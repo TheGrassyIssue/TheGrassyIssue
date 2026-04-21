@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 220" role="img" aria-label="The Grassy Issue">
+  <title>The Grassy Issue</title>
+  <style>
+    .wm { font-family: 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 500; font-size: 88px; letter-spacing: -0.01em; fill: currentColor; }
+    .mono { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 14px; letter-spacing: 0.18em; fill: currentColor; }
+  </style>
+  <text class="wm" x="450" y="130" text-anchor="middle">The Grassy Issue</text>
+  <line x1="280" y1="170" x2="340" y2="170" stroke="currentColor" stroke-width="1.4" stroke-opacity="0.6"></line>
+  <text class="mono" x="450" y="176" text-anchor="middle" fill-opacity="0.7">AUSTIN, TX · EST. 2026</text>
+  <line x1="560" y1="170" x2="620" y2="170" stroke="currentColor" stroke-width="1.4" stroke-opacity="0.6"></line>
+</svg>

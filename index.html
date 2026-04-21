@@ -1,0 +1,3873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Grassy Issue — A running feed of golf culture, design & Austin muni.</title>
+<meta name="description" content="A constant stream of golf culture, gear drops, course guides, news and Austin muni scores. Not a magazine. Not a blog. The feed." />
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://thegrassyissue.com/" />
+<meta property="og:title" content="The Grassy Issue" />
+<meta property="og:description" content="A running feed of golf culture, design & Austin muni." />
+<meta property="og:image" content="https://thegrassyissue.com/images/og-image.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="The Grassy Issue" />
+<meta name="twitter:description" content="A running feed of golf culture, design & Austin muni." />
+<meta name="twitter:image" content="https://thegrassyissue.com/images/og-image.jpg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Skip link for accessibility */
+  .skip-link {
+    position: absolute;
+    top: -100%;
+    left: 16px;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 8px 16px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 100;
+    text-decoration: none;
+  }
+  .skip-link:focus {
+    top: 8px;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--grass);
+    outline-offset: 2px;
+  }
+  img { max-width: 100%; display: block; }
+  button { font: inherit; cursor: pointer; border: none; background: none; }
+
+  .mono { font-family: var(--mono); letter-spacing: 0.08em; text-transform: uppercase; font-size: 11px; }
+
+  /* TICKER — seamless infinite scroll */
+  .ticker {
+    background: var(--ink);
+    color: var(--paper);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 9px 0;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 20;
+  }
+  .ticker-inner {
+    display: flex;
+    width: max-content;
+    animation: ticker-scroll 90s linear infinite;
+  }
+  .ticker-track {
+    display: flex;
+    flex-shrink: 0;
+  }
+  .ticker-track span {
+    margin-right: 48px;
+    white-space: nowrap;
+  }
+  .ticker-track .flag { color: var(--flag); }
+  .ticker-track .rough { color: var(--rough); }
+  @keyframes ticker-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    background: var(--paper);
+    border-bottom: 0.5px solid var(--ink);
+    z-index: 15;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .nav-wordmark {
+    line-height: 1;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  .nav-wordmark img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .nav-links a {
+    padding: 6px 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+  .nav-links a:hover { border-bottom-color: var(--ink); }
+  .nav-links a.active { border-bottom-color: var(--ink); }
+  .nav-cta {
+    padding: 9px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+  .nav-cta:hover { background: var(--grass); }
+
+  /* Mobile menu toggle */
+  .nav-toggle {
+    display: none;
+    width: 28px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+  .nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+  .nav-toggle.open span:nth-child(1) { transform: translateY(9.25px) rotate(45deg); }
+  .nav-toggle.open span:nth-child(2) { opacity: 0; }
+  .nav-toggle.open span:nth-child(3) { transform: translateY(-9.25px) rotate(-45deg); }
+
+  /* Mobile drawer */
+  .nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--paper);
+    z-index: 14;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+  .nav-drawer.open {
+    display: flex;
+    opacity: 1;
+  }
+  .nav-drawer a {
+    padding: 12px 24px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+  .nav-drawer a:hover { border-bottom-color: var(--ink); }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    height: 88vh;
+    min-height: 580px;
+    max-height: 900px;
+    overflow: hidden;
+    background: var(--ink);
+  }
+  .hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+  .hero-img.mobile { display: none; }
+  .hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg,
+      rgba(20, 20, 20, 0.15) 0%,
+      rgba(20, 20, 20, 0) 30%,
+      rgba(20, 20, 20, 0) 55%,
+      rgba(20, 20, 20, 0.55) 100%);
+    pointer-events: none;
+  }
+  .hero-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 48px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .hero-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .hero-stamp {
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .hero-stamp .pulse {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--flag);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
+  }
+  .hero-caption {
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.8;
+    text-align: right;
+  }
+  .hero-bottom { max-width: 860px; }
+  .hero-tag {
+    display: inline-block;
+    background: var(--flag);
+    color: var(--paper);
+    padding: 6px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+  .hero h1 {
+    color: var(--paper);
+    font-family: var(--serif);
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(44px, 7vw, 96px);
+    line-height: 0.95;
+    letter-spacing: -0.02em;
+  }
+  .hero-sub {
+    color: var(--paper);
+    margin-top: 20px;
+    max-width: 600px;
+    font-size: 15px;
+    line-height: 1.55;
+    opacity: 0.92;
+  }
+
+  /* ABOUT STRIP */
+  .about-strip {
+    border-bottom: 0.5px solid var(--ink);
+    padding: 40px 0;
+  }
+  .about-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 60px;
+    align-items: center;
+  }
+  .about-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .about-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--ink);
+  }
+  .about-text {
+    font-family: var(--serif);
+    font-size: clamp(18px, 1.8vw, 22px);
+    line-height: 1.4;
+  }
+  .about-text em { font-style: italic; }
+
+  /* FILTERS */
+  .filters {
+    border-bottom: 0.5px solid var(--ink);
+    padding: 20px 0;
+    background: var(--paper);
+    position: sticky;
+    top: 63px;
+    z-index: 10;
+  }
+  .filters-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  .filter-pills {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .pill {
+    padding: 7px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    border: 0.5px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    transition: all 0.15s;
+  }
+  .pill:hover { background: var(--ink); color: var(--paper); }
+  .pill.active { background: var(--ink); color: var(--paper); }
+  .sort-select {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    white-space: nowrap;
+  }
+
+  /* MASONRY FEED */
+  .feed {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 32px 80px;
+    position: relative;
+  }
+  .feed .card {
+    position: absolute;
+    width: calc(25% - 6px);
+  }
+  .card {
+    break-inside: avoid;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+    position: relative;
+    display: block;
+    /* entrance animation */
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  .card.visible {
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.2s,
+                opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 -1px var(--ink);
+  }
+  .card.hidden {
+    display: none;
+  }
+
+  .card-media {
+    position: relative;
+    background: var(--ink);
+    overflow: hidden;
+  }
+  .card-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s;
+  }
+  .card:hover .card-media img { transform: scale(1.03); }
+
+  .card-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 4px 8px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--paper);
+    color: var(--ink);
+    z-index: 2;
+  }
+  .card-tag.flag { background: var(--flag); color: var(--paper); }
+  .card-tag.grass { background: var(--grass); color: var(--paper); }
+  .card-tag.ink { background: var(--ink); color: var(--paper); }
+  .card-tag.rough { background: var(--rough); color: var(--ink); }
+
+  .card-body {
+    padding: 14px 14px 12px;
+  }
+  .card-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.25;
+    margin-bottom: 8px;
+  }
+  .card-text {
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    color: var(--ink);
+    opacity: 0.8;
+  }
+
+  .card-meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding-top: 10px;
+    border-top: 0.5px solid rgba(20, 20, 20, 0.15);
+  }
+  .card-source { opacity: 0.55; }
+  .card-votes {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .card-votes .vote-up {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+  }
+  .card-votes .vote-up::before {
+    content: '▲';
+    font-size: 10px;
+    color: var(--grass);
+  }
+  .card-votes .comments {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    opacity: 0.55;
+  }
+
+  /* Special card types */
+  .card-text-only {
+    padding: 18px 16px;
+  }
+  .card-quote {
+    padding: 24px 18px 20px;
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .card-quote .card-tag {
+    background: var(--flag);
+    color: var(--paper);
+  }
+  .card-quote blockquote {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 22px;
+    line-height: 1.25;
+    margin: 28px 0 14px;
+  }
+  .card-quote cite {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-style: normal;
+    opacity: 0.7;
+  }
+
+  .card-score {
+    background: var(--paper);
+  }
+  .card-score .card-body { padding-top: 18px; }
+  .card-score .score-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 8px 0;
+    border-bottom: 0.5px solid rgba(20, 20, 20, 0.12);
+  }
+  .card-score .score-row:last-of-type { border-bottom: none; }
+  .card-score .pos {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    width: 24px;
+    opacity: 0.6;
+  }
+  .card-score .name {
+    font-size: 13px;
+    flex: 1;
+  }
+  .card-score .score {
+    font-family: var(--mono);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--grass);
+  }
+
+  .card-drop { position: relative; }
+  .card-drop .price-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 8px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    z-index: 2;
+  }
+
+  /* GIVEAWAYS */
+  .giveaways {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 48px;
+  }
+  .giveaways-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 20px;
+    border-top: 0.5px solid var(--ink);
+  }
+  .giveaways-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .giveaways-label .pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--flag);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  .giveaways-count {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .giveaways-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .giveaway-card {
+    border: 0.5px solid var(--ink);
+    overflow: hidden;
+    display: block;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .giveaway-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 -1px var(--ink);
+  }
+  .giveaway-img {
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+  }
+  .giveaway-live {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 3px 7px;
+    background: var(--flag);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .giveaway-live::before {
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--paper);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  .giveaway-ends {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 3px 7px;
+    background: rgba(20,20,20,0.75);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .giveaway-body {
+    padding: 12px;
+  }
+  .giveaway-brand {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 4px;
+  }
+  .giveaway-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.25;
+  }
+  .giveaway-source {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+
+  /* EVENTS */
+  .events {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 48px;
+  }
+  .events-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 20px;
+    border-top: 0.5px solid var(--ink);
+  }
+  .events-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+  }
+  .events-label .cal-icon {
+    width: 14px;
+    height: 14px;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 8px;
+    line-height: 1;
+  }
+  .events-count {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+  .event-card {
+    border: 0.5px solid var(--ink);
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    color: var(--ink);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .event-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 0 -1px var(--ink);
+  }
+  .event-img {
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 18px;
+  }
+  .event-date {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 3px 7px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .event-type {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+    padding: 3px 7px;
+    background: rgba(20,20,20,0.75);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .event-body {
+    padding: 12px;
+  }
+  .event-venue {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    margin-bottom: 4px;
+  }
+  .event-title {
+    font-family: var(--serif);
+    font-size: 15px;
+    line-height: 1.25;
+    margin-bottom: 4px;
+  }
+  .event-desc {
+    font-size: 12px;
+    line-height: 1.4;
+    color: #555;
+  }
+  .event-source {
+    margin-top: 8px;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+
+  /* LOAD MORE */
+  .load-more {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 24px 0 0;
+  }
+  .load-more button {
+    padding: 16px 40px;
+    background: transparent;
+    color: var(--ink);
+    border: 0.5px solid var(--ink);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: all 0.2s;
+  }
+  .load-more button:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  /* FOOTER */
+  .footer {
+    border-top: 0.5px solid var(--ink);
+    padding: 60px 32px 32px;
+    background: var(--paper);
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2.5fr 1fr 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-brand .wordmark {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1;
+  }
+  .footer-brand .tag {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 16px;
+    max-width: 320px;
+    line-height: 1.7;
+    opacity: 0.7;
+  }
+  .footer-brand .mailing {
+    margin-top: 24px;
+    display: flex;
+    max-width: 380px;
+    border: 0.5px solid var(--ink);
+    position: relative;
+  }
+  .footer-brand .mailing input {
+    flex: 1;
+    padding: 11px 12px;
+    border: none;
+    background: transparent;
+    font-family: var(--sans);
+    font-size: 13px;
+    outline: none;
+    color: var(--ink);
+  }
+  .footer-brand .mailing input::placeholder { opacity: 0.4; }
+  .footer-brand .mailing button {
+    padding: 0 16px;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .footer-brand .mailing button:hover { background: var(--grass); }
+  .mailing-success {
+    position: absolute;
+    inset: 0;
+    background: var(--grass);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+  .mailing-success.show {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .footer-col h4 {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 14px;
+    opacity: 0.55;
+  }
+  .footer-col ul { list-style: none; }
+  .footer-col li {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  .footer-col a { transition: opacity 0.15s; }
+  .footer-col a:hover { opacity: 0.55; }
+  .footer-col li .soon {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: var(--flag);
+    margin-left: 6px;
+  }
+  .footer-bottom {
+    max-width: 1400px;
+    margin: 60px auto 0;
+    padding-top: 24px;
+    border-top: 0.5px solid var(--ink);
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+
+  /* VOTE BAR — Mid to Fire */
+  .vote-bar {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 0.5px solid rgba(20, 20, 20, 0.1);
+  }
+  .vote-bar-label {
+    display: flex;
+    justify-content: space-between;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+  .vote-bar-label .mid { opacity: 0.5; transition: opacity 0.3s; }
+  .vote-bar-label .fire { color: var(--flag); transition: opacity 0.3s; }
+  .vote-bar-label .pct {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    opacity: 0;
+    transition: opacity 0.4s;
+  }
+  .vote-bar.has-voted .vote-bar-label .pct { opacity: 1; }
+  .vote-bar.has-voted .vote-bar-label .mid .pct { color: var(--ink); }
+  .vote-bar.has-voted .vote-bar-label .fire .pct { color: var(--flag); }
+  .vote-bar-track {
+    height: 8px;
+    background: rgba(20, 20, 20, 0.08);
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: height 0.3s;
+  }
+  .vote-bar.has-voted .vote-bar-track { height: 10px; }
+  .vote-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--rough) 0%, var(--flag) 100%);
+    border-radius: 4px;
+    transition: width 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .vote-bar-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    gap: 6px;
+  }
+  .vote-btn {
+    flex: 1;
+    padding: 6px 0;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 0.5px solid rgba(20, 20, 20, 0.2);
+    background: transparent;
+    color: var(--ink);
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .vote-btn:hover { background: var(--ink); color: var(--paper); transform: scale(1.02); }
+  .vote-btn.voted { pointer-events: none; opacity: 0.4; transform: scale(0.97); border-color: transparent; background: transparent; color: var(--ink); }
+  .vote-btn.voted.chosen { opacity: 1; background: var(--ink); color: var(--paper); transform: scale(1); }
+  .vote-btn.fire-btn:hover { background: var(--flag); color: var(--paper); border-color: var(--flag); }
+  .vote-btn.fire-btn.voted.chosen { background: var(--flag); color: var(--paper); border-color: var(--flag); }
+  .vote-bar-count {
+    text-align: center;
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    opacity: 0.45;
+    margin-top: 4px;
+    transition: opacity 0.3s;
+  }
+
+  /* QUOTE CARD — portrait */
+  .card-quote .quote-portrait {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid rgba(244, 241, 234, 0.3);
+    margin-top: 16px;
+  }
+  .card-quote .quote-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 16px;
+  }
+
+  /* SCOREBOARD STRIP — top of page */
+  .scoreboard-strip {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 14px 0;
+    border-bottom: 0.5px solid rgba(244, 241, 234, 0.1);
+  }
+  .scoreboard-strip-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+    display: flex;
+    align-items: center;
+    gap: 28px;
+  }
+  .scoreboard-strip-title {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    opacity: 0.55;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .scoreboard-strip-title .live-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--flag);
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  .scoreboard-strip-scores {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex: 1;
+  }
+  .scoreboard-strip-scores::-webkit-scrollbar { display: none; }
+  .strip-score {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    white-space: nowrap;
+    font-size: 12px;
+  }
+  .strip-score .strip-pos {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    opacity: 0.45;
+  }
+  .strip-score .strip-name {
+    opacity: 0.8;
+  }
+  .strip-score .strip-num {
+    font-family: var(--mono);
+    font-weight: 500;
+    color: var(--grass);
+    font-size: 13px;
+  }
+  .scoreboard-strip-cta {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: 0.55;
+    transition: opacity 0.15s;
+  }
+  .scoreboard-strip-cta:hover { opacity: 1; }
+  .scoreboard-course-tabs {
+    display: flex;
+    gap: 6px;
+    margin-left: 8px;
+    flex-shrink: 0;
+  }
+  .scoreboard-course-tab {
+    font-family: var(--mono);
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 3px;
+    background: rgba(244,241,234,0.08);
+    color: var(--paper);
+    opacity: 0.45;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+    transition: opacity 0.15s, background 0.15s;
+  }
+  .scoreboard-course-tab:hover { opacity: 0.75; }
+  .scoreboard-course-tab.active {
+    opacity: 1;
+    background: var(--grass);
+    color: var(--paper);
+  }
+  .scoreboard-loading {
+    font-family: var(--mono);
+    font-size: 10px;
+    opacity: 0.4;
+    letter-spacing: 0.1em;
+  }
+  @media (max-width: 768px) {
+    .scoreboard-course-tabs { display: none; }
+    .scoreboard-strip-inner { gap: 16px; padding: 0 16px; }
+  }
+
+  /* VIBE BOARD — Pinterest-style image grid */
+  .vibe-board {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+  }
+  .vibe-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 20px;
+    border-top: 0.5px solid var(--ink);
+  }
+  .vibe-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .vibe-source {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .vibe-grid {
+    column-count: 5;
+    column-gap: 8px;
+  }
+  .vibe-pin {
+    break-inside: avoid;
+    margin-bottom: 8px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    display: block;
+  }
+  .vibe-pin img {
+    width: 100%;
+    display: block;
+    transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .vibe-pin:hover img { transform: scale(1.04); }
+  .vibe-pin .vibe-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, transparent 50%, rgba(20, 20, 20, 0.7) 100%);
+    opacity: 0;
+    transition: opacity 0.4s;
+    display: flex;
+    align-items: flex-end;
+    padding: 12px;
+  }
+  .vibe-pin:hover .vibe-overlay { opacity: 1; }
+  .vibe-overlay span {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 13px;
+    color: var(--paper);
+    line-height: 1.3;
+  }
+
+  /* POST SCORE FORM */
+  .score-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+  }
+  .score-section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 0 24px;
+    border-top: 0.5px solid var(--ink);
+  }
+  .score-section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .score-section-sub {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .score-form-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .score-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .score-form label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.7;
+  }
+  .score-form input,
+  .score-form select {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--sans);
+    font-size: 14px;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    color: var(--ink);
+    outline: none;
+    transition: border-color 0.15s, box-shadow 0.15s;
+    -webkit-appearance: none;
+    appearance: none;
+  }
+  .score-form select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23141414' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+    cursor: pointer;
+  }
+  .score-form input:focus,
+  .score-form select:focus {
+    border-color: var(--grass);
+    box-shadow: 0 0 0 2px rgba(45, 74, 43, 0.15);
+  }
+  .score-form input::placeholder {
+    color: var(--ink);
+    opacity: 0.35;
+  }
+  .score-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  .score-form .upload-zone {
+    border: 1.5px dashed rgba(20, 20, 20, 0.25);
+    padding: 28px 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.15s, background 0.15s;
+    position: relative;
+  }
+  .score-form .upload-zone:hover {
+    border-color: var(--grass);
+    background: rgba(45, 74, 43, 0.03);
+  }
+  .score-form .upload-zone.has-file {
+    border-color: var(--grass);
+    border-style: solid;
+    background: rgba(45, 74, 43, 0.05);
+  }
+  .upload-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0;
+  }
+  .upload-zone .upload-icon {
+    font-size: 24px;
+    margin-bottom: 8px;
+    opacity: 0.4;
+  }
+  .upload-zone .upload-text {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.55;
+  }
+  .upload-zone .upload-filename {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--grass);
+    margin-top: 4px;
+    display: none;
+  }
+  .upload-zone.has-file .upload-filename { display: block; }
+  .upload-zone.has-file .upload-text { display: none; }
+  .score-submit {
+    padding: 14px 28px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.15s;
+    align-self: flex-start;
+  }
+  .score-submit:hover {
+    background: var(--grass);
+    transform: translateY(-1px);
+  }
+  .score-submit:active { transform: translateY(0); }
+  .score-submit.submitted {
+    background: var(--grass);
+    pointer-events: none;
+  }
+
+  /* Score form — right side info */
+  .score-info {
+    padding: 32px;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+  }
+  .score-info-title {
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 16px;
+  }
+  .score-info-text {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.7;
+    margin-bottom: 20px;
+  }
+  .score-info-rules {
+    padding-top: 16px;
+    border-top: 0.5px solid rgba(20, 20, 20, 0.12);
+  }
+  .score-info-rules dt {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+    margin-top: 12px;
+  }
+  .score-info-rules dt:first-child { margin-top: 0; }
+  .score-info-rules dd {
+    font-size: 13px;
+    line-height: 1.5;
+    opacity: 0.65;
+    margin-left: 0;
+  }
+
+  /* Card hover overlay — Classy Issue inspired */
+  .card-media .card-hover-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(20, 20, 20, 0.0);
+    transition: background 0.5s;
+    z-index: 1;
+  }
+  .card:hover .card-media .card-hover-overlay {
+    background: rgba(20, 20, 20, 0.08);
+  }
+
+  /* GEAR CAROUSEL */
+  .gear-carousel { position: relative; overflow: hidden; touch-action: pan-y; }
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    touch-action: pan-y;
+  }
+  .gear-slide {
+    min-width: 100%;
+    position: relative;
+  }
+  .gear-slide img {
+    width: 100%;
+    aspect-ratio: 4/5;
+    object-fit: cover;
+    display: block;
+  }
+  .gear-slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(20,20,20,0.85));
+    color: var(--paper);
+  }
+  .gear-slide-brand {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.7;
+    margin-bottom: 2px;
+  }
+  .gear-slide-name {
+    font-family: var(--serif);
+    font-size: 14px;
+    line-height: 1.3;
+    margin-bottom: 4px;
+  }
+  .gear-slide-price {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: var(--paper);
+  }
+  .gear-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--paper);
+    color: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 3;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    border: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .gear-carousel:hover .gear-arrow { opacity: 1; }
+  .gear-arrow.prev { left: 8px; }
+  .gear-arrow.next { right: 8px; }
+  @media (hover: none) and (pointer: coarse) {
+    .gear-arrow {
+      opacity: 0.7;
+      width: 36px;
+      height: 36px;
+      font-size: 16px;
+    }
+  }
+  .gear-dots {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 0 4px;
+  }
+  .gear-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--ink);
+    opacity: 0.15;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    transition: opacity 0.3s;
+  }
+  .gear-dot.active { opacity: 0.6; }
+  @media (hover: none) and (pointer: coarse) {
+    .gear-dot {
+      width: 8px;
+      height: 8px;
+      padding: 4px;
+      box-sizing: content-box;
+    }
+  }
+  .gear-counter {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    text-align: center;
+    padding: 2px 0 0;
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1100px) { .feed .card { width: calc(33.333% - 6px); } .vibe-grid { column-count: 3; } }
+  @media (max-width: 820px) {
+    .feed .card { width: calc(50% - 4px); }
+    .hero-img.desktop { display: none; }
+    .hero-img.mobile { display: block; object-position: center 30%; }
+    .hero { height: 80vh; min-height: 520px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-cta { display: none; }
+    .nav-inner { padding: 14px 20px; }
+    .hero-content { padding: 28px 20px; }
+    .about-inner { grid-template-columns: 1fr; gap: 16px; padding: 0 20px; }
+    .filters-inner { padding: 0 20px; }
+    .filters { top: 53px; padding: 14px 0; }
+    .filter-pills { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+    .filter-pills::-webkit-scrollbar { display: none; }
+    .pill { flex-shrink: 0; padding: 9px 14px; }
+    .feed { padding: 20px 20px 60px; gap: 6px; }
+    .giveaways { padding: 0 20px 36px; }
+    .giveaways-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .events { padding: 0 20px 36px; }
+    .events-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .card { margin-bottom: 0px; }
+    .footer { padding: 48px 20px 24px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { flex-direction: column; gap: 10px; padding: 0 20px; padding-top: 24px; }
+    .scoreboard-strip-inner { padding: 0 20px; gap: 12px; }
+    .scoreboard-strip-cta { display: none; }
+    .scoreboard-strip-title { font-size: 8px; }
+    .scoreboard-strip-scores { gap: 16px; }
+    .strip-score { font-size: 11px; }
+    .score-form-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .score-section { padding: 0 20px 48px; }
+    .vibe-board { padding: 0 20px 48px; }
+    .vibe-grid { column-count: 2; column-gap: 6px; }
+    .vibe-pin { margin-bottom: 6px; }
+    .card-title { font-size: 15px; }
+    .card-text { font-size: 12px; line-height: 1.55; }
+    .card-body { padding: 14px 16px 16px; }
+    .gear-slide-name { font-size: 13px; }
+    .gear-slide-info { padding: 12px 14px; }
+  }
+  @media (max-width: 480px) {
+    .feed .card { width: 100%; }
+    .hero h1 { font-size: 40px; }
+    .hero-caption { display: none; }
+    .giveaways-grid { grid-template-columns: 1fr 1fr; }
+    .events-grid { grid-template-columns: 1fr 1fr; }
+    .footer-inner { grid-template-columns: 1fr; }
+    .scoreboard-strip { padding: 10px 0; }
+    .scoreboard-strip-scores { gap: 12px; }
+    .strip-score .strip-name { max-width: 100px; overflow: hidden; text-overflow: ellipsis; }
+    .vibe-grid { column-count: 2; }
+    .card-body { padding: 12px 14px 14px; }
+    .card-title { font-size: 14px; }
+    .card-text { font-size: 11.5px; -webkit-line-clamp: 4; display: -webkit-box; -webkit-box-orient: vertical; overflow: hidden; }
+    .card-meta { font-size: 8px; }
+    .gear-slide-brand { font-size: 8px; }
+    .gear-slide-name { font-size: 12px; }
+    .gear-slide-price { font-size: 10px; }
+  }
+</style>
+</head>
+<body>
+
+<a href="#feed" class="skip-link">Skip to feed</a>
+
+<div class="ticker" aria-label="Live ticker" role="marquee">
+  <div class="ticker-inner">
+    <div class="ticker-track">
+      <span class="flag">[LIVE FEED]</span>
+      <span>LIONS WEEKLY LEADER — SLICEFIXER_ATX · 74</span>
+      <span class="rough">[NEW DROP]</span>
+      <span>MANORS SS26 PRESS ROOM CAPSULE</span>
+      <span class="flag">[EVENT]</span>
+      <span>TEXAS CHILDREN'S LEGACY GOLF CLASSIC · LIONS MUNI · MAY 14</span>
+      <span class="rough">[GUIDE]</span>
+      <span>HANCOCK HOLE 1 — THE OLDEST FIRST TEE IN TEXAS</span>
+      <span class="flag">[NEWS]</span>
+      <span>LIV TO ATX? RUMORS PERSIST</span>
+      <span class="rough">[NEW DROP]</span>
+      <span>EASTSIDE GOLF × AIR JORDAN 1 LOW G — WHITE/LINEN</span>
+      <span class="flag">[GUIDE]</span>
+      <span>ROY KIZER HOLE 15 — THE PRETTIEST PAR 3 YOU'LL EVER BOGEY</span>
+      <span class="rough">[MUNI]</span>
+      <span>MORRIS WILLIAMS REOPENING REPORT</span>
+      <span class="flag">[EVENT]</span>
+      <span>HILL COUNTRY AMATEUR CHAMPIONSHIP · LEANDER · MAY 16–17</span>
+      <span class="rough">[GUIDE]</span>
+      <span>MORRIS WILLIAMS HOLE 7 — THE BLIND TEE SHOT THAT REWARDS TRUST</span>
+      <span class="flag">[GEAR]</span>
+      <span>THE BALL MARKER EDIT — 6 MARKERS WORTH POCKETING</span>
+      <span class="rough">[GUIDE]</span>
+      <span>LIONS HOLE 6 — THE DOGLEG THAT PUNISHES THE BOLD</span>
+    </div>
+    <div class="ticker-track" aria-hidden="true">
+      <span class="flag">[LIVE FEED]</span>
+      <span>LIONS WEEKLY LEADER — SLICEFIXER_ATX · 74</span>
+      <span class="rough">[NEW DROP]</span>
+      <span>MANORS SS26 PRESS ROOM CAPSULE</span>
+      <span class="flag">[EVENT]</span>
+      <span>TEXAS CHILDREN'S LEGACY GOLF CLASSIC · LIONS MUNI · MAY 14</span>
+      <span class="rough">[GUIDE]</span>
+      <span>HANCOCK HOLE 1 — THE OLDEST FIRST TEE IN TEXAS</span>
+      <span class="flag">[NEWS]</span>
+      <span>LIV TO ATX? RUMORS PERSIST</span>
+      <span class="rough">[NEW DROP]</span>
+      <span>EASTSIDE GOLF × AIR JORDAN 1 LOW G — WHITE/LINEN</span>
+      <span class="flag">[GUIDE]</span>
+      <span>ROY KIZER HOLE 15 — THE PRETTIEST PAR 3 YOU'LL EVER BOGEY</span>
+      <span class="rough">[MUNI]</span>
+      <span>MORRIS WILLIAMS REOPENING REPORT</span>
+      <span class="flag">[EVENT]</span>
+      <span>HILL COUNTRY AMATEUR CHAMPIONSHIP · LEANDER · MAY 16–17</span>
+      <span class="rough">[GUIDE]</span>
+      <span>MORRIS WILLIAMS HOLE 7 — THE BLIND TEE SHOT THAT REWARDS TRUST</span>
+      <span class="flag">[GEAR]</span>
+      <span>THE BALL MARKER EDIT — 6 MARKERS WORTH POCKETING</span>
+      <span class="rough">[GUIDE]</span>
+      <span>LIONS HOLE 6 — THE DOGLEG THAT PUNISHES THE BOLD</span>
+    </div>
+  </div>
+</div>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark"><img src="assets/logo-wordmark-only.svg" alt="The Grassy Issue" height="36"></a>
+    <div class="nav-links">
+      <a href="#feed" class="active">Feed</a>
+      <a href="#feed" onclick="activateFilter('drop');return false;">Drops</a>
+      <a href="#feed" onclick="activateFilter('guide');return false;">Muni Guides</a>
+      <a href="scoreboard.html">Scoreboard</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="scoreboard.html#submit" class="nav-cta">Post a score →</a>
+  </div>
+</nav>
+
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
+  <a href="#feed" onclick="closeMenu()">Feed</a>
+  <a href="#feed" onclick="closeMenu();activateFilter('drop');">Drops</a>
+  <a href="#feed" onclick="closeMenu();activateFilter('item');">Items</a>
+  <a href="#feed" onclick="closeMenu();activateFilter('guide');">Muni Guides</a>
+  <a href="scoreboard.html" onclick="closeMenu();">Scoreboard</a>
+  <a href="scoreboard.html#submit" class="nav-cta" style="margin-top: 12px;" onclick="closeMenu()">Post a score →</a>
+</div>
+
+<section class="hero">
+  <img src="images/hero-wide.jpg" alt="A Texas thunderhead glowing pink at sunset above an Austin municipal golf course" class="hero-img desktop" loading="eager" />
+  <img src="images/hero.jpg" alt="A Texas thunderhead glowing pink at sunset above an Austin municipal golf course" class="hero-img mobile" loading="eager" />
+  <div class="hero-content">
+    <div class="hero-top">
+      <div class="hero-stamp">
+        <span class="pulse"></span>
+        <span>The Feed · Live from Austin</span>
+      </div>
+      <div class="hero-caption">
+        Roy Kizer, 7:42 PM<br/>
+        <span style="opacity: 0.65;">Shot on iPhone · No filter</span>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <span class="hero-tag">[Field Note]</span>
+      <h1>Golf culture,<br/>in a running feed.</h1>
+      <p class="hero-sub">
+        Austin muni guides, gear drops, course news, scores from your group chat. Not a magazine. Not a blog. A running index of the game — updated constantly, curated from Austin.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="about-strip">
+  <div class="about-inner">
+    <div class="about-label">About the Issue</div>
+    <div class="about-text">
+      <em>Golf in Austin is having a moment, and nobody's writing it down.</em> The Grassy Issue is the attempt — a running feed of muni guides, drops, news, and scores, edited in Austin by Lenny Harrington.
+    </div>
+  </div>
+</section>
+
+<!-- SCOREBOARD STRIP -->
+<div class="scoreboard-strip">
+  <div class="scoreboard-strip-inner">
+    <div class="scoreboard-strip-title"><span class="live-dot"></span> Leaderboard</div>
+    <div class="scoreboard-course-tabs" id="courseTabsStrip"></div>
+    <div class="scoreboard-strip-scores" id="leaderboardScores">
+      <span class="scoreboard-loading">Loading scores…</span>
+    </div>
+    <a href="scoreboard.html" class="scoreboard-strip-cta" id="leaderboardCta">Full scoreboard →</a>
+  </div>
+</div>
+
+<section class="filters" aria-label="Filter feed">
+  <div class="filters-inner">
+    <div class="filter-pills" role="tablist">
+      <button class="pill active" data-filter="all" role="tab" aria-selected="true">All</button>
+      <button class="pill" data-filter="drop" role="tab" aria-selected="false">Drops</button>
+      <button class="pill" data-filter="guide" role="tab" aria-selected="false">Muni Guides</button>
+      <button class="pill" data-filter="score" role="tab" aria-selected="false">Scores</button>
+      <button class="pill" data-filter="news" role="tab" aria-selected="false">News</button>
+      <button class="pill" data-filter="field" role="tab" aria-selected="false">Field Notes</button>
+    </div>
+    <div class="sort-select">Newest ↓</div>
+  </div>
+</section>
+
+<section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
+
+  <!-- DROP — Sentinel Golf Basecamp Travel Sleeve Restock -->
+  <a href="https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-kjjr6-6gc6d-ar5fg-ykh5a-dbfwy-mkdrf-ze83c-r74ja-amdsg-knj8p-d5r8d-d2w2w-6m378-maws9-dg4sd-55sjx-blnez" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="http://static1.squarespace.com/static/5f7b7302cb6064569d654760/5f7ca15041467b27b1b1db69/6935dd5aa34e486953ff97e0/1776776947340/tb1.jpg?format=1500w" alt="Sentinel Golf Basecamp Travel Sleeve in Black ULTRA" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Sentinel Basecamp Travel Sleeve — restocked in Black ULTRA.</div>
+      <div class="card-text">Sentinel's travel bag is back. Built from Challenge ULTRA composite — a UHMWPE face with recycled polyester CrossPly that's waterproof, abrasion-resistant, and comes in at 7.4 oz/yd. Designed in Minneapolis, made to protect your sticks in transit. $298.</div>
+      <div class="card-meta">
+        <span class="card-source">sentinelgolf.us · New</span>
+        <span class="card-votes"><span class="vote-up">147</span><span class="comments">◎ 38</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- DROP — PUMA Golf × Gumtree Golf & Nature Club -->
+  <a href="https://www.pumagolf.com/collections/gumtree-golf-nature-club" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://www.pumagolf.com/cdn/shop/files/25AW_Ecom_GO_Apparel_MadeForThis_Homepage-fullpage_img1.jpg?v=1774855118" alt="PUMA Golf x Gumtree Golf & Nature Club Collection" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">PUMA × Gumtree Golf & Nature Club — the collab nobody saw coming.</div>
+      <div class="card-text">Brooklyn-based Gumtree Golf meets PUMA for a full collection: hoodies, polos, shorts, shoes, and skirts across men's, women's, and juniors. The concept riffs on the Puma concolor — the mountain lion's North American habitat as a lens for golf and nature. 16 pieces, just dropped.</div>
+      <div class="card-meta">
+        <span class="card-source">pumagolf.com · New</span>
+        <span class="card-votes"><span class="vote-up">192</span><span class="comments">◎ 56</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- BRAND TO WATCH — CPH / Captain's Helm Golf -->
+  <a href="https://captainshelmgolf.com/en" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag grass">[Brand to Watch]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://captainshelmgolf.com/cdn/shop/files/CHG26-SS-T07-06_649d6168-fc06-4e43-b7a1-791934beecec_1024x1024.jpg?v=1776391567" alt="CPH Golf — Overlap Jersey SS Pullover by Captain's Helm Golf" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">CPH Golf — "I'm Not a Golf Gentleman."</div>
+      <div class="card-text">Captain's Helm Golf out of Tokyo is what happens when surf culture, camp vibes, and streetwear walk into a pro shop. Mock necks with edge, printed slogans your club pro won't understand, and rugged outerwear that plays with every golfing convention. Overlap polos from $71, pullover jerseys from $114. One of the most interesting brands nobody stateside is talking about yet.</div>
+      <div class="card-meta">
+        <span class="card-source">captainshelmgolf.com · New</span>
+        <span class="card-votes"><span class="vote-up">89</span><span class="comments">◎ 24</span></span>
+      </div>
+    </div>
+  </a>
+
+  <!-- GEAR CAROUSEL — Jordan Golf Spring/Summer '26 -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="jordangolf">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://www.nike.com/jordan/golf" target="_blank" rel="noopener">
+              <img src="https://sneakernews.com/wp-content/uploads/2026/03/air-jordan-1-low-golf-chicago-iq3417-600.jpg" alt="Air Jordan 1 Low Golf Chicago" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Jordan</div><div class="gear-slide-name">AJ1 Low Golf — Chicago</div><div class="gear-slide-price">$175.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.nike.com/jordan/golf" target="_blank" rel="noopener">
+              <img src="https://image-cdn.hypb.st/https%3A%2F%2Fhypebeast.com%2Fimage%2F2026%2F03%2F24%2Fair-jordan-1-low-golf-white-fir-IQ3417-100-release-info-tw.jpg?w=1080&cbr=1&q=90&fit=max" alt="Air Jordan 1 Low Golf White/Fir" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Jordan</div><div class="gear-slide-name">AJ1 Low Golf — White/Fir</div><div class="gear-slide-price">$175.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.nike.com/jordan/golf" target="_blank" rel="noopener">
+              <img src="https://cdn.shopify.com/s/files/1/0264/8060/7341/files/Nike-Golf-Air-Jordan-1-Low-G-Spiked-Shoes-IQ3417-100-1_d52322ef-8cbd-4176-89ef-02aa627be506.jpg?v=1775037979" alt="Air Jordan 1 Low Golf Spiked White/Fir" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Jordan</div><div class="gear-slide-name">AJ1 Low G Spiked — White/Fir</div><div class="gear-slide-price">$175.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://eastsidegolf.com/collections/jordan-x-eastside-golf" target="_blank" rel="noopener">
+              <img src="https://cdn.shopify.com/s/files/1/0542/2419/1681/products/Jordan-Eastside-Golf-ADG-03.png?v=1668262165" alt="Eastside Golf x Air Jordan ADG 4" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Eastside Golf × Jordan</div><div class="gear-slide-name">ADG 4 — Grey</div><div class="gear-slide-price">$205.00</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Jordan Golf Spring Edit — Chicago drops May 10.</div>
+      <div class="card-text">Jordan's spring '26 golf lineup is stacked. The AJ1 Low Golf "Chicago" spiked drops May 10 at $175, the White/Fir Augusta colorway landed April 1, and Eastside Golf's ADG 4 is still the culture play. Tony Finau, Mookie Betts, and Chris Paul are all in the campaign. $175–$205.</div>
+      <div class="gear-dots" data-dots="jordangolf"></div>
+      <div class="gear-counter" data-counter="jordangolf">1 / 4</div>
+      <div class="card-meta">
+        <span class="card-source">Nike / Jordan Golf · New</span>
+        <span class="card-votes"><span class="vote-up">241</span><span class="comments">◎ 73</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Vessel Season Opener 2026 -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="vesselopener">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://vesselgolf.com/products/2026-season-opener-player-v-pro-stand" target="_blank" rel="noopener">
+              <img src="https://vesselgolf.com/cdn/shop/files/PLAYERVPRO-SEEASONOPENER.jpg?v=1774628378&width=2048" alt="Vessel 2026 Season Opener Player V Pro Stand" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Vessel</div><div class="gear-slide-name">Player V Pro Stand</div><div class="gear-slide-price">$519.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://vesselgolf.com/products/2026-season-opener-lux-stand" target="_blank" rel="noopener">
+              <img src="https://vesselgolf.com/cdn/shop/files/SO26LuxStand.webp?v=1773780647&width=2048" alt="Vessel 2026 Season Opener Lux Stand" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Vessel</div><div class="gear-slide-name">Lux Stand</div><div class="gear-slide-price">$429.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://vesselgolf.com/products/2026-season-opener-lux-pro-cart-ii" target="_blank" rel="noopener">
+              <img src="https://vesselgolf.com/cdn/shop/files/SEASONOPENER2026-5.jpg?v=1773679296&width=2048" alt="Vessel 2026 Season Opener Lux Pro Cart II" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Vessel</div><div class="gear-slide-name">Lux Pro Cart II</div><div class="gear-slide-price">$549.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://vesselgolf.com/products/2026-season-opener-prime-2-0-staff" target="_blank" rel="noopener">
+              <img src="https://vesselgolf.com/cdn/shop/files/SEASONOPENER-PRIMESTAFF2.0-10_e24d259a-4916-4de7-946d-a8ba0854276b.jpg?v=1773849764&width=2048" alt="Vessel 2026 Season Opener Prime 2.0 Staff" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Vessel</div><div class="gear-slide-name">Prime 2.0 Staff</div><div class="gear-slide-price">$599.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://vesselgolf.com/products/2026-season-opener-primex-2-0-backpack" target="_blank" rel="noopener">
+              <img src="https://vesselgolf.com/cdn/shop/files/SEASONOPENER2026_8183733b-f5f3-4c5b-815a-876c2a485a34.jpg?v=1773680179&width=2048" alt="Vessel 2026 Season Opener PrimeX 2.0 Backpack" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Vessel</div><div class="gear-slide-name">PrimeX 2.0 Backpack</div><div class="gear-slide-price">$309.00</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Vessel Season Opener '26 — Masters green, croc texture, already selling out.</div>
+      <div class="card-text">Vessel's annual Masters-week limited edition dropped and it's gorgeous — green croc-textured synthetic leather with gold accents across five pieces. The Player V Pro, Lux Stand, and Backpack already sold out. The Prime 2.0 Staff ($599) is the only one still standing. $309–$599.</div>
+      <div class="gear-dots" data-dots="vesselopener"></div>
+      <div class="gear-counter" data-counter="vesselopener">1 / 5</div>
+      <div class="card-meta">
+        <span class="card-source">vesselgolf.com · New</span>
+        <span class="card-votes"><span class="vote-up">186</span><span class="comments">◎ 49</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Trail Shoes (Best Non-Golfing Golf Shoe) -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="trailshoes">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://www.salomon.com/en-us/shop/product/sense-ride-5-gore-tex-li3170.html" target="_blank" rel="noopener">
+              <img src="https://www.outdoorsports.com/cdn/shop/files/Salomon-Mens-Sense_Ride_5_GTX-Black_Magnet_Black-Side_600x.png?v=1698869826" alt="Salomon Sense Ride 5 Gore-Tex" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Salomon</div><div class="gear-slide-name">Sense Ride 5 GTX</div><div class="gear-slide-price">$120.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.hoka.com/en/us/mens-trail/speedgoat-6-gtx/1155150.html" target="_blank" rel="noopener">
+              <img src="https://mountaineerjourney.com/wp-content/uploads/2025/05/WP-Featured-Images-1-4.webp" alt="HOKA Speedgoat 6 GTX" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">HOKA</div><div class="gear-slide-name">Speedgoat 6 GTX</div><div class="gear-slide-price">$170.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.merrell.com/US/en/agility-peak-5-gore-tex/58253M.html" target="_blank" rel="noopener">
+              <img src="https://cdn.runrepeat.com/storage/gallery/product_primary/40554/merrell-agility-peak-5-gtx-22337924-720.jpg" alt="Merrell Agility Peak 5 Gore-Tex" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Merrell</div><div class="gear-slide-name">Agility Peak 5 GTX</div><div class="gear-slide-price">$140.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.on.com/en-us/products/cloudventure-waterproof-32wp" target="_blank" rel="noopener">
+              <img src="https://cdn.shoplightspeed.com/shops/613930/files/70571839/on-cloudventure-waterproof-running-shoes-mens.jpg" alt="On Cloudventure Waterproof" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">On</div><div class="gear-slide-name">Cloudventure Waterproof</div><div class="gear-slide-price">$170.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.altrarunning.com/en-us/trail/mens-lone-peak-8/AL0A85NC.html" target="_blank" rel="noopener">
+              <img src="https://mountaineerjourney.com/wp-content/uploads/2025/07/11-2.webp" alt="Altra Lone Peak 8" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Altra</div><div class="gear-slide-name">Lone Peak 8</div><div class="gear-slide-price">$140.00</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Best Non-Golfing Golf Shoe — 5 trail runners that belong on the course.</div>
+      <div class="card-text">MyGolfSpy tested trail runners against spikeless golf shoes and the verdict surprised everyone: trail shoes won on comfort while golf shoes took stability. If you walk munis and don't care about soggy mornings, these five will outperform your beaters. $120–$170.</div>
+      <div class="gear-dots" data-dots="trailshoes"></div>
+      <div class="gear-counter" data-counter="trailshoes">1 / 5</div>
+      <div class="card-meta">
+        <span class="card-source">MyGolfSpy · New</span>
+        <span class="card-votes"><span class="vote-up">203</span><span class="comments">◎ 67</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUOTE — David Feherty -->
+  <div class="card card-quote" data-type="quote">
+    <span class="card-tag" style="position:static;">[Quote]</span>
+    <blockquote>"Playing Augusta is like playing a Salvador Dalí landscape. I expected a clock to fall out of the trees and hit me in the face."</blockquote>
+    <div class="quote-row">
+      <div class="quote-portrait" style="width:48px;height:48px;border-radius:50%;background:var(--rough);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;letter-spacing:0.05em;color:var(--paper);flex-shrink:0;">DF</div>
+      <div>
+        <cite style="display:block;">— David Feherty</cite>
+        <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;display:block;margin-top:2px;">Northern Irish, Golf Broadcaster & Author</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROP — Manors Club Collection (Spring 2026) -->
+  <a href="https://manorsgolf.com/collections/the-club-collection" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://cdn.sanity.io/images/9aznesrq/production/41d996ada7bf43b0efe598bc1d71035040342248-3240x4098.png?auto=format&fit=max&q=75&w=800" alt="Manors Club Collection Spring 2026" style="aspect-ratio: 4/5; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Manors · The Club Collection.</div>
+      <div class="card-text">Polartec hoodies, packable Highland pullovers, and the wavy Ranger Polo in a full-garment print for the first time. The whole line reads like a private members' club that lost its membership committee. Traditional without the gatekeeping, which is a trick most brands cannot pull off.</div>
+      <div class="card-meta">
+        <span class="card-source">Manors · New</span>
+        <span class="card-votes">
+          <span class="vote-up">0</span>
+          <span class="comments">◎ 0</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 0%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">0 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- DROP — Eastside Golf "More Than Just a Game" -->
+  <a href="https://eastsidegolf.com/collections/new-arrivals" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://eastsidegolf.com/cdn/shop/files/Updated-banner_eabb7f7b-2a33-4f9b-b198-65771d0147d7.png?v=1776349313&width=1950" alt="Eastside Golf — This Was Never Just About The Game" style="aspect-ratio: 4/5; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Eastside Golf · "More Than Just a Game."</div>
+      <div class="card-text">Eastside's new collection threads the needle between on-course and off-course without pretending the line ever existed. The Boxford Shirt could go to dinner; the Shatter Print Windshirt was built for 6:30 AM tee times when April can't decide what it wants to be. Ajanaku and Cooper keep building a wardrobe, not a hype cycle.</div>
+      <div class="card-meta">
+        <span class="card-source">Eastside Golf · New</span>
+        <span class="card-votes">
+          <span class="vote-up">0</span>
+          <span class="comments">◎ 0</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 0%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">0 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- DROP — Random Golf Club × ECCO BIOM H5 RGC -->
+  <a href="https://randomgolfclub.com/pages/ecco-golf" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://randomgolfclub.com/cdn/shop/files/ECCO.BIOM.H5.SHOP1.jpg?v=1746545751&width=1800" alt="Random Golf Club × ECCO BIOM H5 RGC in White" style="aspect-ratio: 4/5; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Random Golf Club × ECCO · BIOM H5 RGC.</div>
+      <div class="card-text">A high-top golf shoe inspired by Nuuk, Greenland — one of the most remote courses on earth. Waterproof ECCO-TEX membrane, BIOM Natural Motion tech, and an ankle-height silhouette that belongs on a tundra expedition or a soggy municipal dawn patrol. Erik Anders Lang already wore them to win the Creator Classic. $249.</div>
+      <div class="card-meta">
+        <span class="card-source">Random Golf Club · Dropping May 6</span>
+        <span class="card-votes">
+          <span class="vote-up">0</span>
+          <span class="comments">◎ 0</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 0%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">0 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- FIELD NOTE — Water cooler confessional at Morris Williams -->
+  <div class="card" data-type="field" style="cursor:default;">
+    <div class="card-media">
+      <span class="card-tag flag">[Field Note]</span>
+      <div style="aspect-ratio: 3/4; background: linear-gradient(180deg, #2D4A2B 0%, #5a7a3a 30%, #d4a040 65%, #f0c878 100%); display: flex; align-items: flex-end; justify-content: center; padding: 24px; color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 18px; text-align: center; text-shadow: 0 1px 6px rgba(0,0,0,0.4);">Morris Williams · Mid-April · 2:47 pm</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title" style="font-style:italic;">The Turn</div>
+      <div class="card-text">By mid-April the water cooler at the Morris Williams turn has become a confessional. Strangers swap excuses for why they're out here in 94 degrees, then fill their bottles and walk back into it anyway.</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · Just now</span>
+        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- DROP — The Earth Tones Edit (carousel) -->
+  <div class="card" data-type="drop">
+    <div class="card-media">
+      <span class="card-tag">[Drop]</span>
+      <div class="gear-carousel">
+        <div class="gear-carousel-track" data-gear="earth">
+          <div class="gear-slide">
+            <a href="https://quietgolf.com/products/montecito-cashmere-sweater?variant=44914946343094" target="_blank" rel="noopener">
+              <img src="https://quietgolf.com/cdn/shop/files/QG_Montecito_Sweater_pine_3_77c8cd8e-8cd9-4992-9dbd-42ed50707d9a.jpg?v=1773723080" alt="Quiet Golf Montecito Cashmere Sweater — Forest" />
+              <div class="gear-slide-info">
+                <div class="gear-slide-brand">Quiet Golf</div>
+                <div class="gear-slide-name">Montecito Cashmere Sweater — Forest</div>
+                <div class="gear-slide-price">$328.00</div>
+              </div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://manorsgolf.com/products/greenskeeper-chino-trousers" target="_blank" rel="noopener">
+              <img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/INSULATED_COURES_GILET_--_CHINO_GREENSKEEPER_TROUSER_-_MIDNIGHT_01_crop2.jpg?v=1771027531" alt="Manors Greenskeeper Chino Trouser" />
+              <div class="gear-slide-info">
+                <div class="gear-slide-brand">Manors</div>
+                <div class="gear-slide-name">Greenskeeper Chino Trouser — Midnight</div>
+                <div class="gear-slide-price">$155.00</div>
+              </div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://shop.aclgolf.com/products/mackenzie-x-acl-golf-8-olive-waxed-canvas-carry-bag" target="_blank" rel="noopener">
+              <img src="https://shop.aclgolf.com/cdn/shop/files/2025_05_11_ACL_Golf_ACL_GOLF_BAG_OLIVE_107.jpg?v=1747430227" alt="MacKenzie × ACL Golf Olive Waxed Canvas Carry Bag" />
+              <div class="gear-slide-info">
+                <div class="gear-slide-brand">MacKenzie × ACL Golf</div>
+                <div class="gear-slide-name">8" Olive Waxed Canvas Carry Bag</div>
+                <div class="gear-slide-price">$850.00</div>
+              </div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.seamusgolf.com/products/brown-tribeca-suede" target="_blank" rel="noopener">
+              <img src="https://www.seamusgolf.com/cdn/shop/files/BROWNSUEDE_DR_BODY_a1f7ecce-d572-4428-b73e-e0898df44e96_edited.png?v=1764683380" alt="Seamus Brown Tribeca Suede Headcover" />
+              <div class="gear-slide-info">
+                <div class="gear-slide-brand">Seamus Golf</div>
+                <div class="gear-slide-name">Brown Tribeca Suede Headcover</div>
+                <div class="gear-slide-price">$110.00</div>
+              </div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.jonessportsco.com/collections/gear/products/script-jones-valuables-pouch-forest-green" target="_blank" rel="noopener">
+              <img src="https://www.jonessportsco.com/cdn/shop/files/JSC_Tremont_PouchGreen-1_540x.jpg?v=1755625251" alt="Jones Sports Co. Valuables Pouch — Forest Green" />
+              <div class="gear-slide-info">
+                <div class="gear-slide-brand">Jones Sports Co.</div>
+                <div class="gear-slide-name">Script Jones Valuables Pouch — Forest Green</div>
+                <div class="gear-slide-price">$95.00</div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Earth Tones Edit — 5 pieces for the understated round.</div>
+      <div class="card-text">Forest cashmere, olive waxed canvas, brown suede. From a hand-stitched MacKenzie × ACL carry bag to a Seamus headcover that'll patina with every round. Dark, quiet, built to last. $95–$850.</div>
+      <div class="gear-dots" data-dots="earth"></div>
+      <div class="gear-counter" data-counter="earth">1 / 5</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · New</span>
+        <span class="card-votes"><span class="vote-up">178</span><span class="comments">◎ 41</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- NEWS — Malbon "Birds of Georgia" × Jason Day at the Masters -->
+  <a href="https://www.si.com/golf/gear/jason-day-will-wear-bird-print-masters-malbon-push-fashion-limits" class="card" data-type="news" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[News]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_0,w_1289,h_725/c_fill,w_1200,ar_4:5,f_auto,q_auto,g_auto/images%2FvoltaxMediaLibrary%2Fmmsport%2Fsi%2F01kn7k3b1k2as9v89sp9.jpg" alt="Jason Day in Malbon's Birds of Georgia jacket at the 2026 Masters" style="aspect-ratio: 4/5; object-fit: cover; object-position: center top;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Augusta told Jason Day to lose the bird pants.</div>
+      <div class="card-text">Malbon's "Birds of Georgia" collection — scarlet tanagers, cardinals, blue jays, the works — was supposed to be a full head-to-toe look. Augusta National said solid pants only. Stephen Malbon's been texting Day bird sounds for six months: "If you know the sounds of birds, you'll make more birdies."</div>
+      <div class="card-meta">
+        <span class="card-source">si.com · New</span>
+        <span class="card-votes">
+          <span class="vote-up">263</span>
+          <span class="comments">◎ 71</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- DROP — Vuori x Tom Holland -->
+  <a href="https://vuoriclothing.com/pages/tom-holland" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://cdn.bfldr.com/JUZN72U0/at/pkjn3bs2gckcnz59kgfk8t/051-Tom-LP-Categories-Golf-Desktop.jpg?auto=webp&width=1200&height=2117&crop=center" alt="Tom Holland teeing off in the Vuori Aim Pant" style="aspect-ratio: 4/5; object-fit: cover; object-position: center top;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Vuori taps Tom Holland — and leads with golf.</div>
+      <div class="card-text">Spider-Man is a golf guy now. Vuori's "The Rise. The Shine." campaign puts Holland front and center in the Aim Pant, teeing off alongside their travel and training lines. The golf play is intentional — and the Aim Pant might be the move for anyone who wants stretch without the golf-brand logo.</div>
+      <div class="card-meta">
+        <span class="card-source">vuoriclothing.com · New</span>
+        <span class="card-votes">
+          <span class="vote-up">142</span>
+          <span class="comments">◎ 38</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- QUOTE — Ben Hogan -->
+  <div class="card card-quote" data-type="quote">
+    <span class="card-tag" style="position:static;">[Quote]</span>
+    <blockquote>"The most important shot in golf is the next one."</blockquote>
+    <div class="quote-row">
+      <div class="quote-portrait" style="width:48px;height:48px;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;letter-spacing:0.05em;color:var(--paper);flex-shrink:0;">BH</div>
+      <div>
+        <cite style="display:block;">— Ben Hogan</cite>
+        <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;display:block;margin-top:2px;">American, 9x Major Champion, 1912–1997</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FIELD NOTE — Solo twilight at Hancock -->
+  <div class="card" data-type="field" style="cursor:default;">
+    <div class="card-media">
+      <span class="card-tag flag">[Field Note]</span>
+      <img src="https://images.unsplash.com/photo-1699058455521-2d3d52e04861?w=800" alt="Twilight on the fairway at Hancock Golf Course" style="aspect-ratio: 3/4; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title" style="font-style:italic;">Solo twilight at Hancock, a Tuesday.</div>
+      <div class="card-text">Hancock at 6 p.m. on a Tuesday. Just me and the live oaks and a three-quarter seven-iron I keep trying to trust. Shadows long enough to make every putt look uphill. Finished before dark, didn't keep score.</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · Just now</span>
+        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Mackenzie Collabs -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="mackenzie">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://jain.golf/products/jain-mackenzie-canvas-bag" target="_blank" rel="noopener">
+              <img src="https://jain.golf/cdn/shop/products/JAIN.GOLF-2.jpg?v=1678145554" alt="Jain x MacKenzie 1st Edition Canvas Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Jain Golf</div><div class="gear-slide-name">1st Edition Canvas Bag</div><div class="gear-slide-price">$720.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://donaldross.com/products/dr-x-mackenzie-clubmaker-carry-bag-v2" target="_blank" rel="noopener">
+              <img src="https://donaldross.com/cdn/shop/files/IMG_2642.jpg?v=1762455600" alt="Donald Ross x MacKenzie Clubmaker Carry Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Donald Ross</div><div class="gear-slide-name">Clubmaker Carry Bag V2</div><div class="gear-slide-price">$795.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://holdernessandbourne.com/pages/h-b-x-mackenzie-golf-bag" target="_blank" rel="noopener">
+              <img src="https://holdernessandbourne.com/cdn/shop/files/MacKenzie_Golf_Bag_CC_JW-1_6a4b9732-07c8-47af-a91b-b11198fd456c.jpg?v=1721228402" alt="Holderness & Bourne x MacKenzie Golf Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Holderness & Bourne</div><div class="gear-slide-name">10th Anniversary Edition</div><div class="gear-slide-price">Limited</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://studentsgolf.com/products/ssc-x-students-x-mackenzie-golf-bag" target="_blank" rel="noopener">
+              <img src="https://studentsgolf.com/cdn/shop/files/Studentsgolf6976898dac44586976898dac5ca.622267296976898dac5ca.jpg?v=1770678671" alt="Students x SSC x MacKenzie Golf Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Students × SSC</div><div class="gear-slide-name">Cordura Camo Edition</div><div class="gear-slide-price">$875.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sugarloafsocialclub.com/products/quiet-golf-mac-bag" target="_blank" rel="noopener">
+              <img src="https://www.sugarloafsocialclub.com/cdn/shop/files/QG_SSC_Drop_PT1-1all.jpg?v=1739482461&width=2048" alt="Quiet Golf x SSC MacKenzie Golf Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Quiet Golf × SSC</div><div class="gear-slide-name">Owl & Arrow Edition</div><div class="gear-slide-price">$875.00</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.fyfegolf.com/products/mackenzie-golf-bag-x-fyfe-18th-edition-shooters-club" target="_blank" rel="noopener">
+              <img src="https://www.fyfegolf.com/cdn/shop/files/mackenzie-golf-bag-x-fyfe-18th-edition-shooters-club-4476420.jpg?v=1762942860" alt="Fyfe x MacKenzie 18th Edition Shooters Club" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Fyfe Golf</div><div class="gear-slide-name">18th Edition — Shooters Club</div><div class="gear-slide-price">$895.00</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The MacKenzie Collab Edit — 6 bags you can't buy on their site.</div>
+      <div class="card-text">Oregon-made, hand-stitched, always limited. From Jain's treated canvas to Fyfe's Dundee mill cloth — the best MacKenzie bags live outside MacKenzie. $720–$895.</div>
+      <div class="gear-dots" data-dots="mackenzie"></div>
+      <div class="gear-counter" data-counter="mackenzie">1 / 6</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · New</span>
+        <span class="card-votes"><span class="vote-up">214</span><span class="comments">◎ 52</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Shoes -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="shoes">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0904/5914/4474/files/aae-right-shoe-side-angle-g-fore-mg4-24-spikeless.jpg?v=1774938368" alt="G/FORE MG4+ Spikeless Golf Shoe" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">G/FORE</div><div class="gear-slide-name">MG4+ Spikeless — Snow/Surf</div><div class="gear-slide-price">$195.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0542/2419/1681/products/Jordan-Eastside-Golf-ADG-03.png?v=1668262165" alt="Eastside Golf x Air Jordan ADG 4 Grey" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Eastside Golf × Jordan</div><div class="gear-slide-name">Air Jordan ADG 4 — Grey</div><div class="gear-slide-price">$205.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0264/8060/7341/files/Nike-Golf-Air-Jordan-1-Low-G-Spiked-Shoes-IQ3417-100-1_d52322ef-8cbd-4176-89ef-02aa627be506.jpg?v=1775037979" alt="Nike Air Jordan 1 Low G Spiked White/Fir" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Nike (Jordan)</div><div class="gear-slide-name">AJ1 Low G Spiked — White/Fir</div><div class="gear-slide-price">$175.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0558/4169/files/nobull-footwear-men-s-leather-golf-shoe-1194038334.png?v=1760798655" alt="NOBULL Leather Golf Shoe White" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">NOBULL</div><div class="gear-slide-name">Leather Golf Shoe — White</div><div class="gear-slide-price">$170.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0605/9583/1015/files/FootJoyPremiereSeriesPackardMen_sSpikedGolfShoes2026-54561_2_a06f0da4-2082-4496-b9f3-922d338a7fc2.jpg?v=1770383523" alt="FootJoy Premiere Series Packard 2026" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">FootJoy</div><div class="gear-slide-name">Premiere Packard 2026</div><div class="gear-slide-price">$250.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0264/8060/7341/files/New-Balance-997-Golf-Shoes-MG997WK-1.png?v=1775135290" alt="New Balance 997 Golf Shoe White/Black" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">New Balance</div><div class="gear-slide-name">997 Golf — White/Black</div><div class="gear-slide-price">$160.00</div></div>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Shoe Edit — 6 pairs that belong on and off the course.</div>
+      <div class="card-text">G/FORE spikeless, Jordan collabs, NOBULL minimalism, FootJoy tour-proven, and New Balance retro. Spikeless to spiked, $160–$250.</div>
+      <div class="gear-dots" data-dots="shoes"></div>
+      <div class="gear-counter" data-counter="shoes">1 / 6</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · 1d</span>
+        <span class="card-votes"><span class="vote-up">178</span><span class="comments">◎ 41</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ITEM — Sentinel Golf Minami Pullover Hood -->
+  <a href="https://www.sentinelgolf.us/shop/p/8t95uvw1ec28h1za76ycshtzy2kvha-57hyk-8trkf-6g8w5-b2y36-a7r98-ldyan-4y4zm-x76y7-dwng2-ph6pz-m8frh-emfez-7ege7-4r22k-2kt58-5xn5k-ltce8-ahn8s-49fck" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[Item]</span>
+      <span class="price-tag" style="position:absolute;top:10px;right:10px;padding:4px 8px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;z-index:2;">$188</span>
+      <div class="card-hover-overlay"></div>
+      <img src="http://static1.squarespace.com/static/5f7b7302cb6064569d654760/5f7ca15041467b27b1b1db69/69e0f399e8c53572a3f13a52/1776350105435/ssd2.jpg?format=1500w" alt="Sentinel Golf Minami Pullover Hood in Oatmeal" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Sentinel Golf · Minami Pullover Hood in "Oatmeal."</div>
+      <div class="card-text">100% cotton, knit and sewn in Japan by Minami Co. (est. 1935). Triple needle cover stitched seams. The kind of hoodie that doesn't need a logo to say something.</div>
+      <div class="card-meta">
+        <span class="card-source">Sentinel Golf · New</span>
+        <span class="card-votes">
+          <span class="vote-up">94</span>
+          <span class="comments">◎ 16</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 74%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">53 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- ITEM — Gumtree Golf Heirloom Quilt Putter Cover -->
+  <a href="https://www.gumtreegolfandnature.com/shop/p/made-in-manhattan-headcover-azdys-e9ree-hccpz" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[Item]</span>
+      <span class="price-tag" style="position:absolute;top:10px;right:10px;padding:4px 8px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;z-index:2;">$120</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://images.squarespace-cdn.com/content/v1/62df2055174c772d5220ba18/e19b49bf-cf85-403c-9b82-9a8bdb07befe/DSCF5122.jpg" alt="Gumtree Golf Heirloom Quilt Putter Cover" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Gumtree Golf · Heirloom Quilt Putter Cover.</div>
+      <div class="card-text">One-of-a-kind blade putter cover made by hand in Manhattan's garment district from vintage 1960s-80s quilted cotton. Cream fleece interior, magnet closure. 1 of 30.</div>
+      <div class="card-meta">
+        <span class="card-source">Gumtree Golf · New</span>
+        <span class="card-votes">
+          <span class="vote-up">87</span>
+          <span class="comments">◎ 19</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 82%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">64 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 1 · FIELD NOTE — Dawn patrol -->
+  <div class="card" data-type="field" style="cursor:default;">
+    <div class="card-media">
+      <span class="card-tag flag">[Field Note]</span>
+      <img src="https://images.unsplash.com/photo-1555117456-af631f9ff82b?w=800" alt="Early morning dew on a golf course at dawn" style="aspect-ratio: 3/4; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Dawn patrol at Roy Kizer, April 12.</div>
+      <div class="card-text">Nobody on the tee sheet before 6:30. Dew thick enough to track your ball by the line it cuts. Nine holes in an hour twelve, barefoot on 4 and 5 because the grass asked nicely.</div>
+      <div class="card-meta">
+        <span class="card-source">Austin · 2h ago</span>
+        <span class="card-votes">
+          <span class="vote-up">174</span>
+          <span class="comments">◎ 23</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 · DROP — Manors SS26 Press Room Capsule -->
+  <a href="drops/manors-ss26.html" class="card" data-type="drop">
+    <div class="card-media">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 4/5; background: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--paper); gap: 10px; padding: 24px; text-align: center;">
+        <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5;">SS26 Collection</div>
+        <div style="font-family: var(--serif); font-style: italic; font-size: 32px; line-height: 1.1;">Manors<br/>Press Room</div>
+        <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.6; margin-top: 4px;">7 Pieces · Out Now</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Manors · SS26 Press Room Capsule.</div>
+      <div class="card-text">Unlined cotton, waxed hems, and the kind of restraint most golf brands forgot. Seven pieces built to outlast the season they dropped in.</div>
+      <div class="card-meta">
+        <span class="card-source">Manors · 4h ago</span>
+        <span class="card-votes">
+          <span class="vote-up">186</span>
+          <span class="comments">◎ 31</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 85%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">152 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- ITEM — Manors Recycled Greenskeeper Trouser -->
+  <a href="https://manors.com/products/recycled-greenskeeper-trouser-steel" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[Item]</span>
+      <span class="price-tag" style="position:absolute;top:10px;right:10px;padding:4px 8px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;z-index:2;">$175</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://s3.store.hypebeast.com/media/image/26/21/pants-2-1-fa9b7.jpg" alt="Manors Recycled Greenskeeper Trouser in Steel" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Manors · Recycled Greenskeeper Trouser in "Steel."</div>
+      <div class="card-text">178gsm recycled nylon, 4-way stretch, PFC-free water repellent finish. Bluesign-certified. Double pleats, crotch gusset, YKK zip pockets — built for 18 in any weather.</div>
+      <div class="card-meta">
+        <span class="card-source">Manors · 4h ago</span>
+        <span class="card-votes">
+          <span class="vote-up">112</span>
+          <span class="comments">◎ 14</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 78%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">126 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 3 · QUOTE — Mo Norman -->
+  <div class="card card-quote" data-type="quote">
+    <span class="card-tag" style="position:static;">[Quote]</span>
+    <blockquote>"I hit it where I'm looking. Simple as that."</blockquote>
+    <div class="quote-row">
+      <div class="quote-portrait" style="width:48px;height:48px;border-radius:50%;background:var(--grass);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;letter-spacing:0.05em;color:var(--paper);flex-shrink:0;">MN</div>
+      <div>
+        <cite style="display:block;">— Mo Norman</cite>
+        <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;display:block;margin-top:2px;">Canadian, 1929–2004</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 · MUNI GUIDE — Lions 6 (links to detail page) -->
+  <a href="guides/lions-6.html" class="card" data-type="guide">
+    <div class="card-media">
+      <span class="card-tag grass">[Muni Guide]</span>
+      <div style="aspect-ratio: 4/3; background: #A8A878; display: flex; align-items: center; justify-content: center; color: var(--ink); font-family: var(--serif); font-style: italic; font-size: 48px; font-weight: 400;">Lions · 6</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Lions Hole 6 — a dogleg that punishes the bold.</div>
+      <div class="card-text">Three lines off the tee. The lay-up most players should hit, the fade around the corner, and the driver over the trees nobody's ever pulled off.</div>
+      <div class="card-meta">
+        <span class="card-source">Par 4 · 367 yds</span>
+        <span class="card-votes">
+          <span class="vote-up">67</span>
+          <span class="comments">◎ 12</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 5 · SCOREBOARD — Lions Week 16 -->
+  <div class="card card-score" data-type="score" style="cursor:default;">
+    <div class="card-body" style="padding: 16px;">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px;">
+        <span class="card-tag" style="position: static; background: var(--grass); color: var(--paper);">[Scoreboard]</span>
+        <span class="mono" style="opacity: 0.55;">Week 16</span>
+      </div>
+      <div class="card-title" style="margin-bottom: 12px;">Lions Muni · This Week.</div>
+      <div class="score-row">
+        <span class="pos">1.</span>
+        <span class="name">slicefixer_atx</span>
+        <span class="score">74</span>
+      </div>
+      <div class="score-row">
+        <span class="pos">2.</span>
+        <span class="name">bunkered_and_proud</span>
+        <span class="score">78</span>
+      </div>
+      <div class="score-row">
+        <span class="pos">3.</span>
+        <span class="name">westlake_wanda</span>
+        <span class="score">81</span>
+      </div>
+      <div class="score-row">
+        <span class="pos">4.</span>
+        <span class="name">tee_totaler</span>
+        <span class="score">83</span>
+      </div>
+      <div class="score-row">
+        <span class="pos">5.</span>
+        <span class="name">rough_rider_78704</span>
+        <span class="score">84</span>
+      </div>
+      <div class="card-meta" style="margin-top: 14px;">
+        <span class="card-source">+ 42 rounds posted</span>
+        <span class="card-votes">
+          <span class="vote-up">204</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 · NEWS — Golf.com: Austin's Muny worth saving -->
+  <a href="https://golf.com/travel/austin-unique-golf-places-worth-saving-lions/" class="card" data-type="news" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[News]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 16/10; background: #141414; color: var(--paper); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; font-size: 28px; padding: 20px; text-align: center; line-height: 1.15;">Golf.com</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Golf.com names Lions Muni one of Austin's places worth saving.</div>
+      <div class="card-text">The Muny — open since 1924, 70K rounds a year, where Crenshaw and Kite learned the game. First course in the South to desegregate. Now Spieth and the Conservancy are fighting to keep it.</div>
+      <div class="card-meta">
+        <span class="card-source">Golf.com · 1d</span>
+        <span class="card-votes">
+          <span class="vote-up">482</span>
+          <span class="comments">◎ 97</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 7 · ITEM — Eastside Golf × Air Jordan 1 Low G -->
+  <a href="https://eastsidegolf.com/products/black-multi-air-jordan-1-low-og" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[Item]</span>
+      <span class="price-tag" style="position:absolute;top:10px;right:10px;padding:4px 8px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;z-index:2;">$155</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://eastsidegolf.com/cdn/shop/files/AURORA_DD9315-117_PHSRH000-2000.jpg?crop=center&height=2400&v=1768338970&width=2000" alt="Eastside Golf x Air Jordan 1 Low G in White/Linen" style="aspect-ratio: 4/5; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Eastside Golf × Jordan · AJ1 Low G.</div>
+      <div class="card-text">White and linen leather, clean as Sunday morning. Olajuwon and Earl keep making the case that golf shoes don't have to look like golf shoes.</div>
+      <div class="card-meta">
+        <span class="card-source">Eastside Golf · 2d</span>
+        <span class="card-votes">
+          <span class="vote-up">412</span>
+          <span class="comments">◎ 67</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 91%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">284 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 8 · FIELD NOTE — walking nine -->
+  <div class="card" data-type="field" style="cursor:default;">
+    <div class="card-media">
+      <span class="card-tag flag">[Field Note]</span>
+      <img src="https://images.unsplash.com/photo-1646505596852-feefe7a4111b?w=800" alt="Golfer walking the course with a carry bag" style="aspect-ratio: 3/4; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+    <div class="card-title" style="font-size: 22px; margin-bottom: 10px;">The case for walking nine after work.</div>
+    <div class="card-text" style="margin-bottom: 14px;">Leave the office at 5:15, tee off by 5:50, done before dark. No cart, no range balls, no swing thoughts. Just five clubs and whatever the course gives you. This is the version of golf that keeps me coming back.</div>
+    <div class="card-meta">
+      <span class="card-source">Lenny · 3d</span>
+      <span class="card-votes">
+        <span class="vote-up">147</span>
+        <span class="comments">◎ 38</span>
+      </span>
+    </div>
+    </div>
+  </div>
+
+  <!-- 9 · ITEM — Quiet Golf Montecito Cashmere Sweater -->
+  <a href="https://quietgolf.com/collections/tops" class="card" data-type="drop" target="_blank" rel="noopener">
+    <div class="card-media">
+      <span class="card-tag rough">[Item]</span>
+      <span class="price-tag" style="position:absolute;top:10px;right:10px;padding:4px 8px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:0.1em;z-index:2;">$328</span>
+      <div class="card-hover-overlay"></div>
+      <img src="https://quietgolf.com/cdn/shop/files/QG_Montecito_Sweater_pine_3_77c8cd8e-8cd9-4992-9dbd-42ed50707d9a.jpg" alt="Quiet Golf Montecito Cashmere Sweater in Pine" style="aspect-ratio: 1/1; object-fit: cover;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Quiet Golf · Montecito Cashmere Sweater in "Pine."</div>
+      <div class="card-text">Full cashmere, the color of a back nine in December. No branding on the front. The kind of piece that says everything by saying nothing.</div>
+      <div class="card-meta">
+        <span class="card-source">Quiet Golf · 3d</span>
+        <span class="card-votes">
+          <span class="vote-up">73</span>
+          <span class="comments">◎ 11</span>
+        </span>
+      </div>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 64%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire 🔥</button>
+        </div>
+        <div class="vote-bar-count">87 votes</div>
+      </div>
+    </div>
+  </a>
+
+  <!-- 10 · NEWS — Hancock turns 125 -->
+  <div class="card" data-type="news" style="cursor:default;">
+    <div class="card-media">
+      <span class="card-tag rough">[News]</span>
+      <div style="aspect-ratio: 3/2; background: var(--grass); display: flex; align-items: center; justify-content: center; color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 28px; padding: 20px; text-align: center;">Hancock<br/>Golf Course</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Hancock turns 125. Still nine holes, still $22, still perfect.</div>
+      <div class="card-text">The oldest course in Texas celebrates with a Sunday scramble and a gallery of photos dating back to 1901. Registration opens next week.</div>
+      <div class="card-meta">
+        <span class="card-source">Austin Muni · 4d</span>
+        <span class="card-votes">
+          <span class="vote-up">263</span>
+          <span class="comments">◎ 41</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 11 · MUNI GUIDE — Hancock Hole 1 -->
+  <a href="guides/hancock-1.html" class="card" data-type="guide">
+    <div class="card-media">
+      <span class="card-tag grass">[Muni Guide]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 4/3; background: #2D4A2B; display: flex; align-items: center; justify-content: center; color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 44px; font-weight: 400;">Hancock · 1</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Hancock Hole 1 — the oldest first tee in Texas.</div>
+      <div class="card-text">Built in 1899, this opening par 4 plays 324 from the blues — the #1 handicap hole on the card. No warm-up. Just step up and earn your way to the green.</div>
+      <div class="card-meta">
+        <span class="card-source">Par 4 · 324 yds</span>
+        <span class="card-votes">
+          <span class="vote-up">112</span>
+          <span class="comments">◎ 24</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- MUNI GUIDE — Roy Kizer Hole 15 -->
+  <a href="guides/roy-kizer-15.html" class="card" data-type="guide">
+    <div class="card-media">
+      <span class="card-tag grass">[Muni Guide]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 4/3; background: linear-gradient(180deg, #4a6a48 0%, #2D4A2B 60%, #1a2e1a 100%); display: flex; align-items: center; justify-content: center; color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 44px; font-weight: 400;">Roy Kizer · 15</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Roy Kizer Hole 15 — the prettiest par 3 you'll ever bogey.</div>
+      <div class="card-text">Short, scenic, and sneaky. At 137 from the tips it's wedge territory — but the water left and the wind off the creek make club selection a mind game. Easiest hole on the card, if you stay dry.</div>
+      <div class="card-meta">
+        <span class="card-source">Par 3 · 137 yds</span>
+        <span class="card-votes">
+          <span class="vote-up">97</span>
+          <span class="comments">◎ 31</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- MUNI GUIDE — Morris Williams Hole 7 -->
+  <a href="guides/morris-williams-7.html" class="card" data-type="guide">
+    <div class="card-media">
+      <span class="card-tag grass">[Muni Guide]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 4/3; background: linear-gradient(180deg, #A8A878 0%, #6b7a5e 50%, #2D4A2B 100%); display: flex; align-items: center; justify-content: center; color: var(--paper); font-family: var(--serif); font-style: italic; font-size: 38px; font-weight: 400;">Morris Williams · 7</div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Morris Williams Hole 7 — the blind tee shot that rewards trust.</div>
+      <div class="card-text">You can't see the fairway from the tee. The ridge swallows your ball for three full seconds. Pick a line, commit, and find out what kind of lie the golf gods gave you.</div>
+      <div class="card-meta">
+        <span class="card-source">Par 4 · 404 yds</span>
+        <span class="card-votes">
+          <span class="vote-up">76</span>
+          <span class="comments">◎ 17</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- EVENT — Texas Children's Legacy Golf Classic -->
+  <a href="events/texas-childrens-classic-2026.html" class="card" data-type="news">
+    <div class="card-media">
+      <span class="card-tag flag">[Event]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 3/2; background: var(--ink); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--paper); gap: 8px; padding: 20px; text-align: center;">
+        <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5;">May 14, 2026</div>
+        <div style="font-family: var(--serif); font-style: italic; font-size: 28px; line-height: 1.1;">Texas Children's<br/>Legacy Golf Classic</div>
+        <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.6; margin-top: 4px;">Lions Municipal Golf Course</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Texas Children's Legacy Golf Classic at Lions — May 14.</div>
+      <div class="card-text">Second annual charity tournament at the historic Lions Municipal. Last year raised nearly $200K for the Child Life Department. Presented by McCarthy Building Companies.</div>
+      <div class="card-meta">
+        <span class="card-source">Lions Muni · May 14</span>
+        <span class="card-votes">
+          <span class="vote-up">68</span>
+          <span class="comments">◎ 12</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- EVENT — Hill Country Amateur Championship -->
+  <a href="events/hill-country-amateur-2026.html" class="card" data-type="news">
+    <div class="card-media">
+      <span class="card-tag rough">[Event]</span>
+      <div class="card-hover-overlay"></div>
+      <div style="aspect-ratio: 3/2; background: var(--grass); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--paper); gap: 8px; padding: 20px; text-align: center;">
+        <div style="font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5;">May 16–17, 2026</div>
+        <div style="font-family: var(--serif); font-style: italic; font-size: 28px; line-height: 1.1;">Hill Country<br/>Amateur Championship</div>
+        <div style="font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.6; margin-top: 4px;">Crystal Falls Golf Club · Leander</div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Hill Country Amateur Championship — May 16–17 in Leander.</div>
+      <div class="card-text">Two-day, 36-hole individual stroke play event at Crystal Falls Golf Club. One of the marquee amateur tournaments in the Austin-area calendar. Open to all skill levels with multiple flights.</div>
+      <div class="card-meta">
+        <span class="card-source">Leander · May 16–17</span>
+        <span class="card-votes">
+          <span class="vote-up">54</span>
+          <span class="comments">◎ 9</span>
+        </span>
+      </div>
+    </div>
+  </a>
+
+  <!-- 12 · FIELD NOTE — Lions parking lot Saturday -->
+  <div class="card" data-type="field" style="cursor:default;">
+    <div class="card-media">
+      <span class="card-tag flag">[Field Note]</span>
+      <img src="https://images.unsplash.com/photo-1609451894243-916955f873ad?w=800" alt="Golf course parking lot on an early Saturday morning" style="aspect-ratio: 9/16; object-fit: cover; display: block; width: 100%;" loading="lazy" />
+    </div>
+    <div class="card-body">
+      <div class="card-title">Eighteen cars in the Lions lot before 7 a.m. on a Saturday.</div>
+      <div class="card-text">A guy in cowboy boots pulling a push cart out of a Tacoma. Two kids with a shared bag. Someone's grandpa doing stretches against the ball washer. This is the whole sport.</div>
+      <div class="card-meta">
+        <span class="card-source">Lions Muni · 5d</span>
+        <span class="card-votes">
+          <span class="vote-up">289</span>
+          <span class="comments">◎ 52</span>
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Ball Markers -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="markers">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0570/2565/9037/files/TeddyRooseveltBallMarker3DPresaleMainProductPhoto.webp?v=1775851008" alt="Matchstick Golf Teddy Roosevelt Ball Marker" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Matchstick Golf</div><div class="gear-slide-name">Teddy Roosevelt</div><div class="gear-slide-price">$20.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0570/2565/9037/files/old-fashioned-main-product-photo-WEB.jpg?v=1696980905" alt="Matchstick Golf Old Fashioned Ball Marker" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Matchstick Golf</div><div class="gear-slide-name">Old Fashioned</div><div class="gear-slide-price">$20.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0570/2565/9037/files/NewCashStackMainProductPhoto.webp?v=1759817858" alt="Matchstick Golf Cash Stack Ball Marker" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Matchstick Golf</div><div class="gear-slide-name">Cash Stack</div><div class="gear-slide-price">$20.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9834-FLM.jpg?v=1769016555" alt="Malbon Golf Tour Divot Ball Marker Flame" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Malbon Golf</div><div class="gear-slide-name">Tour Divot Ball Marker — Flame</div><div class="gear-slide-price">$38.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9868-GRN1.png?v=1763671883" alt="Malbon Golf M Script Ball Marker Green" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Malbon Golf</div><div class="gear-slide-name">M Script Ball Marker — Green</div><div class="gear-slide-price">$34.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/2435/1447/products/SouthPark_websitePhotos_MainImagesFloatingArtboard7.jpg?v=1762201661" alt="Pins & Aces South Park Randy Ball Marker" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Pins & Aces</div><div class="gear-slide-name">South Park — Randy</div><div class="gear-slide-price">$14.95</div></div>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Ball Marker Edit — 6 markers worth pocketing.</div>
+      <div class="card-text">Matchstick Golf's hand-painted enamel, Malbon's Tour Divot series, and a South Park collab from Pins & Aces. $15–$38.</div>
+      <div class="gear-dots" data-dots="markers"></div>
+      <div class="gear-counter" data-counter="markers">1 / 6</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · 1d</span>
+        <span class="card-votes"><span class="vote-up">94</span><span class="comments">◎ 18</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Headcovers -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="headcovers">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0129/1462/files/LakersLarge.png?v=1776288871" alt="Seamus Golf Upcycled NBA Jersey Head Cover Lakers" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Seamus Golf</div><div class="gear-slide-name">Upcycled NBA Jersey — Lakers</div><div class="gear-slide-price">$195.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0891/6290/7958/files/GEORGIA-FRONT.jpg?v=1775828348" alt="Dormie Workshop Peach State Georgia License Plate Headcover" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Dormie Workshop</div><div class="gear-slide-name">Peach State — Georgia License Plate</div><div class="gear-slide-price">$300.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/MW-A99-LGB_d0335ff1-9b72-43e1-b7bf-b938c8bfc137.jpg?v=1775664326" alt="Malbon Golf Womens Driver Cover Light Blue" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Malbon Golf</div><div class="gear-slide-name">Driver Cover — Light Blue</div><div class="gear-slide-price">$128.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0554/1357/1734/files/Ghillie-Driver_Fyfe-Golf.jpg?v=1775226716" alt="Fyfe Golf Ghillie Olive Green Waxed Canvas Headcover" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Fyfe Golf</div><div class="gear-slide-name">Ghillie Waxed Canvas — Olive</div><div class="gear-slide-price">$95.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0554/1357/1734/files/rothesay-harris-tweed-headcover-3908813.jpg?v=1762942941" alt="Fyfe Golf Rothesay Harris Tweed Headcover" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Fyfe Golf</div><div class="gear-slide-name">Rothesay Harris Tweed</div><div class="gear-slide-price">$95.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/SQ19177791.jpg?v=1774983142" alt="Malbon Golf Birds of Georgia Sparrow Embroidered Driver Cover" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Malbon Golf</div><div class="gear-slide-name">Birds of Georgia Sparrow Driver</div><div class="gear-slide-price">$160.00</div></div>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Headcover Edit — 6 covers that deserve their own bag tag.</div>
+      <div class="card-text">Seamus upcycled NBA jerseys, Dormie's handcrafted leather, Fyfe's Scottish Harris Tweed, and Malbon's embroidered Birds of Georgia. $95–$300.</div>
+      <div class="gear-dots" data-dots="headcovers"></div>
+      <div class="gear-counter" data-counter="headcovers">1 / 6</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · 2d</span>
+        <span class="card-votes"><span class="vote-up">142</span><span class="comments">◎ 23</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Hats -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="hats">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9849-WYW-SR2.jpg?v=1775857647" alt="Malbon Golf Reversible Velasco Bucket Hat" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Malbon Golf</div><div class="gear-slide-name">Reversible Velasco Bucket Hat</div><div class="gear-slide-price">$88.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/60945558-YLW.jpg?v=1774981249" alt="Malbon Golf New Era 9TWENTY Hat" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Malbon Golf</div><div class="gear-slide-name">New Era 9TWENTY Hat</div><div class="gear-slide-price">$48.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0569/7205/0614/files/USA-DADHAT_d9b9b975-8ee0-4cc8-bb4b-5826b60bb1d7.jpg?v=1772587843" alt="Quiet Golf USA Dad Hat" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Quiet Golf</div><div class="gear-slide-name">USA Dad Hat</div><div class="gear-slide-price">$50.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0569/7205/0614/files/qg_SMATHERS_HATS_cotton_forest.jpg?v=1770485471" alt="Quiet Golf x Smathers & Branson Flag Hat" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Quiet Golf</div><div class="gear-slide-name">Smathers & Branson Flag Hat</div><div class="gear-slide-price">$60.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/1028/7699/products/birds-of-condor-black-yellow-golf-tokyo-country-club-nylon-summer-cap-hat-front.jpg?v=1754978602" alt="Birds of Condor Tokyo Country Club Snapback" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Birds of Condor</div><div class="gear-slide-name">Tokyo Country Club Snapback</div><div class="gear-slide-price">$59.95</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/2435/1447/files/BF25_Hats_Last4_Ballmarker_AngleredoArtboard-32_54c599ff-1393-474c-9ed6-20fafc793b08.png?v=1765417294" alt="Pins & Aces Ace/King Black Perforated Rope Hat" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Pins & Aces</div><div class="gear-slide-name">Ace/King Perforated Rope Hat</div><div class="gear-slide-price">$39.95</div></div>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Hat Edit — 6 lids for golfers who skip the pro shop.</div>
+      <div class="card-text">Malbon buckets, Quiet Golf dad hats, Birds of Condor snapbacks — headwear from brands that actually get the culture. $40–$88.</div>
+      <div class="gear-dots" data-dots="hats"></div>
+      <div class="gear-counter" data-counter="hats">1 / 6</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · 3d</span>
+        <span class="card-votes"><span class="vote-up">156</span><span class="comments">◎ 27</span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- GEAR CAROUSEL — Golf Bags -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Drop]</span>
+      <div class="gear-carousel" data-carousel="bags">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_Bag_MossyOak_CountryDNA_a1_WEB.png?v=1745869463" alt="Sunday Golf Loma Bag Mossy Oak" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Sunday Golf</div><div class="gear-slide-name">Loma Bag — Mossy Oak Country DNA</div><div class="gear-slide-price">$144.99</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Ryder_Burnt_Orange_a7_WEB_2db35bb7-c7bd-4fbe-bb28-04cbe51acdab.png?v=1757607345" alt="Sunday Golf Ryder Stand Bag Burnt Orange" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Sunday Golf</div><div class="gear-slide-name">Ryder Stand Bag — Burnt Orange</div><div class="gear-slide-price">$249.99</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/3102/5646/files/LuxStandMonarchHero.png?v=1775147155" alt="Vessel Lux Stand Bag Monarch" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Vessel</div><div class="gear-slide-name">Lux Stand — Monarch</div><div class="gear-slide-price">$399.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0382/1885/8631/files/12_2bddf03c-9511-4d96-89e5-2f377956134a.png?v=1775856509" alt="MNML Golf MR2 Water The Cosmos" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">MNML Golf</div><div class="gear-slide-name">MR2 "Water The Cosmos"</div><div class="gear-slide-price">$699.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0693/6587/files/HeritageOriginal-Green-10.jpg?v=1744818356" alt="Jones Golf Original Jones Bag Evergreen" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Jones Golf</div><div class="gear-slide-name">Original Jones Bag — Evergreen</div><div class="gear-slide-price">$215.00</div></div>
+          </div>
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0150/9084/files/STITCH_2026_000SG2507_SL2gen2_FRNWD_7021.jpg?v=1773773057" alt="Stitch Golf SL2 Gen 2 Fernwood" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Stitch Golf</div><div class="gear-slide-name">SL2 Gen 2 — Fernwood</div><div class="gear-slide-price">$398.00</div></div>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">The Bag Edit — 6 bags for golfers who care what they carry.</div>
+      <div class="card-text">Sunday Golf's Mossy Oak Loma to MNML's hand-painted recycled ocean plastic MR2. Carry bags, stand bags, and one Jones original. $145–$699.</div>
+      <div class="gear-dots" data-dots="bags"></div>
+      <div class="gear-counter" data-counter="bags">1 / 6</div>
+      <div class="card-meta">
+        <span class="card-source">The Grassy Issue · 4d</span>
+        <span class="card-votes"><span class="vote-up">203</span><span class="comments">◎ 34</span></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="load-more" id="loadMore">
+    <button onclick="loadMoreCards()">Load more →</button>
+  </div>
+
+</section>
+
+<!-- GIVEAWAYS -->
+<section class="giveaways">
+  <div class="giveaways-header">
+    <div class="giveaways-label">
+      <span class="pulse-dot"></span>
+      Live Giveaways
+    </div>
+    <span class="giveaways-count">4 active</span>
+  </div>
+  <div class="giveaways-grid">
+
+    <a href="https://travismathew.com/blogs/stories/2026-travismathew-x-st-andrews-old-course-sweepstakes" target="_blank" rel="noopener" class="giveaway-card">
+      <div class="giveaway-img" style="background: linear-gradient(135deg, #2D4A2B 0%, #1a2d19 100%); color: var(--paper);">
+        <span class="giveaway-live">Live</span>
+        <span class="giveaway-ends">Draws May 17</span>
+        TravisMathew
+      </div>
+      <div class="giveaway-body">
+        <div class="giveaway-brand">TravisMathew × St Andrews</div>
+        <div class="giveaway-title">Win a 3-night golf trip for 4 to play the Old Course & Castle Course. Includes flights, Rusacks hotel, Callaway Quantum drivers, OGIO luggage + outfits. ~$4,900 value.</div>
+        <div class="giveaway-source">travismathew.com ↗</div>
+      </div>
+    </a>
+
+    <a href="https://thelongdrink.com/golfgiveaway2026" target="_blank" rel="noopener" class="giveaway-card">
+      <div class="giveaway-img" style="background: var(--flag); color: var(--paper);">
+        <span class="giveaway-live">Live</span>
+        <span class="giveaway-ends">Draws May 31</span>
+        Long Drink
+      </div>
+      <div class="giveaway-body">
+        <div class="giveaway-brand">The Long Drink Company</div>
+        <div class="giveaway-title">Grand prize: 3-night Birdie House retreat for 8 (Scottsdale, Pinehurst, or Myrtle Beach) + 2 days of golf + merch kits. 10 runners-up get a $340 golf gear kit. ~$25,000 value.</div>
+        <div class="giveaway-source">thelongdrink.com ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.schweppesgolf.com/Home/" target="_blank" rel="noopener" class="giveaway-card">
+      <div class="giveaway-img" style="background: #141414; color: var(--paper);">
+        <span class="giveaway-live">Live</span>
+        <span class="giveaway-ends">Draws Jul 13</span>
+        Schweppes
+      </div>
+      <div class="giveaway-body">
+        <div class="giveaway-brand">Schweppes Golf Sweepstakes</div>
+        <div class="giveaway-title">Win a trip to Las Vegas for 4 — flights, 2-night hotel, private Topgolf bay experience + $1,000 gift card. One entry per day. ~$8,325 value.</div>
+        <div class="giveaway-source">schweppesgolf.com ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.coronausa.com/pages/golf-2026" target="_blank" rel="noopener" class="giveaway-card">
+      <div class="giveaway-img" style="background: var(--rough); color: var(--ink);">
+        <span class="giveaway-live">Live</span>
+        <span class="giveaway-ends">Draws Dec 31</span>
+        Corona
+      </div>
+      <div class="giveaway-body">
+        <div class="giveaway-brand">Corona Premier Golf 2026</div>
+        <div class="giveaway-title">5 grand-prize golf trips for 4 (flights + 2-night hotel + $1,200 GolfNow credit) plus Corona × TravisMathew gear bundles with Vice balls. Runs all year.</div>
+        <div class="giveaway-source">coronausa.com ↗</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- EVENTS -->
+<section class="events">
+  <div class="events-header">
+    <div class="events-label">
+      <span class="cal-icon">&#9670;</span>
+      Austin Events
+    </div>
+    <span class="events-count">4 upcoming</span>
+  </div>
+  <div class="events-grid">
+
+    <a href="https://www.fairwayscantina.com/fairways-cantina-mens-open-championship" target="_blank" rel="noopener" class="event-card">
+      <div class="event-img">
+        <span class="event-date">May 16</span>
+        <span class="event-type">Tournament</span>
+        <img src="https://images.squarespace-cdn.com/content/v1/5fce494ed0f3a8752c51c983/b3a02d82-31de-40a7-b92a-c89985864128/Mens+Trophy+Website.png" alt="Fairways Cantina Men's Open Championship trophy" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+      </div>
+      <div class="event-body">
+        <div class="event-venue">Morris Williams Golf Course · Austin</div>
+        <div class="event-title">Fairways Cantina Men's Open Championship</div>
+        <div class="event-desc">2-Man Gross Best Ball at Morris Williams, hosted by the crew at Fairways Cantina. One of the best local tournaments on the Austin muni calendar. Sign up before it fills.</div>
+        <div class="event-source">fairwayscantina.com ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.texaschildrens.org/support/events/legacy-golf-classic-austin" target="_blank" rel="noopener" class="event-card">
+      <div class="event-img">
+        <span class="event-date">May 14</span>
+        <span class="event-type">Charity</span>
+        <img src="https://golf-pass.brightspotcdn.com/dims4/default/c7113e6/2147483647/strip/true/crop/927x927+257+0/resize/1200x1200!/format/webp/quality/90/?url=https%3A%2F%2Fgolf-pass-brightspot.s3.amazonaws.com%2Fe8%2F70%2F48f17d35b29e1eaa5790a71aef55%2F97648.jpg" alt="Lions Municipal Golf Course" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+      </div>
+      <div class="event-body">
+        <div class="event-venue">Lions Municipal Golf Course · Austin</div>
+        <div class="event-title">Texas Children's Legacy Golf Classic</div>
+        <div class="event-desc">2nd annual charity tournament at Lions. Presented by McCarthy Building Companies. Every dollar supports Child Life programs at Texas Children's Austin.</div>
+        <div class="event-source">texaschildrens.org ↗</div>
+      </div>
+    </a>
+
+    <a href="https://golfhub.golfgenius.com/events/1859d8e7-6b22-4019-9d7d-36edcb68f67d" target="_blank" rel="noopener" class="event-card">
+      <div class="event-img">
+        <span class="event-date">May 16–17</span>
+        <span class="event-type">Tournament</span>
+        <img src="https://www.crystalfallsgolf.com/wp-content/uploads/sites/8458/2022/03/003.jpg" alt="Crystal Falls Golf Club" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+      </div>
+      <div class="event-body">
+        <div class="event-venue">Crystal Falls GC · Leander</div>
+        <div class="event-title">Hill Country Amateur Championship</div>
+        <div class="event-desc">Two-day, 36-hole individual stroke play. One of the marquee amateur tournaments in the Austin area calendar. Multiple flights, all skill levels.</div>
+        <div class="event-source">austinamateurgolf.com ↗</div>
+      </div>
+    </a>
+
+    <a href="https://www.golfgenius.com/pages/9640050926186138951" target="_blank" rel="noopener" class="event-card">
+      <div class="event-img">
+        <span class="event-date">Ongoing</span>
+        <span class="event-type">League</span>
+        <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/crm/austin/IMG_4695-2_540DEAC4-EFD7-4BCA-9BD2CAC1E938BDF6_b2c069b2-a246-4fe8-b50ceee3d28b7340.jpg" alt="Butler Pitch and Putt" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy" />
+      </div>
+      <div class="event-body">
+        <div class="event-venue">Butler Pitch & Putt · Downtown Austin</div>
+        <div class="event-title">Butler Social Scramble</div>
+        <div class="event-desc">Get paired with new friends and scramble against the rest. Random teams, prizes for 1st and 2nd. All skill levels welcome. Downtown Austin's par-3 gem.</div>
+        <div class="event-source">butlerpitchandputt.com ↗</div>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- POST A SCORE -->
+<section class="score-section" id="submit">
+  <div class="score-section-header">
+    <div class="score-section-label">◎ Post a Score</div>
+    <span class="score-section-sub">Austin Munis Only</span>
+  </div>
+  <div class="score-form-wrap">
+    <form class="score-form" id="scoreForm">
+      <!-- Honeypot for spam -->
+      <input type="text" name="_honey" style="display:none" />
+
+      <div>
+        <label for="scoreCourse">Course</label>
+        <select id="scoreCourse" name="Course" required>
+          <option value="" disabled selected>Select a course</option>
+          <option value="Lions Municipal">Lions Municipal</option>
+          <option value="Jimmy Clay">Jimmy Clay</option>
+          <option value="Roy Kizer">Roy Kizer</option>
+          <option value="Hancock">Hancock</option>
+          <option value="Morris Williams">Morris Williams</option>
+          <option value="Riverside">Riverside</option>
+          <option value="Butler Pitch & Putt">Butler Pitch &amp; Putt</option>
+          <option value="Grey Rock">Grey Rock</option>
+          <option value="Roy Kizer Par 3">Roy Kizer Par 3</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="scoreTotal">Final Score</label>
+          <input type="number" id="scoreTotal" name="Score" placeholder="e.g. 82" min="40" max="150" required />
+        </div>
+        <div>
+          <label for="scoreName">Display Name</label>
+          <input type="text" id="scoreName" name="Display Name" placeholder="e.g. slicefixer_atx" required />
+        </div>
+      </div>
+      <div>
+        <label for="scoreEmail">Email</label>
+        <input type="email" id="scoreEmail" name="email" placeholder="you@email.com" required />
+      </div>
+      <div>
+        <label>Scorecard Photo (optional)</label>
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">◻</div>
+          <div class="upload-text">Drop a photo or click to upload</div>
+          <div class="upload-filename" id="uploadFilename"></div>
+          <input type="file" id="scorePhoto" name="Scorecard Photo" accept="image/*" onchange="handleUpload(this)" />
+        </div>
+      </div>
+      <button type="submit" class="score-submit" id="scoreSubmitBtn">Post My Score →</button>
+    </form>
+    <div class="score-info">
+      <div class="score-info-title">Post your round, make the board.</div>
+      <div class="score-info-text">We publish weekly leaderboards for every Austin muni. Submit your score and — if you're honest and we can verify — you'll show up on the board. Top scores get featured in the feed.</div>
+      <dl class="score-info-rules">
+        <dt>Courses</dt>
+        <dd>Austin municipal courses only. No private clubs, no resort rounds.</dd>
+        <dt>Verification</dt>
+        <dd>Upload a photo of your scorecard. We spot-check and trust the community.</dd>
+        <dt>Leaderboard</dt>
+        <dd>Updated every Monday morning. Best single round per player per week.</dd>
+        <dt>Privacy</dt>
+        <dd>Email is for verification only. Never shared, never sold.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<!-- VIBE BOARD -->
+<section class="vibe-board">
+  <div class="vibe-header">
+    <div class="vibe-label">◎ Vibe Board</div>
+    <span class="vibe-source">via Pinterest</span>
+  </div>
+  <div class="vibe-grid">
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/77/3a/85/773a85f84039deae4dab385bc006edce.jpg" alt="Golf style" loading="lazy" />
+      <div class="vibe-overlay"><span>The vibe</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/81/96/fb/8196fb87c1ceda7a24a1c31f33afe4ea.jpg" alt="The Masters poster" loading="lazy" />
+      <div class="vibe-overlay"><span>The Masters</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/45/0b/ef/450bef8adf35be750a633f58c5152ad7.jpg" alt="Golfer kneeling" loading="lazy" />
+      <div class="vibe-overlay"><span>Reading the line</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/11/f7/2a/11f72acf74cbbde7fb2faa1eb7b69885.jpg" alt="Golf culture" loading="lazy" />
+      <div class="vibe-overlay"><span>Eastside energy</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/e5/37/5f/e5375f118efa417bde7924a7d8c1a4a1.jpg" alt="Golf bags on a cart" loading="lazy" />
+      <div class="vibe-overlay"><span>Bag check</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/e2/3e/0e/e23e0ea940846953d8c9f37a3f93979c.jpg" alt="Golf boots and umbrella" loading="lazy" />
+      <div class="vibe-overlay"><span>Kit on the ground</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/54/12/8b/54128b27230d63846c466add08329674.jpg" alt="Snake illustration" loading="lazy" />
+      <div class="vibe-overlay"><span>Course graphic</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/05/72/d2/0572d24661f8c10bd054b05053002f20.jpg" alt="Mobile golf shop" loading="lazy" />
+      <div class="vibe-overlay"><span>Pop-up pro shop</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/b3/45/a9/b345a95d38bcb4c471ef83a29f12a5e8.jpg" alt="Golf retail interior" loading="lazy" />
+      <div class="vibe-overlay"><span>Shop inspo</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/46/5c/9f/465c9fa37107a04d6e1eb1077718f96b.jpg" alt="Golf clubs in bags" loading="lazy" />
+      <div class="vibe-overlay"><span>Vintage irons</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/ce/98/fa/ce98fa77edbbeac980d6fc119b0a520e.jpg" alt="Golf store" loading="lazy" />
+      <div class="vibe-overlay"><span>Retail mood</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/6b/56/65/6b56656438f2be6f462a33b15ccf4e94.jpg" alt="Golf style lookbook" loading="lazy" />
+      <div class="vibe-overlay"><span>On the course</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/57/e9/b8/57e9b8d7c2ec19526d24528b0c7c8e5e.jpg" alt="Golf interior design" loading="lazy" />
+      <div class="vibe-overlay"><span>Clubhouse design</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/50/53/28/50532894b91e8291e013e6e143de2ed6.jpg" alt="Clothing rack" loading="lazy" />
+      <div class="vibe-overlay"><span>Color palette</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/db/fd/5c/dbfd5c3ad1aabf39554eb7fb9af19010.jpg" alt="Golf illustration pattern" loading="lazy" />
+      <div class="vibe-overlay"><span>Swing pattern</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/bd/87/36/bd8736e2419db342881cf5dbb8d8bd7a.jpg" alt="Vintage golfer portrait" loading="lazy" />
+      <div class="vibe-overlay"><span>Old school</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/8c/88/a7/8c88a72100243caa14b491270b5231a6.jpg" alt="Colorful chairs" loading="lazy" />
+      <div class="vibe-overlay"><span>Waiting room</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/0c/ed/93/0ced93104de8cce839457af8d91255af.jpg" alt="Golf polo shirts" loading="lazy" />
+      <div class="vibe-overlay"><span>The polo wall</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/1c/67/3d/1c673d84d67f399be5ba9e5fee19eea1.jpg" alt="Marketing infographic" loading="lazy" />
+      <div class="vibe-overlay"><span>This Is Marketing</span></div>
+    </div>
+    <div class="vibe-pin">
+      <img src="https://i.pinimg.com/736x/22/1e/3d/221e3d8ed3c48bb6bb3e091c0a11b18e.jpg" alt="Golf course scene" loading="lazy" />
+      <div class="vibe-overlay"><span>On the green</span></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="wordmark">The Grassy Issue.</div>
+      <div class="tag">A running feed of golf culture, design &amp; Austin muni. Edited &amp; published by Lenny Harrington in Austin, Texas.</div>
+      <form class="mailing" id="mailingForm">
+        <input type="email" placeholder="Email for updates" required aria-label="Email address for updates" />
+        <button type="submit">Join →</button>
+        <div class="mailing-success" id="mailingSuccess">You're in ✓</div>
+      </form>
+    </div>
+    <div class="footer-col">
+      <h4>The Feed</h4>
+      <ul>
+        <li><a href="#feed" onclick="activateFilter('drop');return false;">Drops</a></li>
+        <li><a href="#feed" onclick="activateFilter('item');return false;">Items</a></li>
+        <li><a href="#feed" onclick="activateFilter('guide');return false;">Muni Guides</a></li>
+        <li><a href="#submit">Scoreboard</a></li>
+        <li><a href="#feed" onclick="activateFilter('news');return false;">News</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>More</h4>
+      <ul>
+        <li><a href="#feed" onclick="activateFilter('field');return false;">Field Notes</a></li>
+        <li><a href="mailto:L4harrington@gmail.com">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Elsewhere</h4>
+      <ul>
+        <li><a href="https://www.instagram.com/thegrassyissue/" target="_blank" rel="noopener">Instagram ↗</a></li>
+        <li><a href="scoreboard.html#submit">Post a score</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The Grassy Issue · Austin, TX</span>
+    <span>Made by hand, one post at a time</span>
+  </div>
+</footer>
+
+<script>
+  // --- Activate feed filter from nav/footer links ---
+  function activateFilter(type) {
+    const pill = document.querySelector(`.pill[data-filter="${type}"]`);
+    if (pill) {
+      pill.click();
+      setTimeout(() => {
+        document.getElementById('feed').scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }
+
+  // --- Score form ---
+  function handleUpload(input) {
+    const zone = document.getElementById('uploadZone');
+    const nameEl = document.getElementById('uploadFilename');
+    if (input.files && input.files[0]) {
+      zone.classList.add('has-file');
+      nameEl.textContent = '✓ ' + input.files[0].name;
+    }
+  }
+
+  // --- Google Sheets API URL (replace after deploying Apps Script) ---
+  const SHEET_API = 'https://script.google.com/macros/s/AKfycbwELhdJhSk-iZxSVxIAiiW8FaEYwxmJWRBs7yODJOKf-Q2IJ0Tqm-AlPssTUoMZ4FfR/exec';
+
+  function submitScore(e) {
+    e.preventDefault();
+    const btn = document.getElementById('scoreSubmitBtn');
+    const form = document.getElementById('scoreForm');
+
+    // Honeypot check
+    if (form.querySelector('[name="_honey"]').value) return false;
+
+    btn.textContent = 'Posting…';
+    btn.disabled = true;
+
+    const payload = {
+      course: document.getElementById('scoreCourse').value,
+      score: document.getElementById('scoreTotal').value,
+      displayName: document.getElementById('scoreName').value,
+      email: document.getElementById('scoreEmail').value,
+      photoURL: ''
+    };
+
+    fetch(SHEET_API, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'text/plain' } // text/plain avoids CORS preflight
+    }).then(r => r.json()).then(data => {
+      btn.textContent = '✓ Score Posted';
+      btn.classList.add('submitted');
+      // Refresh the leaderboard
+      loadLeaderboard();
+      setTimeout(() => {
+        form.reset();
+        document.getElementById('uploadZone').classList.remove('has-file');
+        document.getElementById('uploadFilename').textContent = '';
+        btn.textContent = 'Post My Score →';
+        btn.classList.remove('submitted');
+        btn.disabled = false;
+      }, 3000);
+    }).catch(() => {
+      btn.textContent = 'Error — try again';
+      setTimeout(() => {
+        btn.textContent = 'Post My Score →';
+        btn.disabled = false;
+      }, 3000);
+    });
+    return false;
+  }
+  document.getElementById('scoreForm').addEventListener('submit', submitScore);
+
+  // --- Live Leaderboard ---
+  let leaderboardData = null;
+  let activeCourse = null;
+
+  function loadLeaderboard() {
+    if (SHEET_API === 'YOUR_APPS_SCRIPT_URL_HERE') {
+      // Show placeholder data until Apps Script is deployed
+      renderPlaceholderLeaderboard();
+      return;
+    }
+    fetch(SHEET_API)
+      .then(r => r.json())
+      .then(data => {
+        if (data.result === 'success') {
+          leaderboardData = data;
+          renderCourseTabs(data.leaderboard);
+          const courses = Object.keys(data.leaderboard);
+          if (courses.length > 0) {
+            activeCourse = activeCourse && courses.includes(activeCourse) ? activeCourse : courses[0];
+            renderLeaderboardScores(data.leaderboard[activeCourse], activeCourse);
+            updateLeaderboardCta(activeCourse, data.week);
+          } else {
+            renderEmptyLeaderboard();
+          }
+        }
+      })
+      .catch(() => renderPlaceholderLeaderboard());
+  }
+
+  function renderCourseTabs(leaderboard) {
+    const container = document.getElementById('courseTabsStrip');
+    const courses = Object.keys(leaderboard);
+    if (courses.length <= 1) { container.innerHTML = ''; return; }
+    container.innerHTML = courses.map(course => {
+      const shortName = course.replace(' Municipal', '').replace(' Pitch & Putt', ' P&P').replace(' Par 3', ' P3');
+      return '<button class="scoreboard-course-tab' + (course === activeCourse ? ' active' : '') +
+        '" data-course="' + course + '">' + shortName + '</button>';
+    }).join('');
+    container.querySelectorAll('.scoreboard-course-tab').forEach(tab => {
+      tab.addEventListener('click', function() {
+        activeCourse = this.dataset.course;
+        container.querySelectorAll('.scoreboard-course-tab').forEach(t => t.classList.remove('active'));
+        this.classList.add('active');
+        renderLeaderboardScores(leaderboardData.leaderboard[activeCourse], activeCourse);
+        updateLeaderboardCta(activeCourse, leaderboardData.week);
+      });
+    });
+  }
+
+  function renderLeaderboardScores(scores, course) {
+    const container = document.getElementById('leaderboardScores');
+    if (!scores || scores.length === 0) {
+      container.innerHTML = '<span class="scoreboard-loading">No scores yet this week — be the first.</span>';
+      return;
+    }
+    container.innerHTML = scores.slice(0, 7).map((s, i) =>
+      '<div class="strip-score">' +
+        '<span class="strip-pos">' + (i + 1) + '.</span> ' +
+        '<span class="strip-name">' + escapeHtml(s.name) + '</span> ' +
+        '<span class="strip-num">' + s.score + '</span>' +
+      '</div>'
+    ).join('');
+  }
+
+  function updateLeaderboardCta(course, week) {
+    const cta = document.getElementById('leaderboardCta');
+    const shortName = course.replace(' Municipal', '').replace(' Pitch & Putt', ' P&P');
+    cta.textContent = shortName + ' · Week ' + week + ' →';
+    cta.href = 'scoreboard.html';
+  }
+
+  function renderEmptyLeaderboard() {
+    document.getElementById('leaderboardScores').innerHTML =
+      '<span class="scoreboard-loading">No scores yet this week — be the first.</span>';
+    document.getElementById('leaderboardCta').textContent = 'Full scoreboard →';
+  }
+
+  function renderPlaceholderLeaderboard() {
+    // Fallback while API isn't connected
+    const scores = [
+      { name: 'slicefixer_atx', score: 74 },
+      { name: 'bunkered_and_proud', score: 78 },
+      { name: 'westlake_wanda', score: 81 },
+      { name: 'tee_totaler', score: 83 },
+      { name: 'rough_rider_78704', score: 84 },
+      { name: 'dawn_patrol_dan', score: 85 },
+      { name: 'hacker_mcgee', score: 87 }
+    ];
+    const container = document.getElementById('leaderboardScores');
+    container.innerHTML = scores.map((s, i) =>
+      '<div class="strip-score">' +
+        '<span class="strip-pos">' + (i + 1) + '.</span> ' +
+        '<span class="strip-name">' + s.name + '</span> ' +
+        '<span class="strip-num">' + s.score + '</span>' +
+      '</div>'
+    ).join('');
+    document.getElementById('leaderboardCta').textContent = 'Full scoreboard →';
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
+  }
+
+  // Load leaderboard on page ready
+  loadLeaderboard();
+
+  // --- Vote bar ---
+  function castVote(btn, type, evt) {
+    if (evt) { evt.preventDefault(); evt.stopPropagation(); }
+    const bar = btn.closest('.vote-bar');
+    if (bar.classList.contains('has-voted')) return;
+
+    const fill = bar.querySelector('.vote-bar-fill');
+    const countEl = bar.querySelector('.vote-bar-count');
+    const btns = bar.querySelectorAll('.vote-btn');
+    const midLabel = bar.querySelector('.vote-bar-label .mid');
+    const fireLabel = bar.querySelector('.vote-bar-label .fire');
+
+    // Parse current state from the fill width and vote count
+    let totalVotes = parseInt(countEl.textContent) || 100;
+    let firePct = parseFloat(fill.style.width) || 50;
+    let fireVotes = Math.round(totalVotes * firePct / 100);
+    let midVotes = totalVotes - fireVotes;
+
+    // Add the new vote
+    if (type === 'fire') {
+      fireVotes++;
+    } else {
+      midVotes++;
+    }
+    totalVotes++;
+
+    // Calculate new percentage
+    let newFirePct = Math.round((fireVotes / totalVotes) * 100);
+    let newMidPct = 100 - newFirePct;
+
+    // Animate the bar
+    fill.style.width = newFirePct + '%';
+
+    // Update count
+    countEl.textContent = totalVotes + ' votes';
+
+    // Show percentages in labels
+    midLabel.innerHTML = 'Mid <span class="pct">' + newMidPct + '%</span>';
+    fireLabel.innerHTML = '<span class="pct">' + newFirePct + '%</span> Fire';
+
+    // Mark voted state
+    bar.classList.add('has-voted');
+    btns.forEach(b => b.classList.add('voted'));
+    btn.classList.add('chosen');
+
+    // Store vote locally for weekly digest
+    const card = bar.closest('.card');
+    const productName = card ? (card.querySelector('.card-title')?.textContent || 'Unknown') : 'Unknown';
+    try {
+      const votes = JSON.parse(localStorage.getItem('tgi_votes') || '[]');
+      votes.push({
+        product: productName,
+        vote: type,
+        firePct: newFirePct,
+        midPct: newMidPct,
+        total: totalVotes,
+        time: new Date().toISOString()
+      });
+      localStorage.setItem('tgi_votes', JSON.stringify(votes));
+    } catch(e) {}
+  }
+
+  // --- Mobile menu ---
+  function toggleMenu() {
+    const btn = document.querySelector('.nav-toggle');
+    const drawer = document.getElementById('navDrawer');
+    const isOpen = btn.classList.toggle('open');
+    drawer.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  }
+  function closeMenu() {
+    const btn = document.querySelector('.nav-toggle');
+    const drawer = document.getElementById('navDrawer');
+    btn.classList.remove('open');
+    drawer.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    document.body.style.overflow = '';
+  }
+
+  // --- Filter pills (proper reflow for masonry) ---
+  const pills = document.querySelectorAll('.pill');
+  const cards = document.querySelectorAll('.card');
+  pills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      pills.forEach(p => {
+        p.classList.remove('active');
+        p.setAttribute('aria-selected', 'false');
+      });
+      pill.classList.add('active');
+      pill.setAttribute('aria-selected', 'true');
+      const filter = pill.dataset.filter;
+      cardsShown = CARDS_PER_PAGE; // reset pagination on filter change
+      cards.forEach(card => {
+        if (filter === 'all' || card.dataset.type === filter) {
+          card.classList.remove('hidden');
+          card.style.display = '';
+        } else {
+          card.classList.add('hidden');
+          card.style.display = 'none';
+        }
+      });
+      // Re-layout masonry and re-trigger entrance animation
+      requestAnimationFrame(() => {
+        layoutMasonry();
+        document.querySelectorAll('.card:not(.hidden)').forEach((c, i) => {
+          c.classList.remove('visible');
+          setTimeout(() => c.classList.add('visible'), i * 60);
+        });
+      });
+    });
+  });
+
+  // --- Masonry layout (left-to-right, then down, with tight vertical packing) ---
+  const CARDS_PER_PAGE = 18;
+  let cardsShown = CARDS_PER_PAGE;
+
+  function layoutMasonry() {
+    const feed = document.querySelector('.feed');
+    const allCards = Array.from(feed.querySelectorAll('.card'));
+    const filteredCards = allCards.filter(c => !c.classList.contains('hidden') && c.style.display !== 'none');
+    if (!filteredCards.length) { feed.style.height = '0px'; return; }
+
+    // Show only up to cardsShown, hide the rest as overflow
+    const visibleCards = filteredCards.slice(0, cardsShown);
+    const overflowCards = filteredCards.slice(cardsShown);
+
+    overflowCards.forEach(card => {
+      card.classList.add('card-overflow');
+      card.style.position = 'absolute';
+      card.style.left = '-9999px';
+    });
+    visibleCards.forEach(card => {
+      card.classList.remove('card-overflow');
+    });
+
+    // Toggle load-more button visibility
+    const loadMoreBtn = document.getElementById('loadMore');
+    if (loadMoreBtn) {
+      loadMoreBtn.style.display = overflowCards.length > 0 ? '' : 'none';
+    }
+
+    const feedWidth = feed.clientWidth;
+    const firstCard = visibleCards[0];
+    const cardWidth = firstCard.offsetWidth;
+    const gap = 8;
+    const cols = Math.max(1, Math.round(feedWidth / (cardWidth + gap)));
+    const colWidth = (feedWidth - (cols - 1) * gap) / cols;
+    const colHeights = new Array(cols).fill(0);
+
+    visibleCards.forEach((card, index) => {
+      const col = index % cols;
+      const x = col * (colWidth + gap);
+      const y = colHeights[col];
+      card.style.position = 'absolute';
+      card.style.left = x + 'px';
+      card.style.top = y + 'px';
+      card.style.width = colWidth + 'px';
+      colHeights[col] += card.offsetHeight + gap;
+    });
+
+    // Hide filtered-out cards off-screen
+    allCards.filter(c => c.classList.contains('hidden') || c.style.display === 'none').forEach(card => {
+      card.style.position = 'absolute';
+      card.style.left = '-9999px';
+    });
+
+    const maxHeight = Math.max(...colHeights);
+
+    // Position load-more button below the cards
+    const loadMoreEl = document.getElementById('loadMore');
+    if (loadMoreEl && loadMoreEl.style.display !== 'none') {
+      loadMoreEl.style.top = maxHeight + 'px';
+      feed.style.height = (maxHeight + loadMoreEl.offsetHeight + 24) + 'px';
+    } else {
+      feed.style.height = maxHeight + 'px';
+    }
+  }
+
+  // Run masonry on load, resize, and after images load
+  layoutMasonry();
+  window.addEventListener('resize', layoutMasonry);
+  // Re-layout every time an image loads
+  document.querySelectorAll('.feed img').forEach(img => {
+    img.addEventListener('load', layoutMasonry);
+    // Also handle lazy-loaded images by removing lazy and forcing load
+    if (img.loading === 'lazy') {
+      img.loading = 'eager';
+    }
+  });
+  // Re-run periodically as images trickle in
+  setTimeout(layoutMasonry, 300);
+  setTimeout(layoutMasonry, 800);
+  setTimeout(layoutMasonry, 1500);
+  setTimeout(layoutMasonry, 3000);
+  // Also run on window load (all resources)
+  window.addEventListener('load', layoutMasonry);
+
+  // --- Load More (global so onclick can reach it) ---
+  window.loadMoreCards = function() {
+    cardsShown += CARDS_PER_PAGE;
+    layoutMasonry();
+    document.querySelectorAll('.feed .card:not(.card-overflow):not(.hidden)').forEach((c, i) => {
+      if (!c.classList.contains('visible')) {
+        setTimeout(() => c.classList.add('visible'), i * 40);
+      }
+    });
+    document.querySelectorAll('.feed img').forEach(img => {
+      if (!img.complete) img.addEventListener('load', layoutMasonry, { once: true });
+    });
+    setTimeout(layoutMasonry, 300);
+    setTimeout(layoutMasonry, 800);
+  };
+
+  // --- Entrance animations via IntersectionObserver ---
+  const observerOptions = { threshold: 0.08, rootMargin: '0px 0px -40px 0px' };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  cards.forEach(card => observer.observe(card));
+
+  // --- Email signup ---
+  document.getElementById('mailingForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const input = this.querySelector('input');
+    const success = document.getElementById('mailingSuccess');
+    const email = input.value;
+
+    fetch('https://formsubmit.co/ajax/l4harrington@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify({ email: email, _subject: 'TGI Mailing List Signup' })
+    }).catch(() => {});
+
+    input.value = '';
+    success.classList.add('show');
+    setTimeout(() => success.classList.remove('show'), 3000);
+  });
+
+  // --- Sticky nav shrink on scroll ---
+  let lastScroll = 0;
+  const nav = document.querySelector('.nav');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > 100) {
+      nav.style.borderBottomColor = 'rgba(20,20,20,0.12)';
+    } else {
+      nav.style.borderBottomColor = '';
+    }
+    lastScroll = y;
+  }, { passive: true });
+
+  /* ── Gear Carousel ── */
+  function initGearCarousels() {
+    document.querySelectorAll('.gear-carousel').forEach(carousel => {
+      const id = carousel.dataset.carousel;
+      const track = carousel.querySelector('.gear-carousel-track');
+      const slides = track.querySelectorAll('.gear-slide');
+      const total = slides.length;
+      const dotsContainer = document.querySelector(`[data-dots="${id}"]`);
+      const counter = document.querySelector(`[data-counter="${id}"]`);
+      let current = 0;
+
+      // Build dots
+      if (dotsContainer) {
+        for (let i = 0; i < total; i++) {
+          const dot = document.createElement('button');
+          dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+          dot.setAttribute('aria-label', `Slide ${i + 1}`);
+          dot.onclick = () => goTo(i);
+          dotsContainer.appendChild(dot);
+        }
+      }
+
+      function goTo(idx) {
+        current = ((idx % total) + total) % total;
+        track.style.transform = `translateX(-${current * 100}%)`;
+        if (dotsContainer) {
+          dotsContainer.querySelectorAll('.gear-dot').forEach((d, i) => {
+            d.classList.toggle('active', i === current);
+          });
+        }
+        if (counter) counter.textContent = `${current + 1} / ${total}`;
+      }
+
+      carousel.goTo = goTo;
+      carousel.getTotal = () => total;
+      carousel.getCurrent = () => current;
+    });
+  }
+
+  function gearSlide(btn, dir) {
+    const carousel = btn.closest('.gear-carousel');
+    const current = carousel.getCurrent();
+    const total = carousel.getTotal();
+    carousel.goTo((current + dir + total) % total);
+  }
+
+  initGearCarousels();
+
+  // Touch/swipe support for gear carousels
+  document.querySelectorAll('.gear-carousel').forEach(carousel => {
+    let startX = 0;
+    let diff = 0;
+    carousel.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchmove', e => { diff = startX - e.touches[0].clientX; }, { passive: true });
+    carousel.addEventListener('touchend', () => {
+      if (Math.abs(diff) > 40) {
+        const cur = carousel.getCurrent();
+        const tot = carousel.getTotal();
+        carousel.goTo((cur + (diff > 0 ? 1 : -1) + tot) % tot);
+      }
+      diff = 0;
+    });
+  });
+</script>
+
+</body>
+</html>

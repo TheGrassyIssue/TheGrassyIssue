@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Hancock Hole 1 — The Grassy Issue Muni Guide</title>
+<meta name="description" content="The oldest first tee in Texas. Par 4, 324 yards — the hardest hole at Hancock. Three game plans for Hancock Golf Course Hole 1." />
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --safe: #2D4A2B;
+    --fun: #A8A878;
+    --aggressive: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+  }
+
+  html, body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 15px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a { color: inherit; text-decoration: none; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--grass); outline-offset: 2px; }
+  img { max-width: 100%; display: block; }
+  button { font: inherit; cursor: pointer; border: none; background: none; }
+
+  .nav { position: sticky; top: 0; background: var(--paper); border-bottom: 0.5px solid var(--ink); z-index: 15; }
+  .nav-inner { max-width: 1400px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+  .nav-wordmark { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 26px; letter-spacing: -0.01em; line-height: 1; white-space: nowrap; }
+  .nav-links { display: flex; gap: 24px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+  .nav-links a { padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+  .nav-links a:hover { border-bottom-color: var(--ink); }
+  .nav-links a.active { border-bottom-color: var(--ink); }
+  .nav-cta { padding: 9px 16px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: background 0.2s; display: inline-block; }
+  .nav-cta:hover { background: var(--grass); }
+  .nav-toggle { display: none; width: 28px; height: 20px; flex-direction: column; justify-content: space-between; padding: 0; }
+  .nav-toggle span { display: block; width: 100%; height: 1.5px; background: var(--ink); transition: transform 0.25s, opacity 0.25s; }
+
+  .breadcrumb { max-width: 1400px; margin: 0 auto; padding: 16px 32px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.6; }
+  .breadcrumb a:hover { opacity: 1; }
+  .breadcrumb span { margin: 0 8px; }
+
+  .hole-header { max-width: 1400px; margin: 0 auto; padding: 0 32px 32px; display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; }
+  .hole-header-left { flex: 1; }
+  .hole-tag { display: inline-block; background: var(--grass); color: var(--paper); padding: 5px 10px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 16px; }
+  .hole-header h1 { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(36px, 5vw, 64px); line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .hole-sub { font-size: 15px; line-height: 1.55; max-width: 600px; opacity: 0.8; }
+  .hole-stats { display: flex; gap: 24px; flex-shrink: 0; }
+  .stat { text-align: center; }
+  .stat-value { font-family: var(--mono); font-size: 28px; font-weight: 500; line-height: 1; color: var(--grass); }
+  .stat-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.18em; text-transform: uppercase; margin-top: 6px; opacity: 0.55; }
+
+  .carousel-container { max-width: 1400px; margin: 0 auto; padding: 0 32px; position: relative; }
+  .carousel { overflow: hidden; border: 0.5px solid var(--ink); }
+  .carousel-track { display: flex; transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .carousel-slide { min-width: 100%; width: 100%; flex-shrink: 0; overflow: hidden; }
+
+  .slide-photo { position: relative; background: var(--ink); aspect-ratio: 16/9; overflow: hidden; }
+  .slide-photo .photo-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--paper); gap: 16px; }
+  .photo-placeholder .hole-number { font-family: var(--serif); font-style: italic; font-size: 120px; line-height: 1; opacity: 0.15; }
+  .photo-placeholder .prompt-text { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; }
+  .slide-photo .photo-caption { position: absolute; bottom: 16px; left: 20px; color: var(--paper); font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.7; }
+
+  .slide-plans { background: var(--paper); padding: 48px 40px; overflow: hidden; }
+  .plans-header { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; margin-bottom: 32px; }
+  .plans-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; min-width: 0; }
+  .plan { border: 0.5px solid var(--ink); padding: 0; position: relative; transition: transform 0.2s, box-shadow 0.2s; overflow: hidden; min-width: 0; }
+  .plan:hover { transform: translateY(-3px); box-shadow: 0 6px 0 -2px var(--ink); }
+  .plan-top { padding: 28px 24px 20px; }
+  .plan.safe .plan-top { background: var(--safe); color: var(--paper); }
+  .plan.fun .plan-top { background: var(--fun); color: var(--ink); }
+  .plan.aggressive .plan-top { background: var(--aggressive); color: var(--paper); }
+  .plan-label { font-family: var(--mono); font-size: 28px; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 500; line-height: 1; margin-bottom: 8px; }
+  .plan-title { font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.15; opacity: 0.9; }
+  .plan-body { padding: 24px; }
+  .plan-text { font-size: 15px; line-height: 1.6; opacity: 0.8; word-wrap: break-word; overflow-wrap: break-word; }
+  .plan-club { margin-top: 20px; padding-top: 16px; border-top: 0.5px solid rgba(20, 20, 20, 0.12); font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; opacity: 0.5; }
+
+  .carousel-controls { display: flex; align-items: center; justify-content: space-between; margin-top: 16px; }
+  .carousel-dots { display: flex; gap: 8px; align-items: center; }
+  .carousel-dot { width: 8px; height: 8px; border: 1px solid var(--ink); border-radius: 50%; background: transparent; padding: 0; transition: background 0.2s; }
+  .carousel-dot.active { background: var(--ink); }
+  .carousel-dot-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.55; margin-left: 12px; }
+  .carousel-arrows { display: flex; gap: 8px; }
+  .carousel-arrow { width: 40px; height: 40px; border: 0.5px solid var(--ink); display: flex; align-items: center; justify-content: center; font-size: 18px; transition: all 0.15s; background: transparent; color: var(--ink); }
+  .carousel-arrow:hover { background: var(--ink); color: var(--paper); }
+
+  .hole-nav { max-width: 1400px; margin: 48px auto 0; padding: 32px 32px 0; border-top: 0.5px solid var(--ink); display: flex; justify-content: space-between; align-items: center; }
+  .hole-nav a { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; padding: 10px 20px; border: 0.5px solid var(--ink); transition: all 0.15s; }
+  .hole-nav a:hover { background: var(--ink); color: var(--paper); }
+  .hole-nav .hole-count { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.55; }
+
+  .crowd-section { max-width: 1400px; margin: 48px auto 0; padding: 0 32px; }
+  .crowd-card { border: 0.5px solid var(--ink); padding: 28px 32px; display: flex; align-items: center; justify-content: space-between; gap: 40px; }
+  .crowd-left { flex: 1; }
+  .crowd-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.55; margin-bottom: 8px; }
+  .crowd-title { font-family: var(--serif); font-style: italic; font-size: 22px; line-height: 1.25; }
+  .crowd-stats { display: flex; gap: 32px; }
+  .crowd-stat-value { font-family: var(--mono); font-size: 24px; font-weight: 500; color: var(--grass); }
+  .crowd-stat-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.55; margin-top: 4px; }
+
+  .footer { border-top: 0.5px solid var(--ink); margin-top: 80px; padding: 40px 32px 24px; background: var(--paper); }
+  .footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.55; }
+
+  @media (max-width: 820px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-inner { padding: 14px 20px; }
+    .breadcrumb { padding: 12px 20px; }
+    .hole-header { padding: 0 20px 24px; flex-direction: column; align-items: flex-start; }
+    .hole-stats { margin-top: 20px; }
+    .carousel-container { padding: 0 20px; }
+    .slide-plans { padding: 28px 20px; }
+    .plans-grid { grid-template-columns: 1fr; gap: 12px; }
+    .plan-label { font-size: 22px; }
+    .plan-top { padding: 20px 20px 16px; }
+    .plan-body { padding: 20px; }
+    .hole-nav { padding: 24px 20px 0; margin-top: 32px; }
+    .crowd-section { padding: 0 20px; }
+    .crowd-card { flex-direction: column; align-items: flex-start; gap: 20px; padding: 20px; }
+    .footer { padding: 32px 20px 20px; margin-top: 48px; }
+  }
+  @media (max-width: 480px) {
+    .hole-header h1 { font-size: 32px; }
+    .carousel-arrow { width: 36px; height: 36px; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/index.html" class="nav-wordmark">The Grassy Issue</a>
+    <div class="nav-links">
+      <a href="/index.html#feed">Feed</a>
+      <a href="/guides/" class="active">Muni Guides</a>
+      <a href="/index.html#submit">Scoreboard</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="/index.html#submit" class="nav-cta">Post a score &rarr;</a>
+  </div>
+</nav>
+
+<div class="breadcrumb">
+  <a href="/index.html">Feed</a>
+  <span>/</span>
+  <a href="/guides/">Muni Guides</a>
+  <span>/</span>
+  Hancock Golf Course
+  <span>/</span>
+  Hole 1
+</div>
+
+<header class="hole-header">
+  <div class="hole-header-left">
+    <span class="hole-tag">[Muni Guide]</span>
+    <h1>Hancock Hole 1 &mdash; the oldest<br/>first tee in Texas.</h1>
+    <p class="hole-sub">Built in 1899, this opening par 4 plays 324 from the blues &mdash; the #1 handicap hole on the card. No warm-up swings, no range session. Just step up to the oldest first tee in Texas and earn your way to the green.</p>
+  </div>
+  <div class="hole-stats">
+    <div class="stat">
+      <div class="stat-value">4</div>
+      <div class="stat-label">Par</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">324</div>
+      <div class="stat-label">Yards</div>
+    </div>
+    <div class="stat">
+      <div class="stat-value">1</div>
+      <div class="stat-label">HCP</div>
+    </div>
+  </div>
+</header>
+
+<div class="carousel-container">
+  <div class="carousel" id="carousel" role="region" aria-label="Hole 1 guide carousel">
+    <div class="carousel-track" id="carouselTrack">
+
+      <div class="carousel-slide">
+        <div class="slide-photo">
+          <div class="photo-placeholder">
+            <div class="hole-number">1</div>
+            <div class="prompt-text">Lenny's tee box photo &mdash; coming soon</div>
+          </div>
+          <div class="photo-caption">Hancock Golf Course &middot; Hole 1 &middot; Tee Box View</div>
+        </div>
+      </div>
+
+      <div class="carousel-slide">
+        <div class="slide-plans">
+          <div class="plans-header">Three ways to play it</div>
+          <div class="plans-grid">
+
+            <div class="plan safe">
+              <div class="plan-top">
+                <div class="plan-label">Safe</div>
+                <div class="plan-title">Find the fairway, find the green.</div>
+              </div>
+              <div class="plan-body">
+                <div class="plan-text">5-iron or hybrid off the tee to the center of the fairway. That leaves you 120&ndash;140 in with a wedge. It's the #1 handicap hole at Hancock for a reason &mdash; the trees pinch the landing area and the green is small. Take the two-shot approach, put the wedge close, and walk off with a par to open the round. Nothing wrong with a 4 here.</div>
+                <div class="plan-club">Tee: 5-Iron / Hybrid &middot; Approach: PW</div>
+              </div>
+            </div>
+
+            <div class="plan fun">
+              <div class="plan-top">
+                <div class="plan-label">Fun</div>
+                <div class="plan-title">3-wood and a flip wedge.</div>
+              </div>
+              <div class="plan-body">
+                <div class="plan-text">Rip a 3-wood through the gap and get it out there around 230. That leaves a half-wedge into a small green &mdash; the kind of shot that feels great when you stick it. The mature oaks lining both sides demand a good line off the tee, but at 324 this hole rewards a confident swing. Two good shots and you're looking at birdie.</div>
+                <div class="plan-club">Tee: 3-Wood &middot; Approach: SW</div>
+              </div>
+            </div>
+
+            <div class="plan aggressive">
+              <div class="plan-top">
+                <div class="plan-label">Aggressive</div>
+                <div class="plan-title">Drive the oldest green in Texas.</div>
+              </div>
+              <div class="plan-body">
+                <div class="plan-text">324 yards. It's drivable if you carry it through the trees and catch the right line. The miss is real &mdash; oaks left and right will eat a wayward drive &mdash; but if you stripe one down the slot, you're putting for eagle on the first hole of the oldest course in Texas. That's a story worth the risk.</div>
+                <div class="plan-club">Tee: Driver</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <div class="carousel-dots">
+      <button class="carousel-dot active" data-slide="0" aria-label="View tee box photo"></button>
+      <button class="carousel-dot" data-slide="1" aria-label="View game plans"></button>
+      <span class="carousel-dot-label" id="slideLabel">Tee Box Photo</span>
+    </div>
+    <div class="carousel-arrows">
+      <button class="carousel-arrow" id="prevSlide" aria-label="Previous slide">&larr;</button>
+      <button class="carousel-arrow" id="nextSlide" aria-label="Next slide">&rarr;</button>
+    </div>
+  </div>
+</div>
+
+<section class="crowd-section">
+  <div class="crowd-card">
+    <div class="crowd-left">
+      <div class="crowd-label">Crowd Verdict</div>
+      <div class="crowd-title">The hardest hole at Hancock &mdash; earn your par.</div>
+    </div>
+    <div class="crowd-stats">
+      <div class="stat">
+        <div class="crowd-stat-value">4.6</div>
+        <div class="crowd-stat-label">Avg Score</div>
+      </div>
+      <div class="stat">
+        <div class="crowd-stat-value">#1</div>
+        <div class="crowd-stat-label">Difficulty</div>
+      </div>
+      <div class="stat">
+        <div class="crowd-stat-value">8%</div>
+        <div class="crowd-stat-label">Birdie Rate</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<nav class="hole-nav" aria-label="Hole navigation">
+  <span style="width:120px;"></span>
+  <span class="hole-count">1 of 9</span>
+  <a href="#">Hole 2 &rarr;</a>
+</nav>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <span>&copy; 2026 The Grassy Issue &middot; Austin, TX</span>
+    <span>Made by hand, one post at a time</span>
+  </div>
+</footer>
+
+<script>
+  const track = document.getElementById('carouselTrack');
+  const dots = document.querySelectorAll('.carousel-dot');
+  const label = document.getElementById('slideLabel');
+  const labels = ['Tee Box Photo', 'Game Plans'];
+  let current = 0;
+
+  function goTo(index) {
+    current = index;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    label.textContent = labels[current];
+  }
+
+  document.getElementById('nextSlide').addEventListener('click', () => goTo(current === 1 ? 0 : 1));
+  document.getElementById('prevSlide').addEventListener('click', () => goTo(current === 0 ? 1 : 0));
+  dots.forEach(dot => dot.addEventListener('click', () => goTo(Number(dot.dataset.slide))));
+
+  let touchStartX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) {
+      if (diff > 0 && current < 1) goTo(1);
+      else if (diff < 0 && current > 0) goTo(0);
+    }
+  }, { passive: true });
+</script>
+
+</body>
+</html>

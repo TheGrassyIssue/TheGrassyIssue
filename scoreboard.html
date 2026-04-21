@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Scoreboard — The Grassy Issue</title>
+<meta name="description" content="Live leaderboards for every Austin municipal golf course. Post your round, make the board." />
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://thegrassyissue.com/scoreboard" />
+<meta property="og:title" content="Scoreboard — The Grassy Issue" />
+<meta property="og:description" content="Live leaderboards for every Austin muni. Post your round, make the board." />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.55;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* NAV */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--paper);
+    border-bottom: 0.5px solid transparent;
+    transition: border-color 0.3s;
+  }
+  .nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-wordmark {
+    line-height: 1;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+  }
+  .nav-wordmark img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+  .nav-links {
+    display: flex;
+    gap: 32px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+  .nav-links a { opacity: 0.5; transition: opacity 0.15s; }
+  .nav-links a:hover, .nav-links a.active { opacity: 1; }
+  .nav-cta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 10px 20px;
+    border: 1px solid var(--ink);
+    border-radius: 2px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+  .nav-toggle { display: none; }
+
+  /* PAGE HEADER */
+  .page-header {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 64px 32px 24px;
+  }
+  .page-header-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    margin-bottom: 12px;
+  }
+  .page-header h1 {
+    font-family: var(--serif);
+    font-size: 42px;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+  }
+  .page-header-sub {
+    font-size: 15px;
+    opacity: 0.55;
+    margin-top: 10px;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+  .page-header-week {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 20px;
+    padding: 8px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    display: inline-block;
+    border-radius: 2px;
+  }
+  .page-header-week .live-dot {
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--flag);
+    margin-right: 8px;
+    animation: pulse 1.8s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  /* COURSE CARDS GRID */
+  .course-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 32px 32px 64px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .course-card {
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 0.5px solid rgba(20,20,20,0.08);
+  }
+  .course-card-header {
+    padding: 20px 24px 16px;
+    border-bottom: 0.5px solid rgba(20,20,20,0.06);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+  }
+  .course-card-name {
+    font-family: var(--serif);
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+  .course-card-par {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+  .course-card-body {
+    padding: 0;
+  }
+  .course-card-empty {
+    padding: 32px 24px;
+    text-align: center;
+    font-size: 13px;
+    opacity: 0.35;
+    font-style: italic;
+  }
+
+  /* SCORE ROWS */
+  .score-row {
+    display: flex;
+    align-items: baseline;
+    padding: 11px 24px;
+    border-bottom: 0.5px solid rgba(20,20,20,0.04);
+    font-size: 13px;
+    transition: background 0.1s;
+  }
+  .score-row:last-child { border-bottom: none; }
+  .score-row:hover { background: rgba(20,20,20,0.015); }
+  .score-row.top-3 { background: rgba(45,74,43,0.03); }
+  .score-pos {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    opacity: 0.35;
+    width: 32px;
+    flex-shrink: 0;
+  }
+  .score-row.top-3 .score-pos { opacity: 0.6; color: var(--grass); }
+  .score-player {
+    flex: 1;
+    font-weight: 500;
+  }
+  .score-date {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.1em;
+    opacity: 0.25;
+    margin-right: 16px;
+  }
+  .score-num {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--grass);
+    min-width: 36px;
+    text-align: right;
+  }
+  .score-diff {
+    font-family: var(--mono);
+    font-size: 10px;
+    opacity: 0.35;
+    min-width: 40px;
+    text-align: right;
+  }
+  .score-diff.under { color: var(--grass); opacity: 0.7; }
+  .score-diff.over { color: var(--flag); opacity: 0.5; }
+
+  /* ALL-TIME SECTION */
+  .alltime-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+  }
+  .alltime-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(20,20,20,0.08);
+  }
+  .alltime-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.45;
+  }
+  .alltime-sub {
+    font-size: 13px;
+    opacity: 0.35;
+    font-style: italic;
+  }
+
+  /* DIVIDER */
+  .section-divider {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px;
+  }
+  .section-divider hr {
+    border: none;
+    border-top: 1px solid rgba(20,20,20,0.08);
+    margin-bottom: 48px;
+  }
+
+  /* SCORE FORM */
+  .score-section {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 80px;
+  }
+  .score-section-header {
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .score-section-label {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    opacity: 0.45;
+  }
+  .score-section-sub {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.3;
+  }
+  .score-form-wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .score-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .score-form label {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 6px;
+    opacity: 0.5;
+  }
+  .score-form input,
+  .score-form select {
+    width: 100%;
+    padding: 12px 14px;
+    font-family: var(--sans);
+    font-size: 14px;
+    border: 1px solid rgba(20,20,20,0.12);
+    border-radius: 3px;
+    background: #fff;
+    color: var(--ink);
+    transition: border-color 0.15s;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .score-form select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='none' stroke='%23141414' stroke-width='1.5'%3E%3Cpath d='M2 4l4 4 4-4'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    padding-right: 36px;
+  }
+  .score-form input:focus,
+  .score-form select:focus {
+    outline: none;
+    border-color: var(--grass);
+  }
+  .score-form input::placeholder { opacity: 0.3; }
+  .score-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+  .score-form .upload-zone {
+    border: 1.5px dashed rgba(20,20,20,0.12);
+    border-radius: 4px;
+    padding: 24px;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    transition: border-color 0.15s, background 0.15s;
+  }
+  .score-form .upload-zone:hover {
+    border-color: var(--grass);
+    background: rgba(45,74,43,0.02);
+  }
+  .score-form .upload-zone.has-file {
+    border-color: var(--grass);
+    background: rgba(45,74,43,0.04);
+  }
+  .upload-icon {
+    font-size: 24px;
+    opacity: 0.2;
+    margin-bottom: 6px;
+  }
+  .upload-text {
+    font-size: 12px;
+    opacity: 0.35;
+  }
+  .upload-filename {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: var(--grass);
+    margin-top: 6px;
+  }
+  .upload-zone input[type="file"] {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    cursor: pointer;
+  }
+  .score-submit {
+    width: 100%;
+    padding: 16px 24px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    background: var(--ink);
+    color: var(--paper);
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: opacity 0.15s;
+  }
+  .score-submit:hover { opacity: 0.85; }
+  .score-submit:disabled { opacity: 0.5; cursor: default; }
+  .score-submit.submitted { background: var(--grass); }
+
+  .score-info-title {
+    font-family: var(--serif);
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
+  .score-info-text {
+    font-size: 14px;
+    opacity: 0.6;
+    line-height: 1.65;
+    margin-bottom: 24px;
+  }
+  .score-info-rules dt {
+    font-family: var(--mono);
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.4;
+    margin-top: 16px;
+  }
+  .score-info-rules dd {
+    font-size: 13px;
+    opacity: 0.55;
+    margin-top: 4px;
+    line-height: 1.55;
+  }
+
+  /* FOOTER */
+  .footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 48px 32px;
+  }
+  .footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-copy {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.4;
+  }
+  .footer-links {
+    display: flex;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+  .footer-links a { opacity: 0.4; transition: opacity 0.15s; }
+  .footer-links a:hover { opacity: 1; }
+
+  /* LOADING SKELETON */
+  .skeleton-row {
+    height: 38px;
+    background: linear-gradient(90deg, rgba(20,20,20,0.03) 25%, rgba(20,20,20,0.06) 50%, rgba(20,20,20,0.03) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 3px;
+    margin: 4px 24px;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 1024px) {
+    .course-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta { display: none; }
+    .nav-toggle {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+    }
+    .nav-toggle span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background: var(--ink);
+    }
+    .page-header { padding: 40px 20px 20px; }
+    .page-header h1 { font-size: 30px; }
+    .page-header-sub { font-size: 13px; }
+    .page-header-week { font-size: 10px; padding: 6px 12px; }
+    .course-grid { grid-template-columns: 1fr; padding: 24px 20px 48px; gap: 16px; }
+    .course-card-header { padding: 16px 18px 12px; }
+    .course-card-name { font-size: 18px; }
+    .score-row { padding: 10px 18px; font-size: 12px; }
+    .score-num { font-size: 13px; }
+    .score-pos { font-size: 9px; }
+    .score-date { font-size: 8px; }
+    .alltime-section { padding: 0 20px 48px; }
+    .score-section { padding: 0 20px 48px; }
+    .score-form-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .score-info-title { font-size: 20px; }
+    .footer { padding: 32px 20px; }
+    .footer-inner { flex-direction: column; gap: 16px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark"><img src="assets/logo-wordmark-only.svg" alt="The Grassy Issue" height="36"></a>
+    <div class="nav-links">
+      <a href="/">Feed</a>
+      <a href="/">Drops</a>
+      <a href="/">Muni Guides</a>
+      <a href="scoreboard.html" class="active">Scoreboard</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </button>
+    <a href="#submit" class="nav-cta">Post a score →</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="page-header-label">◎ Scoreboard</div>
+  <h1>Austin Muni Leaderboards</h1>
+  <p class="page-header-sub">Weekly leaderboards for every Austin municipal course. Post your round, make the board. Top scores get featured in the feed.</p>
+  <div class="page-header-week" id="weekBadge"><span class="live-dot"></span> Loading…</div>
+</div>
+
+<div class="course-grid" id="courseGrid">
+  <!-- Populated by JS -->
+</div>
+
+<div class="section-divider"><hr /></div>
+
+<div class="alltime-section">
+  <div class="alltime-header">
+    <div class="alltime-label">◎ All-Time Bests</div>
+    <div class="alltime-sub">Lowest score ever posted per course</div>
+  </div>
+  <div class="course-grid" id="allTimeGrid" style="padding: 0;">
+    <!-- Populated by JS -->
+  </div>
+</div>
+
+<div class="section-divider"><hr /></div>
+
+<!-- POST A SCORE -->
+<section class="score-section" id="submit">
+  <div class="score-section-header">
+    <div class="score-section-label">◎ Post a Score</div>
+    <span class="score-section-sub">Austin Munis Only</span>
+  </div>
+  <div class="score-form-wrap">
+    <form class="score-form" id="scoreForm">
+      <input type="text" name="_honey" style="display:none" />
+      <div>
+        <label for="scoreCourse">Course</label>
+        <select id="scoreCourse" name="Course" required>
+          <option value="" disabled selected>Select a course</option>
+          <option value="Lions Municipal">Lions Municipal</option>
+          <option value="Jimmy Clay">Jimmy Clay</option>
+          <option value="Roy Kizer">Roy Kizer</option>
+          <option value="Hancock">Hancock</option>
+          <option value="Morris Williams">Morris Williams</option>
+          <option value="Riverside">Riverside</option>
+          <option value="Butler Pitch & Putt">Butler Pitch &amp; Putt</option>
+          <option value="Grey Rock">Grey Rock</option>
+          <option value="Roy Kizer Par 3">Roy Kizer Par 3</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div>
+          <label for="scoreTotal">Final Score</label>
+          <input type="number" id="scoreTotal" name="Score" placeholder="e.g. 82" min="40" max="150" required />
+        </div>
+        <div>
+          <label for="scoreName">Display Name</label>
+          <input type="text" id="scoreName" name="Display Name" placeholder="e.g. slicefixer_atx" required />
+        </div>
+      </div>
+      <div>
+        <label for="scoreEmail">Email</label>
+        <input type="email" id="scoreEmail" name="email" placeholder="you@email.com" required />
+      </div>
+      <div>
+        <label>Scorecard Photo (optional)</label>
+        <div class="upload-zone" id="uploadZone">
+          <div class="upload-icon">◻</div>
+          <div class="upload-text">Drop a photo or click to upload</div>
+          <div class="upload-filename" id="uploadFilename"></div>
+          <input type="file" id="scorePhoto" name="Scorecard Photo" accept="image/*" onchange="handleUpload(this)" />
+        </div>
+      </div>
+      <button type="submit" class="score-submit" id="scoreSubmitBtn">Post My Score →</button>
+    </form>
+    <div class="score-info">
+      <div class="score-info-title">Post your round, make the board.</div>
+      <div class="score-info-text">We publish weekly leaderboards for every Austin muni. Submit your score and — if you're honest and we can verify — you'll show up on the board. Top scores get featured in the feed.</div>
+      <dl class="score-info-rules">
+        <dt>Courses</dt>
+        <dd>Austin municipal courses only. No private clubs, no resort rounds.</dd>
+        <dt>Verification</dt>
+        <dd>Upload a photo of your scorecard. We spot-check and trust the community.</dd>
+        <dt>Leaderboard</dt>
+        <dd>Updated live. Best single round per player per week.</dd>
+        <dt>Privacy</dt>
+        <dd>Email is for verification only. Never shared, never sold.</dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-copy">© 2026 The Grassy Issue · Austin, TX</div>
+    <div class="footer-links">
+      <a href="/">Feed</a>
+      <a href="scoreboard.html">Scoreboard</a>
+      <a href="#submit">Post a Score</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const SHEET_API = 'https://script.google.com/macros/s/AKfycbwELhdJhSk-iZxSVxIAiiW8FaEYwxmJWRBs7yODJOKf-Q2IJ0Tqm-AlPssTUoMZ4FfR/exec';
+
+  // Course metadata
+  const COURSES = {
+    'Lions Municipal':      { par: 71, holes: 18, shortName: 'Lions' },
+    'Jimmy Clay':           { par: 72, holes: 18, shortName: 'Jimmy Clay' },
+    'Roy Kizer':            { par: 72, holes: 18, shortName: 'Roy Kizer' },
+    'Hancock':              { par: 35, holes: 9,  shortName: 'Hancock' },
+    'Morris Williams':      { par: 72, holes: 18, shortName: 'Morris Williams' },
+    'Riverside':            { par: 71, holes: 18, shortName: 'Riverside' },
+
+    'Butler Pitch & Putt':  { par: 27, holes: 9,  shortName: 'Butler P&P' },
+    'Grey Rock':            { par: 72, holes: 18, shortName: 'Grey Rock' },
+    'Roy Kizer Par 3':      { par: 27, holes: 9,  shortName: 'Kizer Par 3' }
+  };
+
+  // Show loading skeletons
+  function showSkeletons() {
+    const grid = document.getElementById('courseGrid');
+    grid.innerHTML = Object.keys(COURSES).map(course => {
+      const info = COURSES[course];
+      return '<div class="course-card">' +
+        '<div class="course-card-header">' +
+          '<div class="course-card-name">' + info.shortName + '</div>' +
+          '<div class="course-card-par">Par ' + info.par + ' · ' + info.holes + ' holes</div>' +
+        '</div>' +
+        '<div class="course-card-body">' +
+          '<div class="skeleton-row"></div>'.repeat(5) +
+        '</div></div>';
+    }).join('');
+  }
+  showSkeletons();
+
+  // Fetch and render
+  function loadScoreboard() {
+    fetch(SHEET_API)
+      .then(r => r.json())
+      .then(data => {
+        if (data.result !== 'success') return;
+
+        // Week badge
+        const weekStart = new Date(data.weekStart);
+        const weekEnd = new Date(data.weekEnd);
+        const fmt = d => d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        document.getElementById('weekBadge').innerHTML =
+          '<span class="live-dot"></span> Week ' + data.week + ' · ' + fmt(weekStart) + ' – ' + fmt(weekEnd);
+
+        // Weekly leaderboard cards
+        renderCourseCards('courseGrid', data.leaderboard, true);
+
+        // All-time bests
+        renderCourseCards('allTimeGrid', data.allTimeBests || {}, false);
+      })
+      .catch(() => {
+        document.getElementById('weekBadge').textContent = 'Could not load scores';
+      });
+  }
+
+  function renderCourseCards(containerId, data, isWeekly) {
+    const grid = document.getElementById(containerId);
+    grid.innerHTML = Object.keys(COURSES).map(course => {
+      const info = COURSES[course];
+      const scores = data[course] || [];
+      let bodyHtml;
+
+      if (scores.length === 0) {
+        bodyHtml = '<div class="course-card-empty">' +
+          (isWeekly ? 'No scores yet this week — be the first.' : 'No scores posted yet.') +
+          '</div>';
+      } else {
+        bodyHtml = scores.slice(0, 10).map((s, i) => {
+          const diff = s.score - info.par;
+          const diffStr = diff === 0 ? 'E' : (diff > 0 ? '+' + diff : diff.toString());
+          const diffClass = diff < 0 ? 'under' : (diff > 0 ? 'over' : '');
+          const top3 = i < 3 ? ' top-3' : '';
+          const dateStr = s.timestamp ? formatDate(s.timestamp) : '';
+
+          return '<div class="score-row' + top3 + '">' +
+            '<span class="score-pos">' + (i + 1) + '.</span>' +
+            '<span class="score-player">' + escapeHtml(s.name) + '</span>' +
+            (dateStr ? '<span class="score-date">' + dateStr + '</span>' : '') +
+            '<span class="score-num">' + s.score + '</span>' +
+            '<span class="score-diff ' + diffClass + '">' + diffStr + '</span>' +
+          '</div>';
+        }).join('');
+      }
+
+      return '<div class="course-card">' +
+        '<div class="course-card-header">' +
+          '<div class="course-card-name">' + info.shortName + '</div>' +
+          '<div class="course-card-par">Par ' + info.par + ' · ' + info.holes + ' holes</div>' +
+        '</div>' +
+        '<div class="course-card-body">' + bodyHtml + '</div>' +
+      '</div>';
+    }).join('');
+  }
+
+  function formatDate(isoStr) {
+    const d = new Date(isoStr);
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  }
+
+  function escapeHtml(str) {
+    const div = document.createElement('div');
+    div.textContent = str || '';
+    return div.innerHTML;
+  }
+
+  loadScoreboard();
+
+  // --- Score form ---
+  function handleUpload(input) {
+    const zone = document.getElementById('uploadZone');
+    const nameEl = document.getElementById('uploadFilename');
+    if (input.files && input.files[0]) {
+      zone.classList.add('has-file');
+      nameEl.textContent = '✓ ' + input.files[0].name;
+    }
+  }
+
+  function submitScore(e) {
+    e.preventDefault();
+    const btn = document.getElementById('scoreSubmitBtn');
+    const form = document.getElementById('scoreForm');
+
+    if (form.querySelector('[name="_honey"]').value) return false;
+
+    btn.textContent = 'Posting…';
+    btn.disabled = true;
+
+    const payload = {
+      course: document.getElementById('scoreCourse').value,
+      score: document.getElementById('scoreTotal').value,
+      displayName: document.getElementById('scoreName').value,
+      email: document.getElementById('scoreEmail').value,
+      photoURL: ''
+    };
+
+    fetch(SHEET_API, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: { 'Content-Type': 'text/plain' }
+    }).then(r => r.json()).then(() => {
+      btn.textContent = '✓ Score Posted';
+      btn.classList.add('submitted');
+      // Refresh the board
+      setTimeout(() => loadScoreboard(), 1000);
+      setTimeout(() => {
+        form.reset();
+        document.getElementById('uploadZone').classList.remove('has-file');
+        document.getElementById('uploadFilename').textContent = '';
+        btn.textContent = 'Post My Score →';
+        btn.classList.remove('submitted');
+        btn.disabled = false;
+      }, 3000);
+    }).catch(() => {
+      btn.textContent = 'Error — try again';
+      setTimeout(() => {
+        btn.textContent = 'Post My Score →';
+        btn.disabled = false;
+      }, 3000);
+    });
+    return false;
+  }
+  document.getElementById('scoreForm').addEventListener('submit', submitScore);
+
+  // Mobile nav toggle
+  function toggleMenu() {
+    // Simple toggle for mobile — minimal for this page
+    const links = document.querySelector('.nav-links');
+    if (links) links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+</body>
+</html>
