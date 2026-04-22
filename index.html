@@ -122,6 +122,72 @@
     100% { transform: translateX(-50%); }
   }
 
+  /* WEATHER BANNER */
+  .weather-banner {
+    background: var(--grass);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .weather-banner .wb-date {
+    opacity: 0.7;
+  }
+  .weather-banner .wb-dot {
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--paper);
+    opacity: 0.35;
+    flex-shrink: 0;
+  }
+  .weather-banner .wb-weather {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .weather-banner .wb-icon {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1;
+  }
+  .weather-banner .wb-temp {
+    font-weight: 500;
+  }
+  .weather-banner .wb-desc {
+    opacity: 0.7;
+  }
+  .weather-banner .wb-tee {
+    background: var(--paper);
+    color: var(--grass);
+    padding: 5px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+  .weather-banner .wb-tee:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+  @media (max-width: 600px) {
+    .weather-banner {
+      padding: 8px 16px;
+      gap: 12px;
+      font-size: 10px;
+    }
+    .weather-banner .wb-dot { display: none; }
+  }
+
   /* NAV */
   .nav {
     position: sticky;
@@ -1720,6 +1786,19 @@
       <span>LIONS HOLE 6 — THE DOGLEG THAT PUNISHES THE BOLD</span>
     </div>
   </div>
+</div>
+
+<!-- WEATHER / DATE / TEE TIME BANNER -->
+<div class="weather-banner" id="weather-banner">
+  <span class="wb-date" id="wb-date"></span>
+  <span class="wb-dot"></span>
+  <span class="wb-weather" id="wb-weather">
+    <em class="wb-icon" id="wb-icon"></em>
+    <span class="wb-temp" id="wb-temp"></span>
+    <span class="wb-desc" id="wb-desc"></span>
+  </span>
+  <span class="wb-dot"></span>
+  <a class="wb-tee" href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a Tee Time →</a>
 </div>
 
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -3969,6 +4048,63 @@
       diff = 0;
     });
   });
+</script>
+
+<script>
+  // --- Weather Banner (Austin, TX — geolocked) ---
+  (function() {
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const now = new Date();
+    const dateStr = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate();
+    document.getElementById('wb-date').textContent = dateStr + ' · Austin, TX';
+
+    // Weather condition → icon mapping
+    function weatherIcon(code) {
+      if (code === 0) return '☀️';
+      if (code <= 3) return '⛅';
+      if (code <= 48) return '🌫️';
+      if (code <= 57) return '🌦️';
+      if (code <= 65) return '🌧️';
+      if (code <= 67) return '🌧️';
+      if (code <= 77) return '❄️';
+      if (code <= 82) return '🌧️';
+      if (code <= 86) return '❄️';
+      if (code >= 95) return '⛈️';
+      return '⛅';
+    }
+
+    function weatherDesc(code) {
+      if (code === 0) return 'Clear';
+      if (code <= 3) return 'Partly cloudy';
+      if (code <= 48) return 'Foggy';
+      if (code <= 57) return 'Drizzle';
+      if (code <= 65) return 'Rain';
+      if (code <= 67) return 'Freezing rain';
+      if (code <= 77) return 'Snow';
+      if (code <= 82) return 'Showers';
+      if (code <= 86) return 'Snow showers';
+      if (code >= 95) return 'Thunderstorm';
+      return 'Cloudy';
+    }
+
+    // Open-Meteo free API — no key needed, Austin coords
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=30.2672&longitude=-97.7431&current=temperature_2m,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FChicago')
+      .then(r => r.json())
+      .then(data => {
+        const cur = data.current;
+        const temp = Math.round(cur.temperature_2m);
+        const code = cur.weather_code;
+        const wind = Math.round(cur.wind_speed_10m);
+        document.getElementById('wb-icon').textContent = weatherIcon(code);
+        document.getElementById('wb-temp').textContent = temp + '°F';
+        document.getElementById('wb-desc').textContent = weatherDesc(code) + ' · Wind ' + wind + ' mph';
+      })
+      .catch(() => {
+        // Fallback: hide weather portion gracefully
+        document.getElementById('wb-weather').style.display = 'none';
+      });
+  })();
 </script>
 
 </body>

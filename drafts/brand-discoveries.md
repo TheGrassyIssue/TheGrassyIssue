@@ -1,4 +1,4 @@
-# Brand Discoveries — April 21, 2026
+# Brand Discoveries — April 22, 2026 (updated)
 
 New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-corporate, Mo Norman energy):
 
@@ -29,3 +29,11 @@ New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-cor
 ## CPH / Captain's Helm (NEW — April 21)
 - **URL:** TBD (Japan-based)
 - **Why they fit:** Japanese streetwear lens on golf. Fun, design-led, keeping things fresh without the hype machine. Needs deeper vetting — URL and product line to be confirmed.
+
+## WAAC / Win At All Costs (NEW — April 22)
+- **URL:** https://waac.co.kr (South Korea)
+- **Why they fit:** Korean golf streetwear with playful graphics and edgy attitude, favorite among rising pros in Asia. Bolder than most on the watchlist — might be too loud for TGI's voice, but the craftsmanship and international perspective are worth tracking.
+
+## Radry Golf (NEW — April 22)
+- **URL:** TBD (needs vetting)
+- **Why they fit:** Understated approach updated with modern streetwear cues. Functional pieces that transition from course to everyday. Quiet design philosophy — more Mo Norman than Bryson. Could fit the TGI roster if quality holds up.

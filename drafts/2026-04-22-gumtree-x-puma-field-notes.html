@@ -1,0 +1,235 @@
+<!-- DRAFT — awaiting Lenny approval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gumtree Golf x PUMA: Field Notes — Preview</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--ink); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.8;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+  }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">[Drop]</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <!-- 1. Hero — PUMA x Gumtree press shot -->
+        <div class="gear-slide">
+          <img src="images/gumtree-puma-1.jpg" alt="PUMA x Gumtree Golf Field Notes lookbook" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">PUMA x Gumtree — Field Notes Lookbook</div>
+          </div>
+        </div>
+
+        <!-- 2. Collab lifestyle shot -->
+        <div class="gear-slide">
+          <img src="images/gumtree-puma-2.jpg" alt="PUMA x Gumtree Golf collab" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Field Notes — On Course</div>
+          </div>
+        </div>
+
+        <!-- 3. Product detail -->
+        <div class="gear-slide">
+          <img src="images/gumtree-puma-3.jpg" alt="PUMA x Gumtree Golf product detail" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Field Notes — Collection Detail</div>
+          </div>
+        </div>
+
+        <!-- 4. Gumtree nature lifestyle -->
+        <div class="gear-slide">
+          <img src="images/gumtree-puma-4.jpg" alt="Gumtree Golf & Nature Club — Just Out For A Walk" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Gumtree — Just Out For A Walk</div>
+          </div>
+        </div>
+
+        <!-- 5. Gumtree lifestyle -->
+        <div class="gear-slide">
+          <img src="images/gumtree-puma-5.jpg" alt="Gumtree Golf & Nature Club lifestyle" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Gumtree — Field Notes</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 5</div>
+
+    <h2 class="card-title">Gumtree Golf x PUMA: The Field Notes Collection Lands</h2>
+    <p class="card-text">
+      Gumtree Golf & Nature Club teamed with PUMA on the Field Notes collection, which is what happens when a brand that hand-sews headcovers from vintage fishing waders meets a company that makes sneakers for Rickie Fowler. The capsule includes polos and gear built around Gumtree's nature-first ethos. Two percent of every Gumtree purchase still goes toward pulling CO₂ out of the atmosphere, which is at least one stroke better than most of us manage on a par 3.
+    </p>
+    <div class="card-meta">
+      <span>Gumtree Golf x PUMA — <a href="https://www.gumtreegolfandnature.com/shop" style="color:#888;">gumtreegolfandnature.com</a></span>
+      <span>Apr 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  let current = 0;
+  const total = slides.length;
+
+  // Build dots
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  }
+
+  function moveSlide(dir) {
+    current = (current + dir + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+  }
+
+  // Touch/swipe support
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
