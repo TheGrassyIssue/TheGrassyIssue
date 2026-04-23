@@ -1,4 +1,4 @@
-# Brand Discoveries — April 22, 2026 (updated)
+# Brand Discoveries — April 23, 2026 (updated)
 
 New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-corporate, Mo Norman energy):
 
@@ -37,3 +37,11 @@ New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-cor
 ## Radry Golf (NEW — April 22)
 - **URL:** TBD (needs vetting)
 - **Why they fit:** Understated approach updated with modern streetwear cues. Functional pieces that transition from course to everyday. Quiet design philosophy — more Mo Norman than Bryson. Could fit the TGI roster if quality holds up.
+
+## Late Nine (NEW — April 23)
+- **URL:** TBD (Stockholm, Sweden)
+- **Why they fit:** Scandinavian restraint applied to golf. Wool trousers, merino knitwear, polos that feel closer to menswear than sportswear. The opposite of loud — a brand that lets fabric do the talking. Strong TGI energy.
+
+## Local Rule (NEW — April 23)
+- **URL:** TBD (needs vetting)
+- **Why they fit:** Clean lines, minimal design, contemporary sensibility closer to modern menswear than traditional golf kit. Restrained and style-forward. Worth investigating further for watchlist candidacy.

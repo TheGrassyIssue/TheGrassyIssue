@@ -1,0 +1,244 @@
+<!-- DRAFT — awaiting Lenny approval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brand to Watch: Late Nine — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+  }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+  }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">Brand to Watch</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <img src="https://late-nine.com/cdn/shop/files/felwfkenwnkfelw.jpg?v=1776789073" alt="Late Nine — current season lookbook" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Late Nine — Current Season</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://late-nine.com/cdn/shop/files/Second_Landing_12.jpg?v=1774815839" alt="Late Nine outerwear" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Outerwear</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://late-nine.com/cdn/shop/files/Second_Landing_13.jpg?v=1774815908" alt="Late Nine polos" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Polos</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://late-nine.com/cdn/shop/files/Second_Landing_14.jpg?v=1774816107" alt="Late Nine knitwear" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Knitwear</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://late-nine.com/cdn/shop/files/Newsletter.jpg?v=1774816418" alt="Late Nine lifestyle" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Lifestyle</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 5</div>
+
+    <h2 class="card-title">Late Nine: Stockholm, Relaxed Fits, and the Quiet Part of Golf</h2>
+    <p class="card-text">
+      Founded in Stockholm in 2024, Late Nine makes golf clothes for people who think most golf clothes try too hard. Ribbed knits, pleated trousers, windbreakers — all cut relaxed, all made in small European factories that care about hand feel more than moisture-wicking stats. The references are late-'90s and early-2000s, back when golf showed up in film and nobody had to explain why it was cool.
+    </p>
+    <p class="card-text">
+      They use deadstock materials when they can, keep production runs limited, and price accordingly — polos start around $252, outerwear north of $500. Not cheap, but you're paying for fabric choices made by people who clearly spend more time touching swatches than reading trend reports.
+    </p>
+
+    <div class="card-detail">
+      Stockholm, Sweden · Founded 2024 · Polos from $252 · Outerwear from $515 · Limited runs · Small-scale European production · Deadstock materials
+    </div>
+
+    <div class="card-meta">
+      <span>Late Nine — <a href="https://late-nine.com">late-nine.com</a></span>
+      <span>Apr 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  }
+
+  function moveSlide(dir) {
+    current = (current + dir + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+  }
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
