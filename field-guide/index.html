@@ -1,0 +1,1104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>The Field Guide to Austin Muni Golf — The Grassy Issue</title>
+<meta name="description" content="An honest guide to the five 18-hole municipal golf courses in Austin, Texas. Which one to play, when to play it, and which one to take your friend from out of town to." />
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thegrassyissue.com/field-guide/" />
+<meta property="og:title" content="The Field Guide to Austin Muni Golf" />
+<meta property="og:description" content="An honest guide to the five 18-hole municipal golf courses in Austin, Texas." />
+<meta property="og:image" content="https://thegrassyissue.com/images/og-field-guide.jpg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --ink: #141414;
+  --paper: #F4F1EA;
+  --grass: #2D4A2B;
+  --rough: #A8A878;
+  --flag: #C7362C;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* ==================== NAV (matches the site) ==================== */
+.nav {
+  border-bottom: 0.5px solid var(--ink);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 18px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+}
+.nav-wordmark {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 26px;
+  letter-spacing: -0.01em;
+  line-height: 1;
+}
+.nav-links {
+  display: flex;
+  gap: 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.nav-links a { padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+.nav-links a:hover, .nav-links a.active { border-bottom-color: var(--ink); }
+.nav-cta {
+  padding: 9px 16px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: background 0.2s;
+}
+.nav-cta:hover { background: var(--grass); }
+
+/* ==================== HERO ==================== */
+.hero {
+  padding: 80px 32px 60px;
+  max-width: 1040px;
+  margin: 0 auto;
+  border-bottom: 0.5px solid var(--ink);
+}
+.hero-kicker {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.hero-kicker .dot { opacity: 0.35; }
+.hero-title {
+  font-family: var(--serif);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(48px, 7vw, 96px);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  margin-bottom: 32px;
+}
+.hero-sub {
+  font-family: var(--serif);
+  font-size: 22px;
+  line-height: 1.45;
+  max-width: 720px;
+  font-style: italic;
+  opacity: 0.85;
+}
+.hero-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 40px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+.hero-meta .dot { opacity: 0.35; }
+
+/* ==================== QUICK ANSWERS ==================== */
+.quick {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 60px 32px;
+}
+.quick-inner { max-width: 1040px; margin: 0 auto; }
+.quick-header {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 28px;
+}
+.quick-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0;
+}
+.quick-card {
+  padding: 24px 20px 24px 0;
+  border-right: 0.5px solid rgba(244, 241, 234, 0.2);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.quick-card:last-child { border-right: none; padding-right: 0; }
+.quick-card:first-child { padding-left: 0; }
+.quick-card:not(:first-child) { padding-left: 20px; }
+.quick-q {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 17px;
+  line-height: 1.25;
+}
+.quick-a {
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--rough);
+  padding-top: 10px;
+  border-top: 0.5px solid rgba(168, 168, 120, 0.3);
+  margin-top: auto;
+}
+.quick-a strong {
+  display: block;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  letter-spacing: -0.01em;
+  text-transform: none;
+  color: var(--paper);
+  margin-bottom: 4px;
+}
+
+/* ==================== PRICE NOTE ==================== */
+.price-note {
+  background: rgba(168, 168, 120, 0.15);
+  border-bottom: 0.5px solid var(--ink);
+  padding: 40px 32px;
+}
+.price-note-inner {
+  max-width: 1040px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+.price-note-label {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.price-note-label::before {
+  content: '';
+  width: 24px;
+  height: 1px;
+  background: var(--ink);
+}
+.price-note-body {
+  font-family: var(--serif);
+  font-size: 18px;
+  line-height: 1.5;
+}
+.price-note-body strong {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--grass);
+}
+.price-note-fine {
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+
+/* ==================== THE GUIDE ==================== */
+.index {
+  padding: 80px 32px;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 40px;
+  padding-bottom: 16px;
+  border-bottom: 0.5px solid var(--ink);
+}
+.index-header h2 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 32px;
+  font-weight: 400;
+}
+.index-header .right {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.muni {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
+  padding: 36px 0;
+  border-bottom: 0.5px solid rgba(20, 20, 20, 0.15);
+  align-items: start;
+}
+.muni:last-child { border-bottom: none; }
+.muni-num {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.muni-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 38px;
+  line-height: 1;
+  letter-spacing: -0.01em;
+}
+.muni-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-top: 10px;
+}
+.muni-badge {
+  display: inline-block;
+  padding: 8px 12px;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+.muni-body {
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.55;
+  margin-bottom: 20px;
+}
+.muni-body p + p { margin-top: 12px; }
+.muni-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+  border-top: 0.5px solid rgba(20, 20, 20, 0.2);
+  padding-top: 16px;
+  margin-top: 14px;
+}
+.muni-stat {
+  border-right: 0.5px solid rgba(20, 20, 20, 0.15);
+  padding-right: 12px;
+}
+.muni-stat:last-child { border-right: none; padding-right: 0; }
+.muni-stat .label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 4px;
+}
+.muni-stat .value {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 18px;
+}
+.muni-links {
+  margin-top: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.muni-links a {
+  padding: 10px 14px;
+  border: 0.5px solid var(--ink);
+  transition: all 0.15s;
+}
+.muni-links a:hover { background: var(--ink); color: var(--paper); }
+.muni-links a.primary {
+  background: var(--ink);
+  color: var(--paper);
+}
+.muni-links a.primary:hover { background: var(--grass); border-color: var(--grass); }
+
+/* ==================== TABLE ==================== */
+.table-section {
+  background: rgba(168, 168, 120, 0.12);
+  padding: 80px 32px;
+  border-top: 0.5px solid var(--ink);
+}
+.table-inner { max-width: 1040px; margin: 0 auto; }
+.table-h2 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+.table-sub {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  opacity: 0.6;
+  margin-bottom: 28px;
+}
+.table-wrap { overflow-x: auto; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--paper);
+  border: 0.5px solid var(--ink);
+  min-width: 640px;
+}
+th, td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 0.5px solid rgba(20, 20, 20, 0.15);
+  font-size: 14px;
+}
+th {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  background: var(--ink);
+  color: var(--paper);
+  border-bottom: none;
+}
+td.course-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 16px;
+}
+td.num {
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.table-note {
+  margin-top: 16px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.55;
+}
+.table-note a { text-decoration: underline; }
+
+/* ==================== AT A GLANCE ==================== */
+.glance {
+  padding: 80px 32px;
+  max-width: 1040px;
+  margin: 0 auto;
+  border-top: 0.5px solid var(--ink);
+}
+.glance-header {
+  margin-bottom: 36px;
+}
+.glance-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 8px;
+}
+.glance-h2 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 32px;
+}
+.glance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+.glance-card {
+  padding: 22px 24px;
+  border: 0.5px solid var(--ink);
+  background: var(--paper);
+}
+.glance-card h3 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+.glance-list {
+  list-style: none;
+  padding: 0;
+}
+.glance-list li {
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgba(20,20,20,0.1);
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  gap: 12px;
+  align-items: baseline;
+}
+.glance-list li:last-child { border-bottom: none; }
+.glance-list .ref {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+/* ==================== HONORABLE MENTIONS ==================== */
+.honorable {
+  padding: 60px 32px 80px;
+  max-width: 1040px;
+  margin: 0 auto;
+  border-top: 0.5px solid var(--ink);
+}
+.honorable-kicker {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+.honorable-h2 {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 28px;
+  margin-bottom: 28px;
+}
+.hon-item {
+  padding: 20px 0;
+  border-bottom: 0.5px solid rgba(20,20,20,0.15);
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.hon-item:last-child { border-bottom: none; }
+.hon-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.hon-tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-top: 6px;
+}
+.hon-body { font-size: 14px; line-height: 1.5; }
+
+/* ==================== FOOTER ==================== */
+.footer {
+  border-top: 0.5px solid var(--ink);
+  padding: 50px 32px 32px;
+  background: var(--paper);
+}
+.footer-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 32px;
+}
+.footer-brand .wordmark {
+  font-family: var(--serif);
+  font-style: italic;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1;
+}
+.footer-brand .tag {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-top: 12px;
+  max-width: 320px;
+  line-height: 1.7;
+  opacity: 0.65;
+}
+.footer-links {
+  display: flex;
+  gap: 24px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  align-self: flex-end;
+}
+.footer-links a:hover { opacity: 1; }
+.footer-bottom {
+  max-width: 1400px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 0.5px solid rgba(20,20,20,0.15);
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+@media (max-width: 820px) {
+  .nav-links { display: none; }
+  .nav-inner { padding: 14px 20px; }
+  .hero { padding: 48px 20px 40px; }
+  .hero-title { font-size: 44px; }
+  .quick { padding: 48px 20px; }
+  .quick-grid { grid-template-columns: 1fr; gap: 0; }
+  .quick-card {
+    border-right: none;
+    border-bottom: 0.5px solid rgba(244,241,234,0.2);
+    padding: 20px 0 !important;
+  }
+  .quick-card:last-child { border-bottom: none; padding-bottom: 0 !important; }
+  .price-note { padding: 32px 20px; }
+  .price-note-inner { grid-template-columns: 1fr; gap: 16px; }
+  .index, .table-section, .glance, .honorable { padding: 48px 20px; }
+  .muni { grid-template-columns: 1fr; gap: 16px; padding: 28px 0; }
+  .muni-stats { grid-template-columns: repeat(2, 1fr); gap: 12px 0; }
+  .muni-stat {
+    border-right: none;
+    padding: 8px 0;
+  }
+  .muni-stat:nth-child(odd) {
+    border-right: 0.5px solid rgba(20,20,20,0.15);
+    padding-right: 16px;
+  }
+  .glance-grid { grid-template-columns: 1fr; }
+  .hon-item { grid-template-columns: 1fr; gap: 10px; }
+  .footer { padding: 40px 20px 24px; }
+  .footer-inner { flex-direction: column; }
+  .footer-links { align-self: flex-start; flex-wrap: wrap; }
+  .footer-bottom { flex-direction: column; }
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark">The Grassy Issue</a>
+    <div class="nav-links">
+      <a href="/#feed">Feed</a>
+      <a href="/field-guide/" class="active">Field Guide</a>
+      <a href="/#drops">Drops</a>
+      <a href="/scoreboard.html">Scoreboard</a>
+    </div>
+    <a href="/scoreboard.html#submit" class="nav-cta">Post a score →</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-kicker">
+    <span>The Grassy Issue · Field Guide</span>
+    <span class="dot">·</span>
+    <span>Updated April 2026</span>
+  </div>
+  <h1 class="hero-title">
+    Five munis,<br/>
+    one field guide.
+  </h1>
+  <p class="hero-sub">
+    An honest guide to the five municipal golf courses that make up the public soul of Austin golf — where to play, where to take your friend from out of town, and which one the locals would quietly rather you didn't crowd up on Saturdays.
+  </p>
+  <div class="hero-meta">
+    <span>By Lenny Harrington</span>
+    <span class="dot">·</span>
+    <span>Living index · Updated quarterly</span>
+    <span class="dot">·</span>
+    <span>~10 min read</span>
+  </div>
+</section>
+
+<section class="quick">
+  <div class="quick-inner">
+    <div class="quick-header">Quick answers — if you only read this far</div>
+    <div class="quick-grid">
+      <div class="quick-card">
+        <div class="quick-q">Visiting for the weekend.</div>
+        <div class="quick-a">Play<strong>Lions Muni</strong>Historic, neighborly, scorable</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">Just moved here. Becoming a regular.</div>
+        <div class="quick-a">Play<strong>Morris Williams</strong>The local's course. Real character.</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">Got three hours. Play something.</div>
+        <div class="quick-a">Play<strong>Hancock</strong>9 holes, $20, done by lunch</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">Taking out-of-town friends.</div>
+        <div class="quick-a">Play<strong>Roy Kizer</strong>Links-style, let the driver rip</div>
+      </div>
+      <div class="quick-card">
+        <div class="quick-q">Want nearly 7,000 yards to yourself.</div>
+        <div class="quick-a">Play<strong>Jimmy Clay</strong>The longest. Rarely crowded.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="price-note">
+  <div class="price-note-inner">
+    <div class="price-note-label">A note on pricing</div>
+    <div>
+      <p class="price-note-body">
+        Here's the thing about Austin municipal golf: <strong>the four 18-hole munis all charge the same price.</strong> $35 Monday through Thursday, $41 Friday, $44 on weekends and holidays. $28 after the sunset cutoff. Which means when you're choosing between Lions, Morris Williams, Roy Kizer, and Jimmy Clay — <strong>price isn't the question.</strong> Character is.
+      </p>
+      <div class="price-note-fine">City of Austin rates · Effective Oct 1, 2025 · Hancock is $20 flat, the outlier</div>
+    </div>
+  </div>
+</section>
+
+<section class="index">
+  <div class="index-header">
+    <h2>The Field Guide, in depth.</h2>
+    <div class="right">Five courses · One page</div>
+  </div>
+
+  <article class="muni">
+    <div>
+      <div class="muni-num">No. 01 · Since 1924</div>
+      <div class="muni-name">Lions Muni.</div>
+      <div class="muni-tag">The historic one. Central. Short. Worth it.</div>
+    </div>
+    <div>
+      <div class="muni-badge">Best for: Walkers, visitors, good vibes</div>
+      <div class="muni-body">
+        <p>Lions plays like a neighborhood. Austin High kids practicing on the range, walkers carrying their own bags, a putting green complex at the clubhouse that's genuinely one of the best at any muni in the state. You feel the vibe before you tee off — pulling up on a Saturday morning, the place just feels like Austin.</p>
+        <p>The course itself is scorable in a way that rewards a regular. Front nine and back nine have distinct personalities — the transition between them is one of the nicest things about the round — and a run of pars and birdies feels earned rather than handed to you. At 6,001 yards par 71 from the tips, it's the shortest of the Austin 18-holers, which sounds like a feature until you try to keep a driver on the narrow tree-lined fairways.</p>
+        <p>Ben Crenshaw and Tom Kite learned here. One of the first courses in the South to desegregate, in 1951 — years before Brown v. Board. It sits on UT land that's been quietly fought over for a decade; "save the Muny" is a sincere Austin cause.</p>
+      </div>
+      <div class="muni-stats">
+        <div class="muni-stat">
+          <div class="label">Par / Yards</div>
+          <div class="value">71 · 6,001</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Built</div>
+          <div class="value">1924</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Walking</div>
+          <div class="value">Yes, easy</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Vibe</div>
+          <div class="value">Classic, close, contested</div>
+        </div>
+      </div>
+      <div class="muni-links">
+        <a href="/guides/lions/" class="primary">Hole-by-hole guide →</a>
+        <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
+        <a href="https://www.austintexas.gov/golfatx/lions-municipal-course" target="_blank" rel="noopener">Course info ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="muni">
+    <div>
+      <div class="muni-num">No. 02 · Since 1964</div>
+      <div class="muni-name">Morris Williams.</div>
+      <div class="muni-tag">The local's course. East side. Real character.</div>
+    </div>
+    <div>
+      <div class="muni-badge">Best for: Regulars, real golfers, elevation junkies</div>
+      <div class="muni-body">
+        <p>Morris Williams is the most elevation you'll find on an Austin muni, and you feel it in your legs if you walk it — which you should. This is the one that plays like real golf: longer holes, better green complexes than anywhere else in the muni system, and a conditioning standard that doesn't apologize. Some of the best downtown skyline views too, from the back nine.</p>
+        <p>Leon Howard design from 1964, opened as Austin's third public course, home to the UT golf team during the Kite and Crenshaw years under coach George Hannon. At 6,637 yards par 72, it's regarded as the toughest test of the four 18-holers — small elevated greens, real contouring, rolling terrain that actually uses central Texas geography. Water runs through holes 11 to 14. The clubhouse has rocking chairs on the porch overlooking the course and is not trying to impress anyone, which is exactly the point.</p>
+      </div>
+      <div class="muni-stats">
+        <div class="muni-stat">
+          <div class="label">Par / Yards</div>
+          <div class="value">72 · 6,637</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Built</div>
+          <div class="value">1964</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Walking</div>
+          <div class="value">Yes, rolling</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Vibe</div>
+          <div class="value">Serious, lived-in, East</div>
+        </div>
+      </div>
+      <div class="muni-links">
+        <a href="/guides/morris-williams/" class="primary">Hole-by-hole guide →</a>
+        <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
+        <a href="https://www.austintexas.gov/department/morris-williams-course" target="_blank" rel="noopener">Course info ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="muni">
+    <div>
+      <div class="muni-num">No. 03 · Since 1899</div>
+      <div class="muni-name">Hancock.</div>
+      <div class="muni-tag">The oldest course in Texas. Nine holes. $20.</div>
+    </div>
+    <div>
+      <div class="muni-badge">Best for: Casual rounds, beginners, 90-minute afternoons</div>
+      <div class="muni-body">
+        <p>Hancock is as casual as Austin golf gets — no need for a polo or anything. It's smack in the middle of a residential neighborhood so try not to hit a car. Weekends crawl, but on off times you can get around in under 90 minutes. Show up solo and jump in a group of random guys; it's always super fun. There's a tricky par 5 toward the end that'll surprise you the first time through.</p>
+        <p>Nine holes, $20 flat every day of the week, tucked into a central-Austin neighborhood that's been here since Reconstruction. Walking only. The oldest golf course in Texas, doing what it's done since 1899.</p>
+      </div>
+      <div class="muni-stats">
+        <div class="muni-stat">
+          <div class="label">Par / Yards</div>
+          <div class="value">35 · 2,624 (9 holes)</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Built</div>
+          <div class="value">1899</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Walking</div>
+          <div class="value">Only walking</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Vibe</div>
+          <div class="value">Neighborhood, 1899, mellow</div>
+        </div>
+      </div>
+      <div class="muni-links">
+        <a href="/guides/hancock/" class="primary">Hole-by-hole guide →</a>
+        <a href="https://www.austintexas.gov/golfatx/hancock-golf-course" target="_blank" rel="noopener">Course info ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="muni">
+    <div>
+      <div class="muni-num">No. 04 · Since 1994</div>
+      <div class="muni-name">Roy Kizer.</div>
+      <div class="muni-tag">Links-style. Flat. Cinematic at sunset.</div>
+    </div>
+    <div>
+      <div class="muni-badge">Best for: Drivers of the ball, walkers, a clean test</div>
+      <div class="muni-body">
+        <p>Kizer feels different from every other muni in Austin — links-style, wide fairways, flat as a table. You can let the driver rip without thinking twice, and losing a ball here takes actual effort. Walking is the way to go. If you've been stuck at tight tree-lined courses for a month, Kizer is where you go to remember what a full swing feels like.</p>
+        <p>The 16th is the course's brain-twister — just outside driver distance, with a deep bunker short of the green that will keep you coming back until you figure out the right club. Play it on a Saturday during UT football season and you'll get the Longhorn flyover directly overhead, which is the kind of thing you can't plan for but never forget.</p>
+        <p>Randolph Russell links-style layout, opened 1994. 6,819 yards par 71 with 57 acres of lakes and wetlands threaded through the fairways. Named for the long-time Lions Muni superintendent who retired in 1973. Wind is the real hazard — don't come on a 25 mph day unless you want character-building. Come at 5:30pm in April with your phone in your pocket.</p>
+      </div>
+      <div class="muni-stats">
+        <div class="muni-stat">
+          <div class="label">Par / Yards</div>
+          <div class="value">71 · 6,819</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Built</div>
+          <div class="value">1994</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Walking</div>
+          <div class="value">Yes, flat</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Vibe</div>
+          <div class="value">Open, scenic, windy</div>
+        </div>
+      </div>
+      <div class="muni-links">
+        <a href="/guides/roy-kizer/" class="primary">Hole-by-hole guide →</a>
+        <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
+        <a href="https://www.austintexas.gov/golfatx/roy-kizer-course" target="_blank" rel="noopener">Course info ↗</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="muni">
+    <div>
+      <div class="muni-num">No. 05 · Since 1974</div>
+      <div class="muni-name">Jimmy Clay.</div>
+      <div class="muni-tag">Longest of the munis. South. Underrated.</div>
+    </div>
+    <div>
+      <div class="muni-badge">Best for: Sunset rounds, long hitters, south-siders</div>
+      <div class="muni-body">
+        <p>Jimmy Clay is the muni that's quietly overlooked, which is a shame because it holds up. A handful of fun holes on the front, and a back nine that's genuinely lovely — worth the drive south even on days when Kizer has tee times available. This is the course to play at sunset: big Texas sky, long shadows, the kind of light that makes even a bad shot feel like part of the round.</p>
+        <p>Joe Finger design from 1974, tucked along Williamson Creek on the south side of town, part of the 36-hole complex it shares with Roy Kizer. 6,918 yards of traditional tree-lined fairways, par 72, the longest you can play in the Austin muni system. A 2007 renovation added a water feature and an island green; a second renovation in 2015 reshaped four greens.</p>
+      </div>
+      <div class="muni-stats">
+        <div class="muni-stat">
+          <div class="label">Par / Yards</div>
+          <div class="value">72 · 6,918</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Built</div>
+          <div class="value">1974</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Walking</div>
+          <div class="value">Yes, long</div>
+        </div>
+        <div class="muni-stat">
+          <div class="label">Vibe</div>
+          <div class="value">South, empty, serious</div>
+        </div>
+      </div>
+      <div class="muni-links">
+        <a href="/guides/jimmy-clay/" class="primary">Hole-by-hole guide →</a>
+        <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
+        <a href="https://www.austintexas.gov/department/jimmy-clay-course" target="_blank" rel="noopener">Course info ↗</a>
+      </div>
+    </div>
+  </article>
+
+</section>
+
+<section class="table-section">
+  <div class="table-inner">
+    <div class="table-h2">All five, side by side.</div>
+    <div class="table-sub">Green fees current as of April 2026 · Updated quarterly</div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Holes</th>
+            <th>Par</th>
+            <th>Yards</th>
+            <th>Built</th>
+            <th>Price</th>
+            <th>Walk</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="course-name">Lions</td>
+            <td class="num">18</td>
+            <td class="num">71</td>
+            <td class="num">6,001</td>
+            <td class="num">1924</td>
+            <td class="num">$35–$44</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td class="course-name">Morris Williams</td>
+            <td class="num">18</td>
+            <td class="num">72</td>
+            <td class="num">6,637</td>
+            <td class="num">1964</td>
+            <td class="num">$35–$44</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td class="course-name">Hancock</td>
+            <td class="num">9</td>
+            <td class="num">35</td>
+            <td class="num">2,624</td>
+            <td class="num">1899</td>
+            <td class="num">$20</td>
+            <td>Only</td>
+          </tr>
+          <tr>
+            <td class="course-name">Roy Kizer</td>
+            <td class="num">18</td>
+            <td class="num">71</td>
+            <td class="num">6,819</td>
+            <td class="num">1994</td>
+            <td class="num">$35–$44</td>
+            <td>Yes</td>
+          </tr>
+          <tr>
+            <td class="course-name">Jimmy Clay</td>
+            <td class="num">18</td>
+            <td class="num">72</td>
+            <td class="num">6,918</td>
+            <td class="num">1974</td>
+            <td class="num">$35–$44</td>
+            <td>Yes</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="table-note">Sunset rates $28 at all four 18-hole courses. Junior, senior, and 9-hole rates also available. Spot a mistake? <a href="mailto:L4harrington@gmail.com">Tell us.</a></div>
+  </div>
+</section>
+
+<section class="glance">
+  <div class="glance-header">
+    <div class="glance-kicker">At a glance</div>
+    <div class="glance-h2">Answers to questions you haven't asked yet.</div>
+  </div>
+  <div class="glance-grid">
+
+    <div class="glance-card">
+      <h3>The best deal in Austin golf.</h3>
+      <ul class="glance-list">
+        <li><span>Sunset rates, any 18-hole muni</span><span class="ref">$28 flat</span></li>
+        <li><span>Sunset cart rental</span><span class="ref">$12</span></li>
+        <li><span>Same course, same turf, half the wait</span><span class="ref">Any day</span></li>
+      </ul>
+    </div>
+
+    <div class="glance-card">
+      <h3>The longest and the shortest.</h3>
+      <ul class="glance-list">
+        <li><span>Longest: Jimmy Clay</span><span class="ref">6,918 yds</span></li>
+        <li><span>Shortest 18: Lions</span><span class="ref">6,001 yds</span></li>
+        <li><span>Shortest total: Hancock</span><span class="ref">2,624 yds</span></li>
+      </ul>
+    </div>
+
+    <div class="glance-card">
+      <h3>Best for a first time golfer.</h3>
+      <ul class="glance-list">
+        <li><span>Hancock</span><span class="ref">Nine, gentle</span></li>
+        <li><span>Roy Kizer</span><span class="ref">Wide fairways</span></li>
+        <li><span>Lions, twilight</span><span class="ref">Shortest test</span></li>
+      </ul>
+    </div>
+
+    <div class="glance-card">
+      <h3>Best for photos.</h3>
+      <ul class="glance-list">
+        <li><span>Roy Kizer at sunset</span><span class="ref">Cinematic</span></li>
+        <li><span>Lions under the live oaks</span><span class="ref">Spring mornings</span></li>
+        <li><span>Morris Williams, skyline view</span><span class="ref">Back porch</span></li>
+      </ul>
+    </div>
+
+    <div class="glance-card">
+      <h3>When courses are busiest.</h3>
+      <ul class="glance-list">
+        <li><span>Saturday 7–10am, all courses</span><span class="ref">Rush</span></li>
+        <li><span>Sunday afternoon at Lions</span><span class="ref">Packed</span></li>
+        <li><span>Tuesday 2–5pm, any</span><span class="ref">Empty</span></li>
+      </ul>
+    </div>
+
+    <div class="glance-card">
+      <h3>Maintenance days to know.</h3>
+      <ul class="glance-list">
+        <li><span>Lions · 3rd Monday monthly</span><span class="ref">Closed</span></li>
+        <li><span>Morris Williams · 2nd Monday monthly</span><span class="ref">Closed</span></li>
+        <li><span>All courses · Check before you go</span><span class="ref">GolfATX.gov</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section class="honorable">
+  <div class="honorable-kicker">Honorable mentions</div>
+  <div class="honorable-h2">Not on the guide, but worth knowing.</div>
+
+  <div class="hon-item">
+    <div>
+      <div class="hon-name">Grey Rock Golf Club.</div>
+      <div class="hon-tag">Semi-private · Southwest Austin</div>
+    </div>
+    <div class="hon-body">
+      <p>Technically part of the Golf ATX system, but priced and operated differently. Grey Rock runs more like a semi-private club than a municipal course — membership options, higher day rates, a Jay Morrish design. Worth knowing about if you're considering a Golf ATX membership or want a course that plays a step up from the five munis. Not what the Field Guide is about, but not nothing.</p>
+    </div>
+  </div>
+
+  <div class="hon-item">
+    <div>
+      <div class="hon-name">Butler Pitch & Putt.</div>
+      <div class="hon-tag">Public · Par 3 · Downtown</div>
+    </div>
+    <div class="hon-body">
+      <p>Nine par-3 holes downtown, walk-up rates, beer stand at the 19th. Not on this Field Guide because it's a different category of golf — closer to a first date than a real round. But it deserves a mention because it's an Austin institution, and because it's the correct answer to "where can I play in jeans right now." Get its own writeup eventually.</p>
+    </div>
+  </div>
+
+  <div class="hon-item">
+    <div>
+      <div class="hon-name">Joe Balander Short Course.</div>
+      <div class="hon-tag">Part of the Kizer complex · Par 3 practice</div>
+    </div>
+    <div class="hon-body">
+      <p>A nine-hole par-3 practice course at the Roy Kizer / Jimmy Clay complex. $5 adults, $3 juniors. Under the radar, open to the public, good for dialing in your wedges or teaching a beginner without the pressure of a full round. Walk only.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <div class="wordmark">The Grassy Issue.</div>
+      <div class="tag">A running feed of golf culture, design &amp; Austin muni. Edited in Austin by Lenny Harrington.</div>
+    </div>
+    <div class="footer-links">
+      <a href="/">Feed</a>
+      <a href="/field-guide/">Field Guide</a>
+      <a href="/scoreboard.html">Scoreboard</a>
+      <a href="https://www.instagram.com/thegrassyissue/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="mailto:L4harrington@gmail.com">Contact</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 The Grassy Issue · Austin, TX</span>
+    <span>Field Guide updated quarterly · Data sources Golf ATX, GolfPass, City of Austin</span>
+  </div>
+</footer>
+
+</body>
+</html>
