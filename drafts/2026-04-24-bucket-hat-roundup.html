@@ -1,0 +1,265 @@
+<!-- DRAFT — awaiting Lenny approval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>8 Bucket Hats Worth the Brim — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+  }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+  }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">Gear Guide</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/RECYCLED_GREENSKEEPER_BUCKET_HAT_BLACK_01_8b60c382-95a6-4ca6-bf2d-470483272005.jpg?v=1757073078" alt="Manors Greenskeeper Bucket Hat — Black" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Manors — Greenskeeper Bucket Hat · $61</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9426-WHT_72ca432d-f18f-4d84-bcf8-7eb21ff3d03f.jpg?v=1753723122" alt="Malbon Bucket Hat — White" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Malbon — Bucket Hat White · $58</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-BU2502-SWING-KINGS-HAT-FRONT-7777_f8c8ed7e-1d54-42d5-a299-44b6a8366fe4.jpg?v=1747307093" alt="Birds of Condor — Swing Kings Reversible" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Birds of Condor — Swing Kings Reversible · $59.95 AUD</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9849-WYW-SR2.jpg?v=1775857647" alt="Malbon — Reversible Velasco" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Malbon — Reversible Velasco · $88</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf699e28b23daa20699e28b23dbe5.85131244699e28b23dbe5.jpg?v=1771972831" alt="Students Golf — Seek Boonie Hat" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Students Golf — Seek Boonie Hat · $60</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-fore-tiger-bucket-bu23108-offwhite-osfa-front-7679.jpg?v=1696935601" alt="Birds of Condor — Fore Tiger" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Birds of Condor — Fore Tiger · $59.95 AUD</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9796-DKO.png?v=1772579721" alt="Malbon — Ripstop Bucket Dark Olive" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Malbon — Ripstop Bucket Dark Olive · $78</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-BU2504-RAGE-HAT-FRONT-7793_1d97f765-4ff2-48b1-8126-13a4089280c1.jpg?v=1747307329" alt="Birds of Condor — Rage Corduroy" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Birds of Condor — Rage Corduroy · $59.95 AUD</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 8</div>
+
+    <h2 class="card-title">8 Bucket Hats Worth the Brim</h2>
+    <p class="card-text">
+      The bucket hat is having its quiet moment on the course — no logos screaming from the crown, no performance fabric monologues on the hang tag. Just a wide brim, some shade, and the vague suggestion that you know what you're doing out there. We pulled eight from four brands that get it right.
+    </p>
+    <p class="card-text">
+      Manors' Greenskeeper is recycled fabric with a wide brim that matches their jacket. Malbon covers the range from a clean $58 script logo to the reversible Velasco at $88. Students Golf went full boonie with a screen-printed marble camo that shouldn't work but does. And Birds of Condor — the Australian brand that treats golf hats like an art form — brings three: a reversible Swing Kings, a corduroy Rage, and the Fore Tiger with its embroidered big cat. Price range across the board: $58–$88 USD, $40–$60 AUD.
+    </p>
+
+    <div class="card-detail">
+      Manors $61 · Malbon $58–$88 · Students Golf $60 · Birds of Condor $40–$60 AUD · Cotton, recycled poly, ripstop, corduroy · 4 brands, 8 hats, zero visors
+    </div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>Apr 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dotsContainer.appendChild(dot);
+  }
+
+  function moveSlide(dir) {
+    current = (current + dir + total) % total;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+  }
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
