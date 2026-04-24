@@ -1,4 +1,4 @@
-# Brand Discoveries — April 23, 2026 (updated)
+# Brand Discoveries — April 24, 2026 (updated)
 
 New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-corporate, Mo Norman energy):
 
@@ -45,3 +45,7 @@ New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-cor
 ## Local Rule (NEW — April 23)
 - **URL:** TBD (needs vetting)
 - **Why they fit:** Clean lines, minimal design, contemporary sensibility closer to modern menswear than traditional golf kit. Restrained and style-forward. Worth investigating further for watchlist candidacy.
+
+## Agronomy Workshop (NEW — April 24)
+- **URL:** https://agronomyworkshop.com (San Francisco)
+- **Why they fit:** Launched 2025 with a tiny, obsessive range — heavyweight cotton mock neck work shirts with hidden tee slots in the chest pocket, caps with integrated pen holders. This is the kind of brand that cares more about a seam than a logo. Craft-first, function-first, zero hype. Strong Mo Norman energy — a brand that would rather show you a well-made pocket than a billboard.
