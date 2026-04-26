@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Lions Municipal Golf Course — Hole-by-Hole Guide — The Grassy Issue</title>
+<meta name="description" content="A hole-by-hole guide to Lions Municipal Golf Course in Austin, TX. The oldest muni in Texas — 18 holes of strategy, history, and local knowledge since 1924." />
+
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://thegrassyissue.com/field-guide/lions/" />
+<meta property="og:title" content="Lions Municipal Golf Course — Hole-by-Hole Guide" />
+<meta property="og:description" content="18 holes of strategy, history, and local knowledge at the oldest muni in Texas." />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+:root {
+  --ink: #141414;
+  --paper: #F4F1EA;
+  --grass: #2D4A2B;
+  --rough: #A8A878;
+  --flag: #C7362C;
+  --serif: 'Fraunces', Georgia, serif;
+  --sans: 'Inter', -apple-system, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 15px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+img { max-width: 100%; display: block; }
+
+/* NAV */
+.nav { border-bottom: 0.5px solid var(--ink); background: var(--paper); position: sticky; top: 0; z-index: 20; }
+.nav-inner { max-width: 1400px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
+.nav-wordmark { font-family: var(--serif); font-style: italic; font-weight: 400; font-size: 26px; letter-spacing: -0.01em; line-height: 1; }
+.nav-links { display: flex; gap: 24px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
+.nav-links a { padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
+.nav-links a:hover, .nav-links a.active { border-bottom-color: var(--ink); }
+.nav-cta { padding: 9px 16px; background: var(--ink); color: var(--paper); font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; white-space: nowrap; transition: background 0.2s; }
+.nav-cta:hover { background: var(--grass); }
+
+/* HERO */
+.hero { padding: 80px 32px 60px; max-width: 1040px; margin: 0 auto; border-bottom: 0.5px solid var(--ink); }
+.hero-kicker { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 24px; display: flex; align-items: center; gap: 10px; }
+.hero-kicker .dot { opacity: 0.35; }
+.hero-title { font-family: var(--serif); font-weight: 400; font-style: italic; font-size: clamp(42px, 6vw, 80px); line-height: 0.95; letter-spacing: -0.02em; margin-bottom: 32px; }
+.hero-sub { font-family: var(--serif); font-size: 22px; line-height: 1.45; max-width: 720px; font-style: italic; opacity: 0.85; }
+.hero-meta { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 40px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.6; }
+
+/* COURSE VITALS */
+.vitals { background: var(--ink); color: var(--paper); padding: 60px 32px; }
+.vitals-inner { max-width: 1040px; margin: 0 auto; }
+.vitals-header { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.6; margin-bottom: 28px; }
+.vitals-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0; }
+.vitals-card { padding: 20px 16px 20px 0; border-right: 0.5px solid rgba(244,241,234,0.2); }
+.vitals-card:last-child { border-right: none; }
+.vitals-card:not(:first-child) { padding-left: 16px; }
+.vitals-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; margin-bottom: 6px; }
+.vitals-value { font-family: var(--serif); font-style: italic; font-size: 22px; }
+.vitals-note { font-family: var(--mono); font-size: 10px; opacity: 0.4; margin-top: 3px; }
+
+/* SCORECARD */
+.scorecard-section { padding: 60px 32px; border-bottom: 0.5px solid var(--ink); }
+.scorecard-inner { max-width: 1040px; margin: 0 auto; }
+.section-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; margin-bottom: 12px; }
+.section-title { font-family: var(--serif); font-style: italic; font-size: 32px; margin-bottom: 8px; }
+.section-sub { font-size: 15px; opacity: 0.7; max-width: 640px; margin-bottom: 32px; line-height: 1.55; }
+.scorecard-wrap { overflow-x: auto; }
+.scorecard { width: 100%; border-collapse: collapse; background: var(--paper); border: 0.5px solid var(--ink); min-width: 700px; }
+.scorecard th, .scorecard td { padding: 10px 12px; text-align: center; border-bottom: 0.5px solid rgba(20,20,20,0.15); font-size: 13px; }
+.scorecard th { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; background: var(--ink); color: var(--paper); border-bottom: none; }
+.scorecard td.hole-num { font-family: var(--mono); font-weight: 500; font-size: 12px; background: rgba(45,74,43,0.08); }
+.scorecard td.par-val { font-family: var(--serif); font-style: italic; font-size: 16px; }
+.scorecard tr.nine-total { background: rgba(20,20,20,0.06); font-weight: 500; }
+.scorecard tr.nine-total td { font-family: var(--mono); font-size: 12px; letter-spacing: 0.06em; border-top: 1.5px solid var(--ink); }
+
+/* HOLE CARDS */
+.holes-section { padding: 60px 32px 80px; max-width: 1040px; margin: 0 auto; }
+.nine-header { font-family: var(--mono); font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 32px; padding-bottom: 12px; border-bottom: 0.5px solid var(--ink); display: flex; justify-content: space-between; align-items: baseline; }
+.nine-header .nine-par { opacity: 0.5; }
+.hole-card { display: grid; grid-template-columns: 100px 1fr; gap: 0; border: 0.5px solid var(--ink); margin-bottom: 20px; background: var(--paper); }
+.hole-num-block { background: var(--ink); color: var(--paper); display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 24px 16px; gap: 4px; }
+.hole-num-block .num { font-family: var(--serif); font-style: italic; font-size: 42px; line-height: 1; }
+.hole-num-block .par-label { font-family: var(--mono); font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.6; }
+.hole-num-block .par-num { font-family: var(--serif); font-size: 18px; }
+.hole-content { padding: 20px 24px; display: flex; flex-direction: column; gap: 12px; }
+.hole-yardages { display: flex; gap: 16px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; }
+.hole-yardages .tee { display: flex; align-items: center; gap: 5px; }
+.hole-yardages .tee-dot { width: 8px; height: 8px; border-radius: 50%; display: inline-block; }
+.tee-dot.blue { background: #3366aa; }
+.tee-dot.white { background: #ccc; border: 0.5px solid #999; }
+.tee-dot.red { background: #C7362C; }
+.hole-hdcp { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; opacity: 0.5; }
+.hole-desc { font-family: var(--serif); font-size: 16px; line-height: 1.5; }
+.hole-tip { font-size: 13px; color: var(--grass); line-height: 1.5; padding: 10px 14px; background: rgba(45,74,43,0.06); border-left: 2px solid var(--grass); }
+.hole-tip strong { font-family: var(--mono); font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; display: block; margin-bottom: 4px; }
+.hole-card.signature { border-color: var(--flag); border-width: 1.5px; }
+.hole-card.signature .hole-num-block { background: var(--flag); }
+
+/* HISTORY */
+.history-section { background: var(--ink); color: var(--paper); padding: 80px 32px; }
+.history-inner { max-width: 1040px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+.history-title { font-family: var(--serif); font-style: italic; font-size: 32px; margin-bottom: 20px; }
+.history-body { font-family: var(--serif); font-size: 17px; line-height: 1.6; opacity: 0.9; }
+.history-body p + p { margin-top: 14px; }
+.timeline { list-style: none; }
+.timeline li { padding: 14px 0; border-bottom: 0.5px solid rgba(244,241,234,0.15); display: grid; grid-template-columns: 80px 1fr; gap: 16px; }
+.timeline .year { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; opacity: 0.5; padding-top: 2px; }
+.timeline .event { font-size: 14px; line-height: 1.5; }
+
+/* FOOTER */
+.footer { padding: 32px; border-top: 0.5px solid var(--ink); text-align: center; }
+.footer-text { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.5; }
+.footer-text a { border-bottom: 0.5px solid currentColor; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .vitals-grid { grid-template-columns: repeat(3, 1fr); }
+  .vitals-card:nth-child(3) { border-right: none; }
+  .vitals-card:nth-child(4) { padding-left: 0; }
+  .history-inner { grid-template-columns: 1fr; gap: 40px; }
+  .hole-card { grid-template-columns: 80px 1fr; }
+  .nav-links { display: none; }
+}
+@media (max-width: 480px) {
+  .vitals-grid { grid-template-columns: repeat(2, 1fr); }
+  .vitals-card:nth-child(2n) { border-right: none; }
+  .vitals-card:nth-child(2n+1):not(:first-child) { padding-left: 0; }
+  .hole-card { grid-template-columns: 1fr; }
+  .hole-num-block { flex-direction: row; padding: 14px 20px; gap: 12px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark">The Grassy Issue</a>
+    <div class="nav-links">
+      <a href="/">Feed</a>
+      <a href="/field-guide/" class="active">Field Guide</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-kicker">
+    <a href="/field-guide/">← Field Guide</a> <span class="dot">·</span> Austin Munis
+  </div>
+  <h1 class="hero-title">Lions Municipal</h1>
+  <p class="hero-sub">The oldest municipal golf course in Texas. 18 holes of narrow fairways, small greens, and a century of stories tucked into the oaks along Enfield Road.</p>
+  <div class="hero-meta">
+    <span>Est. 1924</span>
+    <span>Par 71</span>
+    <span>6,001 yards (Blue)</span>
+    <span>2901 Enfield Rd, Austin TX</span>
+    <span>National Register of Historic Places</span>
+  </div>
+</section>
+
+<!-- COURSE VITALS -->
+<section class="vitals">
+  <div class="vitals-inner">
+    <div class="vitals-header">Course vitals</div>
+    <div class="vitals-grid">
+      <div class="vitals-card">
+        <div class="vitals-label">Par</div>
+        <div class="vitals-value">71</div>
+        <div class="vitals-note">Front 36 · Back 35</div>
+      </div>
+      <div class="vitals-card">
+        <div class="vitals-label">Blue tees</div>
+        <div class="vitals-value">6,001</div>
+        <div class="vitals-note">69.2 / 114</div>
+      </div>
+      <div class="vitals-card">
+        <div class="vitals-label">White tees</div>
+        <div class="vitals-value">5,642</div>
+        <div class="vitals-note">67.3 / 110</div>
+      </div>
+      <div class="vitals-card">
+        <div class="vitals-label">Red tees</div>
+        <div class="vitals-value">4,931</div>
+        <div class="vitals-note">63.1 / 100</div>
+      </div>
+      <div class="vitals-card">
+        <div class="vitals-label">Green fees</div>
+        <div class="vitals-value">$30–37</div>
+        <div class="vitals-note">Cart $18/player</div>
+      </div>
+      <div class="vitals-card">
+        <div class="vitals-label">Resident card</div>
+        <div class="vitals-value">$5/yr</div>
+        <div class="vitals-note">Discounts on fees</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SCORECARD -->
+<section class="scorecard-section">
+  <div class="scorecard-inner">
+    <div class="section-kicker">Full scorecard</div>
+    <h2 class="section-title">By the numbers</h2>
+    <p class="section-sub">Three tee boxes, par 71. The back nine plays a stroke shorter but makes up for it with tighter corridors and Hogan's Hole.</p>
+    <div class="scorecard-wrap">
+      <table class="scorecard">
+        <thead>
+          <tr><th>Hole</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>Out</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="hole-num">Par</td><td class="par-val">4</td><td class="par-val">5</td><td class="par-val">4</td><td class="par-val">3</td><td class="par-val">4</td><td class="par-val">4</td><td class="par-val">3</td><td class="par-val">5</td><td class="par-val">4</td><td class="par-val">36</td></tr>
+          <tr><td class="hole-num">Blue</td><td>369</td><td>505</td><td>400</td><td>155</td><td>375</td><td>380</td><td>161</td><td>445</td><td>370</td><td><strong>3,160</strong></td></tr>
+          <tr><td class="hole-num">White</td><td>359</td><td>487</td><td>378</td><td>138</td><td>308</td><td>363</td><td>146</td><td>430</td><td>355</td><td><strong>2,964</strong></td></tr>
+          <tr><td class="hole-num">Red</td><td>330</td><td>402</td><td>306</td><td>124</td><td>290</td><td>263</td><td>128</td><td>425</td><td>303</td><td><strong>2,571</strong></td></tr>
+          <tr><td class="hole-num">HDCP</td><td>7</td><td>1</td><td>5</td><td>17</td><td>9</td><td>13</td><td>15</td><td>3</td><td>11</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div style="height: 24px;"></div>
+    <div class="scorecard-wrap">
+      <table class="scorecard">
+        <thead>
+          <tr><th>Hole</th><th>10</th><th>11</th><th>12</th><th>13</th><th>14</th><th>15</th><th>16</th><th>17</th><th>18</th><th>In</th></tr>
+        </thead>
+        <tbody>
+          <tr><td class="hole-num">Par</td><td class="par-val">4</td><td class="par-val">4</td><td class="par-val">5</td><td class="par-val">3</td><td class="par-val">5</td><td class="par-val">3</td><td class="par-val">4</td><td class="par-val">3</td><td class="par-val">4</td><td class="par-val">35</td></tr>
+          <tr><td class="hole-num">Blue</td><td>295</td><td>325</td><td>500</td><td>161</td><td>525</td><td>139</td><td>403</td><td>183</td><td>310</td><td><strong>2,841</strong></td></tr>
+          <tr><td class="hole-num">White</td><td>276</td><td>319</td><td>472</td><td>139</td><td>508</td><td>126</td><td>381</td><td>165</td><td>292</td><td><strong>2,678</strong></td></tr>
+          <tr><td class="hole-num">Red</td><td>255</td><td>302</td><td>424</td><td>108</td><td>405</td><td>105</td><td>363</td><td>118</td><td>280</td><td><strong>2,360</strong></td></tr>
+          <tr><td class="hole-num">HDCP</td><td>8</td><td>10</td><td>2</td><td>16</td><td>4</td><td>18</td><td>6</td><td>14</td><td>12</td><td></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- HOLE-BY-HOLE -->
+<section class="holes-section">
+
+  <div class="nine-header">
+    <span>Front nine</span>
+    <span class="nine-par">Par 36 · 3,160 yards (Blue)</span>
+  </div>
+
+  <!-- HOLE 1 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">1</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 369</div>
+        <div class="tee"><span class="tee-dot white"></span> 359</div>
+        <div class="tee"><span class="tee-dot red"></span> 330</div>
+      </div>
+      <div class="hole-hdcp">Handicap 7</div>
+      <div class="hole-desc">A straightforward opening par 4 that eases you into the round. The fairway is framed by oaks on both sides, setting the tone for what Muny is all about — keep it in the short grass or pay for it.</div>
+      <div class="hole-tip"><strong>Local tip</strong> The green is small and slightly elevated. Take one more club than you think on the approach — short misses leave an awkward chip.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 2 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">2</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">5</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 505</div>
+        <div class="tee"><span class="tee-dot white"></span> 487</div>
+        <div class="tee"><span class="tee-dot red"></span> 402</div>
+      </div>
+      <div class="hole-hdcp">Handicap 1 — Hardest hole on the course</div>
+      <div class="hole-desc">The number one handicap hole for a reason. Over 500 yards from the blues with a tree-lined corridor that demands three well-placed shots. This is a course management hole — the players who try to overpower it are the ones making double.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Lay up to your favorite wedge distance on the second shot. The green is small and guarded — hitting it in regulation from 180+ is a low-percentage play here.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 3 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">3</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 400</div>
+        <div class="tee"><span class="tee-dot white"></span> 378</div>
+        <div class="tee"><span class="tee-dot red"></span> 306</div>
+      </div>
+      <div class="hole-hdcp">Handicap 5</div>
+      <div class="hole-desc">A proper par 4 with some teeth. At 400 from the blues it's the longest non-par-5 on the front nine, and the narrow fairway doesn't give you much room to miss. Find the fairway and you'll have a mid-iron in — miss it and you're punching out from under the oaks.</div>
+      <div class="hole-tip"><strong>Local tip</strong> If the pin is front-left, aim for the center of the green. The slope runs toward that pin position and a well-struck center approach will feed down.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 4 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">4</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">3</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 155</div>
+        <div class="tee"><span class="tee-dot white"></span> 138</div>
+        <div class="tee"><span class="tee-dot red"></span> 124</div>
+      </div>
+      <div class="hole-hdcp">Handicap 17</div>
+      <div class="hole-desc">The easiest hole on the front nine. A short par 3 — 8 iron for most from the whites. But Muny greens are Muny greens: small, firm, and sloped in ways that have been confusing golfers since the Coolidge administration.</div>
+      <div class="hole-tip"><strong>Local tip</strong> This is a birdie hole. Hit the green, trust the read, and take your three.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 5 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">5</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 375</div>
+        <div class="tee"><span class="tee-dot white"></span> 308</div>
+        <div class="tee"><span class="tee-dot red"></span> 290</div>
+      </div>
+      <div class="hole-hdcp">Handicap 9</div>
+      <div class="hole-desc">Notice the 67-yard gap between blue and white tees — this hole plays very differently depending on where you tee it up. From the whites it's a short par 4 that tempts you to get aggressive. From the blues it's a real test.</div>
+      <div class="hole-tip"><strong>Local tip</strong> From the whites, a fairway wood to the middle of the fairway leaves a flip wedge. Don't try to drive the green — the trouble around it isn't worth the risk.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 6 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">6</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 380</div>
+        <div class="tee"><span class="tee-dot white"></span> 363</div>
+        <div class="tee"><span class="tee-dot red"></span> 263</div>
+      </div>
+      <div class="hole-hdcp">Handicap 13</div>
+      <div class="hole-desc">A tight, tree-lined par 4 that rewards placement off the tee. The 117-yard difference between blue and red tees tells you everything — this hole has multiple personalities depending on your game.</div>
+      <div class="hole-tip"><strong>Local tip</strong> The trees pinch the fairway about 230 out from the blues. If you can carry them, you'll have a short iron in. If not, hit 3-wood short of the pinch.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 7 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">7</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">3</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 161</div>
+        <div class="tee"><span class="tee-dot white"></span> 146</div>
+        <div class="tee"><span class="tee-dot red"></span> 128</div>
+      </div>
+      <div class="hole-hdcp">Handicap 15</div>
+      <div class="hole-desc">A mid-length par 3 with a green tucked among the trees. Nothing fancy, nothing hidden — hit the green and make your putt. The course is testing your nerve more than your yardage book here.</div>
+      <div class="hole-tip"><strong>Local tip</strong> The green tends to be firm. One club more, land it short, and let it release to the pin.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 8 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">8</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">5</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 445</div>
+        <div class="tee"><span class="tee-dot white"></span> 430</div>
+        <div class="tee"><span class="tee-dot red"></span> 425</div>
+      </div>
+      <div class="hole-hdcp">Handicap 3</div>
+      <div class="hole-desc">The second hardest hole on the course, and it's a reachable par 5. At 445 from the blues, long hitters will think eagle. The course disagrees — the green is small and well-protected. This is where Muny punishes ambition.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Notice the red tees are only 20 yards shorter than the whites here. This hole plays long for everyone. A smart lay-up to 80–100 yards gives you the best look at birdie.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 9 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">9</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 370</div>
+        <div class="tee"><span class="tee-dot white"></span> 355</div>
+        <div class="tee"><span class="tee-dot red"></span> 303</div>
+      </div>
+      <div class="hole-hdcp">Handicap 11</div>
+      <div class="hole-desc">A solid closing par 4 for the front. Make your par, take stock of where you stand, and head to the back nine where the course gets interesting in different ways.</div>
+      <div class="hole-tip"><strong>Local tip</strong> If you're walking, the turn is a good time to grab a drink from the pro shop. The back nine has less shade and Austin heat is no joke.</div>
+    </div>
+  </div>
+
+  <!-- BACK NINE HEADER -->
+  <div class="nine-header" style="margin-top: 48px;">
+    <span>Back nine</span>
+    <span class="nine-par">Par 35 · 2,841 yards (Blue)</span>
+  </div>
+
+  <!-- HOLE 10 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">10</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 295</div>
+        <div class="tee"><span class="tee-dot white"></span> 276</div>
+        <div class="tee"><span class="tee-dot red"></span> 255</div>
+      </div>
+      <div class="hole-hdcp">Handicap 8</div>
+      <div class="hole-desc">The back nine opens with a driveable par 4 — just 276 from the whites. This is where local knowledge really starts to matter. The hole rewards smart plays more than big swings.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Many regulars hit iron off this tee. A well-placed 6 or 7 iron to the fairway leaves a wedge flip. The trouble around the green makes the hero play a bad bet.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 11 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">11</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 325</div>
+        <div class="tee"><span class="tee-dot white"></span> 319</div>
+        <div class="tee"><span class="tee-dot red"></span> 302</div>
+      </div>
+      <div class="hole-hdcp">Handicap 10</div>
+      <div class="hole-desc">Back-to-back short par 4s. This one plays a touch longer but the same principle applies — precision over power. The trees tighten the corridor and the green is tucked in a way that rewards accuracy.</div>
+      <div class="hole-tip"><strong>Local tip</strong> The tee yardages are nearly identical across all three tee boxes here. This hole plays the same for everyone — find the fairway, knock it close.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 12 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">12</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">5</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 500</div>
+        <div class="tee"><span class="tee-dot white"></span> 472</div>
+        <div class="tee"><span class="tee-dot red"></span> 424</div>
+      </div>
+      <div class="hole-hdcp">Handicap 2</div>
+      <div class="hole-desc">The hardest hole on the back nine and the second hardest on the course. A long par 5 that requires three good shots from most players. After the two short par 4s, this brings you back to earth quickly.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Don't chase the green in two. Muny is about making pars, not heroes — a smart lay-up and a controlled wedge is the play.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 13 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">13</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">3</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 161</div>
+        <div class="tee"><span class="tee-dot white"></span> 139</div>
+        <div class="tee"><span class="tee-dot red"></span> 108</div>
+      </div>
+      <div class="hole-hdcp">Handicap 16</div>
+      <div class="hole-desc">A breather after the 12th. Short par 3, middle of the back nine. Make your par and move on.</div>
+      <div class="hole-tip"><strong>Local tip</strong> The green slopes more than it looks. Read the break carefully — this is a hole where you should be putting for birdie.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 14 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">14</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">5</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 525</div>
+        <div class="tee"><span class="tee-dot white"></span> 508</div>
+        <div class="tee"><span class="tee-dot red"></span> 405</div>
+      </div>
+      <div class="hole-hdcp">Handicap 4</div>
+      <div class="hole-desc">The longest hole on the course. Over 500 yards from both the blue and white tees — this is a true three-shot par 5. No shortcuts, no tricks. Just a long walk through the oaks with a club in your hand.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Accept the bogey if it comes. This hole gives up very few birdies. Par here is a win.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 15 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">15</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">3</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 139</div>
+        <div class="tee"><span class="tee-dot white"></span> 126</div>
+        <div class="tee"><span class="tee-dot red"></span> 105</div>
+      </div>
+      <div class="hole-hdcp">Handicap 18 — Easiest hole on the course</div>
+      <div class="hole-desc">The number 18 handicap — the easiest hole at Muny. Just 126 yards from the whites. Pitching wedge, gap wedge, whatever you trust most. This is your gift before the closing stretch.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Don't get cute. Hit the center of the green and two-putt. Save the aggression for the 19th hole.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 16 — SIGNATURE HOLE -->
+  <div class="hole-card signature">
+    <div class="hole-num-block">
+      <div class="num">16</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 403</div>
+        <div class="tee"><span class="tee-dot white"></span> 381</div>
+        <div class="tee"><span class="tee-dot red"></span> 363</div>
+      </div>
+      <div class="hole-hdcp">Handicap 6 — "Hogan's Hole"</div>
+      <div class="hole-desc">The most famous hole at Muny. Ben Hogan reportedly stood on this tee and asked, "Where's the fairway?" The drive is blind — you're hitting over a ridge with no idea what's on the other side until you've committed. The approach crosses water to an elevated, sloping green. Even at 381 from the whites, it plays much harder than the handicap suggests. This is the hole you'll talk about afterward.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Ask the group ahead where they aimed off the tee, or find a regular and follow their lead. There's a safe landing area slightly left of center that most locals play to. On the approach, commit to your club — the water punishes indecision more than it punishes bad swings.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 17 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">17</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">3</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 183</div>
+        <div class="tee"><span class="tee-dot white"></span> 165</div>
+        <div class="tee"><span class="tee-dot red"></span> 118</div>
+      </div>
+      <div class="hole-hdcp">Handicap 14</div>
+      <div class="hole-desc">The longest par 3 on the course. After the emotional rollercoaster of 16, this hole demands focus. 183 from the blues is a serious par 3 — this is 5-iron territory for a lot of players.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Miss the green long rather than short. The back of this green is more forgiving than the front, and an up-and-down from behind is easier than the alternative.</div>
+    </div>
+  </div>
+
+  <!-- HOLE 18 -->
+  <div class="hole-card">
+    <div class="hole-num-block">
+      <div class="num">18</div>
+      <div class="par-label">Par</div>
+      <div class="par-num">4</div>
+    </div>
+    <div class="hole-content">
+      <div class="hole-yardages">
+        <div class="tee"><span class="tee-dot blue"></span> 310</div>
+        <div class="tee"><span class="tee-dot white"></span> 292</div>
+        <div class="tee"><span class="tee-dot red"></span> 280</div>
+      </div>
+      <div class="hole-hdcp">Handicap 12</div>
+      <div class="hole-desc">A short finishing par 4 — just 292 from the whites. Muny doesn't end with a monster. It ends the way it started: keep it in play, find the green, make your putt. If you played smart all day, this is your reward. If you didn't, it's your last chance to salvage something.</div>
+      <div class="hole-tip"><strong>Local tip</strong> Driveable for some, but the smart play is fairway wood to the fat part and a wedge in. Finish your round the way Harvey Penick would have wanted — with a par and a handshake.</div>
+    </div>
+  </div>
+
+</section>
+
+<!-- HISTORY -->
+<section class="history-section">
+  <div class="history-inner">
+    <div>
+      <h2 class="history-title">A hundred years of keeping it public</h2>
+      <div class="history-body">
+        <p>Lions Municipal isn't just the oldest muni in Texas — it's one of the most important golf courses in the American South. Before Brown v. Board of Education, before the Civil Rights Act, two young Black men walked onto this course and started playing. Mayor Taylor Glass's response — "Let them play" — made Muny one of the first desegregated public golf courses in the South.</p>
+        <p>Harvey Penick learned the game here, then spent 50 years teaching it. Ben Crenshaw grew up playing these fairways. Ben Hogan left his name on the 16th hole. The Firecracker Open — Texas's oldest amateur tournament — has been played here since the 1940s.</p>
+        <p>When development threatened the course in the 2010s, the Austin community fought to save it. The Muny Conservancy was established, the course was listed on the National Register of Historic Places, and the land was preserved. Muny isn't a museum — it's a living course, $30 green fees, open to anyone who shows up.</p>
+      </div>
+    </div>
+    <div>
+      <ul class="timeline">
+        <li><span class="year">1924</span><span class="event">Austin Lions Club opens a 9-hole course on UT's Brackenridge Tract — the first public course in Austin</span></li>
+        <li><span class="year">1927</span><span class="event">Harvey Penick becomes head professional. He stays for 34 years.</span></li>
+        <li><span class="year">1936</span><span class="event">City of Austin assumes the lease from the Lions Club</span></li>
+        <li><span class="year">~1950</span><span class="event">Muny desegregates — one of the first public courses in the South. "Let them play."</span></li>
+        <li><span class="year">1940s+</span><span class="event">The Firecracker Open begins — Texas's oldest amateur tournament, still played annually</span></li>
+        <li><span class="year">2016</span><span class="event">Listed on the National Register of Historic Places and named to the National Trust's 11 Most Endangered list</span></li>
+        <li><span class="year">2019</span><span class="event">The Muny Conservancy is established to preserve the course for future generations</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-text">
+    <a href="/">The Grassy Issue</a> · <a href="/field-guide/">Field Guide</a> · Lions Municipal Golf Course · Austin, TX
+  </div>
+</footer>
+
+</body>
+</html>
