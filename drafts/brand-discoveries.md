@@ -1,4 +1,4 @@
-# Brand Discoveries — April 24, 2026 (updated)
+# Brand Discoveries — April 27, 2026 (updated)
 
 New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-corporate, Mo Norman energy):
 
@@ -49,3 +49,7 @@ New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-cor
 ## Agronomy Workshop (NEW — April 24)
 - **URL:** https://agronomyworkshop.com (San Francisco)
 - **Why they fit:** Launched 2025 with a tiny, obsessive range — heavyweight cotton mock neck work shirts with hidden tee slots in the chest pocket, caps with integrated pen holders. This is the kind of brand that cares more about a seam than a logo. Craft-first, function-first, zero hype. Strong Mo Norman energy — a brand that would rather show you a well-made pocket than a billboard.
+
+## Public Drip (NEW — April 27)
+- **URL:** https://publicdrip.com (Brooklyn, NY)
+- **Why they fit:** Founded 2020, designed for the public-course golfer. Named after the municipal athlete who doesn't have a locker at the club. Shot their lookbook at Van Cortlandt Park, the oldest public course in the US. Already has Hypebeast, Golf Digest, and LIV Golf Cleeks co-signs. Anti-corporate by DNA, design-forward by execution. Strongest new candidate for the watchlist this cycle.
