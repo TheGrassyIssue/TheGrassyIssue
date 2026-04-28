@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>TGI — Stats</title>
+<link rel="icon" href="/favicon.ico" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', -apple-system, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--paper); color: var(--ink); font-family: var(--sans); }
+
+  .stats-wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+
+  .stats-header {
+    margin-bottom: 40px;
+  }
+  .stats-header h1 {
+    font-family: var(--serif);
+    font-size: 1.75rem;
+    font-weight: 500;
+    margin-bottom: 6px;
+  }
+  .stats-header p {
+    font-size: 0.85rem;
+    color: var(--rough);
+  }
+
+  .stat-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+  .stat-card {
+    background: #fff;
+    border: 1px solid #e2dfda;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+  }
+  .stat-card .num {
+    font-family: var(--mono);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--grass);
+    display: block;
+    margin-bottom: 4px;
+  }
+  .stat-card .label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--rough);
+  }
+
+  .stats-section {
+    margin-bottom: 36px;
+  }
+  .stats-section h2 {
+    font-family: var(--serif);
+    font-size: 1.15rem;
+    font-weight: 500;
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e2dfda;
+  }
+
+  /* Chart */
+  .chart-wrap {
+    background: #fff;
+    border: 1px solid #e2dfda;
+    border-radius: 8px;
+    padding: 20px;
+    height: 220px;
+    position: relative;
+  }
+  .chart-wrap canvas { width: 100% !important; height: 100% !important; }
+
+  /* Tables */
+  .stats-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.85rem;
+  }
+  .stats-table th {
+    text-align: left;
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--rough);
+    padding: 8px 12px;
+    border-bottom: 1px solid #e2dfda;
+  }
+  .stats-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #f0ede8;
+  }
+  .stats-table tr:last-child td { border-bottom: none; }
+  .stats-table .count {
+    font-family: var(--mono);
+    font-size: 0.85rem;
+    text-align: right;
+    color: var(--grass);
+  }
+
+  .stats-empty {
+    text-align: center;
+    padding: 48px 24px;
+    color: var(--rough);
+    font-size: 0.9rem;
+  }
+  .stats-empty .icon { font-size: 2rem; margin-bottom: 12px; display: block; }
+
+  .back-link {
+    display: inline-block;
+    margin-top: 32px;
+    font-size: 0.8rem;
+    color: var(--rough);
+    text-decoration: none;
+    border-bottom: 1px solid #e2dfda;
+    padding-bottom: 2px;
+  }
+  .back-link:hover { color: var(--ink); border-color: var(--ink); }
+
+  .loading { color: var(--rough); font-size: 0.85rem; text-align: center; padding: 40px; }
+
+  @media (max-width: 520px) {
+    .stat-cards { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stats-wrap">
+  <div class="stats-header">
+    <h1>The Grassy Issue — Stats</h1>
+    <p id="stats-subtitle">Loading...</p>
+  </div>
+
+  <div class="stat-cards">
+    <div class="stat-card">
+      <span class="num" id="total-views">—</span>
+      <span class="label">Total Views</span>
+    </div>
+    <div class="stat-card">
+      <span class="num" id="today-views">—</span>
+      <span class="label">Today</span>
+    </div>
+    <div class="stat-card">
+      <span class="num" id="week-views">—</span>
+      <span class="label">Last 7 Days</span>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <h2>Daily Traffic — Last 30 Days</h2>
+    <div class="chart-wrap">
+      <canvas id="traffic-chart"></canvas>
+    </div>
+  </div>
+
+  <div class="stats-section">
+    <h2>Top Pages</h2>
+    <div id="top-pages"><div class="loading">Loading...</div></div>
+  </div>
+
+  <div class="stats-section">
+    <h2>Referrers</h2>
+    <div id="referrers"><div class="loading">Loading...</div></div>
+  </div>
+
+  <a href="/" class="back-link">← Back to the feed</a>
+</div>
+
+<script>
+(function() {
+  // ──── CONFIG ────
+  // After signing up at goatcounter.com, your code is the subdomain.
+  // e.g. if your dashboard is thegrassyissue.goatcounter.com, the code is "thegrassyissue"
+  const GC_CODE = 'thegrassyissue';
+  const API_BASE = 'https://' + GC_CODE + '.goatcounter.com';
+
+  // Helpers
+  function fmt(n) {
+    if (n === null || n === undefined) return '—';
+    return Number(n).toLocaleString();
+  }
+  function dateStr(d) {
+    return d.toISOString().split('T')[0];
+  }
+
+  const today = new Date();
+  const weekAgo = new Date(today); weekAgo.setDate(today.getDate() - 6);
+  const monthAgo = new Date(today); monthAgo.setDate(today.getDate() - 29);
+
+  document.getElementById('stats-subtitle').textContent =
+    'Private dashboard · Updated ' + today.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+  // ──── Fetch total count via the public counter API ────
+  // This endpoint doesn't need auth — it just returns the hit count
+  var counterImg = new Image();
+  counterImg.src = API_BASE + '/counter/' + encodeURIComponent('/') + '.json';
+
+  // We'll use the GoatCounter JSON export endpoints
+  // These require the site to have "Allow public access to the API" enabled in settings
+  // If the API isn't public, the page shows placeholder data with setup instructions
+
+  function fetchJSON(path) {
+    return fetch(API_BASE + path, { credentials: 'omit' })
+      .then(function(r) {
+        if (!r.ok) throw new Error(r.status);
+        return r.json();
+      });
+  }
+
+  // ──── Load stats via the public API ────
+  Promise.all([
+    fetchJSON('/api/v1/stats/total'),
+    fetchJSON('/api/v1/stats/hits/days?period-start=' + dateStr(monthAgo) + '&period-end=' + dateStr(today)),
+    fetchJSON('/api/v1/stats/pages?period-start=' + dateStr(monthAgo) + '&period-end=' + dateStr(today) + '&limit=10'),
+  ])
+  .then(function(results) {
+    var total = results[0];
+    var daily = results[1];
+    var pages = results[2];
+
+    // Total views
+    document.getElementById('total-views').textContent = fmt(total.total);
+
+    // Today + week from daily data
+    if (daily && daily.days) {
+      var days = daily.days;
+      var todayCount = 0, weekCount = 0;
+      if (days.length > 0) todayCount = days[days.length - 1];
+      for (var i = Math.max(0, days.length - 7); i < days.length; i++) weekCount += days[i];
+      document.getElementById('today-views').textContent = fmt(todayCount);
+      document.getElementById('week-views').textContent = fmt(weekCount);
+
+      // Draw chart
+      drawChart(daily.day_labels || [], days);
+    }
+
+    // Top pages
+    if (pages && pages.paths) {
+      var html = '<table class="stats-table"><thead><tr><th>Page</th><th style="text-align:right">Views</th></tr></thead><tbody>';
+      pages.paths.forEach(function(p) {
+        html += '<tr><td>' + escHtml(p.path) + '</td><td class="count">' + fmt(p.count) + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      document.getElementById('top-pages').innerHTML = html;
+    }
+
+    // Referrers — try to load
+    return fetchJSON('/api/v1/stats/hits/refs?period-start=' + dateStr(monthAgo) + '&period-end=' + dateStr(today) + '&limit=10');
+  })
+  .then(function(refs) {
+    if (refs && refs.refs) {
+      var html = '<table class="stats-table"><thead><tr><th>Source</th><th style="text-align:right">Views</th></tr></thead><tbody>';
+      refs.refs.forEach(function(r) {
+        html += '<tr><td>' + escHtml(r.name || '(direct)') + '</td><td class="count">' + fmt(r.count) + '</td></tr>';
+      });
+      html += '</tbody></table>';
+      document.getElementById('referrers').innerHTML = html;
+    }
+  })
+  .catch(function() {
+    // API not yet active — show setup message
+    document.getElementById('total-views').textContent = '—';
+    document.getElementById('today-views').textContent = '—';
+    document.getElementById('week-views').textContent = '—';
+    document.getElementById('top-pages').innerHTML =
+      '<div class="stats-empty">' +
+      '<span class="icon">⛳</span>' +
+      'Stats will appear here once GoatCounter is set up.<br>' +
+      'Sign up free at <a href="https://goatcounter.com" target="_blank">goatcounter.com</a> with code <strong>thegrassyissue</strong>.<br>' +
+      'Then enable "public access to API" in your GoatCounter site settings.' +
+      '</div>';
+    document.getElementById('referrers').innerHTML = '';
+  });
+
+  function escHtml(s) {
+    var d = document.createElement('div');
+    d.textContent = s;
+    return d.innerHTML;
+  }
+
+  // ──── Tiny canvas chart (no dependencies) ────
+  function drawChart(labels, values) {
+    var canvas = document.getElementById('traffic-chart');
+    var ctx = canvas.getContext('2d');
+    var dpr = window.devicePixelRatio || 1;
+    var rect = canvas.parentElement.getBoundingClientRect();
+    canvas.width = rect.width * dpr;
+    canvas.height = rect.height * dpr;
+    ctx.scale(dpr, dpr);
+    var W = rect.width, H = rect.height;
+
+    var max = Math.max.apply(null, values) || 1;
+    var pad = { top: 20, right: 16, bottom: 32, left: 44 };
+    var plotW = W - pad.left - pad.right;
+    var plotH = H - pad.top - pad.bottom;
+    var barW = Math.max(2, (plotW / values.length) - 2);
+
+    // Y axis lines
+    ctx.strokeStyle = '#e2dfda';
+    ctx.lineWidth = 1;
+    ctx.font = '10px Inter, sans-serif';
+    ctx.fillStyle = '#A8A878';
+    ctx.textAlign = 'right';
+    for (var g = 0; g <= 4; g++) {
+      var gy = pad.top + plotH - (plotH * g / 4);
+      ctx.beginPath();
+      ctx.moveTo(pad.left, gy);
+      ctx.lineTo(W - pad.right, gy);
+      ctx.stroke();
+      ctx.fillText(Math.round(max * g / 4), pad.left - 8, gy + 3);
+    }
+
+    // Bars
+    ctx.fillStyle = '#2D4A2B';
+    for (var i = 0; i < values.length; i++) {
+      var bh = (values[i] / max) * plotH;
+      var bx = pad.left + (i * (plotW / values.length)) + 1;
+      var by = pad.top + plotH - bh;
+      ctx.beginPath();
+      ctx.roundRect ? ctx.roundRect(bx, by, barW, bh, 2) : ctx.rect(bx, by, barW, bh);
+      ctx.fill();
+    }
+
+    // X axis labels (show ~5)
+    ctx.fillStyle = '#A8A878';
+    ctx.textAlign = 'center';
+    ctx.font = '10px Inter, sans-serif';
+    var step = Math.max(1, Math.floor(values.length / 5));
+    for (var j = 0; j < values.length; j += step) {
+      var lx = pad.left + (j * (plotW / values.length)) + barW / 2;
+      var lbl = labels[j] || '';
+      // Show as "Apr 5" style
+      if (lbl.length >= 10) {
+        var d = new Date(lbl);
+        lbl = d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+      }
+      ctx.fillText(lbl, lx, H - pad.bottom + 16);
+    }
+  }
+})();
+</script>
+
+</body>
+</html>
