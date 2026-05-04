@@ -1,4 +1,4 @@
-# Brand Discoveries — May 1, 2026 (updated)
+# Brand Discoveries — May 4, 2026 (updated)
 
 New brands spotted that fit the Grassy Issue aesthetic (design-forward, anti-corporate, Mo Norman energy):
 
