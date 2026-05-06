@@ -11,3 +11,7 @@
 ## Students Golf
 - **URL:** https://studentsgolf.com/
 - **Why they fit:** Already collabing with Sugarloaf Social Club and MacKenzie on bags. Course Studies Division feels like a design thesis on golf culture. Young, irreverent, well-made. They treat golf like a subject worth studying rather than a lifestyle worth performing.
+
+## Heathlander (added May 6)
+- **URL:** https://heathlander.com/
+- **Why they fit:** UK-based, co-founded by Teddy Lynn, built around heathland courses of southern England. Concise lineup that reflects the lifestyle of actually playing golf in weather that doesn't want you there. Shoes with tributes to specific heathland courses. Anti-sunshine-state energy in the best way.
