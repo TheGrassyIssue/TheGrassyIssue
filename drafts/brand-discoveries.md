@@ -1,4 +1,4 @@
-# Brand Discoveries — May 5, 2026
+# Brand Discoveries — May 8, 2026
 
 ## Agronomy Workshop
 - **URL:** https://agronomywork.shop/
@@ -15,3 +15,7 @@
 ## Heathlander (added May 6)
 - **URL:** https://heathlander.com/
 - **Why they fit:** UK-based, co-founded by Teddy Lynn, built around heathland courses of southern England. Concise lineup that reflects the lifestyle of actually playing golf in weather that doesn't want you there. Shoes with tributes to specific heathland courses. Anti-sunshine-state energy in the best way.
+
+## Public Drip (added May 8)
+- **URL:** https://publicdrip.com/
+- **Why they fit:** Brooklyn brand born from NYC public golf courses. Graphic weight is intentional, silhouettes read modern without trying too hard. The opposite of logo-forward energy. If you play muni golf and care about design, this is your brand. Strong alignment with TGI's Austin muni focus.
