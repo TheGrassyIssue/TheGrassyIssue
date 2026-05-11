@@ -20,6 +20,23 @@
 <meta name="twitter:description" content="A running feed of golf culture, design & Austin muni." />
 <meta name="twitter:image" content="https://thegrassyissue.com/images/og-image.jpg" />
 
+<link rel="canonical" href="https://thegrassyissue.com/" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "The Grassy Issue",
+  "url": "https://thegrassyissue.com/",
+  "description": "A running feed of golf culture, gear drops, course guides, and Austin muni scores.",
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Grassy Issue",
+    "url": "https://thegrassyissue.com/"
+  }
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
@@ -503,7 +520,10 @@
     border: 0.5px solid var(--ink);
     background: var(--paper);
     overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.35s ease,
+                opacity 0.3s;
     position: relative;
     display: block;
     /* entrance animation */
@@ -514,12 +534,14 @@
     opacity: 1;
     transform: translateY(0);
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-                box-shadow 0.2s,
+                box-shadow 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                border-color 0.35s ease,
                 opacity 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
   .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 0 -1px var(--ink);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px -4px rgba(20, 20, 20, 0.12), 0 2px 6px -1px rgba(20, 20, 20, 0.08);
+    border-color: rgba(20, 20, 20, 0.25);
   }
   .card.hidden {
     display: none;
@@ -536,16 +558,17 @@
     display: block;
     transition: transform 0.4s;
   }
-  .card:hover .card-media img { transform: scale(1.03); }
+  .card:hover .card-media img { transform: scale(1.02); }
 
   .card-tag {
     position: absolute;
     top: 10px;
     left: 10px;
-    padding: 4px 8px;
+    padding: 4px 9px;
     font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.14em;
+    font-size: 8.5px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
     text-transform: uppercase;
     background: var(--paper);
     color: var(--ink);
@@ -564,15 +587,17 @@
     font-style: italic;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.25;
+    line-height: 1.22;
+    letter-spacing: -0.01em;
     margin-bottom: 8px;
   }
   .card-text {
     font-size: 13px;
-    line-height: 1.5;
+    line-height: 1.55;
+    letter-spacing: 0.005em;
     margin-bottom: 10px;
     color: var(--ink);
-    opacity: 0.8;
+    opacity: 0.72;
   }
 
   .card-meta {
@@ -580,11 +605,12 @@
     align-items: center;
     justify-content: space-between;
     font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.1em;
+    font-size: 9.5px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     padding-top: 10px;
-    border-top: 0.5px solid rgba(20, 20, 20, 0.15);
+    border-top: 0.5px solid rgba(20, 20, 20, 0.12);
   }
   .card-source { opacity: 0.55; }
   .card-votes {
