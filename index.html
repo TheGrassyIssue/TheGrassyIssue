@@ -6291,6 +6291,10 @@
 
   // Run masonry on load, resize, and after images load
   layoutMasonry();
+  // Animate initial cards in with stagger
+  document.querySelectorAll('.feed .card:not(.card-overflow):not(.hidden)').forEach((c, i) => {
+    setTimeout(() => c.classList.add('visible'), i * 60);
+  });
   window.addEventListener('resize', layoutMasonry);
   // Re-layout every time an image loads
   document.querySelectorAll('.feed img').forEach(img => {
