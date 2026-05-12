@@ -6407,7 +6407,7 @@
         if (textEl && window._slideTexts && window._slideTexts[id]) {
           textEl.style.transition = 'opacity 0.2s ease';
           textEl.style.opacity = '0';
-          setTimeout(function(){ textEl.textContent = window._slideTexts[id][current]; textEl.style.opacity = '1'; }, 200);
+          setTimeout(function(){ textEl.textContent = window._slideTexts[id][current]; textEl.style.opacity = '1'; layoutMasonry(); }, 200);
         }
       }
 
