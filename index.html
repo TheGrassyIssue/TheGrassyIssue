@@ -6255,7 +6255,7 @@
     const feedWidth = feed.clientWidth;
     const firstCard = visibleCards[0];
     const cardWidth = firstCard.offsetWidth;
-    const gap = 8;
+    const gap = 20;
     const cols = Math.max(1, Math.round(feedWidth / (cardWidth + gap)));
     const colWidth = (feedWidth - (cols - 1) * gap) / cols;
     const colHeights = new Array(cols).fill(0);
