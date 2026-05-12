@@ -1,21 +1,25 @@
-# Brand Discoveries — May 8, 2026
+# Brand Discoveries — May 12, 2026
+
+New-to-us brands that fit the Grassy Issue aesthetic (anti-corporate, design-forward, Mo Norman energy).
+
+---
 
 ## Agronomy Workshop
-- **URL:** https://agronomywork.shop/
-- **Why they fit:** San Francisco label started by designer Rob Junge in 2025. Natural materials only (no polyester), subtle branding, tee pocket in the golf shirt. Small range (mock neck work shirt, towel, cap) but the craft is evident. Anti-corporate, design-forward, Mo Norman would approve of the restraint.
+**URL:** https://agronomywork.shop/
+**Why they fit:** San Francisco designer Rob Junge started this one-man operation making heavyweight cotton work shirts with hidden tee holders, waxed canvas caps, and caddie towels. All natural materials, zero polyester, made in LA. The whole vibe is "greenkeeper who reads design blogs." Very GGNC-adjacent energy. Worth a card if they drop new product.
+
+## Sugarloaf Social Club
+**URL:** https://www.sugarloafsocialclub.com/
+**Why they fit:** Started as a group chat among college roommates, became an annual golf trip, then an Instagram, then a brand. Named after a defunct Coore & Crenshaw course in Florida. "Play or Perish" is the motto. They collab with everyone (Sentinel, Quiet Golf, Mackenzie, Students Golf) and the design sensibility is joyful without being corny. Already well-connected in the indie golf world — surprised we haven't featured them yet.
 
 ## Rebolf
-- **URL:** https://rebolf.com/
-- **Why they fit:** Barcelona brand fusing vintage golf fashion with streetwear playfulness. Fun tees, pleated trousers, collared sweaters. European sensibility without being precious about it. Not bro-golf, not tech-bro-golf.
+**URL:** https://rebolf.com (Barcelona)
+**Why they fit:** Spanish brand fusing vintage golf fashion with modern streetwear. Pleated trousers, button-ups, fun tees. European sensibility that reads more Wes Anderson than bro-golf. Small and independent.
 
-## Students Golf
-- **URL:** https://studentsgolf.com/
-- **Why they fit:** Already collabing with Sugarloaf Social Club and MacKenzie on bags. Course Studies Division feels like a design thesis on golf culture. Young, irreverent, well-made. They treat golf like a subject worth studying rather than a lifestyle worth performing.
+## Featherie
+**URL:** https://featherie.com
+**Why they fit:** Founded by Kate Korngold when she was 14 years old. Now in 100+ golf clubs nationwide. Youth energy without the cringe. The origin story alone is a card.
 
-## Heathlander (added May 6)
-- **URL:** https://heathlander.com/
-- **Why they fit:** UK-based, co-founded by Teddy Lynn, built around heathland courses of southern England. Concise lineup that reflects the lifestyle of actually playing golf in weather that doesn't want you there. Shoes with tributes to specific heathland courses. Anti-sunshine-state energy in the best way.
-
-## Public Drip (added May 8)
-- **URL:** https://publicdrip.com/
-- **Why they fit:** Brooklyn brand born from NYC public golf courses. Graphic weight is intentional, silhouettes read modern without trying too hard. The opposite of logo-forward energy. If you play muni golf and care about design, this is your brand. Strong alignment with TGI's Austin muni focus.
+## Olydoe
+**URL:** https://olydoe.com
+**Why they fit:** Launched October 2025. Founder was frustrated that all golf apparel looked the same and used the same polyester fabrics. Heritage-based, classic style updated for the modern golfer. Small enough to still feel like a discovery.

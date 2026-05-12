@@ -1,47 +1,55 @@
-# Drop Scout Report — May 8, 2026
+# Drop Scout Report — May 12, 2026
 
 ## Summary
-- **New draft cards created this run:** 2 (genuinely new finds)
-- **Repeated coverage skipped:** Gumtree x PUMA Field Notes, Fyfe x MacKenzie, Devereux Southern Draw/Westward, Bogey Boys Summer Course, Eastside Golf MTJAG, Malbon Warehouse Sale (all already drafted in prior runs)
-- **Brands with activity:** Eastside Golf, Random Golf Club
+- **4 draft cards created** for Lenny's review
+- **5 new brand discoveries** logged
+- **0 active giveaways** spotted
+- **1 warehouse sale** (Malbon, just ended May 10)
 
-## New Drafts (not previously covered)
+---
 
-1. **Eastside Golf — "More Than Just a Game" Collection** — Spring drop blending on-course and off-course. Boxford Shirt and Shatter Print Windshirt are standouts. First dedicated card for this collection (previously noted but not fully drafted).
+## Brand-by-Brand Status
 
-2. **Random Golf Club — 2026 Classics + NYC Event May 22** — Full 2026 Classics calendar is live with bucket-list courses (Tobacco Road, Sweetens Cove, Chambers Bay). Next event is May 22 in NYC. Worth a card since RGC events are time-sensitive.
+### Active / Card-Worthy
 
-## Already Drafted (no new card needed)
-- Gumtree x PUMA Field Notes — drafted many times (Apr 22 through May 7)
-- Fyfe x MacKenzie 20th Edition — drafted many times
-- Bogey Boys Summer Course Collection — drafted May 4, 6, 7
-- Devereux Southern Draw / Westward — drafted May 1, 6, 7, 8
-- Malbon Warehouse Sale (May 7–10) — drafted May 7, 8
-- Malbon x Gap (June 6 launch) — drafted May 5
-- Holderness & Bourne × MacKenzie 10th Anniversary — drafted May 7
-- Sentinel Spring Apparel — drafted May 1
-- RGC x Abercrombie — drafted May 5
-- Quiet Golf x PUMA — drafted Apr 29
+| Brand | Activity | Card? |
+|-------|----------|-------|
+| **Gumtree Golf x PUMA** | Field Notes Collection launched April 22. Full apparel capsule, $40–$130. Rocky Mountain shoot, natural materials. | Yes |
+| **Gumtree Golf x Malbon** | Birds of Georgia collab live on GGNC shop. Embroidered covers, bird calls (sold out), Nocs binoculars. Two watchlist brands teaming up. | Yes |
+| **Devereux** | Westward Collection Spring '26 Drop 1 is live. Westward Polo, Gingham Polo, Ivy Crew, Ladders Polo. | Yes |
+| **Malbon Golf** | Warehouse sale in Tustin, CA ran May 7–10 (up to 70% off). No new collection drop found. | Yes (recap) |
 
-## Brands With No New Activity (Last 48 Hours)
-- **Manors** — Club Collection (Feb 2026), quiet since
-- **Metalwood Studio** — adidas SS26 capsule (Feb 2026), quiet since
-- **Quiet Golf** — PUMA collab ongoing, Miura × QG in market, no new drop
-- **Sentinel Golf** — Spring apparel live, no new pieces
-- **Fyfe Golf** — Royal Dornoch headcover collab noted, no new specific drop
-- **Mackenzie Golf Bags** — Fyfe collab in April, H&B 10th anniversary bag in market, quiet this week
+### Quiet / No New Drops
 
-## Upcoming to Watch
-- **Malbon x Gap** launches June 6 — 33 pieces, $18–$138. Consider timing a pre-drop card closer to date.
-- **Random Golf Club NYC Classic** — May 22. Could warrant a reminder card closer to the date.
+| Brand | Notes |
+|-------|-------|
+| **Manors** | Club Collection launched Feb 24. SS26 on SSENSE. No new May activity. |
+| **Metalwood Studio** | adidas MC70 collab dropped Feb 20. SS26 collection available. Nothing new in 48 hrs. |
+| **Eastside Golf** | Nike "Take Flight" collab from fall 2025 still available. Women's line expansion noted. No new May drop. |
+| **Quiet Golf** | Spring '26 on Pacsun. PUMA collab ongoing. Miura collab exists. No specific new drop found. |
+| **Bogey Boys** | Summer Course Collection page is live but shows 0 products — either coming soon or sold through. Worth monitoring. |
+| **Random Golf Club** | 2026 Classics events running (Plainfield May 19, Tamarack May 26). No new product drop. |
+| **Sentinel Golf** | Outdoor capsule (rain gear, bags, tents) from Dec 2025. Sugarloaf collab pieces available. Quiet. |
+| **Fyfe Golf** | Hand-forged ball markers, Between Tides collection, Drop Zone collection. Mackenzie x Fyfe 20th Edition collab was expected April 2026. |
+| **Mackenzie Golf Bags** | Fyfe 20th Edition and various collabs (Students, H&B, Quiet Golf x SSC). No new standalone May drop. |
 
-## Brand Discoveries
-- **Public Drip** (Brooklyn) added to brand-discoveries.md. Muni-golf roots, intentional design, strong TGI alignment. Prior discoveries (Agronomy Workshop, Rebolf, Students Golf, Heathlander) still tracked.
+## New Brand Discoveries
+5 brands logged in brand-discoveries.md:
+1. **Agronomy Workshop** — SF-based, heavyweight cotton, all-natural materials, made in LA
+2. **Sugarloaf Social Club** — Started as a group chat, now a full brand/agency. Collabs everywhere.
+3. **Rebolf** — Barcelona. Vintage golf + streetwear. Wes Anderson energy.
+4. **Featherie** — Founded by a 14-year-old, now in 100+ clubs.
+5. **Olydoe** — Launched Oct 2025. Anti-sameness, heritage-based.
 
-## Active Giveaways
-- None spotted in this scan.
+## Giveaways
+None spotted across any of the 12 brands this cycle.
 
-## Notes
-- The drafts folder now has 80+ files. Lenny should archive or clear approved/rejected cards.
-- The Malbon warehouse sale ends Sunday May 10 — time-sensitive if not yet approved.
-- Public Drip and Students Golf remain strong candidates for permanent watchlist addition.
+## Notes for Lenny
+- The **Gumtree x Malbon Birds of Georgia** collab is particularly interesting — two brands from the watchlist linking up. The handmade bird calls already sold out, which suggests heat.
+- **Bogey Boys Summer Course Collection** showing 0 products is worth watching. Could be a pre-launch page or a complete sellout.
+- **Sugarloaf Social Club** keeps popping up in collabs with our watchlist brands (Sentinel, Quiet Golf, Mackenzie, Devereux). Might be worth adding to the permanent watchlist.
+- **Agronomy Workshop** is the discovery I'm most excited about. One designer, natural materials only, hidden tee holders in the shirt pocket. Very on-brand for TGI.
+
+---
+
+*Next scout run: tomorrow. Draft cards are in /site/drafts/ for review.*
