@@ -98,71 +98,87 @@
     max-width: 560px;
   }
 
-  /* EVENT CARDS */
-  .events-grid {
+  /* FEATURED EVENT */
+  .featured-event {
     max-width: 1400px;
     margin: 0 auto;
     padding: 0 32px 64px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 24px;
   }
-  .event-card {
+  .featured-event a {
+    display: flex;
+    align-items: stretch;
     border: 0.5px solid var(--ink);
     transition: background 0.2s;
+    text-decoration: none;
+  }
+  .featured-event a:hover { background: rgba(20,20,20,0.02); }
+  .featured-poster {
+    flex: 0 0 380px;
+    overflow: hidden;
+  }
+  .featured-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .featured-body {
+    flex: 1;
+    padding: 48px 40px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
-  .event-card:hover { background: rgba(20,20,20,0.03); }
-
-  .event-card-badge {
+  .featured-badges {
     display: flex;
     gap: 8px;
-    padding: 20px 24px 0;
+    margin-bottom: 20px;
   }
   .badge {
     font-family: var(--mono);
     font-size: 9px;
     letter-spacing: 0.14em;
     text-transform: uppercase;
-    padding: 4px 8px;
+    padding: 5px 10px;
   }
   .badge-tgi { background: var(--flag); color: var(--paper); }
-  .badge-community { background: var(--grass); color: var(--paper); }
-  .badge-charity { background: var(--ink); color: var(--paper); }
   .badge-interest { background: rgba(199,54,44,0.1); color: var(--flag); }
-  .badge-date { background: rgba(20,20,20,0.06); }
-
-  .event-card-body {
-    padding: 16px 24px 24px;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  .event-card h2 {
+  .featured-body h2 {
     font-family: var(--serif);
     font-style: italic;
     font-weight: 400;
-    font-size: 24px;
-    line-height: 1.15;
-    margin-bottom: 10px;
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 16px;
   }
-  .event-card p {
-    font-size: 14px;
-    line-height: 1.6;
+  .featured-body p {
+    font-size: 17px;
+    line-height: 1.65;
     opacity: 0.7;
-    flex: 1;
+    max-width: 520px;
+    margin-bottom: 24px;
   }
-  .event-card-meta {
+  .featured-meta {
     font-family: var(--mono);
     font-size: 10px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     opacity: 0.45;
-    margin-top: 16px;
-    padding-top: 16px;
+    padding-top: 20px;
     border-top: 0.5px solid rgba(20,20,20,0.15);
   }
+  .featured-cta {
+    display: inline-block;
+    margin-top: 24px;
+    padding: 12px 24px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    transition: background 0.2s;
+  }
+  .featured-cta:hover { background: var(--grass); }
 
   /* FOOTER */
   .footer { border-top: 0.5px solid var(--ink); margin-top: 48px; padding: 40px 32px 24px; background: var(--paper); }
@@ -173,7 +189,11 @@
     .nav-toggle { display: flex; }
     .nav-inner { padding: 14px 20px; }
     .events-hero { padding: 40px 20px 32px; }
-    .events-grid { padding: 0 20px 40px; grid-template-columns: 1fr; }
+    .featured-event { padding: 0 20px 40px; }
+    .featured-event a { flex-direction: column; }
+    .featured-poster { flex: none; max-height: 420px; }
+    .featured-body { padding: 32px 24px; }
+    .featured-body h2 { font-size: 28px; }
     .footer { padding: 32px 20px 20px; }
   }
 </style>
@@ -200,47 +220,22 @@
   <p>Tournaments, charity classics, and community rounds &mdash; happening in Austin and beyond. Some we host. Some we cover. All worth showing up for.</p>
 </header>
 
-<section class="events-grid">
-
-  <!-- THE LONG WALK -->
-  <a href="/events/the-long-walk" class="event-card">
-    <div class="event-card-badge">
-      <span class="badge badge-tgi">TGI Event</span>
-      <span class="badge badge-interest">Gauging Interest</span>
+<section class="featured-event">
+  <a href="/events/the-long-walk">
+    <div class="featured-poster">
+      <img src="/images/long-walk-poster.jpg" alt="The Long Walk event poster — cartoon golfer carrying a bag, walking 36 holes across Jimmy Clay and Roy Kizer golf courses in Austin, Texas" />
     </div>
-    <div class="event-card-body">
+    <div class="featured-body">
+      <div class="featured-badges">
+        <span class="badge badge-tgi">TGI Event</span>
+        <span class="badge badge-interest">Gauging Interest</span>
+      </div>
       <h2>The Long Walk, Golf Till You Drop</h2>
       <p>Back-to-back 36-hole walking tournament at Jimmy Clay and Roy Kizer. No carts. 16+ players. Donations benefit First Tee.</p>
-      <div class="event-card-meta">Jimmy Clay &amp; Roy Kizer &middot; Austin, TX &middot; Date TBD</div>
+      <div class="featured-meta">Jimmy Clay &amp; Roy Kizer &middot; Austin, TX &middot; Date TBD</div>
+      <span class="featured-cta">Express Interest &rarr;</span>
     </div>
   </a>
-
-  <!-- TEXAS CHILDREN'S -->
-  <a href="/events/texas-childrens-classic-2026" class="event-card">
-    <div class="event-card-badge">
-      <span class="badge badge-charity">Charity</span>
-      <span class="badge badge-date">May 14, 2026</span>
-    </div>
-    <div class="event-card-body">
-      <h2>Texas Children's Legacy Golf Classic</h2>
-      <p>The second annual charity tournament at Lions Municipal Golf Course. Four-person scramble benefiting the Child Life Department at Texas Children's Hospital Austin.</p>
-      <div class="event-card-meta">Lions Municipal &middot; Austin, TX &middot; May 14</div>
-    </div>
-  </a>
-
-  <!-- HILL COUNTRY AMATEUR -->
-  <a href="/events/hill-country-amateur-2026" class="event-card">
-    <div class="event-card-badge">
-      <span class="badge badge-community">Tournament</span>
-      <span class="badge badge-date">2026</span>
-    </div>
-    <div class="event-card-body">
-      <h2>Hill Country Amateur</h2>
-      <p>Amateur tournament in the Texas Hill Country. Open to all skill levels, celebrating public golf and the Austin amateur golf community.</p>
-      <div class="event-card-meta">Hill Country &middot; Austin, TX &middot; 2026</div>
-    </div>
-  </a>
-
 </section>
 
 <footer class="footer">
