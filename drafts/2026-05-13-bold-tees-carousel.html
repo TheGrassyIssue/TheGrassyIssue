@@ -1,0 +1,365 @@
+<!-- DRAFT — awaiting Lenny approval -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 Bold Tees Worth the Cotton — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">Gear Guide</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <img src="https://quietgolf.com/cdn/shop/files/MONOGRAMPOCKETDUSTYBLUE_1930c5ee-56c8-4915-83e3-a40d54e97288.jpg?v=1775861112" alt="Quiet Golf — Monogram Washed Pocket Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Quiet Golf — Monogram Washed Pocket Tee · $55</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://randomgolfclub.com/cdn/shop/files/ClubhouseTee-Black-001.jpg?v=1746217489" alt="Random Golf Club — S.F.E. Clubhouse Tee (Black)" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Random Golf Club — S.F.E. Clubhouse Tee · $40</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://studentsgolf.com/cdn/shop/files/Studentsgolf699d3ccbc79eb5699d3ccbc7b8f.21719842699d3ccbc7b8f.jpg?v=1771912451" alt="Students Golf — Grass Obsession Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Students Golf — Grass Obsession Tee · $52</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://devereuxgolf.com/cdn/shop/files/SP26_4019_CACTUSVOODOO-BLK-1_e92025a0-828b-4d74-a259-327160b2a7ca_1200x630.jpg?v=1775071878" alt="Devereux — Voodoo Cactus Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Devereux — Voodoo Cactus Tee · $44</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MGA_T-SHIRT_BLACK_03_CROP.jpg?v=1748444534" alt="Manors — MGA T-Shirt" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Manors — MGA T-Shirt · $61</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://radry.com/cdn/shop/files/golfishard_tee_front_web.jpg?v=1762996050" alt="Radry — Golf's Hard Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Radry — Golf's Hard Tee · $42</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://static1.squarespace.com/static/62df2055174c772d5220ba18/62df3a67d3f6270c6d7e2e1f/687168fa6588572799f28f54/1768931660509/MOKCINGBIRD2.jpg?format=1500w" alt="GGNC — To Fight A Mockingbird Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">GGNC — To Fight A Mockingbird Tee · $60</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-03-04_BLK_V1.jpg?v=1773376873" alt="Metalwood Studio — Free Metalwood Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Metalwood Studio — Free Metalwood Tee · $62</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://static1.squarespace.com/static/683e05c0d72e3d55cd902385/683e05c1d72e3d55cd9023bb/697580bb028f182e8bfe2863/1778254391221/gettingworse_1.png?format=1500w" alt="Kingfisher Golf — Getting Worse Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Kingfisher Golf — Getting Worse Tee · $34.99</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://www.walkergolfthings.com/cdn/shop/files/EVE04-75_1200x1600.jpg?v=1777419116" alt="Walker Golf — Tool Shed Tee (White)" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Walker Golf — Tool Shed Tee · $49.95</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://www.walkergolfthings.com/cdn/shop/files/PERCHEDT-SHIRTNAVY-2_1500x2000.jpg?v=1764840342" alt="Walker Golf — Perched Tee (Navy)" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Walker Golf — Perched Tee (Navy) · $49.95</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://merrillgolf.com/cdn/shop/files/Targetteefront.jpg?v=1766167029" alt="Merrill Golf — Target Practice Tee (Vintage Black)" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Merrill Golf — Target Practice Tee · $60</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 12</div>
+
+    <h2 class="card-title">12 Bold Tees Worth the Cotton</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "Quiet Golf does the quiet luxury thing without saying the words out loud. Washed pocket tee, tonal monogram, heavyweight cotton. The kind of shirt that gets a nod from the guy with taste at the range.",
+      detail: "$55 · Washed cotton · Pocket tee · quietgolf.com"
+    },
+    {
+      desc: "Random Golf Club's Clubhouse tee for the San Francisco chapter. Black on black with the S.F.E. crest. It's a membership card you can wear, and at $40 it's the cheapest entry on this list.",
+      detail: "$40 · Cotton · Screen print · randomgolfclub.com"
+    },
+    {
+      desc: "Students Golf screen-printed an actual grass obsession onto a tee, which feels honest. South Korea's most interesting golf label keeps making things you didn't know you needed.",
+      detail: "$52 · Cotton · Graphic print · studentsgolf.com"
+    },
+    {
+      desc: "Devereux put a voodoo cactus on faded black cotton and priced it at $44, which is the most Austin thing on this list. Desert meets the fairway. No explanation needed.",
+      detail: "$44 · Faded black cotton · Screen print · devereuxgolf.com"
+    },
+    {
+      desc: "Manors keeps the London minimalism tight. The MGA tee is understated to the point of being confrontational about it. Premium weight, clean badge, not trying to impress you.",
+      detail: "$61 · Premium cotton · MGA badge · manorsgolf.com"
+    },
+    {
+      desc: "Radry just wrote \"Golf's Hard\" and left it at that. $42, message received. The most relatable thing in your closet after a round where nothing went right.",
+      detail: "$42 · Cotton · Statement print · radry.com"
+    },
+    {
+      desc: "GGNC's Mockingbird tee is literary and strange — exactly the energy you want from Gumtree Golf & Nature Club. Part course culture, part book club, entirely uncommitted to being normal.",
+      detail: "$60 · Cotton · Graphic print · gumtreegolfandnature.com"
+    },
+    {
+      desc: "Metalwood went full manifesto at $62. The \"Free Metalwood\" tee reads like a protest sign for a brand that treats golf gear like a design exercise. Heavyweight, dropped shoulder, black.",
+      detail: "$62 · Heavyweight cotton · Screen print · metalwood.studio"
+    },
+    {
+      desc: "Kingfisher out of Dallas said \"Getting Worse\" for $35, and honestly that's the most accurate golf tee ever made. New indie label, no pretension, just self-awareness priced right.",
+      detail: "$34.99 · Cotton · Screen print · kingfisher-golf.com"
+    },
+    {
+      desc: "Walker Golf Things out of Australia. The Tool Shed tee has a retro workshop graphic that looks borrowed from your dad's garage wall. Premium 220g cotton, standard fit, screen-printed front and back.",
+      detail: "$49.95 · 220g cotton · Screen print · walkergolfthings.com"
+    },
+    {
+      desc: "Second Walker pick. The Perched tee puts their Kooka bird mascot on navy heavyweight cotton. Part of the Graphic Capsule collection — classic graphics fused with golf, course to pub.",
+      detail: "$49.95 · 220g cotton · Navy · walkergolfthings.com"
+    },
+    {
+      desc: "Merrill Golf closed it out with a vintage-washed target print that feels like it was designed in a garage, in the best way. Dropped shoulder, boxy fit, heavyweight cotton. The quiet closer.",
+      detail: "$60 · Heavyweight cotton · Vintage washed · merrillgolf.com"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateText(idx) {
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[idx].desc;
+      detailEl.textContent = slideData[idx].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 150);
+  }
+
+  function goToSlide(idx) {
+    current = idx;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+    updateText(current);
+  }
+
+  function moveSlide(dir) {
+    goToSlide((current + dir + total) % total);
+  }
+
+  updateText(0);
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>

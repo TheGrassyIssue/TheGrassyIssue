@@ -1,55 +1,69 @@
-# Drop Scout Report — May 12, 2026
+# Drop Scout Report — May 13, 2026
 
 ## Summary
-- **4 draft cards created** for Lenny's review
-- **5 new brand discoveries** logged
+- **4 draft cards** carried forward (no net-new drops in last 24 hours)
+- **8 brand discoveries** total (3 new today: Late Nine, Students Golf, Radry Golf)
 - **0 active giveaways** spotted
-- **1 warehouse sale** (Malbon, just ended May 10)
+- **Gumtree Golf remains the most active brand** on the watchlist
 
 ---
 
 ## Brand-by-Brand Status
 
-### Active / Card-Worthy
+### Active / Card-Worthy (cards already in /drafts/)
 
 | Brand | Activity | Card? |
 |-------|----------|-------|
-| **Gumtree Golf x PUMA** | Field Notes Collection launched April 22. Full apparel capsule, $40–$130. Rocky Mountain shoot, natural materials. | Yes |
-| **Gumtree Golf x Malbon** | Birds of Georgia collab live on GGNC shop. Embroidered covers, bird calls (sold out), Nocs binoculars. Two watchlist brands teaming up. | Yes |
-| **Devereux** | Westward Collection Spring '26 Drop 1 is live. Westward Polo, Gingham Polo, Ivy Crew, Ladders Polo. | Yes |
-| **Malbon Golf** | Warehouse sale in Tustin, CA ran May 7–10 (up to 70% off). No new collection drop found. | Yes (recap) |
+| **Gumtree Golf x PUMA** | Field Notes Collection launched April 22. Full apparel capsule, $40–$130. Still available. | Yes |
+| **Gumtree Golf x Malbon** | Birds of Georgia collab live on GGNC shop. Bird calls sold out. Nocs binoculars ($198) still up. | Yes |
+| **Devereux** | Journey to Georgia Masters capsule active. Also running end-of-season sale on prior pieces. | Yes |
+| **Mackenzie x Fyfe** | 20th Edition limited bag in heaven blue waxed canvas. 7-8 week lead time. | Yes |
 
 ### Quiet / No New Drops
 
 | Brand | Notes |
 |-------|-------|
-| **Manors** | Club Collection launched Feb 24. SS26 on SSENSE. No new May activity. |
-| **Metalwood Studio** | adidas MC70 collab dropped Feb 20. SS26 collection available. Nothing new in 48 hrs. |
-| **Eastside Golf** | Nike "Take Flight" collab from fall 2025 still available. Women's line expansion noted. No new May drop. |
-| **Quiet Golf** | Spring '26 on Pacsun. PUMA collab ongoing. Miura collab exists. No specific new drop found. |
-| **Bogey Boys** | Summer Course Collection page is live but shows 0 products — either coming soon or sold through. Worth monitoring. |
-| **Random Golf Club** | 2026 Classics events running (Plainfield May 19, Tamarack May 26). No new product drop. |
-| **Sentinel Golf** | Outdoor capsule (rain gear, bags, tents) from Dec 2025. Sugarloaf collab pieces available. Quiet. |
-| **Fyfe Golf** | Hand-forged ball markers, Between Tides collection, Drop Zone collection. Mackenzie x Fyfe 20th Edition collab was expected April 2026. |
-| **Mackenzie Golf Bags** | Fyfe 20th Edition and various collabs (Students, H&B, Quiet Golf x SSC). No new standalone May drop. |
+| **Manors** | Club Collection (Feb 2026) still current. SS26 on SSENSE. No new May activity. |
+| **Malbon Golf** | Warehouse sale May 7-10 ended. Collab with Gumtree (Birds of Georgia) is the main action. |
+| **Metalwood Studio** | adidas MC70 collab (Feb) still in conversation. Nothing new in 48 hrs. |
+| **Eastside Golf** | Nike "Take Flight" was fall 2025. No new May drop. |
+| **Quiet Golf** | PUMA x QGC collection ongoing. Steady state, no new specific drop. |
+| **Bogey Boys** | Summer Course Collection page still shows 0 products. Still ambiguous — pre-launch or sold through. |
+| **Random Golf Club** | 2026 Classics events running. No new product drop. |
+| **Sentinel Golf** | Quiet. Pre-order model means gaps between releases. |
+| **Fyfe Golf** | Mackenzie 20th Edition is the main news. Drop Zone collection ongoing. |
+| **Mackenzie Golf Bags** | Multiple collabs active (Fyfe 20th, SSC x Students, H&B 10th anniversary). |
 
-## New Brand Discoveries
-5 brands logged in brand-discoveries.md:
-1. **Agronomy Workshop** — SF-based, heavyweight cotton, all-natural materials, made in LA
-2. **Sugarloaf Social Club** — Started as a group chat, now a full brand/agency. Collabs everywhere.
-3. **Rebolf** — Barcelona. Vintage golf + streetwear. Wes Anderson energy.
-4. **Featherie** — Founded by a 14-year-old, now in 100+ clubs.
-5. **Olydoe** — Launched Oct 2025. Anti-sameness, heritage-based.
+---
+
+## New Brand Discoveries (Updated)
+
+8 brands total in brand-discoveries.md:
+
+*Previously logged:*
+1. **Agronomy Workshop** — SF/LA, one-designer craft studio, natural materials
+2. **Sugarloaf Social Club** — Group-chat-to-brand, collab hub for indie golf
+3. **Rebolf** — Barcelona, vintage golf + streetwear
+4. **Featherie** — Founded by a 14-year-old, now in 100+ clubs
+5. **Olydoe** — Launched Oct 2025, heritage-based anti-sameness
+
+*Added today:*
+6. **Late Nine** — Stockholm, Scandinavian minimalism, '90s nostalgia, merino and wool
+7. **Students Golf** — LA, streetwear roots pivoting to considered coursewear
+8. **Radry Golf** — Art project disguised as golf brand, independent since 2018
+
+---
 
 ## Giveaways
 None spotted across any of the 12 brands this cycle.
 
 ## Notes for Lenny
-- The **Gumtree x Malbon Birds of Georgia** collab is particularly interesting — two brands from the watchlist linking up. The handmade bird calls already sold out, which suggests heat.
-- **Bogey Boys Summer Course Collection** showing 0 products is worth watching. Could be a pre-launch page or a complete sellout.
-- **Sugarloaf Social Club** keeps popping up in collabs with our watchlist brands (Sentinel, Quiet Golf, Mackenzie, Devereux). Might be worth adding to the permanent watchlist.
-- **Agronomy Workshop** is the discovery I'm most excited about. One designer, natural materials only, hidden tee holders in the shirt pocket. Very on-brand for TGI.
+- No net-new product drops detected in the last 24 hours. The 4 existing draft cards remain the freshest items for review.
+- **Bogey Boys Summer Course Collection** is still showing 0 products — worth keeping an eye on for an imminent drop.
+- **Late Nine** (Stockholm) is the most exciting new discovery today. Scandinavian restraint, zero logo energy, wool trousers that look like they belong in a Bergman film. Very on-brand for TGI.
+- **Students Golf** keeps popping up in collabs with other watchlist brands (Sugarloaf, Mackenzie). Their "Course Studies" pivot from streetwear to considered coursewear mirrors the vibe TGI is going for.
+- Recommend adding **Sugarloaf Social Club** to the permanent watchlist — they're the connective tissue between half the brands we're already tracking.
 
 ---
 
-*Next scout run: tomorrow. Draft cards are in /site/drafts/ for review.*
+*Next scout run: May 14, 2026. Draft cards are in /site/drafts/ for review.*
