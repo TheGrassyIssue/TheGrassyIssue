@@ -1917,6 +1917,65 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- GEAR GUIDE — 6 Golf Tees That Cost More Than Your Lunch -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Gear Guide]</span>
+      <div class="gear-carousel" data-carousel="premtees">
+        <div class="gear-carousel-track">
+
+          <div class="gear-slide">
+            <img src="https://flightpathgolf.com/cdn/shop/files/01_Green.jpg?v=1721337556" alt="Flightpath Golf — Diamond Tee" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Flightpath Golf</div><div class="gear-slide-name">Diamond Tee · $23 / 8</div></div>
+          </div>
+
+          <div class="gear-slide">
+            <img src="https://birddarts.com/cdn/shop/files/BirdDartsLeahPieperPhotography-160_a0d1dd24-bb12-4273-bd86-e94bf64d133e.jpg?v=1725216466" alt="Bird Darts — Premium Bamboo Tees" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Bird Darts</div><div class="gear-slide-name">Bamboo Tees · $6.99 / 18</div></div>
+          </div>
+
+          <div class="gear-slide">
+            <img src="https://cdn.shopify.com/s/files/1/0065/4996/2863/files/WBslide_6f7398b6-e07f-4340-957a-3be8054f27c1.jpg?v=1728488442" alt="Western Birch Golf Co. — Striped Birch Tees" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Western Birch</div><div class="gear-slide-name">Striped Birch Tees · $9–$12 / 50</div></div>
+          </div>
+
+          <div class="gear-slide">
+            <img src="https://lignum-golf.com/cdn/shop/files/Untitled_design.png?v=1653055037" alt="Lignum — Microwood Tees" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Lignum</div><div class="gear-slide-name">Microwood Tees · ~$6 / 12</div></div>
+          </div>
+
+          <div class="gear-slide">
+            <img src="https://greenswing.golf/cdn/shop/files/yellowbamboogolftees.jpg?v=1714557055" alt="Green Swing — Bamboo Tees" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Green Swing</div><div class="gear-slide-name">Bamboo Tees · ~$6 / 30</div></div>
+          </div>
+
+          <div class="gear-slide">
+            <img src="https://m.media-amazon.com/images/I/71oeEVRCXZL._AC_SL3840_.jpg" alt="Brimz Supply — Tee Box Smokes" loading="lazy" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Brimz Supply</div><div class="gear-slide-name">Tee Box Smokes · $12.99 / 10</div></div>
+          </div>
+
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+        <div class="gear-dots" data-dots="premtees"></div>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">May 13, 2026 · Gear Guide</div>
+      <h2 class="card-title">6 Golf Tees That Cost More Than Your Lunch</h2>
+      <p class="card-text" data-slidetext="premtees">Flightpath made a diamond-shaped polycarbonate tee and put it in a matchbox. The pitch is less drag, more distance — and the shape science actually checks out. $23 for eight, so you're paying for engineering, not wood.</p>
+      <div class="vote-bar">
+        <div class="vote-bar-label"><span class="mid">Mid</span><span class="fire">Fire</span></div>
+        <div class="vote-bar-track"><div class="vote-bar-fill" style="width: 0%"></div></div>
+        <div class="vote-bar-actions">
+          <button class="vote-btn mid-btn" onclick="castVote(this, 'mid', event)">Mid</button>
+          <button class="vote-btn fire-btn" onclick="castVote(this, 'fire', event)">Fire &#128293;</button>
+        </div>
+        <div class="vote-bar-count">0 votes</div>
+      </div>
+    </div>
+  </div>
+
   <!-- GEAR GUIDE — 12 Bold Tees Worth the Cotton -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -6517,6 +6576,14 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    premtees: [
+      "Flightpath made a diamond-shaped polycarbonate tee and put it in a matchbox. The pitch is less drag, more distance — and the shape science actually checks out. $23 for eight, so you’re paying for engineering, not wood.",
+      "Bird Darts put bamboo tees in a cigarette box and made it look intentional. Natural material, clean branding, the kind of thing that sits well in a golf bag side pocket. $6.99 for eighteen — the packaging alone is worth half that.",
+      "Western Birch names their colorways after classic cars — Fleetwood, Thunderbird, Mustang. Striped birch hardwood in dozens of combos, which means your tee game now has a palette. $9–$12 for fifty, and they look better than they need to.",
+      "Lignum is German-engineered microwood — wood fiber pressed with natural adhesives into something that lasts 50 rounds. Anti-spin head, ring height system, the whole Teutonic playbook. About $6 for twelve, which is a bargain for tees that refuse to break.",
+      "Green Swing out of the UK does limited-edition bamboo tees in colors that actually pop — yellow, black, natural. Eco-focused without making it their whole personality. About $6 for thirty, which makes them the volume play on this list.",
+      "Brimz called them Tee Box Smokes and put them in a magnetic cigarette box, which is either brilliant or unhinged. Bamboo tees, ten per pack, the kind of accessory that starts conversations on the first tee. Packaging game is strong."
+    ],
     boldtees: [
       "Quiet Golf does the quiet luxury thing without saying the words out loud. Washed pocket tee, tonal monogram, heavyweight cotton. The kind of shirt that gets a nod from the guy with taste at the range.",
       "Random Golf Club’s Clubhouse tee for the San Francisco chapter. Black on black with the S.F.E. crest. It’s a membership card you can wear, and at $40 it’s the cheapest entry on this list.",
