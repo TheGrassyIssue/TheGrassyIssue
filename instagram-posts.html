@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>TGI Instagram Posts</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #d5d2ca;
+    font-family: 'Inter', system-ui, sans-serif;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #888;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  .post {
+    width: 1080px;
+    height: 1080px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  /* ─────────────────────────────────────
+     POST 1 — Premium Tees Grid
+     ───────────────────────────────────── */
+  .post-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 0;
+  }
+
+  .post-1 .img-cell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .post-1 .img-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.85);
+  }
+
+  .post-1 .img-cell .brand-label {
+    position: absolute;
+    bottom: 10px;
+    left: 12px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.7);
+  }
+
+  .post-1 .hero-cell {
+    grid-column: 2 / 4;
+    grid-row: 1 / 3;
+    background: #F4F1EA;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 56px;
+    position: relative;
+  }
+
+  .post-1 .hero-cell .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #F4F1EA;
+    background: #2D4A2B;
+    display: inline-block;
+    padding: 5px 12px;
+    margin-bottom: 28px;
+    align-self: flex-start;
+  }
+
+  .post-1 .hero-cell h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 54px;
+    font-weight: 600;
+    line-height: 1.12;
+    color: #141414;
+    margin-bottom: 24px;
+  }
+
+  .post-1 .hero-cell .sub {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.06em;
+    color: #888;
+    line-height: 1.7;
+  }
+
+  .post-1 .hero-cell .site {
+    position: absolute;
+    bottom: 28px;
+    left: 56px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: #bbb;
+  }
+
+  /* ─────────────────────────────────────
+     POST 2 — Kingfisher Getting Worse
+     ───────────────────────────────────── */
+  .post-2 {
+    background: #141414;
+  }
+
+  .post-2 .bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.7);
+  }
+
+  .post-2 .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      rgba(0,0,0,0) 0%,
+      rgba(0,0,0,0.1) 40%,
+      rgba(0,0,0,0.75) 75%,
+      rgba(0,0,0,0.92) 100%
+    );
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 64px 60px;
+  }
+
+  .post-2 .overlay .tag {
+    position: absolute;
+    top: 28px;
+    left: 28px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #F4F1EA;
+    background: #2D4A2B;
+    padding: 5px 12px;
+  }
+
+  .post-2 .overlay .brand {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #A8A878;
+    margin-bottom: 12px;
+  }
+
+  .post-2 .overlay h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 52px;
+    font-weight: 600;
+    line-height: 1.12;
+    color: #F4F1EA;
+    margin-bottom: 16px;
+  }
+
+  .post-2 .overlay .desc {
+    font-size: 17px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.7);
+    max-width: 620px;
+    margin-bottom: 20px;
+  }
+
+  .post-2 .overlay .foot {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.35);
+  }
+
+  /* ─────────────────────────────────────
+     POST 3 — 19th Hole Austin Collage
+     ───────────────────────────────────── */
+  .post-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 0;
+    position: relative;
+  }
+
+  .post-3 .venue-img {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .post-3 .venue-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.65);
+  }
+
+  .post-3 .venue-img .venue-text {
+    position: absolute;
+    bottom: 16px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .post-3 .venue-img .venue-name {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.2;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+  }
+
+  .post-3 .venue-img .venue-hood {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: rgba(255,255,255,0.7);
+    margin-top: 4px;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+
+  .post-3 .center-badge {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    background: #2D4A2B;
+    padding: 28px 36px;
+    text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.4);
+  }
+
+  .post-3 .center-badge .badge-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #A8A878;
+    margin-bottom: 8px;
+  }
+
+  .post-3 .center-badge h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 26px;
+    font-weight: 600;
+    color: #F4F1EA;
+    line-height: 1.2;
+    margin-bottom: 8px;
+  }
+
+  .post-3 .center-badge .badge-site {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.08em;
+    color: rgba(244,241,234,0.45);
+  }
+
+  /* ─────────────────────────────────────
+     POST 4 — 3 Putt Round Product Grid
+     ───────────────────────────────────── */
+  .post-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 0;
+  }
+
+  .post-4 .header-bar {
+    grid-column: 1 / -1;
+    background: #141414;
+    padding: 28px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .post-4 .header-bar .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #F4F1EA;
+    background: #C7362C;
+    padding: 5px 12px;
+  }
+
+  .post-4 .header-bar h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #F4F1EA;
+  }
+
+  .post-4 .header-bar .site-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #666;
+  }
+
+  .post-4 .prod-cell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .post-4 .prod-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .post-4 .prod-cell .prod-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+  }
+
+  .post-4 .prod-cell .prod-name {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+
+  .post-4 .prod-cell .prod-price {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: rgba(255,255,255,0.6);
+    margin-top: 2px;
+  }
+
+  /* ─────────────────────────────────────
+     POST 5 — Fresh Pieces Fashion Grid
+     ───────────────────────────────────── */
+  .post-5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr;
+    gap: 0;
+  }
+
+  .post-5 .header-bar {
+    grid-column: 1 / -1;
+    background: #F4F1EA;
+    padding: 32px 44px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .post-5 .header-bar .left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .post-5 .header-bar .tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #141414;
+    background: #A8A878;
+    padding: 5px 12px;
+  }
+
+  .post-5 .header-bar h1 {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 28px;
+    font-weight: 600;
+    color: #141414;
+  }
+
+  .post-5 .header-bar .site-tag {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    color: #999;
+  }
+
+  .post-5 .fashion-cell {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .post-5 .fashion-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    filter: brightness(0.8);
+  }
+
+  .post-5 .fashion-cell .fashion-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.65));
+  }
+
+  .post-5 .fashion-cell .fashion-brand {
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.5);
+  }
+
+  .post-5 .fashion-cell .fashion-piece {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9px;
+    letter-spacing: 0.06em;
+    color: rgba(255,255,255,0.7);
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════ POST 1 — Premium Tees ═══════ -->
+<div class="label">Post 1 — Gear Guide: Premium Tees</div>
+<div class="post post-1">
+  <div class="img-cell">
+    <img src="https://flightpathgolf.com/cdn/shop/files/01_Green.jpg?v=1721337556" alt="Flightpath" />
+    <div class="brand-label">Flightpath · $23</div>
+  </div>
+  <div class="hero-cell">
+    <div class="tag">Gear Guide</div>
+    <h1>6 Golf Tees That Cost More Than Your&nbsp;Lunch</h1>
+    <div class="sub">Polycarbonate diamonds. Bamboo in<br>cigarette boxes. Striped birch named<br>after classic cars. $6–$23.</div>
+    <div class="site">thegrassyissue.com</div>
+  </div>
+  <div class="img-cell">
+    <img src="https://birddarts.com/cdn/shop/files/BirdDartsLeahPieperPhotography-160_a0d1dd24-bb12-4273-bd86-e94bf64d133e.jpg?v=1725216466" alt="Bird Darts" />
+    <div class="brand-label">Bird Darts · $6.99</div>
+  </div>
+  <div class="img-cell">
+    <img src="https://cdn.shopify.com/s/files/1/0065/4996/2863/files/WBslide_6f7398b6-e07f-4340-957a-3be8054f27c1.jpg?v=1728488442" alt="Western Birch" />
+    <div class="brand-label">Western Birch · $9</div>
+  </div>
+  <div class="img-cell">
+    <img src="https://lignum-golf.com/cdn/shop/files/Untitled_design.png?v=1653055037" alt="Lignum" />
+    <div class="brand-label">Lignum · ~$6</div>
+  </div>
+  <div class="img-cell">
+    <img src="https://m.media-amazon.com/images/I/71oeEVRCXZL._AC_SL3840_.jpg" alt="Brimz Supply" />
+    <div class="brand-label">Brimz · $12.99</div>
+  </div>
+</div>
+
+<!-- ═══════ POST 2 — Bold Tees Spotlight ═══════ -->
+<div class="label">Post 2 — Bold Tees: Kingfisher Spotlight</div>
+<div class="post post-2">
+  <img class="bg-img" src="https://static1.squarespace.com/static/683e05c0d72e3d55cd902385/683e05c1d72e3d55cd9023bb/697580bb028f182e8bfe2863/1778254391221/gettingworse_1.png?format=1500w" alt="Kingfisher Golf — Getting Worse Tee" />
+  <div class="overlay">
+    <div class="tag">Gear Guide</div>
+    <div class="brand">Kingfisher Golf — Dallas, TX</div>
+    <h1>"Getting Worse"<br>Tee — $34.99</h1>
+    <div class="desc">The most accurate golf tee ever made. New indie label, no pretension, just self-awareness priced right.</div>
+    <div class="foot">From "12 Bold Tees Worth the Cotton" · thegrassyissue.com</div>
+  </div>
+</div>
+
+<!-- ═══════ POST 3 — 19th Hole Austin ═══════ -->
+<div class="label">Post 3 — The Edit: 19th Hole Austin</div>
+<div class="post post-3">
+  <div class="venue-img">
+    <img src="images/19thhole/equipment-room.jpg" alt="Equipment Room" />
+    <div class="venue-text">
+      <div class="venue-name">Equipment Room</div>
+      <div class="venue-hood">Hotel Magdalena · Music Ln</div>
+    </div>
+  </div>
+  <div class="venue-img">
+    <img src="images/19thhole/wild-ones.jpg" alt="Only The Wild Ones" />
+    <div class="venue-text">
+      <div class="venue-name">Only The Wild Ones</div>
+      <div class="venue-hood">South Congress</div>
+    </div>
+  </div>
+  <div class="venue-img">
+    <img src="images/19thhole/fraziers.jpg" alt="Frazier's Long & Low" />
+    <div class="venue-text">
+      <div class="venue-name">Frazier's Long & Low</div>
+      <div class="venue-hood">South Shore · Elmont Dr</div>
+    </div>
+  </div>
+  <div class="venue-img">
+    <img src="images/19thhole/domo-alley-gato.jpg" alt="Domo Alley-Gato" />
+    <div class="venue-text">
+      <div class="venue-name">Domo Alley-Gato</div>
+      <div class="venue-hood">East 6th St</div>
+    </div>
+  </div>
+  <div class="center-badge">
+    <div class="badge-tag">The Edit · Austin</div>
+    <h1>5 Post-Round<br>Evening Spots</h1>
+    <div class="badge-site">thegrassyissue.com</div>
+  </div>
+</div>
+
+<!-- ═══════ POST 4 — 3 Putt Round ═══════ -->
+<div class="label">Post 4 — Brand to Know: 3 Putt Round</div>
+<div class="post post-4">
+  <div class="header-bar">
+    <div class="tag">Brand to Know</div>
+    <h1>3 Putt Round — Golf Tees Disguised as Bad Habits</h1>
+    <div class="site-tag">thegrassyissue.com</div>
+  </div>
+  <div class="prod-cell">
+    <img src="images/3puttround/red-addiction-tees.jpg" alt="Golf Addiction Tee Packs" />
+    <div class="prod-label">
+      <div class="prod-name">"Golf Addiction" Tee Packs</div>
+      <div class="prod-price">From €31</div>
+    </div>
+  </div>
+  <div class="prod-cell">
+    <img src="images/3puttround/drive-to-survive-towel.jpg" alt="Drive to Survive Towel" />
+    <div class="prod-label">
+      <div class="prod-name">Drive to Survive Towel</div>
+      <div class="prod-price">€29</div>
+    </div>
+  </div>
+  <div class="prod-cell">
+    <img src="images/3puttround/golf-tee-matches.jpg" alt="Golf Tee Matches" />
+    <div class="prod-label">
+      <div class="prod-name">Golf Tee Matches</div>
+      <div class="prod-price">€20</div>
+    </div>
+  </div>
+  <div class="prod-cell">
+    <img src="images/3puttround/knitted-polo-green.jpg" alt="Addiction Knitted Polo" />
+    <div class="prod-label">
+      <div class="prod-name">Addiction Knitted Polo</div>
+      <div class="prod-price">€120</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════ POST 5 — Fresh Pieces ═══════ -->
+<div class="label">Post 5 — The Edit: Fresh Pieces</div>
+<div class="post post-5">
+  <div class="header-bar">
+    <div class="left">
+      <div class="tag">The Edit</div>
+      <h1>Fresh Pieces for the Warm Weather</h1>
+    </div>
+    <div class="site-tag">thegrassyissue.com</div>
+  </div>
+  <div class="fashion-cell">
+    <img src="https://malbon.com/cdn/shop/files/mens_in_line_2.png?v=1776707797&width=2048" alt="Malbon Golf" />
+    <div class="fashion-label">
+      <div class="fashion-brand">Malbon Golf</div>
+      <div class="fashion-piece">SS26 Studio Collection</div>
+    </div>
+  </div>
+  <div class="fashion-cell">
+    <img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/ORGANIC_COURSE_PULLOVER_-_IVORY_--_RECYCLED_GREENSKEEPER_TROUSER_-_TAN_01_crop.jpg?v=1771025550" alt="Manors Golf" />
+    <div class="fashion-label">
+      <div class="fashion-brand">Manors Golf</div>
+      <div class="fashion-piece">Course Pullover + Greenskeeper Trouser</div>
+    </div>
+  </div>
+  <div class="fashion-cell">
+    <img src="https://quietgolf.com/cdn/shop/files/MONOGRAMPOCKETDUSTYBLUE_1930c5ee-56c8-4915-83e3-a40d54e97288.jpg?v=1775861112" alt="Quiet Golf" />
+    <div class="fashion-label">
+      <div class="fashion-brand">Quiet Golf</div>
+      <div class="fashion-piece">Celtic Polo Active Jersey · $110</div>
+    </div>
+  </div>
+  <div class="fashion-cell">
+    <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-03-04_BLK_V1.jpg?v=1773376873" alt="Metalwood Studio" />
+    <div class="fashion-label">
+      <div class="fashion-brand">Metalwood Studio</div>
+      <div class="fashion-piece">Free Metalwood Tee · $62</div>
+    </div>
+  </div>
+  <div class="fashion-cell">
+    <img src="https://radry.com/cdn/shop/files/golfishard_tee_front_web.jpg?v=1762996050" alt="Radry" />
+    <div class="fashion-label">
+      <div class="fashion-brand">Radry</div>
+      <div class="fashion-piece">Golf's Hard Tee · $42</div>
+    </div>
+  </div>
+  <div class="fashion-cell">
+    <img src="https://devereuxgolf.com/cdn/shop/files/SP26_4019_CACTUSVOODOO-BLK-1_e92025a0-828b-4d74-a259-327160b2a7ca_1200x630.jpg?v=1775071878" alt="Devereux" />
+    <div class="fashion-label">
+      <div class="fashion-brand">Devereux</div>
+      <div class="fashion-piece">Voodoo Cactus Tee · $44</div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
