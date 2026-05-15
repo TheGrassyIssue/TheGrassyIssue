@@ -180,6 +180,88 @@
   }
   .featured-cta:hover { background: var(--grass); }
 
+  /* EVENT GRID */
+  .events-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 32px 64px;
+  }
+  .events-grid-header {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.1;
+    margin-bottom: 32px;
+    padding-bottom: 16px;
+    border-bottom: 0.5px solid rgba(20,20,20,0.15);
+  }
+  .events-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  .event-card {
+    border: 0.5px solid var(--ink);
+    display: flex;
+    flex-direction: column;
+    transition: background 0.2s;
+    text-decoration: none;
+    overflow: hidden;
+  }
+  .event-card:hover { background: rgba(20,20,20,0.02); }
+  .event-card-img {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+  }
+  .event-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  .event-card:hover .event-card-img img { transform: scale(1.03); }
+  .event-card-body {
+    padding: 24px 28px 28px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+  .event-card-badges {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+  }
+  .badge-community { background: rgba(45,74,43,0.12); color: var(--grass); }
+  .badge-tournament { background: rgba(20,20,20,0.08); color: var(--ink); }
+  .badge-pga { background: var(--grass); color: var(--paper); }
+  .event-card h3 {
+    font-family: var(--serif);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  .event-card p {
+    font-size: 14px;
+    line-height: 1.65;
+    opacity: 0.7;
+    margin-bottom: 16px;
+  }
+  .event-card-meta {
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    opacity: 0.45;
+    padding-top: 14px;
+    border-top: 0.5px solid rgba(20,20,20,0.15);
+    margin-top: auto;
+  }
+
   /* FOOTER */
   .footer { border-top: 0.5px solid var(--ink); margin-top: 48px; padding: 40px 32px 24px; background: var(--paper); }
   .footer-inner { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; font-family: var(--mono); font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; opacity: 0.55; }
@@ -195,6 +277,12 @@
     .featured-body { padding: 32px 24px; }
     .featured-body h2 { font-size: 28px; }
     .footer { padding: 32px 20px 20px; }
+    .events-grid { padding: 0 20px 40px; }
+    .events-grid-header { font-size: 24px; }
+    .events-list { grid-template-columns: 1fr; }
+    .event-card-img { height: 180px; }
+    .event-card-body { padding: 20px; }
+    .event-card h3 { font-size: 20px; }
   }
 </style>
 </head>
@@ -204,8 +292,7 @@
   <div class="nav-inner">
     <a href="/index.html" class="nav-wordmark">The Grassy Issue</a>
     <div class="nav-links">
-      <a href="/index.html#feed">The Feed</a>
-      <a href="/field-guide/">Field Guide</a>
+      <a href="/index.html#feed">Feed</a>
       <a href="/events/" class="active">Events</a>
       <a href="/scoreboard.html">Scoreboard</a>
     </div>
@@ -237,6 +324,69 @@
       <span class="featured-cta">Express Interest &rarr;</span>
     </div>
   </a>
+</section>
+
+<section class="events-grid">
+  <h2 class="events-grid-header">Around Town &amp; Beyond</h2>
+  <div class="events-list">
+
+    <a class="event-card" href="https://www.amateurgolf.com/amateur-golf-tournaments/3526/Firecracker-Open-Golf-Championship" target="_blank" rel="noopener">
+      <div class="event-card-img">
+        <img src="/images/event-firecracker.jpg" alt="Aerial view of an Austin municipal golf course with lake and city skyline" loading="lazy" />
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-badges">
+          <span class="badge badge-tournament">Tournament</span>
+        </div>
+        <h3>Firecracker Open</h3>
+        <p>Austin Amateur Golf&rsquo;s premier muni showdown. Three days of stroke play across city courses, qualifier rounds in June, and a field limited to players who earned their way in. This is the tournament your municipal membership was building toward.</p>
+        <div class="event-card-meta">Morris Williams &amp; Jimmy Clay &middot; Austin, TX &middot; Jul 3&ndash;5, 2026</div>
+      </div>
+    </a>
+
+    <a class="event-card" href="https://birdease.com/34292/aboutus" target="_blank" rel="noopener">
+      <div class="event-card-img">
+        <img src="/images/event-canoe-cup.jpg" alt="Par-3 golf green with flag on a sunny day" loading="lazy" />
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-badges">
+          <span class="badge badge-community">Community</span>
+        </div>
+        <h3>The Canoe Cup</h3>
+        <p>Inaugural 3-man scramble at Butler Pitch &amp; Putt, presented by the Young Men&rsquo;s Business League. Downtown par-3, random teams, networking that actually involves grass under your feet. Show up to play or just to hang &mdash; either way, you&rsquo;re not missing this one.</p>
+        <div class="event-card-meta">Butler Pitch &amp; Putt &middot; Austin, TX &middot; Date TBA</div>
+      </div>
+    </a>
+
+    <a class="event-card" href="https://randomgolfclub.com/collections/chapter-events" target="_blank" rel="noopener">
+      <div class="event-card-img">
+        <img src="/images/event-rgc-austin.jpg" alt="Golfers walking the course together on a sunny afternoon" loading="lazy" />
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-badges">
+          <span class="badge badge-community">Community</span>
+        </div>
+        <h3>Random Golf Club &mdash; Austin Chapter</h3>
+        <p>The global community of local golfers runs chapter events right here in Austin. Open invitations, all skill levels, and the kind of rounds where you show up knowing nobody and leave with a group text. Check their page for upcoming dates.</p>
+        <div class="event-card-meta">Various Austin Courses &middot; Ongoing 2026</div>
+      </div>
+    </a>
+
+    <a class="event-card" href="https://www.goodgoodchampionship.com/" target="_blank" rel="noopener">
+      <div class="event-card-img">
+        <img src="/images/event-good-good.jpg" alt="Scenic golf course winding through hills and mature trees" loading="lazy" />
+      </div>
+      <div class="event-card-body">
+        <div class="event-card-badges">
+          <span class="badge badge-pga">PGA Tour</span>
+        </div>
+        <h3>Good Good Championship</h3>
+        <p>The PGA Tour returns to Austin with a brand-new event at Omni Barton Creek&rsquo;s Fazio Canyons course. 120-player field, $6M purse, and a recently renovated Tom Fazio layout winding through limestone cliffs. The Tour hasn&rsquo;t been in town in years. Mark it.</p>
+        <div class="event-card-meta">Omni Barton Creek &middot; Austin, TX &middot; Nov 9&ndash;15, 2026</div>
+      </div>
+    </a>
+
+  </div>
 </section>
 
 <footer class="footer">
