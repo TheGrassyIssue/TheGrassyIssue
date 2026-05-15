@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Metalwood Studio SS26 — Our 10 Picks — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+  .gear-slide a { display: block; text-decoration: none; color: inherit; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 14px 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-brand {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85; margin-bottom: 2px;
+  }
+
+  .gear-slide-name {
+    font-family: var(--sans); font-size: 13px;
+    font-weight: 500;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">New Drop</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/double-plaid-windbreaker-jacket-multicolor" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-05-05_MLT_V1_3840x.progressive.jpg?v=1773376838&format=jpg&w=3840&q=75" alt="Metalwood Studio — Double Plaid Windbreaker Jacket" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Double Plaid Windbreaker · $288</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/trail-mix-reversible-vest-ice" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-05-07_ICE_V1_3840x.progressive.jpg?v=1773376253&format=jpg&w=3840&q=75" alt="Metalwood Studio — Trail Mix Reversible Vest in Ice" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Trail Mix Reversible Vest · $218</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/king-of-the-greens-jersey-black" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-04-10_BLK_V1.jpg?v=1778806873" alt="Metalwood Studio — King of the Greens Jersey in Black" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">King of the Greens Jersey · $168</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/micro-grid-oversized-button-up-shirt-sky" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-04-05_SKY_V1_bc7542e2-5001-4025-88ca-916a00639a60.jpg?v=1778805962" alt="Metalwood Studio — Micro Grid Button Up in Sky" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Micro Grid Button Up · $168</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/digital-hombre-top-orange" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-04-03_ORG_V1.jpg?v=1778801289" alt="Metalwood Studio — Digital Hombre Top in Orange" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Digital Hombre Top · $154</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/digital-hombre-short-green" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-07-04_GRN_V1.jpg?v=1778809740" alt="Metalwood Studio — Digital Hombre Short in Green" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Digital Hombre Short · $136</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/canvas-short-black" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-07-03_BLK_V1_3840x.progressive.jpg?v=1773375517&format=jpg&w=3840&q=75" alt="Metalwood Studio — Canvas Short in Black" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Canvas Short · $208</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/freshwater-hat-black" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-01-02_BLK_V2.jpg?v=1778801834" alt="Metalwood Studio — Freshwater Hat in Black" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">Freshwater Hat · $58</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/king-of-the-greens-trucker-hat-black" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-01-03_BLK_V1.jpg?v=1778803434" alt="Metalwood Studio — King of the Greens Trucker Hat in Black" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">Metalwood Studio</div><div class="gear-slide-name">King of the Greens Trucker · $48</div></div>
+          </a>
+        </div>
+
+        <div class="gear-slide">
+          <a href="https://metalwood.studio/products/metalwood-x-adidas-originals-mc70-golf-shoe-white" target="_blank" rel="noopener">
+            <img src="https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-ADI-19-01_WHT_V1.jpg?v=1769931566" alt="adidas x Metalwood MC70 Golf Shoe in White" />
+            <div class="gear-slide-info"><div class="gear-slide-brand">adidas x Metalwood</div><div class="gear-slide-name">MC70 Golf Shoe · $200</div></div>
+          </a>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 10</div>
+
+    <h2 class="card-title">Metalwood Studio SS26 — Our 10 Picks</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "The statement piece. Full plaid patchwork in a relaxed windbreaker cut — loud enough for the first tee, light enough for post-round drinks. 100% nylon, multicolor. At $288 you're paying for the design, and it's worth every cent.",
+      detail: "$288 · Nylon · Multicolor plaid · metalwood.studio"
+    },
+    {
+      desc: "Reversible means two fits in one. Ice-blue quilted on one side, tonal on the other. Layer it over a polo when the marine layer rolls in. Clean and functional at $218.",
+      detail: "$218 · Reversible · Ice colorway · metalwood.studio"
+    },
+    {
+      desc: "\"Queen of the fairways, tho.\" 100% cotton jersey with screen-printed detail. The kind of shirt that plays better than it looks — and it looks great. Runs slightly oversized.",
+      detail: "$168 · 100% Cotton · Screen printed · metalwood.studio"
+    },
+    {
+      desc: "The boxy-cropped camp collar they're calling a \"slut shirt\" — their words, not ours. 100% cotton, micro grid weave in sky blue. Woven label at the placket. Irresistible is right.",
+      detail: "$168 · 100% Cotton · Oversized boxy-crop · metalwood.studio"
+    },
+    {
+      desc: "Full sublimation mesh in a gradient orange that was supposed to be called \"ombré\" but someone typed \"hombre\" and now it's canon. Lightweight polyester — breathes on the course.",
+      detail: "$154 · 100% Polyester mesh · Sublimation print · metalwood.studio"
+    },
+    {
+      desc: "The matching bottom to the Hombre top. Same mesh, same gradient energy, same naming accident. Bubble patch detail and side pockets. The set together is unreal.",
+      detail: "$136 · 100% Polyester mesh · 7\"+ inseam · metalwood.studio"
+    },
+    {
+      desc: "Heavy canvas, workwear proportions, golf-day attitude. Black and built to last. At $208 these are premium — but the construction backs it up.",
+      detail: "$208 · Canvas · Black · metalwood.studio"
+    },
+    {
+      desc: "\"Brimothee Chalamet.\" Oversized brim, nylon construction, adjustable toggle. This is the hat that says you take shade seriously. One size fits most.",
+      detail: "$58 · 100% Nylon · Adjustable toggle · metalwood.studio"
+    },
+    {
+      desc: "Puff-printed King of the Greens graphic on a classic trucker silhouette. Big-head friendly, one-size-fits-all. The hat Metalwood's doctors don't want you to know about.",
+      detail: "$48 · 100% Polyester · Puff print · metalwood.studio"
+    },
+    {
+      desc: "The collab shoe. Predator upper on a golf chassis with BOOST midsole and Torsion system. Soccer-inspired toe, water-resistant laces. Everyone's mad because they keep calling it \"soccer.\"",
+      detail: "$200 · Leather · BOOST midsole · adidas x Metalwood"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateText(idx) {
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[idx].desc;
+      detailEl.textContent = slideData[idx].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 150);
+  }
+
+  function goToSlide(idx) {
+    current = idx;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+    updateText(current);
+  }
+
+  function moveSlide(dir) {
+    goToSlide((current + dir + total) % total);
+  }
+
+  updateText(0);
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
