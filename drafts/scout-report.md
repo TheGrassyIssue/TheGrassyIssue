@@ -1,58 +1,59 @@
-# Drop Scout Report — May 15, 2026
+# Drop Scout Report — May 18, 2026 (Sunday)
 
 ## Summary
-- **New drops found:** 5 noteworthy items (within recent weeks, closest to 48-hour window)
-- **Brands with notable recent activity:** Gumtree Golf & Nature (PUMA collab), Sugarloaf Social Club (SS26 live), Radmor (Chasing Light collection), Late Nine (debut collection), Dormie Workshop (custom book reopening May 2026)
-- **Seasonal collections already live:** Bogey Boys Spring '26, Devereux Westward Collection, Students Golf "In Full Swing" + "Research Club", Quiet Golf x PUMA, Metalwood x adidas SS26, Manors Club Collection, Head Golf SS26
-- **Active giveaways spotted:** None confirmed in this scan
-- **Malbon warehouse sale:** May 7-10 in Tustin, CA (just passed)
+- **5 draft cards written** for Lenny's review
+- **0 active giveaways** spotted
+- **2 new brand discoveries** (CPH / Captain's Helm, Erthe Golf)
 
-## Brands with Recent Activity (Last 2-4 Weeks)
+## Draft Cards Written
 
-### PUMA x Gumtree Golf & Nature Club — Field Notes Collection (April/May 2026)
-- Collab dropped late April/early May 2026
-- Earthy tones (Warm White, Sandstone, Dark Sage, Fudge)
-- Pieces: ¼-Zip ($130), Polo ($95), Helsinki G shoe ($130), graphic tees ($55), shorts ($88), 5-panel cap ($40)
-- Inspired by Rocky Mountains / Puma Concolor habitat
-- **Strong Grassy Issue fit** — nature-forward, anti-speed ethos
+1. **Manors Golf — Summer Capsule** → `2026-05-18-manors-summer-capsule.html`
+   - Buttersoft Polos ($114), Stableford Shorts ($127), Ranger Golf Shorts ($100)
+   - Lookbook shot in St. Lucia with Victor Cruz and Josh Denzel
+   - Early access started May 5, now live for everyone
+   - **This is the biggest story this cycle**
 
-### Sugarloaf Social Club — SS26 Collection (Live Now)
-- Nine core pieces, 25 variations
-- Includes new shorts, anorak ($165), polos ($95), Arrowcord grips ($65)
-- New SSC Locker Room showroom in McLean, VA
-- Described as "the team's best work to date"
-- **Strong Grassy Issue fit** — purist, intentional, charming
+2. **Gumtree x PUMA — Field Notes Collection** → `2026-05-18-gumtree-puma-field-notes.html`
+   - Launched April 22 (Earth Day), still fresh
+   - Rocky Mountains shoot, landscape-color polos, Helsinki G shoe
+   - Nature-forward ethos, anti-speed messaging
 
-### Radmor — "Chasing Light" Spring 2026 (Live Now)
-- Dylan Quarter Zip ($145), Ethan Knit Polo ($145)
-- Theme: "Maximize the hours that matter"
-- Sustainability-focused premium brand
-- **Moderate Grassy Issue fit**
+3. **Quiet Golf x PUMA — Spring Collection** → `2026-05-18-quiet-golf-puma.html`
+   - Cable knit sweaters, half-zips, limited-edition Avant saddle shoes ($180)
+   - Earth-tone palette (bunker sand, fairway green, chocolate)
+   - Available now at pumagolf.com and retail
 
-### Dormie Workshop — Custom Book Reopening (Early May 2026)
-- Custom order book was full, reopening early May 2026
-- All custom products start at $300 + shipping
-- Skipped 2026 PGA Show — interesting strategic move
-- **Strong Grassy Issue fit** — handmade Nova Scotia leather goods
+4. **Bogey Boys — Summer Course Collection** → `2026-05-18-bogey-boys-summer-course.html`
+   - Now live alongside "Summer in the City" line
+   - Macklemore's brand continues to show up consistently
 
-### Late Nine — Debut Collection (2026)
-- Swedish brand, first lineup launched 2026
-- Wool trousers ($430), polo ($275), windbreaker ($515), merino knitwear
-- Minimal branding, '90s Ryder Cup nostalgia
-- **Strong Grassy Issue fit** — design-forward, quiet, European craft
+5. **Sugarloaf Social Club — SS26 + THE PLAYERS 2026** → `2026-05-18-sugarloaf-players-2026.html`
+   - Full SS26 collection live + THE PLAYERS 2026 capsule
+   - Continues to stock collabs with Quiet Golf, Students, Sentinel, MacKenzie
 
-## Seasonal Collections Already Tracked (Launched Earlier in 2026)
-- Manors — Club Collection (Feb 2026)
-- Metalwood x adidas — SS26 capsule (Feb 2026)
-- Bogey Boys — Spring '26 (live)
-- Devereux — Westward Collection + Johnnie Walker collab (Spring 2026)
-- Quiet Golf x PUMA — Spring collection (live)
-- Students Golf — "In Full Swing" D1 + "Research Club" D2 (Jan-Feb 2026)
-- Head Golf — SS26 lookbook (live)
-- Dimple & Divot — Patrons Collection 2026 (March 29)
+## Other Notable Activity (No Card Written — Already Tracked or Not New Enough)
+
+- **Malbon Golf** — Warehouse sale was May 7–10 in Tustin, CA. No new product.
+- **Metalwood Studio** — adidas x Metalwood SS26 launched February. Steady but nothing new.
+- **Eastside Golf** — Nike "Take Flight" launched fall 2025. No new drops.
+- **Devereux Golf** — Westward Collection (Spring 2026) is out. Not brand new.
+- **Random Golf Club** — 2026 Classics events announced. Iceland Major (June), NZ Major (October). No product drops.
+- **Sentinel Golf** — Pre-order model, nothing new this cycle.
+- **Fyfe Golf** — Hand-forged metal ball markers are recent additions. MacKenzie collab was April.
+- **Students Golf** — Spring 2026 "In Full Swing" + "Research Club" on FWRD. Not new-new but gaining momentum.
+- **Dimple & Divot** — Patrons Collection 2026 was March/April.
+- **Sounder Golf** — Clean Lie Polo is a recent addition.
 
 ## Brands with No Notable New Activity
-Random Golf Club, Eastside Golf, Sentinel Golf, Fyfe Golf, Mackenzie Golf Bags, Agronomy Workshop, Casualist, Left of Field, Public Drip, Bluegrass Fairway, Field Day Sporting Co, Tremont, Winston Collection, Sounder, Seamus Golf, Hame Golf, Heathlander, Macade, Local Rule, Fantl Sport, Rebolf, Angus & Grace, Merrill Golf, FlagBag Golf Co, Shapland Bags, Whim Golf, Forewind Golf
+Mackenzie Golf Bags, Agronomy Workshop, Casualist, Left of Field, Late Nine, Public Drip, Whim Golf, Forewind Golf, Hame Golf, Bluegrass Fairway, Field Day Sporting Co, Tremont, Dormie Workshop, Winston Collection, Seamus Golf, Radmor, Head Golf, Heathlander, Macade, Local Rule, Fantl Sport, Rebolf, Angus & Grace, Merrill Golf, FlagBag Golf Co, Shapland Bags
+
+## Giveaways
+- None spotted this cycle.
 
 ## New Brand Discoveries
-See brand-discoveries.md
+See `brand-discoveries.md` — CPH (Captain's Helm) from Japan and Erthe Golf added.
+
+## Notes
+- Sunday scan — lower activity expected. Brands tend to launch mid-week.
+- PUMA's indie-brand strategy is becoming a pattern: Quiet Golf collab, Gumtree collab, both within weeks of each other. Worth a trend piece?
+- Manors Summer Capsule is the lead story — new products, celebrity lookbook, and just went general access.

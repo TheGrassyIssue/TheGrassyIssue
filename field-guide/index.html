@@ -374,6 +374,31 @@ img { max-width: 100%; display: block; }
 }
 .muni-links a.primary:hover { background: var(--grass); border-color: var(--grass); }
 
+/* ==================== COURSE PHOTOS ==================== */
+.muni-photo {
+  grid-column: 1 / -1;
+  margin: 0 0 8px;
+  overflow: hidden;
+  border: 0.5px solid rgba(20, 20, 20, 0.15);
+}
+.muni-photo img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.9);
+  transition: filter 0.3s;
+}
+.muni-photo:hover img { filter: saturate(1); }
+.muni-photo figcaption {
+  padding: 8px 0 0;
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+
 /* ==================== TABLE ==================== */
 .table-section {
   background: rgba(168, 168, 120, 0.12);
@@ -632,6 +657,7 @@ td.num {
   }
   .glance-grid { grid-template-columns: 1fr; }
   .hon-item { grid-template-columns: 1fr; gap: 10px; }
+  .muni-photo img { height: 200px; }
   .footer { padding: 40px 20px 24px; }
   .footer-inner { flex-direction: column; }
   .footer-links { align-self: flex-start; flex-wrap: wrap; }
@@ -675,6 +701,10 @@ td.num {
     <span>~10 min read</span>
   </div>
 </section>
+
+<figure class="muni-photo" style="border: none; border-bottom: 0.5px solid var(--ink);">
+  <img src="/images/event-firecracker.jpg" alt="Aerial view of Lions Municipal Golf Course with the Austin skyline in the distance" loading="lazy" style="height: 340px; filter: saturate(0.85) brightness(0.97);" />
+</figure>
 
 <section class="quick">
   <div class="quick-inner">
@@ -723,6 +753,10 @@ td.num {
   </div>
 
   <article class="muni">
+    <figure class="muni-photo">
+      <img src="/images/event-firecracker-pond.jpg" alt="Water hazard framed by live oaks on a golden afternoon at Lions Municipal Golf Course" loading="lazy" />
+      <figcaption>Lions Municipal · Austin, TX</figcaption>
+    </figure>
     <div>
       <div class="muni-num">No. 01 · Since 1924</div>
       <div class="muni-name">Lions Muni.</div>
@@ -761,6 +795,10 @@ td.num {
   </article>
 
   <article class="muni">
+    <figure class="muni-photo">
+      <img src="/images/event-city-champ.jpg" alt="View of the downtown Austin skyline from an elevated tee box at Morris Williams Golf Course" loading="lazy" />
+      <figcaption>Morris Williams · Austin, TX</figcaption>
+    </figure>
     <div>
       <div class="muni-num">No. 02 · Since 1964</div>
       <div class="muni-name">Morris Williams.</div>
@@ -834,6 +872,10 @@ td.num {
   </article>
 
   <article class="muni">
+    <figure class="muni-photo">
+      <img src="/images/event-firecracker-test.jpg" alt="Panoramic view of links-style fairways, bunkers, and water at Roy Kizer Golf Course" loading="lazy" />
+      <figcaption>Roy Kizer · Austin, TX</figcaption>
+    </figure>
     <div>
       <div class="muni-num">No. 04 · Since 1994</div>
       <div class="muni-name">Roy Kizer.</div>
@@ -872,6 +914,10 @@ td.num {
   </article>
 
   <article class="muni">
+    <figure class="muni-photo">
+      <img src="/images/hero.jpg" alt="Cart path winding through rolling fairways under a wide Texas sky at Jimmy Clay Golf Course" loading="lazy" />
+      <figcaption>Jimmy Clay · Austin, TX</figcaption>
+    </figure>
     <div>
       <div class="muni-num">No. 05 · Since 1974</div>
       <div class="muni-name">Jimmy Clay.</div>
@@ -1062,6 +1108,9 @@ td.num {
     <div>
       <div class="hon-name">Butler Pitch & Putt.</div>
       <div class="hon-tag">Public · Par 3 · Downtown</div>
+      <figure class="muni-photo" style="margin-top: 12px;">
+        <img src="/images/event-butler-skyline.jpg" alt="Austin skyline seen from Butler Pitch and Putt at dusk" loading="lazy" style="height: 140px;" />
+      </figure>
     </div>
     <div class="hon-body">
       <p>Nine par-3 holes downtown, walk-up rates, beer stand at the 19th. Not on this Field Guide because it's a different category of golf — closer to a first date than a real round. But it deserves a mention because it's an Austin institution, and because it's the correct answer to "where can I play in jeans right now." Get its own writeup eventually.</p>
