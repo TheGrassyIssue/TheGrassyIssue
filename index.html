@@ -1912,6 +1912,59 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- FIELD GUIDE — Ranking the Muni Grub -->
+  <div class="card" data-type="guide">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Field Guide]</span>
+      <div class="gear-carousel" data-carousel="munigrub">
+        <div class="gear-carousel-track">
+
+          <div class="gear-slide">
+            <a href="https://www.austintexas.gov/golfatx/hancock-course" target="_blank" rel="noopener">
+              <img src="https://hancockgolfcourseconservancy.org/wp-content/uploads/2020/11/cropped-IMG_2838.jpg" alt="Hancock Golf Course — Austin, TX" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">#4 · Hancock GC</div><div class="gear-slide-name">The Clubhouse Window</div></div>
+            </a>
+          </div>
+
+          <div class="gear-slide">
+            <a href="https://rs3culinary.com/pages/stag-finch-scottish-alehouse-roy-kizer-jimmy-clay-golf-courses" target="_blank" rel="noopener">
+              <img src="https://cdn.shopify.com/s/files/1/0761/0328/7076/t/7/assets/0c0a6214-WCg_600x.jpg?v=1687359165" alt="Stag & Finch Scottish Alehouse — Jimmy Clay / Roy Kizer" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">#3 · Stag & Finch</div><div class="gear-slide-name">Jimmy Clay / Roy Kizer</div></div>
+            </a>
+          </div>
+
+          <div class="gear-slide">
+            <a href="https://www.ciscosaustin.com/muny" target="_blank" rel="noopener">
+              <img src="https://images.squarespace-cdn.com/content/v1/618adbf1b1946521f5247b43/1637033609316-FUMZEZ5OJBTHHYF04NUR/DC101238.jpg" alt="Cisco's Muny Cafe — Lions Municipal Golf Course" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">#2 · Cisco's Muny Cafe</div><div class="gear-slide-name">Lions Municipal</div></div>
+            </a>
+          </div>
+
+          <div class="gear-slide">
+            <a href="https://www.fairwayscantina.com/" target="_blank" rel="noopener">
+              <img src="https://assets.simpleviewinc.com/simpleview/image/upload/c_limit,h_1200,q_75,w_1200/v1/crm/austin/473579472_1125511766027505_2978123869709353926_n_F473445B-95EF-4797-72FE0CACB30E95C0-f4734315065599f_f4737e63-f1b6-97f3-7a6547595ab7d199.jpg" alt="Fairways Cantina patio overlooking Morris Williams Golf Course" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">#1 · Fairways Cantina</div><div class="gear-slide-name">Morris Williams</div></div>
+            </a>
+          </div>
+
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Ranking the Muni Grub — Every On-Course Food Spot in Austin</div>
+      <div class="card-text" data-slidetext="munigrub">Barely qualifies. The Hancock clubhouse has a window that sells beer, water, and a few pre-wrapped snacks. No menu, no seating, no ambiance. You're paying at a parking meter to play a 9-hole muni — the food matches the energy. Grab a taco from one of the trucks on 41st Street before your round and keep expectations at zero.</div>
+      <div class="gear-dots" data-dots="munigrub"></div>
+      <div class="gear-counter" data-counter="munigrub">1 / 4</div>
+      <div class="card-source">
+        <a href="https://www.austintexas.gov/golfatx" target="_blank" rel="noopener" class="source-link">GolfATX</a> ·
+        <a href="https://www.fairwayscantina.com/" target="_blank" rel="noopener" class="source-link">fairwayscantina.com</a> ·
+        <a href="https://www.ciscosaustin.com/muny" target="_blank" rel="noopener" class="source-link">ciscosaustin.com</a>
+      </div>
+    </div>
+  </div>
+
   <!-- BRAND TO KNOW — Merrill Golf -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -7117,6 +7170,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    munigrub: [
+      "Barely qualifies. The Hancock clubhouse has a window that sells beer, water, and a few pre-wrapped snacks. No menu, no seating, no ambiance. You're paying at a parking meter to play a 9-hole muni — the food matches the energy. Grab a taco from one of the trucks on 41st Street before your round and keep expectations at zero.",
+      "RS3 Culinary took over the old snack bar in 2017 and gave it a Scottish pub theme — burgers, Scotch eggs, a whisky list, and a build-your-own Bloody Mary bar. It's a real sit-down spot where the two courses meet, open 7am–7pm daily. The food is solid but the vibe is more corporate concessions than neighborhood hangout. Functional, fine, not a destination on its own.",
+      "Austin's oldest Tex-Mex meets Austin's oldest public golf course. Cisco's opened at the Lions clubhouse in late 2021, serving migas, breakfast tacos, chicken tacos, burgers, nachos, and fajitas — plus frozen margaritas from a cart on the course. Indoor and outdoor seating with views of the fairways. It's Cisco's — you already know the food is good.",
+      "The best muni food in Austin and it's not close. Three neighborhood residents opened Fairways Cantina at Morris Williams in 2020. Named tacos — Happy Gilmore (carne asada), Great White Shark (beer-battered snapper), Black Knight (blackened shrimp). Fresh guac, queso, loaded cantina fries, top-shelf frozen margs. Dog-friendly patio with the best views in East Austin. Open 7am–9pm in summer. This is a restaurant that happens to be on a golf course."
+    ],
     merrillgolf: [
       "Merrill Golf calls itself \"a design venture that aims to create timeless products through the lens of golf.\" No polos. No moisture-wicking polyester. Instead: acid-washed tees, heavyweight hoodies, five-panel caps, and dad hats that feel more tackle shop than country club. The flying-duck logo tells you everything about the vibe — vintage Americana, outdoors-first, golf as a backdrop for the lifestyle they're actually selling.",
       "The Target Practice Tee in Vintage Black — heavyweight cotton with the Merrill flag-pin graphic screen-printed front and back. The acid-wash treatment gives it that broken-in feel straight out of the bag. Slightly oversized, cropped fit — this is a course tee that doesn't look like one. $60.",
