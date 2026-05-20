@@ -1,6 +1,20 @@
-# Brand Discoveries — 2026-05-19
+# Brand Discoveries — 2026-05-20
 
 ## New This Scan
+
+### Radry Golf
+- **URL:** https://radry.com
+- **Why they fit:** Self-describes as "a never-ending art project disguised as a golf brand." Minimalist, art-inspired, lifestyle-first with relaxed modern cuts and unisex-friendly fits. Already drafted their Chasing Light collection. Fits TGI perfectly — consider adding to extended watchlist.
+
+### Rebolf (Barcelona, Spain)
+- **URL:** https://rebolf.com
+- **Why they fit:** Fuses vintage golf fashion with modern streetwear playfulness. European indie energy from Barcelona. Worth a deeper look for TGI's international coverage.
+
+### Featherie
+- **URL:** https://www.featherie.com
+- **Why they fit:** Founded by a 14-year-old competitive golfer (Kate Korngold), now in 100+ pro shops. Women's golf apparel with built-in tee holders and scorecard pockets. Not core TGI aesthetic but the founder story has Mo Norman underdog energy. Recently featured in LINKS Magazine.
+
+## Discovered May 19 (Still Tracking)
 
 ### Three Putt Golf
 - **URL:** https://threeputtgolfclothing.co.uk
