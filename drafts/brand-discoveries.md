@@ -1,6 +1,18 @@
-# Brand Discoveries — 2026-05-20
+# Brand Discoveries — 2026-05-21
 
 ## New This Scan
+
+### VESSEL (Carlsbad, CA)
+- **URL:** https://vesselbags.com
+- **Why they fit:** Known for premium golf bags, VESSEL just launched their debut apparel collection (SS26) on May 14-15. Same obsessive design DNA applied to performance wear. Not streetwear-first but the craftsmanship ethos aligns with TGI's respect for quality. Worth monitoring as they build out the apparel line.
+
+### Olydoe (UK)
+- **URL:** https://olydoe.com
+- **Why they fit:** Launched October 2025 by Scott Matthews. Born from wanting to buy a decent polo at a course and finding nothing. Early-stage brand with grassroots energy. Watch for growth.
+
+---
+
+## Discovered May 20 (Still Tracking)
 
 ### Radry Golf
 - **URL:** https://radry.com

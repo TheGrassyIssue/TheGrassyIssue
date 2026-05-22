@@ -1,20 +1,31 @@
-# Drop Scout Report — 2026-05-20 (Wednesday)
+# Drop Scout Report — 2026-05-21 (Thursday)
 
 ## Summary
-- **1 new draft card written** for Lenny's review
+- **3 new draft cards written** for Lenny's review
 - **0 active giveaways** spotted
-- **3 new brand discoveries** (Radry Golf, Rebolf, Featherie)
+- **2 new brand discoveries** (VESSEL apparel debut, Olydoe UK)
 
 ---
 
-## New Draft Card
+## New Draft Cards
 
-### 1. Students Golf × Sugarloaf Social Club — Badge Capsule
-- **Status:** Current drop
-- Limited-edition capsule with custom patches/badges as visual markers of experience
-- Includes a team jacket and limited-edition MacKenzie bag
-- → `2026-05-20-sugarloaf-students-collab.html`
-- **New collab between two brands already on the watchlist — worth a card**
+### 1. Random Golf Club — Mad Scramble Tour NYC (May 22)
+- **Status:** Event tomorrow at Split Rock GC, new tour merch (hoodies, tees) live now
+- Player's Pass $75, Spectator $10
+- → `2026-05-21-random-golf-club-mad-scramble-nyc.html`
+- **Timely — event is tomorrow, worth a quick-hit card**
+
+### 2. VESSEL — Debut Apparel Collection SS26
+- **Status:** Launched May 14-15, still fresh
+- First-ever apparel line from the premium bag company
+- → `2026-05-21-vessel-apparel-debut.html`
+- **New brand entering apparel — notable industry move**
+
+### 3. Malbon — Performance SU '26
+- **Status:** Summer performance line is live, plus continued adidas Originals collab
+- Technical fabrics, athlete-driven construction
+- → `2026-05-21-malbon-performance-su26.html`
+- **Seasonal drop, worth a card since it just went live**
 
 ---
 
@@ -22,42 +33,57 @@
 
 | Draft | Status |
 |-------|--------|
-| Devereux x Mount Gay Rum | Dropped May 18, card written May 19 — still the freshest lead |
+| Devereux x Mount Gay Rum | Dropped May 18, card written May 18-19 — still current |
+| Sugarloaf x Students Golf Badge Capsule | Card written May 20 — still fresh |
 | Bogey Boys Summer Course | Live, card already written |
 | Radmor "Chasing Light" | Live, card already written |
 | Malbon x Gap (June 6) | Upcoming, pre-drop card already written |
 | PUMA x Gumtree Field Notes | Still current, card already written |
+| Sugarloaf SS26 Collection | Live, card already written |
 
 ---
 
-## Other Notable Activity (No Card Written)
+## Brand Activity Scan (All 41 Brands)
 
-| Brand | Activity | Notes |
-|-------|----------|-------|
-| Malbon | Performance SU '26 live, adidas Originals chapter continues | Ongoing seasonal line, not a 48hr drop |
-| Random Golf Club | NYC event May 22 ($75), Classics selling out | Events, not product drops |
-| Sentinel Golf | Basecamp Expedition series ongoing | Pre-order/made-to-order model |
-| Fyfe Golf | Between Tides + Shooter's Club collections | Ongoing |
-| Mackenzie | Fyfe collab, H&B 10th anniversary bag | Ongoing |
-| Sugarloaf Social Club | SS26 + THE PLAYERS capsule | Covered in previous scans |
-| Manors | Club Collection + Summer Capsule | Not new this cycle |
-| Dormie Workshop | Custom orders reopened | Noted May 15 |
+### Core Watchlist (1-12)
+| Brand | Activity |
+|-------|----------|
+| Manors | Club Collection (Feb) still current; no new May drop detected |
+| Malbon | **Performance SU '26 live** + adidas Originals ongoing + Gap collab June 6 |
+| Metalwood Studio | Spring/Summer collection + adidas MC70 collab ongoing; no new May-specific drop |
+| Eastside Golf | Take Flight x Nike collab (Sep 2025) still available; no new May drop |
+| Quiet Golf | Spring 2026 at Pacsun + PUMA collab ongoing; no new May-specific drop |
+| Bogey Boys | Summer Course Collection live; no new activity since last scan |
+| Devereux | **Mount Gay collab dropped May 18** — card already exists |
+| Random Golf Club | **Mad Scramble Tour NYC May 22** + new tour merch |
+| Gumtree Golf | PUMA Field Notes ongoing; no new activity |
+| Sentinel Golf | No new drops detected |
+| Fyfe Golf | No new drops detected |
+| Mackenzie Golf Bags | Fyfe collab and H&B anniversary bag ongoing; no new May drop |
 
-## Brands with No Notable New Activity This Scan
-Metalwood Studio, Eastside Golf, Quiet Golf, Agronomy Workshop, Casualist, Left of Field, Late Nine, Public Drip, Whim Golf, Forewind Golf, Hame Golf, Sounder Golf, Bluegrass Fairway, Field Day Sporting Co, Tremont, Winston Collection, Seamus Golf, Dimple & Divot, Head Golf, Heathlander, Macade, Local Rule, Fantl Sport, Angus & Grace, Merrill Golf, FlagBag Golf Co, Shapland Bags
+### Extended Watchlist (13-41) — Notable Activity
+| Brand | Activity |
+|-------|----------|
+| Sugarloaf Social Club | **Students Golf collab** (card written May 20) + SS26 live |
+| Radmor | **Chasing Light** spring drop (card already written) |
+| Sounder | Spring 2026 collection live, "Clean Lie Polo" new for 2026 |
+| Dormie Workshop | Customs reopened (card written May 15) |
+| All others | No significant new drops detected in last 48 hours |
 
-## Giveaways
-None spotted this cycle.
+---
 
 ## New Brand Discoveries
-See `brand-discoveries.md` — added this scan:
-- **Radry Golf** (radry.com) — "A never-ending art project disguised as a golf brand." Minimalist, art-forward, unisex. Strong TGI fit.
-- **Rebolf** (rebolf.com) — Barcelona. Vintage golf × modern streetwear. European indie energy.
-- **Featherie** (featherie.com) — Founded by a 14-year-old, now in 100+ pro shops. Women's golf with underdog story.
+- **VESSEL** (Carlsbad, CA) — bag company's debut apparel line, launched May 14-15
+- **Olydoe** (UK) — launched Oct 2025, grassroots polo brand born from frustration with pro shop options
+
+---
+
+## Active Giveaways
+None spotted this scan.
+
+---
 
 ## Notes
-- **Quiet day.** Most of the week's action landed in the May 18–19 window (Devereux x Mount Gay, Malbon x Gap preview). Mid-week tends to be quieter for drops.
-- The Students x Sugarloaf collab is worth a card because it's two TGI-universe brands teaming up with a MacKenzie bag — that's three watchlist brands in one capsule.
-- **Malbon x Gap (June 6)** remains the biggest upcoming drop on the horizon. 33 pieces, Jesper Parnevik campaign, wide retail.
-- Radry Golf should be considered for the extended watchlist — their aesthetic is a near-perfect TGI match.
-- **Duplicate note:** My run created `2026-05-18-devereux-mount-gay.html` and `2026-05-20-bogey-boys-summer-course.html` before I realized previous versions exist. These are dupes of cards from May 19 — safe to delete.
+- RGC Mad Scramble NYC is tomorrow (May 22) — if Lenny wants to run the card, it should go up today or early tomorrow
+- Malbon x Gap drops June 6 — pre-drop card already in drafts, may want to refresh closer to date
+- VESSEL entering apparel is a significant industry move worth tracking even though they're not core TGI aesthetic yet
