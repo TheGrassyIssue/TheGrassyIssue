@@ -1,31 +1,20 @@
-# Drop Scout Report — 2026-05-21 (Thursday)
+# Drop Scout Report — 2026-05-22 (Friday)
 
 ## Summary
-- **3 new draft cards written** for Lenny's review
+- **1 new draft card written** for Lenny's review
 - **0 active giveaways** spotted
-- **2 new brand discoveries** (VESSEL apparel debut, Olydoe UK)
+- **0 new brand discoveries** (all previously identified brands still tracking)
 
 ---
 
 ## New Draft Cards
 
-### 1. Random Golf Club — Mad Scramble Tour NYC (May 22)
-- **Status:** Event tomorrow at Split Rock GC, new tour merch (hoodies, tees) live now
-- Player's Pass $75, Spectator $10
-- → `2026-05-21-random-golf-club-mad-scramble-nyc.html`
-- **Timely — event is tomorrow, worth a quick-hit card**
-
-### 2. VESSEL — Debut Apparel Collection SS26
-- **Status:** Launched May 14-15, still fresh
-- First-ever apparel line from the premium bag company
-- → `2026-05-21-vessel-apparel-debut.html`
-- **New brand entering apparel — notable industry move**
-
-### 3. Malbon — Performance SU '26
-- **Status:** Summer performance line is live, plus continued adidas Originals collab
-- Technical fabrics, athlete-driven construction
-- → `2026-05-21-malbon-performance-su26.html`
-- **Seasonal drop, worth a card since it just went live**
+### 1. Malbon x HVN — Women's Capsule Collab
+- **Status:** Just announced/launched (Who What Wear coverage published ~19 hours ago)
+- Harley Viera-Newton brings vintage-inspired prints and gingham to Malbon's women's line
+- Blue gingham windbreaker, matching tennis dress, white pleated skirt
+- -> `2026-05-22-malbon-x-hvn.html`
+- **Fresh collab, strong design angle, women's golf getting interesting moves**
 
 ---
 
@@ -33,8 +22,11 @@
 
 | Draft | Status |
 |-------|--------|
-| Devereux x Mount Gay Rum | Dropped May 18, card written May 18-19 — still current |
-| Sugarloaf x Students Golf Badge Capsule | Card written May 20 — still fresh |
+| RGC Mad Scramble Tour NYC | **Happening TODAY** at Split Rock GC — card written May 21 |
+| Malbon Performance SU '26 | Live, card written May 21 |
+| VESSEL Apparel Debut | Live, card written May 21 |
+| Devereux x Mount Gay Rum | Dropped May 18, card written May 18-19 |
+| Sugarloaf x Students Golf Badge Capsule | Card written May 20 |
 | Bogey Boys Summer Course | Live, card already written |
 | Radmor "Chasing Light" | Live, card already written |
 | Malbon x Gap (June 6) | Upcoming, pre-drop card already written |
@@ -49,32 +41,31 @@
 | Brand | Activity |
 |-------|----------|
 | Manors | Club Collection (Feb) still current; no new May drop detected |
-| Malbon | **Performance SU '26 live** + adidas Originals ongoing + Gap collab June 6 |
-| Metalwood Studio | Spring/Summer collection + adidas MC70 collab ongoing; no new May-specific drop |
-| Eastside Golf | Take Flight x Nike collab (Sep 2025) still available; no new May drop |
-| Quiet Golf | Spring 2026 at Pacsun + PUMA collab ongoing; no new May-specific drop |
-| Bogey Boys | Summer Course Collection live; no new activity since last scan |
-| Devereux | **Mount Gay collab dropped May 18** — card already exists |
-| Random Golf Club | **Mad Scramble Tour NYC May 22** + new tour merch |
+| Malbon | **x HVN women's capsule just dropped** + Performance SU '26 live + Gap collab June 6 |
+| Metalwood Studio | SS26 collection + adidas MC70 ongoing; no new drop since last scan |
+| Eastside Golf | Take Flight x Nike (fall 2025) still available; Bridgestone collab balls ongoing; no new May drop |
+| Quiet Golf | Spring 2026 at Pacsun + PUMA collab ongoing; no new drop |
+| Bogey Boys | Summer Course Collection live; no new activity |
+| Devereux | Mount Gay collab (May 18) still fresh; no newer activity |
+| Random Golf Club | **Mad Scramble Tour NYC TODAY** (May 22) at Split Rock GC + DC event also today |
 | Gumtree Golf | PUMA Field Notes ongoing; no new activity |
 | Sentinel Golf | No new drops detected |
-| Fyfe Golf | No new drops detected |
+| Fyfe Golf | Between Tides collection current; Harris Tweed headcovers ongoing |
 | Mackenzie Golf Bags | Fyfe collab and H&B anniversary bag ongoing; no new May drop |
 
 ### Extended Watchlist (13-41) — Notable Activity
 | Brand | Activity |
 |-------|----------|
-| Sugarloaf Social Club | **Students Golf collab** (card written May 20) + SS26 live |
-| Radmor | **Chasing Light** spring drop (card already written) |
-| Sounder | Spring 2026 collection live, "Clean Lie Polo" new for 2026 |
-| Dormie Workshop | Customs reopened (card written May 15) |
+| Sugarloaf Social Club | SS26 live, Students Golf badge collab ongoing |
+| Radmor | Chasing Light spring drop ongoing |
+| Sounder | Spring 2026 live, Clean Lie Polo current |
+| Shapland Bags | Restocking August 2026 — nothing new right now |
 | All others | No significant new drops detected in last 48 hours |
 
 ---
 
 ## New Brand Discoveries
-- **VESSEL** (Carlsbad, CA) — bag company's debut apparel line, launched May 14-15
-- **Olydoe** (UK) — launched Oct 2025, grassroots polo brand born from frustration with pro shop options
+None this scan. All previously discovered brands (VESSEL, Olydoe, Radry, Rebolf, Featherie, Three Putt Golf, The Old Ghosts, CPH, Erthe Golf, Late Nine, Agronomy Workshop, Heathlander) remain on the tracking list in brand-discoveries.md.
 
 ---
 
@@ -84,6 +75,7 @@ None spotted this scan.
 ---
 
 ## Notes
-- RGC Mad Scramble NYC is tomorrow (May 22) — if Lenny wants to run the card, it should go up today or early tomorrow
-- Malbon x Gap drops June 6 — pre-drop card already in drafts, may want to refresh closer to date
-- VESSEL entering apparel is a significant industry move worth tracking even though they're not core TGI aesthetic yet
+- Malbon is on a tear right now — HVN collab, Performance SU '26, Gap collab incoming June 6. They're the most active brand across the watchlist this month.
+- RGC Mad Scramble NYC is TODAY. If Lenny ran yesterday's card, perfect timing. DC event happening same day.
+- Quiet scan day overall — only one genuinely new card. Most brands are in between seasonal drops.
+- Shapland Bags confirmed restock in August — worth checking back then.

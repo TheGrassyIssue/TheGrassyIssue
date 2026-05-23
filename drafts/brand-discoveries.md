@@ -1,6 +1,10 @@
-# Brand Discoveries — 2026-05-21
+# Brand Discoveries — 2026-05-22
 
 ## New This Scan
+
+No new brand discoveries this scan.
+
+## Discovered May 21 (Still Tracking)
 
 ### VESSEL (Carlsbad, CA)
 - **URL:** https://vesselbags.com
