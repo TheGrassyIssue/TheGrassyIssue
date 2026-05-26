@@ -1,8 +1,12 @@
-# Brand Discoveries — 2026-05-22
+# Brand Discoveries — 2026-05-25
 
 ## New This Scan
 
-No new brand discoveries this scan.
+### Kadet (US)
+- **URL:** (check for current site — mentioned in LINKS Magazine roundup)
+- **Why they fit:** Uses newly-developed technical fabrics to reinvent pieces with old-school cut and fit. The tension between future fabric and vintage silhouette is interesting. Named in "under-the-radar" lists for 2026.
+
+---
 
 ## Discovered May 21 (Still Tracking)
 
