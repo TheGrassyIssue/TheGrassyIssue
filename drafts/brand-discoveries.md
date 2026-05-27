@@ -1,6 +1,9 @@
-# Brand Discoveries — 2026-05-25
+# Brand Discoveries — 2026-05-27
 
-## New This Scan
+## New This Scan (May 27)
+No new brand discoveries this cycle. All previously tracked brands still active.
+
+## Discovered May 25
 
 ### Kadet (US)
 - **URL:** (check for current site — mentioned in LINKS Magazine roundup)

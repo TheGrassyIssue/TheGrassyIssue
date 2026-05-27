@@ -1,12 +1,19 @@
-# Drop Scout Report — 2026-05-26 (Tuesday / Memorial Day)
+# Drop Scout Report — 2026-05-27 (Wednesday)
 
 ## Summary
-- **0 new draft cards written** — no new drops detected in the last 24 hours
+- **1 new draft card written** — Radmor "Chasing Light" Spring '26
 - **0 active giveaways** spotted
-- **0 new brand discoveries** (see notes on emerging brands below)
-- Memorial Day holiday = expected quiet cycle
+- **0 new brand discoveries** this scan
+- Post-Memorial Day quiet cycle continues; no major drops detected
+- ⚠️ Duplicate cards created for Devereux x Mount Gay, Bogey Boys Summer Course, and Sugarloaf SS26 — these already had cards from prior runs (May 25, May 20, May 15). Lenny can delete the 2026-05-27 versions.
 
 ---
+
+## New Card — May 27
+
+| Draft | Status | Notes |
+|-------|--------|-------|
+| **Radmor "Chasing Light" Spring '26** | NEW — card written May 27 | Quarter zips + knit polos from $145. "Maximize the hours that matter." Previously noted as Archive Sale only; Chasing Light is their actual Spring '26 line. |
 
 ## Still Active from Previous Scans (No New Card Needed)
 
@@ -31,29 +38,30 @@
 ### Core Watchlist (1-12)
 | Brand | Activity |
 |-------|----------|
-| Manors | Club Collection (Feb) + Summer Collection (Victor Cruz x Cabot St Lucia lookbook) current; no new May 26 drop |
-| Malbon | Performance SU '26 live; HVN collab live; Gap collab coming June 6 |
-| Metalwood Studio | SS26 collection + adidas MC70 ongoing; Net Parka, Plaid Tactical Overshirt, King of the Greens Jersey all current; no new drop |
-| Eastside Golf | Take Flight x Nike still live; no new activity since May 25 card |
-| Quiet Golf | Spring 2026 at Pacsun + PUMA collab ongoing; no new drop |
-| Bogey Boys | Summer Course Collection live; Spring '26 hats live; no new activity |
-| Devereux | Mount Gay Rum capsule (May 18) still fresh and available |
-| Random Golf Club | **Tamarack Country Club Classic happening TODAY (May 26)** — Seth Raynor-adjacent C.H. Banks course in CT; 2026 Classics tour continuing with Rolling Green May 27 |
+| Manors | Club Collection (Feb) + Summer Collection current; no new May 27 drop |
+| Malbon | Performance SU '26 live; HVN collab live; adidas SS'26 cooling fabrics live; **Gap collab coming June 6** |
+| Metalwood Studio | SS26 collection + adidas MC70 ongoing; Trophy Pants + Seersucker Spa Shorts SOLD OUT; no new drop |
+| Eastside Golf | Take Flight x Nike still live; Community Day in Philly was May 16; no new drops |
+| Quiet Golf | Spring 2026 at Pacsun + PUMA collab ongoing; Miura x Quiet Golf still available; no new drop |
+| Bogey Boys | Summer Course Collection live; no new activity |
+| Devereux | Mount Gay Rum capsule (May 18) still available at Revolve, PacSun, Tilly's |
+| Random Golf Club | **Rolling Green Classic happening TODAY (May 27)** — 7 spots left as of yesterday; Mad Scramble Tour DC was May 22 |
 | Gumtree Golf | PUMA Field Notes still current; no new activity |
-| Sentinel Golf | No new drops detected; Basecamp Expedition series still current |
-| Fyfe Golf | Between Tides collection current; hand-forged ball markers in steel/copper/bronze available; no new drop |
-| Mackenzie Golf Bags | Fyfe collab + H&B collab + Students x SSC collab bags all available; no new May drop |
+| Sentinel Golf | No new drops detected; Basecamp Expedition II series still current; pre-order model |
+| Fyfe Golf | Shooter's Club Collection + hand-forged ball markers current; no new drop |
+| Mackenzie Golf Bags | Fyfe collab landing July 2026; H&B 10th anniversary bag available; no new May drop |
 
 ### Extended Watchlist (13-41) — Notable Activity
 | Brand | Activity |
 |-------|----------|
-| Sugarloaf Social Club | SS26 live; Students Golf badge collab ongoing |
-| Students Golf | SSC collab live; Research Club delivery 2 ongoing |
-| Agronomy Workshop | Debut capsule available; getting strong press coverage as one to watch |
-| Dormie Workshop | Custom order books recently reopened |
-| Dimple & Divot | May drop live |
-| Radmor | Archive Sale running |
-| Casualist | Spring collection current; quiet |
+| Sugarloaf Social Club | SS26 live; Students Golf collab ongoing |
+| Students Golf | "In Full Swing" Spring '26 Delivery 1 live; SSC + Dimple & Divot collabs |
+| Agronomy Workshop | Debut capsule available; featured on Golfmagic "10 to watch" list |
+| Dormie Workshop | Custom order books active |
+| Dimple & Divot | Patrons Collection 2026 + Students collab pencil brush available |
+| **Radmor** | **"Chasing Light" Spring '26 is the main line (not just Archive Sale) — NEW CARD WRITTEN** |
+| Late Nine | Debut collection live; getting Hypebeast + Sprezza + Skratch coverage; $275-$515 range |
+| Casualist | Spring '26 + Legacy Wool Caps current; quiet |
 | Forewind Golf | One-of-a-kind pieces from reclaimed sails; no new drops noted |
 | All others | No significant new drops detected in last 48 hours |
 
@@ -73,8 +81,11 @@ None spotted this scan.
 ---
 
 ## Notes
-- Memorial Day is historically dead for indie golf drops. Expect Tuesday/Wednesday to bring a few post-holiday launches.
-- RGC Tamarack Classic today is a nice cultural moment — Banks-designed course, limited spots, community-first energy. Not a product drop but worth noting in the TGI culture feed.
-- Metalwood Studio's full SS26 line is very deep — Seersucker Spa Shorts and Trophy Pants both sold out, suggesting strong demand. The King of the Greens Jersey ($168) and Digital Hombre pieces are interesting new silhouettes worth keeping an eye on.
-- The Agronomy Workshop continues to gain press momentum. Multiple "brands to watch in 2026" lists are featuring them. Their hidden tee holder and pencil holder details are exactly the kind of obsessive craft that fits TGI voice.
+- Post-Memorial Day Wednesday — still quiet. No major new drops detected across all 41 brands.
+- **RGC Rolling Green Classic happening today (May 27)** — community golf culture moment, not a product drop but fits TGI's vibe.
+- Radmor's "Chasing Light" collection was under-covered in prior scans (listed only as Archive Sale). The Spring '26 line has clean transitional pieces that fit TGI voice — card written today.
+- **Malbon x Gap (June 6)** remains the biggest upcoming drop to watch. 33-piece collection, $18-$138.
+- Metalwood Studio continues to sell through — Trophy Pants and Seersucker Spa Shorts now sold out across all colorways.
+- Late Nine continues gaining press traction (Sprezza, Hypebeast, Skratch). Worth a dedicated card on their next drop.
+- Three duplicate cards were accidentally created today (Devereux, Bogey Boys, Sugarloaf) — these already had cards from prior scans. Lenny should delete the 2026-05-27 versions and keep the originals.
 - All previously discovered brands remain on tracking list (see brand-discoveries.md).
