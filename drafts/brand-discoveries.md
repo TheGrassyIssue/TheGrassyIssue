@@ -1,7 +1,13 @@
-# Brand Discoveries — 2026-05-27
+# Brand Discoveries — 2026-05-29
 
-## New This Scan (May 27)
-No new brand discoveries this cycle. All previously tracked brands still active.
+## New This Scan (May 29)
+
+### Goatlane (Netherlands)
+- **URL:** https://goatlane.com
+- **Why they fit:** Founded 2020, aiming to rediscover golf's classic coolness from the golden era. Design-forward spikeless shoes with vintage silhouettes and colorful options. Inclusive sizing and fun energy. European indie with genuine aesthetic point of view. Worth monitoring.
+
+## Previous Scan (May 28)
+No new brand discoveries that cycle.
 
 ## Discovered May 25
 
