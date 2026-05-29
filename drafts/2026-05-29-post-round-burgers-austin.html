@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>12 Post-Round Burgers Worth the Detour — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">Field Guide</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:#141414;color:var(--paper);">Casino El Camino</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Casino El Camino — Dirty Sixth · ~$14</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(180deg, #F4F1EA 0%, #A8A878 100%);color:var(--ink);">Dirty Martin's</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Dirty Martin's Kum-Bak — West Campus · ~$9</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(135deg, #2D4A2B 0%, #1a2d19 100%);color:var(--paper);">Top Notch</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Top Notch — Crestview · ~$13</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:var(--flag);color:var(--paper);">JewBoy Burgers</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">JewBoy Burgers — Airport Blvd · ~$12</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(180deg, #141414 0%, #2D4A2B 100%);color:var(--paper);">Buddy's Burger</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Buddy's Burger — Cameron Rd · ~$5</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:#141414;color:var(--paper);">Bad Larry Burger Club</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Bad Larry Burger Club — Pop-up · ~$12</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(135deg, #A8A878 0%, #2D4A2B 100%);color:var(--paper);">Workhorse Bar</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Workhorse Bar — North Loop · ~$14</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(180deg, #F4F1EA 0%, #A8A878 100%);color:var(--ink);">Lebowski's Grill</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Lebowski's Grill — Highland Lanes · ~$12</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(135deg, #2D4A2B 0%, #1a2d19 100%);color:var(--paper);">Patty Palace</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Patty Palace — St. Elmo Brewing · ~$10</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:var(--flag);color:var(--paper);">Dan's Hamburgers</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Dan's Hamburgers — Multiple locations · ~$7</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:linear-gradient(180deg, #141414 0%, #2D4A2B 100%);color:var(--paper);">Hopdoddy</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Hopdoddy — South Congress (Original) · ~$15</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="placeholder" style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:var(--serif);font-style:italic;font-size:22px;background:#141414;color:var(--paper);">Loro</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Loro — South Lamar · ~$16</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 12</div>
+
+    <h2 class="card-title">12 Post-Round Burgers Worth the Detour</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "Three-quarter pound patties in a bar so dark you won't see what you're eating until the second bite. The burgers are named after cities — the Chicago and KC are the moves. Guy Fieri called it the best burger in town, which is the one time you should agree with Guy Fieri.",
+      detail: "~$14 · 517 E 6th St · Dive bar · Cash helps"
+    },
+    {
+      desc: "Flipping burgers since 1926, which makes this place older than most golf courses in Texas. The Kum-Bak burger is the original, but the D.H. Special — a double patty melt on Texas toast — is what you order when the round went well. Never-frozen angus beef with a butter-sheen bun.",
+      detail: "~$9 · 2808 Guadalupe St · Counter service · Since 1926"
+    },
+    {
+      desc: "Charcoal-grilled burgers and onion rings in a drive-in that hasn't changed since 1971. Featured in Dazed and Confused, which is the only film reference this list needs. The charcoal makes a difference you'll notice on the first bite and forget to articulate on the third.",
+      detail: "~$13 · 7525 Burnet Rd · Drive-in · Since 1971"
+    },
+    {
+      desc: "El Paso border culture meets Reform Jewish cooking, which is a combination that shouldn't work and absolutely does. The Oy Vey Guey is the signature. The Yenta comes topped with a fried latke. The latkes alone are worth the trip even if you skip the burger, which you won't.",
+      detail: "~$12 · 5111 Airport Blvd · Diner · Latkes mandatory"
+    },
+    {
+      desc: "Three-ounce patties smashed thin with caramelized edges, and somehow still juicy. The spicy burger with pepper jack, grilled jalapenos, and Buddy's sauce costs less than your golf ball markup. Drive-through, patio, or eat inside — all three work.",
+      detail: "~$5 · 9001 Cameron Rd · Drive-through · Best value on the list"
+    },
+    {
+      desc: "Never open, never closed. Bad Larry's announces pre-sales on Instagram and sells out in under five minutes. The burgers have arrived by remote-controlled truck and once through a second-story burger chute. Chuck-and-brisket blend, 20% fat, from Austin's K&C Cattle Co. Opening a permanent East Austin spot.",
+      detail: "~$12 · Pop-up / East Austin · Follow @badlarryburgerclub · Sell out warning"
+    },
+    {
+      desc: "No sign out front. Thin rooms stuffed between two stores. The Bastrop Burger uses grass-fed beef from Central Texas ranchers and comes with heavily seasoned parmesan fries. North Loop is one of the grooviest blocks in Austin — vintage shops, food trucks, and this bar pretending it doesn't exist.",
+      detail: "~$14 · 100 N Loop Blvd E · Dive bar · No sign, intentionally"
+    },
+    {
+      desc: "A burger joint hiding inside a bowling alley on Burnet Road, which is exactly the kind of sentence that makes people move to Austin. The Dude and The Walter are the signature burgers. Large portions, fair prices, and the ambient sound of pins dropping while you eat.",
+      detail: "~$12 · 8909 Burnet Rd · Inside bowling alley · The Dude abides"
+    },
+    {
+      desc: "Paper-thin patties with a dark crust that might get mistaken for parchment. Parked at St. Elmo Brewing, so you order a smash burger and grab a beer from the brewery next door. Two-patty format, sharp American cheese, tangy sauce. The simplest thing on this list and one of the best.",
+      detail: "~$10 · 439 Industrial Blvd · Trailer at brewery · Cash or card"
+    },
+    {
+      desc: "Old-school drive-through with multiple locations and the kind of prices that make you wonder what year it is. Fresh ingredients, never-frozen meat, and a chocolate shake thick enough to stand a straw in. The Austin equivalent of the burger your parents grew up eating.",
+      detail: "~$7 · Multiple locations · Drive-through · Breakfast too"
+    },
+    {
+      desc: "The SoCo original that launched a chain from Denver to Nashville. Beef ground fresh daily, brioche buns, and toppings that range from classic to au poivre aioli. Yes it expanded. The original location still delivers. Go on a weekday to avoid the line that wraps around the building.",
+      detail: "~$15 · 1400 S Congress Ave · Full bar · The one that started it"
+    },
+    {
+      desc: "Aaron Franklin and Tyson Cole put a smokehouse and an Asian kitchen in the same building, which is the most Austin sentence ever written. The cheeseburger has a brisket-blend patty with red-onion brisket jam. Not the best burger on this list, but the best patio-and-a-burger experience by a wide margin.",
+      detail: "~$16 · 2115 S Lamar Blvd · Smokehouse patio · Franklin x Uchi"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateText(idx) {
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[idx].desc;
+      detailEl.textContent = slideData[idx].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 150);
+  }
+
+  function goToSlide(idx) {
+    current = idx;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+    updateText(current);
+  }
+
+  function moveSlide(dir) {
+    goToSlide((current + dir + total) % total);
+  }
+
+  updateText(0);
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
