@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Muni Kids Turns 10. The Muni Never Left. — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">Brand to Know</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <div style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:24px;background:linear-gradient(135deg,#2D4A2B 0%,#1a2d19 100%);color:#F4F1EA;text-align:center;padding:20px;">Muni Kids<br>Est. 2015</div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Portland, OR · Est. 2015</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/products/Muni-Kids-PDX-Carpet-Canvas-Golf-Headcovers_1200x1200.png?v=1615588658" alt="Muni Kids — PDX Carpet Golf Headcovers" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — PDX Carpet Golf Headcovers · $65</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/files/Muni-Kids-Ol_-Dirty-Headcover-Limited-Edition-Canvas-Golf-Headcovers_1200x1200.webp?v=1735431516" alt="Muni Kids — Ol' Dirty Headcover" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Ol' Dirty Headcover · $85</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/files/Muni-Kids-Swimming-In-Circles-Limited-Edition-Canvas-Golf-Headcovers_1200x1200.jpg?v=1693586674" alt="Muni Kids — Swimming In Circles Headcovers" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Swimming In Circles Headcovers · $85</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/products/Muni-Kids-PGA-Dropout-Golf-Headcovers-Front_1200x1200.png?v=1635219715" alt="Muni Kids — PGA Dropout Headcovers" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — PGA Dropout Headcovers · $75</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/products/Muni-Kids-Smiley-Face-Golf-Headcovers_1200x1200.png?v=1632977868" alt="Muni Kids — Smiley Face Headcovers" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Smiley Face Headcovers · $75</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/files/Muni-Kids-I-Am-Tiger-T-Shirt-Front_1200x1200.webp?v=1740671413" alt="Muni Kids — I Am Tiger T-Shirt" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — I Am Tiger T-Shirt · $45</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/files/Muni-Kids-Bogeys-Suck-Old-E-Forever-Collection-Golf-T-Shirt_1200x1200.jpg?v=1702320662" alt="Muni Kids — Bogeys Suck Old E Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Bogeys Suck Old E Tee · $40</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/files/Muni-Kids-Country-Club-Opp-Golf-Snapback-Black-Front_1200x1200.webp?v=1753923362" alt="Muni Kids — Country Club Opp Snapback" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Country Club Opp Snapback · $40</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://munikids.com/cdn/shop/files/Muni-Kids-Neighborhood-Golf-Shop-Planet-Golforia-Hole-1-The-Lost-City-of-Etiquette-Written-and-Illustrated-by-Drew-Reinland_1200x1200.webp?v=1746214869" alt="Muni Kids — Golforia Hole 1" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Muni Kids — Golforia Hole 1 · $30</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 10</div>
+
+    <h2 class="card-title">Muni Kids Turns 10. The Muni Never Left.</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>May 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "Brothers Maxton and Drew Reinland started Muni Kids in Portland in 2015 because nobody was making golf gear for the people who actually learned the game on public courses. Ten years later they've built a universe — headcovers, apparel, art, a podcast, urban golf meetups, a children's book called 'Golforia,' and a brick-and-mortar shop inside Portland's Memory Den. Before the indie golf scene had a name, Muni Kids was already screen-printing it.",
+      detail: "munikids.com · Portland, OR · Founded 2015 · 10th Anniversary"
+    },
+    {
+      desc: "The pattern from Portland International Airport's world-famous carpet, turned into a golf headcover. If you've ever connected through PDX and stared at the floor thinking 'that would look good on a driver,' Drew Reinland had the same thought first. Canvas construction, fleece-lined, made to order by Reinland Golf Co.",
+      detail: "$65 · Canvas · Fleece-lined · Made to order · munikids.com"
+    },
+    {
+      desc: "ODB on a headcover. Limited edition canvas with a portrait that belongs in a museum and ended up on a driver. Wu-Tang meets the first tee, which is exactly the kind of crossover that makes Muni Kids Muni Kids. Fleece-lined, handcrafted, and absolutely not available at your country club pro shop.",
+      detail: "$85 · Limited edition · Canvas · Handcrafted · munikids.com"
+    },
+    {
+      desc: "Mac Miller tribute headcovers from the Balloonerism Stampede drop. Swimming in circles on the course is what most of us do anyway. Canvas, fleece-lined, limited edition, and quietly one of the most emotional products in indie golf. Pittsburgh to Portland, 18 holes at a time.",
+      detail: "$85 · Limited edition · Mac Miller tribute · munikids.com"
+    },
+    {
+      desc: "The name says it all. A graduation cap on a headcover for the golfer who never went pro and never wanted to. Canvas construction with the Muni Kids woven label. The most self-aware product in golf accessories, and somehow still aspirational.",
+      detail: "$75 · Canvas · Woven label · munikids.com"
+    },
+    {
+      desc: "A smiley face on a headcover. No logo, no brand name, no explanation needed. The kind of product that makes people smile back at your bag, which is the entire point of playing golf in the first place.",
+      detail: "$75 · Canvas · Fleece-lined · munikids.com"
+    },
+    {
+      desc: "Tiger's face screen-printed on a black tee. No name, no swoosh, just the look. Muni Kids does pop culture golf tributes better than anyone because they never explain them. You either get it or you don't, and the person behind you on the range definitely gets it.",
+      detail: "$45 · Screen print · Cotton · munikids.com"
+    },
+    {
+      desc: "Old English lettering that says Bogeys Suck, which is simultaneously the most obvious and most necessary statement in golf. Part of the Forever Collection — the core tees that never leave the lineup. Black on black, no frills, just truth.",
+      detail: "$40 · Forever Collection · Cotton · munikids.com"
+    },
+    {
+      desc: "The name is the mission statement. Country Club Opposition. Muni Kids has been the anti-country-club brand since day one, and this snapback is the uniform. Black hat, white embroidery, zero ambiguity about where you stand on golf's class divide.",
+      detail: "$40 · Snapback · Black/White · munikids.com"
+    },
+    {
+      desc: "A children's book about golf etiquette written and illustrated by Drew Reinland, which might be the most unexpectedly beautiful thing a headcover company has ever produced. 'The Lost City of Etiquette' teaches kids the game's unwritten rules through an adventure story. This is where Muni Kids stops being a brand and starts being a culture.",
+      detail: "$30 · Written & illustrated by Drew Reinland · munikids.com"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateText(idx) {
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[idx].desc;
+      detailEl.textContent = slideData[idx].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 150);
+  }
+
+  function goToSlide(idx) {
+    current = idx;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+    updateText(current);
+  }
+
+  function moveSlide(dir) {
+    goToSlide((current + dir + total) % total);
+  }
+
+  updateText(0);
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
