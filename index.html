@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<!-- deploy trigger: masters 2027 ticket lottery news post added -->
+<!-- deploy trigger: water when dry brand to know post added -->
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
@@ -1977,6 +1977,107 @@
         "The 2027 Masters runs April 5–11. Monday through Wednesday are practice rounds, with the Par 3 Contest on Wednesday. Thursday through Sunday are tournament rounds. Peak azalea season. Peak golf. Peak everything, honestly.",
         "You can apply for every day but can only win one. Tournament tickets are drawn first — if you lose, you’re automatically re-entered for practice rounds. Resale is strictly prohibited. Augusta will revoke your badge at the gate without blinking.",
         "Twenty days. One in two hundred. A $160 ticket to walk the most famous course on the planet. The math is terrible and you should absolutely do it anyway. Go to masters.com, click tickets, and apply before June 20."
+      ]
+    };
+    var origGearSlide = window.gearSlide;
+    window.gearSlide = function(btn, dir) {
+      origGearSlide(btn, dir);
+      var carousel = btn.closest('.gear-carousel');
+      if (!carousel) return;
+      var cid = carousel.dataset.carousel;
+      if (!slideTexts[cid]) return;
+      var counter = document.querySelector('[data-counter="'+cid+'"]');
+      if (!counter) return;
+      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
+      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
+      if (textEl) textEl.textContent = slideTexts[cid][idx];
+    };
+  })();
+  </script>
+
+  <!-- BRAND TO KNOW — Water When Dry -->
+  <div class="card" data-type="brand">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag ink">[Brand to Know]</span>
+      <div class="gear-carousel" data-carousel="wwdgarden">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/3X009910_VSCO_2.jpg?width=1200" alt="Water When Dry — On Course" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">Welcome to the Garden</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/camper-short-dusk" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/CAMPER-BLUE-FRONT.png?width=1200" alt="Camper Short — River" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">Camper Short · $88</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/charcoal-hoodie-copy" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/GREEN-ZIP-UP.png?width=1200" alt="Canopy Zip Hoodie — Leaf" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">Canopy Zip Hoodie — Leaf · $98</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/black-zip-up-hoodie" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/3X010423.jpg?width=1200" alt="Canopy Zip Hoodie — Charcoal On Model" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">Canopy Zip Hoodie — Charcoal · $98</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/sherpa-fleece-blackberry" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/BLACKPLUM.gif?width=1200" alt="Canopy Fleece — Blackberry" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">Canopy Fleece — Blackberry · $128</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/april-showers-tee" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/CHAINSTITCH-FONT.png?width=1200" alt="April Showers Tee" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">April Showers Tee · $68</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/wwd-strapback-wwd-green" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/GREEN-HAT-SITE_6cf04871-bcf9-4909-b19c-b5baaad89c5d.png?width=1200" alt="5-Panel Strapback — Green" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">5-Panel Strapback · $48</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://waterwhendry.com/products/greener-grass-tee-soil" target="_blank" rel="noopener">
+              <img src="https://waterwhendry.com/cdn/shop/files/GREENER.png?width=1200" alt="Greener Grass Tee — Soil" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Water When Dry</div><div class="gear-slide-name">Greener Grass Tee · $58</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this,-1)">&#8592;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this,1)">&#8594;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Water When Dry: The Garden Metaphor That Actually Works</div>
+      <div class="card-text" data-slidetext="wwdgarden">Water When Dry is built on a garden metaphor — what you water will grow — and the whole brand runs through it. The colorways are named River, Dusk, Leaf, Soil, Blackberry. The membership program is called the Garden Club. The homepage says 'Welcome to the Garden.' It should be annoying but it's not, because the clothes are actually good and the tone never tips into self-help territory.</div>
+      <div class="gear-dots" data-dots="wwdgarden"></div>
+      <div class="gear-counter" data-counter="wwdgarden">1 / 8</div>
+      <div class="card-meta">
+        <span class="card-source"><a href="https://waterwhendry.com" target="_blank" rel="noopener">waterwhendry.com</a> · $15 – $128</span>
+        <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var slideTexts = {
+      wwdgarden: [
+        "Water When Dry is built on a garden metaphor — what you water will grow — and the whole brand runs through it. The colorways are named River, Dusk, Leaf, Soil, Blackberry. The membership program is called the Garden Club. The homepage says 'Welcome to the Garden.' It should be annoying but it's not, because the clothes are actually good and the tone never tips into self-help territory.",
+        "The Camper Short is the anchor piece. 7-inch inseam, nylon with mesh lining, eight pockets — which is three more pockets than most golf shorts bother with. Built for the course, the trail, the brewery patio after, and the airport the next morning. Comes in River, Dusk, and Dawn. Fits true to size.",
+        "The Canopy Zip Hoodie in Leaf is the piece that makes you look twice. 100% cotton, 380 GSM, garment-dyed and stone-washed so it looks like you've owned it for years on the first wear. Metal hardware. Monochrome embroidered logos. The kind of hoodie that costs $98 and looks like it should cost more.",
+        "Same hoodie, different light. The Charcoal colorway on a 6'3 frame doing exactly what a good hoodie should do — disappearing into your wardrobe until you reach for it every single time. Stone-washed cotton that softens without losing shape.",
+        "The Canopy Fleece in Blackberry is the kind of piece that makes you want to play a November round just to justify owning it. Sherpa construction, deep color that photographs somewhere between dark plum and burnt wine. Limited quantities on both this and the Riverbank colorway.",
+        "Chain-stitch lettering on heavyweight cotton. The April Showers Tee is the most graphically confident piece in the lineup — script embroidery that reads like a vintage bowling league shirt crossed with something from a Japanese americana shop. Sold out of first run.",
+        "Unstructured 5-panel strapback in a forest green that matches the WWD logo mark. Low profile, soft bill, the kind of hat that earns questions on the course because nobody recognizes the brand yet. That's the point.",
+        "The Greener Grass Tee in Soil. Heavyweight cotton, relaxed fit, and a graphic that says exactly what it means. The whole brand operates at this frequency — earnest without being corny, grounded without being boring. Worth watching as they build out."
       ]
     };
     var origGearSlide = window.gearSlide;

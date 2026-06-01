@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water When Dry — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--ink); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">Brand to Know</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/3X009910_VSCO_2.jpg?width=1200" alt="Water When Dry — On Course Lifestyle" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — Welcome to the Garden</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/CAMPER-BLUE-FRONT.png?width=1200" alt="Water When Dry — Camper Short in River" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — Camper Short · $88</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/GREEN-ZIP-UP.png?width=1200" alt="Water When Dry — Canopy Zip Hoodie in Leaf" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — Canopy Zip Hoodie · $98</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/3X010423.jpg?width=1200" alt="Water When Dry — Canopy Zip Hoodie On Model" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — Canopy Zip Hoodie · Charcoal · $98</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/BLACKPLUM.gif?width=1200" alt="Water When Dry — Canopy Fleece in Blackberry" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — Canopy Fleece · $128</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/CHAINSTITCH-FONT.png?width=1200" alt="Water When Dry — April Showers Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — April Showers Tee · $68</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/GREEN-HAT-SITE_6cf04871-bcf9-4909-b19c-b5baaad89c5d.png?width=1200" alt="Water When Dry — 5-Panel Strapback in Green" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — 5-Panel Strapback · $48</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img src="https://waterwhendry.com/cdn/shop/files/GREENER.png?width=1200" alt="Water When Dry — Greener Grass Tee" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Water When Dry — Greener Grass Tee · $58</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 8</div>
+
+    <h2 class="card-title">Water When Dry: The Garden Metaphor That Actually Works</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>June 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "Water When Dry is built on a garden metaphor — what you water will grow — and the whole brand runs through it. The colorways are named River, Dusk, Leaf, Soil, Blackberry. The membership program is called the Garden Club. The homepage says 'Welcome to the Garden.' It should be annoying but it's not, because the clothes are actually good and the tone never tips into self-help territory.",
+      detail: "waterwhendry.com · @water.whendry · Shopify · 1,800+ Garden Club members"
+    },
+    {
+      desc: "The Camper Short is the anchor piece. 7-inch inseam, nylon with mesh lining, eight pockets — which is three more pockets than most golf shorts bother with. Built for the course, the trail, the brewery patio after, and the airport the next morning. Comes in River, Dusk, and Dawn. Fits true to size.",
+      detail: "$88 · 7\" inseam · Nylon/mesh · 8 pockets · waterwhendry.com"
+    },
+    {
+      desc: "The Canopy Zip Hoodie in Leaf is the piece that makes you look twice. 100% cotton, 380 GSM, garment-dyed and stone-washed so it looks like you've owned it for years on the first wear. Metal hardware. Monochrome embroidered logos. The kind of hoodie that costs $98 and looks like it should cost more.",
+      detail: "$98 · 100% cotton · 380 GSM · Garment-dyed · waterwhendry.com"
+    },
+    {
+      desc: "Same hoodie, different light. The Charcoal colorway on a 6'3 frame doing exactly what a good hoodie should do — disappearing into your wardrobe until you reach for it every single time. Stone-washed cotton that softens without losing shape.",
+      detail: "$98 · Charcoal · 100% cotton · Stone-washed · waterwhendry.com"
+    },
+    {
+      desc: "The Canopy Fleece in Blackberry is the kind of piece that makes you want to play a November round just to justify owning it. Sherpa construction, deep color that photographs somewhere between dark plum and burnt wine. Limited quantities on both this and the Riverbank colorway.",
+      detail: "$128 · Sherpa fleece · Blackberry · waterwhendry.com"
+    },
+    {
+      desc: "Chain-stitch lettering on heavyweight cotton. The April Showers Tee is the most graphically confident piece in the lineup — script embroidery that reads like a vintage bowling league shirt crossed with something from a Japanese americana shop. Sold out of first run.",
+      detail: "$68 · Chain-stitch embroidery · Heavyweight cotton · waterwhendry.com"
+    },
+    {
+      desc: "Unstructured 5-panel strapback in a forest green that matches the WWD logo mark. Low profile, soft bill, the kind of hat that earns questions on the course because nobody recognizes the brand yet. That's the point.",
+      detail: "$48 · Unstructured 5-panel · Strapback · waterwhendry.com"
+    },
+    {
+      desc: "The Greener Grass Tee in Soil. Heavyweight cotton, relaxed fit, and a graphic that says exactly what it means. The whole brand operates at this frequency — earnest without being corny, grounded without being boring. Worth watching as they build out.",
+      detail: "$58 · Heavyweight cotton · Relaxed fit · waterwhendry.com"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const dotsBox = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  const total = slideData.length;
+  let cur = 0;
+
+  slideData.forEach((_, i) => {
+    const d = document.createElement('span');
+    d.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsBox.appendChild(d);
+  });
+
+  function goTo(i) {
+    cur = i;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, j) =>
+      d.classList.toggle('active', j === cur));
+    counter.textContent = `${cur + 1} / ${total}`;
+
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[cur].desc;
+      detailEl.textContent = slideData[cur].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 200);
+  }
+
+  function moveSlide(dir) {
+    let next = cur + dir;
+    if (next < 0) next = total - 1;
+    if (next >= total) next = 0;
+    goTo(next);
+  }
+
+  let touchStartX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) moveSlide(diff > 0 ? 1 : -1);
+  });
+
+  goTo(0);
+</script>
+</body>
+</html>
