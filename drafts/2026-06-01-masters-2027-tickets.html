@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masters 2027 Ticket Application Is Open — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --augusta: #036B3F;
+    --azalea: #D4577B;
+    --sand: #E8DCC8;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--flag); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  /* Info slides — text on colored backgrounds */
+  .info-panel {
+    width: 100%; aspect-ratio: 4/5;
+    display: flex; flex-direction: column;
+    justify-content: center; align-items: center;
+    padding: 36px 28px; text-align: center;
+  }
+
+  .info-panel.dark {
+    background: var(--augusta);
+    color: var(--paper);
+  }
+
+  .info-panel.light {
+    background: var(--paper);
+    color: var(--ink);
+    border-bottom: 0.5px solid rgba(0,0,0,0.06);
+  }
+
+  .info-panel.sand {
+    background: var(--sand);
+    color: var(--ink);
+  }
+
+  .info-panel.ink {
+    background: var(--ink);
+    color: var(--paper);
+  }
+
+  .info-eyebrow {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.14em; text-transform: uppercase;
+    opacity: 0.7; margin-bottom: 16px;
+  }
+
+  .info-big {
+    font-family: var(--serif); font-weight: 600;
+    line-height: 1.2; margin-bottom: 16px;
+  }
+
+  .info-big.xl { font-size: 30px; }
+  .info-big.lg { font-size: 24px; }
+  .info-big.md { font-size: 20px; }
+
+  .info-body {
+    font-size: 13px; line-height: 1.6;
+    opacity: 0.85; max-width: 300px;
+  }
+
+  .info-stat {
+    font-family: var(--serif); font-size: 56px;
+    font-weight: 600; line-height: 1;
+    margin-bottom: 8px;
+  }
+
+  .info-stat-label {
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.7;
+  }
+
+  .info-list {
+    text-align: left; width: 100%;
+    max-width: 280px; margin-top: 8px;
+  }
+
+  .info-list-item {
+    display: flex; justify-content: space-between;
+    align-items: baseline;
+    padding: 10px 0;
+    border-bottom: 0.5px solid rgba(255,255,255,0.15);
+    font-size: 13px;
+  }
+
+  .info-panel.light .info-list-item,
+  .info-panel.sand .info-list-item {
+    border-bottom-color: rgba(0,0,0,0.1);
+  }
+
+  .info-list-item .label { opacity: 0.85; }
+
+  .info-list-item .value {
+    font-family: var(--mono); font-size: 12px;
+    font-weight: 500;
+  }
+
+  .info-steps {
+    text-align: left; width: 100%;
+    max-width: 280px; margin-top: 8px;
+  }
+
+  .info-step {
+    display: flex; gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+  }
+
+  .info-step-num {
+    font-family: var(--serif); font-size: 22px;
+    font-weight: 600; opacity: 0.4;
+    min-width: 24px;
+  }
+
+  .info-step-text {
+    font-size: 13px; line-height: 1.55;
+    padding-top: 4px;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">News</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <!-- SLIDE 1 — Title -->
+        <div class="gear-slide">
+          <div class="info-panel dark">
+            <div class="info-eyebrow">Augusta National Golf Club</div>
+            <div class="info-big xl">Masters 2027<br>Ticket Application<br>Is Open Now</div>
+            <div class="info-body">June 1 – 20 at masters.com. You have twenty days and roughly a 1-in-200 shot. Apply anyway.</div>
+          </div>
+        </div>
+
+        <!-- SLIDE 2 — The Window -->
+        <div class="gear-slide">
+          <div class="info-panel sand">
+            <div class="info-eyebrow">The Window</div>
+            <div class="info-big lg">June 1 – June 20</div>
+            <div class="info-body">Applications opened today. You have exactly twenty days to submit at masters.com. Log in or create an account, pick your days, pick your ticket count (1–4), and hope for the best.</div>
+          </div>
+        </div>
+
+        <!-- SLIDE 3 — How It Works -->
+        <div class="gear-slide">
+          <div class="info-panel light">
+            <div class="info-eyebrow">How the Lottery Works</div>
+            <div class="info-steps">
+              <div class="info-step">
+                <span class="info-step-num">1</span>
+                <span class="info-step-text">Go to masters.com. Create an account or log into an existing one.</span>
+              </div>
+              <div class="info-step">
+                <span class="info-step-num">2</span>
+                <span class="info-step-text">Select the days you want to attend. You can apply for every day — practice and tournament.</span>
+              </div>
+              <div class="info-step">
+                <span class="info-step-num">3</span>
+                <span class="info-step-text">Choose 1–4 tickets per day. One entry per person. No gaming the system.</span>
+              </div>
+              <div class="info-step">
+                <span class="info-step-num">4</span>
+                <span class="info-step-text">After June 20, Augusta runs a random lottery. Winners get notified by email. Everyone else gets a polite no.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 4 — The Odds -->
+        <div class="gear-slide">
+          <div class="info-panel ink">
+            <div class="info-eyebrow">Your Odds</div>
+            <div class="info-stat">0.55%</div>
+            <div class="info-stat-label">Chance of getting tournament tickets</div>
+            <div class="info-body" style="margin-top: 20px;">Roughly 1 in 200. An estimated two million people apply each year. You will almost certainly not win. You should still apply, because the alternative is paying $4,000 on the secondary market and Augusta revoking your badge at the gate.</div>
+          </div>
+        </div>
+
+        <!-- SLIDE 5 — Prices -->
+        <div class="gear-slide">
+          <div class="info-panel dark">
+            <div class="info-eyebrow">2027 Ticket Prices</div>
+            <div class="info-big md">Face Value</div>
+            <div class="info-list">
+              <div class="info-list-item">
+                <span class="label">Monday Practice</span>
+                <span class="value">$125</span>
+              </div>
+              <div class="info-list-item">
+                <span class="label">Tuesday Practice</span>
+                <span class="value">$125</span>
+              </div>
+              <div class="info-list-item">
+                <span class="label">Wednesday (Par 3 Contest)</span>
+                <span class="value">$150</span>
+              </div>
+              <div class="info-list-item">
+                <span class="label">Thursday – Sunday</span>
+                <span class="value">$160 / day</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 6 — Tournament Dates -->
+        <div class="gear-slide">
+          <div class="info-panel sand">
+            <div class="info-eyebrow">Mark Your Calendar</div>
+            <div class="info-big lg">April 5 – 11, 2027</div>
+            <div class="info-list">
+              <div class="info-list-item">
+                <span class="label">Mon – Wed, April 5–7</span>
+                <span class="value">Practice</span>
+              </div>
+              <div class="info-list-item">
+                <span class="label">Wednesday, April 7</span>
+                <span class="value">Par 3 Contest</span>
+              </div>
+              <div class="info-list-item">
+                <span class="label">Thu – Sun, April 8–11</span>
+                <span class="value">Tournament</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 7 — Fine Print -->
+        <div class="gear-slide">
+          <div class="info-panel light">
+            <div class="info-eyebrow">The Fine Print</div>
+            <div class="info-big md">What You Should Know</div>
+            <div class="info-steps">
+              <div class="info-step">
+                <span class="info-step-num">&bull;</span>
+                <span class="info-step-text">You can apply for every day but can only <strong>win one day</strong>.</span>
+              </div>
+              <div class="info-step">
+                <span class="info-step-num">&bull;</span>
+                <span class="info-step-text">Tournament tickets are drawn first. If you lose, you're re-entered for practice rounds.</span>
+              </div>
+              <div class="info-step">
+                <span class="info-step-num">&bull;</span>
+                <span class="info-step-text">Resale is <strong>strictly prohibited</strong>. Augusta will revoke your badge at the gate.</span>
+              </div>
+              <div class="info-step">
+                <span class="info-step-num">&bull;</span>
+                <span class="info-step-text">Series badge holders and Augusta employees are ineligible for tournament rounds.</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SLIDE 8 — CTA -->
+        <div class="gear-slide">
+          <div class="info-panel ink">
+            <div class="info-eyebrow">Go</div>
+            <div class="info-big xl">masters.com<br>/tickets</div>
+            <div class="info-body" style="margin-top: 16px;">Twenty days. One in two hundred. A $160 ticket to the most beautiful course on earth. The math is terrible and you should do it anyway.</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 8</div>
+
+    <h2 class="card-title">The Masters Ticket Lottery Is Open. You Have Twenty Days.</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>June 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "Augusta National opened the 2027 Masters ticket application today. The window runs June 1–20 at masters.com. Roughly two million people will apply. Roughly 0.55% of them will get in. The rest will refresh their email for three months and then quietly buy a practice round badge from a guy named Todd.",
+      detail: "Apply: masters.com/tickets · Window: June 1–20, 2026"
+    },
+    {
+      desc: "The application window is open right now and closes June 20. That's twenty days to go to masters.com, log in (or create an account), pick the days you want, and submit. No essay required. No proof of handicap. Just an email address and a willingness to be disappointed.",
+      detail: "Open: June 1, 2026 · Closes: June 20, 2026"
+    },
+    {
+      desc: "Four steps. Create an account. Select days (practice, tournament, or both). Pick how many tickets (1–4). Submit. One entry per person. After June 20, Augusta runs a random draw — tournament tickets first, then practice rounds for anyone who missed. Winners notified by email.",
+      detail: "One entry per person · Up to 4 tickets · Random draw after June 20"
+    },
+    {
+      desc: "About a 0.55% chance of getting tournament round tickets. That's roughly 1 in 200. An estimated two million applications go in every year for a very limited number of badges. Still better odds than making a hole-in-one, which is about 1 in 12,500. So there's that.",
+      detail: "~2 million applicants · ~0.55% success rate · Still worth it"
+    },
+    {
+      desc: "Practice rounds on Monday and Tuesday are $125. Wednesday — which includes the Par 3 Contest, arguably the most fun day — is $150. Tournament rounds Thursday through Sunday are $160 each. For context, that's less than a decent round at most resort courses. Augusta is many things. Overpriced at face value is not one of them.",
+      detail: "Practice: $125–$150 · Tournament: $160/day · Face value only"
+    },
+    {
+      desc: "The 2027 Masters runs April 5–11. Monday through Wednesday are practice rounds, with the Par 3 Contest on Wednesday. Thursday through Sunday are tournament rounds. Peak azalea season. Peak golf. Peak everything, honestly.",
+      detail: "Practice: April 5–7 · Par 3: April 7 · Tournament: April 8–11"
+    },
+    {
+      desc: "You can apply for every day but can only win one. Tournament tickets are drawn first — if you lose, you're automatically re-entered for practice rounds. Resale is strictly prohibited. Augusta will revoke your badge at the gate without blinking. This is not a place that negotiates.",
+      detail: "Win one day max · No resale · Badges revoked if transferred"
+    },
+    {
+      desc: "Twenty days. One in two hundred. A $160 ticket to walk the most famous course on the planet. The math is terrible and you should absolutely do it anyway. Go to masters.com, click tickets, and apply before June 20.",
+      detail: "Apply now: masters.com/tickets · Deadline: June 20, 2026"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const dotsBox = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  const total = slideData.length;
+  let cur = 0;
+
+  slideData.forEach((_, i) => {
+    const d = document.createElement('span');
+    d.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    d.onclick = () => goTo(i);
+    dotsBox.appendChild(d);
+  });
+
+  function goTo(i) {
+    cur = i;
+    track.style.transform = `translateX(-${cur * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, j) =>
+      d.classList.toggle('active', j === cur));
+    counter.textContent = `${cur + 1} / ${total}`;
+
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[cur].desc;
+      detailEl.textContent = slideData[cur].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 200);
+  }
+
+  function moveSlide(dir) {
+    let next = cur + dir;
+    if (next < 0) next = total - 1;
+    if (next >= total) next = 0;
+    goTo(next);
+  }
+
+  // Touch / swipe support
+  let touchStartX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+  carousel.addEventListener('touchend', e => {
+    const diff = touchStartX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) moveSlide(diff > 0 ? 1 : -1);
+  });
+
+  // Init first slide
+  goTo(0);
+</script>
+</body>
+</html>

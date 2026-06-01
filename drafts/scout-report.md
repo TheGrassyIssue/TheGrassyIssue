@@ -1,74 +1,67 @@
-# Drop Scout Report — 2026-05-31 (Saturday)
+# Drop Scout Report — 2026-06-01 (Sunday)
 
 ## Summary
-- **5 carousel cards built today** — Manors x GJ, Malbon Gallo Colorido, 14 Hats, Muni Kids 11 Years, Devereux GORP (draft only)
-- **1 field guide drafted** — 12 Post-Round Burgers (parked, needs photos)
-- **3 pushed live** — Manors x GJ, Malbon Gallo, 14 Hats
-- **2 pending deploy** — Muni Kids 11 Years, updated Malbon images + Baker Boy removal
-- **1 new brand discovery** — Goatlane (Netherlands)
-- **0 active giveaways**
-- Vercel deploy queue was stuck for 6 hours — resolved by canceling a frozen "Initializing" build. Deploy script restored to git-push-only.
+- **2 new draft cards** — Seamus U.S. Open Shinnecock collection, Malbon x Gap (drops Friday June 6)
+- **2 new brand discoveries** — Southside Golf Co (South Austin!), 3Putt Round (Milan)
+- **0 active giveaways spotted**
+- Quiet week across the watchlist. Most brands are in steady-state summer selling. The big action is the Malbon x Gap collab dropping Friday.
 
 ---
 
-## Pushed to Site
+## New Draft Cards
 
-| Card | Type | Slides | Status |
-|------|------|--------|--------|
-| Manors x Gentleman Jack: Whiskey on the First Tee | Drop | 9 slides | Live |
-| Malbon's Summer Collection Channels the Gallo Colorido | Drop | 6 slides | Live (images updated) |
-| 14 Hats Worth Losing to the Wind | The Edit | 14 slides | Live |
-
-## Pending Deploy
-
-| Card | Type | Slides | Status |
-|------|------|--------|--------|
-| Muni Kids Turns 11. The Muni Never Left. | Brand to Know | 10 slides | In feed, awaiting deploy |
-| Malbon Gallo Colorido image fixes | Maintenance | — | Better product shots swapped in |
-| Baker Boy Cap removal from hats | Maintenance | — | 15→14 hats |
-
-## Drafted (Not Pushed)
-
-| Draft | Type | Status |
-|-------|------|--------|
-| `2026-05-29-devereux-gorp-golf.html` | Drop | Simple card, not carousel |
-| `2026-05-29-post-round-burgers-austin.html` | Field Guide | 12-slide carousel, parked until Lenny has photos |
+| Draft | Type | Notes |
+|-------|------|-------|
+| `2026-06-01-seamus-us-open-shinnecock.html` | Drop | Ball markers, headcovers, pitch tools for Shinnecock. U.S. Open is June 18-21. |
+| `2026-06-01-malbon-x-gap.html` | Drop | 33-piece collab, $18-$138. Drops Friday June 6 at 9am PT. Chunky-stripe polos, plaid shorts, PAR logo. |
 
 ---
 
-## Brand Activity Scan (from automated scout run)
+## Core Watchlist Activity Scan
 
-### Core Watchlist Highlights
 | Brand | Activity |
 |-------|----------|
-| Manors | **Gentleman Jack x MANORS capsule (9 pieces, $21-$283)** — Paisley Polo, Blade Polo, Merino Crewneck, Logo Tee, Retro Crown Cap, Driver Cover, Paisley Towel, Scorecard Holder, Ball Marker |
-| Malbon | **Summer "Gallo Colorido" drop** — Playa Windshirt, Ventura Camp Shirt, Scooter Playa Short, Navarro Polo, Velasco Snapback, Acetate Dice. Gap collab June 6. |
-| Devereux | **GORP Golf Collection** — Alien Camo pattern, gorpcore-meets-golf |
+| Manors | Gentleman Jack collab still selling. No new drop detected. Summer Invitational event upcoming. |
+| Malbon | Gallo Colorido summer collection live. **Gap collab drops June 6** — biggest drop of the week. |
+| Metalwood Studio | SS26 collection + adidas MC70 shoes in steady selling. No new drop. |
+| Eastside Golf | Nike Take Flight and Bridgestone balls available. No new activity. |
+| Quiet Golf | Spring 2026 selling across Pacsun, HBX, SSENSE. PUMA collab still live. No new drop. |
+| Bogey Boys | Summer Course Collection live and selling. No new items. |
+| Devereux | Mount Gay capsule (May 18) still available. GORP Golf collection live. No new drop. |
+| Random Golf Club | Events-focused: Iceland Major June 13-20, The Loop June 24-25. No product drop. |
+| Gumtree Golf & Nature | PUMA Field Notes collection still at retail. No new activity. |
+| Sentinel Golf | Pre-order model, no active window detected. |
+| Fyfe Golf | Royal Dornoch collab headcovers available. Mackenzie collab landing July. |
+| Mackenzie Golf Bags | Fyfe collab July 2026. H&B 10th anniversary bag available. Sunday bags sold out, restock August. |
 
-### Extended Watchlist
+## Extended Watchlist Highlights
+
 | Brand | Activity |
 |-------|----------|
-| Muni Kids | **11th anniversary** — Brand to Know carousel built. PDX headcovers, ODB tribute, Mac Miller tribute, apparel, Golforia book |
-| All others | Steady-state selling spring/summer collections. No new drops detected. |
-
----
-
-## Site Maintenance
-
-- **Vercel deploy fix**: Stuck "Initializing" build blocked queue for 6 hours. Canceled via dashboard, unblocked all pending deploys.
-- **Deploy script**: Tested `npx vercel --prod` backup, removed per Lenny's preference. Script is git-push-only.
-- **Downloads/site sync**: Discovered deploy pulls from `Desktop/TheGrassyIssue/site/` (git repo), NOT `Downloads/site/`. Both folders now synced.
-- **Malbon images**: Swapped transparent PNG flats to better-cropped alternate angles (-B.png, -A.png) and .jpg where available.
-- **Baker Boy Cap**: Removed from hats carousel (15→14) per Lenny.
+| Seamus Golf | **2026 U.S. Open Shinnecock collection now live** — ball markers, headcovers, pitch tools, bag tags. Card drafted. |
+| Sugarloaf Social Club | SS26 + grape Arrowcord grips + Students collab selling. THE PLAYERS 2026 capsule live. |
+| Students Golf | Spring '26 Delivery 2 "In Full Swing" live. Sugarloaf collab selling. |
+| Dimple & Divot | Patrons Collection 2026 still available. Hardware refresh (nickel trigger snap). |
+| Head Golf | SS26 "The Golfer's Escape" collection live. Summer/Fall 2026 collection incoming. |
+| Whim Golf | SS26 on SSENSE. Steady-state merino selling. |
+| Radmor | Spring 2026 collection + Weatherman umbrella collab available. |
+| Sounder | Spring 2026 new arrivals (50 items). Steady selling. |
+| Late Nine | Debut collection selling. Gaining press traction. |
+| Winston Collection | Acquired by Imperial in Jan 2026. Business as usual. |
+| Dormie Workshop | Custom order book reopened May. |
+| Heathlander | Cashmere winter pieces + core golf shoes selling. |
+| All others | Steady-state or no detectable new activity. |
 
 ---
 
 ## Upcoming to Watch
 
-- **Malbon x Gap** — Launching June 6. 33-piece collection, $18-$138. Pre-draft card next week.
-- **Fyfe x Mackenzie** — Collab reportedly landing July 2026.
+- **Malbon x Gap** — Drops Friday June 6. Card drafted and ready.
+- **U.S. Open at Shinnecock** — June 18-21. Seamus collection live. Expect more brand capsules to drop in the next 2 weeks.
+- **Fyfe x Mackenzie** — Collab landing July 2026.
 - **Shapland Bags** — Restocking August 2026.
-- **Good Good Championship** — PGA Tour event at Omni Barton Creek, Austin. Nov 9-15, 2026. Biggest local golf story of the year.
+- **RGC Iceland Major** — June 13-20. Seven rounds across Iceland. Content opportunity.
+- **Good Good Championship** — PGA Tour at Omni Barton Creek, Austin. Nov 9-15.
 
 ---
 
@@ -77,6 +70,12 @@ None spotted.
 
 ---
 
-## New Brand Discovery
-- **Goatlane** (Netherlands) — Vintage-inspired golf shoes, founded 2020. Added to brand-discoveries.md.
-- **Muni Kids** — Elevated to Brand to Know post. Consider adding to extended watchlist for ongoing monitoring.
+## New Brand Discoveries
+
+### Southside Golf Co (South Austin, TX)
+- **URL:** https://southsidegolfco.com
+- **Why:** Premium limited-run drops from South Austin. Anti-corporate, quality-first. Local to TGI — consider adding to extended watchlist.
+
+### 3Putt Round (Milan, Italy)
+- **URL:** https://3puttround.com
+- **Why:** Quirky golf accessories from Milan — tees in cigarette-pack packaging, towels, hats. Collab'd with Casualist. Wry humor fits TGI voice.

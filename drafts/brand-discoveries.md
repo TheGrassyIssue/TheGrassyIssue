@@ -1,18 +1,27 @@
-# Brand Discoveries — 2026-05-29
+# Brand Discoveries — 2026-06-01
 
-## New This Scan (May 29)
+## New This Scan (June 1)
+
+### Southside Golf Co (South Austin, TX)
+- **URL:** https://southsidegolfco.com
+- **Why they fit:** Built in South Austin — literally local to TGI. Premium limited-run golf apparel with smaller drops focused on quality, fit, and originality over mass production. Anti-corporate by design. The fact that they're Austin-based and nobody's talked about them yet is a miss worth correcting.
+
+### 3Putt Round (Milan, Italy)
+- **URL:** https://3puttround.com
+- **Why they fit:** Milanese brand making golf accessories with quirky, unconventional packaging — tees styled after cigarette packs, towels, hats. Collab'd with Casualist. Playful without being try-hard. Has the same wry energy TGI goes for.
+
+---
+
+## Previous Scan (May 29)
 
 ### Goatlane (Netherlands)
 - **URL:** https://goatlane.com
 - **Why they fit:** Founded 2020, aiming to rediscover golf's classic coolness from the golden era. Design-forward spikeless shoes with vintage silhouettes and colorful options. Inclusive sizing and fun energy. European indie with genuine aesthetic point of view. Worth monitoring.
 
-## Previous Scan (May 28)
-No new brand discoveries that cycle.
-
 ## Discovered May 25
 
 ### Kadet (US)
-- **URL:** (check for current site — mentioned in LINKS Magazine roundup)
+- **URL:** https://kadet.us
 - **Why they fit:** Uses newly-developed technical fabrics to reinvent pieces with old-school cut and fit. The tension between future fabric and vintage silhouette is interesting. Named in "under-the-radar" lists for 2026.
 
 ---
