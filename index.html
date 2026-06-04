@@ -9183,6 +9183,7 @@
       <input id="nl-email" type="email" required placeholder="your@email.com" style="flex:1;padding:13px 16px;border:0.5px solid #141414;background:#F4F1EA;font-family:'Inter',sans-serif;font-size:14px;color:#141414;outline:none;" />
       <button type="submit" style="padding:13px 20px;background:#141414;color:#F4F1EA;border:none;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.2s;">Join &rarr;</button>
     </form>
+    <iframe name="nl-hidden-frame" style="display:none;"></iframe>
     <div id="nl-thanks" style="display:none;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:20px;color:#2D4A2B;margin-top:4px;">You're in. First drop incoming.</div>
     <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;opacity:0.35;margin-top:20px;">No spam. No ads. Just the good stuff.</div>
   </div>
@@ -9215,11 +9216,17 @@ function closeNL(){
 function submitNL(e){
   e.preventDefault();
   var email = document.getElementById('nl-email').value;
-  // Send to Google Sheets
-  fetch('https://script.google.com/macros/s/AKfycbwY5Q8KyPZssb0m1PHiDdBzEZhWERESK1W8XFduRsWvNFSRhwwxDtjxzo8tElys9H8d/exec', {
-    method: 'POST',
-    body: JSON.stringify({email: email})
-  }).catch(function(){});
+  // Send to Google Sheets via hidden form (avoids CORS redirect issues with fetch)
+  var f = document.createElement('form');
+  f.method = 'POST';
+  f.action = 'https://script.google.com/macros/s/AKfycbwY5Q8KyPZssb0m1PHiDdBzEZhWERESK1W8XFduRsWvNFSRhwwxDtjxzo8tElys9H8d/exec';
+  f.target = 'nl-hidden-frame';
+  var inp = document.createElement('input');
+  inp.type = 'hidden'; inp.name = 'email'; inp.value = email;
+  f.appendChild(inp);
+  document.body.appendChild(f);
+  f.submit();
+  document.body.removeChild(f);
   document.getElementById('nl-form').style.display = 'none';
   document.getElementById('nl-thanks').style.display = 'block';
   setTimeout(closeNL, 2200);
