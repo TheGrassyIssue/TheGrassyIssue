@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>6 Shinnecock Capsules Before the First Tee — The Grassy Issue</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&display=swap');
+
+  :root {
+    --ink: #141414;
+    --paper: #F4F1EA;
+    --grass: #2D4A2B;
+    --rough: #A8A878;
+    --flag: #C7362C;
+    --serif: 'Fraunces', Georgia, serif;
+    --sans: 'Inter', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--paper);
+    font-family: var(--sans);
+    display: flex;
+    justify-content: center;
+    padding: 32px 16px;
+    min-height: 100vh;
+  }
+
+  .card {
+    max-width: 380px;
+    width: 100%;
+    border: 0.5px solid var(--ink);
+    background: var(--paper);
+    overflow: hidden;
+  }
+
+  .card-media { position: relative; overflow: hidden; }
+
+  .card-tag {
+    position: absolute; top: 10px; left: 10px;
+    padding: 4px 8px; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.12em;
+    text-transform: uppercase; z-index: 3;
+    background: var(--grass); color: var(--paper);
+  }
+
+  .gear-carousel { position: relative; overflow: hidden; }
+
+  .gear-carousel-track {
+    display: flex;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .gear-slide { min-width: 100%; position: relative; }
+
+  .gear-slide-img {
+    width: 100%; aspect-ratio: 4/5;
+    object-fit: cover; display: block;
+  }
+
+  .gear-slide-placeholder {
+    width: 100%; aspect-ratio: 4/5;
+    display: flex; align-items: center; justify-content: center;
+    flex-direction: column; gap: 8px;
+    font-family: var(--mono); font-size: 11px;
+    letter-spacing: 0.08em; text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+  }
+
+  .gear-slide-placeholder .brand-mark {
+    font-family: var(--serif); font-size: 22px;
+    font-weight: 600; text-transform: none;
+    letter-spacing: 0; color: #fff;
+  }
+
+  .gear-slide-info {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 16px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.55));
+    color: #fff;
+  }
+
+  .gear-slide-caption {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.1em; text-transform: uppercase;
+    opacity: 0.85;
+  }
+
+  .gear-arrow {
+    position: absolute; top: 50%; transform: translateY(-50%);
+    width: 36px; height: 36px; border-radius: 50%;
+    border: none; background: rgba(255,255,255,0.9);
+    color: var(--ink); font-size: 20px; cursor: pointer;
+    z-index: 4; display: flex; align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  }
+
+  .gear-arrow:hover { background: #fff; }
+  .gear-arrow.prev { left: 10px; }
+  .gear-arrow.next { right: 10px; }
+
+  .card-body { padding: 16px; }
+
+  .card-title {
+    font-family: var(--serif); font-size: 17px;
+    font-weight: 600; line-height: 1.35;
+    margin-bottom: 8px; color: var(--ink);
+  }
+
+  .card-text {
+    font-size: 13px; line-height: 1.55;
+    color: #555; margin-bottom: 12px;
+    min-height: 60px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-text.fade { opacity: 0; }
+
+  .gear-dots {
+    display: flex; gap: 5px;
+    justify-content: center; margin-bottom: 4px;
+  }
+
+  .gear-dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: #ccc; transition: background 0.3s;
+    cursor: pointer;
+  }
+
+  .gear-dot.active { background: var(--ink); }
+
+  .gear-counter {
+    text-align: center; font-family: var(--mono);
+    font-size: 10px; color: #999;
+    letter-spacing: 0.08em; margin-bottom: 12px;
+  }
+
+  .card-detail {
+    font-family: var(--mono); font-size: 10px;
+    letter-spacing: 0.04em; color: #888;
+    line-height: 1.7; margin-bottom: 12px;
+    transition: opacity 0.25s ease;
+  }
+
+  .card-detail.fade { opacity: 0; }
+
+  .card-meta {
+    display: flex; justify-content: space-between;
+    align-items: center; font-family: var(--mono);
+    font-size: 10px; letter-spacing: 0.06em;
+    color: #888; padding-top: 10px;
+    border-top: 0.5px solid rgba(0,0,0,0.08);
+  }
+
+  .card-meta a { color: #888; }
+</style>
+</head>
+<body>
+
+<div class="card">
+  <div class="card-media">
+    <span class="card-tag">The Roundup</span>
+    <div class="gear-carousel" id="carousel">
+      <div class="gear-carousel-track" id="track">
+
+        <div class="gear-slide">
+          <img class="gear-slide-img" src="https://thegolfwire.com/wp-content/uploads/2026/06/JLSH26LookbookMen03204.jpg" alt="J.Lindeberg — 30th Anniversary Capsule lookbook" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">J.Lindeberg — 30th Anniversary Capsule · $80-$300+</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img class="gear-slide-img" src="https://greysonclothiers.com/cdn/shop/files/UHT10935_100_1.png?v=1778017179" alt="Greyson Clothiers — 126th U.S. Open Wolf Flag Rope Hat" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Greyson — 126th U.S. Open Wolf Flag Rope Hat · $50</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <div class="gear-slide-placeholder" style="background:#1c3d5a;">
+            <span class="brand-mark">Peter Millar</span>
+            <span>Official USGA Outfitter</span>
+          </div>
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Peter Millar — 126th U.S. Open Collection · $45-$175</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img class="gear-slide-img" src="https://www.smathersandbranson.com/cdn/shop/files/USGA126thUSOpenShinnecockHills_ClassicNavy__Hat_LowRes.jpg?v=1779394860&width=1000" alt="Smathers & Branson — 126th U.S. Open Shinnecock Hills Hat" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Smathers & Branson — 126th U.S. Open Needlepoint Hat · $45</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img class="gear-slide-img" src="https://dks.scene7.com/is/image/dkscdn/26WHGMP11PRNTDPLXAPTA_Course_Hills_Convo_Green_is/?wid=800&hei=1000&qlt=85&fmt=jpg" alt="Walter Hagen — Course Hills Printed Polo" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">Walter Hagen — Course Hills Printed Polo · $80</div>
+          </div>
+        </div>
+
+        <div class="gear-slide">
+          <img class="gear-slide-img" src="https://www.golfdiscount.com/cdn/shop/files/adidas-ultimate365-plus-soft-print-golf-polo-2026-Crystal-Sky-KF0084-hero-itempicture.jpg?v=1770748187" alt="adidas Golf — Ultimate365+ Soft Print Polo" />
+          <div class="gear-slide-info">
+            <div class="gear-slide-caption">adidas Golf — Ultimate365+ Soft Print Polo · $85</div>
+          </div>
+        </div>
+
+      </div>
+      <button class="gear-arrow prev" onclick="moveSlide(-1)">&#8592;</button>
+      <button class="gear-arrow next" onclick="moveSlide(1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="gear-dots" id="dots"></div>
+    <div class="gear-counter" id="counter">1 / 6</div>
+
+    <h2 class="card-title">6 Shinnecock Capsules Before the First Tee</h2>
+    <p class="card-text" id="desc"></p>
+    <div class="card-detail" id="detail"></div>
+
+    <div class="card-meta">
+      <span>The Grassy Issue — <a href="https://thegrassyissue.com">thegrassyissue.com</a></span>
+      <span>June 2026</span>
+    </div>
+  </div>
+</div>
+
+<script>
+  const slideData = [
+    {
+      desc: "The 30th anniversary capsule pays tribute to Jesper Parnevik's 1998 Open look. Pink trousers, black sweater, iconic snapback — all reimagined in polos, striped knitwear, pleated pants, and tailored shorts. Hovland and Norgaard will wear it at Shinnecock, which is either product placement or a love letter depending on your tolerance for nostalgia.",
+      detail: "$80-$300+ · Pink/black/white palette · Parnevik 1998 tribute · jlindebergusa.com"
+    },
+    {
+      desc: "The Wolf Flag Rope Hat is 100% nylon with a structured silhouette, flat brim, and a custom 126th U.S. Open patch. Part of Greyson's broader Shinnecock capsule alongside polos and quarter-zips for Rahm and Lowry. Clean enough to survive a corporate outing. Interesting enough to not feel like one.",
+      detail: "$50 · 100% nylon · Structured flat brim · Final sale · greysonclothiers.com"
+    },
+    {
+      desc: "The official USGA outfitter brought the full kit. Embroidered polos in Dunnes Stripe, a Pine Raglan Hoodie, performance quarter-zips, and enough hats to stock a Southampton pro shop. The quality is Peter Millar quality, which is to say: your father-in-law will approve and your golf buddies will not make fun of you.",
+      detail: "$45-$175 · Official USGA outfitter · Performance jersey · petermillar.com"
+    },
+    {
+      desc: "Hand-stitched needlepoint belt with Shinnecock trophy imagery. One product, done perfectly. The kind of accessory that takes 40 hours to make and 4 seconds to appreciate. If you know Smathers & Branson you already own three of their belts and this sentence is unnecessary.",
+      detail: "$135 · Hand-stitched needlepoint · Shinnecock trophy imagery · smathersandbranson.com"
+    },
+    {
+      desc: "The collection itself is standard tournament merch. What makes this interesting is the pop-up boutique in East Hampton Village carrying limited-release U.S. Open gear alongside the mainline. If you are already in the Hamptons for the tournament, walking past this shop is harder than making the cut at Shinnecock.",
+      detail: "$30-$90 · Pop-up boutique in East Hampton Village · golfgalaxy.com"
+    },
+    {
+      desc: "Licensed U.S. Open polos and hats from the three stripes. The real storyline here is Scheffler going for the career Grand Slam — if he closes it out on his 30th birthday wearing adidas, the scripted outfits will sell out before the trophy ceremony ends.",
+      detail: "$35-$120 · Scheffler Grand Slam watch · Licensed U.S. Open collection · adidas.com"
+    }
+  ];
+
+  const track = document.getElementById('track');
+  const slides = track.children;
+  const dotsContainer = document.getElementById('dots');
+  const counter = document.getElementById('counter');
+  const descEl = document.getElementById('desc');
+  const detailEl = document.getElementById('detail');
+  let current = 0;
+  const total = slides.length;
+
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'gear-dot' + (i === 0 ? ' active' : '');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  function updateText(idx) {
+    descEl.classList.add('fade');
+    detailEl.classList.add('fade');
+    setTimeout(() => {
+      descEl.textContent = slideData[idx].desc;
+      detailEl.textContent = slideData[idx].detail;
+      descEl.classList.remove('fade');
+      detailEl.classList.remove('fade');
+    }, 150);
+  }
+
+  function goToSlide(idx) {
+    current = idx;
+    track.style.transform = `translateX(-${current * 100}%)`;
+    document.querySelectorAll('.gear-dot').forEach((d, i) =>
+      d.classList.toggle('active', i === current));
+    counter.textContent = `${current + 1} / ${total}`;
+    updateText(current);
+  }
+
+  function moveSlide(dir) {
+    goToSlide((current + dir + total) % total);
+  }
+
+  updateText(0);
+
+  let startX = 0;
+  const carousel = document.getElementById('carousel');
+  carousel.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+  carousel.addEventListener('touchend', e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 50) moveSlide(diff > 0 ? 1 : -1);
+  });
+</script>
+
+</body>
+</html>
