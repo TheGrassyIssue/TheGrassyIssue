@@ -1,3 +1,21 @@
+# Brand Discoveries — 2026-06-05
+
+## New This Scan (June 5) — Deep dive: tees + accessories, Europe/Australia
+
+### Found Golf (Melbourne, AU) ⭐ FEATURED
+- **URL:** https://found.golf
+- **Why they fit:** Art-school Melbourne fashion label that "activates golf as creative culture." Heavyweight graphic tees (Box Par, Daisy Chain, $118 AUD) that read like prints, not merch — plus the standout accessory, a refillable faux-cigarette "Ciggie Box" tee holder ($25 AUD). Editorial pickup in The Age, SMH, GQ South Africa. Purest Mo Norman energy of the deep-dive batch. **Brand to Know post drafted 2026-06-05.**
+
+### Walker Golf Things (AU)
+- **URL:** https://www.walkergolfthings.com
+- **Why they fit:** Founded by Australian pro skater Jack Fardell. Skate-culture Australiana — native-bird graphic tees (Kooka, ~$55 AUD), full headcovers/accessories/bags ranges, and an adidas capsule. Stocked at HBX and The Iconic. Leans a touch premium/polo-forward now but the design POV is genuine. Strong future feature candidate.
+
+### Bold Golf (Dublin, Ireland)
+- **URL:** https://bold-golf.com
+- **Why they fit:** The European pick. Golf-meets-streetwear-meets-art out of Dublin — graphic tees, rugby jerseys, Italian-leather Sunday bags and fleece-lined leather headcovers (~$77). Founder-led with art collabs (Penfold). Caveat: well-funded with Shane Lowry as an investor, so more hype-adjacent than scrappy-indie — monitor, but lighter on the craft-underdog angle than Found.
+
+---
+
 # Brand Discoveries — 2026-06-01
 
 ## New This Scan (June 1)
