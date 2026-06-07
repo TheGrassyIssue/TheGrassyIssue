@@ -1912,6 +1912,83 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- BRAND TO KNOW — Found Golf -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Brand to Know]</span>
+      <div class="gear-carousel" data-carousel="foundgolf">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://found.golf/products/black-tee" target="_blank" rel="noopener">
+              <img src="https://found.golf/cdn/shop/files/MG_7440.jpg?v=1751031017&width=1200" alt="Found Golf Box Par Tee" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Found Golf</div><div class="gear-slide-name">Box Par Tee · $118 AUD</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://found.golf/products/daisy-chain-tee" target="_blank" rel="noopener">
+              <img src="https://found.golf/cdn/shop/files/MG_7429.jpg?v=1751027794&width=1200" alt="Found Golf Daisy Chain Tee" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Found Golf</div><div class="gear-slide-name">Daisy Chain Tee · $118 AUD</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://found.golf/products/golf-tees-ciggie-box" target="_blank" rel="noopener">
+              <img src="https://found.golf/cdn/shop/files/CigaretteBox.01.jpg?v=1764239559&width=1200" alt="Found Golf Reusable Ciggie Box tee holder" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Found Golf</div><div class="gear-slide-name">Reusable Ciggie Box (tee holder) · $25 AUD</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://found.golf/products/dad-cap-olive" target="_blank" rel="noopener">
+              <img src="https://found.golf/cdn/shop/files/Olive-hat-3-4-large_c7ed693d-43c7-462d-ac7a-0cd5f5cc5301.jpg?v=1751036981&width=1200" alt="Found Golf Dad Cap Olive" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Found Golf</div><div class="gear-slide-name">Dad Cap — Olive · $55 AUD</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://found.golf/products/shiz-vest" target="_blank" rel="noopener">
+              <img src="https://found.golf/cdn/shop/files/Found-Pull-Over-Front.1_37fdb068-e811-4c16-adc3-e0f7d13b8607.jpg?v=1756210761&width=1200" alt="Found Golf The Shiz Vest" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Found Golf</div><div class="gear-slide-name">The Shiz Vest · $200 AUD</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title">Brand to Know — Found Golf</div>
+      <div class="card-text" data-slidetext="foundgolf">Box Par Tee — Found is a Melbourne fashion label that treats the course as a studio and the dress code as a memo it never received. The Box Par Tee is the way in: a heavyweight graphic shirt that reads like an art-school print, not tournament merch, cut to wear off the course without anyone clocking that you play. $118 AUD.</div>
+      <div class="gear-dots" data-dots="foundgolf"></div>
+      <div class="gear-counter" data-counter="foundgolf">1 / 5</div>
+      <div class="card-source"><a href="https://found.golf" target="_blank" rel="noopener">found.golf</a></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var slideTexts = {
+      foundgolf: [
+        "Box Par Tee — Found is a Melbourne fashion label that treats the course as a studio and the dress code as a memo it never received. The Box Par Tee is the way in: a heavyweight graphic shirt that reads like an art-school print, not tournament merch, cut to wear off the course without anyone clocking that you play. $118 AUD.",
+        "Daisy Chain Tee — The same playbook with a softer hand. A daisy-chain graphic that looks more like a band shirt than golf apparel, in heavyweight cotton with a unisex cut. The kind of thing you forget is technically golfwear until someone asks where you got it. $118 AUD.",
+        "Reusable Ciggie Box — The piece that gives the whole thing away: a refillable faux-cigarette pack that holds your wooden tees. Either a joke about the game's vices or the most honest accessory anyone's made for it. It's the cheapest thing on the site and the one you'll actually talk about. $25 AUD.",
+        "Dad Cap, Olive — The restraint setting. Unstructured six-panel, no loud branding, just a clean piece doing the job a hat is meant to do. Proof Found can play it straight when the mood calls for it. $55 AUD.",
+        "The Shiz Vest — The flex. A pullover vest that belongs as much at a gallery opening as a tee box, and where Found's 'golf as creative culture' line stops being marketing and starts being a wardrobe. The Age, the SMH, and GQ South Africa have all come around, which for a brand this young is less hype than vindication. $200 AUD."
+      ]
+    };
+    var origGearSlide = window.gearSlide;
+    window.gearSlide = function(btn, dir) {
+      origGearSlide(btn, dir);
+      var carousel = btn.closest('.gear-carousel');
+      if (!carousel) return;
+      var cid = carousel.dataset.carousel;
+      if (!slideTexts[cid]) return;
+      var counter = document.querySelector('[data-counter="'+cid+'"]');
+      if (!counter) return;
+      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
+      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
+      if (textEl) textEl.textContent = slideTexts[cid][idx];
+    };
+  })();
+  </script>
+
   <!-- DROP — Walker Golf Par-Tec Collection -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
