@@ -1,3 +1,21 @@
+# Brand Discoveries — 2026-06-08
+
+## New This Scan (June 8) — Handmade headcover makers
+
+### Reinland Golf Co (Portland / PNW, US) ⭐ STRONG FIT
+- **URL:** https://reinlandgolfco.com
+- **Why they fit:** Family-run Pacific Northwest maker hand-sewing headcovers to order from wool, waxed canvas, corduroy, and repurposed fabrics (Harris Tweed classics, occasional pop-culture drops). Founder spun it off from Muni Kids; the "made by Mom in the PNW" story is exactly the craft-over-mass-production angle TGI loves. Pairs naturally with the Mogshade headcover post — a natural Brand to Know candidate.
+
+### Patrick Gibbons Handmade (Arizona, US)
+- **URL:** https://www.gibbonshandmade.com
+- **Why they fit:** Boutique Arizona maker (garage start, 2007) hand-crafting wool headcovers, leather putter grips, ball markers, and cash covers, made to order in the USA. Witty product names ("Designated" Driver cover), classic-European golf references, slow-craft ethos. Established but under-the-radar and design-forward.
+
+### Aguila Golf (maybe — skip for now)
+- **URL:** https://aguila-golf.com
+- **Note:** Surfaced as a design-forward apparel label but reads more generic/trend-following than craft-obsessed. Skip unless the actual product proves the aesthetic.
+
+---
+
 # Brand Discoveries — 2026-06-05
 
 ## New This Scan (June 5) — Deep dive: tees + accessories, Europe/Australia
