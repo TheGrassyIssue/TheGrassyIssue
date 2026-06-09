@@ -1,23 +1,21 @@
-# Drop Scout Report — 2026-06-08 (Monday)
+# Drop Scout Report — 2026-06-09 (Tuesday)
 
 ## Summary
-- **1 new draft card** — Sugarloaf Social Club x Payntr Golf shoe ("Play or Perish"). Launched ~June 5, just outside the strict 48h window but not captured in the prior scout, so drafted as genuinely new.
-- **2 new brand discoveries** — Reinland Golf Co (strong fit, PNW handmade headcovers) and Patrick Gibbons Handmade (AZ handmade headcovers/leather). Added to `brand-discoveries.md`.
-- **0 active giveaways** — Nothing on-brand; only corporate/governing-body promos surfaced.
-- All 41 brands checked. Quiet across the core 12 and the extended 29 for the June 6–8 window.
+- **0 new draft cards** — Nothing across the core 12 or extended 29 cleared the "genuinely new in the last 48h" bar. The U.S. Open week pipeline is mostly already drafted (Seamus) or off-watchlist.
+- **0 new brand discoveries** — Both candidates the scan surfaced (Olydoe, Southside Golf Co) were *already* in `brand-discoveries.md`. Verified both are live and active, corrected two stale entries instead of duplicating.
+- **0 active giveaways** — No on-brand independent giveaways surfaced. Indie-brand contests run mostly on IG Stories, which web search doesn't index.
+- All 41 brands checked. Quiet run.
 
 ---
 
-## New Draft This Run
-
-| Draft | Type | Status |
-|-------|------|--------|
-| `2026-06-08-sugarloaf-payntr-play-or-perish.html` | Drop | Ready. SSC x Payntr Golf shoe — off-white upper, navy accents, translucent red outsole, "PLAY OR PERISH" stamped underneath. Also marks SSC's arrival in Golf Galaxy. Price TBC. |
+## New Drafts This Run
+None. No drop, collab, or limited release in the June 7–9 window that wasn't already captured in a prior scout.
 
 ## Still-Open Drafts From Prior Runs (verify before publishing)
-- `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, nine pieces.
+- `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr "Play or Perish" shoe + Golf Galaxy retail. Newest open card.
+- `2026-06-01-seamus-us-open-shinnecock.html` — U.S. Open capsule, ships ~6/16. Tournament June 18–21 — timely this week.
 - `2026-06-01-malbon-x-gap.html` — Dropped Friday June 6. Now live, not upcoming — update copy if publishing.
-- `2026-06-01-seamus-us-open-shinnecock.html` — U.S. Open capsule, ships ~6/16. Tournament June 18–21.
+- `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, nine pieces.
 
 ---
 
@@ -25,49 +23,49 @@
 
 | Brand | Activity |
 |-------|----------|
-| Manors | Gentleman Jack capsule still in cycle (drafted). No new product. |
-| Malbon | x Gap dropped Friday June 6 (drafted). Youth Summer '26 ongoing seasonal. No new drop. |
+| Manors | Gentleman Jack capsule (drafted) latest. No new drop. |
+| Malbon | x Gap (June 6, drafted) + Gallo Colorido (drafted). Nothing newer. |
 | Metalwood Studio | adidas SS26 (Feb) still latest. No new drop. |
-| Eastside Golf | Nike Take Flight + Bridgestone balls available. No new drop. |
-| Quiet Golf | Spring 2026 / Miura / SSC collabs ongoing. No new drop. |
-| Bogey Boys | Summer Course Collection live; adidas collab older news. No new drop. |
-| Devereux | Mount Gay + Westward Spring 2026 selling. No new drop. |
-| Random Golf Club | Events mode — Iceland Major (June 13–20). Bad Birdie collab dated Aug 5 (future). No merch drop now. |
-| Gumtree Golf & Nature | PUMA Field Notes (April) + State Flower at retail. No new drop. |
-| Sentinel Golf | Basecamp Expedition pre-order (Dec 2025). No new window. |
-| Fyfe Golf | Seasonal accessories steady. Mackenzie collab July (queued). No new drop. |
-| Mackenzie Golf Bags | Fyfe collab July; nothing in this window. No new drop. |
+| Eastside Golf | Nike Take Flight + Bridgestone balls standing. No new drop. |
+| Quiet Golf | New Active Pique polo colorways (Blue/Fern/Rose, ~$114) have fresh timestamps but read as seasonal restock, not a launch. No card. |
+| Bogey Boys | Summer Course Collection live. No new drop. |
+| Devereux | Mount Gay + Westward Spring 2026 (drafted). No new drop. |
+| Random Golf Club | Iceland Major (June 13–20) is an event w/ closed registration, not a product drop. |
+| Gumtree Golf & Nature | State Flower + Puma Field Notes standing. No new drop. |
+| Sentinel Golf | Pre-order model; Basecamp Expedition (Dec 2025) only. No new window. |
+| Fyfe Golf | Mackenzie collab queued July. Nothing this window. |
+| Mackenzie Golf Bags | Fyfe collab July. Nothing this window. |
 
 ## Extended Watchlist Highlights (13–41)
-- **Sugarloaf Social Club (#18)** — Payntr Golf shoe collab + Golf Galaxy retail launch (~June 5). **Drafted this run.**
-- **Casualist (#14) / Left of Field (#15)** — Paris Golf Gallery pop-up June 23–29 teasers. Future/ambiguous, not a drop. Worth an IG eyeball later.
-- **Winston Collection (#28)** — Now Imperial-owned; Imperial's 2026 U.S. Open line is hats. No new Winston headcover drop.
-- **Shapland Bags (#41)** — Next restock referenced for August 2026.
+- **Casualist (#14) + Left of Field (#15)** — Both confirmed at Paris Golf Gallery pop-up (June 23–29). B2B showroom; no concrete public drop yet. **Re-scout closer to June 23.**
+- **Students Golf (#16)** — "Course Studies" performance line teased at PGG (appointment-only B2B). Real story if/when it hits retail; not a consumer drop yet.
+- **Sounder (#23) / Macade (#34)** — Running a June sale / 15% promo respectively. Promos, not drops.
+- **Tremont (#26)** — Released a 2026 Materials Catalog (custom options), not a product drop.
+- **Dormie Workshop (#27)** — Custom order book reopening early July (already drafted).
+- **Shapland Bags (#41)** — Next restock confirmed ~August 2026.
 - **All others (13–41)** — Steady-state or no detectable new activity in the last 48h.
 
 ---
 
-## U.S. Open Watch (Shinnecock Hills, June 18–21)
-Several brands launched Shinnecock capsules this week, but **none are on the TGI 41**: Imperial, UNRL (126th U.S. Open capsule), Holderness & Bourne, FootJoy, J.Lindeberg (30-yr anniversary), Flag & Anthem. Seamus (on watchlist) already drafted June 1. Flagging for awareness only — no action unless Lenny wants to widen coverage.
-
----
-
 ## This Week to Watch
-- **U.S. Open** — Shinnecock, June 18–21. Seamus capsule drafted; expect more brand activity midweek.
+- **U.S. Open** — Shinnecock, June 18–21. Seamus capsule drafted; expect more brand activity midweek. Off-watchlist Shinnecock capsules noted prior run (Imperial, UNRL, H&B, FootJoy, J.Lindeberg) — awareness only.
 - **RGC Iceland Major** — June 13–20.
+- **Casualist / Left of Field Paris Golf Gallery** — June 23–29. Re-check ~June 22.
 - **Fyfe x Mackenzie** — Collab landing July 2026.
 - **RGC x Bad Birdie** — dated Aug 5 (future).
 
 ---
 
 ## Active Giveaways
-None worth posting. Only off-brand promos surfaced (USGA, Long Drink, Rock Bottom Golf, TaylorMade, Bad Birdie). Independent-brand giveaways tend to run on Instagram Stories, which web search doesn't index — would need direct IG checks to catch them.
+None worth posting. No on-brand independent giveaways surfaced; only off-brand corporate/governing-body promos. Catching indie giveaways would require direct Instagram Stories checks.
 
 ---
 
 ## Brand Discoveries
-Two new on-aesthetic finds this scan, both handmade-headcover makers in the Mogshade lane:
-- **Reinland Golf Co** (PNW) — family-run, made-to-order wool/canvas/tweed headcovers. Strong Brand to Know candidate.
-- **Patrick Gibbons Handmade** (AZ) — boutique wool headcovers + leather goods, made in USA.
+No genuinely new on-aesthetic brands this scan. The two candidates that surfaced were already tracked:
+- **Olydoe** — already logged (May 21). Verified live & active (American-grown Supima cotton, Summer 2026 collection). Corrected the stale "(UK)" location note → American-grown. Strong Brand to Know candidate.
+- **Southside Golf Co** — already logged (June 1). Verified live & active (PGA-pro-designed, 50-per-drop, Austin). Refreshed entry with current product/price detail. The Austin angle still makes this an obvious un-used Brand to Know.
 
-One skip: **Aguila Golf** — reads generic, not craft-forward. Left off pending product proof. Most other "new brand" results recycled brands already tracked.
+Skipped as off-aesthetic: Conscious Golfer (luxury e-carts / wellness positioning), Three Putt Golf UK (bro-streetwear). Steurer & Co. and Lambda are quality but established, not up-and-coming.
+
+**Suggestion for Lenny:** It's a quiet drop week. Both Olydoe and Southside are verified-live and un-featured — Southside especially, given the local Austin tie-in. Either would make a clean Brand to Know post if you want something to publish this week.

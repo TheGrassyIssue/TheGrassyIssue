@@ -38,9 +38,9 @@
 
 ## New This Scan (June 1)
 
-### Southside Golf Co (South Austin, TX)
-- **URL:** https://southsidegolfco.com
-- **Why they fit:** Built in South Austin — literally local to TGI. Premium limited-run golf apparel with smaller drops focused on quality, fit, and originality over mass production. Anti-corporate by design. The fact that they're Austin-based and nobody's talked about them yet is a miss worth correcting.
+### Southside Golf Co (South Austin, TX) ⭐ STRONG LOCAL FIT
+- **URL:** https://southsidegolfco.com (shop: https://shop.southsidegolfco.com)
+- **Why they fit:** Built in South Austin — literally local to TGI. Designed and tested by a PGA pro; limited runs of only 50 per drop, no restocks. Heritage wool hats ($64), corduroy 5-panels ($54), worn-in dad hats ($42), heavyweight hoodies. "Built for players who don't fit country club golf. No copy-paste culture." Confirmed live & actively selling 2026-06-09 (current Heritage Drop; fresh reviews dated June 6). Austin angle makes this an obvious Brand to Know — resurfacing it; still un-featured.
 
 ### 3Putt Round (Milan, Italy)
 - **URL:** https://3puttround.com
@@ -68,9 +68,9 @@
 - **URL:** https://vesselbags.com
 - **Why they fit:** Known for premium golf bags, VESSEL just launched their debut apparel collection (SS26) on May 14-15. Same obsessive design DNA applied to performance wear. Not streetwear-first but the craftsmanship ethos aligns with TGI's respect for quality. Worth monitoring as they build out the apparel line.
 
-### Olydoe (UK)
+### Olydoe (US, American-grown)
 - **URL:** https://olydoe.com
-- **Why they fit:** Launched October 2025 by Scott Matthews. Born from wanting to buy a decent polo at a course and finding nothing. Early-stage brand with grassroots energy. Watch for growth.
+- **Why they fit:** Launched October 2025 by Scott Matthews. Born from wanting to buy a decent polo at a course and finding nothing. Small-batch, American-grown Supima cotton polos ($110), OG tees ($30), and shield/star hats ($45) — "not trying to be the biggest brand in golf, just the most thoughtful." Now running a Summer 2026 collection. Craft-over-scale, natural-fiber ethos squarely in the Mo Norman lane. (Confirmed live & active 2026-06-09. Earlier "UK" note corrected — brand is American-grown.) Strong Brand to Know candidate when Lenny wants one.
 
 ---
 
