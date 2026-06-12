@@ -1,20 +1,20 @@
-# Drop Scout Report — 2026-06-11 (Thursday)
+# Drop Scout Report — 2026-06-12 (Friday)
 
 ## Summary
-- **0 new draft cards** — Nothing across the core 12 or extended 29 cleared the "genuinely new in the last 48h" bar. The board is unchanged since Tuesday: U.S. Open week activity is already drafted (Seamus), and the rest is seasonal collection or promo, not a launch.
-- **0 new brand discoveries** — The one fresh candidate web search surfaced (Kadet) is already logged in `brand-discoveries.md` (May 25). The "up-and-coming 2026" roundups returned only already-tracked names (Left of Field, Three Putt Golf).
-- **0 active giveaways** — Only off-brand corporate/sweepstakes promos (Rock Bottom, Callaway, Ray Cook). No on-brand independent contests surfaced; indie giveaways run on IG Stories, which web search doesn't index.
-- All 41 brands checked. Quiet run — second in a row.
+- **1 new draft card** — `2026-06-12-bogey-boys-adidas-mc80.html`. Bogey Boys x adidas, the full expanded collab, launches **this Sunday, June 14** on bogeyboys.com, adidas.com, and select retailers. Anchored by a new spikeless shoe (the MC80) plus a vintage-clubhouse apparel range. Datable, on-brand, and not previously captured.
+- **0 new brand discoveries** — Web roundups surfaced only already-tracked names (Southside Golf Co, Local Rule (#35), Three Putt Golf). Nothing new on-aesthetic.
+- **0 active giveaways** — Only off-brand corporate/sweepstakes promos (PGA Championship accessories, Promo Direct). No on-brand indie contests indexed; those run on IG Stories.
+- All 41 brands checked. Activity ended a two-week quiet streak.
 
 ---
 
 ## New Drafts This Run
-None. No drop, collab, or limited release in the June 9–11 window that wasn't already captured in a prior scout.
+- **`2026-06-12-bogey-boys-adidas-mc80.html`** — Bogey Boys x adidas. MC80 spikeless shoe (80s adidas silhouette) plus men's/women's apparel: terry-cloth tracksuit, v-neck sweater vests, trousers, rompers, skirts, five-panel rope hat, leather gloves and travel bag. **Launches June 14 — time-sensitive, two days out.** Price TBC.
 
 ## Still-Open Drafts From Prior Runs (verify before publishing)
-- `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr "Play or Perish" shoe + Golf Galaxy retail. Newest open card.
-- `2026-06-01-seamus-us-open-shinnecock.html` — U.S. Open capsule, presale ships ~6/16. **Tournament June 18–21 — most timely card on the board this week.**
-- `2026-06-01-malbon-x-gap.html` — Dropped June 6, now live (not upcoming). Update copy if publishing.
+- `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr "Play or Perish" shoe + Golf Galaxy retail.
+- `2026-06-01-seamus-us-open-shinnecock.html` — U.S. Open capsule, presale ships ~6/16. **Tournament June 18–21 — most timely card on the board.**
+- `2026-06-01-malbon-x-gap.html` — Live since June 6. Update copy from "upcoming" to "live" if publishing.
 - `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, nine pieces.
 
 ---
@@ -24,46 +24,45 @@ None. No drop, collab, or limited release in the June 9–11 window that wasn't 
 | Brand | Activity |
 |-------|----------|
 | Manors | Gentleman Jack capsule (drafted) latest. No new drop. |
-| Malbon | "Malecón Sun" summer collection + Youth Summer '26 are live, but read as the seasonal Summer '26 rollout (Antillean-inspired), not a discrete 48h launch. x Gap (June 6) + Gallo Colorido already drafted. No card. |
-| Metalwood Studio | adidas SS26 (Feb) still latest. No new drop. |
-| Eastside Golf | Nike Take Flight + Bridgestone balls standing. No new drop. |
-| Quiet Golf | Took outside investment (story, not a product). Seasonal pique restock only. No card. |
-| Bogey Boys | Summer Course Collection live. No new drop. |
-| Devereux | Mount Gay (May 18) + Westward Spring 2026 standing. No new drop. |
-| Random Golf Club | Iceland Major (June 13–20) is an event w/ closed registration, not a product drop. |
-| Gumtree Golf & Nature | Puma Field Notes (April) standing. No new drop. |
-| Sentinel Golf | Pre-order model; Basecamp Expedition (Dec 2025) + SSC x PLAYERS jacket only. No new window. |
+| Malbon | x HVN + x Gap (drafted) standing. USGA-shop U.S. Open tee exists but reads as licensed merch, not a Malbon capsule launch. No card. |
+| Metalwood Studio | adidas SS26 still latest. No new drop. |
+| Eastside Golf | Nike "Take Flight" standing. No new drop. |
+| Quiet Golf | SSC collab + seasonal tees standing. No new drop. |
+| Bogey Boys | **NEW — x adidas launches June 14 (carded).** Summer Course Collection still live. |
+| Devereux | Mount Gay (May 18) + Westward Spring standing. No new drop. |
+| Random Golf Club | Abercrombie collab (drafted) standing; Iceland Major June 13–20 is an event, not a product. |
+| Gumtree Golf & Nature | Puma Field Notes standing. No new drop. |
+| Sentinel Golf | Pre-order model; nothing new this window. |
 | Fyfe Golf | Mackenzie collab confirmed July. Nothing this window. |
 | Mackenzie Golf Bags | Fyfe collab July. Nothing this window. |
 
 ## Extended Watchlist Highlights (13–41)
-- **Casualist (#14) + Left of Field (#15) + Students Golf (#16)** — All three confirmed at Paris Golf Gallery (June 23–29). B2B/appointment showroom; no public consumer drop yet. **Re-scout ~June 22.**
-- **Sounder (#23) / Macade (#34)** — Spring '26 arrivals + standing promo codes respectively. Restock/promo, not a drop.
-- **Public Drip (#19)** — SS25 still the latest indexed collection. Nothing new detected.
-- **Dormie Workshop (#27)** — Custom order book reopening early July (already noted prior run).
-- **Field Day Sporting Co. (#25) / Whim (#20) / Radmor (#31)** — Spring/SS26 collections shipping. Seasonal, all standing.
-- **Shapland Bags (#41)** — Next restock confirmed ~August 2026.
+- **Casualist (#14) / Left of Field (#15) / Students Golf (#16)** — Paris Golf Gallery showing June 23–29. Students has Spring '26 "Research Club" delivery live (seasonal). **Re-scout ~June 22.**
+- **Radmor (#31)** — Spring '26 "Chasing Light" (Bauhaus x Augusta capsule, varsity jacket, pop-art) shipping. Seasonal, already drafted previously.
+- **Dormie Workshop (#27)** — Custom order book reopening (early summer). Restock cadence, not a drop.
+- **Sugarloaf (#18)** — Payntr collab already drafted (June 8). No new window.
 - **All others (13–41)** — Steady-state or no detectable new activity in the last 48h.
 
 ---
 
 ## This Week to Watch
-- **U.S. Open** — Shinnecock, June 18–21. Seamus capsule drafted and timely; expect more brand activity once tournament week opens. Off-watchlist Shinnecock capsules previously noted (Imperial, UNRL, H&B, FootJoy, J.Lindeberg) — awareness only.
+- **Bogey Boys x adidas** — Launches **June 14 (Sunday)**. Carded; publish before then.
+- **U.S. Open** — Shinnecock, June 18–21. Seamus capsule drafted and timely; expect more brand activity once tournament week opens. Off-watchlist Shinnecock capsules previously noted (Imperial, UNRL, Flag & Anthem) — awareness only.
 - **RGC Iceland Major** — June 13–20.
-- **Casualist / Left of Field / Students Golf — Paris Golf Gallery** — June 23–29. Re-check ~June 22.
+- **Casualist / Left of Field / Students — Paris Golf Gallery** — June 23–29. Re-check ~June 22.
 - **Fyfe x Mackenzie** — Collab landing July 2026.
 
 ---
 
 ## Active Giveaways
-None worth posting. Only off-brand corporate/sweepstakes promos surfaced. Catching on-brand indie giveaways would require direct Instagram Stories checks.
+None worth posting. Only off-brand corporate/sweepstakes promos surfaced. On-brand indie giveaways run on IG Stories, which web search doesn't index.
 
 ---
 
 ## Brand Discoveries
-No genuinely new on-aesthetic brands this scan. Web search's "up-and-coming 2026" roundups returned only names already tracked:
-- **Kadet** — already logged (May 25). US brand reinventing old-school silhouettes in new technical fabrics; vintage-football-shirt-inspired open-neck polos. Still a credible future feature.
-- **Left of Field** — already on the extended watchlist (#15); Paris Golf Gallery showing noted above.
-- **Three Putt Golf (UK)** — already logged (May 19), and reads more bro-streetwear than Mo Norman. Skip.
+No genuinely new on-aesthetic brands this scan. "Up-and-coming 2026" roundups returned only already-tracked names:
+- **Southside Golf Co** — already noted (South Austin local tie-in still un-used; bench suggestion).
+- **Local Rule** — already on the extended watchlist (#35).
+- **Three Putt Golf (UK)** — already logged; reads more bro-streetwear than Mo Norman. Skip.
 
-**Suggestion for Lenny:** Two quiet weeks running. If you want something to publish this week, the bench is deep and verified-live: **Southside Golf Co** (South Austin — the local tie-in still un-used), **Olydoe** (American-grown Supima, thoughtful), or **Found Golf** (drafted June 5, not yet published). The Seamus U.S. Open card is also your most time-sensitive open draft with the major a week out.
+**Suggestion for Lenny:** Two clean options this week. The **Bogey Boys x adidas** card is fresh and dated (publish before Sunday's launch). The **Seamus U.S. Open** card is your most time-sensitive standing draft with the major opening June 18.
