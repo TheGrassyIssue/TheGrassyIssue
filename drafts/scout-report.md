@@ -1,15 +1,15 @@
 # Drop Scout Report — 2026-06-12 (Friday)
 
 ## Summary
-- **1 new draft card** — `2026-06-12-bogey-boys-adidas-mc80.html`. Bogey Boys x adidas, the full expanded collab, launches **this Sunday, June 14** on bogeyboys.com, adidas.com, and select retailers. Anchored by a new spikeless shoe (the MC80) plus a vintage-clubhouse apparel range. Datable, on-brand, and not previously captured.
+- **0 new draft cards** — A Bogey Boys x adidas card was drafted and then **voided**: that collection (MC80 shoe + terry-cloth tracksuit capsule) actually launched **June 14, 2023**, not 2026. The scout misread 2023 articles as a fresh drop because June 14 falls on a Sunday in 2026. Corrected. No genuine new drop this run.
 - **0 new brand discoveries** — Web roundups surfaced only already-tracked names (Southside Golf Co, Local Rule (#35), Three Putt Golf). Nothing new on-aesthetic.
 - **0 active giveaways** — Only off-brand corporate/sweepstakes promos (PGA Championship accessories, Promo Direct). No on-brand indie contests indexed; those run on IG Stories.
-- All 41 brands checked. Activity ended a two-week quiet streak.
+- All 41 brands checked. Quiet run — back to the two-week pattern.
 
 ---
 
 ## New Drafts This Run
-- **`2026-06-12-bogey-boys-adidas-mc80.html`** — Bogey Boys x adidas. MC80 spikeless shoe (80s adidas silhouette) plus men's/women's apparel: terry-cloth tracksuit, v-neck sweater vests, trousers, rompers, skirts, five-panel rope hat, leather gloves and travel bag. **Launches June 14 — time-sensitive, two days out.** Price TBC.
+- None. (`2026-06-12-bogey-boys-adidas-mc80.html` voided — see Summary; the adidas x Bogey Boys collab is from June 2023, not new.)
 
 ## Still-Open Drafts From Prior Runs (verify before publishing)
 - `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr "Play or Perish" shoe + Golf Galaxy retail.
@@ -28,7 +28,7 @@
 | Metalwood Studio | adidas SS26 still latest. No new drop. |
 | Eastside Golf | Nike "Take Flight" standing. No new drop. |
 | Quiet Golf | SSC collab + seasonal tees standing. No new drop. |
-| Bogey Boys | **NEW — x adidas launches June 14 (carded).** Summer Course Collection still live. |
+| Bogey Boys | Summer Course Collection still live. (x adidas "drop" was a false positive — that collab is from June 2023. No new drop.) |
 | Devereux | Mount Gay (May 18) + Westward Spring standing. No new drop. |
 | Random Golf Club | Abercrombie collab (drafted) standing; Iceland Major June 13–20 is an event, not a product. |
 | Gumtree Golf & Nature | Puma Field Notes standing. No new drop. |
@@ -46,7 +46,6 @@
 ---
 
 ## This Week to Watch
-- **Bogey Boys x adidas** — Launches **June 14 (Sunday)**. Carded; publish before then.
 - **U.S. Open** — Shinnecock, June 18–21. Seamus capsule drafted and timely; expect more brand activity once tournament week opens. Off-watchlist Shinnecock capsules previously noted (Imperial, UNRL, Flag & Anthem) — awareness only.
 - **RGC Iceland Major** — June 13–20.
 - **Casualist / Left of Field / Students — Paris Golf Gallery** — June 23–29. Re-check ~June 22.
@@ -65,4 +64,4 @@ No genuinely new on-aesthetic brands this scan. "Up-and-coming 2026" roundups re
 - **Local Rule** — already on the extended watchlist (#35).
 - **Three Putt Golf (UK)** — already logged; reads more bro-streetwear than Mo Norman. Skip.
 
-**Suggestion for Lenny:** Two clean options this week. The **Bogey Boys x adidas** card is fresh and dated (publish before Sunday's launch). The **Seamus U.S. Open** card is your most time-sensitive standing draft with the major opening June 18.
+**Suggestion for Lenny:** Nothing genuinely new this run. Your most time-sensitive standing draft is the **Seamus U.S. Open** card, with the major opening June 18. If you want something else on the bench, **Found Golf** (drafted June 5) is still unpublished.
