@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -135,7 +137,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>5 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -156,7 +158,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://late-nine.com/cdn/shop/files/felwfkenwnkfelw.jpg?v=1776789073" alt="Late Nine — Current Season Lookbook" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Late Nine</div>
         <div class="product-name">Current Season</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -166,7 +170,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://late-nine.com/cdn/shop/files/Second_Landing_12.jpg?v=1774815839" alt="Late Nine Outerwear" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Late Nine</div>
         <div class="product-name">Outerwear</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -176,7 +182,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://late-nine.com/cdn/shop/files/Second_Landing_13.jpg?v=1774815908" alt="Late Nine Polos" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Late Nine</div>
         <div class="product-name">Polos</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -186,7 +194,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://late-nine.com/cdn/shop/files/Second_Landing_14.jpg?v=1774816107" alt="Late Nine Knitwear" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Late Nine</div>
         <div class="product-name">Knitwear</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -196,7 +206,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://late-nine.com/cdn/shop/files/Newsletter.jpg?v=1774816418" alt="Late Nine Lifestyle" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Late Nine</div>
         <div class="product-name">Lifestyle</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -210,35 +222,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/ald-golf-ss26-new-york-prep-hits-the-first-tee" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0302/7829/files/SS26WJ037_PRINTEDGOLFPOPOVER_BLACKWATCHPLAID_1.jpg?v=1776794030" alt="ALD Golf SS26 — New York Prep Hits the First Tee" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">ALD Golf SS26 — New York Prep Hits the First </div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/10-technical-fabric-tops-for-summer" class="more-card">
+      <div class="more-card-img"><img src="https://www.fantlsport.com/cdn/shop/files/Untitled-1_0014_Layer-41_eeb1138b-08b6-4948-b0bc-332b1e713ded.png?v=1780298491&amp;width=600" alt="10 Technical Fabric Tops for Summer" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">10 Technical Fabric Tops for Summer</div>
+        <div class="more-card-tag">The Roundup</div>
       </div>
     </a>
 
-    <a href="/drops/muni-kids-turns-11-the-muni-never-left" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://munikids.com/cdn/shop/products/Muni-Kids-PDX-Carpet-Canvas-Golf-Headcovers_1200x1200.png?v=1615588658" alt="Muni Kids Turns 11. The Muni Never Left." loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Muni Kids Turns 11. The Muni Never Left.</div>
-        <div class="more-drop-brand">Brand to Know</div>
+    <a href="/drops/the-best-non-golfing-golf-shoe-5-trail-runners-that-belong-o" class="more-card">
+      <div class="more-card-img"><img src="https://www.outdoorsports.com/cdn/shop/files/Salomon-Mens-Sense_Ride_5_GTX-Black_Magnet_Black-Side_600x.png?v=1698869826" alt="The Best Non-Golfing Golf Shoe — 5 trail runners that belong on the course." loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Best Non-Golfing Golf Shoe — 5 trail runn</div>
+        <div class="more-card-tag">Drop</div>
       </div>
     </a>
 
-    <a href="/drops/manors-x-gentleman-jack-whiskey-on-the-first-tee" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/Gentleman_Jack_Paisely_Polo_-_Black_250_crop.jpg?v=1778502188" alt="Manors x Gentleman Jack: Whiskey on the First Tee" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Manors x Gentleman Jack: Whiskey on the First</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/5-post-round-evening-spots-in-austin" class="more-card">
+      <div class="more-card-img"><img src="/images/19thhole/equipment-room.jpg" alt="5 Post-Round Evening Spots in Austin" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">5 Post-Round Evening Spots in Austin</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/8-best-practice-facilities-around-austin" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.harveypenickgc.com/wp-content/uploads/sites/5426/2015/10/Harvey-Penick-GC-hole7-1700-X-500.jpg" alt="8 Best Practice Facilities Around Austin" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">8 Best Practice Facilities Around Austin</div>
-        <div class="more-drop-brand">Field Guide</div>
+    <a href="/drops/the-towel-edit-12-worth-clipping-to-your-bag" class="more-card">
+      <div class="more-card-img"><img src="https://www.sugarloafsocialclub.com/cdn/shop/files/SUGTWL001_1copy.jpg?v=1776769930&amp;width=2048" alt="The Towel Edit — 12 Worth Clipping to Your Bag" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Towel Edit — 12 Worth Clipping to Your Ba</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
   </div>

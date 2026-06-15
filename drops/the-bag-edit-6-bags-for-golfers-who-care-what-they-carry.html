@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -134,7 +136,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>6 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -157,7 +159,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_Bag_MossyOak_CountryDNA_a1_WEB.png?v=1745869463" alt="Sunday Golf Loma Bag Mossy Oak" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Sunday Golf</div>
         <div class="product-name">Sunday Golf Loma Bag Mossy Oak</div>
+        
         
       </div>
     </a>
@@ -167,7 +171,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Ryder_Burnt_Orange_a7_WEB_2db35bb7-c7bd-4fbe-bb28-04cbe51acdab.png?v=1757607345" alt="Sunday Golf Ryder Stand Bag Burnt Orange" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Sunday Golf</div>
         <div class="product-name">Sunday Golf Ryder Stand Bag Burnt Orange</div>
+        
         
       </div>
     </a>
@@ -177,7 +183,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/3102/5646/files/LuxStandMonarchHero.png?v=1775147155" alt="Vessel Lux Stand Bag Monarch" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Vessel</div>
         <div class="product-name">Vessel Lux Stand Bag Monarch</div>
+        
         
       </div>
     </a>
@@ -187,7 +195,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0382/1885/8631/files/12_2bddf03c-9511-4d96-89e5-2f377956134a.png?v=1775856509" alt="MNML Golf MR2 Water The Cosmos" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">MNML Golf</div>
         <div class="product-name">MNML Golf MR2 Water The Cosmos</div>
+        
         
       </div>
     </a>
@@ -197,7 +207,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0693/6587/files/HeritageOriginal-Green-10.jpg?v=1744818356" alt="Jones Golf Original Jones Bag Evergreen" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Jones Golf</div>
         <div class="product-name">Jones Golf Original Jones Bag Evergreen</div>
+        
         
       </div>
     </a>
@@ -207,7 +219,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0150/9084/files/STITCH_2026_000SG2507_SL2gen2_FRNWD_7021.jpg?v=1773773057" alt="Stitch Golf SL2 Gen 2 Fernwood" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Stitch Golf</div>
         <div class="product-name">Stitch Golf SL2 Gen 2 Fernwood</div>
+        
         
       </div>
     </a>
@@ -221,35 +235,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/5-zero-torque-putters-worth-your-attention" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://thegolfwire.com/wp-content/uploads/2026/04/MoneyShotPocket21.jpg" alt="5 Zero Torque Putters Worth Your Attention" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">5 Zero Torque Putters Worth Your Attention</div>
-        <div class="more-drop-brand">Gear Guide</div>
+    <a href="/drops/7-grips-to-add-a-little-flavor" class="more-card">
+      <div class="more-card-img"><img src="https://www.loudmouth.com/cdn/shop/files/LOUDMOUTH_SWING_GRIP_MAGIC_BUS_002.png?v=1776267174&amp;amp;width=800" alt="7 Grips to Add a Little Flavor" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">7 Grips to Add a Little Flavor</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://static1.squarespace.com/static/62df2055174c772d5220ba18/62df3a67d3f6270c6d7e2e1f/687168fa6588572799f28f54/1768931660509/MOKCINGBIRD2.jpg?format=1500w" alt="The Tee Edit — 14 independent tees for the fairway and beyond" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">The Tee Edit — 14 independent tees for the fa</div>
-        <div class="more-drop-brand">The Roundup</div>
+    <a href="/drops/the-putter-cover-edit-11-covers-worth-the-pocket" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-black-tokyo-country-club-blade-putter-cover-front.jpg?v=1689074572" alt="The Putter Cover Edit — 11 Covers Worth the Pocket" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Putter Cover Edit — 11 Covers Worth the P</div>
+        <div class="more-card-tag">Field Guide</div>
       </div>
     </a>
 
-    <a href="/drops/10-rangefinders-from-90-to-600" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://gogogosport.com/cdn/shop/files/1_78610967-a183-473a-8b95-d70b62edfffd.jpg?v=1750401675" alt="10 Rangefinders from $90 to $600" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">10 Rangefinders from $90 to $600</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/10-white-tees-to-beat-the-texas-heat" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/0148/2421/0518/files/SP26_4025_CLUB-TOSS-WHT-2.jpg?v=1775073139" alt="10 White Tees to Beat the Texas Heat" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">10 White Tees to Beat the Texas Heat</div>
+        <div class="more-card-tag">Field Guide</div>
       </div>
     </a>
 
-    <a href="/drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/cc33e5f0-fc75-4ee3-b4a0-58bdcdaf2ebe/CSB1.jpg?format=2500w" alt="Sentinel Golf x 1733 — Saltex Bags &amp; V4 Brush" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Sentinel Golf x 1733 — Saltex Bags &amp; V4 Brush</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/roy-kizer-from-sewage-plant-to-links-style-gem" class="more-card">
+      <div class="more-card-img"><img src="https://austin.widen.net/content/4ff53fab-21d9-400f-8698-23b952464164/web/Parks%20and%20Recreation%20-%20Web_kizer-golf-course.jpg" alt="Roy Kizer — From Sewage Plant to Links-Style Gem" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Roy Kizer — From Sewage Plant to Links-Style </div>
+        <div class="more-card-tag">Field Guide</div>
       </div>
     </a>
   </div>

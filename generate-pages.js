@@ -1,106 +1,92 @@
 #!/usr/bin/env node
 /**
- * TGI Post Page Generator — Layer 2
+ * TGI Post Page Generator — Layer 2 (v2)
  *
- * Parses index.html, extracts carousel-card data, and generates
- * standalone post pages using the approved enhanced template.
+ * Extracts carousel data + per-slide descriptions from index.html
+ * and generates standalone pages with full product writeups.
  *
- * Usage:  node generate-pages.js [--dry-run]
- *
- * Reads:  ./index.html
- * Writes: ./drops/*.html  (skips pages that already exist)
+ * Usage:  node generate-pages.js [--dry-run] [--force]
+ *   --dry-run   List what would be generated without writing
+ *   --force     Overwrite existing generated pages
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const SITE_DIR = __dirname;
-const INDEX_PATH = path.join(SITE_DIR, 'index.html');
-const DRY_RUN = process.argv.includes('--dry-run');
-const html = fs.readFileSync(INDEX_PATH, 'utf8');
+const SITE = __dirname;
+const html = fs.readFileSync(path.join(SITE, 'index.html'), 'utf8');
+const DRY  = process.argv.includes('--dry-run');
+const FORCE = process.argv.includes('--force');
 
-/* ── Helpers ───────────────────────────────────────────────── */
+/* ── 0. Load editorial writeups ──────────────────────────── */
+const writeupsFile = path.join(SITE, 'writeups-all.json');
+const editorialWriteups = fs.existsSync(writeupsFile) ? JSON.parse(fs.readFileSync(writeupsFile,'utf8')) : {};
+console.log(`Loaded ${Object.keys(editorialWriteups).length} editorial writeups.\n`);
 
-function esc(s) {
-  return s.replace(/&/g,'&amp;').replace(/</g,'&lt;')
-          .replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+/* ── helpers ──────────────────────────────────────────────── */
+const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+const strip = s => s.replace(/<[^>]+>/g, '').trim();
+const squeeze = s => s.replace(/\s+/g, ' ').trim();
+const slugify = s => s.toLowerCase().replace(/['']/g,'').replace(/&amp;/g,'and').replace(/&/g,'and').replace(/[^a-z0-9]+/g,'-').replace(/(^-|-$)/g,'').substring(0,60);
+
+/* ── 1. Extract _slideTexts from JS ──────────────────────── */
+const slideTexts = {};  // carouselId → string[]
+const stBlock = html.match(/window\._slideTexts\s*=\s*\{([\s\S]*?)\n  \};/);
+if (stBlock) {
+  const entries = stBlock[1].matchAll(/(\w+):\s*\[([\s\S]*?)\]/g);
+  for (const [, id, body] of entries) {
+    // Parse the string array — handle escaped quotes
+    const texts = [];
+    const strRe = /"((?:[^"\\]|\\.)*)"/g;
+    let m;
+    while ((m = strRe.exec(body)) !== null) {
+      texts.push(m[1].replace(/\\"/g, '"').replace(/\\n/g, '\n'));
+    }
+    slideTexts[id] = texts;
+  }
 }
-function strip(s) { return s.replace(/<[^>]+>/g, '').trim(); }
-function squeeze(s) { return s.replace(/\s+/g, ' ').trim(); }
-function slugify(s) {
-  return s.toLowerCase()
-    .replace(/['']/g, '')
-    .replace(/&amp;/g, 'and').replace(/&/g, 'and')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/(^-|-$)/g, '')
-    .substring(0, 60);
-}
+console.log(`Loaded _slideTexts for ${Object.keys(slideTexts).length} carousels.\n`);
 
-/* ── Step 1 — find every card start position ───────────────── */
+/* ── 2. Find card boundaries in feed ─────────────────────── */
+const feedStart = html.indexOf('<section class="feed" id="feed"');
+const feedEnd   = html.indexOf('</section>', feedStart + 100);
 
 const cardStarts = [];
 const startRe = /(?:<div|<a[^>]*href)[^>]*class="card"[^>]*data-type="([^"]+)"[^>]*>/g;
 let sm;
 while ((sm = startRe.exec(html)) !== null) {
-  cardStarts.push({ idx: sm.index, type: sm[1] });
+  if (sm.index >= feedStart && sm.index <= feedEnd) {
+    cardStarts.push({ idx: sm.index, type: sm[1] });
+  }
 }
 
-// Feed section bounds
-const feedStart = html.indexOf('<section class="feed" id="feed"');
-const feedEnd   = html.indexOf('</section>', feedStart + 100);
+/* ── 3. Parse each card ──────────────────────────────────── */
+const allCards = [];
+// Pre-existing manually-named pages we don't overwrite
+const manualSlugs = new Set([
+  'ald-golf-ss26-new-releases', 'muni-kids-10-years', 'manors-gentleman-jack',
+  'malbon-summer-gallo-colorido', 'metalwood-ss26-picks', 'sugarloaf-ss26',
+  'premium-tees-carousel', 'bold-tees-carousel', 'hats-carousel',
+  'best-golf-streetwear-brands-2026', 'manors-ss26'
+]);
 
-console.log(`Total card markers: ${cardStarts.length}`);
-console.log(`Feed section: chars ${feedStart}–${feedEnd}\n`);
-
-/* ── Step 2 — extract each card's HTML block ───────────────── */
-
-const rawCards = [];
 for (let i = 0; i < cardStarts.length; i++) {
   const start = cardStarts[i].idx;
-  if (start < feedStart || start > feedEnd) continue;  // outside feed
   const end = (i + 1 < cardStarts.length) ? cardStarts[i + 1].idx : feedEnd;
-  rawCards.push({
-    type: cardStarts[i].type,
-    html: html.substring(start, end)
-  });
-}
+  const c = html.substring(start, end);
+  const type = cardStarts[i].type;
 
-console.log(`Cards inside feed: ${rawCards.length}\n`);
-
-/* ── Step 3 — parse each card ──────────────────────────────── */
-
-const allCards = [];   // all parsed cards (used for cross-links)
-const toGenerate = []; // cards that need new pages
-
-// Existing page slugs
-const existing = new Set();
-for (const dir of ['drops', 'guides', 'events']) {
-  const dp = path.join(SITE_DIR, dir);
-  if (!fs.existsSync(dp)) continue;
-  fs.readdirSync(dp).forEach(f => {
-    if (f.endsWith('.html') && f !== 'index.html')
-      existing.add(`${dir}/${f.replace('.html', '')}`);
-  });
-}
-
-for (const raw of rawCards) {
-  const c = raw.html;
-  const type = raw.type;
-
-  // Skip link-only cards (<a class="card" href="...">)  pointing externally
+  // Skip link-only, field-note, and non-carousel cards
   if (/^<a[^>]*href="https?:\/\//.test(c)) continue;
-  // Skip link-only cards pointing to internal pages (already exist)
   if (/^<a[^>]*href="\//.test(c)) continue;
-  // Skip field-note cards
   if (type === 'field') continue;
 
-  // Must have a carousel
-  const carouselMatch = c.match(/data-carousel="([^"]+)"/);
-  if (!carouselMatch) continue;
-  const carouselId = carouselMatch[1];
+  const carouselM = c.match(/data-carousel="([^"]+)"/);
+  if (!carouselM) continue;
+  const carouselId = carouselM[1];
 
-  // Title
-  const titleM = c.match(/<div class="card-title"[^>]*>([\s\S]*?)<\/div>/);
+  // Title — handle both <div> and <h2>
+  const titleM = c.match(/<(?:div|h[1-6])\s+class="card-title"[^>]*>(?:<a[^>]*>)?([\s\S]*?)(?:<\/a>)?<\/(?:div|h[1-6])>/);
   const title = titleM ? squeeze(strip(titleM[1])) : '';
   if (!title) continue;
 
@@ -108,80 +94,77 @@ for (const raw of rawCards) {
   const tagM = c.match(/<span class="card-tag[^"]*">\[?([^\]<]+)\]?<\/span>/);
   const tag = tagM ? strip(tagM[1]) : 'Drop';
 
-  // Description text
-  const textM = c.match(/<div class="card-text"[^>]*>([\s\S]*?)<\/div>/);
-  const desc = textM ? squeeze(strip(textM[1])) : '';
+  // Card-level description (initial text shown)
+  const textM = c.match(/<(?:div|p) class="card-text"[^>]*>([\s\S]*?)<\/(?:div|p)>/);
+  const cardDesc = textM ? squeeze(strip(textM[1])) : '';
 
-  // Source link + domain
+  // Source link + price
   const srcM = c.match(/<(?:div|span) class="card-source"[^>]*>[\s\S]*?<a href="(https?:\/\/[^"]+)"[^>]*>([^<]+)<\/a>([\s\S]*?)<\/(?:div|span)>/);
   const sourceUrl = srcM ? srcM[1] : '';
   const sourceDomain = srcM ? strip(srcM[2]) : '';
   const priceM = srcM ? (srcM[3] || '').match(/·\s*(\$[\d,]+\s*[–\-]\s*\$[\d,]+)/) : null;
   const priceRange = priceM ? priceM[1] : '';
 
-  // Extract slides — two patterns:
-  //   1. <a href=PRODUCT><img src=IMG alt=ALT>..slide-info..</a>   (linked products)
-  //   2. <div class="gear-slide"><img src=IMG alt=ALT>...</div>     (unlinked)
+  // Slides: linked products <a href><img><slide-info></a>
   const slides = [];
-  // Pattern 1: linked
-  const linkedRe = /<div class="gear-slide">\s*<a href="([^"]+)"[^>]*>\s*<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"[\s\S]*?<\/a>\s*<\/div>/g;
+  const slideRe = /<div class="gear-slide">\s*<a href="([^"]+)"[^>]*>\s*<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"([\s\S]*?)<\/a>\s*<\/div>/g;
   let lm;
-  while ((lm = linkedRe.exec(c)) !== null) {
-    // Extract brand + name from slide-info if present
-    const brandM = lm[0].match(/class="gear-slide-brand">([^<]+)</);
-    const nameM  = lm[0].match(/class="gear-slide-name">([^<]+)</);
+  while ((lm = slideRe.exec(c)) !== null) {
+    const brandM = lm[4].match(/gear-slide-brand">([^<]+)/);
+    const nameM  = lm[4].match(/gear-slide-name">([^<]+)/);
     slides.push({
-      href: lm[1],
-      src: lm[2],
-      alt: lm[3],
+      href: lm[1], src: lm[2], alt: lm[3],
       brand: brandM ? strip(brandM[1]) : '',
       name: nameM ? strip(nameM[1]) : ''
     });
   }
-  // Pattern 2: unlinked (only if pattern 1 found nothing)
-  if (slides.length === 0) {
-    const unlinkedRe = /<div class="gear-slide"[^>]*>[\s\S]*?<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"[\s\S]*?<\/div>/g;
+  // Unlinked slides
+  if (!slides.length) {
+    const ulRe = /<div class="gear-slide"[^>]*>[\s\S]*?<img[^>]*src="([^"]+)"[^>]*alt="([^"]*)"([\s\S]*?)<\/div>/g;
     let um;
-    while ((um = unlinkedRe.exec(c)) !== null) {
-      slides.push({ href: sourceUrl, src: um[1], alt: um[2], brand: '', name: '' });
+    while ((um = ulRe.exec(c)) !== null) {
+      const brandM = um[3].match(/gear-slide-brand">([^<]+)/);
+      const nameM  = um[3].match(/gear-slide-name">([^<]+)/);
+      slides.push({
+        href: sourceUrl, src: um[1], alt: um[2],
+        brand: brandM ? strip(brandM[1]) : '',
+        name: nameM ? strip(nameM[1]) : ''
+      });
     }
   }
 
-  // Folder (always drops for now; guides/events have their own pages)
-  const folder = 'drops';
+  // Per-slide descriptions from _slideTexts
+  const perSlide = slideTexts[carouselId] || [];
+
   const slug = slugify(title);
-  const pagePath = `${folder}/${slug}`;
+  const pagePath = `drops/${slug}`;
 
-  const card = { carouselId, title, tag, desc, folder, slug, pagePath,
-                 sourceUrl, sourceDomain, priceRange, slides, type };
-  allCards.push(card);
-
-  // Already has a page?
-  if (existing.has(pagePath) || fs.existsSync(path.join(SITE_DIR, folder, slug + '.html'))) {
-    console.log(`  SKIP  ${pagePath} (exists)`);
-    continue;
-  }
-  // Already has a "readmore" link in the card? (wired in Layer 1)
-  if (c.includes('card-readmore')) {
-    console.log(`  SKIP  ${pagePath} (already wired)`);
-    continue;
-  }
-
-  toGenerate.push(card);
+  allCards.push({ carouselId, title, tag, cardDesc, sourceUrl, sourceDomain,
+                  priceRange, slides, perSlide, slug, pagePath, type });
 }
 
-console.log(`\nParsed ${allCards.length} carousel cards total.`);
-console.log(`Pages to generate: ${toGenerate.length}`);
-if (DRY_RUN) {
-  console.log('\n--- DRY RUN — listing planned pages ---');
-  toGenerate.forEach(c => console.log(`  ${c.pagePath}  (${c.slides.length} slides)  "${c.title}"`));
-  process.exit(0);
+console.log(`Parsed ${allCards.length} carousel cards.`);
+
+/* ── 4. Determine which pages to generate ────────────────── */
+const toGen = [];
+for (const card of allCards) {
+  if (manualSlugs.has(card.slug)) {
+    console.log(`  SKIP  ${card.pagePath} (manual page)`);
+    continue;
+  }
+  const fp = path.join(SITE, 'drops', card.slug + '.html');
+  if (fs.existsSync(fp) && !FORCE) {
+    console.log(`  SKIP  ${card.pagePath} (exists)`);
+    continue;
+  }
+  toGen.push(card);
 }
+console.log(`\nPages to generate: ${toGen.length}`);
+if (DRY) { toGen.forEach(c => console.log(`  ${c.pagePath} (${c.slides.length} slides, ${c.perSlide.length} texts)`)); process.exit(0); }
 
-/* ── Step 4 — hashtag generator ────────────────────────────── */
-
+/* ── 5. Hashtag helper ───────────────────────────────────── */
 function hashtags(title, tag) {
-  const t = new Set(['#TheGrassyIssue', '#GolfCulture']);
+  const t = new Set(['#TheGrassyIssue','#GolfCulture']);
   const lo = tag.toLowerCase();
   if (lo.includes('drop'))    t.add('#NewDrop');
   if (lo.includes('edit'))    t.add('#GearEdit');
@@ -202,65 +185,68 @@ function hashtags(title, tag) {
   if (tl.includes('towel'))   t.add('#GolfTowels');
   if (tl.includes('headcover') || tl.includes('cover')) t.add('#Headcovers');
   t.add('#GolfFashion');
-  return [...t].slice(0, 10);
+  return [...t].slice(0,10);
 }
 
-/* ── Step 5 — page template ────────────────────────────────── */
-
+/* ── 6. Page template ────────────────────────────────────── */
 function buildPage(card) {
-  const metaDesc = card.desc
-    ? card.desc.substring(0, 155).replace(/\s+\S*$/, '') + '…'
+  const editText = editorialWriteups[card.carouselId] || card.cardDesc || '';
+  const metaDesc = editText
+    ? editText.replace(/\n+/g,' ').substring(0,155).replace(/\s+\S*$/,'') + '…'
     : `${card.title} — curated by The Grassy Issue.`;
   const url = `https://thegrassyissue.com/${card.pagePath}`;
   const today = new Date().toISOString().split('T')[0];
   const tags = hashtags(card.title, card.tag);
-
   const tagColor = /drop|news/i.test(card.tag) ? 'flag' : 'grass';
-  const ctaText = card.sourceUrl ? 'Shop the Collection' : 'Back to Feed';
-  const ctaUrl  = card.sourceUrl || '/';
 
-  // Product grid
+  // Product grid with per-slide descriptions
   const productCards = card.slides.map((s, i) => {
-    const name = s.name || s.alt || `Item ${i + 1}`;
+    const displayName = s.name || s.alt || `Item ${i + 1}`;
+    const brand = s.brand || '';
     const link = s.href || card.sourceUrl || '#';
+    const desc = (card.perSlide[i] || '').trim();
+
     return `
     <a href="${esc(link)}" target="_blank" rel="noopener" class="product-card">
       <div class="product-img">
-        <img src="${esc(s.src)}" alt="${esc(s.alt || name)}" loading="lazy" />
+        <img src="${esc(s.src)}" alt="${esc(s.alt || displayName)}" loading="lazy" />
       </div>
       <div class="product-body">
-        <div class="product-name">${esc(name)}</div>
+        ${brand ? `<div class="product-brand">${esc(brand)}</div>` : ''}
+        <div class="product-name">${esc(displayName)}</div>
+        ${desc ? `<div class="product-desc">${esc(desc)}</div>` : ''}
         ${link !== '#' ? '<span class="product-link">Shop ↗</span>' : ''}
       </div>
     </a>`;
   }).join('\n');
 
-  // "More from the Feed" — pick 4 other carousel cards with images
+  // "More from the Feed" cross-links
   const related = allCards
     .filter(c => c.carouselId !== card.carouselId && c.slides.length > 0)
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 4);
+    .sort(() => Math.random() - 0.5).slice(0,4);
 
   const moreHtml = related.map(rc => {
     const img = rc.slides[0];
     return `
-    <a href="/${rc.pagePath}" class="more-drop-card">
-      <div class="more-drop-img"><img src="${esc(img.src)}" alt="${esc(rc.title)}" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">${esc(rc.title.substring(0, 45))}</div>
-        <div class="more-drop-brand">${esc(rc.tag)}</div>
+    <a href="/${rc.pagePath}" class="more-card">
+      <div class="more-card-img"><img src="${esc(img.src)}" alt="${esc(rc.title)}" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">${esc(rc.title.substring(0,45))}</div>
+        <div class="more-card-tag">${esc(rc.tag)}</div>
       </div>
     </a>`;
   }).join('\n');
 
-  // Split description into paragraphs (every ~2-3 sentences)
-  const descParas = card.desc
-    ? card.desc.split(/(?<=\.)\s+/).reduce((acc, s, i) => {
-        if (i % 3 === 0) acc.push([]);
-        acc[acc.length - 1].push(s);
-        return acc;
-      }, []).map(g => `<p>${g.join(' ')}</p>`).join('\n    ')
-    : '<p>Curated by The Grassy Issue.</p>';
+  // Use editorial writeup if available, fall back to card description
+  const editorial = editorialWriteups[card.carouselId];
+  let descParas;
+  if (editorial) {
+    descParas = editorial.split(/\n\n+/).map(p => `<p>${p.trim()}</p>`).join('\n    ');
+  } else if (card.cardDesc) {
+    descParas = card.cardDesc.split(/(?<=\.)\s+/).reduce((a,s,i)=>{if(i%3===0)a.push([]);a[a.length-1].push(s);return a;},[]).map(g=>`<p>${g.join(' ')}</p>`).join('\n    ');
+  } else {
+    descParas = '<p>Curated by The Grassy Issue.</p>';
+  }
 
   return `<!DOCTYPE html>
 <html lang="en">
@@ -334,11 +320,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -374,7 +362,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 <div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
   <a href="/#feed">${esc(card.tag)}</a><span>/</span>
-  ${esc(card.title.substring(0, 40))}
+  ${esc(card.title.substring(0,40))}
 </div>
 
 <header class="drop-header">
@@ -398,9 +386,9 @@ ${card.slides.length > 0 ? `<div class="drop-hero"><div class="drop-hero-img"><i
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>${card.slides.length} items</span></div>
       ${card.priceRange ? `<div class="sidebar-detail"><span class="l">Price range</span><span>${esc(card.priceRange)}</span></div>` : ''}
-      <a href="${esc(ctaUrl)}" ${card.sourceUrl ? 'target="_blank" rel="noopener"' : ''} class="sidebar-cta">${esc(ctaText)} ${card.sourceUrl ? '↗' : '←'}</a>
+      <a href="${esc(card.sourceUrl || '/')}" ${card.sourceUrl ? 'target="_blank" rel="noopener"' : ''} class="sidebar-cta">${card.sourceUrl ? 'Shop the Collection ↗' : '← Back to Feed'}</a>
       <div class="hashtags">
-        ${tags.map(h => `<span class="hashtag">${h}</span>`).join('\n        ')}
+        ${tags.map(h=>`<span class="hashtag">${h}</span>`).join('\n        ')}
       </div>
     </div>
   </aside>
@@ -428,24 +416,13 @@ ${moreHtml}
 </html>`;
 }
 
-/* ── Step 6 — write pages ──────────────────────────────────── */
-
+/* ── 7. Write pages ──────────────────────────────────────── */
 let created = 0;
-const newUrls = [];
-const today = new Date().toISOString().split('T')[0];
-
-for (const card of toGenerate) {
-  const dir = path.join(SITE_DIR, card.folder);
-  if (!fs.existsSync(dir)) fs.mkdirSync(dir, { recursive: true });
-  const fp = path.join(dir, card.slug + '.html');
-
-  fs.writeFileSync(fp, buildPage(card), 'utf8');
-  console.log(`  CREATE  ${card.pagePath}  (${card.slides.length} slides)`);
+for (const card of toGen) {
+  const dir = path.join(SITE, 'drops');
+  if (!fs.existsSync(dir)) fs.mkdirSync(dir, {recursive:true});
+  fs.writeFileSync(path.join(dir, card.slug + '.html'), buildPage(card), 'utf8');
+  console.log(`  CREATE  ${card.pagePath}  (${card.slides.length} slides, ${card.perSlide.length} texts)`);
   created++;
-  newUrls.push(`https://thegrassyissue.com/${card.pagePath}`);
 }
-
-console.log(`\n✓ Created ${created} new pages.`);
-if (newUrls.length) {
-  console.log(`\nNew sitemap URLs:\n${newUrls.map(u => '  ' + u).join('\n')}`);
-}
+console.log(`\n✓ Created ${created} pages with per-slide descriptions.`);

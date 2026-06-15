@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -136,7 +138,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>8 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -157,7 +159,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/RECYCLED_GREENSKEEPER_BUCKET_HAT_BLACK_01_8b60c382-95a6-4ca6-bf2d-470483272005.jpg?v=1757073078" alt="Manors Greenskeeper Bucket Hat — Black" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Manors</div>
         <div class="product-name">Greenskeeper Bucket Hat — Black</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -167,7 +171,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9426-WHT_72ca432d-f18f-4d84-bcf8-7eb21ff3d03f.jpg?v=1753723122" alt="Malbon Bucket Hat — White" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Malbon</div>
         <div class="product-name">Bucket Hat — White</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -177,7 +183,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-BU2502-SWING-KINGS-HAT-FRONT-7777_f8c8ed7e-1d54-42d5-a299-44b6a8366fe4.jpg?v=1747307093" alt="Birds of Condor Swing Kings Reversible Bucket Hat" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Birds of Condor</div>
         <div class="product-name">Swing Kings Reversible</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -187,7 +195,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9849-WYW-SR2.jpg?v=1775857647" alt="Malbon Reversible Velasco Bucket Hat" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Malbon</div>
         <div class="product-name">Reversible Velasco</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -197,7 +207,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf699e28b23daa20699e28b23dbe5.85131244699e28b23dbe5.jpg?v=1771972831" alt="Students Golf Seek Boonie Hat — Camo" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Students Golf</div>
         <div class="product-name">Seek Boonie Hat — Camo</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -207,7 +219,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-fore-tiger-bucket-bu23108-offwhite-osfa-front-7679.jpg?v=1696935601" alt="Birds of Condor Fore Tiger Bucket Hat" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Birds of Condor</div>
         <div class="product-name">Fore Tiger</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -217,7 +231,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/1770/9541/files/M-9796-DKO.png?v=1772579721" alt="Malbon Ripstop Bucket Hat — Dark Olive" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Malbon</div>
         <div class="product-name">Ripstop Bucket — Dark Olive</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -227,7 +243,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-BU2504-RAGE-HAT-FRONT-7793_1d97f765-4ff2-48b1-8126-13a4089280c1.jpg?v=1747307329" alt="Birds of Condor Rage Corduroy Bucket Hat" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Birds of Condor</div>
         <div class="product-name">Rage — Black Corduroy</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -241,35 +259,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/ald-golf-ss26-new-york-prep-hits-the-first-tee" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0302/7829/files/SS26WJ037_PRINTEDGOLFPOPOVER_BLACKWATCHPLAID_1.jpg?v=1776794030" alt="ALD Golf SS26 — New York Prep Hits the First Tee" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">ALD Golf SS26 — New York Prep Hits the First </div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/10-nikes-that-belong-on-the-course" class="more-card">
+      <div class="more-card-img"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9adf6c88-c7a5-4665-a960-0c64605863b2/PEGASUS+1+G.png" alt="10 Nikes That Belong on the Course" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">10 Nikes That Belong on the Course</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://images.squarespace-cdn.com/content/v1/685f4948293ca176c73dabb1/74885ba6-a9c8-4d7c-bc89-4e0423530e8b/Justin+Aragon+Dropping+a+putt+with+swag+putter+copy.jpg?format=1500w" alt="7 Indoor Simulators for Austin's Gross Rainy Days" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">7 Indoor Simulators for Austin's Gross Rainy </div>
-        <div class="more-drop-brand">Field Guide</div>
+    <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="more-card">
+      <div class="more-card-img"><img src="https://images.squarespace-cdn.com/content/v1/685f4948293ca176c73dabb1/74885ba6-a9c8-4d7c-bc89-4e0423530e8b/Justin+Aragon+Dropping+a+putt+with+swag+putter+copy.jpg?format=1500w" alt="7 Indoor Simulators for Austin's Gross Rainy Days" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">7 Indoor Simulators for Austin's Gross Rainy </div>
+        <div class="more-card-tag">Field Guide</div>
       </div>
     </a>
 
-    <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/211bbc22-d70a-4ecf-b796-31ec211bfb4d/WaterLions_LorenzoDePaolis.jpg?format=1500w" alt="The Firecracker Open — 81 Years at the Muny" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">The Firecracker Open — 81 Years at the Muny</div>
-        <div class="more-drop-brand">Field Guide</div>
+    <a href="/drops/the-2026-putter-drop-8-worth-the-cash" class="more-card">
+      <div class="more-card-img"><img src="https://labgolf.com/cdn/shop/files/LINK.2.1SOLE.jpg?v=1&amp;width=1200" alt="The 2026 Putter Drop — 8 Worth the Cash" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The 2026 Putter Drop — 8 Worth the Cash</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/brand-to-know-merrill-golf" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0560/2646/4443/files/Hoodielifestyle.jpg?v=1717109181" alt="Brand to Know — Merrill Golf" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Brand to Know — Merrill Golf</div>
-        <div class="more-drop-brand">Brand to Know</div>
+    <a href="/drops/technical-fabrics-heating-up-heres-12-of-our-favs" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V370LAK_SP24_M_ECOMM_BOTTOMS_FRONT_BOTTOMS_2.jpg?v=1743124960&amp;width=600" alt="Technical Fabrics Heating Up, Here's 12 of Our Favs" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Technical Fabrics Heating Up, Here's 12 of Ou</div>
+        <div class="more-card-tag">The Roundup</div>
       </div>
     </a>
   </div>

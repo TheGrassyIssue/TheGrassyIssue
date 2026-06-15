@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -135,7 +137,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>5 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -156,7 +158,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250432_39ef2562-a847-4827-986b-3735b62ab1df.png?v=1775427235" alt="Agronomy Workshop S/S Heavyweight Work Shirt — Navy" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Agronomy Workshop</div>
         <div class="product-name">S/S Heavyweight Work Shirt — Navy</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -166,7 +170,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_E-1.png?v=1773679915" alt="Agronomy Workshop L/S Heavyweight Work Shirt — Earth" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Agronomy Workshop</div>
         <div class="product-name">L/S Heavyweight Work Shirt — Earth</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -176,7 +182,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-1.png?v=1774638978" alt="Agronomy Workshop Hidden Tee Holder Detail" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Agronomy Workshop</div>
         <div class="product-name">Chest Pocket — Hidden Tee Holder</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -186,7 +194,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0832/6378/3105/files/TH_01.png?v=1774903113" alt="Agronomy Workshop Tree Hat — Navy" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Agronomy Workshop</div>
         <div class="product-name">Tree Hat — Navy</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -196,7 +206,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Blueprint-Model.png?v=1774650711" alt="Agronomy Workshop Unusual Lies Towel — Blueprint" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Agronomy Workshop</div>
         <div class="product-name">Unusual Lies Towel — Blueprint</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -210,35 +222,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/walker-golf-the-par-tec-drop" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.walkergolfthings.com/cdn/shop/files/Walker_Golf_Feb_WEB_022_700x934_crop_center.jpg?v=1771886071" alt="Walker Golf — The Par-Tec Drop" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Walker Golf — The Par-Tec Drop</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/brand-to-watch-kingfisher-golf" class="more-card">
+      <div class="more-card-img"><img src="https://images.squarespace-cdn.com/content/v1/683e05c0d72e3d55cd902385/9ff3ffd9-e36a-48c5-a5c0-a58539a31abe/DSC06723.jpg?format=1500w" alt="Brand to Watch: Kingfisher Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Brand to Watch: Kingfisher Golf</div>
+        <div class="more-card-tag">Brand to Watch</div>
       </div>
     </a>
 
-    <a href="/drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/cc33e5f0-fc75-4ee3-b4a0-58bdcdaf2ebe/CSB1.jpg?format=2500w" alt="Sentinel Golf x 1733 — Saltex Bags &amp; V4 Brush" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Sentinel Golf x 1733 — Saltex Bags &amp; V4 Brush</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/accessories-on-and-off-the-course" class="more-card">
+      <div class="more-card-img"><img src="https://dimpledivot.com/cdn/shop/files/Murphy_Black_2024_Original_Hickory_Wood_Golf_Brush_Cleaner_Dimple___Divot_A.jpg?v=1730089715&amp;width=2048" alt="Accessories On &amp; Off the Course" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Accessories On &amp; Off the Course</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/10-technical-fabric-tops-for-summer" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.fantlsport.com/cdn/shop/files/Untitled-1_0014_Layer-41_eeb1138b-08b6-4948-b0bc-332b1e713ded.png?v=1780298491&amp;width=600" alt="10 Technical Fabric Tops for Summer" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">10 Technical Fabric Tops for Summer</div>
-        <div class="more-drop-brand">The Roundup</div>
+    <a href="/drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond" class="more-card">
+      <div class="more-card-img"><img src="https://static1.squarespace.com/static/62df2055174c772d5220ba18/62df3a67d3f6270c6d7e2e1f/687168fa6588572799f28f54/1768931660509/MOKCINGBIRD2.jpg?format=1500w" alt="The Tee Edit — 14 independent tees for the fairway and beyond" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Tee Edit — 14 independent tees for the fa</div>
+        <div class="more-card-tag">The Roundup</div>
       </div>
     </a>
 
-    <a href="/drops/aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0302/7829/files/SS26_GOLF_LB_04_013_R14_0faa5219-09e1-41eb-8061-398bd72c7a6a.jpg?v=1776801704" alt="Aimé Leon Dore SS26 Golf: Croc-Embossed FootJoys and a Sweater Your Grandfather Would Approve Of" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Aimé Leon Dore SS26 Golf: Croc-Embossed FootJ</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/12-bold-tees-that-belong-in-your-bag" class="more-card">
+      <div class="more-card-img"><img src="https://quietgolf.com/cdn/shop/files/MONOGRAMPOCKETDUSTYBLUE_1930c5ee-56c8-4915-83e3-a40d54e97288.jpg?v=1775861112" alt="12 Bold Tees That Belong in Your Bag" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">12 Bold Tees That Belong in Your Bag</div>
+        <div class="more-card-tag">Gear Guide</div>
       </div>
     </a>
   </div>

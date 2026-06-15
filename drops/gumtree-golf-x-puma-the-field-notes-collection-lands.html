@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -134,7 +136,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>5 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -155,7 +157,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="/images/gumtree-puma-1.jpg" alt="PUMA x Gumtree Golf Field Notes lookbook" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Gumtree × PUMA</div>
         <div class="product-name">Field Notes — Lookbook</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -165,7 +169,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="/images/gumtree-puma-2.jpg" alt="PUMA x Gumtree Golf collab on course" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Gumtree × PUMA</div>
         <div class="product-name">Field Notes — On Course</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -175,7 +181,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="/images/gumtree-puma-3.jpg" alt="PUMA x Gumtree Golf product detail" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Gumtree × PUMA</div>
         <div class="product-name">Field Notes — Collection Detail</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -185,7 +193,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="/images/gumtree-puma-4.jpg" alt="Gumtree Golf &amp; Nature Club — Just Out For A Walk" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Gumtree</div>
         <div class="product-name">Just Out For A Walk</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -195,7 +205,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="/images/gumtree-puma-5.jpg" alt="Gumtree Golf &amp; Nature Club lifestyle" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Gumtree</div>
         <div class="product-name">Field Notes — Nature First</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -209,35 +221,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/10-nikes-that-belong-on-the-course" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9adf6c88-c7a5-4665-a960-0c64605863b2/PEGASUS+1+G.png" alt="10 Nikes That Belong on the Course" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">10 Nikes That Belong on the Course</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site" class="more-card">
+      <div class="more-card-img"><img src="https://jain.golf/cdn/shop/products/JAIN.GOLF-2.jpg?v=1678145554" alt="The MacKenzie Collab Edit — 6 bags you can't buy on their site." loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The MacKenzie Collab Edit — 6 bags you can't </div>
+        <div class="more-card-tag">Drop</div>
       </div>
     </a>
 
-    <a href="/drops/brand-to-know-mogshade" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.mogshadegolf.com/cdn/shop/files/estate-headcover-152093.jpg?width=1200" alt="Brand to Know — Mogshade" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Brand to Know — Mogshade</div>
-        <div class="more-drop-brand">Brand to Know</div>
+    <a href="/drops/the-hats-and-towels-edit" class="more-card">
+      <div class="more-card-img"><img src="https://framerusercontent.com/images/fBngOx9OuGX6aXfybQYtWwCys.png?width=2000&amp;height=2000" alt="The Hats &amp; Towels Edit" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Hats &amp; Towels Edit</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/ssc-x-byrdie-golf-social-wear-just-dropped" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.sugarloafsocialclub.com/cdn/shop/files/SSCSST001-BLTGRNS_1copy.jpg?v=1780605083&amp;width=900" alt="SSC x Byrdie Golf — Social Wear Just Dropped" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">SSC x Byrdie Golf — Social Wear Just Dropped</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="more-card">
+      <div class="more-card-img"><img src="https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/211bbc22-d70a-4ecf-b796-31ec211bfb4d/WaterLions_LorenzoDePaolis.jpg?format=1500w" alt="The Firecracker Open — 81 Years at the Muny" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Firecracker Open — 81 Years at the Muny</div>
+        <div class="more-card-tag">Field Guide</div>
       </div>
     </a>
 
-    <a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://waterwhendry.com/cdn/shop/files/3X009910_VSCO_2.jpg?width=1200" alt="Water When Dry: The Garden Metaphor That Actually Works" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Water When Dry: The Garden Metaphor That Actu</div>
-        <div class="more-drop-brand">Brand to Know</div>
+    <a href="/drops/manors-golf-ss26-collection" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/Ranger_Golf_Short_-_PEBBLE_94_crop.jpg?v=1777478003" alt="Manors Golf — SS26 Collection" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Manors Golf — SS26 Collection</div>
+        <div class="more-card-tag">New Drop</div>
       </div>
     </a>
   </div>

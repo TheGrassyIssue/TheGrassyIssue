@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -134,7 +136,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>6 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -156,7 +158,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0904/5914/4474/files/aae-right-shoe-side-angle-g-fore-mg4-24-spikeless.jpg?v=1774938368" alt="G/FORE MG4+ Spikeless Golf Shoe" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">G/FORE</div>
         <div class="product-name">G/FORE MG4+ Spikeless Golf Shoe</div>
+        
         
       </div>
     </a>
@@ -166,7 +170,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0542/2419/1681/products/Jordan-Eastside-Golf-ADG-03.png?v=1668262165" alt="Eastside Golf x Air Jordan ADG 4 Grey" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Eastside Golf × Jordan</div>
         <div class="product-name">Eastside Golf x Air Jordan ADG 4 Grey</div>
+        
         
       </div>
     </a>
@@ -176,7 +182,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0264/8060/7341/files/Nike-Golf-Air-Jordan-1-Low-G-Spiked-Shoes-IQ3417-100-1_d52322ef-8cbd-4176-89ef-02aa627be506.jpg?v=1775037979" alt="Nike Air Jordan 1 Low G Spiked White/Fir" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Nike (Jordan)</div>
         <div class="product-name">Nike Air Jordan 1 Low G Spiked White/Fir</div>
+        
         
       </div>
     </a>
@@ -186,7 +194,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0558/4169/files/nobull-footwear-men-s-leather-golf-shoe-1194038334.png?v=1760798655" alt="NOBULL Leather Golf Shoe White" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">NOBULL</div>
         <div class="product-name">NOBULL Leather Golf Shoe White</div>
+        
         
       </div>
     </a>
@@ -196,7 +206,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0605/9583/1015/files/FootJoyPremiereSeriesPackardMen_sSpikedGolfShoes2026-54561_2_a06f0da4-2082-4496-b9f3-922d338a7fc2.jpg?v=1770383523" alt="FootJoy Premiere Series Packard 2026" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">FootJoy</div>
         <div class="product-name">FootJoy Premiere Series Packard 2026</div>
+        
         
       </div>
     </a>
@@ -206,7 +218,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shopify.com/s/files/1/0264/8060/7341/files/New-Balance-997-Golf-Shoes-MG997WK-1.png?v=1775135290" alt="New Balance 997 Golf Shoe White/Black" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">New Balance</div>
         <div class="product-name">New Balance 997 Golf Shoe White/Black</div>
+        
         
       </div>
     </a>
@@ -220,35 +234,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/10-nikes-that-belong-on-the-course" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9adf6c88-c7a5-4665-a960-0c64605863b2/PEGASUS+1+G.png" alt="10 Nikes That Belong on the Course" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">10 Nikes That Belong on the Course</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/manors-golf-ss26-collection" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/Ranger_Golf_Short_-_PEBBLE_94_crop.jpg?v=1777478003" alt="Manors Golf — SS26 Collection" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Manors Golf — SS26 Collection</div>
+        <div class="more-card-tag">New Drop</div>
       </div>
     </a>
 
-    <a href="/drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/cc33e5f0-fc75-4ee3-b4a0-58bdcdaf2ebe/CSB1.jpg?format=2500w" alt="Sentinel Golf x 1733 — Saltex Bags &amp; V4 Brush" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Sentinel Golf x 1733 — Saltex Bags &amp; V4 Brush</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/5-post-round-evening-spots-in-austin" class="more-card">
+      <div class="more-card-img"><img src="/images/19thhole/equipment-room.jpg" alt="5 Post-Round Evening Spots in Austin" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">5 Post-Round Evening Spots in Austin</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
 
-    <a href="/drops/8-special-day-rounds-near-austin" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.cwgolfarch.com/wp-content/uploads/2021/02/Hole-3.jpg" alt="8 Special Day Rounds Near Austin" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">8 Special Day Rounds Near Austin</div>
-        <div class="more-drop-brand">Field Guide</div>
+    <a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" class="more-card">
+      <div class="more-card-img"><img src="https://waterwhendry.com/cdn/shop/files/3X009910_VSCO_2.jpg?width=1200" alt="Water When Dry: The Garden Metaphor That Actually Works" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Water When Dry: The Garden Metaphor That Actu</div>
+        <div class="more-card-tag">Brand to Know</div>
       </div>
     </a>
 
-    <a href="/drops/10-rangefinders-from-90-to-600" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://gogogosport.com/cdn/shop/files/1_78610967-a183-473a-8b95-d70b62edfffd.jpg?v=1750401675" alt="10 Rangefinders from $90 to $600" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">10 Rangefinders from $90 to $600</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/malbon-golf-studio-seoul-ss26" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/1770/9541/files/G6121PPI47-GRN.png?v=1776974701" alt="Malbon Golf — Studio Seoul SS26" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Malbon Golf — Studio Seoul SS26</div>
+        <div class="more-card-tag">Drop</div>
       </div>
     </a>
   </div>

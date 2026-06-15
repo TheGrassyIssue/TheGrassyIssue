@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -134,7 +136,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>5 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -157,7 +159,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://www.outdoorsports.com/cdn/shop/files/Salomon-Mens-Sense_Ride_5_GTX-Black_Magnet_Black-Side_600x.png?v=1698869826" alt="Salomon Sense Ride 5 Gore-Tex" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Salomon</div>
         <div class="product-name">Sense Ride 5 GTX</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -167,7 +171,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://mountaineerjourney.com/wp-content/uploads/2025/05/WP-Featured-Images-1-4.webp" alt="HOKA Speedgoat 6 GTX" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">HOKA</div>
         <div class="product-name">Speedgoat 6 GTX</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -177,7 +183,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.runrepeat.com/storage/gallery/product_primary/40554/merrell-agility-peak-5-gtx-22337924-720.jpg" alt="Merrell Agility Peak 5 Gore-Tex" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Merrell</div>
         <div class="product-name">Agility Peak 5 GTX</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -187,7 +195,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://cdn.shoplightspeed.com/shops/613930/files/70571839/on-cloudventure-waterproof-running-shoes-mens.jpg" alt="On Cloudventure Waterproof" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">On</div>
         <div class="product-name">Cloudventure Waterproof</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -197,7 +207,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://mountaineerjourney.com/wp-content/uploads/2025/07/11-2.webp" alt="Altra Lone Peak 8" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Altra</div>
         <div class="product-name">Lone Peak 8</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -211,35 +223,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/the-2026-putter-drop-8-worth-the-cash" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://labgolf.com/cdn/shop/files/LINK.2.1SOLE.jpg?v=1&amp;width=1200" alt="The 2026 Putter Drop — 8 Worth the Cash" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">The 2026 Putter Drop — 8 Worth the Cash</div>
-        <div class="more-drop-brand">The Edit</div>
+    <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="more-card">
+      <div class="more-card-img"><img src="https://hancockgolfcourseconservancy.org/wp-content/uploads/2020/11/cropped-IMG_2838.jpg" alt="Ranking the Muni Grub — Every On-Course Food Spot in Austin" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Ranking the Muni Grub — Every On-Course Food </div>
+        <div class="more-card-tag">Field Guide</div>
       </div>
     </a>
 
-    <a href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0129/1462/files/LakersLarge.png?v=1776288871" alt="The Headcover Edit — 6 covers that deserve their own bag tag." loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">The Headcover Edit — 6 covers that deserve th</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/the-jordan-golf-spring-edit-chicago-drops-may-10" class="more-card">
+      <div class="more-card-img"><img src="https://sneakernews.com/wp-content/uploads/2026/03/air-jordan-1-low-golf-chicago-iq3417-600.jpg" alt="The Jordan Golf Spring Edit — Chicago drops May 10." loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Jordan Golf Spring Edit — Chicago drops M</div>
+        <div class="more-card-tag">Drop</div>
       </div>
     </a>
 
-    <a href="/drops/vessel-season-opener-26-masters-green-croc-texture-already-s" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://vesselgolf.com/cdn/shop/files/PLAYERVPRO-SEEASONOPENER.jpg?v=1774628378&amp;width=2048" alt="Vessel Season Opener '26 — Masters green, croc texture, already selling out." loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Vessel Season Opener '26 — Masters green, cro</div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/the-shoe-edit-6-pairs-that-belong-on-and-off-the-course" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/0904/5914/4474/files/aae-right-shoe-side-angle-g-fore-mg4-24-spikeless.jpg?v=1774938368" alt="The Shoe Edit — 6 pairs that belong on and off the course." loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">The Shoe Edit — 6 pairs that belong on and of</div>
+        <div class="more-card-tag">Drop</div>
       </div>
     </a>
 
-    <a href="/drops/ald-golf-ss26-new-york-prep-hits-the-first-tee" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://cdn.shopify.com/s/files/1/0302/7829/files/SS26WJ037_PRINTEDGOLFPOPOVER_BLACKWATCHPLAID_1.jpg?v=1776794030" alt="ALD Golf SS26 — New York Prep Hits the First Tee" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">ALD Golf SS26 — New York Prep Hits the First </div>
-        <div class="more-drop-brand">Drop</div>
+    <a href="/drops/manors-golf-ss26-collection" class="more-card">
+      <div class="more-card-img"><img src="https://cdn.shopify.com/s/files/1/0713/1693/0869/files/Ranger_Golf_Short_-_PEBBLE_94_crop.jpg?v=1777478003" alt="Manors Golf — SS26 Collection" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Manors Golf — SS26 Collection</div>
+        <div class="more-card-tag">New Drop</div>
       </div>
     </a>
   </div>

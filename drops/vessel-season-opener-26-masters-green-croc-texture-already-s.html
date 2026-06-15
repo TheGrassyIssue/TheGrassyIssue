@@ -70,11 +70,13 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
 .products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
 .products-hdr{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:24px}
-.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.products-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
 .product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
-.product-body{padding:18px 20px}
-.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:8px}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
 .product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
 .more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
 .more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
@@ -135,7 +137,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>5 items</span></div>
       
-      <a href="/"  class="sidebar-cta">Back to Feed ←</a>
+      <a href="/"  class="sidebar-cta">← Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -155,7 +157,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://vesselgolf.com/cdn/shop/files/PLAYERVPRO-SEEASONOPENER.jpg?v=1774628378&amp;width=2048" alt="Vessel 2026 Season Opener Player V Pro Stand" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Vessel</div>
         <div class="product-name">Player V Pro Stand</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -165,7 +169,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://vesselgolf.com/cdn/shop/files/SO26LuxStand.webp?v=1773780647&amp;width=2048" alt="Vessel 2026 Season Opener Lux Stand" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Vessel</div>
         <div class="product-name">Lux Stand</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -175,7 +181,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://vesselgolf.com/cdn/shop/files/SEASONOPENER2026-5.jpg?v=1773679296&amp;width=2048" alt="Vessel 2026 Season Opener Lux Pro Cart II" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Vessel</div>
         <div class="product-name">Lux Pro Cart II</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -185,7 +193,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://vesselgolf.com/cdn/shop/files/SEASONOPENER-PRIMESTAFF2.0-10_e24d259a-4916-4de7-946d-a8ba0854276b.jpg?v=1773849764&amp;width=2048" alt="Vessel 2026 Season Opener Prime 2.0 Staff" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Vessel</div>
         <div class="product-name">Prime 2.0 Staff</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -195,7 +205,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <img src="https://vesselgolf.com/cdn/shop/files/SEASONOPENER2026_8183733b-f5f3-4c5b-815a-876c2a485a34.jpg?v=1773680179&amp;width=2048" alt="Vessel 2026 Season Opener PrimeX 2.0 Backpack" loading="lazy" />
       </div>
       <div class="product-body">
+        <div class="product-brand">Vessel</div>
         <div class="product-name">PrimeX 2.0 Backpack</div>
+        
         <span class="product-link">Shop ↗</span>
       </div>
     </a>
@@ -209,35 +221,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
   <div class="more-grid">
 
-    <a href="/drops/where-to-watch-the-world-cup-in-austin" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1200,ar_4:3,g_center,f_auto/cms/haymaker-austin-nicolai-mccrary" alt="Where to Watch the World Cup in Austin" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Where to Watch the World Cup in Austin</div>
-        <div class="more-drop-brand">News</div>
+    <a href="/drops/12-bold-tees-that-belong-in-your-bag" class="more-card">
+      <div class="more-card-img"><img src="https://quietgolf.com/cdn/shop/files/MONOGRAMPOCKETDUSTYBLUE_1930c5ee-56c8-4915-83e3-a40d54e97288.jpg?v=1775861112" alt="12 Bold Tees That Belong in Your Bag" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">12 Bold Tees That Belong in Your Bag</div>
+        <div class="more-card-tag">Gear Guide</div>
       </div>
     </a>
 
-    <a href="/drops/8-best-practice-facilities-around-austin" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://www.harveypenickgc.com/wp-content/uploads/sites/5426/2015/10/Harvey-Penick-GC-hole7-1700-X-500.jpg" alt="8 Best Practice Facilities Around Austin" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">8 Best Practice Facilities Around Austin</div>
-        <div class="more-drop-brand">Field Guide</div>
+    <a href="/drops/6-golf-tees-that-cost-more-than-your-lunch" class="more-card">
+      <div class="more-card-img"><img src="https://flightpathgolf.com/cdn/shop/files/01_Green.jpg?v=1721337556" alt="6 Golf Tees That Cost More Than Your Lunch" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">6 Golf Tees That Cost More Than Your Lunch</div>
+        <div class="more-card-tag">Gear Guide</div>
       </div>
     </a>
 
-    <a href="/drops/5-zero-torque-putters-worth-your-attention" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://thegolfwire.com/wp-content/uploads/2026/04/MoneyShotPocket21.jpg" alt="5 Zero Torque Putters Worth Your Attention" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">5 Zero Torque Putters Worth Your Attention</div>
-        <div class="more-drop-brand">Gear Guide</div>
+    <a href="/drops/12-putter-covers-were-eyeing" class="more-card">
+      <div class="more-card-img"><img src="https://studentsgolf.com/cdn/shop/files/Studentsgolf67b6f31aad6be067b6f31aad878.6034779267b6f31aad878.jpg?v=1756412295&amp;width=600" alt="12 Putter Covers We're Eyeing" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">12 Putter Covers We're Eyeing</div>
+        <div class="more-card-tag">The Roundup</div>
       </div>
     </a>
 
-    <a href="/drops/brand-to-watch-kingfisher-golf" class="more-drop-card">
-      <div class="more-drop-img"><img src="https://images.squarespace-cdn.com/content/v1/683e05c0d72e3d55cd902385/9ff3ffd9-e36a-48c5-a5c0-a58539a31abe/DSC06723.jpg?format=1500w" alt="Brand to Watch: Kingfisher Golf" loading="lazy" /></div>
-      <div class="more-drop-body">
-        <div class="more-drop-name">Brand to Watch: Kingfisher Golf</div>
-        <div class="more-drop-brand">Brand to Watch</div>
+    <a href="/drops/ssc-x-byrdie-golf-social-wear-just-dropped" class="more-card">
+      <div class="more-card-img"><img src="https://www.sugarloafsocialclub.com/cdn/shop/files/SSCSST001-BLTGRNS_1copy.jpg?v=1780605083&amp;width=900" alt="SSC x Byrdie Golf — Social Wear Just Dropped" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">SSC x Byrdie Golf — Social Wear Just Dropped</div>
+        <div class="more-card-tag">The Edit</div>
       </div>
     </a>
   </div>
