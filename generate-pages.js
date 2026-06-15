@@ -67,7 +67,8 @@ const manualSlugs = new Set([
   'ald-golf-ss26-new-releases', 'muni-kids-10-years', 'manors-gentleman-jack',
   'malbon-summer-gallo-colorido', 'metalwood-ss26-picks', 'sugarloaf-ss26',
   'premium-tees-carousel', 'bold-tees-carousel', 'hats-carousel',
-  'best-golf-streetwear-brands-2026', 'manors-ss26'
+  'best-golf-streetwear-brands-2026', 'manors-ss26',
+  'brand-to-know-read-the-green'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
