@@ -9650,6 +9650,9 @@
       carousel.goTo = goTo;
       carousel.getTotal = () => total;
       carousel.getCurrent = () => current;
+
+      // Initialize slide 1 text on load
+      goTo(0);
     });
   }
 
