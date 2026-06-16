@@ -1913,6 +1913,52 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+    <!-- MUNI GUIDE — Austin BBQ Field Guide -->
+  <div class="card" data-type="guide">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Muni Guide]</span>
+      <div class="gear-carousel" data-carousel="austinbbq12">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://kgbbq.com" target="_blank" rel="noopener">
+              <img src="/images/austin-bbq/kg-bbq.jpg" alt="KG BBQ brisket and sides at Oddwood Brewing" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">KG BBQ</div><div class="gear-slide-name">Egyptian-Texas Fusion · Manor Rd</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://leroyandlewisbbq.com" target="_blank" rel="noopener">
+              <img src="/images/austin-bbq/leroy-lewis.jpg" alt="LeRoy and Lewis BBQ" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">LeRoy and Lewis</div><div class="gear-slide-name">New School BBQ · Emerald Forest Dr</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://theinterstellarbbq.com" target="_blank" rel="noopener">
+              <img src="/images/austin-bbq/interstellar-bbq.jpg" alt="InterStellar BBQ brisket" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">InterStellar BBQ</div><div class="gear-slide-name">Traditional Craft · RR 620</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://labarbecue.com" target="_blank" rel="noopener">
+              <img src="/images/austin-bbq/la-barbecue.jpg" alt="La Barbecue brisket" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">La Barbecue</div><div class="gear-slide-name">Spectacular Beef Ribs · E Cesar Chavez</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">June 16, 2026 · Muni Guide</div>
+      <div class="card-title"><a href="/drops/austin-bbq-field-guide" style="color:inherit;text-decoration:none;border-bottom:none;">The Austin BBQ Field Guide — 12 Spots After the Round</a></div>
+      <p class="card-text" data-slidetext="austinbbq12">KG BBQ — Egyptian-Texas fusion from pitmaster Kareem El-Ghayesh at Oddwood Brewing on Manor Road. Sumac and pomegranate-rubbed brisket, lamb ribs, and a Mediterranean sausage that rewrites what you thought BBQ could be. Texas Monthly Top 50 and Michelin Bib Gourmand. Fri–Sun, 11am until it's gone.</p>
+      <div class="gear-dots" data-dots="austinbbq12"></div>
+      <div class="gear-counter" data-counter="austinbbq12">1 / 4</div>
+      <div class="card-source"><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></div>
+      <a href="/drops/austin-bbq-field-guide" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+    </div>
+  </div>
+
     <!-- BRAND TO KNOW — Read The Green -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -9886,6 +9932,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    austinbbq12: [
+      "KG BBQ — Egyptian-Texas fusion from pitmaster Kareem El-Ghayesh at Oddwood Brewing on Manor Road. Sumac and pomegranate-rubbed brisket, lamb ribs, and a Mediterranean sausage that rewrites what you thought BBQ could be. Texas Monthly Top 50 and Michelin Bib Gourmand. Fri–Sun, 11am until it's gone.",
+      "LeRoy and Lewis — The #2 BBQ joint in Texas according to Texas Monthly and the only BBQ truck in America with a Michelin star. Evan LeRoy and Sawyer Lewis do nose-to-tail, seasonal BBQ out of a trailer on Emerald Forest Drive. The bacon ribs on Saturdays are legend. Show up early.",
+      "InterStellar BBQ — Michelin-starred traditional craft BBQ out on RR 620. John Bates runs one of the most consistent smokers in Central Texas — the brisket is textbook, the beef rib is massive, and the turkey is an under-the-radar star. Texas Monthly Top 50 since 2021.",
+      "La Barbecue — LeAnn Mueller carries on the Mueller family BBQ dynasty at the east side trailer on Cesar Chavez. The beef rib is one of the best single items in Austin BBQ — peppery bark, clean smoke, absurdly tender. Michelin-starred with shorter lines than that other famous spot down the road."
+    ],
     summerstyle10: [
       "Ryan Peake — The outlaw redemption arc. Left-handed, ex-gang member turned pro golfer, anti-establishment energy on and off the course. Counter-cultural in a sport that rarely allows it. @ryanpeakegolf",
       "Anthony Kim — The comeback and the fit. Malbon equity partner, LIV Golf dark horse, and the rare player who disappeared for a decade and came back cooler. The real one. @anthonykimgolf",

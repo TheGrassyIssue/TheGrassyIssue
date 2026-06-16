@@ -68,7 +68,8 @@ const manualSlugs = new Set([
   'malbon-summer-gallo-colorido', 'metalwood-ss26-picks', 'sugarloaf-ss26',
   'premium-tees-carousel', 'bold-tees-carousel', 'hats-carousel',
   'best-golf-streetwear-brands-2026', 'manors-ss26',
-  'brand-to-know-read-the-green'
+  'brand-to-know-read-the-green',
+  'austin-bbq-field-guide'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
