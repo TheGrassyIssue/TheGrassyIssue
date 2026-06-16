@@ -1,17 +1,18 @@
-# Drop Scout Report — 2026-06-15 (Monday)
+# Drop Scout Report — 2026-06-16 (Tuesday)
 
 ## Summary
-- **0 new draft cards.** No genuinely new, verified drop in the last 48h across all 41 brands. Several search results *looked* new but date-checked as old or 2025 — flagged below so they don't get re-drafted.
-- **0 new brand discoveries.** "Up-and-coming 2026" roundups returned only already-tracked or off-aesthetic names (Three Putt, Radry, Southside Golf Co).
-- **0 active on-brand giveaways.** Only off-brand corporate sweepstakes (Cobra/Titleist Father's Day, expired June 10). Indie giveaways run on IG Stories, which web search doesn't index.
-- It's **U.S. Open week** (Shinnecock, June 18–21). The single most timely thing on the board is the standing **Seamus U.S. Open** draft.
+- **0 new draft cards.** No genuinely new, verified drop in the last 48h across all 41 brands. Everything surfacing in search was already-tracked, seasonal, or a misdated old release (flagged below).
+- **0 new brand discoveries.** "Up-and-coming 2026" roundups returned only already-tracked or off-aesthetic names (Three Putt, Radry) plus Goatlane — established since 2020, noted below but not new.
+- **0 active on-brand giveaways.** Nothing indexed. On-brand indie giveaways run on IG Stories, which web search doesn't reach.
+- **U.S. Open week begins Thursday (Shinnecock, June 18–21).** The single most time-sensitive thing on the board is the standing **Seamus U.S. Open** draft — and Seamus's collection items ship **today (June 16)**, so it's now fully live, not presale. Publish it this week if you publish anything.
 
 ---
 
 ## False positives caught this run (do NOT draft)
-- **Gumtree "State Flower Collection"** — looks like a fresh Gumtree drop (Japanese lace linen shirts, embroidered state-flower patches, state-flower tee). It's from **July 2023** (Hypebeast 2023/7). Not new.
-- **LIV Golf x Malbon capsule** — surfaced with "June 2026" dates but the launch was **LIV Golf Dallas, June 27–29, 2025** at Maridoe. Not new, and LIV-branded reads more pro-circuit merch than on-aesthetic anyway.
-- **Eastside x Mercedes-Benz women's capsule** — recirculating in search; original release was **April 2024**.
+- **Bogey Boys x adidas (MC80 / terry tracksuit)** — search snippets pushed a "available June 14" line. June 14 was a **Sunday** in 2026 but a Wednesday in 2023; the actual launch was **June 14, 2023**. Already voided in `2026-06-12-bogey-boys-adidas-mc80.html`. Not new.
+- **Gumtree "State Flower Collection"** — recirculating again. From **July 2023**. Not new.
+- **Eastside x Mercedes-Benz women's capsule** — still recirculating; original release **April 2024**.
+- **Metalwood x adidas (Predator Sala)** — Jan 2026 release, still the brand's latest. Not new this window.
 
 ---
 
@@ -19,11 +20,11 @@
 - None.
 
 ## Still-Open Drafts From Prior Runs (verify before publishing)
-- `2026-06-01-seamus-us-open-shinnecock.html` — **Most timely card on the board.** Confirmed live: washed blues/reds, seersucker, nautical signal flags, veg-tanned leather; driver covers, hip flask, head covers, ball markers. Tournament **June 18–21**. Publish this week if you publish anything.
+- `2026-06-01-seamus-us-open-shinnecock.html` — **Most timely card on the board, and now live.** Collection items shipped June 16 (no longer presale): washed blues/reds, seersucker, nautical signal flags, veg-tanned Oregon leather; driver/fairway/mallet covers, hip flask, ball markers, drawstring pouch. Tournament **June 18–21**. If publishing, switch any "presale/ships June 16" framing to "available now."
 - `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr "Play or Perish" shoe + Golf Galaxy retail. Still standing.
-- `2026-06-05-found-golf-brand-to-know.html` — Brand-to-Know, still unpublished.
+- `2026-06-05-found-golf-brand-to-know.html` — Brand-to-Know, still unpublished. Good bench piece.
 - `2026-06-01-malbon-x-gap.html` — Live since June 6. Switch copy from "upcoming" to "live" if publishing.
-- `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, nine pieces.
+- `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, nine pieces. Still latest from Manors.
 
 ---
 
@@ -32,45 +33,46 @@
 | Brand | Activity |
 |-------|----------|
 | Manors | Gentleman Jack capsule (drafted) still latest. No new drop. |
-| Malbon | x Gap (live) + x HVN standing. LIV x Malbon is a 2025 item — skip. No new card. |
-| Metalwood Studio | adidas SS26 (Predator Sala, Jan release) still latest. No new drop. |
-| Eastside Golf | Nike "Take Flight" standing. Eastside x Air Jordan 12 ($200) is *upcoming* per Sole Retriever but undated — bench it, don't draft yet. |
+| Malbon | x Gap (live) + x Honma + x HVN standing. No new card. |
+| Metalwood Studio | adidas SS26 (Predator Sala, Jan) still latest. No new drop. |
+| Eastside Golf | Nike "Take Flight" + Bridgestone x Eastside TOUR BX ball standing. Air Jordan 12 still undated — bench, don't draft. No new drop. |
 | Quiet Golf | SSC collab + seasonal tees standing. No new drop. |
-| Bogey Boys | Summer Course Collection still live. No new drop. (adidas "collab" remains the voided 2023 false positive.) |
+| Bogey Boys | Summer Course Collection still live. adidas "June 14" is the 2023 false positive (voided). No new drop. |
 | Devereux | Mount Gay capsule (May 18, drafted) still latest. No new drop. |
-| Random Golf Club | Classics + Mad Scramble Tour events. "Bad Birdie" reference is an event door-prize, not a collab. No new product. |
-| Gumtree Golf & Nature | Puma Field Notes standing. State Flower = 2023, not new. No new drop. |
+| Random Golf Club | Classics + events (The Loop June 24–25, Lawsonia June 29). Bad Birdie tie remains an event/door-prize, not a product collab. No new product. |
+| Gumtree Golf & Nature | Puma Field Notes standing. State Flower = 2023. No new drop. |
 | Sentinel Golf | Pre-order model; nothing new this window. |
-| Fyfe Golf | Mackenzie collab confirmed **July 2026**. Nothing this window. |
+| Fyfe Golf | Mackenzie collab confirmed **July 2026** (early access open). Nothing this window. |
 | Mackenzie Golf Bags | Fyfe collab July. Nothing this window. |
 
 ## Extended Watchlist Highlights (13–41)
-- **Sugarloaf (#18)** — SSC x Clubhaus is part of SS26 (Japan shop collab, knit covers made in USA by Fore Ewe). Seasonal, not a fresh window. Payntr collab already drafted.
-- **Radmor (#31)** — "Chasing Light" Spring '26 + Summer Lifestyle Collection shipping. Seasonal, drafted previously.
-- **Students / Casualist / Left of Field (#15–16)** — Paris Golf Gallery showing **June 23–29**. Re-scout ~June 22.
+- **Seamus (#29)** — U.S. Open Shinnecock collection now shipping (June 16). Drives the standing draft. See above.
+- **Sugarloaf (#18)** — First Major Drop of 2026 (SS26) live; SSC x Clubhaus + Payntr (drafted) standing. Running a Father's Day promo that ends **6/16 noon EST** — promo, not a drop.
+- **Radmor (#31)** — "Chasing Light" Spring '26 + Summer Lifestyle Collection. Seasonal, drafted previously.
+- **Students / Casualist / Left of Field (#15, 14, 15)** — Paris Golf Gallery activity expected **June 23–29** (Fashion Week timing). **Re-scout ~June 22.** Search this run returned only the 2025 recap.
 - **Macade / Public Drip / Whim / Sounder** — Steady-state, no detectable new activity in the last 48h.
-- **Dormie / Seamus / Winston (headcovers)** — No new headcover drop indexed beyond Seamus's U.S. Open line.
+- **Dormie / Winston (headcovers)** — No new headcover drop indexed beyond Seamus's U.S. Open line.
 - **All others (13–41)** — Steady-state or no detectable new activity.
 
 ---
 
 ## This Week to Watch
-- **U.S. Open — Shinnecock, June 18–21.** On-brand pick is the standing Seamus capsule. Off-watchlist U.S. Open capsules still circulating for awareness only (Imperial, UNRL, B.Draddy, Holderness & Bourne, Flag & Anthem, FootJoy, J.Lindeberg 30th-anniversary Parnevik capsule) — corporate/tournament merch, skip.
-- **Father's Day — June 21.** Expect indie-brand promos to surface on IG over the weekend.
+- **U.S. Open — Shinnecock, June 18–21.** On-brand pick is the now-live Seamus capsule. Off-watchlist U.S. Open / tournament merch still circulating (Imperial, UNRL, B.Draddy, Holderness & Bourne, FootJoy, J.Lindeberg) — corporate, skip.
+- **Father's Day — June 21.** Expect indie promos over the weekend on IG.
 - **Paris Golf Gallery — June 23–29** (Casualist / Left of Field / Students). Re-check ~June 22.
 - **Fyfe x Mackenzie** — landing July 2026.
 
 ---
 
 ## Active Giveaways
-None worth posting. Only off-brand corporate sweepstakes (Cobra OPTM X driver Father's Day giveaway, expired June 10). On-brand indie giveaways run on IG Stories, not indexed by web search.
+None worth posting. Nothing on-brand indexed by web search this run.
 
 ---
 
 ## Brand Discoveries
-No genuinely new on-aesthetic brands this scan. Roundups returned only already-tracked or off-brand names:
-- **Three Putt Golf (UK)** — already logged; reads bro-streetwear, not Mo Norman. Skip.
-- **Radry Golf** — minimalist, surfaced in a trend roundup. Watch but unverified as a standalone indie worth tracking.
-- **Southside Golf Co** — already noted (South Austin local tie-in still un-used; bench suggestion).
+No genuinely new on-aesthetic indie brands this scan.
+- **Goatlane** (goatlane.com) — Swedish, founded 2020, Arnold-Palmer golden-era inspiration, blurs the course/everyday line. Design-forward and arguably on-aesthetic, but **established, not new** — surfaced only in a Dormy retail roundup. Worth a one-time look as a possible Brand-to-Know if Lenny wants a non-US pick; not urgent.
+- **Three Putt Golf (UK)** — already logged; reads bro-streetwear. Skip.
+- **Radry Golf** — minimalist, still unverified as a standalone worth tracking. Watch only.
 
-**Suggestion for Lenny:** Quiet run, true to the two-week pattern. With the U.S. Open opening **June 18**, your single most time-sensitive move is publishing the **Seamus Shinnecock** card. If you want a second piece on the bench, **Found Golf** (drafted June 5) is still unpublished.
+**Suggestion for Lenny:** Another quiet, steady-state run. With the U.S. Open opening **Thursday June 18** and the Seamus Shinnecock collection now shipping, your single most time-sensitive move is publishing the **Seamus Shinnecock** card (update copy to "available now"). If you want a second piece on the bench, **Found Golf** (drafted June 5) is still unpublished. Next natural re-scout for fresh signal is **~June 22**, ahead of the Paris Golf Gallery window.
