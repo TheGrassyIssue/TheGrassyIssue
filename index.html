@@ -1913,10 +1913,56 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
-    <!-- MUNI GUIDE — Austin BBQ Field Guide -->
-  <div class="card" data-type="guide">
+    <!-- DROP — Arsham x Malbon Chapter Three -->
+  <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
-      <span class="card-tag grass">[Muni Guide]</span>
+      <span class="card-tag flag">[Drop]</span>
+      <div class="gear-carousel" data-carousel="arshammalbon4">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://malbon.com/collections/arsham" target="_blank" rel="noopener">
+              <img src="/images/arsham-malbon/cloudburst-rain-jacket.jpg" alt="Arsham Cloudburst Rain Jacket in oxidized green" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Arsham x Malbon</div><div class="gear-slide-name">Cloudburst Rain Jacket · $428</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://malbon.com/collections/arsham" target="_blank" rel="noopener">
+              <img src="/images/arsham-malbon/monogram-quarter-zip.jpg" alt="Arsham Monogram Quarter Zip" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Arsham x Malbon</div><div class="gear-slide-name">Monogram Quarter Zip · $248</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://malbon.com/collections/arsham" target="_blank" rel="noopener">
+              <img src="/images/arsham-malbon/stealth-cart-bag.jpg" alt="Arsham Stealth Cart Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Arsham x Malbon</div><div class="gear-slide-name">Stealth Cart Bag · $448</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://malbon.com/collections/arsham" target="_blank" rel="noopener">
+              <img src="/images/arsham-malbon/fracture-snapback.jpg" alt="Arsham Fracture Snapback" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Arsham x Malbon</div><div class="gear-slide-name">Fracture Snapback · $48</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">June 17, 2026 · Drop</div>
+      <div class="card-title"><a href="/drops/arsham-malbon-chapter-three" style="color:inherit;text-decoration:none;border-bottom:none;">Arsham x Malbon — Chapter Three Is Live</a></div>
+      <p class="card-text" data-slidetext="arshammalbon4">The Cloudburst Rain Jacket — fully seam-sealed waterproof shell in Arsham's oxidized green palette. Reflective details, magnetic storm flap, ventilation zips. $428.</p>
+      <div class="gear-dots" data-dots="arshammalbon4"></div>
+      <div class="gear-counter" data-counter="arshammalbon4">1 / 4</div>
+      <div class="card-source"><a href="https://malbon.com/collections/arsham" target="_blank" rel="noopener">malbon.com</a></div>
+      <a href="/drops/arsham-malbon-chapter-three" class="card-readmore" style="display:inline-block;font-size:0.97rem;color:var(--ink);opacity:0.7;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px;">See the Full Post →</a>
+    </div>
+  </div>
+
+    <!-- THE EDIT — Austin BBQ Field Guide -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Edit]</span>
       <div class="gear-carousel" data-carousel="austinbbq12">
         <div class="gear-carousel-track">
           <div class="gear-slide">
@@ -1949,7 +1995,7 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">June 16, 2026 · Muni Guide</div>
+      <div class="card-meta">June 16, 2026 · The Edit</div>
       <div class="card-title"><a href="/drops/austin-bbq-field-guide" style="color:inherit;text-decoration:none;border-bottom:none;">The Austin BBQ Field Guide — 12 Spots After the Round</a></div>
       <p class="card-text" data-slidetext="austinbbq12">KG BBQ — Egyptian-Texas fusion from pitmaster Kareem El-Ghayesh at Oddwood Brewing on Manor Road. Sumac and pomegranate-rubbed brisket, lamb ribs, and a Mediterranean sausage that rewrites what you thought BBQ could be. Texas Monthly Top 50 and Michelin Bib Gourmand. Fri–Sun, 11am until it's gone.</p>
       <div class="gear-dots" data-dots="austinbbq12"></div>
@@ -9932,6 +9978,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    arshammalbon4: [
+      "The Cloudburst Rain Jacket — fully seam-sealed waterproof shell in Arsham's oxidized green palette. Reflective details, magnetic storm flap, ventilation zips. $428.",
+      "The Monogram Quarter Zip — Arsham's eroded monogram pattern across the full body, YKK quarter zip, ribbed cuffs. Two colorways: black and oxidized green. $248.",
+      "The Stealth Cart Bag — 14-way top, insulated cooler pocket, Arsham's fracture patterning on every panel. The statement piece of the collection. $448.",
+      "The Fracture Snapback — Arsham's cracked-surface treatment on the Buckets logo, structured crown, adjustable snap closure. Two colorways. $48."
+    ],
     austinbbq12: [
       "KG BBQ — Egyptian-Texas fusion from pitmaster Kareem El-Ghayesh at Oddwood Brewing on Manor Road. Sumac and pomegranate-rubbed brisket, lamb ribs, and a Mediterranean sausage that rewrites what you thought BBQ could be. Texas Monthly Top 50 and Michelin Bib Gourmand. Fri–Sun, 11am until it's gone.",
       "LeRoy and Lewis — The #2 BBQ joint in Texas according to Texas Monthly and the only BBQ truck in America with a Michelin star. Evan LeRoy and Sawyer Lewis do nose-to-tail, seasonal BBQ out of a trailer on Emerald Forest Drive. The bacon ribs on Saturdays are legend. Show up early.",
