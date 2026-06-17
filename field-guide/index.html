@@ -537,14 +537,20 @@ td.num {
 
 /* ==================== GUIDE SECTIONS (new) ==================== */
 .guide-section { padding: 80px 32px; max-width: 1040px; margin: 0 auto; border-top: 0.5px solid var(--ink); }
-.guide-section-header { margin-bottom: 40px; }
+.guide-section-header { margin-bottom: 40px; display: flex; align-items: baseline; gap: 20px; }
+.guide-section-num { font-family: var(--serif); font-style: italic; font-size: 56px; line-height: 1; color: var(--grass); opacity: 0.18; flex-shrink: 0; }
+.guide-section-text { flex: 1; }
 .guide-section-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px; }
 .guide-section-h2 { font-family: var(--serif); font-style: italic; font-size: 32px; font-weight: 400; margin-bottom: 16px; }
-.guide-section-intro { font-family: var(--serif); font-size: 17px; line-height: 1.55; max-width: 720px; margin-bottom: 36px; }
+.guide-section-intro { font-family: var(--serif); font-size: 17px; line-height: 1.55; max-width: 720px; margin-bottom: 40px; }
 .guide-section-intro p + p { margin-top: 12px; }
-.guide-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.guide-card { padding: 24px; border: 0.5px solid var(--ink); background: var(--paper); transition: background 0.15s; display: flex; flex-direction: column; }
-.guide-card:hover { background: rgba(168,168,120,0.08); }
+.guide-section-intro p:first-child::first-line { font-weight: 500; }
+.guide-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.guide-card { border: 0.5px solid var(--ink); background: var(--paper); transition: background 0.15s, transform 0.15s; display: flex; flex-direction: column; overflow: hidden; }
+.guide-card:hover { background: rgba(168,168,120,0.08); transform: translateY(-2px); }
+.guide-card-img { width: 100%; height: 180px; object-fit: cover; display: block; filter: saturate(0.85) brightness(0.95); transition: filter 0.3s; }
+.guide-card:hover .guide-card-img { filter: saturate(1) brightness(1); }
+.guide-card-body { padding: 20px 22px 22px; display: flex; flex-direction: column; flex: 1; }
 .guide-card-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.45; margin-bottom: 10px; }
 .guide-card-title { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.2; margin-bottom: 10px; }
 .guide-card-desc { font-size: 14px; line-height: 1.5; opacity: 0.8; margin-bottom: 16px; flex: 1; }
@@ -756,7 +762,10 @@ td.num {
     padding-right: 16px;
   }
   .guide-section { padding: 48px 20px; }
+  .guide-section-header { gap: 14px; }
+  .guide-section-num { font-size: 40px; }
   .guide-cards { grid-template-columns: 1fr; }
+  .guide-card-img { height: 160px; }
   .faq-section { padding: 48px 20px; }
   .glance-grid { grid-template-columns: 1fr; }
   .hon-item { grid-template-columns: 1fr; gap: 10px; }
@@ -955,7 +964,7 @@ td.num {
     <div>
       <div class="muni-num">No. 01 · Since 1924</div>
       <div class="muni-name">Lions Muni.</div>
-      <div class="muni-tag">The historic one. Central. Short. Worth it.</div>
+      <div class="muni-tag">The historic one. Central. Short. The one you play first.</div>
     </div>
     <div>
       <div class="muni-badge">Best for: Walkers, visitors, good vibes</div>
@@ -1150,7 +1159,7 @@ td.num {
 
   <article class="muni">
     <figure class="muni-photo">
-      <img src="/images/hero.jpg" alt="Cart path winding through rolling fairways under a wide Texas sky at Jimmy Clay Golf Course" loading="lazy" />
+      <img src="/images/field-guide/jimmy-clay.jpg" alt="Tree-lined fairway stretching through the south Austin landscape at Jimmy Clay Golf Course" loading="lazy" />
       <figcaption>Jimmy Clay · Austin, TX</figcaption>
     </figure>
     <div>
@@ -1161,7 +1170,7 @@ td.num {
     <div>
       <div class="muni-badge">Best for: Sunset rounds, long hitters, south-siders</div>
       <div class="muni-body">
-        <p>Jimmy Clay is the muni that's quietly overlooked, which is a shame because it holds up. A handful of fun holes on the front, and a back nine that's genuinely lovely — worth the drive south even on days when Kizer has tee times available. This is the course to play at sunset: big Texas sky, long shadows, the kind of light that makes even a bad shot feel like part of the round.</p>
+        <p>Jimmy Clay is the muni that's quietly overlooked, which is a shame because it holds up. A handful of fun holes on the front, and a back nine that's genuinely lovely — reason enough to drive south even on days when Kizer has tee times available. This is the course to play at sunset: big Texas sky, long shadows, the kind of light that makes even a bad shot feel like part of the round.</p>
         <p>Joe Finger design from 1974, tucked along Williamson Creek on the south side of town, part of the 36-hole complex it shares with Roy Kizer. 6,918 yards of traditional tree-lined fairways, par 72, the longest you can play in the Austin muni system. A 2007 renovation added a water feature and an island green; a second renovation in 2015 reshaped four greens.</p>
       </div>
       <div class="muni-stats">
@@ -1274,8 +1283,11 @@ td.num {
 
 <section class="guide-section" id="practice">
   <div class="guide-section-header">
-    <div class="guide-section-kicker">Practice & Ranges</div>
-    <h2 class="guide-section-h2">Where to sharpen your game.</h2>
+    <div class="guide-section-num">02</div>
+    <div class="guide-section-text">
+      <div class="guide-section-kicker">Practice & Ranges</div>
+      <h2 class="guide-section-h2">Where to sharpen your game.</h2>
+    </div>
   </div>
   <div class="guide-section-intro">
     <p>Austin has better practice infrastructure than most cities its size. Driving ranges with real grass tees, dedicated short game areas, and a growing number of indoor sim spots for when summer heat hits triple digits or winter rain rolls through. If you want to work on your game without committing to a full round, you have options.</p>
@@ -1283,24 +1295,33 @@ td.num {
   </div>
   <div class="guide-cards">
     <a href="/drops/8-best-practice-facilities-around-austin" class="guide-card">
-      <div class="guide-card-tag">Practice · 8 Spots</div>
-      <div class="guide-card-title">8 Best Practice Facilities Around Austin</div>
-      <div class="guide-card-desc">The best driving ranges, short game areas, and practice setups across the Austin metro — from the range at Harvey Penick to the new spots popping up on the south side.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/driving-range.jpg" alt="Golfer practicing at a driving range with lush green turf" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Practice · 8 Spots</div>
+        <div class="guide-card-title">8 Best Practice Facilities Around Austin</div>
+        <div class="guide-card-desc">The best driving ranges, short game areas, and practice setups across the Austin metro — from the range at Harvey Penick to the new spots popping up on the south side.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
     <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="guide-card">
-      <div class="guide-card-tag">Simulators · 7 Spots</div>
-      <div class="guide-card-title">7 Indoor Simulators for Austin's Gross Rainy Days</div>
-      <div class="guide-card-desc">When it's 105° or sideways rain, these sim spots keep your swing alive. TrackMan bays, leagues, and full-bar setups across town.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/indoor-sim.jpg" alt="Indoor golf simulator bay with screen and launch monitor" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Simulators · 7 Spots</div>
+        <div class="guide-card-title">7 Indoor Simulators for Austin's Gross Rainy Days</div>
+        <div class="guide-card-desc">When it's 105° or sideways rain, these sim spots keep your swing alive. TrackMan bays, leagues, and full-bar setups across town.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
   </div>
 </section>
 
 <section class="guide-section" id="food">
   <div class="guide-section-header">
-    <div class="guide-section-kicker">After the Round</div>
-    <h2 class="guide-section-h2">Where to eat, drink, and decompress.</h2>
+    <div class="guide-section-num">03</div>
+    <div class="guide-section-text">
+      <div class="guide-section-kicker">After the Round</div>
+      <h2 class="guide-section-h2">Where to eat, drink, and decompress.</h2>
+    </div>
   </div>
   <div class="guide-section-intro">
     <p>Austin's post-round scene is as good as the golf itself. This is a food city, and golfers here have it figured out — BBQ joints with short waits, burger spots five minutes from the course, evening bars that don't card you for still wearing golf shoes. The 19th hole in Austin isn't a clubhouse; it's a whole city.</p>
@@ -1308,42 +1329,60 @@ td.num {
   </div>
   <div class="guide-cards">
     <a href="/drops/austin-bbq-field-guide" class="guide-card">
-      <div class="guide-card-tag">BBQ · 12 Spots</div>
-      <div class="guide-card-title">The Austin BBQ Field Guide — 12 Spots After the Round</div>
-      <div class="guide-card-desc">Twelve BBQ joints mapped to which course you just played. Proximity, wait times, what to order. The definitive post-round BBQ list.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/austin-bbq.jpg" alt="Sliced brisket and smoked ribs on butcher paper at an Austin BBQ joint" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">BBQ · 12 Spots</div>
+        <div class="guide-card-title">The Austin BBQ Field Guide — 12 Spots After the Round</div>
+        <div class="guide-card-desc">Twelve BBQ joints mapped to which course you just played. Proximity, wait times, what to order. The definitive post-round BBQ list.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
     <a href="/drops/10-of-the-best-post-round-burgers" class="guide-card">
-      <div class="guide-card-tag">Burgers · 10 Spots</div>
-      <div class="guide-card-title">10 of the Best Post-Round Burgers</div>
-      <div class="guide-card-desc">Ten burger spots across Austin that hit right after 18 holes. Smash burgers, patty melts, the works.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/burger.jpg" alt="Stacked smash burger with melted cheese and crispy edges" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Burgers · 10 Spots</div>
+        <div class="guide-card-title">10 of the Best Post-Round Burgers</div>
+        <div class="guide-card-desc">Ten burger spots across Austin that hit right after 18 holes. Smash burgers, patty melts, the works.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
     <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="guide-card">
-      <div class="guide-card-tag">On-Course · Ranked</div>
-      <div class="guide-card-title">Ranking the Muni Grub — Every On-Course Food Spot in Austin</div>
-      <div class="guide-card-desc">Every snack bar, hot dog stand, and turn-counter across all five munis — ranked, reviewed, brutally honest.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/muni-grub.jpg" alt="Hot dogs and snack bar food at a golf course turn counter" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">On-Course · Ranked</div>
+        <div class="guide-card-title">Ranking the Muni Grub — Every On-Course Food Spot in Austin</div>
+        <div class="guide-card-desc">Every snack bar, hot dog stand, and turn-counter across all five munis — ranked, reviewed, brutally honest.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
     <a href="/drops/7-post-round-moves-in-austin" class="guide-card">
-      <div class="guide-card-tag">Post-Round · 7 Moves</div>
-      <div class="guide-card-title">7 Post-Round Moves in Austin</div>
-      <div class="guide-card-desc">What to do after the round — patio beers, swimming holes, live music, and the drive that makes the whole day.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/austin-patio.jpg" alt="String lights over an outdoor patio at an Austin bar on a warm evening" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Post-Round · 7 Moves</div>
+        <div class="guide-card-title">7 Post-Round Moves in Austin</div>
+        <div class="guide-card-desc">What to do after the round — patio beers, swimming holes, live music, and the drive that makes the whole day.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
     <a href="/drops/5-post-round-evening-spots-in-austin" class="guide-card">
-      <div class="guide-card-tag">Evening · 5 Spots</div>
-      <div class="guide-card-title">5 Post-Round Evening Spots in Austin</div>
-      <div class="guide-card-desc">Five bars and restaurants for when the round turns into a night out. Low-key, walkable from downtown courses.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/evening-spot.jpg" alt="Neon signs and warm light at an Austin bar at night" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Evening · 5 Spots</div>
+        <div class="guide-card-title">5 Post-Round Evening Spots in Austin</div>
+        <div class="guide-card-desc">Five bars and restaurants for when the round turns into a night out. Low-key, walkable from downtown courses.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
   </div>
 </section>
 
 <section class="guide-section" id="events">
   <div class="guide-section-header">
-    <div class="guide-section-kicker">Events & History</div>
-    <h2 class="guide-section-h2">What's happening and what came before.</h2>
+    <div class="guide-section-num">04</div>
+    <div class="guide-section-text">
+      <div class="guide-section-kicker">Events & History</div>
+      <h2 class="guide-section-h2">What's happening and what came before.</h2>
+    </div>
   </div>
   <div class="guide-section-intro">
     <p>Austin muni golf has real history — over a century of public golf, events that have been running for decades, and renovation projects that are reshaping the entire system. This isn't a city that just built courses and left them alone. The stories behind these places are part of what makes playing them feel different.</p>
@@ -1351,30 +1390,42 @@ td.num {
   </div>
   <div class="guide-cards">
     <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="guide-card">
-      <div class="guide-card-tag">Event · Annual</div>
-      <div class="guide-card-title">The Firecracker Open — 81 Years at the Muny</div>
-      <div class="guide-card-desc">The longest-running golf event in Austin history. Every Fourth of July at Lions Municipal since 1945.</div>
-      <span class="guide-card-link">Read the story →</span>
+      <img class="guide-card-img" src="/images/field-guide/firecracker.jpg" alt="Scenic golf course on a bright summer day — home of the annual Firecracker Open" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Event · Annual</div>
+        <div class="guide-card-title">The Firecracker Open — 81 Years at the Muny</div>
+        <div class="guide-card-desc">The longest-running golf event in Austin history. Every Fourth of July at Lions Municipal since 1945.</div>
+        <span class="guide-card-link">Read the story →</span>
+      </div>
     </a>
     <a href="/drops/lions-muny-is-getting-a-world-class-renovation-heres-whats-c" class="guide-card">
-      <div class="guide-card-tag">News · Renovation</div>
-      <div class="guide-card-title">Lions Muny Is Getting a World-Class Renovation</div>
-      <div class="guide-card-desc">The historic course is getting a full redesign from Gil Hanse. What's planned, what's changing, and when it's happening.</div>
-      <span class="guide-card-link">Read the story →</span>
+      <img class="guide-card-img" src="/images/field-guide/renovation.jpg" alt="Golf course under renovation with earth movers reshaping the landscape" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">News · Renovation</div>
+        <div class="guide-card-title">Lions Muny Is Getting a World-Class Renovation</div>
+        <div class="guide-card-desc">The historic course is getting a full redesign from Gil Hanse. What's planned, what's changing, and when it's happening.</div>
+        <span class="guide-card-link">Read the story →</span>
+      </div>
     </a>
     <a href="/drops/where-to-watch-the-world-cup-in-austin" class="guide-card">
-      <div class="guide-card-tag">Guide · World Cup</div>
-      <div class="guide-card-title">Where to Watch the World Cup in Austin</div>
-      <div class="guide-card-desc">Austin is a host city in 2026. Where to watch matches, grab a pint, and still make your tee time.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/world-cup.jpg" alt="Fans watching a soccer match at a packed bar during the World Cup" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Guide · World Cup</div>
+        <div class="guide-card-title">Where to Watch the World Cup in Austin</div>
+        <div class="guide-card-desc">Austin is a host city in 2026. Where to watch matches, grab a pint, and still make your tee time.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
   </div>
 </section>
 
 <section class="guide-section" id="day-trips">
   <div class="guide-section-header">
-    <div class="guide-section-kicker">Beyond the City</div>
-    <h2 class="guide-section-h2">When you want something different.</h2>
+    <div class="guide-section-num">05</div>
+    <div class="guide-section-text">
+      <div class="guide-section-kicker">Beyond the City</div>
+      <h2 class="guide-section-h2">When you want something different.</h2>
+    </div>
   </div>
   <div class="guide-section-intro">
     <p>The Hill Country and surrounding area have courses that are a completely different experience from the munis — resort-style layouts, Hill Country views, and designs from architects whose names you'd recognize. Some are 20 minutes outside the city limits. Some are a full day trip. All of them are a reason to get in the car.</p>
@@ -1382,16 +1433,22 @@ td.num {
   </div>
   <div class="guide-cards">
     <a href="/drops/8-special-day-rounds-near-austin" class="guide-card">
-      <div class="guide-card-tag">Day Trips · 8 Courses</div>
-      <div class="guide-card-title">8 Special Day Rounds Near Austin</div>
-      <div class="guide-card-desc">Eight courses within driving distance that feel like a weekend getaway — Wolfdancer, Vaaler Creek, ColoVista, and more.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/hill-country-golf.jpg" alt="Scenic golf course with rolling elevation through the Texas Hill Country" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Day Trips · 8 Courses</div>
+        <div class="guide-card-title">8 Special Day Rounds Near Austin</div>
+        <div class="guide-card-desc">Eight courses within driving distance that feel like a weekend getaway — Wolfdancer, Vaaler Creek, ColoVista, and more.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
     <a href="/drops/10-texas-courses-worth-the-trip" class="guide-card">
-      <div class="guide-card-tag">Texas · 10 Courses</div>
-      <div class="guide-card-title">10 Texas Courses for the Trip</div>
-      <div class="guide-card-desc">Ten courses across the state that are a reason to book a tee time and a hotel room. From the Hill Country to the Gulf Coast.</div>
-      <span class="guide-card-link">Read the guide →</span>
+      <img class="guide-card-img" src="/images/field-guide/texas-road.jpg" alt="Open Texas highway stretching through Hill Country under a wide sky" loading="lazy" />
+      <div class="guide-card-body">
+        <div class="guide-card-tag">Texas · 10 Courses</div>
+        <div class="guide-card-title">10 Texas Courses for the Trip</div>
+        <div class="guide-card-desc">Ten courses across the state that are a reason to book a tee time and a hotel room. From the Hill Country to the Gulf Coast.</div>
+        <span class="guide-card-link">Read the guide →</span>
+      </div>
     </a>
   </div>
 </section>
@@ -1464,7 +1521,7 @@ td.num {
 
 <section class="honorable">
   <div class="honorable-kicker">Honorable mentions</div>
-  <div class="honorable-h2">Not on the guide, but worth knowing.</div>
+  <div class="honorable-h2">Not on the guide, but good to know.</div>
 
   <div class="hon-item">
     <div>
@@ -1472,7 +1529,7 @@ td.num {
       <div class="hon-tag">Semi-private · Southwest Austin</div>
     </div>
     <div class="hon-body">
-      <p>Technically part of the Golf ATX system, but priced and operated differently. Grey Rock runs more like a semi-private club than a municipal course — membership options, higher day rates, a Jay Morrish design. Worth knowing about if you're considering a Golf ATX membership or want a course that plays a step up from the five munis. Not what the Field Guide is about, but not nothing.</p>
+      <p>Technically part of the Golf ATX system, but priced and operated differently. Grey Rock runs more like a semi-private club than a municipal course — membership options, higher day rates, a Jay Morrish design. Good to have on your radar if you're considering a Golf ATX membership or want a course that plays a step up from the five munis. Not what the Field Guide is about, but not nothing.</p>
     </div>
   </div>
 
