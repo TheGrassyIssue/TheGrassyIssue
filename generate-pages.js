@@ -70,7 +70,8 @@ const manualSlugs = new Set([
   'best-golf-streetwear-brands-2026', 'manors-ss26',
   'brand-to-know-read-the-green',
   'austin-bbq-field-guide',
-  'arsham-malbon-chapter-three'
+  'arsham-malbon-chapter-three',
+  'the-glove-edit'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {

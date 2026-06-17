@@ -3,20 +3,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Field Guide to Austin Muni Golf — The Grassy Issue</title>
-<meta name="description" content="An honest guide to the five 18-hole municipal golf courses in Austin, Texas. Which one to play, when to play it, and which one to take your friend from out of town to." />
+<title>The Austin Golf Guide — Courses, Food, Practice, Culture — The Grassy Issue</title>
+<meta name="description" content="The complete guide to golf in Austin, Texas. Municipal courses, practice ranges, post-round food, simulators, events, and day trips. Updated June 2026." />
 
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://thegrassyissue.com/field-guide/" />
-<meta property="og:title" content="The Field Guide to Austin Muni Golf" />
-<meta property="og:description" content="An honest guide to the five 18-hole municipal golf courses in Austin, Texas." />
+<meta property="og:title" content="The Austin Golf Guide — The Grassy Issue" />
+<meta property="og:description" content="The complete guide to golf in Austin. Courses, practice, food, culture, events, day trips. From the muni tee box to the BBQ pit." />
 <meta property="og:image" content="https://thegrassyissue.com/images/og-field-guide.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Field Guide to Austin Muni Golf — The Grassy Issue" />
-<meta name="twitter:description" content="An honest guide to the five 18-hole municipal golf courses in Austin, Texas." />
+<meta name="twitter:title" content="The Austin Golf Guide — The Grassy Issue" />
+<meta name="twitter:description" content="The complete guide to golf in Austin. Courses, practice, food, culture, events, day trips. From the muni tee box to the BBQ pit." />
 <meta name="twitter:image" content="https://thegrassyissue.com/images/og-field-guide.jpg" />
 <link rel="canonical" href="https://thegrassyissue.com/field-guide" />
 
@@ -143,6 +143,14 @@ img { max-width: 100%; display: block; }
   opacity: 0.6;
 }
 .hero-meta .dot { opacity: 0.35; }
+
+/* ==================== TABLE OF CONTENTS ==================== */
+.toc { background: var(--ink); color: var(--paper); padding: 32px 32px; border-bottom: 0.5px solid var(--ink); }
+.toc-inner { max-width: 1040px; margin: 0 auto; }
+.toc-label { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; margin-bottom: 16px; }
+.toc-links { display: flex; flex-wrap: wrap; gap: 12px; }
+.toc-links a { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; padding: 10px 16px; border: 0.5px solid rgba(244,241,234,0.25); color: var(--paper); transition: all 0.15s; }
+.toc-links a:hover { background: var(--paper); color: var(--ink); }
 
 /* ==================== QUICK ANSWERS ==================== */
 .quick {
@@ -527,6 +535,21 @@ td.num {
 }
 .table-note a { text-decoration: underline; }
 
+/* ==================== GUIDE SECTIONS (new) ==================== */
+.guide-section { padding: 80px 32px; max-width: 1040px; margin: 0 auto; border-top: 0.5px solid var(--ink); }
+.guide-section-header { margin-bottom: 40px; }
+.guide-section-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px; }
+.guide-section-h2 { font-family: var(--serif); font-style: italic; font-size: 32px; font-weight: 400; margin-bottom: 16px; }
+.guide-section-intro { font-family: var(--serif); font-size: 17px; line-height: 1.55; max-width: 720px; margin-bottom: 36px; }
+.guide-section-intro p + p { margin-top: 12px; }
+.guide-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.guide-card { padding: 24px; border: 0.5px solid var(--ink); background: var(--paper); transition: background 0.15s; display: flex; flex-direction: column; }
+.guide-card:hover { background: rgba(168,168,120,0.08); }
+.guide-card-tag { font-family: var(--mono); font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; opacity: 0.45; margin-bottom: 10px; }
+.guide-card-title { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.2; margin-bottom: 10px; }
+.guide-card-desc { font-size: 14px; line-height: 1.5; opacity: 0.8; margin-bottom: 16px; flex: 1; }
+.guide-card-link { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink); border-bottom: 1px solid var(--ink); padding-bottom: 2px; display: inline-block; align-self: flex-start; }
+
 /* ==================== AT A GLANCE ==================== */
 .glance {
   padding: 80px 32px;
@@ -636,6 +659,16 @@ td.num {
 }
 .hon-body { font-size: 14px; line-height: 1.5; }
 
+/* ==================== FAQ ==================== */
+.faq-section { padding: 80px 32px; max-width: 1040px; margin: 0 auto; border-top: 0.5px solid var(--ink); }
+.faq-kicker { font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px; }
+.faq-h2 { font-family: var(--serif); font-style: italic; font-size: 32px; font-weight: 400; margin-bottom: 36px; }
+.faq-item { padding: 24px 0; border-bottom: 0.5px solid rgba(20,20,20,0.15); }
+.faq-item:first-child { border-top: 0.5px solid rgba(20,20,20,0.15); }
+.faq-q { font-family: var(--serif); font-style: italic; font-size: 20px; line-height: 1.3; margin-bottom: 12px; cursor: pointer; }
+.faq-a { font-size: 15px; line-height: 1.6; max-width: 720px; }
+.faq-a a { border-bottom: 1px solid var(--ink); padding-bottom: 1px; }
+
 /* ==================== FOOTER ==================== */
 .footer {
   border-top: 0.5px solid var(--ink);
@@ -699,6 +732,8 @@ td.num {
   .nav-inner { padding: 14px 20px; }
   .hero { padding: 48px 20px 40px; }
   .hero-title { font-size: 44px; }
+  .toc { padding: 24px 20px; }
+  .toc-links { gap: 8px; }
   .quick { padding: 48px 20px; }
   .quick-grid { grid-template-columns: 1fr; gap: 0; }
   .quick-card {
@@ -720,6 +755,9 @@ td.num {
     border-right: 0.5px solid rgba(20,20,20,0.15);
     padding-right: 16px;
   }
+  .guide-section { padding: 48px 20px; }
+  .guide-cards { grid-template-columns: 1fr; }
+  .faq-section { padding: 48px 20px; }
   .glance-grid { grid-template-columns: 1fr; }
   .hon-item { grid-template-columns: 1fr; gap: 10px; }
   .muni-photo img { height: 200px; }
@@ -729,6 +767,84 @@ td.num {
   .footer-bottom { flex-direction: column; }
 }
 </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "The Austin Golf Guide",
+  "description": "The complete guide to golf in Austin, Texas. Municipal courses, practice ranges, post-round food, simulators, events, and day trips.",
+  "author": {
+    "@type": "Person",
+    "name": "Lenny Harrington"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "The Grassy Issue",
+    "url": "https://thegrassyissue.com"
+  },
+  "datePublished": "2026-04-01",
+  "dateModified": "2026-06-17",
+  "mainEntityOfPage": "https://thegrassyissue.com/field-guide",
+  "image": "https://thegrassyissue.com/images/og-field-guide.jpg"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where can I play golf in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Austin has five municipal golf courses open to the public: Lions Municipal, Morris Williams, Hancock (9 holes), Roy Kizer, and Jimmy Clay. Green fees range from $20 to $44. There are also semi-private options like Grey Rock and the par-3 Butler Pitch and Putt downtown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does it cost to play golf in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Austin's four 18-hole municipal courses charge $35 Monday–Thursday, $41 on Friday, and $44 on weekends. Sunset rates are $28 at all four. Hancock, the 9-hole course, is $20 flat every day. These are the most affordable public options in the city."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the best public golf course in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It depends on what you want. Morris Williams is the toughest test with the best green complexes. Lions Municipal is the most historic and beloved. Roy Kizer is a wide-open links-style layout. Jimmy Clay is the longest and least crowded. Hancock is a $20, 9-hole neighborhood classic — the oldest course in Texas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are there indoor golf simulators in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Austin has seven-plus indoor golf simulator venues across town, equipped with TrackMan, Foresight, and Full Swing systems. Options range from standalone sim bays to full bar-and-lounge setups with leagues and events."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What should I do after a round of golf in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Austin's post-round scene is one of the best in the country. Hit a BBQ joint near whatever course you played, grab a smash burger, or head to a patio bar. We've mapped 12 BBQ spots, 10 burger joints, and a full list of post-round evening spots across the city."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Austin good for golf?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Austin is one of the best muni golf cities in the country. Five affordable public courses, eight-plus practice facilities, a growing indoor sim scene, 300-plus days of playable weather, and a food and bar culture that makes the post-round as good as the round itself."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -747,29 +863,43 @@ td.num {
 
 <section class="hero">
   <div class="hero-kicker">
-    <span>The Grassy Issue · Field Guide</span>
+    <span>The Grassy Issue · Austin Golf Guide</span>
     <span class="dot">·</span>
-    <span>Updated April 2026</span>
+    <span>Updated June 2026</span>
   </div>
   <h1 class="hero-title">
-    Five munis,<br/>
-    one field guide.
+    The Austin<br/>
+    Golf Guide.
   </h1>
   <p class="hero-sub">
-    An honest guide to the five municipal golf courses that make up the public soul of Austin golf — where to play, where to take your friend from out of town, and which one the locals would quietly rather you didn't crowd up on Saturdays.
+    Everything you need to play golf in Austin — the five municipal courses, where to practice, where to eat after the round, what events to know about, and where to go when you want something special. All in one place, updated quarterly.
   </p>
   <div class="hero-meta">
     <span>By Lenny Harrington</span>
     <span class="dot">·</span>
-    <span>Living index · Updated quarterly</span>
+    <span>Living guide · Updated quarterly</span>
     <span class="dot">·</span>
-    <span>~10 min read</span>
+    <span>~15 min read</span>
   </div>
 </section>
 
 <figure class="muni-photo" style="border: none; border-bottom: 0.5px solid var(--ink);">
   <img src="/images/event-firecracker.jpg" alt="Aerial view of Lions Municipal Golf Course with the Austin skyline in the distance" loading="lazy" style="height: 340px; filter: saturate(0.85) brightness(0.97);" />
 </figure>
+
+<div class="toc">
+  <div class="toc-inner">
+    <div class="toc-label">In this guide</div>
+    <div class="toc-links">
+      <a href="#munis">Municipal Courses</a>
+      <a href="#practice">Practice & Ranges</a>
+      <a href="#food">After the Round</a>
+      <a href="#events">Events & History</a>
+      <a href="#day-trips">Day Trips</a>
+      <a href="#reference">Quick Reference</a>
+    </div>
+  </div>
+</div>
 
 <section class="quick">
   <div class="quick-inner">
@@ -811,10 +941,10 @@ td.num {
   </div>
 </section>
 
-<section class="index">
+<section class="index" id="munis">
   <div class="index-header">
-    <h2>The Field Guide, in depth.</h2>
-    <div class="right">Five courses · One page</div>
+    <h2>The Municipal Courses.</h2>
+    <div class="right">Five public courses · The backbone of Austin golf</div>
   </div>
 
   <article class="muni">
@@ -1140,7 +1270,135 @@ td.num {
   </div>
 </section>
 
-<section class="glance">
+<!-- ==================== NEW GUIDE SECTIONS ==================== -->
+
+<section class="guide-section" id="practice">
+  <div class="guide-section-header">
+    <div class="guide-section-kicker">Practice & Ranges</div>
+    <h2 class="guide-section-h2">Where to sharpen your game.</h2>
+  </div>
+  <div class="guide-section-intro">
+    <p>Austin has better practice infrastructure than most cities its size. Driving ranges with real grass tees, dedicated short game areas, and a growing number of indoor sim spots for when summer heat hits triple digits or winter rain rolls through. If you want to work on your game without committing to a full round, you have options.</p>
+    <p>The practice scene has gotten surprisingly good in the last few years. New facilities have opened on the south side, established ranges have upgraded their tech, and the indoor sim market has exploded. Whether you need an hour on the range or a full swing analysis session, it's covered.</p>
+  </div>
+  <div class="guide-cards">
+    <a href="/drops/8-best-practice-facilities-around-austin" class="guide-card">
+      <div class="guide-card-tag">Practice · 8 Spots</div>
+      <div class="guide-card-title">8 Best Practice Facilities Around Austin</div>
+      <div class="guide-card-desc">The best driving ranges, short game areas, and practice setups across the Austin metro — from the range at Harvey Penick to the new spots popping up on the south side.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+    <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="guide-card">
+      <div class="guide-card-tag">Simulators · 7 Spots</div>
+      <div class="guide-card-title">7 Indoor Simulators for Austin's Gross Rainy Days</div>
+      <div class="guide-card-desc">When it's 105° or sideways rain, these sim spots keep your swing alive. TrackMan bays, leagues, and full-bar setups across town.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+  </div>
+</section>
+
+<section class="guide-section" id="food">
+  <div class="guide-section-header">
+    <div class="guide-section-kicker">After the Round</div>
+    <h2 class="guide-section-h2">Where to eat, drink, and decompress.</h2>
+  </div>
+  <div class="guide-section-intro">
+    <p>Austin's post-round scene is as good as the golf itself. This is a food city, and golfers here have it figured out — BBQ joints with short waits, burger spots five minutes from the course, evening bars that don't card you for still wearing golf shoes. The 19th hole in Austin isn't a clubhouse; it's a whole city.</p>
+    <p>We've mapped the best spots to every course in the system, ranked the on-course food options (somebody had to), and put together evening plans for when the round turns into a night. All of it below.</p>
+  </div>
+  <div class="guide-cards">
+    <a href="/drops/austin-bbq-field-guide" class="guide-card">
+      <div class="guide-card-tag">BBQ · 12 Spots</div>
+      <div class="guide-card-title">The Austin BBQ Field Guide — 12 Spots After the Round</div>
+      <div class="guide-card-desc">Twelve BBQ joints mapped to which course you just played. Proximity, wait times, what to order. The definitive post-round BBQ list.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+    <a href="/drops/10-of-the-best-post-round-burgers" class="guide-card">
+      <div class="guide-card-tag">Burgers · 10 Spots</div>
+      <div class="guide-card-title">10 of the Best Post-Round Burgers</div>
+      <div class="guide-card-desc">Ten burger spots across Austin that hit right after 18 holes. Smash burgers, patty melts, the works.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+    <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="guide-card">
+      <div class="guide-card-tag">On-Course · Ranked</div>
+      <div class="guide-card-title">Ranking the Muni Grub — Every On-Course Food Spot in Austin</div>
+      <div class="guide-card-desc">Every snack bar, hot dog stand, and turn-counter across all five munis — ranked, reviewed, brutally honest.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+    <a href="/drops/7-post-round-moves-in-austin" class="guide-card">
+      <div class="guide-card-tag">Post-Round · 7 Moves</div>
+      <div class="guide-card-title">7 Post-Round Moves in Austin</div>
+      <div class="guide-card-desc">What to do after the round — patio beers, swimming holes, live music, and the drive that makes the whole day.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+    <a href="/drops/5-post-round-evening-spots-in-austin" class="guide-card">
+      <div class="guide-card-tag">Evening · 5 Spots</div>
+      <div class="guide-card-title">5 Post-Round Evening Spots in Austin</div>
+      <div class="guide-card-desc">Five bars and restaurants for when the round turns into a night out. Low-key, walkable from downtown courses.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+  </div>
+</section>
+
+<section class="guide-section" id="events">
+  <div class="guide-section-header">
+    <div class="guide-section-kicker">Events & History</div>
+    <h2 class="guide-section-h2">What's happening and what came before.</h2>
+  </div>
+  <div class="guide-section-intro">
+    <p>Austin muni golf has real history — over a century of public golf, events that have been running for decades, and renovation projects that are reshaping the entire system. This isn't a city that just built courses and left them alone. The stories behind these places are part of what makes playing them feel different.</p>
+    <p>This section covers the events calendar and the stories behind the courses. From the Firecracker Open — 81 years running at Lions — to the Gil Hanse renovation that's about to transform the Muny, there's always something happening in Austin golf.</p>
+  </div>
+  <div class="guide-cards">
+    <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="guide-card">
+      <div class="guide-card-tag">Event · Annual</div>
+      <div class="guide-card-title">The Firecracker Open — 81 Years at the Muny</div>
+      <div class="guide-card-desc">The longest-running golf event in Austin history. Every Fourth of July at Lions Municipal since 1945.</div>
+      <span class="guide-card-link">Read the story →</span>
+    </a>
+    <a href="/drops/lions-muny-is-getting-a-world-class-renovation-heres-whats-c" class="guide-card">
+      <div class="guide-card-tag">News · Renovation</div>
+      <div class="guide-card-title">Lions Muny Is Getting a World-Class Renovation</div>
+      <div class="guide-card-desc">The historic course is getting a full redesign from Gil Hanse. What's planned, what's changing, and when it's happening.</div>
+      <span class="guide-card-link">Read the story →</span>
+    </a>
+    <a href="/drops/where-to-watch-the-world-cup-in-austin" class="guide-card">
+      <div class="guide-card-tag">Guide · World Cup</div>
+      <div class="guide-card-title">Where to Watch the World Cup in Austin</div>
+      <div class="guide-card-desc">Austin is a host city in 2026. Where to watch matches, grab a pint, and still make your tee time.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+  </div>
+</section>
+
+<section class="guide-section" id="day-trips">
+  <div class="guide-section-header">
+    <div class="guide-section-kicker">Beyond the City</div>
+    <h2 class="guide-section-h2">When you want something different.</h2>
+  </div>
+  <div class="guide-section-intro">
+    <p>The Hill Country and surrounding area have courses that are a completely different experience from the munis — resort-style layouts, Hill Country views, and designs from architects whose names you'd recognize. Some are 20 minutes outside the city limits. Some are a full day trip. All of them are a reason to get in the car.</p>
+    <p>These aren't replacements for the munis — they're additions. When you want elevation changes that make Morris Williams look flat, or fairways carved through live oak canyons, or the feeling of playing somewhere that was designed to be a destination, this is the list.</p>
+  </div>
+  <div class="guide-cards">
+    <a href="/drops/8-special-day-rounds-near-austin" class="guide-card">
+      <div class="guide-card-tag">Day Trips · 8 Courses</div>
+      <div class="guide-card-title">8 Special Day Rounds Near Austin</div>
+      <div class="guide-card-desc">Eight courses within driving distance that feel like a weekend getaway — Wolfdancer, Vaaler Creek, ColoVista, and more.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+    <a href="/drops/10-texas-courses-worth-the-trip" class="guide-card">
+      <div class="guide-card-tag">Texas · 10 Courses</div>
+      <div class="guide-card-title">10 Texas Courses for the Trip</div>
+      <div class="guide-card-desc">Ten courses across the state that are a reason to book a tee time and a hotel room. From the Hill Country to the Gulf Coast.</div>
+      <span class="guide-card-link">Read the guide →</span>
+    </a>
+  </div>
+</section>
+
+<!-- ==================== END NEW GUIDE SECTIONS ==================== -->
+
+<section class="glance" id="reference">
   <div class="glance-header">
     <div class="glance-kicker">At a glance</div>
     <div class="glance-h2">Answers to questions you haven't asked yet.</div>
@@ -1239,6 +1497,41 @@ td.num {
     <div class="hon-body">
       <p>A nine-hole par-3 practice course at the Roy Kizer / Jimmy Clay complex. $5 adults, $3 juniors. Under the radar, open to the public, good for dialing in your wedges or teaching a beginner without the pressure of a full round. Walk only.</p>
     </div>
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="faq-kicker">Frequently Asked</div>
+  <h2 class="faq-h2">Common questions about golf in Austin.</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">Where can I play golf in Austin?</div>
+    <div class="faq-a">Austin has five municipal golf courses open to the public: <a href="#munis">Lions Municipal, Morris Williams, Hancock, Roy Kizer, and Jimmy Clay</a>. Green fees range from $20 to $44, making them the most affordable option in the city. Beyond the munis, there's the semi-private Grey Rock Golf Club, the par-3 Butler Pitch and Putt downtown, and a handful of private clubs. For most people, the munis are where it starts.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How much does it cost to play golf in Austin?</div>
+    <div class="faq-a">The four 18-hole municipal courses all charge the same rate: $35 Monday through Thursday, $41 on Friday, and $44 on weekends and holidays. Sunset rates drop to $28 at all four. Hancock, the 9-hole course, is $20 flat every day of the week. These are the most affordable 18-hole options in the city — and the pricing is identical across Lions, Morris Williams, Roy Kizer, and Jimmy Clay.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What is the best public golf course in Austin?</div>
+    <div class="faq-a">It depends on what you're looking for. Morris Williams is the toughest test with the best green complexes and real elevation. Lions Municipal is the most historic and beloved — Ben Crenshaw and Tom Kite grew up here. Roy Kizer is a wide-open links-style layout, great for big hitters. Jimmy Clay is the longest and least crowded. And Hancock is a $20, 9-hole neighborhood classic — the oldest course in Texas.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Are there indoor golf simulators in Austin?</div>
+    <div class="faq-a">Yes — and the scene is growing fast. Austin has seven-plus indoor simulator venues across town, equipped with TrackMan, Foresight, and Full Swing systems. Options range from standalone sim bays to full bar-and-lounge setups with leagues and events. We've reviewed all of them in our <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days">simulator guide</a>.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">What should I do after a round of golf in Austin?</div>
+    <div class="faq-a">Austin's post-round scene is one of the best in the country. Hit a BBQ joint near whatever course you just played — we've mapped <a href="/drops/austin-bbq-field-guide">12 spots by proximity</a>. Grab a <a href="/drops/10-of-the-best-post-round-burgers">smash burger</a>, head to a patio bar, or check out our full list of <a href="/drops/7-post-round-moves-in-austin">post-round moves</a> for swimming holes, live music, and more.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Is Austin good for golf?</div>
+    <div class="faq-a">Austin is one of the best muni golf cities in the country. Five affordable public courses with real character, eight-plus practice facilities, a growing indoor simulator scene, 300-plus days of playable weather, and a food and bar culture that makes the post-round as good as the round itself. Whether you're a beginner or a single-digit handicap, there's something here for you.</div>
   </div>
 </section>
 
