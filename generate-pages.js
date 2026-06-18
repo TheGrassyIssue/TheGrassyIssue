@@ -71,7 +71,8 @@ const manualSlugs = new Set([
   'brand-to-know-read-the-green',
   'austin-bbq-field-guide',
   'arsham-malbon-chapter-three',
-  'the-glove-edit'
+  'the-glove-edit',
+  'the-summer-tee-edit'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
