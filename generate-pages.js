@@ -72,7 +72,8 @@ const manualSlugs = new Set([
   'austin-bbq-field-guide',
   'arsham-malbon-chapter-three',
   'the-glove-edit',
-  'the-summer-tee-edit'
+  'the-summer-tee-edit',
+  'world-cup-jersey-edit-pitch-to-green'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
