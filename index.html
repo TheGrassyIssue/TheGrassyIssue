@@ -1913,6 +1913,54 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+    <!-- THE ROUNDUP — Best Wings in Austin, 16 Spots -->
+  <div class="card" data-type="guide">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Roundup]</span>
+      <div class="gear-carousel" data-carousel="atxwings1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://wingzup.com" target="_blank" rel="noopener">
+              <img src="/images/best-wings/wingzup.jpg" alt="Wingzup wings and sauces in Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Wingzup</div><div class="gear-slide-name">28 Sauces · Hancock</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://tommywantwingyatx.com" target="_blank" rel="noopener">
+              <img src="/images/best-wings/tommy-want-wingy.jpg" alt="Tommy Want Wingy chicken lollipops" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Tommy Want Wingy</div><div class="gear-slide-name">Chicken Lollipops · Rainey St</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://stilesswitchbbq.com" target="_blank" rel="noopener">
+              <img src="/images/best-wings/stiles-switch.jpg" alt="Stiles Switch BBQ smoked wings" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Stiles Switch BBQ</div><div class="gear-slide-name">Oak-Smoked Wings · Brentwood</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://spicyboyschicken.com" target="_blank" rel="noopener">
+              <img src="/images/best-wings/spicy-boys.jpg" alt="Spicy Boys fried chicken wings" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Spicy Boys</div><div class="gear-slide-name">Pan-Asian Fusion · East Austin</div></div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <button class="gear-prev" onclick="gearSlide(this,-1)" aria-label="Previous slide">‹</button>
+      <button class="gear-next" onclick="gearSlide(this,1)" aria-label="Next slide">›</button>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">June 19, 2026 · The Roundup</div>
+      <div class="card-title"><a href="/drops/best-wings-in-austin">The Best Wings in Austin — 16 Spots After the Round</a></div>
+      <p class="card-text slide-text" id="slideText-atxwings1">Wingzup — 28+ homemade sauces across 6 wing styles, from Golden to Smoked. Won the Austin American-Statesman 2024 Best Wings bracket. Ghost Wing Challenge if you're feeling brave. Since 2011. Hancock.</p>
+      <div class="gear-dots" data-carousel="atxwings1">
+        <span class="gear-dot active"></span><span class="gear-dot"></span><span class="gear-dot"></span><span class="gear-dot"></span>
+      </div>
+      <div class="gear-counter" data-carousel="atxwings1">1 / 4</div>
+      <div class="card-source"><a href="https://www.google.com/maps/search/best+wings+austin+tx" target="_blank" rel="noopener">Google Maps</a></div>
+      <a href="/drops/best-wings-in-austin" class="read-more">See the Full Post →</a>
+    </div>
+  </div>
+
     <!-- DROP — Maxfli × Siegelman Stable "Harness the Drive" -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -10168,6 +10216,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    atxwings1: [
+      "Wingzup — 28+ homemade sauces across 6 wing styles, from Golden to Smoked. Won the Austin American-Statesman 2024 Best Wings bracket. Ghost Wing Challenge if you're feeling brave. Since 2011. Hancock.",
+      "Tommy Want Wingy — signature chicken lollipops frenched into a bone handle for mess-free eating. Ranch On Fire dry rub is the cult favorite. Three locations across Austin's best bar patios. Since 2012. Rainey St / S. Lamar / S. Congress.",
+      "Stiles Switch BBQ — oak-smoked wings flash-fried and tossed. Alabama White Sauce is the sleeper pick. Real smoke flavor from a respected Austin BBQ institution. Brentwood.",
+      "Spicy Boys Fried Chicken — pan-Asian fusion wings with Thai Red Curry BBQ, Lemon-Sichuan dry rub, and Indonesian Sambal. At Zilker and St. Elmo breweries. Known to sell out — arrive early. East Austin."
+    ],
     maxfliss1: [
       "Siegelman Stable × Maxfli Pullover Jacket — charcoal grey and green tech poplin with athletic mesh lining. Nylon coil zip pockets plus hidden internal pockets. Elastic cuffs and hem. The statement piece of the collection. $298.",
       "Racing Stable Track Shorts — green with cream SS logo on the left thigh. Tech poplin shell, athletic mesh lining, elastic waist with internal drawcord. The most on-course-ready bottom in the collection. $132.",

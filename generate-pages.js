@@ -74,7 +74,8 @@ const manualSlugs = new Set([
   'the-glove-edit',
   'the-summer-tee-edit',
   'world-cup-jersey-edit-pitch-to-green',
-  'maxfli-siegelman-stable-harness-the-drive'
+  'maxfli-siegelman-stable-harness-the-drive',
+  'best-wings-in-austin'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
