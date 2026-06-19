@@ -1,32 +1,31 @@
-# Drop Scout Report — 2026-06-18 (Thursday)
+# Drop Scout Report — 2026-06-19 (Friday)
 
 ## Summary
-- **1 new draft card.** Dormie Workshop's **2026 Liberty U.S. Open headcover** (Statue of Liberty face, leather, numbered, very limited, $200 at Fairway Jockey) released yesterday for U.S. Open week. On-watchlist (#27), on-aesthetic, time-sensitive. Card drafted: `2026-06-18-dormie-liberty-us-open-headcover.html`.
-- **Eastside x Nike Air Max Plus G is now LIVE** (dropped June 16, $205). Not re-drafted — the existing `2026-05-25-eastside-golf-nike-take-flight.html` card already covers it; just switch its copy from "lands/upcoming" to "available now" if publishing this week.
-- **0 new brand discoveries.** The only fresh roundup (Golfmagic's "10 up-and-coming 2026") was a December 2025 piece; every name on it (3Putt Round, Kadet, CPH/Captain's Helm, Casualist, Left of Field, Students, Merrill, Rebolf, Agronomy, Head) is already on the watchlist or in `brand-discoveries.md`.
-- **0 active on-brand giveaways.** Father's Day promos only (Seamus 25% bundles, Sugarloaf $25-off ended 6/16) — discounts, not drops. On-brand indie giveaways run on IG Stories, which web search doesn't reach.
-- **U.S. Open is underway** (Shinnecock, June 18-21). Tournament-week drops are the live signal: Dormie (drafted) is the on-aesthetic one; the now-live Eastside and standing Seamus cards are your other timely publishes.
+- **0 new draft cards this run.** The two genuinely fresh, on-aesthetic signals — **Dormie Liberty U.S. Open headcover** and **Malbon x Arsham Chapter Three** — were both caught and drafted in the last two runs (June 18 and June 17) and are still standing. Nothing new on-watchlist crossed the 48h window today that isn't already covered.
+- **Everything new today is corporate / off-aesthetic.** PUMA SHOWTIME Ignite Elevate 2 ($150, June 17), adidas CODECHAOS Messi (June 17), PING Wyndham Clark putter signing, Turtleson's "Name A Polo After Your Dad" Father's Day contest. All major-brand U.S. Open / World Cup / Father's Day tie-ins. Skip.
+- **0 new brand discoveries.** The two names that surfaced (Goatlane, Local Rule) are already tracked — Goatlane is in `brand-discoveries.md` (May 29) and Local Rule is watchlist #35.
+- **0 active on-brand giveaways.** Only Father's Day promos (Turtleson contest, lingering Seamus bundles) — promos/contests, not drops. Indie giveaways run on IG Stories, which web search doesn't index.
+- **U.S. Open final rounds this weekend** (Shinnecock, through June 21). Tournament-week publishes are ready and waiting — see standing drafts below.
 
 ---
 
 ## New Drafts This Run
-- **`2026-06-18-dormie-liberty-us-open-headcover.html`** — Dormie Workshop's limited Liberty headcover for the U.S. Open's return to New York. Leather, Statue of Liberty face via inset applique (3D effect), individually numbered, very limited run, $200 at Fairway Jockey. Follows their sold-out 25-unit PGA Championship cover. Verified via golf.com (published 2026-06-17) + Fairway Jockey product page.
+None. Quiet run, as anticipated. The fresh signal is already on the board from the prior two runs.
 
-## False positives caught this run (do NOT draft)
-- **PAYNTR x Bad Birdie shoe** — surfaced fresh (golf.com, June 17) but Bad Birdie is bro-streetwear. Off-aesthetic, skip.
-- **FootJoy x Todd Snyder 2026** — design-forward but FootJoy is a corporate major. Skip for a card.
-- **adidas CODECHAOS Messi / TaylorMade Sailor's Point / Imperial / Bridgestone USA 250** — U.S. Open / corporate capsules. Off-watchlist, off-aesthetic.
-- **Gumtree "Field Notes" / "State Flower"** — Field Notes is April; State Flower is 2023. Not new.
-
----
-
-## Still-Open Drafts From Prior Runs (verify before publishing)
-- `2026-05-25-eastside-golf-nike-take-flight.html` — **Now live (shoe dropped June 16).** Switch "lands/upcoming" to "available now." Timely for U.S. Open week.
-- `2026-06-01-seamus-us-open-shinnecock.html` — Shipping since June 16; tournament is now live. Still flagged: title uses "Worth Marking" — **retitle to drop "worth"** before publishing (against the no-"worth" rule).
+## Standing Drafts Ready to Publish (verify, then post)
+- `2026-06-18-dormie-liberty-us-open-headcover.html` — **Today's most on-brand publish.** Limited Liberty leather headcover, numbered, $200 at Fairway Jockey. Will sell out fast; U.S. Open is live through Sunday. Post now if posting anything this weekend.
 - `2026-06-17-malbon-arsham-chapter-three.html` — Arsham Chapter Three, live since June 17. Fresh, still standing.
+- `2026-06-01-seamus-us-open-shinnecock.html` — Shinnecock collection shipping; tournament live. **Retitle first** — current title uses "Worth Marking," which breaks the no-"worth" rule.
+- `2026-05-25-eastside-golf-nike-take-flight.html` — Eastside x Nike now live. Timely for U.S. Open week. (Note: the Air Max Plus G itself dates to fall 2025; verify which exact SKU this card refers to before publishing as "new.")
 - `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr shoe + Golf Galaxy retail. Still standing.
 - `2026-06-05-found-golf-brand-to-know.html` — Brand-to-Know bench piece, still unpublished.
 - `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, still latest from Manors.
+
+## False positives caught this run (do NOT draft)
+- **PUMA SHOWTIME Ignite Elevate 2** ($150, June 17, pumagolf.com) — neon corporate U.S. Open footwear. Off-aesthetic.
+- **adidas CODECHAOS Messi** (June 17) — World Cup tie-in, corporate. Skip.
+- **PING x Wyndham Clark Scottsdale TEC putter** — equipment endorsement, not a culture drop. Skip.
+- **Turtleson "Name A Polo After Your Dad" contest** — Father's Day marketing, not a product drop. Skip.
 
 ---
 
@@ -34,41 +33,36 @@
 
 | Brand | Activity |
 |-------|----------|
-| Manors | Site leads with "A Heatwave is Coming" summer push; no discrete new drop. Gentleman Jack still standing. |
-| Malbon | Arsham Chapter Three (June 17, drafted) is the latest. x Gap / x Honma / x HVN still standing. |
-| Metalwood Studio | King of the Greens line + adidas pieces standing. No new drop this window. |
-| Eastside Golf | **Air Max Plus G x Nike now LIVE (June 16, $205).** Pro Series Tee + Core SS Tee also dated 6/17. See note above. |
+| Manors | "Heatwave" summer push + Gentleman Jack capsule still standing. No new discrete drop. |
+| Malbon | Arsham Chapter Three (drafted) is the latest. x Gap / x Honma / x HVN standing. |
+| Metalwood Studio | adidas Predator Sala (Jan) + King of the Greens standing. Nothing new this window. |
+| Eastside Golf | x Nike collab standing/live. No new drop this window. |
 | Quiet Golf | SSC collab + seasonal tees standing. No new drop. |
-| Bogey Boys | Summer Course Collection still latest. No new drop. |
-| Devereux | Mount Gay capsule still latest. No new drop. |
-| Random Golf Club | New-arrivals hats (Sans Serif Dad, Vista Mid Crown) + City Golf, undated/steady. Events: The Loop June 24-25, Lawsonia June 29. No new product signal this window. |
-| Gumtree Golf & Nature | Puma Field Notes standing. No new drop. |
-| Sentinel Golf | Pre-order model; nothing new this window. |
+| Bogey Boys | Summer Course Collection + adidas collab standing. No new drop. |
+| Devereux | Mount Gay capsule (since May 18) still latest. No new drop. |
+| Random Golf Club | New-arrivals hats steady; events The Loop June 24-25, Lawsonia June 29. No new product signal. |
+| Gumtree Golf & Nature | Puma Field Notes / State Flower standing. No new drop. |
+| Sentinel Golf | Basecamp Expedition Series II (pre-order model). Nothing new this window. |
 | Fyfe Golf | Mackenzie collab confirmed July 2026 (early access open). Nothing this window. |
 | Mackenzie Golf Bags | Fyfe collab July. Nothing this window. |
 
 ## Extended Watchlist Highlights (13-41)
-- **Dormie (#27)** — **NEW: Liberty U.S. Open headcover (drafted).** The fresh signal of the run.
-- **Seamus (#29)** — U.S. Open Shinnecock collection live/shipping; Father's Day bundles (promo). Drives the standing draft.
-- **Sugarloaf (#18)** — SS26 + SSC x Payntr standing. Father's Day $25-off promo ended 6/16.
-- **Students / Casualist / Left of Field (#16, 14, 15)** — Paris Golf Gallery activity expected **June 23-29** (Fashion Week timing). **Re-scout ~June 22.** No new product this window.
-- **Radmor (#31)** — Chasing Light standing. No verified new drop.
-- **Macade / Public Drip / Whim / Sounder / Tremont / Field Day / Winston / others** — Steady-state, no detectable new activity in the last 48h.
+- **Dormie (#27)** — Liberty U.S. Open headcover (drafted June 18). Still the run's standout publish.
+- **Seamus (#29)** — U.S. Open Shinnecock collection live/shipping. Drives the standing draft (retitle off "worth" first).
+- **Students / Casualist / Left of Field (#16, 14, 15)** — Paris Golf Gallery activity expected **June 23-29** (Fashion Week timing). No new product yet. **Re-scout ~June 22-23.**
+- **Macade / Sounder / Public Drip / Radmor / Heathlander / others** — Steady-state. Summer '26 collections live but no fresh 48h drop signal.
 
 ---
 
 ## This Week to Watch
-- **U.S. Open — Shinnecock, June 18-21.** On-aesthetic pick is the Dormie Liberty cover (drafted); Eastside (now live) and Seamus (retitle first) are the other timely publishes.
+- **U.S. Open final rounds — Shinnecock, through June 21.** On-aesthetic publish is Dormie Liberty (drafted); Eastside (verify SKU) and Seamus (retitle) are the other timely posts.
 - **Father's Day — June 21.** Expect indie promos over the weekend on IG.
-- **Paris Golf Gallery — June 23-29** (Casualist / Left of Field / Students). Re-check ~June 22.
-- **Fyfe x Mackenzie** — landing July 2026.
-
----
+- **Paris Golf Gallery — June 23-29** (Casualist / Left of Field / Students). **Re-check ~June 22-23** — this is the next likely source of fresh on-brand signal.
 
 ## Active Giveaways
-None on-brand. Only Father's Day discount promos indexed (Seamus bundles, Sugarloaf $25-off) — promos, not drops; off-format for a card.
+None on-brand. Only Father's Day contests/promos indexed (Turtleson polo contest, Seamus bundles) — off-format for a card.
 
 ## Brand Discoveries
-No genuinely new on-aesthetic indie brands this scan. The one fresh-looking roundup (Golfmagic "10 up-and-coming 2026") was December 2025 and entirely already-tracked names.
+No genuinely new on-aesthetic indie brands this scan. Surfaced names (Goatlane, Local Rule) are already tracked.
 
-**Suggestion for Lenny:** With the U.S. Open live, the **Dormie Liberty headcover** is today's real signal and your most on-brand tournament-week publish (it will sell out fast). For the same week, the **Eastside Air Max Plus G** card is now accurate as "available now," and **Seamus Shinnecock** is ready once you retitle off "Worth Marking." Next natural re-scout for fresh signal is **~June 22**, ahead of the Paris Golf Gallery window.
+**Suggestion for Lenny:** Quiet run — no new cards. With the U.S. Open final rounds this weekend, the **Dormie Liberty headcover** remains your most on-brand, time-sensitive publish (it will sell out). **Seamus Shinnecock** is ready once retitled off "worth." Next natural re-scout for fresh signal is **~June 22-23**, right before the Paris Golf Gallery window opens.

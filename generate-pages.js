@@ -73,7 +73,8 @@ const manualSlugs = new Set([
   'arsham-malbon-chapter-three',
   'the-glove-edit',
   'the-summer-tee-edit',
-  'world-cup-jersey-edit-pitch-to-green'
+  'world-cup-jersey-edit-pitch-to-green',
+  'maxfli-siegelman-stable-harness-the-drive'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
