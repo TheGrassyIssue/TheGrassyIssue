@@ -47,10 +47,65 @@
     --grass: #2D4A2B;
     --rough: #A8A878;
     --flag: #C7362C;
+    --ink-rgb: 20, 20, 20;
     --serif: 'Fraunces', Georgia, serif;
     --sans: 'Inter', -apple-system, sans-serif;
     --mono: 'JetBrains Mono', monospace;
   }
+
+  /* NIGHT MODE — auto-activates after 6pm local time */
+  :root.night {
+    --ink: #E8E5DC;
+    --paper: #1A1A18;
+    --grass: #4A7A47;
+    --rough: #8A8A6A;
+    --flag: #E04A3F;
+    --ink-rgb: 232, 229, 220;
+  }
+  :root.night body { background: #1A1A18; }
+  :root.night .card { background: #222220; }
+  :root.night .card-body { background: #222220; }
+  :root.night .nav { background: #1A1A18; }
+  :root.night .nav-drawer { background: #1A1A18; }
+  :root.night .footer { background: #141412; }
+  :root.night .gear-arrow { background: rgba(26, 26, 24, 0.85); color: var(--ink); }
+  :root.night .gear-arrow:hover { background: #1A1A18; }
+  :root.night .card:hover { box-shadow: 0 8px 24px -4px rgba(0,0,0,0.35), 0 2px 6px -1px rgba(0,0,0,0.2); }
+  :root.night .weather-banner { background: #2A4A28; }
+  :root.night .ticker { background: #E8E5DC; color: #1A1A18; }
+  :root.night .card-tag.grass { background: #4A7A47; color: #1A1A18; }
+  :root.night .card-tag.flag { background: #E04A3F; color: #1A1A18; }
+  :root.night .card-tag.ink { background: #E8E5DC; color: #1A1A18; }
+  :root.night .about-strip { border-color: rgba(232,229,220,0.12); }
+  :root.night img { filter: brightness(0.92); }
+  :root.night .hero img { filter: brightness(0.8); }
+  :root.night .nav-cta { background: #E8E5DC; color: #1A1A18; }
+  :root.night .nav-cta:hover { background: #4A7A47; color: #1A1A18; }
+  :root.night .vote-btn.voted.chosen { background: #E8E5DC; color: #1A1A18; }
+  :root.night .night-toggle { opacity: 1; }
+
+  /* Night mode toggle pill */
+  .night-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--ink);
+    color: var(--paper);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    border: none;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    transition: transform 0.2s, background 0.2s;
+  }
+  .night-toggle:hover { transform: scale(1.1); }
+  :root.night .night-toggle { background: #E8E5DC; color: #1A1A18; }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -341,10 +396,10 @@
     position: absolute;
     inset: 0;
     background: linear-gradient(180deg,
-      rgba(20, 20, 20, 0.15) 0%,
-      rgba(20, 20, 20, 0) 30%,
-      rgba(20, 20, 20, 0) 55%,
-      rgba(20, 20, 20, 0.55) 100%);
+      rgba(var(--ink-rgb), 0.15) 0%,
+      rgba(var(--ink-rgb), 0) 30%,
+      rgba(var(--ink-rgb), 0) 55%,
+      rgba(var(--ink-rgb), 0.55) 100%);
     pointer-events: none;
   }
   .hero-content {
@@ -540,8 +595,8 @@
   }
   .card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px -4px rgba(20, 20, 20, 0.12), 0 2px 6px -1px rgba(20, 20, 20, 0.08);
-    border-color: rgba(20, 20, 20, 0.25);
+    box-shadow: 0 8px 24px -4px rgba(var(--ink-rgb), 0.12), 0 2px 6px -1px rgba(var(--ink-rgb), 0.08);
+    border-color: rgba(var(--ink-rgb), 0.25);
   }
   .card.hidden {
     display: none;
@@ -610,7 +665,7 @@
     letter-spacing: 0.12em;
     text-transform: uppercase;
     padding-top: 10px;
-    border-top: 0.5px solid rgba(20, 20, 20, 0.12);
+    border-top: 0.5px solid rgba(var(--ink-rgb), 0.12);
   }
   .card-source { opacity: 0.55; }
   .card-votes {
@@ -673,7 +728,7 @@
     justify-content: space-between;
     align-items: baseline;
     padding: 8px 0;
-    border-bottom: 0.5px solid rgba(20, 20, 20, 0.12);
+    border-bottom: 0.5px solid rgba(var(--ink-rgb), 0.12);
   }
   .card-score .score-row:last-of-type { border-bottom: none; }
   .card-score .pos {
@@ -798,7 +853,7 @@
     bottom: 8px;
     right: 8px;
     padding: 3px 7px;
-    background: rgba(20,20,20,0.75);
+    background: rgba(var(--ink-rgb),0.75);
     color: var(--paper);
     font-family: var(--mono);
     font-size: 9px;
@@ -919,7 +974,7 @@
     bottom: 8px;
     right: 8px;
     padding: 3px 7px;
-    background: rgba(20,20,20,0.75);
+    background: rgba(var(--ink-rgb),0.75);
     color: var(--paper);
     font-family: var(--mono);
     font-size: 9px;
@@ -1103,7 +1158,7 @@
   .vote-bar {
     margin-top: 12px;
     padding-top: 12px;
-    border-top: 0.5px solid rgba(20, 20, 20, 0.1);
+    border-top: 0.5px solid rgba(var(--ink-rgb), 0.1);
   }
   .vote-bar-label {
     display: flex;
@@ -1128,7 +1183,7 @@
   .vote-bar.has-voted .vote-bar-label .fire .pct { color: var(--flag); }
   .vote-bar-track {
     height: 8px;
-    background: rgba(20, 20, 20, 0.08);
+    background: rgba(var(--ink-rgb), 0.08);
     border-radius: 4px;
     position: relative;
     overflow: hidden;
@@ -1155,7 +1210,7 @@
     font-size: 9px;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    border: 0.5px solid rgba(20, 20, 20, 0.2);
+    border: 0.5px solid rgba(var(--ink-rgb), 0.2);
     background: transparent;
     color: var(--ink);
     transition: all 0.2s;
@@ -1454,7 +1509,7 @@
     gap: 16px;
   }
   .score-form .upload-zone {
-    border: 1.5px dashed rgba(20, 20, 20, 0.25);
+    border: 1.5px dashed rgba(var(--ink-rgb), 0.25);
     padding: 28px 20px;
     text-align: center;
     cursor: pointer;
@@ -1546,7 +1601,7 @@
   }
   .score-info-rules {
     padding-top: 16px;
-    border-top: 0.5px solid rgba(20, 20, 20, 0.12);
+    border-top: 0.5px solid rgba(var(--ink-rgb), 0.12);
   }
   .score-info-rules dt {
     font-family: var(--mono);
@@ -1573,7 +1628,7 @@
     z-index: 1;
   }
   .card:hover .card-media .card-hover-overlay {
-    background: rgba(20, 20, 20, 0.08);
+    background: rgba(var(--ink-rgb), 0.08);
   }
 
   /* GEAR CAROUSEL */
@@ -11104,6 +11159,60 @@ function submitNL(e){
   setTimeout(closeNL, 2200);
   return false;
 }
+</script>
+
+<!-- Night mode toggle -->
+<button class="night-toggle" onclick="toggleNight()" aria-label="Toggle night mode" title="Toggle night mode">
+  <span class="night-icon">☾</span>
+</button>
+
+<script>
+(function() {
+  var root = document.documentElement;
+  var icon = null;
+
+  function isNightTime() {
+    var h = new Date().getHours();
+    return h >= 18 || h < 6;
+  }
+
+  function applyMode(night) {
+    if (night) {
+      root.classList.add('night');
+    } else {
+      root.classList.remove('night');
+    }
+    icon = document.querySelector('.night-icon');
+    if (icon) icon.textContent = night ? '☀' : '☾';
+  }
+
+  // Check localStorage for manual override, otherwise use time
+  var stored = localStorage.getItem('tgi-night');
+  if (stored === 'on') {
+    applyMode(true);
+  } else if (stored === 'off') {
+    applyMode(false);
+  } else {
+    applyMode(isNightTime());
+  }
+
+  // Re-check every minute if no manual override
+  setInterval(function() {
+    if (!localStorage.getItem('tgi-night')) {
+      applyMode(isNightTime());
+    }
+  }, 60000);
+
+  // Expose toggle
+  window.toggleNight = function() {
+    var isNight = root.classList.contains('night');
+    applyMode(!isNight);
+    // Set manual override that expires at next transition boundary
+    localStorage.setItem('tgi-night', !isNight ? 'on' : 'off');
+    // Clear override after 12 hours so auto-mode resumes
+    setTimeout(function() { localStorage.removeItem('tgi-night'); }, 12 * 60 * 60 * 1000);
+  };
+})();
 </script>
 
 <!-- GoatCounter — privacy-friendly hit counter, no cookies -->
