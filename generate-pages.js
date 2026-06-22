@@ -69,6 +69,7 @@ const manualSlugs = new Set([
   'premium-tees-carousel', 'bold-tees-carousel', 'hats-carousel',
   'best-golf-streetwear-brands-2026', 'manors-ss26',
   'brand-to-know-read-the-green',
+  'brand-to-know-aug-11',
   'austin-bbq-field-guide',
   'arsham-malbon-chapter-three',
   'the-glove-edit',
