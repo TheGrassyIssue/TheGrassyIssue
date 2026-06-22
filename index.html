@@ -54,34 +54,46 @@
   }
 
   /* NIGHT MODE — auto-activates after 6pm local time */
-  :root.night {
-    --ink: #E8E5DC;
-    --paper: #1A1A18;
-    --grass: #4A7A47;
-    --rough: #8A8A6A;
-    --flag: #E04A3F;
-    --ink-rgb: 232, 229, 220;
+  /* Smooth transition on all color-driven properties */
+  body, .card, .card-body, .nav, .nav-drawer, .footer, .nav-cta,
+  .ticker, .weather-banner, .card-tag, .gear-arrow, .about-strip,
+  .night-toggle, .vote-btn {
+    transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
   }
-  :root.night body { background: #1A1A18; }
-  :root.night .card { background: #222220; }
-  :root.night .card-body { background: #222220; }
-  :root.night .nav { background: #1A1A18; }
-  :root.night .nav-drawer { background: #1A1A18; }
-  :root.night .footer { background: #141412; }
-  :root.night .gear-arrow { background: rgba(26, 26, 24, 0.85); color: var(--ink); }
-  :root.night .gear-arrow:hover { background: #1A1A18; }
-  :root.night .card:hover { box-shadow: 0 8px 24px -4px rgba(0,0,0,0.35), 0 2px 6px -1px rgba(0,0,0,0.2); }
-  :root.night .weather-banner { background: #2A4A28; }
-  :root.night .ticker { background: #E8E5DC; color: #1A1A18; }
-  :root.night .card-tag.grass { background: #4A7A47; color: #1A1A18; }
-  :root.night .card-tag.flag { background: #E04A3F; color: #1A1A18; }
-  :root.night .card-tag.ink { background: #E8E5DC; color: #1A1A18; }
-  :root.night .about-strip { border-color: rgba(232,229,220,0.12); }
-  :root.night img { filter: brightness(0.92); }
-  :root.night .hero img { filter: brightness(0.8); }
-  :root.night .nav-cta { background: #E8E5DC; color: #1A1A18; }
-  :root.night .nav-cta:hover { background: #4A7A47; color: #1A1A18; }
-  :root.night .vote-btn.voted.chosen { background: #E8E5DC; color: #1A1A18; }
+  img { transition: filter 0.6s ease; }
+
+  :root.night {
+    --ink: #C8C3B8;
+    --paper: #202020;
+    --grass: #5A8A56;
+    --rough: #9A9A7A;
+    --flag: #D4564A;
+    --ink-rgb: 200, 195, 184;
+  }
+  :root.night body { background: #202020; }
+  :root.night .card { background: #2A2A28; border-color: rgba(200,195,184,0.1); }
+  :root.night .card-body { background: #2A2A28; }
+  :root.night .nav { background: #242422; border-color: rgba(200,195,184,0.08); }
+  :root.night .nav-drawer { background: #242422; }
+  :root.night .footer { background: #1C1C1A; }
+  :root.night .gear-arrow { background: rgba(42, 42, 40, 0.85); color: var(--ink); }
+  :root.night .gear-arrow:hover { background: #2A2A28; }
+  :root.night .card:hover { box-shadow: 0 8px 24px -4px rgba(0,0,0,0.3), 0 2px 6px -1px rgba(0,0,0,0.15); }
+  :root.night .weather-banner { background: #2E4E2C; }
+  :root.night .ticker { background: #C8C3B8; color: #202020; }
+  :root.night .card-tag.grass { background: #5A8A56; color: #202020; }
+  :root.night .card-tag.flag { background: #D4564A; color: #202020; }
+  :root.night .card-tag.ink { background: #C8C3B8; color: #202020; }
+  :root.night .about-strip { border-color: rgba(200,195,184,0.08); }
+  :root.night img { filter: brightness(0.88); }
+  :root.night .hero img { filter: brightness(0.75); }
+  :root.night .nav-cta { background: #C8C3B8; color: #202020; }
+  :root.night .nav-cta:hover { background: #5A8A56; color: #202020; }
+  :root.night .vote-btn.voted.chosen { background: #C8C3B8; color: #202020; }
+  :root.night .card-source a { opacity: 0.5; }
+  :root.night .card-readmore { opacity: 0.55; }
+  :root.night .card-meta { opacity: 0.35; }
+  :root.night .card-text { opacity: 0.7; }
   :root.night .night-toggle { opacity: 1; }
 
   /* Night mode toggle pill */
@@ -105,7 +117,7 @@
     transition: transform 0.2s, background 0.2s;
   }
   .night-toggle:hover { transform: scale(1.1); }
-  :root.night .night-toggle { background: #E8E5DC; color: #1A1A18; }
+  :root.night .night-toggle { background: #C8C3B8; color: #202020; }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -1408,7 +1420,7 @@
   .vibe-pin .vibe-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, transparent 50%, rgba(20, 20, 20, 0.7) 100%);
+    background: linear-gradient(180deg, transparent 50%, rgba(var(--ink-rgb), 0.7) 100%);
     opacity: 0;
     transition: opacity 0.4s;
     display: flex;
@@ -1623,7 +1635,7 @@
   .card-media .card-hover-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(20, 20, 20, 0.0);
+    background: rgba(var(--ink-rgb), 0.0);
     transition: background 0.5s;
     z-index: 1;
   }
@@ -1654,7 +1666,7 @@
     left: 0;
     right: 0;
     padding: 16px;
-    background: linear-gradient(transparent, rgba(20,20,20,0.85));
+    background: linear-gradient(transparent, rgba(var(--ink-rgb),0.85));
     color: var(--paper);
   }
   .gear-slide-brand {
@@ -1919,7 +1931,7 @@
       <div class="hero-caption">
         Roy Kizer, May 22<br/>
         <span style="opacity: 0.65;">Shot on iPhone · No filter</span>
-      <a href="/drops/roy-kizer-from-sewage-plant-to-links-style-gem" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/roy-kizer-from-sewage-plant-to-links-style-gem" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
     <div class="hero-bottom">
@@ -1967,6 +1979,52 @@
 </section>
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
+
+    <!-- THE EDIT — Camo, 18 Picks -->
+  <div class="card" data-type="gear">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Edit]</span>
+      <div class="gear-carousel" data-carousel="camo1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://studentsgolf.com/search?q=realtree" target="_blank" rel="noopener">
+              <img src="/images/camo-edit/students-realtree-pants.jpg" alt="Students Golf Emers Realtree Twill Pants" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Students Golf</div><div class="gear-slide-name">Emers Realtree Twill Pants · $98</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.bunxgolf.com/products/texas-wedge-golf-hat?variant=50895145337106" target="_blank" rel="noopener">
+              <img src="/images/camo-edit/bunx-tex-camo-hat.jpg" alt="BUNX Golf Texas Wedge Camo Snapback" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">BUNX Golf</div><div class="gear-slide-name">The Tex · Camo Snapback · $42</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.robertmarkgolf.com/collections/camo-headcovers" target="_blank" rel="noopener">
+              <img src="/images/camo-edit/robert-mark-camo-headcover.jpg" alt="Robert Mark Golf Custom Camo Leather Headcover" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Robert Mark Golf</div><div class="gear-slide-name">Custom Camo Headcover · from $95</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://sundaygolf.com/products/ryder-mossy-oak-bottomland-camo-lightweight-stand-bag" target="_blank" rel="noopener">
+              <img src="/images/camo-edit/sunday-mossy-oak-bag.jpg" alt="Sunday Golf × Mossy Oak Ryder Bottomland Camo Stand Bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sunday Golf × Mossy Oak</div><div class="gear-slide-name">Ryder Stand Bag · $280</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-meta">June 22, 2026 · The Edit</div>
+      <div class="card-title"><a href="/drops/the-camo-edit" style="color:inherit;text-decoration:none;border-bottom:none;">The Camo Edit — 18 Picks That Blend In and Stand Out</a></div>
+      <p class="card-text" data-slidetext="camo1">Students Golf Emers Realtree Twill Pants — full Realtree Xtra camo print on structured twill. The kind of pants that make the pro shop do a double-take. $98.</p>
+      <div class="gear-dots" data-dots="camo1"></div>
+      <div class="gear-counter" data-counter="camo1">1 / 4</div>
+      <div class="card-source"><a href="/drops/the-camo-edit">The Edit</a></div>
+      <a href="/drops/the-camo-edit" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+    </div>
+  </div>
 
     <!-- THE EDIT — Home Golf Decor, 18 Picks -->
   <div class="card" data-type="gear">
@@ -2402,7 +2460,7 @@
       <div class="gear-dots" data-dots="austinbbq12"></div>
       <div class="gear-counter" data-counter="austinbbq12">1 / 4</div>
       <div class="card-source"><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></div>
-      <a href="/drops/austin-bbq-field-guide" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/austin-bbq-field-guide" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2454,7 +2512,7 @@
       <div class="gear-dots" data-dots="readthegreen"></div>
       <div class="gear-counter" data-counter="readthegreen">1 / 5</div>
       <div class="card-source"><a href="https://readthegreen.com" target="_blank" rel="noopener">readthegreen.com</a></div>
-      <a href="/drops/brand-to-know-read-the-green" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-read-the-green" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2538,7 +2596,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://www.aimeleondore.com/collections/ald-golf" target="_blank" rel="noopener">aimeleondore.com</a> · $50–$495</span>
       </div>
-      <a href="/drops/ald-golf-ss26-new-releases" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/ald-golf-ss26-new-releases" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2619,7 +2677,7 @@
       <div class="gear-dots" data-dots="summerstyle10"></div>
       <div class="gear-counter" data-counter="summerstyle10">1 / 10</div>
       <div class="card-source"><a href="https://thegrassyissue.com">thegrassyissue.com</a></div>
-      <a href="/drops/the-summer-style-list-10-golfers-who-get-it" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-summer-style-list-10-golfers-who-get-it" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2712,7 +2770,7 @@
       <div class="gear-dots" data-dots="techbottoms12"></div>
       <div class="gear-counter" data-counter="techbottoms12">1 / 12</div>
       <div class="card-source"><a href="https://thegrassyissue.com">thegrassyissue.com</a></div>
-      <a href="/drops/premium-tees-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/premium-tees-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2793,7 +2851,7 @@
       <div class="gear-dots" data-dots="techtops10"></div>
       <div class="gear-counter" data-counter="techtops10">1 / 10</div>
       <div class="card-source"><a href="https://thegrassyissue.com" target="_blank" rel="noopener">thegrassyissue.com</a></div>
-      <a href="/drops/10-technical-fabric-tops-for-summer" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-technical-fabric-tops-for-summer" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2886,7 +2944,7 @@
       <div class="gear-dots" data-dots="puttercovers12"></div>
       <div class="gear-counter" data-counter="puttercovers12">1 / 12</div>
       <div class="card-source"><a href="https://thegrassyissue.com" target="_blank" rel="noopener">thegrassyissue.com</a></div>
-      <a href="/drops/12-putter-covers-were-eyeing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/12-putter-covers-were-eyeing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -2967,7 +3025,7 @@
       <div class="gear-dots" data-dots="rangefinder10"></div>
       <div class="gear-counter" data-counter="rangefinder10">1 / 10</div>
       <div class="card-source"><a href="https://thegrassyissue.com" target="_blank" rel="noopener">thegrassyissue.com</a></div>
-      <a href="/drops/10-rangefinders-from-90-to-600" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-rangefinders-from-90-to-600" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3048,7 +3106,7 @@
       <div class="gear-dots" data-dots="worldcup10"></div>
       <div class="gear-counter" data-counter="worldcup10">1 / 10</div>
       <div class="card-source"><a href="https://www.austinfc.com/soccercelebration" target="_blank" rel="noopener">austinfc.com</a></div>
-      <a href="/drops/where-to-watch-the-world-cup-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/where-to-watch-the-world-cup-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3153,7 +3211,7 @@
       <div class="gear-dots" data-dots="teeedit"></div>
       <div class="gear-counter" data-counter="teeedit">1 / 14</div>
       <div class="card-source"><a href="https://thegrassyissue.com" target="_blank" rel="noopener">thegrassyissue.com</a></div>
-      <a href="/drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3228,7 +3286,7 @@
       <div class="gear-dots" data-dots="sscbyrdie"></div>
       <div class="gear-counter" data-counter="sscbyrdie">1 / 9</div>
       <div class="card-source"><a href="https://www.sugarloafsocialclub.com/collections/ssc-x-byrdie-golf" target="_blank" rel="noopener">sugarloafsocialclub.com</a></div>
-      <a href="/drops/ssc-x-byrdie-golf-social-wear-just-dropped" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/ssc-x-byrdie-golf-social-wear-just-dropped" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3309,7 +3367,7 @@
       <div class="gear-dots" data-dots="nikes10"></div>
       <div class="gear-counter" data-counter="nikes10">1 / 10</div>
       <div class="card-source"><a href="https://www.nike.com/w/golf-shoes-23q9wzy7ok" target="_blank" rel="noopener">nike.com</a></div>
-      <a href="/drops/10-nikes-that-belong-on-the-course" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-nikes-that-belong-on-the-course" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3390,7 +3448,7 @@
       <div class="gear-dots" data-dots="walkerpartec"></div>
       <div class="gear-counter" data-counter="walkerpartec">1 / 10</div>
       <div class="card-source"><a href="https://www.walkergolfthings.com/en-us/collections/par-tec" target="_blank" rel="noopener">walkergolfthings.com</a></div>
-      <a href="/drops/walker-golf-the-par-tec-drop" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/walker-golf-the-par-tec-drop" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3441,7 +3499,7 @@
       <div class="gear-dots" data-dots="foundgolf"></div>
       <div class="gear-counter" data-counter="foundgolf">1 / 5</div>
       <div class="card-source"><a href="https://found.golf" target="_blank" rel="noopener">found.golf</a></div>
-      <a href="/drops/brand-to-know-found-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-found-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3561,7 +3619,7 @@
       <div class="gear-dots" data-dots="drivers12"></div>
       <div class="gear-counter" data-counter="drivers12">1 / 12</div>
       <div class="card-source"><a href="https://mygolfspy.com/buyers-guides/drivers/best-drivers-of-2026/" target="_blank" rel="noopener">Various</a></div>
-      <a href="/drops/the-2026-driver-drop-12-new-sticks" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-2026-driver-drop-12-new-sticks" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3631,7 +3689,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Grip Edit</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
-      <a href="/drops/7-grips-to-add-a-little-flavor" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/7-grips-to-add-a-little-flavor" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -3720,7 +3778,7 @@
       <div class="card-meta">
         <span class="card-source">126th U.S. Open · Shinnecock Hills · June 18–21</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
-      <a href="/drops/6-shinnecock-capsules-before-the-first-tee" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/6-shinnecock-capsules-before-the-first-tee" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -3799,7 +3857,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://themunyconservancy.com" target="_blank" rel="noopener">themunyconservancy.com</a></span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
-      <a href="/drops/lions-muny-is-getting-a-world-class-renovation-heres-whats-c" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/lions-muny-is-getting-a-world-class-renovation-heres-whats-c" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -3911,7 +3969,7 @@
       <div class="gear-dots" data-dots="mogshade"></div>
       <div class="gear-counter" data-counter="mogshade">1 / 10</div>
       <div class="card-source"><a href="https://www.mogshadegolf.com" target="_blank" rel="noopener">mogshadegolf.com</a></div>
-      <a href="/drops/brand-to-know-mogshade" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-mogshade" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -3982,7 +4040,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://waterwhendry.com" target="_blank" rel="noopener">waterwhendry.com</a> · $15 – $128</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
-      <a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -4066,7 +4124,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://www.masters.com/en_US/tickets" target="_blank" rel="noopener">masters.com</a> · Apply by June 20</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
-      <a href="/drops/the-masters-ticket-lottery-is-open-you-have-twenty-days" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-masters-ticket-lottery-is-open-you-have-twenty-days" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -4184,7 +4242,7 @@
       <div class="gear-dots" data-dots="bottles11"></div>
       <div class="gear-counter" data-counter="bottles11">1 / 11</div>
       <div class="card-source"><a href="https://www.gumtreegolfandnature.com" target="_blank" rel="noopener">Various</a></div>
-      <a href="/drops/11-water-bottles-wed-actually-carry" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/11-water-bottles-wed-actually-carry" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4265,7 +4323,7 @@
       <div class="gear-dots" data-dots="burgers12"></div>
       <div class="gear-counter" data-counter="burgers12">1 / 10</div>
       <div class="card-source"><a href="https://www.google.com/maps" target="_blank" rel="noopener">Various</a></div>
-      <a href="/drops/10-of-the-best-post-round-burgers" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-of-the-best-post-round-burgers" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4299,7 +4357,7 @@
         <span class="card-source"><a href="https://munikids.com" target="_blank" rel="noopener">munikids.com</a> · $30 – $85</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
       </div>
-      <a href="/drops/muni-kids-10-years" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/muni-kids-10-years" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4368,7 +4426,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://thegrassyissue.com/drops/hats-carousel" target="_blank" rel="noopener">Various</a> · $35 – $65</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/hats-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/hats-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -4438,8 +4496,8 @@
         <span class="card-source"><a href="https://manorsgolf.com/products" target="_blank" rel="noopener">Manors Golf</a> · $21 – $283</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
       </div>
-      <a href="/drops/manors-gentleman-jack" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
-      <a href="/drops/manors-ss26" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/manors-gentleman-jack" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/manors-ss26" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4500,7 +4558,7 @@
         <span class="card-source"><a href="https://malbon.com/collections/mens-summer-collection" target="_blank" rel="noopener">Malbon Golf</a> · $45 – $168</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
       </div>
-      <a href="/drops/malbon-summer-gallo-colorido" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/malbon-summer-gallo-colorido" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4616,7 +4674,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Austin, TX</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/8-special-day-rounds-near-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/8-special-day-rounds-near-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -4752,7 +4810,7 @@
       <div class="gear-dots" data-dots="hoodies14"></div>
       <div class="gear-counter" data-counter="hoodies14">1 / 14</div>
       <div class="card-source"><a href="https://www.gumtreegolfandnature.com" target="_blank" rel="noopener">Various</a></div>
-      <a href="/drops/14-hoodies-that-caught-my-eye" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/14-hoodies-that-caught-my-eye" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4823,7 +4881,7 @@
       <div class="gear-dots" data-dots="golfbooks7"></div>
       <div class="gear-counter" data-counter="golfbooks7">1 / 7</div>
       <div class="card-source"><a href="https://www.amazon.com" target="_blank" rel="noopener">Amazon</a></div>
-      <a href="/drops/7-books-to-elevate-your-golf-game" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/7-books-to-elevate-your-golf-game" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -4907,7 +4965,7 @@
         <a href="https://www.evnroll.com" target="_blank" rel="noopener" class="source-link">Evnroll</a> ·
         <a href="https://lambcrafted.com" target="_blank" rel="noopener" class="source-link">Lamb Crafted</a> ·
         <a href="https://swag.golf" target="_blank" rel="noopener" class="source-link">Swag Golf</a>
-      <a href="/drops/the-2026-putter-drop-8-worth-the-cash" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-2026-putter-drop-8-worth-the-cash" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -4989,7 +5047,7 @@
         <a href="https://radry.com/" target="_blank" rel="noopener" class="source-link">radry.com</a> ·
         <a href="https://whitedotmarket.com/collections/tony-radry-knapton" target="_blank" rel="noopener" class="source-link">White Dot Market</a> ·
         <a href="https://www.instagram.com/radrygolf/" target="_blank" rel="noopener" class="source-link">@radrygolf</a>
-      <a href="/drops/brand-to-know-radry-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-radry-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5060,7 +5118,7 @@
         <a href="https://mogshadegolf.com/" target="_blank" rel="noopener" class="source-link">Mogshade</a> ·
         <a href="https://www.walkergolfthings.com/" target="_blank" rel="noopener" class="source-link">Walker Golf</a> ·
         <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="source-link">Jones</a>
-      <a href="/drops/accessories-on-and-off-the-course" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/accessories-on-and-off-the-course" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5114,7 +5172,7 @@
         <a href="https://www.austintexas.gov/golfatx" target="_blank" rel="noopener" class="source-link">GolfATX</a> ·
         <a href="https://www.fairwayscantina.com/" target="_blank" rel="noopener" class="source-link">fairwayscantina.com</a> ·
         <a href="https://www.ciscosaustin.com/muny" target="_blank" rel="noopener" class="source-link">ciscosaustin.com</a>
-      <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5174,7 +5232,7 @@
       <div class="card-source">
         <a href="https://merrillgolf.com/" target="_blank" rel="noopener" class="source-link">merrillgolf.com</a> ·
         <a href="https://www.instagram.com/merrillgolf/" target="_blank" rel="noopener" class="source-link">@merrillgolf</a>
-      <a href="/drops/brand-to-know-merrill-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-merrill-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5301,7 +5359,7 @@
         <a href="https://stitchgolf.com/products/sl2-gen-2" target="_blank" rel="noopener" class="source-link">Stitch</a> ·
         <a href="https://shaplandbags.com/products/kantle-3-1" target="_blank" rel="noopener" class="source-link">Shapland</a> ·
         <a href="https://ghostgolf.com/collections/anyday-golf-bags" target="_blank" rel="noopener" class="source-link">Ghost Golf</a>
-      <a href="/drops/7-bags-that-stand-out" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/7-bags-that-stand-out" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5397,7 +5455,7 @@
         <span class="card-source">metalwood.studio · Drop</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
       </div>
-      <a href="/drops/metalwood-ss26-picks" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/metalwood-ss26-picks" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -5477,7 +5535,7 @@
       <div class="card-meta">
         <span class="card-source">sentinelgolf.us · Drop</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5586,7 +5644,7 @@
       <div class="card-meta">
         <span class="card-source">casualist.com · Brand to Know</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/brand-to-know-casualist" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-casualist" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -5726,7 +5784,7 @@
         </div>
         <div class="vote-bar-count">0 votes</div>
       </div>
-      <a href="/drops/premium-tees-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">Read the Guide →</a>
+      <a href="/drops/premium-tees-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">Read the Guide →</a>
     </div>
   </div>
 
@@ -5816,7 +5874,7 @@
         </div>
         <div class="vote-bar-count">0 votes</div>
       </div>
-      <a href="/drops/bold-tees-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">Read the Guide →</a>
+      <a href="/drops/bold-tees-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">Read the Guide →</a>
     </div>
   </div>
 
@@ -5872,7 +5930,7 @@
       <div class="card-meta">May 12, 2026 · The Edit</div>
       <h2 class="card-title"><a href="/drops/5-post-round-evening-spots-in-austin" style="color:inherit;text-decoration:none;border-bottom:none;">5 Post-Round Evening Spots in Austin</a></h2>
       <p class="card-text" data-slidetext="19thhole">You just played 18. The sun's going down. You're not ready to go home. These five spots are where the round keeps going — vinyl bars, patio hangs, and low-key vibes across the city.</p>
-      <a href="/drops/5-post-round-evening-spots-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/5-post-round-evening-spots-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -5949,7 +6007,7 @@
       <div class="card-meta">May 11, 2026 · Brand to Know</div>
       <h2 class="card-title"><a href="/drops/3-putt-round-golf-tees-disguised-as-bad-habits" style="color:inherit;text-decoration:none;border-bottom:none;">3 Putt Round — Golf Tees Disguised as Bad Habits</a></h2>
       <p class="card-text" data-slidetext="threeputtround">European brand 3 Putt Round packages golf tees inside cigarette boxes, matchbooks, and snus tins. The whole line leans into golf-as-addiction humor — punchy colors, cheeky copy, and accessories that belong on a shelf as much as in your bag.</p>
-      <a href="/drops/3-putt-round-golf-tees-disguised-as-bad-habits" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/3-putt-round-golf-tees-disguised-as-bad-habits" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -6054,7 +6112,7 @@
       <div class="card-meta">May 11, 2026 · The Edit</div>
       <h2 class="card-title"><a href="/drops/fresh-pieces-for-the-warm-weather" style="color:inherit;text-decoration:none;border-bottom:none;">Fresh Pieces for the Warm Weather</a></h2>
       <p class="card-text" data-slidetext="freshpieces">12 brands. 12 pieces. Your warm-weather rotation, sorted.</p>
-      <a href="/drops/fresh-pieces-for-the-warm-weather" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/fresh-pieces-for-the-warm-weather" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -6162,7 +6220,7 @@
       </div>
       <h2 class="card-title"><a href="/drops/public-drip-brooklyns-muni-born-golf-label" style="color:inherit;text-decoration:none;border-bottom:none;">Public Drip — Brooklyn's Muni-Born Golf Label</a></h2>
       <p class="card-text" data-slidetext="publicdrip">Founded in 2020 by Neil Tan after rediscovering golf at Van Cortlandt Park in the Bronx, Public Drip is the anti-country-club label — streetwear drops for public course golfers. Featured in Hypebeast, collab with LIV Golf's Cleeks GC, and one of LINKS Magazine's brands to watch in 2026.</p>
-      <a href="/drops/public-drip-brooklyns-muni-born-golf-label" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/public-drip-brooklyns-muni-born-golf-label" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -6470,7 +6528,7 @@
       </div>
       <h2 class="card-title"><a href="/drops/hats-carousel" style="color:inherit;text-decoration:none;border-bottom:none;">The Hats & Towels Edit</a></h2>
       <p class="card-text" data-slidetext="hatstowels">Six hats and six towels from indie golf brands worth knowing — from Agronomy Workshop's pencil-holder rope hat to Birds of Condor's Coogi-print towel. No big-box brands. All character.</p>
-      <a href="/drops/hats-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See Full Edit →</a>
+      <a href="/drops/hats-carousel" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See Full Edit →</a>
     </div>
   </div>
 
@@ -6564,7 +6622,7 @@
       </div>
       <h2 class="card-title"><a href="/drops/10-texas-courses-worth-the-trip" style="color:inherit;text-decoration:none;border-bottom:none;">10 Texas Courses Worth the Trip</a></h2>
       <p class="card-text" data-slidetext="texascourses">Desert canyons in Big Bend, PGA Tour-grade conditioning in Frisco, Tom Fazio cliffs in Austin, and three Robert Trent Jones Sr. layouts on Lake LBJ. These are the premium Texas courses worth building a weekend around.</p>
-      <a href="/drops/10-texas-courses-worth-the-trip" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-texas-courses-worth-the-trip" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -6672,7 +6730,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · The Edit</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/3-aussie-golf-brands-you-should-know" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/3-aussie-golf-brands-you-should-know" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -6753,7 +6811,7 @@
       <div class="card-meta">
         <span class="card-source">themunyconservancy.com · Field Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -6863,7 +6921,7 @@
         <span class="card-source">sugarloafsocialclub.com · New</span>
         <span class="card-votes"><span class="vote-up">163</span><span class="comments">◎ 37</span></span>
       </div>
-      <a href="/drops/sugarloaf-ss26" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/sugarloaf-ss26" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
     </div>
   </div>
 
@@ -6971,7 +7029,7 @@
       <div class="card-meta">
         <span class="card-source">metalwood.studio · Brand to Know</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/brand-to-know-metalwood-studio" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-know-metalwood-studio" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7080,7 +7138,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · The Edit</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/the-towel-edit-12-worth-clipping-to-your-bag" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-towel-edit-12-worth-clipping-to-your-bag" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7154,7 +7212,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Field Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7256,7 +7314,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Field Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/the-putter-cover-edit-11-covers-worth-the-pocket" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-putter-cover-edit-11-covers-worth-the-pocket" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7351,7 +7409,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Field Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/10-white-tees-to-beat-the-texas-heat" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-white-tees-to-beat-the-texas-heat" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7432,7 +7490,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Malbon Golf</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/malbon-golf-studio-seoul-ss26" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/malbon-golf-studio-seoul-ss26" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7506,7 +7564,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Brand to Watch</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/brand-to-watch-kingfisher-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/brand-to-watch-kingfisher-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7587,7 +7645,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Field Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/8-best-practice-facilities-around-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/8-best-practice-facilities-around-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7667,7 +7725,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Gear Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/5-zero-torque-putters-worth-your-attention" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/5-zero-torque-putters-worth-your-attention" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7762,7 +7820,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Field Guide</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/10-indie-ball-marker-brands-worth-knowing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-indie-ball-marker-brands-worth-knowing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7836,7 +7894,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · Austin, TX</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/7-post-round-moves-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/7-post-round-moves-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7908,7 +7966,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://www.aimeleondore.com/collections/ald-golf" target="_blank" rel="noopener">aimeleondore.com</a> · $40–$495</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -7962,7 +8020,7 @@
       <div class="card-meta">
         <span class="card-source"><a href="https://www.zarahome.com" target="_blank" rel="noopener">zarahome.com</a> · $30–$129</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/zara-home-made-a-golf-collection-and-its-weirdly-good" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/zara-home-made-a-golf-collection-and-its-weirdly-good" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8047,7 +8105,7 @@
       <div class="card-meta">
         <span class="card-source">Manors · Malbon · Students Golf · Birds of Condor</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/8-bucket-hats-worth-the-brim" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/8-bucket-hats-worth-the-brim" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8101,7 +8159,7 @@
       <div class="card-meta">
         <span class="card-source">agronomywork.shop · New</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/agronomy-workshop-a-golf-shirt-with-a-hidden-tee-slot-and-no" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/agronomy-workshop-a-golf-shirt-with-a-hidden-tee-slot-and-no" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8155,7 +8213,7 @@
       <div class="card-meta">
         <span class="card-source">late-nine.com · New</span>
         <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8215,7 +8273,7 @@
       <div class="card-meta">
         <span class="card-source">fyfegolf.com · New</span>
         <span class="card-votes"><span class="vote-up">178</span><span class="comments">◎ 42</span></span>
-      <a href="/drops/fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8281,7 +8339,7 @@
       <div class="card-meta">
         <span class="card-source">TGI Guide · New</span>
         <span class="card-votes"><span class="vote-up">204</span><span class="comments">◎ 51</span></span>
-      <a href="/drops/7-divot-tools-actually-worth-carrying" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/7-divot-tools-actually-worth-carrying" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8353,7 +8411,7 @@
       <div class="card-meta">
         <span class="card-source">gumtreegolfandnature.com · New</span>
         <span class="card-votes"><span class="vote-up">192</span><span class="comments">◎ 56</span></span>
-      <a href="/drops/gumtree-golf-x-puma-the-field-notes-collection-lands" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/gumtree-golf-x-puma-the-field-notes-collection-lands" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8418,7 +8476,7 @@
       <div class="card-meta">
         <span class="card-source">Nike / Jordan Golf · New</span>
         <span class="card-votes"><span class="vote-up">241</span><span class="comments">◎ 73</span></span>
-      <a href="/drops/the-jordan-golf-spring-edit-chicago-drops-may-10" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-jordan-golf-spring-edit-chicago-drops-may-10" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8472,7 +8530,7 @@
       <div class="card-meta">
         <span class="card-source">vesselgolf.com · New</span>
         <span class="card-votes"><span class="vote-up">186</span><span class="comments">◎ 49</span></span>
-      <a href="/drops/vessel-season-opener-26-masters-green-croc-texture-already-s" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/vessel-season-opener-26-masters-green-croc-texture-already-s" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8526,7 +8584,7 @@
       <div class="card-meta">
         <span class="card-source">MyGolfSpy · New</span>
         <span class="card-votes"><span class="vote-up">203</span><span class="comments">◎ 67</span></span>
-      <a href="/drops/the-best-non-golfing-golf-shoe-5-trail-runners-that-belong-o" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-best-non-golfing-golf-shoe-5-trail-runners-that-belong-o" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8844,7 +8902,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · New</span>
         <span class="card-votes"><span class="vote-up">214</span><span class="comments">◎ 52</span></span>
-      <a href="/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -8892,7 +8950,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · 1d</span>
         <span class="card-votes"><span class="vote-up">178</span><span class="comments">◎ 41</span></span>
-      <a href="/drops/the-shoe-edit-6-pairs-that-belong-on-and-off-the-course" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-shoe-edit-6-pairs-that-belong-on-and-off-the-course" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -9118,7 +9176,7 @@
     <div class="card-media">
       <span class="card-tag rough">[News]</span>
       <div class="card-hover-overlay"></div>
-      <div style="aspect-ratio: 16/10; background: #141414; color: var(--paper); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; font-size: 28px; padding: 20px; text-align: center; line-height: 1.15;">Golf.com</div>
+      <div style="aspect-ratio: 16/10; background: var(--ink); color: var(--paper); display: flex; align-items: center; justify-content: center; font-family: var(--serif); font-style: italic; font-size: 28px; padding: 20px; text-align: center; line-height: 1.15;">Golf.com</div>
     </div>
     <div class="card-body">
       <div class="card-title">Golf.com names Lions Muni one of Austin's places worth saving.</div>
@@ -9401,7 +9459,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · 1d</span>
         <span class="card-votes"><span class="vote-up">94</span><span class="comments">◎ 18</span></span>
-      <a href="/drops/the-ball-marker-edit-6-markers-worth-pocketing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-ball-marker-edit-6-markers-worth-pocketing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -9449,7 +9507,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · 2d</span>
         <span class="card-votes"><span class="vote-up">142</span><span class="comments">◎ 23</span></span>
-      <a href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -9497,7 +9555,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · 3d</span>
         <span class="card-votes"><span class="vote-up">156</span><span class="comments">◎ 27</span></span>
-      <a href="/drops/the-hat-edit-6-lids-for-golfers-who-skip-the-pro-shop" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-hat-edit-6-lids-for-golfers-who-skip-the-pro-shop" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -9545,7 +9603,7 @@
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · 4d</span>
         <span class="card-votes"><span class="vote-up">203</span><span class="comments">◎ 34</span></span>
-      <a href="/drops/the-bag-edit-6-bags-for-golfers-who-care-what-they-carry" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid #141414;padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-bag-edit-6-bags-for-golfers-who-care-what-they-carry" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
       </div>
     </div>
   </div>
@@ -9594,7 +9652,7 @@
     </a>
 
     <a href="https://www.schweppesgolf.com/Home/" target="_blank" rel="noopener" class="giveaway-card">
-      <div class="giveaway-img" style="background: #141414; color: var(--paper);">
+      <div class="giveaway-img" style="background: var(--ink); color: var(--paper);">
         <span class="giveaway-live">Live</span>
         <span class="giveaway-ends">Draws Jul 13</span>
         Schweppes
@@ -10306,7 +10364,7 @@
   window.addEventListener('scroll', () => {
     const y = window.scrollY;
     if (y > 100) {
-      nav.style.borderBottomColor = 'rgba(20,20,20,0.12)';
+      nav.style.borderBottomColor = 'rgba(var(--ink-rgb),0.12)';
     } else {
       nav.style.borderBottomColor = '';
     }
@@ -10379,6 +10437,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    camo1: [
+      "Students Golf Emers Realtree Twill Pants — full Realtree Xtra camo print on structured twill. The kind of pants that make the pro shop do a double-take. $98.",
+      "BUNX Golf The Tex — 5-panel camo snapback with pre-curved bill and high crown. Texas Wedge vibes in a hat that actually fits well. $42.",
+      "Robert Mark Golf Custom Camo Headcover — handcrafted genuine leather, sewn in the USA. Pick your camo color combo and pattern. Starts at $95.",
+      "Sunday Golf × Mossy Oak Ryder Stand Bag — Bottomland camo on a 4.9 lb stand bag with 14-club capacity, insulated Frosty Pocket, and a lifetime warranty. $280."
+    ],
     homedecor1: [
       "Park Golf Stand — 100% solid American walnut, handmade in Los Angeles. Oil-based finish with wax sealer, laser-engraved logo. Your carry bag deserves better than the garage floor.",
       "PrimePutt Tour-Quality Putting Mat — premium ½\" nylon turf with Roll-Flat tech. Stimps around 10, mimicking real green feel. PGA champion recommended. The benchmark for home putting.",
@@ -11100,15 +11164,15 @@
 </script>
 
 <!-- ==================== NEWSLETTER POPUP ==================== -->
-<div id="nl-overlay" style="display:none;position:fixed;inset:0;background:rgba(20,20,20,0.55);z-index:9999;opacity:0;transition:opacity 0.3s;">
-  <div id="nl-popup" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.95);background:#F4F1EA;max-width:440px;width:90%;padding:48px 36px 40px;text-align:center;transition:transform 0.3s;">
-    <button id="nl-close" onclick="closeNL()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;color:#141414;cursor:pointer;opacity:0.5;font-family:'Inter',sans-serif;" aria-label="Close">&times;</button>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:#A8A878;margin-bottom:16px;">The Grassy Issue</div>
-    <div style="font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:28px;line-height:1.15;color:#141414;margin-bottom:12px;">New drops.<br>No&nbsp;fluff.</div>
-    <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.55;color:#141414;opacity:0.7;margin-bottom:28px;max-width:340px;margin-left:auto;margin-right:auto;">Gear drops, course intel, Austin muni culture, and be the first to know about Grassy Issue events — in your inbox before it hits the feed. One email a week, unsubscribe whenever.</p>
+<div id="nl-overlay" style="display:none;position:fixed;inset:0;background:rgba(var(--ink-rgb),0.55);z-index:9999;opacity:0;transition:opacity 0.3s;">
+  <div id="nl-popup" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.95);background:var(--paper);max-width:440px;width:90%;padding:48px 36px 40px;text-align:center;transition:transform 0.3s;">
+    <button id="nl-close" onclick="closeNL()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;color:var(--ink);cursor:pointer;opacity:0.5;font-family:'Inter',sans-serif;" aria-label="Close">&times;</button>
+    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rough);margin-bottom:16px;">The Grassy Issue</div>
+    <div style="font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:28px;line-height:1.15;color:var(--ink);margin-bottom:12px;">New drops.<br>No&nbsp;fluff.</div>
+    <p style="font-family:'Inter',sans-serif;font-size:14px;line-height:1.55;color:var(--ink);opacity:0.7;margin-bottom:28px;max-width:340px;margin-left:auto;margin-right:auto;">Gear drops, course intel, Austin muni culture, and be the first to know about Grassy Issue events — in your inbox before it hits the feed. One email a week, unsubscribe whenever.</p>
     <form id="nl-form" onsubmit="return submitNL(event)" style="display:flex;gap:0;max-width:360px;margin:0 auto;">
-      <input id="nl-email" type="email" required placeholder="your@email.com" style="flex:1;padding:13px 16px;border:0.5px solid #141414;background:#F4F1EA;font-family:'Inter',sans-serif;font-size:14px;color:#141414;outline:none;" />
-      <button type="submit" style="padding:13px 20px;background:#141414;color:#F4F1EA;border:none;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.2s;">Join &rarr;</button>
+      <input id="nl-email" type="email" required placeholder="your@email.com" style="flex:1;padding:13px 16px;border:0.5px solid var(--ink);background:var(--paper);font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);outline:none;" />
+      <button type="submit" style="padding:13px 20px;background:var(--ink);color:var(--paper);border:none;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.2s;">Join &rarr;</button>
     </form>
     <iframe name="nl-hidden-frame" style="display:none;"></iframe>
     <div id="nl-thanks" style="display:none;font-family:'Fraunces',Georgia,serif;font-style:italic;font-size:20px;color:#2D4A2B;margin-top:4px;">You're in. First drop incoming.</div>

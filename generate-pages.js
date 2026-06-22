@@ -77,7 +77,8 @@ const manualSlugs = new Set([
   'maxfli-siegelman-stable-harness-the-drive',
   'best-wings-in-austin',
   'nike-acg-golf-edit',
-  'home-golf-decor-edit'
+  'home-golf-decor-edit',
+  'the-camo-edit'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {

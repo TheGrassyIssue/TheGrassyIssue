@@ -1,3 +1,26 @@
+# Brand Discoveries — 2026-06-22
+
+## New This Scan (June 22) — Paris Golf Gallery roster (PFW June 23-28)
+
+The Paris Golf Gallery returns this week as the golf-lifestyle showroom alongside Paris Fashion Week. Its curated brand list is a clean vein of European/indie names that fit the TGI aesthetic. The strongest finds:
+
+### Lost Balls (France) ⭐ STRONG FIT
+- **URL:** stocked at https://www.parisgolfgallery.com/collections/lost-balls (brand IG: @lostballs)
+- **Why they fit:** Wry, slightly profane French label — forest-green grips, "Handwrite" tees, a "Fuck off Tee," oversized golf-club polos. Anti-precious to the point of provocation, but the humor is genuine, not brand-manager-trying-to-be-edgy. The profanity needs a judgment call before featuring, but the design POV is pure Mo Norman.
+
+### Sandy Par (France/EU)
+- **URL:** stocked at Paris Golf Gallery (sandy-par)
+- **Why they fit:** "Everybody Golfs" 5-panel caps (~€42) and Cruiser nylon shorts. Explicitly anti-gatekeeping, inclusive, and unbothered — the opposite of country-club golf. Quietly on-message for TGI.
+
+### Khalhon (EU)
+- **URL:** stocked at Paris Golf Gallery (khalhon)
+- **Why they fit:** Premium minimalist — Legacy knit polos (~€130), Signature windbreakers (~€165), near-zero visible branding. The Late Nine / quiet-luxury lane done by a smaller house. Worth monitoring.
+
+### Cluster to monitor (PGG roster, lower priority)
+oMA Studio (LA hatmaker crossing into golf), Momento Golf, Paré Golf, AEIA Golf, Baggy Pants Golf, Lend Golf, Breakfast Ball Academy ("Sunny Side" tee), Brutta (Roy Camo cap). Several already-tracked names also stock here: 3 Putt Round, CPH/Golf, Kadet, Mogshade, Left of Field, Rebolf, Merrill, Metalwood, Dimple & Divot (limited PGG brush). **The full PGG brands list is a recurring scouting source — re-check after each PFW window (Jan + June).**
+
+---
+
 # Brand Discoveries — 2026-06-08
 
 ## New This Scan (June 8) — Handmade headcover makers
