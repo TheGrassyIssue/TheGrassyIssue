@@ -1,3 +1,10 @@
+# Brand Discoveries — 2026-06-23
+
+## Scan note (June 23)
+No new brands to add. The Paris Golf Gallery opened today (PFW, June 23-28) and its roster matches what was logged June 22. The on-aesthetic indie names surfacing in this week's press (3 Putt Round, Kadet, CPH/Golf, Casualist) are all already below. **Re-check the PGG brands list June 26-28** for any first-time exhibitors or post-show capsules before the window closes.
+
+---
+
 # Brand Discoveries — 2026-06-22
 
 ## New This Scan (June 22) — Paris Golf Gallery roster (PFW June 23-28)
