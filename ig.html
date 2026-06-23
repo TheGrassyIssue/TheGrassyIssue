@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>TGI — Instagram Tiles</title>
+<meta name="robots" content="noindex, nofollow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+:root{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#111;font-family:var(--sans);color:#fff;padding:40px 0}
+.header{text-align:center;padding:0 20px 40px}
+.header h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:28px;color:var(--paper);margin-bottom:8px}
+.header p{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;color:var(--paper)}
+.tiles{display:flex;flex-direction:column;align-items:center;gap:40px;padding:0 20px}
+.tile{width:1080px;height:1080px;position:relative;overflow:hidden;flex-shrink:0;border-radius:0}
+.tile-img{position:absolute;inset:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+.tile-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.15) 0%,rgba(0,0,0,.05) 40%,rgba(0,0,0,.55) 75%,rgba(0,0,0,.85) 100%)}
+.tile-tag{position:absolute;top:40px;left:40px;padding:8px 16px;background:var(--grass);color:var(--paper);font-family:var(--mono);font-size:13px;letter-spacing:.18em;text-transform:uppercase;z-index:2}
+.tile-bottom{position:absolute;bottom:0;left:0;right:0;padding:0 48px 48px;z-index:2}
+.tile-logo{font-family:var(--serif);font-style:italic;font-weight:400;font-size:18px;color:rgba(244,241,234,.7);margin-bottom:12px;letter-spacing:-.01em}
+.tile-title{font-family:var(--serif);font-style:italic;font-weight:400;font-size:42px;line-height:1.1;letter-spacing:-.02em;color:var(--paper);max-width:900px}
+.tile-num{position:absolute;top:40px;right:40px;font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:rgba(244,241,234,.4);z-index:2}
+@media(max-width:1120px){
+  .tile{width:calc(100vw - 40px);height:calc(100vw - 40px);max-width:1080px;max-height:1080px}
+  .tile-title{font-size:clamp(24px,4vw,42px)}
+  .tile-tag{font-size:11px;top:24px;left:24px;padding:6px 12px}
+  .tile-bottom{padding:0 28px 28px}
+}
+</style>
+</head>
+<body>
+<div class="header">
+  <h1>The Grassy Issue — Instagram Tiles</h1>
+  <p>88 posts · Screenshot at 1080×1080 · Not indexed</p>
+</div>
+<div class="tiles">
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/golf-balls/tp5-pix.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Golf Ball Edit — 16 Picks, $32 to $60 a Dozen</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/jersey-polos/kith-drew-polo.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Jersey Polo Edit — 14 Picks, No Buttons Required</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/aug11/aug11-art-reverse-og.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Aug 11</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/camo-edit/students-realtree-pants.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Camo Edit — 18 Picks That Blend In and Stand Out</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/home-golf-decor/park-golf-stand.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Home Golf Decor Edit — 18 Picks for the 19th Hole</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/nike-acg/cinder-cone.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Nike ACG × Golf — 19 All Conditions Picks for the Course</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/best-wings/wingzup.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Best Wings in Austin — 16 Spots After the Round</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/maxfli-siegelman/pullover-jacket.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Maxfli × Siegelman Stable — "Harness the Drive"</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/world-cup-jersey-edit/england-home.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">World Cup Jersey Edit — 18 Kits From the Pitch to the Green</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/summer-tee-edit/kingfisher-getting-worse.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Summer Tee Edit — 18 Picks From $30 to $68</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/glove-edit/malbon-buckets.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Glove Edit — 18 Picks From $10 to $48</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/arsham-malbon/cloudburst-rain-jacket.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Arsham x Malbon — Chapter Three Is Live</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/austin-bbq/kg-bbq.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Austin BBQ Field Guide — 12 Spots After the Round</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/readthegreen/founders-reserve.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Read The Green</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0302/7829/files/SS26WJ037_PRINTEDGOLFPOPOVER_BLACKWATCHPLAID_1.jpg?v=1776794030')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">ALD Golf SS26 — New York Prep Hits the First Tee</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.mos.cms.futurecdn.net/QKeUrbd6TttDJG2wxVdHBN-2500-80.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Summer Style List — 10 Golfers Who Get It</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0022/4008/6074/files/V370LAK_SP24_M_ECOMM_BOTTOMS_FRONT_BOTTOMS_2.jpg?v=1743124960&width=600')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Technical Fabrics Heating Up, Here's 12 of Our Favs</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.fantlsport.com/cdn/shop/files/Untitled-1_0014_Layer-41_eeb1138b-08b6-4948-b0bc-332b1e713ded.png?v=1780298491&width=600')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 Technical Fabric Tops for Summer</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://studentsgolf.com/cdn/shop/files/Studentsgolf67b6f31aad6be067b6f31aad878.6034779267b6f31aad878.jpg?v=1756412295&width=600')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">12 Putter Covers We're Eyeing</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://gogogosport.com/cdn/shop/files/1_78610967-a183-473a-8b95-d70b62edfffd.jpg?v=1750401675')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 Rangefinders from $90 to $600</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://res.cloudinary.com/the-infatuation/image/upload/c_fill,w_1200,ar_4:3,g_center,f_auto/cms/haymaker-austin-nicolai-mccrary')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">News</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Where to Watch the World Cup in Austin</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://static1.squarespace.com/static/62df2055174c772d5220ba18/62df3a67d3f6270c6d7e2e1f/687168fa6588572799f28f54/1768931660509/MOKCINGBIRD2.jpg?format=1500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Tee Edit — 14 independent tees for the fairway and beyond</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.sugarloafsocialclub.com/cdn/shop/files/SSCSST001-BLTGRNS_1copy.jpg?v=1780605083&width=900')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">SSC x Byrdie Golf — Social Wear Just Dropped</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://static.nike.com/a/images/t_PDP_1728_v1/f_auto,b_rgb:f5f5f5,u_9ddf04c7-2a9a-4d76-add1-d15af8f0263d,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/9adf6c88-c7a5-4665-a960-0c64605863b2/PEGASUS+1+G.png')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 Nikes That Belong on the Course</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.walkergolfthings.com/cdn/shop/files/Walker_Golf_Feb_WEB_022_700x934_crop_center.jpg?v=1771886071')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Walker Golf — The Par-Tec Drop</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://found.golf/cdn/shop/files/MG_7440.jpg?v=1751031017&width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Found Golf</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.taylormadegolf.com/dw/image/v2/AAIS_PRD/on/demandware.static/-/Sites-tmag-master-catalog/en_US/v1780638213565/zoom/TC441_zoom_D.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The 2026 Driver Drop — 12 New Sticks</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://ripitgrips.com/cdn/shop/files/ArtSeries-Kenny-Charcoal_Front.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">7 Grips to Add a Little Flavor</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://thegolfwire.com/wp-content/uploads/2026/06/JLSH26LookbookMen03204.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Roundup</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">6 Shinnecock Capsules Before the First Tee</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.mogshadegolf.com/cdn/shop/files/estate-headcover-152093.jpg?width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Mogshade</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://waterwhendry.com/cdn/shop/files/3X009910_VSCO_2.jpg?width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Water When Dry: The Garden Metaphor That Actually Works</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/55ae19d5-8014-494f-a373-24b97df7e694/sawb1.jpg?format=1500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">11 Water Bottles We'd Actually Carry</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/60f2fce46385b311d9476316/9b520433-499c-4930-ba31-01c2f2c9c153/CheeseburgerWithChallahBun-SD_E0A1898.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 of the Best Post-Round Burgers</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://munikids.com/cdn/shop/products/Muni-Kids-PDX-Carpet-Canvas-Golf-Headcovers_1200x1200.png?v=1615588658')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Muni Kids Turns 11. The Muni Never Left.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://radry.com/cdn/shop/files/chargeit_hat_front_new_web.jpg?v=1761065202&width=2100')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">14 Hats From Funky Brands</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0713/1693/0869/files/Gentleman_Jack_Paisely_Polo_-_Black_250_crop.jpg?v=1778502188')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Manors x Gentleman Jack: Whiskey on the First Tee</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://malbon.com/cdn/shop/files/M-9854-CHV-B.png?crop=center&height=1600&v=1778191951&width=720')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Malbon's Summer Collection Channels the Gallo Colorido</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.cwgolfarch.com/wp-content/uploads/2021/02/Hole-3.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">8 Special Day Rounds Near Austin</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://eastsidegolf.com/cdn/shop/files/EGMC3004-Core_Fleece_Hoodie_Swingman-Heather_Grey-Front.png?width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">14 Hoodies That Caught My Eye</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://m.media-amazon.com/images/I/81TgJeMv-TL._SY522_.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">7 Books to Elevate Your Golf Game</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://labgolf.com/cdn/shop/files/LINK.2.1SOLE.jpg?v=1&width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The 2026 Putter Drop — 8 Worth the Cash</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://radry.com/cdn/shop/files/Custodian_Hat_Front_Web.jpg?v=1&width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Radry Golf</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://dimpledivot.com/cdn/shop/files/Murphy_Black_2024_Original_Hickory_Wood_Golf_Brush_Cleaner_Dimple___Divot_A.jpg?v=1730089715&width=2048')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Accessories On & Off the Course</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://hancockgolfcourseconservancy.org/wp-content/uploads/2020/11/cropped-IMG_2838.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Ranking the Muni Grub — Every On-Course Food Spot in Austin</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0560/2646/4443/files/Hoodielifestyle.jpg?v=1717109181')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Merrill Golf</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.jonessportsco.com/cdn/shop/files/JSC_Trouper26_DarkGreen-1_1200x.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">7 Bags That Stand Out</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-05-05_MLT_V1_3840x.progressive.jpg?v=1773376838&format=jpg&w=3840&q=75')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Metalwood Studio SS26 — Our 10 Picks</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/cc33e5f0-fc75-4ee3-b4a0-58bdcdaf2ebe/CSB1.jpg?format=2500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Sentinel Golf x 1733 — Saltex Bags & V4 Brush</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_No_Idea_sweatshirt_worn_model_lifestyle_shot.png')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Casualist</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://flightpathgolf.com/cdn/shop/files/01_Green.jpg?v=1721337556')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Gear Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">6 Golf Tees That Cost More Than Your Lunch</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://quietgolf.com/cdn/shop/files/MONOGRAMPOCKETDUSTYBLUE_1930c5ee-56c8-4915-83e3-a40d54e97288.jpg?v=1775861112')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Gear Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">12 Bold Tees That Belong in Your Bag</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/19thhole/equipment-room.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">5 Post-Round Evening Spots in Austin</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/3puttround/red-addiction-tees.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">3 Putt Round — Golf Tees Disguised as Bad Habits</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://malbon.com/cdn/shop/files/mens_in_line_2.png?v=1776707797&width=2048')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Fresh Pieces for the Warm Weather</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS26_CLEEKS_ECOMM_PA_frequency_polo_storm_light_cream_hero_front_lowres.png?v=1766814012')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Public Drip — Brooklyn's Muni-Born Golf Label</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://framerusercontent.com/images/fBngOx9OuGX6aXfybQYtWwCys.png?width=2000&height=2000')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Hats & Towels Edit</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://golf-pass.brightspotcdn.com/dims4/default/5803268/2147483647/strip/true/crop/3888x2186+0+203/resize/900x506!/quality/90/?url=https%3A%2F%2Fgolf-pass-brightspot.s3.amazonaws.com%2F80%2F24%2F1ae0a4c34a6742b4366d837fdc6e%2Fp.php')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 Texas Courses Worth the Trip</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://lofgolf.com/cdn/shop/files/260408_LOFG7425_resized_900x.jpg?v=1776317330')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">3 Aussie Golf Brands You Should Know</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/211bbc22-d70a-4ecf-b796-31ec211bfb4d/WaterLions_LorenzoDePaolis.jpg?format=1500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Firecracker Open — 81 Years at the Muny</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.sugarloafsocialclub.com/cdn/shop/files/SSCTA011-NVYS_5copy_adb7e7fa-30df-46b5-b9dd-fabacb6e903c.jpg?v=1776769930&width=800')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">New Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Sugarloaf Social Club — SS26 Just Dropped</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS25-03-15-MDN_V1.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Know</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Know — Metalwood Studio</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.sugarloafsocialclub.com/cdn/shop/files/SUGTWL001_1copy.jpg?v=1776769930&width=2048')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">The Edit</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Towel Edit — 12 Worth Clipping to Your Bag</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/685f4948293ca176c73dabb1/74885ba6-a9c8-4d7c-bc89-4e0423530e8b/Justin+Aragon+Dropping+a+putt+with+swag+putter+copy.jpg?format=1500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">7 Indoor Simulators for Austin's Gross Rainy Days</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-black-tokyo-country-club-blade-putter-cover-front.jpg?v=1689074572')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Putter Cover Edit — 11 Covers Worth the Pocket</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0148/2421/0518/files/SP26_4025_CLUB-TOSS-WHT-2.jpg?v=1775073139')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 White Tees to Beat the Texas Heat</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/1770/9541/files/G6121PPI47-GRN.png?v=1776974701')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Malbon Golf — Studio Seoul SS26</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://images.squarespace-cdn.com/content/v1/683e05c0d72e3d55cd902385/9ff3ffd9-e36a-48c5-a5c0-a58539a31abe/DSC06723.jpg?format=1500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Watch</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Brand to Watch: Kingfisher Golf</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.harveypenickgc.com/wp-content/uploads/sites/5426/2015/10/Harvey-Penick-GC-hole7-1700-X-500.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">8 Best Practice Facilities Around Austin</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://thegolfwire.com/wp-content/uploads/2026/04/MoneyShotPocket21.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Gear Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">5 Zero Torque Putters Worth Your Attention</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/2622/0470/files/Swag-Anniversary-2026-Torched-Bottlecap-Ball-marker-1000-1.jpg?v=1774018111')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">10 Indie Ball Marker Brands Worth Knowing</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://static.wixstatic.com/media/4ee5ed_8528d3f52c1d413998735161fa07c7ee~mv2.jpg/v1/fill/w_980,h_1225,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/LS102929-homepage.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Field Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">7 Post-Round Moves in Austin</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0302/7829/files/SS26_GOLF_LB_04_013_R14_0faa5219-09e1-41eb-8061-398bd72c7a6a.jpg?v=1776801704')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Aimé Leon Dore SS26 Golf: Croc-Embossed FootJoys and a Sweater Your Grandfather Would Approve Of</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://storage.googleapis.com/skratch-strapi/48320120500_a7_e643205261/48320120500_a7_e643205261.webp')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Zara Home Made a Golf Collection and It's Weirdly Good</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0713/1693/0869/files/RECYCLED_GREENSKEEPER_BUCKET_HAT_BLACK_01_8b60c382-95a6-4ca6-bf2d-470483272005.jpg?v=1757073078')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Gear Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">8 Bucket Hats Worth the Brim</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250432_39ef2562-a847-4827-986b-3735b62ab1df.png?v=1775427235')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Watch</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Agronomy Workshop — A Golf Shirt with a Hidden Tee Slot and Nothing to Prove</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://late-nine.com/cdn/shop/files/felwfkenwnkfelw.jpg?v=1776789073')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Brand to Watch</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Late Nine — Stockholm, Relaxed Fits, and the Quiet Part of Golf</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.fyfegolf.com/cdn/shop/files/oban-blue-driver.jpg?v=1776945451&width=1200')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Fyfe Golf — Between Tides. Sail cloth, marine suede, and waxed canvas, made in Scotland.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://static1.squarespace.com/static/5f7b7302cb6064569d654760/5f7ca15041467b27b1b1db69/68af63a2424ab774772b5ecd/1771431255792/J1.jpg?format=1500w')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Guide</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">7 divot tools actually worth carrying.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('/images/gumtree-puma-1.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Gumtree Golf x PUMA: The Field Notes Collection Lands</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://sneakernews.com/wp-content/uploads/2026/03/air-jordan-1-low-golf-chicago-iq3417-600.jpg')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Jordan Golf Spring Edit — Chicago drops May 10.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://vesselgolf.com/cdn/shop/files/PLAYERVPRO-SEEASONOPENER.jpg?v=1774628378&width=2048')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">Vessel Season Opener '26 — Masters green, croc texture, already selling out.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://www.outdoorsports.com/cdn/shop/files/Salomon-Mens-Sense_Ride_5_GTX-Black_Magnet_Black-Side_600x.png?v=1698869826')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Best Non-Golfing Golf Shoe — 5 trail runners that belong on the course.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://jain.golf/cdn/shop/products/JAIN.GOLF-2.jpg?v=1678145554')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The MacKenzie Collab Edit — 6 bags you can't buy on their site.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0904/5914/4474/files/aae-right-shoe-side-angle-g-fore-mg4-24-spikeless.jpg?v=1774938368')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Shoe Edit — 6 pairs that belong on and off the course.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0570/2565/9037/files/TeddyRooseveltBallMarker3DPresaleMainProductPhoto.webp?v=1775851008')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Ball Marker Edit — 6 markers worth pocketing.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0129/1462/files/LakersLarge.png?v=1776288871')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Headcover Edit — 6 covers that deserve their own bag tag.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/1770/9541/files/M-9849-WYW-SR2.jpg?v=1775857647')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Hat Edit — 6 lids for golfers who skip the pro shop.</div>
+      </div>
+    </div>
+
+    <div class="tile">
+      <div class="tile-img" style="background-image:url('https://cdn.shopify.com/s/files/1/0267/2646/5578/files/Loma_Bag_MossyOak_CountryDNA_a1_WEB.png?v=1745869463')"></div>
+      <div class="tile-overlay"></div>
+      <div class="tile-tag">Drop</div>
+      <div class="tile-bottom">
+        <div class="tile-logo">The Grassy Issue</div>
+        <div class="tile-title">The Bag Edit — 6 bags for golfers who care what they carry.</div>
+      </div>
+    </div>
+
+</div>
+<div style="text-align:center;padding:60px 20px;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.3;color:var(--paper)">
+  End of tiles · 88 posts
+</div>
+</body>
+</html>
