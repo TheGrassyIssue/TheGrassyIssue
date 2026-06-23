@@ -71,6 +71,7 @@ const manualSlugs = new Set([
   'brand-to-know-read-the-green',
   'brand-to-know-aug-11',
   'the-jersey-polo-edit',
+  'the-golf-ball-edit',
   'austin-bbq-field-guide',
   'arsham-malbon-chapter-three',
   'the-glove-edit',
