@@ -81,7 +81,8 @@ const manualSlugs = new Set([
   'best-wings-in-austin',
   'nike-acg-golf-edit',
   'home-golf-decor-edit',
-  'the-camo-edit'
+  'the-camo-edit',
+  'brand-to-know-cloud-and-wind-golf'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {

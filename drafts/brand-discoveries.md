@@ -1,3 +1,13 @@
+# Brand Discoveries — 2026-06-24
+
+## New This Scan (June 24) — Austin-local find
+
+### Southside Golf Co (Austin, TX) ⭐ STRONG FIT — LOCAL
+- **URL:** https://southsidegolfco.com (shop: https://shop.southsidegolfco.com)
+- **Why they fit:** South Austin label built explicitly "for players who don't fit country club golf." Limited drops of 50 units, no restocks — when they're gone they're gone. Designed and tested by a PGA pro for Texas heat and long rounds, clean design with none of the country-club uniform. Also runs a TrackMan indoor sim, lessons, and leagues in South Austin, which ties directly into TGI's existing Austin-muni coverage. This is the rare discovery that is both on-aesthetic and in Lenny's backyard — a natural "Brand to Know" or a local-scene feature, not just a watchlist line.
+
+---
+
 # Brand Discoveries — 2026-06-23
 
 ## Scan note (June 23)

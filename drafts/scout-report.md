@@ -1,31 +1,36 @@
-# Drop Scout Report — 2026-06-23 (Tuesday)
+# Drop Scout Report — 2026-06-24 (Wednesday)
 
 ## Summary
-- **0 new draft cards this run.** Nothing broke in the 48h window that isn't already drafted from prior runs. The scene is steady-state.
-- **Paris Golf Gallery opened today (June 23).** This is the live thread of the week. Yesterday's run already drafted the standout — `2026-06-22-students-course-studies-paris.html` (Students debuting Course Studies + SS26 at PGG). **That is today's publish if posting anything.** No need for a second PGG card on opening day.
-- **Core watchlist (1-12) confirmed steady.** Re-scanned all twelve; every signal traces back to an already-drafted card. Details below.
-- **No new brand discoveries.** The genuinely on-aesthetic names surfacing this week (3 Putt Round, Kadet, CPH/Golf, Casualist, plus the PGG roster) are already logged in `brand-discoveries.md`. Nothing new to add — added a dated confirmation note instead of padding the file.
-- **0 active on-brand giveaways.** Only the Dunkin' x TaylorMade "Golf Week" promo surfaced — corporate, off-aesthetic, ignored. Indie giveaways run on IG Stories, which web search doesn't index.
+- **0 new draft cards this run.** Nothing cleared the 48h window that isn't already drafted from prior runs. The scene is still steady-state — same picture as yesterday.
+- **1 new brand discovery: Southside Golf Co (Austin, TX).** Genuinely new, genuinely on-aesthetic, and local to Lenny. Logged to `brand-discoveries.md`. Strong "Brand to Know" candidate. Details below.
+- **Core watchlist (1-12) confirmed steady.** Re-scanned all twelve; every signal traces back to an already-drafted card or a standing seasonal range.
+- **Paris Golf Gallery (PFW, June 23-28) still LIVE.** No first-time exhibitor or post-show capsule has surfaced yet beyond what was logged June 22. **Re-scout June 26-28** for the back half of the window.
+- **0 active on-brand giveaways.** Only corporate promos surfaced (Dunkin' x TaylorMade "Golf Week," adidas CODECHAOS Messi) — off-aesthetic, skipped.
 
 ---
 
 ## New Drafts This Run
 None. Producing a report is the correct output when nothing fresh clears the bar.
 
+## New Brand Discovery
+**Southside Golf Co — https://southsidegolfco.com**
+South Austin brand for "players who don't fit country club golf." Limited drops of 50 units, no restocks; designed and tested by a PGA pro for Texas heat. Also runs a TrackMan indoor sim, lessons, and leagues in South Austin — a direct tie-in to TGI's Austin coverage. Both on-aesthetic and in Lenny's backyard. Logged to `brand-discoveries.md` as a strong "Brand to Know" / local-scene candidate.
+
 ## Standing Drafts Still Ready to Publish (verify, then post)
-- `2026-06-22-students-course-studies-paris.html` — **[DROP]** Students x Course Studies at the Paris Golf Gallery. **PGG opened today — this is the timely one. Post it.**
-- `2026-06-18-dormie-liberty-us-open-headcover.html` — U.S. Open week (Shinnecock) is now over and Wyndham Clark has the trophy. Timeliness is gone. Post in the next day or shelve.
+- `2026-06-22-students-course-studies-paris.html` — **[DROP]** Students x Course Studies at Paris Golf Gallery. PGG runs through June 28 — still timely. Top of the queue.
 - `2026-06-17-malbon-arsham-chapter-three.html` — Arsham Chapter Three, live since June 17. Still standing.
 - `2026-06-08-sugarloaf-payntr-play-or-perish.html` — SSC x Payntr shoe. Still standing.
 - `2026-06-05-found-golf-brand-to-know.html` — Brand-to-Know bench piece, still unpublished.
 - `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, still latest from Manors.
-- `2026-06-01-seamus-us-open-shinnecock.html` — **Retitle first** (current title breaks the no-"worth" rule), and the U.S. Open has passed. Likely shelve.
+- `2026-06-18-dormie-liberty-us-open-headcover.html` — U.S. Open has passed (Wyndham Clark won). Timeliness gone. Post immediately or shelve.
+- `2026-06-01-seamus-us-open-shinnecock.html` — **Retitle first** (breaks the no-"worth" rule) and the U.S. Open has passed. Likely shelve.
 
 ## False positives caught this run (do NOT draft)
-- **Mount Gay x Devereux** — search phrasing made it read "June 2026," but it's the May 18 capsule, already drafted.
-- **Daniel Arsham "new Malbon drop"** — same Chapter Three arc previewed June 14, already drafted June 17. Not a second drop.
-- **Casualist x 3 Putt Round** — a real, on-aesthetic collab, but it predates this window (already referenced in a Dec 2025 brand roundup). Not new — brands already logged, no drop card.
-- **Sounder / Left of Field / Bogey Boys "new" lines** — all SS26 / Spring '26 ranges already captured in prior reports. No discrete 48h drop.
+- **Pine Coast x Mogshade Sunday bag/headcover** — search surfaced it under PGG, but the collab was revealed at the **January 2025** edition. Not new.
+- **Off-White x Paris Hilinski "All In One"** — surfaced as a PGG-era golf capsule; actually launched **December 2024**, and it's $500 polos / $1,500 jackets. Not new, not on-aesthetic.
+- **Mount Gay x Devereux** — May 18 capsule, already drafted. Not a June drop.
+- **Eastside x Nike Take Flight / Bridgestone TOUR BX** — both standing, already captured.
+- **Dunkin' x TaylorMade, adidas CODECHAOS Messi** — fresh this week but corporate and off-aesthetic. Skipped per voice rules.
 
 ---
 
@@ -34,37 +39,35 @@ None. Producing a report is the correct output when nothing fresh clears the bar
 | Brand | Activity |
 |-------|----------|
 | Manors | Gentleman Jack capsule (May) still latest. No new discrete drop. |
-| Malbon | Arsham Chapter Three (drafted June 17) latest. Malecón Sun + Lingua Franca are standing seasonal. Showing at PGG. |
-| Metalwood Studio | adidas SS26 capsule (Feb) still the headline. Stocks at PGG. Nothing new. |
-| Eastside Golf | x Nike Take Flight + Bridgestone TOUR BX standing. Steady new-arrivals churn, no discrete drop. |
-| Quiet Golf | SSC collab + seasonal tees standing. No new drop. |
+| Malbon | Arsham Chapter Three (drafted June 17) latest. New Era 9SEVENTY + Lingua Franca standing seasonal. Showing at PGG. |
+| Metalwood Studio | adidas Predator Sala SS26 capsule still the headline. Stocks at PGG. Nothing new. |
+| Eastside Golf | x Nike Take Flight + Bridgestone TOUR BX standing. New-arrivals churn, no discrete drop. |
+| Quiet Golf | SSC collab + Vintage Supima polo standing. No new drop. |
 | Bogey Boys | Summer Course Collection + adidas MC80 standing. No new drop. |
-| Devereux | Mount Gay capsule (May 18) still latest. Showing at PGG. No new drop. |
-| Random Golf Club | New-arrivals hats steady; Classics events The Loop (June 24-25), Lawsonia (June 29). Community, not product. |
+| Devereux | Mount Gay capsule (May 18) still latest. No new drop. |
+| Random Golf Club | New-arrivals hats + Bad Birdie tie-in steady. Classics: The Loop (June 24-25), Lawsonia (June 29). Community, not product. |
 | Gumtree Golf & Nature | Puma Field Notes / State Flower standing. No new drop. |
-| Sentinel Golf | Showing at PGG; Basecamp Expedition Series II standing. Nothing new. |
+| Sentinel Golf | Basecamp Expedition Series II standing. Showing at PGG. Nothing new. |
 | Fyfe Golf | Mackenzie collab confirmed July 2026 (early access open). Nothing new this window. |
 | Mackenzie Golf Bags | Fyfe collab July. Nothing new this window. |
 
 ## Extended Watchlist Highlights (13-41)
-- **Students (#16)** — Course Studies + SS26 debut at PGG. **Drafted yesterday — today's publish.**
-- **Left of Field / Casualist / Rebolf / Merrill / Sentinel / Devereux / Metalwood / Mogshade / Dimple & Divot (#15, #14, #37, #39, et al.)** — all confirmed on the PGG roster this week. SS26 ranges live; no discrete new drop card yet. The PFW window runs through ~June 28 — **re-check June 26-28** for post-show capsules and lookbooks.
-- **Head Golf (#32)** — On the PGG roster; Ka Ho Kam-led revival continues. No discrete 48h drop.
-- **Macade / Public Drip / Radmor / Heathlander / Seamus / Dormie** — Steady-state. Summer '26 lines live, no fresh 48h drop.
+- **Students (#16)** — Course Studies + SS26 at PGG. Drafted June 22, still the timely publish.
+- **Sugarloaf / Students / Sentinel / Quiet (SSC collabs)** — SS26 ranges live, no discrete 48h drop.
+- **Seamus / Dormie / Macade / Sounder** — Steady-state. Dormie was at the Canadian Open; summer lines live, no fresh 48h drop.
+- **Casualist / CPH/Golf / Three Putt** — On-aesthetic and active, already logged in `brand-discoveries.md`. No new drop card.
+- **PGG roster (Left of Field, Merrill, Head, Khalhon, Lost Balls, Sandy Par, et al.)** — Window runs through June 28. **Re-check June 26-28** for post-show capsules and lookbooks.
 
 ---
 
-## Brand Discoveries
-No new additions this run. The on-aesthetic names surfacing this week are already in `brand-discoveries.md` (3 Putt Round, Kadet, CPH/Golf, Casualist, plus the full June 22 PGG roster — Lost Balls, Sandy Par, Khalhon, and the lower-priority cluster). Added a short dated confirmation note to that file rather than re-logging duplicates.
-
 ## This Week to Watch
-- **Paris Golf Gallery — June 23-28 (Paris Fashion Week), now LIVE.** The source of fresh on-brand signal. Students is drafted and ready. **Re-scout June 26-28** for Left of Field, Casualist, Khalhon, and any PGG-exclusive capsules or post-show lookbooks.
-- **U.S. Open concluded** (Wyndham Clark won). Dormie Liberty and Seamus Shinnecock standing drafts have lost timeliness — post in the next day or shelve.
-- **The Open at Royal Birkdale** is the next major on the horizon — watch for headcover/tartan makers (Seamus, Dormie) to start tournament capsules in the coming weeks.
+- **Paris Golf Gallery — June 23-28, LIVE.** Students drafted and ready. **Re-scout June 26-28** for back-half exhibitors and post-show capsules.
+- **U.S. Open concluded** (Wyndham Clark won). Dormie Liberty + Seamus Shinnecock standing drafts have lost timeliness — post now or shelve.
+- **The Open at Royal Birkdale** is the next major on the horizon — watch Seamus and Dormie for tournament/tartan capsules in the coming weeks.
 - **RGC Classics** — The Loop (June 24-25), Lawsonia (June 29). Community, not product.
 
 ## Active Giveaways
-None on-brand. (Dunkin' x TaylorMade "Golf Week" is the only indexed promo — corporate, off-aesthetic, skipped.)
+None on-brand. (Corporate-only: Dunkin' x TaylorMade, adidas Messi.)
 
 ---
-*Scout run autonomously. No cards published — drafts folder only, per standing instruction. Lenny reviews and approves.*
+*Scout run autonomously. No cards published — drafts folder only, per standing instruction. One new brand discovery (Southside Golf Co, Austin) logged. Lenny reviews and approves.*
