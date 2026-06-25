@@ -82,7 +82,8 @@ const manualSlugs = new Set([
   'nike-acg-golf-edit',
   'home-golf-decor-edit',
   'the-camo-edit',
-  'brand-to-know-cloud-and-wind-golf'
+  'brand-to-know-cloud-and-wind-golf',
+  'the-golf-tech-edit'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {

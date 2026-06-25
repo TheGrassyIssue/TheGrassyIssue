@@ -1980,6 +1980,51 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- THE EDIT — Golf Tech, 18 Picks -->
+  <div class="card" data-type="gear">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Edit]</span>
+      <div class="gear-carousel" data-carousel="golftech1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://www.garmin.com/en-US/p/847706/" target="_blank" rel="noopener">
+              <img src="/images/golf-tech/garmin-s70.jpg" alt="Garmin Approach S70 GPS Golf Watch" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Garmin</div><div class="gear-slide-name">Approach S70 (47mm) · $700</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.arccosgolf.com/products/smart-sensors" target="_blank" rel="noopener">
+              <img src="/images/golf-tech/arccos-gen4.jpg" alt="Arccos Gen 4 Smart Sensors" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Arccos</div><div class="gear-slide-name">Gen 4 Smart Sensors · $200</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://rapsodo.com/products/mlm2pro-mobile-launch-monitor-golf-simulator" target="_blank" rel="noopener">
+              <img src="/images/golf-tech/rapsodo-mlm2pro.jpg" alt="Rapsodo MLM2PRO Launch Monitor" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Rapsodo</div><div class="gear-slide-name">MLM2PRO Launch Monitor · $700</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://mileseeygolf.com/products/mileseey-genesonic-pro-detachable-gps-speaker" target="_blank" rel="noopener">
+              <img src="/images/golf-tech/mileseey-genesonic.jpg" alt="Mileseey GeneSonic Pro GPS Speaker" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Mileseey</div><div class="gear-slide-name">GeneSonic Pro GPS Speaker · $270</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/the-golf-tech-edit" style="color:inherit;text-decoration:none;border-bottom:none;">The Golf Tech Edit</a></div>
+      <p class="card-text" data-slidetext="golftech1">Garmin Approach S70 — The gold standard in golf GPS. 1.4-inch AMOLED, 43K preloaded courses, slope-adjusted distances, wind data, and health tracking. 20-hour GPS battery. Every bell and whistle a golf watch can have. $700.</p>
+      <div class="gear-dots" data-dots="golftech1"></div>
+      <div class="gear-counter" data-counter="golftech1">1 / 4</div>
+      <div class="card-source"><a href="/drops/the-golf-tech-edit">18 picks from $30 to $5,000</a></div>
+      <a href="/drops/the-golf-tech-edit" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See All 18 Picks →</a>
+    </div>
+  </div>
+
   <!-- BRAND TO KNOW — Cloud & Wind Golf -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -10619,6 +10664,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    golftech1: [
+      "Garmin Approach S70 — The gold standard in golf GPS. 1.4-inch AMOLED, 43K preloaded courses, slope-adjusted distances, wind data, and health tracking. 20-hour GPS battery. Every bell and whistle a golf watch can have. $700.",
+      "Arccos Gen 4 Smart Sensors — 16 sensors, one per club. AI caddie adjusts yardages for wind, elevation, and temperature in real time. Strokes gained analytics and smart strategy suggestions. The best shot tracker in golf. $200.",
+      "Rapsodo MLM2PRO — The best launch monitor under $1K. Dual camera plus doppler radar captures 15 metrics per swing, including spin rate and shot tracer video. Sim play on 30K courses. Portable and seriously accurate. $700.",
+      "Mileseey GeneSonic Pro — 40W Bluetooth speaker with built-in GPS and a detachable handheld remote. 43K courses, no subscription, IPX67 waterproof, magnetic cart mount. Music and yardages in one device. $270."
+    ],
     cloudwind1: [
       "The Blossom: Beneath the Boughs — Eastern floral motifs meet natural rubber. Each grip ships with a line of Chinese verse printed along the shaft. Inspired by paths through nature that lead to unforgettable views. $18.",
       "Cloud & Wave: June Gloom — The newest Pacific Summer drop. Muted coastal tones that capture that low-cloud morning feel of a SoCal links round. The kind of grip that makes people ask where you got it. $18.",

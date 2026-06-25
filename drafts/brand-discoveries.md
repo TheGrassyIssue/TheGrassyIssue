@@ -1,3 +1,13 @@
+# Brand Discoveries — 2026-06-25
+
+## New This Scan (June 25) — one candidate, needs eyes
+
+### Radry Golf — candidate, verify before featuring
+- **URL:** to confirm (surfaced via 2026 "design-forward golf brand" roundups)
+- **Why they might fit:** Pitched as understated modern minimalism — "quiet confidence and versatility," closer to clean menswear than golf kit. On paper that is squarely the Quiet Golf / Local Rule lane TGI already likes. Flagging rather than endorsing: I haven't confirmed it's genuinely independent or current, and the name only showed up inside aggregator listicles, not primary press. Worth a 5-minute look at their own site/IG before it earns a watchlist line.
+
+---
+
 # Brand Discoveries — 2026-06-24
 
 ## New This Scan (June 24) — Austin-local find
