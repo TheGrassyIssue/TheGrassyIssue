@@ -1,3 +1,27 @@
+# Brand Discoveries — 2026-07-06
+
+## New This Scan (July 6) — one candidate, and it's local
+
+### Southside Golf Co (South Austin, TX) — strong fit, verify then feature
+- **URL:** https://shop.southsidegolfco.com (also southsidegolfco.com — indoor sim lounge + lessons)
+- **Why they fit:** This is the one to move on. South Austin brand, designed and tested by a PGA pro, doing premium limited-run apparel with an explicit "golf without the country-club uniform" pitch. Only 50 units per drop, no restocks — once they're gone they're gone. Heavyweight golf hoodies built for real weight and everyday wear, not the thin pro-shop stuff. Anti-corporate, small-batch, and — critically for TGI — it's *in Austin*, which puts it directly in the muni-and-local lane the site is built around. They also run a TrackMan indoor lounge with leagues and memberships, so there's a real-world "go hang out here" angle for an Austin-focused feature. Worth a Brand-to-Know writeup once Lenny eyeballs the product; the local hook alone earns it.
+
+### Olydoe — flag to verify next pass
+- **URL:** olydoe.com (verify)
+- **Why they fit:** Surfaced in a "new golf brands 2026" roundup as one of the freshest independent entrants (launched ~Oct 2025). Couldn't confirm the aesthetic this run — search was intermittent — so this is a placeholder to check the site next pass. If it's design-forward and anti-corporate, it fits; if it's bro-golf or bland performance wear, drop it.
+
+---
+
+# Brand Discoveries — 2026-06-26
+
+## New This Scan (June 26) — one candidate, Portuguese craft lane
+
+### Matize Golf (Porto, Portugal) — monitor
+- **URL:** https://www.matizegolf.com
+- **Why they fit:** Family-run Portuguese label founded by three friends (José, Tiago, Marcos) with roots in the textile industry — José's family runs a production unit in northern Portugal. Eco-conscious, sustainability-forward apparel that leans classic-with-a-twist rather than loud streetwear. Surfaced via the Paris Golf Gallery roster (showed at the January PFW window). Sits in the same handcrafted-Portuguese lane as Mogshade, which TGI has already featured — a natural pairing if Lenny ever wants a "made in Portugal" thread. Flagging to monitor, not endorsing: it reads a touch more conventional-polo than Mo Norman, so wants a look at the actual product before it earns a watchlist line.
+
+---
+
 # Brand Discoveries — 2026-06-25
 
 ## New This Scan (June 25) — one candidate, needs eyes

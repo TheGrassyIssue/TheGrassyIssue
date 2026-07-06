@@ -1,37 +1,33 @@
-# Drop Scout Report — 2026-06-25 (Thursday)
+# Drop Scout Report — 2026-07-06 (Monday, second run)
 
 ## Summary
-- **1 new draft card this run:** Sugarloaf Social Club x PAYNTR "Americana Dream" / Summer P.O.P. Eighty Seven, unveiled June 23 — inside the 48h window. Saved as `2026-06-25-sugarloaf-payntr-americana-dream.html`.
-- **Core watchlist (1-12) steady.** Every core signal traces to an already-drafted card or a standing seasonal range. No discrete new core drop this window.
-- **1 brand candidate logged:** Radry Golf — minimalist menswear-leaning label that surfaced in 2026 roundups. Flagged to `brand-discoveries.md` as needs-verification, not endorsed.
-- **0 active on-brand giveaways.** Only stale/unverifiable Malbon bag-giveaway reels surfaced; nothing current and clean enough to feature.
-- **Paris Golf Gallery (PFW, June 23-28) still LIVE.** Re-scout June 26-28 for back-half exhibitors and post-show capsules.
+- **0 new draft cards this run.** This is the second scout pass today; the 07:40 run already scanned the same 48h window and drafted 2 cards (Gumtree State Flower + Dormie custom-shop reopen). Nothing has moved on the core or extended lists since then.
+- **Core watchlist (1-12) steady.** Fyfe x Mackenzie **21st edition still "landing July 2026"** with early access open but no live product page yet — the freshest imminent core drop, keep checking daily. Metalwood (adidas SS26), Malbon (Gap / Honma / Tailfins seasonal), Seamus, and the rest are all standing/seasonal, no discrete in-window launch.
+- **Extended watchlist (13-41) steady.** Sugarloaf's "First Major Drop of the Year" + Payntr collab already drafted (`2026-06-25-sugarloaf-payntr-americana-dream.html`). Students "Club Championship" summer range is seasonal, Course Studies already drafted June 22.
+- **0 confirmed on-brand giveaways.** Only mass-market sweepstakes (Long Drink, Performance Golf July 4) surfaced — not TGI-aesthetic.
+- **New-brand note:** **Olydoe** (launched Oct 2025) came up as a fresh independent name; couldn't confirm its aesthetic this run (search intermittent) — flagged in `brand-discoveries.md` to verify next pass. **Southside Golf Co (South Austin)** remains the strongest move-on candidate, already filed last run.
 
 ---
 
 ## New Drafts This Run
-**`2026-06-25-sugarloaf-payntr-americana-dream.html` — [DROP]**
-Sugarloaf x PAYNTR "Americana Dream" summer capsule. Headline is a special "Summer P.O.P." Eighty Seven (off-white upper, navy accents, translucent red outsole, lawn-chair detailing), plus a Summer Slide, Tech Hoody, and Windshirt. Limited run, ships by 6/30. Distinct from the June 8 SSC x PAYNTR "Play or Perish" draft — that was the earlier collab; this is the new Americana drop. Verified via Golf Business Network (dated 2026-06-23), The Golf Wire, and Skratch.
+None. No genuinely new drop found since the 07:40 pass.
 
-## Watch / verify before drafting
-- **Dormie Workshop "Good Luck" Collection** — casino-themed Italian-leather headcovers/stash bags (slot-machine 7s, "Money Bag" dollar-sign cover). Covered by golf.com and live on dormieworkshop.com, but I couldn't pin a clear in-window launch date — it reads as a standing collection. On-aesthetic enough to feature if Lenny wants it; left undrafted pending a timeliness call.
-- **Malbon "Malecón Sun"** — summer seasonal range (seersucker taupe/green, sun-washed pinks). Real and current but seasonal, not a discrete 48h drop. Noted, not drafted.
-
-## Standing Drafts Still Ready to Publish (verify, then post)
-- `2026-06-22-students-course-studies-paris.html` — **[DROP]** Students x Course Studies at Paris Golf Gallery. PGG runs through June 28 — still timely. Top of the queue.
-- `2026-06-18-dormie-liberty-us-open-headcover.html` — U.S. Open has passed. Timeliness gone; post now or shelve.
-- `2026-06-17-malbon-arsham-chapter-three.html` — Arsham Chapter Three, still standing.
-- `2026-06-08-sugarloaf-payntr-play-or-perish.html` — earlier SSC x PAYNTR collab; superseded in freshness by today's Americana Dream card.
+## Still Ready to Publish (from earlier runs — verify timeliness, then post)
+- `2026-07-06-gumtree-state-flower-collection.html` — Gumtree State Flower Collection (20 lace-linen shirts, hand-embroidered state-flower patches). Verify on-site launch date before publishing.
+- `2026-07-06-dormie-custom-shop-reopens.html` — Dormie custom order book reopened early July. Timely access alert.
+- `2026-05-29-manors-gentleman-jack.html` — Still Manors' latest; fresh July press. Good publish moment.
+- `2026-06-17-malbon-arsham-chapter-three.html` — Still standing.
 - `2026-06-05-found-golf-brand-to-know.html` — Brand-to-Know bench piece, still unpublished.
-- `2026-05-29-manors-gentleman-jack.html` — Gentleman Jack capsule, still Manors' latest.
-- `2026-06-01-seamus-us-open-shinnecock.html` — retitle first (breaks no-"worth" rule) and U.S. Open has passed. Likely shelve.
+
+## Watch / verify before next draft
+- **Fyfe x Mackenzie 21st Edition** — slated July 2026, early access open, not yet live. Check fyfegolf.com product page daily; freshest imminent core drop.
+- **The 154th Open at Royal Birkdale (July 16–19)** — watch Seamus and Dormie for tartan/tournament capsules as the tournament nears. No first-party Open release confirmed yet.
 
 ## False positives caught this run (do NOT draft)
-- **Malbon Malecón Sun / Summer Collection** — seasonal range, not a discrete drop.
-- **Bridgestone x Eastside TOUR BX, Eastside x Nike Take Flight** — standing, already captured.
-- **Mount Gay x Devereux** — May 18 capsule, already drafted.
-- **Fyfe x Mackenzie** — next edition confirmed for July; nothing new this window.
-- **Malbon bag-giveaway IG reels** — surfaced in search but undated/unverifiable; not current.
+- **Sugarloaf "First Major Drop of the Year" / SS26 / Payntr** — already drafted or standing.
+- **Students "Club Championship" summer** — seasonal range; Course Studies already drafted.
+- **Metalwood x adidas SS26** — still the standing headline, not new.
+- **Malbon Gap / Honma / Tailfins and Palms** — all prior-press or seasonal, not in-window.
 
 ---
 
@@ -39,36 +35,18 @@ Sugarloaf x PAYNTR "Americana Dream" summer capsule. Headline is a special "Summ
 
 | Brand | Activity |
 |-------|----------|
-| Manors | Gentleman Jack capsule (May) still latest. Club Collection standing. No new drop. |
-| Malbon | Arsham Chapter Three (drafted June 17) latest discrete drop. Malecón Sun summer range standing. |
-| Metalwood Studio | adidas Predator Sala / SS26 capsule still the headline. Nothing new. |
-| Eastside Golf | Nike Take Flight + Bridgestone TOUR BX standing. New-arrivals churn, no discrete drop. |
-| Quiet Golf | SSC collab + minimalist seasonal standing. No new drop. |
-| Bogey Boys | Summer Course Collection + adidas MC80 standing. No new drop. |
-| Devereux | Mount Gay capsule (May 18) still latest. No new drop. |
-| Random Golf Club | Community calendar only — Classics: The Loop (June 24-25), Lawsonia (June 29). No product drop. |
-| Gumtree Golf & Nature | Puma Field Notes / State Flower standing. No new drop. |
-| Sentinel Golf | Basecamp Expedition Series II standing. Nothing new. |
-| Fyfe Golf | Mackenzie collab confirmed July (early access open). Nothing new this window. |
-| Mackenzie Golf Bags | Fyfe collab July. Nothing new this window. |
+| Manors | Gentleman Jack still latest. No new drop. |
+| Malbon | Gap/Honma/Tailfins seasonal + archive sale. No discrete in-window drop. |
+| Metalwood Studio | adidas SS26 still the headline. Nothing new. |
+| Eastside Golf | New-arrivals churn, no discrete drop. |
+| Quiet Golf | SS26 minimalist range standing. No new drop. |
+| Bogey Boys | Summer Course + adidas standing. No new drop. |
+| Devereux | Post-July 4 seasonal. No discrete launch. |
+| Random Golf Club | Standing classics. No new drop. |
+| Gumtree | State Flower Collection already drafted this morning. |
+| Sentinel | Spring/summer standing. No new drop. |
+| Fyfe Golf | 21st edition x Mackenzie still "landing July 2026," early access only — NOT live yet. Top watch. |
+| Mackenzie Golf Bags | Tied to Fyfe collab above. No independent new drop. |
 
-## Extended Watchlist Highlights (13-41)
-- **Sugarloaf (#18)** — NEW: Americana Dream x PAYNTR, drafted this run.
-- **Students (#16)** — Course Studies + SS26 at PGG. Drafted June 22, still the timely publish.
-- **Dormie (#27)** — Good Luck casino-leather collection live; timeliness unconfirmed (see Watch list).
-- **Radmor (#31)** — Chasing Light spring range + Special Projects '26 standing. No fresh 48h drop.
-- **Macade / Seamus / Sounder** — Steady-state; summer lines live, no discrete 48h drop.
-- **PGG roster (Left of Field, Lost Balls, Sandy Par, Merrill, Head, et al.)** — Window runs through June 28. **Re-check June 26-28** for post-show capsules.
-
----
-
-## This Week to Watch
-- **Paris Golf Gallery — June 23-28, LIVE.** Re-scout June 26-28 for back-half exhibitors and post-show capsules.
-- **The Open at Royal Birkdale (154th)** is the next major on the horizon — watch Seamus and Dormie for tournament/tartan capsules in the coming weeks.
-- **RGC Classics** — Lawsonia June 29. Community, not product.
-
-## Active Giveaways
-None on-brand and current.
-
----
-*Scout run autonomously. 1 card drafted (Sugarloaf x PAYNTR Americana Dream), 1 brand candidate logged (Radry, needs verification). No cards published — drafts folder only, per standing instruction. Lenny reviews and approves.*
+## Extended Watchlist (13-41)
+No discrete new drops in-window. Sugarloaf and Students activity already drafted/seasonal (see false positives). Remainder quiet this pass.

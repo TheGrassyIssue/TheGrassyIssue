@@ -83,7 +83,8 @@ const manualSlugs = new Set([
   'home-golf-decor-edit',
   'the-camo-edit',
   'brand-to-know-cloud-and-wind-golf',
-  'the-golf-tech-edit'
+  'the-golf-tech-edit',
+  'fyfe-x-mackenzie-every-edition'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
