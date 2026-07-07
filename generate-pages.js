@@ -85,7 +85,9 @@ const manualSlugs = new Set([
   'brand-to-know-cloud-and-wind-golf',
   'the-golf-tech-edit',
   'fyfe-x-mackenzie-every-edition',
-  'brand-to-know-siegelman-stable'
+  'brand-to-know-siegelman-stable',
+  'brand-to-know-olydoe',
+  'brand-to-know-random-golf-club'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
