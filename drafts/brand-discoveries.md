@@ -1,3 +1,23 @@
+# Brand Discoveries — 2026-07-08
+
+## New This Scan (July 8)
+
+### Olydoe — CONFIRMED fit (promote from 07-06 placeholder)
+- **URL:** https://olydoe.com
+- **Why they fit:** The 07-06 placeholder checks out. Launched Oct 2025 by Scott Matthews; "quiet luxury" golf apparel in Supima cotton, merino, and TENCEL with the tagline "not the biggest brand, just the most thoughtful." Chicago/Texas heritage, understated, craft-led, anti-loud — squarely Mo Norman lane. Strongest current new find. Covered by Links Magazine and The Golf Wire. Ready for a Brand-to-Know once Lenny eyeballs the product.
+
+### Shoal Golf Co. — monitor
+- **URL:** https://shoalgolfco.com
+- **Why they fit:** Minimalist walking bags stripped of unnecessary features — "meant to disappear on your shoulder." Exactly the dry, understated accessory lane (think Sentinel/MacKenzie energy without the price tag conversation). Surfaced via The Old Ghosts "30 Indie Golf Brands" field guide.
+
+### Solo Golf — monitor
+- **URL:** verify
+- **Why they fit:** Clean, logo-free, technical minimalist golfwear. The logo-free ethos is the whole anti-corporate pitch. Wants a look at actual product before it earns a watchlist line.
+
+*(Also surfaced, lower priority: Radry Golf — already filed 06-25; Hudson Sutler and Evans Golf Company — American-made bag makers, more heritage than new; The Matchplay Company — British club-colors socks, niche but on-tone.)*
+
+---
+
 # Brand Discoveries — 2026-07-06
 
 ## New This Scan (July 6) — one candidate, and it's local

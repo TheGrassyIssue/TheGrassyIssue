@@ -87,7 +87,8 @@ const manualSlugs = new Set([
   'fyfe-x-mackenzie-every-edition',
   'brand-to-know-siegelman-stable',
   'brand-to-know-olydoe',
-  'brand-to-know-random-golf-club'
+  'brand-to-know-random-golf-club',
+  'off-course-golf-brands-doing-non-golf-things'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
