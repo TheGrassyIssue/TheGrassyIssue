@@ -90,7 +90,9 @@ const manualSlugs = new Set([
   'brand-to-know-random-golf-club',
   'off-course-golf-brands-doing-non-golf-things',
   'brand-to-know-beams-golf',
-  'ovo-golf-2026-collection'
+  'ovo-golf-2026-collection',
+  'the-sock-edit',
+  'brand-to-know-odd-ritual'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
