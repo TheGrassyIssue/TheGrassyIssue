@@ -88,7 +88,9 @@ const manualSlugs = new Set([
   'brand-to-know-siegelman-stable',
   'brand-to-know-olydoe',
   'brand-to-know-random-golf-club',
-  'off-course-golf-brands-doing-non-golf-things'
+  'off-course-golf-brands-doing-non-golf-things',
+  'brand-to-know-beams-golf',
+  'ovo-golf-2026-collection'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
