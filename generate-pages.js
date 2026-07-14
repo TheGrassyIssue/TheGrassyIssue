@@ -93,7 +93,8 @@ const manualSlugs = new Set([
   'ovo-golf-2026-collection',
   'the-sock-edit',
   'brand-to-know-odd-ritual',
-  'malbon-x-grateful-dead'
+  'malbon-x-grateful-dead',
+  'the-driver-headcover-edit'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
