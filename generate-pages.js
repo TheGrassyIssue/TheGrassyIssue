@@ -92,7 +92,8 @@ const manualSlugs = new Set([
   'brand-to-know-beams-golf',
   'ovo-golf-2026-collection',
   'the-sock-edit',
-  'brand-to-know-odd-ritual'
+  'brand-to-know-odd-ritual',
+  'malbon-x-grateful-dead'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
