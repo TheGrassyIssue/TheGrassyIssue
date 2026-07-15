@@ -215,3 +215,13 @@ oMA Studio (LA hatmaker crossing into golf), Momento Golf, Paré Golf, AEIA Golf
 ### Heathlander (New York, NY)
 **URL:** https://heathlander.com
 **Why they fit:** Won Best New Product at 2025 PGA Show. Golf shoes with heathland-inspired colorways. Now expanding into cashmere knitwear.
+
+---
+
+## 2026-07-15 additions
+
+### Radry Golf — https://radrygolf.com (verify URL)
+Understated golfwear with modern streetwear cues; clean, restrained palette that reads closer to menswear than golf kit. Surfaced across multiple 2026 "under-the-radar" roundups (LINKS, Golfmagic). Fits the Grassy Issue lane — design-forward, low-logo, not bro-golf. FILED TO MONITOR; confirm official site and whether they've dropped anything datable before promoting to a Brand-to-Know card.
+
+### Solo Golf (already on watch) — logo-free, minimalist, technical
+Reconfirmed this run in LINKS + Southside roundups. Clean, timeless, logo-free technical golfwear. Still monitor for a first datable drop.

@@ -1980,6 +1980,57 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- THE EDIT — Rain Gear -->
+  <div class="card" data-type="gear">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Edit]</span>
+      <div class="gear-carousel" data-carousel="raingearedit1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://eastsidegolf.com/products/black-eastside-golf-umbrella" target="_blank" rel="noopener">
+              <img src="/images/rain-gear-edit/eastside-umbrella.jpg" alt="Eastside Golf Script Umbrella" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Eastside Golf</div><div class="gear-slide-name">Script Umbrella &middot; $48</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sugarloafsocialclub.com/products/ssc-april-showers-umbrella" target="_blank" rel="noopener">
+              <img src="/images/rain-gear-edit/sugarloaf-umbrella.jpg" alt="Sugarloaf Social Club April Showers Umbrella" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sugarloaf Social Club</div><div class="gear-slide-name">April Showers Umbrella &middot; $88</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.function18.com/products/kjus-cascade-bucket-hat-k00906-02-black" target="_blank" rel="noopener">
+              <img src="/images/rain-gear-edit/kjus-cascade-hat.jpg" alt="KJUS Cascade Bucket Hat" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">KJUS</div><div class="gear-slide-name">Cascade Bucket Hat &middot; $99</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sunmountain.com/products/monsoon-jacket" target="_blank" rel="noopener">
+              <img src="/images/rain-gear-edit/sunmountain-monsoon.jpg" alt="Sun Mountain Monsoon Jacket" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sun Mountain</div><div class="gear-slide-name">Monsoon Jacket &middot; $100</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://manorsgolf.com/products/2-5l-waterproof-jacket" target="_blank" rel="noopener">
+              <img src="/images/rain-gear-edit/manors-pertex-jacket.jpg" alt="Manors Golf 2.5L Pertex Waterproof Jacket" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Manors Golf</div><div class="gear-slide-name">2.5L Pertex WP Jacket &middot; $402</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/the-rain-gear-edit" style="color:inherit;text-decoration:none;border-bottom:none;">The Rain Gear Edit</a></div>
+      <p class="card-text" data-slidetext="raingearedit1">Eastside Golf &mdash; Script Umbrella. 58" canopy, auto-open. Culture-forward rain protection from the brand that brought golf to a new generation. $48.</p>
+      <div class="gear-dots" data-dots="raingearedit1"></div>
+      <div class="gear-counter" data-counter="raingearedit1">1 / 5</div>
+      <div class="card-source"><a href="/drops/the-rain-gear-edit">18 picks from $20 to $402</a></div>
+      <a href="/drops/the-rain-gear-edit" class="card-readmore" style="display:inline-block;margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See All 18 Picks &rarr;</a>
+    </div>
+  </div>
+
   <!-- THE EDIT — Driver Headcovers -->
   <div class="card" data-type="gear">
     <div class="card-media" style="position:relative;">
@@ -11165,6 +11216,13 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    raingearedit1: [
+      "Eastside Golf — Script Umbrella. 58\" canopy, auto-open. Culture-forward rain protection from the brand that brought golf to a new generation. $48.",
+      "Sugarloaf Social Club — April Showers Umbrella. Wind-resistant to 55mph, 56\" canopy, UPF 50+, reflective trim. Survives Texas thunderstorms with style. $88.",
+      "KJUS — Cascade Bucket Hat. Swiss-engineered, seam-sealed, packable. 100% recycled polyester. The premium waterproof bucket for golfers who don't settle. $99.",
+      "Sun Mountain — Monsoon Jacket. 15K waterproof rating, feather-light, packable, 2-year waterproof guarantee. Best budget rain jacket in golf. Full stop. $100.",
+      "Manors Golf — 2.5L Pertex WP Jacket. 30,000mm Pertex Shield Pro — the highest waterproof rating on this list. Seam-sealed, packs with carabiner. The tech ceiling. $402."
+    ],
     headcoveredit1: [
       "Gumtree Golf — State Flora & Fauna 2.0 (Texas). Upcycled vintage heirloom textiles from the 1970s–80s with hand-embroidered state flower and bird patches. Each one is one-of-a-kind, made in Manhattan. The Texas driver is the move. $165.",
       "Mogshade — Churra Mono. 100% Churra wool from a heritage Portuguese sheep breed. Handcrafted in Serra da Estrela, fleece-lined. The headcover equivalent of a well-worn tweed jacket. ~$87.",
