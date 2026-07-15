@@ -95,7 +95,8 @@ const manualSlugs = new Set([
   'brand-to-know-odd-ritual',
   'malbon-x-grateful-dead',
   'the-driver-headcover-edit',
-  'the-rain-gear-edit'
+  'the-rain-gear-edit',
+  'the-wedge-drop'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {

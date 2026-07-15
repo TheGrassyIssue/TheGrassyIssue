@@ -1980,6 +1980,51 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- THE EDIT — Wedges -->
+  <div class="card" data-type="gear">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Edit]</span>
+      <div class="gear-carousel" data-carousel="wedgedrop1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://takomogolf.com/products/skyforger-002-wedges" target="_blank" rel="noopener">
+              <img src="/images/wedge-edit/takomo-skyforger-002.jpg" alt="Takomo Skyforger 002 Wedge" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Takomo</div><div class="gear-slide-name">Skyforger 002 &middot; $99</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://mizunogolf.com/us/golf-clubs/mp-series/mizuno-pro-t3/" target="_blank" rel="noopener">
+              <img src="/images/wedge-edit/mizuno-pro-t3.jpg" alt="Mizuno Pro T-3 Wedge" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Mizuno</div><div class="gear-slide-name">Pro T-3 &middot; $180</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.taylormadegolf.com/MG5-Wedge/DW-TC647.html" target="_blank" rel="noopener">
+              <img src="/images/wedge-edit/taylormade-mg5.jpg" alt="TaylorMade Milled Grind 5 Wedge" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">TaylorMade</div><div class="gear-slide-name">Milled Grind 5 &middot; $200</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.callawaygolf.com/opuswedges/wedges-2026-opus-sp-chrome-usa-250.html" target="_blank" rel="noopener">
+              <img src="/images/wedge-edit/callaway-opus-sp.jpg" alt="Callaway Opus SP Chrome Wedge" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Callaway</div><div class="gear-slide-name">Opus SP Chrome &middot; $220</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/the-wedge-drop" style="color:inherit;text-decoration:none;border-bottom:none;">The Wedge Drop</a></div>
+      <p class="card-text" data-slidetext="wedgedrop1">Takomo &mdash; Skyforger 002. Forged, full face grooves, Australian DTC darling. The best value wedge in golf. $99.</p>
+      <div class="gear-dots" data-dots="wedgedrop1"></div>
+      <div class="gear-counter" data-counter="wedgedrop1">1 / 4</div>
+      <div class="card-source"><a href="/drops/the-wedge-drop">18 picks from $99 to ~$350</a></div>
+      <a href="/drops/the-wedge-drop" class="card-readmore" style="display:inline-block;margin-top:.5rem;font-family:'JetBrains Mono',monospace;font-size:.82rem;letter-spacing:.04em;color:var(--grass);text-decoration:none;border-bottom:1px solid var(--grass);">See All 18 Picks &rarr;</a>
+    </div>
+  </div>
+
   <!-- THE EDIT — Rain Gear -->
   <div class="card" data-type="gear">
     <div class="card-media" style="position:relative;">
@@ -11216,6 +11261,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    wedgedrop1: [
+      "Takomo — Skyforger 002. Forged, full face grooves, Australian DTC darling. The best value wedge in golf. $99.",
+      "Mizuno — Pro T-3. Grain Flow Forged HD in Hiroshima. Shallow cavity back, Quad Cut+ grooves, HydroFlow micro grooves. Buttery Japanese steel at a mid-range price. $180.",
+      "TaylorMade — Milled Grind 5. The first fully forged Milled Grind. Saw-milled grooves with steeper walls and sharper edges for maximum grab on partial shots. $200.",
+      "Callaway — Opus SP Chrome. Spin Pocket construction shifts the CG higher for a more penetrating flight. Two-piece build, tour-shaped, engineered for spin consistency. $220."
+    ],
     raingearedit1: [
       "Eastside Golf — Script Umbrella. 58\" canopy, auto-open. Culture-forward rain protection from the brand that brought golf to a new generation. $48.",
       "Sugarloaf Social Club — April Showers Umbrella. Wind-resistant to 55mph, 56\" canopy, UPF 50+, reflective trim. Survives Texas thunderstorms with style. $88.",
