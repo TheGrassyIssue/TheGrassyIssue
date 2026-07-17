@@ -1,67 +1,70 @@
-# Drop Scout Report — 2026-07-15 (Wednesday)
+# Drop Scout Report — 2026-07-17 (Friday)
 
 ## Summary
-- **1 new draft card this run.** Malbon x New Era 9TWENTY everyday-cap collection (verify note attached — could not date exactly).
-- **Quiet 48-hour window.** Last run was 07/13, so most core brands are unchanged. No confirmed new house drops on the core watchlist beyond the Malbon cap collection.
-- **It's Open week.** The 154th Open is at Royal Birkdale Thu 07/16–Sun 07/19. The tournament-capsule story is already covered by the standing `2026-07-13-malbon-the-open-capsule.html` draft. The official R&A Royal Birkdale range (varsity bomber, BOSS/adidas/Peter Millar) launched but is mass/official, not on-brand — not drafted.
-- **1 active giveaway spotted:** Vessel x Melin giveaway (vesselgolf.com). Off-watchlist but design-forward; noted below.
-- **1 new brand discovery filed:** Radry Golf (understated, streetwear-leaning). Added to `brand-discoveries.md`.
-- **Fyfe x Mackenzie 21st Edition still NOT live** — collection page still tops out at the 20th edition. Remains the top daily watch.
+- **0 new draft cards this run.** No confirmed, datable, in-window (last 48h) drop surfaced across the core or extended watchlist that isn't already drafted or already logged.
+- **Quiet Open-weekend window.** Yesterday's 07/16 run caught the Eastside "Shatter" batch; nothing newer has landed since. The 154th Open is mid-tournament at Royal Birkdale (07/16–19), and the on-brand Open coverage is already sitting in drafts (`2026-07-13-malbon-the-open-capsule.html`, `2026-07-08-reflo-living-links-open.html`).
+- **No new brand discovery filed.** The interesting names that surfaced (Southside Golf Co, CPH/Captain's Helm) are already in `brand-discoveries.md`. One new name considered and rejected on fit — see below.
+- **No giveaways confirmed** on the watchlist this run.
+- **Fyfe x Mackenzie 21st Edition still NOT live** — collection page still tops out at the 20th. Remains the top daily watch.
 
 ---
 
 ## New Drafts This Run
-- `2026-07-15-malbon-new-era-9twenty.html` — Malbon's New Era 9TWENTY relaunched as an unstructured everyday cap (M / Script / bird-print). VERIFY it's genuinely new and confirm SKUs/price on malbon.com/collections/new-era before posting.
+- None. Nothing cleared the bar (new + datable + within 48h + not already drafted + on-brand).
+
+## Candidates checked and NOT drafted (with reason)
+- **Malbon x Bushmills Open capsule** — surfaces strongly in search but it's the **2025** Royal Portrush collaboration recirculating. Stale, not new. Do not draft.
+- **Fyfe x Mackenzie "next collaboration, July 2026"** — early-access sign-up only; the live collection page still ends at the 20th Edition. Not live, not datable. Keep on watch.
+- **Sentinel "Basecamp Expedition Vol. 2"** — a search snippet implied a second installment, but the live shop header still reads **"Basecamp: Expedition One."** In-stock pre-orders (X50 Kermit Chair $330, Anderson's Belt $180) are on-brand but not confirmed as last-48h drops. No datable new launch — do not draft.
+- **Eastside Core Pique Polo (07/15) + 07/14 hats** — single-SKU house arrivals inside the same batch already covered by the 07/13 and 07/16 Eastside drafts. Not a distinct new drop; Eastside is also heavily represented in recent drafts. Skip.
+- **Seamus 2026 U.S. Open line** — still the Shinnecock collection, already drafted (`2026-06-01-seamus-us-open-shinnecock.html`). No dedicated Birkdale/Open capsule found. Watch through the weekend.
+- **Devereux "God Bless Golf and America"** — already drafted (`2026-07-08`). Still current, not new.
+- **Gumtree** — Coffee line (07/08) + State Flower (07/06) still the latest. No new drop.
+- **Bogey Boys / Quiet Golf / Random Golf Club / Manors / Metalwood** — all standing/seasonal; nothing datable and new. (Metalwood adidas MC70 = Feb 2026, not new.)
 
 ## Still Ready to Publish (from earlier runs — verify timeliness, then post)
-- `2026-07-13-malbon-the-open-capsule.html` — Malbon Open capsule; timely for Birkdale week (07/16–19). Good to run now.
-- `2026-07-13-eastside-summer-new-arrivals.html` — verify still current.
-- `2026-07-08-reflo-living-links-open.html` — Reflo officially licensed 154th Open capsule; also timely this week.
-- `2026-07-08-devereux-god-bless-golf-america.html`, `2026-07-08-gumtree-coffee.html`, `2026-07-08-malbon-footjoy-traditions.html` — still standing from last week.
+- `2026-07-16-eastside-shatter-print-arrivals.html` — verify live SKUs/price before posting.
+- `2026-07-15-malbon-new-era-9twenty.html` — confirm genuinely current before posting.
+- `2026-07-13-malbon-the-open-capsule.html` — timely for Birkdale week; good to run now.
+- `2026-07-08-reflo-living-links-open.html` — officially licensed 154th Open capsule; also timely this week.
 - `2026-06-05-found-golf-brand-to-know.html` — Brand-to-Know bench piece, still unpublished.
 
-## Watch / verify before next draft
-- **Fyfe x Mackenzie 21st Edition** — slated July 2026, still NOT live (page tops out at 20th). Check fyfegolf.com daily.
-- **Seamus for an Open/Birkdale drop** — no dedicated Birkdale capsule surfaced; only the 2026 U.S. Open line remains live. Watch through Open weekend.
-- **Malbon x New Era date** — if the cap card can't be confirmed as new, downgrade to a watch item rather than publish.
-- **Public Drip / Dimple & Divot Essentials Pouch** — still soft leads from prior runs; unconfirmed timing.
+## Watch / verify before next run
+- **Fyfe x Mackenzie 21st Edition** — slated July 2026, still NOT live. Check fyfegolf.com daily. Top watch.
+- **Sentinel Basecamp** — pre-order windows (Kermit Chair, Anderson's Belt) are open; watch for a clearly dated "Expedition Two" announcement worth a card.
+- **Students Golf** — summer line current; watch studentsgolf.com/new-arrivals for a fresh datable drop vs. the 06/22 Course Studies Paris release.
+- **Seamus / indie makers** — watch for any Birkdale-timed Open drop through the weekend.
 
-## False positives caught this run (do NOT draft)
-- **R&A official 154th Open Royal Birkdale range** — mass/official (BOSS, adidas, Peter Millar); off-brand.
-- **Metalwood x adidas SS26 (MC80 / Predator Sala)** — still standing SS26, not new.
-- **Random Golf Club** — July activity is trips/Mad Scramble events (LANDMAND, Rodeo Dunes), not product drops.
-- **Malbon x Fabletics (07/08)** — mass-market activewear collab; off-brand for TGI.
+## Brand Discoveries
+- **No new brand filed this run.**
+- **Considered and rejected:** **JAY3LLE** (Johan Lindeberg's new label — designed in Riyadh, made in Italy, women-forward resort/golf crossover). Design-forward but reads as luxury fashion-house, not the anti-corporate Mo Norman lane TGI curates. Not filed.
+- Reconfirmed already-tracked: **Southside Golf Co** (Austin — ⭐ strong local fit, already in file), **CPH / Captain's Helm** (Japan, already in file).
+
+## Giveaways
+- None confirmed active on the watchlist this run. Most indie giveaways run on Instagram and don't index in web search.
 
 ---
 
-## Core Watchlist Activity Scan (1-12)
+## Core Watchlist Activity Scan (1–12)
 
 | Brand | Activity |
 |-------|----------|
-| Manors | Club Collection (Feb) still the latest house line. No new drop. |
-| Malbon | **New Era 9TWENTY everyday caps — drafted this run (verify).** Open capsule (07/13) also standing. |
-| Metalwood Studio | adidas SS26 (MC80 / Predator Sala) still the headline. Nothing new. |
-| Eastside Golf | Summer new arrivals (07/13) standing; nothing newer in window. |
-| Quiet Golf | SS26 polos still latest. No new drop. |
-| Bogey Boys | Between drops; no new datable release. |
-| Devereux | "God Bless Golf and America" (07/08) still the current house line. No new drop. |
-| Random Golf Club | Events/trips only in July. No product drop. |
-| Gumtree | Coffee line (07/08) still current. No new drop. |
-| Sentinel | Basecamp / bags standing. No new drop. |
+| Manors | Club Collection (spring) still the house line; Gentleman Jack already covered. No new drop. |
+| Malbon | Open capsule (07/13) + New Era 9TWENTY (07/15) standing. Bushmills capsule = 2025, stale. Nothing newer. |
+| Metalwood Studio | adidas MC70 (Feb 2026) + SS26 still the headline. Nothing new. |
+| Eastside Golf | Shatter batch (07/14) drafted last run; 07/15 Core Pique Polo is same-batch, not distinct. No new card. |
+| Quiet Golf | SS26 / Miura + SSC collabs still latest. No new drop. |
+| Bogey Boys | Summer Course Collection still current. Between drops. |
+| Devereux | "God Bless Golf and America" (07/08) still current. No new drop. |
+| Random Golf Club | Events + apparel basics; no confirmed in-window product drop. |
+| Gumtree | Coffee (07/08) + State Flower (07/06) still current. No new drop. |
+| Sentinel | Basecamp: Expedition One live; pre-orders open, but no datable new launch. |
 | Fyfe Golf | 21st edition still early-access only — NOT live. Top watch. |
 | Mackenzie Golf Bags | Standard made-to-order. No new drop. |
 
-## Extended Watchlist (13-41) — nothing confirmed in-window
-No dated new drops surfaced this run for the extended list (Agronomy Workshop, Casualist, Left of Field, Students, Late Nine, Sugarloaf, Public Drip, Whim, Forewind, Hame, Sounder, Bluegrass Fairway, Field Day, Tremont, Dormie, Dimple & Divot, Radmor, Head, Heathlander, Macade, Local Rule, Fantl, Rebolf, Angus & Grace, Merrill, FlagBag, Shapland, Winston, Seamus). Search returned mostly seasonal/standing items and coupon-site noise.
-
-## Brand Discoveries
-- **Radry Golf** — NEW this run. Understated, streetwear-leaning golfwear; fits the TGI lane. Filed to monitor (confirm official URL + first datable drop). See `brand-discoveries.md`.
-- **Solo Golf** — reconfirmed (logo-free minimalist technical wear); still monitoring.
-
-## Giveaways
-- **Vessel x Melin giveaway** — active, vesselgolf.com. Off-watchlist but design-forward (Vessel was a prior discovery). Worth a look if Lenny wants a giveaway card; not drafted without confirmed terms/deadline.
-- No on-brand watchlist giveaways confirmed active. Most indie giveaways run on Instagram and don't index in web search.
+## Extended Watchlist (13–41) — nothing confirmed new in-window
+Searched Students, Sugarloaf, Seamus, Dormie, Radmor, Macade, Agronomy Workshop and others. Only standing/seasonal items surfaced (SSC SS26 + Payntr, Students summer, Dormie custom shop / Liberty U.S. Open, Seamus U.S. Open) — all previously logged. No dated new drops this run.
 
 ---
 
-_Note: web_fetch was provenance-gated this run, so all checks ran via web search. Site-level verification (exact publish dates, live SKUs) still recommended before publishing — especially the Malbon New Era card._
+_Note: all checks ran via web search + spot site fetches this run. Site-level verification (exact publish dates, live SKUs, price) still recommended before publishing any standing draft — especially the Eastside card._

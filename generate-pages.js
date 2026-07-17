@@ -96,7 +96,10 @@ const manualSlugs = new Set([
   'malbon-x-grateful-dead',
   'the-driver-headcover-edit',
   'the-rain-gear-edit',
-  'the-wedge-drop'
+  'the-wedge-drop',
+  'the-push-cart-edit',
+  'brand-to-know-morning-people-clothiers',
+  'students-golf-our-15-favorites'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {

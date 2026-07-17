@@ -225,3 +225,8 @@ Understated golfwear with modern streetwear cues; clean, restrained palette that
 
 ### Solo Golf (already on watch) — logo-free, minimalist, technical
 Reconfirmed this run in LINKS + Southside roundups. Clean, timeless, logo-free technical golfwear. Still monitor for a first datable drop.
+
+---
+
+## Monitor (added 2026-07-16)
+- **Three Putt Golf** (UK) — golf-streetwear line flagged in "best 2026 brands" roundups as launching later in 2026; positioned in the UK streetwear lane. Fits the anti-corporate, design-forward TGI aesthetic on paper. TO CONFIRM: official URL and first datable drop before promoting to a discovery card.
