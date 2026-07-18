@@ -99,7 +99,8 @@ const manualSlugs = new Set([
   'the-wedge-drop',
   'the-push-cart-edit',
   'brand-to-know-morning-people-clothiers',
-  'students-golf-our-15-favorites'
+  'students-golf-our-15-favorites',
+  'the-hot-weather-roundup'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
