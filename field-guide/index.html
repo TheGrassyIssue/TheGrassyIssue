@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Austin Golf Guide — Courses, Food, Practice, Culture — The Grassy Issue</title>
-<meta name="description" content="The complete guide to golf in Austin, Texas. Municipal courses, practice ranges, post-round food, simulators, events, and day trips. Updated June 2026." />
+<meta name="description" content="The complete guide to golf in Austin, Texas. Municipal courses, how to play them, special-occasion courses, practice ranges, post-round food, simulators, events, and day trips. Updated July 2026." />
 
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -535,6 +535,128 @@ td.num {
 }
 .table-note a { text-decoration: underline; }
 
+/* ==================== HOW TO PLAY IT ==================== */
+.play-it {
+  margin-top: 28px;
+  padding: 24px 28px;
+  background: rgba(45,74,43,0.04);
+  border: 0.5px solid rgba(45,74,43,0.15);
+}
+.play-it-header {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--grass);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.play-it-header::before {
+  content: '⛳';
+  font-size: 12px;
+}
+.play-it-tips {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.play-it-tips li {
+  padding: 10px 0;
+  border-bottom: 0.5px solid rgba(45,74,43,0.1);
+  font-size: 14px;
+  line-height: 1.55;
+  display: flex;
+  gap: 12px;
+  align-items: baseline;
+}
+.play-it-tips li:last-child { border-bottom: none; }
+.play-it-tips .tip-label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--grass);
+  white-space: nowrap;
+  min-width: 60px;
+  flex-shrink: 0;
+  padding-top: 2px;
+}
+
+/* ==================== SPECIAL DAY COURSES ==================== */
+.special-course {
+  padding: 40px 0;
+  border-bottom: 0.5px solid rgba(20,20,20,0.15);
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 32px;
+  align-items: start;
+}
+.special-course:last-child { border-bottom: none; }
+.special-course-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  filter: saturate(0.85) brightness(0.95);
+  transition: filter 0.3s;
+  border: 0.5px solid var(--ink);
+}
+.special-course:hover .special-course-img { filter: saturate(1) brightness(1); }
+.special-course-name {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 24px;
+  line-height: 1.2;
+  margin-bottom: 6px;
+}
+.special-course-meta {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.55;
+  margin-bottom: 14px;
+}
+.special-course-body {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+}
+.special-course-stats {
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.special-course-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.special-course-stat .label {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.45;
+}
+.special-course-stat .value {
+  font-family: var(--mono);
+  font-size: 13px;
+}
+.special-course-link {
+  display: inline-block;
+  margin-top: 14px;
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-bottom: 1px solid var(--ink);
+  padding-bottom: 2px;
+}
+
 /* ==================== GUIDE SECTIONS (new) ==================== */
 .guide-section { padding: 80px 32px; max-width: 1040px; margin: 0 auto; border-top: 0.5px solid var(--ink); }
 .guide-section-header { margin-bottom: 40px; display: flex; align-items: baseline; gap: 20px; }
@@ -769,6 +891,9 @@ td.num {
   .faq-section { padding: 48px 20px; }
   .glance-grid { grid-template-columns: 1fr; }
   .hon-item { grid-template-columns: 1fr; gap: 10px; }
+  .special-course { grid-template-columns: 1fr; gap: 16px; }
+  .special-course-img { height: 180px; }
+  .play-it { padding: 20px 18px; }
   .muni-photo img { height: 200px; }
   .footer { padding: 40px 20px 24px; }
   .footer-inner { flex-direction: column; }
@@ -782,7 +907,7 @@ td.num {
   "@context": "https://schema.org",
   "@type": "Article",
   "headline": "The Austin Golf Guide",
-  "description": "The complete guide to golf in Austin, Texas. Municipal courses, practice ranges, post-round food, simulators, events, and day trips.",
+  "description": "The complete guide to golf in Austin, Texas. Municipal courses with strategy tips, special-day courses, practice ranges, post-round food, simulators, events, and day trips.",
   "author": {
     "@type": "Person",
     "name": "Lenny Harrington"
@@ -793,7 +918,7 @@ td.num {
     "url": "https://thegrassyissue.com"
   },
   "datePublished": "2026-04-01",
-  "dateModified": "2026-06-17",
+  "dateModified": "2026-07-19",
   "mainEntityOfPage": "https://thegrassyissue.com/field-guide",
   "image": "https://thegrassyissue.com/images/og-field-guide.jpg"
 }
@@ -845,6 +970,22 @@ td.num {
     },
     {
       "@type": "Question",
+      "name": "Where should I play for a special occasion in Austin?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "For a birthday or celebration, Falconhead in Bee Cave has a dramatic limestone cliff par 3. For bachelor groups, Star Ranch in Hutto offers an all-inclusive package. For the full resort experience, Omni Barton Creek has four championship courses by Fazio, Crenshaw, and Palmer. For the toughest test, ShadowGlen in Manor has a slope of 139. All are within 30 minutes of downtown."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I play the Austin munis well?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Each muni rewards a different approach. At Lions, leave the driver in the bag for tight fairways. At Morris Williams, bring your short game for elevated greens. At Roy Kizer, rip the driver but respect the wind. At Jimmy Clay, play the right tees and save energy for the back nine. At Hancock, bring five clubs and enjoy the walk."
+      }
+    },
+    {
+      "@type": "Question",
       "name": "Is Austin good for golf?",
       "acceptedAnswer": {
         "@type": "Answer",
@@ -874,14 +1015,14 @@ td.num {
   <div class="hero-kicker">
     <span>The Grassy Issue · Austin Golf Guide</span>
     <span class="dot">·</span>
-    <span>Updated June 2026</span>
+    <span>Updated July 2026</span>
   </div>
   <h1 class="hero-title">
     The Austin<br/>
     Golf Guide.
   </h1>
   <p class="hero-sub">
-    Everything you need to play golf in Austin — the five municipal courses, where to practice, where to eat after the round, what events to know about, and where to go when you want something special. All in one place, updated quarterly.
+    Everything you need to play golf in Austin — the five municipal courses and how to play them, where to go for a special day, where to practice, where to eat after the round, what events to know about, and the best courses within driving distance. All in one place, updated quarterly.
   </p>
   <div class="hero-meta">
     <span>By Lenny Harrington</span>
@@ -901,6 +1042,7 @@ td.num {
     <div class="toc-label">In this guide</div>
     <div class="toc-links">
       <a href="#munis">Municipal Courses</a>
+      <a href="#special-day">Special Day Courses</a>
       <a href="#practice">Practice & Ranges</a>
       <a href="#food">After the Round</a>
       <a href="#events">Events & History</a>
@@ -995,6 +1137,15 @@ td.num {
         <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
         <a href="https://www.austintexas.gov/golfatx/lions-municipal-course" target="_blank" rel="noopener">Course info ↗</a>
       </div>
+      <div class="play-it">
+        <div class="play-it-header">How to play it</div>
+        <ul class="play-it-tips">
+          <li><span class="tip-label">Off the tee</span><span>Leave the driver in the bag more than you think. Fairways are tight and tree-lined — a 3-wood or hybrid to the center of the fairway beats a 280-yard slice into the oaks every time.</span></li>
+          <li><span class="tip-label">Approach</span><span>The greens are small and well-guarded by mature trees. Favor the fat part of the green rather than chasing pins. Miss to the center, not the edge.</span></li>
+          <li><span class="tip-label">Tempo</span><span>Walk it. Lions is the most walkable muni in the system — flat transitions, short distances between greens and tees. The pace is part of the experience.</span></li>
+          <li><span class="tip-label">Local tip</span><span>Spend 20 minutes on the putting green before your round. The practice complex at Lions is genuinely one of the best at any muni in Texas, and the greens on the course roll the same speed.</span></li>
+        </ul>
+      </div>
       <div class="sig-hole">
         <div class="sig-hole-num">#6</div>
         <div>
@@ -1046,6 +1197,15 @@ td.num {
         <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
         <a href="https://www.austintexas.gov/department/morris-williams-course" target="_blank" rel="noopener">Course info ↗</a>
       </div>
+      <div class="play-it">
+        <div class="play-it-header">How to play it</div>
+        <ul class="play-it-tips">
+          <li><span class="tip-label">Off the tee</span><span>Driver is fine on most holes, but the elevated greens will punish you if you're out of position. Pick a side and commit — there's usually a clear bail-out on every hole if you know where to look.</span></li>
+          <li><span class="tip-label">Greens</span><span>The green complexes are the best in the muni system. They're small, contoured, and elevated — expect more chips and pitches than usual. Dial in your 50-to-80-yard game before you come here.</span></li>
+          <li><span class="tip-label">Walk it</span><span>It's hilly, so cart riders miss half the fun. Walking Morris Williams is a workout, but the elevation changes are the whole personality of the course. Hydrate in summer.</span></li>
+          <li><span class="tip-label">Local tip</span><span>Play holes 11 through 14 with extra focus — water comes into play on all four and that stretch makes or breaks your card. Also: grab the rocking chairs on the clubhouse porch after the round.</span></li>
+        </ul>
+      </div>
       <div class="sig-hole">
         <div class="sig-hole-num">#7</div>
         <div>
@@ -1091,6 +1251,15 @@ td.num {
       </div>
       <div class="muni-links">
         <a href="https://www.austintexas.gov/golfatx/hancock-golf-course" target="_blank" rel="noopener">Course info ↗</a>
+      </div>
+      <div class="play-it">
+        <div class="play-it-header">How to play it</div>
+        <ul class="play-it-tips">
+          <li><span class="tip-label">Club choice</span><span>You can play the whole course with 5 clubs — a hybrid, 7-iron, pitching wedge, sand wedge, and a putter. Don't overthink it. The holes are short but demand accuracy over distance.</span></li>
+          <li><span class="tip-label">Pace</span><span>Show up solo or as a twosome on a weekday afternoon and you'll be through in 75 minutes. Weekend mornings back up — arrive early or wait until after 2pm.</span></li>
+          <li><span class="tip-label">Hazards</span><span>Cars parked along the street are in play on a couple holes. The neighborhood is the hazard. Hit it straight and you're fine; miss wide and you're apologizing to someone's windshield.</span></li>
+          <li><span class="tip-label">Local tip</span><span>No driving range, no warm-up area. You step up to the first tee cold. Stretch in the parking lot and hit your first swing with confidence — everyone who's played Hancock knows the feeling.</span></li>
+        </ul>
       </div>
       <div class="sig-hole">
         <div class="sig-hole-num">#1</div>
@@ -1144,6 +1313,15 @@ td.num {
         <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
         <a href="https://www.austintexas.gov/golfatx/roy-kizer-course" target="_blank" rel="noopener">Course info ↗</a>
       </div>
+      <div class="play-it">
+        <div class="play-it-header">How to play it</div>
+        <ul class="play-it-tips">
+          <li><span class="tip-label">Off the tee</span><span>This is your driver course. Wide fairways, minimal trees, room to miss. Grip it and rip it — you'll rarely be punished for length here, only for direction when water's in play.</span></li>
+          <li><span class="tip-label">Wind</span><span>The number one variable at Kizer. The course is flat and exposed, so a 15 mph south wind turns a 150-yard approach into a 170-yard club. Check the forecast before you pick your tees.</span></li>
+          <li><span class="tip-label">Water</span><span>57 acres of lakes and wetlands weave through the course. Know which side of the fairway the water is on before you tee off — the mistake isn't the water, it's not knowing it's there.</span></li>
+          <li><span class="tip-label">Local tip</span><span>Book a sunset tee time in spring or fall. The light at Kizer between 5:30 and 7pm is unlike anything else in Austin golf. Also: the 16th is a brain-twister — just lay up short of that deep bunker.</span></li>
+        </ul>
+      </div>
       <div class="sig-hole">
         <div class="sig-hole-num">#15</div>
         <div>
@@ -1195,6 +1373,15 @@ td.num {
         <a href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a tee time ↗</a>
         <a href="https://www.austintexas.gov/department/jimmy-clay-course" target="_blank" rel="noopener">Course info ↗</a>
       </div>
+      <div class="play-it">
+        <div class="play-it-header">How to play it</div>
+        <ul class="play-it-tips">
+          <li><span class="tip-label">Off the tee</span><span>At 6,918 yards, Jimmy Clay rewards length. Play from the tees that match your game — this is the only Austin muni where the back tees can genuinely add a full hour to your round if you're not hitting it 250+.</span></li>
+          <li><span class="tip-label">Front nine</span><span>A few forgettable holes mixed with a couple of genuinely fun ones. Don't let the front lull you — the back nine is where the course wakes up and the scoring windows close.</span></li>
+          <li><span class="tip-label">Back nine</span><span>This is the reason to play Jimmy Clay. The stretch from 12 through 16 is the best back-nine run in the muni system. Williamson Creek comes into play, the light gets good, and the holes have real character.</span></li>
+          <li><span class="tip-label">Local tip</span><span>This is the least crowded 18-hole muni in Austin. If you want a quiet round without a wait, book Jimmy Clay on a weekday afternoon. Pair it with Kizer for a 36-hole day — they share a parking lot.</span></li>
+        </ul>
+      </div>
       <div class="sig-hole">
         <div class="sig-hole-num">#6</div>
         <div>
@@ -1212,7 +1399,7 @@ td.num {
 <section class="table-section">
   <div class="table-inner">
     <div class="table-h2">All five, side by side.</div>
-    <div class="table-sub">Green fees current as of April 2026 · Updated quarterly</div>
+    <div class="table-sub">Green fees current as of July 2026 · Updated quarterly</div>
     <div class="table-wrap">
       <table>
         <thead>
@@ -1279,11 +1466,156 @@ td.num {
   </div>
 </section>
 
+<!-- ==================== SPECIAL DAY COURSES ==================== -->
+
+<section class="guide-section" id="special-day">
+  <div class="guide-section-header">
+    <div class="guide-section-num">02</div>
+    <div class="guide-section-text">
+      <div class="guide-section-kicker">Special Day Courses</div>
+      <h2 class="guide-section-h2">When you want something a step up.</h2>
+    </div>
+  </div>
+  <div class="guide-section-intro">
+    <p>The munis are the backbone of golf in Austin, but they're not the whole story. Within 30 minutes of downtown there are public and semi-private courses that feel like a different world — better conditioning, bigger budgets, designs by architects you'd recognize. These are the places you book for a birthday, a bachelor round, when friends visit from out of town, or when you just want a Saturday that feels like an occasion.</p>
+    <p>None of these replace the munis. They're additions — for the days when you want to dress a little nicer, pay a little more, and play something that was designed to impress. Prices range from $50 to $180+ depending on the day, so check rates before you book.</p>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/falconhead.jpg" alt="Limestone ledge overlooking a creek at Falconhead Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">Falconhead Golf Club.</div>
+      <div class="special-course-meta">Public · Bee Cave · 25 min from downtown</div>
+      <div class="special-course-body">The closest thing to a destination course within Austin's city limits. The par-3 8th sits on a limestone ledge cantilevered above a creek — one of the most beautiful holes in Texas. The rest of the layout is carved through Hill Country terrain with real elevation, mature oaks, and a level of conditioning that the munis can't match. Dynamic pricing means weekday afternoons can be surprisingly affordable; weekend mornings run north of $150. Excellent practice facilities.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">72 · 7,108</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">PGA Tour Design</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Cart included</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Birthdays, visitors</span></div>
+      </div>
+      <a href="https://www.falconheadaustin.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/avery-ranch.jpg" alt="Limestone ravine and fairway at Avery Ranch Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">Avery Ranch Golf Club.</div>
+      <div class="special-course-meta">Semi-private · Cedar Park · 30 min from downtown</div>
+      <div class="special-course-body">Holes winding through limestone caverns, live oaks, streams, and ravines — this is what happens when you give a Jack Nicklaus associate natural Hill Country terrain to work with. Five par 3s and five par 5s give it a different rhythm than most courses, and the 7th is a signature hole you'll remember. The TopTracer-equipped driving range and Brushy Creek views from the bar make the whole trip feel like more than a round of golf. Conditioning is consistently excellent.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">72 · 7,121</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">Andy Raugust (Nicklaus)</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Available</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Couples, bachelor rounds</span></div>
+      </div>
+      <a href="https://averyranch.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/grey-rock.jpg" alt="Rolling fairway through Hill Country at Grey Rock Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">Grey Rock Golf Club.</div>
+      <div class="special-course-meta">Semi-private · Southwest Austin · 20 min from downtown</div>
+      <div class="special-course-body">Technically part of the Golf ATX system but operated at a semi-private level — higher green fees, membership options, and a Jay Morrish design that plays like a significant step up from the munis. Grey Rock has the Open Range with TrackMan-equipped bays, a golf academy, and a Biergarten that's become a post-round destination in its own right. The course itself uses the southwest Austin Hill Country terrain to full effect — elevation, water, and mature trees throughout. The closest "upgrade" course to downtown.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">72 · 6,909</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">Jay Morrish</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Available</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Regular upgrade, weekday treat</span></div>
+      </div>
+      <a href="https://www.greyrockgolfandtennis.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/star-ranch.jpg" alt="White sand bunkers and rolling fairway at Star Ranch Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">Star Ranch Golf Club.</div>
+      <div class="special-course-meta">Public · Hutto · 30 min from downtown</div>
+      <div class="special-course-body">One of the best values in the Austin area — an all-inclusive package that covers green fees, cart, range balls, and breakfast and lunch. The course sits on a hill built around a central lake, with 60+ white sand bunkers, wide fairways, and a links-influenced front nine that plays very differently from the tree-lined back. Ranked among GolfPass's Top 50 US Public Courses. The kind of place where you play 18, eat lunch at the turn, and feel like you got a full day for what you'd pay at Falconhead for just the round.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">71 · 7,017</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">Morrish / Bechtol / Russell</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Cart included</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">All-day golf, groups</span></div>
+      </div>
+      <a href="https://www.golfstarranch.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/shadowglen.jpg" alt="Elevated tee box with distant fairway at ShadowGlen Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">ShadowGlen Golf Club.</div>
+      <div class="special-course-meta">Public · Manor · 20 min from downtown</div>
+      <div class="special-course-body">If you want the hardest public course in the Austin area, this is the one. A slope of 139 from the tips, 7,174 yards, and a back nine that uses elevation changes more aggressively than anything in the muni system. The front nine plays more links-like; the back tightens through trees and drops. Reviewers consistently mention the drive-thru bar at the turn. Despite the difficulty, it's surprisingly accessible — the five tee sets range from 4,898 to 7,174 yards, so there's a setup for everyone. One of Austin's genuine hidden gems.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">72 · 7,174</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">Bechtol &amp; Russell</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Available</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Low handicaps, toughest test</span></div>
+      </div>
+      <a href="https://www.shadowglengolf.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/crystal-falls.jpg" alt="Scenic view across rolling terrain at Crystal Falls Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">Crystal Falls Golf Club.</div>
+      <div class="special-course-meta">Public · Leander · 35 min from downtown</div>
+      <div class="special-course-body">Water on 12 of 18 holes, real elevation changes, and a target-golf layout that plays tougher than its 6,654 yards suggest. Crystal Falls is the kind of course where a straight hitter with a 7-iron can outplay a bomber who can't find the fairway. The views from the elevated tees are Hill Country through and through. Reasonably priced for the quality — you're paying muni-plus rates for semi-private conditioning. A strong choice when you want something better without the sticker shock.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">72 · 6,654</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">Jack Miller</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Available</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Shotmakers, budget upgrade</span></div>
+      </div>
+      <a href="https://www.crystalfallsgolf.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/wolfdancer.jpg" alt="Lush resort fairway winding through Texas landscape at Wolfdancer Golf Club" loading="lazy" />
+    <div>
+      <div class="special-course-name">Wolfdancer Golf Club.</div>
+      <div class="special-course-meta">Resort · Lost Pines · 30 min from downtown</div>
+      <div class="special-course-body">The resort play. Wolfdancer sits at the Hyatt Regency Lost Pines and feels like two courses in one — the first 12 holes roll through open prairie, then the final six drop into a river valley. Arthur Hills designed it to show off the terrain, and it works. GPS-equipped carts, iced towels, and the kind of service you don't get at a muni. The 3rd hole — a 603-yard par 5 from an elevated tee — is the "wow" moment. Best for a weekend trip with the family or a round that feels like a getaway without driving three hours.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Par / Yards</span><span class="value">72 · 7,029</span></div>
+        <div class="special-course-stat"><span class="label">Designer</span><span class="value">Arthur Hills</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Cart included</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Resort golf, special occasion</span></div>
+      </div>
+      <a href="https://www.wolfdancergolfclub.com/" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+  <div class="special-course">
+    <img class="special-course-img" src="/images/field-guide/omni-barton.jpg" alt="Rolling Hill Country fairway at Omni Barton Creek Resort" loading="lazy" />
+    <div>
+      <div class="special-course-name">Omni Barton Creek Resort.</div>
+      <div class="special-course-meta">Resort · West Austin · 20 min from downtown</div>
+      <div class="special-course-body">The big one. Four 18-hole championship courses at a single resort — Fazio Canyons (ranked top 35 in Golf Digest), Fazio Foothills, Crenshaw Cliffside, and Palmer Lakeside. This is where Austin golf becomes a destination. Fazio Canyons is the headliner — a recently renovated Tom Fazio design through Hill Country canyons with views that make you stop mid-backswing. Crenshaw Cliffside is the most playable of the four, with wide fairways and massive greens designed for enjoyment over punishment. Full resort amenities: spa, four restaurants, three pools. The most impressive golf experience within Austin city limits, no question.</div>
+      <div class="special-course-stats">
+        <div class="special-course-stat"><span class="label">Courses</span><span class="value">4 × 18 holes</span></div>
+        <div class="special-course-stat"><span class="label">Designers</span><span class="value">Fazio · Crenshaw · Palmer</span></div>
+        <div class="special-course-stat"><span class="label">Walking</span><span class="value">Cart included</span></div>
+        <div class="special-course-stat"><span class="label">Best for</span><span class="value">Big occasion, resort golf</span></div>
+      </div>
+      <a href="https://www.omnihotels.com/hotels/austin-barton-creek/golf" target="_blank" rel="noopener" class="special-course-link">Book a tee time ↗</a>
+    </div>
+  </div>
+
+</section>
+
 <!-- ==================== NEW GUIDE SECTIONS ==================== -->
 
 <section class="guide-section" id="practice">
   <div class="guide-section-header">
-    <div class="guide-section-num">02</div>
+    <div class="guide-section-num">03</div>
     <div class="guide-section-text">
       <div class="guide-section-kicker">Practice & Ranges</div>
       <h2 class="guide-section-h2">Where to sharpen your game.</h2>
@@ -1317,7 +1649,7 @@ td.num {
 
 <section class="guide-section" id="food">
   <div class="guide-section-header">
-    <div class="guide-section-num">03</div>
+    <div class="guide-section-num">04</div>
     <div class="guide-section-text">
       <div class="guide-section-kicker">After the Round</div>
       <h2 class="guide-section-h2">Where to eat, drink, and decompress.</h2>
@@ -1378,7 +1710,7 @@ td.num {
 
 <section class="guide-section" id="events">
   <div class="guide-section-header">
-    <div class="guide-section-num">04</div>
+    <div class="guide-section-num">05</div>
     <div class="guide-section-text">
       <div class="guide-section-kicker">Events & History</div>
       <h2 class="guide-section-h2">What's happening and what came before.</h2>
@@ -1421,7 +1753,7 @@ td.num {
 
 <section class="guide-section" id="day-trips">
   <div class="guide-section-header">
-    <div class="guide-section-num">05</div>
+    <div class="guide-section-num">06</div>
     <div class="guide-section-text">
       <div class="guide-section-kicker">Beyond the City</div>
       <h2 class="guide-section-h2">When you want something different.</h2>
@@ -1516,33 +1848,42 @@ td.num {
       </ul>
     </div>
 
+    <div class="glance-card">
+      <h3>Best special-day courses by vibe.</h3>
+      <ul class="glance-list">
+        <li><span>Birthday round</span><span class="ref">Falconhead</span></li>
+        <li><span>Bachelor party</span><span class="ref">Star Ranch (all-inclusive)</span></li>
+        <li><span>Full resort experience</span><span class="ref">Omni Barton Creek</span></li>
+        <li><span>Toughest test</span><span class="ref">ShadowGlen</span></li>
+      </ul>
+    </div>
+
+    <div class="glance-card">
+      <h3>The casual plays.</h3>
+      <ul class="glance-list">
+        <li><span>Butler Pitch & Putt</span><span class="ref">Par 3, downtown</span></li>
+        <li><span>Joe Balander Short Course</span><span class="ref">$5, wedge practice</span></li>
+        <li><span>Hancock after 2pm</span><span class="ref">$20, 75 minutes</span></li>
+      </ul>
+    </div>
+
   </div>
 </section>
 
 <section class="honorable">
   <div class="honorable-kicker">Honorable mentions</div>
-  <div class="honorable-h2">Not on the guide, but good to know.</div>
-
-  <div class="hon-item">
-    <div>
-      <div class="hon-name">Grey Rock Golf Club.</div>
-      <div class="hon-tag">Semi-private · Southwest Austin</div>
-    </div>
-    <div class="hon-body">
-      <p>Technically part of the Golf ATX system, but priced and operated differently. Grey Rock runs more like a semi-private club than a municipal course — membership options, higher day rates, a Jay Morrish design. Good to have on your radar if you're considering a Golf ATX membership or want a course that plays a step up from the five munis. Not what the Field Guide is about, but not nothing.</p>
-    </div>
-  </div>
+  <div class="honorable-h2">Also on your radar.</div>
 
   <div class="hon-item">
     <div>
       <div class="hon-name">Butler Pitch & Putt.</div>
       <div class="hon-tag">Public · Par 3 · Downtown</div>
       <figure class="muni-photo" style="margin-top: 12px;">
-        <img src="/images/event-butler-skyline.jpg" alt="Austin skyline seen from Butler Pitch and Putt at dusk" loading="lazy" style="height: 140px;" />
+        <img src="/images/field-guide/butler-pp.jpg" alt="Austin skyline seen from Butler Pitch and Putt at dusk" loading="lazy" style="height: 140px;" />
       </figure>
     </div>
     <div class="hon-body">
-      <p>Nine par-3 holes downtown, walk-up rates, beer stand at the 19th. Not on this Field Guide because it's a different category of golf — closer to a first date than a real round. But it deserves a mention because it's an Austin institution, and because it's the correct answer to "where can I play in jeans right now." Get its own writeup eventually.</p>
+      <p>Nine par-3 holes downtown on the south shore of Lady Bird Lake, walk-up rates, a beer stand at the turn, and the Austin skyline as your backdrop. Not a serious test of golf — closer to a first date or a weeknight hang than a real round. But it's an Austin institution, and it's the correct answer to "where can I play in jeans right now without a tee time." Bring a few clubs, grab a beer, and enjoy the sunset. One of the best casual golf experiences in any city.</p>
     </div>
   </div>
 
@@ -1553,6 +1894,26 @@ td.num {
     </div>
     <div class="hon-body">
       <p>A nine-hole par-3 practice course at the Roy Kizer / Jimmy Clay complex. $5 adults, $3 juniors. Under the radar, open to the public, good for dialing in your wedges or teaching a beginner without the pressure of a full round. Walk only.</p>
+    </div>
+  </div>
+
+  <div class="hon-item">
+    <div>
+      <div class="hon-name">Vaaler Creek Golf Club.</div>
+      <div class="hon-tag">Public · Blanco · 50 min from Austin</div>
+    </div>
+    <div class="hon-body">
+      <p>The Hill Country day trip. Ranked #10 in Texas by the Dallas Morning News, Vaaler Creek is in Blanco — about 50 minutes west of Austin. Michael Lowry design with 6,946 yards of beautifully conditioned fairways, a restored 1860s ranch house for a clubhouse, and a shaded deck overlooking the 18th. Not close enough to be a regular play, but absolutely a reason to get in the car for a Saturday morning.</p>
+    </div>
+  </div>
+
+  <div class="hon-item">
+    <div>
+      <div class="hon-name">ColoVista Golf Club.</div>
+      <div class="hon-tag">Public · Bastrop · 35 min from Austin</div>
+    </div>
+    <div class="hon-body">
+      <p>A wild ride of a course in Bastrop overlooking the Colorado River. The signature 15th — a 191-yard par 3 off a cliff with a 200-foot drop to the green — is one of the most dramatic holes in central Texas. The front nine plays links-style, the back nine uses extreme elevation through rugged terrain. Ranked #1 Hidden Gem by the Houston Chronicle. Check recent reviews for condition updates.</p>
     </div>
   </div>
 </section>
@@ -1584,6 +1945,16 @@ td.num {
   <div class="faq-item">
     <div class="faq-q">What should I do after a round of golf in Austin?</div>
     <div class="faq-a">Austin's post-round scene is one of the best in the country. Hit a BBQ joint near whatever course you just played — we've mapped <a href="/drops/austin-bbq-field-guide">12 spots by proximity</a>. Grab a <a href="/drops/10-of-the-best-post-round-burgers">smash burger</a>, head to a patio bar, or check out our full list of <a href="/drops/7-post-round-moves-in-austin">post-round moves</a> for swimming holes, live music, and more.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">Where should I play for a special occasion in Austin?</div>
+    <div class="faq-a">For a birthday or celebration, Falconhead in Bee Cave is the go-to — its par-3 8th on a limestone cliff is unforgettable. For a bachelor group, Star Ranch in Hutto offers an all-inclusive package with green fees, cart, range, and meals. For the full resort experience, Omni Barton Creek has four Tom Fazio, Crenshaw, and Palmer courses at one property. For the toughest public test, ShadowGlen in Manor has a slope of 139 from the tips. All are within 30 minutes of downtown. See our full <a href="#special-day">special day section</a> for eight courses.</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">How do I play the Austin munis well?</div>
+    <div class="faq-a">Each muni rewards a different approach. At Lions, leave the driver in the bag — it's short and tight, so accuracy beats distance. At Morris Williams, bring your short game — the elevated greens are the best in the system. At Kizer, rip the driver but respect the wind. At Jimmy Clay, play the right tees and save energy for the back nine. At Hancock, bring five clubs and enjoy the walk. We've added detailed "How to Play It" strategy tips to every course in the <a href="#munis">municipal section</a>.</div>
   </div>
 
   <div class="faq-item">
