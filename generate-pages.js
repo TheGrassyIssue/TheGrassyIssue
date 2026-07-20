@@ -100,7 +100,8 @@ const manualSlugs = new Set([
   'the-push-cart-edit',
   'brand-to-know-morning-people-clothiers',
   'students-golf-our-15-favorites',
-  'the-hot-weather-roundup'
+  'the-hot-weather-roundup',
+  'brand-to-know-kingfisher-golf'
 ]);
 
 for (let i = 0; i < cardStarts.length; i++) {
