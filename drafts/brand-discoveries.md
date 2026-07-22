@@ -230,3 +230,10 @@ Reconfirmed this run in LINKS + Southside roundups. Clean, timeless, logo-free t
 
 ## Monitor (added 2026-07-16)
 - **Three Putt Golf** (UK) — golf-streetwear line flagged in "best 2026 brands" roundups as launching later in 2026; positioned in the UK streetwear lane. Fits the anti-corporate, design-forward TGI aesthetic on paper. TO CONFIRM: official URL and first datable drop before promoting to a discovery card.
+
+---
+
+## 2026-07-22 additions
+
+### 3286 Golf Studio (Nagoya, Japan) — https://3286golfstudio.jp
+**Why they fit:** Handmade golf headcovers cut and sewn from antique kimonos, obi belts, and vintage Japanese fabrics — no machinery beyond a sewing machine. One-of-one pieces, craft-obsessed, zero bro-golf. Same "quiet handcraft over hype" lane as Mogshade (Portuguese headcovers) that Lenny already covered. Strong Brand-to-Know candidate; confirm shipping to US and a datable release before building a card.
