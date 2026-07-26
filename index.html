@@ -1980,6 +1980,77 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- BRAND TO KNOW — Fella Golf -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Brand to Know]</span>
+      <div class="gear-carousel" data-carousel="fella1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://fellagolf.com/products/tech-ripstop-anorak-jacket" target="_blank" rel="noopener">
+              <img src="/images/fella-golf/tech-ripstop-anorak.jpg" alt="Fella Golf Tech Ripstop Anorak Jacket" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Fella Golf</div><div class="gear-slide-name">Tech Ripstop Anorak &middot; &euro;140</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://fellagolf.com/products/sandbagger-t-shirt" target="_blank" rel="noopener">
+              <img src="/images/fella-golf/sandbagger-tee.jpg" alt="Fella Golf Sandbagger T-Shirt" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Fella Golf</div><div class="gear-slide-name">Sandbagger T-Shirt &middot; &euro;70</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://fellagolf.com/products/dice-mallet-headcover-copy" target="_blank" rel="noopener">
+              <img src="/images/fella-golf/pizza-headcover.jpg" alt="Fella Golf Pizza Slice Driver Headcover" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Fella Golf</div><div class="gear-slide-name">Pizza Slice Headcover &middot; &euro;59</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://fellagolf.com/products/pizza-slice-double-ball-marker" target="_blank" rel="noopener">
+              <img src="/images/fella-golf/pizza-ball-marker.jpg" alt="Fella Golf Pizza Slice Double Ball Marker" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Fella Golf</div><div class="gear-slide-name">Pizza Ball Marker &middot; &euro;15</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/fella-golf" style="color:inherit;text-decoration:none;border-bottom:none;">Brand to Know &mdash; Fella Golf</a></div>
+      <div class="card-text" data-slidetext="fella1">Tech Ripstop Anorak Jacket &mdash; Packable ripstop half-zip anorak with mesh underarm panels for ventilation. Lightweight, wind-resistant, folds into its own pocket. The Amsterdam-made solution for changeable weather on the links. &euro;140.</div>
+      <div class="gear-dots" data-dots="fella1"></div>
+      <div class="gear-counter" data-counter="fella1">1 / 4</div>
+      <div class="card-source"><a href="https://fellagolf.com" target="_blank" rel="noopener">fellagolf.com</a></div>
+      <a href="/drops/fella-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var slideTexts = {
+      fella1: [
+        "Tech Ripstop Anorak Jacket — Packable ripstop half-zip anorak with mesh underarm panels for ventilation. Lightweight, wind-resistant, folds into its own pocket. The Amsterdam-made solution for changeable weather on the links. €140.",
+        "Sandbagger T-Shirt — Vintage-inspired sandbagger graphic on 240GSM carbon-finished cotton. Heavyweight, boxy cut. Fella’s tongue-in-cheek take on the golfer everyone knows but nobody admits to being. €70.",
+        "Pizza Slice Driver Headcover — White PU leather with green diamond quilting and an embroidered pizza slice. The kind of headcover that starts conversations on the first tee. Because golf doesn’t have to be so serious. €59.",
+        "Pizza Slice Double Ball Marker — Golden pizza slice marker with “It only takes one good shot” engraved on the back. The tiniest piece in the collection and somehow the most Fella thing they make. €15."
+      ]
+    };
+    var origGearSlide = window.gearSlide;
+    window.gearSlide = function(btn, dir) {
+      origGearSlide(btn, dir);
+      var carousel = btn.closest('.gear-carousel');
+      if (!carousel) return;
+      var cid = carousel.dataset.carousel;
+      if (!slideTexts[cid]) return;
+      var counter = document.querySelector('[data-counter="'+cid+'"]');
+      if (!counter) return;
+      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
+      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
+      if (textEl) textEl.textContent = slideTexts[cid][idx];
+    };
+  })();
+  </script>
+
   <!-- THE BREAK 80 KIT — 5 Picks to Finally Shoot 79 -->
   <div class="card" data-type="edit">
     <div class="card-media" style="position:relative;">
