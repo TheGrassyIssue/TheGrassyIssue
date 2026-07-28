@@ -1980,6 +1980,68 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- SSC SUMMER SAILING MICRO DROP -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag flag">[Drop]</span>
+      <div class="gear-carousel" data-carousel="sscsailing">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://www.sugarloafsocialclub.com/products/ssc-x-mackenzie-sail-bag" target="_blank" rel="noopener">
+              <img src="/images/ssc-summer-sailing/mackenzie-sail-bag-1492.jpg" alt="SSC x MacKenzie Sail Bag 1492" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">SSC &times; MacKenzie</div><div class="gear-slide-name">Sail Bag &ldquo;1492&rdquo; &middot; $975</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sugarloafsocialclub.com/products/suede-boat-shoe" target="_blank" rel="noopener">
+              <img src="/images/ssc-summer-sailing/suede-boat-shoe.jpg" alt="SSC Sugar-Loafer Suede Boat Shoe" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sugarloaf Social Club</div><div class="gear-slide-name">Sugar-Loafer Boat Shoe &middot; $180</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sugarloafsocialclub.com/products/ssc-embroidered-belt" target="_blank" rel="noopener">
+              <img src="/images/ssc-summer-sailing/canvas-arrow-belt.jpg" alt="SSC Canvas Arrow Belt" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sugarloaf Social Club</div><div class="gear-slide-name">Canvas Arrow Belt &middot; $95</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sugarloafsocialclub.com/products/ssc-floppy-bucket-hat" target="_blank" rel="noopener">
+              <img src="/images/ssc-summer-sailing/ribbon-bucket-hat.jpg" alt="SSC Ribbon Floppy Bucket Hat" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sugarloaf Social Club</div><div class="gear-slide-name">Ribbon Floppy Bucket &middot; $40</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/sugarloaf-summer-sailing" style="color:inherit;text-decoration:none;border-bottom:none;">SSC Summer Sailing Drop</a></div>
+      <div class="card-text" data-slidetext="sscsailing">Sail Bag &ldquo;1492&rdquo; &mdash; One-of-a-kind MacKenzie golf bag built from decommissioned sailcloth. Each bag carries a unique sail number and the patina of actual open-water miles. Hand-finished in Portland. $975.</div>
+      <div class="gear-dots" data-dots="sscsailing"></div>
+      <div class="gear-counter" data-counter="sscsailing">1 / 4</div>
+      <div class="card-source"><a href="/drops/sugarloaf-summer-sailing">thegrassyissue.com</a> &middot; Drop</div>
+      <a href="/drops/sugarloaf-summer-sailing" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var slideTexts = {
+      sscsailing: [
+        "Sail Bag “1492” — One-of-a-kind MacKenzie golf bag built from decommissioned sailcloth. Each bag carries a unique sail number and the patina of actual open-water miles. Hand-finished in Portland. $975.",
+        "Sugar-Loafer Suede Boat Shoe — Full-suede upper, hand-stitched moc toe, non-marking sole that works on the boat or the clubhouse patio. Tan. The shoe Sugarloaf was always going to make. $180.",
+        "Canvas Arrow Belt — Embroidered SSC arrow logo on a woven canvas strap with a brushed silver slide buckle. Navy and khaki. $95.",
+        "Ribbon Floppy Bucket Hat — Soft bucket hat with grosgrain ribbon SSC trim. UPF protection meets country-club-on-vacation energy. $40."
+      ]
+    };
+    document.querySelectorAll('[data-slidetext]').forEach(function(el){
+      var key = el.getAttribute('data-slidetext');
+      if(slideTexts[key]){el.setAttribute('data-texts', JSON.stringify(slideTexts[key]));}
+    });
+  })();
+  </script>
+
   <!-- THE TOWEL EDIT, VOL. 2 -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
