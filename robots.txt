@@ -1,3 +1,8 @@
 User-agent: *
 Allow: /
+Disallow: /drafts/
+Disallow: /ig
+Disallow: /instagram-posts
+Disallow: /stats
+
 Sitemap: https://thegrassyissue.com/sitemap.xml
