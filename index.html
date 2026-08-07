@@ -1921,6 +1921,84 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 
+  <!-- BRAND REVISITED — Sentinel Golf -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Brand Revisited]</span>
+      <div class="gear-carousel" data-carousel="sentinelrevisited1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-aj82l-y9w5f" target="_blank" rel="noopener">
+              <img src="/images/sentinel-golf/sorensen-walker-charcoal.jpg" alt="Sentinel × Sørensen Walker — Charcoal Nubuck" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel &times; S&oslash;rensen</div><div class="gear-slide-name">S&oslash;rensen Walker &mdash; Charcoal &middot; $1,750</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sentinelgolf.us/shop/p/ranger-bag-shag-xx29f-b8hjy-3gat7" target="_blank" rel="noopener">
+              <img src="/images/sentinel-golf/kvadrat-headcovers-green.jpg" alt="Sentinel × Kvadrat Headcovers — Green" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel &times; Kvadrat</div><div class="gear-slide-name">Kvadrat Headcovers &mdash; Green &middot; $108</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-kjjr6-6gc6d-ar5fg-ykh5a-dbfwy-mkdrf-ze83c-r74ja-amdsg-knj8p-d5r8d-9frp2" target="_blank" rel="noopener">
+              <img src="/images/sentinel-golf/1733-duffle-coyote.jpg" alt="Sentinel × 1733 Duffle — Saltex Coyote" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel &times; 1733</div><div class="gear-slide-name">1733 Duffle &mdash; Saltex Coyote &middot; $320</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sentinelgolf.us/shop/p/8t95uvw1ec28h1za76ycshtzy2kvha-57hyk-8trkf-6g8w5-b2y36-gykk4-kmx3l-ys7ma-ybfgz-mcy6w" target="_blank" rel="noopener">
+              <img src="/images/sentinel-golf/debs-vest-khaki.jpg" alt="Sentinel Golf Debs Vest — Khaki" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel</div><div class="gear-slide-name">Debs Vest &mdash; Khaki &middot; $224</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-mylxr-f4jjt" target="_blank" rel="noopener">
+              <img src="/images/sentinel-golf/felt-target-mat.jpg" alt="Sentinel Golf Felt Target Mat" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel</div><div class="gear-slide-name">Felt Target Mat &middot; $148</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/brand-to-know-sentinel-golf" style="color:inherit;text-decoration:none;border-bottom:none;">Brand Revisited &mdash; Sentinel Golf</a></div>
+      <div class="card-text" data-slidetext="sentinelrevisited1">S&oslash;rensen Walker &mdash; Charcoal Nubuck. Hand-stitched Danish leather, the MacKenzie carry bag refined &ldquo;akin to a sculpture.&rdquo; Made to order. $1,750.</div>
+      <div class="gear-dots" data-dots="sentinelrevisited1"></div>
+      <div class="gear-counter" data-counter="sentinelrevisited1">1 / 5</div>
+      <div class="card-source"><a href="https://www.sentinelgolf.us" target="_blank" rel="noopener">sentinelgolf.us</a></div>
+      <a href="/drops/brand-to-know-sentinel-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    var slideTexts = {
+      sentinelrevisited1: [
+        "Sørensen Walker — Charcoal Nubuck. Hand-stitched Danish leather, the MacKenzie carry bag refined “akin to a sculpture.” Made to order. $1,750.",
+        "Kvadrat Headcovers — Green. Danish 3D-knit textile, knit in Denmark and sewn in New York, Melton wool lining. $108.",
+        "1733 Duffle — Saltex Coyote. A collab duffle in rugged Saltex fabric, built to take a beating and look better for it. $320.",
+        "Debs Vest — Khaki. Insulated, low-bulk layer for a cold morning tee time. $224.",
+        "Felt Target Mat. Wool-felt target for indoor putting and short-game reps. A quiet, tactile practice tool. $148."
+      ]
+    };
+    var origGearSlide = window.gearSlide;
+    window.gearSlide = function(btn, dir) {
+      origGearSlide(btn, dir);
+      var carousel = btn.closest('.gear-carousel');
+      if (!carousel) return;
+      var cid = carousel.dataset.carousel;
+      if (!slideTexts[cid]) return;
+      var counter = document.querySelector('[data-counter="'+cid+'"]');
+      if (!counter) return;
+      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
+      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
+      if (textEl) textEl.textContent = slideTexts[cid][idx];
+    };
+  })();
+  </script>
+
   <!-- THE EDIT — Fyfe Putter Covers -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -3133,57 +3211,6 @@
         <cite style="display:block;">— Tom Watson</cite>
         <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;display:block;margin-top:2px;">8× Major Champion</span>
       </div>
-    </div>
-  </div>
-
-  <!-- BRAND TO KNOW — Sentinel Golf -->
-  <div class="card" data-type="drop">
-    <div class="card-media" style="position:relative;">
-      <span class="card-tag grass">[Brand to Know]</span>
-      <div class="gear-carousel" data-carousel="sentinelgolf1">
-        <div class="gear-carousel-track">
-          <div class="gear-slide">
-            <a href="https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-aj82l" target="_blank" rel="noopener">
-              <img src="/images/sentinel-golf/sorensen-walker.jpg" alt="Sentinel Golf Sørensen Walker" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel</div><div class="gear-slide-name">S&oslash;rensen Walker &middot; $1,750</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-srmy2-h7w7l-8pcrj-ezbym-nw9xc" target="_blank" rel="noopener">
-              <img src="/images/sentinel-golf/robotech-dome.jpg" alt="Sentinel Golf Basecamp Robotech Dome" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel</div><div class="gear-slide-name">Basecamp Robotech Dome &middot; $3,900</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-f592w" target="_blank" rel="noopener">
-              <img src="/images/sentinel-golf/ultracomp-walker.jpg" alt="Sentinel Golf UltraComp Walker 2.0" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel</div><div class="gear-slide-name">UltraComp Walker 2.0 &middot; $890</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.sentinelgolf.us/shop/p/x50-kermit-chair-olive" target="_blank" rel="noopener">
-              <img src="/images/sentinel-golf/kermit-chair.jpg" alt="Sentinel Golf X50 Kermit Chair" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel &times; Kermit</div><div class="gear-slide-name">X50 Kermit Chair &middot; $330</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.sentinelgolf.us/shop/p/mwqw2hk7jsxug69d9fa1t1gk7kdu6e-jg7sw-kz2dg" target="_blank" rel="noopener">
-              <img src="/images/sentinel-golf/cerakote-rypstick.jpg" alt="Sentinel Golf Cerakote Rypstick" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sentinel</div><div class="gear-slide-name">Cerakote Rypstick &middot; $248</div></div>
-            </a>
-          </div>
-        </div>
-        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
-        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="card-title"><a href="/drops/brand-to-know-sentinel-golf" style="color:inherit;text-decoration:none;border-bottom:none;">Brand to Know &mdash; Sentinel Golf</a></div>
-      <div class="card-text" data-slidetext="sentinelgolf1">S&oslash;rensen Walker &mdash; Hand-stitched Danish nubuck leather carry bag. MacKenzie-style Sunday bag reimagined with Scandinavian craftsmanship. Limited pre-order, sold out in every colorway. $1,750.</div>
-      <div class="gear-dots" data-dots="sentinelgolf1"></div>
-      <div class="gear-counter" data-counter="sentinelgolf1">1 / 5</div>
-      <div class="card-source"><a href="https://www.sentinelgolf.us" target="_blank" rel="noopener">sentinelgolf.us</a></div>
-      <a href="/drops/brand-to-know-sentinel-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
     </div>
   </div>
 
