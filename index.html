@@ -53,71 +53,7 @@
     --mono: 'JetBrains Mono', monospace;
   }
 
-  /* NIGHT MODE — auto-activates after 6pm local time */
-  /* Smooth transition on all color-driven properties */
-  body, .card, .card-body, .nav, .nav-drawer, .footer, .nav-cta,
-  .ticker, .weather-banner, .card-tag, .gear-arrow, .about-strip,
-  .night-toggle, .vote-btn {
-    transition: background-color 0.6s ease, color 0.6s ease, border-color 0.6s ease;
-  }
-  img { transition: filter 0.6s ease; }
 
-  :root.night {
-    --ink: #C8C3B8;
-    --paper: #202020;
-    --grass: #5A8A56;
-    --rough: #9A9A7A;
-    --flag: #D4564A;
-    --ink-rgb: 200, 195, 184;
-  }
-  :root.night body { background: #202020; }
-  :root.night .card { background: #2A2A28; border-color: rgba(200,195,184,0.1); }
-  :root.night .card-body { background: #2A2A28; }
-  :root.night .nav { background: #242422; border-color: rgba(200,195,184,0.08); }
-  :root.night .nav-drawer { background: #242422; }
-  :root.night .footer { background: #1C1C1A; }
-  :root.night .gear-arrow { background: rgba(42, 42, 40, 0.85); color: var(--ink); }
-  :root.night .gear-arrow:hover { background: #2A2A28; }
-  :root.night .card:hover { box-shadow: 0 8px 24px -4px rgba(0,0,0,0.3), 0 2px 6px -1px rgba(0,0,0,0.15); }
-  :root.night .weather-banner { background: #2E4E2C; }
-  :root.night .ticker { background: #C8C3B8; color: #202020; }
-  :root.night .card-tag.grass { background: #5A8A56; color: #202020; }
-  :root.night .card-tag.flag { background: #D4564A; color: #202020; }
-  :root.night .card-tag.ink { background: #C8C3B8; color: #202020; }
-  :root.night .about-strip { border-color: rgba(200,195,184,0.08); }
-  :root.night img { filter: brightness(0.88); }
-  :root.night .hero img { filter: brightness(0.75); }
-  :root.night .nav-cta { background: #C8C3B8; color: #202020; }
-  :root.night .nav-cta:hover { background: #5A8A56; color: #202020; }
-  :root.night .vote-btn.voted.chosen { background: #C8C3B8; color: #202020; }
-  :root.night .card-source a { opacity: 0.5; }
-  :root.night .card-readmore { opacity: 0.55; }
-  :root.night .card-meta { opacity: 0.35; }
-  :root.night .card-text { opacity: 0.7; }
-  :root.night .night-toggle { opacity: 1; }
-
-  /* Night mode toggle pill */
-  .night-toggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 50;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: var(--ink);
-    color: var(--paper);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    font-size: 18px;
-    border: none;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-    transition: transform 0.2s, background 0.2s;
-  }
-  .night-toggle:hover { transform: scale(1.1); }
-  :root.night .night-toggle { background: #C8C3B8; color: #202020; }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -14153,60 +14089,6 @@ function submitNL(e){
   setTimeout(closeNL, 2200);
   return false;
 }
-</script>
-
-<!-- Night mode toggle -->
-<button class="night-toggle" onclick="toggleNight()" aria-label="Toggle night mode" title="Toggle night mode">
-  <span class="night-icon">☾</span>
-</button>
-
-<script>
-(function() {
-  var root = document.documentElement;
-  var icon = null;
-
-  function isNightTime() {
-    var h = new Date().getHours();
-    return h >= 18 || h < 6;
-  }
-
-  function applyMode(night) {
-    if (night) {
-      root.classList.add('night');
-    } else {
-      root.classList.remove('night');
-    }
-    icon = document.querySelector('.night-icon');
-    if (icon) icon.textContent = night ? '☀' : '☾';
-  }
-
-  // Check localStorage for manual override, otherwise use time
-  var stored = localStorage.getItem('tgi-night');
-  if (stored === 'on') {
-    applyMode(true);
-  } else if (stored === 'off') {
-    applyMode(false);
-  } else {
-    applyMode(isNightTime());
-  }
-
-  // Re-check every minute if no manual override
-  setInterval(function() {
-    if (!localStorage.getItem('tgi-night')) {
-      applyMode(isNightTime());
-    }
-  }, 60000);
-
-  // Expose toggle
-  window.toggleNight = function() {
-    var isNight = root.classList.contains('night');
-    applyMode(!isNight);
-    // Set manual override that expires at next transition boundary
-    localStorage.setItem('tgi-night', !isNight ? 'on' : 'off');
-    // Clear override after 12 hours so auto-mode resumes
-    setTimeout(function() { localStorage.removeItem('tgi-night'); }, 12 * 60 * 60 * 1000);
-  };
-})();
 </script>
 
 <!-- GoatCounter — privacy-friendly hit counter, no cookies -->
