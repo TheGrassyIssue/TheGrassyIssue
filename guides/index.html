@@ -62,6 +62,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <style>
+@font-face{font-family:'In The Margins';src:url('/assets/fonts/inthemargins.woff2') format('woff2'),url('/assets/fonts/inthemargins.woff') format('woff'),url('/assets/fonts/inthemargins.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+
 :root {
   --ink: #141414;
   --paper: #F4F1EA;
@@ -71,7 +73,7 @@
   --safe: #2D4A2B;
   --fun: #A8A878;
   --aggressive: #C7362C;
-  --serif: 'Fraunces', Georgia, serif;
+  --serif: 'Fraunces', Georgia, serif;--display:'In The Margins','Fraunces',Georgia,serif;
   --sans: 'Inter', -apple-system, sans-serif;
   --mono: 'JetBrains Mono', monospace;
 }
@@ -133,11 +135,11 @@ a { color: inherit; text-decoration: none; }
   gap: 32px;
 }
 .nav-wordmark {
-  font-family: var(--serif);
-  font-style: italic;
+  font-family:var(--display);
+  font-style:normal;
   font-weight: 400;
   font-size: 26px;
-  letter-spacing: -0.01em;
+  letter-spacing:0;
   line-height: 1;
 }
 .nav-links {

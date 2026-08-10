@@ -39,14 +39,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
-:root{--ink:#141414;--ink-rgb:20,20,20;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;--serif:'Fraunces',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
+@font-face{font-family:'In The Margins';src:url('/assets/fonts/inthemargins.woff2') format('woff2'),url('/assets/fonts/inthemargins.woff') format('woff'),url('/assets/fonts/inthemargins.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+
+:root{--ink:#141414;--ink-rgb:20,20,20;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;--serif:'Fraunces',Georgia,serif;--display:'In The Margins','Fraunces',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
 *{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--grass);outline-offset:2px}img{max-width:100%;display:block}button{font:inherit;cursor:pointer;border:none;background:none}
 .nav{position:sticky;top:0;background:var(--paper);border-bottom:.5px solid var(--ink);z-index:15}
 .nav-inner{max-width:1400px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:32px}
-.nav-wordmark{font-family:var(--serif);font-style:italic;font-weight:400;font-size:26px;letter-spacing:-.01em;line-height:1;white-space:nowrap}
+.nav-wordmark{font-family:var(--display);font-style:normal;font-weight:400;font-size:26px;letter-spacing:.01em;line-height:1;white-space:nowrap}
 .nav-links{display:flex;gap:24px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
 .nav-links a{padding:6px 0;border-bottom:1px solid transparent;transition:border-color .15s}.nav-links a:hover{border-bottom-color:var(--ink)}
 .nav-cta{padding:9px 16px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .2s;display:inline-block}.nav-cta:hover{background:var(--grass)}

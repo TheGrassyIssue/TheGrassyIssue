@@ -41,6 +41,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
 <style>
+@font-face{font-family:'In The Margins';src:url('/assets/fonts/inthemargins.woff2') format('woff2'),url('/assets/fonts/inthemargins.woff') format('woff'),url('/assets/fonts/inthemargins.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+
   :root {
     --ink: #141414;
     --paper: #F4F1EA;
@@ -48,7 +50,7 @@
     --rough: #A8A878;
     --flag: #C7362C;
     --ink-rgb: 20, 20, 20;
-    --serif: 'Fraunces', Georgia, serif;
+    --serif: 'Fraunces', Georgia, serif;--display:'In The Margins','Fraunces',Georgia,serif;
     --sans: 'Inter', -apple-system, sans-serif;
     --mono: 'JetBrains Mono', monospace;
   }
@@ -1911,6 +1913,52 @@
 </section>
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
+
+  <!-- FIELD GUIDE — Hancock Golf Course -->
+  <div class="card" data-type="guide">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Field Guide]</span>
+      <div class="gear-carousel" data-carousel="hancock1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="/drops/hancock-golf-course-austin">
+              <img src="/images/hancock/hole4.jpg" alt="Hancock Golf Course 4th hole fairway, Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Est. 1899</div><div class="gear-slide-name">The 4th &mdash; Hancock Golf Course</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/hancock-golf-course-austin">
+              <img src="/images/hancock/hole9.jpg" alt="A golfer plays the 9th at Hancock Golf Course, Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Par 35 &middot; 9 holes</div><div class="gear-slide-name">The 9th &mdash; walking only</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/hancock-golf-course-austin">
+              <img src="/images/hancock/paystation.jpg" alt="Pay station at Hancock Golf Course, Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">$20 all day</div><div class="gear-slide-name">The pay station &mdash; no pro shop</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/hancock-golf-course-austin">
+              <img src="/images/hancock/hero.jpg" alt="Hancock Golf Course fairway, Austin, Texas" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">811 E. 41st St.</div><div class="gear-slide-name">Oldest course in Texas</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/hancock-golf-course-austin" style="color:inherit;text-decoration:none;border-bottom:none;">Hancock Golf Course &mdash; The Oldest Course in Texas Is a $20 Nine in the Middle of Austin</a></div>
+      <div class="card-text" data-slidetext="hancock1">Drive up 41st Street and you&rsquo;ll miss it &mdash; a shopping center on one side, Hyde Park bungalows on the other, and in between, nine holes that have been there since 1899. The oldest course in Texas, city in every direction, twenty bucks to walk it.</div>
+      <div class="gear-dots" data-dots="hancock1"></div>
+      <div class="gear-counter" data-counter="hancock1">1 / 4</div>
+      <div class="card-source"><a href="https://www.austintexas.gov/golfatx/hancock-course" target="_blank" rel="noopener">austintexas.gov</a> · 811 E. 41st St.</div>
+      <a href="/drops/hancock-golf-course-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+
 
   <!-- DROP — Students Golf Summer 2026 -->
   <div class="card" data-type="drop">
@@ -13468,6 +13516,12 @@
       "Tucci's Southside Subs — the South Austin institution, six minutes from Jimmy Clay and Roy Kizer. Fresh-baked New World Bakery bread, Boar's Head meats, subs big enough to split across eighteen.",
       "Otherside Deli — house-brined, smoked, and steamed pastrami six minutes from Hancock. Doors open 10 AM, which is exactly when you want a Reuben before a lunch loop.",
       "Home Slice — the best Italian sub in the city, hiding at the pizza counter on South Congress. Get the half unless you want to sleep through your tee time."
+    ],
+    hancock1: [
+      "Drive up 41st Street and you&rsquo;ll miss it &mdash; a shopping center on one side, Hyde Park bungalows on the other, and in between, nine holes that have been there since 1899. The oldest course in Texas, city in every direction, twenty bucks to walk it.",
+      "Walking only. No carts, no pull carts, no tee sheet. First come, first served, and every round starts on the first hole.",
+      "No pro shop &mdash; you tap a card at the pay station, keep the stub, and go. $20 for a regular round, $16 at sunset, same price seven days a week.",
+      "Harvey Penick learned the game on this ground &mdash; caddie at eight in 1912, head pro at eighteen, here until 1950. The red notebook that became the Little Red Book got started here."
     ],
     sgsummer26: [
       "Anti-Gravity Lightweight Pants &mdash; Students calls it the most lightweight performance pant in golf, field-tested in Nevada heat. About the only pant argument that survives an Austin August. $130.",
