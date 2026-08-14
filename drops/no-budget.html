@@ -106,6 +106,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .nb-tier{border:.5px solid var(--ink);padding:26px 24px;display:flex;flex-direction:column;justify-content:space-between;min-height:230px}.nb-tier .nb-price{font-family:var(--serif);font-style:italic;font-size:34px;line-height:1;margin-bottom:10px}.nb-tier .nb-name{font-size:15px;line-height:1.5;font-weight:500;margin-bottom:8px}.nb-tier .nb-note{font-size:13.5px;line-height:1.6;opacity:.8}.nb-tier .nb-brand{font-family:var(--mono);font-size:9px;letter-spacing:.16em;text-transform:uppercase;opacity:.5;margin-bottom:12px}.nb-grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
 @media(max-width:820px){.nb-grid3{grid-template-columns:1fr}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.pull-quote{padding:0 20px}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -176,35 +193,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Clubs &mdash; What Gold Actually Costs</h2>
   <div class="products-grid">
 
-    <a href="https://us.honmagolf.com/products/beres-7s-fuji-limited-edition-golf-club-set" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/honma-fuji.jpg" alt="Honma BERES 7-Star Fuji Limited Edition, Masterpiece Collection" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/honma-fuji.jpg" alt="Honma BERES 7-Star Fuji Limited Edition, Masterpiece Collection &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/honma-fuji-a2.jpg" alt="Honma BERES 7-Star Fuji Limited Edition, Masterpiece Collection &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/honma-fuji-a3.jpg" alt="Honma BERES 7-Star Fuji Limited Edition, Masterpiece Collection &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/honma-fuji-a4.jpg" alt="Honma BERES 7-Star Fuji Limited Edition, Masterpiece Collection &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Honma</div>
         <div class="product-name">BERES 7-Star Fuji Limited Edition, Masterpiece Collection &middot; $399,800</div>
         <div class="product-desc">Four hundred thousand dollars for a set of golf clubs, from Honma&rsquo;s own US store. Hand-built in Sakata, Japan, with gold and lacquer work borrowed from Japanese fine art. This is the ceiling.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://us.honmagolf.com/products/beres-7s-fuji-limited-edition-golf-club-set" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://us.honmagolf.com/products/5-star-set-beres-10" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/honma-5star.jpg" alt="Honma BERES 10, 5-Star Set" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/honma-5star.jpg" alt="Honma BERES 10, 5-Star Set &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/honma-5star-a2.jpg" alt="Honma BERES 10, 5-Star Set &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/honma-5star-a3.jpg" alt="Honma BERES 10, 5-Star Set &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/honma-5star-a4.jpg" alt="Honma BERES 10, 5-Star Set &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Honma</div>
         <div class="product-name">BERES 10, 5-Star Set &middot; $70,830</div>
         <div class="product-desc">The one people actually mean when they say &ldquo;those gold Honmas.&rdquo; Ten clubs with 24-karat gold and platinum accents. The iron set alone is $54,000.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://us.honmagolf.com/products/5-star-set-beres-10" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://miuragolf.com/products/mc-502-stock" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/miura-mc502.jpg" alt="Miura MC-502 forged set" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/miura-mc502.jpg" alt="Miura MC-502 forged set &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/miura-mc502-a2.jpg" alt="Miura MC-502 forged set &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/miura-mc502-a3.jpg" alt="Miura MC-502 forged set &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/miura-mc502-a4.jpg" alt="Miura MC-502 forged set &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Miura</div>
         <div class="product-name">MC-502 forged set &middot; $2,450</div>
         <div class="product-desc">Every head forged from S20C carbon steel in Himeji and hand-finished by the Miura family. The quiet, sane answer to everything above it on this page.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://miuragolf.com/products/mc-502-stock" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -212,55 +229,55 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Bags &mdash; 5 That Cost More Than a Full Set</h2>
   <div class="products-grid">
 
-    <a href="https://malbongolf.com/products/jimmy-choo-x-malbon-golf-bag-latte-malbon-green-malbon-pink" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/jimmychoo-bag.jpg" alt="Jimmy Choo &times; Malbon Golf Bag" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/jimmychoo-bag.jpg" alt="Jimmy Choo &times; Malbon Golf Bag &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/jimmychoo-bag-a2.jpg" alt="Jimmy Choo &times; Malbon Golf Bag &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/jimmychoo-bag-a3.jpg" alt="Jimmy Choo &times; Malbon Golf Bag &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/jimmychoo-bag-a4.jpg" alt="Jimmy Choo &times; Malbon Golf Bag &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jimmy Choo &times; Malbon</div>
         <div class="product-name">Golf Bag &middot; $4,450</div>
         <div class="product-desc">A shoe house and a golf brand making a staff bag together. Latte monogram canvas, green trim, and a price that outruns most people&rsquo;s entire setup.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://malbongolf.com/products/jimmy-choo-x-malbon-golf-bag-latte-malbon-green-malbon-pink" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.vesselbags.com/products/custom-prime-staff-2-0" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/vessel-prime.jpg" alt="Vessel Custom Prime Staff 2.0" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/vessel-prime.jpg" alt="Vessel Custom Prime Staff 2.0 &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Vessel</div>
         <div class="product-name">Custom Prime Staff 2.0 &middot; $2,430</div>
         <div class="product-desc">The top of Vessel&rsquo;s line, fully customizable. The bag tour players carry when the logo isn&rsquo;t already spoken for.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.vesselbags.com/products/custom-prime-staff-2-0" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://steurerjacoby.com/products/8-airliner-style-leather" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/sj-airliner.jpg" alt="Steurer &amp; Jacoby 8&Prime; Airliner, premium leather" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/sj-airliner.jpg" alt="Steurer &amp; Jacoby 8&Prime; Airliner, premium leather &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/sj-airliner-a2.jpg" alt="Steurer &amp; Jacoby 8&Prime; Airliner, premium leather &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/sj-airliner-a3.jpg" alt="Steurer &amp; Jacoby 8&Prime; Airliner, premium leather &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/sj-airliner-a4.jpg" alt="Steurer &amp; Jacoby 8&Prime; Airliner, premium leather &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Steurer &amp; Jacoby</div>
         <div class="product-name">8&Prime; Airliner, premium leather &middot; $1,346</div>
         <div class="product-desc">American-tanned leather, cotton duck canvas, solid brass hardware. Made in Louisville and built to outlive you.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://steurerjacoby.com/products/8-airliner-style-leather" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://miuragolf.com/products/mackenzie-bag" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/mackenzie-walker.jpg" alt="MacKenzie Original Walker Bag, leather" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/mackenzie-walker.jpg" alt="MacKenzie Original Walker Bag, leather &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/mackenzie-walker-a2.jpg" alt="MacKenzie Original Walker Bag, leather &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/mackenzie-walker-a3.jpg" alt="MacKenzie Original Walker Bag, leather &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/mackenzie-walker-a4.jpg" alt="MacKenzie Original Walker Bag, leather &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">MacKenzie</div>
         <div class="product-name">Original Walker Bag, leather &middot; $1,250</div>
         <div class="product-desc">Full-grain bittersweet, buckskin and cream leather with an 8&Prime; top. The bag that started the modern carry-bag revival.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://miuragolf.com/products/mackenzie-bag" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.seamusgolf.com/products/navy-harris-tweed-sunday-bag-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/seamus-bag.jpg" alt="Seamus Golf Navy Harris Tweed Sunday Bag" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/seamus-bag.jpg" alt="Seamus Golf Navy Harris Tweed Sunday Bag &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/seamus-bag-a2.jpg" alt="Seamus Golf Navy Harris Tweed Sunday Bag &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/seamus-bag-a3.jpg" alt="Seamus Golf Navy Harris Tweed Sunday Bag &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/seamus-bag-a4.jpg" alt="Seamus Golf Navy Harris Tweed Sunday Bag &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Seamus Golf</div>
         <div class="product-name">Navy Harris Tweed Sunday Bag &middot; $995</div>
         <div class="product-desc">Harris Tweed woven in the Outer Hebrides, cut and sewn in Oregon. The most handsome way to carry six clubs.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.seamusgolf.com/products/navy-harris-tweed-sunday-bag-copy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -268,35 +285,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Clothes &mdash; Cashmere and Consequences</h2>
   <div class="products-grid">
 
-    <a href="https://malbongolf.com/products/jimmy-choo-x-malbon-mens-slide-latte-malbon-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/jimmychoo-slide.jpg" alt="Jimmy Choo &times; Malbon Men&rsquo;s Slide" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/jimmychoo-slide.jpg" alt="Jimmy Choo &times; Malbon Men&rsquo;s Slide &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/jimmychoo-slide-a2.jpg" alt="Jimmy Choo &times; Malbon Men&rsquo;s Slide &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/jimmychoo-slide-a3.jpg" alt="Jimmy Choo &times; Malbon Men&rsquo;s Slide &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/jimmychoo-slide-a4.jpg" alt="Jimmy Choo &times; Malbon Men&rsquo;s Slide &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jimmy Choo &times; Malbon</div>
         <div class="product-name">Men&rsquo;s Slide &middot; $750</div>
         <div class="product-desc">Post-round footwear from a shoe house that normally does red carpets. Monogram canvas, green footbed.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://malbongolf.com/products/jimmy-choo-x-malbon-mens-slide-latte-malbon-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://holdernessandbourne.com/products/the-buckley-crewneck-sweater-heathered-california-spruce" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/hb-buckley.jpg" alt="Holderness &amp; Bourne The Buckley Crewneck" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/hb-buckley.jpg" alt="Holderness &amp; Bourne The Buckley Crewneck &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/hb-buckley-a2.jpg" alt="Holderness &amp; Bourne The Buckley Crewneck &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/hb-buckley-a3.jpg" alt="Holderness &amp; Bourne The Buckley Crewneck &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/hb-buckley-a4.jpg" alt="Holderness &amp; Bourne The Buckley Crewneck &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Holderness &amp; Bourne</div>
         <div class="product-name">The Buckley Crewneck &middot; $645</div>
         <div class="product-desc">100% Scottish cashmere, knit at one of the oldest mills in the world, with a doubled cuff so it survives being worn.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://holdernessandbourne.com/products/the-buckley-crewneck-sweater-heathered-california-spruce" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.quietgolf.com/products/montecito-cable-knit-sweater-bone" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/qg-montecito.jpg" alt="Quiet Golf Montecito Cashmere Cable Knit" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/qg-montecito.jpg" alt="Quiet Golf Montecito Cashmere Cable Knit &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/qg-montecito-a2.jpg" alt="Quiet Golf Montecito Cashmere Cable Knit &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/qg-montecito-a3.jpg" alt="Quiet Golf Montecito Cashmere Cable Knit &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/qg-montecito-a4.jpg" alt="Quiet Golf Montecito Cashmere Cable Knit &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Quiet Golf</div>
         <div class="product-name">Montecito Cashmere Cable Knit &middot; $380</div>
         <div class="product-desc">Cashmere cable knit with no logo anywhere on it. The whole point.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.quietgolf.com/products/montecito-cable-knit-sweater-bone" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -304,45 +321,45 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Accessories &mdash; Small Things, Large Numbers</h2>
   <div class="products-grid">
 
-    <a href="https://www.luxurygolfmarkers.com/products/platinum-personalised-prestige-edition-luxury-golf-ball-marker-hallmarked-precious-metal-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/lgm-platinum.jpg" alt="Luxury Golf Markers Platinum Prestige Edition marker" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/lgm-platinum.jpg" alt="Luxury Golf Markers Platinum Prestige Edition marker &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/lgm-platinum-a2.jpg" alt="Luxury Golf Markers Platinum Prestige Edition marker &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/lgm-platinum-a3.jpg" alt="Luxury Golf Markers Platinum Prestige Edition marker &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/lgm-platinum-a4.jpg" alt="Luxury Golf Markers Platinum Prestige Edition marker &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Luxury Golf Markers</div>
         <div class="product-name">Platinum Prestige Edition marker &middot; $3,500</div>
         <div class="product-desc">Hallmarked platinum, personalised. Costs more than the driver it&rsquo;s marking a putt for.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.luxurygolfmarkers.com/products/platinum-personalised-prestige-edition-luxury-golf-ball-marker-hallmarked-precious-metal-copy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://revolutionjewelry.com/products/tungsten-meteorite-and-14k-gold-premium-golf-ball-marker" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/rev-eminence.jpg" alt="Revolution The Eminence" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/rev-eminence.jpg" alt="Revolution The Eminence &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/rev-eminence-a2.jpg" alt="Revolution The Eminence &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/rev-eminence-a3.jpg" alt="Revolution The Eminence &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/rev-eminence-a4.jpg" alt="Revolution The Eminence &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Revolution</div>
         <div class="product-name">The Eminence &middot; $2,700</div>
         <div class="product-desc">Tungsten, actual meteorite, and 14k gold. You will lose it on the sixth hole.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://revolutionjewelry.com/products/tungsten-meteorite-and-14k-gold-premium-golf-ball-marker" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://malbongolf.com/products/monzee-roba-cover-camo-camo-mix" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/monzee-cover.jpg" alt="Monzee Roba Cover Camo" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/monzee-cover.jpg" alt="Monzee Roba Cover Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/monzee-cover-a2.jpg" alt="Monzee Roba Cover Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/monzee-cover-a3.jpg" alt="Monzee Roba Cover Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/monzee-cover-a4.jpg" alt="Monzee Roba Cover Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Monzee</div>
         <div class="product-name">Roba Cover Camo &middot; $1,500</div>
         <div class="product-desc">A headcover. Fifteen hundred dollars. We include it because someone is buying them.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://malbongolf.com/products/monzee-roba-cover-camo-camo-mix" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://clintorms.com/products/sterling-silver-texas-flag-ball-marker" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/orms-texas.jpg" alt="Clint Orms Sterling Silver Texas Flag marker" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/orms-texas.jpg" alt="Clint Orms Sterling Silver Texas Flag marker &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/orms-texas-a2.jpg" alt="Clint Orms Sterling Silver Texas Flag marker &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Clint Orms</div>
         <div class="product-name">Sterling Silver Texas Flag marker &middot; $300</div>
         <div class="product-desc">Hand-engraved by a Fredericksburg silversmith who normally makes belt buckles for people with ranches.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://clintorms.com/products/sterling-silver-texas-flag-ball-marker" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -350,55 +367,55 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The House &mdash; Spending It Indoors</h2>
   <div class="products-grid">
 
-    <a href="https://www.trackman.com/golf/simulator" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/trackman.jpg" alt="Trackman Golf Simulator" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/trackman.jpg" alt="Trackman Golf Simulator &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Trackman</div>
         <div class="product-name">Golf Simulator &middot; ~$25,000</div>
         <div class="product-desc">The radar the tour uses, in your garage. The number that makes every other item here look reasonable.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.trackman.com/golf/simulator" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fullswinggolf.com/kit" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/fullswing.jpg" alt="Full Swing KIT Launch Monitor &amp; Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/fullswing.jpg" alt="Full Swing KIT Launch Monitor &amp; Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Full Swing</div>
         <div class="product-name">KIT Launch Monitor &amp; Studio &middot; $4,999&ndash;$11,500</div>
         <div class="product-desc">KIT alone is $4,999; full simulator packages run $8,000&ndash;15,000 and KIT Studio systems start at $11,500. Tiger&rsquo;s brand, if that moves you.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fullswinggolf.com/kit" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/wool-poster-trio" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/mogshade-trio.jpg" alt="Mogshade Wool Poster Trio" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/mogshade-trio.jpg" alt="Mogshade Wool Poster Trio &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/mogshade-trio-a2.jpg" alt="Mogshade Wool Poster Trio &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/mogshade-trio-a3.jpg" alt="Mogshade Wool Poster Trio &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/mogshade-trio-a4.jpg" alt="Mogshade Wool Poster Trio &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Wool Poster Trio &middot; $890</div>
         <div class="product-desc">Three hand-tufted wool course renderings from the Portuguese workshop. Ships in eight weeks. Actual art, not a framed print.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/wool-poster-trio" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://shop.bettinardi.com/products/transfusion™-man-cigar-tray" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/bettinardi-cigartray.jpg" alt="Bettinardi Transfusion Man Cigar Tray" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/bettinardi-cigartray.jpg" alt="Bettinardi Transfusion Man Cigar Tray &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Bettinardi</div>
         <div class="product-name">Transfusion Man Cigar Tray &middot; $275</div>
         <div class="product-desc">A milled cigar tray from a putter company. Exactly as unnecessary and appealing as it sounds.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://shop.bettinardi.com/products/transfusion™-man-cigar-tray" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.seamusgolf.com/products/hand-forged-putting-cup-drain-it" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/seamus-cup.jpg" alt="Seamus Golf Hand Forged Putting Cup" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/seamus-cup.jpg" alt="Seamus Golf Hand Forged Putting Cup &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/seamus-cup-a2.jpg" alt="Seamus Golf Hand Forged Putting Cup &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/no-budget/seamus-cup-a4.jpg" alt="Seamus Golf Hand Forged Putting Cup &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Seamus Golf</div>
         <div class="product-name">Hand Forged Putting Cup &middot; $200</div>
         <div class="product-desc">A forged metal cup for the office carpet. The cheapest thing on this list and still $200.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.seamusgolf.com/products/hand-forged-putting-cup-drain-it" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -407,45 +424,45 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <div style="max-width:760px;font-size:15px;line-height:1.7;opacity:.85;margin-bottom:26px">Rates come from the resorts&rsquo; own published numbers and move with the season. Two of these carry an asterisk, and the asterisks are the interesting part.</div>
   <div class="products-grid">
 
-    <a href="https://www.pinehurst.com/packages/bed-breakfast-golf-package/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/pinehurst.jpg" alt="Aerial view of the Pinehurst Resort courses, North Carolina" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/pinehurst.jpg" alt="Aerial view of the Pinehurst Resort courses, North Carolina &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Pinehurst &middot; North Carolina</div>
         <div class="product-name">Bed, Breakfast &amp; Golf &middot; $660&ndash;$1,180 / night</div>
         <div class="product-desc">Per person at The Carolina (Deluxe) depending on season, including a round a night and breakfast. No. 2 carries a $250 premium, No. 10 is $125, and you need two nights minimum to play either.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.pinehurst.com/packages/bed-breakfast-golf-package/" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.pebblebeach.com/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/pebble.jpg" alt="The 18th green at Pebble Beach Golf Links, California" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/pebble.jpg" alt="The 18th green at Pebble Beach Golf Links, California &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Pebble Beach &middot; California</div>
         <div class="product-name">Resort golf package &middot; from ~$3,345</div>
         <div class="product-desc">Per person for three nights and two rounds &mdash; though that figure comes from a golf packager. Pebble&rsquo;s own seasonal rates differ, so check direct before committing.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.pebblebeach.com/" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.adaremanor.com/experiences/golf-getaways/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/adare.jpg" alt="Golf at Adare Manor with the manor house behind the green, Ireland" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/adare.jpg" alt="Golf at Adare Manor with the manor house behind the green, Ireland &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Adare Manor &middot; Ireland</div>
         <div class="product-name">Stay &amp; Play &middot; from ~$1,953 / night</div>
         <div class="product-desc">A night at the 2027 Ryder Cup host. One thing to know before booking: the course is only open to resort residents from May 26 to October 18, 2026.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.adaremanor.com/experiences/golf-getaways/" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://tearai.com/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/no-budget/tearai.jpg" alt="Te Arai Links South Course on the New Zealand coast" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/no-budget/tearai.jpg" alt="Te Arai Links South Course on the New Zealand coast &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Te Arai &middot; New Zealand</div>
         <div class="product-name">Links suites &middot; NZ$525&ndash;840 / night</div>
         <div class="product-desc">The reachable half of the best golf on earth. Tara Iti next door is invitation-only &mdash; you play it with a member or you don&rsquo;t play it. That&rsquo;s the real luxury item.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://tearai.com/" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -513,6 +530,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

@@ -106,6 +106,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.ig-grid a{display:block;border:.5px solid var(--ink);overflow:hidden}.ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .3s}.ig-grid a:hover img{transform:scale(1.04)}
 @media(max-width:820px){.ig-grid{grid-template-columns:repeat(2,1fr)}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.pull-quote{padding:0 20px}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -177,185 +194,185 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 <section class="products">
   <h2 class="products-hdr">The Syllabus &mdash; 18 Pieces</h2>
   <div class="products-grid">
-    <a href="https://studentsgolf.com/products/manager-s-s-q-zip-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/manager-s-s-q-zip-shirt.jpg" alt="Students Golf Manager S/S Q-Zip Shirt — Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/manager-s-s-q-zip-shirt.jpg" alt="Students Golf Manager S/S Q-Zip Shirt — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/manager-s-s-q-zip-shirt-a2.jpg" alt="Students Golf Manager S/S Q-Zip Shirt — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/manager-s-s-q-zip-shirt-a3.jpg" alt="Students Golf Manager S/S Q-Zip Shirt — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/manager-s-s-q-zip-shirt-a4.jpg" alt="Students Golf Manager S/S Q-Zip Shirt — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Manager S/S Q-Zip Shirt | Black &middot; $110</div>
         <div class="product-desc">Retro short-sleeve quarter-zip in a performance cotton blend &mdash; moisture-wicking, YKK nylon zip, loose fit. Wears as a shirt or a mid-layer.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/manager-s-s-q-zip-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/leeds-s-s-tech-zip-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/leeds-s-s-tech-zip-polo.jpg" alt="Students Golf Leeds S/S Tech Zip Polo — Black/Grey" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/leeds-s-s-tech-zip-polo.jpg" alt="Students Golf Leeds S/S Tech Zip Polo — Black/Grey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/leeds-s-s-tech-zip-polo-a2.jpg" alt="Students Golf Leeds S/S Tech Zip Polo — Black/Grey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/leeds-s-s-tech-zip-polo-a3.jpg" alt="Students Golf Leeds S/S Tech Zip Polo — Black/Grey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/leeds-s-s-tech-zip-polo-a4.jpg" alt="Students Golf Leeds S/S Tech Zip Polo — Black/Grey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Leeds S/S Tech Zip Polo | Black/Grey &middot; $98</div>
         <div class="product-desc">Short-sleeve performance polo with a quarter-zip collar and a clean, relaxed cut. The technical counterpart to the Manager.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/leeds-s-s-tech-zip-polo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/arndt-s-s-polo-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/arndt-s-s-polo-shirt.jpg" alt="Students Golf Arndt S/S Polo Shirt — Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/arndt-s-s-polo-shirt.jpg" alt="Students Golf Arndt S/S Polo Shirt — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/arndt-s-s-polo-shirt-a2.jpg" alt="Students Golf Arndt S/S Polo Shirt — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/arndt-s-s-polo-shirt-a3.jpg" alt="Students Golf Arndt S/S Polo Shirt — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/arndt-s-s-polo-shirt-a4.jpg" alt="Students Golf Arndt S/S Polo Shirt — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Arndt S/S Polo Shirt | Black &middot; $97</div>
         <div class="product-desc">Lightweight polyester polo with tonal mixed-fabric detailing. The subtle one in the range.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/arndt-s-s-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/ledgewood-s-s-polo-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/ledgewood-s-s-polo-shirt.jpg" alt="Students Golf Ledgewood S/S Polo Shirt — Military" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/ledgewood-s-s-polo-shirt.jpg" alt="Students Golf Ledgewood S/S Polo Shirt — Military &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/ledgewood-s-s-polo-shirt-a2.jpg" alt="Students Golf Ledgewood S/S Polo Shirt — Military &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/ledgewood-s-s-polo-shirt-a3.jpg" alt="Students Golf Ledgewood S/S Polo Shirt — Military &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/ledgewood-s-s-polo-shirt-a4.jpg" alt="Students Golf Ledgewood S/S Polo Shirt — Military &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Ledgewood S/S Polo Shirt | Military &middot; $105</div>
         <div class="product-desc">Paneled, sport-inspired polo in heathered TerraLuxe fabric &mdash; structured but breathable, with an earthy matte finish. Cut long for big swings.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/ledgewood-s-s-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/mcwilliams-s-s-polo-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/mcwilliams-s-s-polo-shirt.jpg" alt="Students Golf McWilliams S/S Polo Shirt — Grey" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/mcwilliams-s-s-polo-shirt.jpg" alt="Students Golf McWilliams S/S Polo Shirt — Grey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/mcwilliams-s-s-polo-shirt-a2.jpg" alt="Students Golf McWilliams S/S Polo Shirt — Grey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/mcwilliams-s-s-polo-shirt-a3.jpg" alt="Students Golf McWilliams S/S Polo Shirt — Grey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/mcwilliams-s-s-polo-shirt-a4.jpg" alt="Students Golf McWilliams S/S Polo Shirt — Grey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">McWilliams S/S Polo Shirt | Grey &middot; $97</div>
         <div class="product-desc">The popular Coordinator polo reimagined in 100% cotton, cut longer so it stays put &mdash; tucked or untucked.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/mcwilliams-s-s-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/future-s-s-jersey-polo-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/future-s-s-jersey-polo-shirt.jpg" alt="Students Golf Future S/S Jersey Polo — Navy" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/future-s-s-jersey-polo-shirt.jpg" alt="Students Golf Future S/S Jersey Polo — Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/future-s-s-jersey-polo-shirt-a2.jpg" alt="Students Golf Future S/S Jersey Polo — Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/future-s-s-jersey-polo-shirt-a3.jpg" alt="Students Golf Future S/S Jersey Polo — Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/future-s-s-jersey-polo-shirt-a4.jpg" alt="Students Golf Future S/S Jersey Polo — Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Future S/S Jersey Polo | Navy &middot; $92</div>
         <div class="product-desc">The Coordinator silhouette in a new performance cotton-poly jersey. Longer length, softer hand.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/future-s-s-jersey-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/greenbriar-s-s-polo-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/greenbriar-s-s-polo-shirt.jpg" alt="Students Golf Greenbriar S/S Polo Shirt — Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/greenbriar-s-s-polo-shirt.jpg" alt="Students Golf Greenbriar S/S Polo Shirt — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/greenbriar-s-s-polo-shirt-a2.jpg" alt="Students Golf Greenbriar S/S Polo Shirt — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/greenbriar-s-s-polo-shirt-a3.jpg" alt="Students Golf Greenbriar S/S Polo Shirt — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/greenbriar-s-s-polo-shirt-a4.jpg" alt="Students Golf Greenbriar S/S Polo Shirt — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Greenbriar S/S Polo Shirt | Black &middot; $97</div>
         <div class="product-desc">100% cotton polo with an all-over tree-branch graphic &mdash; the outdoorsy one of the summer run.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/greenbriar-s-s-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/chippy-s-s-polo-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/chippy-s-s-polo-shirt.jpg" alt="Students Golf Chippy S/S Polo Shirt — White" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/chippy-s-s-polo-shirt.jpg" alt="Students Golf Chippy S/S Polo Shirt — White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/chippy-s-s-polo-shirt-a2.jpg" alt="Students Golf Chippy S/S Polo Shirt — White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/chippy-s-s-polo-shirt-a3.jpg" alt="Students Golf Chippy S/S Polo Shirt — White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/chippy-s-s-polo-shirt-a4.jpg" alt="Students Golf Chippy S/S Polo Shirt — White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Chippy S/S Polo Shirt | White &middot; $97</div>
         <div class="product-desc">Clean white polo with a traditional collar and placket. The lightest look for on-course wear.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/chippy-s-s-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/crescent-s-s-button-up-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/crescent-s-s-button-up-shirt.jpg" alt="Students Golf Crescent S/S Button-up — Light Blue" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/crescent-s-s-button-up-shirt.jpg" alt="Students Golf Crescent S/S Button-up — Light Blue &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/crescent-s-s-button-up-shirt-a2.jpg" alt="Students Golf Crescent S/S Button-up — Light Blue &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/crescent-s-s-button-up-shirt-a3.jpg" alt="Students Golf Crescent S/S Button-up — Light Blue &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/crescent-s-s-button-up-shirt-a4.jpg" alt="Students Golf Crescent S/S Button-up — Light Blue &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Crescent S/S Button-up | Light Blue &middot; $94</div>
         <div class="product-desc">Short-sleeve oxford button-up &mdash; full button front, relaxed cut, as at home at the clubhouse bar as the first tee.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/crescent-s-s-button-up-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/walk-s-s-button-up-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/walk-s-s-button-up-shirt.jpg" alt="Students Golf Walk S/S Button-up — White" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/walk-s-s-button-up-shirt.jpg" alt="Students Golf Walk S/S Button-up — White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/walk-s-s-button-up-shirt-a2.jpg" alt="Students Golf Walk S/S Button-up — White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/walk-s-s-button-up-shirt-a3.jpg" alt="Students Golf Walk S/S Button-up — White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/walk-s-s-button-up-shirt-a4.jpg" alt="Students Golf Walk S/S Button-up — White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Walk S/S Button-up | White &middot; $97</div>
         <div class="product-desc">Lightweight poly-spandex button-up with a relaxed silhouette &mdash; the warm-weather overshirt of the collection.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/walk-s-s-button-up-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/calculus-baggy-slack-pleated-shorts-3" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/calculus-baggy-slack-pleated-shorts-3.jpg" alt="Students Golf Calculus Baggy Pleated Shorts — Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/calculus-baggy-slack-pleated-shorts-3.jpg" alt="Students Golf Calculus Baggy Pleated Shorts — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/calculus-baggy-slack-pleated-shorts-3-a2.jpg" alt="Students Golf Calculus Baggy Pleated Shorts — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/calculus-baggy-slack-pleated-shorts-3-a3.jpg" alt="Students Golf Calculus Baggy Pleated Shorts — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/calculus-baggy-slack-pleated-shorts-3-a4.jpg" alt="Students Golf Calculus Baggy Pleated Shorts — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Calculus Baggy Pleated Shorts | Black &middot; $108</div>
         <div class="product-desc">The signature short, back for another season &mdash; two front pleats, stretch wool-blend slack fabric, half-elastic waistband, carabiner clip on the belt.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/calculus-baggy-slack-pleated-shorts-3" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/oaklawn-mesh-shorts" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/oaklawn-mesh-shorts.jpg" alt="Students Golf Oaklawn Mesh Shorts — Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-mesh-shorts.jpg" alt="Students Golf Oaklawn Mesh Shorts — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-mesh-shorts-a2.jpg" alt="Students Golf Oaklawn Mesh Shorts — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-mesh-shorts-a3.jpg" alt="Students Golf Oaklawn Mesh Shorts — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-mesh-shorts-a4.jpg" alt="Students Golf Oaklawn Mesh Shorts — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Oaklawn Mesh Shorts | Black &middot; $92</div>
         <div class="product-desc">Lightweight polyester mesh with an elastic waistband &mdash; practice-range shorts that double as gym shorts.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/oaklawn-mesh-shorts" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/oaklawn-s-s-mesh-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/oaklawn-s-s-mesh-t-shirt.jpg" alt="Students Golf Oaklawn S/S Mesh T-shirt — Dark Blue" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-s-s-mesh-t-shirt.jpg" alt="Students Golf Oaklawn S/S Mesh T-shirt — Dark Blue &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-s-s-mesh-t-shirt-a2.jpg" alt="Students Golf Oaklawn S/S Mesh T-shirt — Dark Blue &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-s-s-mesh-t-shirt-a3.jpg" alt="Students Golf Oaklawn S/S Mesh T-shirt — Dark Blue &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/oaklawn-s-s-mesh-t-shirt-a4.jpg" alt="Students Golf Oaklawn S/S Mesh T-shirt — Dark Blue &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Oaklawn S/S Mesh T-shirt | Dark Blue &middot; $72</div>
         <div class="product-desc">Matching mesh crew-neck tee &mdash; breathable, relaxed, made to pair with the shorts.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/oaklawn-s-s-mesh-t-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/jones-short-2" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/jones-short-2.jpg" alt="Students Golf Jones Short — Olive" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/jones-short-2.jpg" alt="Students Golf Jones Short — Olive &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/jones-short-2-a2.jpg" alt="Students Golf Jones Short — Olive &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/jones-short-2-a3.jpg" alt="Students Golf Jones Short — Olive &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/jones-short-2-a4.jpg" alt="Students Golf Jones Short — Olive &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Jones Short | Olive &middot; $48</div>
         <div class="product-desc">Above-the-knee walk short with an elastic waist &mdash; course, workout, or driveway hoops. The entry point of the collection.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/jones-short-2" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/anti-gravity-classic-pants" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/anti-gravity-classic-pants.jpg" alt="Students Golf Anti-Gravity Lightweight Pants — Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/anti-gravity-classic-pants.jpg" alt="Students Golf Anti-Gravity Lightweight Pants — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/anti-gravity-classic-pants-a2.jpg" alt="Students Golf Anti-Gravity Lightweight Pants — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/anti-gravity-classic-pants-a3.jpg" alt="Students Golf Anti-Gravity Lightweight Pants — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/anti-gravity-classic-pants-a4.jpg" alt="Students Golf Anti-Gravity Lightweight Pants — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Anti-Gravity Lightweight Pants | Black &middot; $130</div>
         <div class="product-desc">Students calls it the most lightweight performance pant in golf &mdash; field-tested in Nevada heat, cool to the touch, straight-leg.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/anti-gravity-classic-pants" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/social-slack-pants" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/social-slack-pants.jpg" alt="Students Golf Social Slack Pants — Dark Tan" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/social-slack-pants.jpg" alt="Students Golf Social Slack Pants — Dark Tan &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/social-slack-pants-a2.jpg" alt="Students Golf Social Slack Pants — Dark Tan &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/social-slack-pants-a3.jpg" alt="Students Golf Social Slack Pants — Dark Tan &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/social-slack-pants-a4.jpg" alt="Students Golf Social Slack Pants — Dark Tan &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Social Slack Pants | Dark Tan &middot; $135</div>
         <div class="product-desc">The daily driver &mdash; a nylon-blend slack with a single bold crease that, per Students, inspires straight ball flight.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/social-slack-pants" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/grass-obsession-s-s-t-shirt-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/grass-obsession-s-s-t-shirt-1.jpg" alt="Students Golf Grass Obsession S/S T-shirt — White" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/grass-obsession-s-s-t-shirt-1.jpg" alt="Students Golf Grass Obsession S/S T-shirt — White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/grass-obsession-s-s-t-shirt-1-a2.jpg" alt="Students Golf Grass Obsession S/S T-shirt — White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/grass-obsession-s-s-t-shirt-1-a3.jpg" alt="Students Golf Grass Obsession S/S T-shirt — White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/grass-obsession-s-s-t-shirt-1-a4.jpg" alt="Students Golf Grass Obsession S/S T-shirt — White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Grass Obsession S/S T-shirt | White &middot; $52</div>
         <div class="product-desc">280-gram cotton graphic tee. Given the name of this website, we didn&rsquo;t have a choice.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/grass-obsession-s-s-t-shirt-1" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/society-structured-5-panel-acrylic-wool-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/society-structured-5-panel-acrylic-wool-hat.jpg" alt="Students Golf Society 5-Panel Wool Hat — Red" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/society-structured-5-panel-acrylic-wool-hat.jpg" alt="Students Golf Society 5-Panel Wool Hat — Red &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/society-structured-5-panel-acrylic-wool-hat-a2.jpg" alt="Students Golf Society 5-Panel Wool Hat — Red &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/society-structured-5-panel-acrylic-wool-hat-a3.jpg" alt="Students Golf Society 5-Panel Wool Hat — Red &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Society 5-Panel Wool Hat | Red &middot; $52</div>
         <div class="product-desc">Structured 5-panel in acrylic wool with 3D &lsquo;S&rsquo; embroidery and side artwork. The dressiest hat Students makes.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/society-structured-5-panel-acrylic-wool-hat" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -364,125 +381,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Electives &mdash; 12 Accessories</h2>
   <div style="max-width:700px;font-size:15px;line-height:1.7;opacity:.85;margin-bottom:28px;">The accessories are where Students gets to be strange, and the Sugarloaf Social Club partnership is the best of it &mdash; Cordura camo headcovers sewn by MacKenzie Golf Bags in Portland, a patch-covered tote, a zipper pouch built like a piece of field gear. Below that, the in-house Draft series runs a drafting-board grid across covers, and the totes, gloves, socks, and bamboo tees keep the entry point cheap.</div>
   <div class="products-grid">
-    <a href="https://studentsgolf.com/products/ssc-x-students-x-mackenzie-driver-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-driver-headcover.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Driver Headcover — Camo" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-driver-headcover.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Driver Headcover — Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-driver-headcover-a2.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Driver Headcover — Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-driver-headcover-a3.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Driver Headcover — Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-driver-headcover-a4.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Driver Headcover — Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Students &times; Sugarloaf &times; MacKenzie Driver Headcover | Camo &middot; $120</div>
         <div class="product-desc">A three-way collab with Sugarloaf Social Club and MacKenzie Golf Bags &mdash; 500D Cordura camo nylon outside, sherpa lining inside, handcrafted in Portland, Oregon. The most serious piece in the accessories run.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/ssc-x-students-x-mackenzie-driver-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/ssc-x-students-x-mackenzie-fairway-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-fairway-headcover.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Fairway Headcover — Camo" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-fairway-headcover.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Fairway Headcover — Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-fairway-headcover-a2.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Fairway Headcover — Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-fairway-headcover-a3.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Fairway Headcover — Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-x-mackenzie-fairway-headcover-a4.jpg" alt="Students Golf Students &times; Sugarloaf &times; MacKenzie Fairway Headcover — Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Students &times; Sugarloaf &times; MacKenzie Fairway Headcover | Camo &middot; $105</div>
         <div class="product-desc">Same Cordura-and-sherpa build, cut for a fairway wood. Buy the pair and your bag tells a story before you hit a shot.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/ssc-x-students-x-mackenzie-fairway-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/ssc-x-students-patch-tote-bag" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-patch-tote-bag.jpg" alt="Students Golf Students &times; Sugarloaf Patch Tote Bag — Tan/Green/Camo" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-patch-tote-bag.jpg" alt="Students Golf Students &times; Sugarloaf Patch Tote Bag — Tan/Green/Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-patch-tote-bag-a2.jpg" alt="Students Golf Students &times; Sugarloaf Patch Tote Bag — Tan/Green/Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-patch-tote-bag-a3.jpg" alt="Students Golf Students &times; Sugarloaf Patch Tote Bag — Tan/Green/Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-patch-tote-bag-a4.jpg" alt="Students Golf Students &times; Sugarloaf Patch Tote Bag — Tan/Green/Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Students &times; Sugarloaf Patch Tote Bag | Tan/Green/Camo &middot; $95</div>
         <div class="product-desc">Cordura camo tote with an interior camo pocket, long and short handles, custom zipper pull, and hand-placed merit patches. No two land quite the same.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/ssc-x-students-patch-tote-bag" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/ssc-x-students-zipper-pouch" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-zipper-pouch.jpg" alt="Students Golf Students &times; Sugarloaf Zipper Pouch — Tan/Green/Camo" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-zipper-pouch.jpg" alt="Students Golf Students &times; Sugarloaf Zipper Pouch — Tan/Green/Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-zipper-pouch-a2.jpg" alt="Students Golf Students &times; Sugarloaf Zipper Pouch — Tan/Green/Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-zipper-pouch-a3.jpg" alt="Students Golf Students &times; Sugarloaf Zipper Pouch — Tan/Green/Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-ssc-x-students-zipper-pouch-a4.jpg" alt="Students Golf Students &times; Sugarloaf Zipper Pouch — Tan/Green/Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Students &times; Sugarloaf Zipper Pouch | Tan/Green/Camo &middot; $45</div>
         <div class="product-desc">Heavy-duty 500D Cordura camo with a carry strap and an SSSC logo patch. Valuables pouch, glove bag, whatever you need it to be.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/ssc-x-students-zipper-pouch" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/draft-barrel-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-draft-barrel-headcover.jpg" alt="Students Golf Draft Barrel Headcover — Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-barrel-headcover.jpg" alt="Students Golf Draft Barrel Headcover — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-barrel-headcover-a2.jpg" alt="Students Golf Draft Barrel Headcover — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-barrel-headcover-a3.jpg" alt="Students Golf Draft Barrel Headcover — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-barrel-headcover-a4.jpg" alt="Students Golf Draft Barrel Headcover — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Draft Barrel Headcover | Green &middot; $60</div>
         <div class="product-desc">The Draft series takes its grid pattern from school drafting boards &mdash; a nod to golfers who care about precision. The barrel is the biggest of the set.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/draft-barrel-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/draft-wood-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-draft-wood-headcover.jpg" alt="Students Golf Draft Wood Headcover — Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-wood-headcover.jpg" alt="Students Golf Draft Wood Headcover — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-wood-headcover-a2.jpg" alt="Students Golf Draft Wood Headcover — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-wood-headcover-a3.jpg" alt="Students Golf Draft Wood Headcover — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-wood-headcover-a4.jpg" alt="Students Golf Draft Wood Headcover — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Draft Wood Headcover | Green &middot; $54</div>
         <div class="product-desc">Same drafting-board grid, sized for a fairway wood. The quietest way to run a matching set.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/draft-wood-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/draft-mallet-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-draft-mallet-headcover.jpg" alt="Students Golf Draft Mallet Headcover — Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-mallet-headcover.jpg" alt="Students Golf Draft Mallet Headcover — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-mallet-headcover-a2.jpg" alt="Students Golf Draft Mallet Headcover — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-mallet-headcover-a3.jpg" alt="Students Golf Draft Mallet Headcover — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-draft-mallet-headcover-a4.jpg" alt="Students Golf Draft Mallet Headcover — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Draft Mallet Headcover | Green &middot; $50</div>
         <div class="product-desc">Mallet cover in the Draft grid. Pair it with the wood and barrel and the whole bag reads as one idea.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/draft-mallet-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/all-terrain-tote-bag" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-all-terrain-tote-bag.jpg" alt="Students Golf All-Terrain Tote Bag — Grey" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-all-terrain-tote-bag.jpg" alt="Students Golf All-Terrain Tote Bag — Grey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-all-terrain-tote-bag-a2.jpg" alt="Students Golf All-Terrain Tote Bag — Grey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-all-terrain-tote-bag-a3.jpg" alt="Students Golf All-Terrain Tote Bag — Grey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-all-terrain-tote-bag-a4.jpg" alt="Students Golf All-Terrain Tote Bag — Grey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">All-Terrain Tote Bag | Grey &middot; $60</div>
         <div class="product-desc">100% cotton duck canvas with a screen-printed mountainscape, twill liner, inner pouch pocket, and heavy cotton webbing handles. Range bag or grocery run.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/all-terrain-tote-bag" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/librarian-tote-bag-2" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-librarian-tote-bag-2.jpg" alt="Students Golf Librarian Tote Bag — Red" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-librarian-tote-bag-2.jpg" alt="Students Golf Librarian Tote Bag — Red &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-librarian-tote-bag-2-a2.jpg" alt="Students Golf Librarian Tote Bag — Red &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-librarian-tote-bag-2-a3.jpg" alt="Students Golf Librarian Tote Bag — Red &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Librarian Tote Bag | Red &middot; $28</div>
         <div class="product-desc">Screen-printed duck canvas with a twill liner and inner pouch. The cheapest way into the Students catalog and the one you&rsquo;ll actually use every week.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/librarian-tote-bag-2" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/lesson-2-cabretta-gloves" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-lesson-2-cabretta-gloves.jpg" alt="Students Golf Lesson 2 Cabretta Gloves — White" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-lesson-2-cabretta-gloves.jpg" alt="Students Golf Lesson 2 Cabretta Gloves — White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-lesson-2-cabretta-gloves-a2.jpg" alt="Students Golf Lesson 2 Cabretta Gloves — White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-lesson-2-cabretta-gloves-a3.jpg" alt="Students Golf Lesson 2 Cabretta Gloves — White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-lesson-2-cabretta-gloves-a4.jpg" alt="Students Golf Lesson 2 Cabretta Gloves — White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Lesson 2 Cabretta Gloves | White &middot; $24</div>
         <div class="product-desc">Cabretta leather glove built around feel and longevity &mdash; Students&rsquo; own framing is that grip is the most fundamental thing in the swing. Ships free.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/lesson-2-cabretta-gloves" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/club-crew-socks" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-club-crew-socks.jpg" alt="Students Golf Club Crew Socks — White" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-club-crew-socks.jpg" alt="Students Golf Club Crew Socks — White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-club-crew-socks-a2.jpg" alt="Students Golf Club Crew Socks — White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-club-crew-socks-a3.jpg" alt="Students Golf Club Crew Socks — White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-club-crew-socks-a4.jpg" alt="Students Golf Club Crew Socks — White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Club Crew Socks | White &middot; $18</div>
         <div class="product-desc">Left-right contoured poly-cotton crew in the everyday club script. The pair you reach for on non-golf days too.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/club-crew-socks" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://studentsgolf.com/products/highly-educated-golf-tees-box-of-51" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/studentsgolf-summer26/acc-highly-educated-golf-tees-box-of-51.jpg" alt="Students Golf Highly Educated Golf Tees (Box of 50) — Color 001" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-highly-educated-golf-tees-box-of-51.jpg" alt="Students Golf Highly Educated Golf Tees (Box of 50) — Color 001 &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/studentsgolf-summer26/acc-highly-educated-golf-tees-box-of-51-a2.jpg" alt="Students Golf Highly Educated Golf Tees (Box of 50) — Color 001 &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Highly Educated Golf Tees (Box of 50) | Color 001 &middot; $15</div>
         <div class="product-desc">Fifty 2.75-inch recycled bamboo tees with contrast stripes and the Students logo at the midpoint. Conforms to the rules of golf, if anyone asks.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://studentsgolf.com/products/highly-educated-golf-tees-box-of-51" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -563,6 +580,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

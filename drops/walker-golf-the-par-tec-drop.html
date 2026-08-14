@@ -172,6 +172,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.ig-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -244,125 +261,105 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Collection — 10 Pieces</h2>
   <div class="products-grid">
 
-    <a href="https://www.walkergolfthings.com/en-us/products/knockout-v-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/d6057309-Walker_Golf_Feb_WEB_022_700x934_crop_center.jpg" alt="Walker Golf Knockout V Polo Maple" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/d6057309-Walker_Golf_Feb_WEB_022_700x934_crop_center.jpg" alt="Walker Golf Knockout V Polo Maple &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/d6057309-Walker_Golf_Feb_WEB_022_700x934_crop_center-a2.jpg" alt="Walker Golf Knockout V Polo Maple &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/d6057309-Walker_Golf_Feb_WEB_022_700x934_crop_center-a3.jpg" alt="Walker Golf Knockout V Polo Maple &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/d6057309-Walker_Golf_Feb_WEB_022_700x934_crop_center-a4.jpg" alt="Walker Golf Knockout V Polo Maple &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Knockout V Polo · Maple · $120</div>
         <div class="product-desc">Knockout V Polo — The newest addition. V-neck knit collar in Maple, ultra-lightweight Par-Tec fabric engineered for movement. Breathable, moisture-wicking, temperature-regulating. The polo that says you came to play but you're not wearing a uniform. Walker makes things for the course and the pub, and this one works at both. $120.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/knockout-v-polo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/par-tec-quarter-zip-fleece" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/b3ee17a4-Walker_Golf_Feb_WEB_020_700x934_crop_center.jpg" alt="Walker Golf Par-Tec Quarter Zip Fleece Forest" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/b3ee17a4-Walker_Golf_Feb_WEB_020_700x934_crop_center.jpg" alt="Walker Golf Par-Tec Quarter Zip Fleece Forest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/b3ee17a4-Walker_Golf_Feb_WEB_020_700x934_crop_center-a2.jpg" alt="Walker Golf Par-Tec Quarter Zip Fleece Forest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/b3ee17a4-Walker_Golf_Feb_WEB_020_700x934_crop_center-a3.jpg" alt="Walker Golf Par-Tec Quarter Zip Fleece Forest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/b3ee17a4-Walker_Golf_Feb_WEB_020_700x934_crop_center-a4.jpg" alt="Walker Golf Par-Tec Quarter Zip Fleece Forest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Par-Tec Quarter Zip Fleece · Forest · $110</div>
         <div class="product-desc">Par-Tec Quarter Zip Fleece — Forest green, lightweight poly-cotton with micro fleece inner neck lining. Zip-through mock neck collar. The early-morning layer for walkers who want warmth without bulk. Everything about Walker is built for the golfer who carries their own bag, and this fleece proves it. $110.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/par-tec-quarter-zip-fleece" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/members-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/04eb848e-Walker_Golf_Feb_WEB_024_700x934_crop_center.jpg" alt="Walker Golf Members Polo Sandstone" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/04eb848e-Walker_Golf_Feb_WEB_024_700x934_crop_center.jpg" alt="Walker Golf Members Polo Sandstone &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Members Polo · Sandstone · $100</div>
         <div class="product-desc">Members Polo — Sandstone colorway, custom contrast knit collar, 3-button placket. Ultra-lightweight body with the embroidered Kooka patch that's become Walker's signature. The fabric disappears on you — you forget you're wearing a performance polo. That's the point. $100.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/members-polo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/featherlite-kooka-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/fd26199d-GT1-SH03-FGO-103_12df0b93-835b-45b2-8aba-b836072feddc_700x93.jpg" alt="Walker Golf Featherlite Kooka Polo Forest Gold" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/fd26199d-GT1-SH03-FGO-103_12df0b93-835b-45b2-8aba-b836072feddc_700x93.jpg" alt="Walker Golf Featherlite Kooka Polo Forest Gold &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Featherlite Kooka Polo · Forest/Gold · $100</div>
         <div class="product-desc">Featherlite Kooka Polo — Forest and Gold. The lightest polo in the Par-Tec lineup. Optimal stretch, maximum breathability, minimal weight. The contrast collar adds just enough personality to keep it from being boring. An Australian brand that understands that golf in the heat requires fabric that actually works. $100.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/featherlite-kooka-polo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/kooka-terry-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/232ee83b-CREAM_TERRY_POLO_FLAT1_57d881a9-65e6-47ee-811c-1827983273df_.jpg" alt="Walker Golf Kooka Terry Polo Cream" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/232ee83b-CREAM_TERRY_POLO_FLAT1_57d881a9-65e6-47ee-811c-1827983273df_.jpg" alt="Walker Golf Kooka Terry Polo Cream &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/232ee83b-CREAM_TERRY_POLO_FLAT1_57d881a9-65e6-47ee-811c-1827983273df_-a2.jpg" alt="Walker Golf Kooka Terry Polo Cream &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/232ee83b-CREAM_TERRY_POLO_FLAT1_57d881a9-65e6-47ee-811c-1827983273df_-a3.jpg" alt="Walker Golf Kooka Terry Polo Cream &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/232ee83b-CREAM_TERRY_POLO_FLAT1_57d881a9-65e6-47ee-811c-1827983273df_-a4.jpg" alt="Walker Golf Kooka Terry Polo Cream &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Kooka Terry Polo · Cream · $100</div>
         <div class="product-desc">Kooka Terry Polo — Cream. Terry cloth texture on a golf polo is a move. Soft hand-feel, relaxed fit, looks like something you'd wear at a beach club that also has a putting green. The most casual piece in the Par-Tec collection and maybe the most interesting. $100.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/kooka-terry-polo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/members-short" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/c04c09eb-Walker_Golf_Feb_WEB_018_700x934_crop_center.jpg" alt="Walker Golf Members Short Navy" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/c04c09eb-Walker_Golf_Feb_WEB_018_700x934_crop_center.jpg" alt="Walker Golf Members Short Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c04c09eb-Walker_Golf_Feb_WEB_018_700x934_crop_center-a2.jpg" alt="Walker Golf Members Short Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c04c09eb-Walker_Golf_Feb_WEB_018_700x934_crop_center-a3.jpg" alt="Walker Golf Members Short Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c04c09eb-Walker_Golf_Feb_WEB_018_700x934_crop_center-a4.jpg" alt="Walker Golf Members Short Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Members Short · Navy · $100</div>
         <div class="product-desc">Members Short — Navy. Par-Tec fabric with a tailored fit, internal drawstring, and enough stretch to let you swing without thinking about your shorts. The kind of short that looks sharp enough for the clubhouse patio after the round. $100.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/members-short" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/stasher-shorts-sand" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/e876abfb-41_0bda8d93-a17a-40a2-ae1d-fb60c6cc5070_700x934_crop_center..jpg" alt="Walker Golf Stasher Shorts Sand" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/e876abfb-41_0bda8d93-a17a-40a2-ae1d-fb60c6cc5070_700x934_crop_center..jpg" alt="Walker Golf Stasher Shorts Sand &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Stasher Shorts · Sand · $90</div>
         <div class="product-desc">Stasher Shorts — Sand. The more relaxed option. Lighter wash, lived-in feel, same Par-Tec performance fabric underneath. Hidden stash pocket. The name says it all — these are the shorts for the golfer who keeps a tee, a ball marker, and a spare ball in their pockets at all times. $90.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/stasher-shorts-sand" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/par-tec-pant-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/607ecb65-Walker_Golf_Feb_WEB_016_700x934_crop_center.jpg" alt="Walker Golf Par-Tec Pant Black" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/607ecb65-Walker_Golf_Feb_WEB_016_700x934_crop_center.jpg" alt="Walker Golf Par-Tec Pant Black &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Par-Tec Pant · Black · $100</div>
         <div class="product-desc">Par-Tec Pant — Black. Full-length performance pant in the same Par-Tec fabric. Tailored fit, stretch waistband, clean silhouette. For cooler rounds or courses with a dress code that means it. The pant you'd wear to dinner after without changing. $100.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/par-tec-pant-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/loft-cap-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/45adda60-Walker_Golf_June_0113_700x934_crop_center.jpg" alt="Walker Golf Loft Cap Black" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/45adda60-Walker_Golf_June_0113_700x934_crop_center.jpg" alt="Walker Golf Loft Cap Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/45adda60-Walker_Golf_June_0113_700x934_crop_center-a2.jpg" alt="Walker Golf Loft Cap Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/45adda60-Walker_Golf_June_0113_700x934_crop_center-a3.jpg" alt="Walker Golf Loft Cap Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/45adda60-Walker_Golf_June_0113_700x934_crop_center-a4.jpg" alt="Walker Golf Loft Cap Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Loft Cap · Black · $55</div>
         <div class="product-desc">Loft Cap — Black. Structured six-panel with the Walker wordmark embroidered on the front. Par-Tec performance fabric keeps your head cool and dry. Low-profile, modern fit. The cap version of everything Walker does — clean, functional, Australian. $55.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/loft-cap-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/striker-cap-forest" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/0b8d22f6-Walker_Golf_June_0125_700x934_crop_center.jpg" alt="Walker Golf Striker Cap Forest" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/0b8d22f6-Walker_Golf_June_0125_700x934_crop_center.jpg" alt="Walker Golf Striker Cap Forest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/0b8d22f6-Walker_Golf_June_0125_700x934_crop_center-a2.jpg" alt="Walker Golf Striker Cap Forest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/0b8d22f6-Walker_Golf_June_0125_700x934_crop_center-a3.jpg" alt="Walker Golf Striker Cap Forest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/0b8d22f6-Walker_Golf_June_0125_700x934_crop_center-a4.jpg" alt="Walker Golf Striker Cap Forest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Striker Cap · Forest · $55</div>
         <div class="product-desc">Striker Cap — Forest. Rope-front snapback in forest green. The more expressive headwear option. Curved brim, structured crown, Walker patch on front. If the Loft is the weekday cap, the Striker is the weekend one. $55.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/striker-cap-forest" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -371,149 +368,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Our Favorites &mdash; 12 Pieces From the Current Range</h2>
   <div class="products-grid">
 
-    <a href="https://www.walkergolfthings.com/en-us/products/chevron-rugby-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p2.jpg" alt="Walker Golf Chevron Rugby Polo - Deep Forest - $149.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p2.jpg" alt="Walker Golf Chevron Rugby Polo - Deep Forest - $149.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p2-a2.jpg" alt="Walker Golf Chevron Rugby Polo - Deep Forest - $149.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p2-a3.jpg" alt="Walker Golf Chevron Rugby Polo - Deep Forest - $149.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p2-a4.jpg" alt="Walker Golf Chevron Rugby Polo - Deep Forest - $149.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Chevron Rugby Polo &middot; Deep Forest &middot; $149.95</div>
         <div class="product-desc">The single best-looking thing Walker makes right now. A tonal chevron knit in deep forest with a heavy cream rugby collar and a three-button placket &mdash; the collar does all the work, giving the whole thing a weight and structure most golf knits don't have. Wears like a sweater, plays like a polo, and looks completely at home in a pub afterward.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/chevron-rugby-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/dancing-kooka-leather-driver-cover-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p7.jpg" alt="Walker Golf Dancing Kooka Leather Driver Cover - Black - $99.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p7.jpg" alt="Walker Golf Dancing Kooka Leather Driver Cover - Black - $99.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p7-a2.jpg" alt="Walker Golf Dancing Kooka Leather Driver Cover - Black - $99.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p7-a3.jpg" alt="Walker Golf Dancing Kooka Leather Driver Cover - Black - $99.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p7-a4.jpg" alt="Walker Golf Dancing Kooka Leather Driver Cover - Black - $99.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Dancing Kooka Leather Driver Cover &middot; Black &middot; $99.95</div>
         <div class="product-desc">Black leather with the kookaburra repeated across it in gold, mid-stride, like a pattern on a bar tie. Headcovers are where a brand either has a point of view or doesn't. This one is unmistakably Walker: the family emblem, treated as decoration rather than a badge. Fits a driver, ages the way leather should.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/dancing-kooka-leather-driver-cover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/mens-breaker-jacket" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p1.jpg" alt="Walker Golf Breaker Jacket - Navy Check - $169.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p1.jpg" alt="Walker Golf Breaker Jacket - Navy Check - $169.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p1-a2.jpg" alt="Walker Golf Breaker Jacket - Navy Check - $169.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p1-a3.jpg" alt="Walker Golf Breaker Jacket - Navy Check - $169.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p1-a4.jpg" alt="Walker Golf Breaker Jacket - Navy Check - $169.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Breaker Jacket &middot; Navy Check &middot; $169.95</div>
         <div class="product-desc">A track-jacket silhouette in a navy windowpane check with piped sleeve stripes &mdash; more 1970s clubhouse than modern shell. Lightweight enough to leave in the bag through summer, cut close enough that it doesn't billow through the swing. The check is what makes it; a solid version would be forgettable.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/mens-breaker-jacket" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/checkered-pullover-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p9.jpg" alt="Walker Golf Checkered Pullover - Maroon - $159.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p9.jpg" alt="Walker Golf Checkered Pullover - Maroon - $159.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p9-a2.jpg" alt="Walker Golf Checkered Pullover - Maroon - $159.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p9-a3.jpg" alt="Walker Golf Checkered Pullover - Maroon - $159.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p9-a4.jpg" alt="Walker Golf Checkered Pullover - Maroon - $159.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Checkered Pullover &middot; Maroon &middot; $159.95</div>
         <div class="product-desc">Maroon and navy grid knit with a crew neck and ribbed cuffs. This is the piece that gives away Walker's skate roots &mdash; the proportions are a little roomier than a golf sweater usually runs, and it's better for it. Works over a polo on a cool morning and works alone on the drive home.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/checkered-pullover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/flecked-quarter-zip" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p3.jpg" alt="Walker Golf Flecked Quarter Zip - Espresso - $139.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p3.jpg" alt="Walker Golf Flecked Quarter Zip - Espresso - $139.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p3-a2.jpg" alt="Walker Golf Flecked Quarter Zip - Espresso - $139.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p3-a3.jpg" alt="Walker Golf Flecked Quarter Zip - Espresso - $139.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p3-a4.jpg" alt="Walker Golf Flecked Quarter Zip - Espresso - $139.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Flecked Quarter Zip &middot; Espresso &middot; $139.95</div>
         <div class="product-desc">A marled espresso knit quarter-zip that reads as brown, cream and grey all at once depending on the light. The flecking hides everything &mdash; sweat, grass, the coffee you spilled on the first tee. The most quietly useful layer in the range.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/flecked-quarter-zip" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/knicked-knit-polo-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p4.jpg" alt="Walker Golf Knicked Knit Polo - Merlot - $129.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p4.jpg" alt="Walker Golf Knicked Knit Polo - Merlot - $129.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p4-a2.jpg" alt="Walker Golf Knicked Knit Polo - Merlot - $129.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p4-a3.jpg" alt="Walker Golf Knicked Knit Polo - Merlot - $129.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p4-a4.jpg" alt="Walker Golf Knicked Knit Polo - Merlot - $129.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Knicked Knit Polo &middot; Merlot &middot; $129.95</div>
         <div class="product-desc">Merlot with a textured knit body and a contrasting cream collar. The name is a nod to knickerbockers and the color pulls from the same old-photograph palette, but nothing about the fit is nostalgic. Sharp enough for a course with a dress code that means it.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/knicked-knit-polo-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/ombre-knit-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p5.jpg" alt="Walker Golf Ombre Knit Polo - Charcoal - $129.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p5.jpg" alt="Walker Golf Ombre Knit Polo - Charcoal - $129.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p5-a2.jpg" alt="Walker Golf Ombre Knit Polo - Charcoal - $129.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p5-a3.jpg" alt="Walker Golf Ombre Knit Polo - Charcoal - $129.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p5-a4.jpg" alt="Walker Golf Ombre Knit Polo - Charcoal - $129.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Ombre Knit Polo &middot; Charcoal &middot; $129.95</div>
         <div class="product-desc">A knit polo that fades from pale grey at the shoulders to near-black at the hem. Gradient garments usually go wrong; this one holds together because the transition is slow and the palette is neutral. The most fashion-forward thing in the collection and still entirely wearable.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/ombre-knit-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/kooka-knit-polo-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p6.jpg" alt="Walker Golf Kooka Knit Polo - Pine / Cream - $129.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p6.jpg" alt="Walker Golf Kooka Knit Polo - Pine / Cream - $129.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p6-a2.jpg" alt="Walker Golf Kooka Knit Polo - Pine / Cream - $129.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p6-a3.jpg" alt="Walker Golf Kooka Knit Polo - Pine / Cream - $129.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p6-a4.jpg" alt="Walker Golf Kooka Knit Polo - Pine / Cream - $129.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Kooka Knit Polo &middot; Pine / Cream &middot; $129.95</div>
         <div class="product-desc">Deep pine knit with a cream tipped collar and the Kooka embroidered at the chest. If you want one piece that explains the brand in a single garment, this is it &mdash; a classic knit polo shape, an Australian bird on the chest, and a fabric that doesn't feel like plastic.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/kooka-knit-polo-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/classic-jacket-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p8.jpg" alt="Walker Golf Classic Jacket - Tan Canvas - $229.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p8.jpg" alt="Walker Golf Classic Jacket - Tan Canvas - $229.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p8-a2.jpg" alt="Walker Golf Classic Jacket - Tan Canvas - $229.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p8-a3.jpg" alt="Walker Golf Classic Jacket - Tan Canvas - $229.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p8-a4.jpg" alt="Walker Golf Classic Jacket - Tan Canvas - $229.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Classic Jacket &middot; Tan Canvas &middot; $229.95</div>
         <div class="product-desc">Tan canvas with a corduroy collar and a hand-warmer pocket &mdash; a chore-jacket cut that owes more to a workwear catalog than a pro shop. The most expensive piece Walker sells and the one most likely to still be in rotation in five years. For shoulder-season rounds and everything around them.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/classic-jacket-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/club-6-panel-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p11.jpg" alt="Walker Golf Club 6 Panel Cap - Forest - $69.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p11.jpg" alt="Walker Golf Club 6 Panel Cap - Forest - $69.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p11-a2.jpg" alt="Walker Golf Club 6 Panel Cap - Forest - $69.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p11-a3.jpg" alt="Walker Golf Club 6 Panel Cap - Forest - $69.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p11-a4.jpg" alt="Walker Golf Club 6 Panel Cap - Forest - $69.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Club 6 Panel Cap &middot; Forest &middot; $69.95</div>
         <div class="product-desc">Forest wool crown, tan suede brim, Kooka patch on the front. The material split is what elevates it &mdash; two textures instead of one, which is the difference between a hat and a good hat. Structured six-panel with a curved brim.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/club-6-panel-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/kooka-icon-towel-5" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p13.jpg" alt="Walker Golf Kooka Icon Towel - Black Sand - $44.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p13.jpg" alt="Walker Golf Kooka Icon Towel - Black Sand - $44.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p13-a2.jpg" alt="Walker Golf Kooka Icon Towel - Black Sand - $44.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p13-a3.jpg" alt="Walker Golf Kooka Icon Towel - Black Sand - $44.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p13-a4.jpg" alt="Walker Golf Kooka Icon Towel - Black Sand - $44.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Kooka Icon Towel &middot; Black Sand &middot; $44.95</div>
         <div class="product-desc">Black towel with the kookaburra printed across it in sand. Golf towels are the easiest place for a brand to phone it in, and Walker didn't &mdash; this is the same dancing-bird motif as the leather driver cover, so the two read as a set clipped to the same bag.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/kooka-icon-towel-5" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.walkergolfthings.com/en-us/products/riviera-knit-polo-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/walker-golf/p17.jpg" alt="Walker Golf Womens Riviera Knit Polo - Maroon / Pink - $149.95" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/walker-golf/p17.jpg" alt="Walker Golf Womens Riviera Knit Polo - Maroon / Pink - $149.95 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p17-a2.jpg" alt="Walker Golf Womens Riviera Knit Polo - Maroon / Pink - $149.95 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p17-a3.jpg" alt="Walker Golf Womens Riviera Knit Polo - Maroon / Pink - $149.95 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/walker-golf/p17-a4.jpg" alt="Walker Golf Womens Riviera Knit Polo - Maroon / Pink - $149.95 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf</div>
         <div class="product-name">Womens Riviera Knit Polo &middot; Maroon / Pink &middot; $149.95</div>
         <div class="product-desc">A cropped, button-through knit polo in maroon with fine pink stripes and a wide cream collar. Walker's womens line has gotten notably stronger &mdash; this and the Country Club Knit Dress are doing something the big brands aren't, which is treating womens golf as a design problem rather than a colorway exercise.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.walkergolfthings.com/en-us/products/riviera-knit-polo-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -649,6 +622,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

@@ -126,6 +126,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -257,145 +274,145 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">All Fourteen, Strongest to Lightest</h2>
   <div class="products-grid">
 
-    <a href="https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/lmnt-recharge.jpg" alt="LMNT Recharge electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/lmnt-recharge.jpg" alt="LMNT Recharge electrolyte drink mix &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">LMNT Recharge &middot; $45 / 30 sticks</div>
         <div class="product-desc">1,000mg of sodium per stick, which is roughly triple what a normal sports drink gives you and exactly the point. Founded by a Robb Wolf&ndash;adjacent crew who decided the government sodium guidance was wrong for people who sweat. Tastes like the ocean the first time. You get used to it, and on a 102&deg; afternoon you stop getting the back-nine headache.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://drinklmnt.com/products/lmnt-recharge-electrolyte-drink" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.precisionhydration.com/us/en/products/ph-1500-electrolyte-drink-mix/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/ph-1500.jpg" alt="Precision Fuel  Hydration PH 1500 electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/ph-1500.jpg" alt="Precision Fuel  Hydration PH 1500 electrolyte drink mix &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Precision Fuel &amp; Hydration PH 1500 &middot; $13.99 / 6 sachets</div>
         <div class="product-desc">1,500mg of sodium per litre &mdash; the strongest thing here, and the one with the most rigor behind it. Precision will sweat-test you in a lab and tell you your personal sodium loss rate before selling you the right strength. If you are the person who finishes a round with salt crust on your hat, this is your bracket.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.precisionhydration.com/us/en/products/ph-1500-electrolyte-drink-mix/" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sodii.com.au/products/citrus-hydration-salts" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/sodii.jpg" alt="Sodii Everyday Hydration Salts electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/sodii.jpg" alt="Sodii Everyday Hydration Salts electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/sodii-a2.jpg" alt="Sodii Everyday Hydration Salts electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/sodii-a3.jpg" alt="Sodii Everyday Hydration Salts electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/sodii-a4.jpg" alt="Sodii Everyday Hydration Salts electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Sodii Everyday Hydration Salts &middot; AU$68.90 / 30 sticks</div>
         <div class="product-desc">1,000mg of sodium and the only packaging in this roundup you&rsquo;d willingly leave on a kitchen counter. Small Australian outfit, sensible ingredient list, genuinely lovely design. Ships from Australia and prices are in AUD, so treat it as the aspirational one rather than the Tuesday reorder.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://sodii.com.au/products/citrus-hydration-salts" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://skratchlabs.com/products/hydration-sport-drink-mix" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/skratch-hydration.jpg" alt="Skratch Labs Hydration Sport Drink Mix electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/skratch-hydration.jpg" alt="Skratch Labs Hydration Sport Drink Mix electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/skratch-hydration-a2.jpg" alt="Skratch Labs Hydration Sport Drink Mix electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/skratch-hydration-a3.jpg" alt="Skratch Labs Hydration Sport Drink Mix electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/skratch-hydration-a4.jpg" alt="Skratch Labs Hydration Sport Drink Mix electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Skratch Labs Hydration Sport Drink Mix &middot; $23.95</div>
         <div class="product-desc">400mg sodium and real fruit for flavor rather than a sweetener blend. Skratch came out of a Team Garmin doctor mixing drinks in a hotel room because the riders hated commercial sports drinks. It still tastes the most like something you&rsquo;d actually want to drink, which matters more than it sounds when you&rsquo;re forcing down a third bottle.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://skratchlabs.com/products/hydration-sport-drink-mix" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://saltt.com/products/powdered-electrolyte-sticks" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/saltt.jpg" alt="SALTT Powder Drink Mix electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/saltt.jpg" alt="SALTT Powder Drink Mix electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/saltt-a2.jpg" alt="SALTT Powder Drink Mix electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/saltt-a3.jpg" alt="SALTT Powder Drink Mix electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/saltt-a4.jpg" alt="SALTT Powder Drink Mix electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">SALTT Powder Drink Mix &middot; $6.50</div>
         <div class="product-desc">969mg sodium at the cheapest per-stick price in the roundup. Small brand, zero sugar, and the packaging has the numbers printed right on the front where you can read them without hunting for a nutrition panel. The value pick if you&rsquo;re going through a stick a round all summer.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://saltt.com/products/powdered-electrolyte-sticks" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://nuunlife.com/products/nuun-sport" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/nuun-sport.jpg" alt="Nuun Sport electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/nuun-sport.jpg" alt="Nuun Sport electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/nuun-sport-a2.jpg" alt="Nuun Sport electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/nuun-sport-a3.jpg" alt="Nuun Sport electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/nuun-sport-a4.jpg" alt="Nuun Sport electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Nuun Sport &middot; $7.49 / 10 tablets</div>
         <div class="product-desc">300mg sodium in a tablet that drops into a bottle without a funnel, a scoop, or powder on your steering wheel. The convenience champion. Under-dosed for a triple-digit walking round on its own, but two tablets in a 32oz bottle gets you into a sensible range.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://nuunlife.com/products/nuun-sport" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.drinkhydrant.com/products/hydration-mix" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/hydrant.jpg" alt="Hydrant Hydrate electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/hydrant.jpg" alt="Hydrant Hydrate electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/hydrant-a2.jpg" alt="Hydrant Hydrate electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/hydrant-a3.jpg" alt="Hydrant Hydrate electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/hydrant-a4.jpg" alt="Hydrant Hydrate electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Hydrant Hydrate &middot; $44.99</div>
         <div class="product-desc">260mg sodium, the lightest dose here, and honest about being a daily-life product rather than a heat-stress one. Good on a cart round, good at a desk, not enough on its own for August at Hancock.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.drinkhydrant.com/products/hydration-mix" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://liquid-iv.com/products/lemon-lime-hydration-multiplier" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/liquid-iv.jpg" alt="Liquid I.V. Hydration Multiplier electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/liquid-iv.jpg" alt="Liquid I.V. Hydration Multiplier electrolyte drink mix &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Liquid I.V. Hydration Multiplier &middot; $24.99 / 16 sticks</div>
         <div class="product-desc">The one everyone&rsquo;s already got in a drawer. Glucose-forward formula built around oral rehydration therapy, which does move fluid across the gut faster &mdash; but it comes with real sugar, and they don&rsquo;t put a clear sodium figure on the product page. Fine as a default, not the sharpest tool for heat.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://liquid-iv.com/products/lemon-lime-hydration-multiplier" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://dripdrop.com/products/sugar-free-electrolyte-powder-plus-starter-pack" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/dripdrop.jpg" alt="DripDrop Zero Sugar Plus electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/dripdrop.jpg" alt="DripDrop Zero Sugar Plus electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/dripdrop-a2.jpg" alt="DripDrop Zero Sugar Plus electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/dripdrop-a3.jpg" alt="DripDrop Zero Sugar Plus electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/dripdrop-a4.jpg" alt="DripDrop Zero Sugar Plus electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">DripDrop Zero Sugar Plus &middot; $27.99</div>
         <div class="product-desc">Developed by a physician for treating dehydration in the field rather than for gym marketing, which shows in the formulation. The zero-sugar version added vitamins. Widely available, reliably decent, and the flavors are less aggressively sweet than most.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://dripdrop.com/products/sugar-free-electrolyte-powder-plus-starter-pack" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://redmond.life/products/get-15-off-re-lyte-hydration-electrolyte-powder" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/re-lyte.jpg" alt="Redmond Re-Lyte Hydration electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/re-lyte.jpg" alt="Redmond Re-Lyte Hydration electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/re-lyte-a2.jpg" alt="Redmond Re-Lyte Hydration electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/re-lyte-a3.jpg" alt="Redmond Re-Lyte Hydration electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/re-lyte-a4.jpg" alt="Redmond Re-Lyte Hydration electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Redmond Re-Lyte Hydration &middot; $40.99</div>
         <div class="product-desc">Built on Redmond Real Salt, mined in Utah, so the mineral profile comes from actual rock rather than a lab blend. No sugar, no synthetic dyes. The variety pouch is the sensible entry point since the flavors run stronger than most.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://redmond.life/products/get-15-off-re-lyte-hydration-electrolyte-powder" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://ultimareplenisher.com/products/ultima-variety-pack-electrolyte-drink-mix" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/ultima.jpg" alt="Ultima Replenisher electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/ultima.jpg" alt="Ultima Replenisher electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/ultima-a2.jpg" alt="Ultima Replenisher electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/ultima-a3.jpg" alt="Ultima Replenisher electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/ultima-a4.jpg" alt="Ultima Replenisher electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Ultima Replenisher &middot; $35.99</div>
         <div class="product-desc">Zero sugar, zero calories, stevia-sweetened, and notably lighter on sodium than anything at the top of this list. The pick if you want something that tastes like flavored water and you&rsquo;re riding rather than walking.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://ultimareplenisher.com/products/ultima-variety-pack-electrolyte-drink-mix" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://tailwindnutrition.com/products/endurance-fuel" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/tailwind.jpg" alt="Tailwind Endurance Fuel electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/tailwind.jpg" alt="Tailwind Endurance Fuel electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/tailwind-a2.jpg" alt="Tailwind Endurance Fuel electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/tailwind-a3.jpg" alt="Tailwind Endurance Fuel electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/tailwind-a4.jpg" alt="Tailwind Endurance Fuel electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Tailwind Endurance Fuel &middot; $42.99</div>
         <div class="product-desc">The outlier: this is calories <em>and</em> electrolytes, designed so an ultrarunner can go all day on nothing else. For golf that means a bottle of this replaces both the drink and the turn-shack hot dog. Mild flavor by design so it doesn&rsquo;t turn on you at hour four.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://tailwindnutrition.com/products/endurance-fuel" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://kaged.com/products/hydra-charge-30sv" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/kaged.jpg" alt="Kaged Hydra-Charge electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/kaged.jpg" alt="Kaged Hydra-Charge electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/kaged-a2.jpg" alt="Kaged Hydra-Charge electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/kaged-a3.jpg" alt="Kaged Hydra-Charge electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/kaged-a4.jpg" alt="Kaged Hydra-Charge electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Kaged Hydra-Charge &middot; $24.99 / 30 servings</div>
         <div class="product-desc">Coconut water powder plus a full electrolyte panel, third-party tested for banned substances &mdash; the reason it shows up in a lot of collegiate bags. Tub rather than sticks, so it lives in the garage rather than the golf bag.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://kaged.com/products/hydra-charge-30sv" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://keynutrients.com/products/electrolyte-recovery-plus" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/hydration/key-nutrients.jpg" alt="Key Nutrients Electrolyte Recovery Plus electrolyte drink mix" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/hydration/key-nutrients.jpg" alt="Key Nutrients Electrolyte Recovery Plus electrolyte drink mix &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/key-nutrients-a2.jpg" alt="Key Nutrients Electrolyte Recovery Plus electrolyte drink mix &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/key-nutrients-a3.jpg" alt="Key Nutrients Electrolyte Recovery Plus electrolyte drink mix &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/hydration/key-nutrients-a4.jpg" alt="Key Nutrients Electrolyte Recovery Plus electrolyte drink mix &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hydration</div>
         <div class="product-name">Key Nutrients Electrolyte Recovery Plus &middot; $39.99</div>
         <div class="product-desc">Small Colorado outfit doing a no-sugar, no-filler tub with a broader mineral list than most. Unfashionable packaging, loyal following, and one of the cheaper ways to buy electrolytes by the serving if you don&rsquo;t need single-serve sticks.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://keynutrients.com/products/electrolyte-recovery-plus" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -506,6 +523,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

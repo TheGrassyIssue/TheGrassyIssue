@@ -112,6 +112,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.ig-grid a{display:block;border:.5px solid var(--ink);overflow:hidden}.ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .3s}.ig-grid a:hover img{transform:scale(1.04)}
 @media(max-width:820px){.ig-grid{grid-template-columns:repeat(2,1fr)}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -182,67 +199,57 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <div class="products-grid">
 
 
-    <a href="https://www.mogshadegolf.com/products/azulejo-bronze-and-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/3fc927e4-azulejo-bronze-green-909098.jpg" alt="Mogshade Azulejo Bronze Green" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/3fc927e4-azulejo-bronze-green-909098.jpg" alt="Mogshade Azulejo Bronze Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Azulejo Bronze &amp; Green · €78</div>
         <div class="product-desc">Azulejo Bronze &amp; Green — Named after the hand-painted tiles that cover Lisbon's facades. Jacquard-woven fabric with a geometric pattern that references Portuguese tile art. Driver, fairway, and hybrid sizes. The kind of headcover that makes people ask where you got it. €78.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/azulejo-bronze-and-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/contour-golf-towel" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/37c84c01-contour-golf-towel-9807088.jpg" alt="Mogshade Contour Golf Towel" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088.jpg" alt="Mogshade Contour Golf Towel &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088-a2.jpg" alt="Mogshade Contour Golf Towel &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088-a3.jpg" alt="Mogshade Contour Golf Towel &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088-a4.jpg" alt="Mogshade Contour Golf Towel &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Contour Golf Towel · €39</div>
         <div class="product-desc">Contour Golf Towel — Premium waffle weave, super absorbent, built to actually perform on the course. The towel matches the headcover aesthetic — understated, well-made, and Portuguese. Clip attachment. €39.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/contour-golf-towel" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/churra-mono-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/bb402924-churra-mono-headcover-8190609.jpg" alt="Mogshade Churra Mono Headcover" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/bb402924-churra-mono-headcover-8190609.jpg" alt="Mogshade Churra Mono Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/bb402924-churra-mono-headcover-8190609-a2.jpg" alt="Mogshade Churra Mono Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/bb402924-churra-mono-headcover-8190609-a3.jpg" alt="Mogshade Churra Mono Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Churra Mono Headcover · €84</div>
         <div class="product-desc">Churra Mono — From the Re.Weave collection, made with rescued high-quality fabrics woven in Serra da Estrela mountain factories. Named after the Churra sheep breed native to the region. Textured wool with a handwoven character you can feel. €84.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/churra-mono-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
 
 
-    <a href="https://www.mogshadegolf.com/products/deco-blue-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/664086b8-deco-blue-headcover-1821868.jpg" alt="Mogshade Deco Blue Headcover" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/664086b8-deco-blue-headcover-1821868.jpg" alt="Mogshade Deco Blue Headcover &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Deco Blue Headcover · €76</div>
         <div class="product-desc">Deco Blue — Art Deco-inspired geometric pattern in blues and golds. Jacquard-woven, fleece-lined, leather accent. The most visually striking headcover in the Mogshade lineup — it looks like it was pulled from a 1920s hotel lobby, in the best way. €76.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/deco-blue-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/alfa-tex-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/597b304a-alfatex-headcover-730449.jpg" alt="Mogshade Alfa.Tex Headcover" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449-a2.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449-a3.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449-a4.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Alfa.Tex Headcover · €78</div>
         <div class="product-desc">Alfa.Tex — Technical textile with a modern, clean aesthetic. Less wool, more structured. For the golfer who wants the Mogshade craft without the traditional fabric look. Minimal, sharp, still handmade in Portugal. €78.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/alfa-tex-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
 
   </div>
@@ -252,125 +259,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">New from the Workshop — 12 Pieces</h2>
   <div class="products-grid">
 
-    <a href="https://www.mogshadegolf.com/products/vintage-white-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-vintage-white.jpg" alt="Mogshade Vintage White Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-vintage-white.jpg" alt="Mogshade Vintage White Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-vintage-white-a2.jpg" alt="Mogshade Vintage White Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Vintage White Headcover · €78</div>
         <div class="product-desc">The newest drop, added this August. Clean off-white vintage fabric with the standard Mogshade build — fleece-lined, made to order in Portugal, and slightly different every time because the cloth comes off a finite roll.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/vintage-white-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/depeche-magazine-5-special-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-depeche-5.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-depeche-5.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-depeche-5-a2.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-depeche-5-a3.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-depeche-5-a4.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Depeche Magazine #5 + Special Headcover · €99</div>
         <div class="product-desc">The collab of the summer: issue #5 of Depeche Golf&#39;s magazine bundled with a special-edition headcover made for the release. Two of the best independent golf projects in Europe in one box.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/depeche-magazine-5-special-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/eighteen-wool-poster-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-eighteen-poster.jpg" alt="Mogshade Eighteen Wool Poster" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster-a2.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster-a3.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster-a4.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Eighteen Wool Poster · €340</div>
         <div class="product-desc">Not a headcover — wall art. A hand-tufted wool poster of an imagined finishing hole, made to order in Portugal and shipped in about eight weeks. Golf course architecture as textile.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/eighteen-wool-poster-1" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/pin-position-wool-poste" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-pin-position-poster.jpg" alt="Mogshade Pin Position Wool Poster" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster-a2.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster-a3.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster-a4.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Pin Position Wool Poster · €340</div>
         <div class="product-desc">The second piece in the wall art line: a pin sheet rendered in tufted wool. The kind of thing that ends up in every den photo on golf Instagram next year.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/pin-position-wool-poste" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/churra-risca-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-churra-risca.jpg" alt="Mogshade Churra Risca Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-churra-risca.jpg" alt="Mogshade Churra Risca Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-churra-risca-a2.jpg" alt="Mogshade Churra Risca Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-churra-risca-a3.jpg" alt="Mogshade Churra Risca Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Churra Risca Headcover · €84</div>
         <div class="product-desc">From the Churra collection — named for the sheep breed native to the Serra da Estrela. Striped rescued wool with a texture no mass-produced cover can fake.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/churra-risca-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/tile-olive-orange-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-tiles-olive-orange.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-tiles-olive-orange.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-tiles-olive-orange-a2.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-tiles-olive-orange-a3.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Tiles Olive &amp; Orange Headcover · €78</div>
         <div class="product-desc">The azulejo idea in a warmer palette — olive and burnt orange geometry pulled from Portuguese tilework, jacquard-woven and fleece-lined.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/tile-olive-orange-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/dot-gray-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-dot-gray.jpg" alt="Mogshade Dot Gray &amp; Pale Yellow Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-dot-gray.jpg" alt="Mogshade Dot Gray &amp; Pale Yellow Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-dot-gray-a2.jpg" alt="Mogshade Dot Gray &amp; Pale Yellow Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Dot Gray &amp; Pale Yellow Headcover · €78</div>
         <div class="product-desc">Quiet polka-dot pattern in gray and pale yellow. The understated pick in a lineup that usually leans loud.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/dot-gray-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/waffle-yellow-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-waffle-yellow.jpg" alt="Mogshade Waffle Yellow Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-waffle-yellow.jpg" alt="Mogshade Waffle Yellow Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-waffle-yellow-a2.jpg" alt="Mogshade Waffle Yellow Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Waffle Yellow Headcover · €78</div>
         <div class="product-desc">Waffle-weave texture in a sunny yellow. Most of the waffle colorways have already sold out — this is the one still on the shelf.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/waffle-yellow-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/desert-yellow-gray-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-desert-yellow-gray.jpg" alt="Mogshade Desert Yellow &amp; Gray Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-desert-yellow-gray.jpg" alt="Mogshade Desert Yellow &amp; Gray Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-desert-yellow-gray-a2.jpg" alt="Mogshade Desert Yellow &amp; Gray Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Desert Yellow &amp; Gray Headcover · €76</div>
         <div class="product-desc">The last survivor of the Desert series — the other four colorways are gone. Warm sand tones over gray, soft hand-feel, fleece interior.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/desert-yellow-gray-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/vintage-fern-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-vintage-fern.jpg" alt="Mogshade Vintage Fern Headcover" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-vintage-fern.jpg" alt="Mogshade Vintage Fern Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-vintage-fern-a2.jpg" alt="Mogshade Vintage Fern Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Vintage Fern Headcover · €78</div>
         <div class="product-desc">Deep fern green from the Vintage line. Reads almost solid from a distance, then shows its weave up close — the Mogshade trick in one cover.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/vintage-fern-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/ocean-bottle-x-mogshade" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-ocean-bottle.jpg" alt="Mogshade Ocean Bottle x Mogshade" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle-a2.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle-a3.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle-a4.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">Ocean Bottle x Mogshade · €39</div>
         <div class="product-desc">The collab water bottle — every Ocean Bottle sold funds the collection of 11.4 kg of ocean-bound plastic. On theme for a brand built on circularity.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/ocean-bottle-x-mogshade" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/products/o-b-oversized-sweat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/new-ob-sweat.jpg" alt="Mogshade O.B. Oversized Sweat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat-a2.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat-a3.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat-a4.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
         <div class="product-name">O.B. Oversized Sweat · €96</div>
         <div class="product-desc">Mogshade does clothing now. Oversized fit, heavyweight, with the brand&#39;s dry sense of humor — O.B. as in the two letters you never want on your scorecard.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mogshadegolf.com/products/o-b-oversized-sweat" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -378,65 +385,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Collab Archive — What You Missed</h2>
   <div class="products-grid">
 
-    <a href="https://www.mogshadegolf.com/collections/fabricaal-x-mogshade" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/collab-fabricaal-crow.jpg" alt="Mogshade Fabricaal x Mogshade &middot; Sold Out" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-fabricaal-crow.jpg" alt="Mogshade Fabricaal x Mogshade &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
         <div class="product-name">Fabricaal x Mogshade &middot; Sold Out</div>
         <div class="product-desc">The artist series — headcovers, valuables pouches, and glasses cases carrying Fabricaal&#39;s illustrated patterns (Crow, Myrtle, Shrub, Chiclete). The mural they painted for the launch is still all over the brand&#39;s Instagram. Every piece is gone.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.mogshadegolf.com/collections/fabricaal-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/collections/fabricaal-x-mogshade" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/collab-igg-sand.jpg" alt="Mogshade IGG x Mogshade &middot; Sold Out" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-igg-sand.jpg" alt="Mogshade IGG x Mogshade &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
         <div class="product-name">IGG x Mogshade &middot; Sold Out</div>
         <div class="product-desc">The July capsule — Sand and Sage headcovers plus a matching glasses case, woven stripe-work unlike anything else in the catalog. Dropped at €104&ndash;109 and sold through in weeks.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.mogshadegolf.com/collections/fabricaal-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/collections/projeto-serra-x-mogshade" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/collab-serra-ovelha.jpg" alt="Mogshade Projeto Serra x Mogshade &middot; Sold Out" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-serra-ovelha.jpg" alt="Mogshade Projeto Serra x Mogshade &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
         <div class="product-name">Projeto Serra x Mogshade &middot; Sold Out</div>
         <div class="product-desc">A tribute to the brand&#39;s home mountains: Serra covers in preto and branco, plus the Ovelha Preta and Ovelha Branca — black sheep and white sheep, rendered in the wool they come from.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.mogshadegolf.com/collections/projeto-serra-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/collections/projeto-serra-x-mogshade" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/collab-serra-vest.jpg" alt="Mogshade S&atilde;o Miguel Sherpa Vest &middot; Sold Out" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-serra-vest.jpg" alt="Mogshade S&atilde;o Miguel Sherpa Vest &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
         <div class="product-name">S&atilde;o Miguel Sherpa Vest &middot; Sold Out</div>
         <div class="product-desc">The one time the Serra project left the golf bag — a burnt-orange sherpa vest with the mountain logo stitched on the chest. €95 when it existed; good luck now.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.mogshadegolf.com/collections/projeto-serra-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/collections/on-set-with-manors" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/collab-manors-tartan.jpg" alt="Mogshade On Set with Manors &middot; Mostly Sold Out" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-manors-tartan.jpg" alt="Mogshade On Set with Manors &middot; Mostly Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
         <div class="product-name">On Set with Manors &middot; Mostly Sold Out</div>
         <div class="product-desc">An edit curated with the London golfwear brand Manors — tartans, espigas, and azulejos picked for their shoots. Two of the eight covers are still in stock; the Tartan Brown is not.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.mogshadegolf.com/collections/on-set-with-manors" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mogshadegolf.com/collections/course-flip" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/mogshade/collab-fiumani-cap.jpg" alt="Mogshade Fiumani x Mogshade Cap &middot; Sold Out" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-fiumani-cap.jpg" alt="Mogshade Fiumani x Mogshade Cap &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
         <div class="product-name">Fiumani x Mogshade Cap &middot; Sold Out</div>
         <div class="product-desc">From the Course Flip collection — a lightweight two-tone cap made with Fiumani. €32 and gone, like most of that collection&#39;s hats, towels, and ball markers.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.mogshadegolf.com/collections/course-flip" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -544,6 +551,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

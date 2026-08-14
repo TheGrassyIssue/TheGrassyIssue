@@ -95,6 +95,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.ig-grid a{display:block;border:.5px solid var(--ink);overflow:hidden}.ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .3s}.ig-grid a:hover img{transform:scale(1.04)}
 @media(max-width:820px){.ig-grid{grid-template-columns:repeat(2,1fr)}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 <script type="application/ld+json">
 {
@@ -227,149 +244,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Collection — 12 Pieces</h2>
   <div class="products-grid">
 
-    <a href="https://readthegreen.com/products/founders-cap-the-reserve" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/founders-reserve.jpg" alt="Read The Green Founder's Cap | The Reserve" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/founders-reserve.jpg" alt="Read The Green Founder's Cap | The Reserve &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-reserve-a2.jpg" alt="Read The Green Founder's Cap | The Reserve &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-reserve-a3.jpg" alt="Read The Green Founder's Cap | The Reserve &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder's Cap | The Reserve · $47</div>
         <div class="product-desc">Premium 5-panel corduroy snapback with seamless front panel and full buckram. 'Read The Green' embroidered front with signature '4' side logo. Custom interior tag and lining. The cap that started it all — in a rich, earthy colorway that works year-round.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-the-reserve" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/founders-cap-green-natural" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/founders-lucky.jpg" alt="Read The Green Founder's Cap | Lucky" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/founders-lucky.jpg" alt="Read The Green Founder's Cap | Lucky &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-lucky-a2.jpg" alt="Read The Green Founder's Cap | Lucky &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-lucky-a3.jpg" alt="Read The Green Founder's Cap | Lucky &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-lucky-a4.jpg" alt="Read The Green Founder's Cap | Lucky &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder's Cap | Lucky · $47</div>
         <div class="product-desc">Same premium corduroy construction as the Reserve, in a green and natural two-tone. The 'Lucky' colorway leans into the golf roots without being obvious about it. Plastic adjustable snap, custom lining.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-green-natural" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/premium-black-natural-golf-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/founders-black-natural.jpg" alt="Read The Green Founder's Cap | Black &amp; Natural" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/founders-black-natural.jpg" alt="Read The Green Founder's Cap | Black &amp; Natural &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-black-natural-a2.jpg" alt="Read The Green Founder's Cap | Black &amp; Natural &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-black-natural-a3.jpg" alt="Read The Green Founder's Cap | Black &amp; Natural &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/founders-black-natural-a4.jpg" alt="Read The Green Founder's Cap | Black &amp; Natural &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder's Cap | Black &amp; Natural · $45</div>
         <div class="product-desc">The most versatile Founder's Cap in the lineup. Black front panel with natural back, embroidered logo, full buckram structure. Goes with everything on and off the course.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/premium-black-natural-golf-cap" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/club-cap-green-khaki" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/club-albert.jpg" alt="Read The Green Club Cap | The Albert" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/club-albert.jpg" alt="Read The Green Club Cap | The Albert &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/club-albert-a2.jpg" alt="Read The Green Club Cap | The Albert &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/club-albert-a3.jpg" alt="Read The Green Club Cap | The Albert &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/club-albert-a4.jpg" alt="Read The Green Club Cap | The Albert &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Club Cap | The Albert · $40</div>
         <div class="product-desc">Mid-profile Club Cap in green and khaki. Lower crown than the Founder's for a more relaxed silhouette. Named after the neighborhood, built for the course. Clean embroidery, adjustable snap.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/club-cap-green-khaki" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/premium-white-fairway-performance-golf-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/fairway-white.jpg" alt="Read The Green Fairway Performance Cap | White" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/fairway-white.jpg" alt="Read The Green Fairway Performance Cap | White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/fairway-white-a2.jpg" alt="Read The Green Fairway Performance Cap | White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/fairway-white-a3.jpg" alt="Read The Green Fairway Performance Cap | White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/fairway-white-a4.jpg" alt="Read The Green Fairway Performance Cap | White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Fairway Performance Cap | White · $45</div>
         <div class="product-desc">The on-course workhorse. Performance fabric, moisture-wicking, structured fit. Clean white with subtle RTG branding. The cap you grab when the round actually matters.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/premium-white-fairway-performance-golf-cap" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-97-vintage-pullover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/pullover-green.png" alt="Read The Green The '97 Vintage Pullover — Green" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/pullover-green.png" alt="Read The Green The '97 Vintage Pullover — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/pullover-green-a2.jpg" alt="Read The Green The '97 Vintage Pullover — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/pullover-green-a3.jpg" alt="Read The Green The '97 Vintage Pullover — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/pullover-green-a4.jpg" alt="Read The Green The '97 Vintage Pullover — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The '97 Vintage Pullover — Green · $89</div>
         <div class="product-desc">The piece that went viral. Lightweight vintage-inspired nylon pullover with rib-knit cuffs and collar, adjustable drawstring waistline. 'Read The Green Golf Club 1997' embroidered front logo. 100% nylon, unisex. Works on the course and everywhere else.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-97-vintage-pullover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-97-vintage-short-sleeve-pullover-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/ss-pullover-navy.jpg" alt="Read The Green Short Sleeve Pullover — Navy" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/ss-pullover-navy.jpg" alt="Read The Green Short Sleeve Pullover — Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/ss-pullover-navy-a2.jpg" alt="Read The Green Short Sleeve Pullover — Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/ss-pullover-navy-a3.jpg" alt="Read The Green Short Sleeve Pullover — Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/ss-pullover-navy-a4.jpg" alt="Read The Green Short Sleeve Pullover — Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Short Sleeve Pullover — Navy · $79</div>
         <div class="product-desc">Same vintage-inspired DNA as the full-length '97, cut short for summer rounds. Rib-knit cuffs, drawstring waist, embroidered logos front and back. 100% nylon, unisex. The warm-weather answer to the pullover that started it all.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-97-vintage-short-sleeve-pullover-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-knit-sweater" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/knit-sweater.png" alt="Read The Green The Oversized Knit Sweater" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/knit-sweater.png" alt="Read The Green The Oversized Knit Sweater &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/knit-sweater-a2.jpg" alt="Read The Green The Oversized Knit Sweater &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/knit-sweater-a3.jpg" alt="Read The Green The Oversized Knit Sweater &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/knit-sweater-a4.jpg" alt="Read The Green The Oversized Knit Sweater &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Oversized Knit Sweater · $100</div>
         <div class="product-desc">Heavyweight and handknit. 800 GSM pre-shrunk cotton for a structured, premium feel. 'Read The Green' text embroidery. Oversized fit — they recommend sizing down. Dry clean only. The most premium piece in the RTG lineup.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-knit-sweater" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-green-crewneck" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/crewneck-grey.png" alt="Read The Green Varsity Crewneck | Grey" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/crewneck-grey.png" alt="Read The Green Varsity Crewneck | Grey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/crewneck-grey-a2.jpg" alt="Read The Green Varsity Crewneck | Grey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/crewneck-grey-a3.jpg" alt="Read The Green Varsity Crewneck | Grey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/crewneck-grey-a4.jpg" alt="Read The Green Varsity Crewneck | Grey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Varsity Crewneck | Grey · $75</div>
         <div class="product-desc">Heavyweight crewneck with varsity-style Read The Green branding. Cotton construction, relaxed fit, built for post-round wear or weekend errands. The kind of crewneck that gets better with every wash.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-green-crewneck" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-club-tee" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/club-tee.png" alt="Read The Green The Club Tee" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/club-tee.png" alt="Read The Green The Club Tee &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/club-tee-a2.jpg" alt="Read The Green The Club Tee &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/club-tee-a3.jpg" alt="Read The Green The Club Tee &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/club-tee-a4.jpg" alt="Read The Green The Club Tee &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Club Tee · $60</div>
         <div class="product-desc">Premium heavyweight drop-shoulder tee with a boxy, slightly cropped feel. Read The Green New York design, water-printed. Unisex. The entry point into RTG's clothing line, and it doesn't feel like a compromise.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-club-tee" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-misprint" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/misprint.png" alt="Read The Green The Misprint" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/misprint.png" alt="Read The Green The Misprint &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/misprint-a2.jpg" alt="Read The Green The Misprint &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/misprint-a3.jpg" alt="Read The Green The Misprint &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/misprint-a4.jpg" alt="Read The Green The Misprint &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Misprint · $60</div>
         <div class="product-desc">Intentionally imperfect. Premium heavyweight tee with a distressed, off-register print that looks like a happy accident. RTG's playful side — golf doesn't have to be buttoned up all the time.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-misprint" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-tee-shirt-tan-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/readthegreen/tee-white.png" alt="Read The Green The Tee Shirt | White" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/tee-white.png" alt="Read The Green The Tee Shirt | White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/tee-white-a2.jpg" alt="Read The Green The Tee Shirt | White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/tee-white-a3.jpg" alt="Read The Green The Tee Shirt | White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/tee-white-a4.jpg" alt="Read The Green The Tee Shirt | White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Tee Shirt | White · $60</div>
         <div class="product-desc">Clean white heavyweight tee with subtle RTG branding. Premium cotton, relaxed fit. The blank canvas of the lineup — pair it with any RTG hat and you're set.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-tee-shirt-tan-copy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -377,125 +370,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 <section class="products" style="margin-top:48px;">
   <h2 class="products-hdr">New from the Collection &mdash; 12 Pieces</h2>
   <div class="products-grid">
-    <a href="https://readthegreen.com/products/the-grounds-crew-jacket-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-gcj-green.jpg" alt="Read The Green Grounds Crew Jacket — Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-gcj-green.jpg" alt="Read The Green Grounds Crew Jacket — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-gcj-green-a2.jpg" alt="Read The Green Grounds Crew Jacket — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-gcj-green-a3.jpg" alt="Read The Green Grounds Crew Jacket — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-gcj-green-a4.jpg" alt="Read The Green Grounds Crew Jacket — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Grounds Crew Jacket | Green &middot; $150</div>
         <div class="product-desc">The work jacket in dark forest green with a brown corduroy collar and the Grounds Crew chest badge. RTG&rsquo;s most premium piece, and the one that keeps selling out.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-grounds-crew-jacket-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-grounds-crew-jacket" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-gcj-tan.jpg" alt="Read The Green Grounds Crew Jacket — Tan" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-gcj-tan.jpg" alt="Read The Green Grounds Crew Jacket — Tan &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-gcj-tan-a2.jpg" alt="Read The Green Grounds Crew Jacket — Tan &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-gcj-tan-a3.jpg" alt="Read The Green Grounds Crew Jacket — Tan &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-gcj-tan-a4.jpg" alt="Read The Green Grounds Crew Jacket — Tan &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Grounds Crew Jacket | Tan &middot; $150</div>
         <div class="product-desc">The tan version &mdash; quilted lining, snap cuffs, New York New York stitched under the badge. Reads vintage groundskeeper, wears like a daily jacket.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-grounds-crew-jacket" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-97-vintage-pullover-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-ls-navy.jpg" alt="Read The Green '97 Vintage Pullover — Navy" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-ls-navy.jpg" alt="Read The Green '97 Vintage Pullover — Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-ls-navy-a2.jpg" alt="Read The Green '97 Vintage Pullover — Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-ls-navy-a3.jpg" alt="Read The Green '97 Vintage Pullover — Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-ls-navy-a4.jpg" alt="Read The Green '97 Vintage Pullover — Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The &rsquo;97 Vintage Pullover | Navy &middot; $89</div>
         <div class="product-desc">The viral pullover in navy &mdash; lightweight nylon, rib-knit V-neck collar, drawstring waist. The piece that put RTG&rsquo;s clothing line on the map.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-97-vintage-pullover-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-97-vintage-short-sleeve-pullover-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-ss-green.jpg" alt="Read The Green '97 Vintage SS Pullover — Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-ss-green.jpg" alt="Read The Green '97 Vintage SS Pullover — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-ss-green-a2.jpg" alt="Read The Green '97 Vintage SS Pullover — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-ss-green-a3.jpg" alt="Read The Green '97 Vintage SS Pullover — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-ss-green-a4.jpg" alt="Read The Green '97 Vintage SS Pullover — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The &rsquo;97 Vintage SS Pullover | Green &middot; $79</div>
         <div class="product-desc">The short-sleeve summer cut of the &rsquo;97 &mdash; same collar, same drawstring, half the fabric. Built for Texas back nines in August.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-97-vintage-short-sleeve-pullover-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-grey-crewneck" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-varsity-green.jpg" alt="Read The Green Varsity Crewneck — Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-varsity-green.jpg" alt="Read The Green Varsity Crewneck — Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-varsity-green-a2.jpg" alt="Read The Green Varsity Crewneck — Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-varsity-green-a3.jpg" alt="Read The Green Varsity Crewneck — Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-varsity-green-a4.jpg" alt="Read The Green Varsity Crewneck — Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Varsity Crewneck | Green &middot; $75</div>
         <div class="product-desc">Chunky knit crewneck with a white tipped collar and Read the Green script across the chest. Collegiate without the college.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-grey-crewneck" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/the-tee-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-tee-tan.jpg" alt="Read The Green The Tee Shirt — Tan" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-tee-tan.jpg" alt="Read The Green The Tee Shirt — Tan &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-tee-tan-a2.jpg" alt="Read The Green The Tee Shirt — Tan &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-tee-tan-a3.jpg" alt="Read The Green The Tee Shirt — Tan &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-tee-tan-a4.jpg" alt="Read The Green The Tee Shirt — Tan &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">The Tee Shirt | Tan &middot; $60</div>
         <div class="product-desc">Heavyweight cream tee with a hand-drawn New York, New York back graphic &mdash; a golfer crossing the street, clubs over his shoulder, cab waiting.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/the-tee-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/founders-cap-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-cap-midnight.jpg" alt="Read The Green Founder's Cap — Midnight" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-cap-midnight.jpg" alt="Read The Green Founder's Cap — Midnight &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-midnight-a2.jpg" alt="Read The Green Founder's Cap — Midnight &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-midnight-a3.jpg" alt="Read The Green Founder's Cap — Midnight &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder&rsquo;s Cap | Midnight &middot; $47</div>
         <div class="product-desc">The signature 5-panel corduroy snapback in deep navy with the gold-stitched logo golfer. The dressiest colorway in the corduroy run.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/founders-cap-brown-natural-corduroy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-cap-espresso.jpg" alt="Read The Green Founder's Cap — Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-cap-espresso.jpg" alt="Read The Green Founder's Cap — Espresso &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-espresso-a2.jpg" alt="Read The Green Founder's Cap — Espresso &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-espresso-a3.jpg" alt="Read The Green Founder's Cap — Espresso &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-espresso-a4.jpg" alt="Read The Green Founder's Cap — Espresso &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder&rsquo;s Cap | Espresso &middot; $47</div>
         <div class="product-desc">Two-tone brown-on-natural corduroy. The colorway you&rsquo;ll see most in RTG&rsquo;s own New York street shots.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-brown-natural-corduroy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/founders-cap-khaki-white-corduroy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-cap-goldenhour.jpg" alt="Read The Green Founder's Cap — Golden Hour" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-cap-goldenhour.jpg" alt="Read The Green Founder's Cap — Golden Hour &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-goldenhour-a2.jpg" alt="Read The Green Founder's Cap — Golden Hour &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-goldenhour-a3.jpg" alt="Read The Green Founder's Cap — Golden Hour &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-goldenhour-a4.jpg" alt="Read The Green Founder's Cap — Golden Hour &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder&rsquo;s Cap | Golden Hour &middot; $47</div>
         <div class="product-desc">Khaki and white corduroy, named for the last hour of light on the course. Softest colorway of the bunch.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-khaki-white-corduroy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/founders-cap-brown-corduroy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-cap-brownstone.jpg" alt="Read The Green Founder's Cap — Brownstone" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-cap-brownstone.jpg" alt="Read The Green Founder's Cap — Brownstone &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-brownstone-a2.jpg" alt="Read The Green Founder's Cap — Brownstone &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-brownstone-a3.jpg" alt="Read The Green Founder's Cap — Brownstone &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-cap-brownstone-a4.jpg" alt="Read The Green Founder's Cap — Brownstone &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Founder&rsquo;s Cap | Brownstone &middot; $47</div>
         <div class="product-desc">All-brown corduroy, named for the row houses the brand shoots in front of. Fall cap, available in August.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-brown-corduroy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/founders-cap-black-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-club-brooklyn.jpg" alt="Read The Green Club Cap — Brooklyn" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-club-brooklyn.jpg" alt="Read The Green Club Cap — Brooklyn &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-club-brooklyn-a2.jpg" alt="Read The Green Club Cap — Brooklyn &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-club-brooklyn-a3.jpg" alt="Read The Green Club Cap — Brooklyn &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-club-brooklyn-a4.jpg" alt="Read The Green Club Cap — Brooklyn &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Club Cap | Brooklyn &middot; $40</div>
         <div class="product-desc">Mid-profile 6-panel in black with the logo golfer up front. The neighborhood-series cap for the borough that plays Dyker Beach.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/founders-cap-black-copy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://readthegreen.com/products/club-cap-natural-royal-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/readthegreen/new-club-littleitaly.jpg" alt="Read The Green Club Cap — Little Italy" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/readthegreen/new-club-littleitaly.jpg" alt="Read The Green Club Cap — Little Italy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-club-littleitaly-a2.jpg" alt="Read The Green Club Cap — Little Italy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-club-littleitaly-a3.jpg" alt="Read The Green Club Cap — Little Italy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/readthegreen/new-club-littleitaly-a4.jpg" alt="Read The Green Club Cap — Little Italy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Read The Green</div>
         <div class="product-name">Club Cap | Little Italy &middot; $40</div>
         <div class="product-desc">Natural crown, royal brim, red accent stitch &mdash; the Italian tricolore as a golf cap. Best-looking of the Club Cap series.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://readthegreen.com/products/club-cap-natural-royal-copy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -627,6 +620,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

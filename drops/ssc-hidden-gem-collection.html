@@ -105,6 +105,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.pull-quote{padding:0 20px}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -177,155 +194,155 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Hidden Gem Collection &mdash; All 15</h2>
   <div class="products-grid">
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gem-mackenzie-golf-bag" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-mackenzie.jpg" alt="Sugarloaf Social Club Hidden Gem MacKenzie Golf Bag" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-mackenzie.jpg" alt="Sugarloaf Social Club Hidden Gem MacKenzie Golf Bag &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-mackenzie-a2.jpg" alt="Sugarloaf Social Club Hidden Gem MacKenzie Golf Bag &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-mackenzie-a3.jpg" alt="Sugarloaf Social Club Hidden Gem MacKenzie Golf Bag &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-mackenzie-a4.jpg" alt="Sugarloaf Social Club Hidden Gem MacKenzie Golf Bag &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem MacKenzie Golf Bag &middot; $850</div>
         <div class="product-desc">Built in Portland by MacKenzie Golf Bags for SSC. The 8&Prime; size takes a full set with room left over, and it has a water bottle holder &mdash; which MacKenzie almost never does.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gem-mackenzie-golf-bag" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/the-ssc-anorak" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-anorak.jpg" alt="Sugarloaf Social Club The SSC Anorak" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-anorak.jpg" alt="Sugarloaf Social Club The SSC Anorak &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-anorak-a2.jpg" alt="Sugarloaf Social Club The SSC Anorak &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-anorak-a3.jpg" alt="Sugarloaf Social Club The SSC Anorak &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-anorak-a4.jpg" alt="Sugarloaf Social Club The SSC Anorak &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">The SSC Anorak &middot; $165</div>
         <div class="product-desc">Cotton-nylon, drop shoulder, drawcord hem. SSC&rsquo;s own description is that it feels like the old windbreaker you stole from your cousin, which is exactly right.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/the-ssc-anorak" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gems-windshirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-windshirt.jpg" alt="Sugarloaf Social Club Hidden Gem Windshirt" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-windshirt.jpg" alt="Sugarloaf Social Club Hidden Gem Windshirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-windshirt-a2.jpg" alt="Sugarloaf Social Club Hidden Gem Windshirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-windshirt-a3.jpg" alt="Sugarloaf Social Club Hidden Gem Windshirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-windshirt-a4.jpg" alt="Sugarloaf Social Club Hidden Gem Windshirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem Windshirt &middot; $125</div>
         <div class="product-desc">Stretchy, wind and water repellent, mesh lined, vented in the back. Size up if you&rsquo;re between.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gems-windshirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gem-leather-headcovers" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-leather-hc.jpg" alt="Sugarloaf Social Club Hidden Gem Leather Headcovers" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-leather-hc.jpg" alt="Sugarloaf Social Club Hidden Gem Leather Headcovers &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-leather-hc-a2.jpg" alt="Sugarloaf Social Club Hidden Gem Leather Headcovers &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-leather-hc-a3.jpg" alt="Sugarloaf Social Club Hidden Gem Leather Headcovers &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-leather-hc-a4.jpg" alt="Sugarloaf Social Club Hidden Gem Leather Headcovers &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem Leather Headcovers &middot; $120 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Gone on day one. Their pitch: just as appropriate at a top-100 as it is at your local muni.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gem-leather-headcovers" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/tech-vest-2026" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-vest.jpg" alt="Sugarloaf Social Club SSC Tech Vest" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-vest.jpg" alt="Sugarloaf Social Club SSC Tech Vest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-vest-a2.jpg" alt="Sugarloaf Social Club SSC Tech Vest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-vest-a3.jpg" alt="Sugarloaf Social Club SSC Tech Vest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-vest-a4.jpg" alt="Sugarloaf Social Club SSC Tech Vest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">SSC Tech Vest &middot; $115</div>
         <div class="product-desc">Zip pockets, Arrow on the back. SSC calls it perhaps their favorite piece they make, and it&rsquo;s the one that works away from the course.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/tech-vest-2026" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/long-sleeve-striped-pique-polo-spring" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-ls-polo.jpg" alt="Sugarloaf Social Club The Mini Stripe LS Polo" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-ls-polo.jpg" alt="Sugarloaf Social Club The Mini Stripe LS Polo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-ls-polo-a2.jpg" alt="Sugarloaf Social Club The Mini Stripe LS Polo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-ls-polo-a3.jpg" alt="Sugarloaf Social Club The Mini Stripe LS Polo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-ls-polo-a4.jpg" alt="Sugarloaf Social Club The Mini Stripe LS Polo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">The Mini Stripe LS Polo &middot; $105</div>
         <div class="product-desc">Their classic pique polo in long sleeve, back for a second year with the SSC Arrow on the back yoke.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/long-sleeve-striped-pique-polo-spring" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gem-knit-headcovers" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-knit-hc.jpg" alt="Sugarloaf Social Club Hidden Gem Knit Headcovers" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-knit-hc.jpg" alt="Sugarloaf Social Club Hidden Gem Knit Headcovers &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-knit-hc-a2.jpg" alt="Sugarloaf Social Club Hidden Gem Knit Headcovers &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-knit-hc-a3.jpg" alt="Sugarloaf Social Club Hidden Gem Knit Headcovers &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-knit-hc-a4.jpg" alt="Sugarloaf Social Club Hidden Gem Knit Headcovers &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem Knit Headcovers &middot; $105 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Made in the USA by Fore Ewe from 100% American wool yarn. Also gone already.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gem-knit-headcovers" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/the-tech-shorts" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-shorts.jpg" alt="Sugarloaf Social Club The Tech Shorts" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-shorts.jpg" alt="Sugarloaf Social Club The Tech Shorts &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-shorts-a2.jpg" alt="Sugarloaf Social Club The Tech Shorts &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-shorts-a3.jpg" alt="Sugarloaf Social Club The Tech Shorts &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-shorts-a4.jpg" alt="Sugarloaf Social Club The Tech Shorts &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">The Tech Shorts &middot; $90</div>
         <div class="product-desc">Lake, range, dog walk. Ian wears his basically every day, per the product page.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/the-tech-shorts" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gem-crazy-creek-chair" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-chair.jpg" alt="Sugarloaf Social Club Hidden Gem Crazy Creek Chair" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-chair.jpg" alt="Sugarloaf Social Club Hidden Gem Crazy Creek Chair &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-chair-a2.jpg" alt="Sugarloaf Social Club Hidden Gem Crazy Creek Chair &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-chair-a3.jpg" alt="Sugarloaf Social Club Hidden Gem Crazy Creek Chair &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-chair-a4.jpg" alt="Sugarloaf Social Club Hidden Gem Crazy Creek Chair &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem Crazy Creek Chair &middot; $75</div>
         <div class="product-desc">The actual Crazy Creek, in SSC colors. &ldquo;Bombproof,&rdquo; folds flat, 16.5&Prime; seat height.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gem-crazy-creek-chair" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/golf-technologies-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-tee.jpg" alt="Sugarloaf Social Club Golf Technologies T-Shirt" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-tee.jpg" alt="Sugarloaf Social Club Golf Technologies T-Shirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-tee-a2.jpg" alt="Sugarloaf Social Club Golf Technologies T-Shirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-tee-a3.jpg" alt="Sugarloaf Social Club Golf Technologies T-Shirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-tee-a4.jpg" alt="Sugarloaf Social Club Golf Technologies T-Shirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Golf Technologies T-Shirt &middot; $44</div>
         <div class="product-desc">Has their McLean address printed on the back. Their words: please don&rsquo;t stalk us, please do come through and buy something.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/golf-technologies-t-shirt" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/cotton-ssc-arrow-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-cap.jpg" alt="Sugarloaf Social Club Cotton SSC Arrow Cap" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-cap.jpg" alt="Sugarloaf Social Club Cotton SSC Arrow Cap &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-cap-a2.jpg" alt="Sugarloaf Social Club Cotton SSC Arrow Cap &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-cap-a3.jpg" alt="Sugarloaf Social Club Cotton SSC Arrow Cap &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-cap-a4.jpg" alt="Sugarloaf Social Club Cotton SSC Arrow Cap &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Cotton SSC Arrow Cap &middot; $40 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Built by American Needle. Sold out, with Nantucket Red, Lavender, Lemon Ice, Classic Blue and Snow White restocking.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/cotton-ssc-arrow-cap" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gem-scoutfitters-32-oz-nalgene" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-nalgene.jpg" alt="Sugarloaf Social Club Hidden Gem Scoutfitters Nalgene" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-nalgene.jpg" alt="Sugarloaf Social Club Hidden Gem Scoutfitters Nalgene &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-nalgene-a2.jpg" alt="Sugarloaf Social Club Hidden Gem Scoutfitters Nalgene &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-nalgene-a3.jpg" alt="Sugarloaf Social Club Hidden Gem Scoutfitters Nalgene &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-nalgene-a4.jpg" alt="Sugarloaf Social Club Hidden Gem Scoutfitters Nalgene &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem Scoutfitters Nalgene &middot; $32</div>
         <div class="product-desc">32 oz wide mouth, made in the USA. Fill it at the turn.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gem-scoutfitters-32-oz-nalgene" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/pistol-putter-grip" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-grip.jpg" alt="Sugarloaf Social Club Pistol Putter Grip" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-grip.jpg" alt="Sugarloaf Social Club Pistol Putter Grip &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-grip-a2.jpg" alt="Sugarloaf Social Club Pistol Putter Grip &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-grip-a3.jpg" alt="Sugarloaf Social Club Pistol Putter Grip &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-grip-a4.jpg" alt="Sugarloaf Social Club Pistol Putter Grip &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Pistol Putter Grip &middot; $24</div>
         <div class="product-desc">Refreshed rubber pistol grip &mdash; Arrow on the front, dancing SUGARLOAF at the base, Big S on the butt. 75 grams.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/pistol-putter-grip" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/hidden-gem-frisbee" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-frisbee.jpg" alt="Sugarloaf Social Club Hidden Gem Frisbee" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-frisbee.jpg" alt="Sugarloaf Social Club Hidden Gem Frisbee &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-frisbee-a2.jpg" alt="Sugarloaf Social Club Hidden Gem Frisbee &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-frisbee-a3.jpg" alt="Sugarloaf Social Club Hidden Gem Frisbee &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-frisbee-a4.jpg" alt="Sugarloaf Social Club Hidden Gem Frisbee &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Hidden Gem Frisbee &middot; $16</div>
         <div class="product-desc">They made a frisbee. That&rsquo;s the entire product description, more or less.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/hidden-gem-frisbee" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/ssc-license-plate-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/ssc-plate.jpg" alt="Sugarloaf Social Club SSC License Plate Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-plate.jpg" alt="Sugarloaf Social Club SSC License Plate Cover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/ssc-plate-a2.jpg" alt="Sugarloaf Social Club SSC License Plate Cover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">SSC License Plate Cover &middot; $15</div>
         <div class="product-desc">Reads: IF YOU CAN READ THIS, I NEED TO MOVE INTO THE RIGHT LANE SO YOU CAN PASS ME.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/ssc-license-plate-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -344,65 +361,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <div style="max-width:760px;font-size:15px;line-height:1.7;opacity:.85;margin-bottom:26px">Hidden Gem isn&rsquo;t the only reason to be on their site. These are still in stock from earlier drops.</div>
   <div class="products-grid">
 
-    <a href="https://sugarloafsocialclub.com/products/ssc-bb-f-irons-b012" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/fav-irons.jpg" alt="Sugarloaf Social Club SSC + BB&amp;F &ldquo;Don White&rdquo; Irons, 4&ndash;P" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-irons.jpg" alt="Sugarloaf Social Club SSC + BB&amp;F &ldquo;Don White&rdquo; Irons, 4&ndash;P &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-irons-a2.jpg" alt="Sugarloaf Social Club SSC + BB&amp;F &ldquo;Don White&rdquo; Irons, 4&ndash;P &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-irons-a3.jpg" alt="Sugarloaf Social Club SSC + BB&amp;F &ldquo;Don White&rdquo; Irons, 4&ndash;P &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-irons-a4.jpg" alt="Sugarloaf Social Club SSC + BB&amp;F &ldquo;Don White&rdquo; Irons, 4&ndash;P &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">SSC + BB&amp;F &ldquo;Don White&rdquo; Irons, 4&ndash;P &middot; $3,000</div>
         <div class="product-desc">Boyd Blade &amp; Ferrule blades hand-ground by Don White, the man who built irons for Tour players for decades. Grips and ferrules included. The most serious thing SSC has ever sold.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/ssc-bb-f-irons-b012" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/ssc-x-makino-tour-3-putter" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/fav-putter.jpg" alt="Sugarloaf Social Club SSC x Makino TOUR 3 Putter" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-putter.jpg" alt="Sugarloaf Social Club SSC x Makino TOUR 3 Putter &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-putter-a2.jpg" alt="Sugarloaf Social Club SSC x Makino TOUR 3 Putter &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-putter-a3.jpg" alt="Sugarloaf Social Club SSC x Makino TOUR 3 Putter &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-putter-a4.jpg" alt="Sugarloaf Social Club SSC x Makino TOUR 3 Putter &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">SSC x Makino TOUR 3 Putter &middot; $800</div>
         <div class="product-desc">Milled in Japan from stainless. You get a follow-up email to specify shaft length, which tells you what kind of object it is.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/ssc-x-makino-tour-3-putter" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/suede-boat-shoe" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/fav-loafer.jpg" alt="Sugarloaf Social Club The Sugar-Loafer Suede Boat Shoe" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-loafer.jpg" alt="Sugarloaf Social Club The Sugar-Loafer Suede Boat Shoe &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-loafer-a2.jpg" alt="Sugarloaf Social Club The Sugar-Loafer Suede Boat Shoe &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-loafer-a3.jpg" alt="Sugarloaf Social Club The Sugar-Loafer Suede Boat Shoe &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-loafer-a4.jpg" alt="Sugarloaf Social Club The Sugar-Loafer Suede Boat Shoe &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">The Sugar-Loafer Suede Boat Shoe &middot; $180</div>
         <div class="product-desc">The boat shoe is back in a softer suede than the original leather. Same fit. Genuinely wearable off the course.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/suede-boat-shoe" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/double-seve-cooler" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/fav-cooler.jpg" alt="Sugarloaf Social Club Double Seve Cooler Bag" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-cooler.jpg" alt="Sugarloaf Social Club Double Seve Cooler Bag &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-cooler-a2.jpg" alt="Sugarloaf Social Club Double Seve Cooler Bag &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-cooler-a3.jpg" alt="Sugarloaf Social Club Double Seve Cooler Bag &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-cooler-a4.jpg" alt="Sugarloaf Social Club Double Seve Cooler Bag &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Double Seve Cooler Bag &middot; $160</div>
         <div class="product-desc">Made in the USA by Hudson Sutler with half an inch of insulation and a welded waterproof liner. Named the way SSC names things.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/double-seve-cooler" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/tourasaurus-sweater" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/fav-sweater.jpg" alt="Sugarloaf Social Club Tourasaurus 8-Bit Sweater" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-sweater.jpg" alt="Sugarloaf Social Club Tourasaurus 8-Bit Sweater &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-sweater-a2.jpg" alt="Sugarloaf Social Club Tourasaurus 8-Bit Sweater &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-sweater-a3.jpg" alt="Sugarloaf Social Club Tourasaurus 8-Bit Sweater &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-sweater-a4.jpg" alt="Sugarloaf Social Club Tourasaurus 8-Bit Sweater &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Tourasaurus 8-Bit Sweater &middot; $130</div>
         <div class="product-desc">An 8-bit dinosaur ready for his Mario Golf tee time. Heavyweight, 100% cotton, completely unserious.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/tourasaurus-sweater" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://sugarloafsocialclub.com/products/nantucket-butter-popsicle-scorecard-holder" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/ssc-hidden-gem/fav-scorecard.jpg" alt="Sugarloaf Social Club Nantucket Butter Scorecard Holder" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-scorecard.jpg" alt="Sugarloaf Social Club Nantucket Butter Scorecard Holder &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-scorecard-a2.jpg" alt="Sugarloaf Social Club Nantucket Butter Scorecard Holder &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-scorecard-a3.jpg" alt="Sugarloaf Social Club Nantucket Butter Scorecard Holder &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-hidden-gem/fav-scorecard-a4.jpg" alt="Sugarloaf Social Club Nantucket Butter Scorecard Holder &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">Nantucket Butter Scorecard Holder &middot; $110</div>
         <div class="product-desc">Made in the USA by Winston Collection. The leather is &ldquo;made to fade,&rdquo; so every one ends up different.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://sugarloafsocialclub.com/products/nantucket-butter-popsicle-scorecard-holder" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -470,6 +487,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

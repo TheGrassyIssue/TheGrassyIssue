@@ -144,6 +144,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;border:.5px solid var(--ink)}
 @media(max-width:820px){.products{padding:0 20px}.products-grid{grid-template-columns:repeat(2,1fr)}.ig-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -239,125 +256,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">The base layer of the whole collection. Manors calls it Pebble on the technical pieces and Chalk on the cotton; either way it&rsquo;s the off-white that ties the drop to every clubhouse dress code in Britain.</p>
   <div class="products-grid">
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-harrington-jacket" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-harrington-jacket-pebble.jpg" alt="Reebok x Manors Harrington Jacket Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-harrington-jacket-pebble.jpg" alt="Reebok x Manors Harrington Jacket Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Harrington Jacket &middot; Pebble &middot; $180</div>
         <div class="product-desc">The anchor piece. Crinkle-nylon Harrington with the full United Kingdom of Golf crest &mdash; lions, crown, Union Jack &mdash; embroidered across the back. Elastic hem and cuffs, snap placket.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-harrington-jacket" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-mockneck-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-mock-neck-polo-pebble.jpg" alt="Reebok x Manors Mock Neck Polo Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-mock-neck-polo-pebble.jpg" alt="Reebok x Manors Mock Neck Polo Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Mock Neck Polo &middot; Pebble &middot; $95 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Short-sleeve mock neck in the collection&rsquo;s harlequin jacquard, with a lion badge at the chest. The most graphic thing in the drop and the one that reads as football kit more than golf shirt.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-mockneck-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-recycled-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-recycled-polo-pebble.jpg" alt="Reebok x Manors Recycled Polo Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-recycled-polo-pebble.jpg" alt="Reebok x Manors Recycled Polo Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Recycled Polo &middot; Pebble &middot; $80</div>
         <div class="product-desc">The plain one, in the best sense. Recycled pique with a soft-roll collar and small Reebok vector at the chest. The piece you buy if you only buy one.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-recycled-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-goat-pique-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-goat-pique-polo-pebble.jpg" alt="Reebok x Manors GOAT Pique Polo Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-goat-pique-polo-pebble.jpg" alt="Reebok x Manors GOAT Pique Polo Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">GOAT Pique Polo &middot; Pebble &middot; $90</div>
         <div class="product-desc">Fine horizontal stripes in pique, with MANORS and the vector stacked at the chest. Retro tennis-club energy dropped onto a golf course.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-goat-pique-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-club-pant" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-club-pant-pebble.jpg" alt="Reebok x Manors Club Pant Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-club-pant-pebble.jpg" alt="Reebok x Manors Club Pant Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Club Pant &middot; Pebble &middot; $130</div>
         <div class="product-desc">Wide, pleated, and unapologetically roomy through the leg. Elasticated waist. Cut closer to a trouser you&rsquo;d wear off the course than anything sold in a pro shop.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-club-pant" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-tour-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-tour-shirt-chalk.jpg" alt="Reebok x Manors Tour Shirt Chalk" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-tour-shirt-chalk.jpg" alt="Reebok x Manors Tour Shirt Chalk &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Tour Shirt &middot; Chalk &middot; $120</div>
         <div class="product-desc">The crested piece &mdash; the full heraldic arms on the chest, raglan sleeves, half-zip mock collar. This is the one the whole campaign is built around.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-tour-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-organic-1-4-zip-pullover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-organic-1-4-zip-pullover-pebble.jpg" alt="Reebok x Manors Organic 1/4 Zip Pullover Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-organic-1-4-zip-pullover-pebble.jpg" alt="Reebok x Manors Organic 1/4 Zip Pullover Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Organic 1/4 Zip Pullover &middot; Pebble &middot; $105</div>
         <div class="product-desc">Organic cotton loopback with raglan seams and a stand collar. The layer for a cold first tee that doesn&rsquo;t look technical.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-organic-1-4-zip-pullover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-graphic-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-graphic-t-shirt-chalk.jpg" alt="Reebok x Manors Graphic T-Shirt Chalk" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-graphic-t-shirt-chalk.jpg" alt="Reebok x Manors Graphic T-Shirt Chalk &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Graphic T-Shirt &middot; Chalk &middot; $45</div>
         <div class="product-desc">Boxy heavyweight cotton with the United Kingdom of Golf crest printed large across the back and a small hit at the chest.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-graphic-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-logo-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-logo-t-shirt-chalk.jpg" alt="Reebok x Manors Logo T-Shirt Chalk" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-logo-t-shirt-chalk.jpg" alt="Reebok x Manors Logo T-Shirt Chalk &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Logo T-Shirt &middot; Chalk &middot; $45</div>
         <div class="product-desc">The quieter tee. Reebok vector at the chest, nothing on the back. Same heavy cotton and relaxed cut.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-logo-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-retro-crown-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-retro-crown-cap-chalk.jpg" alt="Reebok x Manors Retro Crown Cap Chalk" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-retro-crown-cap-chalk.jpg" alt="Reebok x Manors Retro Crown Cap Chalk &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Retro Crown Cap &middot; Chalk &middot; $45</div>
         <div class="product-desc">Flat-brim five-panel with a rope front, MANORS wordmark and the vector on the crown. Contrast underbrim.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-retro-crown-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/reebok-x-manors-tech-cap-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-tech-cap-pebble.jpg" alt="Reebok x Manors Tech Cap Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-tech-cap-pebble.jpg" alt="Reebok x Manors Tech Cap Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Tech Cap &middot; Pebble &middot; $40 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Lightweight nylon five-panel with a woven tab at the side. The performance option, minus the performance styling.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/reebok-x-manors-tech-cap-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-shade-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-shade-cap-pebble.jpg" alt="Reebok x Manors Shade Cap Pebble" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-shade-cap-pebble.jpg" alt="Reebok x Manors Shade Cap Pebble &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Shade Cap &middot; Pebble &middot; $45</div>
         <div class="product-desc">The oddball and the best thing in the accessories run &mdash; a cap with a full neck drape, built for links wind and an unbroken sun.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-shade-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -366,65 +383,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">The best run in the collection and the one the product photography undersells. Legacy Green is a soft, dusty sage rather than a hunting green, and it turns the harlequin print into something completely different.</p>
   <div class="products-grid">
 
-    <a href="https://www.manorsgolf.com/products/reebok-x-manors-club-c-revenge-golf" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-club-c-revenge-golf-legacy-green.jpg" alt="Reebok x Manors Club C Revenge Golf Legacy Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-club-c-revenge-golf-legacy-green.jpg" alt="Reebok x Manors Club C Revenge Golf Legacy Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Club C Revenge Golf &middot; Legacy Green &middot; $130</div>
         <div class="product-desc">The Club C, spiked. Checkered heel tab, MANORS debossed at the side, and a proper golf outsole under a silhouette that has never been near a fairway before.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/reebok-x-manors-club-c-revenge-golf" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-mockneck-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-mock-neck-polo-legacy-green.jpg" alt="Reebok x Manors Mock Neck Polo Legacy Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-mock-neck-polo-legacy-green.jpg" alt="Reebok x Manors Mock Neck Polo Legacy Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Mock Neck Polo &middot; Legacy Green &middot; $95</div>
         <div class="product-desc">Short-sleeve mock neck in the collection&rsquo;s harlequin jacquard, with a lion badge at the chest. The most graphic thing in the drop and the one that reads as football kit more than golf shirt.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-mockneck-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-recycled-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-recycled-polo-legacy-green.jpg" alt="Reebok x Manors Recycled Polo Legacy Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-recycled-polo-legacy-green.jpg" alt="Reebok x Manors Recycled Polo Legacy Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Recycled Polo &middot; Legacy Green &middot; $80</div>
         <div class="product-desc">The plain one, in the best sense. Recycled pique with a soft-roll collar and small Reebok vector at the chest. The piece you buy if you only buy one.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-recycled-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-tour-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-tour-shirt-legacy-green.jpg" alt="Reebok x Manors Tour Shirt Legacy Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-tour-shirt-legacy-green.jpg" alt="Reebok x Manors Tour Shirt Legacy Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Tour Shirt &middot; Legacy Green &middot; $120</div>
         <div class="product-desc">The crested piece &mdash; the full heraldic arms on the chest, raglan sleeves, half-zip mock collar. This is the one the whole campaign is built around.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-tour-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-organic-1-4-zip-pullover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-organic-1-4-zip-pullover-legacy-green.jpg" alt="Reebok x Manors Organic 1/4 Zip Pullover Legacy Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-organic-1-4-zip-pullover-legacy-green.jpg" alt="Reebok x Manors Organic 1/4 Zip Pullover Legacy Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Organic 1/4 Zip Pullover &middot; Legacy Green &middot; $105</div>
         <div class="product-desc">Organic cotton loopback with raglan seams and a stand collar. The layer for a cold first tee that doesn&rsquo;t look technical.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-organic-1-4-zip-pullover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/reebok-x-manors-tech-cap-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-tech-cap-legacy-green.jpg" alt="Reebok x Manors Tech Cap Legacy Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-tech-cap-legacy-green.jpg" alt="Reebok x Manors Tech Cap Legacy Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Tech Cap &middot; Legacy Green &middot; $40</div>
         <div class="product-desc">Lightweight nylon five-panel with a woven tab at the side. The performance option, minus the performance styling.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/reebok-x-manors-tech-cap-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -433,65 +450,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Deep cold-brew brown. It shows up on the Club C midsole, the Club Pant, and both tees, and it&rsquo;s the color doing the heavy lifting in the campaign imagery.</p>
   <div class="products-grid">
 
-    <a href="https://www.manorsgolf.com/products/reebok-x-manors-club-c-revenge-golf" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-club-c-revenge-golf-espresso.jpg" alt="Reebok x Manors Club C Revenge Golf Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-club-c-revenge-golf-espresso.jpg" alt="Reebok x Manors Club C Revenge Golf Espresso &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Club C Revenge Golf &middot; Espresso &middot; $130</div>
         <div class="product-desc">The Club C, spiked. Checkered heel tab, MANORS debossed at the side, and a proper golf outsole under a silhouette that has never been near a fairway before.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/reebok-x-manors-club-c-revenge-golf" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-goat-pique-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-goat-pique-polo-espresso.jpg" alt="Reebok x Manors GOAT Pique Polo Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-goat-pique-polo-espresso.jpg" alt="Reebok x Manors GOAT Pique Polo Espresso &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">GOAT Pique Polo &middot; Espresso &middot; $90</div>
         <div class="product-desc">Fine horizontal stripes in pique, with MANORS and the vector stacked at the chest. Retro tennis-club energy dropped onto a golf course.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-goat-pique-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-club-pant" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-club-pant-espresso.jpg" alt="Reebok x Manors Club Pant Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-club-pant-espresso.jpg" alt="Reebok x Manors Club Pant Espresso &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Club Pant &middot; Espresso &middot; $130</div>
         <div class="product-desc">Wide, pleated, and unapologetically roomy through the leg. Elasticated waist. Cut closer to a trouser you&rsquo;d wear off the course than anything sold in a pro shop.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-club-pant" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-graphic-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-graphic-t-shirt-espresso.jpg" alt="Reebok x Manors Graphic T-Shirt Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-graphic-t-shirt-espresso.jpg" alt="Reebok x Manors Graphic T-Shirt Espresso &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Graphic T-Shirt &middot; Espresso &middot; $45</div>
         <div class="product-desc">Boxy heavyweight cotton with the United Kingdom of Golf crest printed large across the back and a small hit at the chest.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-graphic-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-logo-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-logo-t-shirt-espresso.jpg" alt="Reebok x Manors Logo T-Shirt Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-logo-t-shirt-espresso.jpg" alt="Reebok x Manors Logo T-Shirt Espresso &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Logo T-Shirt &middot; Espresso &middot; $45</div>
         <div class="product-desc">The quieter tee. Reebok vector at the chest, nothing on the back. Same heavy cotton and relaxed cut.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-logo-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-retro-crown-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-retro-crown-cap-espresso.jpg" alt="Reebok x Manors Retro Crown Cap Espresso" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-retro-crown-cap-espresso.jpg" alt="Reebok x Manors Retro Crown Cap Espresso &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Retro Crown Cap &middot; Espresso &middot; $45</div>
         <div class="product-desc">Flat-brim five-panel with a rope front, MANORS wordmark and the vector on the crown. Contrast underbrim.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-retro-crown-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -500,25 +517,25 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Named for the spiny yellow shrub that lines half the links courses in the British Isles and eats half the golf balls. Two tees only.</p>
   <div class="products-grid">
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-graphic-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-graphic-t-shirt-gorse-yellow.jpg" alt="Reebok x Manors Graphic T-Shirt Gorse Yellow" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-graphic-t-shirt-gorse-yellow.jpg" alt="Reebok x Manors Graphic T-Shirt Gorse Yellow &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Graphic T-Shirt &middot; Gorse Yellow &middot; $45</div>
         <div class="product-desc">Boxy heavyweight cotton with the United Kingdom of Golf crest printed large across the back and a small hit at the chest.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-graphic-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-logo-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-logo-t-shirt-gorse-yellow.jpg" alt="Reebok x Manors Logo T-Shirt Gorse Yellow" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-logo-t-shirt-gorse-yellow.jpg" alt="Reebok x Manors Logo T-Shirt Gorse Yellow &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Logo T-Shirt &middot; Gorse Yellow &middot; $45</div>
         <div class="product-desc">The quieter tee. Reebok vector at the chest, nothing on the back. Same heavy cotton and relaxed cut.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-logo-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -527,15 +544,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">One piece, and it&rsquo;s the one everyone wants.</p>
   <div class="products-grid">
 
-    <a href="https://www.manorsgolf.com/products/reebok-x-manors-pumps" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-og-pump-golf-navy.jpg" alt="Reebok x Manors OG Pump Golf Navy" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-og-pump-golf-navy.jpg" alt="Reebok x Manors OG Pump Golf Navy &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">OG Pump Golf &middot; Navy &middot; $220</div>
         <div class="product-desc">The follow-up to the Pump that started this whole partnership. Navy croc-textured panels over chalk leather, gold eyelets, and the Pump bladder still on the tongue. The halo product of the drop.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/reebok-x-manors-pumps" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -544,35 +561,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">One colorway each, and the towel and ball marker are the two things in here most likely to still be around next month.</p>
   <div class="products-grid">
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-towel" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-towel.jpg" alt="Reebok x Manors Towel" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-towel.jpg" alt="Reebok x Manors Towel &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Towel &middot; $40</div>
         <div class="product-desc">Waffle-weave with the harlequin print and MANORS across the face. Carabiner clip.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-towel" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-stickers" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-graphic-sticker-pack.jpg" alt="Reebok x Manors Graphic Sticker Pack" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-graphic-sticker-pack.jpg" alt="Reebok x Manors Graphic Sticker Pack &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Graphic Sticker Pack &middot; $8</div>
         <div class="product-desc">Eight stickers &mdash; crest, lions, wordmarks, vector &mdash; in the drop&rsquo;s full palette. Eight dollars.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-stickers" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.manorsgolf.com/products/manors-x-reebok-ball-marker" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/reebok-manors-ii/v-ball-marker.jpg" alt="Reebok x Manors Ball Marker" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/reebok-manors-ii/v-ball-marker.jpg" alt="Reebok x Manors Ball Marker &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Reebok &times; Manors</div>
         <div class="product-name">Ball Marker &middot; $18</div>
         <div class="product-desc">Cast metal, antiqued finish, the full crest in relief with THE UNITED KINGDOM OF GOLF on the banner. The cheapest way into the collection that still feels like the collection.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://www.manorsgolf.com/products/manors-x-reebok-ball-marker" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -688,6 +705,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

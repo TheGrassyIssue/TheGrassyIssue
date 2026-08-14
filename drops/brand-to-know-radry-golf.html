@@ -193,6 +193,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.ig-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -270,185 +287,185 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Everything below is in stock as of August 2026. The hats are the volume business, the corduroy covers are the signature, and the two prints at the end come through White Dot Market, the gallery side of the same operation.</p>
   <div class="products-grid">
 
-    <a href="https://radry.com/products/gang-gang-mallet-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-gg-mallet.jpg" alt="Radry Golf Gang Gang Mallet Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-gg-mallet.jpg" alt="Radry Golf Gang Gang Mallet Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-gg-mallet-a2.jpg" alt="Radry Golf Gang Gang Mallet Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-gg-mallet-a3.jpg" alt="Radry Golf Gang Gang Mallet Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-gg-mallet-a4.jpg" alt="Radry Golf Gang Gang Mallet Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Gang Gang Mallet Cover &middot; $65</div>
         <div class="product-desc">Corduroy mallet cover in sage with the Gang Gang characters stitched across it. Corduroy is an odd choice for a headcover and it works, because it takes the embroidery differently than leather does.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/gang-gang-mallet-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/gang-gang-blade-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-gg-blade.jpg" alt="Radry Golf Gang Gang Blade Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-gg-blade.jpg" alt="Radry Golf Gang Gang Blade Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-gg-blade-a2.jpg" alt="Radry Golf Gang Gang Blade Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-gg-blade-a3.jpg" alt="Radry Golf Gang Gang Blade Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Gang Gang Blade Cover &middot; $65</div>
         <div class="product-desc">Same treatment, blade fit. The pair is the closest Radry gets to a signature product.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/gang-gang-blade-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/logo-zip-hoodie" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-zip-hoodie.jpg" alt="Radry Golf Logo Zip Hoodie" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-zip-hoodie.jpg" alt="Radry Golf Logo Zip Hoodie &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-zip-hoodie-a2.jpg" alt="Radry Golf Logo Zip Hoodie &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Logo Zip Hoodie &middot; $95</div>
         <div class="product-desc">Black full-zip with the smiley embroidered small at the chest. The most wearable thing in the current run and the one that gives away the least.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/logo-zip-hoodie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/mouthful-hoodie" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-mouthful-hoodie.jpg" alt="Radry Golf Mouthful Hoodie" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-mouthful-hoodie.jpg" alt="Radry Golf Mouthful Hoodie &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-mouthful-hoodie-a2.jpg" alt="Radry Golf Mouthful Hoodie &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Mouthful Hoodie &middot; $95</div>
         <div class="product-desc">Off-white hoodie with the wordmark spelled out in scattered multicolour letters. Reads as a kids drawing at ten feet, which is the intent.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/mouthful-hoodie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/mouthful-tee" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-mouthful-tee.jpg" alt="Radry Golf Mouthful Tee" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-mouthful-tee.jpg" alt="Radry Golf Mouthful Tee &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-mouthful-tee-a2.jpg" alt="Radry Golf Mouthful Tee &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Mouthful Tee &middot; $55</div>
         <div class="product-desc">The same graphic on a heavyweight tee. Cheaper entry to the same idea.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/mouthful-tee" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/staple-two-tone-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-twotone-hat.jpg" alt="Radry Golf Staple Two Tone Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-twotone-hat.jpg" alt="Radry Golf Staple Two Tone Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-twotone-hat-a2.jpg" alt="Radry Golf Staple Two Tone Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Staple Two Tone Hat &middot; $42</div>
         <div class="product-desc">Brown crown, tan suede brim, smiley patch on the front. The two-tone hats are where Radry looks most like a proper apparel brand.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/staple-two-tone-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/belly-up-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-bellyup-hat.jpg" alt="Radry Golf Belly Up Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-bellyup-hat.jpg" alt="Radry Golf Belly Up Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-bellyup-hat-a2.jpg" alt="Radry Golf Belly Up Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Belly Up Hat &middot; $42</div>
         <div class="product-desc">Black cap reading RADRY&rsquo;S GOLF &amp; SUPPER CLUB, which is a very Wisconsin joke and a good one.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/belly-up-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/downwind-hat-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-downwind-hat.jpg" alt="Radry Golf Downwind Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-downwind-hat.jpg" alt="Radry Golf Downwind Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-downwind-hat-a2.jpg" alt="Radry Golf Downwind Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Downwind Hat &middot; $42</div>
         <div class="product-desc">Forest green with a small illustrated scene stitched across the front panel. One of Knapton&rsquo;s drawings translated straight to thread.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/downwind-hat-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/logomaxx-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-logomaxx-hat.jpg" alt="Radry Golf Logomaxx Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-logomaxx-hat.jpg" alt="Radry Golf Logomaxx Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-logomaxx-hat-a2.jpg" alt="Radry Golf Logomaxx Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Logomaxx Hat &middot; $42</div>
         <div class="product-desc">Navy, and the front panel just says countryclub_logo.jpg. Design-nerd humour aimed squarely at anyone who has ever been sent a low-res club crest.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/logomaxx-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/middy-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-middy-hat.jpg" alt="Radry Golf Middy Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-middy-hat.jpg" alt="Radry Golf Middy Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-middy-hat-a2.jpg" alt="Radry Golf Middy Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Middy Hat &middot; $42</div>
         <div class="product-desc">Salmon crown with a script Radry logo and MIDWEST USA underneath. The most straightforwardly handsome hat they make.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/middy-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/staple-crew" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-staple-crew.jpg" alt="Radry Golf Staple Crew" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-staple-crew.jpg" alt="Radry Golf Staple Crew &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-staple-crew-a2.jpg" alt="Radry Golf Staple Crew &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-staple-crew-a3.jpg" alt="Radry Golf Staple Crew &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-staple-crew-a4.jpg" alt="Radry Golf Staple Crew &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Staple Crew &middot; $95</div>
         <div class="product-desc">Grey crewneck with the smiley patch at the chest and nothing else. Radry doing quiet.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/staple-crew" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/wdm-x-radry-collab-tee" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-wdm-tee.jpg" alt="Radry Golf WDM X Radry Collab Tee" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-wdm-tee.jpg" alt="Radry Golf WDM X Radry Collab Tee &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-wdm-tee-a2.jpg" alt="Radry Golf WDM X Radry Collab Tee &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">WDM X Radry Collab Tee &middot; $42</div>
         <div class="product-desc">Collab tee between Radry and White Dot Market, the gallery arm, with a paint palette and brushes graphic. The two halves of the operation on one shirt.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/wdm-x-radry-collab-tee" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/del-campo-radry-socks" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-socks.jpg" alt="Radry Golf Del Radry Socks" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-socks.jpg" alt="Radry Golf Del Radry Socks &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-socks-a2.jpg" alt="Radry Golf Del Radry Socks &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-socks-a3.jpg" alt="Radry Golf Del Radry Socks &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-socks-a4.jpg" alt="Radry Golf Del Radry Socks &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Del Radry Socks &middot; $18</div>
         <div class="product-desc">Ankle socks with the smiley at the cuff. Eighteen dollars, and the cheapest way into the brand.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/del-campo-radry-socks" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/big-face-tee-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-bigface-tee.jpg" alt="Radry Golf Big Face Tee" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-bigface-tee.jpg" alt="Radry Golf Big Face Tee &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-bigface-tee-a2.jpg" alt="Radry Golf Big Face Tee &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-bigface-tee-a3.jpg" alt="Radry Golf Big Face Tee &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-bigface-tee-a4.jpg" alt="Radry Golf Big Face Tee &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Big Face Tee &middot; $42</div>
         <div class="product-desc">The logo blown up to fill the chest, and the best look at what it actually is. Round eye on one side, square eye on the other, wave for a mouth.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/big-face-tee-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/issa-zoo-tee" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-issazoo-tee.jpg" alt="Radry Golf Issa Zoo Boxy Tee" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-issazoo-tee.jpg" alt="Radry Golf Issa Zoo Boxy Tee &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-issazoo-tee-a2.jpg" alt="Radry Golf Issa Zoo Boxy Tee &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-issazoo-tee-a3.jpg" alt="Radry Golf Issa Zoo Boxy Tee &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Issa Zoo Boxy Tee &middot; $48</div>
         <div class="product-desc">Cream boxy tee with a loose illustrated crowd scene. Closer to a print you&rsquo;d frame than a graphic tee.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/issa-zoo-tee" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/midwest-nice-hoodie-sweatshirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-midwest-hoodie.jpg" alt="Radry Golf Midwest Nice Hoodie Sweatshirt" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-midwest-hoodie.jpg" alt="Radry Golf Midwest Nice Hoodie Sweatshirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-midwest-hoodie-a2.jpg" alt="Radry Golf Midwest Nice Hoodie Sweatshirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-midwest-hoodie-a3.jpg" alt="Radry Golf Midwest Nice Hoodie Sweatshirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/r-midwest-hoodie-a4.jpg" alt="Radry Golf Midwest Nice Hoodie Sweatshirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Midwest Nice Hoodie Sweatshirt &middot; $75</div>
         <div class="product-desc">Black hoodie with a small green-and-yellow graphic. Midwest Nice, which if you have spent time in Wisconsin is both a compliment and a warning.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://radry.com/products/midwest-nice-hoodie-sweatshirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://whitedotmarket.com/products/patrons-playground" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-print-patrons.jpg" alt="Radry Golf Patron's Playground" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-print-patrons.jpg" alt="Radry Golf Patron's Playground &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Patron's Playground &middot; $75</div>
         <div class="product-desc">Patron&rsquo;s Playground, an open edition print through White Dot Market. Nine panels of Augusta iconography rendered like a comic page.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://whitedotmarket.com/products/patrons-playground" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://whitedotmarket.com/products/solo-approach" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/r-print-solo.jpg" alt="Radry Golf Solo Approach" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/r-print-solo.jpg" alt="Radry Golf Solo Approach &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Solo Approach &middot; $150</div>
         <div class="product-desc">Solo Approach, a limited edition print. A single figure walking into a wall of green. The quietest thing Knapton has made and probably the best.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://whitedotmarket.com/products/solo-approach" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -457,125 +474,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Radry works in small numbered runs and does not restock. This is the part of the catalogue that explains the brand better than the current one does. None of it is buyable. All of it is still up on the site, which is its own kind of statement.</p>
   <div class="products-grid">
 
-    <a href="https://radry.com/products/the-cow-caddy-holstein-driver" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-cow-holstein.jpg" alt="Radry Golf The Cow Caddy Holstein Driver" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-cow-holstein.jpg" alt="Radry Golf The Cow Caddy Holstein Driver &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-cow-holstein-a2.jpg" alt="Radry Golf The Cow Caddy Holstein Driver &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-cow-holstein-a3.jpg" alt="Radry Golf The Cow Caddy Holstein Driver &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">The Cow Caddy Holstein Driver &middot; $110 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Real cow hide, Holstein pattern, with a cow embroidered on the end cap. Made with Seamus, and the piece that put Radry on a lot of radars.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/the-cow-caddy-holstein-driver" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/the-cow-caddy-palomino-driver" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-cow-palomino.jpg" alt="Radry Golf The Cow Caddy Palomino Driver" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-cow-palomino.jpg" alt="Radry Golf The Cow Caddy Palomino Driver &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-cow-palomino-a2.jpg" alt="Radry Golf The Cow Caddy Palomino Driver &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-cow-palomino-a3.jpg" alt="Radry Golf The Cow Caddy Palomino Driver &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">The Cow Caddy Palomino Driver &middot; $110 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">The Palomino version, brown and white. Both driver and fairway fits existed; all four are gone.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/the-cow-caddy-palomino-driver" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/fletcher-statue" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-fletcher.jpg" alt="Radry Golf "Fletcher" Resin Figurine" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-fletcher.jpg" alt="Radry Golf  &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-fletcher-a2.jpg" alt="Radry Golf  &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-fletcher-a3.jpg" alt="Radry Golf  &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-fletcher-a4.jpg" alt="Radry Golf  &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">"Fletcher" Resin Figurine &middot; $210 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Fletcher, from the Series 1 resin figurine run. Translucent frosted resin, roughly seven inches, sold in a printed box with the character line-drawn on the side. Hypebeast covered the launch in November 2024.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/fletcher-statue" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/radge-figurine" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-radge.jpg" alt="Radry Golf "Radge" Resin Figurine" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-radge.jpg" alt="Radry Golf  &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-radge-a2.jpg" alt="Radry Golf  &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-radge-a3.jpg" alt="Radry Golf  &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-radge-a4.jpg" alt="Radry Golf  &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">"Radge" Resin Figurine &middot; $210 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Radge, the black colourway of the same figure. $210 and gone.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/radge-figurine" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/100-barry-figurine" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-barry.jpg" alt="Radry Golf "Barry" Resin Figurine" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-barry.jpg" alt="Radry Golf  &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-barry-a2.jpg" alt="Radry Golf  &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-barry-a3.jpg" alt="Radry Golf  &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-barry-a4.jpg" alt="Radry Golf  &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">"Barry" Resin Figurine &middot; $210 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Barry, in white. The three together are the clearest signal that Radry is an art practice with a golf brand attached rather than the reverse.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/100-barry-figurine" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/radry-x-peter-heon-jacket" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-slowplay.jpg" alt="Radry Golf Slow Play 001 Jacket (Auction)" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-slowplay.jpg" alt="Radry Golf Slow Play 001 Jacket (Auction) &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-slowplay-a2.jpg" alt="Radry Golf Slow Play 001 Jacket (Auction) &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-slowplay-a3.jpg" alt="Radry Golf Slow Play 001 Jacket (Auction) &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-slowplay-a4.jpg" alt="Radry Golf Slow Play 001 Jacket (Auction) &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Slow Play 001 Jacket (Auction) &middot; $465 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Slow Play 001, a collaboration with Peter Heon, sold by auction at $465. Pale green cropped jacket with a blue circle on one side and a blue square pocket on the other. The logo, taken apart and worn.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/radry-x-peter-heon-jacket" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/lll-needlepoint-blade-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-needlepoint.jpg" alt="Radry Golf LLL Needlepoint Blade Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-needlepoint.jpg" alt="Radry Golf LLL Needlepoint Blade Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-needlepoint-a2.jpg" alt="Radry Golf LLL Needlepoint Blade Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-needlepoint-a3.jpg" alt="Radry Golf LLL Needlepoint Blade Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-needlepoint-a4.jpg" alt="Radry Golf LLL Needlepoint Blade Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">LLL Needlepoint Blade Cover &middot; $105 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Hand-worked needlepoint blade cover, florals and the smiley stitched in. $105 for something that took hours by hand, which is why there was one run and no more.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/lll-needlepoint-blade-cover" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/vintage-cameo-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-cameo.jpg" alt="Radry Golf Deadstock Cameo Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-cameo.jpg" alt="Radry Golf Deadstock Cameo Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-cameo-a2.jpg" alt="Radry Golf Deadstock Cameo Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Deadstock Cameo Hat &middot; $45 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Deadstock Cameo Hat. Radry buys vintage blanks and finishes them by hand, so each run is tiny and hand-numbered. The strap on this one reads 34 of 75.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/vintage-cameo-hat" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/deadstock-dimple-head-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-dimple.jpg" alt="Radry Golf Deadstock Dimple Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-dimple.jpg" alt="Radry Golf Deadstock Dimple Hat &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-dimple-a2.jpg" alt="Radry Golf Deadstock Dimple Hat &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Deadstock Dimple Hat &middot; $48 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">Deadstock Dimple Hat, printed to look like the surface of a golf ball. Same numbered-deadstock model.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/deadstock-dimple-head-hat" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/gang-gang-driver-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-gg-driver.jpg" alt="Radry Golf Gang Gang Driver Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-gg-driver.jpg" alt="Radry Golf Gang Gang Driver Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-gg-driver-a2.jpg" alt="Radry Golf Gang Gang Driver Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-gg-driver-a3.jpg" alt="Radry Golf Gang Gang Driver Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-gg-driver-a4.jpg" alt="Radry Golf Gang Gang Driver Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Gang Gang Driver Cover &middot; $65 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">The driver cover from the original Gang Gang run, in green corduroy. The mallet and blade came back; this one hasn&rsquo;t.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/gang-gang-driver-cover" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/the-animals-got-out-again-towel" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-towel.jpg" alt="Radry Golf The Animals Got Out Again Towel" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-towel.jpg" alt="Radry Golf The Animals Got Out Again Towel &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-towel-a2.jpg" alt="Radry Golf The Animals Got Out Again Towel &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-towel-a3.jpg" alt="Radry Golf The Animals Got Out Again Towel &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-towel-a4.jpg" alt="Radry Golf The Animals Got Out Again Towel &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">The Animals Got Out Again Towel &middot; $45 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">The Animals Got Out Again. A golf towel with a goose on it and a title that sounds like a text from a neighbour.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/the-animals-got-out-again-towel" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://radry.com/products/smiley-keychain" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/radry-golf/a-keychain.jpg" alt="Radry Golf Smiley Keychain" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/radry-golf/a-keychain.jpg" alt="Radry Golf Smiley Keychain &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/radry-golf/a-keychain-a2.jpg" alt="Radry Golf Smiley Keychain &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Radry Golf</div>
         <div class="product-name">Smiley Keychain &middot; $7 <span style="opacity:.55">&middot; Sold out</span></div>
         <div class="product-desc">A seven dollar rubber smiley keychain, sold out. Which tells you most of what you need to know about how this brand moves.</div>
-        <span class="product-link">View &#8599;</span>
+        <a href="https://radry.com/products/smiley-keychain" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -724,6 +741,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>
