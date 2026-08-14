@@ -20,9 +20,10 @@ Retitled today, highest priority:
 2. `/drops/reebok-x-manors-ii` — teaser converted to full drop post
 3. `/drops/walker-golf-the-par-tec-drop` — retitled, +600 words, FAQ schema
 
-New URL:
+New URLs:
 
-4. `/drops/the-hydration-edit`
+4. `/drops/the-towel-edit-vol-3` — new page, 18 products, FAQ schema, swipeable galleries
+5. `/drops/the-hydration-edit`
 
 Still outstanding from previous deploys:
 
