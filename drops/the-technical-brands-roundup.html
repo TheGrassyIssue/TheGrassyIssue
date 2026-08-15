@@ -99,6 +99,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -169,103 +186,89 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">The Polos</h2>
     <div class="products-grid">
 
-      <a href="https://radmorgolf.com/collections/mens-polos" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/radmor-sutton-polo.jpg" alt="Radmor Sutton Yarn Dyed Stripe Knit Polo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/radmor-sutton-polo.jpg" alt="Radmor Sutton Yarn Dyed Stripe Knit Polo &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Cool Jade &middot; Recycled Poly</span>
           <div class="product-brand">Radmor</div>
           <div class="product-name">Sutton Yarn Dyed Stripe Knit Polo</div>
           <div class="product-desc">Seattle-based Radmor uses Cool Jade &mdash; a fabric woven from recycled jade stone particles that creates a natural cooling effect on skin contact. The Sutton adds sweater-knit texture to a true performance polo. UPF 50+, moisture-wicking, biodegradable fiber.</div>
           <div class="product-price">$135</div>
-          <span class="product-link">Shop Radmor &nearr;</span>
+          <a href="https://radmorgolf.com/collections/mens-polos" target="_blank" rel="noopener" class="product-link">Shop Radmor &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://manorsgolf.com/collections/polo" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/manors-course-polo.jpg" alt="Manors Course Polo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/manors-course-polo.jpg" alt="Manors Course Polo &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Seawool &middot; Oyster Shell Fiber</span>
           <div class="product-brand">Manors</div>
           <div class="product-name">Course Polo</div>
           <div class="product-desc">UK brand Manors weaves Seawool &mdash; a yarn made from crushed oyster shells and recycled PET bottles. The result is a fabric with natural moisture-wicking properties, odor resistance, and a hand feel softer than standard merino. Sustainable from the ocean up.</div>
           <div class="product-price">$88</div>
-          <span class="product-link">Shop Manors &nearr;</span>
+          <a href="https://manorsgolf.com/collections/polo" target="_blank" rel="noopener" class="product-link">Shop Manors &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://reflo.com/collections/the-golf-edit" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/reflo-mira-polo.jpg" alt="Reflo Mira Polo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/reflo-mira-polo.jpg" alt="Reflo Mira Polo &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Java-tek &middot; Coffee-Infused</span>
           <div class="product-brand">Reflo</div>
           <div class="product-name">Mira Polo</div>
           <div class="product-desc">Reflo&rsquo;s Java-tek fabric is woven from recycled coffee beans. The coffee particles speed up drying time, control odor through natural anti-bacterial properties, and provide UV protection. Single-use waste given a second life on the course. Made in Portugal.</div>
           <div class="product-price">~$95</div>
-          <span class="product-link">Shop Reflo &nearr;</span>
+          <a href="https://reflo.com/collections/the-golf-edit" target="_blank" rel="noopener" class="product-link">Shop Reflo &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://whimgolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/whim-merino-shirt.jpg" alt="Whim Golf Merino SS Golf Shirt" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/whim-merino-shirt.jpg" alt="Whim Golf Merino SS Golf Shirt &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">100% Merino Wool</span>
           <div class="product-brand">Whim Golf</div>
           <div class="product-name">Merino SS Golf Shirt</div>
           <div class="product-desc">Pure merino wool on the golf course. Temperature-regulating, naturally antimicrobial, odor-resistant without chemical treatment. Whim sources premium fibers and lets the material do all the work &mdash; no synthetic blends, no coatings. The most expensive polo here, and it earns it.</div>
           <div class="product-price">$289</div>
-          <span class="product-link">Shop Whim &nearr;</span>
+          <a href="https://whimgolf.com/" target="_blank" rel="noopener" class="product-link">Shop Whim &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://soundergolf.com/collections/polos" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/sounder-play-well-polo.jpg" alt="Sounder Play Well Polo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/sounder-play-well-polo.jpg" alt="Sounder Play Well Polo &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Organic Cotton Pique</span>
           <div class="product-brand">Sounder</div>
           <div class="product-name">Play Well Polo</div>
           <div class="product-desc">Scottish brand Sounder builds everything from 100% organic cotton &mdash; not a single gram of polyester in the lineup. Engineered placket, elasticated cuffs and hem for structure. Proof that natural fiber, done right, outperforms the synthetic stuff most brands default to.</div>
           <div class="product-price">~$100</div>
-          <span class="product-link">Shop Sounder &nearr;</span>
+          <a href="https://soundergolf.com/collections/polos" target="_blank" rel="noopener" class="product-link">Shop Sounder &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://macadegolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/macade-ar-tech-polo.jpg" alt="Macade AR Tech Polo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/macade-ar-tech-polo.jpg" alt="Macade AR Tech Polo &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Recycled Tech Fabric</span>
           <div class="product-brand">Macade</div>
           <div class="product-name">Tan AR Tech Polo</div>
           <div class="product-desc">Australian streetwear-meets-golf brand. The AR Tech Polo uses recycled polyester with four-way stretch, rapid-dry construction, and a relaxed modern fit. Macade builds for the player who wants clean design and real performance without the country-club aesthetic.</div>
           <div class="product-price">$110</div>
-          <span class="product-link">Shop Macade &nearr;</span>
+          <a href="https://macadegolf.com/" target="_blank" rel="noopener" class="product-link">Shop Macade &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://morningpeopleclothiers.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/morning-people-polo.jpg" alt="Morning People Golforever Polo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/morning-people-polo.jpg" alt="Morning People Golforever Polo &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Proprietary 3-Fiber Blend</span>
           <div class="product-brand">Morning People</div>
           <div class="product-name">The Golforever Polo</div>
           <div class="product-desc">Morning People developed a proprietary three-fiber blend specifically for their Golforever Polo &mdash; engineered for stretch, breathability, and a buttery hand feel at a price that undercuts everyone on this list. The $75 entry point makes the tech accessible.</div>
           <div class="product-price">$75</div>
-          <span class="product-link">Shop Morning People &nearr;</span>
+          <a href="https://morningpeopleclothiers.com/" target="_blank" rel="noopener" class="product-link">Shop Morning People &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -275,47 +278,41 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Beyond the Collar</h2>
     <div class="products-grid">
 
-      <a href="https://radmorgolf.com/collections/t-shirts" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/radmor-maxwell-tee.jpg" alt="Radmor Maxwell Pimalite Tee" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/radmor-maxwell-tee.jpg" alt="Radmor Maxwell Pimalite Tee &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Peruvian Pima Cotton ELS</span>
           <div class="product-brand">Radmor</div>
           <div class="product-name">Maxwell Pimalite Tee</div>
           <div class="product-desc">Knit from 30/1 extra-long-staple Peruvian Pima Cotton &mdash; the smoothest natural fiber on earth. Biodegradable, 100% recyclable, UPF 50+. The cellulose fiber breaks down at end of life, reducing landfill impact. A tee shirt as a sustainability statement.</div>
           <div class="product-price">$62</div>
-          <span class="product-link">Shop Radmor &nearr;</span>
+          <a href="https://radmorgolf.com/collections/t-shirts" target="_blank" rel="noopener" class="product-link">Shop Radmor &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://studentsgolf.com/products/oaklawn-s-s-mesh-t-shirt" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/students-oaklawn-mesh-tee.jpg" alt="Students Golf Oaklawn Mesh T-Shirt" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/students-oaklawn-mesh-tee.jpg" alt="Students Golf Oaklawn Mesh T-Shirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/technical-brands/students-oaklawn-mesh-tee-a2.jpg" alt="Students Golf Oaklawn Mesh T-Shirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/technical-brands/students-oaklawn-mesh-tee-a3.jpg" alt="Students Golf Oaklawn Mesh T-Shirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/technical-brands/students-oaklawn-mesh-tee-a4.jpg" alt="Students Golf Oaklawn Mesh T-Shirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <span class="tech-badge">Mesh Construction</span>
           <div class="product-brand">Students Golf</div>
           <div class="product-name">Oaklawn S/S Mesh T-Shirt</div>
           <div class="product-desc">Full mesh construction for maximum airflow on hot rounds. Students Golf brings Ivy League athletic archive energy to the course &mdash; vintage silhouettes rebuilt with modern technical fabrics. Boxy fit, breathable from every angle. The summer tee that actually keeps you cool.</div>
           <div class="product-price">$72</div>
-          <span class="product-link">Shop Students Golf &nearr;</span>
+          <a href="https://studentsgolf.com/products/oaklawn-s-s-mesh-t-shirt" target="_blank" rel="noopener" class="product-link">Shop Students Golf &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://reflo.com/collections/the-golf-edit" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/reflo-adda-windbreaker.jpg" alt="Reflo Adda Windbreaker" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/reflo-adda-windbreaker.jpg" alt="Reflo Adda Windbreaker &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Recycled Polyester Shell</span>
           <div class="product-brand">Reflo</div>
           <div class="product-name">Adda Windbreaker</div>
           <div class="product-desc">Lightweight wind protection built from recycled polyester. The Adda is Reflo&rsquo;s answer to the dawn tee time &mdash; packable, breathable, and made from waste material. Pairs with the Mira Polo underneath for a full Reflo tech stack. Made in Portugal.</div>
           <div class="product-price">~$150</div>
-          <span class="product-link">Shop Reflo &nearr;</span>
+          <a href="https://reflo.com/collections/the-golf-edit" target="_blank" rel="noopener" class="product-link">Shop Reflo &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -325,47 +322,41 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Below the Belt</h2>
     <div class="products-grid">
 
-      <a href="https://radmorgolf.com/collections/mens-pants" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/radmor-vincent-pant.jpg" alt="Radmor Vincent Slim Fit Performance Pant" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/radmor-vincent-pant.jpg" alt="Radmor Vincent Slim Fit Performance Pant &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Lyocell Twill</span>
           <div class="product-brand">Radmor</div>
           <div class="product-name">Vincent Slim Fit Performance Pant</div>
           <div class="product-desc">Lyocell-blend twill with a soft drape and natural stretch. Lyocell is derived from sustainably harvested wood pulp &mdash; biodegradable, moisture-wicking, and cooler against skin than cotton. Radmor&rsquo;s slim fit keeps it modern without restricting the swing.</div>
           <div class="product-price">$142</div>
-          <span class="product-link">Shop Radmor &nearr;</span>
+          <a href="https://radmorgolf.com/collections/mens-pants" target="_blank" rel="noopener" class="product-link">Shop Radmor &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://manorsgolf.com/collections/bottoms" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/manors-pleated-trouser.jpg" alt="Manors Lightweight Pleated Trouser" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/manors-pleated-trouser.jpg" alt="Manors Lightweight Pleated Trouser &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Primeflex&trade; Recycled Nylon</span>
           <div class="product-brand">Manors</div>
           <div class="product-name">Lightweight Pleated Trouser</div>
           <div class="product-desc">Bluesign-certified recycled nylon with Primeflex 2-way stretch and PFC-free water resistance. Double pleats, scorecard ticket pocket, gusset construction for unrestricted mobility. Classic chino silhouette with technical guts. Made to handle every condition.</div>
           <div class="product-price">$175</div>
-          <span class="product-link">Shop Manors &nearr;</span>
+          <a href="https://manorsgolf.com/collections/bottoms" target="_blank" rel="noopener" class="product-link">Shop Manors &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://soundergolf.com/collections/shorts" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/sounder-good-walk-short.jpg" alt="Sounder Drawcord Good Walk Short" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/sounder-good-walk-short.jpg" alt="Sounder Drawcord Good Walk Short &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Herringbone Cotton</span>
           <div class="product-brand">Sounder</div>
           <div class="product-name">Drawcord Good Walk Short</div>
           <div class="product-desc">Textured herringbone cotton with a drawcord waist &mdash; Sounder&rsquo;s most relaxed silhouette. Same organic cotton commitment, finished with details that nod to cricket and rugby rather than corporate golf. Built in Portugal for players who walk the course.</div>
           <div class="product-price">~$133</div>
-          <span class="product-link">Shop Sounder &nearr;</span>
+          <a href="https://soundergolf.com/collections/shorts" target="_blank" rel="noopener" class="product-link">Shop Sounder &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -375,89 +366,77 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Top &amp; Sole</h2>
     <div class="products-grid">
 
-      <a href="https://manorsgolf.com/collections/accessories" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/manors-frontier-cap.jpg" alt="Manors Frontier Tech Cap" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/manors-frontier-cap.jpg" alt="Manors Frontier Tech Cap &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Nylon-Elastane</span>
           <div class="product-brand">Manors</div>
           <div class="product-name">Frontier Tech Cap</div>
           <div class="product-desc">Technical nylon-elastane construction with a structured panel and clean branding. Part of Manors&rsquo; Frontier collection built for all-conditions golf. Lightweight, quick-drying, and built to hold its shape round after round.</div>
           <div class="product-price">$54</div>
-          <span class="product-link">Shop Manors &nearr;</span>
+          <a href="https://manorsgolf.com/collections/accessories" target="_blank" rel="noopener" class="product-link">Shop Manors &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://whimgolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/whim-merino-hat.jpg" alt="Whim Golf Eggplant Woven Merino Hat" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/whim-merino-hat.jpg" alt="Whim Golf Eggplant Woven Merino Hat &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Woven Merino</span>
           <div class="product-brand">Whim Golf</div>
           <div class="product-name">Eggplant Woven Merino Hat</div>
           <div class="product-desc">Same premium merino used in their shirts, now on your head. Temperature regulation, natural odor resistance, and a rich eggplant colorway that stands out in a sea of white and navy. Whim stays committed to the fiber from head to toe.</div>
           <div class="product-price">$89</div>
-          <span class="product-link">Shop Whim &nearr;</span>
+          <a href="https://whimgolf.com/" target="_blank" rel="noopener" class="product-link">Shop Whim &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.markandlona.us/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/mark-lona-bucket-hat.jpg" alt="MARK &amp; LONA Gauge Camo Bucket Hat" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/mark-lona-bucket-hat.jpg" alt="MARK &amp; LONA Gauge Camo Bucket Hat &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Japanese Design</span>
           <div class="product-brand">MARK &amp; LONA</div>
           <div class="product-name">Gauge Camo Bucket Hat</div>
           <div class="product-desc">Tokyo-based luxury golf. The Gauge collection fuses military-grade materials with Japanese design sensibility. Bold camo print, structured bucket silhouette, premium construction from a brand that treats golf as fashion-forward, not fashion-backward.</div>
           <div class="product-price">~$207</div>
-          <span class="product-link">Shop MARK &amp; LONA &nearr;</span>
+          <a href="https://www.markandlona.us/" target="_blank" rel="noopener" class="product-link">Shop MARK &amp; LONA &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://macadegolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/macade-tx-cap.jpg" alt="Macade TX Unstructured Cap" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/macade-tx-cap.jpg" alt="Macade TX Unstructured Cap &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">Unstructured Tech</span>
           <div class="product-brand">Macade</div>
           <div class="product-name">Tan TX Unstructured Cap</div>
           <div class="product-desc">Macade&rsquo;s unstructured cap in their signature tan. Relaxed fit, minimal branding, designed to pair with the AR Tech Polo for a complete look. The TX construction keeps it light and packable without losing shape on the course.</div>
           <div class="product-price">$40</div>
-          <span class="product-link">Shop Macade &nearr;</span>
+          <a href="https://macadegolf.com/" target="_blank" rel="noopener" class="product-link">Shop Macade &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://morningpeopleclothiers.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/morning-people-hat.jpg" alt="Morning People High Crown Hat" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/morning-people-hat.jpg" alt="Morning People High Crown Hat &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">High Crown</span>
           <div class="product-brand">Morning People</div>
           <div class="product-name">High Crown Hat</div>
           <div class="product-desc">The most affordable piece on this list. Morning People&rsquo;s High Crown hat has a taller profile that stands out from the low-crown trend. Clean embroidery, structured front panels, and a snapback closure. Entry-level pricing, no compromise on silhouette.</div>
           <div class="product-price">$32</div>
-          <span class="product-link">Shop Morning People &nearr;</span>
+          <a href="https://morningpeopleclothiers.com/" target="_blank" rel="noopener" class="product-link">Shop Morning People &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.nike.com/t/acg-pegasus-trail-mens-trail-running-shoes-Z5DRSN1X/HV8116-103" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/technical-brands/nike-acg-pegasus-trail.jpg" alt="Nike ACG Pegasus Trail" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/technical-brands/nike-acg-pegasus-trail.jpg" alt="Nike ACG Pegasus Trail &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <span class="tech-badge">ReactX Foam &middot; All Terrain Compound</span>
           <div class="product-brand">Nike ACG</div>
           <div class="product-name">ACG Pegasus Trail</div>
           <div class="product-desc">Nike&rsquo;s All Conditions Gear line meets the Pegasus platform. ReactX foam for road-level responsiveness, All Terrain Compound outsole for grip on dirt and gravel, recycled materials throughout. The trail runner that crosses over to the golf course &mdash; built for every surface between the parking lot and the first tee.</div>
           <div class="product-price">$155</div>
-          <span class="product-link">Shop Nike &nearr;</span>
+          <a href="https://www.nike.com/t/acg-pegasus-trail-mens-trail-running-shoes-Z5DRSN1X/HV8116-103" target="_blank" rel="noopener" class="product-link">Shop Nike &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -551,6 +530,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

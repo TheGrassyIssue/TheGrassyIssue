@@ -111,6 +111,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -184,125 +201,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">New from the Collection — 12 Picks, August 2026</h2>
   <div class="products-grid">
 
-    <a href="https://huegahouse.com/products/flow-black-running-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-flow-running-black.jpg" alt="Huega House Flow Running Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-flow-running-black.jpg" alt="Huega House Flow Running Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-flow-running-black-a2.jpg" alt="Huega House Flow Running Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-flow-running-black-a3.jpg" alt="Huega House Flow Running Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-flow-running-black-a4.jpg" alt="Huega House Flow Running Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Flow Running Hat — Black · $45</div>
         <div class="product-desc">The run-club hat that moonlights on the course. Lightweight, sweat-ready, five-panel low profile — built for August in Texas.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/flow-black-running-hat" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/athletics-vintage-camo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-athletics-vintage-camo.jpg" alt="Huega House Athletics Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-athletics-vintage-camo.jpg" alt="Huega House Athletics Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletics-vintage-camo-a2.jpg" alt="Huega House Athletics Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletics-vintage-camo-a3.jpg" alt="Huega House Athletics Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletics-vintage-camo-a4.jpg" alt="Huega House Athletics Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Athletics Hat — Vintage Camo · $45</div>
         <div class="product-desc">The mid-profile Athletics crown in the washed-out camo that keeps selling through. '90s hunting-catalog energy, muni-ready.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/athletics-vintage-camo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/athletics-black-natural" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-athletics-black-natural.jpg" alt="Huega House Athletics Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-athletics-black-natural.jpg" alt="Huega House Athletics Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletics-black-natural-a2.jpg" alt="Huega House Athletics Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletics-black-natural-a3.jpg" alt="Huega House Athletics Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletics-black-natural-a4.jpg" alt="Huega House Athletics Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Athletics Hat — Black &amp; Natural · $45</div>
         <div class="product-desc">Two-tone Athletics script in the cleanest colorway of the run.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/athletics-black-natural" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/moments-vintage-camo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-moments-vintage-camo.jpg" alt="Huega House Moments Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-moments-vintage-camo.jpg" alt="Huega House Moments Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-moments-vintage-camo-a2.jpg" alt="Huega House Moments Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-moments-vintage-camo-a3.jpg" alt="Huega House Moments Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-moments-vintage-camo-a4.jpg" alt="Huega House Moments Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Moments Hat — Vintage Camo · $45</div>
         <div class="product-desc">The 'Moments' script over vintage camo — the brand motto in hat form.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/moments-vintage-camo" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/athletic-association-khaki-natural" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-athletic-assoc-khaki.jpg" alt="Huega House Athletic Association" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-athletic-assoc-khaki.jpg" alt="Huega House Athletic Association &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletic-assoc-khaki-a2.jpg" alt="Huega House Athletic Association &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletic-assoc-khaki-a3.jpg" alt="Huega House Athletic Association &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-athletic-assoc-khaki-a4.jpg" alt="Huega House Athletic Association &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Athletic Association — Khaki &amp; Natural · $45</div>
         <div class="product-desc">The collegiate-style Athletic Association crest in khaki. High-profile crown, old-gymnasium typography.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/athletic-association-khaki-natural" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/vintage-swan-black-natural-hat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-vintage-swan-black.jpg" alt="Huega House Vintage Swan Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-vintage-swan-black.jpg" alt="Huega House Vintage Swan Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-vintage-swan-black-a2.jpg" alt="Huega House Vintage Swan Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-vintage-swan-black-a3.jpg" alt="Huega House Vintage Swan Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-vintage-swan-black-a4.jpg" alt="Huega House Vintage Swan Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Vintage Swan Hat — Black &amp; Natural · $45</div>
         <div class="product-desc">The swan logo that started conversations, now in black and natural.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/vintage-swan-black-natural-hat" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/legacy-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-legacy-navy.jpg" alt="Huega House Legacy Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-legacy-navy.jpg" alt="Huega House Legacy Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-legacy-navy-a2.jpg" alt="Huega House Legacy Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-legacy-navy-a3.jpg" alt="Huega House Legacy Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-legacy-navy-a4.jpg" alt="Huega House Legacy Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Legacy Hat — Navy · $45</div>
         <div class="product-desc">The high-profile Legacy block in navy — the closest thing to a '90s tour hat in the range.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/legacy-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/track-hoodie-heather-grey" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-track-hoodie-grey.jpg" alt="Huega House Track Hoodie" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-track-hoodie-grey.jpg" alt="Huega House Track Hoodie &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-track-hoodie-grey-a2.jpg" alt="Huega House Track Hoodie &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-track-hoodie-grey-a3.jpg" alt="Huega House Track Hoodie &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-track-hoodie-grey-a4.jpg" alt="Huega House Track Hoodie &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Track Hoodie — Heather Grey · $66</div>
         <div class="product-desc">New fleece line: the Track Hoodie with run-club graphics on heather grey. Post-round, pre-coffee.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/track-hoodie-heather-grey" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/miler-hoodie-navy-blue" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-miler-hoodie-navy.jpg" alt="Huega House Miler Hoodie" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-miler-hoodie-navy.jpg" alt="Huega House Miler Hoodie &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-miler-hoodie-navy-a2.jpg" alt="Huega House Miler Hoodie &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-miler-hoodie-navy-a3.jpg" alt="Huega House Miler Hoodie &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-miler-hoodie-navy-a4.jpg" alt="Huega House Miler Hoodie &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Miler Hoodie — Navy · $66</div>
         <div class="product-desc">The Miler's distance-club graphic on navy fleece. Sibling to the Track, slightly quieter.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/miler-hoodie-navy-blue" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/cuffed-beanie-camel" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-cuffed-beanie-camel.jpg" alt="Huega House Cuffed Beanie" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-cuffed-beanie-camel.jpg" alt="Huega House Cuffed Beanie &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-cuffed-beanie-camel-a2.jpg" alt="Huega House Cuffed Beanie &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-cuffed-beanie-camel-a3.jpg" alt="Huega House Cuffed Beanie &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-cuffed-beanie-camel-a4.jpg" alt="Huega House Cuffed Beanie &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Cuffed Beanie — Camel · $14</div>
         <div class="product-desc">The cheapest way into the brand — a clean cuffed beanie with the small woven tab.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/cuffed-beanie-camel" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/icon-classic-hat-emerald-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-icon-classic-evergreen.jpg" alt="Huega House Icon Classic Hat" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-icon-classic-evergreen.jpg" alt="Huega House Icon Classic Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-icon-classic-evergreen-a2.jpg" alt="Huega House Icon Classic Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-icon-classic-evergreen-a3.jpg" alt="Huega House Icon Classic Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-icon-classic-evergreen-a4.jpg" alt="Huega House Icon Classic Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Icon Classic Hat — Evergreen · $32</div>
         <div class="product-desc">The Icon script on an unstructured dad cap in evergreen. Masters-adjacent color, dad-cap ease.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/icon-classic-hat-emerald-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://huegahouse.com/products/surge-tee-3-pack" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/huega-house/new-surge-tee-3pack.jpg" alt="Huega House Surge Tee 3-Pack · $158" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/new-surge-tee-3pack.jpg" alt="Huega House Surge Tee 3-Pack · $158 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-surge-tee-3pack-a2.jpg" alt="Huega House Surge Tee 3-Pack · $158 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-surge-tee-3pack-a3.jpg" alt="Huega House Surge Tee 3-Pack · $158 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/new-surge-tee-3pack-a4.jpg" alt="Huega House Surge Tee 3-Pack · $158 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Huega House · New</div>
         <div class="product-name">Surge Tee 3-Pack · $158</div>
         <div class="product-desc">The performance tee that anchors their apparel line, bundled. Black, white, graphite — a week of range sessions sorted.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://huegahouse.com/products/surge-tee-3-pack" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -368,101 +385,85 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Headwear</h2>
     <div class="products-grid">
 
-      <a href="https://huegahouse.com/products/black-icon-performance" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/icon-performance-black.jpg" alt="Huega House Icon Performance Hat — Black" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/icon-performance-black.jpg" alt="Huega House Icon Performance Hat — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-performance-black-a2.jpg" alt="Huega House Icon Performance Hat — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-performance-black-a3.jpg" alt="Huega House Icon Performance Hat — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-performance-black-a4.jpg" alt="Huega House Icon Performance Hat — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Icon Performance Hat &middot; $49</div>
           <div class="product-desc">Structured five-panel with moisture-wicking sweatband and perforated side panels. Clean swan logo. Course-ready.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/black-icon-performance" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/athletic-association-green-natural" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/athletic-assoc-green.jpg" alt="Huega House Athletic Association Hat — Green &amp; Natural" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/athletic-assoc-green.jpg" alt="Huega House Athletic Association Hat — Green &amp; Natural &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/athletic-assoc-green-a2.jpg" alt="Huega House Athletic Association Hat — Green &amp; Natural &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/athletic-assoc-green-a3.jpg" alt="Huega House Athletic Association Hat — Green &amp; Natural &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/athletic-assoc-green-a4.jpg" alt="Huega House Athletic Association Hat — Green &amp; Natural &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Athletic Association Hat &middot; $45</div>
           <div class="product-desc">High-profile structured cap with vintage athletic lettering. Green front, natural mesh back. Old-school ballpark energy.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/athletic-association-green-natural" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/lined-burnt-red" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/legacy-rust.jpg" alt="Huega House Legacy Hat — Rust &amp; Natural" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/legacy-rust.jpg" alt="Huega House Legacy Hat — Rust &amp; Natural &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/legacy-rust-a2.jpg" alt="Huega House Legacy Hat — Rust &amp; Natural &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/legacy-rust-a3.jpg" alt="Huega House Legacy Hat — Rust &amp; Natural &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/legacy-rust-a4.jpg" alt="Huega House Legacy Hat — Rust &amp; Natural &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Legacy Hat &middot; $45</div>
           <div class="product-desc">The brand&rsquo;s signature silhouette in a rust and natural colorway. Structured crown, curved brim, embroidered swan. Seven colorways total.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/lined-burnt-red" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/vintage-swan-forest-green-hat" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/vintage-swan-green.jpg" alt="Huega House Vintage Swan Hat — Forest Green" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/vintage-swan-green.jpg" alt="Huega House Vintage Swan Hat — Forest Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/vintage-swan-green-a2.jpg" alt="Huega House Vintage Swan Hat — Forest Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/vintage-swan-green-a3.jpg" alt="Huega House Vintage Swan Hat — Forest Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/vintage-swan-green-a4.jpg" alt="Huega House Vintage Swan Hat — Forest Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Vintage Swan Hat &middot; $45</div>
           <div class="product-desc">Oversized vintage swan embroidery on a structured high-profile cap. Forest green corduroy with a retro feel.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/vintage-swan-forest-green-hat" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/aero-navy-blue-nylon-hat" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/aero-nylon-navy.jpg" alt="Huega House Aero Nylon Hat — Navy" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/aero-nylon-navy.jpg" alt="Huega House Aero Nylon Hat — Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/aero-nylon-navy-a2.jpg" alt="Huega House Aero Nylon Hat — Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/aero-nylon-navy-a3.jpg" alt="Huega House Aero Nylon Hat — Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/aero-nylon-navy-a4.jpg" alt="Huega House Aero Nylon Hat — Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Aero Nylon Hat &middot; $43</div>
           <div class="product-desc">Lightweight nylon construction with a water-resistant finish. Quick-dry, packable, and ready for early-morning tee times.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/aero-navy-blue-nylon-hat" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/timber-camo" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/icon-canvas-timber-camo.jpg" alt="Huega House Icon Canvas Hat — Timber Camo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/icon-canvas-timber-camo.jpg" alt="Huega House Icon Canvas Hat — Timber Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-canvas-timber-camo-a2.jpg" alt="Huega House Icon Canvas Hat — Timber Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-canvas-timber-camo-a3.jpg" alt="Huega House Icon Canvas Hat — Timber Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-canvas-timber-camo-a4.jpg" alt="Huega House Icon Canvas Hat — Timber Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Icon Canvas Hat &middot; $45</div>
           <div class="product-desc">Canvas mid-profile cap in a muted timber camo print. Tonal swan logo. One of the brand&rsquo;s best sellers.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/timber-camo" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/letterman-black" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/letterman-black.jpg" alt="Huega House Letterman Hat — Black" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/letterman-black.jpg" alt="Huega House Letterman Hat — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/letterman-black-a2.jpg" alt="Huega House Letterman Hat — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/letterman-black-a3.jpg" alt="Huega House Letterman Hat — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/letterman-black-a4.jpg" alt="Huega House Letterman Hat — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Letterman Hat &middot; $50</div>
           <div class="product-desc">Wool-blend structured cap with chenille &ldquo;H&rdquo; patch. Varsity letterman vibes. The most premium hat in the lineup.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/letterman-black" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/woodland-dark-camo" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/woodland-camo.jpg" alt="Huega House Woodland Hat — Woodland Camo" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/woodland-camo.jpg" alt="Huega House Woodland Hat — Woodland Camo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/woodland-camo-a2.jpg" alt="Huega House Woodland Hat — Woodland Camo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/woodland-camo-a3.jpg" alt="Huega House Woodland Hat — Woodland Camo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/woodland-camo-a4.jpg" alt="Huega House Woodland Hat — Woodland Camo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Woodland Hat &middot; $45</div>
           <div class="product-desc">Dark woodland camo on a structured mid-profile frame. Subtle embroidered swan on the front panel. Falls between outdoors and streetwear.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/woodland-dark-camo" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -471,125 +472,105 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Apparel</h2>
     <div class="products-grid">
 
-      <a href="https://huegahouse.com/products/hybrid-tee-black" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/surge-tee-black.jpg" alt="Huega House Surge Tee — Black" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/surge-tee-black.jpg" alt="Huega House Surge Tee — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-tee-black-a2.jpg" alt="Huega House Surge Tee — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-tee-black-a3.jpg" alt="Huega House Surge Tee — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-tee-black-a4.jpg" alt="Huega House Surge Tee — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Surge Tee &middot; $62</div>
           <div class="product-desc">Performance hybrid fabric with a lived-in feel. Four-way stretch, anti-odor, quick-dry. Works on the course, at the range, or post-round.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/hybrid-tee-black" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/hybrid-tee-white" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/surge-tee-white.jpg" alt="Huega House Surge Tee — White" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/surge-tee-white.jpg" alt="Huega House Surge Tee — White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-tee-white-a2.jpg" alt="Huega House Surge Tee — White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-tee-white-a3.jpg" alt="Huega House Surge Tee — White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-tee-white-a4.jpg" alt="Huega House Surge Tee — White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Surge Tee &middot; $62</div>
           <div class="product-desc">Same performance hybrid build in white. Crew neck, relaxed fit, clean branding on the chest. Three colorways total.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/hybrid-tee-white" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/essential-tee-cream" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/essential-tee-cream.jpg" alt="Huega House Essential Tee — Cream" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/essential-tee-cream.jpg" alt="Huega House Essential Tee — Cream &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-tee-cream-a2.jpg" alt="Huega House Essential Tee — Cream &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-tee-cream-a3.jpg" alt="Huega House Essential Tee — Cream &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-tee-cream-a4.jpg" alt="Huega House Essential Tee — Cream &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Essential Tee &middot; $57</div>
           <div class="product-desc">Heavyweight cotton tee with a boxy, vintage fit. Cream colorway with tonal branding. The everyday off-course staple.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/essential-tee-cream" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/hybrid-short-6-5-sandstone" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/surge-short-sandstone.jpg" alt="Huega House Surge Short 6.5 — Sandstone" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/surge-short-sandstone.jpg" alt="Huega House Surge Short 6.5 — Sandstone &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-short-sandstone-a2.jpg" alt="Huega House Surge Short 6.5 — Sandstone &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-short-sandstone-a3.jpg" alt="Huega House Surge Short 6.5 — Sandstone &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-short-sandstone-a4.jpg" alt="Huega House Surge Short 6.5 — Sandstone &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Surge Short 6.5&Prime; &middot; $65</div>
           <div class="product-desc">Performance hybrid short with a 6.5-inch inseam. Stretch fabric, zippered pocket, elastic waistband. Three colorways.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/hybrid-short-6-5-sandstone" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/hybrid-short-6-5-black" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/surge-short-black.jpg" alt="Huega House Surge Short 6.5 — Black" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/surge-short-black.jpg" alt="Huega House Surge Short 6.5 — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-short-black-a2.jpg" alt="Huega House Surge Short 6.5 — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-short-black-a3.jpg" alt="Huega House Surge Short 6.5 — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/surge-short-black-a4.jpg" alt="Huega House Surge Short 6.5 — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Surge Short 6.5&Prime; &middot; $65</div>
           <div class="product-desc">The same hybrid performance build in black. Liner-free, quick-dry, and built for hot rounds.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/hybrid-short-6-5-black" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/essential-sweat-shorts-taupe" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/essential-sweat-shorts-taupe.jpg" alt="Huega House Essential Sweat Shorts — Taupe" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/essential-sweat-shorts-taupe.jpg" alt="Huega House Essential Sweat Shorts — Taupe &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-sweat-shorts-taupe-a2.jpg" alt="Huega House Essential Sweat Shorts — Taupe &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-sweat-shorts-taupe-a3.jpg" alt="Huega House Essential Sweat Shorts — Taupe &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-sweat-shorts-taupe-a4.jpg" alt="Huega House Essential Sweat Shorts — Taupe &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Essential Sweat Shorts &middot; $57</div>
           <div class="product-desc">French terry sweat shorts with a drawstring waist and side pockets. The post-round, grab-a-beer shorts. Three colorways.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/essential-sweat-shorts-taupe" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/warm-up-hoodie-black" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/warm-up-hoodie-black.jpg" alt="Huega House Warm Up Hoodie — Black" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/warm-up-hoodie-black.jpg" alt="Huega House Warm Up Hoodie — Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/warm-up-hoodie-black-a2.jpg" alt="Huega House Warm Up Hoodie — Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/warm-up-hoodie-black-a3.jpg" alt="Huega House Warm Up Hoodie — Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/warm-up-hoodie-black-a4.jpg" alt="Huega House Warm Up Hoodie — Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Warm Up Hoodie &middot; $88</div>
           <div class="product-desc">Midweight French terry with a kangaroo pocket and raglan sleeves. Vintage sports branding on the chest. The early-tee-time layer.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/warm-up-hoodie-black" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/icon-hoodie-deep-emerald" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/icon-hoodie-evergreen.jpg" alt="Huega House Icon Hoodie — Evergreen" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/icon-hoodie-evergreen.jpg" alt="Huega House Icon Hoodie — Evergreen &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-hoodie-evergreen-a2.jpg" alt="Huega House Icon Hoodie — Evergreen &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-hoodie-evergreen-a3.jpg" alt="Huega House Icon Hoodie — Evergreen &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-hoodie-evergreen-a4.jpg" alt="Huega House Icon Hoodie — Evergreen &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Icon Hoodie &middot; $88</div>
           <div class="product-desc">Heavyweight fleece hoodie in a deep evergreen. Embroidered swan logo, ribbed cuffs and hem. Six colorways total.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/icon-hoodie-deep-emerald" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/essential-crewneck-bone" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/essential-crewneck-bone.jpg" alt="Huega House Essential Crewneck — Bone" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/essential-crewneck-bone.jpg" alt="Huega House Essential Crewneck — Bone &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-crewneck-bone-a2.jpg" alt="Huega House Essential Crewneck — Bone &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-crewneck-bone-a3.jpg" alt="Huega House Essential Crewneck — Bone &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/essential-crewneck-bone-a4.jpg" alt="Huega House Essential Crewneck — Bone &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Essential Crewneck &middot; $72</div>
           <div class="product-desc">Midweight crewneck sweatshirt in bone. Clean embroidered logo, ribbed trim, relaxed fit. Three colorways.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/essential-crewneck-bone" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://huegahouse.com/products/icon-sweatpants-deep-emerald" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/huega-house/icon-sweatpants-evergreen.jpg" alt="Huega House Icon Sweatpants — Evergreen" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/huega-house/icon-sweatpants-evergreen.jpg" alt="Huega House Icon Sweatpants — Evergreen &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-sweatpants-evergreen-a2.jpg" alt="Huega House Icon Sweatpants — Evergreen &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-sweatpants-evergreen-a3.jpg" alt="Huega House Icon Sweatpants — Evergreen &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/huega-house/icon-sweatpants-evergreen-a4.jpg" alt="Huega House Icon Sweatpants — Evergreen &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">Huega House</div>
           <div class="product-name">Icon Sweatpants &middot; $70</div>
           <div class="product-desc">Heavyweight fleece joggers with a tapered leg and elastic cuffs. Matches the Icon Hoodie in Evergreen. Three colorways.</div>
-          <span class="product-link">Shop &nearr;</span>
+          <a href="https://huegahouse.com/products/icon-sweatpants-deep-emerald" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -673,6 +654,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

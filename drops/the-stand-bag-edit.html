@@ -100,6 +100,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -177,77 +194,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Walker &amp; Carry Bags</h2>
     <div class="products-grid">
 
-      <a href="https://www.mackenziegolfbags.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/mackenzie-walker-nylon.jpg" alt="MacKenzie Original Walker Nylon" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/mackenzie-walker-nylon.jpg" alt="MacKenzie Original Walker Nylon &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">MacKenzie Golf Bags</div>
           <div class="product-name">Original Walker &middot; Nylon &middot; $550</div>
           <div class="product-desc">Handcrafted in Portland. 1680D nylon, single-strap carry, classic silhouette. The walker bag that started the revival.</div>
-          <span class="product-link">Shop MacKenzie &nearr;</span>
+          <a href="https://www.mackenziegolfbags.com/" target="_blank" rel="noopener" class="product-link">Shop MacKenzie &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.mackenziegolfbags.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/mackenzie-walker-canvas.jpg" alt="MacKenzie Original Walker Canvas" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/mackenzie-walker-canvas.jpg" alt="MacKenzie Original Walker Canvas &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">MacKenzie Golf Bags</div>
           <div class="product-name">Original Walker &middot; Canvas &middot; $850</div>
           <div class="product-desc">Waxed canvas with leather trim. An heirloom-quality carry bag that patinas with every round. No stand, no gimmicks.</div>
-          <span class="product-link">Shop MacKenzie &nearr;</span>
+          <a href="https://www.mackenziegolfbags.com/" target="_blank" rel="noopener" class="product-link">Shop MacKenzie &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://miuragolf.com/collections/vendors?q=mackenzie" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/miura-sentinel-mackenzie-walker.jpg" alt="Miura x Sentinel MacKenzie Walker" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/miura-sentinel-mackenzie-walker.jpg" alt="Miura x Sentinel MacKenzie Walker &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Miura &times; Sentinel &times; MacKenzie</div>
           <div class="product-name">Miura Walker Bag &middot; $1,360</div>
           <div class="product-desc">Triple-collab limited edition. 1680D CORDURA ballistic nylon, made in Japan. The grail walker for collectors and players alike.</div>
-          <span class="product-link">Shop Miura &nearr;</span>
+          <a href="https://miuragolf.com/collections/vendors?q=mackenzie" target="_blank" rel="noopener" class="product-link">Shop Miura &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/sentinel-ultracomp-walker.jpg" alt="Sentinel UltraComp Walker 2.0" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/sentinel-ultracomp-walker.jpg" alt="Sentinel UltraComp Walker 2.0 &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Sentinel Golf</div>
           <div class="product-name">UltraComp Walker 2.0 &middot; $890</div>
           <div class="product-desc">Proprietary UltraComp material &mdash; ultralight and weather-resistant. Made in the USA. Sentinel&rsquo;s own take on the walker, no MacKenzie co-sign needed.</div>
-          <span class="product-link">Shop Sentinel &nearr;</span>
+          <a href="https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f" target="_blank" rel="noopener" class="product-link">Shop Sentinel &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/jones-original-se.jpg" alt="Jones Original SE PU Single Strap" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/jones-original-se.jpg" alt="Jones Original SE PU Single Strap &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Jones Sports Co.</div>
           <div class="product-name">Original SE PU &middot; Single Strap &middot; $245</div>
           <div class="product-desc">The OG single-strap carry. PU-coated canvas, minimal pockets, pure walking. Jones built the template everyone else followed.</div>
-          <span class="product-link">Shop Jones &nearr;</span>
+          <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="product-link">Shop Jones &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.sugarloafsocialclub.com/products/quiet-golf-mac-bag" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/quiet-golf-ssc-mackenzie.jpg" alt="Quiet Golf x SSC MacKenzie Walker" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/quiet-golf-ssc-mackenzie.jpg" alt="Quiet Golf x SSC MacKenzie Walker &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Quiet Golf &times; SSC &times; MacKenzie</div>
           <div class="product-name">QG Walker Bag &middot; ~$600</div>
           <div class="product-desc">Waxed canvas with leather details and Quiet Golf owl branding. Limited collab with Sugarloaf Social Club on the MacKenzie walker platform.</div>
-          <span class="product-link">Shop SSC &nearr;</span>
+          <a href="https://www.sugarloafsocialclub.com/products/quiet-golf-mac-bag" target="_blank" rel="noopener" class="product-link">Shop SSC &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -260,77 +265,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Stand Bags &mdash; Niche / Indie</h2>
     <div class="products-grid">
 
-      <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/jones-rover-r.jpg" alt="Jones Rover R Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/jones-rover-r.jpg" alt="Jones Rover R Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Jones Sports Co.</div>
           <div class="product-name">Rover R Stand &middot; ~$350</div>
           <div class="product-desc">3-way top, lightest in the Jones line. Clean design, dual strap, insulated pocket. The minimalist&rsquo;s stand bag.</div>
-          <span class="product-link">Shop Jones &nearr;</span>
+          <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="product-link">Shop Jones &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/jones-trouper-r.jpg" alt="Jones Trouper R 4.0 Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/jones-trouper-r.jpg" alt="Jones Trouper R 4.0 Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Jones Sports Co.</div>
           <div class="product-name">Trouper R 4.0 &middot; ~$400</div>
           <div class="product-desc">5-way top, 7 pockets, insulated cooler pocket. The full-featured Jones for walkers who want storage without the bulk.</div>
-          <span class="product-link">Shop Jones &nearr;</span>
+          <a href="https://jonessportsco.com/" target="_blank" rel="noopener" class="product-link">Shop Jones &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://sundaygolf.com/products/the-ranger-iron-premium-stand-bag" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/sunday-golf-ranger.jpg" alt="Sunday Golf The Ranger Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/sunday-golf-ranger.jpg" alt="Sunday Golf The Ranger Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Sunday Golf</div>
           <div class="product-name">The Ranger &middot; $400</div>
           <div class="product-desc">6-way top, carbon fiber legs, 9 pockets including magnetic Frosty pocket. MyGolfSpy Staff Most Wanted three years running.</div>
-          <span class="product-link">Shop Sunday Golf &nearr;</span>
+          <a href="https://sundaygolf.com/products/the-ranger-iron-premium-stand-bag" target="_blank" rel="noopener" class="product-link">Shop Sunday Golf &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://sundaygolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/sunday-golf-ryder.jpg" alt="Sunday Golf The Ryder Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/sunday-golf-ryder.jpg" alt="Sunday Golf The Ryder Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Sunday Golf</div>
           <div class="product-name">The Ryder &middot; $270</div>
           <div class="product-desc">5-way top, 4.9 lbs. Frosty pocket, smell-proof pocket, recycled nylon ripstop. The affordable Sunday Golf standout.</div>
-          <span class="product-link">Shop Sunday Golf &nearr;</span>
+          <a href="https://sundaygolf.com/" target="_blank" rel="noopener" class="product-link">Shop Sunday Golf &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://minimalgolf.com/products/mr2-golf-bag" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/mnml-mr2.jpg" alt="MNML Golf MR2 Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="4">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/mnml-mr2.jpg" alt="MNML Golf MR2 Stand Bag &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/stand-bags/mnml-mr2-a2.jpg" alt="MNML Golf MR2 Stand Bag &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/stand-bags/mnml-mr2-a3.jpg" alt="MNML Golf MR2 Stand Bag &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/stand-bags/mnml-mr2-a4.jpg" alt="MNML Golf MR2 Stand Bag &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
         <div class="product-body">
           <div class="product-brand">MNML Golf</div>
           <div class="product-name">MR2 &middot; $349</div>
           <div class="product-desc">Zero zippers &mdash; every closure is magnetic. Built-in solar charger, filming pocket, 5.5 lbs. The smartest bag in golf.</div>
-          <span class="product-link">Shop MNML &nearr;</span>
+          <a href="https://minimalgolf.com/products/mr2-golf-bag" target="_blank" rel="noopener" class="product-link">Shop MNML &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://ghostgolf.com/collections/anyday-golf-bags" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/ghost-golf-anyday.jpg" alt="Ghost Golf Anyday Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/ghost-golf-anyday.jpg" alt="Ghost Golf Anyday Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Ghost Golf</div>
           <div class="product-name">Anyday &middot; $415</div>
           <div class="product-desc">Carbon fiber legs, 7-way or 14-way top. Magnetic pockets, velvet-wrapped dividers that protect premium shafts. 6.5 lbs.</div>
-          <span class="product-link">Shop Ghost Golf &nearr;</span>
+          <a href="https://ghostgolf.com/collections/anyday-golf-bags" target="_blank" rel="noopener" class="product-link">Shop Ghost Golf &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -343,77 +336,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h2 class="products-hdr">Stand Bags &mdash; Premium / Best-in-Class</h2>
     <div class="products-grid">
 
-      <a href="https://www.vesselgolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/vessel-player-air.jpg" alt="Vessel Player Air Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/vessel-player-air.jpg" alt="Vessel Player Air Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Vessel</div>
           <div class="product-name">Player Air &middot; ~$399</div>
           <div class="product-desc">Carbon fiber legs, CORDURA body, magnetic rangefinder pocket. Lightest in the Vessel lineup. Tour-level build quality.</div>
-          <span class="product-link">Shop Vessel &nearr;</span>
+          <a href="https://www.vesselgolf.com/" target="_blank" rel="noopener" class="product-link">Shop Vessel &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.stitchgolf.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/stitch-sl2-gen2.jpg" alt="Stitch Golf SL2 Gen 2 Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/stitch-sl2-gen2.jpg" alt="Stitch Golf SL2 Gen 2 Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Stitch Golf</div>
           <div class="product-name">SL2 Gen 2 &middot; $398</div>
           <div class="product-desc">5.5 lbs, 4-way top. STITCH Touring Fabric with M.I.Y. customization program &mdash; choose your colors, monogram, and details.</div>
-          <span class="product-link">Shop Stitch &nearr;</span>
+          <a href="https://www.stitchgolf.com/" target="_blank" rel="noopener" class="product-link">Shop Stitch &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.titleist.com/product/players-4-carbon/25TBSX5.html" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/titleist-players-4-carbon.jpg" alt="Titleist Players 4 Carbon Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/titleist-players-4-carbon.jpg" alt="Titleist Players 4 Carbon Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Titleist</div>
           <div class="product-name">Players 4 Carbon &middot; $310</div>
           <div class="product-desc">Featherweight at ~3 lbs. Carbon fiber legs, 4-way full-length dividers, 6 pockets. The lightest full-featured bag on this list.</div>
-          <span class="product-link">Shop Titleist &nearr;</span>
+          <a href="https://www.titleist.com/product/players-4-carbon/25TBSX5.html" target="_blank" rel="noopener" class="product-link">Shop Titleist &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://ping.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/ping-hoofer-lite.jpg" alt="Ping Hoofer Lite Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/ping-hoofer-lite.jpg" alt="Ping Hoofer Lite Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Ping</div>
           <div class="product-name">Hoofer Lite &middot; $260</div>
           <div class="product-desc">5 lbs, 4-way top. Convertible single-to-double strap system. The gold standard for walking &mdash; reliable, proven, no-nonsense.</div>
-          <span class="product-link">Shop Ping &nearr;</span>
+          <a href="https://ping.com/" target="_blank" rel="noopener" class="product-link">Shop Ping &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.ogio.com/golf/golf-bags/ogio-golf-bags-stand-2026-fuse.html" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/ogio-fuse.jpg" alt="OGIO Fuse Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/ogio-fuse.jpg" alt="OGIO Fuse Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">OGIO</div>
           <div class="product-name">Fuse &middot; $240</div>
           <div class="product-desc">4.4 lbs &mdash; lightest full-featured option. Over-molded 4-way top, recycled polyester blend. Wide foam shoulder straps for all-day comfort.</div>
-          <span class="product-link">Shop OGIO &nearr;</span>
+          <a href="https://www.ogio.com/golf/golf-bags/ogio-golf-bags-stand-2026-fuse.html" target="_blank" rel="noopener" class="product-link">Shop OGIO &nearr;</a>
         </div>
-      </a>
+      </div>
 
-      <a href="https://www.sunmountain.com/" target="_blank" rel="noopener" class="product-card">
-        <div class="product-img">
-          <img src="/images/stand-bags/sun-mountain-eclipse.jpg" alt="Sun Mountain Eclipse E-4.5 VLO Stand Bag" loading="lazy" />
-        </div>
+      <div class="product-card" data-frames="1">
+        <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/stand-bags/sun-mountain-eclipse.jpg" alt="Sun Mountain Eclipse E-4.5 VLO Stand Bag &middot; view 1 of 1" loading="lazy" /></div></div></div>
         <div class="product-body">
           <div class="product-brand">Sun Mountain</div>
           <div class="product-name">Eclipse E-4.5 VLO &middot; ~$280</div>
           <div class="product-desc">VLO strap system balances the load across your back. 14-way top, ultralight build. Designed by a company that lives and breathes walking golf.</div>
-          <span class="product-link">Shop Sun Mountain &nearr;</span>
+          <a href="https://www.sunmountain.com/" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &nearr;</a>
         </div>
-      </a>
+      </div>
 
     </div>
   </div>
@@ -493,6 +474,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

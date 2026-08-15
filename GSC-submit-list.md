@@ -79,6 +79,24 @@ Same fix as the sitewide pass in August. Worst offenders include `ald-golf-ss26-
 
 ---
 
+---
+
+## Swipeable galleries — 24 pages updated 14 Aug 2026
+
+Product cards on 24 existing posts were converted to swipeable image galleries, adding 946
+new product photos pulled from each brand's own site. The page content and copy are unchanged;
+only the image markup and card structure differ.
+
+These do NOT need manual reindexing — Google will pick up the changes on its normal recrawl,
+and the text content is identical. Do not burn daily indexing quota on them.
+
+One real fix went out with this: the Kingfisher "Golf Tee Box" card had been using the Logo
+Golfer photo. It now shows the actual tee box.
+
+Three sites no longer expose product data, so those pages show single images:
+Manors (endpoint pulled), Cloud & Wind (Squarespace), Metalwood Studio (moved to a custom build).
+
+
 ## Note
 
 You already have a page at `/drops/lions-muny-is-getting-a-world-class-renovation-heres-whats-c`. Worth a look next to what the city's site currently says — their only posted project is the May driving-range resurfacing.

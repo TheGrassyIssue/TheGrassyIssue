@@ -94,6 +94,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr);gap:16px}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:repeat(2,1fr)}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -156,161 +173,135 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Collection — 13 Pieces</h2>
   <div class="products-grid">
 
-    <a href="https://metalwood.studio/products/adidas-metalwood-mc70-golf-shoe-silver" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/metalwood-adidas-mc70.jpg" alt="Metalwood Studio × adidas MC70 Golf Shoe silver metallic" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/metalwood-adidas-mc70.jpg" alt="Metalwood Studio × adidas MC70 Golf Shoe silver metallic &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">&times; adidas MC70 Golf &middot; $200</div>
         <div class="product-desc">Predator upper on a golf chassis. Silver metallic leather, BOOST midsole with LIGHTSTRIKE technology and Torsion system, water-resistant laces. Soccer-inspired asymmetry with deco-stitched toe detail — the kind of shoe that makes people ask questions on the first tee.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/adidas-metalwood-mc70-golf-shoe-silver" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://quietgolf.com/products/qg-x-adidas-samba" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/quiet-golf-adidas-samba.jpg" alt="Quiet Golf × Adidas Samba Golf spikeless shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/quiet-golf-adidas-samba.jpg" alt="Quiet Golf × Adidas Samba Golf spikeless shoe &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/golf-shoes/quiet-golf-adidas-samba-a2.jpg" alt="Quiet Golf × Adidas Samba Golf spikeless shoe &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/golf-shoes/quiet-golf-adidas-samba-a3.jpg" alt="Quiet Golf × Adidas Samba Golf spikeless shoe &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/golf-shoes/quiet-golf-adidas-samba-a4.jpg" alt="Quiet Golf × Adidas Samba Golf spikeless shoe &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Quiet Golf</div>
         <div class="product-name">&times; Adidas Samba Golf &middot; $150</div>
         <div class="product-desc">The Samba — maybe the most iconic sneaker silhouette of the decade — gets a golf-ready sole and Quiet Golf's restrained touch. Spikeless traction, gum outsole, full-grain leather upper. The shoe that proved golf doesn't need to look like golf.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://quietgolf.com/products/qg-x-adidas-samba" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://eastsidegolf.com/collections/golf-shoes" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/eastside-golf-jordan-aj1.jpg" alt="Eastside Golf × Jordan AJ1 Low G golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/eastside-golf-jordan-aj1.jpg" alt="Eastside Golf × Jordan AJ1 Low G golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Eastside Golf</div>
         <div class="product-name">&times; Jordan AJ1 Low G &middot; ~$180</div>
         <div class="product-desc">Olajuwon Ajanaku and Earl Cooper brought Jordan to the course and changed the conversation. The AJ1 Low G keeps the Wings logo, the Jumpman tongue, and the silhouette that started it all — now with integrated traction for 18.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://eastsidegolf.com/collections/golf-shoes" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://malbon.com/collections/tour-golf-shoe" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/malbon-tour-1.jpg" alt="Malbon Golf Tour 1 spikeless golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/malbon-tour-1.jpg" alt="Malbon Golf Tour 1 spikeless golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Malbon Golf</div>
         <div class="product-name">Tour 1 &middot; $228</div>
         <div class="product-desc">Malbon's first in-house golf shoe — not a collab, not a rebrand, built from scratch. Spikeless outsole with multi-directional traction, premium leather upper, Buckets logo on the heel. The shoe they've been building toward since day one.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://malbon.com/collections/tour-golf-shoe" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://manorsgolf.com/collections/shoes" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/manors-reebok-pump-golf.jpg" alt="Manors × Reebok OG Pump Golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/manors-reebok-pump-golf.jpg" alt="Manors × Reebok OG Pump Golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Manors</div>
         <div class="product-name">&times; Reebok OG Pump Golf &middot; $225</div>
         <div class="product-desc">London's Manors brought the Pump to the course. Reebok's original inflation system for a custom fit, spikeless golf outsole, premium materials throughout. The kind of crossover that makes you stop and look twice on the first tee.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://manorsgolf.com/collections/shoes" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.studentsgolf.com" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/students-payntr-pt.jpg" alt="Students Golf × PAYNTR PT golf shoe with magnetic ball marker" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/students-payntr-pt.jpg" alt="Students Golf × PAYNTR PT golf shoe with magnetic ball marker &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">&times; PAYNTR PT &middot; $240</div>
         <div class="product-desc">Students Golf and PAYNTR built a shoe with a magnetic ball marker embedded in the tongue — pull it off, mark your ball, snap it back. Full-grain leather, spikeless sole, and the kind of detail that separates a golf shoe from a statement.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.studentsgolf.com" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.sugarloafsocialclub.com/shop" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/ssc-payntr-eighty-seven.jpg" alt="Sugarloaf Social Club × PAYNTR Eighty Seven SC golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/ssc-payntr-eighty-seven.jpg" alt="Sugarloaf Social Club × PAYNTR Eighty Seven SC golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Sugarloaf Social Club</div>
         <div class="product-name">&times; PAYNTR Eighty Seven SC &middot; ~$200</div>
         <div class="product-desc">SSC put their mark on PAYNTR's Eighty Seven silhouette — clean lines, club-inspired colorway, spikeless traction built for walking rounds. The Social Club keeps doing collabs that feel exclusive without being inaccessible.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.sugarloafsocialclub.com/shop" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://vesselgolf.com/collections" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/vessel-payntr-sl.jpg" alt="Vessel × PAYNTR SL golf shoe with carbon fiber plate" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/vessel-payntr-sl.jpg" alt="Vessel × PAYNTR SL golf shoe with carbon fiber plate &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Vessel</div>
         <div class="product-name">&times; PAYNTR SL &middot; $229</div>
         <div class="product-desc">Vessel's bag engineering meets PAYNTR's shoe engineering — a carbon fiber plate for energy return, premium leather upper, and the same obsessive material quality Vessel brings to their Player III bags. Performance and taste in equal measure.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://vesselgolf.com/collections" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://markandlona.us/collections/shoes-spikeless-men" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/mark-lona-spikeless.jpg" alt="MARK and LONA spikeless golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/mark-lona-spikeless.jpg" alt="MARK and LONA spikeless golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">MARK &amp; LONA</div>
         <div class="product-name">Spikeless Golf Shoe &middot; ~$250</div>
         <div class="product-desc">Tokyo's luxury golf label brings fashion-house design to the fairway. Spikeless outsole, premium construction, and the kind of bold aesthetic that makes Japanese golf fashion its own category. Not for everyone — that's the point.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://markandlona.us/collections/shoes-spikeless-men" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://payntrgolf.com" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/payntr-reserve-classic.jpg" alt="PAYNTR Reserve Classic Tour RS golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/payntr-reserve-classic.jpg" alt="PAYNTR Reserve Classic Tour RS golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">PAYNTR Golf</div>
         <div class="product-name">Reserve Classic Tour RS &middot; ~$200</div>
         <div class="product-desc">PAYNTR's flagship — the shoe they build everything else around. Full-grain leather, removable spikes for tournament play, and a classic silhouette that nods to old-school golf without living in it. Three collabs on this list run through PAYNTR's DNA.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://payntrgolf.com" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.nike.com/t/air-max-1-86-og-g-mens-golf-shoes-JZm9QM" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/nike-air-max-1-86.jpg" alt="Nike Air Max 1 86 OG G golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/nike-air-max-1-86.jpg" alt="Nike Air Max 1 86 OG G golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Nike</div>
         <div class="product-name">Air Max 1 '86 OG G &middot; $160</div>
         <div class="product-desc">Tinker Hatfield's 1987 original — the shoe that invented the visible Air window — rebuilt for the course. Waterproof upper, integrated spikeless traction, and a silhouette that hasn't lost a step in nearly four decades. The sneaker that started everything, now on grass.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.nike.com/t/air-max-1-86-og-g-mens-golf-shoes-JZm9QM" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.nike.com/t/air-max-90-g-golf-shoes-0lS2OW8C" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/nike-air-max-90-g.jpg" alt="Nike Air Max 90 G golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/nike-air-max-90-g.jpg" alt="Nike Air Max 90 G golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Nike</div>
         <div class="product-name">Air Max 90 G &middot; $145</div>
         <div class="product-desc">The AM90 might be the most recognizable sneaker profile on earth — the infrared mudguard, the waffle outsole, the Max Air unit. Nike kept every detail and swapped the sole for integrated golf traction. Five colorways, zero compromise on the silhouette.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.nike.com/t/air-max-90-g-golf-shoes-0lS2OW8C" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.nike.com/t/air-pegasus-89-g-golf-shoes-HJMHzqFE" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/golf-shoes/nike-pegasus-89-g.jpg" alt="Nike Air Pegasus 89 G golf shoe" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/golf-shoes/nike-pegasus-89-g.jpg" alt="Nike Air Pegasus 89 G golf shoe &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Nike</div>
         <div class="product-name">Air Pegasus '89 G &middot; $125</div>
         <div class="product-desc">The Pegasus line has been Nike's workhorse since 1983, and the '89 G brings that retro-runner DNA to the course. Suede and mesh upper, visible Air heel unit, spikeless traction. The entry point on this list at $125 — and it looks better than shoes at twice the price.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.nike.com/t/air-pegasus-89-g-golf-shoes-HJMHzqFE" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -396,6 +387,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

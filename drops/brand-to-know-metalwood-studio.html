@@ -137,6 +137,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -207,185 +224,185 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">New from the Collection — SS26 &amp; the adidas Era</h2>
   <div class="products-grid">
 
-    <a href="https://metalwood.studio/products/metalwood-x-adidas-originals-predator-sala-sneaker-vino" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-predator-sala.jpg" alt="adidas Predator Sala — Vino — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-predator-sala.jpg" alt="adidas Predator Sala — Vino — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood × adidas · New</div>
         <div class="product-name">adidas Predator Sala — Vino · $150</div>
         <div class="product-desc">The one that had a line down La Brea in January. The indoor-soccer Predator rebuilt by Metalwood for adidas Skateboarding — shaggy suede, glossy overlays, burgundy palette. Golf brand does soccer shoe, and it works.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/metalwood-x-adidas-originals-predator-sala-sneaker-vino" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/adidas-metalwood-mc70-golf-shoe-silver" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-mc70-silver.jpg" alt="adidas MC70 Golf Shoe — Silver — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-mc70-silver.jpg" alt="adidas MC70 Golf Shoe — Silver — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood × adidas · New</div>
         <div class="product-name">adidas MC70 Golf Shoe — Silver · $200</div>
         <div class="product-desc">The collab's course piece in its newest colorway: deco-stitched leather upper inspired by 1970s football boots on a modern golf chassis. Dropped via CONFIRMED and metalwood.studio in February.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/adidas-metalwood-mc70-golf-shoe-silver" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/adidas-metalwood-pant-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-adidas-pant.jpg" alt="adidas x Metalwood Pant — Black — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-adidas-pant.jpg" alt="adidas x Metalwood Pant — Black — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood × adidas · New</div>
         <div class="product-name">adidas x Metalwood Pant — Black · $150</div>
         <div class="product-desc">The collab trouser — three stripes meet Metalwood's baggy '90s silhouette. The pant the lookbook lives in.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/adidas-metalwood-pant-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/adidas-metalwood-leather-golf-glove-white-lh" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-adidas-glove.jpg" alt="adidas x Metalwood Golf Glove — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-adidas-glove.jpg" alt="adidas x Metalwood Golf Glove — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood × adidas · New</div>
         <div class="product-name">adidas x Metalwood Golf Glove · $35</div>
         <div class="product-desc">Leather cabretta with three-stripes detailing. The cheapest way into the collab, and the only piece you'll actually wear out.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/adidas-metalwood-leather-golf-glove-white-lh" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/net-parka-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-net-parka.jpg" alt="Net Parka — Black — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-net-parka.jpg" alt="Net Parka — Black — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Net Parka — Black · $188</div>
         <div class="product-desc">Sheer mesh outerwear that looks like a driving-range net turned into a jacket. Zero warmth, maximum statement.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/net-parka-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/plaid-tactical-overshirt-green-white" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-plaid-overshirt.jpg" alt="Plaid Tactical Overshirt — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-plaid-overshirt.jpg" alt="Plaid Tactical Overshirt — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Plaid Tactical Overshirt · $208</div>
         <div class="product-desc">Green-and-white plaid with utility pockets — golf-dad fabric, tactical build. The most Metalwood garment in the range.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/plaid-tactical-overshirt-green-white" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/paneled-work-shirt-olive" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-work-shirt.jpg" alt="Paneled Work Shirt — Olive — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-work-shirt.jpg" alt="Paneled Work Shirt — Olive — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Paneled Work Shirt — Olive · $188</div>
         <div class="product-desc">Workwear panels in olive. Reads mechanic's shirt until you clock the metal logo.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/paneled-work-shirt-olive" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/micro-grid-oversized-button-up-shirt-sky" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-micro-grid-sky.jpg" alt="Micro Grid Button Up — Sky — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-micro-grid-sky.jpg" alt="Micro Grid Button Up — Sky — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Micro Grid Button Up — Sky · $168</div>
         <div class="product-desc">Oversized boxy button-up in a sky micro-check. Clubhouse-after-the-round energy.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/micro-grid-oversized-button-up-shirt-sky" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/moto-zip-hooded-sweatshirt-tar" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-moto-hoodie.jpg" alt="Moto Zip Hoodie — Tar — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-moto-hoodie.jpg" alt="Moto Zip Hoodie — Tar — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Moto Zip Hoodie — Tar · $170</div>
         <div class="product-desc">Moto-styled full-zip in tar. Heavyweight fleece with race-team lines.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/moto-zip-hooded-sweatshirt-tar" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/stonehenge-hooded-sweatshirt-heather-grey" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-stonehenge-hoodie.jpg" alt="Stonehenge Hoodie — Heather — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-stonehenge-hoodie.jpg" alt="Stonehenge Hoodie — Heather — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Stonehenge Hoodie — Heather · $170</div>
         <div class="product-desc">The Stonehenge graphic on heather grey fleece. Monoliths and metal woods — it makes sense if you don't think about it.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/stonehenge-hooded-sweatshirt-heather-grey" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/dewey-hooded-sweatshirt-olive" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-dewey-hoodie.jpg" alt="Dewey Hoodie — Olive — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-dewey-hoodie.jpg" alt="Dewey Hoodie — Olive — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Dewey Hoodie — Olive · $170</div>
         <div class="product-desc">Graffiti-warped logo across olive fleece. The loudest of the hood options.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/dewey-hooded-sweatshirt-olive" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/digital-hombre-top-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-hombre-top.jpg" alt="Digital Hombre Top — Green — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-hombre-top.jpg" alt="Digital Hombre Top — Green — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Digital Hombre Top — Green · $154</div>
         <div class="product-desc">Pixel-gradient knit in green. Somewhere between range-picker uniform and rave flyer.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/digital-hombre-top-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/double-layer-striped-t-shirt-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-double-layer-tee.jpg" alt="Double Layer Striped Tee — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-double-layer-tee.jpg" alt="Double Layer Striped Tee — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Double Layer Striped Tee · $108</div>
         <div class="product-desc">The built-in-layering tee — striped short sleeve fused over a thin-striped long sleeve. The '90s skate-catalog fit, pre-assembled.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/double-layer-striped-t-shirt-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/king-of-the-greens-t-shirt-fatigue-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-kotg-tee.jpg" alt="King of the Greens Tee — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-kotg-tee.jpg" alt="King of the Greens Tee — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">King of the Greens Tee · $62</div>
         <div class="product-desc">The KOTG graphic in fatigue green. Vintage sporting-goods typography, muni-champion energy.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/king-of-the-greens-t-shirt-fatigue-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/trophy-short-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-trophy-short.jpg" alt="Trophy Short — Navy — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-trophy-short.jpg" alt="Trophy Short — Navy — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Trophy Short — Navy · $148</div>
         <div class="product-desc">The Trophy short in navy — most colorways already sold through, which tells you what you need to know.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/trophy-short-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/seersucker-spa-short-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-spa-short.jpg" alt="Seersucker Spa Short — Navy — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-spa-short.jpg" alt="Seersucker Spa Short — Navy — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Seersucker Spa Short — Navy · $136</div>
         <div class="product-desc">Seersucker in a spa-short cut. For the 19th hole, the pool deck, or both in one afternoon.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/seersucker-spa-short-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/freshwater-hat-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-freshwater-hat.jpg" alt="Freshwater Hat — Black — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-freshwater-hat.jpg" alt="Freshwater Hat — Black — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Freshwater Hat — Black · $58</div>
         <div class="product-desc">A fishing-adjacent soft hat in black. The brim for people who've moved past caps.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/freshwater-hat-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/metal-logo-torque-wrench-silver" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/new-torque-wrench.jpg" alt="Metal Logo Torque Wrench — Metalwood Studio" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-torque-wrench.jpg" alt="Metal Logo Torque Wrench — Metalwood Studio &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood · New</div>
         <div class="product-name">Metal Logo Torque Wrench · $36</div>
         <div class="product-desc">A divot tool shaped like a torque wrench. The most on-brand object Metalwood makes — garage tool for the green.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/metal-logo-torque-wrench-silver" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -429,65 +446,65 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Collab Archive — What You Missed</h2>
   <div class="products-grid">
 
-    <a href="https://www.instagram.com/metalwoodstudio/p/DLDE1cbxQoe/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/collab-oakley.jpg" alt="Oakley Pro M Frame — Metalwood Studio collab" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/collab-oakley.jpg" alt="Oakley Pro M Frame — Metalwood Studio collab &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood &middot; Archive</div>
         <div class="product-name">Oakley Pro M Frame · 2025 · Sold Out</div>
         <div class="product-desc">The big one &mdash; the &#39;90s tour-staple shield reissued through Metalwood&#39;s lens, launched with a Paris Fashion Week party and a friends-and-family release that never hit a public cart for most people.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.instagram.com/metalwoodstudio/p/DLDE1cbxQoe/" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.instagram.com/metalwoodstudio/p/C3SvXKgOX9B/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/collab-footjoy.jpg" alt="FootJoy Golf Sneaker — Metalwood Studio collab" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/collab-footjoy.jpg" alt="FootJoy Golf Sneaker — Metalwood Studio collab &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood &middot; Archive</div>
         <div class="product-name">FootJoy Golf Sneaker · Sold Out</div>
         <div class="product-desc">A premium spikeless shoe with the FJ | metalwood dual branding &mdash; the moment the biggest shoemaker in golf co-signed the &#39;90s revival. Long gone.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.instagram.com/metalwoodstudio/p/C3SvXKgOX9B/" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.instagram.com/metalwoodstudio/p/DQ5qFvCj5kI/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/collab-keen.jpg" alt="KEEN Footwear Capsule — Metalwood Studio collab" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/collab-keen.jpg" alt="KEEN Footwear Capsule — Metalwood Studio collab &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood &middot; Archive</div>
         <div class="product-name">KEEN Footwear Capsule · Sold Out</div>
         <div class="product-desc">The unlikeliest pairing on the list &mdash; hiking-sandal royalty doing golf footwear with a La Brea streetwear brand. It somehow made perfect sense on course.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.instagram.com/metalwoodstudio/p/DQ5qFvCj5kI/" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.instagram.com/metalwoodstudio/p/DAwLTcHSd8x/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/collab-maxfli.jpg" alt="Maxfli Collection — Metalwood Studio collab" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/collab-maxfli.jpg" alt="Maxfli Collection — Metalwood Studio collab &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood &middot; Archive</div>
         <div class="product-name">Maxfli Collection · Sold Out</div>
         <div class="product-desc">A nod to golf&#39;s golden era with the ball brand your dad played in 1994 &mdash; caps, balls, and gear wearing the old Maxfli marks like they never left.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.instagram.com/metalwoodstudio/p/DAwLTcHSd8x/" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.instagram.com/metalwoodstudio/p/CtcMLyOOGtN/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/collab-amex.jpg" alt="AmEx x Hypebeast Capsule — Metalwood Studio collab" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/collab-amex.jpg" alt="AmEx x Hypebeast Capsule — Metalwood Studio collab &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood &middot; Archive</div>
         <div class="product-name">AmEx x Hypebeast Capsule · 2023 · Sold Out</div>
         <div class="product-desc">An exclusive capsule made with American Express and Hypebeast &mdash; denim carry bags and course-ready pieces you had to be in the right room to get.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.instagram.com/metalwoodstudio/p/CtcMLyOOGtN/" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.instagram.com/metalwoodstudio/p/DJ-U8UXtIjC/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/metalwood/collab-garrett-leight.jpg" alt="Garrett Leight Eyewear — Metalwood Studio collab" loading="lazy" /></div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/collab-garrett-leight.jpg" alt="Garrett Leight Eyewear — Metalwood Studio collab &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood &middot; Archive</div>
         <div class="product-name">Garrett Leight Eyewear · Sold Out</div>
         <div class="product-desc">LA eyewear royalty meets &#39;90s golf &mdash; frames built for squinting down a fairway, shot lying in a pit of range balls.</div>
-        <span class="product-link">View ↗</span>
+        <a href="https://www.instagram.com/metalwoodstudio/p/DJ-U8UXtIjC/" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -529,149 +546,125 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Original Collection — 12 Pieces</h2>
   <div class="products-grid">
 
-    <a href="https://metalwood.studio/products/tri-metal-t-shirt-midnight" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/010662da-MWS25-03-15-MDN_V1.jpg" alt="Metalwood Studio — Tri-Metal T-Shirt in Midnight" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/010662da-MWS25-03-15-MDN_V1.jpg" alt="Metalwood Studio — Tri-Metal T-Shirt in Midnight &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Tri-Metal T-Shirt · $54</div>
         <div class="product-desc">The Tri-Metal Tee ($54) is the entry point — heavyweight cotton with a crest graphic that pulls from medieval heraldry and industrial signage. It's the piece that tells you what Metalwood is about in one glance: golf clothes designed by someone who grew up on skate graphics and indie brand culture, not country club catalogs.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/tri-metal-t-shirt-midnight" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/medieval-terry-polo-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/d445c297-MWS25-04-03-NVY_V1.jpg" alt="Metalwood Studio — Medieval Terry Polo in Navy" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/d445c297-MWS25-04-03-NVY_V1.jpg" alt="Metalwood Studio — Medieval Terry Polo in Navy &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Medieval Terry Polo · $128</div>
         <div class="product-desc">The Medieval Terry Polo in navy ($128) is a terry cloth polo with a medieval crest embroidered on the chest. Terry on a golf course is a power move — it shouldn't work, but Metalwood makes it feel intentional. The texture reads 'vintage resort' rather than 'beach towel.' One of the most distinctive polos in indie golf right now.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/medieval-terry-polo-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/world-class-zip-polo-white" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/853e9949-MWS25-04-10-WHT_V1.jpg" alt="Metalwood Studio — World Class Zip Polo in White" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/853e9949-MWS25-04-10-WHT_V1.jpg" alt="Metalwood Studio — World Class Zip Polo in White &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">World Class Zip Polo · $128</div>
         <div class="product-desc">World Class Zip Polo in white ($128) — a quarter-zip polo with 'World Class' script on the chest. The zip detail elevates it past basic polo territory and the white keeps it course-appropriate anywhere. Metalwood's polo fits tend to run slightly boxy, which works for the brand's aesthetic. Pair with the Medieval hat.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/world-class-zip-polo-white" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/madras-patch-explorer-shirt-multicolor" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/2cae6a0a-MWS25-04-04-MLT_V1.jpg" alt="Metalwood Studio — Madras Explorer Shirt in Multi" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/2cae6a0a-MWS25-04-04-MLT_V1.jpg" alt="Metalwood Studio — Madras Explorer Shirt in Multi &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Madras Explorer Shirt · $158</div>
         <div class="product-desc">The Madras Explorer Shirt ($158) is Metalwood doing a madras camp shirt with their own twist — the plaid is louder than traditional madras, and the cut is more relaxed. It's a shirt for the walk from the clubhouse to the first tee, or for the bar after. Not technically golf apparel, but very much golf-adjacent.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/madras-patch-explorer-shirt-multicolor" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/mini-metal-logo-longsleeve-thermal-polo-marine" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/9985f5b9-25FW-04-104_MAR_V1.jpg" alt="Metalwood Studio — LS Thermal Polo in Maroon" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/9985f5b9-25FW-04-104_MAR_V1.jpg" alt="Metalwood Studio — LS Thermal Polo in Maroon &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">LS Thermal Polo · $128</div>
         <div class="product-desc">LS Thermal Polo in maroon ($128) — a long-sleeve thermal knit polo for cold-weather rounds. The waffle texture gives it visual interest without a pattern, and the maroon colorway is rich without being loud. This is a layering piece that works under a vest or on its own. Metalwood does cold-weather golf better than most indie brands.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/mini-metal-logo-longsleeve-thermal-polo-marine" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/lined-v-neck-pullover-multicolor" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/bfbe7936-25FW-05-110_MLT_V1.jpg" alt="Metalwood Studio — V-Neck Pullover in Multi" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/bfbe7936-25FW-05-110_MLT_V1.jpg" alt="Metalwood Studio — V-Neck Pullover in Multi &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">V-Neck Pullover · $188</div>
         <div class="product-desc">The V-Neck Pullover in multi ($188) hits the 'vintage ski lodge' aesthetic that Metalwood does so well. Multi-stripe in muted tones, relaxed fit, ribbed cuffs and hem. It's outerwear that looks like it was thrifted from a 1978 pro shop in Vermont. Not for minimalists, but undeniably cool.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/lined-v-neck-pullover-multicolor" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/contrast-stitch-quarter-zip-pullover-charcoal" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/c28892a8-25FW-05-106_CHR_V1.jpg" alt="Metalwood Studio — Quarter Zip Pullover in Charcoal" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/c28892a8-25FW-05-106_CHR_V1.jpg" alt="Metalwood Studio — Quarter Zip Pullover in Charcoal &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Quarter Zip Pullover · $158</div>
         <div class="product-desc">Quarter Zip Pullover in charcoal ($158) — the most versatile outerwear piece in the lineup. Clean charcoal, minimal branding, quality knit construction. This is the pullover you grab when you don't want to think about what to wear. It works on the course, at dinner, on a plane. The $158 price point is fair for the quality.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/contrast-stitch-quarter-zip-pullover-charcoal" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/bomber-jacket-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/3c458fc9-25FW-05-109_SEAF_V1.jpg" alt="Metalwood Studio — Bomber Jacket in Seafoam" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/3c458fc9-25FW-05-109_SEAF_V1.jpg" alt="Metalwood Studio — Bomber Jacket in Seafoam &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Bomber Jacket · $228</div>
         <div class="product-desc">The Bomber Jacket in seafoam ($228) is a straight fashion piece — quilted bomber with a seafoam colorway that reads 'spring in Tokyo.' Metalwood's outerwear has gotten increasingly ambitious, and this jacket is the peak of that arc. Not for the traditional golfer, but if you're building a closet around indie golf brands, this is a statement piece.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/bomber-jacket-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/mechanic-jacket-black" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/4d4d007e-25FW-05-104_BLK_V1.jpg" alt="Metalwood Studio — Mechanic Jacket in Black" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/4d4d007e-25FW-05-104_BLK_V1.jpg" alt="Metalwood Studio — Mechanic Jacket in Black &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Mechanic Jacket · $278</div>
         <div class="product-desc">Mechanic Jacket in black ($278) — the most expensive piece in the collection and the most technically interesting. Waxed cotton shell, utility pockets, snap closures. It looks like it belongs in a motorcycle shop, not a pro shop, which is exactly the point. Metalwood's version of a golf jacket for people who don't want a golf jacket.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/mechanic-jacket-black" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/metal-logo-5-panel-hat-navy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/metalwood/new-metal-logo-5panel-navy.jpg" alt="Metalwood Studio — Metal Logo 5-Panel Hat in Navy" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-metal-logo-5panel-navy.jpg" alt="Metalwood Studio — Metal Logo 5-Panel Hat in Navy &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Metal Logo 5-Panel Hat · Navy · $42</div>
         <div class="product-desc">The signature hat of the brand — the metal logo on an unstructured 5-panel with a curved brim. Runs in seven colorways; navy is the one that goes with everything in your bag. At $42, still one of the better-priced hats in the indie golf space, and the gateway piece alongside the Tri-Metal Tee.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/metal-logo-5-panel-hat-navy" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/professional-piping-snapback-hat-white" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/metalwood/new-piping-snapback-white.jpg" alt="Metalwood Studio — Professional Piping Snapback in White" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/metalwood/new-piping-snapback-white.jpg" alt="Metalwood Studio — Professional Piping Snapback in White &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood Studio</div>
         <div class="product-name">Professional Piping Snapback · White · $48</div>
         <div class="product-desc">Structured snapback with contrast piping straight off a 1994 tour telecast — the most overtly '90s hat in the range. White is bold for a hat (stains, sweat) but it photographs incredibly well. Also in black.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/professional-piping-snapback-hat-white" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://metalwood.studio/products/metalwood-x-adidas-originals-mc70-golf-shoe-white" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/f65775f5-26SS-ADI-19-01_WHT_V1.jpg" alt="Metalwood Studio x adidas — MC70 Golf Shoe in White" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/f65775f5-26SS-ADI-19-01_WHT_V1.jpg" alt="Metalwood Studio x adidas — MC70 Golf Shoe in White &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Metalwood x adidas</div>
         <div class="product-name">MC70 Golf Shoe · $200</div>
         <div class="product-desc">The adidas x Metalwood MC70 Golf Shoe ($200) is the collab that put Metalwood on the radar of people outside the indie golf bubble. A retro-inspired silhouette based on the '70s adidas archive, with Metalwood's medieval crest on the tongue and heel tab. Spikeless, leather upper, gum sole. It's the coolest golf shoe you can buy right now, full stop.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://metalwood.studio/products/metalwood-x-adidas-originals-mc70-golf-shoe-white" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -756,6 +749,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>

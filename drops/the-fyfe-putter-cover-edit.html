@@ -95,6 +95,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -164,185 +181,185 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">All 18 Covers</h2>
   <div class="products-grid">
 
-    <a href="https://www.fyfegolf.com/products/black-grouse-harris-tweed-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/black-grouse-mallet.jpg" alt="Fyfe Golf Black Grouse Harris Tweed and Leather Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/black-grouse-mallet.jpg" alt="Fyfe Golf Black Grouse Harris Tweed and Leather Mallet Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/black-grouse-mallet-a2.jpg" alt="Fyfe Golf Black Grouse Harris Tweed and Leather Mallet Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/black-grouse-mallet-a3.jpg" alt="Fyfe Golf Black Grouse Harris Tweed and Leather Mallet Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">Black Grouse Tweed &amp; Leather</div>
         <div class="product-desc">Black-and-white houndstooth Harris Tweed with Italian Nappa leather. Stark, sharp, and impossible to mistake for stock. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/black-grouse-harris-tweed-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/mackenzie-tartan-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/mackenzie-tartan-blade.jpg" alt="Fyfe Golf MacKenzie Tartan Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/mackenzie-tartan-blade.jpg" alt="Fyfe Golf MacKenzie Tartan Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/mackenzie-tartan-blade-a2.jpg" alt="Fyfe Golf MacKenzie Tartan Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/mackenzie-tartan-blade-a3.jpg" alt="Fyfe Golf MacKenzie Tartan Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">MacKenzie Tartan Blade</div>
         <div class="product-desc">100% wool in the MacKenzie tartan — the same cloth from the Fyfe x MacKenzie bag collab, sized for your gamer. Black fleece lining. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/mackenzie-tartan-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/cannich-blade-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/cannich-blade.jpg" alt="Fyfe Golf Cannich Waverley Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/cannich-blade.jpg" alt="Fyfe Golf Cannich Waverley Tweed Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/cannich-blade-a2.jpg" alt="Fyfe Golf Cannich Waverley Tweed Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/cannich-blade-a3.jpg" alt="Fyfe Golf Cannich Waverley Tweed Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Cannich Blade</div>
         <div class="product-desc">Peregrine houndstooth Waverley Tweed woven in Selkirk. A refined study in greys — quiet, restrained, built to last. $65.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/cannich-blade-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/gt-rosso-scuderia-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/gt-rosso-mallet.jpg" alt="Fyfe Golf GT Rosso Scuderia Leather Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-rosso-mallet.jpg" alt="Fyfe Golf GT Rosso Scuderia Leather Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-rosso-mallet-a2.jpg" alt="Fyfe Golf GT Rosso Scuderia Leather Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-rosso-mallet-a3.jpg" alt="Fyfe Golf GT Rosso Scuderia Leather Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-rosso-mallet-a4.jpg" alt="Fyfe Golf GT Rosso Scuderia Leather Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">GT Rosso Scuderia Leather</div>
         <div class="product-desc">Italian leather in racing red with a cream Sherpa lining. Grand-touring energy for the mallet crowd. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/gt-rosso-scuderia-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/gt-phantom-black-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/gt-phantom-mallet.jpg" alt="Fyfe Golf GT Phantom Black Leather Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-phantom-mallet.jpg" alt="Fyfe Golf GT Phantom Black Leather Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-phantom-mallet-a2.jpg" alt="Fyfe Golf GT Phantom Black Leather Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-phantom-mallet-a3.jpg" alt="Fyfe Golf GT Phantom Black Leather Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-phantom-mallet-a4.jpg" alt="Fyfe Golf GT Phantom Black Leather Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">GT Phantom Black Leather</div>
         <div class="product-desc">Clean lines, quiet confidence. All-black Italian leather with classic grand-touring depth. The stealth option. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/gt-phantom-black-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/gt-vanquish-green-leather-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/gt-vanquish-blade.jpg" alt="Fyfe Golf GT Vanquish Green Leather Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-vanquish-blade.jpg" alt="Fyfe Golf GT Vanquish Green Leather Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-vanquish-blade-a2.jpg" alt="Fyfe Golf GT Vanquish Green Leather Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-vanquish-blade-a3.jpg" alt="Fyfe Golf GT Vanquish Green Leather Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">GT Vanquish Green Leather</div>
         <div class="product-desc">Supple Italian leather in British racing green with a plush lining. Timeless design, performance-first build. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/gt-vanquish-green-leather-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/gt-carrera-cognac-leather-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/gt-carrera-blade.jpg" alt="Fyfe Golf GT Carrera Cognac Leather Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-carrera-blade.jpg" alt="Fyfe Golf GT Carrera Cognac Leather Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-carrera-blade-a2.jpg" alt="Fyfe Golf GT Carrera Cognac Leather Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gt-carrera-blade-a3.jpg" alt="Fyfe Golf GT Carrera Cognac Leather Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">GT Carrera Cognac Leather</div>
         <div class="product-desc">Cognac Italian leather that will only get better with sun and rounds. The one that ages like a good watch strap. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/gt-carrera-cognac-leather-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/harbour-seersucker-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/harbour-seersucker-blade.jpg" alt="Fyfe Golf Harbour Seersucker Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/harbour-seersucker-blade.jpg" alt="Fyfe Golf Harbour Seersucker Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/harbour-seersucker-blade-a2.jpg" alt="Fyfe Golf Harbour Seersucker Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/harbour-seersucker-blade-a3.jpg" alt="Fyfe Golf Harbour Seersucker Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Harbour Seersucker Blade</div>
         <div class="product-desc">Blue-and-white striped cotton seersucker with Sherpa fleece inside. The summer bag's answer to all that wool. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/harbour-seersucker-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/fortrose-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/fortrose-blade.jpg" alt="Fyfe Golf Fortrose Harris Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/fortrose-blade.jpg" alt="Fyfe Golf Fortrose Harris Tweed Blade Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/fortrose-blade-a2.jpg" alt="Fyfe Golf Fortrose Harris Tweed Blade Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/fortrose-blade-a3.jpg" alt="Fyfe Golf Fortrose Harris Tweed Blade Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/fortrose-blade-a4.jpg" alt="Fyfe Golf Fortrose Harris Tweed Blade Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Fortrose Harris Tweed</div>
         <div class="product-desc">Navy Harris Tweed with a soft red-and-orange overcheck. Handwoven in the Outer Hebrides, finished with black fleece. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/fortrose-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/galloway-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/galloway-blade.jpg" alt="Fyfe Golf Galloway Harris Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/galloway-blade.jpg" alt="Fyfe Golf Galloway Harris Tweed Blade Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/galloway-blade-a2.jpg" alt="Fyfe Golf Galloway Harris Tweed Blade Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/galloway-blade-a3.jpg" alt="Fyfe Golf Galloway Harris Tweed Blade Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/galloway-blade-a4.jpg" alt="Fyfe Golf Galloway Harris Tweed Blade Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Galloway Harris Tweed</div>
         <div class="product-desc">Black Harris Tweed with multi-colored fleck — like static on an old TV, in a good way. Organic fleece lining. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/galloway-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/auld-master-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/auld-master-blade.jpg" alt="Fyfe Golf Auld Master Harris Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/auld-master-blade.jpg" alt="Fyfe Golf Auld Master Harris Tweed Blade Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/auld-master-blade-a2.jpg" alt="Fyfe Golf Auld Master Harris Tweed Blade Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/auld-master-blade-a3.jpg" alt="Fyfe Golf Auld Master Harris Tweed Blade Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/auld-master-blade-a4.jpg" alt="Fyfe Golf Auld Master Harris Tweed Blade Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Auld Master Harris Tweed</div>
         <div class="product-desc">Small check in rust orange, charcoal, and blue with a rich blue fleece lining. The professor of the lineup. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/auld-master-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/gamekeeper-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/gamekeeper-blade.jpg" alt="Fyfe Golf Gamekeeper Estate Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/gamekeeper-blade.jpg" alt="Fyfe Golf Gamekeeper Estate Tweed Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gamekeeper-blade-a2.jpg" alt="Fyfe Golf Gamekeeper Estate Tweed Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/gamekeeper-blade-a3.jpg" alt="Fyfe Golf Gamekeeper Estate Tweed Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Gamekeeper Blade</div>
         <div class="product-desc">Estate tweed in muted blues with a brown houndstooth overcheck — the cloth Scottish gamekeepers actually wore. Pure New Wool. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/gamekeeper-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/dalmore-mallet-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/dalmore-mallet.jpg" alt="Fyfe Golf Dalmore Leather Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/dalmore-mallet.jpg" alt="Fyfe Golf Dalmore Leather Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/dalmore-mallet-a2.jpg" alt="Fyfe Golf Dalmore Leather Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/dalmore-mallet-a3.jpg" alt="Fyfe Golf Dalmore Leather Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/dalmore-mallet-a4.jpg" alt="Fyfe Golf Dalmore Leather Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">Dalmore Mallet</div>
         <div class="product-desc">Dark brown leather, rich with natural patina, that gains character with every round. The top-shelf pick at $75.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/dalmore-mallet-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/nightwatch-mallet-headcover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/nightwatch-mallet.jpg" alt="Fyfe Golf Night Watch Tartan Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/nightwatch-mallet.jpg" alt="Fyfe Golf Night Watch Tartan Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/nightwatch-mallet-a2.jpg" alt="Fyfe Golf Night Watch Tartan Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/nightwatch-mallet-a3.jpg" alt="Fyfe Golf Night Watch Tartan Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/nightwatch-mallet-a4.jpg" alt="Fyfe Golf Night Watch Tartan Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">Nightwatch Mallet</div>
         <div class="product-desc">Dark navy Pure New Wool crossed with olive and black — a muted reimagining of the Black Watch tartan. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/nightwatch-mallet-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/fescue-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/fescue-blade.jpg" alt="Fyfe Golf Fescue Harris Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/fescue-blade.jpg" alt="Fyfe Golf Fescue Harris Tweed Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/fescue-blade-a2.jpg" alt="Fyfe Golf Fescue Harris Tweed Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/fescue-blade-a3.jpg" alt="Fyfe Golf Fescue Harris Tweed Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Fescue Harris Tweed</div>
         <div class="product-desc">Herringbone Harris Tweed the color of the stuff you're trying to avoid off the tee. Handcrafted in Scotland. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/fescue-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/jura-sunset-harris-tweed-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/jura-sunset-mallet.jpg" alt="Fyfe Golf Jura Sunset Harris Tweed and Leather Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/jura-sunset-mallet.jpg" alt="Fyfe Golf Jura Sunset Harris Tweed and Leather Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/jura-sunset-mallet-a2.jpg" alt="Fyfe Golf Jura Sunset Harris Tweed and Leather Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/jura-sunset-mallet-a3.jpg" alt="Fyfe Golf Jura Sunset Harris Tweed and Leather Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/jura-sunset-mallet-a4.jpg" alt="Fyfe Golf Jura Sunset Harris Tweed and Leather Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">Jura Sunset Tweed &amp; Leather</div>
         <div class="product-desc">Warm-toned Harris Tweed named for the island sunsets, trimmed in Italian Nappa leather. Magnetic closure. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/jura-sunset-harris-tweed-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/blackwatch-harris-tweed-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/blackwatch-mallet.jpg" alt="Fyfe Golf Blackwatch Harris Tweed and Leather Mallet Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/blackwatch-mallet.jpg" alt="Fyfe Golf Blackwatch Harris Tweed and Leather Mallet Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/blackwatch-mallet-a2.jpg" alt="Fyfe Golf Blackwatch Harris Tweed and Leather Mallet Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/blackwatch-mallet-a3.jpg" alt="Fyfe Golf Blackwatch Harris Tweed and Leather Mallet Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Mallet</div>
         <div class="product-name">Blackwatch Tweed &amp; Leather</div>
         <div class="product-desc">The classic Black Watch tartan in Harris Tweed with Nappa leather trim. The most famous cloth in Scotland, on your mallet. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/blackwatch-harris-tweed-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.fyfegolf.com/products/caledonian-skies-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img"><img src="/images/fyfe-putter-covers/caledonian-skies-blade.jpg" alt="Fyfe Golf Caledonian Skies Harris Tweed Blade Putter Cover" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-putter-covers/caledonian-skies-blade.jpg" alt="Fyfe Golf Caledonian Skies Harris Tweed Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/caledonian-skies-blade-a2.jpg" alt="Fyfe Golf Caledonian Skies Harris Tweed Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-putter-covers/caledonian-skies-blade-a3.jpg" alt="Fyfe Golf Caledonian Skies Harris Tweed Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fyfe Golf · Blade</div>
         <div class="product-name">Caledonian Skies Tweed</div>
         <div class="product-desc">Light blue herringbone Harris Tweed — the rare Scottish sky that's actually clear. Ample padding, magnetic close. $69.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.fyfegolf.com/products/caledonian-skies-harris-tweed-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -428,6 +445,28 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
       +'<span style="display:block;font-family:Fraunces,Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
 })();
 </script>
 </body>
