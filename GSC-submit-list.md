@@ -23,9 +23,10 @@ Retitled today, highest priority:
 New URLs:
 
 4. `/drops/the-towel-edit-vol-3` — new page, 18 products, FAQ schema, swipeable galleries
-5. `/drops/the-payntr-collab-edit` — new page, 33 items, FAQ schema, swipeable galleries
-6. `/drops/brand-to-know-sugarloaf-social-club` — new page, 32 projects, FAQ schema, swipeable galleries
-6. `/drops/the-hydration-edit`
+5. `/drops/brand-to-know-casualist` — Brand Revisited, retitled, all 12 prices corrected USD→GBP
+6. `/drops/the-payntr-collab-edit` — new page, 33 items, FAQ schema, swipeable galleries
+7. `/drops/brand-to-know-sugarloaf-social-club` — new page, 33 projects, FAQ schema, swipeable galleries
+8. `/drops/the-hydration-edit`
 
 Still outstanding from previous deploys:
 
