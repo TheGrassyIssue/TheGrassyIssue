@@ -2,15 +2,60 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/drops/muni-kids-turns-11-the-muni-never-left", "destination": "/drops/muni-kids-10-years", "permanent": true },
-    { "source": "/drops/metalwood-studio-ss26-our-10-picks", "destination": "/drops/metalwood-ss26-picks", "permanent": true },
-    { "source": "/drops/malbons-summer-collection-channels-the-gallo-colorido", "destination": "/drops/malbon-summer-gallo-colorido", "permanent": true },
-    { "source": "/drops/manors-x-gentleman-jack-whiskey-on-the-first-tee", "destination": "/drops/manors-gentleman-jack", "permanent": true },
-    { "source": "/drops/ald-golf-ss26-new-york-prep-hits-the-first-tee", "destination": "/drops/ald-golf-ss26-new-releases", "permanent": true },
-    { "source": "/drops/12-bold-tees-that-belong-in-your-bag", "destination": "/drops/bold-tees-carousel", "permanent": true },
-    { "source": "/drops/6-golf-tees-that-cost-more-than-your-lunch", "destination": "/drops/premium-tees-carousel", "permanent": true },
-    { "source": "/drops/the-hats-and-towels-edit", "destination": "/drops/hats-carousel", "permanent": true },
-    { "source": "/drops/14-hats-from-funky-brands", "destination": "/drops/hats-carousel", "permanent": true },
-    { "source": "/drops/sugarloaf-social-club-ss26-just-dropped", "destination": "/drops/sugarloaf-ss26", "permanent": true }
+    {
+      "source": "/drops/muni-kids-turns-11-the-muni-never-left",
+      "destination": "/drops/muni-kids-10-years",
+      "permanent": true
+    },
+    {
+      "source": "/drops/metalwood-studio-ss26-our-10-picks",
+      "destination": "/drops/metalwood-ss26-picks",
+      "permanent": true
+    },
+    {
+      "source": "/drops/malbons-summer-collection-channels-the-gallo-colorido",
+      "destination": "/drops/malbon-summer-gallo-colorido",
+      "permanent": true
+    },
+    {
+      "source": "/drops/manors-x-gentleman-jack-whiskey-on-the-first-tee",
+      "destination": "/drops/manors-gentleman-jack",
+      "permanent": true
+    },
+    {
+      "source": "/drops/ald-golf-ss26-new-york-prep-hits-the-first-tee",
+      "destination": "/drops/ald-golf-ss26-new-releases",
+      "permanent": true
+    },
+    {
+      "source": "/drops/12-bold-tees-that-belong-in-your-bag",
+      "destination": "/drops/bold-tees-carousel",
+      "permanent": true
+    },
+    {
+      "source": "/drops/6-golf-tees-that-cost-more-than-your-lunch",
+      "destination": "/drops/premium-tees-carousel",
+      "permanent": true
+    },
+    {
+      "source": "/drops/the-hats-and-towels-edit",
+      "destination": "/drops/hats-carousel",
+      "permanent": true
+    },
+    {
+      "source": "/drops/14-hats-from-funky-brands",
+      "destination": "/drops/hats-carousel",
+      "permanent": true
+    },
+    {
+      "source": "/drops/sugarloaf-social-club-ss26-just-dropped",
+      "destination": "/drops/sugarloaf-ss26",
+      "permanent": true
+    },
+    {
+      "source": "/drops/brand-to-know-jones-sports-co",
+      "destination": "/drops/brand-revisited-jones-sports-co",
+      "permanent": true
+    }
   ]
 }
