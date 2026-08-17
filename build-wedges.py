@@ -198,31 +198,58 @@ for name, anchor, kicker, blurb, doms in SECTIONS:
     body.append('<h2 id="%s">%s</h2>\n<p class="cat-kicker"><strong>%s.</strong> %s</p>\n<div class="products-grid">\n%s</div>\n'
                 % (anchor, name, kicker, blurb, "".join(cards)))
 
-OEM = """<h2 id="programs">The Manufacturer Programs</h2>
-<p class="cat-kicker"><strong>What They Will And Won&rsquo;t Tell You.</strong> Every major maker runs a wedge
-personalisation program. Two of them publish what the limits actually are. The rest hide the options behind a
-configurator that renders nothing until you are inside it, which makes the category almost impossible to compare
-honestly &mdash; so here is only what each brand states itself.</p>
-<div class="spec-table-wrap"><table class="spec-table">
-<thead><tr><th>Program</th><th>Current model</th><th>Price</th><th>What&rsquo;s published</th><th>Lead time</th></tr></thead>
-<tbody>
-<tr><td>TaylorMade MyMG5</td><td>MG5</td><td>$249.99<br><span class="muted">$50 over stock</span></td>
-<td>12 characters, 5 layouts, 50+ logos. Four finishes, five grinds.</td><td>4 weeks</td></tr>
-<tr><td>Mizuno Custom Stamping</td><td>Pro T-1 / T-3</td><td>$180 base<br><span class="muted">stamping price not stated</span></td>
-<td>6 characters per wedge, spaces count, letters/numbers/# only, 12 named colours. Dealer channel only.</td><td>Not stated</td></tr>
-<tr><td>Titleist Vokey WedgeWorks</td><td>SM11</td><td>$199&ndash;$229</td>
-<td>Four finishes, 26 loft/bounce/grind combos, six WedgeWorks-exclusive grinds. Character limits not published.</td><td>5&ndash;6 weeks<br><span class="muted">self-declared delay</span></td></tr>
-<tr><td>Callaway Customs</td><td>Opus SP / SP+</td><td>$199.99<br><span class="muted">no upcharge to enter</span></td>
-<td>Finish, paint, stamped text and emojis, shaft bands, ferrules. Opus Raw is custom-only. Limits not published.</td><td>Not stated</td></tr>
-<tr><td>Cleveland My Custom Wedge</td><td>RTZ 2</td><td>$199.99&ndash;$219.99</td>
-<td>Paintfill, engraving, ferrules, skins, custom components. Site is a client-rendered app; nothing further is published.</td><td>Not stated</td></tr>
-<tr><td>PING</td><td>s259</td><td><span class="muted">no price published</span></td>
-<td>Nothing. No character limits, no paint-fill palette, no upcharges, and PING does not sell direct &mdash; you take the design to a retailer.</td><td>Not stated</td></tr>
-</tbody></table></div>
-<p>The pattern is the interesting part. The two brands that publish hard numbers are the two with the tightest limits.
-Mizuno will give you six characters and tells you so; Titleist will give you considerably more and tells you nothing
-until you are three clicks into a builder.</p>
+PROGRAMS = [('TaylorMade MyMG5', 'MG5', '$249.99', '$50 over the stock MG5', 'y', '12 characters', 'Five layouts, more than 50 logos. Four finishes, five grinds, choice of shaft and grip.', '4 weeks'), ('Mizuno Custom Stamping', 'Pro T-1 / T-3', '$180', 'base price; stamping cost not stated', 'y', '6 characters', 'Spaces count. Letters, numbers and a hash mark only. Twelve named paint colours. Dealer channel only, no online builder.', 'Not stated'), ('Titleist Vokey WedgeWorks', 'SM11', '$199&ndash;$229', 'varies by finish', 'n', 'Not published', 'Four finishes, 26 loft, bounce and grind combinations, six WedgeWorks-exclusive grinds. Stamping and toe engraving offered; no limits given.', '5&ndash;6 weeks, a delay they declare themselves'), ('Callaway Customs', 'Opus SP / SP+', '$199.99', 'identical to the stock chrome wedge', 'n', 'Not published', 'Finish, paint, stamped text and emojis, shaft bands, ferrules. Opus Raw is available through Customs only.', 'Not stated'), ('Cleveland My Custom Wedge', 'RTZ 2', '$199.99&ndash;$219.99', 'by finish', 'n', 'Not published', 'Paintfill, engraving, ferrules, skins and custom components. The builder is a client-rendered app that publishes nothing further.', 'Not stated'), ('PING', 's259', 'No price published', 'PING does not sell direct', 'n', 'Not published', 'Nothing is published: no character limits, no paint-fill palette, no upcharges. You take the design to an authorised retailer.', 'Not stated')]
+
+PROG_CSS = """
+/* --- custom wedge report: section kickers + manufacturer program cards --- */
+.cat-kicker{font-family:var(--sans);font-size:13.5px;line-height:1.65;opacity:.8;margin:0 0 26px;max-width:74ch;border-left:2px solid var(--rough);padding-left:14px}
+.cat-kicker strong{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;display:block;margin-bottom:5px}
+.prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:0 0 26px}
+.prog{border:.5px solid var(--ink);padding:20px 20px 18px;display:flex;flex-direction:column;background:rgba(255,255,255,.35)}
+.prog-top{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;margin-bottom:14px}
+.prog-name{font-family:var(--display);font-size:21px;line-height:1.1}
+.prog-model{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;border:.5px solid var(--ink);padding:4px 8px;white-space:nowrap;opacity:.8}
+.prog-price{font-family:var(--serif);font-style:italic;font-size:25px;line-height:1;margin-bottom:3px}
+.prog-sub{font-family:var(--mono);font-size:9.5px;letter-spacing:.09em;text-transform:uppercase;opacity:.55;margin-bottom:16px}
+.prog-rows{border-top:.5px solid rgba(20,20,20,.18);margin-top:auto}
+.prog-row{display:grid;grid-template-columns:88px 1fr;gap:12px;padding:10px 0;border-bottom:.5px solid rgba(20,20,20,.1)}
+.prog-row:last-child{border-bottom:none}
+.prog-k{font-family:var(--mono);font-size:9px;letter-spacing:.11em;text-transform:uppercase;opacity:.5;padding-top:2px}
+.prog-v{font-family:var(--sans);font-size:12.5px;line-height:1.5}
+.pub{display:inline-block;font-family:var(--mono);font-size:8.5px;letter-spacing:.11em;text-transform:uppercase;padding:3px 7px;border-radius:2px}
+.pub.y{background:var(--grass);color:var(--paper)}
+.pub.n{background:transparent;color:var(--flag);border:.5px solid var(--flag)}
+@media(max-width:860px){.prog-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.prog-row{grid-template-columns:1fr;gap:3px}.prog-name{font-size:19px}}
 """
+
+PROG_SHELL = """<h2 id="programs">The Manufacturer Programs</h2>
+<p class="cat-kicker"><strong>What They Will And Won&rsquo;t Tell You</strong>
+Every major maker runs a wedge personalisation program. Two of them publish what the limits actually are; the rest
+hide the options behind a configurator that renders nothing until you are already inside it. Only what each brand
+states itself is below.</p>
+<div class="prog-grid">
+%s
+</div>
+<p>The pattern is the interesting part. The two brands that publish hard numbers are the two with the tightest
+limits. Mizuno will give you six characters and tells you so. Titleist will give you considerably more and tells you
+nothing until you are three clicks into a builder. PING publishes no price, no limits and no lead time, and will not
+sell to you directly at all.</p>
+"""
+
+def prog_card(name, model, price, sub, pub, chars, detail, lead):
+    badge = '<span class="pub y">publishes limits</span>' if pub == "y" else '<span class="pub n">not published</span>'
+    return ('  <div class="prog">\n'
+            '    <div class="prog-top"><div class="prog-name">%s</div><div class="prog-model">%s</div></div>\n'
+            '    <div class="prog-price">%s</div>\n'
+            '    <div class="prog-sub">%s</div>\n'
+            '    <div class="prog-rows">\n'
+            '      <div class="prog-row"><div class="prog-k">Stamping</div><div class="prog-v">%s &nbsp;%s</div></div>\n'
+            '      <div class="prog-row"><div class="prog-k">Options</div><div class="prog-v">%s</div></div>\n'
+            '      <div class="prog-row"><div class="prog-k">Lead time</div><div class="prog-v">%s</div></div>\n'
+            '    </div>\n  </div>') % (name, model, price, sub, chars, badge, detail, lead)
+
+OEM = PROG_SHELL % "\n".join(prog_card(*p) for p in PROGRAMS)
 
 faq_html = "".join(
     '    <details class="faq-q"><summary>%s</summary><p>%s</p></details>\n' % (q, a)
@@ -252,6 +279,7 @@ h = re.sub(r'(<meta name="description" content=")[^"]*(")', lambda m: m.group(1)
 h = re.sub(r'(<meta property="og:title" content=")[^"]*(")', lambda m: m.group(1)+TITLE+m.group(2), h)
 h = re.sub(r'(<meta property="og:description" content=")[^"]*(")', lambda m: m.group(1)+DESC+m.group(2), h)
 h = h.replace("the-ball-marker-atlas", SLUG)
+h = h.replace("</style>", PROG_CSS + "</style>", 1)
 h = h.replace("/images/ball-markers/hero.jpg", "/images/custom-wedges/hero.jpg")
 
 # swap the H1
