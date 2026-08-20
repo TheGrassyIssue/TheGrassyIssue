@@ -283,18 +283,22 @@ h = re.sub(r'(<div class="writeup-body">).*?(</div>)',
 
 # ---- body: part one grid, then part two prose, then the Barton Creek closer
 cards = "".join(card(c[0], c[1], c[2], c[3], c[4], FR.get(c[0], [])) for c in CLUBS)
+# HOUSE FORMAT — cards MUST be wrapped in <div class="products-grid">. Direct children of
+# <section class="products"> fall out of the grid and render full-width and oversized.
 body = ('<section class="products">\n'
-        '  <h2 class="products-hdr">Part One &mdash; The Golf</h2>\n'
-        '  <p class="part-lede">Eleven of them here, west to south. The twelfth, Barton Creek, gets its own '
-        'section at the end &mdash; it is the only one on the list you can realistically play. '
+        '<h2 id="part-one">Part One &mdash; The Golf</h2>\n'
+        '<p class="cat-kicker"><strong>Eleven Clubs, West to South</strong>The twelfth, Barton Creek, gets '
+        'its own section at the end &mdash; it is the only one on the list you can realistically play. '
         'Every photograph is the club\'s own.</p>\n'
+        '<div class="products-grid">\n'
         + cards +
+        '</div>\n'
         '</section>\n'
         # NOTE: this section is intentionally left unclosed — the template's </section>
         # after the FAQ block closes it. See the cut below.
         '<section class="products part2">\n'
-        '  <h2 class="products-hdr">%s</h2>\n' % PART2_HDR + PART2 + '\n'
-        '  <h2 class="products-hdr" style="margin-top:38px">%s</h2>\n' % CLOSER_HDR +
+        '<h2 id="part-two">%s</h2>\n' % PART2_HDR + PART2 + '\n'
+        '<h2 id="closest" style="margin-top:38px">%s</h2>\n' % CLOSER_HDR +
         '  <div class="closer">\n' + CLOSER + '\n  </div>\n')
 
 start = h.index('<section class="products">')

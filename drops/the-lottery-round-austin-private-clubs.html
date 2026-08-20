@@ -106,7 +106,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 .sec-intro{font-family:var(--sans);font-size:13px;line-height:1.6;opacity:.75;max-width:760px;margin:-8px 0 22px}
 
-/* --- section kickers + info cards --- */
+/* --- custom wedge report: section kickers + manufacturer program cards --- */
 .cat-kicker{font-family:var(--sans);font-size:13.5px;line-height:1.65;opacity:.8;margin:0 0 26px;max-width:74ch;border-left:2px solid var(--rough);padding-left:14px}
 .cat-kicker strong{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.75;display:block;margin-bottom:5px}
 .prog-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:0 0 26px}
@@ -219,8 +219,9 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 </div>
 
 <section class="products">
-  <h2 class="products-hdr">Part One &mdash; The Golf</h2>
-  <p class="part-lede">Eleven of them here, west to south. The twelfth, Barton Creek, gets its own section at the end &mdash; it is the only one on the list you can realistically play. Every photograph is the club's own.</p>
+<h2 id="part-one">Part One &mdash; The Golf</h2>
+<p class="cat-kicker"><strong>Eleven Clubs, West to South</strong>The twelfth, Barton Creek, gets its own section at the end &mdash; it is the only one on the list you can realistically play. Every photograph is the club's own.</p>
+<div class="products-grid">
   <div class="product-card club-card" data-frames="0">
     <div class="club-noimg"><span class="club-noimg-mark">&mdash;</span><span class="club-noimg-txt">No photography published</span></div>
     <div class="club-meta"><span class="club-place">Spicewood</span><span class="club-arch">Bill Coore &amp; Ben Crenshaw, 2001</span></div>
@@ -287,9 +288,10 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <h3 class="club-name">River Place Country Club</h3>
     <div class="club-body"><p>Tom Kite is from Austin, learned under Penick alongside Crenshaw, and this was among his first ventures into course design, built with Roy Bechtol.</p><p>The opening year is genuinely unsettled &mdash; third-party listings claim 1982, 1984, 1994 and 1995, and Kite's own design site says only that his work began in the early 1990s. We are not going to invent a date for you.</p><p>It plays hard up and down a canyon in the northwest hills, and it is the closest thing on this list to a golf course that will physically hurt you.</p></div>
   </div>
+</div>
 </section>
 <section class="products part2">
-  <h2 class="products-hdr">Part Two &mdash; The Door</h2>
+<h2 id="part-two">Part Two &mdash; The Door</h2>
     <p>Here is the finding, and we want to be precise about the claim: <strong>not one of these twelve
     clubs publishes an initiation fee, a monthly due, a food and beverage minimum, or a capital assessment
     anywhere on its own website.</strong> Zero out of twelve. We checked every club's own membership page
@@ -320,7 +322,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     person.</p>
     <p>Which brings us back to the lottery. If it hits, the golf is all still there &mdash; the Dyes on the lake,
     Demaret's only course, Kidd's Zoysia. You just have to find somebody willing to pick up.</p>
-  <h2 class="products-hdr" style="margin-top:38px">The Closest You'll Get</h2>
+<h2 id="closest" style="margin-top:38px">The Closest You'll Get</h2>
   <div class="closer">
     <p>One asterisk on all of the above. <strong>Barton Creek</strong> runs 72 holes southwest of town and
     the architecture list is absurd for somewhere you can realistically get onto: <strong>Fazio Foothills</strong>

@@ -174,10 +174,11 @@ def card(i):
             '    <a class="product-shop" href="%s" target="_blank" rel="noopener">Shop &#8599;</a>\n'
             '  </div>\n') % (len(fr), pg, m["type"], m["title"], m["price"], sold, COPY[i], m["url"])
 
+# Only genuinely new classes go here. .cat-kicker / .products-grid / .product-* already
+# exist in the template — reuse them rather than inventing parallel styles.
 CSS = """
 .oos{font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;
  color:#9a3b3b;border:1px solid #d9b3b3;border-radius:3px;padding:3px 6px;margin-left:5px;white-space:nowrap}
-.sec-lede{font:400 15px/1.62 'Inter',sans-serif;color:#4a4a42;max-width:70ch;margin:-6px 0 24px}
 """
 
 h = BASE
@@ -195,11 +196,20 @@ h = re.sub(r'(<h1[^>]*>).*?(</h1>)', lambda m: m.group(1) + TITLE + m.group(2), 
 h = re.sub(r'(<div class="writeup-body">).*?(</div>)',
            lambda m: m.group(1) + "\n" + INTRO + "\n  " + m.group(2), h, count=1, flags=re.S)
 
+def anchor(s):
+    return re.sub(r'[^a-z0-9]+', '-', s.lower()).strip('-')[:24]
+
+# HOUSE FORMAT — do not deviate. Every section is:
+#   <h2 id="…">  +  <p class="cat-kicker">  +  <div class="products-grid"> cards </div>
+# Cards MUST sit inside .products-grid (3-up desktop / 2-up / 1-up). Direct children of
+# <section class="products"> fall out of the grid and render full-width and oversized.
 body = '<section class="products">\n'
 for name, kicker, lede, ids in SECTIONS:
-    body += ('  <h2 class="products-hdr">%s</h2>\n  <p class="sec-lede"><strong>%s.</strong> %s</p>\n'
-             % (name, kicker, lede))
+    body += ('<h2 id="%s">%s</h2>\n'
+             '<p class="cat-kicker"><strong>%s</strong>%s</p>\n'
+             '<div class="products-grid">\n' % (anchor(name), name, kicker, lede))
     body += "".join(card(i) for i in ids)
+    body += '</div>\n'
 # section left OPEN — template's </section> after the FAQ closes it
 start = h.index('<section class="products">')
 fq = h.index('<div class="faq">')
