@@ -24,21 +24,21 @@ New URLs:
 
 4. `/drops/the-towel-edit-vol-3` — new page, 18 products, FAQ schema, swipeable galleries
 5. `/drops/the-custom-wedge-report` — new page, 32 wedges, 11 makers, OEM comparison table, FAQ schema
-7. `/drops/the-ball-marker-atlas` — new page, 77 markers, 9 categories, FAQ schema
-7. `/drops/brand-to-know-casualist` — Brand Revisited, retitled, all 12 prices corrected USD→GBP
-8. `/drops/the-payntr-collab-edit` — new page, 33 items, FAQ schema, swipeable galleries
-9. `/drops/brand-to-know-sugarloaf-social-club` — new page, 33 projects, FAQ schema, swipeable galleries
-10. `/drops/the-hydration-edit`
+8. `/drops/the-ball-marker-atlas` — new page, 77 markers, 9 categories, FAQ schema
+8. `/drops/brand-to-know-casualist` — Brand Revisited, retitled, all 12 prices corrected USD→GBP
+9. `/drops/the-payntr-collab-edit` — new page, 33 items, FAQ schema, swipeable galleries
+10. `/drops/brand-to-know-sugarloaf-social-club` — new page, 33 projects, FAQ schema, swipeable galleries
+11. `/drops/the-hydration-edit`
 
 Still outstanding from previous deploys:
 
 5. `/drops/ssc-hidden-gem-collection`
-7. `/drops/no-budget`
-8. `/drops/hancock-golf-course-austin`
-9. `/drops/brand-to-know-kingfisher-golf`
-10. `/drops/brand-to-know-read-the-green`
-10. `/drops/students-golf-summer-2026`
-11. `/drops/the-magazine-edit`
+8. `/drops/no-budget`
+9. `/drops/hancock-golf-course-austin`
+10. `/drops/brand-to-know-kingfisher-golf`
+11. `/drops/brand-to-know-read-the-green`
+11. `/drops/students-golf-summer-2026`
+12. `/drops/the-magazine-edit`
 12. `/drops/brand-to-know-jones-sports-co`
 
 GSC caps manual indexing requests at roughly 10–12 a day, so do 1–4 first and the rest tomorrow.
