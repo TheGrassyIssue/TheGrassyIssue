@@ -236,12 +236,16 @@ def card(slug, name, place, arch, paras, frames):
         pg = ('<div class="club-noimg"><span class="club-noimg-mark">&mdash;</span>'
               '<span class="club-noimg-txt">No photography published</span></div>')
     body = "".join("<p>%s</p>" % p for p in paras)
+    # HOUSE FORMAT: card text sits inside <div class="product-body"> — that div carries the
+    # padding. Without it the copy runs flush to the card border.
     return ('  <div class="product-card club-card" data-frames="%d">\n'
             '    %s\n'
-            '    <div class="club-meta"><span class="club-place">%s</span>'
+            '      <div class="product-body">\n'
+            '        <div class="club-meta"><span class="club-place">%s</span>'
             '<span class="club-arch">%s</span></div>\n'
-            '    <h3 class="club-name">%s</h3>\n'
-            '    <div class="club-body">%s</div>\n'
+            '        <h3 class="club-name">%s</h3>\n'
+            '        <div class="club-body">%s</div>\n'
+            '      </div>\n'
             '  </div>\n') % (n, pg, place, arch, name, body)
 
 CSS = """
@@ -309,8 +313,9 @@ start = h.index('<section class="products">')
 fq = h.index('<div class="faq">')
 h = h[:start] + body + '  ' + h[fq:]
 
+# HOUSE FORMAT: .faq-q + bare <p>. There is no .faq-item or .faq-a CSS on these pages.
 faq_html = "".join(
-    '    <details class="faq-item"><summary>%s</summary><div class="faq-a"><p>%s</p></div></details>\n' % (q, a)
+    '    <details class="faq-q"><summary>%s</summary><p>%s</p></details>\n' % (q, a)
     for q, a in FAQ)
 h = re.sub(r'(<div class="faq">).*?(  </div>\n</section>)',
            lambda m: m.group(1) + "\n" + faq_html + m.group(2), h, count=1, flags=re.S)

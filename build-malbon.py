@@ -166,12 +166,16 @@ def card(i):
           + ('<div class="pg-dots">' + "".join('<span></span>' for _ in fr) + '</div>' if len(fr) > 1 else '')
           + '</div>')
     sold = '' if m["avail"] else ' <span class="oos">Sold out</span>'
+    # HOUSE FORMAT: card text lives inside <div class="product-body"> (that div carries the
+    # padding), and the outbound link is class="product-link". There is no .product-shop.
     return ('  <div class="product-card" data-frames="%d">\n'
             '    %s\n'
-            '    <div class="product-brand">Malbon &middot; %s</div>\n'
-            '    <div class="product-name">%s &middot; $%s%s</div>\n'
-            '    <div class="product-desc">%s</div>\n'
-            '    <a class="product-shop" href="%s" target="_blank" rel="noopener">Shop &#8599;</a>\n'
+            '      <div class="product-body">\n'
+            '        <div class="product-brand">Malbon &middot; %s</div>\n'
+            '        <div class="product-name">%s &middot; $%s%s</div>\n'
+            '        <div class="product-desc">%s</div>\n'
+            '        <a href="%s" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>\n'
+            '      </div>\n'
             '  </div>\n') % (len(fr), pg, m["type"], m["title"], m["price"], sold, COPY[i], m["url"])
 
 # Only genuinely new classes go here. .cat-kicker / .products-grid / .product-* already
@@ -215,7 +219,8 @@ start = h.index('<section class="products">')
 fq = h.index('<div class="faq">')
 h = h[:start] + body + '  ' + h[fq:]
 
-faq_html = "".join('    <details class="faq-item"><summary>%s</summary><div class="faq-a"><p>%s</p></div></details>\n'
+# HOUSE FORMAT: .faq-q + bare <p>. There is no .faq-item or .faq-a CSS on these pages.
+faq_html = "".join('    <details class="faq-q"><summary>%s</summary><p>%s</p></details>\n'
                    % (q, a) for q, a in FAQ)
 h = re.sub(r'(<div class="faq">).*?(  </div>\n</section>)',
            lambda m: m.group(1) + "\n" + faq_html + m.group(2), h, count=1, flags=re.S)

@@ -26,12 +26,22 @@ def verify(path):
         "%d card(s) outside the grid — they will render full-width and oversized" % len(outside))
     chk("at least one .products-grid present", bool(grids) or not cards)
 
-    # section headers use the template's own classes, not invented ones
-    invented = [c for c in re.findall(r'class="([a-z0-9 -]+)"', h)
-                for c in c.split()
-                if c not in ("",) and ('.%s{' % c) not in h and ('.%s ' % c) not in h
-                and c.startswith(('sec-', 'club-', 'cat-', 'part-', 'prog-', 'spec-'))]
-    chk("no unstyled invented classes", not set(invented), str(sorted(set(invented))))
+    # EVERY class used in the body must have a CSS rule somewhere on the page.
+    # Inventing a class name renders it completely unstyled — this has now bitten
+    # three times (spec-table on the wedge post, products-grid + faq-item here).
+    # NB: these pages carry SEVERAL <style> blocks — concatenate them all, and strip
+    # them out before collecting used classes.
+    css = "\n".join(re.findall(r'<style[^>]*>(.*?)</style>', h, re.S))
+    body_html = re.sub(r'<style[^>]*>.*?</style>', ' ', h, flags=re.S)
+    used = set()
+    for attr in re.findall(r'class="([^"]+)"', body_html):
+        used.update(attr.split())
+    styled = set(re.findall(r'\.([A-Za-z][\w-]*)', css))
+    # classes only ever targeted by JS/structure, not styling
+    # more-kicker/more-title are unstyled across the whole site (pre-existing, not introduced here)
+    EXEMPT = {"faq", "products", "more-grid", "more-kicker", "more-title"}
+    unstyled = sorted(c for c in used if c not in styled and c not in EXEMPT)
+    chk("every class used has a CSS rule", not unstyled, str(unstyled))
 
     # --- structure ---
     chk("div balance", h.count("<div") == h.count("</div>"), "%d/%d" % (h.count("<div"), h.count("</div>")))
