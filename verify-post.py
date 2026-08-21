@@ -57,6 +57,25 @@ def verify(path):
         if int(m.group(1)) != blk.count('class="pg-frame"'): bad.append(m.group(1))
     chk("data-frames matches actual pg-frame count", not bad, str(bad))
 
+    # Gallery CONTROLS. The page ships JS that drives .pg-dot / .pg-arw / .pg-count; a gallery
+    # with 2+ frames must emit all three or the controls silently do nothing. Bare <span> dots
+    # (no class) render invisible — that shipped on four posts before this check existed.
+    ctl = []
+    for m in re.finditer(r'<div class="product-card[^"]*" data-frames="(\d+)">', h):
+        n = int(m.group(1)); blk = h[m.start():match_div(h, m.start())]
+        dots = len(re.findall(r'<button class="pg-dot[^"]*"', blk))
+        cnt = re.search(r'<span class="pg-count">1/(\d+)</span>', blk)
+        arw = blk.count('class="pg-arw')
+        if n < 2:
+            good = dots == 0
+        else:
+            good = (dots == n and cnt and int(cnt.group(1)) == n
+                    and arw == 2 and blk.count('class="pg-dot on"') == 1)
+        if not good: ctl.append(n)
+    chk("gallery controls complete (dots/arrows/counter)", not ctl,
+        "%d gallery(s) wrong — frames %s" % (len(ctl), ctl[:5]))
+    chk("no classless <span> dots", '<div class="pg-dots"><span>' not in h)
+
     # --- images ---
     srcs = re.findall(r'src="(/images/[^"]+)"', h)
     miss = [s for s in srcs if not os.path.exists(root + s)]
@@ -77,7 +96,12 @@ def verify(path):
     chk("canonical points at this slug", bool(can) and slug in can.group(0))
 
     # --- editorial rules ---
+    # strip tags first so hrefs/slugs (e.g. the legacy 10-texas-courses-worth-the-trip)
+    # don't trip the ban — it applies to prose, not to historical URLs.
     txt = re.sub(r'<[^>]+>', ' ', h)
+    txt = re.sub(r'https?://\S+|/[\w/-]+', ' ', txt)
+    # place names containing "Worth" are not the banned word (Fort Worth, Worth Avenue...)
+    txt = re.sub(r'\bFort\s+Worth\b', ' ', txt, flags=re.I)
     chk("no banned word 'worth'", not re.search(r'\bworth\b', txt, re.I))
     body = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', h, flags=re.S)
     words = len(html.unescape(re.sub(r'<[^>]+>', ' ', body)).split())

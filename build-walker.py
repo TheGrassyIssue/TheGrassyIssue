@@ -172,7 +172,13 @@ def card(i):
           + "".join('<div class="pg-frame"><img src="/images/walker-blooming-grounds/%s" loading="lazy" '
                     'alt="%s"></div>' % (f, alt) for f in fr)
           + '</div>'
-          + ('<div class="pg-dots">' + "".join('<span></span>' for _ in fr) + '</div>' if len(fr) > 1 else '')
+          + (('<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+              '<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+              '<span class="pg-count">1/%d</span>' % len(fr)
+              + '<div class="pg-dots">'
+              + "".join('<button class="pg-dot%s" data-i="%d" aria-label="View image %d"></button>'
+                        % (" on" if j == 0 else "", j, j + 1) for j in range(len(fr)))
+              + '</div>') if len(fr) > 1 else '')
           + '</div>')
     sold = '' if m["avail"] else ' <span class="oos">Sold out</span>'
     # HOUSE FORMAT: text inside .product-body, outbound link is .product-link
@@ -220,7 +226,13 @@ def range_card(n):
           + "".join('<div class="pg-frame"><img src="/images/walker-blooming-grounds/%s" loading="lazy" '
                     'alt="%s"></div>' % (f, alt) for f in fr)
           + '</div>'
-          + ('<div class="pg-dots">' + "".join('<span></span>' for _ in fr) + '</div>' if len(fr) > 1 else '')
+          + (('<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+              '<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+              '<span class="pg-count">1/%d</span>' % len(fr)
+              + '<div class="pg-dots">'
+              + "".join('<button class="pg-dot%s" data-i="%d" aria-label="View image %d"></button>'
+                        % (" on" if j == 0 else "", j, j + 1) for j in range(len(fr)))
+              + '</div>') if len(fr) > 1 else '')
           + '</div>')
     return ('  <div class="product-card" data-frames="%d">\n'
             '    %s\n'

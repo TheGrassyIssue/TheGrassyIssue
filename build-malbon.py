@@ -163,7 +163,13 @@ def card(i):
           + "".join('<div class="pg-frame"><img src="/images/malbon-fall/%s" loading="lazy" alt="%s"></div>'
                     % (f, alt) for f in fr)
           + '</div>'
-          + ('<div class="pg-dots">' + "".join('<span></span>' for _ in fr) + '</div>' if len(fr) > 1 else '')
+          + (('<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+              '<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+              '<span class="pg-count">1/%d</span>' % len(fr)
+              + '<div class="pg-dots">'
+              + "".join('<button class="pg-dot%s" data-i="%d" aria-label="View image %d"></button>'
+                        % (" on" if j == 0 else "", j, j + 1) for j in range(len(fr)))
+              + '</div>') if len(fr) > 1 else '')
           + '</div>')
     sold = '' if m["avail"] else ' <span class="oos">Sold out</span>'
     # HOUSE FORMAT: card text lives inside <div class="product-body"> (that div carries the

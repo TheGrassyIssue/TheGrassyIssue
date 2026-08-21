@@ -230,7 +230,13 @@ def card(slug, name, place, arch, paras, frames):
                         'alt="%s golf course in %s, Texas — %s">'
                         '</div>' % (f, name, place, arch.replace("&amp;", "and"))
                         for f in frames)
-              + '</div>' + ('<div class="pg-dots">' + "".join('<span></span>' for _ in frames) + '</div>' if n > 1 else '')
+              + '</div>' + (('<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+                 '<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+                 '<span class="pg-count">1/%d</span>' % n
+                 + '<div class="pg-dots">'
+                 + "".join('<button class="pg-dot%s" data-i="%d" aria-label="View image %d"></button>'
+                           % (" on" if j == 0 else "", j, j + 1) for j in range(n))
+                 + '</div>') if n > 1 else '')
               + '</div>')
     else:
         pg = ('<div class="club-noimg"><span class="club-noimg-mark">&mdash;</span>'
