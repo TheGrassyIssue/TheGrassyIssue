@@ -1852,8 +1852,8 @@
             </a>
           </div>
         </div>
-        <button class="gear-arrow prev" aria-label="Previous">&#8249;</button>
-        <button class="gear-arrow next" aria-label="Next">&#8250;</button>
+        <button class="gear-arrow prev" aria-label="Previous" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" aria-label="Next" onclick="gearSlide(this, 1)">&#8250;</button>
       </div>
     </div>
     <div class="card-body">
@@ -1897,8 +1897,8 @@
             </a>
           </div>
         </div>
-        <button class="gear-arrow prev" aria-label="Previous">&#8249;</button>
-        <button class="gear-arrow next" aria-label="Next">&#8250;</button>
+        <button class="gear-arrow prev" aria-label="Previous" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" aria-label="Next" onclick="gearSlide(this, 1)">&#8250;</button>
       </div>
     </div>
     <div class="card-body">
@@ -3361,44 +3361,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      midiron26: [
-        "Their take on a 1990s polo and the most ambitious thing they make. Heavy 300gsm cotton on a unisex boxy fit, black and cream rugby stripes, a vintage-washed twill appliqué across the back and a metal MEMBER bag tag. A$129.",
-        "Embroidered across the front, in Japanese and then English: “Very good swing. Very bad Result.” Their own copy calls it a cap for the days you stripe one down the middle and walk off with a double. A$69.",
-        "All-over tree camo on mid-weight perforated polyester, raised silicone print and a big arched MIDIRON across the chest. The piece their night-flash photography was built around. A$129.",
-        "A padded driver cover in camo with a custom flag label and velvet lining. Named “The Big Stick,” which works as a driver joke or a Roosevelt joke. The only thing they make that isn’t clothing. A$69."
-      ],
-      texasbrands26: [
-        "Mike Taylor and John Hatfield walked out of Nike on a Friday in February 2017 and opened their own shop in the same Fort Worth building on the Monday. Taylor still grinds every wedge himself.",
-        "P53 is named for Ben Hogan’s 1953 season. Every iron starts as one billet of certified American steel, struck at 2,100°F under a gravity hammer, then finished by hand in Fort Worth.",
-        "Maggie learned to knit from her mother and made her first set of covers as a Father’s Day present. Retro stripes, tassels and poms, sets of three around ninety-five dollars.",
-        "Clint Orms started engraving in Dallas in 1992 and now works from Kerrville. Solid sterling and gold, buckles named for Texas counties, and never more than ten pieces from one design."
-      ],
-      sentinelrevisited1: [
-        "Sørensen Walker — Charcoal Nubuck. Hand-stitched Danish leather, the MacKenzie carry bag refined “akin to a sculpture.” Made to order. $1,750.",
-        "Kvadrat Headcovers — Green. Danish 3D-knit textile, knit in Denmark and sewn in New York, Melton wool lining. $108.",
-        "1733 Duffle — Saltex Coyote. A collab duffle in rugged Saltex fabric, built to take a beating and look better for it. $320.",
-        "Debs Vest — Khaki. Insulated, low-bulk layer for a cold morning tee time. $224.",
-        "Felt Target Mat. Wool-felt target for indoor putting and short-game reps. A quiet, tactile practice tool. $148."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- THE EDIT — Fyfe Putter Covers -->
   <div class="card" data-type="drop">
@@ -3843,7 +3806,7 @@
       <a href="/drops/the-technical-brands-roundup" class="card-readmore" style="display:inline-block;font-size:0.97rem;color:var(--ink);opacity:0.7;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px;">See the Full Post &rarr;</a>
     </div>
   </div>
-  <script>(function(){const t=["Radmor Sutton Polo — Cool Jade fabric woven from recycled jade stone particles creates a natural cooling effect on contact. Sweater-knit texture, UPF 50+, moisture-wicking, biodegradable fiber. Seattle-based and fabric-obsessed. $135.","Reflo Mira Polo — Java-tek fabric woven from recycled coffee beans. The coffee particles speed up drying, control odor through natural anti-bacterial properties, and provide UV protection. Single-use waste given a second life. Made in Portugal. ~$95.","Manors Course Polo — Seawool yarn made from crushed oyster shells and recycled PET bottles. Natural moisture-wicking, odor resistance, and a hand feel softer than standard merino. Sustainable from the ocean up. $88.","Whim Golf Merino SS Shirt — Pure merino wool on the course. Temperature-regulating, naturally antimicrobial, zero synthetic blends or coatings. The most expensive polo in the roundup at $289, and it earns every dollar."];const c=document.querySelector(‘[data-carousel="techbrands"]’);if(!c)return;const d=document.querySelector(‘[data-slidetext="techbrands"]’);const o=document.querySelector(‘[data-dots="techbrands"]’);const n=document.querySelector(‘[data-counter="techbrands"]’);if(d)d.textContent=t[0];const s=c.querySelectorAll(‘.gear-slide’);function u(){const i=Math.round(c.querySelector(‘.gear-carousel-track’).scrollLeft/s[0].offsetWidth);if(d)d.textContent=t[i]||t[0];if(o){o.innerHTML=’’;t.forEach((_,j)=>{const dot=document.createElement(‘span’);dot.className=’gear-dot’+(j===i?’ active’:’’);o.appendChild(dot);})}if(n)n.textContent=(i+1)+’ / ‘+s.length;}c.querySelector(‘.gear-carousel-track’).addEventListener(‘scroll’,u);setTimeout(u,0);})()</script>
+  <script>(function(){const t=["Radmor Sutton Polo — Cool Jade fabric woven from recycled jade stone particles creates a natural cooling effect on contact. Sweater-knit texture, UPF 50+, moisture-wicking, biodegradable fiber. Seattle-based and fabric-obsessed. $135.","Reflo Mira Polo — Java-tek fabric woven from recycled coffee beans. The coffee particles speed up drying, control odor through natural anti-bacterial properties, and provide UV protection. Single-use waste given a second life. Made in Portugal. ~$95.","Manors Course Polo — Seawool yarn made from crushed oyster shells and recycled PET bottles. Natural moisture-wicking, odor resistance, and a hand feel softer than standard merino. Sustainable from the ocean up. $88.","Whim Golf Merino SS Shirt — Pure merino wool on the course. Temperature-regulating, naturally antimicrobial, zero synthetic blends or coatings. The most expensive polo in the roundup at $289, and it earns every dollar."];const c=document.querySelector('[data-carousel="techbrands"]');if(!c)return;const d=document.querySelector('[data-slidetext="techbrands"]');const o=document.querySelector('[data-dots="techbrands"]');const n=document.querySelector('[data-counter="techbrands"]');if(d)d.textContent=t[0];const s=c.querySelectorAll('.gear-slide');function u(){const i=Math.round(c.querySelector('.gear-carousel-track').scrollLeft/s[0].offsetWidth);if(d)d.textContent=t[i]||t[0];if(o){o.innerHTML='';t.forEach((_,j)=>{const dot=document.createElement('span');dot.className='gear-dot'+(j===i?' active':'');o.appendChild(dot);})}if(n)n.textContent=(i+1)+' / '+s.length;}c.querySelector('.gear-carousel-track').addEventListener('scroll',u);setTimeout(u,0);})()</script>
 
   <!-- SUMMER PRACTICE GUIDE — FIELD GUIDE -->
   <div class="card" data-type="guide">
@@ -4128,22 +4091,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      sscsailing: [
-        "Sail Bag “1492” — One-of-a-kind MacKenzie golf bag built from decommissioned sailcloth. Each bag carries a unique sail number and the patina of actual open-water miles. Hand-finished in Portland. $975.",
-        "Sugar-Loafer Suede Boat Shoe — Full-suede upper, hand-stitched moc toe, non-marking sole that works on the boat or the clubhouse patio. Tan. The shoe Sugarloaf was always going to make. $180.",
-        "Canvas Arrow Belt — Embroidered SSC arrow logo on a woven canvas strap with a brushed silver slide buckle. Navy and khaki. $95.",
-        "Ribbon Floppy Bucket Hat — Soft bucket hat with grosgrain ribbon SSC trim. UPF protection meets country-club-on-vacation energy. $40."
-      ]
-    };
-    document.querySelectorAll('[data-slidetext]').forEach(function(el){
-      var key = el.getAttribute('data-slidetext');
-      if(slideTexts[key]){el.setAttribute('data-texts', JSON.stringify(slideTexts[key]));}
-    });
-  })();
-  </script>
+  
 
   <!-- THE TOWEL EDIT, VOL. 2 -->
   
@@ -4215,50 +4163,9 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      towels2: [
-        "Shinto Gauze Towel — 2.5-ply Japanese gauze, 100% organic cotton, 45″×12″. Made in Japan by artisans who’ve been at it for decades. Slim enough to tuck under the bag handle. Khaki. $40.",
-        "QG Paisley Towel — 100% cotton terry velour with a full paisley print and brass grommet-and-hook. 16″×24″. Made in USA. The towel that says ‘I have taste’ without saying anything at all. Navy. $60.",
-        "Guinness Golf Towel — A vintage Guinness bar towel, repurposed in a workshop in Fife, Scotland. Eyelet and carabiner. One-of-a-kind pub-meets-links energy. £30.",
-        "Gentleman Jack × MANORS Paisley Towel — Paisley pulled from vintage Gentleman Jack® bottle engravings. Soft, absorbent, built for long rounds in the summer heat. A collab that actually makes sense. £30.",
-        "Queen of Clubs Golf Towel — Velour cotton with a queen playing-card graphic. Grommet and hook. Made in USA. Women’s-forward brand that everyone should be paying attention to. $34.",
-        "Magnetic Golf Towel — Microfiber waffle, center keyhole, industrial-strength magnet. 20″×20″. Holds 400% its weight in water. Tour-pro approved. The tech towel that actually delivers. $38."
-      ]
-    };
-    document.querySelectorAll('[data-slidetext]').forEach(function(el){
-      var key = el.getAttribute('data-slidetext');
-      if(slideTexts[key]){el.setAttribute('data-texts', JSON.stringify(slideTexts[key]));}
-    });
-  })();
-  </script>
+  
 
-  <script>
-  (function(){
-    var slideTexts = {
-      devereuxrevisited1: [
-        "Range Girl Driver Cover — a pin-up in a red bikini leaning on a Devereux pennant, in raised embroidery on white leather. The single most Devereux object they sell. $54.",
-        "High Noon Polo — clay ground, black contrast collar, small scattered print. The best-looking polo Devereux makes right now and it isn’t especially close. $74.",
-        "Devco Twill Jacket — Vintage Sky twill, spread collar, zip hand pockets, cut short enough to sit right on a swing. The most restrained thing in the lineup. $138.",
-        "Neon Sign Driver Barrel — black leather done as a neon sign for the Pioneer Country Club, a place that does not exist. Yellow, red and cyan thread on black. Best piece in the range. $54."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- BRAND TO KNOW — Fella Golf -->
   <div class="card" data-type="drop">
@@ -4305,31 +4212,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      fella1: [
-        "Tech Ripstop Anorak Jacket — Packable ripstop half-zip anorak with mesh underarm panels for ventilation. Lightweight, wind-resistant, folds into its own pocket. The Amsterdam-made solution for changeable weather on the links. €140.",
-        "Sandbagger T-Shirt — Vintage-inspired sandbagger graphic on 240GSM carbon-finished cotton. Heavyweight, boxy cut. Fella’s tongue-in-cheek take on the golfer everyone knows but nobody admits to being. €70.",
-        "Pizza Slice Driver Headcover — White PU leather with green diamond quilting and an embroidered pizza slice. The kind of headcover that starts conversations on the first tee. Because golf doesn’t have to be so serious. €59.",
-        "Pizza Slice Double Ball Marker — Golden pizza slice marker with “It only takes one good shot” engraved on the back. The tiniest piece in the collection and somehow the most Fella thing they make. €15."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- THE BREAK 80 KIT — 5 Picks to Finally Shoot 79 -->
   <div class="card" data-type="drop">
@@ -7186,32 +7069,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      foundgolf: [
-        "Box Par Tee — Found is a Melbourne fashion label that treats the course as a studio and the dress code as a memo it never received. The Box Par Tee is the way in: a heavyweight graphic shirt that reads like an art-school print, not tournament merch, cut to wear off the course without anyone clocking that you play. $118 AUD.",
-        "Daisy Chain Tee — The same playbook with a softer hand. A daisy-chain graphic that looks more like a band shirt than golf apparel, in heavyweight cotton with a unisex cut. The kind of thing you forget is technically golfwear until someone asks where you got it. $118 AUD.",
-        "Reusable Ciggie Box — The piece that gives the whole thing away: a refillable faux-cigarette pack that holds your wooden tees. Either a joke about the game's vices or the most honest accessory anyone's made for it. It's the cheapest thing on the site and the one you'll actually talk about. $25 AUD.",
-        "Dad Cap, Olive — The restraint setting. Unstructured six-panel, no loud branding, just a clean piece doing the job a hat is meant to do. Proof Found can play it straight when the mood calls for it. $55 AUD.",
-        "The Shiz Vest — The flex. A pullover vest that belongs as much at a gallery opening as a tee box, and where Found's 'golf as creative culture' line stops being marketing and starts being a wardrobe. The Age, the SMH, and GQ South Africa have all come around, which for a brand this young is less hype than vindication. $200 AUD."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- THE EDIT — The 2026 Driver Drop -->
   <div class="card" data-type="drop">
@@ -7377,34 +7235,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      grips7: [
-        "Queensland, Australia. 14 designs, everything from geometric patterns to pin-up art. Artist Series collabs with Evan Weselmann, Domenico Carnimeo, and Nori Okawa — no creative briefs, just ‘make something.’ High-percentage natural rubber, soft feel, weather-resistant. The grip equivalent of hanging art in your locker.",
-        "Magic Bus is the flagship pattern — psychedelic swirls on a swing grip made by TourMARK. Available as a set of 7 or a single putter grip. Loudmouth also makes Jolly Roger, Captain Thunderbolt, Scribblz, and Paint Balls. Each putter grip comes with a matching ball marker, which is either a nice detail or an excuse to buy the whole line.",
-        "Denver, Colorado. Small-batch, 5-point inspected, designed in the USA. The Lavender Lemonade is a pastel play that looks like it belongs on a Wes Anderson set. Cross-hatch texture with a patented tackiness spray. Also makes Bikini Bottom, Golf Happens (smiley faces), and a Colorado flag grip called 5280.",
-        "Dia de los Muertos on a putter grip. Sweet Rollz makes floral, aloha, and limited edition putter grips in a pistol shape. Over 1,000 reviews. The Muertos is the one that photographs best, but the Mahalo and La Piña are just as committed to the bit. Midsize and skinny options.",
-        "Japanese grip technology with 195 color combinations in the X Grip series. IOMAX compound is 100% waterproof and UV-resistant. Decades of market presence but still relatively unknown in the US. Unusually tacky, unusually soft, and available in a color palette that makes a Pantone book look limited.",
-        "Southern California premium grip company building out a clean, design-forward line. Putter grips and ball markers. Early-stage brand with the kind of restrained aesthetic that usually means the founder owns too many Dieter Rams books. One to watch as they expand.",
-        "The biggest grip brand in golf doing something actually interesting. Deep green Tour Velvet with azalea accents for the year’s first major. Same rubber-blend compound, same non-slip surface, different energy entirely. Limited edition and already sold out at most retailers, which tells you everything."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- ROUNDUP — 6 Shinnecock Capsules Before the First Tee -->
   <div class="card" data-type="drop">
@@ -7466,33 +7297,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      shinnecock6: [
-        "The 30th anniversary capsule pays tribute to Jesper Parnevik's 1998 Open look. Pink trousers, black sweater, iconic snapback — all reimagined in polos, striped knitwear, pleated pants, and tailored shorts. Hovland and Norgaard will wear it at Shinnecock, which is either product placement or a love letter depending on your tolerance for nostalgia.",
-        "The Wolf Flag Rope Hat is 100% nylon with a structured silhouette, flat brim, and a custom 126th U.S. Open patch. Part of Greyson's broader Shinnecock capsule alongside polos and quarter-zips for Rahm and Lowry. Clean enough to survive a corporate outing. Interesting enough to not feel like one.",
-        "The official USGA outfitter brought the full kit. Embroidered polos in Dunnes Stripe, a Pine Raglan Hoodie, performance quarter-zips, and enough hats to stock a Southampton pro shop. The quality is Peter Millar quality, which is to say: your father-in-law will approve and your golf buddies will not make fun of you.",
-        "Hand-stitched needlepoint hat with Shinnecock Hills imagery in classic navy. One brand, one craft, zero shortcuts. If you know Smathers & Branson you already own three of their belts and this sentence is unnecessary. The full U.S. Open collection also includes a key fob and can cooler.",
-        "The collection itself is standard tournament merch. What makes this interesting is the pop-up boutique in East Hampton Village carrying limited-release U.S. Open gear alongside the mainline. If you are already in the Hamptons for the tournament, walking past this shop is harder than making the cut at Shinnecock.",
-        "Licensed U.S. Open polos and hats from the three stripes. The real storyline here is Scheffler going for the career Grand Slam — if he closes it out on his 30th birthday wearing adidas, the scripted outfits will sell out before the trophy ceremony ends."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- NEWS — Lions Muny Coore & Crenshaw Renovation -->
   <style>
@@ -7558,35 +7363,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      lionsmuny: [
-        "Austin's oldest public course — open since 1924, desegregated since 1950 — is getting a full Coore & Crenshaw restoration. New clubhouse. Teaching center. Trails to Town Lake. And the architects are doing it for free.",
-        "Lions Municipal opened in 1924 as Austin’s first public course. In 1950 it became the first desegregated muni in the South when Mayor Taylor Glass said ‘Let them play.’ In 2016, it was added to the National Register of Historic Places.",
-        "Bill Coore and Ben Crenshaw — the duo behind Pinehurst No. 2, Sand Hills, Sheep Ranch, and Cabot Cliffs — are doing the renovation pro bono. Crenshaw grew up playing Lions. There may be no more personal project in golf architecture.",
-        "The plan is to restore the original routing from the course’s golden era, before a 1974 redesign altered the layout. 141 acres of Austin history, brought back to what Crenshaw himself played as a kid on Enfield Road.",
-        "The vision goes way beyond golf. A new clubhouse with a restaurant and pro shop. Expanded driving range and teaching pavilion. Trails connecting to Town Lake. Flexible green space for farmers markets, concerts, and community events.",
-        "The historic clubhouse — where the call to Mayor Glass was placed in 1950 — will become a teaching center, golf museum, and civil rights education space. A place where Austin’s history of integration is preserved and taught.",
-        "The Muny Conservancy was created in 2019 to work with the City and UT to permanently preserve the land. The annual Imagine Muny gala has raised over $1M per year. The preservation district was extended to May 2027 — which may be its final deadline.",
-        "70,000 rounds a year. A century of history. The first integrated municipal course in the American South. A pro-bono Coore & Crenshaw restoration. This is the most important story in Austin golf. Learn more at themunyconservancy.com."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- BRAND TO KNOW — Mogshade Golf -->
   <div class="card" data-type="drop">
@@ -7741,35 +7518,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      wwdgarden: [
-        "Water When Dry is built on a garden metaphor — what you water will grow — and the whole brand runs through it. The colorways are named River, Dusk, Leaf, Soil, Blackberry. The membership program is called the Garden Club. The homepage says 'Welcome to the Garden.' It should be annoying but it's not, because the clothes are actually good and the tone never tips into self-help territory.",
-        "The Camper Short is the anchor piece. 7-inch inseam, nylon with mesh lining, eight pockets — which is three more pockets than most golf shorts bother with. Built for the course, the trail, the brewery patio after, and the airport the next morning. Comes in River, Dusk, and Dawn. Fits true to size.",
-        "The Canopy Zip Hoodie in Leaf is the piece that makes you look twice. 100% cotton, 380 GSM, garment-dyed and stone-washed so it looks like you've owned it for years on the first wear. Metal hardware. Monochrome embroidered logos. The kind of hoodie that costs $98 and looks like it should cost more.",
-        "Same hoodie, different light. The Charcoal colorway on a 6'3 frame doing exactly what a good hoodie should do — disappearing into your wardrobe until you reach for it every single time. Stone-washed cotton that softens without losing shape.",
-        "The Canopy Fleece in Blackberry is the kind of piece that makes you want to play a November round just to justify owning it. Sherpa construction, deep color that photographs somewhere between dark plum and burnt wine. Limited quantities on both this and the Riverbank colorway.",
-        "Chain-stitch lettering on heavyweight cotton. The April Showers Tee is the most graphically confident piece in the lineup — script embroidery that reads like a vintage bowling league shirt crossed with something from a Japanese americana shop. Sold out of first run.",
-        "Unstructured 5-panel strapback in a forest green that matches the WWD logo mark. Low profile, soft bill, the kind of hat that earns questions on the course because nobody recognizes the brand yet. That's the point.",
-        "The Greener Grass Tee in Soil. Heavyweight cotton, relaxed fit, and a graphic that says exactly what it means. The whole brand operates at this frequency — earnest without being corny, grounded without being boring. Worth watching as they build out."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- NEWS — Masters 2027 Ticket Application Open -->
   <style>
@@ -7825,35 +7574,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      masters27: [
-        "Augusta National opened the 2027 Masters ticket application today. The window runs June 1–20 at masters.com. Roughly two million people will apply. Roughly 0.55% of them will get in. The rest will refresh their email for three months and then quietly buy a practice round badge from a guy named Todd.",
-        "The application window is open right now and closes June 20. That’s twenty days to go to masters.com, log in (or create an account), pick the days you want, and submit. No essay required. No proof of handicap. Just an email address and a willingness to be disappointed.",
-        "Four steps. Create an account. Select days (practice, tournament, or both). Pick how many tickets (1–4). Submit. One entry per person. After June 20, Augusta runs a random draw — tournament tickets first, then practice rounds for anyone who missed.",
-        "About a 0.55% chance of getting tournament round tickets. That’s roughly 1 in 200. An estimated two million applications go in every year for a very limited number of badges. Still better odds than making a hole-in-one, which is about 1 in 12,500. So there’s that.",
-        "Practice rounds on Monday and Tuesday are $125. Wednesday — which includes the Par 3 Contest, arguably the most fun day — is $150. Tournament rounds Thursday through Sunday are $160 each. That’s less than a decent round at most resort courses. Augusta is many things. Overpriced at face value is not one of them.",
-        "The 2027 Masters runs April 5–11. Monday through Wednesday are practice rounds, with the Par 3 Contest on Wednesday. Thursday through Sunday are tournament rounds. Peak azalea season. Peak golf. Peak everything, honestly.",
-        "You can apply for every day but can only win one. Tournament tickets are drawn first — if you lose, you’re automatically re-entered for practice rounds. Resale is strictly prohibited. Augusta will revoke your badge at the gate without blinking.",
-        "Twenty days. One in two hundred. A $160 ticket to walk the most famous course on the planet. The math is terrible and you should absolutely do it anyway. Go to masters.com, click tickets, and apply before June 20."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- THE EDIT — 11 Water Bottles We'd Actually Carry -->
   <div class="card" data-type="drop">
@@ -8070,37 +7791,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      munikids10: [
-        "Brothers Maxton and Drew Reinland started Muni Kids in Portland in 2015 because nobody was making golf gear for the people who actually learned the game on public courses. Eleven years later they've built a universe — headcovers, apparel, art, a podcast, urban golf meetups, a children's book called 'Golforia,' and a brick-and-mortar shop inside Portland's Memory Den. Before the indie golf scene had a name, Muni Kids was already screen-printing it.",
-        "The pattern from Portland International Airport's world-famous carpet, turned into a golf headcover. If you've ever connected through PDX and stared at the floor thinking 'that would look good on a driver,' Drew Reinland had the same thought first. Canvas construction, fleece-lined, made to order by Reinland Golf Co.",
-        "ODB on a headcover. Limited edition canvas with a portrait that belongs in a museum and ended up on a driver. Wu-Tang meets the first tee, which is exactly the kind of crossover that makes Muni Kids Muni Kids. Fleece-lined, handcrafted, and absolutely not available at your country club pro shop.",
-        "Mac Miller tribute headcovers from the Balloonerism Stampede drop. Swimming in circles on the course is what most of us do anyway. Canvas, fleece-lined, limited edition, and quietly one of the most emotional products in indie golf. Pittsburgh to Portland, 18 holes at a time.",
-        "The name says it all. A graduation cap on a headcover for the golfer who never went pro and never wanted to. Canvas construction with the Muni Kids woven label. The most self-aware product in golf accessories, and somehow still aspirational.",
-        "A smiley face on a headcover. No logo, no brand name, no explanation needed. The kind of product that makes people smile back at your bag, which is the entire point of playing golf in the first place.",
-        "Tiger's face screen-printed on a black tee. No name, no swoosh, just the look. Muni Kids does pop culture golf tributes better than anyone because they never explain them. You either get it or you don't, and the person behind you on the range definitely gets it.",
-        "Old English lettering that says Bogeys Suck, which is simultaneously the most obvious and most necessary statement in golf. Part of the Forever Collection — the core tees that never leave the lineup. Black on black, no frills, just truth.",
-        "The name is the mission statement. Country Club Opposition. Muni Kids has been the anti-country-club brand since day one, and this snapback is the uniform. Black hat, white embroidery, zero ambiguity about where you stand on golf's class divide.",
-        "A children's book about golf etiquette written and illustrated by Drew Reinland, which might be the most unexpectedly beautiful thing a headcover company has ever produced. 'The Lost City of Etiquette' teaches kids the game's unwritten rules through an adventure story. This is where Muni Kids stops being a brand and starts being a culture."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- THE EDIT — 14 Hats From Funky Brands -->
   <div class="card" data-type="drop">
@@ -8140,41 +7831,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      hats14: [
-        "Mid-crown rope cap with a retro fit that splits the difference between dad hat and structured cap. Art-driven graphics from Tony Knapton's Wisconsin studio. Radry is a never-ending art project disguised as a golf brand, and this hat is the business card.",
-        "Wide brim plus neck flap in 70/30 cotton-nylon with DuPont Teflon water and stain repellent. Limited edition. For the golfer who also owns binoculars and can identify three species of hawk. Probably the most functional hat on this list.",
-        "Italian logo embroidered in Negroni Orange on lightweight cotton. Low profile six panel, curved peak, metal clasp. The hat equivalent of ordering an Aperol Spritz at the turn and not apologizing for it.",
-        "From the Summer '26 Gallo Colorido drop. Cotton canvas with leather applique detailing and back embroidery. Flat brim, structured snapback. Named for the Caribbean inspiration that runs through the whole collection.",
-        "Silicon patch Tennessee artwork at centre front. Six-panel snapback with a short crown that sits low for a sharp look. Pre-curved brim that holds its shape after a full season. From the whiskey collab that just dropped this week.",
-        "Actual leaf camouflage on 100% cotton with direct embroidery and adjustable velcro. Metalwood's skate-meets-golf energy compressed into a single hat. Works on the course, works at the skate park, works at the bodega on the way home.",
-        "From the SS26 collab capsule that brought Y2K fashion to the first tee. Black polyester snapback with co-branded embroidery. Two logos that shouldn't work together and absolutely do.",
-        "2026 NBA All-Star Game collab with New Era. ESG logo character on the side, All-Star script on the front. Golf brand meets basketball culture, which is the entire Eastside Golf thesis condensed into a hat.",
-        "Nos Ludere Simul — We Play Together. Most technical RGC hat to date with rain resistance and breathability. Signature crest inspired by Snowball, RGC's first member. Built for all conditions between the first tee and the nineteenth hole.",
-        "Nylon micro ripstop with the Alien Camo pattern from the new gorpcore collection. Built to handle elements while staying lightweight. The hat for people who want their golf accessories to look like they also climb mountains on weekends.",
-        "GGNC logo intertwined with vintage state flower illustrations from across America, designed and embroidered in New York City. Unstructured five-panel with an adjustable closure. The kind of hat that starts a conversation with someone who notices details.",
-        "Made in the USA. High crown visor for the golfer who fully commits to the visor lifestyle and doesn't look back. SSC branding keeps it clean. The visor is either the bravest or most divisive headwear choice in golf, and SSC leans into it.",
-        "Five-panel rope hat in 100% recycled nylon with a built-in golf pencil holder. Comes with an Agronomy Workshop pencil because the details are the whole point. Quick-adjust rope closure. The hat that treats the scorecard like an analog ritual.",
-        "100% recycled quick-dry nylon from West London. Mid-profile snapback in five colorways. Made to order, which means a week wait and the satisfaction of knowing nobody else at the muni is wearing the same hat. Best-seller for a reason."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- DROP — Manors x Gentleman Jack -->
   <div class="card" data-type="drop">
@@ -8210,36 +7867,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      manorsgj: [
-        "Paisley print drawn from engraved detailing on vintage Gentleman Jack bottles. Seawool fabric made from recycled oyster shells and plastic bottles. UV 50+ protection, 4-way stretch, and the kind of odour control that means you won't offend anyone on the back nine.",
-        "The Drip pattern pulled from the Jack Daniels archive — a whiskey drip printed across the body. Blade collar, snap-button placket, Seawool fabric. Already sold out in XS, which tells you something.",
-        "Jacquard Tennessee artwork knitted into the chest. 100% merino wool, 9-gauge knit for a heavier vintage feel. Warm when the wind bites, cool when the sun breaks through. The pub-to-first-tee transitional garment you didn't know you needed.",
-        "Tennessee artwork digitally printed at the chest. 240gsm cotton, relaxed fit, built to wear in over time. Layers under a knit on cool mornings or goes solo through the warm-up. The kind of tee that lives in rotation.",
-        "Six-panel snapback, short crown, low on the head. Silicon patch Tennessee artwork at centre front. Inspired by a baseball classic but dressed for the course. Pre-curved brim that holds its shape after a full season.",
-        "Pebbled PU leather with the Tennessee artwork embroidered at centre. Soft-lined inside, snug fit on top. Built to live in the bag for the long haul and look better the more it gets beat up.",
-        "The paisley print from the polo, now on something you'll lose in your bag and find three weeks later. Waffle texture, clip attachment, big enough to actually dry something.",
-        "For people who still keep score on paper, which is either charmingly old-school or a coping mechanism for screen fatigue. Either way, this one's leather-wrapped with the collab branding.",
-        "The entry point. Twenty-one dollars for the Tennessee artwork on metal. Small enough to forget in your pocket, specific enough that someone on the green will ask about it."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- DROP — Malbon Summer "Gallo Colorido" -->
   <div class="card" data-type="drop">
@@ -8271,33 +7899,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      malbongallo: [
-        "Short sleeve windshirt with a partial center zip and high collar. Lightweight nylon-spandex construction built for transitional conditions when the marine layer burns off mid-round. Comes in Chive, Surf Spray, and Cream — three colorways that all say Caribbean without saying the word Caribbean.",
-        "Camp collar, center button closure, and a chest pocket with Malbon artwork. The cotton-poly blend sits relaxed without looking like you gave up. The kind of shirt that works at the course, at dinner, and at the airport in between.",
-        "Designed to pair with the Playa Windshirt, which is the polite way of saying Malbon would like you to buy both. Elastic waistband, internal drawcord, zippered back pocket. Nylon-spandex build that dries fast enough to go from the course to the beach without changing.",
-        "The Summer Collection's workhorse polo. Clean lines, performance fabric, and the Buckets logo keeping things on brand without being loud about it. Available in Cream, which is the summer default when you've run out of opinions about color.",
-        "Named for the collection's Caribbean inspiration and priced like a hat should be priced. Structured snapback with the Buckets logo. The entry point to the Gallo Colorido collection if you're not ready to commit to a full windshirt.",
-        "Acetate dice in a havana colorway for forty-five dollars. That's it. That's the product. Malbon turned a bar game into a golf accessory and honestly the confidence required to price this is more impressive than the object itself."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- FIELD GUIDE — 8 Special Day Rounds Near Austin -->
   
@@ -8401,35 +8003,7 @@
     </div>
   </div>
 
-  <script>
-  (function(){
-    var slideTexts = {
-      specialday: [
-        "Arthur Hills carved Wolfdancer through Lost Pines like he had a grudge against flat land. The greens are fast, the elevation changes are real, and the stretch from 14 to 18 is one of the best closing runs in Texas. You do not need to be a Hyatt guest to play, which makes this the most accessible great course in the Austin orbit. Thirty minutes east and a world away from your Tuesday nine at the muni.",
-        "Two Fazio designs — Canyons and Foothills — and both have made Golf Digest's 100 Greatest Public list. The catch: you need a resort stay to play. Book one night, play 36, and pretend you are on a golf trip. Canyons is the showpiece with canyon-framed par 3s. Foothills is the locals' favorite. Twenty-five minutes from downtown and you feel like you drove to Scottsdale.",
-        "Robert Trent Jones Sr. built three courses at Horseshoe Bay and Ram Rock is the one that punishes you. Elevation changes along Lake LBJ, forced carries over granite, and the kind of views that make you forget you just made double. Apple Rock is the friendlier sibling if you want scenery without the therapy session. An hour northwest — pack lunch and make the drive.",
-        "Tucked in the hills outside Blanco, Vaaler Creek is the semi-secret Hill Country round that people whisper about. Cart included in the green fee, which softens the $95-110 weekend rate. The back nine winds through live oaks and creek beds that make you wonder why you ever play anything flat. Fifty minutes from Austin and worth every one of them.",
-        "PGA Tour designers laid out Falconhead in Lakeway and it plays like a course that costs twice the price. Rolling Hill Country terrain, creeks threading through the fairways, and conditioning that stays sharp year-round. Weekday rates under $55 make this the best value splurge in the Austin metro. Close enough for a lunch-break nine if your boss is lenient.",
-        "Golf Digest gave Avery Ranch four and a half stars and a Best Places to Play nod, which tracks once you see the limestone ravines cutting through the fairways. A former Nicklaus Design associate drew this up and it shows — the routing threads through live oaks, natural caves, and creek beds that make north Austin feel like a different zip code. Seventy-five dollars for this much terrain is the kind of math that makes you wonder what you have been doing with your weekends.",
-        "Troon manages this one in San Marcos and it is ranked 48th in the state, which puts it in rare company for a course you can just book online. The Hill Country routing is polished without being fussy, the conditioning runs hot year-round, and the drive down I-35 is painless enough that you will forget you left Austin. Semi-private with public tee times most days. The kind of course that makes you stand a little straighter on the first tee.",
-        "They built a golf course inside an abandoned cement quarry and the back nine descends a hundred feet between two-hundred-foot limestone walls. It is the most visually absurd public course in Texas and possibly the most photographed. An hour and change south on I-35, which is the only thing standing between you and one of the most unique rounds you will ever play. Weekday rate is fifty-nine dollars, which feels like a clerical error."
-      ]
-    };
-    var origGearSlide = window.gearSlide;
-    window.gearSlide = function(btn, dir) {
-      origGearSlide(btn, dir);
-      var carousel = btn.closest('.gear-carousel');
-      if (!carousel) return;
-      var cid = carousel.dataset.carousel;
-      if (!slideTexts[cid]) return;
-      var counter = document.querySelector('[data-counter="'+cid+'"]');
-      if (!counter) return;
-      var idx = parseInt(counter.textContent.split('/')[0].trim()) - 1;
-      var textEl = document.querySelector('[data-slidetext="'+cid+'"]');
-      if (textEl) textEl.textContent = slideTexts[cid][idx];
-    };
-  })();
-  </script>
+  
 
   <!-- THE EDIT — 14 Hoodies That Caught My Eye -->
   <div class="card" data-type="drop">
@@ -10349,8 +9923,8 @@
             </a>
           </div>
         </div>
-        <button class="gear-arrow prev" aria-label="Previous">&#8249;</button>
-        <button class="gear-arrow next" aria-label="Next">&#8250;</button>
+        <button class="gear-arrow prev" aria-label="Previous" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" aria-label="Next" onclick="gearSlide(this, 1)">&#8250;</button>
       </div>
     </div>
     <div class="card-body">
@@ -13834,14 +13408,6 @@
         // Dynamic slide text support
         var textEl = document.querySelector('[data-slidetext="' + id + '"]');
         if (textEl && window._slideTexts && window._slideTexts[id]) {
-
-    readthegreen: [
-      "Founder\u2019s Cap \u2014 The Reserve. Premium 5-panel corduroy snapback with seamless front panel and full buckram. \u201cRead The Green\u201d embroidered front with signature \u201c4\u201d side logo. Custom interior tag and lining. $47.",
-      "The \u201997 Vintage Pullover \u2014 Green. Lightweight, vintage-inspired nylon pullover with rib-knit cuffs and collar, adjustable drawstring waistline. \u2018Read The Green Golf Club 1997\u2019 embroidered front logo. The piece that went viral. 100% nylon, unisex. $89.",
-      "Short Sleeve Pullover \u2014 Navy. Same vintage-inspired DNA as the full-length \u201997, cut short for summer rounds. Rib-knit cuffs, drawstring waist, embroidered logos front and back. 100% nylon, unisex. $79.",
-      "Varsity Crewneck \u2014 Grey. Heavyweight crewneck with varsity-style Read The Green branding. Cotton construction, relaxed fit, built for post-round wear or weekend errands. $75.",
-      "The Club Tee. Premium heavyweight drop-shoulder tee with a boxy, slightly cropped feel. Read The Green New York design, water-printed. Unisex. The kind of shirt that works with everything. $60."
-    ],
           textEl.style.transition = 'opacity 0.2s ease';
           textEl.style.opacity = '0';
           setTimeout(function(){ textEl.textContent = window._slideTexts[id][current]; textEl.style.opacity = '1'; layoutMasonry(); }, 200);
@@ -13866,6 +13432,178 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+specialday: [
+        "Arthur Hills carved Wolfdancer through Lost Pines like he had a grudge against flat land. The greens are fast, the elevation changes are real, and the stretch from 14 to 18 is one of the best closing runs in Texas. You do not need to be a Hyatt guest to play, which makes this the most accessible great course in the Austin orbit. Thirty minutes east and a world away from your Tuesday nine at the muni.",
+        "Two Fazio designs — Canyons and Foothills — and both have made Golf Digest's 100 Greatest Public list. The catch: you need a resort stay to play. Book one night, play 36, and pretend you are on a golf trip. Canyons is the showpiece with canyon-framed par 3s. Foothills is the locals' favorite. Twenty-five minutes from downtown and you feel like you drove to Scottsdale.",
+        "Robert Trent Jones Sr. built three courses at Horseshoe Bay and Ram Rock is the one that punishes you. Elevation changes along Lake LBJ, forced carries over granite, and the kind of views that make you forget you just made double. Apple Rock is the friendlier sibling if you want scenery without the therapy session. An hour northwest — pack lunch and make the drive.",
+        "Tucked in the hills outside Blanco, Vaaler Creek is the semi-secret Hill Country round that people whisper about. Cart included in the green fee, which softens the $95-110 weekend rate. The back nine winds through live oaks and creek beds that make you wonder why you ever play anything flat. Fifty minutes from Austin and worth every one of them.",
+        "PGA Tour designers laid out Falconhead in Lakeway and it plays like a course that costs twice the price. Rolling Hill Country terrain, creeks threading through the fairways, and conditioning that stays sharp year-round. Weekday rates under $55 make this the best value splurge in the Austin metro. Close enough for a lunch-break nine if your boss is lenient.",
+        "Golf Digest gave Avery Ranch four and a half stars and a Best Places to Play nod, which tracks once you see the limestone ravines cutting through the fairways. A former Nicklaus Design associate drew this up and it shows — the routing threads through live oaks, natural caves, and creek beds that make north Austin feel like a different zip code. Seventy-five dollars for this much terrain is the kind of math that makes you wonder what you have been doing with your weekends.",
+        "Troon manages this one in San Marcos and it is ranked 48th in the state, which puts it in rare company for a course you can just book online. The Hill Country routing is polished without being fussy, the conditioning runs hot year-round, and the drive down I-35 is painless enough that you will forget you left Austin. Semi-private with public tee times most days. The kind of course that makes you stand a little straighter on the first tee.",
+        "They built a golf course inside an abandoned cement quarry and the back nine descends a hundred feet between two-hundred-foot limestone walls. It is the most visually absurd public course in Texas and possibly the most photographed. An hour and change south on I-35, which is the only thing standing between you and one of the most unique rounds you will ever play. Weekday rate is fifty-nine dollars, which feels like a clerical error."
+      ],
+
+malbongallo: [
+        "Short sleeve windshirt with a partial center zip and high collar. Lightweight nylon-spandex construction built for transitional conditions when the marine layer burns off mid-round. Comes in Chive, Surf Spray, and Cream — three colorways that all say Caribbean without saying the word Caribbean.",
+        "Camp collar, center button closure, and a chest pocket with Malbon artwork. The cotton-poly blend sits relaxed without looking like you gave up. The kind of shirt that works at the course, at dinner, and at the airport in between.",
+        "Designed to pair with the Playa Windshirt, which is the polite way of saying Malbon would like you to buy both. Elastic waistband, internal drawcord, zippered back pocket. Nylon-spandex build that dries fast enough to go from the course to the beach without changing.",
+        "The Summer Collection's workhorse polo. Clean lines, performance fabric, and the Buckets logo keeping things on brand without being loud about it. Available in Cream, which is the summer default when you've run out of opinions about color.",
+        "Named for the collection's Caribbean inspiration and priced like a hat should be priced. Structured snapback with the Buckets logo. The entry point to the Gallo Colorido collection if you're not ready to commit to a full windshirt.",
+        "Acetate dice in a havana colorway for forty-five dollars. That's it. That's the product. Malbon turned a bar game into a golf accessory and honestly the confidence required to price this is more impressive than the object itself."
+      ],
+
+manorsgj: [
+        "Paisley print drawn from engraved detailing on vintage Gentleman Jack bottles. Seawool fabric made from recycled oyster shells and plastic bottles. UV 50+ protection, 4-way stretch, and the kind of odour control that means you won't offend anyone on the back nine.",
+        "The Drip pattern pulled from the Jack Daniels archive — a whiskey drip printed across the body. Blade collar, snap-button placket, Seawool fabric. Already sold out in XS, which tells you something.",
+        "Jacquard Tennessee artwork knitted into the chest. 100% merino wool, 9-gauge knit for a heavier vintage feel. Warm when the wind bites, cool when the sun breaks through. The pub-to-first-tee transitional garment you didn't know you needed.",
+        "Tennessee artwork digitally printed at the chest. 240gsm cotton, relaxed fit, built to wear in over time. Layers under a knit on cool mornings or goes solo through the warm-up. The kind of tee that lives in rotation.",
+        "Six-panel snapback, short crown, low on the head. Silicon patch Tennessee artwork at centre front. Inspired by a baseball classic but dressed for the course. Pre-curved brim that holds its shape after a full season.",
+        "Pebbled PU leather with the Tennessee artwork embroidered at centre. Soft-lined inside, snug fit on top. Built to live in the bag for the long haul and look better the more it gets beat up.",
+        "The paisley print from the polo, now on something you'll lose in your bag and find three weeks later. Waffle texture, clip attachment, big enough to actually dry something.",
+        "For people who still keep score on paper, which is either charmingly old-school or a coping mechanism for screen fatigue. Either way, this one's leather-wrapped with the collab branding.",
+        "The entry point. Twenty-one dollars for the Tennessee artwork on metal. Small enough to forget in your pocket, specific enough that someone on the green will ask about it."
+      ],
+
+hats14: [
+        "Mid-crown rope cap with a retro fit that splits the difference between dad hat and structured cap. Art-driven graphics from Tony Knapton's Wisconsin studio. Radry is a never-ending art project disguised as a golf brand, and this hat is the business card.",
+        "Wide brim plus neck flap in 70/30 cotton-nylon with DuPont Teflon water and stain repellent. Limited edition. For the golfer who also owns binoculars and can identify three species of hawk. Probably the most functional hat on this list.",
+        "Italian logo embroidered in Negroni Orange on lightweight cotton. Low profile six panel, curved peak, metal clasp. The hat equivalent of ordering an Aperol Spritz at the turn and not apologizing for it.",
+        "From the Summer '26 Gallo Colorido drop. Cotton canvas with leather applique detailing and back embroidery. Flat brim, structured snapback. Named for the Caribbean inspiration that runs through the whole collection.",
+        "Silicon patch Tennessee artwork at centre front. Six-panel snapback with a short crown that sits low for a sharp look. Pre-curved brim that holds its shape after a full season. From the whiskey collab that just dropped this week.",
+        "Actual leaf camouflage on 100% cotton with direct embroidery and adjustable velcro. Metalwood's skate-meets-golf energy compressed into a single hat. Works on the course, works at the skate park, works at the bodega on the way home.",
+        "From the SS26 collab capsule that brought Y2K fashion to the first tee. Black polyester snapback with co-branded embroidery. Two logos that shouldn't work together and absolutely do.",
+        "2026 NBA All-Star Game collab with New Era. ESG logo character on the side, All-Star script on the front. Golf brand meets basketball culture, which is the entire Eastside Golf thesis condensed into a hat.",
+        "Nos Ludere Simul — We Play Together. Most technical RGC hat to date with rain resistance and breathability. Signature crest inspired by Snowball, RGC's first member. Built for all conditions between the first tee and the nineteenth hole.",
+        "Nylon micro ripstop with the Alien Camo pattern from the new gorpcore collection. Built to handle elements while staying lightweight. The hat for people who want their golf accessories to look like they also climb mountains on weekends.",
+        "GGNC logo intertwined with vintage state flower illustrations from across America, designed and embroidered in New York City. Unstructured five-panel with an adjustable closure. The kind of hat that starts a conversation with someone who notices details.",
+        "Made in the USA. High crown visor for the golfer who fully commits to the visor lifestyle and doesn't look back. SSC branding keeps it clean. The visor is either the bravest or most divisive headwear choice in golf, and SSC leans into it.",
+        "Five-panel rope hat in 100% recycled nylon with a built-in golf pencil holder. Comes with an Agronomy Workshop pencil because the details are the whole point. Quick-adjust rope closure. The hat that treats the scorecard like an analog ritual.",
+        "100% recycled quick-dry nylon from West London. Mid-profile snapback in five colorways. Made to order, which means a week wait and the satisfaction of knowing nobody else at the muni is wearing the same hat. Best-seller for a reason."
+      ],
+
+munikids10: [
+        "Brothers Maxton and Drew Reinland started Muni Kids in Portland in 2015 because nobody was making golf gear for the people who actually learned the game on public courses. Eleven years later they've built a universe — headcovers, apparel, art, a podcast, urban golf meetups, a children's book called 'Golforia,' and a brick-and-mortar shop inside Portland's Memory Den. Before the indie golf scene had a name, Muni Kids was already screen-printing it.",
+        "The pattern from Portland International Airport's world-famous carpet, turned into a golf headcover. If you've ever connected through PDX and stared at the floor thinking 'that would look good on a driver,' Drew Reinland had the same thought first. Canvas construction, fleece-lined, made to order by Reinland Golf Co.",
+        "ODB on a headcover. Limited edition canvas with a portrait that belongs in a museum and ended up on a driver. Wu-Tang meets the first tee, which is exactly the kind of crossover that makes Muni Kids Muni Kids. Fleece-lined, handcrafted, and absolutely not available at your country club pro shop.",
+        "Mac Miller tribute headcovers from the Balloonerism Stampede drop. Swimming in circles on the course is what most of us do anyway. Canvas, fleece-lined, limited edition, and quietly one of the most emotional products in indie golf. Pittsburgh to Portland, 18 holes at a time.",
+        "The name says it all. A graduation cap on a headcover for the golfer who never went pro and never wanted to. Canvas construction with the Muni Kids woven label. The most self-aware product in golf accessories, and somehow still aspirational.",
+        "A smiley face on a headcover. No logo, no brand name, no explanation needed. The kind of product that makes people smile back at your bag, which is the entire point of playing golf in the first place.",
+        "Tiger's face screen-printed on a black tee. No name, no swoosh, just the look. Muni Kids does pop culture golf tributes better than anyone because they never explain them. You either get it or you don't, and the person behind you on the range definitely gets it.",
+        "Old English lettering that says Bogeys Suck, which is simultaneously the most obvious and most necessary statement in golf. Part of the Forever Collection — the core tees that never leave the lineup. Black on black, no frills, just truth.",
+        "The name is the mission statement. Country Club Opposition. Muni Kids has been the anti-country-club brand since day one, and this snapback is the uniform. Black hat, white embroidery, zero ambiguity about where you stand on golf's class divide.",
+        "A children's book about golf etiquette written and illustrated by Drew Reinland, which might be the most unexpectedly beautiful thing a headcover company has ever produced. 'The Lost City of Etiquette' teaches kids the game's unwritten rules through an adventure story. This is where Muni Kids stops being a brand and starts being a culture."
+      ],
+
+masters27: [
+        "Augusta National opened the 2027 Masters ticket application today. The window runs June 1–20 at masters.com. Roughly two million people will apply. Roughly 0.55% of them will get in. The rest will refresh their email for three months and then quietly buy a practice round badge from a guy named Todd.",
+        "The application window is open right now and closes June 20. That’s twenty days to go to masters.com, log in (or create an account), pick the days you want, and submit. No essay required. No proof of handicap. Just an email address and a willingness to be disappointed.",
+        "Four steps. Create an account. Select days (practice, tournament, or both). Pick how many tickets (1–4). Submit. One entry per person. After June 20, Augusta runs a random draw — tournament tickets first, then practice rounds for anyone who missed.",
+        "About a 0.55% chance of getting tournament round tickets. That’s roughly 1 in 200. An estimated two million applications go in every year for a very limited number of badges. Still better odds than making a hole-in-one, which is about 1 in 12,500. So there’s that.",
+        "Practice rounds on Monday and Tuesday are $125. Wednesday — which includes the Par 3 Contest, arguably the most fun day — is $150. Tournament rounds Thursday through Sunday are $160 each. That’s less than a decent round at most resort courses. Augusta is many things. Overpriced at face value is not one of them.",
+        "The 2027 Masters runs April 5–11. Monday through Wednesday are practice rounds, with the Par 3 Contest on Wednesday. Thursday through Sunday are tournament rounds. Peak azalea season. Peak golf. Peak everything, honestly.",
+        "You can apply for every day but can only win one. Tournament tickets are drawn first — if you lose, you’re automatically re-entered for practice rounds. Resale is strictly prohibited. Augusta will revoke your badge at the gate without blinking.",
+        "Twenty days. One in two hundred. A $160 ticket to walk the most famous course on the planet. The math is terrible and you should absolutely do it anyway. Go to masters.com, click tickets, and apply before June 20."
+      ],
+
+wwdgarden: [
+        "Water When Dry is built on a garden metaphor — what you water will grow — and the whole brand runs through it. The colorways are named River, Dusk, Leaf, Soil, Blackberry. The membership program is called the Garden Club. The homepage says 'Welcome to the Garden.' It should be annoying but it's not, because the clothes are actually good and the tone never tips into self-help territory.",
+        "The Camper Short is the anchor piece. 7-inch inseam, nylon with mesh lining, eight pockets — which is three more pockets than most golf shorts bother with. Built for the course, the trail, the brewery patio after, and the airport the next morning. Comes in River, Dusk, and Dawn. Fits true to size.",
+        "The Canopy Zip Hoodie in Leaf is the piece that makes you look twice. 100% cotton, 380 GSM, garment-dyed and stone-washed so it looks like you've owned it for years on the first wear. Metal hardware. Monochrome embroidered logos. The kind of hoodie that costs $98 and looks like it should cost more.",
+        "Same hoodie, different light. The Charcoal colorway on a 6'3 frame doing exactly what a good hoodie should do — disappearing into your wardrobe until you reach for it every single time. Stone-washed cotton that softens without losing shape.",
+        "The Canopy Fleece in Blackberry is the kind of piece that makes you want to play a November round just to justify owning it. Sherpa construction, deep color that photographs somewhere between dark plum and burnt wine. Limited quantities on both this and the Riverbank colorway.",
+        "Chain-stitch lettering on heavyweight cotton. The April Showers Tee is the most graphically confident piece in the lineup — script embroidery that reads like a vintage bowling league shirt crossed with something from a Japanese americana shop. Sold out of first run.",
+        "Unstructured 5-panel strapback in a forest green that matches the WWD logo mark. Low profile, soft bill, the kind of hat that earns questions on the course because nobody recognizes the brand yet. That's the point.",
+        "The Greener Grass Tee in Soil. Heavyweight cotton, relaxed fit, and a graphic that says exactly what it means. The whole brand operates at this frequency — earnest without being corny, grounded without being boring. Worth watching as they build out."
+      ],
+
+lionsmuny: [
+        "Austin's oldest public course — open since 1924, desegregated since 1950 — is getting a full Coore & Crenshaw restoration. New clubhouse. Teaching center. Trails to Town Lake. And the architects are doing it for free.",
+        "Lions Municipal opened in 1924 as Austin’s first public course. In 1950 it became the first desegregated muni in the South when Mayor Taylor Glass said ‘Let them play.’ In 2016, it was added to the National Register of Historic Places.",
+        "Bill Coore and Ben Crenshaw — the duo behind Pinehurst No. 2, Sand Hills, Sheep Ranch, and Cabot Cliffs — are doing the renovation pro bono. Crenshaw grew up playing Lions. There may be no more personal project in golf architecture.",
+        "The plan is to restore the original routing from the course’s golden era, before a 1974 redesign altered the layout. 141 acres of Austin history, brought back to what Crenshaw himself played as a kid on Enfield Road.",
+        "The vision goes way beyond golf. A new clubhouse with a restaurant and pro shop. Expanded driving range and teaching pavilion. Trails connecting to Town Lake. Flexible green space for farmers markets, concerts, and community events.",
+        "The historic clubhouse — where the call to Mayor Glass was placed in 1950 — will become a teaching center, golf museum, and civil rights education space. A place where Austin’s history of integration is preserved and taught.",
+        "The Muny Conservancy was created in 2019 to work with the City and UT to permanently preserve the land. The annual Imagine Muny gala has raised over $1M per year. The preservation district was extended to May 2027 — which may be its final deadline.",
+        "70,000 rounds a year. A century of history. The first integrated municipal course in the American South. A pro-bono Coore & Crenshaw restoration. This is the most important story in Austin golf. Learn more at themunyconservancy.com."
+      ],
+
+shinnecock6: [
+        "The 30th anniversary capsule pays tribute to Jesper Parnevik's 1998 Open look. Pink trousers, black sweater, iconic snapback — all reimagined in polos, striped knitwear, pleated pants, and tailored shorts. Hovland and Norgaard will wear it at Shinnecock, which is either product placement or a love letter depending on your tolerance for nostalgia.",
+        "The Wolf Flag Rope Hat is 100% nylon with a structured silhouette, flat brim, and a custom 126th U.S. Open patch. Part of Greyson's broader Shinnecock capsule alongside polos and quarter-zips for Rahm and Lowry. Clean enough to survive a corporate outing. Interesting enough to not feel like one.",
+        "The official USGA outfitter brought the full kit. Embroidered polos in Dunnes Stripe, a Pine Raglan Hoodie, performance quarter-zips, and enough hats to stock a Southampton pro shop. The quality is Peter Millar quality, which is to say: your father-in-law will approve and your golf buddies will not make fun of you.",
+        "Hand-stitched needlepoint hat with Shinnecock Hills imagery in classic navy. One brand, one craft, zero shortcuts. If you know Smathers & Branson you already own three of their belts and this sentence is unnecessary. The full U.S. Open collection also includes a key fob and can cooler.",
+        "The collection itself is standard tournament merch. What makes this interesting is the pop-up boutique in East Hampton Village carrying limited-release U.S. Open gear alongside the mainline. If you are already in the Hamptons for the tournament, walking past this shop is harder than making the cut at Shinnecock.",
+        "Licensed U.S. Open polos and hats from the three stripes. The real storyline here is Scheffler going for the career Grand Slam — if he closes it out on his 30th birthday wearing adidas, the scripted outfits will sell out before the trophy ceremony ends."
+      ],
+
+grips7: [
+        "Queensland, Australia. 14 designs, everything from geometric patterns to pin-up art. Artist Series collabs with Evan Weselmann, Domenico Carnimeo, and Nori Okawa — no creative briefs, just ‘make something.’ High-percentage natural rubber, soft feel, weather-resistant. The grip equivalent of hanging art in your locker.",
+        "Magic Bus is the flagship pattern — psychedelic swirls on a swing grip made by TourMARK. Available as a set of 7 or a single putter grip. Loudmouth also makes Jolly Roger, Captain Thunderbolt, Scribblz, and Paint Balls. Each putter grip comes with a matching ball marker, which is either a nice detail or an excuse to buy the whole line.",
+        "Denver, Colorado. Small-batch, 5-point inspected, designed in the USA. The Lavender Lemonade is a pastel play that looks like it belongs on a Wes Anderson set. Cross-hatch texture with a patented tackiness spray. Also makes Bikini Bottom, Golf Happens (smiley faces), and a Colorado flag grip called 5280.",
+        "Dia de los Muertos on a putter grip. Sweet Rollz makes floral, aloha, and limited edition putter grips in a pistol shape. Over 1,000 reviews. The Muertos is the one that photographs best, but the Mahalo and La Piña are just as committed to the bit. Midsize and skinny options.",
+        "Japanese grip technology with 195 color combinations in the X Grip series. IOMAX compound is 100% waterproof and UV-resistant. Decades of market presence but still relatively unknown in the US. Unusually tacky, unusually soft, and available in a color palette that makes a Pantone book look limited.",
+        "Southern California premium grip company building out a clean, design-forward line. Putter grips and ball markers. Early-stage brand with the kind of restrained aesthetic that usually means the founder owns too many Dieter Rams books. One to watch as they expand.",
+        "The biggest grip brand in golf doing something actually interesting. Deep green Tour Velvet with azalea accents for the year’s first major. Same rubber-blend compound, same non-slip surface, different energy entirely. Limited edition and already sold out at most retailers, which tells you everything."
+      ],
+
+foundgolf: [
+        "Box Par Tee — Found is a Melbourne fashion label that treats the course as a studio and the dress code as a memo it never received. The Box Par Tee is the way in: a heavyweight graphic shirt that reads like an art-school print, not tournament merch, cut to wear off the course without anyone clocking that you play. $118 AUD.",
+        "Daisy Chain Tee — The same playbook with a softer hand. A daisy-chain graphic that looks more like a band shirt than golf apparel, in heavyweight cotton with a unisex cut. The kind of thing you forget is technically golfwear until someone asks where you got it. $118 AUD.",
+        "Reusable Ciggie Box — The piece that gives the whole thing away: a refillable faux-cigarette pack that holds your wooden tees. Either a joke about the game's vices or the most honest accessory anyone's made for it. It's the cheapest thing on the site and the one you'll actually talk about. $25 AUD.",
+        "Dad Cap, Olive — The restraint setting. Unstructured six-panel, no loud branding, just a clean piece doing the job a hat is meant to do. Proof Found can play it straight when the mood calls for it. $55 AUD.",
+        "The Shiz Vest — The flex. A pullover vest that belongs as much at a gallery opening as a tee box, and where Found's 'golf as creative culture' line stops being marketing and starts being a wardrobe. The Age, the SMH, and GQ South Africa have all come around, which for a brand this young is less hype than vindication. $200 AUD."
+      ],
+
+fella1: [
+        "Tech Ripstop Anorak Jacket — Packable ripstop half-zip anorak with mesh underarm panels for ventilation. Lightweight, wind-resistant, folds into its own pocket. The Amsterdam-made solution for changeable weather on the links. €140.",
+        "Sandbagger T-Shirt — Vintage-inspired sandbagger graphic on 240GSM carbon-finished cotton. Heavyweight, boxy cut. Fella’s tongue-in-cheek take on the golfer everyone knows but nobody admits to being. €70.",
+        "Pizza Slice Driver Headcover — White PU leather with green diamond quilting and an embroidered pizza slice. The kind of headcover that starts conversations on the first tee. Because golf doesn’t have to be so serious. €59.",
+        "Pizza Slice Double Ball Marker — Golden pizza slice marker with “It only takes one good shot” engraved on the back. The tiniest piece in the collection and somehow the most Fella thing they make. €15."
+      ],
+
+devereuxrevisited1: [
+        "Range Girl Driver Cover — a pin-up in a red bikini leaning on a Devereux pennant, in raised embroidery on white leather. The single most Devereux object they sell. $54.",
+        "High Noon Polo — clay ground, black contrast collar, small scattered print. The best-looking polo Devereux makes right now and it isn’t especially close. $74.",
+        "Devco Twill Jacket — Vintage Sky twill, spread collar, zip hand pockets, cut short enough to sit right on a swing. The most restrained thing in the lineup. $138.",
+        "Neon Sign Driver Barrel — black leather done as a neon sign for the Pioneer Country Club, a place that does not exist. Yellow, red and cyan thread on black. Best piece in the range. $54."
+      ],
+
+towels2: [
+        "Shinto Gauze Towel — 2.5-ply Japanese gauze, 100% organic cotton, 45″×12″. Made in Japan by artisans who’ve been at it for decades. Slim enough to tuck under the bag handle. Khaki. $40.",
+        "QG Paisley Towel — 100% cotton terry velour with a full paisley print and brass grommet-and-hook. 16″×24″. Made in USA. The towel that says ‘I have taste’ without saying anything at all. Navy. $60.",
+        "Guinness Golf Towel — A vintage Guinness bar towel, repurposed in a workshop in Fife, Scotland. Eyelet and carabiner. One-of-a-kind pub-meets-links energy. £30.",
+        "Gentleman Jack × MANORS Paisley Towel — Paisley pulled from vintage Gentleman Jack® bottle engravings. Soft, absorbent, built for long rounds in the summer heat. A collab that actually makes sense. £30.",
+        "Queen of Clubs Golf Towel — Velour cotton with a queen playing-card graphic. Grommet and hook. Made in USA. Women’s-forward brand that everyone should be paying attention to. $34.",
+        "Magnetic Golf Towel — Microfiber waffle, center keyhole, industrial-strength magnet. 20″×20″. Holds 400% its weight in water. Tour-pro approved. The tech towel that actually delivers. $38."
+      ],
+
+sscsailing: [
+        "Sail Bag “1492” — One-of-a-kind MacKenzie golf bag built from decommissioned sailcloth. Each bag carries a unique sail number and the patina of actual open-water miles. Hand-finished in Portland. $975.",
+        "Sugar-Loafer Suede Boat Shoe — Full-suede upper, hand-stitched moc toe, non-marking sole that works on the boat or the clubhouse patio. Tan. The shoe Sugarloaf was always going to make. $180.",
+        "Canvas Arrow Belt — Embroidered SSC arrow logo on a woven canvas strap with a brushed silver slide buckle. Navy and khaki. $95.",
+        "Ribbon Floppy Bucket Hat — Soft bucket hat with grosgrain ribbon SSC trim. UPF protection meets country-club-on-vacation energy. $40."
+      ],
+
+midiron26: [
+        "Their take on a 1990s polo and the most ambitious thing they make. Heavy 300gsm cotton on a unisex boxy fit, black and cream rugby stripes, a vintage-washed twill appliqué across the back and a metal MEMBER bag tag. A$129.",
+        "Embroidered across the front, in Japanese and then English: “Very good swing. Very bad Result.” Their own copy calls it a cap for the days you stripe one down the middle and walk off with a double. A$69.",
+        "All-over tree camo on mid-weight perforated polyester, raised silicone print and a big arched MIDIRON across the chest. The piece their night-flash photography was built around. A$129.",
+        "A padded driver cover in camo with a custom flag label and velvet lining. Named “The Big Stick,” which works as a driver joke or a Roosevelt joke. The only thing they make that isn’t clothing. A$69."
+      ],
+      texasbrands26: [
+        "Mike Taylor and John Hatfield walked out of Nike on a Friday in February 2017 and opened their own shop in the same Fort Worth building on the Monday. Taylor still grinds every wedge himself.",
+        "P53 is named for Ben Hogan’s 1953 season. Every iron starts as one billet of certified American steel, struck at 2,100°F under a gravity hammer, then finished by hand in Fort Worth.",
+        "Maggie learned to knit from her mother and made her first set of covers as a Father’s Day present. Retro stripes, tassels and poms, sets of three around ninety-five dollars.",
+        "Clint Orms started engraving in Dallas in 1992 and now works from Kerrville. Solid sterling and gold, buckles named for Texas counties, and never more than ten pieces from one design."
+      ],
+      sentinelrevisited1: [
+        "Sørensen Walker — Charcoal Nubuck. Hand-stitched Danish leather, the MacKenzie carry bag refined “akin to a sculpture.” Made to order. $1,750.",
+        "Kvadrat Headcovers — Green. Danish 3D-knit textile, knit in Denmark and sewn in New York, Melton wool lining. $108.",
+        "1733 Duffle — Saltex Coyote. A collab duffle in rugged Saltex fabric, built to take a beating and look better for it. $320.",
+        "Debs Vest — Khaki. Insulated, low-bulk layer for a cold morning tee time. $224.",
+        "Felt Target Mat. Wool-felt target for indoor putting and short-game reps. A quiet, tactile practice tool. $148."
+      ],
+
     fyfeputter: [
       "Black Grouse Tweed & Leather Mallet — Black-and-white houndstooth Harris Tweed meets Italian Nappa leather, with a magnetic closure and enough padding to shrug off the rest of your bag. Sleek, stark, and very Sunday-money. $69.",
       "MacKenzie Tartan Blade — 100% wool in the MacKenzie tartan, lined with soft black fleece and closed with a magnet. The same cloth Fyfe cut for its MacKenzie bag collab, now sized for your gamer. $69.",
