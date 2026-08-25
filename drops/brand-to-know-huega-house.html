@@ -128,6 +128,11 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pg-dot.on{background:var(--ink);opacity:1}
 @media(max-width:900px){.pg-arw{opacity:.85}}
 
+
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
+.pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
+@media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
 </style>
 </head>
 <body>
@@ -324,7 +329,11 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 </section>
 
 <section class="products" style="border-top:none;padding-top:48px">
-  <h2 class="products-hdr">In the Wild — <a href="https://www.instagram.com/huegahouse/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--ink)">@huegahouse</a></h2>
+  
+<div class="pull-quote">
+  <div class="pull-quote-inner">&ldquo;We are passionate about the vintage aesthetics of our hats, drawing significant inspiration from classic racing and sports logos.&rdquo;<span class="pull-quote-attr">&mdash; Jonathan Ruley, Huega House co-founder</span></div>
+</div>
+<h2 class="products-hdr">In the Wild — <a href="https://www.instagram.com/huegahouse/" target="_blank" rel="noopener" style="border-bottom:1px solid var(--ink)">@huegahouse</a></h2>
   <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:24px">
     <a href="https://www.instagram.com/huegahouse/p/DbuDHSImCRD/" target="_blank" rel="noopener" style="display:block;border:.5px solid var(--ink);overflow:hidden">
       <img src="/images/huega-house/ig-DbuDHSImCRD.jpg" alt="Huega House x San Diego Padres graphics" loading="lazy" style="width:100%;aspect-ratio:1/1;object-fit:cover" />
