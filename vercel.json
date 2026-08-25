@@ -61,6 +61,11 @@
       "source": "/drops/3-aussie-golf-brands-you-should-know",
       "destination": "/drops/australian-golf-brands-and-trips",
       "permanent": true
+    },
+    {
+      "source": "/scoreboard",
+      "destination": "/",
+      "permanent": true
     }
   ]
 }

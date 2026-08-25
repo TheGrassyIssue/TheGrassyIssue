@@ -4,20 +4,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Grassy Issue — A running feed of golf culture, design & Austin muni.</title>
-<meta name="description" content="A constant stream of golf culture, gear drops, course guides, news and Austin muni scores. Not a magazine. Not a blog. The feed." />
+<title>The Grassy Issue | Independent Golf Brands, Gear &amp; Austin Golf Culture</title>
+<meta name="description" content="Independent golf brands, gear drops, course guides and Austin golf culture — a running feed plus a permanent index of the brands to know. Not a magazine. Not a blog. The feed." />
 
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://thegrassyissue.com/" />
-<meta property="og:title" content="The Grassy Issue" />
-<meta property="og:description" content="A running feed of golf culture, design & Austin muni." />
+<meta property="og:title" content="The Grassy Issue | Independent Golf Brands, Gear & Austin Golf Culture" />
+<meta property="og:description" content="Independent golf brands, gear drops, course guides and Austin golf culture — a running feed plus a permanent index of the brands to know." />
 <meta property="og:image" content="https://thegrassyissue.com/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Grassy Issue" />
-<meta name="twitter:description" content="A running feed of golf culture, design & Austin muni." />
+<meta name="twitter:title" content="The Grassy Issue | Independent Golf Brands, Gear & Austin Golf Culture" />
+<meta name="twitter:description" content="Independent golf brands, gear drops, course guides and Austin golf culture." />
 <meta name="twitter:image" content="https://thegrassyissue.com/images/og-image.jpg" />
 
 <link rel="canonical" href="https://thegrassyissue.com/" />
@@ -1748,9 +1748,9 @@
     <a href="/" class="nav-wordmark"><img src="assets/logo-wordmark-only.svg" alt="The Grassy Issue" height="24"></a>
     <div class="nav-links">
       <a href="#feed" class="active">The Feed</a>
+      <a href="/brands/">Brands</a>
       <a href="/field-guide/">Field Guide</a>
       <a href="/events/">Events</a>
-      <a href="/scoreboard">Scoreboard</a>
     </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
       <span></span><span></span><span></span>
@@ -1759,16 +1759,14 @@
       <input id="tgi-search-input" type="search" placeholder="Search" autocomplete="off" aria-label="Search the site" />
       <div id="tgi-search-results"></div>
     </div>
-    <a href="/scoreboard#submit" class="nav-cta">Post a score →</a>
   </div>
 </nav>
 
 <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
   <a href="#feed" onclick="closeMenu();">The Feed</a>
+  <a href="/brands/" onclick="closeMenu();">Brands</a>
   <a href="/field-guide/" onclick="closeMenu();">Field Guide</a>
   <a href="/events/" onclick="closeMenu();">Events</a>
-  <a href="/scoreboard" onclick="closeMenu();">Scoreboard</a>
-  <a href="/scoreboard#submit" class="nav-cta" style="margin-top: 12px;" onclick="closeMenu()">Post a score →</a>
 </div>
 
 <section class="hero">
@@ -1795,17 +1793,6 @@
   </div>
 </section>
 
-<!-- SCOREBOARD STRIP -->
-<div class="scoreboard-strip">
-  <div class="scoreboard-strip-inner">
-    <div class="scoreboard-strip-title"><span class="live-dot"></span> Leaderboard</div>
-    <div class="scoreboard-course-tabs" id="courseTabsStrip"></div>
-    <div class="scoreboard-strip-scores" id="leaderboardScores">
-      <span class="scoreboard-loading">Loading scores…</span>
-    </div>
-    <a href="/scoreboard" class="scoreboard-strip-cta" id="leaderboardCta">Full scoreboard →</a>
-  </div>
-</div>
 
 <section class="filters" aria-label="Filter feed">
   <div class="filters-inner">
@@ -12747,72 +12734,7 @@
 </section>
 
 <!-- POST A SCORE -->
-<section class="score-section" id="submit">
-  <div class="score-section-header">
-    <div class="score-section-label">◎ Post a Score</div>
-    <span class="score-section-sub">Austin Munis Only</span>
-  </div>
-  <div class="score-form-wrap">
-    <form class="score-form" id="scoreForm">
-      <!-- Honeypot for spam -->
-      <input type="text" name="_honey" style="display:none" />
 
-      <div>
-        <label for="scoreCourse">Course</label>
-        <select id="scoreCourse" name="Course" required>
-          <option value="" disabled selected>Select a course</option>
-          <option value="Lions Municipal">Lions Municipal</option>
-          <option value="Jimmy Clay">Jimmy Clay</option>
-          <option value="Roy Kizer">Roy Kizer</option>
-          <option value="Hancock">Hancock</option>
-          <option value="Morris Williams">Morris Williams</option>
-          <option value="Riverside">Riverside</option>
-          <option value="Butler Pitch & Putt">Butler Pitch &amp; Putt</option>
-          <option value="Grey Rock">Grey Rock</option>
-          <option value="Roy Kizer Par 3">Roy Kizer Par 3</option>
-        </select>
-      </div>
-      <div class="form-row">
-        <div>
-          <label for="scoreTotal">Final Score</label>
-          <input type="number" id="scoreTotal" name="Score" placeholder="e.g. 82" min="40" max="150" required />
-        </div>
-        <div>
-          <label for="scoreName">Display Name</label>
-          <input type="text" id="scoreName" name="Display Name" placeholder="e.g. slicefixer_atx" required />
-        </div>
-      </div>
-      <div>
-        <label for="scoreEmail">Email</label>
-        <input type="email" id="scoreEmail" name="email" placeholder="you@email.com" required />
-      </div>
-      <div>
-        <label>Scorecard Photo (optional)</label>
-        <div class="upload-zone" id="uploadZone">
-          <div class="upload-icon">◻</div>
-          <div class="upload-text">Drop a photo or click to upload</div>
-          <div class="upload-filename" id="uploadFilename"></div>
-          <input type="file" id="scorePhoto" name="Scorecard Photo" accept="image/*" onchange="handleUpload(this)" />
-        </div>
-      </div>
-      <button type="submit" class="score-submit" id="scoreSubmitBtn">Post My Score →</button>
-    </form>
-    <div class="score-info">
-      <div class="score-info-title">Post your round, make the board.</div>
-      <div class="score-info-text">We publish weekly leaderboards for every Austin muni. Submit your score and — if you're honest and we can verify — you'll show up on the board. Top scores get featured in the feed.</div>
-      <dl class="score-info-rules">
-        <dt>Courses</dt>
-        <dd>Austin municipal courses only. No private clubs, no resort rounds.</dd>
-        <dt>Verification</dt>
-        <dd>Upload a photo of your scorecard. We spot-check and trust the community.</dd>
-        <dt>Leaderboard</dt>
-        <dd>Updated every Monday morning. Best single round per player per week.</dd>
-        <dt>Privacy</dt>
-        <dd>Email is for verification only. Never shared, never sold.</dd>
-      </dl>
-    </div>
-  </div>
-</section>
 
 <!-- VIBE BOARD -->
 <section class="vibe-board">
@@ -12925,7 +12847,7 @@
       <h4>Elsewhere</h4>
       <ul>
         <li><a href="https://www.instagram.com/thegrassyissue/" target="_blank" rel="noopener">Instagram ↗</a></li>
-        <li><a href="/scoreboard#submit">Post a score</a></li>
+        <li></li>
       </ul>
     </div>
   </div>
@@ -12949,7 +12871,6 @@
 
   // --- Score form ---
   function handleUpload(input) {
-    const zone = document.getElementById('uploadZone');
     const nameEl = document.getElementById('uploadFilename');
     if (input.files && input.files[0]) {
       zone.classList.add('has-file');
@@ -12958,153 +12879,24 @@
   }
 
   // --- Google Sheets API URL (replace after deploying Apps Script) ---
-  const SHEET_API = 'https://script.google.com/macros/s/AKfycbwELhdJhSk-iZxSVxIAiiW8FaEYwxmJWRBs7yODJOKf-Q2IJ0Tqm-AlPssTUoMZ4FfR/exec';
 
-  function submitScore(e) {
-    e.preventDefault();
-    const btn = document.getElementById('scoreSubmitBtn');
-    const form = document.getElementById('scoreForm');
-
-    // Honeypot check
-    if (form.querySelector('[name="_honey"]').value) return false;
-
-    btn.textContent = 'Posting…';
-    btn.disabled = true;
-
-    const payload = {
-      course: document.getElementById('scoreCourse').value,
-      score: document.getElementById('scoreTotal').value,
-      displayName: document.getElementById('scoreName').value,
-      email: document.getElementById('scoreEmail').value,
-      photoURL: ''
-    };
-
-    fetch(SHEET_API, {
-      method: 'POST',
-      body: JSON.stringify(payload),
-      headers: { 'Content-Type': 'text/plain' } // text/plain avoids CORS preflight
-    }).then(r => r.json()).then(data => {
-      btn.textContent = '✓ Score Posted';
-      btn.classList.add('submitted');
-      // Refresh the leaderboard
-      loadLeaderboard();
-      setTimeout(() => {
-        form.reset();
-        document.getElementById('uploadZone').classList.remove('has-file');
-        document.getElementById('uploadFilename').textContent = '';
-        btn.textContent = 'Post My Score →';
-        btn.classList.remove('submitted');
-        btn.disabled = false;
-      }, 3000);
-    }).catch(() => {
-      btn.textContent = 'Error — try again';
-      setTimeout(() => {
-        btn.textContent = 'Post My Score →';
-        btn.disabled = false;
-      }, 3000);
-    });
-    return false;
-  }
-  document.getElementById('scoreForm').addEventListener('submit', submitScore);
+  
 
   // --- Live Leaderboard ---
   let leaderboardData = null;
   let activeCourse = null;
 
-  function loadLeaderboard() {
-    if (SHEET_API === 'YOUR_APPS_SCRIPT_URL_HERE') {
-      // Show placeholder data until Apps Script is deployed
-      renderPlaceholderLeaderboard();
-      return;
-    }
-    fetch(SHEET_API)
-      .then(r => r.json())
-      .then(data => {
-        if (data.result === 'success') {
-          leaderboardData = data;
-          renderCourseTabs(data.leaderboard);
-          const courses = Object.keys(data.leaderboard);
-          if (courses.length > 0) {
-            activeCourse = activeCourse && courses.includes(activeCourse) ? activeCourse : courses[0];
-            renderLeaderboardScores(data.leaderboard[activeCourse], activeCourse);
-            updateLeaderboardCta(activeCourse, data.week);
-          } else {
-            renderEmptyLeaderboard();
-          }
-        }
-      })
-      .catch(() => renderPlaceholderLeaderboard());
-  }
+  
 
-  function renderCourseTabs(leaderboard) {
-    const container = document.getElementById('courseTabsStrip');
-    const courses = Object.keys(leaderboard);
-    if (courses.length <= 1) { container.innerHTML = ''; return; }
-    container.innerHTML = courses.map(course => {
-      const shortName = course.replace(' Municipal', '').replace(' Pitch & Putt', ' P&P').replace(' Par 3', ' P3');
-      return '<button class="scoreboard-course-tab' + (course === activeCourse ? ' active' : '') +
-        '" data-course="' + course + '">' + shortName + '</button>';
-    }).join('');
-    container.querySelectorAll('.scoreboard-course-tab').forEach(tab => {
-      tab.addEventListener('click', function() {
-        activeCourse = this.dataset.course;
-        container.querySelectorAll('.scoreboard-course-tab').forEach(t => t.classList.remove('active'));
-        this.classList.add('active');
-        renderLeaderboardScores(leaderboardData.leaderboard[activeCourse], activeCourse);
-        updateLeaderboardCta(activeCourse, leaderboardData.week);
-      });
-    });
-  }
+  
 
-  function renderLeaderboardScores(scores, course) {
-    const container = document.getElementById('leaderboardScores');
-    if (!scores || scores.length === 0) {
-      container.innerHTML = '<span class="scoreboard-loading">No scores yet this week — be the first.</span>';
-      return;
-    }
-    container.innerHTML = scores.slice(0, 7).map((s, i) =>
-      '<div class="strip-score">' +
-        '<span class="strip-pos">' + (i + 1) + '.</span> ' +
-        '<span class="strip-name">' + escapeHtml(s.name) + '</span> ' +
-        '<span class="strip-num">' + s.score + '</span>' +
-      '</div>'
-    ).join('');
-  }
+  
 
-  function updateLeaderboardCta(course, week) {
-    const cta = document.getElementById('leaderboardCta');
-    const shortName = course.replace(' Municipal', '').replace(' Pitch & Putt', ' P&P');
-    cta.textContent = shortName + ' · Week ' + week + ' →';
-    cta.href = 'scoreboard.html';
-  }
+  
 
-  function renderEmptyLeaderboard() {
-    document.getElementById('leaderboardScores').innerHTML =
-      '<span class="scoreboard-loading">No scores yet this week — be the first.</span>';
-    document.getElementById('leaderboardCta').textContent = 'Full scoreboard →';
-  }
+  
 
-  function renderPlaceholderLeaderboard() {
-    // Fallback while API isn't connected
-    const scores = [
-      { name: 'slicefixer_atx', score: 74 },
-      { name: 'bunkered_and_proud', score: 78 },
-      { name: 'westlake_wanda', score: 81 },
-      { name: 'tee_totaler', score: 83 },
-      { name: 'rough_rider_78704', score: 84 },
-      { name: 'dawn_patrol_dan', score: 85 },
-      { name: 'hacker_mcgee', score: 87 }
-    ];
-    const container = document.getElementById('leaderboardScores');
-    container.innerHTML = scores.map((s, i) =>
-      '<div class="strip-score">' +
-        '<span class="strip-pos">' + (i + 1) + '.</span> ' +
-        '<span class="strip-name">' + s.name + '</span> ' +
-        '<span class="strip-num">' + s.score + '</span>' +
-      '</div>'
-    ).join('');
-    document.getElementById('leaderboardCta').textContent = 'Full scoreboard →';
-  }
+  
 
   function escapeHtml(str) {
     const div = document.createElement('div');
@@ -13113,7 +12905,6 @@
   }
 
   // Load leaderboard on page ready
-  loadLeaderboard();
 
   // --- Vote bar ---
   function castVote(btn, type, evt) {
