@@ -15,6 +15,7 @@ import json, os, re, html as H
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 BRANDS = json.load(open(os.path.join(ROOT, "data", "brands.json")))
+MENTIONS = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json")))
 
 # ---------------------------------------------------------------- card images
 def resolve_img(b):
@@ -57,15 +58,25 @@ for b in sorted(BRANDS, key=lambda x: x["name"].lower()):
     cats_txt = " &middot; ".join(CATL[c] for c in b["cats"])
     imgtag = (f'<img src="{img}" loading="lazy" alt="{H.escape(b["name"])} — independent golf brand">'
               if img else '<div class="bi-noimg"></div>')
-    cards.append(f'''  <a class="bi-card" href="{b["url"]}" data-tags="{tags}">
-    <div class="bi-img">{imgtag}</div>
+    men = MENTIONS.get(b["slug"], [])
+    cov = ""
+    if len(men) > 1:
+        items = "".join(
+            f'<li><a href="{m["url"]}">{H.escape(m["title"])}</a>'
+            + (' <span class="bi-cov-tag">profile</span>' if m["profile"] else "") + "</li>"
+            for m in men)
+        cov = (f'<details class="bi-cov"><summary>All coverage &middot; {len(men)} posts</summary>'
+               f'<ul>{items}</ul></details>')
+    cards.append(f'''  <div class="bi-card" data-tags="{tags}">
+    <a class="bi-imglink" href="{b["url"]}"><div class="bi-img">{imgtag}</div></a>
     <div class="bi-body">
-      <div class="bi-top"><span class="bi-name">{H.escape(b["name"])}</span></div>
+      <a class="bi-namelink" href="{b["url"]}"><span class="bi-name">{H.escape(b["name"])}</span></a>
       <div class="bi-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
       <p class="bi-line">{b["line"]}</p>
-      <span class="bi-more">Read the coverage &rarr;</span>
+      <a class="bi-more" href="{b["url"]}">Read the profile &rarr;</a>
+      {cov}
     </div>
-  </a>''')
+  </div>''')
 
 pills = ['<button class="bi-pill on" data-f="all">All</button>']
 pills += [f'<button class="bi-pill" data-f="{k}">{v}</button>' for k, v in CATS if k != "community"]
@@ -126,7 +137,8 @@ h1{{font-family:var(--serif);font-weight:600;font-size:clamp(34px,5vw,54px);line
 background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;padding:7px 14px;cursor:pointer;color:var(--ink);}}
 .bi-pill.on{{background:var(--ink);color:var(--paper);border-color:var(--ink);}}
 .bi-grid{{max-width:1200px;margin:22px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:22px;}}
-.bi-card{{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;text-decoration:none;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}}
+.bi-card{{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}}
+.bi-imglink,.bi-namelink{{color:inherit;text-decoration:none;}}
 .bi-card:hover{{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}}
 .bi-img{{aspect-ratio:4/3;overflow:hidden;background:#eceae2;}}
 .bi-img img{{width:100%;height:100%;object-fit:cover;display:block;}}
@@ -135,7 +147,16 @@ background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;p
 .bi-name{{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:-.01em;}}
 .bi-meta{{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grass);}}
 .bi-line{{font-size:13.5px;line-height:1.55;color:#4a4f48;flex:1;}}
-.bi-more{{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);align-self:flex-start;padding-bottom:2px;}}
+.bi-more{{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);align-self:flex-start;padding-bottom:2px;color:inherit;text-decoration:none;}}
+.bi-cov{{margin-top:10px;border-top:1px solid rgba(20,20,20,.1);padding-top:9px;}}
+.bi-cov summary{{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grass);cursor:pointer;list-style:none;}}
+.bi-cov summary::before{{content:'+ ';}}
+.bi-cov[open] summary::before{{content:'\\2212  ';}}
+.bi-cov summary::-webkit-details-marker{{display:none;}}
+.bi-cov ul{{list-style:none;margin:9px 0 2px;display:flex;flex-direction:column;gap:6px;max-height:220px;overflow-y:auto;}}
+.bi-cov li a{{font-size:12.5px;line-height:1.45;color:#4a4f48;text-decoration:none;border-bottom:1px solid rgba(45,74,43,.35);}}
+.bi-cov li a:hover{{color:var(--ink);}}
+.bi-cov-tag{{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grass);border:1px solid var(--grass);border-radius:2px;padding:1px 4px;margin-left:5px;}}
 .bi-zero{{display:none;max-width:1200px;margin:30px auto;padding:0 24px;font-family:var(--mono);font-size:12px;color:#6e736c;}}
 footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}}
 @media(max-width:640px){{.nav-links{{gap:12px;}}.nav-links a{{font-size:9.5px;}}.nav-cta{{display:none;}}}}
