@@ -59,18 +59,13 @@ for b in sorted(BRANDS, key=lambda x: x["name"].lower()):
     imgtag = (f'<img src="{img}" loading="lazy" alt="{H.escape(b["name"])} — independent golf brand">'
               if img else '<div class="bi-noimg"></div>')
     men = MENTIONS.get(b["slug"], [])
-    cov = ""
-    if len(men) > 1:
-        items = "".join(
-            f'<li><a href="{m["url"]}">{H.escape(m["title"])}</a>'
-            + (' <span class="bi-cov-tag">profile</span>' if m["profile"] else "") + "</li>"
-            for m in men)
-        cov = (f'<details class="bi-cov"><summary>All coverage &middot; {len(men)} posts</summary>'
-               f'<ul>{items}</ul></details>')
+    bp = f'/brands/{b["slug"]}'
+    cov = (f'<a class="bi-covlink" href="{bp}">All coverage &middot; {len(men)} post{"s" if len(men)!=1 else ""} &rarr;</a>'
+           if men else "")
     cards.append(f'''  <div class="bi-card" data-tags="{tags}">
-    <a class="bi-imglink" href="{b["url"]}"><div class="bi-img">{imgtag}</div></a>
+    <a class="bi-imglink" href="{bp if men else b["url"]}"><div class="bi-img">{imgtag}</div></a>
     <div class="bi-body">
-      <a class="bi-namelink" href="{b["url"]}"><span class="bi-name">{H.escape(b["name"])}</span></a>
+      <a class="bi-namelink" href="{bp if men else b["url"]}"><span class="bi-name">{H.escape(b["name"])}</span></a>
       <div class="bi-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
       <p class="bi-line">{b["line"]}</p>
       <a class="bi-more" href="{b["url"]}">Read the profile &rarr;</a>
@@ -159,15 +154,8 @@ background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;p
 .bi-meta{{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grass);}}
 .bi-line{{font-size:13.5px;line-height:1.55;color:#4a4f48;flex:1;}}
 .bi-more{{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--ink);align-self:flex-start;padding-bottom:2px;color:inherit;text-decoration:none;}}
-.bi-cov{{margin-top:10px;border-top:1px solid rgba(20,20,20,.1);padding-top:9px;}}
-.bi-cov summary{{font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grass);cursor:pointer;list-style:none;}}
-.bi-cov summary::before{{content:'+ ';}}
-.bi-cov[open] summary::before{{content:'\\2212  ';}}
-.bi-cov summary::-webkit-details-marker{{display:none;}}
-.bi-cov ul{{list-style:none;margin:9px 0 2px;display:flex;flex-direction:column;gap:6px;max-height:220px;overflow-y:auto;}}
-.bi-cov li a{{font-size:12.5px;line-height:1.45;color:#4a4f48;text-decoration:none;border-bottom:1px solid rgba(45,74,43,.35);}}
-.bi-cov li a:hover{{color:var(--ink);}}
-.bi-cov-tag{{font-family:var(--mono);font-size:8.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--grass);border:1px solid var(--grass);border-radius:2px;padding:1px 4px;margin-left:5px;}}
+.bi-covlink{{margin-top:10px;border-top:1px solid rgba(20,20,20,.1);padding-top:9px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grass);text-decoration:none;}}
+.bi-covlink:hover{{color:var(--ink);}}
 .bi-zero{{display:none;max-width:1200px;margin:30px auto;padding:0 24px;font-family:var(--mono);font-size:12px;color:#6e736c;}}
 footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}}
 @media(max-width:640px){{.nav-links{{gap:12px;}}.nav-links a{{font-size:9.5px;}}.nav-cta{{display:none;}}}}
@@ -240,3 +228,133 @@ os.makedirs(os.path.join(ROOT, "brands"), exist_ok=True)
 open(os.path.join(ROOT, "brands", "index.html"), "w", encoding="utf-8").write(page)
 print(f"wrote brands/index.html — {N} brands, {len(page)} bytes")
 if missing_img: print("no image resolved for:", missing_img)
+
+# ------------------------------------------------- per-brand coverage pages
+THUMBS = json.load(open(os.path.join(ROOT, "data", "post-thumbs.json")))
+GC = ('<!-- GoatCounter analytics -->\n<script data-goatcounter="https://thegrassyissue.goatcounter.com/count" '
+      'async src="//gc.zgo.at/count.js"></script>')
+
+def brand_page(b):
+    slug = b["slug"]; name = H.escape(b["name"])
+    men = MENTIONS.get(slug, [])
+    men = sorted(men, key=lambda e: not e.get("profile"))
+    loc = H.escape(b["loc"]) if b["loc"] != "—" else ""
+    cats_txt = " &middot; ".join(CATL[c] for c in b["cats"])
+    img = resolve_img(b)
+    tiles = []
+    for e in men:
+        t = THUMBS.get(e["url"], {})
+        ti = t.get("img")
+        cat = H.escape(t.get("cat", "Drops & Brands"))
+        badge = '<span class="bp-badge">The Profile</span>' if e.get("profile") else ""
+        thumb = (f'<div class="bp-thumb"><img src="{ti}" loading="lazy" alt="{H.escape(e["title"])}">{badge}</div>'
+                 if ti else f'<div class="bp-thumb bp-nothumb">{badge}</div>')
+        tiles.append(f'''  <a class="bp-card" href="{e["url"]}">
+    {thumb}
+    <div class="bp-body">
+      <div class="bp-kicker">{cat}</div>
+      <div class="bp-title">{H.escape(e["title"])}</div>
+    </div>
+  </a>''')
+    ld = json.dumps({"@context":"https://schema.org","@type":"CollectionPage",
+      "name":f"{b['name']} — All Grassy Issue Coverage",
+      "url":f"https://thegrassyissue.com/brands/{slug}",
+      "mainEntity":{"@type":"ItemList","numberOfItems":len(men),
+        "itemListElement":[{"@type":"ListItem","position":i+1,"name":e["title"],
+          "url":"https://thegrassyissue.com"+e["url"]} for i,e in enumerate(men)]}}, ensure_ascii=False)
+    heroimg = f'<img src="{img}" alt="{name} — independent golf brand" loading="eager">' if img else ''
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{b["name"]} &mdash; All Coverage | The Grassy Issue</title>
+<meta name="description" content="Every Grassy Issue post featuring {b["name"]} — {len(men)} article{"s" if len(men)!=1 else ""}, from the full profile to every edit and roundup that includes the brand.">
+<link rel="canonical" href="https://thegrassyissue.com/brands/{slug}">
+<meta property="og:title" content="{b["name"]} — All Grassy Issue Coverage">
+<meta property="og:url" content="https://thegrassyissue.com/brands/{slug}">
+<meta property="og:type" content="website">
+{fonts}
+<script type="application/ld+json">{ld}</script>
+<style>
+{margins_css}
+:root{{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;
+--serif:'Fraunces',Georgia,serif;--display:'In The Margins','Fraunces',Georgia,serif;
+--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace;}}
+*{{margin:0;padding:0;box-sizing:border-box;}}
+body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
+.nav{{border-bottom:1px solid rgba(20,20,20,.15);background:var(--paper);position:sticky;top:0;z-index:50;}}
+.nav-inner{{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 24px;}}
+.nav-wordmark{{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.01em;}}
+.nav-links{{display:flex;gap:20px;}}
+.nav-links a{{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
+.nav-links a.active{{opacity:1;border-bottom:2px solid var(--grass);padding-bottom:2px;}}
+.bp-head{{max-width:1200px;margin:0 auto;padding:44px 24px 6px;display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}}
+.bp-heroimg{{width:190px;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(20,20,20,.2);background:#eceae2;flex-shrink:0;}}
+.bp-heroimg img{{width:100%;height:100%;object-fit:cover;display:block;}}
+.bp-headtext{{flex:1;min-width:260px;}}
+.bp-crumb{{font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:12px;}}
+.bp-crumb a{{color:var(--ink);text-decoration:none;opacity:.7;}}
+.bp-crumb span{{opacity:.4;margin:0 6px;}}
+.bp-kickline{{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grass);}}
+h1{{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);line-height:1.05;letter-spacing:-.01em;margin:10px 0 10px;}}
+.bp-meta{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6e736c;margin-bottom:12px;}}
+.bp-line{{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}}
+.bp-profile{{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}}
+.bp-grid{{max-width:1200px;margin:30px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}}
+.bp-card{{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}}
+.bp-card:hover{{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}}
+.bp-thumb{{aspect-ratio:16/10;overflow:hidden;background:#eceae2;position:relative;}}
+.bp-thumb img{{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease;}}
+.bp-card:hover .bp-thumb img{{transform:scale(1.04);}}
+.bp-nothumb{{background:repeating-linear-gradient(45deg,#eceae2,#eceae2 10px,#e4e1d7 10px,#e4e1d7 20px);}}
+.bp-badge{{position:absolute;top:10px;left:10px;background:var(--grass);color:var(--paper);font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;padding:4px 8px;border-radius:2px;}}
+.bp-body{{padding:14px 16px 16px;display:flex;flex-direction:column;gap:6px;flex:1;}}
+.bp-kicker{{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--grass);}}
+.bp-title{{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}}
+footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}}
+@media(max-width:640px){{.nav-links{{gap:12px;}}.nav-links a{{font-size:9.5px;}}.bp-heroimg{{width:120px;}}}}
+</style>
+</head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark">The Grassy Issue</a>
+    <div class="nav-links">
+      <a href="/#feed">The Feed</a>
+      <a href="/brands/" class="active">Brands</a>
+      <a href="/field-guide/">Field Guide</a>
+      <a href="/events/">Events</a>
+    </div>
+  </div>
+</nav>
+
+<header class="bp-head">
+  <div class="bp-heroimg">{heroimg}</div>
+  <div class="bp-headtext">
+    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands/">The Brand Index</a><span>/</span>{name}</div>
+    <div class="bp-kickline">[ All Coverage &middot; {len(men)} Post{"s" if len(men)!=1 else ""} ]</div>
+    <h1>{name}</h1>
+    <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
+    <p class="bp-line">{b["line"]}</p>
+    <a class="bp-profile" href="{b["url"]}">Read the full profile &rarr;</a>
+  </div>
+</header>
+
+<div class="bp-grid">
+{chr(10).join(tiles)}
+</div>
+
+<footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>
+{GC}
+</body>
+</html>'''
+
+npages = 0
+for b in BRANDS:
+    if not MENTIONS.get(b["slug"]):
+        continue
+    html_out = brand_page(b)
+    open(os.path.join(ROOT, "brands", b["slug"] + ".html"), "w", encoding="utf-8").write(html_out)
+    npages += 1
+print(f"wrote {npages} per-brand coverage pages in /brands/")
