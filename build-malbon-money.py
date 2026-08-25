@@ -245,7 +245,7 @@ head = rep(head, r'(<div class="breadcrumb">.*?<span>/</span>\s*)[^<]*?(</div>)'
 head = rep(head, r'<h1>.*?</h1>', f'<h1>{TITLE}</h1>', 1)
 head = rep(head, r'<div class="drop-meta">.*?</div>', '<div class="drop-meta">\n    <span>24 Items</span><span>&middot;</span><span>$498 &ndash; $20,000</span>\n  </div>', 1)
 head = rep(head, r'<div class="drop-hero"><div class="drop-hero-img"><img src="[^"]*" alt="[^"]*" /></div></div>',
-           f'<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}honma-premium-0.jpg" alt="Malbon x Honma Premium black and gold driver — the most expensive Malbon item ever sold" /></div></div>', 1)
+           f'<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}hero-tag-campaign.jpg" alt="TAG Heuer x Malbon campaign — golfers on course with the Connected Calibre E4 Malbon Edition" style="object-position:center center;" /></div></div>', 1)
 head = rep(head, r'<div class="writeup">.*?</div>\s*</aside>\s*</div>', WRITEUP, 1)
 
 # --- more-from-feed in tail
