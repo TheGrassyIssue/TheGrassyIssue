@@ -80,7 +80,10 @@ def verify(path):
     srcs = re.findall(r'src="(/images/[^"]+)"', h)
     miss = [s for s in srcs if not os.path.exists(root + s)]
     chk("all local images exist", not miss, str(miss[:4]))
-    chk("no hot-linked images", not re.findall(r'src="https?://(?!thegrassyissue)', h))
+    # only <img> tags — third-party <script src> (analytics) is expected and allowed
+    chk("no hot-linked images",
+        not [i for i in re.findall(r'<img[^>]*>', h)
+             if re.search(r'src="https?://(?!thegrassyissue)', i)])
     imgs = re.findall(r'<img[^>]*>', h)
     chk("every img has alt", all('alt="' in i for i in imgs), "%d imgs" % len(imgs))
 

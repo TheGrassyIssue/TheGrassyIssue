@@ -14,6 +14,13 @@ is replaced with the existing franchise name "Brands to Know"). All images local
 import json, os, re, html as H
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+
+GA = ('<!-- Google Analytics 4 (gtag.js) -->\n'
+      '<script async src="https://www.googletagmanager.com/gtag/js?id=G-LHN9XKKRYQ"></script>\n'
+      '<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n'
+      "  gtag('js', new Date());\n  gtag('config', 'G-LHN9XKKRYQ');\n</script>")
+GC = ('<!-- GoatCounter analytics -->\n<script data-goatcounter="https://thegrassyissue.goatcounter.com/count" '
+      'async src="//gc.zgo.at/count.js"></script>')
 BRANDS = json.load(open(os.path.join(ROOT, "data", "brands.json")))
 MENTIONS = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json")))
 
@@ -160,6 +167,8 @@ background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;p
 footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}}
 @media(max-width:640px){{.nav-links{{gap:12px;}}.nav-links a{{font-size:9.5px;}}.nav-cta{{display:none;}}}}
 </style>
+{GA}
+{GC}
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -231,8 +240,6 @@ if missing_img: print("no image resolved for:", missing_img)
 
 # ------------------------------------------------- per-brand coverage pages
 THUMBS = json.load(open(os.path.join(ROOT, "data", "post-thumbs.json")))
-GC = ('<!-- GoatCounter analytics -->\n<script data-goatcounter="https://thegrassyissue.goatcounter.com/count" '
-      'async src="//gc.zgo.at/count.js"></script>')
 
 def brand_page(b):
     slug = b["slug"]; name = H.escape(b["name"])
@@ -346,6 +353,7 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 </div>
 
 <footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>
+{GA}
 {GC}
 </body>
 </html>'''

@@ -220,7 +220,7 @@ head = rep(head, r'<span class="drop-tag grass">\[[^\]]*\]</span>', '<span class
 head = rep(head, r'<h1>.*?</h1>', f'<h1>{TITLE}</h1>')
 head = rep(head, r'<div class="drop-meta">.*?</div>', '<div class="drop-meta">\n    <span>23 Picks</span><span>&middot;</span><span>Beaverton, OR &middot; Est. 2011</span>\n  </div>')
 head = rep(head, r'<div class="drop-hero"><div class="drop-hero-img"><img src="[^"]*" alt="[^"]*"[^>]*/></div></div>',
-           f'<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}patriot-driver-1.jpg" alt="Seamus Golf USA wool driver cover, hand-cut and sewn in Beaverton, Oregon" /></div></div>')
+           f'<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}hero-pendleton.jpg" alt="Seamus Golf Pendleton wool towel and vintage club — hand-cut in Beaverton, Oregon" /></div></div>')
 head = rep(head, r'<div class="writeup">.*?</div>\s*</aside>\s*</div>', WRITEUP)
 
 tail = rep(tail, r'<div class="more-grid">.*?</div>\s*</section>',
