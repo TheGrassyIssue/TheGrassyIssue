@@ -10,6 +10,11 @@ Brands deliberately WITHOUT a quote (no verifiable founder statement exists):
   twentyfour-golf  - founder anonymous; About page is unsigned first-person brand copy
   fella-golf       - real sourced founder quotes exist but are Dutch-only (Golf.nl,
                      Oct 2025); running them needs a translation decision from Lenny
+  odd-ritual       - no founder named; press credits only the design agency
+  cloud-and-wind   - no human named anywhere, even in trademark records
+  read-the-green   - four anonymous NYC founders; only press paraphrases them
+  mogshade         - founders known (Nicola Mulinaris, Gabriele Donada) but every
+                     first-person source is behind LinkedIn/Instagram login
 
 Placement: before the Nth section heading, i.e. between product sections.
 """
@@ -68,6 +73,29 @@ QUOTES = {
  "brand-revisited-jones-sports-co": (
    "We didn&rsquo;t want the bags to be a billboard. The logo is small and the quality of the product is what speaks.",
    "Chris Carnahan, Jones Sports Co partner and creative director", 3),
+
+ # --- Brand Revisited round, added 2026-08-25 ---
+ "brand-to-know-sentinel-golf": (
+   "Since it started, the project has always been about bringing new ideas, materials, and people into the golf space, "
+   "not only to make it more interesting but to make it more fun.",
+   "John Mooty, Sentinel Golf founder", 2),
+
+ "brand-to-know-metalwood-studio": (
+   "I was done helping people build their own empires. I knew I could do it, so I was just going to do it for me.",
+   "Cole Young, Metalwood Studio founder", 2),
+
+ "brand-to-know-kingfisher-golf": (
+   "You can have the most humbling, humiliating day on the course or at the range and still go back for more.",
+   "Fiona Cohen, Kingfisher Golf founder", 2),
+
+ "brand-to-know-radry-golf": (
+   "You can learn a lot about life through golf and I wanted my logo to be a reminder of that.",
+   "Tony Knapton, Radry Golf founder", 2),
+
+ # first sentence of a longer quote block — trimmed from the start, not merged
+ "walker-golf-the-par-tec-drop": (
+   "We have deep roots in both skate and golf, and that balance shows up in everything we do.",
+   "Jack Fardell, Walker Golf Things co-founder", 2),
 }
 
 def block(quote, attr):

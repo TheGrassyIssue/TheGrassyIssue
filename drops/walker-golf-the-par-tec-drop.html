@@ -189,6 +189,11 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pg-dot.on{background:var(--ink);opacity:1}
 @media(max-width:900px){.pg-arw{opacity:.85}}
 
+
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
+.pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
+@media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
 </style>
 </head>
 <body>
@@ -364,7 +369,11 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 
 <section class="products" style="margin-top:48px;">
-  <h2 class="products-hdr">Our Favorites &mdash; 12 Pieces From the Current Range</h2>
+  
+<div class="pull-quote">
+  <div class="pull-quote-inner">&ldquo;We have deep roots in both skate and golf, and that balance shows up in everything we do.&rdquo;<span class="pull-quote-attr">&mdash; Jack Fardell, Walker Golf Things co-founder</span></div>
+</div>
+<h2 class="products-hdr">Our Favorites &mdash; 12 Pieces From the Current Range</h2>
   <div class="products-grid">
 
     <div class="product-card" data-frames="4">
