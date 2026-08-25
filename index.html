@@ -1785,9 +1785,9 @@
       </div>
     </div>
     <div class="hero-bottom">
-      <h1>Golf culture,<br/>in a running feed.</h1>
+      <h1>THE GRASSY ISSUE</h1>
       <p class="hero-sub">
-        Austin muni guides, gear drops, course news, scores from your group chat. Not a magazine. Not a blog. A running index of the game — updated constantly, curated from Austin.
+        A running index of modern golf culture. Independent brands, gear, courses, people and things worth knowing. Curated from Austin.
       </p>
     </div>
   </div>
@@ -1810,6 +1810,51 @@
 
 <section class="feed" id="feed" role="tabpanel" aria-label="Content feed">
 <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[The Edit]</span>
+      <div class="gear-carousel" data-carousel="malbonmoney">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://us.honmagolf.com/products/malbon-x-honma-mens-premium-set" target="_blank" rel="noopener">
+              <img src="/images/malbon-money/honma-premium-0.jpg" alt="Malbon x Honma Premium Set black and gold driver, the most expensive Malbon item ever sold" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Malbon &times; Honma</div><div class="gear-slide-name">Premium 14-Club Set &middot; $20,000</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://malbongolf.com/products/jimmy-choo-x-malbon-golf-bag-latte-malbon-green-malbon-pink" target="_blank" rel="noopener">
+              <img src="/images/malbon-money/jc-golf-bag-0.jpg" alt="Jimmy Choo x Malbon 2.0 Golf Bag in latte monogram with green trim" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Jimmy Choo &times; Malbon</div><div class="gear-slide-name">2.0 Golf Bag &middot; $4,450</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://bettinardi.com/products/bb8-tri-dass-malbon-buckets-fat-cat" target="_blank" rel="noopener">
+              <img src="/images/malbon-money/bet-fatcat-0.jpg" alt="Malbon x Bettinardi BB8 Tri DASS Buckets Fat Cat putter, fifteen made" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Malbon &times; Bettinardi</div><div class="gear-slide-name">BB8 DASS &ldquo;Fat Cat&rdquo; &middot; $2,400</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://hypebeast.com/2024/2/tag-heuer-malbon-golf-collaboration-connected-watch-apparel" target="_blank" rel="noopener">
+              <img src="/images/malbon-money/tag-malbon-0.jpg" alt="TAG Heuer Connected Calibre E4 x Malbon Golf Edition smartwatch on wrist" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">TAG Heuer &times; Malbon</div><div class="gear-slide-name">Connected Calibre E4 &middot; $2,350</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" aria-label="Previous" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" aria-label="Next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-meta"><span>The Grassy Issue</span><span>25 Aug 2026</span></div>
+      <div class="card-title"><a href="/drops/no-budget-malbon" style="color:inherit;text-decoration:none;border-bottom:none;">No Budget: Malbon &mdash; the 24 Most Expensive Things They Have Ever Sold</a></div>
+      <div class="card-text" data-slidetext="malbonmoney">A $20,000 Honma club set that Forbes says is actually selling. We swept all 1,068 products on Malbon&rsquo;s store and dug up the delisted grails &mdash; the 24 priciest things they have ever sold, at original retail. Nine are still buyable.</div>
+      <div class="gear-dots" data-dots="malbonmoney"></div>
+      <div class="gear-counter" data-counter="malbonmoney">1 / 4</div>
+      <div class="card-source">24 items &middot; $498&ndash;$20,000 &middot; 9 still in stock</div>
+      <a href="/drops/no-budget-malbon" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+
+  <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
       <span class="card-tag grass">[The Edit]</span>
       <div class="gear-carousel" data-carousel="aussiegolf">
@@ -13225,6 +13270,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+malbonmoney: [
+"A $20,000 Honma club set that Forbes says is actually selling. Fourteen clubs on Honma\u2019s Beres line, black and gold, headcovers and bag included \u2014 sold through Honma\u2019s US store and still in stock.",
+"The most expensive item on Malbon\u2019s own store: the $4,450 Jimmy Choo 2.0 Golf Bag, denim and leather, water-treated, still buyable. The first Choo drop sold ten of twenty-seven pieces in half an hour.",
+"March 2022, fifteen made: the BB8 Tri DASS \u201cBuckets Fat Cat\u201d \u2014 the first putter ever sold with an NFT. The NFT era did not age well. The putter did.",
+"February 2024\u2019s TAG Heuer Connected Calibre E4 Malbon Edition, $2,350 \u2014 eighteen bezel markings for eighteen holes and a color-shifting Buckets face. The only watch Malbon has ever sold, gone from the catalogue."
+],
 specialday: [
         "Arthur Hills carved Wolfdancer through Lost Pines like he had a grudge against flat land. The greens are fast, the elevation changes are real, and the stretch from 14 to 18 is one of the best closing runs in Texas. You do not need to be a Hyatt guest to play, which makes this the most accessible great course in the Austin orbit. Thirty minutes east and a world away from your Tuesday nine at the muni.",
         "Two Fazio designs — Canyons and Foothills — and both have made Golf Digest's 100 Greatest Public list. The catch: you need a resort stay to play. Book one night, play 36, and pretend you are on a golf trip. Canyons is the showpiece with canyon-framed par 3s. Foothills is the locals' favorite. Twenty-five minutes from downtown and you feel like you drove to Scottsdale.",
