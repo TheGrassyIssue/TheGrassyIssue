@@ -16,9 +16,9 @@ import json, os, re, html as H
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 GA = ('<!-- Google Analytics 4 (gtag.js) -->\n'
-      '<script async src="https://www.googletagmanager.com/gtag/js?id=G-LHN9XKKRYQ"></script>\n'
+      '<script async src="https://www.googletagmanager.com/gtag/js?id=G-G89M4116SB"></script>\n'
       '<script>\n  window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n'
-      "  gtag('js', new Date());\n  gtag('config', 'G-LHN9XKKRYQ');\n</script>")
+      "  gtag('js', new Date());\n  gtag('config', 'G-G89M4116SB');\n</script>")
 GC = ('<!-- GoatCounter analytics -->\n<script data-goatcounter="https://thegrassyissue.goatcounter.com/count" '
       'async src="//gc.zgo.at/count.js"></script>')
 BRANDS = json.load(open(os.path.join(ROOT, "data", "brands.json")))
