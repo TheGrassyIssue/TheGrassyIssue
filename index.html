@@ -376,15 +376,6 @@
     text-transform: uppercase;
     margin-bottom: 20px;
   }
-  .hero h1 {
-    color: var(--paper);
-    font-family: var(--serif);
-    font-weight: 400;
-    font-style: italic;
-    font-size: clamp(30px, 4vw, 52px);
-    line-height: 0.95;
-    letter-spacing: -0.02em;
-  }
   .hero-sub {
     color: var(--paper);
     margin-top: 10px;
@@ -392,6 +383,10 @@
     font-size: 13px;
     line-height: 1.5;
     opacity: 0.92;
+    font-weight: 400;
+    font-family: inherit;
+    letter-spacing: normal;
+    text-transform: none;
   }
 
   /* ABOUT STRIP */
@@ -1706,7 +1701,6 @@
   }
   @media (max-width: 480px) {
     .feed .card { width: 100%; }
-    .hero h1 { font-size: 40px; }
     .hero-caption { display: none; }
     .giveaways-grid { grid-template-columns: 1fr 1fr; }
     .events-grid { grid-template-columns: 1fr 1fr; }
@@ -1785,10 +1779,9 @@
       </div>
     </div>
     <div class="hero-bottom">
-      <h1>THE GRASSY ISSUE</h1>
-      <p class="hero-sub">
-        A running index of modern golf culture. Independent brands, gear, courses, people and things worth knowing. Curated from Austin.
-      </p>
+      <h1 class="hero-sub">
+        A running index of modern golf culture. The independent brands, the gear, the courses, the people. Curated from Austin.
+      </h1>
     </div>
   </div>
 </section>
