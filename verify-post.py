@@ -112,6 +112,18 @@ def verify(path):
     mc = re.findall(r'<a[^>]*class="more-card".*?</a>', h, re.S)
     chk("more-cards carry an image and use .more-card-img/-body",
         all('more-card-img' in c and '<img' in c for c in mc))
+    # the sidebar must be nested INSIDE .writeup — if .writeup closes early the
+    # sidebar overlaps the first section instead of sitting beside the copy
+    _w = h.find('<div class="writeup">')
+    _a = h.find('<aside class="sidebar">')
+    _depth = None
+    if _w >= 0 and _a > _w:
+        _d = 0
+        for _m in re.finditer(r'<div\b[^>]*>|</div>', h[_w:_a]):
+            _d += 1 if _m.group(0).startswith('<div') else -1
+        _depth = _d
+    chk("sidebar is nested inside .writeup (not closed early)",
+        _depth is None or _depth >= 1)
     chk("no legacy .more-kicker/.more-title markup",
         'more-kicker' not in h and 'more-title' not in h)
     chk("word count >= 1200", words >= 1200, str(words))

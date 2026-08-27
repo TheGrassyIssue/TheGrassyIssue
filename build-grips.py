@@ -163,6 +163,9 @@ faq_ld = json.dumps({
                                     "text": re.sub(r'&[a-z]+;', ' ', a)}} for q, a in FAQS]},
  ensure_ascii=False)
 
+# NOTE: the template nests <aside class="sidebar"> INSIDE <div class="writeup">.
+# Do not close .writeup before the aside — the final </div> closes it. Getting this
+# wrong makes the sidebar overlap the first section instead of sitting beside it.
 WRITEUP = '''<div class="writeup">
     <div class="writeup-body">
       <p>The grip is the only part of a golf club you actually touch, and four companies decide what almost everyone holds. Golf Pride, Lamkin, Winn and SuperStroke work from a shared assumption &mdash; that a grip is a consumable, black and ribbed, replaced when it goes shiny. Five smaller houses start somewhere else, and they are why the category has become interesting again.</p>
@@ -170,7 +173,6 @@ WRITEUP = '''<div class="writeup">
       <p>The economics explain the shape of the field. A full set is thirteen grips, so a Stick set runs about a hundred and seventy-five dollars and a RIPIT set about three hundred and twenty-five. That is why so many of these brands lead with putter grips. A putter grip is a single purchase, an easy first buy, and the one club where a golfer will tolerate something that looks unusual.</p>
       <p>The five below run from thirteen dollars to forty, and all of them are in stock as of late August. Two are for the whole set, three are for the one club where a golfer will try something strange.</p>
     </div>
-  </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -186,7 +188,8 @@ WRITEUP = '''<div class="writeup">
         <span class="hashtag">#GearEdit</span>
       </div>
     </div>
-  </aside>'''
+  </aside>
+</div>'''
 
 tpl = open(TPL, encoding="utf-8").read()
 head, rest = tpl.split('<section class="products">', 1)

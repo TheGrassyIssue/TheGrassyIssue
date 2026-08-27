@@ -53,8 +53,28 @@ background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;p
 .bi-card{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}
 .bi-imglink,.bi-namelink{color:inherit;text-decoration:none;}
 .bi-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}
-.bi-img{aspect-ratio:4/3;overflow:hidden;background:#eceae2;}
+.bi-img{aspect-ratio:4/3;overflow:hidden;background:#eceae2;position:relative;}
 .bi-img img{width:100%;height:100%;object-fit:cover;display:block;}
+.bi-gal{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;}
+.bi-gal::-webkit-scrollbar{display:none;}
+.bi-slide{flex:0 0 100%;scroll-snap-align:start;height:100%;}
+.bi-slide img{width:100%;height:100%;object-fit:cover;display:block;}
+.bi-gal:focus-visible{outline:2px solid var(--grass);outline-offset:-2px;}
+.bi-tags{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 8px;}
+.bi-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid rgba(61,107,53,.35);color:#3d6b35;background:rgba(61,107,53,.06);
+  padding:3px 7px;border-radius:3px;text-decoration:none;white-space:nowrap;}
+.bi-tag:hover{background:#3d6b35;color:#fff;border-color:#3d6b35;}
+.bi-attrs{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 8px;}
+.bi-attr{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid rgba(20,20,20,.22);color:#4a4a44;background:transparent;
+  padding:3px 7px;border-radius:3px;text-decoration:none;white-space:nowrap;}
+.bi-attr:hover{background:var(--ink);color:var(--paper);border-color:var(--ink);}
+.bi-pill-attr{border-style:dashed;}
+.bi-pill-attr.on{background:var(--ink);color:var(--paper);border-style:solid;}
+.bi-pill-taste{border-color:rgba(61,107,53,.45);color:#3d6b35;}
+.bi-pill-taste.on{background:#3d6b35;border-color:#3d6b35;color:#fff;}
 .bi-noimg{width:100%;height:100%;background:repeating-linear-gradient(45deg,#eceae2,#eceae2 10px,#e4e1d7 10px,#e4e1d7 20px);}
 .bi-body{padding:16px 16px 18px;display:flex;flex-direction:column;gap:7px;flex:1;}
 .bi-name{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:-.01em;}
@@ -115,6 +135,23 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 
 <div class="bi-filters" role="tablist" aria-label="Filter brands">
   <button class="bi-pill on" data-f="all">All</button>
+  <button class="bi-pill bi-pill-taste" data-f="muni-energy">Muni energy</button>
+  <button class="bi-pill bi-pill-taste" data-f="design-nerd">Design nerd</button>
+  <button class="bi-pill bi-pill-taste" data-f="quiet-luxury">Quiet luxury</button>
+  <button class="bi-pill bi-pill-taste" data-f="loud-on-purpose">Loud on purpose</button>
+  <button class="bi-pill bi-pill-taste" data-f="dad-golf">Dad golf</button>
+  <button class="bi-pill bi-pill-taste" data-f="gorpcore">Gorpcore</button>
+  <button class="bi-pill bi-pill-taste" data-f="post-round-friendly">Post-round friendly</button>
+  <button class="bi-pill bi-pill-taste" data-f="made-by-hand">Made by hand</button>
+  <button class="bi-pill bi-pill-taste" data-f="collab-machine">Collab machine</button>
+  <button class="bi-pill bi-pill-taste" data-f="course-merch">Course merch</button>
+  <button class="bi-pill bi-pill-taste" data-f="member-guest">Member-guest</button>
+  <button class="bi-pill bi-pill-taste" data-f="range-rat">Range rat</button>
+  <button class="bi-pill bi-pill-attr" data-f="women-founded">Women-founded</button>
+  <button class="bi-pill bi-pill-attr" data-f="tour-proven">Tour-proven</button>
+  <button class="bi-pill bi-pill-attr" data-f="heritage">Heritage</button>
+  <button class="bi-pill bi-pill-attr" data-f="drops-and-vanishes">Drops and vanishes</button>
+  <button class="bi-pill bi-pill-attr" data-f="new-to-index">New to the index</button>
   <button class="bi-pill" data-f="apparel">Apparel</button>
   <button class="bi-pill" data-f="equipment">Clubs</button>
   <button class="bi-pill" data-f="bags">Bags</button>
@@ -131,761 +168,837 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </div>
 
 <div class="bi-grid" id="bi-grid">
-  <div class="bi-card" data-tags="usa texas art">
-    <a class="bi-imglink" href="/brands/ally-aiken"><div class="bi-img"><img src="/images/texas-brands/allyaiken-0.jpg" loading="lazy" alt="Ally Aiken Design — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas art made-by-hand course-merch">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/allyaiken-2.jpg" loading="lazy" alt="Ally Aiken Design &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/allyaiken-3.jpg" loading="lazy" alt="Ally Aiken Design &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/allyaiken-0.jpg" loading="lazy" alt="Ally Aiken Design &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/allyaiken-5.jpg" loading="lazy" alt="Ally Aiken Design &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/allyaiken-4.jpg" loading="lazy" alt="Ally Aiken Design &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/allyaiken-1.jpg" loading="lazy" alt="Ally Aiken Design &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/ally-aiken"><span class="bi-name">Ally Aiken Design</span></a>
       <div class="bi-meta">Austin, TX &middot; Art</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a><a class="bi-tag" href="/brands/tag/course-merch">Course merch</a></div>
       <p class="bi-line">Watercolour golf course maps from Austin — hundreds of courses, commissions open.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#allyaiken">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/ally-aiken">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas equipment">
-    <a class="bi-imglink" href="/brands/artisan-golf"><div class="bi-img"><img src="/images/texas-brands/artisan-2.jpg" loading="lazy" alt="Artisan Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas equipment made-by-hand">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/artisan-5.jpg" loading="lazy" alt="Artisan Golf &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/texas-brands/artisan-3.jpg" loading="lazy" alt="Artisan Golf &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/texas-brands/artisan-4.jpg" loading="lazy" alt="Artisan Golf &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/texas-brands/artisan-2.jpg" loading="lazy" alt="Artisan Golf &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/artisan-golf"><span class="bi-name">Artisan Golf</span></a>
       <div class="bi-meta">Fort Worth, TX &middot; Clubs</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div>
       <p class="bi-line">Two ex-Nike craftsmen in Nike's old Fort Worth building — wedges ground by hand, fitting required.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#artisan">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/artisan-golf">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headwear">
-    <a class="bi-imglink" href="/brands/aug-11"><div class="bi-img"><img src="/images/aug11/aug11-art-reverse-og.jpg" loading="lazy" alt="Aug 11 — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headwear post-round-friendly">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aug11/aug11-art-reverse-og.jpg" loading="lazy" alt="Aug 11 &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/aug-11"><span class="bi-name">Aug 11</span></a>
       <div class="bi-meta">Atlanta, GA &middot; Headwear</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a></div>
       <p class="bi-line">Hat brand founded in 2023 by Johnny Person — rope caps and buckets with a vintage Southern lean.</p>
       <a class="bi-more" href="/drops/brand-to-know-aug-11">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/aug-11">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas headcovers">
-    <a class="bi-imglink" href="/brands/austinknittylimits"><div class="bi-img"><img src="/images/texas-brands/knitty-0.jpg" loading="lazy" alt="AustinKnittyLimits — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas headcovers made-by-hand">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/knitty-3.jpg" loading="lazy" alt="AustinKnittyLimits &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/knitty-4.jpg" loading="lazy" alt="AustinKnittyLimits &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/knitty-5.jpg" loading="lazy" alt="AustinKnittyLimits &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/knitty-1.jpg" loading="lazy" alt="AustinKnittyLimits &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/knitty-2.jpg" loading="lazy" alt="AustinKnittyLimits &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/knitty-0.jpg" loading="lazy" alt="AustinKnittyLimits &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/austinknittylimits"><span class="bi-name">AustinKnittyLimits</span></a>
       <div class="bi-meta">Austin, TX &middot; Headcovers</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div>
       <p class="bi-line">Hand-knit retro headcovers from Austin, one at a time, taught by the maker's mother.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#knitty">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/austinknittylimits">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="japan apparel">
-    <a class="bi-imglink" href="/brands/beams-golf"><div class="bi-img"><img src="/images/beams-golf/hero.jpg" loading="lazy" alt="BEAMS Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="japan apparel design-nerd quiet-luxury collab-machine tour-proven">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/beams-golf/hero.jpg" loading="lazy" alt="BEAMS Golf &mdash; 1 of 5"></div><div class="bi-slide"><img src="/images/beams-golf/blouson-navy.jpg" loading="lazy" alt="BEAMS Golf &mdash; 2 of 5"></div><div class="bi-slide"><img src="/images/beams-golf/montauk-mock.jpg" loading="lazy" alt="BEAMS Golf &mdash; 3 of 5"></div><div class="bi-slide"><img src="/images/beams-golf/bgthree-sweater.jpg" loading="lazy" alt="BEAMS Golf &mdash; 4 of 5"></div><div class="bi-slide"><img src="/images/beams-golf/basket-knit-mock.jpg" loading="lazy" alt="BEAMS Golf &mdash; 5 of 5"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/beams-golf"><span class="bi-name">BEAMS Golf</span></a>
       <div class="bi-meta">Tokyo, Japan &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/quiet-luxury">Quiet luxury</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a></div>
       <p class="bi-line">The golf line of Tokyo's BEAMS empire, running since 2011 — Japanese fairway fashion at its most complete.</p>
       <a class="bi-more" href="/drops/brand-to-know-beams-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/beams-golf">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas grips accessories">
-    <a class="bi-imglink" href="/brands/bestgrips"><div class="bi-img"><img src="/images/texas-brands/bestgrips-0.jpg" loading="lazy" alt="BestGrips — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas grips accessories made-by-hand">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/bestgrips-0.jpg" loading="lazy" alt="BestGrips &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/bestgrips-2.jpg" loading="lazy" alt="BestGrips &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/bestgrips-4.jpg" loading="lazy" alt="BestGrips &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/bestgrips-3.jpg" loading="lazy" alt="BestGrips &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/bestgrips-5.jpg" loading="lazy" alt="BestGrips &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/bestgrips-1.jpg" loading="lazy" alt="BestGrips &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/bestgrips"><span class="bi-name">BestGrips</span></a>
       <div class="bi-meta">Conroe, TX &middot; Grips &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div>
       <p class="bi-line">A father and son making leather grips in Texas — Horween leathers, no minimums, no paid endorsements.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#bestgrips">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/bestgrips">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="australia headcovers accessories">
-    <a class="bi-imglink" href="/brands/big-dog-golf"><div class="bi-img"><img src="/images/aussie/bigdog-0.jpg" loading="lazy" alt="Big Dog Golf Co. — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aussie/bigdog-2.jpg" loading="lazy" alt="Big Dog Golf Co. &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/aussie/bigdog-3.jpg" loading="lazy" alt="Big Dog Golf Co. &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/aussie/bigdog-1.jpg" loading="lazy" alt="Big Dog Golf Co. &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/aussie/bigdog-0.jpg" loading="lazy" alt="Big Dog Golf Co. &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/big-dog-golf"><span class="bi-name">Big Dog Golf Co.</span></a>
       <div class="bi-meta">Wodonga, Australia &middot; Headcovers &middot; Accessories</div>
+      
       <p class="bi-line">Leather covers stocked in the pro shops at Royal Melbourne, Barnbougle and Cape Wickham.</p>
       <a class="bi-more" href="/drops/australian-golf-brands-and-trips#bigdog">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/big-dog-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia apparel headwear">
-    <a class="bi-imglink" href="/brands/birds-of-condor"><div class="bi-img"><img src="/images/aussie/birds-0.jpg" loading="lazy" alt="Birds of Condor — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia apparel headwear loud-on-purpose muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aussie/birds-0.jpg" loading="lazy" alt="Birds of Condor &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/aussie/birds-3.jpg" loading="lazy" alt="Birds of Condor &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/aussie/birds-2.jpg" loading="lazy" alt="Birds of Condor &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/aussie/birds-1.jpg" loading="lazy" alt="Birds of Condor &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/aussie/birds-4.jpg" loading="lazy" alt="Birds of Condor &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/aussie/birds-5.jpg" loading="lazy" alt="Birds of Condor &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/birds-of-condor"><span class="bi-name">Birds of Condor</span></a>
       <div class="bi-meta">Byron Bay, Australia &middot; Apparel &middot; Headwear</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">Byron Bay's cult label — started with ten hats, now a flagship store with a restored 80s buggy inside.</p>
       <a class="bi-more" href="/drops/australian-golf-brands-and-trips#birds">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/birds-of-condor">All coverage &middot; 13 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headcovers accessories">
-    <a class="bi-imglink" href="/brands/bluetross"><div class="bi-img"><img src="/images/women-founded/bluetross-0.jpg" loading="lazy" alt="Bluetross — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headcovers accessories women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/bluetross-4.jpg" loading="lazy" alt="Bluetross &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/women-founded/bluetross-3.jpg" loading="lazy" alt="Bluetross &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/women-founded/bluetross-5.jpg" loading="lazy" alt="Bluetross &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/bluetross"><span class="bi-name">Bluetross</span></a>
       <div class="bi-meta">Charleston, SC &middot; Headcovers &middot; Accessories</div>
+      <div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Horween and Italian leather covers, belts and wallets, co-founded by Gail Hanson.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#bluetross">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/bluetross">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe apparel">
-    <a class="bi-imglink" href="/brands/bunker-mentality"><div class="bi-img"><img src="/images/women-founded/bunker-mentality-0.jpg" loading="lazy" alt="Bunker Mentality — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe apparel muni-energy women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/bunker-mentality-5.jpg" loading="lazy" alt="Bunker Mentality &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/bunker-mentality-4.jpg" loading="lazy" alt="Bunker Mentality &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/bunker-mentality-2.jpg" loading="lazy" alt="Bunker Mentality &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/bunker-mentality-0.jpg" loading="lazy" alt="Bunker Mentality &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/bunker-mentality-3.jpg" loading="lazy" alt="Bunker Mentality &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/bunker-mentality-1.jpg" loading="lazy" alt="Bunker Mentality &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/bunker-mentality"><span class="bi-name">Bunker Mentality</span></a>
       <div class="bi-meta">Nottinghamshire, England &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Twenty-plus years independent, co-founded by Tamasine Green; now cut made-to-order with no warehouse.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#bunker-mentality">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/bunker-mentality">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe apparel">
-    <a class="bi-imglink" href="/brands/casualist"><div class="bi-img"><img src="/images/casualist/hero.jpg" loading="lazy" alt="Casualist — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe apparel quiet-luxury post-round-friendly">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/casualist/windbreaker-coach-jacket-archive-4.jpg" loading="lazy" alt="Casualist &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/casualist/weekend-pique-polo-4.jpg" loading="lazy" alt="Casualist &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/casualist/hero.jpg" loading="lazy" alt="Casualist &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/casualist/windbreaker-coach-jacket-archive-3.jpg" loading="lazy" alt="Casualist &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/casualist/dress-code-mockneck-tee-3.jpg" loading="lazy" alt="Casualist &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/casualist/ball-marker-2.jpg" loading="lazy" alt="Casualist &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/casualist"><span class="bi-name">Casualist</span></a>
       <div class="bi-meta">London, UK &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/quiet-luxury">Quiet luxury</a><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a></div>
       <p class="bi-line">Elie Reboul's West London label that outgrew its own name — quiet clothes for golf and after.</p>
       <a class="bi-more" href="/drops/brand-to-know-casualist">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/casualist">All coverage &middot; 4 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas accessories">
-    <a class="bi-imglink" href="/brands/chipp-golf"><div class="bi-img"><img src="/images/texas-brands/chipp-0.jpg" loading="lazy" alt="Chipp Golf Co — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas accessories loud-on-purpose">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/chipp-0.jpg" loading="lazy" alt="Chipp Golf Co &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/chipp-3.jpg" loading="lazy" alt="Chipp Golf Co &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/chipp-4.jpg" loading="lazy" alt="Chipp Golf Co &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/chipp-2.jpg" loading="lazy" alt="Chipp Golf Co &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/chipp-1.jpg" loading="lazy" alt="Chipp Golf Co &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/chipp-5.jpg" loading="lazy" alt="Chipp Golf Co &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/chipp-golf"><span class="bi-name">Chipp Golf Co</span></a>
       <div class="bi-meta">Dallas, TX &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a></div>
       <p class="bi-line">Cabretta gloves with a conscience — ten per cent of every glove goes to a charitable partner.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#chipp">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/chipp-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas accessories">
-    <a class="bi-imglink" href="/brands/clint-orms"><div class="bi-img"><img src="/images/texas-brands/clintorms-0.jpg" loading="lazy" alt="Clint Orms — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas accessories made-by-hand heritage drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/clintorms-4.jpg" loading="lazy" alt="Clint Orms &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/clintorms-5.jpg" loading="lazy" alt="Clint Orms &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/clintorms-1.jpg" loading="lazy" alt="Clint Orms &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/clintorms-2.jpg" loading="lazy" alt="Clint Orms &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/clintorms-3.jpg" loading="lazy" alt="Clint Orms &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/clintorms-0.jpg" loading="lazy" alt="Clint Orms &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/clint-orms"><span class="bi-name">Clint Orms</span></a>
       <div class="bi-meta">Kerrville, TX &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/heritage">Heritage</a><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">Hill Country silversmith, est. 1992 — sterling ball markers, never more than ten from one design.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#clintorms">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/clint-orms">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa grips accessories">
-    <a class="bi-imglink" href="/brands/cloud-and-wind-golf"><div class="bi-img"><img src="/images/cloud-and-wind/hero-torrey.jpg" loading="lazy" alt="Cloud &amp; Wind Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa grips accessories design-nerd">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/cloud-and-wind/zen-smoke.jpg" loading="lazy" alt="Cloud &amp; Wind Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/cloud-and-wind/beneath-the-boughs.jpg" loading="lazy" alt="Cloud &amp; Wind Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/cloud-and-wind/classic-collection.jpg" loading="lazy" alt="Cloud &amp; Wind Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/cloud-and-wind/hero-torrey.jpg" loading="lazy" alt="Cloud &amp; Wind Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/cloud-and-wind/canvas.jpg" loading="lazy" alt="Cloud &amp; Wind Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/cloud-and-wind/spring-haiku.jpg" loading="lazy" alt="Cloud &amp; Wind Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/cloud-and-wind-golf"><span class="bi-name">Cloud &amp; Wind Golf</span></a>
       <div class="bi-meta">California &middot; Grips &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div>
       <p class="bi-line">Grips only — Eastern aesthetics, Chinese verse printed on the box, $18 a grip.</p>
       <a class="bi-more" href="/drops/brand-to-know-cloud-and-wind-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/cloud-and-wind-golf">All coverage &middot; 6 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas apparel">
-    <a class="bi-imglink" href="/brands/criquet"><div class="bi-img"><img src="/images/criquet/austinfc-3.jpg" loading="lazy" alt="Criquet Shirts — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas apparel dad-golf post-round-friendly muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/criquet/classic-players-0.jpg" loading="lazy" alt="Criquet Shirts &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/criquet/jones-duffle-2.jpg" loading="lazy" alt="Criquet Shirts &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/criquet/savemuny-3.jpg" loading="lazy" alt="Criquet Shirts &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/criquet/austinfc-2.jpg" loading="lazy" alt="Criquet Shirts &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/criquet/austinfc-3.jpg" loading="lazy" alt="Criquet Shirts &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/criquet/classic-players-3.jpg" loading="lazy" alt="Criquet Shirts &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/criquet"><span class="bi-name">Criquet Shirts</span></a>
       <div class="bi-meta">Austin, TX &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/dad-golf">Dad golf</a><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">Austin's original players shirt, est. 2010 — Pima cotton, removable stays, made in Peru and says so.</p>
       <a class="bi-more" href="/drops/brand-to-know-criquet">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/criquet">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headcovers">
-    <a class="bi-imglink" href="/brands/daphnes-headcovers"><div class="bi-img"><img src="/images/women-founded/daphnes-0.jpg" loading="lazy" alt="Daphne&#x27;s Headcovers — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headcovers loud-on-purpose women-founded heritage tour-proven">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/daphnes-0.jpg" loading="lazy" alt="Daphne&#x27;s Headcovers &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/women-founded/daphnes-5.jpg" loading="lazy" alt="Daphne&#x27;s Headcovers &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/women-founded/daphnes-2.jpg" loading="lazy" alt="Daphne&#x27;s Headcovers &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/daphnes-headcovers"><span class="bi-name">Daphne&#x27;s Headcovers</span></a>
       <div class="bi-meta">Phoenix, AZ &middot; Headcovers</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/heritage">Heritage</a><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a></div>
       <p class="bi-line">Founded 1979 by Jane Spicer and her mother. Made Frank, the tiger headcover Tiger Woods carried.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#daphnes">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/daphnes-headcovers">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa accessories">
-    <a class="bi-imglink" href="/brands/devant"><div class="bi-img"><img src="/images/women-founded/devant-0.jpg" loading="lazy" alt="Devant Sport Towels — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa accessories women-founded heritage new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/devant-5.jpg" loading="lazy" alt="Devant Sport Towels &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/devant-0.jpg" loading="lazy" alt="Devant Sport Towels &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/devant-3.jpg" loading="lazy" alt="Devant Sport Towels &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/devant-4.jpg" loading="lazy" alt="Devant Sport Towels &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/devant-1.jpg" loading="lazy" alt="Devant Sport Towels &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/devant-2.jpg" loading="lazy" alt="Devant Sport Towels &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/devant"><span class="bi-name">Devant Sport Towels</span></a>
       <div class="bi-meta">Richmond, VA &middot; Accessories</div>
+      <div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/heritage">Heritage</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Founded 1976 by Mary Ann Sheppard. Licensed towels for the USGA, PGA of America, PGA Tour and LPGA.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#devant">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/devant">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/devereux-golf"><div class="bi-img"><img src="/images/devereux-golf/r-hero-course.jpg" loading="lazy" alt="Devereux Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel post-round-friendly muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/devereux-golf/r-waffle-crew-a2.jpg" loading="lazy" alt="Devereux Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/devereux-golf/r-thunderbird-a2.jpg" loading="lazy" alt="Devereux Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/devereux-golf/r-thunderbird-a3.jpg" loading="lazy" alt="Devereux Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/devereux-golf/r-sandy-lane-a4.jpg" loading="lazy" alt="Devereux Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/devereux-golf/r-devco-jacket-a2.jpg" loading="lazy" alt="Devereux Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/devereux-golf/r-sandy-lane.jpg" loading="lazy" alt="Devereux Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/devereux-golf"><span class="bi-name">Devereux Golf</span></a>
       <div class="bi-meta">Scottsdale, AZ &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">Scottsdale brothers, est. 2013, named after their grandfather — relaxed silhouettes before that was normal.</p>
       <a class="bi-more" href="/drops/brand-to-know-devereux-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/devereux-golf">All coverage &middot; 16 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe apparel">
-    <a class="bi-imglink" href="/brands/duca-del-cosma"><div class="bi-img"><img src="/images/women-founded/duca-del-cosma-0.jpg" loading="lazy" alt="Duca del Cosma — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe apparel member-guest women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/duca-del-cosma-5.jpg" loading="lazy" alt="Duca del Cosma &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/duca-del-cosma-4.jpg" loading="lazy" alt="Duca del Cosma &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/duca-del-cosma-2.jpg" loading="lazy" alt="Duca del Cosma &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/duca-del-cosma-0.jpg" loading="lazy" alt="Duca del Cosma &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/duca-del-cosma-1.jpg" loading="lazy" alt="Duca del Cosma &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/duca-del-cosma-3.jpg" loading="lazy" alt="Duca del Cosma &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/duca-del-cosma"><span class="bi-name">Duca del Cosma</span></a>
       <div class="bi-meta">Breukelen, Netherlands &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/member-guest">Member-guest</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Italian golf shoes co-founded in 2004 by Antje Elle and Baldovino Mattiazzo; since sold twice.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#duca-del-cosma">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/duca-del-cosma">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas equipment">
-    <a class="bi-imglink" href="/brands/edel-golf"><div class="bi-img"><img src="/images/texas-brands/edel-0.jpg" loading="lazy" alt="Edel Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas equipment design-nerd made-by-hand">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/edel-1.jpg" loading="lazy" alt="Edel Golf &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/texas-brands/edel-5.jpg" loading="lazy" alt="Edel Golf &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/texas-brands/edel-4.jpg" loading="lazy" alt="Edel Golf &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/edel-golf"><span class="bi-name">Edel Golf</span></a>
       <div class="bi-meta">Austin, TX &middot; Clubs</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div>
       <p class="bi-line">David Edel's putters, fitted like irons and still hand-finished in Austin.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#edel">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/edel-golf">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="usa texas equipment">
-    <a class="bi-imglink" href="/brands/edison-golf"><div class="bi-img"><img src="/images/texas-brands/edison-0.jpg" loading="lazy" alt="Edison Golf — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/edison-4.jpg" loading="lazy" alt="Edison Golf &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/texas-brands/edison-2.jpg" loading="lazy" alt="Edison Golf &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/texas-brands/edison-0.jpg" loading="lazy" alt="Edison Golf &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/edison-golf"><span class="bi-name">Edison Golf</span></a>
       <div class="bi-meta">Rockport, TX &middot; Clubs</div>
+      
       <p class="bi-line">Terry Koehler's wedge company on the Gulf Coast — the patented Koehler Sole, built to order.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#edison">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/edison-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe apparel accessories">
-    <a class="bi-imglink" href="/brands/fella-golf"><div class="bi-img"><img src="/images/fella-golf/tech-ripstop-anorak.jpg" loading="lazy" alt="Fella Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe apparel accessories loud-on-purpose">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/fella-golf/tech-ripstop-anorak.jpg" loading="lazy" alt="Fella Golf &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/fella-golf"><span class="bi-name">Fella Golf</span></a>
       <div class="bi-meta">Europe &middot; Apparel &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a></div>
       <p class="bi-line">Tongue-in-cheek European golf — heavyweight tees, a pizza-slice ball marker, zero seriousness.</p>
       <a class="bi-more" href="/drops/fella-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/fella-golf">All coverage &middot; 4 posts &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="australia apparel art">
-    <a class="bi-imglink" href="/brands/found-golf"><div class="bi-img"><img src="/images/feed/3d14fd10-MG_7440.jpg" loading="lazy" alt="Found Golf — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/feed/3d14fd10-MG_7440.jpg" loading="lazy" alt="Found Golf &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/found-golf"><span class="bi-name">Found Golf</span></a>
       <div class="bi-meta">Melbourne, Australia &middot; Apparel &middot; Art</div>
+      
       <p class="bi-line">Half gallery, half golf label — Melbourne's Lance Peach and Ellen Keillar sell paintings next to polos.</p>
       <a class="bi-more" href="/drops/brand-to-know-found-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/found-golf">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe headcovers accessories">
-    <a class="bi-imglink" href="/brands/fyfe-golf"><div class="bi-img"><img src="/images/fyfe-putter-covers/brand-hero.jpg" loading="lazy" alt="Fyfe Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe headcovers accessories made-by-hand design-nerd">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/fyfe-putter-covers/brand-hero.jpg" loading="lazy" alt="Fyfe Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/fyfe-putter-covers/gt-carrera-blade-a3.jpg" loading="lazy" alt="Fyfe Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/fyfe-putter-covers/gt-vanquish-blade-a2.jpg" loading="lazy" alt="Fyfe Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/fyfe-putter-covers/cannich-blade-a3.jpg" loading="lazy" alt="Fyfe Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/fyfe-putter-covers/gt-rosso-mallet-a4.jpg" loading="lazy" alt="Fyfe Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/fyfe-putter-covers/gt-phantom-mallet-a3.jpg" loading="lazy" alt="Fyfe Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/fyfe-golf"><span class="bi-name">Fyfe Golf</span></a>
       <div class="bi-meta">UK &middot; Headcovers &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div>
       <p class="bi-line">Putter covers in sail cloth, marine suede and waxed canvas — plus the MacKenzie editions.</p>
       <a class="bi-more" href="/drops/the-fyfe-putter-cover-edit">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/fyfe-golf">All coverage &middot; 12 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa grips">
-    <a class="bi-imglink" href="/brands/garsen-golf"><div class="bi-img"><img src="/images/grips/hero.jpg" loading="lazy" alt="Garsen Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa grips range-rat new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/grips/garsen-3.jpg" loading="lazy" alt="Garsen Golf &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/grips/garsen-2.jpg" loading="lazy" alt="Garsen Golf &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/grips/garsen-0.jpg" loading="lazy" alt="Garsen Golf &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/grips/garsen-1.jpg" loading="lazy" alt="Garsen Golf &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/garsen-golf"><span class="bi-name">Garsen Golf</span></a>
       <div class="bi-meta">United States &middot; Grips</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/range-rat">Range rat</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Putter grips only, built around the QUAD — a trapezoid that tucks the elbows in and takes the hands out of the stroke.</p>
       <a class="bi-more" href="/drops/the-niche-grip-report#garsen">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/garsen-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa japan apparel">
-    <a class="bi-imglink" href="/brands/gramicci"><div class="bi-img"><img src="/images/gramicci/brand-hero.jpg" loading="lazy" alt="Gramicci — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa japan apparel gorpcore post-round-friendly muni-energy heritage">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/gramicci/brand-hero.jpg" loading="lazy" alt="Gramicci &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/gramicci/upf-shield-s-s-top-a2.jpg" loading="lazy" alt="Gramicci &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/gramicci/eqt-pant-a4.jpg" loading="lazy" alt="Gramicci &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/gramicci/upf-shield-s-s-top-a4.jpg" loading="lazy" alt="Gramicci &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/gramicci/g-short-a2.jpg" loading="lazy" alt="Gramicci &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/gramicci/g-short-a4.jpg" loading="lazy" alt="Gramicci &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/gramicci"><span class="bi-name">Gramicci</span></a>
       <div class="bi-meta">Est. 1982, Yosemite &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/gorpcore">Gorpcore</a><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/heritage">Heritage</a></div>
       <p class="bi-line">Climbing pants born on Yosemite granite in 1982 that quietly became golf-course staples.</p>
       <a class="bi-more" href="/drops/brand-to-know-gramicci">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/gramicci">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="australia apparel">
-    <a class="bi-imglink" href="/brands/gray-haast"><div class="bi-img"><img src="/images/aussie/grayhaast-0.jpg" loading="lazy" alt="Gray + Haast — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aussie/grayhaast-2.jpg" loading="lazy" alt="Gray + Haast &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/aussie/grayhaast-0.jpg" loading="lazy" alt="Gray + Haast &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/aussie/grayhaast-5.jpg" loading="lazy" alt="Gray + Haast &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/aussie/grayhaast-3.jpg" loading="lazy" alt="Gray + Haast &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/gray-haast"><span class="bi-name">Gray + Haast</span></a>
       <div class="bi-meta">Burleigh Heads, Australia &middot; Apparel</div>
+      
       <p class="bi-line">Named for the founder and the largest eagle that ever lived — clean Queensland golfwear.</p>
       <a class="bi-more" href="/drops/australian-golf-brands-and-trips#grayhaast">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/gray-haast">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia apparel accessories">
-    <a class="bi-imglink" href="/brands/gumtree-nature-club"><div class="bi-img"><img src="/images/gumtree-nature-club/brand-hero.jpg" loading="lazy" alt="Gumtree Nature Club — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia apparel accessories made-by-hand gorpcore drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/gumtree-nature-club/barrel-jeans.jpg" loading="lazy" alt="Gumtree Nature Club &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/gumtree-nature-club/brand-hero.jpg" loading="lazy" alt="Gumtree Nature Club &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/gumtree-nature-club/nc-socks.jpg" loading="lazy" alt="Gumtree Nature Club &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/gumtree-nature-club/rockaway-stripe-shirt.jpg" loading="lazy" alt="Gumtree Nature Club &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/gumtree-nature-club/nc-tee.jpg" loading="lazy" alt="Gumtree Nature Club &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/gumtree-nature-club/mohair-sweater.jpg" loading="lazy" alt="Gumtree Nature Club &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/gumtree-nature-club"><span class="bi-name">Gumtree Nature Club</span></a>
       <div class="bi-meta">Australia &middot; Apparel &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a><a class="bi-tag" href="/brands/tag/gorpcore">Gorpcore</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">Nature-first golf goods from Australia — the drop that sold on gum leaves and gravel car parks.</p>
       <a class="bi-more" href="/drops/gumtree-nature-club-drop">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/gumtree-nature-club">All coverage &middot; 10 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa accessories">
-    <a class="bi-imglink" href="/brands/hedge"><div class="bi-img"><img src="/images/women-founded/hedge-0.jpg" loading="lazy" alt="Hedge — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa accessories women-founded">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/hedge-2.jpg" loading="lazy" alt="Hedge &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/women-founded/hedge-4.jpg" loading="lazy" alt="Hedge &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/women-founded/hedge-1.jpg" loading="lazy" alt="Hedge &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/hedge"><span class="bi-name">Hedge</span></a>
       <div class="bi-meta">New York, NY &middot; Accessories</div>
+      <div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a></div>
       <p class="bi-line">Meagan Ouderkirk and Antonia DiPaolo's golf and tennis label — and the only people in golf making a caddie brooch.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#hedge">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/hedge">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa accessories art">
-    <a class="bi-imglink" href="/brands/huega-house"><div class="bi-img"><img src="/images/huega-house/brand-hero.jpg" loading="lazy" alt="Huega House — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa accessories art muni-energy post-round-friendly">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/huega-house/new-moments-vintage-camo-a2.jpg" loading="lazy" alt="Huega House &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/huega-house/new-athletics-black-natural-a3.jpg" loading="lazy" alt="Huega House &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/huega-house/brand-hero.jpg" loading="lazy" alt="Huega House &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/huega-house/new-athletics-black-natural-a4.jpg" loading="lazy" alt="Huega House &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/huega-house/new-flow-running-black-a3.jpg" loading="lazy" alt="Huega House &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/huega-house/new-athletics-vintage-camo-a3.jpg" loading="lazy" alt="Huega House &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/huega-house"><span class="bi-name">Huega House</span></a>
       <div class="bi-meta">Carlsbad, CA &middot; Accessories &middot; Art</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a></div>
       <p class="bi-line">Carlsbad, est. 2022 — retro-modern prints, towels and objects that treat golf as graphic design.</p>
       <a class="bi-more" href="/drops/brand-to-know-huega-house">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/huega-house">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa accessories">
-    <a class="bi-imglink" href="/brands/inside-story"><div class="bi-img"><img src="/images/women-founded/inside-story-0.jpg" loading="lazy" alt="Inside Story Socks — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa accessories design-nerd women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/inside-story-5.jpg" loading="lazy" alt="Inside Story Socks &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/inside-story-3.jpg" loading="lazy" alt="Inside Story Socks &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/inside-story-2.jpg" loading="lazy" alt="Inside Story Socks &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/inside-story-1.jpg" loading="lazy" alt="Inside Story Socks &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/inside-story-0.jpg" loading="lazy" alt="Inside Story Socks &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/inside-story-4.jpg" loading="lazy" alt="Inside Story Socks &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/inside-story"><span class="bi-name">Inside Story Socks</span></a>
       <div class="bi-meta">San Diego, CA &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Golf socks knit from coffee grounds and recycled bottles, co-founded by Isabelle Shee.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#inside-story">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/inside-story">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headcovers">
-    <a class="bi-imglink" href="/brands/jan-craig"><div class="bi-img"><img src="/images/women-founded/jan-craig-0.jpg" loading="lazy" alt="Jan Craig Headcovers — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headcovers made-by-hand women-founded heritage tour-proven new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/jan-craig-3.jpg" loading="lazy" alt="Jan Craig Headcovers &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/jan-craig-4.jpg" loading="lazy" alt="Jan Craig Headcovers &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/jan-craig-1.jpg" loading="lazy" alt="Jan Craig Headcovers &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/jan-craig-0.jpg" loading="lazy" alt="Jan Craig Headcovers &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/jan-craig-5.jpg" loading="lazy" alt="Jan Craig Headcovers &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/jan-craig-2.jpg" loading="lazy" alt="Jan Craig Headcovers &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/jan-craig"><span class="bi-name">Jan Craig Headcovers</span></a>
       <div class="bi-meta">Chicago, IL &middot; Headcovers</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/heritage">Heritage</a><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Hand-knit wool headcovers since 1962. Nicklaus, Watson and Ryder Cup teams carried them.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#jan-craig">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/jan-craig">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa bags">
-    <a class="bi-imglink" href="/brands/jones-sports-co"><div class="bi-img"><img src="/images/jones-sports-co/hero.jpg" loading="lazy" alt="Jones Sports Co — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa bags design-nerd heritage">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/jones-sports-co/hero.jpg" loading="lazy" alt="Jones Sports Co &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-0.jpg" loading="lazy" alt="Jones Sports Co &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-4.jpg" loading="lazy" alt="Jones Sports Co &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-2.jpg" loading="lazy" alt="Jones Sports Co &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-3.jpg" loading="lazy" alt="Jones Sports Co &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-1.jpg" loading="lazy" alt="Jones Sports Co &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/jones-sports-co"><span class="bi-name">Jones Sports Co</span></a>
       <div class="bi-meta">Portland, OR &middot; Bags</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/heritage">Heritage</a></div>
       <p class="bi-line">The 1971 carry bag that never went away — revived in Portland and better than the original.</p>
       <a class="bi-more" href="/drops/brand-revisited-jones-sports-co">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/jones-sports-co">All coverage &middot; 17 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas apparel">
-    <a class="bi-imglink" href="/brands/juniper-james"><div class="bi-img"><img src="/images/texas-brands/juniperjames-0.jpg" loading="lazy" alt="Juniper &amp; James — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas apparel design-nerd">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/juniperjames-2.jpg" loading="lazy" alt="Juniper &amp; James &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/juniperjames-4.jpg" loading="lazy" alt="Juniper &amp; James &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/juniperjames-3.jpg" loading="lazy" alt="Juniper &amp; James &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/juniperjames-0.jpg" loading="lazy" alt="Juniper &amp; James &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/juniperjames-1.jpg" loading="lazy" alt="Juniper &amp; James &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/juniperjames-5.jpg" loading="lazy" alt="Juniper &amp; James &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/juniper-james"><span class="bi-name">Juniper &amp; James</span></a>
       <div class="bi-meta">New Braunfels, TX &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div>
       <p class="bi-line">From the founder of Duck Camp, named for his twins — breathable polos for Hill Country heat.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#juniperjames">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/juniper-james">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas apparel">
-    <a class="bi-imglink" href="/brands/kingfisher-golf"><div class="bi-img"><img src="/images/kingfisher-golf/hero-package.jpg" loading="lazy" alt="Kingfisher Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas apparel muni-energy design-nerd women-founded">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/kingfisher-golf/new-kit-polo-a4.jpg" loading="lazy" alt="Kingfisher Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/kingfisher-golf/new-navy-zipper-polo-a2.jpg" loading="lazy" alt="Kingfisher Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/kingfisher-golf/new-mechanic-polo-a2.jpg" loading="lazy" alt="Kingfisher Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/kingfisher-golf/new-cream-polo-a2.jpg" loading="lazy" alt="Kingfisher Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/kingfisher-golf/new-cream-polo-a4.jpg" loading="lazy" alt="Kingfisher Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/kingfisher-golf/new-mechanic-polo-a4.jpg" loading="lazy" alt="Kingfisher Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/kingfisher-golf"><span class="bi-name">Kingfisher Golf</span></a>
       <div class="bi-meta">Dallas, TX &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a></div>
       <p class="bi-line">Started at a kitchen counter in East Dallas by a former PepsiCo art director; first athlete signed via a Worst Golfer in Dallas contest.</p>
       <a class="bi-more" href="/drops/brand-to-know-kingfisher-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/kingfisher-golf">All coverage &middot; 8 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas equipment accessories">
-    <a class="bi-imglink" href="/brands/lamb-crafted"><div class="bi-img"><img src="/images/texas-brands/lamb-0.jpg" loading="lazy" alt="Lamb Crafted — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas equipment accessories made-by-hand">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/lamb-0.jpg" loading="lazy" alt="Lamb Crafted &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/lamb-2.jpg" loading="lazy" alt="Lamb Crafted &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/lamb-4.jpg" loading="lazy" alt="Lamb Crafted &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/lamb-5.jpg" loading="lazy" alt="Lamb Crafted &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/lamb-3.jpg" loading="lazy" alt="Lamb Crafted &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/lamb-1.jpg" loading="lazy" alt="Lamb Crafted &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/lamb-crafted"><span class="bi-name">Lamb Crafted</span></a>
       <div class="bi-meta">Plano, TX &middot; Clubs &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div>
       <p class="bi-line">A six-person Texas machine shop — engraved putters, markers and leather from Tyson Lamb's bench.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#lamb">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/lamb-crafted">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia apparel">
-    <a class="bi-imglink" href="/brands/left-of-field-golf"><div class="bi-img"><img src="/images/left-of-field/hero-left-of-field.jpg" loading="lazy" alt="Left of Field Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia apparel post-round-friendly gorpcore design-nerd">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/left-of-field/hero-left-of-field.jpg" loading="lazy" alt="Left of Field Golf &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/left-of-field/xelements-polo-0-4.jpg" loading="lazy" alt="Left of Field Golf &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/left-of-field/xelements-polo-0-2.jpg" loading="lazy" alt="Left of Field Golf &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/left-of-field/xbass-polo-black-1-0.jpg" loading="lazy" alt="Left of Field Golf &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/left-of-field-golf"><span class="bi-name">Left of Field Golf</span></a>
       <div class="bi-meta">Sydney, Australia &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a><a class="bi-tag" href="/brands/tag/gorpcore">Gorpcore</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div>
       <p class="bi-line">Surf and skate silhouettes for the course, every collection named for a stretch of Australian coast.</p>
       <a class="bi-more" href="/drops/brand-to-know-left-of-field-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/left-of-field-golf">All coverage &middot; 7 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia headcovers accessories">
-    <a class="bi-imglink" href="/brands/mackem-golf"><div class="bi-img"><img src="/images/aussie/mackem-0.jpg" loading="lazy" alt="Mackem Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia headcovers accessories made-by-hand women-founded">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aussie/mackem-1.jpg" loading="lazy" alt="Mackem Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/aussie/mackem-4.jpg" loading="lazy" alt="Mackem Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/aussie/mackem-5.jpg" loading="lazy" alt="Mackem Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/aussie/mackem-3.jpg" loading="lazy" alt="Mackem Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/aussie/mackem-2.jpg" loading="lazy" alt="Mackem Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/aussie/mackem-0.jpg" loading="lazy" alt="Mackem Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/mackem-golf"><span class="bi-name">Mackem Golf</span></a>
       <div class="bi-meta">Kalamunda, Australia &middot; Headcovers &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a></div>
       <p class="bi-line">Wool headcovers sewn in the Perth hills — bespoke work from football shirts and family tartan.</p>
       <a class="bi-more" href="/drops/australian-golf-brands-and-trips#mackem">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/mackem-golf">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/malbon"><div class="bi-img"><img src="/images/women-founded/malbon-0.jpg" loading="lazy" alt="Malbon Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel loud-on-purpose collab-machine women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/malbon-4.jpg" loading="lazy" alt="Malbon Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/malbon-3.jpg" loading="lazy" alt="Malbon Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/malbon-0.jpg" loading="lazy" alt="Malbon Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/malbon-1.jpg" loading="lazy" alt="Malbon Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/malbon-2.jpg" loading="lazy" alt="Malbon Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/malbon-5.jpg" loading="lazy" alt="Malbon Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/malbon"><span class="bi-name">Malbon Golf</span></a>
       <div class="bi-meta">Los Angeles, CA &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Co-founded 2017 by Erica and Stephen Malbon. Started as an Instagram mood board.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#malbon">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/malbon">All coverage &middot; 39 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe apparel">
-    <a class="bi-imglink" href="/brands/manors"><div class="bi-img"><img src="/images/manors/ranger-golf-short.jpg" loading="lazy" alt="Manors Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe apparel quiet-luxury design-nerd member-guest">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/manors/ranger-golf-short.jpg" loading="lazy" alt="Manors Golf &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/manors"><span class="bi-name">Manors Golf</span></a>
       <div class="bi-meta">London, UK &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/quiet-luxury">Quiet luxury</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/member-guest">Member-guest</a></div>
       <p class="bi-line">London's modern-heritage benchmark — and the Reebok collab that sold through twice.</p>
       <a class="bi-more" href="/drops/manors-ss26">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/manors">All coverage &middot; 30 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/merrill-golf"><div class="bi-img"><img src="/images/feed/0ee52e54-Hoodielifestyle.jpg" loading="lazy" alt="Merrill Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/feed/0ee52e54-Hoodielifestyle.jpg" loading="lazy" alt="Merrill Golf &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/merrill-golf"><span class="bi-name">Merrill Golf</span></a>
       <div class="bi-meta">Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">A design venture through the lens of golf — acid-washed tees, heavyweight fleece and a flying duck.</p>
       <a class="bi-more" href="/drops/brand-to-know-merrill-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/merrill-golf">All coverage &middot; 4 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel accessories">
-    <a class="bi-imglink" href="/brands/metalwood-studio"><div class="bi-img"><img src="/images/metalwood/brand-hero.jpg" loading="lazy" alt="Metalwood Studio — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel accessories loud-on-purpose design-nerd collab-machine">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/metalwood/brand-hero.jpg" loading="lazy" alt="Metalwood Studio &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/metalwood/ig-DanyQDuGWXn.jpg" loading="lazy" alt="Metalwood Studio &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/metalwood/ig-DaIce4RjuNW.jpg" loading="lazy" alt="Metalwood Studio &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/metalwood/ig-Daap_xwJx_x.jpg" loading="lazy" alt="Metalwood Studio &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/metalwood/ig-DaamEE4GVZW.jpg" loading="lazy" alt="Metalwood Studio &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/metalwood/new-hombre-top.jpg" loading="lazy" alt="Metalwood Studio &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/metalwood-studio"><span class="bi-name">Metalwood Studio</span></a>
       <div class="bi-meta">Los Angeles, CA &middot; Apparel &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div>
       <p class="bi-line">Cole Young's LA studio mining Y2K tour aesthetics — the blueprint for modern golf nostalgia.</p>
       <a class="bi-more" href="/drops/brand-to-know-metalwood-studio">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/metalwood-studio">All coverage &middot; 13 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia headwear apparel">
-    <a class="bi-imglink" href="/brands/midiron"><div class="bi-img"><img src="/images/midiron/hero-midiron.jpg" loading="lazy" alt="Midiron — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia headwear apparel post-round-friendly muni-energy drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/midiron/tour-spec-cap-field-camo-0.jpg" loading="lazy" alt="Midiron &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/midiron/contact-cap-navy-1.jpg" loading="lazy" alt="Midiron &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/midiron/tour-spec-cap-tree-camo-2.jpg" loading="lazy" alt="Midiron &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/midiron/contact-cap-navy-2.jpg" loading="lazy" alt="Midiron &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/midiron/hero-midiron.jpg" loading="lazy" alt="Midiron &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/midiron/tour-spec-cap-tree-camo-0.jpg" loading="lazy" alt="Midiron &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/midiron"><span class="bi-name">Midiron</span></a>
       <div class="bi-meta">Sydney, Australia &middot; Headwear &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">Nine products, no founder named, everything shot at night on a floodlit par-three.</p>
       <a class="bi-more" href="/drops/brand-to-know-midiron">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/midiron">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe headcovers accessories">
-    <a class="bi-imglink" href="/brands/mogshade"><div class="bi-img"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" loading="lazy" alt="Mogshade — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe headcovers accessories made-by-hand design-nerd collab-machine drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/mogshade/new-pin-position-poster-a4.jpg" loading="lazy" alt="Mogshade &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/mogshade/new-tiles-olive-orange-a3.jpg" loading="lazy" alt="Mogshade &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/mogshade/new-churra-risca-a3.jpg" loading="lazy" alt="Mogshade &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" loading="lazy" alt="Mogshade &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/mogshade/new-eighteen-poster-a3.jpg" loading="lazy" alt="Mogshade &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/mogshade/new-churra-risca-a2.jpg" loading="lazy" alt="Mogshade &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/mogshade"><span class="bi-name">Mogshade</span></a>
       <div class="bi-meta">Portugal &middot; Headcovers &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</p>
       <a class="bi-more" href="/drops/brand-to-know-mogshade">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/mogshade">All coverage &middot; 7 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/morning-people-clothiers"><div class="bi-img"><img src="/images/morning-people-clothiers/hero-lifestyle.jpg" loading="lazy" alt="Morning People Clothiers — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel design-nerd muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/morning-people-clothiers/performance-hat-icon.jpg" loading="lazy" alt="Morning People Clothiers &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/morning-people-clothiers/high-crown-hat.jpg" loading="lazy" alt="Morning People Clothiers &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/morning-people-clothiers/casual-hat.jpg" loading="lazy" alt="Morning People Clothiers &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/morning-people-clothiers/performance-hat-pacer.jpg" loading="lazy" alt="Morning People Clothiers &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/morning-people-clothiers/hero-lifestyle.jpg" loading="lazy" alt="Morning People Clothiers &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/morning-people-clothiers/polo-charcoal.jpg" loading="lazy" alt="Morning People Clothiers &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/morning-people-clothiers"><span class="bi-name">Morning People Clothiers</span></a>
       <div class="bi-meta">USA / South Korea &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">Designed in the USA, sewn in South Korea — early-tee-time clothes with a five-piece discipline.</p>
       <a class="bi-more" href="/drops/brand-to-know-morning-people-clothiers">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/morning-people-clothiers">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="world apparel">
-    <a class="bi-imglink" href="/brands/odd-ritual"><div class="bi-img"><img src="/images/odd-ritual/brand-hero.jpg" loading="lazy" alt="Odd Ritual — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="world apparel muni-energy gorpcore">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/odd-ritual/c03-caddie-jacket-navy-a3.jpg" loading="lazy" alt="Odd Ritual &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/odd-ritual/c03-caddie-jacket-navy-a4.jpg" loading="lazy" alt="Odd Ritual &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/odd-ritual/c03-trouser-black-a3.jpg" loading="lazy" alt="Odd Ritual &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/odd-ritual/c03-trouser-black-a4.jpg" loading="lazy" alt="Odd Ritual &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/odd-ritual/c03-heritage-polo-a4.jpg" loading="lazy" alt="Odd Ritual &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/odd-ritual/c03-heritage-polo-a3.jpg" loading="lazy" alt="Odd Ritual &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/odd-ritual"><span class="bi-name">Odd Ritual</span></a>
       <div class="bi-meta">Cape Town, South Africa &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a><a class="bi-tag" href="/brands/tag/gorpcore">Gorpcore</a></div>
       <p class="bi-line">Born in Cape Town, named for the small habits before every shot — golf without the gatekeeping.</p>
       <a class="bi-more" href="/drops/brand-to-know-odd-ritual">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/odd-ritual">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia apparel">
-    <a class="bi-imglink" href="/brands/okka-golf"><div class="bi-img"><img src="/images/aussie/okka-0.jpg" loading="lazy" alt="Okka Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia apparel made-by-hand">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aussie/okka-4.jpg" loading="lazy" alt="Okka Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/aussie/okka-0.jpg" loading="lazy" alt="Okka Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/aussie/okka-1.jpg" loading="lazy" alt="Okka Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/aussie/okka-5.jpg" loading="lazy" alt="Okka Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/aussie/okka-3.jpg" loading="lazy" alt="Okka Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/aussie/okka-2.jpg" loading="lazy" alt="Okka Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/okka-golf"><span class="bi-name">Okka Golf</span></a>
       <div class="bi-meta">Perth, Australia &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div>
       <p class="bi-line">Screen-printed by one person in Perth who refuses wholesale on principle.</p>
       <a class="bi-more" href="/drops/australian-golf-brands-and-trips#okka">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/okka-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas apparel">
-    <a class="bi-imglink" href="/brands/olydoe"><div class="bi-img"><img src="/images/olydoe/lifestyle-hero.jpg" loading="lazy" alt="Olydoe — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas apparel design-nerd">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/olydoe/lifestyle-hero.jpg" loading="lazy" alt="Olydoe &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/olydoe/ls-polo-cotton.jpg" loading="lazy" alt="Olydoe &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/olydoe/pique-polo.jpg" loading="lazy" alt="Olydoe &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/olydoe/og-tee.jpg" loading="lazy" alt="Olydoe &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/olydoe/polo-stripe-brown.jpg" loading="lazy" alt="Olydoe &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/olydoe/polo-stripe-blue.jpg" loading="lazy" alt="Olydoe &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/olydoe"><span class="bi-name">Olydoe</span></a>
       <div class="bi-meta">Dallas, TX &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div>
       <p class="bi-line">An ex-banker's anti-polyester manifesto — Supima cotton polos, launched October 2025.</p>
       <a class="bi-more" href="/drops/brand-to-know-olydoe">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/olydoe">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa bags">
-    <a class="bi-imglink" href="/brands/orkai"><div class="bi-img"><img src="/images/women-founded/orkai-0.jpg" loading="lazy" alt="ORKAI — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa bags made-by-hand women-founded tour-proven new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/orkai-4.jpg" loading="lazy" alt="ORKAI &mdash; 1 of 5"></div><div class="bi-slide"><img src="/images/women-founded/orkai-0.jpg" loading="lazy" alt="ORKAI &mdash; 2 of 5"></div><div class="bi-slide"><img src="/images/women-founded/orkai-2.jpg" loading="lazy" alt="ORKAI &mdash; 3 of 5"></div><div class="bi-slide"><img src="/images/women-founded/orkai-1.jpg" loading="lazy" alt="ORKAI &mdash; 4 of 5"></div><div class="bi-slide"><img src="/images/women-founded/orkai-3.jpg" loading="lazy" alt="ORKAI &mdash; 5 of 5"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/orkai"><span class="bi-name">ORKAI</span></a>
       <div class="bi-meta">Boca Raton, FL &middot; Bags</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Formerly ORCA Golf. Founded by Deborah and Erica Bennett; bag supplier to the 2023 LPGA International Crown.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#orkai">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/orkai">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="usa texas equipment">
-    <a class="bi-imglink" href="/brands/p53"><div class="bi-img"><img src="/images/texas-brands/p53-0.jpg" loading="lazy" alt="P53 Irons — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/p53-0.jpg" loading="lazy" alt="P53 Irons &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/texas-brands/p53-1.jpg" loading="lazy" alt="P53 Irons &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/texas-brands/p53-2.jpg" loading="lazy" alt="P53 Irons &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/p53"><span class="bi-name">P53 Irons</span></a>
       <div class="bi-meta">Fort Worth, TX &middot; Clubs</div>
+      
       <p class="bi-line">Named for Hogan's 1953 season — American-forged irons finished in Fort Worth, by invitation.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#p53">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/p53">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="australia apparel accessories">
-    <a class="bi-imglink" href="/brands/penta-golf"><div class="bi-img"><img src="/images/aussie/penta-0.jpg" loading="lazy" alt="Penta Golf — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/aussie/penta-0.jpg" loading="lazy" alt="Penta Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/aussie/penta-3.jpg" loading="lazy" alt="Penta Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/aussie/penta-2.jpg" loading="lazy" alt="Penta Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/aussie/penta-5.jpg" loading="lazy" alt="Penta Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/aussie/penta-4.jpg" loading="lazy" alt="Penta Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/aussie/penta-1.jpg" loading="lazy" alt="Penta Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/penta-golf"><span class="bi-name">Penta Golf</span></a>
       <div class="bi-meta">Northern Beaches, Sydney &middot; Apparel &middot; Accessories</div>
+      
       <p class="bi-line">Three unnamed friends from magazine publishing — golf clothes with an art department's eye.</p>
       <a class="bi-more" href="/drops/australian-golf-brands-and-trips#penta">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/penta-golf">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
   <div class="bi-card" data-tags="usa texas equipment">
-    <a class="bi-imglink" href="/brands/piretti"><div class="bi-img"><img src="/images/texas-brands/piretti-0.jpg" loading="lazy" alt="Piretti Putters — independent golf brand"></div></a>
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/piretti-4.jpg" loading="lazy" alt="Piretti Putters &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/piretti-2.jpg" loading="lazy" alt="Piretti Putters &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/piretti-0.jpg" loading="lazy" alt="Piretti Putters &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/piretti-1.jpg" loading="lazy" alt="Piretti Putters &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/piretti-5.jpg" loading="lazy" alt="Piretti Putters &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/texas-brands/piretti-3.jpg" loading="lazy" alt="Piretti Putters &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/piretti"><span class="bi-name">Piretti Putters</span></a>
       <div class="bi-meta">Spring, TX &middot; Clubs</div>
+      
       <p class="bi-line">Milled from solid billets since 2008 — heavier heads, 2.5 degrees of loft, no cast putters ever.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#piretti">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/piretti">All coverage &middot; 2 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/puma-golf"><div class="bi-img"><img src="/images/realtree-puma/hero.jpg" loading="lazy" alt="PUMA Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel tour-proven new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/realtree-puma/realtree-cloudspun-tech-golf-hoodie-4.jpg" loading="lazy" alt="PUMA Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-fleece-golf-vest-3.jpg" loading="lazy" alt="PUMA Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-helsinki-g-spikeless-golf-shoes-4.jpg" loading="lazy" alt="PUMA Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-avant-tour-spiked-golf-shoes-4.jpg" loading="lazy" alt="PUMA Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-helsinki-g-spikeless-golf-shoes-2.jpg" loading="lazy" alt="PUMA Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-helsinki-g-spikeless-golf-shoes-0.jpg" loading="lazy" alt="PUMA Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/puma-golf"><span class="bi-name">PUMA Golf</span></a>
       <div class="bi-meta">Carlsbad, CA &middot; Apparel</div>
+      <div class="bi-attrs"><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">COBRA PUMA GOLF's apparel and footwear arm — and the big brand most willing to take a swing at a collab.</p>
       <a class="bi-more" href="/drops/puma-golf-x-realtree-precision-in-the-wild">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/puma-golf">All coverage &middot; 6 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/quiet-golf"><div class="bi-img"><img src="/images/quiet-golf/store.jpg" loading="lazy" alt="Quiet Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel quiet-luxury post-round-friendly">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/quiet-golf/ig-DbB5RYVks9j.jpg" loading="lazy" alt="Quiet Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/quiet-golf/ig-DaBiKSzyE83.jpg" loading="lazy" alt="Quiet Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/quiet-golf/ig-DadcGRTPLHg.jpg" loading="lazy" alt="Quiet Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/quiet-golf/store.jpg" loading="lazy" alt="Quiet Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/quiet-golf/new-cable-knit-bone-a2.jpg" loading="lazy" alt="Quiet Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/quiet-golf/new-jagger-polo-a2.jpg" loading="lazy" alt="Quiet Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/quiet-golf"><span class="bi-name">Quiet Golf</span></a>
       <div class="bi-meta">Costa Mesa, CA &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/quiet-luxury">Quiet luxury</a><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a></div>
       <p class="bi-line">From the Museum of Peace & Quiet orbit — considered golf clothes with an owl crest and an adidas Samba collab.</p>
       <a class="bi-more" href="/drops/brand-to-know-quiet-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/quiet-golf">All coverage &middot; 17 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headwear apparel">
-    <a class="bi-imglink" href="/brands/radry-golf"><div class="bi-img"><img src="/images/radry-golf/r-hero-cow.jpg" loading="lazy" alt="Radry Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headwear apparel loud-on-purpose muni-energy drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/radry-golf/r-gg-blade-a3.jpg" loading="lazy" alt="Radry Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/radry-golf/r-craft-3.jpg" loading="lazy" alt="Radry Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/radry-golf/r-hero-cow.jpg" loading="lazy" alt="Radry Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/radry-golf/r-middy-hat.jpg" loading="lazy" alt="Radry Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/radry-golf/r-twotone-hat.jpg" loading="lazy" alt="Radry Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/radry-golf/r-twotone-hat-a2.jpg" loading="lazy" alt="Radry Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/radry-golf"><span class="bi-name">Radry Golf</span></a>
       <div class="bi-meta">Sheboygan, WI &middot; Headwear &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">A Wisconsin artist whose logo is a bird in a bucket hat — est. 2018, drawn before it is stitched.</p>
       <a class="bi-more" href="/drops/brand-to-know-radry-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/radry-golf">All coverage &middot; 10 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel community">
-    <a class="bi-imglink" href="/brands/random-golf-club"><div class="bi-img"><img src="/images/random-golf-club/carry-bag-navy.jpg" loading="lazy" alt="Random Golf Club — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel community muni-energy course-merch">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/random-golf-club/carry-bag-tan.jpg" loading="lazy" alt="Random Golf Club &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/random-golf-club/putter-cover-burgundy.jpg" loading="lazy" alt="Random Golf Club &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/random-golf-club/dad-hat-tan.jpg" loading="lazy" alt="Random Golf Club &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/random-golf-club/umbrella.jpg" loading="lazy" alt="Random Golf Club &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/random-golf-club"><span class="bi-name">Random Golf Club</span></a>
       <div class="bi-meta">Los Angeles, CA &middot; Apparel &middot; Community</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a><a class="bi-tag" href="/brands/tag/course-merch">Course merch</a></div>
       <p class="bi-line">Erik Anders Lang's community that became a brand — meetups, films, and the only Australia trip in golf media.</p>
       <a class="bi-more" href="/drops/brand-to-know-random-golf-club">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/random-golf-club">All coverage &middot; 12 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel headwear">
-    <a class="bi-imglink" href="/brands/read-the-green"><div class="bi-img"><img src="/images/readthegreen/hero-irl.jpg" loading="lazy" alt="Read The Green — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel headwear muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/readthegreen/hero-irl.jpg" loading="lazy" alt="Read The Green &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/read-the-green"><span class="bi-name">Read The Green</span></a>
       <div class="bi-meta">New York, NY &middot; Apparel &middot; Headwear</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">New York energy, est. 1997 graphics — the '97 nylon pullover is the piece that went viral.</p>
       <a class="bi-more" href="/drops/brand-to-know-read-the-green">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/read-the-green">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/realtree"><div class="bi-img"><img src="/images/realtree-puma/hero.jpg" loading="lazy" alt="Realtree — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel loud-on-purpose gorpcore collab-machine tour-proven heritage new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/realtree-puma/realtree-cloudspun-tech-golf-hoodie-4.jpg" loading="lazy" alt="Realtree &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-fleece-golf-vest-3.jpg" loading="lazy" alt="Realtree &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-helsinki-g-spikeless-golf-shoes-4.jpg" loading="lazy" alt="Realtree &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-avant-tour-spiked-golf-shoes-4.jpg" loading="lazy" alt="Realtree &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-helsinki-g-spikeless-golf-shoes-2.jpg" loading="lazy" alt="Realtree &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/realtree-puma/realtree-helsinki-g-spikeless-golf-shoes-0.jpg" loading="lazy" alt="Realtree &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/realtree"><span class="bi-name">Realtree</span></a>
       <div class="bi-meta">Columbus, GA &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/gorpcore">Gorpcore</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a><a class="bi-attr" href="/brands/attr/heritage">Heritage</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">The camouflage licensor turning forty, now with golf collabs at PUMA and Sun Mountain.</p>
       <a class="bi-more" href="/drops/puma-golf-x-realtree-precision-in-the-wild">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/realtree">All coverage &middot; 4 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/rhoback"><div class="bi-img"><img src="/images/women-founded/rhoback-0.jpg" loading="lazy" alt="Rhoback — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/rhoback-2.jpg" loading="lazy" alt="Rhoback &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/women-founded/rhoback-1.jpg" loading="lazy" alt="Rhoback &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/women-founded/rhoback-3.jpg" loading="lazy" alt="Rhoback &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/rhoback"><span class="bi-name">Rhoback</span></a>
       <div class="bi-meta">Charlottesville, VA &middot; Apparel</div>
+      <div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Performance polos out of UVA's Darden incubator, co-founded by Kristina Loftus.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#rhoback">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/rhoback">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia grips">
-    <a class="bi-imglink" href="/brands/ripit-grips"><div class="bi-img"><img src="/images/grips/hero.jpg" loading="lazy" alt="RIPIT Grips — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia grips loud-on-purpose design-nerd drops-and-vanishes new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/grips/ripit-1.jpg" loading="lazy" alt="RIPIT Grips &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/grips/ripit-0.jpg" loading="lazy" alt="RIPIT Grips &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/grips/ripit-3.jpg" loading="lazy" alt="RIPIT Grips &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/grips/ripit-2.jpg" loading="lazy" alt="RIPIT Grips &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/ripit-grips"><span class="bi-name">RIPIT Grips</span></a>
       <div class="bi-meta">Australia &middot; Grips</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Todd Watts spent three years getting a print to survive the moulding — art-series golf grips with alignment marks at both ends.</p>
       <a class="bi-more" href="/drops/the-niche-grip-report#ripit">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/ripit-grips">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa grips">
-    <a class="bi-imglink" href="/brands/rosemark-grips"><div class="bi-img"><img src="/images/grips/hero.jpg" loading="lazy" alt="Rosemark Grips — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa grips range-rat tour-proven new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/cloud-and-wind/classic-collection.jpg" loading="lazy" alt="Rosemark Grips &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/texas-brands/hero-texas-brands.jpg" loading="lazy" alt="Rosemark Grips &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/custom-wedges/hero.jpg" loading="lazy" alt="Rosemark Grips &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/grips/rosemark-0.jpg" loading="lazy" alt="Rosemark Grips &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/rosemark-grips"><span class="bi-name">Rosemark Grips</span></a>
       <div class="bi-meta">United States &middot; Grips</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/range-rat">Range rat</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Moulded micro-texture putter grips with a tour record to match — more than ten million dollars won, and a Travelers title.</p>
       <a class="bi-more" href="/drops/the-niche-grip-report#rosemark">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/rosemark-grips">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/rouqe-golf"><div class="bi-img"><img src="/images/rouqe/hero.jpg" loading="lazy" alt="Rouqe Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel dad-golf muni-energy drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/rouqe/blue-blade-collar-1.jpg" loading="lazy" alt="Rouqe Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/rouqe/blue-blade-collar-0.jpg" loading="lazy" alt="Rouqe Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/rouqe/blue-blade-collar-3.jpg" loading="lazy" alt="Rouqe Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/rouqe/script-ls-1.jpg" loading="lazy" alt="Rouqe Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/rouqe/burgundy-stripe-1.jpg" loading="lazy" alt="Rouqe Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/rouqe/script-ls-0.jpg" loading="lazy" alt="Rouqe Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/rouqe-golf"><span class="bi-name">Rouqe Golf</span></a>
       <div class="bi-meta">Canada &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/dad-golf">Dad golf</a><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">Mock necks and retro rugby stripes, shot on a dry mountain course. Founder not publicly named.</p>
       <a class="bi-more" href="/drops/brand-to-know-rouqe-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/rouqe-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe apparel">
-    <a class="bi-imglink" href="/brands/royal-albartross"><div class="bi-img"><img src="/images/women-founded/royal-albartross-0.jpg" loading="lazy" alt="Royal Albartross — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe apparel member-guest women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/royal-albartross-0.jpg" loading="lazy" alt="Royal Albartross &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/women-founded/royal-albartross-5.jpg" loading="lazy" alt="Royal Albartross &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/women-founded/royal-albartross-4.jpg" loading="lazy" alt="Royal Albartross &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/women-founded/royal-albartross-3.jpg" loading="lazy" alt="Royal Albartross &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/women-founded/royal-albartross-1.jpg" loading="lazy" alt="Royal Albartross &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/women-founded/royal-albartross-2.jpg" loading="lazy" alt="Royal Albartross &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/royal-albartross"><span class="bi-name">Royal Albartross</span></a>
       <div class="bi-meta">London, England &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/member-guest">Member-guest</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Luxury golf footwear made in Italy and Portugal, founded by designer Alex Bartholomew.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#royal-albartross">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/royal-albartross">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headcovers accessories">
-    <a class="bi-imglink" href="/brands/seamus"><div class="bi-img"><img src="/images/seamus/glacier-driver-0.jpg" loading="lazy" alt="Seamus Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headcovers accessories made-by-hand design-nerd women-founded tour-proven">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/seamus/dude-driver-1.jpg" loading="lazy" alt="Seamus Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/seamus/stogie-driver-3.jpg" loading="lazy" alt="Seamus Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/seamus/hero-pendleton.jpg" loading="lazy" alt="Seamus Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/seamus/glacier-driver-3.jpg" loading="lazy" alt="Seamus Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/seamus/earlst-driver-3.jpg" loading="lazy" alt="Seamus Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/seamus/patriot-driver-3.jpg" loading="lazy" alt="Seamus Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/seamus"><span class="bi-name">Seamus Golf</span></a>
       <div class="bi-meta">Beaverton, OR &middot; Headcovers &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a></div>
       <p class="bi-line">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that covered the 2016 U.S. Ryder Cup team.</p>
       <a class="bi-more" href="/drops/brand-to-know-seamus">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/seamus">All coverage &middot; 17 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa bags">
-    <a class="bi-imglink" href="/brands/sentinel-golf"><div class="bi-img"><img src="/images/sentinel-golf/expedition-hero.jpg" loading="lazy" alt="Sentinel Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa bags gorpcore design-nerd collab-machine drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/sentinel-golf/expedition-1.jpg" loading="lazy" alt="Sentinel Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/sentinel-golf/expedition-2.jpg" loading="lazy" alt="Sentinel Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/sentinel-golf/expedition-3.jpg" loading="lazy" alt="Sentinel Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/sentinel-golf/robotech-dome.jpg" loading="lazy" alt="Sentinel Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/sentinel-golf/kermit-chair.jpg" loading="lazy" alt="Sentinel Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/sentinel-golf/staff-fleece-brown.jpg" loading="lazy" alt="Sentinel Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/sentinel-golf"><span class="bi-name">Sentinel Golf</span></a>
       <div class="bi-meta">Minneapolis, MN &middot; Bags</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/gorpcore">Gorpcore</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">Minneapolis walker bags from $810 — Dyneema, Danish textiles, and no interest in compromise.</p>
       <a class="bi-more" href="/drops/brand-to-know-sentinel-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/sentinel-golf">All coverage &middot; 11 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/siegelman-stable"><div class="bi-img"><img src="/images/siegelman-stable/pullover-jacket.jpg" loading="lazy" alt="Siegelman Stable — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel post-round-friendly collab-machine">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/siegelman-stable/golf-tote.jpg" loading="lazy" alt="Siegelman Stable &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/siegelman-stable/track-shorts-1.jpg" loading="lazy" alt="Siegelman Stable &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/siegelman-stable/headcover-green.jpg" loading="lazy" alt="Siegelman Stable &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/siegelman-stable/dad-hat.jpg" loading="lazy" alt="Siegelman Stable &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/siegelman-stable/maxfli-hat.jpg" loading="lazy" alt="Siegelman Stable &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/siegelman-stable/pullover-jacket.jpg" loading="lazy" alt="Siegelman Stable &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/siegelman-stable"><span class="bi-name">Siegelman Stable</span></a>
       <div class="bi-meta">New York, NY &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/post-round-friendly">Post-round friendly</a><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a></div>
       <p class="bi-line">Max Siegelman's NYC stable — racing-heritage sweats that ended up on tour players and a Maxfli box.</p>
       <a class="bi-more" href="/drops/brand-to-know-siegelman-stable">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/siegelman-stable">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa texas apparel">
-    <a class="bi-imglink" href="/brands/sierra-madre"><div class="bi-img"><img src="/images/texas-brands/sierramadre-0.jpg" loading="lazy" alt="Sierra Madre Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa texas apparel design-nerd women-founded">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/texas-brands/sierramadre-0.jpg" loading="lazy" alt="Sierra Madre Golf &mdash; 1 of 5"></div><div class="bi-slide"><img src="/images/texas-brands/sierramadre-4.jpg" loading="lazy" alt="Sierra Madre Golf &mdash; 2 of 5"></div><div class="bi-slide"><img src="/images/texas-brands/sierramadre-3.jpg" loading="lazy" alt="Sierra Madre Golf &mdash; 3 of 5"></div><div class="bi-slide"><img src="/images/texas-brands/sierramadre-2.jpg" loading="lazy" alt="Sierra Madre Golf &mdash; 4 of 5"></div><div class="bi-slide"><img src="/images/texas-brands/sierramadre-5.jpg" loading="lazy" alt="Sierra Madre Golf &mdash; 5 of 5"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/sierra-madre"><span class="bi-name">Sierra Madre Golf</span></a>
       <div class="bi-meta">Austin, TX &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a></div>
       <p class="bi-line">Women's golf clothes by two women who play — built-in bras, real pockets, a glove loop on the skort.</p>
       <a class="bi-more" href="/drops/texas-golf-brands-and-makers#sierramadre">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/sierra-madre">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe accessories">
-    <a class="bi-imglink" href="/brands/sinking-birdies"><div class="bi-img"><img src="/images/women-founded/sinking-birdies-0.jpg" loading="lazy" alt="Sinking Birdies — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe accessories loud-on-purpose women-founded new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/sinking-birdies-4.jpg" loading="lazy" alt="Sinking Birdies &mdash; 1 of 3"></div><div class="bi-slide"><img src="/images/women-founded/sinking-birdies-5.jpg" loading="lazy" alt="Sinking Birdies &mdash; 2 of 3"></div><div class="bi-slide"><img src="/images/women-founded/sinking-birdies-3.jpg" loading="lazy" alt="Sinking Birdies &mdash; 3 of 3"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/sinking-birdies"><span class="bi-name">Sinking Birdies</span></a>
       <div class="bi-meta">Hampshire, England &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Bold-print Cabretta gloves, towels and covers. Co-founder Christina Rogers verified via Companies House.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#sinking-birdies">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/sinking-birdies">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa grips">
-    <a class="bi-imglink" href="/brands/stick-grips"><div class="bi-img"><img src="/images/grips/hero.jpg" loading="lazy" alt="Stick Grips — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa grips range-rat new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/grips/stick-1.jpg" loading="lazy" alt="Stick Grips &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/grips/stick-0.jpg" loading="lazy" alt="Stick Grips &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/grips/stick-3.jpg" loading="lazy" alt="Stick Grips &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/grips/stick-2.jpg" loading="lazy" alt="Stick Grips &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/stick-grips"><span class="bi-name">Stick Grips</span></a>
       <div class="bi-meta">United States &middot; Grips</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/range-rat">Range rat</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Industrial rubber people who came to golf and changed the taper — the Ascension profile sits both hands at nearly the same diameter.</p>
       <a class="bi-more" href="/drops/the-niche-grip-report#stick">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/stick-grips">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel">
-    <a class="bi-imglink" href="/brands/students-golf"><div class="bi-img"><img src="/images/students-golf-15/brand-hero.jpg" loading="lazy" alt="Students Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel loud-on-purpose">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/students-golf-15/brand-hero.jpg" loading="lazy" alt="Students Golf &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/students-golf-15/calculus-shorts.jpg" loading="lazy" alt="Students Golf &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/students-golf-15/eldorado-headcover.jpg" loading="lazy" alt="Students Golf &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/students-golf-15/heritage-pants.jpg" loading="lazy" alt="Students Golf &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/students-golf-15/leeds-polo.jpg" loading="lazy" alt="Students Golf &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/students-golf-15/jones-short.jpg" loading="lazy" alt="Students Golf &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/students-golf"><span class="bi-name">Students Golf</span></a>
       <div class="bi-meta">USA &middot; Apparel</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a></div>
       <p class="bi-line">Campus-inflected golfwear built on varsity graphics and a deep bench of collabs.</p>
       <a class="bi-more" href="/drops/students-golf-our-15-favorites">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/students-golf">All coverage &middot; 17 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa apparel community">
-    <a class="bi-imglink" href="/brands/sugarloaf-social-club"><div class="bi-img"><img src="/images/ssc-brand/hero-irons.jpg" loading="lazy" alt="Sugarloaf Social Club — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa apparel community collab-machine course-merch drops-and-vanishes">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/ssc-brand/hero-irons.jpg" loading="lazy" alt="Sugarloaf Social Club &mdash; 1 of 1"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/sugarloaf-social-club"><span class="bi-name">Sugarloaf Social Club</span></a>
       <div class="bi-meta">USA &middot; Apparel &middot; Community</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/collab-machine">Collab machine</a><a class="bi-tag" href="/brands/tag/course-merch">Course merch</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/drops-and-vanishes">Drops and vanishes</a></div>
       <p class="bi-line">The group chat that became a brand — Ian Gilley's crew, est. 2011, sailing capsules and hidden gems.</p>
       <a class="bi-more" href="/drops/brand-to-know-sugarloaf-social-club">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/sugarloaf-social-club">All coverage &middot; 24 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa bags accessories">
-    <a class="bi-imglink" href="/brands/sun-mountain"><div class="bi-img"><img src="/images/sun-mountain/hero.jpg" loading="lazy" alt="Sun Mountain — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa bags accessories design-nerd heritage new-to-index">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/sun-mountain/irl-06.jpg" loading="lazy" alt="Sun Mountain &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/sun-mountain/hero.jpg" loading="lazy" alt="Sun Mountain &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/sun-mountain/irl-18.jpg" loading="lazy" alt="Sun Mountain &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/sun-mountain/irl-19.jpg" loading="lazy" alt="Sun Mountain &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/sun-mountain/legacy-leather-stand-bag-0.jpg" loading="lazy" alt="Sun Mountain &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/sun-mountain/legacy-leather-stand-bag-3.jpg" loading="lazy" alt="Sun Mountain &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/sun-mountain"><span class="bi-name">Sun Mountain</span></a>
       <div class="bi-meta">Missoula, MT &middot; Bags &middot; Accessories</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/heritage">Heritage</a><a class="bi-attr" href="/brands/attr/new-to-index">New to the index</a></div>
       <p class="bi-line">Invented the modern stand bag in 1986 and the folding push cart in 1999; still assembles its bags in Montana.</p>
       <a class="bi-more" href="/drops/brand-to-know-sun-mountain">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/sun-mountain">All coverage &middot; 4 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="europe equipment">
-    <a class="bi-imglink" href="/brands/takomo-golf"><div class="bi-img"><img src="/images/takomo-golf/brand-hero.jpg" loading="lazy" alt="Takomo Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="europe equipment range-rat tour-proven">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/takomo-golf/brand-hero.jpg" loading="lazy" alt="Takomo Golf &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/takomo-golf/iron-201t-mkii.jpg" loading="lazy" alt="Takomo Golf &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/takomo-golf/skyforger-wedge.jpg" loading="lazy" alt="Takomo Golf &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/takomo-golf/iron-101-mkii.jpg" loading="lazy" alt="Takomo Golf &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/takomo-golf"><span class="bi-name">Takomo Golf</span></a>
       <div class="bi-meta">Turku, Finland &middot; Clubs</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/range-rat">Range rat</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/tour-proven">Tour-proven</a></div>
       <p class="bi-line">Finnish direct-to-consumer irons, est. 2021 — tour-quality forgings at half the shop price.</p>
       <a class="bi-more" href="/drops/brand-to-know-takomo-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/takomo-golf">All coverage &middot; 3 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia accessories headcovers">
-    <a class="bi-imglink" href="/brands/twentyfour-golf"><div class="bi-img"><img src="/images/twentyfour-golf/brand-hero.jpg" loading="lazy" alt="TwentyFour Golf — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia accessories headcovers muni-energy">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/twentyfour-golf/motion-polo-green-a2.jpg" loading="lazy" alt="TwentyFour Golf &mdash; 1 of 5"></div><div class="bi-slide"><img src="/images/twentyfour-golf/brand-hero.jpg" loading="lazy" alt="TwentyFour Golf &mdash; 2 of 5"></div><div class="bi-slide"><img src="/images/twentyfour-golf/new-dbyc-cap-black-a4.jpg" loading="lazy" alt="TwentyFour Golf &mdash; 3 of 5"></div><div class="bi-slide"><img src="/images/twentyfour-golf/motion-polo-navy-a2.jpg" loading="lazy" alt="TwentyFour Golf &mdash; 4 of 5"></div><div class="bi-slide"><img src="/images/twentyfour-golf/new-dbyc-cap-black-a3.jpg" loading="lazy" alt="TwentyFour Golf &mdash; 5 of 5"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/twentyfour-golf"><span class="bi-name">TwentyFour Golf</span></a>
       <div class="bi-meta">East Coast, Australia &middot; Accessories &middot; Headcovers</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/muni-energy">Muni energy</a></div>
       <p class="bi-line">Small-batch Australian covers and accessories, twelve pieces at a time.</p>
       <a class="bi-more" href="/drops/brand-to-know-twentyfour-golf">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/twentyfour-golf">All coverage &middot; 1 post &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="australia apparel headwear">
-    <a class="bi-imglink" href="/brands/walker-golf-things"><div class="bi-img"><img src="/images/walker-blooming-grounds/hero-blooming-grounds.jpg" loading="lazy" alt="Walker Golf Things — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="australia apparel headwear loud-on-purpose design-nerd">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/walker-blooming-grounds/blooming-grounds-t-shirt-3-1.jpg" loading="lazy" alt="Walker Golf Things &mdash; 1 of 6"></div><div class="bi-slide"><img src="/images/walker-blooming-grounds/blooming-grounds-t-shirt-3-4.jpg" loading="lazy" alt="Walker Golf Things &mdash; 2 of 6"></div><div class="bi-slide"><img src="/images/walker-blooming-grounds/blooming-grounds-knit-polo-1-1.jpg" loading="lazy" alt="Walker Golf Things &mdash; 3 of 6"></div><div class="bi-slide"><img src="/images/walker-blooming-grounds/blooming-grounds-knit-polo-1-3.jpg" loading="lazy" alt="Walker Golf Things &mdash; 4 of 6"></div><div class="bi-slide"><img src="/images/walker-blooming-grounds/blooming-grounds-knit-polo-1-4.jpg" loading="lazy" alt="Walker Golf Things &mdash; 5 of 6"></div><div class="bi-slide"><img src="/images/walker-blooming-grounds/gardener-ss-shirt-5-3.jpg" loading="lazy" alt="Walker Golf Things &mdash; 6 of 6"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/walker-golf-things"><span class="bi-name">Walker Golf Things</span></a>
       <div class="bi-meta">Gold Coast, Australia &middot; Apparel &middot; Headwear</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/loud-on-purpose">Loud on purpose</a><a class="bi-tag" href="/brands/tag/design-nerd">Design nerd</a></div>
       <p class="bi-line">Pro skater Jack Fardell's label — named after Nicklaus, collabs with adidas, Wahine and Coopers.</p>
       <a class="bi-more" href="/drops/walker-golf-blooming-grounds-drop">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/walker-golf-things">All coverage &middot; 8 posts &rarr;</a>
     </div>
   </div>
-  <div class="bi-card" data-tags="usa headcovers">
-    <a class="bi-imglink" href="/brands/zaleas-golf"><div class="bi-img"><img src="/images/women-founded/zaleas-0.jpg" loading="lazy" alt="Zalea&#x27;s Golf Co. — independent golf brand"></div></a>
+  <div class="bi-card" data-tags="usa headcovers made-by-hand women-founded">
+    <div class="bi-img"><div class="bi-gal" tabindex="0"><div class="bi-slide"><img src="/images/women-founded/zaleas-5.jpg" loading="lazy" alt="Zalea&#x27;s Golf Co. &mdash; 1 of 4"></div><div class="bi-slide"><img src="/images/women-founded/zaleas-1.jpg" loading="lazy" alt="Zalea&#x27;s Golf Co. &mdash; 2 of 4"></div><div class="bi-slide"><img src="/images/women-founded/zaleas-4.jpg" loading="lazy" alt="Zalea&#x27;s Golf Co. &mdash; 3 of 4"></div><div class="bi-slide"><img src="/images/women-founded/zaleas-0.jpg" loading="lazy" alt="Zalea&#x27;s Golf Co. &mdash; 4 of 4"></div></div></div>
     <div class="bi-body">
       <a class="bi-namelink" href="/brands/zaleas-golf"><span class="bi-name">Zalea&#x27;s Golf Co.</span></a>
       <div class="bi-meta">Palm Desert, CA &middot; Headcovers</div>
+      <div class="bi-tags"><a class="bi-tag" href="/brands/tag/made-by-hand">Made by hand</a></div><div class="bi-attrs"><a class="bi-attr" href="/brands/attr/women-founded">Women-founded</a></div>
       <p class="bi-line">Zoe Walker-Faure's hand-sewn headcovers, started in a college dorm with her mother and grandmother.</p>
       <a class="bi-more" href="/drops/golf-brands-founded-by-women#zaleas">Read the profile &rarr;</a>
       <a class="bi-covlink" href="/brands/zaleas-golf">All coverage &middot; 1 post &rarr;</a>

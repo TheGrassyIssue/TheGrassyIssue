@@ -53,6 +53,25 @@ CATS = [("apparel","Apparel"),("equipment","Clubs"),("bags","Bags"),
 REGIONS = [("usa","USA"),("texas","Texas"),("australia","Australia"),
            ("japan","Japan"),("europe","Europe"),("world","Elsewhere")]
 CATL = dict(CATS); REGL = dict(REGIONS)
+
+# Lifestyle-first gallery frames, chosen by the ranker in tools (see reference memory).
+# Falls back to the single resolved thumbnail when a brand has no scored frames.
+GAL = json.load(open(os.path.join(ROOT, "data", "brand-gallery.json"), encoding="utf-8")) \
+      if os.path.exists(os.path.join(ROOT, "data", "brand-gallery.json")) else {}
+
+TAGS = [("muni-energy","Muni energy"),("design-nerd","Design nerd"),
+        ("quiet-luxury","Quiet luxury"),("loud-on-purpose","Loud on purpose"),
+        ("dad-golf","Dad golf"),("gorpcore","Gorpcore"),
+        ("post-round-friendly","Post-round friendly"),("made-by-hand","Made by hand")]
+TAGS += [("collab-machine","Collab machine"),("course-merch","Course merch"),
+         ("member-guest","Member-guest"),("range-rat","Range rat")]
+TAGL = dict(TAGS)
+
+# Attributes are facts, not judgements — separate row, separate pill group.
+ATTRS = [("women-founded","Women-founded"),("tour-proven","Tour-proven"),
+         ("heritage","Heritage"),("drops-and-vanishes","Drops and vanishes"),
+         ("new-to-index","New to the index")]
+ATTRL = dict(ATTRS)
 import datetime as _dt
 UPD = _dt.date.today().strftime("%-d %b %Y")  # auto-stamp, was hardcoded to 25 Aug 2026
 
@@ -61,21 +80,36 @@ missing_img = []
 for b in sorted(BRANDS, key=lambda x: x["name"].lower()):
     img = resolve_img(b)
     if not img: missing_img.append(b["slug"])
-    tags = " ".join(b["regions"] + b["cats"])
+    tags = " ".join(b["regions"] + b["cats"] + b.get("tags", []) + b.get("attrs", []))
     chip = REGL.get(b["regions"][-1] if "texas" in b["regions"] else b["regions"][0], "")
     loc = H.escape(b["loc"]) if b["loc"] != "—" else ""
     cats_txt = " &middot; ".join(CATL[c] for c in b["cats"])
-    imgtag = (f'<img src="{img}" loading="lazy" alt="{H.escape(b["name"])} — independent golf brand">'
-              if img else '<div class="bi-noimg"></div>')
+    frames = (GAL.get(b["slug"], {}) or {}).get("frames") or ([img] if img else [])
+    frames = ["/" + f.lstrip("/") for f in frames][:6]
+    if frames:
+        slides = "".join(
+            f'<div class="bi-slide"><img src="{f}" loading="lazy" '
+            f'alt="{H.escape(b["name"])} &mdash; {i+1} of {len(frames)}"></div>'
+            for i, f in enumerate(frames))
+        imgtag = f'<div class="bi-gal" tabindex="0">{slides}</div>'
+    else:
+        imgtag = '<div class="bi-noimg"></div>'
     men = MENTIONS.get(b["slug"], [])
     bp = f'/brands/{b["slug"]}'
     cov = (f'<a class="bi-covlink" href="{bp}">All coverage &middot; {len(men)} post{"s" if len(men)!=1 else ""} &rarr;</a>'
            if men else "")
+    chips = "".join(f'<a class="bi-tag" href="/brands/tag/{t}">{TAGL[t]}</a>'
+                    for t in b.get("tags", []) if t in TAGL)
+    chips = f'<div class="bi-tags">{chips}</div>' if chips else ""
+    ats = "".join(f'<a class="bi-attr" href="/brands/attr/{a}">{ATTRL[a]}</a>'
+                  for a in b.get("attrs", []) if a in ATTRL)
+    chips += f'<div class="bi-attrs">{ats}</div>' if ats else ""
     cards.append(f'''  <div class="bi-card" data-tags="{tags}">
-    <a class="bi-imglink" href="{bp if men else b["url"]}"><div class="bi-img">{imgtag}</div></a>
+    <div class="bi-img">{imgtag}</div>
     <div class="bi-body">
       <a class="bi-namelink" href="{bp if men else b["url"]}"><span class="bi-name">{H.escape(b["name"])}</span></a>
       <div class="bi-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
+      {chips}
       <p class="bi-line">{b["line"]}</p>
       <a class="bi-more" href="{b["url"]}">Read the profile &rarr;</a>
       {cov}
@@ -83,6 +117,8 @@ for b in sorted(BRANDS, key=lambda x: x["name"].lower()):
   </div>''')
 
 pills = ['<button class="bi-pill on" data-f="all">All</button>']
+pills += [f'<button class="bi-pill bi-pill-taste" data-f="{k}">{v}</button>' for k, v in TAGS]
+pills += [f'<button class="bi-pill bi-pill-attr" data-f="{k}">{v}</button>' for k, v in ATTRS]
 pills += [f'<button class="bi-pill" data-f="{k}">{v}</button>' for k, v in CATS if k != "community"]
 pills += [f'<button class="bi-pill" data-f="{k}">{v}</button>' for k, v in REGIONS if k != "world"]
 
@@ -155,8 +191,28 @@ background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;p
 .bi-card{{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}}
 .bi-imglink,.bi-namelink{{color:inherit;text-decoration:none;}}
 .bi-card:hover{{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}}
-.bi-img{{aspect-ratio:4/3;overflow:hidden;background:#eceae2;}}
+.bi-img{{aspect-ratio:4/3;overflow:hidden;background:#eceae2;position:relative;}}
 .bi-img img{{width:100%;height:100%;object-fit:cover;display:block;}}
+.bi-gal{{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;
+  scrollbar-width:none;-ms-overflow-style:none;}}
+.bi-gal::-webkit-scrollbar{{display:none;}}
+.bi-slide{{flex:0 0 100%;scroll-snap-align:start;height:100%;}}
+.bi-slide img{{width:100%;height:100%;object-fit:cover;display:block;}}
+.bi-gal:focus-visible{{outline:2px solid var(--grass);outline-offset:-2px;}}
+.bi-tags{{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 8px;}}
+.bi-tag{{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid rgba(61,107,53,.35);color:#3d6b35;background:rgba(61,107,53,.06);
+  padding:3px 7px;border-radius:3px;text-decoration:none;white-space:nowrap;}}
+.bi-tag:hover{{background:#3d6b35;color:#fff;border-color:#3d6b35;}}
+.bi-attrs{{display:flex;flex-wrap:wrap;gap:5px;margin:0 0 8px;}}
+.bi-attr{{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid rgba(20,20,20,.22);color:#4a4a44;background:transparent;
+  padding:3px 7px;border-radius:3px;text-decoration:none;white-space:nowrap;}}
+.bi-attr:hover{{background:var(--ink);color:var(--paper);border-color:var(--ink);}}
+.bi-pill-attr{{border-style:dashed;}}
+.bi-pill-attr.on{{background:var(--ink);color:var(--paper);border-style:solid;}}
+.bi-pill-taste{{border-color:rgba(61,107,53,.45);color:#3d6b35;}}
+.bi-pill-taste.on{{background:#3d6b35;border-color:#3d6b35;color:#fff;}}
 .bi-noimg{{width:100%;height:100%;background:repeating-linear-gradient(45deg,#eceae2,#eceae2 10px,#e4e1d7 10px,#e4e1d7 20px);}}
 .bi-body{{padding:16px 16px 18px;display:flex;flex-direction:column;gap:7px;flex:1;}}
 .bi-name{{font-family:var(--serif);font-weight:600;font-size:19px;letter-spacing:-.01em;}}
@@ -368,3 +424,159 @@ for b in BRANDS:
     open(os.path.join(ROOT, "brands", b["slug"] + ".html"), "w", encoding="utf-8").write(html_out)
     npages += 1
 print(f"wrote {npages} per-brand coverage pages in /brands/")
+
+# ------------------------------------------------- taste-tag pages
+# One page per tag at /brands/tag/<slug>. These, not the index, are the linkable
+# assets — "the eleven brands doing Muni energy" is something people cite; a
+# directory is not. Criteria are printed on the page so the tag is checkable.
+TAG_COPY = {
+ "muni-energy": ("Muni energy",
+   "Gear made for public golf &mdash; unpretentious, priced so a weekly player can buy it, and often tied to a specific course or local cause.",
+   "Core apparel under about $120, or an explicit public-course or community affiliation. No country-club signalling."),
+ "design-nerd": ("Design nerd",
+   "Brands where the reason to buy is a design decision rather than a logo, and which will tell you what that decision was.",
+   "The brand explains construction or design rationale on its own product pages, and the work reads as considered to someone outside golf."),
+ "quiet-luxury": ("Quiet luxury",
+   "Expensive and undecorated. The money goes into the material, not the branding.",
+   "Core piece above about $150, branding limited to a woven label or small mark, premium natural or technical materials."),
+ "loud-on-purpose": ("Loud on purpose",
+   "Print, colour and graphics are the product, not a finish applied to it afterwards.",
+   "All-over prints, bold colourways, or graphics as the primary design element across the range rather than on one capsule."),
+ "dad-golf": ("Dad golf",
+   "Deliberately traditional, and not ironic about it.",
+   "References pre-1990 golf clothing &mdash; four-button plackets, pleats, natural fibres, fuller cuts. No athleisure silhouettes."),
+ "gorpcore": ("Gorpcore",
+   "Outdoor and technical crossover, usually with a real lineage outside golf.",
+   "Technical shells, ripstop, utility hardware, or a genuine hiking, climbing or workwear history."),
+ "post-round-friendly": ("Post-round friendly",
+   "Reads as normal clothes the moment you leave the course.",
+   "No visible golf branding on the core range, and silhouettes that work in a bar without explanation."),
+ "collab-machine": ("Collab machine",
+   "Brands whose identity is built on who they work with rather than on their own line.",
+   "Collaborations make up a substantial share of the catalogue, or the brand is better known for its partnerships than for what it makes alone."),
+ "course-merch": ("Course merch",
+   "Tied to a specific course or club &mdash; sometimes a real one, sometimes not.",
+   "The range references a named course, club or municipal facility, or the brand exists to sell an invented club&rsquo;s merchandise."),
+ "member-guest": ("Member-guest",
+   "The dressed-up end of the index. What you wear when the round actually matters.",
+   "The range is cut for an occasion rather than a practice session &mdash; collared, tailored, coordinated. Distinct from Quiet luxury, which is about restraint and price rather than occasion."),
+ "range-rat": ("Range rat",
+   "Built for practice and repetition rather than for the photograph.",
+   "Hard-wearing, technical or deliberately cheap, and sold on durability or function rather than on how it looks in a lookbook."),
+ "made-by-hand": ("Made by hand",
+   "Small-batch or hand-finished by a named person.",
+   "Hand-cut, hand-sewn, hand-knit, hand-stamped or made to order, by a maker the brand will name."),
+}
+
+EMDASH = "\u2014"
+
+
+def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
+    """Clone a generated brand page and swap its body — reuses the real head,
+    nav, CSS and footer rather than duplicating them here."""
+    tpl_brand = next(b for b in BRANDS if MENTIONS.get(b["slug"]))
+    tpl = brand_page(tpl_brand)
+
+    members = [b for b in sorted(BRANDS, key=lambda x: x["name"].lower()) if tag in b.get(key, [])]
+    tiles = []
+    for b in members:
+        frames = (GAL.get(b["slug"], {}) or {}).get("frames") or []
+        f = "/" + frames[0].lstrip("/") if frames else (resolve_img(b) or "")
+        men = MENTIONS.get(b["slug"], [])
+        href = f'/brands/{b["slug"]}' if men else b["url"]
+        thumb = (f'<div class="bp-thumb"><img src="{f}" loading="lazy" alt="{H.escape(b["name"])}"></div>'
+                 if f else '<div class="bp-thumb bp-nothumb"></div>')
+        others = "".join(f'<a class="bi-tag" href="/brands/tag/{t}">{TAGL[t]}</a>'
+                         for t in b.get("tags", []) if t != tag and t in TAGL)
+        locx = H.escape(b["loc"]) if b["loc"] != EMDASH else ""
+        tagbar = '<div class="bi-tags">' + others + '</div>' if others else ""
+        tiles.append(
+            '  <a class="bp-card" href="' + href + '">\n    ' + thumb +
+            '\n    <div class="bp-body">\n      <div class="bp-cat">' + locx +
+            '</div>\n      <div class="bp-title">' + H.escape(b["name"]) +
+            '</div>\n      <p class="bp-line">' + b["line"] + '</p>\n      ' +
+            tagbar + '\n    </div>\n  </a>')
+
+    desc = re.sub(r"&[a-z]+;", " ", blurb)
+    ld = json.dumps({"@context":"https://schema.org","@type":"CollectionPage",
+      "name": f"{label} \u2014 golf brands | The Grassy Issue", "description": desc,
+      "url": f"https://thegrassyissue.com/brands/{base}/{tag}",
+      "mainEntity":{"@type":"ItemList","numberOfItems":len(members),
+        "itemListElement":[{"@type":"ListItem","position":i+1,"name":b["name"],
+          "url":"https://thegrassyissue.com"+b["url"]} for i,b in enumerate(members)]}},
+      ensure_ascii=False)
+
+    out = tpl
+    out = re.sub(r"<title>.*?</title>", f"<title>{label} &mdash; Golf Brands | The Grassy Issue</title>", out, 1, re.S)
+    out = re.sub(r'<meta name="description" content=".*?">',
+                 f'<meta name="description" content="{desc} {len(members)} independent golf brands tagged {label}.">', out, 1, re.S)
+    out = re.sub(r'<link rel="canonical" href=".*?">',
+                 f'<link rel="canonical" href="https://thegrassyissue.com/brands/{base}/{tag}">', out, 1, re.S)
+    out = re.sub(r'<meta property="og:url" content=".*?">',
+                 f'<meta property="og:url" content="https://thegrassyissue.com/brands/{base}/{tag}">', out, 1, re.S)
+    out = re.sub(r'<meta property="og:title" content=".*?">',
+                 f'<meta property="og:title" content="{label} &mdash; Golf Brands">', out, 1, re.S)
+    out = re.sub(r'<script type="application/ld\+json">.*?</script>',
+                 f'<script type="application/ld+json">{ld}</script>', out, 1, re.S)
+    out = out.replace("</style>", """
+.tg-crit{background:rgba(61,107,53,.06);border-left:3px solid #3d6b35;padding:14px 18px;margin:0 0 28px;}
+.tg-crit b{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#3d6b35;display:block;margin-bottom:5px;}
+.tg-crit p{margin:0;font-size:14.5px;line-height:1.6;}
+.bi-tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.bi-tag{font-family:var(--mono);font-size:9.5px;letter-spacing:.07em;text-transform:uppercase;
+  border:1px solid rgba(61,107,53,.35);color:#3d6b35;background:rgba(61,107,53,.06);
+  padding:3px 7px;border-radius:3px;text-decoration:none;white-space:nowrap;}
+</style>""", 1)
+
+    body = f'''  <div class="bp-crumb"><a href="/">Feed</a> <span>/</span> <a href="/brands/">Brands</a> <span>/</span> {label}</div>
+  <header class="bp-head">
+    <span class="bp-kicker">[ " + ("Taste tag" if base=="tag" else "Attribute") + " ]</span>
+    <h1>{label}</h1>
+    <p class="bp-intro">{blurb}</p>
+  </header>
+  <div class="tg-crit"><b>What earns this tag</b><p>{criteria}</p></div>
+  <div class="bp-grid">
+{chr(10).join(tiles)}
+  </div>
+  <p class="bp-foot"><a href="/brands/">&larr; Back to the Brand Index</a></p>
+'''
+    out = re.sub(r"(<main[^>]*>).*?(</main>)", lambda m: m.group(1) + "\n" + body + m.group(2), out, 1, re.S)
+    return out
+
+os.makedirs(os.path.join(ROOT, "brands", "tag"), exist_ok=True)
+ntag = 0
+for tag, (label, blurb, criteria) in TAG_COPY.items():
+    if not any(tag in b.get("tags", []) for b in BRANDS):
+        continue
+    open(os.path.join(ROOT, "brands", "tag", tag + ".html"), "w", encoding="utf-8").write(
+        tag_page(tag, label, blurb, criteria))
+    ntag += 1
+print(f"wrote {ntag} taste-tag pages in /brands/tag/")
+
+ATTR_COPY = {
+ "women-founded": ("Women-founded",
+   "Brands founded or co-founded by a woman.",
+   "A named woman is credited as founder or co-founder by the brand or by a published source."),
+ "tour-proven": ("Tour-proven",
+   "Gear with real use in professional competition, not just a sponsorship deal.",
+   "A named player used the product in a named event, or the brand publishes a verifiable tour record. Sponsorship alone does not count."),
+ "heritage": ("Heritage",
+   "Brands that were making this before most of the field existed.",
+   "A founding year earlier than 2000, stated by the brand."),
+ "drops-and-vanishes": ("Drops and vanishes",
+   "Short runs, no reliable restock. Buy it when you see it.",
+   "The brand states a limited-run or periodic-release model, or its catalogue is mostly sold out at any given time."),
+ "new-to-index": ("New to the index",
+   "Brands added to the Brand Index in the last ninety days.",
+   "Computed from the date a brand first entered the index, not editorially assigned."),
+}
+
+os.makedirs(os.path.join(ROOT, "brands", "attr"), exist_ok=True)
+nattr = 0
+for a, (label, blurb, criteria) in ATTR_COPY.items():
+    if not any(a in b.get("attrs", []) for b in BRANDS):
+        continue
+    page = tag_page(a, label, blurb, criteria, key="attrs", base="attr")
+    open(os.path.join(ROOT, "brands", "attr", a + ".html"), "w", encoding="utf-8").write(page)
+    nattr += 1
+print(f"wrote {nattr} attribute pages in /brands/attr/")
