@@ -230,27 +230,29 @@ art_ld = json.dumps({"@context":"https://schema.org","@type":"Article","headline
 
 WRITEUP = '''<div class="writeup">
   <div class="writeup-body">
-    <p>Start with the thing that kept happening while we reported this out. Seamus Golf was
-    founded by Megan and Akbar Chisti. Megan was the trained designer, she rebuilt the headcover
-    that started the company, and she still sews product &mdash; and there is not a single
-    published quote from her anywhere. Bluetross was founded by Gail and Marc Hanson. The first
-    prototypes came off Gail&rsquo;s inherited sewing machine. The biggest feature ever written
-    about the company is headlined &ldquo;the unlikely story of a man who quit his job to make
-    leather headcovers,&rdquo; and she appears in it twice, once as the source of the machine.</p>
-    <p>Neither brand is hiding anything. Both credit her plainly on their own About page. The
-    voice just defaults to him.</p>
-    <p>So this is seventeen golf brands founded or co-founded by women, filtered to the ones
-    making things men actually buy &mdash; headcovers, leather, bags, gloves, towels, socks,
-    polos, shoes. That filter turned out to be the hard part. Almost every women-founded golf
-    brand makes women&rsquo;s apparel and nothing else, and almost every independent brand
-    making unisex hard goods was founded by men. The overlap is thin, and finding it meant
-    checking dozens of names one at a time.</p>
-    <p>The rule was: name the woman, cite where we found her, and confirm the store still has
-    stock in it. Where someone co-founded with a husband or a mother, we say so rather than
-    rounding up. One brand was cut outright because the only place a woman is called co-founder
-    is a photo caption in a hometown newspaper. One is included with a caveat printed on it.
-    The oldest has been hand-knitting since 1962 and once dressed a Ryder Cup team; the newest
-    started at a kitchen counter last year.</p>
+    <p>In 1962, on a rural route outside Cincinnati, a golfer called Jan Craig could not find
+    headcovers she liked for a new set of clubs, so she knitted her own. Jack Nicklaus ordered a
+    set within a few years. Tom Watson carried them. So did multiple Ryder Cup teams. The company
+    still hand-knits every cover to order, and the only design change in six decades was adding
+    elastic inside the driver.</p>
+    <p>Seventeen years later, a mother and daughter in Phoenix invented the animal headcover. One
+    of theirs ended up on Tiger Woods&rsquo; driver at the 1997 Masters, Nike licensed the
+    character, and the business grew four hundred per cent in a quarter.</p>
+    <p>Both of those are women-founded golf companies, and neither is a novelty. That is the post:
+    seventeen brands founded or co-founded by women, filtered to the ones making things men
+    actually buy &mdash; headcovers, leather, bags, gloves, towels, socks, polos, shoes. The filter
+    is what made it hard. Almost every women-founded golf brand makes women&rsquo;s apparel and
+    nothing else, and almost every independent brand making unisex hard goods was founded by men.
+    The overlap is thin enough that finding it meant checking dozens of names one at a time.</p>
+    <p>One thing kept surfacing while we did. Megan Chisti co-founded Seamus, trained as the
+    designer, rebuilt the headcover that started the company and still sews product &mdash; and
+    there is no published quote from her anywhere. Gail Hanson co-founded Bluetross, and the first
+    prototypes came off her inherited sewing machine; the biggest feature ever written about the
+    company is headlined &ldquo;the unlikely story of a man who quit his job to make leather
+    headcovers.&rdquo; Neither brand is hiding anything &mdash; both credit her plainly on their
+    own About page. The voice just defaults to him. So the rule here was to name the woman, cite
+    where we found her, and say plainly when she co-founded with a husband or a mother rather than
+    rounding up.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">

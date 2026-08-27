@@ -31,7 +31,7 @@ def resolve_img(b):
     url = b["url"]
     if "#" in url:                                  # anchor brands -> lead frame
         frag = url.split("#")[1]
-        for d in ["texas-brands", "aussie", "left-of-field", "midiron", "walker-blooming-grounds"]:
+        for d in ["texas-brands", "aussie", "left-of-field", "midiron", "walker-blooming-grounds", "women-founded", "all-black"]:
             base = {"lof": "xelements-polo-0-0", "midiron": "detour-stripe-polo-5",
                     "walker": "blooming-grounds-knit-polo-1-0"}.get(frag, frag + "-0")
             # sierra madre lead frame is -2 after the tennis cut; try -0.. -2
@@ -53,6 +53,8 @@ CATS = [("apparel","Apparel"),("equipment","Clubs"),("bags","Bags"),
 REGIONS = [("usa","USA"),("texas","Texas"),("australia","Australia"),
            ("japan","Japan"),("europe","Europe"),("world","Elsewhere")]
 CATL = dict(CATS); REGL = dict(REGIONS)
+import datetime as _dt
+UPD = _dt.date.today().strftime("%-d %b %Y")  # auto-stamp, was hardcoded to 25 Aug 2026
 
 cards = []
 missing_img = []
@@ -202,7 +204,7 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
   headcovers and the occasional oddity &mdash; from Texas to Tasmania to Tokyo. Every brand here
   has been researched, photographed and written up by The Grassy Issue, curated from Austin.
   Each card links to our full coverage. <em>The index grows every week.</em></p>
-  <div class="bi-count"><span id="bi-showing">{N}</span> of {N} brands &middot; Updated 25 Aug 2026</div>
+  <div class="bi-count"><span id="bi-showing">{N}</span> of {N} brands &middot; Updated {UPD}</div>
 </header>
 
 <div class="bi-filters" role="tablist" aria-label="Filter brands">
