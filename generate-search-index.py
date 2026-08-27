@@ -7,7 +7,8 @@ SITE = os.path.dirname(os.path.abspath(__file__))
 def extract(path, url):
     h = open(path, encoding="utf-8", errors="ignore").read()
     t = re.search(r"<title>([^<]*)</title>", h)
-    title = html.unescape(t.group(1)).replace(" — The Grassy Issue", "").strip() if t else url
+    # strip the site suffix in either separator style ( — or | ) — 10 posts use the pipe
+    title = re.sub(r"\s*[—|]\s*The Grassy Issue\s*$", "", html.unescape(t.group(1))).strip() if t else url
     d = re.search(r'<meta name="description" content="([^"]*)"', h)
     desc = html.unescape(d.group(1)).strip() if d else ""
     tag = re.search(r'<span class="drop-tag[^"]*">\[([^\]]+)\]</span>', h)
