@@ -220,3 +220,11 @@ page = head + '<section class="products">\n' + products + '\n<div class="faq">\n
 open(OUT, "w", encoding="utf-8").write(page)
 words = len(re.sub(r'<[^>]+>',' ',page).split())
 print(f"wrote {OUT} ({len(page):,} bytes, ~{words:,} words)")
+
+# --- house voice guard -------------------------------------------------------
+# Card copy and section kickers are owned by data/copy-deck.json, not by this
+# script (see VOICE.md). Re-applying the deck here means a rebuild can never
+# silently restore the pre-2026-08-27 copy. Safe to run repeatedly.
+import subprocess as _sp, os as _os
+_sp.run(["python3", _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "copy-deck.py"),
+         "apply"], check=False)

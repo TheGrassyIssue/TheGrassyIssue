@@ -332,3 +332,11 @@ page = page[:last] + '<script type="application/ld+json">%s</script>' % faq + pa
 open(OUT, "w", encoding="utf-8").write(page)
 print("wrote", OUT, len(page), "bytes")
 print("cards:", page.count('<div class="product-card'), " grids:", page.count('<div class="products-grid">'))
+
+# --- house voice guard -------------------------------------------------------
+# Card copy and section kickers are owned by data/copy-deck.json, not by this
+# script (see VOICE.md). Re-applying the deck here means a rebuild can never
+# silently restore the pre-2026-08-27 copy. Safe to run repeatedly.
+import subprocess as _sp, os as _os
+_sp.run(["python3", _os.path.join(_os.path.dirname(_os.path.abspath(__file__)), "copy-deck.py"),
+         "apply"], check=False)
