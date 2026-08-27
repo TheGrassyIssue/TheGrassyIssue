@@ -45,7 +45,8 @@ interrupts interrupt hangs hang hung holds hold held stays stay stayed sends sen
 brings bring brought turns turn turned starts start started opens open opened closes close
 covers cover covered runs ran begins begin began stands stand stood knows know knew
 prices price priced charges charge charged milled mills mill built builds cuts cut
-photographs photograph reads reading arrives arrive arrived""".split())
+photographs photograph reads reading arrives arrive arrived explains explain explained
+treat treats treated change changes changed decide decides decided ships wants want""".split())
 
 
 def sentences(t):
