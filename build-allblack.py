@@ -24,10 +24,13 @@ IMAGE RULES (Lenny, 2026-08-27):
   clint-orms, devant, duca-del-cosma, jones, malbon, piretti, seamus,
   sun-mountain. Small leather goods and headcovers never get lifestyle shoots.
 
-SUN MOUNTAIN: originally the Legacy Leather Stand Bag ($1,200). Swapped on
-Lenny's call because Sun Mountain publishes zero staged photography for it —
-all twelve images are studio packshots. Replaced with the Matchplay Ballistic
-14-way in Black ($435).
+SUN MOUNTAIN: CUT ENTIRELY (2026-08-27). Tried the Legacy Leather Stand Bag,
+then the Matchplay Ballistic 14-way. Both fail the no-busy-background rule at
+source: Sun Mountain shoots its black bags against a corrugated-metal backdrop
+with hard black bands running through frame. Cropping to the light region left
+band remnants; cropping to the bag's bounding box could not separate them
+because the bands overlap the product. There is no clean black Sun Mountain
+image to use. Jones Sports Co covers the bag slot.
 
 METALWOOD: Lenny specifically asked for the QUARTER ZIP JERSEY POLO. It has a
 white collar and cuffs, the only contrast trim in the post. Kept on his call.
@@ -57,7 +60,7 @@ SLUG = "the-all-black-edit"
 OUT  = os.path.join(ROOT, "drops", SLUG + ".html")
 TITLE = "The All-Black Edit"
 TITLE_TXT = "The All-Black Edit"
-DESC = ("Twenty genuinely all-black golf pieces, one per brand, head to toe — Manors trousers, "
+DESC = ("Nineteen genuinely all-black golf pieces, one per brand, head to toe — Manors trousers, "
         "Metalwood, Odd Ritual, a blacked-out stand bag, Italian shoes and the only black sock "
         "in independent golf. Charcoal need not apply.")
 
@@ -144,10 +147,6 @@ FEET = [
 ]
 
 KIT = [
- ("sun-mountain", "Sun Mountain", "Stand bag &middot; $435",
-  "Matchplay Ballistic 14-Way",
-  "Fourteen-way top, ballistic nylon, quilted panels, and no contrast trim anywhere &mdash; which is rarer in bags than it should be. Most blacked-out bags are ruined by a red zip pull or a silver logo plate. This one just commits.",
-  "https://www.sunmountain.com/products/matchplay-ballistic-14-way-stand-bag"),
  ("jones", "Jones Sports Co", "Sunday bag &middot; $175",
   "Original Bomber, Black Vinyl",
   "Unstructured, no legs, no cart strap, nothing. Solid black vinyl with no panelling. Jones has been making this shape since 1971 and the black one is the version that disappears entirely behind whatever you are wearing.",
@@ -189,9 +188,9 @@ products = (
  + section("feet", "The Feet", "Two &middot; shoes and socks",
    "A short section, and not for lack of looking. Golf makes almost nothing black from the ankle down "
    "without a contrast sole or a cream stripe.", FEET)
- + section("kit", "The Kit", "Four &middot; bags, cover, belt",
-   "The hardware. Blacked-out bags are usually let down by one red zip pull, and blacked-out leather is "
-   "usually just very dark brown, so this section took the longest to fill.", KIT)
+ + section("kit", "The Kit", "Three &middot; bag, cover, belt",
+   "The hardware, and the section that took the longest to fill. Blacked-out bags are usually let down by "
+   "one red zip pull, and blacked-out leather is usually just very dark brown.", KIT)
  + section("details", "The Details", "Three &middot; cap, towel, putter",
    "The last twenty dollars and the first thousand. One of these is the cheapest thing in the post and "
    "one is the most expensive, and they are both doing the same job.", DETAILS)
@@ -199,11 +198,11 @@ products = (
 
 FAQS = [
  ("What are the best all-black golf clothes?",
-  "Twenty pieces are covered here, one per brand. For trousers, Manors' Lightweight Course Trousers 2.0 at $163 or Left of Field's Stanwell pleated wide trouser at $225. For a collar, Odd Ritual's Classic Polo at about $47 or Devereux's textured Phoenician knit at $88. For a layer, Malbon's Studio Seoul piste crewneck at $248 or Random Golf Club's hoodie at $75."),
+  "Nineteen pieces are covered here, one per brand. For trousers, Manors' Lightweight Course Trousers 2.0 at $163 or Left of Field's Stanwell pleated wide trouser at $225. For a collar, Odd Ritual's Classic Polo at about $47 or Devereux's textured Phoenician knit at $88. For a layer, Malbon's Studio Seoul piste crewneck at $248 or Random Golf Club's hoodie at $75."),
  ("Are there any genuinely all-black golf shoes?",
   "Very few. Duca del Cosma's Grado at $179 is solid black through the upper and sole. Most black golf shoes have a contrast element somewhere — Royal Albartross's Strider Lite has an orange heel counter and the Tailor brogue has a cream midsole, which is why neither is in this post."),
  ("Which brands make a black golf bag with no contrast trim?",
-  "Sun Mountain's Matchplay Ballistic 14-way in black at $435, and Jones Sports Co's Original Bomber in black vinyl at $175. Most blacked-out bags are undone by a coloured zip pull or a metal logo plate."),
+  "Jones Sports Co's Original Bomber in black vinyl at $175 — unstructured, no legs, no contrast panelling. Most blacked-out bags are undone by a coloured zip pull or a metal logo plate. Sun Mountain makes black bags but photographs all of them against a striped metal backdrop, so we left them out."),
  ("Is there a black golf sock?",
   "Mogshade's Dogleg sock at $14.90 is the only one we found across the whole independent field. Inside Story Socks, the specialist, stocks ivory, white, royal blue, berry red and cream — no black at all."),
  ("What about a black golf glove?",
@@ -244,16 +243,16 @@ WRITEUP = '''<div class="writeup">
     unmistakably green. Royal Albartross makes handsome shoes and every single men&rsquo;s pair
     has a contrast sole, welt or heel counter. Artisan&rsquo;s darkest putter finish is called
     Gunmetal, which is at least honest.</p>
-    <p>What is left is twenty pieces, one per brand, head to toe &mdash; two trousers, three
-    collars, two tees, a hoodie, shorts, shoes, socks, two bags, a headcover, a belt, a cap, a towel and one
+    <p>What is left is nineteen pieces, one per brand, head to toe &mdash; two trousers, three
+    collars, two tees, a hoodie, shorts, shoes, socks, a bag, a headcover, a belt, a cap, a towel and one
     thousand-dollar putter. Two gaps we could not fill and will not pretend otherwise: nobody
     independent makes a black glove, and exactly one brand makes a black sock.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Pieces</span><span>20</span></div>
-      <div class="sidebar-detail"><span class="l">Brands</span><span>20</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>19</span></div>
+      <div class="sidebar-detail"><span class="l">Brands</span><span>19</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$14.90&ndash;$999</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>Aug 2026</span></div>
       <a href="/brands/" class="sidebar-cta">Browse the Brand Index &rarr;</a>
@@ -291,7 +290,7 @@ head = rep(head, r'<script type="application/ld\+json">\{"@context": "https://sc
 head = rep(head, r'(<div class="breadcrumb">.*?<span>/</span>\s*)[^<]*?(</div>)', lambda m: m.group(1) + TITLE_TXT + m.group(2))
 head = rep(head, r'<h1>.*?</h1>', f'<h1>{TITLE}</h1>')
 head = rep(head, r'<div class="drop-meta">.*?</div>',
-           '<div class="drop-meta">\n    <span>20 Pieces</span><span>&middot;</span>'
+           '<div class="drop-meta">\n    <span>19 Pieces</span><span>&middot;</span>'
            '<span>One per brand &middot; True black only &middot; Checked Aug 2026</span>\n  </div>')
 head = rep(head, r'<div class="drop-hero"><div class="drop-hero-img"><img src="[^"]*" alt="[^"]*"[^>]*/></div></div>',
            f'<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}hero.jpg" '
@@ -300,9 +299,9 @@ head = rep(head, r'<div class="writeup">.*?</div>\s*</aside>\s*</div>', lambda m
 
 tail = rep(tail, r'<div class="more-grid">.*?</div>\s*</section>',
 '''<div class="more-grid">
-    <a href="/drops/golf-brands-founded-by-women" class="more-card"><div class="more-kicker">The Roundup</div><div class="more-title">Seventeen Golf Brands Founded by Women</div></a>
-    <a href="/drops/brand-to-know-criquet" class="more-card"><div class="more-kicker">Brand to Know</div><div class="more-title">Criquet, the Austin Label That Rebuilt Grandpa&rsquo;s Golf Shirt</div></a>
-    <a href="/drops/brand-to-know-sun-mountain" class="more-card"><div class="more-kicker">Brand to Know</div><div class="more-title">Sun Mountain, the Montana Company That Put Legs on the Golf Bag</div></a>
+    <a href="/drops/golf-brands-founded-by-women" class="more-card">\n      <div class="more-card-img"><img src="/images/women-founded/hero.jpg" alt="Seventeen Golf Brands Founded by Women" loading="lazy" /></div>\n      <div class="more-card-body"><div class="more-card-name">Seventeen Golf Brands Founded by Women</div><div class="more-card-tag">The Roundup</div></div>\n    </a>
+    <a href="/drops/brand-to-know-criquet" class="more-card">\n      <div class="more-card-img"><img src="/images/criquet/austinfc-3.jpg" alt="Criquet, the Austin Label That Rebuilt Grandpas Golf Shirt" loading="lazy" /></div>\n      <div class="more-card-body"><div class="more-card-name">Criquet, the Austin Label That Rebuilt Grandpa&rsquo;s Golf Shirt</div><div class="more-card-tag">Brand to Know</div></div>\n    </a>
+    <a href="/drops/brand-to-know-sun-mountain" class="more-card">\n      <div class="more-card-img"><img src="/images/sun-mountain/hero.jpg" alt="Sun Mountain, the Montana Company That Put Legs on the Golf Bag" loading="lazy" /></div>\n      <div class="more-card-body"><div class="more-card-name">Sun Mountain, the Montana Company That Put Legs on the Golf Bag</div><div class="more-card-tag">Brand to Know</div></div>\n    </a>
   </div>
 </section>''')
 

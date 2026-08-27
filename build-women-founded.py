@@ -314,9 +314,9 @@ head = rep(head, r'</style>', CSS + '</style>')
 
 tail = rep(tail, r'<div class="more-grid">.*?</div>\s*</section>',
 '''<div class="more-grid">
-    <a href="/drops/brand-to-know-kingfisher-golf" class="more-card"><div class="more-kicker">Brand to Know</div><div class="more-title">Kingfisher Golf &mdash; the Dallas Label Founded by Fiona Cohen</div></a>
-    <a href="/drops/brand-to-know-seamus" class="more-card"><div class="more-kicker">Brand to Know</div><div class="more-title">Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team</div></a>
-    <a href="/drops/brand-to-know-sun-mountain" class="more-card"><div class="more-kicker">Brand to Know</div><div class="more-title">Sun Mountain, the Montana Company That Put Legs on the Golf Bag</div></a>
+    <a href="/drops/brand-to-know-kingfisher-golf" class="more-card">\n      <div class="more-card-img"><img src="/images/kingfisher-golf/hero-package.jpg" alt="Kingfisher Golf  the Dallas Label Founded by Fiona Cohen" loading="lazy" /></div>\n      <div class="more-card-body"><div class="more-card-name">Kingfisher Golf &mdash; the Dallas Label Founded by Fiona Cohen</div><div class="more-card-tag">Brand to Know</div></div>\n    </a>
+    <a href="/drops/brand-to-know-seamus" class="more-card">\n      <div class="more-card-img"><img src="/images/seamus/patriot-driver-1.jpg" alt="Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team" loading="lazy" /></div>\n      <div class="more-card-body"><div class="more-card-name">Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team</div><div class="more-card-tag">Brand to Know</div></div>\n    </a>
+    <a href="/drops/brand-to-know-sun-mountain" class="more-card">\n      <div class="more-card-img"><img src="/images/sun-mountain/hero.jpg" alt="Sun Mountain, the Montana Company That Put Legs on the Golf Bag" loading="lazy" /></div>\n      <div class="more-card-body"><div class="more-card-name">Sun Mountain, the Montana Company That Put Legs on the Golf Bag</div><div class="more-card-tag">Brand to Know</div></div>\n    </a>
   </div>
 </section>''')
 

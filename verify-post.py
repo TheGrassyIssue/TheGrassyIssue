@@ -108,6 +108,12 @@ def verify(path):
     chk("no banned word 'worth'", not re.search(r'\bworth\b', txt, re.I))
     body = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', h, flags=re.S)
     words = len(html.unescape(re.sub(r'<[^>]+>', ' ', body)).split())
+    # more-cards must use the styled structure — .more-kicker/.more-title have no CSS
+    mc = re.findall(r'<a[^>]*class="more-card".*?</a>', h, re.S)
+    chk("more-cards carry an image and use .more-card-img/-body",
+        all('more-card-img' in c and '<img' in c for c in mc))
+    chk("no legacy .more-kicker/.more-title markup",
+        'more-kicker' not in h and 'more-title' not in h)
     chk("word count >= 1200", words >= 1200, str(words))
     print("\n  %s — %d check(s) failed\n" % (os.path.basename(path), len(fails)))
     return len(fails)
