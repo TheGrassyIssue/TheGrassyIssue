@@ -35,3 +35,6 @@ build-sunmountain.py
 build-realtree-puma.py
 build-women-founded.py
 research/
+
+# Build/tooling scripts — static site, nothing server-side runs these
+*.py

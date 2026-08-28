@@ -154,8 +154,8 @@ page = f'''<!DOCTYPE html>
 <script type="application/ld+json">{itemlist}</script>
 <style>
 {margins_css}
-:root{{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;
---serif:'Fraunces',Georgia,serif;--display:'In The Margins','Fraunces',Georgia,serif;
+@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}}@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}}@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}}@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}}:root{{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;
+--serif:'Editors Note Text',Georgia,serif;--display:'In The Margins','Editors Note Text',Georgia,serif;
 --sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace;}}
 *{{margin:0;padding:0;box-sizing:border-box;}}
 body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
@@ -343,8 +343,8 @@ def brand_page(b):
 <script type="application/ld+json">{ld}</script>
 <style>
 {margins_css}
-:root{{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;
---serif:'Fraunces',Georgia,serif;--display:'In The Margins','Fraunces',Georgia,serif;
+@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}}@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}}@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}}@font-face{{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}}:root{{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;
+--serif:'Editors Note Text',Georgia,serif;--display:'In The Margins','Editors Note Text',Georgia,serif;
 --sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace;}}
 *{{margin:0;padding:0;box-sizing:border-box;}}
 body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
