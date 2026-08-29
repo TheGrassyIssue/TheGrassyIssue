@@ -566,6 +566,18 @@
     opacity: 0.72;
   }
 
+  .card-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 2px;
+  }
+  .card-link:hover { border-bottom-color: var(--grass); color: var(--grass); }
+
   .card-meta {
     display: flex;
     align-items: center;
@@ -2239,13 +2251,9 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta"><span>The Grassy Issue</span><span>25 Aug 2026</span></div>
       <div class="card-title"><a href="/drops/date-night-after-36" style="color:inherit;text-decoration:none;border-bottom:none;">Date Night After 36 &mdash; Where to Take Them When You Played All Weekend</a></div>
       <div class="card-text" data-slidetext="datenight26">You played 36 holes this weekend. Dinner is the peace treaty. Fifteen Austin spots at three volumes &mdash; from a Michelin star and the Launderette neon sign down to brisket, tacos and fifty-year-old queso. All verified open, August 2026.</div>
-      <div class="gear-dots" data-dots="datenight26"></div>
-      <div class="gear-counter" data-counter="datenight26">1 / 4</div>
-      <div class="card-source">15 spots &middot; $$&ndash;$$$$ &middot; Austin, TX</div>
-      <a href="/drops/date-night-after-36" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+      <a href="/drops/date-night-after-36" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -2678,16 +2686,14 @@
             </a>
           </div>
         </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)" aria-label="Previous">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)" aria-label="Next">&#8250;</button>
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta"><span>The Grassy Issue</span><span>20 Aug 2026</span></div>
       <div class="card-title"><a href="/drops/the-lottery-round-austin-private-clubs" style="color:inherit;text-decoration:none;border-bottom:none;">The Lottery Round &mdash; 12 Private Clubs Around Austin</a></div>
       <div class="card-text" data-slidetext="lotteryround26">You come into money. Where do you go play? Coore and Crenshaw in Spicewood, Pete and Alice Dye on Lake Austin, the only course Jimmy Demaret ever designed, and David McLay Kidd's first in Texas. Then we went looking for what any of it costs.</div>
-      <div class="gear-dots" data-dots="lotteryround26"></div>
-      <div class="gear-counter" data-counter="lotteryround26">1 / 4</div>
-      <div class="card-source">12 clubs &middot; 9 architects &middot; 0 published prices</div>
-      <a href="/drops/the-lottery-round-austin-private-clubs" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+      <a href="/drops/the-lottery-round-austin-private-clubs" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -3410,10 +3416,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/hancock-golf-course-austin" style="color:inherit;text-decoration:none;border-bottom:none;">Hancock Golf Course &mdash; The Oldest Course in Texas Is a $20 Nine in the Middle of Austin</a></div>
       <div class="card-text" data-slidetext="hancock1">Drive up 41st Street and you&rsquo;ll miss it &mdash; a shopping center on one side, Hyde Park bungalows on the other, and in between, nine holes that have been there since 1899. The oldest course in Texas, city in every direction, twenty bucks to walk it.</div>
-      <div class="gear-dots" data-dots="hancock1"></div>
-      <div class="gear-counter" data-counter="hancock1">1 / 4</div>
-      <div class="card-source"><a href="https://www.austintexas.gov/golfatx/hancock-course" target="_blank" rel="noopener">austintexas.gov</a> · 811 E. 41st St.</div>
-      <a href="/drops/hancock-golf-course-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+      <a href="/drops/hancock-golf-course-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -3639,10 +3642,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/sandwiches-before-the-round" style="color:inherit;text-decoration:none;border-bottom:none;">Sandwiches Before the Round</a></div>
       <div class="card-text" data-slidetext="sandwiches1">Mum Foods &mdash; Michelin-listed pastrami four minutes from Morris Williams. The Rachel: oak-smoked pastrami, coleslaw, russian dressing on grilled rye. The best pre-round upgrade in Austin golf.</div>
-      <div class="gear-dots" data-dots="sandwiches1"></div>
-      <div class="gear-counter" data-counter="sandwiches1">1 / 4</div>
-      <div class="card-source"><a href="/drops/sandwiches-before-the-round">12 spots, paired with the closest muni</a></div>
-      <a href="/drops/sandwiches-before-the-round" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+      <a href="/drops/sandwiches-before-the-round" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -4453,10 +4453,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/summer-practice-guide-austin">The Summer Practice Guide</a></div>
       <div class="card-text" data-slidetext="summerpractice">...</div>
-      <div class="gear-dots" data-dots="summerpractice"></div>
-      <div class="gear-counter" data-counter="summerpractice"></div>
-      <div class="card-source">Austin, TX &middot; 10 Spots</div>
-      <a href="/drops/summer-practice-guide-austin" class="card-readmore">Read the full guide &rarr;</a>
+      <a href="/drops/summer-practice-guide-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
   <script>(function(){const t=["Where to practice when it's 105 degrees. Round Rock Driving Range is a 35-acre facility just north of Austin — fully lit with Musco stadium lights, open until 10:30pm every night. Long range, short range, chipping green, putting green, and wedge range with target greens. $10–$20 buckets.","Butler Pitch & Putt has been an Austin original since 1949. Nine holes from 60 to 110 yards — pure wedge and putter work on real greens near Zilker Park. No tee times, no dress code. The best short game practice in the city.","When the heat advisory hits, go inside. Golfinity is 20,000 square feet with 22 simulator bays running TrackMan, Foresight, and Uneekor. Play 100+ courses, get PGA coaching, and eat a real meal. The serious summer practice destination.","Jimmy Clay's lit range stays open until 9pm — the best twilight session in Austin. Grass tees, chipping area, putting green, and a 4-hole practice course. $7–$11 buckets. Pair it with an evening 9 at Roy Kizer."];const c=document.querySelector('[data-carousel="summerpractice"]');if(!c)return;const d=document.querySelector('[data-slidetext="summerpractice"]');const o=document.querySelector('[data-dots="summerpractice"]');const n=document.querySelector('[data-counter="summerpractice"]');if(d)d.textContent=t[0];const s=c.querySelectorAll('.gear-slide');function u(){const i=Math.round(c.querySelector('.gear-carousel-track').scrollLeft/s[0].offsetWidth);if(d)d.textContent=t[i]||t[0];if(o){o.innerHTML='';t.forEach((_,j)=>{const dot=document.createElement('span');dot.className='gear-dot'+(j===i?' active':'');o.appendChild(dot);})}if(n)n.textContent=(i+1)+' / '+s.length;}c.querySelector('.gear-carousel-track').addEventListener('scroll',u);setTimeout(u,0);})()</script>
@@ -4910,10 +4907,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/austin-coffee-guide" style="color:inherit;text-decoration:none;border-bottom:none;">The Pre-Round Pour &mdash; 18 Austin Coffee Shops for Golfers</a></div>
       <div class="card-text" data-slidetext="coffee1">Radio Coffee &amp; Beer — South Lamar. An outdoor compound with local roasters, food trucks, and a backyard stage. Grab a cortado and a breakfast taco under the oaks before you head to Lions. The most Austin coffee experience in Austin.</div>
-      <div class="gear-dots" data-dots="coffee1"></div>
-      <div class="gear-counter" data-counter="coffee1">1 / 4</div>
-      <div class="card-source"><a href="/drops/austin-coffee-guide">See all 18 picks &rarr;</a></div>
-      <a href="/drops/austin-coffee-guide" class="card-readmore">See the Full Post &rarr;</a>
+      <a href="/drops/austin-coffee-guide" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -4970,10 +4964,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/the-retreat-guide" style="color:inherit;text-decoration:none;border-bottom:none;">The Retreat Guide &mdash; 12 Golf Retreats from Buddy Trips to Bucket Lists</a></div>
       <div class="card-text" data-slidetext="retreats1">Sweetens Cove — South Pittsburg, TN. A King-Collins 9-hole masterpiece ranked #49 in the U.S. The e9Retreat house sleeps 14 across the street — bourbon room, golf sim, concierge kitchen. Thirty minutes from Chattanooga. Nine holes, infinite loops.</div>
-      <div class="gear-dots" data-dots="retreats1"></div>
-      <div class="gear-counter" data-counter="retreats1">1 / 4</div>
-      <div class="card-source"><a href="/drops/the-retreat-guide">See all 12 retreats &rarr;</a></div>
-      <a href="/drops/the-retreat-guide" class="card-readmore">See the Full Post &rarr;</a>
+      <a href="/drops/the-retreat-guide" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -5036,12 +5027,9 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">July 21, 2026 · The Guide</div>
       <div class="card-title"><a href="/drops/austin-golf-road-trip" style="color:inherit;text-decoration:none;border-bottom:none;">The Austin Golf Road Trip &mdash; 3 Days, 5 Rounds, All-Out</a></div>
       <p class="card-text" data-slidetext="atxroadtrip1">Day 1 AM: Lions Municipal &mdash; Austin&rsquo;s oldest public course, opened 1924. Harvey Penick taught Ben Crenshaw and Tom Kite on these fairways. First integrated muni south of the Mason-Dixon line. Crenshaw holds the course record at 61. Hallowed ground, $30&ndash;37.</p>
-      <div class="gear-dots" data-dots="atxroadtrip1"></div>
-      <div class="gear-counter" data-counter="atxroadtrip1">1 / 7</div>
-      <a href="/drops/austin-golf-road-trip" class="card-readmore" style="display:inline-block;font-size:0.97rem;color:var(--ink);opacity:0.7;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px;">See the Full Itinerary &rarr;</a>
+      <a href="/drops/austin-golf-road-trip" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -5142,13 +5130,9 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">July 19, 2026 · The Roundup</div>
       <div class="card-title"><a href="/drops/best-pizza-in-austin" style="color:inherit;text-decoration:none;border-bottom:none;">The Best Pizza in Austin &mdash; 10 Spots After the Round</a></div>
       <p class="card-text" data-slidetext="atxpizza1">Bufalina &mdash; The highest-rated pizza in Austin. 900-degree wood-fired Neapolitan, natural wine list, intimate East Cesar Chavez patio. The Infatuation 9.4. Seasonal toppings, simple perfection. East Austin.</p>
-      <div class="gear-dots" data-dots="atxpizza1"></div>
-      <div class="gear-counter" data-counter="atxpizza1">1 / 4</div>
-      <div class="card-source"><a href="https://www.google.com/maps/search/best+pizza+austin+tx" target="_blank" rel="noopener">Google Maps</a></div>
-      <a href="/drops/best-pizza-in-austin" class="card-readmore" style="display:inline-block;font-size:0.97rem;color:var(--ink);opacity:0.7;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px;">See the Full Post &rarr;</a>
+      <a href="/drops/best-pizza-in-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -5163,8 +5147,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/rodeo-dunes-the-great-divide" style="color:inherit;text-decoration:none;border-bottom:none;">72 Strangers, 3 Rounds, 1 Course.</a></div>
       <div class="card-text">Random Golf Club&rsquo;s The Great Divide at Rodeo Dunes &mdash; a Coore &amp; Crenshaw links course carved through 90-foot chop dunes on a Colorado cattle ranch. 72 golfers, red vs. blue elimination, caddies for every group, and a final-round 81 that felt like the best round I&rsquo;ve ever played. A field note from Roggen, CO.</div>
-      <div class="card-source"><a href="https://randomgolfclub.com/pages/rgc-events" target="_blank" rel="noopener">randomgolfclub.com</a></div>
-      <a href="/drops/rodeo-dunes-the-great-divide" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">Read the Field Note &rarr;</a>
+      <a href="/drops/rodeo-dunes-the-great-divide" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -6419,13 +6402,9 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">June 19, 2026 · The Roundup</div>
       <div class="card-title"><a href="/drops/best-wings-in-austin" style="color:inherit;text-decoration:none;border-bottom:none;">The Best Wings in Austin — 16 Spots After the Round</a></div>
       <p class="card-text" data-slidetext="atxwings1">Wingzup — 28+ homemade sauces across 6 wing styles, from Golden to Smoked. Won the Austin American-Statesman 2024 Best Wings bracket. Ghost Wing Challenge if you're feeling brave. Since 2011. Hancock.</p>
-      <div class="gear-dots" data-dots="atxwings1"></div>
-      <div class="gear-counter" data-counter="atxwings1">1 / 4</div>
-      <div class="card-source"><a href="https://www.google.com/maps/search/best+wings+austin+tx" target="_blank" rel="noopener">Google Maps</a></div>
-      <a href="/drops/best-wings-in-austin" class="card-readmore" style="display:inline-block;font-size:0.97rem;color:var(--ink);opacity:0.7;text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:1px;">See the Full Post →</a>
+      <a href="/drops/best-wings-in-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -6719,13 +6698,9 @@
       </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">June 16, 2026 · The Edit</div>
       <div class="card-title"><a href="/drops/austin-bbq-field-guide" style="color:inherit;text-decoration:none;border-bottom:none;">The Austin BBQ Field Guide — 12 Spots After the Round</a></div>
       <p class="card-text" data-slidetext="austinbbq12">KG BBQ — Egyptian-Texas fusion from pitmaster Kareem El-Ghayesh at Oddwood Brewing on Manor Road. Sumac and pomegranate-rubbed brisket, lamb ribs, and a Mediterranean sausage that rewrites what you thought BBQ could be. Texas Monthly Top 50 and Michelin Bib Gourmand. Fri–Sun, 11am until it's gone.</p>
-      <div class="gear-dots" data-dots="austinbbq12"></div>
-      <div class="gear-counter" data-counter="austinbbq12">1 / 4</div>
-      <div class="card-source"><a href="https://www.google.com/maps" target="_blank" rel="noopener">Google Maps</a></div>
-      <a href="/drops/austin-bbq-field-guide" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/austin-bbq-field-guide" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -6901,11 +6876,7 @@
     </div>
     <div class="card-body">
       <div class="card-title"><a href="/drops/the-summer-style-list-10-golfers-who-get-it" style="color:inherit;text-decoration:none;border-bottom:none;">The Summer Style List — 10 Golfers Who Get It</a></div>
-      <div class="gear-slidetext" data-slidetext="summerstyle10"></div>
-      <div class="gear-dots" data-dots="summerstyle10"></div>
-      <div class="gear-counter" data-counter="summerstyle10">1 / 10</div>
-      <div class="card-source"><a href="https://thegrassyissue.com">thegrassyissue.com</a></div>
-      <a href="/drops/the-summer-style-list-10-golfers-who-get-it" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/the-summer-style-list-10-golfers-who-get-it" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -8115,13 +8086,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" style="color:inherit;text-decoration:none;border-bottom:none;">Water When Dry: The Garden Metaphor That Actually Works</a></div>
       <div class="card-text" data-slidetext="wwdgarden">Water When Dry is built on a garden metaphor — what you water will grow — and the whole brand runs through it. The colorways are named River, Dusk, Leaf, Soil, Blackberry. The membership program is called the Garden Club. The homepage says 'Welcome to the Garden.' It should be annoying but it's not, because the clothes are actually good and the tone never tips into self-help territory.</div>
-      <div class="gear-dots" data-dots="wwdgarden"></div>
-      <div class="gear-counter" data-counter="wwdgarden">1 / 8</div>
-      <div class="card-meta">
-        <span class="card-source"><a href="https://waterwhendry.com" target="_blank" rel="noopener">waterwhendry.com</a> · $15 – $128</span>
-        <span class="card-votes"><span class="vote-up">0</span><span class="comments">&#9678; 0</span></span>
-      <a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/water-when-dry-the-garden-metaphor-that-actually-works" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -8357,10 +8322,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/10-of-the-best-post-round-burgers" style="color:inherit;text-decoration:none;border-bottom:none;">10 of the Best Post-Round Burgers</a></div>
       <div class="card-text" data-slidetext="burgers12">Sour Duck Market — The Peeler Farms Wagyu double smash burger from Odd Duck's bakery-cafe sibling. Two wagyu smash patties with crispy edges, American and pimento cheese, pickles, and secret sauce on the best challah bun in East Austin. $14 for arguably the best smash burger in the city. MLK Boulevard.</div>
-      <div class="gear-dots" data-dots="burgers12"></div>
-      <div class="gear-counter" data-counter="burgers12">1 / 10</div>
-      <div class="card-source"><a href="https://www.google.com/maps" target="_blank" rel="noopener">Various</a></div>
-      <a href="/drops/10-of-the-best-post-round-burgers" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-of-the-best-post-round-burgers" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -8600,13 +8562,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/8-special-day-rounds-near-austin" style="color:inherit;text-decoration:none;border-bottom:none;">8 Special Day Rounds Near Austin</a></div>
       <div class="card-text" data-slidetext="specialday">Arthur Hills carved Wolfdancer through Lost Pines like he had a grudge against flat land. The greens are fast, the elevation changes are real, and the stretch from 14 to 18 is one of the best closing runs in Texas. You do not need to be a Hyatt guest to play, which makes this the most accessible great course in the Austin orbit. Thirty minutes east and a world away from your Tuesday nine at the muni.</div>
-      <div class="gear-dots" data-dots="specialday"></div>
-      <div class="gear-counter" data-counter="specialday">1 / 8</div>
-      <div class="card-meta">
-        <span class="card-source">The Grassy Issue · Austin, TX</span>
-        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/8-special-day-rounds-near-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/8-special-day-rounds-near-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -9000,14 +8956,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" style="color:inherit;text-decoration:none;border-bottom:none;">Ranking the Muni Grub — Every On-Course Food Spot in Austin</a></div>
       <div class="card-text" data-slidetext="munigrub">On-site food is just a vending machine — no kitchen, no menu, no one cooking anything. But Jo's Coffee is right around the corner with solid coffee and snacks before your round. Post-round grub is where Hancock wins: there's a great wing spot nearby and Otherside Deli, one of the best sandwich shops in Austin, is a quick five-minute drive. The course itself has zero food game, but the neighborhood picks up the slack.</div>
-      <div class="gear-dots" data-dots="munigrub"></div>
-      <div class="gear-counter" data-counter="munigrub">1 / 4</div>
-      <div class="card-source">
-        <a href="https://www.austintexas.gov/golfatx" target="_blank" rel="noopener" class="source-link">GolfATX</a> ·
-        <a href="https://www.fairwayscantina.com/" target="_blank" rel="noopener" class="source-link">fairwayscantina.com</a> ·
-        <a href="https://www.ciscosaustin.com/muny" target="_blank" rel="noopener" class="source-link">ciscosaustin.com</a>
-      <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -9770,14 +9719,12 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">May 12, 2026 · The Edit</div>
       <h2 class="card-title"><a href="/drops/5-post-round-evening-spots-in-austin" style="color:inherit;text-decoration:none;border-bottom:none;">5 Post-Round Evening Spots in Austin</a></h2>
       <p class="card-text" data-slidetext="19thhole">You just played 18. The sun's going down. You're not ready to go home. These five spots are where the round keeps going — vinyl bars, patio hangs, and low-key vibes across the city.</p>
-      <a href="/drops/5-post-round-evening-spots-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/5-post-round-evening-spots-in-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -9860,8 +9807,7 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
       <div class="card-meta">May 11, 2026 · Brand to Know</div>
@@ -9965,8 +9911,7 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
       <div class="card-meta">May 11, 2026 · The Edit</div>
@@ -10070,8 +10015,7 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
       <div class="card-meta">
@@ -10178,8 +10122,7 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
       <div class="card-meta">
@@ -10271,16 +10214,12 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">
-        <span class="meta-cat">Field Guide</span>
-        <time>May 7 2026</time>
-      </div>
       <h2 class="card-title"><a href="/drops/roy-kizer-from-sewage-plant-to-links-style-gem" style="color:inherit;text-decoration:none;border-bottom:none;">Roy Kizer — From Sewage Plant to Links-Style Gem</a></h2>
       <p class="card-text" data-slidetext="roykizer">Built on a decommissioned wastewater treatment plant in southeast Austin, Roy Kizer is a links-style muni with 35 acres of lakes, 22 acres of wetlands, and 40+ bunkers. Named after the man who kept Lions Muny alive for 36 years.</p>
+      <a href="/drops/roy-kizer-from-sewage-plant-to-links-style-gem" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -10385,8 +10324,7 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
       <div class="card-meta">
@@ -10479,17 +10417,12 @@
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-        <div class="gear-dots"></div>
-      </div>
+              </div>
     </div>
     <div class="card-body">
-      <div class="card-meta">
-        <span class="meta-cat">Field Guide</span>
-        <time>May 6 2026</time>
-      </div>
       <h2 class="card-title"><a href="/drops/10-texas-courses-worth-the-trip" style="color:inherit;text-decoration:none;border-bottom:none;">10 Texas Courses Worth the Trip</a></h2>
       <p class="card-text" data-slidetext="texascourses">Desert canyons in Big Bend, PGA Tour-grade conditioning in Frisco, Tom Fazio cliffs in Austin, and three Robert Trent Jones Sr. layouts on Lake LBJ. These are the premium Texas courses worth building a weekend around.</p>
-      <a href="/drops/10-texas-courses-worth-the-trip" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
+      <a href="/drops/10-texas-courses-worth-the-trip" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -10567,13 +10500,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/the-firecracker-open-81-years-at-the-muny" style="color:inherit;text-decoration:none;border-bottom:none;">The Firecracker Open — 81 Years at the Muny</a></div>
       <div class="card-text" data-slidetext="firecracker">Lions Municipal opened in 1924 as Austin's first public course — nine holes cut through the oaks on Enfield Road by the Lions Club. In 1950, it quietly became the first desegregated public course south of the Mason-Dixon line. Since 1945, the Firecracker Open has drawn the best amateur players in Texas every Fourth of July weekend. Crenshaw, Kite, and Uresti all won here before turning pro. 54 holes, no cut, and a field that mixes college stars with 60-year-old regulars who've played the course a thousand times.</div>
-      <div class="gear-dots" data-dots="firecracker"></div>
-      <div class="gear-counter" data-counter="firecracker">1 / 8</div>
-      <div class="card-meta">
-        <span class="card-source">themunyconservancy.com · Field Guide</span>
-        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/the-firecracker-open-81-years-at-the-muny" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -10875,13 +10802,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" style="color:inherit;text-decoration:none;border-bottom:none;">7 Indoor Simulators for Austin's Gross Rainy Days</a></div>
       <div class="card-text" data-slidetext="indoorsims">Three TrackMan 4 bays in a converted warehouse south of Slaughter. Southside Golf Co is the most low-key sim spot in Austin — no velvet ropes, no $18 cocktails, just clean bays with tour-level radar and a lounge with pool tables. PGA instruction available, leagues running, walk-ins welcome when a bay's open. The vibe is closer to a buddy's garage setup than a golf bar, and that's the whole point.</div>
-      <div class="gear-dots" data-dots="indoorsims"></div>
-      <div class="gear-counter" data-counter="indoorsims">1 / 7</div>
-      <div class="card-meta">
-        <span class="card-source">The Grassy Issue · Field Guide</span>
-        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/7-indoor-simulators-for-austins-gross-rainy-days" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -11250,13 +11171,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/8-best-practice-facilities-around-austin" style="color:inherit;text-decoration:none;border-bottom:none;">8 Best Practice Facilities Around Austin</a></div>
       <div class="card-text" data-slidetext="practiceatx">The best public practice facility in Austin, full stop. Named after the man who wrote the Little Red Book. All-grass range — no mats, no rubber tees — plus two putting greens, a practice bunker, a 3-hole short course, and a PGA Tour-designed 9-hole layout. The range faces east, so afternoon sessions dodge the sun. Buckets run $8–$14. City-owned, open to everyone, and perpetually underrated.</div>
-      <div class="gear-dots" data-dots="practiceatx"></div>
-      <div class="gear-counter" data-counter="practiceatx">1 / 8</div>
-      <div class="card-meta">
-        <span class="card-source">The Grassy Issue · Field Guide</span>
-        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/8-best-practice-facilities-around-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/8-best-practice-facilities-around-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -11419,13 +11334,7 @@
     <div class="card-body">
       <div class="card-title"><a href="/drops/7-post-round-moves-in-austin" style="color:inherit;text-decoration:none;border-bottom:none;">7 Post-Round Moves in Austin</a></div>
       <div class="card-text" data-slidetext="postroundatx">East Austin all-day brunch with a patio and scratch cocktails. The move when you tee off at 7 and finish by noon. Order the pancake, pretend you didn't just three-putt the last four greens. Started as a food truck in 2015 — now two Austin locations and a Denver outpost.</div>
-      <div class="gear-dots" data-dots="postroundatx"></div>
-      <div class="gear-counter" data-counter="postroundatx">1 / 7</div>
-      <div class="card-meta">
-        <span class="card-source">The Grassy Issue · Austin, TX</span>
-        <span class="card-votes"><span class="vote-up">0</span><span class="comments">◎ 0</span></span>
-      <a href="/drops/7-post-round-moves-in-austin" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post →</a>
-      </div>
+      <a href="/drops/7-post-round-moves-in-austin" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
 
@@ -12328,8 +12237,6 @@
     <div class="card-body">
       <div class="card-title">The Earth Tones Edit — 5 pieces for the understated round.</div>
       <div class="card-text">Forest cashmere, olive waxed canvas, brown suede. From a hand-stitched MacKenzie × ACL carry bag to a Seamus headcover that'll patina with every round. Dark, quiet, built to last. $95–$850.</div>
-      <div class="gear-dots" data-dots="earth"></div>
-      <div class="gear-counter" data-counter="earth">1 / 5</div>
       <div class="card-meta">
         <span class="card-source">The Grassy Issue · New</span>
         <span class="card-votes"><span class="vote-up">178</span><span class="comments">◎ 41</span></span>
