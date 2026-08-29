@@ -194,17 +194,8 @@
     justify-content: space-between;
     gap: 32px;
   }
-  .nav-wordmark {
-    line-height: 1;
-    white-space: nowrap;
-    display: flex;
-    align-items: center;
-  }
-  .nav-wordmark img {
-    height: 36px;
-    width: auto;
-    display: block;
-  }
+  .nav-wordmark{/*TGI-WM-V1*/font-family:var(--serif);font-style:normal;font-weight:700;font-size:21px;letter-spacing:.085em;text-transform:uppercase;line-height:1;white-space:nowrap;color:var(--grass)}
+  
   .nav-links {
     display: flex;
     gap: 24px;
@@ -1751,7 +1742,7 @@
 
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
-    <a href="/" class="nav-wordmark"><img src="assets/logo-wordmark-only.svg" alt="The Grassy Issue" height="24"></a>
+    <a href="/" class="nav-wordmark">The Grassy Issue</a>
     <div class="nav-links">
       <a href="#feed" class="active">The Feed</a>
       <a href="/brands/">Brands</a>
