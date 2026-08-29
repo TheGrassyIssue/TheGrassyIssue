@@ -233,67 +233,53 @@ FACES = "".join(
                      ("bold", 700, "normal")])
 
 CSS = FACES + """
+/* RESPONSIVE SIZING - why every internal dimension is in em, not px.
+   The box must stay a true 1:1 at ANY width so it screenshots square on a
+   phone. So the tile carries a base font-size that tracks its own width
+   (10px at 1080, scaling down with the viewport), and every size inside is a
+   multiple of that base. Change the base and the whole composition scales.
+   On a 3x phone a full-width box screenshots at ~1100 device px - already
+   Instagram size, no resizing needed.
+   NB: em compounds, so spacing on an element that sets its own font-size is
+   expressed against THAT size (e.g. .ig-h margin .356em x 45 = 16). */
 :root{--paper:#F4F1EA;--ink:#141414;--grass:#2D4A2B;
 --serif:'Editors Note Text',Georgia,serif;--mono:'JetBrains Mono',monospace}
 *{box-sizing:border-box;margin:0;padding:0}
-body{background:#2a2a28;color:var(--paper);font-family:var(--mono);padding:28px 0 80px}
-.head{max-width:1080px;margin:0 auto 26px;padding:0 4px}
-.head h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:30px;margin-bottom:6px}
-.head p{font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.62;line-height:1.7}
-.tiles{display:flex;flex-direction:column;align-items:center;gap:44px}
-.wrap{width:1080px}
-.cap{display:flex;justify-content:space-between;gap:12px;font-size:10px;letter-spacing:.12em;
-text-transform:uppercase;opacity:.5;padding:0 2px 7px}
+body{background:#2a2a28;color:var(--paper);font-family:var(--mono);padding:18px 0 60px}
+.head{max-width:min(1080px,100vw);margin:0 auto 22px;padding:0 14px}
+.head h1{font-family:var(--serif);font-style:italic;font-weight:400;font-size:26px;margin-bottom:6px}
+.head p{font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;opacity:.62;line-height:1.7}
+.tiles{display:flex;flex-direction:column;align-items:center;gap:34px}
+.wrap{width:min(1080px,100vw)}
+.cap{display:flex;justify-content:space-between;gap:10px;font-size:9.5px;letter-spacing:.1em;
+text-transform:uppercase;opacity:.5;padding:0 12px 6px}
 .cap a{color:inherit}
-.tile{width:1080px;height:1080px;position:relative;overflow:hidden;background:#111}
-.tile-img{position:absolute;inset:0;background-size:cover;background-position:center}
-.tile-shade{position:absolute;inset:0;background:linear-gradient(180deg,
-rgba(0,0,0,.34) 0%,rgba(0,0,0,.10) 30%,rgba(0,0,0,.55) 66%,rgba(0,0,0,.88) 100%)}
-.tile-tag{position:absolute;top:44px;left:44px;padding:10px 18px;background:var(--grass);
-color:var(--paper);font-family:var(--mono);font-size:15px;letter-spacing:.14em;text-transform:uppercase}
-.tile-bottom{position:absolute;left:0;right:0;bottom:0;padding:0 56px 56px;z-index:2}
-.tile-logo{font-family:var(--mono);font-size:14px;letter-spacing:.24em;text-transform:uppercase;
-opacity:.82;margin-bottom:16px}
-.tile-title{font-family:var(--serif);font-weight:700;font-size:60px;line-height:1.07;
-letter-spacing:-.015em;color:#fff;margin-bottom:18px;text-wrap:balance}
-.tile-text{font-family:var(--serif);font-size:27px;line-height:1.4;color:#fff;opacity:.93;max-width:15in}
-.tile-rule{width:74px;height:3px;background:var(--paper);opacity:.85;margin-bottom:22px}
-/* ── slide 1: a grid of images over the opening lines, on paper ── */
+.tile{width:min(1080px,100vw);aspect-ratio:1/1;position:relative;overflow:hidden;background:#111;
+font-size:min(10px,0.926vw)}
 .tile-split{display:flex;flex-direction:column;background:var(--paper);color:var(--ink)}
-/* The grid takes whatever the text does not. Fixing its height left a band of
-   dead paper under short write-ups; this way the photographs always fill it. */
-.ig-grid{position:relative;flex:1;min-height:0;display:grid;gap:5px;background:#fff}
+.ig-grid{position:relative;flex:1;min-height:0;display:grid;gap:.5em;background:#fff}
 .ig-grid.g4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
-/* 3 images: one tall lead beside two stacked, so nothing is left half-empty */
 .ig-grid.g3{grid-template-columns:1.45fr 1fr;grid-template-rows:1fr 1fr}
 .ig-grid.g3 .gi:first-child{grid-row:span 2}
 .ig-grid.g2{grid-template-columns:1fr 1fr;grid-template-rows:1fr}
 .ig-grid.g1{grid-template-columns:1fr;grid-template-rows:1fr}
-/* contain, not cover: show the WHOLE image (Lenny, 2026-08-28 - "make sure the
-   crop shows the full image"). cover filled each cell but guillotined tall
-   product shots and cut heads off lifestyle frames. The trade is letterboxing,
-   so cells are matted in WHITE, not --paper. Most product shots are already
-   photographed on white, so white matting makes them blend edge to edge; cream
-   matting left a visible white rectangle inside every cream cell. */
 .gi{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#fff}
-/* .gi.pack (contain) retired with the 4-up grid: a single hero image always
-   fills its frame, otherwise portraits sit in white bars. */
-.ig-lower{flex:0 0 auto;padding:38px 58px 44px;position:relative}
-.ig-h{font-family:var(--serif);font-weight:700;font-size:45px;line-height:1.08;
-letter-spacing:-.015em;margin-bottom:16px;text-wrap:balance}
-.ig-p{font-family:var(--serif);font-size:27px;line-height:1.4;opacity:.8}
-.ig-logo{font-family:var(--mono);font-size:13px;letter-spacing:.24em;text-transform:uppercase;
-color:var(--grass);margin-bottom:14px}
-/* ── slide 2: the write-up, on TGI paper stock ── */
+.ig-lower{flex:0 0 auto;padding:3.8em 5.8em 4.4em;position:relative}
+.ig-h{font-family:var(--serif);font-weight:700;font-size:4.5em;line-height:1.08;
+letter-spacing:-.015em;margin-bottom:.356em;text-wrap:balance}
+.ig-p{font-family:var(--serif);font-size:2.7em;line-height:1.4;opacity:.8}
+.ig-logo{font-family:var(--mono);font-size:1.3em;letter-spacing:.24em;text-transform:uppercase;
+color:var(--grass);margin-bottom:1.077em}
+/* slide 2: the write-up, on TGI paper stock */
 .tile-paper{background:var(--paper);color:var(--ink);display:flex;flex-direction:column;
-justify-content:center;padding:104px 92px}
-.ts-kicker{font-family:var(--mono);font-size:16px;letter-spacing:.18em;text-transform:uppercase;
+justify-content:center;padding:10.4em 9.2em}
+.ts-kicker{font-family:var(--mono);font-size:1.6em;letter-spacing:.18em;text-transform:uppercase;
 color:var(--grass)}
-.ts-rule{width:74px;height:3px;background:var(--ink);opacity:.8;margin:24px 0 38px}
+.ts-rule{width:7.4em;height:.3em;background:var(--ink);opacity:.8;margin:2.4em 0 3.8em}
 .ts-body{font-family:var(--serif);line-height:1.44;letter-spacing:-.005em}
-.ts-title{font-family:var(--serif);font-weight:700;font-size:30px;line-height:1.2;
-margin-bottom:20px;opacity:.55}
-.ts-foot{position:absolute;left:92px;bottom:60px;font-family:var(--mono);font-size:14px;
+.ts-title{font-family:var(--serif);font-weight:700;font-size:3em;line-height:1.2;
+margin-bottom:.667em;opacity:.55}
+.ts-foot{position:absolute;left:6.571em;bottom:4.286em;font-family:var(--mono);font-size:1.4em;
 letter-spacing:.22em;text-transform:uppercase;opacity:.45}
 @media print{body{background:#fff}.head,.cap{display:none}.tiles{gap:0}}
 """
@@ -329,7 +315,7 @@ def render(tiles):
       <div class="ts-kicker">{t["tag"]}</div>
       <div class="ts-rule"></div>
       <div class="ts-title">{t["title"]}</div>
-      <div class="ts-body" style="font-size:{type_scale(len(t["writeup"]))}px">{t["writeup"]}</div>
+      <div class="ts-body" style="font-size:{type_scale(len(t["writeup"]))/10:.1f}em">{t["writeup"]}</div>
       <div class="ts-foot">The Grassy Issue &middot; thegrassyissue.com</div>
     </div>
   </div>''')
