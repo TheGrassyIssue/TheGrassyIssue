@@ -833,5 +833,17 @@
   ],
   "lifestyle": 3,
   "needs_sourcing": false
+ },
+ "forden-golf": {
+  "frames": [
+   "/images/forden/teepicks-0.jpg",
+   "/images/forden/d-umbrella-canopy.jpg",
+   "/images/forden/retro-club-hoodie-0.jpg",
+   "/images/forden/golfer-snapback-0.jpg",
+   "/images/forden/local-muni-tee-0.jpg",
+   "/images/forden/undulations-crew-0.jpg"
+  ],
+  "lifestyle": 2,
+  "needs_sourcing": true
  }
 }

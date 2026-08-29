@@ -94,6 +94,25 @@ A specific product, SKU or price belongs in sentence two at the earliest, and
 usually on a card. Naming a product category the brand is known for is fine
 — *"Jones makes the best carry bag in golf"*, *"Seamus turns the headcover into
 the most personal object in the bag"* — because that describes the whole output.
+
+### What the whole intro has to cover
+
+Set by Lenny, 2026-08-29, after the Forden draft opened on a 1938 physics
+experiment at MIT: **the intro is an inside look at the brand, not a history
+lesson.** Before a reader reaches the first product they need three things:
+
+1. **What it is** — what the brand makes and what it is specific about.
+2. **The inspiration** — where the look comes from, in a line or two.
+3. **Who it is for** — the actual golfer, described concretely.
+
+A good origin story is still good material. It just does not lead, and it does
+not get a paragraph of its own before the reader knows what they are looking at.
+Compress it into the "inspiration" beat, or move it further down the page.
+
+The Forden rewrite is the reference: *"Forden Golf makes clothes for municipal
+golf, and it is specific about it."* → skate graphics and the Swingman mark
+(Edgerton in three lines, not seven) → founder quote → *"the golfer who walks
+nine after work, keeps a cheap towel clipped to the bag."*
 Naming one thing it sells is not.
 
 > **Before:** Sugarloaf Social Club sells a $1,400 MacKenzie sailcloth bag and a
