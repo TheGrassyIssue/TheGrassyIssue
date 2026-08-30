@@ -68,7 +68,7 @@
   /* NAV */
   .nav { position: sticky; top: 0; background: var(--paper); border-bottom: 0.5px solid var(--ink); z-index: 15; }
   .nav-inner { max-width: 1400px; margin: 0 auto; padding: 18px 32px; display: flex; align-items: center; justify-content: space-between; gap: 32px; }
-  .nav-wordmark{/*TGI-WM-V1*/font-family:var(--serif);font-style:normal;font-weight:700;font-size:21px;letter-spacing:.085em;text-transform:uppercase;line-height:1;white-space:nowrap;color:var(--grass)}
+  .nav-wordmark{/*TGI-WM-V1*/font-family:var(--serif);font-style:normal;font-weight:700;font-size:21px;letter-spacing:.085em;text-transform:uppercase;line-height:1;white-space:nowrap;border-bottom:none;text-decoration:none;color:var(--grass)}
   .nav-links { display: flex; gap: 24px; font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; }
   .nav-links a { padding: 6px 0; border-bottom: 1px solid transparent; transition: border-color 0.15s; }
   .nav-links a:hover { border-bottom-color: var(--ink); }
@@ -290,15 +290,30 @@
 </head>
 <body>
 
+<!--TGI-HDR-V1-->
+<!-- WEATHER / DATE / TEE TIME BANNER -->
+<div class="weather-banner" id="weather-banner">
+  <span class="wb-date" id="wb-date"></span>
+  <span class="wb-dot"></span>
+  <span class="wb-weather" id="wb-weather">
+    <em class="wb-icon" id="wb-icon"></em>
+    <span class="wb-temp" id="wb-temp"></span>
+    <span class="wb-desc" id="wb-desc"></span>
+  </span>
+  <span class="wb-dot"></span>
+  <a class="wb-tee" href="https://txaustinweb.myvscloud.com/webtrac/web/search.html?display=detail&module=GR" target="_blank" rel="noopener">Book a Tee Time →</a>
+</div>
+
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="/" class="nav-wordmark">The Grassy Issue</a>
     <div class="nav-links">
-      <a href="/#feed">Feed</a>
+      <a href="/#feed">The Feed</a>
       <a href="/brands/">Brands</a>
+      <a href="/field-guide/">Field Guide</a>
       <a href="/events/" class="active">Events</a>
     </div>
-    <button class="nav-toggle" aria-label="Open menu">
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" onclick="toggleMenu()">
       <span></span><span></span><span></span>
     </button>
     <div id="tgi-sbox">
@@ -430,6 +445,227 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+/*TGI-HDR-V1*/
+.weather-banner {
+    background: var(--grass);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 10px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+.weather-banner .wb-date {
+    opacity: 0.7;
+  }
+.weather-banner .wb-dot {
+    width: 3px; height: 3px;
+    border-radius: 50%;
+    background: var(--paper);
+    opacity: 0.35;
+    flex-shrink: 0;
+  }
+.weather-banner .wb-weather {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+.weather-banner .wb-icon {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1;
+  }
+.weather-banner .wb-temp {
+    font-weight: 500;
+  }
+.weather-banner .wb-desc {
+    opacity: 0.7;
+  }
+.weather-banner .wb-tee {
+    background: var(--paper);
+    color: var(--grass);
+    padding: 5px 12px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s, color 0.2s;
+  }
+.weather-banner .wb-tee:hover {
+    background: var(--ink);
+    color: var(--paper);
+  }
+.nav {
+    position: sticky;
+    top: 0;
+    background: var(--paper);
+    border-bottom: 0.5px solid var(--ink);
+    z-index: 15;
+  }
+.nav-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+.nav-links {
+    display: flex;
+    gap: 24px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+  }
+.nav-links a {
+    padding: 6px 0;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+  }
+.nav-links a:hover { border-bottom-color: var(--ink); }
+.nav-links a.active { border-bottom-color: var(--ink); }
+.nav-cta {
+    padding: 9px 16px;
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: background 0.2s;
+    display: inline-block;
+  }
+.nav-cta:hover { background: var(--grass); }
+.nav-toggle {
+    display: none;
+    width: 28px;
+    height: 20px;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+.nav-toggle span {
+    display: block;
+    width: 100%;
+    height: 1.5px;
+    background: var(--ink);
+    transition: transform 0.25s, opacity 0.25s;
+  }
+.nav-toggle.open span:nth-child(1) { transform: translateY(9.25px) rotate(45deg); }
+.nav-toggle.open span:nth-child(2) { opacity: 0; }
+.nav-toggle.open span:nth-child(3) { transform: translateY(-9.25px) rotate(-45deg); }
+.nav-drawer {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--paper);
+    z-index: 14;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    font-family: var(--mono);
+    font-size: 13px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+.nav-drawer.open {
+    display: flex;
+    opacity: 1;
+  }
+.nav-drawer a {
+    padding: 12px 24px;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.15s;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+  }
+.nav-drawer a:hover { border-bottom-color: var(--ink); }
+#tgi-sbox{position:relative}
+#tgi-search-input{width:150px;background:transparent;border:.5px solid #141414;padding:7px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#141414;outline:none;border-radius:0;-webkit-appearance:none}
+#tgi-search-input:focus{border-color:#2D4A2B;outline:2px solid #2D4A2B;outline-offset:1px}
+#tgi-search-input::placeholder{color:#141414;opacity:.45}
+#tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
+@media (max-width: 600px) {
+    .weather-banner {
+      padding: 8px 16px;
+      gap: 12px;
+      font-size: 10px;
+    }
+    .weather-banner .wb-dot { display: none; }
+  }
+@media (max-width: 820px) {
+    .feed .card { width: calc(50% - 4px); }
+    .hero-img.desktop { display: none; }
+    .hero-img.mobile { display: block; object-position: center 65%; }
+    .hero { height: 30vh; min-height: 230px; }
+    .nav-links { display: none; }
+    .nav-toggle { display: flex; }
+    .nav-cta { display: none; }
+    .nav-inner { padding: 14px 20px; }
+    .hero-content { padding: 28px 20px; }
+    .about-inner { grid-template-columns: 1fr; gap: 16px; padding: 0 20px; }
+    .filters-inner { padding: 0 20px; }
+    .filters { top: 53px; padding: 14px 0; }
+    .filter-pills { overflow-x: auto; flex-wrap: nowrap; -webkit-overflow-scrolling: touch; scrollbar-width: none; padding-bottom: 2px; }
+    .filter-pills::-webkit-scrollbar { display: none; }
+    .pill { flex-shrink: 0; padding: 9px 14px; }
+    .feed { padding: 20px 20px 60px; gap: 6px; }
+    .giveaways { padding: 0 20px 36px; }
+    .giveaways-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .events { padding: 0 20px 36px; }
+    .events-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
+    .card { margin-bottom: 0px; }
+    .footer { padding: 48px 20px 24px; }
+    .footer-inner { grid-template-columns: 1fr 1fr; gap: 32px; }
+    .footer-brand { grid-column: 1 / -1; }
+    .footer-bottom { flex-direction: column; gap: 10px; padding: 0 20px; padding-top: 24px; }
+    .scoreboard-strip-inner { padding: 0 20px; gap: 12px; }
+    .scoreboard-strip-cta { display: none; }
+    .scoreboard-strip-title { font-size: 8px; }
+    .scoreboard-strip-scores { gap: 16px; }
+    .strip-score { font-size: 11px; }
+    .score-form-wrap { grid-template-columns: 1fr; gap: 32px; }
+    .score-section { padding: 0 20px 48px; }
+    .vibe-board { padding: 0 20px 48px; }
+    .vibe-grid { column-count: 2; column-gap: 6px; }
+    .vibe-pin { margin-bottom: 6px; }
+    .card-title { font-size: 15px; }
+    .card-text { font-size: 12px; line-height: 1.55; }
+    .card-body { padding: 14px 16px 16px; }
+    .gear-slide-name { font-size: 13px; }
+    .gear-slide-info { padding: 12px 14px; }
+  }
+@media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
 /*TGI-ENT-V1*/
 @font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
 body{font-family:var(--serif)}
@@ -481,5 +717,62 @@ body{font-size:16px;line-height:1.6}
 </script>
 <!-- GoatCounter analytics -->
 <script data-goatcounter="https://thegrassyissue.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<script>// TGI-HDR-V1
+
+  // --- Weather Banner (Austin, TX — geolocked) ---
+  (function() {
+    const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    const months = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const now = new Date();
+    const dateStr = days[now.getDay()] + ', ' + months[now.getMonth()] + ' ' + now.getDate();
+    document.getElementById('wb-date').textContent = dateStr + ' · Austin, TX';
+
+    // Weather condition → icon mapping
+    function weatherIcon(code) {
+      if (code === 0) return '☀️';
+      if (code <= 3) return '⛅';
+      if (code <= 48) return '🌫️';
+      if (code <= 57) return '🌦️';
+      if (code <= 65) return '🌧️';
+      if (code <= 67) return '🌧️';
+      if (code <= 77) return '❄️';
+      if (code <= 82) return '🌧️';
+      if (code <= 86) return '❄️';
+      if (code >= 95) return '⛈️';
+      return '⛅';
+    }
+
+    function weatherDesc(code) {
+      if (code === 0) return 'Clear';
+      if (code <= 3) return 'Partly cloudy';
+      if (code <= 48) return 'Foggy';
+      if (code <= 57) return 'Drizzle';
+      if (code <= 65) return 'Rain';
+      if (code <= 67) return 'Freezing rain';
+      if (code <= 77) return 'Snow';
+      if (code <= 82) return 'Showers';
+      if (code <= 86) return 'Snow showers';
+      if (code >= 95) return 'Thunderstorm';
+      return 'Cloudy';
+    }
+
+    // Open-Meteo free API — no key needed, Austin coords
+    fetch('https://api.open-meteo.com/v1/forecast?latitude=30.2672&longitude=-97.7431&current=temperature_2m,weather_code,wind_speed_10m&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=America%2FChicago')
+      .then(r => r.json())
+      .then(data => {
+        const cur = data.current;
+        const temp = Math.round(cur.temperature_2m);
+        const code = cur.weather_code;
+        const wind = Math.round(cur.wind_speed_10m);
+        document.getElementById('wb-icon').textContent = weatherIcon(code);
+        document.getElementById('wb-temp').textContent = temp + '°F';
+        document.getElementById('wb-desc').textContent = weatherDesc(code) + ' · Wind ' + wind + ' mph';
+      })
+      .catch(() => {
+        // Fallback: hide weather portion gracefully
+        document.getElementById('wb-weather').style.display = 'none';
+      });
+  })();
+</script>
 </body>
 </html>

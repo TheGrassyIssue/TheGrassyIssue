@@ -38,7 +38,12 @@ MARK = "/*TGI-WM-V1*/"
 # optical weight next to the mono nav links.
 SPEC = ("font-family:var(--serif);font-style:normal;font-weight:700;"
         "font-size:21px;letter-spacing:.085em;text-transform:uppercase;"
-        "line-height:1;white-space:nowrap")
+        "line-height:1;white-space:nowrap;border-bottom:none;text-decoration:none")
+# border-bottom:none AND text-decoration:none. /brands/ is the only page without a
+# global `a{color:inherit;text-decoration:none}` reset, so the browser's default
+# underline showed through on the masthead there and nowhere else. Checking
+# borderBottomWidth alone reported "identical" and missed it — Lenny caught it by
+# looking. Assert on BOTH properties when verifying link styling.
 
 
 def inventory(paths):
@@ -66,8 +71,16 @@ def fix(path, apply_):
 
     # 2. replace the .nav-wordmark rule. Match the whole block so we overwrite
     #    whatever spec is there rather than appending a competing one.
+    #
+    #    PRESERVE the colour. apply-green-wordmark.py appends `color:var(--grass)`
+    #    to this same rule, so a naive full overwrite silently stripped the green
+    #    and made this script non-idempotent the moment green was applied — it
+    #    reported "would update 279 of 279" forever and would have reverted the
+    #    masthead colour on the next generator run.
     def repl(mm):
-        return f".nav-wordmark{{{MARK}{SPEC}}}"
+        colour = re.search(r"color:\s*[^;}]+", mm.group(0))
+        tail = ";" + colour.group(0).replace(" ", "") if colour else ""
+        return f".nav-wordmark{{{MARK}{SPEC}{tail}}}"
 
     new, n = re.subn(r"\.nav-wordmark\s*\{[^}]*\}", repl, s, count=1)
     if n and new != s:

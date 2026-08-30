@@ -114,6 +114,16 @@ def fix(path, apply_, titles):
             d["description"] = desc.replace("&mdash;", "-")
             changed = True
             notes.append("Article description resynced")
+        # Article headline. Found 2026-08-29 on the White Tee Edit: the head-swap
+        # rewrote <title>, og:title and twitter:title but not the JSON-LD headline,
+        # so the schema still announced "The Niche Grip Report". Same test as the
+        # other fields - only a leak if it holds ANOTHER post's title verbatim.
+        hl = d.get("headline")
+        if ogt and hl and norm(hl) != norm(ogt) and norm(hl) in foreign:
+            d["headline"] = html.unescape(ogt).replace("—", "-")
+            changed = True
+            notes.append(f"Article headline {hl!r} -> og:title")
+
         # schema image kept pointing at /images/grips/hero.jpg - use og:image.
         # TWO guards, both learned the hard way:
         #  - skip the grip report itself; grips/hero.jpg is ITS OWN image, and a
