@@ -13,6 +13,15 @@ def extract(path, url):
     desc = html.unescape(d.group(1)).strip() if d else ""
     tag = re.search(r'<span class="drop-tag[^"]*">\[([^\]]+)\]</span>', h)
     tag = tag.group(1) if tag else ("Guide" if "/guides/" in url or "field-guide" in url else "Post")
+    # UNESCAPE. The tag is scraped straight out of the HTML, so it arrives as
+    # "Drops &amp; Brands". The search overlay runs its own esc() over every field
+    # before injecting, which double-escaped it to &amp;amp; and printed
+    # "Drops &amp; Brands" in the results list. Store plain text; let the renderer escape.
+    tag = html.unescape(tag).strip()
+    # Every post is Field Notes, Drops & Brands or News — the three-category rule.
+    # "Post" and "Guide" are fallbacks for pages with no drop-tag; map them so the
+    # search results never show a label that exists nowhere else on the site.
+    tag = {"Post": "Field Notes", "Guide": "Field Notes"}.get(tag, tag)
     img = re.search(r'src="(/images/[^"]+)"', h)
     img = img.group(1) if img else ""
     # product names as keywords

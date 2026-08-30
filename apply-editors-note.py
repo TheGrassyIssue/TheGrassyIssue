@@ -181,6 +181,28 @@ def main():
                 stats["subs"] += html.count(src)
                 html = html.replace(src, dst)
 
+        # ---- SCRIPT SAFETY (added 2026-08-30 after this killed sitewide search)
+        # The substitutions above turn an UNQUOTED font name into a SINGLE-QUOTED
+        # one. That is fine in CSS and in a double-quoted style attribute, and
+        # fatal inside a single-quoted JavaScript string — which is where the
+        # search overlay assembles its result rows:
+        #     +'<span style="...font-family:'Editors Note Text',Georgia,serif;..."'
+        # The quote closes the literal, the parser throws `Unexpected identifier`,
+        # and the whole <script> block dies silently. 185 pages shipped that way
+        # and site search did nothing on any of them.
+        # So: re-escape the quotes inside <script> blocks after substituting.
+        def _esc_scripts(doc):
+            def one(m):
+                js = m.group(2)
+                if "'Editors Note Text'" in js:
+                    js = re.sub(r"(?<!\\)'Editors Note Text'",
+                                r"\\'Editors Note Text\\'", js)
+                return m.group(1) + js + m.group(3)
+            return re.sub(r"(<script\b[^>]*>)(.*?)(</script>)", one, doc, flags=re.S)
+
+        if not revert:
+            html = _esc_scripts(html)
+
         if not revert:
             body = article_css(html) if prof == "ARTICLE" else prof
             stats["article" if prof == "ARTICLE" else "scoped"] += 1

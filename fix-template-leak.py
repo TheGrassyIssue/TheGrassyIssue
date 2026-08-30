@@ -183,6 +183,32 @@ def fix(path, apply_, titles):
     return notes
 
 
+def shared_faqs(paths):
+    """Report any FAQ question-set that appears on more than one page.
+
+    THE BLIND SPOT THIS CLOSES (Lenny, 2026-08-30: "the FAQ is repeating on a
+    bunch of pages"). The repair above rebuilds the VISIBLE FAQ from the page's
+    own FAQPage schema, on the assumption the schema is right — which held for
+    the four pages it was written for. It is useless when the clone copied BOTH:
+    the White Tee Edit carried the Niche Grip Report's eight grip questions in
+    the visible block AND in the JSON-LD, so visible matched schema and the
+    check passed while the page shipped another post's FAQ.
+
+    Two pages can never legitimately share an identical question set, so this is
+    reported rather than auto-fixed — writing a real FAQ needs a human.
+    """
+    import hashlib, collections
+    by = collections.defaultdict(list)
+    for p in paths:
+        s = open(p, encoding="utf-8", errors="replace").read()
+        qs = [re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", q)).strip().lower()
+              for q in re.findall(r"<summary>(.*?)</summary>", s, re.S)]
+        if qs:
+            by[hashlib.md5("|".join(qs).encode()).hexdigest()].append(
+                (os.path.basename(p), qs[0]))
+    return {k: v for k, v in by.items() if len(v) > 1}
+
+
 def main(apply_=False):
     n = 0
     paths = sorted(glob.glob(os.path.join(ROOT, "drops", "*.html")))
@@ -195,6 +221,18 @@ def main(apply_=False):
             for x in notes:
                 print("   -", x)
     print(f"\n{'fixed' if apply_ else 'would fix'} {n} page(s)")
+
+    dupes = shared_faqs(paths)
+    if dupes:
+        print("\n!! SHARED FAQ — these pages carry an identical question set,")
+        print("   which means one of them was cloned WITH the other's FAQ.")
+        print("   Not auto-fixable: write a real FAQ for the wrong one.")
+        for v in dupes.values():
+            print(f'\n   first question: "{v[0][1][:70]}"')
+            for name, _ in v:
+                print("      -", name)
+    else:
+        print("no shared FAQ sets")
     if not apply_:
         print("(dry run - pass --apply to write)")
 

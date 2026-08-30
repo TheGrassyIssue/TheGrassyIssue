@@ -387,23 +387,24 @@
  {
   "slug": "edel-golf",
   "name": "Edel Golf",
-  "loc": "Austin, TX",
+  "loc": "Arvada, CO",
   "regions": [
-   "usa",
-   "texas"
+   "usa"
   ],
   "cats": [
    "equipment"
   ],
-  "line": "David Edel's putters, fitted like irons and still hand-finished in Austin.",
-  "url": "/drops/texas-golf-brands-and-makers#edel",
+  "line": "David Edel fitted putters by where you actually aim, measured with a mirror and a laser. He sold the company in 2023; the method outlived him.",
+  "url": "/drops/brand-to-know-edel-golf",
   "tags": [
    "design-nerd",
    "made-by-hand"
   ],
   "added": "2026-08-24",
-  "attrs": [],
-  "img": "/images/texas-brands/edel-0.jpg"
+  "attrs": [
+   "heritage"
+  ],
+  "img": "/images/edel-golf/bowline-0.jpg"
  },
  {
   "slug": "edison-golf",

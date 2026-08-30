@@ -101,7 +101,16 @@ def verify(path):
     # --- editorial rules ---
     # strip tags first so hrefs/slugs (e.g. the legacy 10-texas-courses-worth-the-trip)
     # don't trip the ban — it applies to prose, not to historical URLs.
-    txt = re.sub(r'<[^>]+>', ' ', h)
+    # Drop the More-from-Feed and Instagram strips BEFORE the prose checks. Those
+    # cards are auto-generated navigation — their text is another post's TITLE, not
+    # copy written for this page. Eight legacy posts still have "worth" in their
+    # titles (Lenny declined retitling), so once fix-more-from-feed.py reshuffled
+    # which posts each page links to, twelve pages started failing the ban for
+    # linking to them. Same principle as the URL strip below: the rule is about
+    # prose, not about pointers to things that already exist.
+    txt = re.sub(r'<section class="more">.*?</section>', ' ', h, flags=re.S)
+    txt = re.sub(r'<a[^>]*class="more-card".*?</a>', ' ', txt, flags=re.S)
+    txt = re.sub(r'<[^>]+>', ' ', txt)
     txt = re.sub(r'https?://\S+|/[\w/-]+', ' ', txt)
     # place names containing "Worth" are not the banned word (Fort Worth, Worth Avenue...)
     txt = re.sub(r'\bFort\s+Worth\b', ' ', txt, flags=re.I)
