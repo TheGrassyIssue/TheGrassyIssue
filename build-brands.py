@@ -25,27 +25,122 @@ BRANDS = json.load(open(os.path.join(ROOT, "data", "brands.json")))
 MENTIONS = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json")))
 
 # ---------------------------------------------------------------- card images
-def resolve_img(b):
+#
+# Lenny, 2026-08-30: "the brands page is showing the same image multiple times."
+#
+# THE BUG. The old anchor branch searched a HARDCODED list of image directories
+# ["texas-brands", "aussie", "left-of-field", …]. Any post whose images live
+# somewhere else — /images/grips/, /images/whitetee26/ — missed every candidate
+# and fell through to the page-hero fallback. Eleven brands across three posts
+# therefore shared three images:
+#
+#     5x /images/whitetee26/hero.jpg   3 Putt Round, ANTi Country Club Tokyo,
+#                                      Badlands, Pluto Golf, Rebolf
+#     4x /images/grips/hero.jpg        Garsen, RipIt, Rosemark, Stick
+#     2x /images/realtree-puma/hero.jpg  PUMA Golf, Realtree
+#
+# The failure was silent because a page hero is a real, existing file — nothing
+# 404s, the cards just all look the same. `missing_img` only ever caught brands
+# that resolved to NOTHING, never brands that resolved to the SAME thing.
+#
+# THE FIX. Read the post instead of guessing at directory names, in four steps,
+# most-specific first, and assert afterwards that no two brands collide.
+
+
+def _norm(x):
+    """Collapse to comparable letters+digits: 'ANTi Country Club Tokyo' -> anticountryclubtokyo."""
+    return re.sub(r"[^a-z0-9]", "", (x or "").lower())
+
+
+def _page_of(url):
+    p = ROOT + url.split("#")[0] + ".html"
+    return p if os.path.exists(p) else None
+
+
+def _span(h, i, tag):
+    """End offset of the element opening at i, by TAG DEPTH.
+
+    A first cut ended each card at "the next product-card, else i+9000 chars".
+    The LAST card in a post has no next card, so its block ran 9000 characters
+    past the closing </div> and swallowed the More-from-Feed thumbnails — which
+    is how 3 Putt Round ended up showing a Sun Mountain photo. Never bound HTML
+    by a character count."""
+    d = 0
+    for m in re.finditer(rf"<{tag}\b|</{tag}>", h[i:]):
+        d += -1 if m.group(0).startswith("</") else 1
+        if d == 0:
+            return i + m.end()
+    return len(h)
+
+
+def _cards(h):
+    """[(brand text, name text, [frame paths])] for every product card on a page.
+
+    Handles both card shapes in the wild: <div class="product-card"> (gallery
+    posts) and <a class="product-card"> (older flat-image posts)."""
+    out = []
+    for m in re.finditer(r'<(div|a) class="product-card[^"]*"[^>]*>', h):
+        blk = h[m.start():_span(h, m.start(), m.group(1))]
+        bm = re.search(r'<div class="product-brand">(.*?)</div>', blk, re.S)
+        nm = re.search(r'<div class="product-name">(.*?)</div>', blk, re.S)
+        frames = re.findall(r'src="(/images/[^"]+)"', blk)
+        txt = lambda mm: H.unescape(re.sub(r"<[^>]+>", " ", mm.group(1))) if mm else ""
+        out.append((txt(bm), txt(nm), frames))
+    return out
+
+
+def resolve_frames(b):
+    """Every frame we can honestly attribute to THIS brand, best first."""
     if b.get("img") and os.path.exists(ROOT + b["img"]):
-        return b["img"]
-    url = b["url"]
-    if "#" in url:                                  # anchor brands -> lead frame
+        return [b["img"]]
+    url, name = b["url"], b["name"]
+    page = _page_of(url)
+    h = open(page, encoding="utf-8").read() if page else ""
+    dirs = list(dict.fromkeys(re.findall(r'src="(/images/[^/]+)/', h)))
+
+    # 1. anchor -> <dir>/<frag>-N.jpg, across the dirs the page ACTUALLY uses
+    if "#" in url:
         frag = url.split("#")[1]
-        for d in ["texas-brands", "aussie", "left-of-field", "midiron", "walker-blooming-grounds", "women-founded", "all-black"]:
-            base = {"lof": "xelements-polo-0-0", "midiron": "detour-stripe-polo-5",
-                    "walker": "blooming-grounds-knit-polo-1-0"}.get(frag, frag + "-0")
-            # sierra madre lead frame is -2 after the tennis cut; try -0.. -2
-            for cand in [base, frag + "-2", frag + "-1"]:
-                p = f"/images/{d}/{cand}.jpg"
-                if os.path.exists(ROOT + p):
-                    return p
-    page = ROOT + url.split("#")[0] + ".html"       # page brands -> page hero
-    if os.path.exists(page):
-        h = open(page, encoding="utf-8").read()
-        m = re.search(r'<div class="drop-hero-img">\s*<img src="([^"]+)"', h)
-        if m and os.path.exists(ROOT + m.group(1)):
-            return m.group(1)
-    return None
+        alias = {"lof": "xelements-polo-0", "midiron": "detour-stripe-polo",
+                 "walker": "blooming-grounds-knit-polo-1"}.get(frag, frag)
+        for d in dirs:
+            hits = [f"{d}/{alias}-{n}.jpg" for n in range(6)
+                    if os.path.exists(ROOT + f"{d}/{alias}-{n}.jpg")]
+            if hits:
+                return hits
+
+    # 2. the product card whose .product-brand names this brand
+    for bt, nt, frames in _cards(h):
+        lead = _norm(bt.split("·")[0])
+        if lead and frames and (lead == _norm(name) or _norm(name).startswith(lead) and len(lead) > 4):
+            return frames
+
+    # 3. filename stem that matches the brand — catches posts (the grip report)
+    #    where .product-brand holds a LOCATION rather than the brand name.
+    n = _norm(name)
+    for d in dirs:
+        stems = sorted({re.sub(r"-\d+$", "", os.path.splitext(f)[0])
+                        for f in os.listdir(ROOT + d) if f.endswith(".jpg")})
+        for s in stems:
+            ns = _norm(s)
+            if len(ns) > 3 and (ns == n or n.startswith(ns)):
+                hits = [f"{d}/{s}-{k}.jpg" for k in range(6)
+                        if os.path.exists(ROOT + f"{d}/{s}-{k}.jpg")]
+                if hits:
+                    return hits
+                if os.path.exists(ROOT + f"{d}/{s}.jpg"):
+                    return [f"{d}/{s}.jpg"]
+
+    # 4. page hero — LAST resort, and now reported rather than shipped silently
+    m = re.search(r'<div class="drop-hero-img">\s*<img src="([^"]+)"', h)
+    if m and os.path.exists(ROOT + m.group(1)):
+        return [m.group(1)]
+    return []
+
+
+def resolve_img(b):
+    f = resolve_frames(b)
+    return f[0] if f else None
 
 CATS = [("apparel","Apparel"),("equipment","Clubs"),("bags","Bags"),
         ("headcovers","Headcovers"),("headwear","Headwear"),("accessories","Accessories"),
@@ -77,6 +172,55 @@ UPD = _dt.date.today().strftime("%-d %b %Y")  # auto-stamp, was hardcoded to 25 
 
 cards = []
 missing_img = []
+# Resolve every brand up front so collisions can be detected BEFORE the page is
+# written. A shared image is the failure mode Lenny actually sees on /brands/;
+# it never trips `missing_img`, because the shared file exists and loads fine.
+RESOLVED = {b["slug"]: resolve_frames(b) for b in BRANDS}
+
+
+def gallery_frames(b):
+    """The card's slides, in precedence order — with brand-gallery.json policed.
+
+    brand-gallery.json is written by the image ranker (see the taste-tags memo).
+    Two defects in it were shipping duplicate-looking cards:
+
+      * rosemark-grips was assigned THREE frames belonging to other brands —
+        /images/cloud-and-wind/classic-collection.jpg, the texas-brands hero and
+        the custom-wedges hero — with its own grip photo demoted to slide 4. The
+        ranker falls back to "any high-scoring lifestyle frame on the site" when
+        a brand has too few of its own, which quietly borrows someone else's.
+      * puma-golf and realtree got byte-identical six-frame lists, because they
+        share one collab post and the ranker scores per POST, not per brand.
+
+    So: an explicit "img" in brands.json is now the highest authority (it is a
+    human decision), and ranked frames are kept only when they live in a
+    directory this brand actually resolves into.
+    """
+    slug, own = b["slug"], RESOLVED.get(b["slug"]) or []
+    ranked = (GAL.get(slug, {}) or {}).get("frames") or []
+    # keep only ranked frames from a directory this brand actually resolves into
+    ok_dirs = {os.path.dirname(f) for f in own} | (
+        {os.path.dirname(b["img"])} if b.get("img") else set())
+    ranked = [f for f in ranked if os.path.dirname("/" + f.lstrip("/")) in ok_dirs]
+    # An explicit "img" pins the LEAD only. An earlier cut returned [img] + own and
+    # dropped `ranked` entirely, which silently collapsed the swipeable gallery to
+    # one slide on every brand we pinned — the cure being worse than the disease.
+    lead = [b["img"]] if (b.get("img") and os.path.exists(ROOT + b["img"])) else []
+    seen, out = set(), []
+    for f in lead + ranked + own:
+        f = "/" + f.lstrip("/")
+        if f not in seen:
+            seen.add(f); out.append(f)
+    return out[:6]
+
+
+GALLERIES = {b["slug"]: gallery_frames(b) for b in BRANDS}
+_lead = {}
+for _s, _f in GALLERIES.items():
+    if _f:
+        _lead.setdefault(_f[0], []).append(_s)
+DUPES = {k: v for k, v in _lead.items() if len(v) > 1}
+
 for b in sorted(BRANDS, key=lambda x: x["name"].lower()):
     img = resolve_img(b)
     if not img: missing_img.append(b["slug"])
@@ -84,8 +228,7 @@ for b in sorted(BRANDS, key=lambda x: x["name"].lower()):
     chip = REGL.get(b["regions"][-1] if "texas" in b["regions"] else b["regions"][0], "")
     loc = H.escape(b["loc"]) if b["loc"] != "—" else ""
     cats_txt = " &middot; ".join(CATL[c] for c in b["cats"])
-    frames = (GAL.get(b["slug"], {}) or {}).get("frames") or ([img] if img else [])
-    frames = ["/" + f.lstrip("/") for f in frames][:6]
+    frames = GALLERIES[b["slug"]]
     if frames:
         slides = "".join(
             f'<div class="bi-slide"><img src="{f}" loading="lazy" '
@@ -163,7 +306,7 @@ body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
 .nav-inner{{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 24px;}}
 .nav-wordmark{{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.01em;}}
 .nav-links{{display:flex;gap:20px;}}
-.nav-links a{{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
+.nav-links a{{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
 .nav-links a.active{{opacity:1;border-bottom:2px solid var(--grass);padding-bottom:2px;}}
 .nav-cta{{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:7px 12px;border-radius:2px;}}
 .bi-hero{{position:relative;height:30vh;min-height:240px;max-height:340px;overflow:hidden;background:var(--ink);}}
@@ -295,6 +438,12 @@ os.makedirs(os.path.join(ROOT, "brands"), exist_ok=True)
 open(os.path.join(ROOT, "brands", "index.html"), "w", encoding="utf-8").write(page)
 print(f"wrote brands/index.html — {N} brands, {len(page)} bytes")
 if missing_img: print("no image resolved for:", missing_img)
+if DUPES:
+    print("\n!! DUPLICATE card images — these brands share a lead frame:")
+    for k, v in DUPES.items():
+        print(f"   {k}\n       " + ", ".join(v))
+    print("   Fix by adding an anchor to the brand's url in data/brands.json, or an\n"
+          "   explicit \"img\", so resolve_frames() can tell them apart.\n")
 
 # ------------------------------------------------- per-brand coverage pages
 THUMBS = json.load(open(os.path.join(ROOT, "data", "post-thumbs.json")))
@@ -352,7 +501,7 @@ body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
 .nav-inner{{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 24px;}}
 .nav-wordmark{{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.01em;}}
 .nav-links{{display:flex;gap:20px;}}
-.nav-links a{{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
+.nav-links a{{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
 .nav-links a.active{{opacity:1;border-bottom:2px solid var(--grass);padding-bottom:2px;}}
 .bp-head{{max-width:1200px;margin:0 auto;padding:44px 24px 6px;display:flex;gap:28px;align-items:flex-start;flex-wrap:wrap;}}
 .bp-heroimg{{width:190px;aspect-ratio:1/1;overflow:hidden;border:1px solid rgba(20,20,20,.2);background:#eceae2;flex-shrink:0;}}
