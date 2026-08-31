@@ -188,7 +188,7 @@ page = f'''<!DOCTYPE html>
   Public Drip FW26</div>
 
 <header class="drop-header">
-  <span class="drop-tag flag">[Drops &amp; Brands]</span>
+  <span class="drop-tag grass">[Drops &amp; Brands]</span>
   <h1>Public Drip FW26: Nightshift &mdash; Brooklyn&rsquo;s Muni Label Goes Dark for Fall</h1>
   <div class="drop-meta">
     <span>August 31, 2026</span><span class="dot"></span>

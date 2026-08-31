@@ -42,7 +42,7 @@ def verify(path):
     # `faq` was in here, which is precisely why three pages shipped with FAQ
     # markup and no .faq rule anywhere — the check designed to catch that was
     # told to ignore it. Removed 2026-08-30.
-    EXEMPT = {"products", "more-grid", "more-kicker", "more-title"}
+    EXEMPT = {"products", "more-grid", "more-kicker", "more-title", "aff-disclosure"}  # aff-disclosure is inline-styled by apply-affiliates.py
     unstyled = sorted(c for c in used if c not in styled and c not in EXEMPT)
     chk("every class used has a CSS rule", not unstyled, str(unstyled))
 

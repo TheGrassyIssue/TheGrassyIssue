@@ -1,0 +1,90 @@
+{
+ "_readme": "Affiliate link map. mode=param: append query params to the merchant URL (template uses {url} nowhere, params joined with & or ?). mode=wrap: replace href with template, {url} = URL-encoded original. mode=skimlinks: handled by the sitewide JS snippet, no per-link rewrite. status=active entries with a non-null id are the only ones apply-affiliates.py touches. Lenny signs up for each program himself; drop the id/template in here and re-run apply-affiliates.py --apply.",
+ "_skimlinks": {
+  "provider": "skimlinks",
+  "publisher_id": "308476X1796792",
+  "note": "Set provider to 'skimlinks' or 'sovrn' + publisher_id once the account exists; apply-affiliates.py --apply then installs the snippet sitewide. Covers big-box merchants (PGA Tour Superstore, Dick's, adidas, TaylorMade, etc.) automatically."
+ },
+ "merchants": {
+  "studentsgolf.com": {
+   "program": "ShareASale / UpPromote (detected on site)",
+   "mode": "wrap",
+   "template": null,
+   "id": null,
+   "status": "pending-signup",
+   "links_on_site": 56
+  },
+  "malbon.com": {
+   "program": "unknown \u2014 mentions affiliate on site; likely invite via outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 59
+  },
+  "metalwood.studio": {
+   "program": "unknown \u2014 mentions affiliate on site; likely invite via outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 34
+  },
+  "sugarloafsocialclub.com": {
+   "program": "none detected \u2014 ask in outreach (Shopify Collabs)",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 62
+  },
+  "radry.com": {
+   "program": "none detected \u2014 ask in outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 46
+  },
+  "lofgolf.com": {
+   "program": "none detected \u2014 ask in outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 44
+  },
+  "seamusgolf.com": {
+   "program": "none detected \u2014 ask in outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 44
+  },
+  "walkergolfthings.com": {
+   "program": "none detected \u2014 ask in outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 41
+  },
+  "jonessportsco.com": {
+   "program": "none detected \u2014 ask in outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 41
+  },
+  "manorsgolf.com": {
+   "program": "none detected \u2014 ask in outreach",
+   "mode": "param",
+   "template": null,
+   "id": null,
+   "status": "pending-outreach",
+   "links_on_site": 40
+  }
+ }
+}
