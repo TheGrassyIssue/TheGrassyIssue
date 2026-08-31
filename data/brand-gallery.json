@@ -841,5 +841,15 @@
   ],
   "lifestyle": 2,
   "needs_sourcing": true
+ },
+ "public-drip": {
+  "frames": [
+   "images/publicdrip-fw26/herringbone-half-zip-coffee-1.jpg",
+   "images/publicdrip-fw26/anywhere-pleated-pants-pinstripe-1.jpg",
+   "images/publicdrip-fw26/waffle-knit-polo-dark-slate-1.jpg",
+   "images/publicdrip-fw26/denim-bucket-indigo-1.jpg",
+   "images/publicdrip-fw26/pa-long-sleeve-mock-cream-1.jpg"
+  ],
+  "lifestyle": 5
  }
 }
