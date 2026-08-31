@@ -233,7 +233,7 @@ page = f'''<!DOCTYPE html>
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/loud-headcovers/hero.jpg" alt="Mogshade Bloom headcovers in green and floral-embroidered white lying in the grass beside a golfer in white trousers and white shoes, pines behind" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="/images/loud-headcovers/hero.jpg" alt="A weaver standing at a manual wooden loom in the Portuguese wool mill that makes Mogshade&rsquo;s headcover textiles, striped blankets stacked on the bench beside her" /></div></div>
 
 <div class="writeup">
   <div class="writeup-body">

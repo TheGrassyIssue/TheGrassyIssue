@@ -18,6 +18,14 @@ tail     = re.search(r'(<!-- TGI SEARCH -->.*?)</body>', ch, re.S).group(1)
 KICKER_CSS = ("/*TGI-KICKER-V1*/\n.cat-kicker{font-family:var(--sans);font-size:15px;"
     "line-height:1.75;color:#3f443e;margin:0 0 36px;max-width:70ch;"
     "border-left:3px solid var(--rough);padding:4px 0 4px 18px}")
+# This chassis inherited a flat .drop-hero rule with no crop. Upgrade it to the
+# sitewide 21:9 cover used on Lions, Hancock and every other post with a hero.
+css_main = css_main.replace(
+    ".drop-hero-img{width:100%;border:.5px solid var(--ink);overflow:hidden}"
+    ".drop-hero-img img{width:100%;display:block}",
+    ".drop-hero-img{width:100%;aspect-ratio:21/9;border:.5px solid var(--ink);overflow:hidden}"
+    ".drop-hero-img img{width:100%;height:100%;object-fit:cover}")
+
 if "TGI-KICKER-V1" not in css_main:
     css_main = css_main.replace("</style>", KICKER_CSS + "\n</style>", 1)
 
@@ -196,6 +204,8 @@ page = f'''<!DOCTYPE html>
     <span>Status checked Aug 31, 2026</span>
   </div>
 </header>
+
+<div class="drop-hero"><div class="drop-hero-img"><img src="/images/publicdrip-fw26/hero.jpg" alt="Public Drip FW26 campaign shot &mdash; a model in the indigo denim bucket hat and cream crewneck inside a dimly lit vintage clothing shop, racks and hanging lamps behind" /></div></div>
 
 <div class="writeup">
   <div class="writeup-body">
