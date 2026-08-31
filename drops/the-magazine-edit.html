@@ -110,6 +110,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
 </style>
+<style>
+/*TGI-FAQ-V1*/
+.faq{max-width:820px}
+.faq-q{border-top:.5px solid var(--ink);padding:14px 0}
+.faq-q summary{font-family:var(--serif);font-size:16px;cursor:pointer;list-style:none}
+.faq-q summary::-webkit-details-marker{display:none}
+.faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
+.faq-q[open] summary:before{content:"\2212 "}
+.faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -490,23 +500,33 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 
+<section class="products" style="border-top:none;padding-top:48px">
+  <h2 class="products-hdr" id="faq">Frequently Asked</h2>
+  <div class="faq">
+    <details class="faq-q"><summary>What are the best independent golf magazines?</summary><p>The Golfer's Journal is the most established, at 124 pages a quarter with no advertising. McKellar is written by an ex-Guardian golf correspondent and an architecture writer. Catalogue 18 runs 300 pages a year as a subscription art magazine. The Links Diary covers Scottish links in words and film.</p></details>
+    <details class="faq-q"><summary>What are the best golf newsletters?</summary><p>Monday Q Info covers the players trying to qualify for the PGA Tour. The Fried Egg covers course architecture. The Quadrilateral covers the major championships. All three are free or low cost.</p></details>
+    <details class="faq-q"><summary>Which golf magazine is best for course architecture?</summary><p>The Fried Egg is the best free option and publishes the deepest course profiles. Golf Club Atlas has been the home of golf course architecture online since 1999. Golf Course Architecture, published quarterly by Tudor Rose, is the industry journal. By Design from the ASGCA is free and written by golf course architects.</p></details>
+    <details class="faq-q"><summary>Are independent golf magazine subscriptions a good buy?</summary><p>Independent titles cost more per issue than newsstand magazines, typically 15 to 30 dollars, but are made to be kept rather than recycled. Several of the best are free, including The Fried Egg, Monday Q Info, Golf Club Atlas, and By Design from the American Society of Golf Course Architects.</p></details>
+  </div>
+</section>
+
 <section class="more">
   <div class="more-hdr">
     <span class="more-label">More from the Feed</span>
     <a href="/" class="more-link">Back to Feed &rarr;</a>
   </div>
   <div class="more-grid">
+    <a href="/drops/brand-to-know-kingfisher-golf" class="more-card">
+      <div class="more-card-img"><img src="/images/kingfisher-golf/hero-package.jpg" alt="Brand to Know &amp;mdash; Kingfisher Golf" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; Kingfisher Golf</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    </a>
     <a href="/drops/10-rangefinders-from-90-to-600" class="more-card">
       <div class="more-card-img"><img src="/images/feed/e18bc38e-1_78610967-a183-473a-8b95-d70b62edfffd.jpg" alt="10 Rangefinders from $90 to $600" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">10 Rangefinders from $90 to $600</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
-    <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="more-card">
-      <div class="more-card-img"><img src="/images/feed/36236404-cropped-IMG_2838.jpg" alt="Ranking the Muni Grub — Every On-Course Food Spot in Austin" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">Ranking the Muni Grub — Every On-Course Food Spot in Austin</div><div class="more-card-tag">Field Notes</div></div>
-    </a>
-    <a href="/drops/brand-to-know-left-of-field-golf" class="more-card">
-      <div class="more-card-img"><img src="/images/left-of-field/hero-left-of-field.jpg" alt="Brand to Know &amp;mdash; Left of Field Golf, and the Australian Coast It Is Named After" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; Left of Field Golf, and the Australian Coast It Is Named After</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/the-technical-brands-roundup" class="more-card">
+      <div class="more-card-img"><img src="/images/technical-brands/radmor-sutton-polo.jpg" alt="The Technical Brands Roundup" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">The Technical Brands Roundup</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
   </div>
 </section>
@@ -520,6 +540,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 #tgi-search-input::placeholder{color:#141414;opacity:.45}
 #tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
 @media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
 
 
 

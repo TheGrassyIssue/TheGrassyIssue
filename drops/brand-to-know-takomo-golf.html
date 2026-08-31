@@ -132,6 +132,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
 </style>
+<style>
+/*TGI-FAQ-V1*/
+.faq{max-width:820px}
+.faq-q{border-top:.5px solid var(--ink);padding:14px 0}
+.faq-q summary{font-family:var(--serif);font-size:16px;cursor:pointer;list-style:none}
+.faq-q summary::-webkit-details-marker{display:none}
+.faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
+.faq-q[open] summary:before{content:"\2212 "}
+.faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -283,19 +293,30 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 
+<section class="products" style="border-top:none;padding-top:48px">
+  <h2 class="products-hdr" id="faq">Takomo Golf &mdash; FAQ</h2>
+  <div class="faq">
+    <details class="faq-q"><summary>What is Takomo Golf?</summary><p>A direct-to-consumer golf club brand launched in 2021 out of Turku, Finland. It designs its own clubs, partners with foundries, and ships direct, which is how it sells forged irons at roughly half the price of comparable sets. The range runs $89 to $679.</p></details>
+    <details class="faq-q"><summary>Are Takomo irons any good?</summary><p>The 101 MKII, a hollow-body game-improvement iron, won MyGolfSpy’s Best GI Iron award and sells for $579 for a seven-piece set. Wesley Bryan has played Takomo irons on the PGA Tour.</p></details>
+    <details class="faq-q"><summary>What Takomo irons are available?</summary><p>The 101 MKII for game improvement, the 201T MKII players precision iron introduced for 2026, and the 301 CB, forged from single-billet S20C carbon steel. A full set of S20C forged cavity backs is $649.</p></details>
+    <details class="faq-q"><summary>How is Takomo cheaper than Mizuno or Srixon?</summary><p>No pro shop markup and no retail middlemen. Comparable Japanese-forged sets from Mizuno or Srixon run well north of a thousand dollars; the savings go straight to the price tag.</p></details>
+    <details class="faq-q"><summary>What is the Takomo Skyforger wedge?</summary><p>An $89 wedge using the same 8620 steel alloy that Cleveland and Vokey charge close to double for.</p></details>
+  </div>
+</section>
+
 <section class="more">
   <div class="more-hdr">
     <span class="more-label">More from the Feed</span>
     <a href="/" class="more-link">Back to Feed →</a>
   </div>
   <div class="more-grid">
-    <a href="/drops/brand-to-know-jlindeberg" class="more-card">
-      <div class="more-card-img"><img src="/images/jlindeberg/hero-pinkstrategy.jpg" alt="Brand to Know &amp;mdash; J.Lindeberg" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; J.Lindeberg</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/brand-to-know-huega-house" class="more-card">
+      <div class="more-card-img"><img src="/images/huega-house/brand-hero.jpg" alt="Huega House" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Huega House</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
-    <a href="/drops/summer-practice-guide-austin" class="more-card">
-      <div class="more-card-img"><img src="/images/summer-practice/round-rock-range.jpg" alt="The Summer Practice Guide" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Summer Practice Guide</div><div class="more-card-tag">Field Notes</div></div>
+    <a href="/drops/austin-bbq-field-guide" class="more-card">
+      <div class="more-card-img"><img src="/images/austin-bbq/kg-bbq.jpg" alt="The Austin BBQ Field Guide — 12 Spots After the Round" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">The Austin BBQ Field Guide — 12 Spots After the Round</div><div class="more-card-tag">Field Notes</div></div>
     </a>
     <a href="/drops/australian-golf-brands-and-trips" class="more-card">
       <div class="more-card-img"><img src="/images/aussie/hero-australia.jpg" alt="Golf in Australia &amp;mdash; Ten Brands to Know, and Twelve Trips You Can Actually Book" loading="lazy" /></div>
@@ -313,6 +334,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 #tgi-search-input::placeholder{color:#141414;opacity:.45}
 #tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
 @media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
 
 
 

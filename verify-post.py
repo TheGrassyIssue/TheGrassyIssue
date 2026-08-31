@@ -39,9 +39,28 @@ def verify(path):
     styled = set(re.findall(r'\.([A-Za-z][\w-]*)', css))
     # classes only ever targeted by JS/structure, not styling
     # more-kicker/more-title are unstyled across the whole site (pre-existing, not introduced here)
-    EXEMPT = {"faq", "products", "more-grid", "more-kicker", "more-title"}
+    # `faq` was in here, which is precisely why three pages shipped with FAQ
+    # markup and no .faq rule anywhere — the check designed to catch that was
+    # told to ignore it. Removed 2026-08-30.
+    EXEMPT = {"products", "more-grid", "more-kicker", "more-title"}
     unstyled = sorted(c for c in used if c not in styled and c not in EXEMPT)
     chk("every class used has a CSS rule", not unstyled, str(unstyled))
+
+    # A FAQ needs its OWN block rule, not merely a mention. `.faq-q p` appears in
+    # a shared font-family list on every page, which was enough to satisfy the
+    # generic check above while the layout rules (.faq measure, the item border,
+    # the +/- marker) were entirely absent — giving raw browser <details> at
+    # full page width. Test for a real `.faq{` declaration.
+    if '<div class="faq"' in body_html:
+        chk("FAQ markup has the house .faq CSS block",
+            bool(re.search(r"\.faq\s*\{", css)),
+            "page renders raw <details> at full width - run apply-faq-style.py")
+
+    # Schema and page must agree: marked-up FAQ content has to be visible.
+    if '"FAQPage"' in h:
+        chk("FAQPage schema has a matching visible FAQ",
+            '<div class="faq"' in body_html,
+            "schema-only FAQ - Google requires the content be on the page")
 
     # --- structure ---
     chk("div balance", h.count("<div") == h.count("</div>"), "%d/%d" % (h.count("<div"), h.count("</div>")))
@@ -75,6 +94,20 @@ def verify(path):
     chk("gallery controls complete (dots/arrows/counter)", not ctl,
         "%d gallery(s) wrong — frames %s" % (len(ctl), ctl[:5]))
     chk("no classless <span> dots", '<div class="pg-dots"><span>' not in h)
+
+    # EVERY CARD MUST CARRY AN IMAGE. data-frames="0" with zero pg-frames is
+    # internally "consistent", so the check above passes it happily — and the
+    # card renders as an empty box. That shipped on the streetwear rebuild when
+    # three Casualist cards pointed at an image prefix that did not exist on
+    # disk: the builder counted 0 frames, wrote data-frames="0", and every gate
+    # agreed the page was fine.
+    empty = []
+    for m in re.finditer(r'<div class="product-card', h):
+        blk = h[m.start():match_div(h, m.start())]
+        if "<img" not in blk:
+            nm = re.search(r'class="product-name">([^<]*)', blk)
+            empty.append(nm.group(1)[:40] if nm else "?")
+    chk("every product-card contains an image", not empty, str(empty[:4]))
 
     # --- images ---
     srcs = re.findall(r'src="(/images/[^"]+)"', h)

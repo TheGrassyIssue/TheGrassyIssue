@@ -177,6 +177,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
  ]
 }
 </script>
+<style>
+/*TGI-FAQ-V1*/
+.faq{max-width:820px}
+.faq-q{border-top:.5px solid var(--ink);padding:14px 0}
+.faq-q summary{font-family:var(--serif);font-size:16px;cursor:pointer;list-style:none}
+.faq-q summary::-webkit-details-marker{display:none}
+.faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
+.faq-q[open] summary:before{content:"\2212 "}
+.faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -538,23 +548,36 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 
+<section class="products" style="border-top:none;padding-top:48px">
+  <h2 class="products-hdr" id="faq">Brand to Know — Read The Green &mdash; FAQ</h2>
+  <div class="faq">
+    <details class="faq-q"><summary>What is Read The Green?</summary><p>Read The Green (RTG) is a premium hat and apparel brand started by four lifelong friends — the name comes from three words shouted at a buddy who missed the pin on a mini golf course. The gear moves between the course and the city without trying too hard.</p></details>
+    <details class="faq-q"><summary>What is the Read The Green Founder's Cap?</summary><p>The brand's signature piece: a 5-panel corduroy snapback with embroidered details and a custom interior lining. It's the hat that put RTG's hat program on the map.</p></details>
+    <details class="faq-q"><summary>What is the '97 Vintage Pullover?</summary><p>The piece that went viral — a lightweight nylon layer with rib-knit cuffs and a drawstring waist that works on the back nine or a Saturday coffee run. The Grounds Crew Jacket and Oversized Knit Sweater followed it into premium territory.</p></details>
+    <details class="faq-q"><summary>Who wears Read The Green?</summary><p>The As Seen On roster runs from MLB — Cody Bellinger, Jasson Domínguez, Merrill Kelly, Austin Pope — to Lexie Hull of the Indiana Fever and NFL veterans C.J. Mosley and Tyron Smith. But the brand still feels like it belongs to the weekend golfer.</p></details>
+    <details class="faq-q"><summary>Where did the name Read The Green come from?</summary><p>Boardwalk miniature golf. Four lifelong friends, one buddy who missed the pin, three words shouted at him — a name over a decade in the making before it became a brand. RTG says the phrase now means taking every obstacle in stride and letting adversity point you toward the next shot.</p></details>
+    <details class="faq-q"><summary>Who runs Read The Green?</summary><p>The same four friends who started it. Customer service emails are answered directly by a founder, and the house rule on product is simple: if they wouldn't wear it themselves, they won't sell it.</p></details>
+    <details class="faq-q"><summary>What is new from Read The Green in 2026?</summary><p>The Grounds Crew Jacket in green and tan, corduroy Founder's Caps in Midnight, Espresso, Golden Hour, and Brownstone, mid-profile Club Caps named for New York neighborhoods — Brooklyn, Little Italy — and short-sleeve versions of the viral '97 Vintage Pullover for summer.</p></details>
+  </div>
+</section>
+
 <section class="more">
   <div class="more-hdr">
     <span class="more-label">More from the Feed</span>
     <a href="/" class="more-link">Back to Feed →</a>
   </div>
   <div class="more-grid">
-    <a href="/drops/the-wedge-drop" class="more-card">
-      <div class="more-card-img"><img src="/images/wedge-edit/takomo-skyforger-002.jpg" alt="The Wedge Drop" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Wedge Drop</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/brand-to-know-morning-people-clothiers" class="more-card">
+      <div class="more-card-img"><img src="/images/morning-people-clothiers/hero-lifestyle.jpg" alt="Brand to Know &amp;mdash; Morning People Clothiers" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; Morning People Clothiers</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
     <a href="/drops/best-wings-in-austin" class="more-card">
       <div class="more-card-img"><img src="/images/best-wings/wingzup.jpg" alt="The Best Wings in Austin — 16 Spots After the Round" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">The Best Wings in Austin — 16 Spots After the Round</div><div class="more-card-tag">Field Notes</div></div>
     </a>
-    <a href="/drops/agronomy-workshop-a-golf-shirt-with-a-hidden-tee-slot-and-no" class="more-card">
-      <div class="more-card-img"><img src="/images/feed/1f046afb-62250432_39ef2562-a847-4827-986b-3735b62ab1df.png" alt="Agronomy Workshop — A Golf Shirt with a Hidden Tee Slot and Nothing to Prove" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">Agronomy Workshop — A Golf Shirt with a Hidden Tee Slot and Nothing to Prove</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/brand-revisited-jones-sports-co" class="more-card">
+      <div class="more-card-img"><img src="/images/jones-sports-co/hero.jpg" alt="Brand Revisited &amp;mdash; Jones Sports Co, and the Taxi Driver Who Started It" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Brand Revisited &mdash; Jones Sports Co, and the Taxi Driver Who Started It</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
   </div>
 </section>
@@ -568,6 +591,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 #tgi-search-input::placeholder{color:#141414;opacity:.45}
 #tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
 @media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
 
 
 

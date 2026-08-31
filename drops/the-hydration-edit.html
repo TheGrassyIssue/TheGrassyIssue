@@ -144,6 +144,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:900px){.pg-arw{opacity:.85}}
 
 </style>
+<style>
+/*TGI-FAQ-V1*/
+.faq{max-width:820px}
+.faq-q{border-top:.5px solid var(--ink);padding:14px 0}
+.faq-q summary{font-family:var(--serif);font-size:16px;cursor:pointer;list-style:none}
+.faq-q summary::-webkit-details-marker{display:none}
+.faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
+.faq-q[open] summary:before{content:"\2212 "}
+.faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -441,23 +451,34 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 
+<section class="products" style="border-top:none;padding-top:48px">
+  <h2 class="products-hdr" id="faq">Frequently Asked</h2>
+  <div class="faq">
+    <details class="faq-q"><summary>How much sodium do you need for a hot round of golf?</summary><p>There is no single number, but sweat sodium loss ranges roughly from 200mg to over 2,000mg per litre of sweat depending on the person, and you can lose one to two litres of sweat during a hot walking round. Most mainstream electrolyte drinks are dosed between 250mg and 500mg per serving, which is built for ordinary daily hydration rather than heat stress. Precision Fuel & Hydration offers sweat testing if you want your actual number rather than a guess.</p></details>
+    <details class="faq-q"><summary>What is the best electrolyte powder for golf in Texas heat?</summary><p>For a walking round in triple-digit heat, the higher-sodium options make the most sense: LMNT at 1,000mg per stick, Precision PH 1500 at 1,500mg per litre, Sodii at 1,000mg, or SALTT at 969mg. For a cart round or a cooler morning tee time, lighter options like Nuun Sport at 300mg or Skratch at 400mg are plenty.</p></details>
+    <details class="faq-q"><summary>Is Liquid I.V. good for golf?</summary><p>It works, and the glucose in the formula genuinely does help move fluid across the gut faster, which is the principle behind oral rehydration therapy. The trade-offs are the sugar content and the fact that Liquid I.V. does not publish a clear per-serving sodium figure on its product page. It is a reasonable default rather than the sharpest option for extreme heat.</p></details>
+    <details class="faq-q"><summary>Should you drink electrolytes before or during a round?</summary><p>Both, and before matters more than most golfers realise. Starting a round already down on fluid and sodium is very hard to correct once you are out there. A common approach is one serving in the 60 to 90 minutes before the tee time and a second bottle mixed for the round itself.</p></details>
+    <details class="faq-q"><summary>Do you need electrolytes or is water enough?</summary><p>For a cool nine holes, water is fine. For a hot walking round of four hours or more, replacing sodium matters, because drinking large volumes of plain water while losing salt through sweat can leave you worse off rather than better. The cramping, headache and heavy-legged feeling on the back nine is often sodium rather than fluid.</p></details>
+  </div>
+</section>
+
 <section class="more">
   <div class="more-hdr">
     <span class="more-label">More from the Feed</span>
     <a href="/" class="more-link">Back to Feed →</a>
   </div>
   <div class="more-grid">
-    <a href="/drops/the-push-cart-edit" class="more-card">
-      <div class="more-card-img"><img src="/images/push-cart-edit/kvv-gl307.jpg" alt="The Push Cart Rundown" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Push Cart Rundown</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/roy-kizer-from-sewage-plant-to-links-style-gem" class="more-card">
+      <div class="more-card-img"><img src="/images/feed/0d3a6cc4-Parks20and20Recreation20-20Web_kizer-golf-course.jpg" alt="Roy Kizer — From Sewage Plant to Links-Style Gem" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Roy Kizer — From Sewage Plant to Links-Style Gem</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
-    <a href="/drops/austin-bbq-field-guide" class="more-card">
-      <div class="more-card-img"><img src="/images/austin-bbq/kg-bbq.jpg" alt="The Austin BBQ Field Guide — 12 Spots After the Round" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Austin BBQ Field Guide — 12 Spots After the Round</div><div class="more-card-tag">Field Notes</div></div>
+    <a href="/drops/the-ball-marker-edit-6-markers-worth-pocketing" class="more-card">
+      <div class="more-card-img"><img src="/images/feed/f0ac9ee4-TeddyRooseveltBallMarker3DPresaleMainProductPhoto.png" alt="The Ball Marker Edit — 6 markers worth pocketing." loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">The Ball Marker Edit — 6 markers worth pocketing.</div><div class="more-card-tag">Field Notes</div></div>
     </a>
-    <a href="/drops/ovo-golf-2026-collection" class="more-card">
-      <div class="more-card-img"><img src="/images/ovo-golf/hero.jpg" alt="OVO Golf &amp;mdash; The 2026 Collection" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">OVO Golf &mdash; The 2026 Collection</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/ssc-x-byrdie-golf-social-wear-just-dropped" class="more-card">
+      <div class="more-card-img"><img src="/images/feed/0d5e7bff-SSCSST001-BLTGRNS_1copy.jpg" alt="SSC x Byrdie Golf — Social Wear Just Dropped" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">SSC x Byrdie Golf — Social Wear Just Dropped</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
   </div>
 </section>
@@ -471,6 +492,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 #tgi-search-input::placeholder{color:#141414;opacity:.45}
 #tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
 @media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
 
 
 

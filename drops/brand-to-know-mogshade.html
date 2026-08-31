@@ -107,8 +107,8 @@ a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outlin
 .more-card-tag{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
 footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
-.faq{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px;margin-top:48px}
-.faq-item{max-width:760px;margin-bottom:28px}.faq-q{font-family:var(--serif);font-style:italic;font-size:19px;margin-bottom:8px}.faq-a{font-size:15px;line-height:1.7;opacity:.85}
+
+
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.ig-grid a{display:block;border:.5px solid var(--ink);overflow:hidden}.ig-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;transition:transform .3s}.ig-grid a:hover img{transform:scale(1.04)}
 @media(max-width:820px){.ig-grid{grid-template-columns:repeat(2,1fr)}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
@@ -129,6 +129,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pg-dot.on{background:var(--ink);opacity:1}
 @media(max-width:900px){.pg-arw{opacity:.85}}
 
+</style>
+<style>
+/*TGI-FAQ-V1*/
+.faq{max-width:820px}
+.faq-q{border-top:.5px solid var(--ink);padding:14px 0}
+.faq-q summary{font-family:var(--serif);font-size:16px;cursor:pointer;list-style:none}
+.faq-q summary::-webkit-details-marker{display:none}
+.faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
+.faq-q[open] summary:before{content:"\2212 "}
+.faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
 </style>
 </head>
 <body>
@@ -448,13 +458,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 <section class="faq">
   <h2 class="products-hdr">Mogshade — Frequently Asked</h2>
-  <div class="faq-item"><div class="faq-q">What does the name Mogshade mean?</div><div class="faq-a">It comes from an old English dialect word for the interplay of light and shadow — sun filtering through leaves and branches onto the course. The woven patterns riff on the same idea.</div></div>
-  <div class="faq-item"><div class="faq-q">Where are Mogshade headcovers made?</div><div class="faq-a">Everything is handmade in Portugal, made to order with a lead time of roughly three weeks. No inventory, no overproduction.</div></div>
-  <div class="faq-item"><div class="faq-q">What materials does Mogshade use?</div><div class="faq-a">Natural, recycled, upcycled, offcut, and deadstock materials — the brand calls it ethical circularity. The Re.Weave and Churra collections use rescued wool from factories in the Serra da Estrela mountains.</div></div>
-  <div class="faq-item"><div class="faq-q">What is the Churra collection?</div><div class="faq-a">A textured wool line named after the Churra sheep breed native to the Serra da Estrela region — rescued mountain-woven fabrics with a handwoven character you can feel.</div></div>
-  <div class="faq-item"><div class="faq-q">Does Mogshade make anything besides headcovers?</div><div class="faq-a">Golf towels, cases, ball markers, clothing, an Ocean Bottle collab, and hand-tufted wool posters of imagined golf holes that ship in about eight weeks.</div></div>
-  <div class="faq-item"><div class="faq-q">What collabs has Mogshade done?</div><div class="faq-a">Fabricaal (artist series), IGG (capsule headcovers), Projeto Serra (a Serra da Estrela tribute), an "On Set with Manors" edit with the London golfwear brand, the Depeche Golf magazine bundle, Ocean Bottle, Fiumani, and an early limited run with Parmore. Most sold out fast.</div></div>
-  <div class="faq-item"><div class="faq-q">Do US orders pay import duties?</div><div class="faq-a">No — since June 2026, import duties and customs fees are included in the price for US orders.</div></div>
+  <div class="faq">
+    <details class="faq-q"><summary>What does the name Mogshade mean?</summary><p>Mogshade comes from an old English dialect word describing the interplay of light and shadow - like sunlight filtering through leaves and branches onto the course. The brand chose it to capture those quiet moments on a golf course, and its woven patterns play on the same idea.</p></details>
+    <details class="faq-q"><summary>Where are Mogshade headcovers made?</summary><p>Every Mogshade piece is handmade in Portugal. Headcovers are made to order with a current lead time of roughly three weeks, which is central to the brand's no-overproduction model.</p></details>
+    <details class="faq-q"><summary>What materials does Mogshade use?</summary><p>Mogshade builds around what it calls ethical circularity: natural, recycled, upcycled, offcut, and deadstock materials. The Re.Weave and Churra collections use rescued high-quality wool fabrics from factories in Portugal's Serra da Estrela mountains.</p></details>
+    <details class="faq-q"><summary>What is the Churra collection?</summary><p>Churra is Mogshade's textured wool line named after the Churra sheep breed native to the Serra da Estrela region. The covers are made from rescued mountain-woven fabrics with a handwoven character you can feel.</p></details>
+    <details class="faq-q"><summary>Does Mogshade make anything besides headcovers?</summary><p>Yes - golf towels, cases and pouches, ball markers, clothing, an Ocean Bottle collaboration, and a wall art line of hand-tufted wool posters of imagined golf holes that ship in about eight weeks.</p></details>
+    <details class="faq-q"><summary>What collabs has Mogshade done?</summary><p>Mogshade has collaborated with the artist Fabricaal, IGG, Projeto Serra, the London golfwear brand Manors (the On Set with Manors edit), Depeche Golf magazine, Ocean Bottle, Fiumani, and Parmore. Most collaboration pieces sold out quickly.</p></details>
+    <details class="faq-q"><summary>Do US orders pay import duties on Mogshade?</summary><p>No. Since June 2026, Mogshade includes import duties and customs handling fees in the price for US orders, so there are no surprise charges at delivery.</p></details>
+  </div>
 </section>
 
 <section class="products" style="border-top:none;margin-top:48px;">
@@ -475,17 +487,17 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <a href="/" class="more-link">Back to Feed →</a>
   </div>
   <div class="more-grid">
+    <a href="/drops/14-hoodies-that-caught-my-eye" class="more-card">
+      <div class="more-card-img"><img src="/images/feed/c45a91a3-EGMC3004-Core_Fleece_Hoodie_Swingman-Heather_Grey-Front.jpg" alt="14 Hoodies That Caught My Eye" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">14 Hoodies That Caught My Eye</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    </a>
     <a href="/drops/7-grips-to-add-a-little-flavor" class="more-card">
       <div class="more-card-img"><img src="/images/feed/51fb747a-LOUDMOUTH_SWING_GRIP_MAGIC_BUS_002.jpg" alt="7 Grips to Add a Little Flavor" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">7 Grips to Add a Little Flavor</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
-    <a href="/drops/the-towel-edit-vol-2" class="more-card">
-      <div class="more-card-img"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" alt="The Towel Edit, Vol. 2" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Towel Edit, Vol. 2</div><div class="more-card-tag">Drops &amp; Brands</div></div>
-    </a>
-    <a href="/drops/japan-golf-roundup" class="more-card">
-      <div class="more-card-img"><img src="/images/japan-golf/miura-km700.jpg" alt="The Japan Golf Roundup" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Japan Golf Roundup</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    <a href="/drops/the-technical-brands-roundup" class="more-card">
+      <div class="more-card-img"><img src="/images/technical-brands/radmor-sutton-polo.jpg" alt="The Technical Brands Roundup" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">The Technical Brands Roundup</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
   </div>
 </section>
@@ -499,6 +511,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 #tgi-search-input::placeholder{color:#141414;opacity:.45}
 #tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
 @media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
 
 
 
