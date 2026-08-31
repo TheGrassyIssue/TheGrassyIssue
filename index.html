@@ -5193,13 +5193,15 @@
   <div class="card" data-type="field">
     <div class="card-media" style="position:relative;">
       <span class="card-tag grass">[Field Notes]</span>
-      <a href="/drops/rodeo-dunes-the-great-divide">
-        <img src="/images/rodeo-dunes/cattle-skull-green.jpg" alt="Cattle skull on the course at Rodeo Dunes — The Great Divide with Random Golf Club" style="width:100%;aspect-ratio:4/5;object-fit:cover;" loading="lazy" />
-      </a>
+      <div class="gear-carousel" data-carousel="rodeodunes">
+        <div class="gear-carousel-track"><div class="gear-slide"><a href="/drops/rodeo-dunes-the-great-divide" target="_blank" rel="noopener"><img src="/images/rodeo-dunes/cattle-skull-green.jpg" alt="Cattle skull on the course at Rodeo Dunes, The Great Divide with Random Golf Club" loading="lazy"></a></div><div class="gear-slide"><a href="/drops/rodeo-dunes-the-great-divide" target="_blank" rel="noopener"><img src="/images/rodeo-dunes/rodeo-dunes-fairway.jpg" alt="A fairway cut through the chop dunes at Rodeo Dunes, Roggen, Colorado" loading="lazy"></a></div><div class="gear-slide"><a href="/drops/rodeo-dunes-the-great-divide" target="_blank" rel="noopener"><img src="/images/rodeo-dunes/lenny-erik-anders-lang.jpg" alt="Lenny with Erik Anders Lang at Random Golf Club's The Great Divide" loading="lazy"></a></div><div class="gear-slide"><a href="/drops/rodeo-dunes-the-great-divide" target="_blank" rel="noopener"><img src="/images/rodeo-dunes/scorecard-bronco.jpg" alt="Rodeo Dunes scorecard on the dash of the Bronco" loading="lazy"></a></div></div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)" aria-label="Previous">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)" aria-label="Next">&#8250;</button>
+      </div>
     </div>
     <div class="card-body">
       <div class="card-title"><a href="/drops/rodeo-dunes-the-great-divide" style="color:inherit;text-decoration:none;border-bottom:none;">72 Strangers, 3 Rounds, 1 Course.</a></div>
-      <div class="card-text">Random Golf Club&rsquo;s The Great Divide at Rodeo Dunes &mdash; a Coore &amp; Crenshaw links course carved through 90-foot chop dunes on a Colorado cattle ranch. 72 golfers, red vs. blue elimination, caddies for every group, and a final-round 81 that felt like the best round I&rsquo;ve ever played. A field note from Roggen, CO.</div>
+      <div class="card-text" data-slidetext="rodeodunes">Random Golf Club&rsquo;s The Great Divide at Rodeo Dunes &mdash; a Coore &amp; Crenshaw links course carved through 90-foot chop dunes on a Colorado cattle ranch. 72 golfers, red vs. blue elimination, caddies for every group, and a final-round 81 that felt like the best round I&rsquo;ve ever played. A field note from Roggen, CO.</div>
       <a href="/drops/rodeo-dunes-the-great-divide" class="card-link">See the full post &#8594;</a>
     </div>
   </div>
@@ -13602,6 +13604,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    "rodeodunes": [
+      "Random Golf Club's The Great Divide at Rodeo Dunes — a Coore & Crenshaw links course carved through 90-foot chop dunes on a Colorado cattle ranch. 72 golfers, red vs. blue, caddies for every group.",
+      "The fairways run through dunes the wind built — 90 feet of chop on a working cattle ranch outside Roggen, Colorado.",
+      "Erik Anders Lang and Random Golf Club ran the week: 72 strangers, three rounds, red versus blue elimination.",
+      "A final-round 81 that felt like the best round I've ever played. Scorecard rode home on the dash."
+    ],
     "streetwear26": [
       "Five brands, fifteen pieces, every one in stock on 30 August 2026. The old version of this page ranked fifteen — ten are gone, and the reasoning is on the page.",
       "Students Golf came out of Publish and sits in Bodega, HBX and Culture Kings. Two decades in the actual streetwear trade, then pattern making applied to golf.",

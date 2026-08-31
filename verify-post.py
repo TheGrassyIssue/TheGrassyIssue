@@ -51,6 +51,15 @@ def verify(path):
     # generic check above while the layout rules (.faq measure, the item border,
     # the +/- marker) were entirely absent — giving raw browser <details> at
     # full page width. Test for a real `.faq{` declaration.
+    # Same loophole as the FAQ: `.cat-kicker` appears in a shared font-family
+    # list on every page, which satisfied the generic class check while three
+    # pages had NO real kicker rule — so the lede rendered as an unstyled
+    # full-width paragraph, sentences running far past the measure below.
+    if 'class="cat-kicker"' in body_html:
+        chk("cat-kicker has a real CSS rule (not just the font list)",
+            bool(re.search(r"\.cat-kicker\s*\{[^}]*max-width", css)),
+            "kicker renders full-width - install the house rule")
+
     if '<div class="faq"' in body_html:
         chk("FAQ markup has the house .faq CSS block",
             bool(re.search(r"\.faq\s*\{", css)),
@@ -105,6 +114,12 @@ def verify(path):
     for m in re.finditer(r'<div class="product-card', h):
         blk = h[m.start():match_div(h, m.start())]
         if "<img" not in blk:
+            # A card may be imageless ON PURPOSE when it says so: the private
+            # clubs post renders Austin Golf Club with "No photography
+            # published" where the frame would be, because the club releases
+            # none. That is editorial, not breakage.
+            if "No photography published" in blk:
+                continue
             nm = re.search(r'class="product-name">([^<]*)', blk)
             empty.append(nm.group(1)[:40] if nm else "?")
     chk("every product-card contains an image", not empty, str(empty[:4]))
