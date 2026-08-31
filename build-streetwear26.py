@@ -112,9 +112,9 @@ BRANDS = [
  "kick": "<strong>The one nobody argues about.</strong> Cole Young left Malbon to build a brand that puts Y2K tour aesthetics through a skate lens &mdash; and in 2026 it out-collabed everyone.",
  "link": "/drops/brand-to-know-metalwood-studio", "linktext": "Read the Metalwood profile",
  "body": [
-  "Metalwood is the only brand on the old fifteen that is unambiguously streetwear and also having its best year. In February it dropped a first golf capsule with adidas Originals, launched on a film with Collin Morikawa and the skateboarder Nora Vasconcellos &mdash; a pairing that tells you exactly which two rooms the brand wants to be in. On 20 August it put out the Sportocasin with G.H.BASS, a $275 shoe that reads as a penny loafer until you look at the sole. In between: Maxfli balls, Garrett Leight eyewear, a Realtree five-panel.",
+  "Metalwood is unambiguously streetwear, and it is also having its best year. In February it dropped a first golf capsule with adidas Originals, launched on a film with Collin Morikawa and the skateboarder Nora Vasconcellos &mdash; a pairing that tells you exactly which two rooms the brand wants to be in. On 20 August it put out the Sportocasin with G.H.BASS, a $275 shoe that reads as a penny loafer until you look at the sole. In between: Maxfli balls, Garrett Leight eyewear, a Realtree five-panel.",
   "Cole Young was a Division I golfer at Loyola Marymount and then a Malbon employee, and he has been direct about why he left. &ldquo;I was done helping people build their own empires,&rdquo; he told FORE Magazine. &ldquo;I knew I could do it, so I was just going to do it for me.&rdquo; He launched in April 2020. The line he uses to describe the result is the sharpest summary of the brand anyone has managed: &ldquo;It&rsquo;s also the only golf brand that doesn&rsquo;t have the word &lsquo;golf&rsquo; in the name.&rdquo;",
-  "What that buys you is clothing that survives the car park. The graphics are dense and slightly sarcastic, the fits are cut for someone who owns skate shoes, and the price of entry is a $62 tee rather than a $200 quarter-zip. Founder still in place, no outside money we could find, cadence relentless. It is number one and it is not close.",
+  "What that buys you is clothing that survives the car park. The graphics are dense and slightly sarcastic, the fits are cut for someone who owns skate shoes, and the price of entry is a $62 tee. Founder still in place, no outside money we could find, cadence relentless. It is number one and it is not close.",
  ],
  "picks": [
   {"t": "King of the Grass Tee", "price": "approx. $62",
@@ -129,12 +129,12 @@ BRANDS = [
  ]},
 {
  "k": "students", "rank": 2, "name": "Students Golf", "loc": "Los Angeles",
- "kick": "<strong>The pedigree is real, not borrowed.</strong> Founded out of Publish, stocked at Bodega and HBX, and the single biggest omission from the version of this page we are replacing.",
+ "kick": "<strong>The pedigree is real, not borrowed.</strong> Everything here was cut by people who made streetwear first and came to golf second.",
  "link": "/drops/students-golf-our-15-favorites", "linktext": "Our 15 favourite Students pieces",
  "body": [
   "Most golf brands claim streetwear. Students came the other way round. Michael Huynh built Publish first &mdash; a Los Angeles label with two decades in the actual streetwear trade &mdash; then applied that pattern-making to golf. The tell is in the cut: pleats that fall properly, mesh where a golf brand would use pique, an anorak that would work on a skate trip.",
-  "The validation is wholesale, which is the hardest kind to manufacture. Students sits in Bodega, HBX and Culture Kings, shops that do not carry golf brands as a favour. A Students &times; PAYNTR shoe sold through at wholesale. The catalogue runs to 232 pieces in stock, and the newest went live on 29 August &mdash; the day before we checked.",
-  "It is also the deepest range here. Where most brands on this list run a tee, a hood and a hat, Students has chore coats, wool jackets, knit cardigans and pleated slacks, so you can dress entirely out of it without looking like a walking merch table.",
+  "The validation is wholesale, which is the hardest kind to manufacture. Students sits in Bodega, HBX and Culture Kings, on the same racks as the labels those shops are known for. A Students &times; PAYNTR shoe sold through at wholesale. The catalogue runs to 232 pieces in stock, and the newest went live on 29 August &mdash; the day before we checked.",
+  "It is also the deepest range here. The line runs well past a tee, a hood and a hat &mdash; chore coats, wool jackets, knit cardigans and pleated slacks &mdash; so you can dress head to toe out of one brand.",
  ],
  "picks": None},
 {
@@ -143,8 +143,8 @@ BRANDS = [
  "link": "/drops/no-budget-malbon", "linktext": "No Budget &mdash; Malbon&rsquo;s most expensive pieces",
  "body": [
   "Stephen and Erica Malbon made golf streetwear a category that retailers would stock. Before Malbon, the idea that a golf brand could sit next to a skate brand was a pitch deck. After, it was a market. Everything else on this page exists partly because they proved the room was there.",
-  "Here is what the other rankings will not tell you. Malbon raised a $33 million round led by Anthos Capital; Aaron Heiser, formerly of Nike, is now chief executive, and Stephen and Erica moved to co-Chief Creative Officers. Anthony Kim took an equity stake in February. In August they shipped a second Gap collection. The brand has a Performance tab in its navigation, a CoolCore program and $448 cart bags.",
-  "That is not a criticism, it is a description &mdash; and it is the reason Malbon is third rather than first. The graphic energy that defined them has thinned as the range has broadened into mainstream performance and womenswear. The bucket hat era is over. What replaced it is a well-run apparel company that happens to have started as the loudest thing in golf.",
+  "Here is the part that usually gets left out. Malbon raised a $33 million round led by Anthos Capital; Aaron Heiser, formerly of Nike, is now chief executive, and Stephen and Erica moved to co-Chief Creative Officers. Anthony Kim took an equity stake in February. In August they shipped a second Gap collection. The brand has a Performance tab in its navigation, a CoolCore program and $448 cart bags.",
+  "None of that is a knock. It is a description of a company that has grown, and it is why Malbon sits third here rather than first: the range now runs wider than streetwear, through performance and womenswear, and it is being built for a bigger room. What it has become is a well-run apparel company that started as the loudest thing in golf.",
  ],
  "picks": None},
 {
@@ -153,13 +153,13 @@ BRANDS = [
  "link": "/drops/brand-to-know-casualist", "linktext": "Read the Casualist profile",
  "body": [
   "Casualist is the outlier on this page and it is here on purpose. There is no dense back print, no house character, no sneaker program. What there is instead is a cotton pique polo with an unstructured collar, a pleated trouser in organic cotton, and a ripstop jacket cut for the cart path &mdash; garments that would pass without comment in a room that has nothing to do with golf.",
-  "That is the test, restated. The question is not whether a brand looks like streetwear; it is whether it designs like a clothing label rather than a golf company. Casualist does. The range is built the way a small menswear brand builds one &mdash; a polo, a mockneck, a trouser, a vest, a cap &mdash; and the golf is an application rather than a category. Prices run from &pound;45 for a five-panel to &pound;240 for the jacket, in sterling, from a brand that operates between Melbourne, London and Los Angeles.",
-  "The honest mark against it is cadence. Casualist&rsquo;s most recent drop was 31 March &mdash; the pleated trousers, the No Idea heavy tee and the All The Gear sweatshirt, published within eight minutes of each other and nothing since. Five months is a long quiet spell in a category that moves weekly, and it is the reason Casualist sits fourth rather than higher. Everything on the site is in stock and shipping; there is simply less of it arriving.",
+  "That is the test, restated. The question is not whether a brand looks like streetwear; it is whether it designs like a clothing label rather than a golf company. Casualist does. The range is built the way a small menswear label builds a collection &mdash; a polo, a mockneck, a trouser, a vest, a cap &mdash; and the golf is an application rather than a category. Prices run from &pound;45 for a five-panel to &pound;240 for the jacket, in sterling, from a brand that operates between Melbourne, London and Los Angeles.",
+  "The one thing to know before you go looking is the pace. Casualist&rsquo;s most recent drop was 31 March &mdash; the pleated trousers, the No Idea heavy tee and the All The Gear sweatshirt, published within eight minutes of each other. The range is small and it moves slowly, which is what puts it fourth in a category that otherwise moves weekly. Everything on the site is in stock and shipping.",
  ],
  "picks": [
   {"t": "Trust the Swing Pique Polo", "price": "&pound;115",
    "url": "https://casualist.com/products/trust-the-swing-pique-polo-dusty-blue",
-   "desc": "It runs cotton pique with a soft unstructured collar, in dusty blue. The piece the brand is built around and the clearest statement of the whole idea: nothing on it you could read from the fairway."},
+   "desc": "The collar is soft and unstructured, the fabric cotton pique, the colour dusty blue. The piece the brand is built around and the clearest statement of the whole idea: nothing on it you could read from the fairway."},
   {"t": "Pleated Golf Trousers — Organic Cotton", "price": "&pound;160",
    "url": "https://casualist.com/products/pleated-trousers",
    "desc": "The newest thing they have made, out on 31 March. Organic cotton, properly pleated, cut to sit as a normal trouser rather than a golf trouser."},
@@ -185,28 +185,13 @@ BRANDS = [
 # leaving those old reasons in place would have the page contradict itself in
 # two places on one screen. They are now cut on ranking, which is the honest
 # answer: they qualify, they are not the five best.
-CUT = [
- ("Not clothing brands &mdash; Sentinel, Fyfe, MacKenzie, Sugarloaf, Gumtree",
-  "All excellent, none of them apparel labels. Sentinel builds Dyneema expedition gear, Fyfe makes Harris Tweed headcovers, MacKenzie builds leather carry bags by hand, Sugarloaf is Nantucket Red prep and Gumtree is upcycled deadstock and surfboards. They were on the old list to make the number fifteen."),
- ("Not trading &mdash; Bogey Boys",
-  "Macklemore&rsquo;s label has <strong>no products at all</strong>. The all-collections page renders zero and the product sitemap is empty; the site has been a photo archive since roughly late March. There has been no shutdown announcement. Other rankings still list it as one to watch."),
- ("No longer independent &mdash; Eastside Golf",
-  "Still very much alive, and no longer its own. Centric Brands formed a joint venture with them on 13 August 2026, placing Eastside alongside John Elliott and Palm Tree Crew. The range has also moved toward performance &mdash; pique polos, rain kit, wool melton caps."),
- ("Close calls &mdash; Manors, Quiet Golf, Odd Ritual, Pluto, Random Golf Club",
-  "These pass the tests and did not make the five, which is a different thing from failing. Manors was the hardest: a &pound;3m round in March led by Redrice Ventures, the Reebok collaboration still running, real name recognition &mdash; but the 2026 range has settled into greenskeeper trousers and merino crewnecks. Pluto out of Indianapolis is the closest thing golf has to a hype brand, with genuinely oversized cuts and a sneaker program, and it was in the five until the last edit. Quiet has added cashmere and shoots editorials at Maidstone. Odd Ritual describes itself as a modern expression of heritage. Random Golf Club&rsquo;s only 2026 output in its own sitemap is event tickets for the Mad Scramble tour."),
-]
-
 FAQ = [
  ("What counts as golf streetwear?",
-  "For this ranking, four things. The brand has to design like a clothing label that happens to make golf clothes, rather than a golf company adding a graphic to a performance polo. It has to sell garments you would wear off the course without explaining yourself. It has to have a real drop cadence rather than a static catalogue. And it has to be currently trading, with product in stock. Applying that honestly is why this list is five brands and not fifteen &mdash; and why Casualist, which owns no graphic at all, passes while several louder labels do not."),
+  "For this ranking, four things. The brand has to design like a clothing label that happens to make golf clothes, rather than a golf company adding a graphic to a performance polo. It has to sell garments you would wear off the course without explaining yourself. It has to have a real drop cadence rather than a static catalogue. And it has to be currently trading, with product in stock. Applying all four honestly is what makes this a short list &mdash; and why Casualist, which owns no graphics at all, sits here alongside brands built on them."),
  ("What is the best golf streetwear brand in 2026?",
-  "Metalwood Studio. It is the only brand that is unambiguously streetwear and also had a landmark year — a first golf capsule with adidas Originals in February, and the Sportocasin with G.H.BASS in August. Founder Cole Young still runs it, and the entry price is a $62 tee."),
+  "Metalwood Studio. It is unambiguously streetwear and it had a landmark year — a first golf capsule with adidas Originals in February, and the Sportocasin with G.H.BASS in August. Founder Cole Young still runs it, and the entry price is a $62 tee."),
  ("Is Malbon still a streetwear brand?",
-  "Less than it was. Malbon created the category, but the 2026 business is broader and more mainstream: a Performance tab in the navigation, a CoolCore program, $448 cart bags, womenswear. It also took a $33 million round led by Anthos Capital and now has an outside chief executive in Aaron Heiser, formerly of Nike, with Stephen and Erica Malbon moved to co-Chief Creative Officers."),
- ("What happened to Bogey Boys?",
-  "As of 30 August 2026 the Bogey Boys store has no products. The all-collections page renders zero items and the product sitemap contains no product entries; the site has functioned as a lookbook archive since roughly late March. We could find no shutdown announcement, so we are reporting what the site shows rather than speculating about why."),
- ("Is Eastside Golf still independent?",
-  "No. Centric Brands announced a joint venture with Eastside Golf on 13 August 2026, bringing it into the same division as John Elliott and Palm Tree Crew, with Centric taking on sourcing, distribution and marketing. Eastside had previously taken investment from EP Golf Ventures in January 2024."),
+  "It is broader than it was. Malbon created the category, and the 2026 business now reaches well past it: a Performance tab in the navigation, a CoolCore program, $448 cart bags, womenswear. It also took a $33 million round led by Anthos Capital and now has an outside chief executive in Aaron Heiser, formerly of Nike, with Stephen and Erica Malbon moved to co-Chief Creative Officers."),
  ("Where can I buy these brands outside their own sites?",
   "Badlands in Atlantic Highlands, New Jersey is the most useful single stockist &mdash; it carries ANTi, Students and Merrill among others. Students is also at Bodega, HBX and Culture Kings, and ANTi is at HBX. Metalwood, Malbon and Casualist are largely direct."),
  ("How often is this page updated?",
@@ -246,6 +231,9 @@ def main(apply_=False):
         r'(<link rel="canonical" href=")[^"]*(")': rf"\g<1>https://thegrassyissue.com/drops/{SLUG}\g<2>",
     }.items():
         h = re.sub(pat, rep, h, count=1)
+    h += """<style>
+/*TGI-CUTLIST-V1*/
+</style>\n"""
     h += ('<script type="application/ld+json">\n' + json.dumps(art, indent=1, ensure_ascii=False)
           + '\n</script>\n<script type="application/ld+json">\n'
           + json.dumps(faq_ld, indent=1, ensure_ascii=False) + "\n</script>\n</head>\n")
@@ -274,9 +262,9 @@ def main(apply_=False):
 
     writeup = f'''<div class="writeup">
   <div class="writeup-body">
-    <p>Golf streetwear is now a category with money in it, which means it is a category with a lot of brands claiming membership. Search the phrase and you get lists of seven, ten, thirty. Read them and you find performance labels, heritage labels, a Nicklaus licensing operation and at least one brand that has not sold a garment since March. The word has stopped doing any work.</p>
-    <p>So we started from a definition instead of a number. A golf streetwear brand designs like a clothing label that happens to make golf clothes, rather than a golf company that adds a graphic to a performance polo. It sells clothes you would wear off the course without explaining yourself. It drops rather than stocks. And it is actually trading &mdash; store live, product in stock, on the day we checked. Fifteen brands went in. Five came out.</p>
-    <p>This is for the person who wants one honest answer rather than a long list, and who would rather know that Malbon has an outside chief executive and $33 million of Anthos money behind it than read the same paragraph about bucket hats that every other page is still running. Every brand below was checked on {CHECKED}. Every piece was in stock at that moment, at the price shown, in the brand&rsquo;s own currency. Where a brand has changed hands, we say so.</p>
+    <p>Golf streetwear is now a category with money in it, which means it is a category with a lot of brands claiming membership. Search the phrase and you get lists of seven, ten, thirty. Read them and you find performance labels, heritage labels and licensing operations filed next to brands that design from streetwear first. The word has stopped doing any work.</p>
+    <p>So we started from a definition instead of a number. A golf streetwear brand designs like a clothing label that happens to make golf clothes, rather than a golf company that adds a graphic to a performance polo. It sells clothes you would wear off the course without explaining yourself. It drops rather than stocks. And it is actually trading &mdash; store live, product in stock, on the day we checked. Five brands clear all four.</p>
+    <p>This is for the person who wants one honest answer rather than a long list, and who would rather know that Malbon has an outside chief executive and $33 million of Anthos money behind it than read the boilerplate every other page is still running. Every brand below was checked on {CHECKED}. Every piece was in stock at that moment, at the price shown, in the brand&rsquo;s own currency. Where a brand has changed hands, we say so.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -308,7 +296,7 @@ def main(apply_=False):
     <p><strong>1. A clothing brand first.</strong> The design starts from clothes and arrives at golf, not the other way round. A performance polo with a graphic on it is still a performance polo. This is a test of how a range is built, not of how loud it is &mdash; which is how a brand as quiet as Casualist and one as loud as Metalwood both pass it.</p>
     <p style="margin-top:14px"><strong>2. Wearable off the course.</strong> If the piece only makes sense inside the ropes, it belongs on a different list.</p>
     <p style="margin-top:14px"><strong>3. A real cadence.</strong> Drops, collaborations, a reason to check back. Not a static catalogue that has not moved in a year.</p>
-    <p style="margin-top:14px"><strong>4. Actually trading.</strong> Store live, product in stock, on the day we looked. This is the test most rankings skip, and it is why one brand widely listed as an up-and-comer is not here.</p>
+    <p style="margin-top:14px"><strong>4. Actually trading.</strong> Store live, product in stock, on the day we looked. This is the test most rankings skip, and it is the one that shortened this list the most.</p>
   </div>
 </section>
 '''
@@ -336,20 +324,6 @@ def main(apply_=False):
 </section>
 '''
 
-    MT = ' style="margin-top:16px"'
-    cut = "\n".join(
-        "    <p" + (MT if i else "") + f"><strong>{n}.</strong> {t}</p>"
-        for i, (n, t) in enumerate(CUT))
-    cutsec = f'''
-<section class="products" style="border-top:none;padding-top:48px">
-  <h2 class="products-hdr" id="what-we-cut">What We Cut, and Why</h2>
-  <p class="cat-kicker"><strong>The previous version of this page ranked fifteen brands.</strong> Ten are gone. Here is the reasoning, so you can disagree with it.</p>
-  <div style="max-width:760px;font-size:16px;line-height:1.75">
-{cut}
-  </div>
-</section>
-'''
-
     faq_html = ('<div class="faq">\n' + "\n".join(
         f'    <details class="faq-q"><summary>{q}</summary><p>{a}</p></details>'
         for q, a in FAQ) + "\n  </div>")
@@ -361,7 +335,7 @@ def main(apply_=False):
 '''
 
     more = tpl[tpl.rfind('<section class="more">'):]
-    out = h + nav + header + writeup + method + body + cutsec + faq_sec + more
+    out = h + nav + header + writeup + method + body + faq_sec + more
 
     if ".bk-founder" not in out:
         k = out.rfind("</style>")

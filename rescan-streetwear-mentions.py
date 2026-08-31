@@ -39,23 +39,19 @@ ON_PAGE = {
     "malbon": "Malbon",
     "casualist": "Casualist",
     "anti-country-club-tokyo": "ANTi",
-    # named and explained in "What We Cut, and Why"
-    "sentinel-golf": "Sentinel",
-    "fyfe-golf": "Fyfe",
-    "mackenzie": "MacKenzie",
-    "sugarloaf-social-club": "Sugarloaf",
-    "gumtree-nature-club": "Gumtree",
-    "manors": "Manors",
-    "quiet-golf": "Quiet",
-    "pluto-golf": "Pluto",
-    "odd-ritual": "Odd Ritual",
-    "random-golf-club": "Random Golf Club",
     # named in the body: a Realtree five-panel in the Metalwood paragraph, and
     # Merrill + Badlands in the stockist answer
     "realtree": "Realtree",
     "merrill-golf": "Merrill",
     "badlands": "Badlands",
 }
+
+# The "What We Cut, and Why" section was removed on 2026-08-30 — TGI does not
+# talk down on other brands, and a section built on explaining why ten labels
+# fell short is that by construction. It had put Sentinel, Fyfe, MacKenzie,
+# Sugarloaf, Gumtree, Manors, Quiet Golf, Odd Ritual, Pluto and Random Golf Club
+# on this page; all ten are now correctly off it. The assertion below is what
+# caught the drift.
 
 
 def strip_chrome(h):
