@@ -23,6 +23,15 @@ ch = open(os.path.join(S, "drops", "public-drip-fw26-nightshift.html"), encoding
 
 css_main = re.search(r'(<link rel="preconnect".*</style>)\s*</head>', ch, re.S).group(1)
 nav      = re.search(r'(<nav class="nav".*?</nav>)', ch, re.S).group(1)
+
+# The Nightshift chassis carries the flat .drop-hero rule (it has no hero block,
+# so nobody noticed). Upgrade it to the sitewide 21:9 cover crop used on Lions,
+# Hancock and every other post with a hero.
+css_main = css_main.replace(
+    ".drop-hero-img{width:100%;border:.5px solid var(--ink);overflow:hidden}"
+    ".drop-hero-img img{width:100%;display:block}",
+    ".drop-hero-img{width:100%;aspect-ratio:21/9;border:.5px solid var(--ink);overflow:hidden}"
+    ".drop-hero-img img{width:100%;height:100%;object-fit:cover}")
 tail     = re.search(r'(<!-- TGI SEARCH -->.*?)</body>', ch, re.S).group(1)
 
 URL   = "https://thegrassyissue.com/drops/loud-on-purpose-headcovers"
@@ -224,6 +233,8 @@ page = f'''<!DOCTYPE html>
   </div>
 </header>
 
+<div class="drop-hero"><div class="drop-hero-img"><img src="/images/loud-headcovers/hero.jpg" alt="Mogshade Bloom headcovers in green and floral-embroidered white lying in the grass beside a golfer in white trousers and white shoes, pines behind" /></div></div>
+
 <div class="writeup">
   <div class="writeup-body">
     <p>A headcover is the one piece of equipment nobody can tell you is wrong. It does not affect ball flight, it does not need fitting, and it is the only thing on the bag you choose purely because you like looking at it. So the question is only ever whether the thing is any good to look at.</p>
@@ -251,14 +262,6 @@ page = f'''<!DOCTYPE html>
   </aside>
 </div>
 {sections_html}
-<section class="products" style="margin-top:48px;">
-  <h2 class="products-hdr">What We Left Out</h2>
-  <div style="max-width:760px;font-size:16px;line-height:1.7;">
-    <p>Three categories got cut on principle. Animal covers, which are their own genre and not this one. Licensed team merch, where the design belongs to a university or a ball club rather than to the label making the cover. And the joke covers &mdash; the pizza slices, the mascots, the pin-ups &mdash; which are fine on their own terms and simply not what this list is for.</p>
-    <p style="margin-top:16px">The line we drew: if you flattened the graphic and hung it on a wall, would you still want it on your wall? Everything above clears that bar. Plenty of loud covers do not.</p>
-  </div>
-</section>
-
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Frequently Asked</h2>
   <div class="faq">
