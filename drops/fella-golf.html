@@ -94,6 +94,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -160,41 +177,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Polos &amp; Knitwear</h2>
   <div class="products-grid">
 
-    <a href="https://fellagolf.com/products/lionel-contrast-rib-knit-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/lionel-polo.jpg" alt="Fella Golf — Lionel Contrast Rib Knit Polo" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/lionel-polo.jpg" alt="Fella Golf — Lionel Contrast Rib Knit Polo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/lionel-polo-a2.jpg" alt="Fella Golf — Lionel Contrast Rib Knit Polo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/lionel-polo-a3.jpg" alt="Fella Golf — Lionel Contrast Rib Knit Polo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/lionel-polo-a4.jpg" alt="Fella Golf — Lionel Contrast Rib Knit Polo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Lionel Contrast Rib Knit Polo &middot; &euro;120</div>
         <div class="product-desc">Textured rib knit polo with contrast tipping along the collar and cuffs. The kind of knit polo that bridges the gap between a proper golf shirt and something you'd wear to dinner in the Jordaan. Relaxed fit, elevated texture. &euro;120.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/lionel-contrast-rib-knit-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/jake-toffee-brown-intarsia-knit-polo" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/jake-polo.jpg" alt="Fella Golf — Jake Intarsia Knit Polo" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/jake-polo.jpg" alt="Fella Golf — Jake Intarsia Knit Polo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/jake-polo-a2.jpg" alt="Fella Golf — Jake Intarsia Knit Polo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/jake-polo-a3.jpg" alt="Fella Golf — Jake Intarsia Knit Polo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/jake-polo-a4.jpg" alt="Fella Golf — Jake Intarsia Knit Polo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Jake Intarsia Knit Polo &middot; &euro;120</div>
         <div class="product-desc">Toffee brown intarsia pattern knit polo with a vintage silhouette that channels 1970s European sport. The color and the knit pattern do all the work — no logos needed. A standout in the S/S '26 lineup. &euro;120.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/jake-toffee-brown-intarsia-knit-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/green-crochet-knitted-polo-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/lionel-chartreuse-polo.jpg" alt="Fella Golf — Lionel Chartreuse Knitted Polo" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/lionel-chartreuse-polo.jpg" alt="Fella Golf — Lionel Chartreuse Knitted Polo &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/lionel-chartreuse-polo-a2.jpg" alt="Fella Golf — Lionel Chartreuse Knitted Polo &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/lionel-chartreuse-polo-a3.jpg" alt="Fella Golf — Lionel Chartreuse Knitted Polo &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/lionel-chartreuse-polo-a4.jpg" alt="Fella Golf — Lionel Chartreuse Knitted Polo &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Lionel Chartreuse Knitted Polo &middot; &euro;140</div>
         <div class="product-desc">Open-knit crochet texture in bold chartreuse — the loudest color in the Fella range and somehow it works. The Lionel silhouette in a summer weight that breathes on the course and turns heads off it. &euro;140.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/green-crochet-knitted-polo-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -204,41 +215,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Tees &amp; Camp Shirts</h2>
   <div class="products-grid">
 
-    <a href="https://fellagolf.com/products/bruno-camp-shirt-tropical-golf-cart" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/bruno-camp-shirt.jpg" alt="Fella Golf — Bruno Camp Shirt Tropical Golf Cart" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/bruno-camp-shirt.jpg" alt="Fella Golf — Bruno Camp Shirt Tropical Golf Cart &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/bruno-camp-shirt-a2.jpg" alt="Fella Golf — Bruno Camp Shirt Tropical Golf Cart &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/bruno-camp-shirt-a3.jpg" alt="Fella Golf — Bruno Camp Shirt Tropical Golf Cart &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/bruno-camp-shirt-a4.jpg" alt="Fella Golf — Bruno Camp Shirt Tropical Golf Cart &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Bruno Camp Shirt &mdash; Tropical Golf Cart &middot; &euro;120</div>
         <div class="product-desc">All-over golf cart print on a camp collar shirt. The Bruno is Fella at its most playful — a shirt that belongs at a beachside bar as much as the first tee. Relaxed fit, full button front, the kind of print that either clicks with you immediately or doesn't. &euro;120.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/bruno-camp-shirt-tropical-golf-cart" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/sandbagger-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/sandbagger-tee.jpg" alt="Fella Golf — Sandbagger T-Shirt" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/sandbagger-tee.jpg" alt="Fella Golf — Sandbagger T-Shirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/sandbagger-tee-a2.jpg" alt="Fella Golf — Sandbagger T-Shirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/sandbagger-tee-a3.jpg" alt="Fella Golf — Sandbagger T-Shirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/sandbagger-tee-a4.jpg" alt="Fella Golf — Sandbagger T-Shirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Sandbagger T-Shirt &middot; &euro;70</div>
         <div class="product-desc">Vintage sandbagger graphic on 240GSM carbon-finished cotton. Heavyweight, boxy cut. Fella's tongue-in-cheek take on the golfer everyone knows but nobody admits to being. The carbon finish gives it a texture you can feel. &euro;70.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/sandbagger-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/breakfast-ball-taco-graphic-t-shirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/taqueria-tee.jpg" alt="Fella Golf — The Fella Taqueria T-Shirt" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/taqueria-tee.jpg" alt="Fella Golf — The Fella Taqueria T-Shirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/taqueria-tee-a2.jpg" alt="Fella Golf — The Fella Taqueria T-Shirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/taqueria-tee-a3.jpg" alt="Fella Golf — The Fella Taqueria T-Shirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/taqueria-tee-a4.jpg" alt="Fella Golf — The Fella Taqueria T-Shirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">The Fella Taqueria T-Shirt &middot; &euro;60</div>
         <div class="product-desc">Taco-themed breakfast ball graphic tee — the name alone tells you everything about Fella's sense of humor. Light cotton, easy fit, the kind of shirt that gets a laugh on the range and a question at the bar. &euro;60.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/breakfast-ball-taco-graphic-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -248,41 +253,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Sweaters &amp; Layers</h2>
   <div class="products-grid">
 
-    <a href="https://fellagolf.com/products/boris-quarter-zip-knitted-sweater" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/boris-quarter-zip.jpg" alt="Fella Golf — Boris Quarter-Zip Sweater" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/boris-quarter-zip.jpg" alt="Fella Golf — Boris Quarter-Zip Sweater &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/boris-quarter-zip-a2.jpg" alt="Fella Golf — Boris Quarter-Zip Sweater &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/boris-quarter-zip-a3.jpg" alt="Fella Golf — Boris Quarter-Zip Sweater &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/boris-quarter-zip-a4.jpg" alt="Fella Golf — Boris Quarter-Zip Sweater &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Boris Quarter-Zip Sweater &middot; &euro;150</div>
         <div class="product-desc">Knitted quarter-zip pullover with a clean gauge and minimal branding. The Boris is Fella's answer to the layer question — warm enough for an early morning nine, refined enough for the clubhouse after. Classic silhouette, modern knit. &euro;150.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/boris-quarter-zip-knitted-sweater" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/zigzag-knitted-vest" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/fred-cashmere-vest.jpg" alt="Fella Golf — Fred Cashmere Vest" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/fred-cashmere-vest.jpg" alt="Fella Golf — Fred Cashmere Vest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/fred-cashmere-vest-a2.jpg" alt="Fella Golf — Fred Cashmere Vest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/fred-cashmere-vest-a3.jpg" alt="Fella Golf — Fred Cashmere Vest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/fred-cashmere-vest-a4.jpg" alt="Fella Golf — Fred Cashmere Vest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Fred Cashmere Vest &middot; &euro;180</div>
         <div class="product-desc">Zigzag pattern cashmere knit vest — the Fred is Fella's premium layer. The intarsia zigzag has a retro sensibility that channels European golf club culture without the stuffiness. Cashmere blend, V-neck, the kind of vest that makes a polo look expensive. &euro;180.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/zigzag-knitted-vest" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/graham-cotton-cashmere-crewneck-knit" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/graham-golf-cart-knit.jpg" alt="Fella Golf — Graham Golf Cart Knit" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/graham-golf-cart-knit.jpg" alt="Fella Golf — Graham Golf Cart Knit &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/graham-golf-cart-knit-a2.jpg" alt="Fella Golf — Graham Golf Cart Knit &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/graham-golf-cart-knit-a3.jpg" alt="Fella Golf — Graham Golf Cart Knit &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/graham-golf-cart-knit-a4.jpg" alt="Fella Golf — Graham Golf Cart Knit &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Graham Golf Cart Knit &middot; &euro;190</div>
         <div class="product-desc">Cotton-cashmere crewneck with an intarsia golf cart motif. The Graham is the most Fella piece in the collection — playful graphic, premium fiber, the kind of sweater that says you take the craft seriously but not yourself. Limited run. &euro;190.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/graham-cotton-cashmere-crewneck-knit" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -292,41 +291,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Outerwear</h2>
   <div class="products-grid">
 
-    <a href="https://fellagolf.com/products/tech-ripstop-anorak-jacket" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/tech-ripstop-anorak.jpg" alt="Fella Golf — Tech Ripstop Anorak Jacket" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/tech-ripstop-anorak.jpg" alt="Fella Golf — Tech Ripstop Anorak Jacket &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/tech-ripstop-anorak-a2.jpg" alt="Fella Golf — Tech Ripstop Anorak Jacket &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/tech-ripstop-anorak-a3.jpg" alt="Fella Golf — Tech Ripstop Anorak Jacket &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/tech-ripstop-anorak-a4.jpg" alt="Fella Golf — Tech Ripstop Anorak Jacket &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Tech Ripstop Anorak Jacket &middot; &euro;140</div>
         <div class="product-desc">Packable ripstop half-zip anorak with mesh underarm panels for ventilation. Lightweight, wind-resistant, folds into its own pocket. Built for the kind of Dutch weather that changes three times before you reach the turn. &euro;140.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/tech-ripstop-anorak-jacket" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/liam-windshirt" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/liam-windshirt.jpg" alt="Fella Golf — Liam Windshirt" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/liam-windshirt.jpg" alt="Fella Golf — Liam Windshirt &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/liam-windshirt-a2.jpg" alt="Fella Golf — Liam Windshirt &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/liam-windshirt-a3.jpg" alt="Fella Golf — Liam Windshirt &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/liam-windshirt-a4.jpg" alt="Fella Golf — Liam Windshirt &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Liam Windshirt &middot; &euro;150</div>
         <div class="product-desc">Lightweight wind layer built for the course. The Liam sits between a shirt and a jacket — enough protection to take the edge off a coastal breeze, light enough to forget you're wearing it. Clean lines, minimal hardware. &euro;150.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/liam-windshirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/water-repellent-tech-jacket" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/panel-tech-jacket.jpg" alt="Fella Golf — Panel Tech Jacket" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/panel-tech-jacket.jpg" alt="Fella Golf — Panel Tech Jacket &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/panel-tech-jacket-a2.jpg" alt="Fella Golf — Panel Tech Jacket &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/panel-tech-jacket-a3.jpg" alt="Fella Golf — Panel Tech Jacket &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/panel-tech-jacket-a4.jpg" alt="Fella Golf — Panel Tech Jacket &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Panel Tech Jacket &middot; &euro;250</div>
         <div class="product-desc">Water-repellent paneled technical jacket — the premium outerwear piece in the Fella range. Seam-sealed construction, articulated fit for the golf swing, tonal panel detailing. The jacket you reach for when the forecast says rain but you're playing anyway. &euro;250.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/water-repellent-tech-jacket" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -336,41 +329,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Headwear</h2>
   <div class="products-grid">
 
-    <a href="https://fellagolf.com/products/cha-cheng-tee-buckethat" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/cha-cheng-bucket.jpg" alt="Fella Golf — Cha-Cheng Tee Bucket Hat" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/cha-cheng-bucket.jpg" alt="Fella Golf — Cha-Cheng Tee Bucket Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/cha-cheng-bucket-a2.jpg" alt="Fella Golf — Cha-Cheng Tee Bucket Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/cha-cheng-bucket-a3.jpg" alt="Fella Golf — Cha-Cheng Tee Bucket Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/cha-cheng-bucket-a4.jpg" alt="Fella Golf — Cha-Cheng Tee Bucket Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Cha-Cheng Tee Bucket Hat &middot; &euro;55</div>
         <div class="product-desc">Tee-print bucket hat with full brim shade. The Cha-Cheng is Fella's take on sun protection — all-over tee graphics, wide brim, the kind of hat that says you care about UV but also about looking interesting doing it. &euro;55.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/cha-cheng-tee-buckethat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/contrast-sticht-dad-cap" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/all-gear-no-game-cap.jpg" alt="Fella Golf — Contrast Stitch Dad Cap All Gear No Game" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/all-gear-no-game-cap.jpg" alt="Fella Golf — Contrast Stitch Dad Cap All Gear No Game &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/all-gear-no-game-cap-a2.jpg" alt="Fella Golf — Contrast Stitch Dad Cap All Gear No Game &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/all-gear-no-game-cap-a3.jpg" alt="Fella Golf — Contrast Stitch Dad Cap All Gear No Game &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/all-gear-no-game-cap-a4.jpg" alt="Fella Golf — Contrast Stitch Dad Cap All Gear No Game &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Contrast Stitch Dad Cap &mdash; &ldquo;All Gear No Game&rdquo; &middot; &euro;50</div>
         <div class="product-desc">Embroidered self-deprecating slogan cap with contrast stitching. "All Gear No Game" — the most honest thing anyone's ever put on a golf hat. Unstructured, adjustable, and a little too relatable. &euro;50.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/contrast-sticht-dad-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/cozy-corduroy-cap-pine-green-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/corduroy-cap.jpg" alt="Fella Golf — Cozy Corduroy Cap Pine Green" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/corduroy-cap.jpg" alt="Fella Golf — Cozy Corduroy Cap Pine Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/corduroy-cap-a2.jpg" alt="Fella Golf — Cozy Corduroy Cap Pine Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/corduroy-cap-a3.jpg" alt="Fella Golf — Cozy Corduroy Cap Pine Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/corduroy-cap-a4.jpg" alt="Fella Golf — Cozy Corduroy Cap Pine Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Cozy Corduroy Cap &mdash; Pine Green &middot; &euro;50</div>
         <div class="product-desc">Wide-wale corduroy with the Fella logo embroidered small. Pine green in a texture that feels like autumn even in summer. The quietest hat in the collection and probably the one that gets the most wear. &euro;50.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/cozy-corduroy-cap-pine-green-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -380,41 +367,35 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">Accessories &amp; Collabs</h2>
   <div class="products-grid">
 
-    <a href="https://fellagolf.com/products/fella-x-jones-original-jones-bag-white" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/jones-bag-stripeshow.jpg" alt="Fella Golf x Jones Original Bag Stripeshow" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/jones-bag-stripeshow.jpg" alt="Fella Golf x Jones Original Bag Stripeshow &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/jones-bag-stripeshow-a2.jpg" alt="Fella Golf x Jones Original Bag Stripeshow &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/jones-bag-stripeshow-a3.jpg" alt="Fella Golf x Jones Original Bag Stripeshow &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/jones-bag-stripeshow-a4.jpg" alt="Fella Golf x Jones Original Bag Stripeshow &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf &times; Jones Sports Co</div>
         <div class="product-name">Fella &times; Jones Original Bag &mdash; Stripeshow &middot; &euro;245</div>
         <div class="product-desc">Limited collab with Portland's Jones Sports Co. The Original Jones Bag silhouette — single-strap carry, no stand, no frills — dressed in Fella's Stripeshow pattern. Amsterdam meets Portland. Two indie brands, one bag. &euro;245.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/fella-x-jones-original-jones-bag-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/dice-mallet-headcover-copy" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/pizza-headcover.jpg" alt="Fella Golf — Pizza Slice Driver Headcover" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/pizza-headcover.jpg" alt="Fella Golf — Pizza Slice Driver Headcover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/pizza-headcover-a2.jpg" alt="Fella Golf — Pizza Slice Driver Headcover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/pizza-headcover-a3.jpg" alt="Fella Golf — Pizza Slice Driver Headcover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/pizza-headcover-a4.jpg" alt="Fella Golf — Pizza Slice Driver Headcover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Pizza Slice Driver Headcover &middot; &euro;59</div>
         <div class="product-desc">White PU leather with green diamond quilting and an embroidered pizza slice. The kind of headcover that starts conversations on the first tee and doesn't apologize for it. Because golf doesn't have to be so serious. &euro;59.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/dice-mallet-headcover-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://fellagolf.com/products/pizza-slice-double-ball-marker" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="../images/fella-golf/pizza-ball-marker.jpg" alt="Fella Golf — Pizza Slice Double Ball Marker" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="../images/fella-golf/pizza-ball-marker.jpg" alt="Fella Golf — Pizza Slice Double Ball Marker &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/pizza-ball-marker-a2.jpg" alt="Fella Golf — Pizza Slice Double Ball Marker &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="../images/fella-golf/pizza-ball-marker-a3.jpg" alt="Fella Golf — Pizza Slice Double Ball Marker &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Fella Golf</div>
         <div class="product-name">Pizza Slice Double Ball Marker &middot; &euro;15</div>
         <div class="product-desc">Golden pizza slice with "It only takes one good shot" on the back. The tiniest piece in the collection and somehow the most Fella thing they make. Two markers in one — clip it, mark it, start a conversation. &euro;15.</div>
-        <span class="product-link">Shop &#8599;</span>
+        <a href="https://fellagolf.com/products/pizza-slice-double-ball-marker" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
-    </a>
+    </div>
 
   </div>
 </section>
@@ -583,5 +564,27 @@ body{font-size:16px;line-height:1.6}
 </script>
 <!-- GoatCounter analytics -->
 <script data-goatcounter="https://thegrassyissue.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
+})();
+</script>
 </body>
 </html>

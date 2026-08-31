@@ -94,6 +94,23 @@ footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
 footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
 @media(max-width:820px){.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.products-grid{grid-template-columns:repeat(2,1fr)}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
 @media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
 </style>
 </head>
 <body>
@@ -159,173 +176,145 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <h2 class="products-hdr">The Collection — 14 Pieces</h2>
   <div class="products-grid">
 
-    <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-dark-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/8b401f47-JSC_Trouper26_DarkGreen-1_1200x.jpg" alt="Jones Trouper 4.0 — Dark Green" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/8b401f47-JSC_Trouper26_DarkGreen-1_1200x.jpg" alt="Jones Trouper 4.0 — Dark Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/8b401f47-JSC_Trouper26_DarkGreen-1_1200x-a2.jpg" alt="Jones Trouper 4.0 — Dark Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/8b401f47-JSC_Trouper26_DarkGreen-1_1200x-a3.jpg" alt="Jones Trouper 4.0 — Dark Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/8b401f47-JSC_Trouper26_DarkGreen-1_1200x-a4.jpg" alt="Jones Trouper 4.0 — Dark Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones</div>
         <div class="product-name">Trouper 4.0 · $315</div>
         <div class="product-desc">The 2026 Trouper is Jones's most refined stand bag yet — redesigned reinforced stand, ergonomic zippers, and that signature silhouette in Dark Green. 5-way top with full-length dividers, magnetic rangefinder pocket, and a cart strap passthrough that actually works. $315.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-dark-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-dark-green" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/f1980db7-JSC_TrouperDG-6_1200x.jpg" alt="Jones Trouper 4.0 — Lifestyle" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/f1980db7-JSC_TrouperDG-6_1200x.jpg" alt="Jones Trouper 4.0 — Lifestyle &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/f1980db7-JSC_TrouperDG-6_1200x-a2.jpg" alt="Jones Trouper 4.0 — Lifestyle &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/f1980db7-JSC_TrouperDG-6_1200x-a3.jpg" alt="Jones Trouper 4.0 — Lifestyle &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/f1980db7-JSC_TrouperDG-6_1200x-a4.jpg" alt="Jones Trouper 4.0 — Lifestyle &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones</div>
         <div class="product-name">Trouper 4.0 — On the Course</div>
         <div class="product-desc">The Trouper on the move — the dual strap system distributes weight evenly for 18 holes of walking. At 4.5 lbs it's one of the lighter stand bags with this level of organization. Jones has been making bags in Portland since 1971, and the Trouper is the bag that built the brand's modern identity.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-dark-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mackenziegolfbags.com/shop/golf-bags/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/25cf59a5-032a6e100c04f1e82e94f436485fc6fd_f3133.png" alt="MacKenzie 8 Inch Waxed Canvas Mac — Charcoal" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/25cf59a5-032a6e100c04f1e82e94f436485fc6fd_f3133.png" alt="MacKenzie 8 Inch Waxed Canvas Mac — Charcoal &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">MacKenzie</div>
         <div class="product-name">8&quot; Waxed Canvas Mac · $740</div>
         <div class="product-desc">MacKenzie Golf Bags — handmade in Portland, Oregon. The 8&quot; Waxed Canvas Mac in Charcoal with Navy trim is their classic carry bag: single pocket, oiled leather details, and that unmistakable Sunday-bag silhouette. At $740 it's the luxury pick, and you can feel every dollar in the materials. 7-8 week lead time for custom orders.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mackenziegolfbags.com/shop/golf-bags/" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.mackenziegolfbags.com/shop/golf-bags/" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/c79573e4-1ac06fa4bd4b1c281d1914f1b3f8d1da_f3017.jpg" alt="MacKenzie Waxed Canvas Mac — Detail" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/c79573e4-1ac06fa4bd4b1c281d1914f1b3f8d1da_f3017.jpg" alt="MacKenzie Waxed Canvas Mac — Detail &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">MacKenzie</div>
         <div class="product-name">Waxed Canvas Mac — Detail</div>
         <div class="product-desc">The details that make MacKenzie special — premium oiled leather trim, hand-stitched seams, and a construction quality that'll last decades. No trendy features, no tech gimmicks. Just a beautifully made golf bag that gets better with age. The kind of bag your playing partners notice.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.mackenziegolfbags.com/shop/golf-bags/" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://vesselgolf.com/products/lux-stand" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/418c998a-luxstandblknew.jpg" alt="Vessel Lux Stand — Crosshatch Black" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/418c998a-luxstandblknew.jpg" alt="Vessel Lux Stand — Crosshatch Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/418c998a-luxstandblknew-a2.jpg" alt="Vessel Lux Stand — Crosshatch Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/418c998a-luxstandblknew-a3.jpg" alt="Vessel Lux Stand — Crosshatch Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/418c998a-luxstandblknew-a4.jpg" alt="Vessel Lux Stand — Crosshatch Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Vessel</div>
         <div class="product-name">Lux Stand · $399</div>
         <div class="product-desc">The Vessel Lux Stand — premium synthetic leather in Crosshatch Black with gold hardware. 14-way top, magnetic pockets throughout, integrated cart strap channel, and Vessel's signature rotator stand system. At $399 it's the most polished stand bag on this list. Vessel builds bags for PGA Tour players — this is the same construction scaled for retail.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://vesselgolf.com/products/lux-stand" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://vesselgolf.com/products/lux-stand" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/c5c075c9-LUXSTAND-CROSSHATCHBLACK-06.jpg" alt="Vessel Lux Stand — Lifestyle" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/c5c075c9-LUXSTAND-CROSSHATCHBLACK-06.jpg" alt="Vessel Lux Stand — Lifestyle &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c5c075c9-LUXSTAND-CROSSHATCHBLACK-06-a2.jpg" alt="Vessel Lux Stand — Lifestyle &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c5c075c9-LUXSTAND-CROSSHATCHBLACK-06-a3.jpg" alt="Vessel Lux Stand — Lifestyle &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c5c075c9-LUXSTAND-CROSSHATCHBLACK-06-a4.jpg" alt="Vessel Lux Stand — Lifestyle &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Vessel</div>
         <div class="product-name">Lux Stand — On the Course</div>
         <div class="product-desc">Vessel's attention to detail is unmatched at this price point. Every pocket has magnetic closures, the putter well is oversized for modern grips, and the base pad is reinforced for thousands of stands. The Lux is for the golfer who wants their bag to look as sharp on the 18th as it did on the 1st.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://vesselgolf.com/products/lux-stand" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://stitchgolf.com/products/sl2-gen-2" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/6dd39f70-StitchGolf67d9ae6a734e5667d9ae6a736bc.3596729967d9ae6a736bc_.jpg" alt="Stitch SL2 Gen 2" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/6dd39f70-StitchGolf67d9ae6a734e5667d9ae6a736bc.3596729967d9ae6a736bc_.jpg" alt="Stitch SL2 Gen 2 &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/6dd39f70-StitchGolf67d9ae6a734e5667d9ae6a736bc.3596729967d9ae6a736bc_-a2.jpg" alt="Stitch SL2 Gen 2 &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/6dd39f70-StitchGolf67d9ae6a734e5667d9ae6a736bc.3596729967d9ae6a736bc_-a3.jpg" alt="Stitch SL2 Gen 2 &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/6dd39f70-StitchGolf67d9ae6a734e5667d9ae6a736bc.3596729967d9ae6a736bc_-a4.jpg" alt="Stitch SL2 Gen 2 &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Stitch</div>
         <div class="product-name">SL2 Gen 2 · $398</div>
         <div class="product-desc">The Stitch SL2 Gen 2 — completely redesigned for 2026 with a refined stand mechanism, deeper pockets, and an updated aesthetic. Japanese-inspired minimalism meets Southern engineering out of Nashville. 4-way top, dual carry straps, and a profile that looks just as good on a push cart. $398.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://stitchgolf.com/products/sl2-gen-2" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://stitchgolf.com/products/sl2-gen-2" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/74978d12-STITCH_2026_000SG2507_SL2gen2_FRNWD_7021.jpg" alt="Stitch SL2 Gen 2 — Lifestyle" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/74978d12-STITCH_2026_000SG2507_SL2gen2_FRNWD_7021.jpg" alt="Stitch SL2 Gen 2 — Lifestyle &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/74978d12-STITCH_2026_000SG2507_SL2gen2_FRNWD_7021-a2.jpg" alt="Stitch SL2 Gen 2 — Lifestyle &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/74978d12-STITCH_2026_000SG2507_SL2gen2_FRNWD_7021-a3.jpg" alt="Stitch SL2 Gen 2 — Lifestyle &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/74978d12-STITCH_2026_000SG2507_SL2gen2_FRNWD_7021-a4.jpg" alt="Stitch SL2 Gen 2 — Lifestyle &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Stitch</div>
         <div class="product-name">SL2 Gen 2 — On the Course</div>
         <div class="product-desc">The SL2 Gen 2 in its natural habitat — walking the course. At just under 5 lbs, the SL2 bridges the gap between Sunday bags and full stand bags. Enough room for 14 clubs and everything you need, nothing you don't. Comes in 8 colorways.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://stitchgolf.com/products/sl2-gen-2" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://shaplandbags.com/products/kantle-3-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/da988b05-Kantle_honey_left.jpg" alt="Shapland Kantle 3.1 — Honey" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/da988b05-Kantle_honey_left.jpg" alt="Shapland Kantle 3.1 — Honey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/da988b05-Kantle_honey_left-a2.jpg" alt="Shapland Kantle 3.1 — Honey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/da988b05-Kantle_honey_left-a3.jpg" alt="Shapland Kantle 3.1 — Honey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/da988b05-Kantle_honey_left-a4.jpg" alt="Shapland Kantle 3.1 — Honey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Shapland</div>
         <div class="product-name">Kantle 3.1 · $490</div>
         <div class="product-desc">The Shapland Kantle 3.1 — handcrafted in Columbus, Ohio with waterproof UV-resistant canvas and premium oiled leather trim. 4-way top with 3/4-length dividers, 8&quot; opening, single pocket design. At $490, Shapland sits between the mainstream brands and full custom — small-batch quality, thoughtful design. Shown in Honey.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://shaplandbags.com/products/kantle-3-1" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://shaplandbags.com/products/kantle-3-1" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/f6991bd7-Kantle_navy_right.jpg" alt="Shapland Kantle 3.1 — Midnight Navy" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/f6991bd7-Kantle_navy_right.jpg" alt="Shapland Kantle 3.1 — Midnight Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/f6991bd7-Kantle_navy_right-a2.jpg" alt="Shapland Kantle 3.1 — Midnight Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/f6991bd7-Kantle_navy_right-a3.jpg" alt="Shapland Kantle 3.1 — Midnight Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/f6991bd7-Kantle_navy_right-a4.jpg" alt="Shapland Kantle 3.1 — Midnight Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Shapland</div>
         <div class="product-name">Kantle 3.1 — Midnight Navy</div>
         <div class="product-desc">Shapland Kantle in Midnight Navy — the dual carry strap system lets you switch between single and double carry instantly. At 5 lbs 10 oz it's lightweight for a canvas bag, and the rain hood tucks in seamlessly. Shapland makes everything in small runs that sell out fast — if you see your color, move.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://shaplandbags.com/products/kantle-3-1" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://ghostgolf.com/products/anyday-kovert-ops-bag" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/6ce78de7-Anyday_Black_Ops_Bag_Hero.jpg" alt="Ghost Golf Anyday — Kovert Ops" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/6ce78de7-Anyday_Black_Ops_Bag_Hero.jpg" alt="Ghost Golf Anyday — Kovert Ops &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/6ce78de7-Anyday_Black_Ops_Bag_Hero-a2.jpg" alt="Ghost Golf Anyday — Kovert Ops &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/6ce78de7-Anyday_Black_Ops_Bag_Hero-a3.jpg" alt="Ghost Golf Anyday — Kovert Ops &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/6ce78de7-Anyday_Black_Ops_Bag_Hero-a4.jpg" alt="Ghost Golf Anyday — Kovert Ops &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Ghost Golf</div>
         <div class="product-name">Anyday Kovert Ops · $415</div>
         <div class="product-desc">The Ghost Golf Anyday in Kovert Ops — matte black everything, carbon fiber legs, velvet-wrapped club dividers. Available in 7-way or 14-way top. Ghost loaded this bag: magnetic rangefinder pocket, cooler-lined water bottle sleeves on both sides, waterproof valuables pockets, customizable ball pocket panel. $415.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://ghostgolf.com/products/anyday-kovert-ops-bag" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://ghostgolf.com/products/anyday-kovert-ops-bag" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/c0f6522f-Anyday_Black_Ops_Bag_Setup.jpg" alt="Ghost Golf Anyday — Setup" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/c0f6522f-Anyday_Black_Ops_Bag_Setup.jpg" alt="Ghost Golf Anyday — Setup &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c0f6522f-Anyday_Black_Ops_Bag_Setup-a2.jpg" alt="Ghost Golf Anyday — Setup &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c0f6522f-Anyday_Black_Ops_Bag_Setup-a3.jpg" alt="Ghost Golf Anyday — Setup &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/c0f6522f-Anyday_Black_Ops_Bag_Setup-a4.jpg" alt="Ghost Golf Anyday — Setup &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Ghost Golf</div>
         <div class="product-name">Anyday — Full Setup</div>
         <div class="product-desc">The Anyday fully loaded and standing. Ghost's stand system is ultra-stable with carbon fiber legs, and the dual strap system goes from single to double carry with quick-release clips. At 6.5 lbs it's the heaviest bag here, but the feature set justifies the weight. Every pocket, every feature, every detail.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://ghostgolf.com/products/anyday-kovert-ops-bag" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-onyx-kodiak" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/2be2eada-JSC_HeritageTrouper_Onyx-1.jpg" alt="Jones Heritage Trouper — Onyx/Kodiak" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/2be2eada-JSC_HeritageTrouper_Onyx-1.jpg" alt="Jones Heritage Trouper — Onyx/Kodiak &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/2be2eada-JSC_HeritageTrouper_Onyx-1-a2.jpg" alt="Jones Heritage Trouper — Onyx/Kodiak &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/2be2eada-JSC_HeritageTrouper_Onyx-1-a3.jpg" alt="Jones Heritage Trouper — Onyx/Kodiak &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/2be2eada-JSC_HeritageTrouper_Onyx-1-a4.jpg" alt="Jones Heritage Trouper — Onyx/Kodiak &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones</div>
         <div class="product-name">Heritage Trouper · $375</div>
         <div class="product-desc">The Jones Heritage Trouper in Onyx/Kodiak — the premium tier of the Trouper line. Deluxe vegan leather with genuine Kodiak leather accents. Same 2026 Trouper chassis with the reinforced stand and ergonomic zippers, wrapped in materials that age beautifully. Heritage 2026 collection, $375.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-onyx-kodiak" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
 
-    <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-onyx-kodiak" target="_blank" rel="noopener" class="product-card">
-      <div class="product-img">
-        <img src="/images/feed/9dbce48f-JSC_TRS_ONK6_5c3b396a-ae7c-4f21-b7f6-40cb7181bc41.jpg" alt="Jones Heritage Trouper — Lifestyle" loading="lazy" />
-      </div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/9dbce48f-JSC_TRS_ONK6_5c3b396a-ae7c-4f21-b7f6-40cb7181bc41.jpg" alt="Jones Heritage Trouper — Lifestyle &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/9dbce48f-JSC_TRS_ONK6_5c3b396a-ae7c-4f21-b7f6-40cb7181bc41-a2.jpg" alt="Jones Heritage Trouper — Lifestyle &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/9dbce48f-JSC_TRS_ONK6_5c3b396a-ae7c-4f21-b7f6-40cb7181bc41-a3.jpg" alt="Jones Heritage Trouper — Lifestyle &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/9dbce48f-JSC_TRS_ONK6_5c3b396a-ae7c-4f21-b7f6-40cb7181bc41-a4.jpg" alt="Jones Heritage Trouper — Lifestyle &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones</div>
         <div class="product-name">Heritage Trouper — On the Course</div>
         <div class="product-desc">The Heritage Trouper bridging classic and modern — the traditional Jones silhouette dressed in vegan leather creates something that feels timeless without being nostalgic. If the standard Trouper 4.0 is the everyday workhorse, the Heritage is the one you pull out when the course calls for it.</div>
-        <span class="product-link">Shop ↗</span>
+        <a href="https://www.jonessportsco.com/collections/trouper/products/trouper-4-0-onyx-kodiak" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
-    </a>
+    </div>
   </div>
 </section>
 
@@ -493,5 +482,27 @@ body{font-size:16px;line-height:1.6}
 </script>
 <!-- GoatCounter analytics -->
 <script data-goatcounter="https://thegrassyissue.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
+})();
+</script>
 </body>
 </html>
