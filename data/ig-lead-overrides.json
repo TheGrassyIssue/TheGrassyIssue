@@ -1,0 +1,10 @@
+{
+  "_why": "The IG tile shows one frame per post. rank_images picks the least packshot-like one, but it cannot tell that a photograph is cropped through the subject's head. Lenny flagged three, 2026-09-02. Map a post's href to the frame it should lead with; build-ig.py honours it over the ranking.",
+  "/drops/apc-golf-cph-golf-collab": {
+    "img": "/images/apcph-golf/polo-1.jpg",
+    "anchor": 0.0
+  },
+  "/drops/public-drip-fw26-nightshift": "/images/publicdrip-fw26/denim-bucket-indigo-1.jpg",
+  "/drops/best-golf-streetwear-brands-2026": "/images/streetwear26/anti-2-0.jpg",
+  "/drops/brand-to-know-manors": "/images/manors/irl-carrybag.jpg"
+}

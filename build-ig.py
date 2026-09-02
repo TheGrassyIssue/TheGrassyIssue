@@ -75,6 +75,47 @@ def shorten(t, n=LIMIT):
     return (cut[:i] if i > 0 else cut).rstrip(' ,;:&—-') + '…'
 
 
+_ABBR = ("A.P.C", "St", "Mr", "Mrs", "Ms", "Dr", "No", "vs", "Vol", "Est",
+         "Jr", "Sr", "U.S", "U.K", "Ft", "Mt", "Co", "Inc")
+
+
+def two_sentences(t):
+    """The first TWO COMPLETE sentences of the post's opening paragraph.
+
+    Lenny, 2026-09-02: "make the IG boxes a 2 sentence summary of the post
+    described." Previously the tile carried shorten(wu, 250), which chopped
+    mid-clause — "…which is remarkable mainly…" — and read as a broken excerpt
+    rather than a summary. House intros run what-it-is → the inspiration → who
+    it's for, so the first two sentences already ARE the summary; they just have
+    to be taken whole.
+
+    A third sentence is allowed when the first two are very short, so terse
+    openers still fill the square.
+    """
+    t = (t or "").strip()
+    if not t:
+        return ""
+    parts, buf = [], ""
+    for tok in re.split(r"(?<=[.!?])\s+", t):
+        buf = (buf + " " + tok).strip() if buf else tok
+        stem = buf.rstrip(".!?").split()[-1] if buf.rstrip(".!?").split() else ""
+        # don't end a sentence on an abbreviation or a single initial
+        if stem in _ABBR or re.fullmatch(r"[A-Z]", stem):
+            continue
+        if buf.endswith((".", "!", "?")):
+            parts.append(buf)
+            buf = ""
+    if buf:
+        parts.append(buf)
+    out = " ".join(parts[:2])
+    if len(out) < 150 and len(parts) > 2:
+        out = " ".join(parts[:3])
+    # A stub is worse than no paragraph at all — the Summer Practice Guide's card
+    # blurb is literally "...", which rendered as a tile with three dots on it.
+    # render() already omits the block when text is empty.
+    return out if len(out) >= 40 else ""
+
+
 def writeup(href):
     """
     The post's OPENING PARAGRAPH, for the text slide. Read from the dedicated
@@ -145,6 +186,86 @@ except Exception:
     _CACHE = {}
 
 
+try:
+    _raw = json.loads((ROOT / "data" / "ig-lead-overrides.json").read_text())
+    LEAD_OVERRIDES = {k: (v if isinstance(v, str) else v["img"])
+                      for k, v in _raw.items() if not k.startswith("_")}
+    # optional per-image vertical anchor, 0 = flush to the top of the frame
+    CROP_ANCHORS = {(v["img"] if isinstance(v, dict) else v): v["anchor"]
+                    for v in _raw.values()
+                    if isinstance(v, dict) and "anchor" in v}
+except Exception:
+    LEAD_OVERRIDES, CROP_ANCHORS = {}, {}
+
+_face_cache = {}
+
+
+def head_clipped(path):
+    """True when a detected face is jammed against the top edge of the frame.
+
+    The tile shows the whole picture now, so a source photograph that was itself
+    cropped through the crown reads as a decapitated model — Lenny, 2026-09-02:
+    "the heads of the first three are not cropped correctly." This demotes such
+    frames so a cleaner one from the same post leads instead.
+
+    Deliberately conservative: it only fires when a face IS found AND its box
+    starts in the top 2% of the image, so it can never demote a well-composed
+    shot. A face cut so badly that the detector misses it entirely will slip
+    through — that is what data/ig-lead-overrides.json is for.
+    """
+    key = str(path)
+    if key in _face_cache:
+        return _face_cache[key]
+    faces = _faces(path)
+    if not faces:
+        _face_cache[key] = False
+        return False
+    try:
+        h = Image.open(path).height
+    except Exception:
+        h = 0
+    hit = bool(h) and any(y <= h * 0.02 for (_, y, _, _) in faces)
+    _face_cache[key] = hit
+    return hit
+
+
+_boxes_cache = {}
+
+
+def _faces(path):
+    """Face boxes in the ORIGINAL image's pixel coordinates, or []. Cached."""
+    key = str(path)
+    if key in _boxes_cache:
+        return _boxes_cache[key]
+    boxes = []
+    try:
+        import cv2
+        im = cv2.imread(key)
+        if im is not None:
+            scale = min(1.0, 700 / max(im.shape[:2]))
+            small = cv2.resize(im, None, fx=scale, fy=scale) if scale < 1 else im
+            grey = cv2.cvtColor(small, cv2.COLOR_BGR2GRAY)
+            found = []
+            for name in ("haarcascade_frontalface_default.xml",
+                         "haarcascade_profileface.xml"):
+                cc = cv2.CascadeClassifier(cv2.data.haarcascades + name)
+                found = list(cc.detectMultiScale(grey, 1.1, 5))
+                if len(found):
+                    break
+            if not len(found):          # profiles facing the other way
+                cc = cv2.CascadeClassifier(
+                    cv2.data.haarcascades + "haarcascade_profileface.xml")
+                flip = cv2.flip(grey, 1)
+                found = [(flip.shape[1] - x - w, y, w, h)
+                         for (x, y, w, h) in cc.detectMultiScale(flip, 1.1, 5)]
+            boxes = [(int(x / scale), int(y / scale), int(w / scale), int(h / scale))
+                     for (x, y, w, h) in found]
+    except Exception:
+        boxes = []
+    _boxes_cache[key] = boxes
+    return boxes
+
+
 def rank_images(urls):
     """
     Lifestyle first (Lenny, 2026-08-28: "prioritize pictures that aren't just
@@ -155,11 +276,13 @@ def rank_images(urls):
     """
     scored = []
     for i, u in enumerate(urls):
+        p = ROOT / u.lstrip('/')
         if u not in _CACHE:
-            p = ROOT / u.lstrip('/')
             _CACHE[u] = packshot_score(p) if p.exists() else 50
-        scored.append((_CACHE[u], i, u))
-    return [u for _, _, u in sorted(scored)]
+        # a head clipped by the top edge sorts behind everything else
+        clip = 1 if (p.exists() and head_clipped(p)) else 0
+        scored.append((clip, _CACHE[u], i, u))
+    return [u for _, _, _, u in sorted(scored)]
 
 
 def type_scale(n):
@@ -213,13 +336,15 @@ def scrape(index_html):
                    # "first few lines" on the box: the opening of the WRITE-UP,
                    # not the card blurb, cut to ~2 sentences so it sits under a
                    # four-image grid without crowding it.
-                   text=shorten(wu, 250) if wu else shorten(blurb, 250),
+                   text=two_sentences(wu or blurb),
                    writeup=shorten(wu, 900) if wu else '',
                    # ONE picture, full size (Lenny, 2026-08-28: the 4-up grid
                    # 'still doesn't look right'). rank_images puts the least
                    # packshot-like frame first, so the single image is the most
                    # photographic one the post has.
-                   imgs=rank_images(imgs)[:1],
+                   imgs=([LEAD_OVERRIDES[href.group(1)]]
+                         if href.group(1) in LEAD_OVERRIDES
+                         else rank_images(imgs)[:1]),
                    img=img)
         (tiles if rec['img'] else noimg).append(rec)
     return tiles, noimg
@@ -257,14 +382,14 @@ text-transform:uppercase;opacity:.5;padding:0 12px 6px}
 .tile{width:min(1080px,100vw);aspect-ratio:1/1;position:relative;overflow:hidden;background:#111;
 font-size:min(10px,0.926vw)}
 .tile-split{display:flex;flex-direction:column;background:var(--paper);color:var(--ink)}
-.ig-grid{position:relative;flex:1;min-height:0;display:grid;gap:.5em;background:#fff}
+.ig-grid{position:relative;flex:0 0 68%;min-height:0;display:grid;gap:.5em;background:#fff}
 .ig-grid.g4{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
 .ig-grid.g3{grid-template-columns:1.45fr 1fr;grid-template-rows:1fr 1fr}
 .ig-grid.g3 .gi:first-child{grid-row:span 2}
 .ig-grid.g2{grid-template-columns:1fr 1fr;grid-template-rows:1fr}
 .ig-grid.g1{grid-template-columns:1fr;grid-template-rows:1fr}
-.gi{background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#fff}
-.ig-lower{flex:0 0 auto;padding:3.8em 5.8em 4.4em;position:relative}
+.gi{background-repeat:no-repeat;background-color:#fff}
+.ig-lower{flex:1 1 auto;min-height:0;overflow:hidden;padding:3.8em 5.8em 4.4em;position:relative}
 .ig-h{font-family:var(--serif);font-weight:700;font-size:4.5em;line-height:1.08;
 letter-spacing:-.015em;margin-bottom:.356em;text-wrap:balance}
 .ig-p{font-family:var(--serif);font-size:2.7em;line-height:1.4;opacity:.8}
@@ -285,6 +410,91 @@ letter-spacing:.22em;text-transform:uppercase;opacity:.45}
 """
 
 
+_focal_cache = {}
+
+
+TILE_W, TILE_H = 1080, 734          # picture area = 68% of the 1080 square
+CROP_DIR = ROOT / "images" / "ig-crops"
+
+
+def tile_crop(url):
+    """Return a derivative cropped to EXACTLY the picture-area shape.
+
+    Lenny, 2026-09-02: "make sure the image fills the box and it's centered."
+    `contain` left bars; `cover` in the browser crops blind from the centre and
+    beheads anyone standing up. So the crop is decided here, once, with the
+    subject in view — the tile then just fills with an image already the right
+    shape, so nothing is cropped at render time.
+
+    Vertical placement: if a face is found, sit its centre at 32% of the crop
+    height, which keeps head and torso and reads as a deliberate portrait crop.
+    With no face, centre it. Horizontal placement is centred on the face when
+    there is one, otherwise centre.
+    """
+    src = ROOT / url.lstrip("/").split("?")[0]
+    if not src.exists():
+        return url
+    out_name = re.sub(r"[^a-z0-9]+", "-", url.lower().strip("/")) + ".jpg"
+    out = CROP_DIR / out_name
+    if out.exists() and out.stat().st_mtime >= src.stat().st_mtime:
+        return "/images/ig-crops/" + out_name
+    try:
+        im = Image.open(src).convert("RGB")
+    except Exception:
+        return url
+    w, h = im.size
+    target = TILE_W / TILE_H
+    fx, fy = None, None
+    for (x, y, fw, fh) in _faces(src):
+        if fw * fh > (0 if fx is None else 0):        # take the largest face
+            fx, fy = x + fw / 2, y + fh / 2
+    if w / h > target:                                # too wide: trim the sides
+        cw = int(h * target); ch = h
+        cx = fx if fx is not None else w / 2
+        x0 = int(min(max(cx - cw / 2, 0), w - cw)); y0 = 0
+    else:                                             # too tall: trim top/bottom
+        cw = w; ch = int(w / target)
+        if fy is not None:
+            y0 = int(min(max(fy - ch * 0.32, 0), h - ch))
+        else:
+            # No face found — could be a profile, sunglasses, or a head turned
+            # away, and a true centre crop then slices it off (A.P.Cph and the
+            # White Tee Edit both did). Sit the window slightly high: it still
+            # reads centred, and it keeps whatever is at the top of the frame.
+            y0 = int((h - ch) * CROP_ANCHORS.get(url, 0.08))
+        x0 = 0
+    im = im.crop((x0, y0, x0 + cw, y0 + ch)).resize((TILE_W, TILE_H), Image.LANCZOS)
+    CROP_DIR.mkdir(parents=True, exist_ok=True)
+    im.save(out, quality=88, optimize=True)
+    return "/images/ig-crops/" + out_name
+
+
+def focal(url):
+    """Every cell now points at a derivative already cropped to the box shape,
+    so filling and centring is all that is left to say."""
+    return "background-size:cover;background-position:center"
+
+
+def _edge_colour(im):
+    """Median colour of the frame's outer border, as #rrggbb.
+
+    Product shots sit on a light grey sweep and photographs have their own edge
+    tone; painting the letterbox this colour makes a contained image read as a
+    full-bleed one rather than a picture pasted onto white.
+    """
+    im = im.convert("RGB")
+    w, h = im.size
+    step = max(1, w // 60)
+    px = im.load()
+    edge = []
+    for x in range(0, w, step):
+        edge.append(px[x, 0]); edge.append(px[x, h - 1])
+    for y in range(0, h, max(1, h // 60)):
+        edge.append(px[0, y]); edge.append(px[w - 1, y])
+    med = [sorted(c[i] for c in edge)[len(edge) // 2] for i in range(3)]
+    return "#%02x%02x%02x" % tuple(med)
+
+
 def render(tiles):
     """Two slides per post: (a) the photograph, (b) the write-up on paper.
     Post them together as an Instagram carousel, a before b."""
@@ -292,7 +502,8 @@ def render(tiles):
     for n, t in enumerate(tiles, 1):
         cells = "".join(
             f'<div class="gi" '
-            f'style="background-image:url(\'{u}\')"></div>' for u in t["imgs"])
+            f'style="background-image:url(\'{tile_crop(u)}\');{focal(u)}"></div>'
+            for u in t["imgs"])
         g = f'g{min(len(t["imgs"]), 4)}'
         txt = f'<div class="ig-p">{t["text"]}</div>' if t["text"] else ''
         out.append(f'''  <div class="wrap">
