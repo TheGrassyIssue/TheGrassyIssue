@@ -389,7 +389,7 @@ font-size:min(10px,0.926vw)}
 .ig-grid.g2{grid-template-columns:1fr 1fr;grid-template-rows:1fr}
 .ig-grid.g1{grid-template-columns:1fr;grid-template-rows:1fr}
 .gi{background-repeat:no-repeat;background-color:#fff}
-.ig-lower{flex:1 1 auto;min-height:0;overflow:hidden;padding:3.8em 5.8em 4.4em;position:relative}
+.ig-lower{flex:1 1 auto;min-height:0;overflow:hidden;padding:3.4em 5.8em 3.2em;position:relative}
 .ig-h{font-family:var(--serif);font-weight:700;font-size:4.5em;line-height:1.08;
 letter-spacing:-.015em;margin-bottom:.356em;text-wrap:balance}
 .ig-p{font-family:var(--serif);font-size:2.7em;line-height:1.4;opacity:.8}
@@ -463,10 +463,43 @@ def tile_crop(url):
             # reads centred, and it keeps whatever is at the top of the frame.
             y0 = int((h - ch) * CROP_ANCHORS.get(url, 0.08))
         x0 = 0
-    im = im.crop((x0, y0, x0 + cw, y0 + ch)).resize((TILE_W, TILE_H), Image.LANCZOS)
+    # Crop only if that loses almost nothing (a source already near the box
+    # shape); otherwise show the whole frame on a blurred bed of itself.
+    if abs((w / h) - target) / target < 0.06:
+        im = im.crop((x0, y0, x0 + cw, y0 + ch)).resize((TILE_W, TILE_H), Image.LANCZOS)
+    else:
+        im = fit_frame(im)
     CROP_DIR.mkdir(parents=True, exist_ok=True)
     im.save(out, quality=88, optimize=True)
     return "/images/ig-crops/" + out_name
+
+
+def fit_frame(src_im):
+    """Whole picture, no crop, still filling the box.
+
+    Lenny, 2026-09-02: "can we zoom out on all these images so they fit better?
+    still getting weird crops." Taking the full width of a 4:5 source and slicing
+    a landscape strip out of it is effectively a heavy zoom — it was reducing
+    portraits to a face or a shoulder. So the image is SCALED to fit entirely
+    inside the box, and the surround is filled with a blurred, slightly darkened
+    enlargement of the same photograph. Nothing is cut, nothing is letterboxed,
+    and the fill reads as depth of field rather than as bars.
+    """
+    from PIL import ImageFilter, ImageEnhance
+    box = (TILE_W, TILE_H)
+    # backdrop: cover the box, blur it down, take the edge off the brightness
+    bw, bh = src_im.size
+    s = max(TILE_W / bw, TILE_H / bh)
+    bg = src_im.resize((max(1, int(bw * s)), max(1, int(bh * s))), Image.LANCZOS)
+    bx, by = (bg.width - TILE_W) // 2, (bg.height - TILE_H) // 2
+    bg = bg.crop((bx, by, bx + TILE_W, by + TILE_H))
+    bg = bg.filter(ImageFilter.GaussianBlur(38))
+    bg = ImageEnhance.Brightness(bg).enhance(0.82)
+    # foreground: the whole frame, as large as it will go
+    fg = src_im.copy()
+    fg.thumbnail(box, Image.LANCZOS)
+    bg.paste(fg, ((TILE_W - fg.width) // 2, (TILE_H - fg.height) // 2))
+    return bg
 
 
 def focal(url):
@@ -505,7 +538,18 @@ def render(tiles):
             f'style="background-image:url(\'{tile_crop(u)}\');{focal(u)}"></div>'
             for u in t["imgs"])
         g = f'g{min(len(t["imgs"]), 4)}'
-        txt = f'<div class="ig-p">{t["text"]}</div>' if t["text"] else ''
+        # Two whole sentences run 41-560 characters. At a fixed 2.7em the long
+        # ones overran the bottom of the square and got clipped mid-word, so the
+        # paragraph is sized to its own length — same idea as type_scale() on
+        # the paper slide.
+        # Budget the block on headline AND body: the headline is set at 4.5em and
+        # a three-liner (Manors) eats the room a two-liner leaves.
+        strip = lambda x: re.sub(r"<[^>]+>", "", x or "")
+        n = len(strip(t["text"])) + int(len(strip(t["title"])) * 1.8)
+        em = 2.7 if n <= 240 else 2.4 if n <= 330 else 2.15 if n <= 430 else \
+            1.95 if n <= 520 else 1.75
+        txt = (f'<div class="ig-p" style="font-size:{em}em">{t["text"]}</div>'
+               if t["text"] else '')
         out.append(f'''  <div class="wrap">
     <div class="cap"><span>{n:03d}a &middot; {t["tag"]} &middot; {len(t["imgs"])} images</span><a href="{t["href"]}" target="_blank">{t["href"]}</a></div>
     <div class="tile tile-split">
