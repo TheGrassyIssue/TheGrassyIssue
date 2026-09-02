@@ -15,7 +15,7 @@ actually is, repointing the mentions-map profile flag rather than 301-ing.
 THE ANGLE: Manors launched in 2019 rejecting technical golf apparel, then in
 spring 2023 wiped its socials and relaunched as a technical golf brand. The
 reversal is the story, and the current catalogue shows both halves — Polartec
-and recycled tech sitting next to a knitted baker boy cap.
+and recycled tech sitting next to a heritage check polo and a reversible knit vest.
 
 SOURCING: every quote is verbatim from the Hypebeast interview (Jack Stanley,
 7 May 2021) — see research/manors-dossier.md. The 859% growth figure traces to
@@ -91,17 +91,37 @@ def photos(*items):
     return '<div class="ig-grid">\n  %s\n</div>' % figs
 
 
+# Frame counts per product, from the rendered manorsgolf.com galleries (2026-09-02).
+# Manors serves product media from Sanity, not Shopify — the .js/.json endpoints are
+# 404, so these were read off the rendered DOM (imgs with .aspect-4/5.fadeIn) and
+# saved as {base}-a2/-a3/-a4. See research/manors-dossier.md.
+FRAMES = json.load(open(os.path.join(S, "data", "manors-frames.json")))
+
+
 def card(base, name, price, frames, desc, alt, handle):
+    n = FRAMES.get(base, 1)
+    srcs = [base] + ["%s-a%d" % (base, i) for i in range(2, n + 1)]
     gal = "".join('<div class="pg-frame"><img src="%s/%s.jpg" alt="%s" loading="lazy" /></div>'
-                  % (IMG, base, alt) for _ in range(1))
-    return ('<div class="product-card" data-frames="1">'
-            '<div class="product-gallery"><div class="pg-track">%s</div></div>'
+                  % (IMG, s, alt) for s in srcs)
+    if n > 1:
+        dots = "".join('<button class="pg-dot%s" data-i="%d" aria-label="View image %d"></button>'
+                       % (" on" if i == 0 else "", i, i + 1) for i in range(n))
+        ctrl = ('<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+                '<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+                '<span class="pg-count">1/%d</span><div class="pg-dots">%s</div>' % (n, dots))
+    else:
+        ctrl = ""
+    tmpl = ('<div class="product-card" data-frames="%(n)d">'
+            '<div class="product-gallery"><div class="pg-track">%(gal)s</div>%(ctrl)s</div>'
             '<div class="product-body">'
             '<div class="product-brand">Manors</div>'
-            '<div class="product-name">%s &middot; %s</div>'
-            '<div class="product-desc">%s</div>'
-            '<a href="%s%s" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>'
-            '</div></div>' % (gal, name, price, desc, STORE, handle))
+            '<div class="product-name">%(name)s &middot; %(price)s</div>'
+            '<div class="product-desc">%(desc)s</div>'
+            '<a href="%(store)s%(handle)s" target="_blank" rel="noopener" '
+            'class="product-link">Shop &#8599;</a>'
+            '</div></div>')
+    return tmpl % dict(n=n, gal=gal, ctrl=ctrl, name=name, price=price,
+                       desc=desc, store=STORE, handle=handle)
 
 
 SECTIONS = [
@@ -148,9 +168,9 @@ SECTIONS = [
  ("What Survived the Rebrand",
   "<strong>Carried Over &middot; The Original Argument</strong>The reposition did not erase the original brand. The golden-age research Nick Watts describes &mdash; archive footage, Getty images of majors, the crowds as much as the players &mdash; is still visible in the cuts and the knitwear.",
   [
-   ("old-bakerboy", "Knitted Baker Boy Cap", "$54",1,
-    "A knitted baker boy cap is not a performance product and never will be. It is the clearest surviving piece of the 1950s research, and at $54 the cheapest way into the brand.",
-    "Manors knitted baker boy cap in dark olive","baker-boy-cap"),
+   ("old-stableford", "Stableford Trouser", "$190",1,
+    "Manors describes it as classic workwear with a nod to golf&rsquo;s golden era, which is the whole pre-2023 pitch stated as a product description. The silhouette is wide and cuffed and belongs to no current golf brand; the Primeflex fabric it is cut from belongs to all of them.",
+    "Manors Stableford Trouser in stone, wide cuffed workwear silhouette","work-trousers"),
    ("old-check", "Heritage Check Polo", "$115",1,
     "Black, checked, and named for the thing it is. The heritage line is the counterweight to the Polartec end of the rail.",
     "Manors heritage check polo in black","heritage-check-polo"),
@@ -234,15 +254,15 @@ photo_row_c = photos(
 )
 
 photo_row_d = photos(
-    ("irl-grillroom",
-     "A grill room interior with framed member photographs covering the walls",
-     "The grill room, walls to the ceiling"),
-    ("irl-snooker",
-     "A woman leaning over a snooker table under low lamps late at night",
-     "Snooker after dark"),
-    ("irl-clubnight",
-     "Three people talking at a Manors party, drinks in hand, low light",
-     "A Manors night, London"),
+    ("irl-divot",
+     "A golfer in a striped Manors polo and olive cap spraying a divot on a fairway",
+     "Striped polo, olive cap, divot"),
+    ("irl-redrock",
+     "A golfer in Manors walking a desert course beneath a red rock wall",
+     "Red rock, olive kit"),
+    ("irl-gorse-swing",
+     "A golfer in a Manors beanie mid-swing on a Scottish links course, gorse in the foreground",
+     "Scotland, into the wind"),
 )
 
 page = f'''<!DOCTYPE html>
@@ -302,7 +322,7 @@ page = f'''<!DOCTYPE html>
   <div class="drop-meta">
     <span>September 2, 2026</span><span class="dot"></span>
     <span>London &middot; est. 2019</span><span class="dot"></span>
-    <span>16 pieces &middot; $54&ndash;$284</span>
+    <span>16 pieces &middot; $68&ndash;$284</span>
   </div>
 </header>
 
@@ -322,8 +342,8 @@ page = f'''<!DOCTYPE html>
       <div class="sidebar-detail"><span class="l">Fashion Dir.</span><span>Nick Watts</span></div>
       <div class="sidebar-detail"><span class="l">Rebrand</span><span>Spring 2023</span></div>
       <div class="sidebar-detail"><span class="l">Collabs</span><span>adidas, Reebok, Gentleman Jack</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$48&ndash;$284</span></div>
-      <div class="sidebar-detail"><span class="l">Our pick</span><span>Knitted Baker Boy Cap</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$68&ndash;$284</span></div>
+      <div class="sidebar-detail"><span class="l">Our pick</span><span>Reversible V-Neck Vest</span></div>
       <a href="https://manorsgolf.com/" target="_blank" rel="noopener" class="sidebar-cta">Visit Manors ↗</a>
       <div class="hashtags">
         <span class="hashtag">#Manors</span>
@@ -369,7 +389,7 @@ page = f'''<!DOCTYPE html>
   <div style="margin-top:30px">{photo_row_b}</div>
   <div>{photo_row_c}</div>
   <div style="max-width:760px;font-size:16px;line-height:1.7;">
-    <p>The same eye runs through the off-course frames &mdash; a grill room hung floor to ceiling with member photographs, a snooker table at midnight, a launch party. Golf brands have been shooting the nineteenth hole for a decade. Manors shoots it like the round is the excuse.</p>
+    <p>The range of terrain is the other tell. A brand arguing that golf clothing was designed for the wrong person has to show the clothing on courses that are not the same manicured parkland every time &mdash; Scottish links in a gale, Arizona desert, a clifftop above the Atlantic, pine straw in Florida. The kit reads the same in all four.</p>
   </div>
   <div style="margin-top:26px">{photo_row_d}</div>
 </section>
