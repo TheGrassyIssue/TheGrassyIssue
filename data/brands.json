@@ -18,6 +18,28 @@
   "added": "2026-08-29"
  },
  {
+  "slug": "apc-golf",
+  "name": "A.P.C. Golf",
+  "loc": "Paris, France",
+  "regions": [
+   "europe"
+  ],
+  "cats": [
+   "apparel",
+   "accessories"
+  ],
+  "line": "Jean Touitou's golf line, launched in Korea and Japan first. Collaborated with Cph/Golf, 2026.",
+  "url": "/drops/apc-golf-cph-golf-collab",
+  "img": "/images/apcph-golf/polo-1.jpg",
+  "tags": [
+   "quiet-luxury",
+   "design-nerd",
+   "collab-machine"
+  ],
+  "attrs": [],
+  "added": "2026-09-02"
+ },
+ {
   "slug": "ally-aiken",
   "name": "Ally Aiken Design",
   "loc": "Austin, TX",
@@ -28,7 +50,7 @@
   "cats": [
    "art"
   ],
-  "line": "Watercolour golf course maps from Austin \u2014 hundreds of courses, commissions open.",
+  "line": "Watercolour golf course maps from Austin — hundreds of courses, commissions open.",
   "url": "/drops/texas-golf-brands-and-makers#allyaiken",
   "tags": [
    "made-by-hand",
@@ -66,7 +88,7 @@
   "cats": [
    "equipment"
   ],
-  "line": "Two ex-Nike craftsmen in Nike's old Fort Worth building \u2014 wedges ground by hand, fitting required.",
+  "line": "Two ex-Nike craftsmen in Nike's old Fort Worth building — wedges ground by hand, fitting required.",
   "url": "/drops/texas-golf-brands-and-makers#artisan",
   "tags": [
    "made-by-hand"
@@ -85,7 +107,7 @@
   "cats": [
    "headwear"
   ],
-  "line": "Hat brand founded in 2023 by Johnny Person \u2014 rope caps and buckets with a vintage Southern lean.",
+  "line": "Hat brand founded in 2023 by Johnny Person — rope caps and buckets with a vintage Southern lean.",
   "url": "/drops/brand-to-know-aug-11",
   "tags": [
    "post-round-friendly"
@@ -140,7 +162,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "The golf line of Tokyo's BEAMS empire, running since 2011 \u2014 Japanese fairway fashion at its most complete.",
+  "line": "The golf line of Tokyo's BEAMS empire, running since 2011 — Japanese fairway fashion at its most complete.",
   "url": "/drops/brand-to-know-beams-golf",
   "tags": [
    "design-nerd",
@@ -165,7 +187,7 @@
    "grips",
    "accessories"
   ],
-  "line": "A father and son making leather grips in Texas \u2014 Horween leathers, no minimums, no paid endorsements.",
+  "line": "A father and son making leather grips in Texas — Horween leathers, no minimums, no paid endorsements.",
   "url": "/drops/texas-golf-brands-and-makers#bestgrips",
   "tags": [
    "made-by-hand"
@@ -201,7 +223,7 @@
    "apparel",
    "headwear"
   ],
-  "line": "Byron Bay's cult label \u2014 started with ten hats, now a flagship store with a restored 80s buggy inside.",
+  "line": "Byron Bay's cult label — started with ten hats, now a flagship store with a restored 80s buggy inside.",
   "url": "/drops/australian-golf-brands-and-trips#birds",
   "tags": [
    "loud-on-purpose",
@@ -263,7 +285,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Elie Reboul's West London label that outgrew its own name \u2014 quiet clothes for golf and after.",
+  "line": "Elie Reboul's West London label that outgrew its own name — quiet clothes for golf and after.",
   "url": "/drops/brand-to-know-casualist",
   "tags": [
    "quiet-luxury",
@@ -284,7 +306,7 @@
   "cats": [
    "accessories"
   ],
-  "line": "Cabretta gloves with a conscience \u2014 ten per cent of every glove goes to a charitable partner.",
+  "line": "Cabretta gloves with a conscience — ten per cent of every glove goes to a charitable partner.",
   "url": "/drops/texas-golf-brands-and-makers#chipp",
   "tags": [
    "loud-on-purpose"
@@ -303,7 +325,7 @@
   "cats": [
    "accessories"
   ],
-  "line": "Hill Country silversmith, est. 1992 \u2014 sterling ball markers, never more than ten from one design.",
+  "line": "Hill Country silversmith, est. 1992 — sterling ball markers, never more than ten from one design.",
   "url": "/drops/texas-golf-brands-and-makers#clintorms",
   "tags": [
    "made-by-hand"
@@ -325,7 +347,7 @@
    "grips",
    "accessories"
   ],
-  "line": "Grips only \u2014 Eastern aesthetics, Chinese verse printed on the box, $18 a grip.",
+  "line": "Grips only — Eastern aesthetics, Chinese verse printed on the box, $18 a grip.",
   "url": "/drops/brand-to-know-cloud-and-wind-golf",
   "tags": [
    "design-nerd"
@@ -333,6 +355,29 @@
   "added": "2026-08-24",
   "attrs": [],
   "img": "/images/cloud-and-wind/classic-collection.jpg"
+ },
+ {
+  "slug": "cph-golf",
+  "name": "Cph/Golf",
+  "loc": "Tokyo, Japan",
+  "regions": [
+   "japan"
+  ],
+  "cats": [
+   "apparel",
+   "headwear",
+   "accessories"
+  ],
+  "line": "CAPTAINS HELM's golf line — California outdoor lifestyle read through Tokyo streetwear.",
+  "url": "/drops/apc-golf-cph-golf-collab",
+  "img": "/images/apcph-golf/halfzip-1.jpg",
+  "tags": [
+   "design-nerd",
+   "collab-machine",
+   "post-round-friendly"
+  ],
+  "attrs": [],
+  "added": "2026-09-02"
  },
  {
   "slug": "criquet",
@@ -345,7 +390,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Austin's original players shirt, est. 2010 \u2014 Pima cotton, removable stays, made in Peru and says so.",
+  "line": "Austin's original players shirt, est. 2010 — Pima cotton, removable stays, made in Peru and says so.",
   "url": "/drops/brand-to-know-criquet",
   "tags": [
    "dad-golf",
@@ -407,7 +452,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Scottsdale brothers, est. 2013, named after their grandfather \u2014 relaxed silhouettes before that was normal.",
+  "line": "Scottsdale brothers, est. 2013, named after their grandfather — relaxed silhouettes before that was normal.",
   "url": "/drops/brand-to-know-devereux-golf",
   "tags": [
    "post-round-friendly",
@@ -471,7 +516,7 @@
   "cats": [
    "equipment"
   ],
-  "line": "Terry Koehler's wedge company on the Gulf Coast \u2014 the patented Koehler Sole, built to order.",
+  "line": "Terry Koehler's wedge company on the Gulf Coast — the patented Koehler Sole, built to order.",
   "url": "/drops/texas-golf-brands-and-makers#edison",
   "tags": [],
   "added": "2026-08-24",
@@ -489,7 +534,7 @@
    "apparel",
    "accessories"
   ],
-  "line": "Tongue-in-cheek European golf \u2014 heavyweight tees, a pizza-slice ball marker, zero seriousness.",
+  "line": "Tongue-in-cheek European golf — heavyweight tees, a pizza-slice ball marker, zero seriousness.",
   "url": "/drops/fella-golf",
   "img": "/images/fella-golf/tech-ripstop-anorak.jpg",
   "tags": [
@@ -532,7 +577,7 @@
    "apparel",
    "art"
   ],
-  "line": "Half gallery, half golf label \u2014 Melbourne's Lance Peach and Ellen Keillar sell paintings next to polos.",
+  "line": "Half gallery, half golf label — Melbourne's Lance Peach and Ellen Keillar sell paintings next to polos.",
   "url": "/drops/brand-to-know-found-golf",
   "tags": [],
   "added": "2026-08-24",
@@ -549,7 +594,7 @@
    "headcovers",
    "accessories"
   ],
-  "line": "Putter covers in sail cloth, marine suede and waxed canvas \u2014 plus the MacKenzie editions.",
+  "line": "Putter covers in sail cloth, marine suede and waxed canvas — plus the MacKenzie editions.",
   "url": "/drops/the-fyfe-putter-cover-edit",
   "tags": [
    "made-by-hand",
@@ -569,7 +614,7 @@
   "cats": [
    "grips"
   ],
-  "line": "Putter grips only, built around the QUAD \u2014 a trapezoid that tucks the elbows in and takes the hands out of the stroke.",
+  "line": "Putter grips only, built around the QUAD — a trapezoid that tucks the elbows in and takes the hands out of the stroke.",
   "url": "/drops/the-niche-grip-report#garsen",
   "tags": [
    "range-rat"
@@ -613,7 +658,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Named for the founder and the largest eagle that ever lived \u2014 clean Queensland golfwear.",
+  "line": "Named for the founder and the largest eagle that ever lived — clean Queensland golfwear.",
   "url": "/drops/australian-golf-brands-and-trips#grayhaast",
   "tags": [],
   "added": "2026-08-24",
@@ -630,7 +675,7 @@
    "apparel",
    "accessories"
   ],
-  "line": "Nature-first golf goods from Australia \u2014 the drop that sold on gum leaves and gravel car parks.",
+  "line": "Nature-first golf goods from Australia — the drop that sold on gum leaves and gravel car parks.",
   "url": "/drops/gumtree-nature-club-drop",
   "tags": [
    "made-by-hand",
@@ -651,7 +696,7 @@
   "cats": [
    "accessories"
   ],
-  "line": "Meagan Ouderkirk and Antonia DiPaolo's golf and tennis label \u2014 and the only people in golf making a caddie brooch.",
+  "line": "Meagan Ouderkirk and Antonia DiPaolo's golf and tennis label — and the only people in golf making a caddie brooch.",
   "url": "/drops/golf-brands-founded-by-women#hedge",
   "tags": [],
   "added": "2026-08-24",
@@ -671,7 +716,7 @@
    "accessories",
    "art"
   ],
-  "line": "Carlsbad, est. 2022 \u2014 retro-modern prints, towels and objects that treat golf as graphic design.",
+  "line": "Carlsbad, est. 2022 — retro-modern prints, towels and objects that treat golf as graphic design.",
   "url": "/drops/brand-to-know-huega-house",
   "tags": [
    "muni-energy",
@@ -703,29 +748,6 @@
   "img": "/images/women-founded/inside-story-0.jpg"
  },
  {
-  "slug": "jan-craig",
-  "name": "Jan Craig Headcovers",
-  "loc": "Chicago, IL",
-  "regions": [
-   "usa"
-  ],
-  "cats": [
-   "headcovers"
-  ],
-  "line": "Hand-knit wool headcovers since 1962. Nicklaus, Watson and Ryder Cup teams carried them.",
-  "url": "/drops/golf-brands-founded-by-women#jan-craig",
-  "tags": [
-   "made-by-hand"
-  ],
-  "added": "2026-08-27",
-  "attrs": [
-   "women-founded",
-   "heritage",
-   "tour-proven",
-   "new-to-index"
-  ]
- },
- {
   "slug": "jlindeberg",
   "name": "J.Lindeberg",
   "loc": "Stockholm, Sweden",
@@ -749,6 +771,29 @@
   ]
  },
  {
+  "slug": "jan-craig",
+  "name": "Jan Craig Headcovers",
+  "loc": "Chicago, IL",
+  "regions": [
+   "usa"
+  ],
+  "cats": [
+   "headcovers"
+  ],
+  "line": "Hand-knit wool headcovers since 1962. Nicklaus, Watson and Ryder Cup teams carried them.",
+  "url": "/drops/golf-brands-founded-by-women#jan-craig",
+  "tags": [
+   "made-by-hand"
+  ],
+  "added": "2026-08-27",
+  "attrs": [
+   "women-founded",
+   "heritage",
+   "tour-proven",
+   "new-to-index"
+  ]
+ },
+ {
   "slug": "jones-sports-co",
   "name": "Jones Sports Co",
   "loc": "Portland, OR",
@@ -758,7 +803,7 @@
   "cats": [
    "bags"
   ],
-  "line": "The 1971 carry bag that never went away \u2014 revived in Portland and better than the original.",
+  "line": "The 1971 carry bag that never went away — revived in Portland and better than the original.",
   "url": "/drops/brand-revisited-jones-sports-co",
   "tags": [
    "design-nerd"
@@ -780,7 +825,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "From the founder of Duck Camp, named for his twins \u2014 breathable polos for Hill Country heat.",
+  "line": "From the founder of Duck Camp, named for his twins — breathable polos for Hill Country heat.",
   "url": "/drops/texas-golf-brands-and-makers#juniperjames",
   "tags": [
    "design-nerd"
@@ -823,7 +868,7 @@
    "equipment",
    "accessories"
   ],
-  "line": "A six-person Texas machine shop \u2014 engraved putters, markers and leather from Tyson Lamb's bench.",
+  "line": "A six-person Texas machine shop — engraved putters, markers and leather from Tyson Lamb's bench.",
   "url": "/drops/texas-golf-brands-and-makers#lamb",
   "tags": [
    "made-by-hand"
@@ -863,7 +908,7 @@
    "headcovers",
    "accessories"
   ],
-  "line": "Wool headcovers sewn in the Perth hills \u2014 bespoke work from football shirts and family tartan.",
+  "line": "Wool headcovers sewn in the Perth hills — bespoke work from football shirts and family tartan.",
   "url": "/drops/australian-golf-brands-and-trips#mackem",
   "tags": [
    "made-by-hand"
@@ -883,7 +928,7 @@
   "cats": [
    "bags"
   ],
-  "line": "Handmade carry bags since 1985 \u2014 and the maker behind collabs for Fyfe, Sugarloaf, Miura and Bandon Dunes.",
+  "line": "Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf, Miura and Bandon Dunes.",
   "url": "/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site",
   "tags": [
    "made-by-hand",
@@ -929,7 +974,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "London's modern-heritage benchmark \u2014 and the Reebok collab that sold through twice.",
+  "line": "London's modern-heritage benchmark — and the Reebok collab that sold through twice.",
   "url": "/drops/manors-ss26",
   "img": "/images/manors/ranger-golf-short.jpg",
   "tags": [
@@ -943,14 +988,14 @@
  {
   "slug": "merrill-golf",
   "name": "Merrill Golf",
-  "loc": "\u2014",
+  "loc": "—",
   "regions": [
    "usa"
   ],
   "cats": [
    "apparel"
   ],
-  "line": "A design venture through the lens of golf \u2014 acid-washed tees, heavyweight fleece and a flying duck.",
+  "line": "A design venture through the lens of golf — acid-washed tees, heavyweight fleece and a flying duck.",
   "url": "/drops/brand-to-know-merrill-golf",
   "tags": [
    "muni-energy"
@@ -969,7 +1014,7 @@
    "apparel",
    "accessories"
   ],
-  "line": "Cole Young's LA studio mining Y2K tour aesthetics \u2014 the blueprint for modern golf nostalgia.",
+  "line": "Cole Young's LA studio mining Y2K tour aesthetics — the blueprint for modern golf nostalgia.",
   "url": "/drops/brand-to-know-metalwood-studio",
   "tags": [
    "loud-on-purpose",
@@ -1035,7 +1080,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Designed in the USA, sewn in South Korea \u2014 early-tee-time clothes with a five-piece discipline.",
+  "line": "Designed in the USA, sewn in South Korea — early-tee-time clothes with a five-piece discipline.",
   "url": "/drops/brand-to-know-morning-people-clothiers",
   "tags": [
    "design-nerd",
@@ -1054,7 +1099,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Born in Cape Town, named for the small habits before every shot \u2014 golf without the gatekeeping.",
+  "line": "Born in Cape Town, named for the small habits before every shot — golf without the gatekeeping.",
   "url": "/drops/brand-to-know-odd-ritual",
   "tags": [
    "muni-energy",
@@ -1092,7 +1137,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "An ex-banker's anti-polyester manifesto \u2014 Supima cotton polos, launched October 2025.",
+  "line": "An ex-banker's anti-polyester manifesto — Supima cotton polos, launched October 2025.",
   "url": "/drops/brand-to-know-olydoe",
   "tags": [
    "design-nerd"
@@ -1134,7 +1179,7 @@
   "cats": [
    "equipment"
   ],
-  "line": "Named for Hogan's 1953 season \u2014 American-forged irons finished in Fort Worth, by invitation.",
+  "line": "Named for Hogan's 1953 season — American-forged irons finished in Fort Worth, by invitation.",
   "url": "/drops/texas-golf-brands-and-makers#p53",
   "tags": [],
   "added": "2026-08-24",
@@ -1152,7 +1197,7 @@
    "apparel",
    "accessories"
   ],
-  "line": "Three unnamed friends from magazine publishing \u2014 golf clothes with an art department's eye.",
+  "line": "Three unnamed friends from magazine publishing — golf clothes with an art department's eye.",
   "url": "/drops/australian-golf-brands-and-trips#penta",
   "tags": [],
   "added": "2026-08-24",
@@ -1169,7 +1214,7 @@
   "cats": [
    "equipment"
   ],
-  "line": "Milled from solid billets since 2008 \u2014 heavier heads, 2.5 degrees of loft, no cast putters ever.",
+  "line": "Milled from solid billets since 2008 — heavier heads, 2.5 degrees of loft, no cast putters ever.",
   "url": "/drops/texas-golf-brands-and-makers#piretti",
   "tags": [],
   "added": "2026-08-24",
@@ -1204,7 +1249,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Neil Tan rediscovered golf at Van Cortlandt Park in 2020 and built the label muni New York now wears \u2014 script-logo polos, pleated trousers and denim buckets, nothing over $170.",
+  "line": "Neil Tan rediscovered golf at Van Cortlandt Park in 2020 and built the label muni New York now wears — script-logo polos, pleated trousers and denim buckets, nothing over $170.",
   "url": "/drops/public-drip-brooklyns-muni-born-golf-label",
   "tags": [
    "muni-energy",
@@ -1224,7 +1269,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "COBRA PUMA GOLF's apparel and footwear arm \u2014 and the big brand most willing to take a swing at a collab.",
+  "line": "COBRA PUMA GOLF's apparel and footwear arm — and the big brand most willing to take a swing at a collab.",
   "url": "/drops/puma-golf-x-realtree-precision-in-the-wild",
   "tags": [],
   "added": "2026-08-25",
@@ -1244,7 +1289,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "From the Museum of Peace & Quiet orbit \u2014 considered golf clothes with an owl crest and an adidas Samba collab.",
+  "line": "From the Museum of Peace & Quiet orbit — considered golf clothes with an owl crest and an adidas Samba collab.",
   "url": "/drops/brand-to-know-quiet-golf",
   "tags": [
    "quiet-luxury",
@@ -1264,7 +1309,7 @@
    "headwear",
    "apparel"
   ],
-  "line": "A Wisconsin artist whose logo is a bird in a bucket hat \u2014 est. 2018, drawn before it is stitched.",
+  "line": "A Wisconsin artist whose logo is a bird in a bucket hat — est. 2018, drawn before it is stitched.",
   "url": "/drops/brand-to-know-radry-golf",
   "tags": [
    "loud-on-purpose",
@@ -1287,7 +1332,7 @@
    "apparel",
    "community"
   ],
-  "line": "Erik Anders Lang's community that became a brand \u2014 meetups, films, and the only Australia trip in golf media.",
+  "line": "Erik Anders Lang's community that became a brand — meetups, films, and the only Australia trip in golf media.",
   "url": "/drops/brand-to-know-random-golf-club",
   "tags": [
    "muni-energy",
@@ -1307,7 +1352,7 @@
    "apparel",
    "headwear"
   ],
-  "line": "New York energy, est. 1997 graphics \u2014 the '97 nylon pullover is the piece that went viral.",
+  "line": "New York energy, est. 1997 graphics — the '97 nylon pullover is the piece that went viral.",
   "url": "/drops/brand-to-know-read-the-green",
   "tags": [
    "muni-energy"
@@ -1388,7 +1433,7 @@
   "cats": [
    "grips"
   ],
-  "line": "Todd Watts spent three years getting a print to survive the moulding \u2014 art-series golf grips with alignment marks at both ends.",
+  "line": "Todd Watts spent three years getting a print to survive the moulding — art-series golf grips with alignment marks at both ends.",
   "url": "/drops/the-niche-grip-report#ripit",
   "tags": [
    "loud-on-purpose",
@@ -1411,7 +1456,7 @@
   "cats": [
    "grips"
   ],
-  "line": "Moulded micro-texture putter grips with a tour record to match \u2014 more than ten million dollars won, and a Travelers title.",
+  "line": "Moulded micro-texture putter grips with a tour record to match — more than ten million dollars won, and a Travelers title.",
   "url": "/drops/the-niche-grip-report#rosemark",
   "tags": [
    "range-rat"
@@ -1499,7 +1544,7 @@
   "cats": [
    "bags"
   ],
-  "line": "Minneapolis walker bags from $810 \u2014 Dyneema, Danish textiles, and no interest in compromise.",
+  "line": "Minneapolis walker bags from $810 — Dyneema, Danish textiles, and no interest in compromise.",
   "url": "/drops/brand-to-know-sentinel-golf",
   "tags": [
    "gorpcore",
@@ -1522,7 +1567,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Max Siegelman's NYC stable \u2014 racing-heritage sweats that ended up on tour players and a Maxfli box.",
+  "line": "Max Siegelman's NYC stable — racing-heritage sweats that ended up on tour players and a Maxfli box.",
   "url": "/drops/brand-to-know-siegelman-stable",
   "tags": [
    "post-round-friendly",
@@ -1542,7 +1587,7 @@
   "cats": [
    "apparel"
   ],
-  "line": "Women's golf clothes by two women who play \u2014 built-in bras, real pockets, a glove loop on the skort.",
+  "line": "Women's golf clothes by two women who play — built-in bras, real pockets, a glove loop on the skort.",
   "url": "/drops/texas-golf-brands-and-makers#sierramadre",
   "tags": [
    "design-nerd"
@@ -1585,7 +1630,7 @@
   "cats": [
    "grips"
   ],
-  "line": "Industrial rubber people who came to golf and changed the taper \u2014 the Ascension profile sits both hands at nearly the same diameter.",
+  "line": "Industrial rubber people who came to golf and changed the taper — the Ascension profile sits both hands at nearly the same diameter.",
   "url": "/drops/the-niche-grip-report#stick",
   "tags": [
    "range-rat"
@@ -1625,7 +1670,7 @@
    "apparel",
    "community"
   ],
-  "line": "The group chat that became a brand \u2014 Ian Gilley's crew, est. 2011, sailing capsules and hidden gems.",
+  "line": "The group chat that became a brand — Ian Gilley's crew, est. 2011, sailing capsules and hidden gems.",
   "url": "/drops/brand-to-know-sugarloaf-social-club",
   "tags": [
    "collab-machine",
@@ -1669,7 +1714,7 @@
   "cats": [
    "equipment"
   ],
-  "line": "Finnish direct-to-consumer irons, est. 2021 \u2014 tour-quality forgings at half the shop price.",
+  "line": "Finnish direct-to-consumer irons, est. 2021 — tour-quality forgings at half the shop price.",
   "url": "/drops/brand-to-know-takomo-golf",
   "tags": [
    "range-rat"
@@ -1710,7 +1755,7 @@
    "apparel",
    "headwear"
   ],
-  "line": "Pro skater Jack Fardell's label \u2014 named after Nicklaus, collabs with adidas, Wahine and Coopers.",
+  "line": "Pro skater Jack Fardell's label — named after Nicklaus, collabs with adidas, Wahine and Coopers.",
   "url": "/drops/walker-golf-blooming-grounds-drop",
   "tags": [
    "loud-on-purpose",
