@@ -276,7 +276,7 @@ page = f'''<!DOCTYPE html>
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Five Swag Golf college headcovers lined up on black — Texas, Tennessee, Alabama, Georgia and Indiana" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Detail of the Swag Golf Texas Longhorns Den Caddy cooler, TEXAS in white script below a longhorn-rider illustration in burnt orange" /></div></div>
 
 <div class="writeup">
   <div class="writeup-body">
