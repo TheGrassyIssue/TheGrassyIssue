@@ -326,7 +326,7 @@ page = f'''<!DOCTYPE html>
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A golfer in a green Manors shirt at the top of his backswing on a desert course in Arizona, a red rock butte behind him" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A golfer in a Manors quarter-zip at the finish of a swing in Monument Valley, the Mitten buttes behind him" /></div></div>
 
 <div class="writeup">
   <div class="writeup-body">
