@@ -46,7 +46,12 @@ brings bring brought turns turn turned starts start started opens open opened cl
 covers cover covered runs ran begins begin began stands stand stood knows know knew
 prices price priced charges charge charged milled mills mill built builds cuts cut
 photographs photograph reads reading arrives arrive arrived explains explain explained
-treat treats treated change changes changed decide decides decided ships wants want""".split())
+treat treats treated change changes changed decide decides decided ships wants want
+moved move moves fell fall falls fallen grew grow grows grown started starting
+played play plays playing wrote write writes written found find finds
+said say says told tell tells gave give gives given saw see sees seen
+became become becomes learned learn learns thought think thinks
+left leave leaves lived live lives spent spend spends""".split())
 
 
 def sentences(t):
