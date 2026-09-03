@@ -789,6 +789,15 @@
 
 
 
+
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
+
 /*TGI-ENT-V1*/
 @font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
 body{font-family:var(--serif)}
@@ -797,6 +806,31 @@ body{font-size:16px;line-height:1.6}
 .card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
 .card-title,.more-card-name{font-style:normal}
 /*/TGI-ENT-V1*/
+/*TGI-MOBILE-MENU-CSS-V1*/
+.nav-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:14;flex-direction:column;align-items:center;justify-content:center;gap:28px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.nav-drawer.open{display:flex;opacity:1}
+.nav-drawer a{padding:12px 24px;border-bottom:1px solid transparent;transition:border-color .15s;min-height:44px;display:flex;align-items:center}
+.nav-drawer a:hover{border-bottom-color:var(--ink)}
+/*TGI-NAV-MOBILE-V1*/
+@media(max-width:820px){
+  /* The 89 brand pages never hid .nav-links on mobile (their only query tweaks
+     gap), so the links stayed visible and overflowed. Normalise every nav here
+     rather than depending on each page's own rules. */
+  .nav-inner{gap:12px;padding-left:16px;padding-right:16px;justify-content:space-between}
+  .nav-links{display:none!important}
+  .nav-toggle{display:flex!important}
+  .nav-wordmark{font-size:17px;letter-spacing:.06em;flex:0 0 auto}
+  #tgi-sbox{flex:1 1 60px;min-width:0}
+  #tgi-search-input{width:100%;min-width:0}
+  #tgi-search-results{width:min(300px,calc(100vw - 32px))}
+}
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
 </style>
 <script>
 (function(){
@@ -896,6 +930,31 @@ body{font-size:16px;line-height:1.6}
         document.getElementById('wb-weather').style.display = 'none';
       });
   })();
+</script>
+
+<!--TGI-MOBILE-MENU-V1-->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
+  <a href="/#feed" onclick="closeMenu();">The Feed</a>
+  <a href="/brands/" onclick="closeMenu();">Brands</a>
+  <a href="/field-guide/" onclick="closeMenu();">Field Guide</a>
+  <a href="/events/" onclick="closeMenu();">Events</a>
+  <a href="/about" onclick="closeMenu();">About</a>
+</div>
+<script>
+function toggleMenu(){var b=document.querySelector('.nav-toggle'),d=document.getElementById('navDrawer');
+  if(!b||!d)return; var o=b.classList.toggle('open'); d.classList.toggle('open',o);
+  b.setAttribute('aria-expanded',o); document.body.style.overflow=o?'hidden':'';}
+function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getElementById('navDrawer');
+  if(!b||!d)return; b.classList.remove('open'); d.classList.remove('open');
+  b.setAttribute('aria-expanded','false'); document.body.style.overflow='';}
+/* Most pages ship the toggle with NO onclick attribute (only index.html has one),
+   so bind here. Strip any inline handler first or index.html would fire twice and
+   cancel itself out. */
+(function(){var b=document.querySelector('.nav-toggle');
+  if(!b)return; b.removeAttribute('onclick');
+  if(!b.hasAttribute('aria-expanded'))b.setAttribute('aria-expanded','false');
+  b.addEventListener('click',function(e){e.preventDefault();toggleMenu();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});})();
 </script>
 </body>
 </html>

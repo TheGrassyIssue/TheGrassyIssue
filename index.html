@@ -1765,6 +1765,7 @@
   <a href="/brands/" onclick="closeMenu();">Brands</a>
   <a href="/field-guide/" onclick="closeMenu();">Field Guide</a>
   <a href="/events/" onclick="closeMenu();">Events</a>
+  <a href="/about" onclick="closeMenu();">About</a>
 </div>
 
 <section class="hero">
@@ -15460,12 +15461,41 @@ function submitNL(e){
 
 
 
+
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
+
 /*TGI-ENT-V1*/
 @font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
 body{font-family:var(--serif)}.card-text{font-family:var(--serif);letter-spacing:0}.card-source,.card-source a,.source-link,.gear-slide-caption,.score-row .name{font-family:var(--mono)}
 .card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
 .card-title,.more-card-name{font-style:normal}
 /*/TGI-ENT-V1*/
+/*TGI-NAV-MOBILE-V1*/
+@media(max-width:820px){
+  /* The 89 brand pages never hid .nav-links on mobile (their only query tweaks
+     gap), so the links stayed visible and overflowed. Normalise every nav here
+     rather than depending on each page's own rules. */
+  .nav-inner{gap:12px;padding-left:16px;padding-right:16px;justify-content:space-between}
+  .nav-links{display:none!important}
+  .nav-toggle{display:flex!important}
+  .nav-wordmark{font-size:17px;letter-spacing:.06em;flex:0 0 auto}
+  #tgi-sbox{flex:1 1 60px;min-width:0}
+  #tgi-search-input{width:100%;min-width:0}
+  #tgi-search-results{width:min(300px,calc(100vw - 32px))}
+}
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
 </style>
 <script>
 (function(){
