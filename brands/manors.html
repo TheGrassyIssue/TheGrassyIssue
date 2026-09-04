@@ -52,27 +52,12 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
 
-
-
-
-
-
-
-
-@media(max-width:360px){
-  .nav-inner{flex-wrap:wrap;gap:10px 12px}
-  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
-  .nav-toggle{flex:0 0 auto;order:2}
-  #tgi-sbox{flex:1 0 100%;order:3}
-  #tgi-search-results{width:100%;right:auto;left:0}
-}
-
-
-/*TGI-MOBILE-MENU-CSS-V1*/
-.nav-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:14;flex-direction:column;align-items:center;justify-content:center;gap:28px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
-.nav-drawer.open{display:flex;opacity:1}
-.nav-drawer a{padding:12px 24px;border-bottom:1px solid transparent;transition:border-color .15s;min-height:44px;display:flex;align-items:center}
-.nav-drawer a:hover{border-bottom-color:var(--ink)}
+/*TGI-ENT-V1*/
+@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
+.bp-line{font-family:var(--serif)}
+.card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
+.card-title,.more-card-name{font-style:normal}
+/*/TGI-ENT-V1*/
 /*TGI-MOBILE-BTN-V1*/
 .nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0;background:none;border:none;cursor:pointer}
 .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);transition:transform .25s,opacity .25s}
@@ -80,6 +65,11 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 .nav-toggle.open span:nth-child(2){opacity:0}
 .nav-toggle.open span:nth-child(3){transform:translateY(-9.25px) rotate(-45deg)}
 @media(max-width:820px){.nav-toggle{display:flex}}
+/*TGI-MOBILE-MENU-CSS-V1*/
+.nav-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:14;flex-direction:column;align-items:center;justify-content:center;gap:28px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.nav-drawer.open{display:flex;opacity:1}
+.nav-drawer a{padding:12px 24px;border-bottom:1px solid transparent;transition:border-color .15s;min-height:44px;display:flex;align-items:center}
+.nav-drawer a:hover{border-bottom-color:var(--ink)}
 /*TGI-NAV-MOBILE-V1*/
 @media(max-width:820px){
   /* The 89 brand pages never hid .nav-links on mobile (their only query tweaks
@@ -100,15 +90,6 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
   #tgi-sbox{flex:1 0 100%;order:3}
   #tgi-search-results{width:100%;right:auto;left:0}
 }
-
-
-
-/*TGI-ENT-V1*/
-@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
-.bp-line{font-family:var(--serif)}
-.card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
-.card-title,.more-card-name{font-style:normal}
-/*/TGI-ENT-V1*/
 </style>
 </head>
 <body>
@@ -123,6 +104,10 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <a href="/about">About</a>
     </div>
     <button class="nav-toggle" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <div id="tgi-sbox">
+      <input id="tgi-search-input" type="search" placeholder="Search" autocomplete="off" aria-label="Search the site" />
+      <div id="tgi-search-results"></div>
+    </div>
   </div>
 </nav>
 
@@ -362,7 +347,6 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </script>
 <!-- GoatCounter analytics -->
 <script data-goatcounter="https://thegrassyissue.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
 <!--TGI-MOBILE-MENU-V1-->
 <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
   <a href="/#feed" onclick="closeMenu();">The Feed</a>
@@ -386,6 +370,259 @@ function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getE
   if(!b.hasAttribute('aria-expanded'))b.setAttribute('aria-expanded','false');
   b.addEventListener('click',function(e){e.preventDefault();toggleMenu();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});})();
+</script>
+<!-- TGI SEARCH -->
+<style>
+#tgi-sbox{position:relative}
+#tgi-search-input{width:150px;background:transparent;border:.5px solid #141414;padding:7px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#141414;outline:none;border-radius:0;-webkit-appearance:none}
+#tgi-search-input:focus{border-color:#2D4A2B;outline:2px solid #2D4A2B;outline-offset:1px}
+#tgi-search-input::placeholder{color:#141414;opacity:.45}
+#tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
+@media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
+
+
+/*TGI-MOBILE-MENU-CSS-V1*/
+.nav-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:14;flex-direction:column;align-items:center;justify-content:center;gap:28px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.nav-drawer.open{display:flex;opacity:1}
+.nav-drawer a{padding:12px 24px;border-bottom:1px solid transparent;transition:border-color .15s;min-height:44px;display:flex;align-items:center}
+.nav-drawer a:hover{border-bottom-color:var(--ink)}
+/*TGI-NAV-MOBILE-V1*/
+@media(max-width:820px){
+  /* The 89 brand pages never hid .nav-links on mobile (their only query tweaks
+     gap), so the links stayed visible and overflowed. Normalise every nav here
+     rather than depending on each page's own rules. */
+  .nav-inner{gap:12px;padding-left:16px;padding-right:16px;justify-content:space-between}
+  .nav-links{display:none!important}
+  .nav-toggle{display:flex!important}
+  .nav-wordmark{font-size:17px;letter-spacing:.06em;flex:0 0 auto}
+  #tgi-sbox{flex:1 1 60px;min-width:0}
+  #tgi-search-input{width:100%;min-width:0}
+  #tgi-search-results{width:min(300px,calc(100vw - 32px))}
+}
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
+
+
+
+
+
+
+
+
+
+/*TGI-ENT-V1*/
+@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
+body{font-family:var(--serif)}
+.product-desc,.faq-q p,.sec-intro,.cat-kicker,.writeup-body,.more-card-desc,.prog-desc,.sec-note{font-family:var(--serif)}
+body{font-size:16px;line-height:1.6}
+.card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
+.card-title,.more-card-name{font-style:normal}
+/*/TGI-ENT-V1*/
+</style>
+<script>
+(function(){
+  var idx=null,inp,res;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function init(){inp=document.getElementById('tgi-search-input');res=document.getElementById('tgi-search-results');if(!inp)return;
+    inp.addEventListener('focus',function(){if(!idx){fetch('/search-index.json').then(function(r){return r.json();}).then(function(d){idx=d;if(inp.value)render(inp.value);});}});
+    inp.addEventListener('input',function(){render(inp.value);});
+    inp.addEventListener('keydown',function(e){if(e.key==='Escape'){inp.value='';hide();inp.blur();}});
+    document.addEventListener('click',function(e){var box=document.getElementById('tgi-sbox');if(box&&!box.contains(e.target))hide();});}
+  function hide(){if(res)res.style.display='none';}
+  function score(it,terms){var s=0,t=it.t.toLowerCase(),k=(it.k||'').toLowerCase(),d=(it.d||'').toLowerCase(),g=(it.g||'').toLowerCase();
+    for(var i=0;i<terms.length;i++){var w=terms[i];if(!w)continue;var hit=0;
+      if(t.indexOf(w)>-1){s+=5;hit=1;}if(g.indexOf(w)>-1){s+=2;hit=1;}if(k.indexOf(w)>-1){s+=2;hit=1;}if(d.indexOf(w)>-1){s+=1;hit=1;}
+      if(!hit)return 0;}
+    return s;}
+  function render(q){if(!res)return;q=(q||'').trim().toLowerCase();
+    if(!q){hide();return;}
+    res.style.display='block';
+    if(!idx){res.innerHTML='<div style="padding:14px;font-family:JetBrains Mono,monospace;font-size:10px;letter-spacing:.1em;opacity:.5;">Loading&hellip;</div>';return;}
+    var terms=q.split(/\s+/),out=[],i;
+    for(i=0;i<idx.length;i++){var s=score(idx[i],terms);if(s>0)out.push([s,idx[i]]);}
+    out.sort(function(a,b){return b[0]-a[0];});out=out.slice(0,8);
+    if(!out.length){res.innerHTML='<div style="padding:14px;font-family:JetBrains Mono,monospace;font-size:10px;letter-spacing:.1em;opacity:.5;">No results</div>';return;}
+    res.innerHTML=out.map(function(p){var it=p[1];
+      return '<a href="'+esc(it.u)+'" style="display:flex;gap:10px;padding:10px 12px;border-bottom:.5px solid rgba(20,20,20,.12);align-items:center;text-decoration:none;color:#141414;">'
+      +(it.i?'<img src="'+esc(it.i)+'" style="width:36px;height:36px;object-fit:cover;border:.5px solid #141414;flex-shrink:0;" loading="lazy" alt="" />':'<span style="width:36px;height:36px;background:#2D4A2B;flex-shrink:0;"></span>')
+      +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
+      +'<span style="display:block;font-family:\'Editors Note Text\',Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
 </script>
 </body>
 </html>

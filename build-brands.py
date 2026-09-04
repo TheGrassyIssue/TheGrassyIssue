@@ -96,7 +96,12 @@ def resolve_frames(b):
     url, name = b["url"], b["name"]
     page = _page_of(url)
     h = open(page, encoding="utf-8").read() if page else ""
-    dirs = list(dict.fromkeys(re.findall(r'src="(/images/[^/]+)/', h)))
+    # NOTE the ["] in the character class. Without it, a root-level image such as
+    # src="/images/gumtree-puma-1.jpg" (no subdirectory) makes the greedy [^/]+ run
+    # past the closing quote and swallow HTML until the next "/" anywhere in the
+    # document, producing a bogus dir like 'images/gumtree-puma-1.jpg" alt="..."'
+    # and crashing os.listdir below with FileNotFoundError.
+    dirs = list(dict.fromkeys(re.findall(r'src="(/images/[^/"]+)/', h)))
 
     # 1. anchor -> <dir>/<frag>-N.jpg, across the dirs the page ACTUALLY uses
     if "#" in url:
@@ -120,7 +125,7 @@ def resolve_frames(b):
     n = _norm(name)
     for d in dirs:
         stems = sorted({re.sub(r"-\d+$", "", os.path.splitext(f)[0])
-                        for f in os.listdir(ROOT + d) if f.endswith(".jpg")})
+                        for f in (os.listdir(ROOT + d) if os.path.isdir(ROOT + d) else []) if f.endswith(".jpg")})
         for s in stems:
             ns = _norm(s)
             if len(ns) > 3 and (ns == n or n.startswith(ns)):
