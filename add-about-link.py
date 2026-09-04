@@ -8,7 +8,7 @@ pass --apply to write. Mirrors the apply-header.py convention.
 import sys, glob, re
 
 APPLY = "--apply" in sys.argv
-pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html")))
+pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html") + glob.glob("*/*/*.html")))
 
 nav_done = foot_done = skipped = 0
 for p in pages:

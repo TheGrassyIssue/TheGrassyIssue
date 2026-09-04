@@ -32,8 +32,12 @@ def fix(path, apply_):
     h = open(path, encoding="utf-8").read()
     if 'id="tgi-sbox"' in h:
         return "already has box"
-    if "tgi-search-input" not in h:
-        return "no search JS — run install-search.py first"
+    # NOTE: deliberately does NOT require the search JS to be present first.
+    # install-search.py bails with "no search box in the nav — nothing to wire"
+    # unless the page already mentions tgi-search-input, so if this script also
+    # waited on the JS the two would deadlock — which is exactly what happened
+    # after the 2026-09-04 build-brands run stripped BOTH halves from 112 pages.
+    # The box goes in first and is inert for one step; install-search wires it.
     m = re.search(r'(<button class="nav-toggle".*?</button>\s*\n)', h, re.S)
     if not m:
         return "!! no .nav-toggle anchor — skipped"

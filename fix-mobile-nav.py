@@ -50,7 +50,7 @@ CSS = MARK + """
 
 APPLY = "--apply" in sys.argv
 REVERT = "--revert" in sys.argv
-pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html")))
+pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html") + glob.glob("*/*/*.html")))
 
 done = skipped = nonav = 0
 for p in pages:

@@ -78,7 +78,7 @@ BTN_CSS = """/*TGI-MOBILE-BTN-V1*/
 
 APPLY  = "--apply"  in sys.argv
 REVERT = "--revert" in sys.argv
-pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html")))
+pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html") + glob.glob("*/*/*.html")))
 
 done = already = skip = 0
 for p in pages:
