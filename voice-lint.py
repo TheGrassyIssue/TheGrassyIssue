@@ -51,7 +51,10 @@ moved move moves fell fall falls fallen grew grow grows grown started starting
 played play plays playing wrote write writes written found find finds
 said say says told tell tells gave give gives given saw see sees seen
 became become becomes learned learn learns thought think thinks
-left leave leaves lived live lives spent spend spends""".split())
+left leave leaves lived live lives spent spend spends
+spans span shows show showed sits sit stands stand spreads spread
+offers offer offered pairs pair paired suits suit suited weighs weigh
+launches launch launched forges forge forged""".split())
 
 
 def sentences(t):
