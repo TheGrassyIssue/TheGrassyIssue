@@ -4,16 +4,16 @@
   "sha1": "88f0569e58a0d20a903a439d40bc0574d8053e4c"
  },
  "index.html": {
-  "size": 1205722,
-  "sha1": "ab69ae2c75eaffaf2cf244861e4f195884e0bbe4"
+  "size": 1210252,
+  "sha1": "b7137c17f7e6c6720d54b03cb567a09ddb172029"
  },
  "about.html": {
   "size": 24889,
   "sha1": "37d893a79f9c4088ef00715b40796cf29179c6e8"
  },
  "field-guide/index.html": {
-  "size": 129101,
-  "sha1": "376f0c9fca1bf008a336e588422e3c4b5196c955"
+  "size": 129109,
+  "sha1": "bf0830d0febba04272a4e8432c21178f27406140"
  },
  "brands/merrill-golf.html": {
   "size": 11886,
@@ -80,8 +80,8 @@
   "sha1": "72ec982adced7813a3a06817dc0800e0c1f7a1b4"
  },
  "brands/index.html": {
-  "size": 198479,
-  "sha1": "e248ca00e10b52d4418b91bd958851da25eac0ca"
+  "size": 204244,
+  "sha1": "4ea7afa7b6a9335bdcae0fa92c1ac426eab791fe"
  },
  "brands/jlindeberg.html": {
   "size": 11125,
@@ -106,6 +106,10 @@
  "brands/bestgrips.html": {
   "size": 10363,
   "sha1": "d4cacd2eb3a625e256f10599908e362c6df778ff"
+ },
+ "brands/gamut-golf.html": {
+  "size": 9858,
+  "sha1": "09a465ee2875837fb66b510a786756ba856569d4"
  },
  "brands/malbon.html": {
   "size": 30676,
@@ -472,807 +476,811 @@
   "sha1": "e947637204dda63610e3fbad55867d9f2555fc3f"
  },
  "brands/attr/heritage.html": {
-  "size": 11597,
-  "sha1": "02f7b42510df8b10a8f5ccc6b6d07e3fe1e9e66d"
+  "size": 12126,
+  "sha1": "c96b59b6af3d14b11d8367b6745452cef69fcbe8"
  },
  "brands/attr/new-to-index.html": {
-  "size": 14868,
-  "sha1": "7f349262b6b2d48ec879eae72efde8e7b7983429"
+  "size": 14997,
+  "sha1": "bb5980b90f066dd2bc6a626215278a537a06ae47"
  },
  "brands/attr/tour-proven.html": {
   "size": 11590,
   "sha1": "07dcf8a3f98d772e6b9c0c99c2553c9e219af410"
  },
  "brands/attr/drops-and-vanishes.html": {
-  "size": 11420,
-  "sha1": "0c53a99893c40d4a23b012ba0926fadcfe471897"
+  "size": 11695,
+  "sha1": "b2492dc3cd523cd602f08051e9b89b6e0342f257"
  },
  "brands/attr/women-founded.html": {
   "size": 12770,
   "sha1": "f4e94609c4a61df2b9759f5e846d824695c5c90f"
  },
  "brands/tag/post-round-friendly.html": {
-  "size": 11654,
-  "sha1": "d90018821e57b0fd62bf0add3de034c2f8b2b1ac"
+  "size": 12475,
+  "sha1": "ae51b51b5e1d53c4b8c83825b1e5d05a35a6e64d"
  },
  "brands/tag/made-by-hand.html": {
-  "size": 12700,
-  "sha1": "6cb9b90693938b259a89088a02f0938ce177099f"
+  "size": 13274,
+  "sha1": "8b1115aba1c0c49e5ae34b473e7854078c7057c5"
  },
  "brands/tag/quiet-luxury.html": {
-  "size": 11030,
-  "sha1": "9ad562a0d61485dcc7c72e5b90af098271295431"
+  "size": 11578,
+  "sha1": "6197fec9ae35346a4e9a204b02b9672c2651ed1e"
  },
  "brands/tag/gorpcore.html": {
-  "size": 10997,
-  "sha1": "b27042aa68483bfc23425d7dd2535bdc841b4144"
+  "size": 11309,
+  "sha1": "bdd0c10e08c26057862ef6cadbbde6463e218246"
  },
  "brands/tag/collab-machine.html": {
-  "size": 11777,
-  "sha1": "790319cff196cdd11a558dd9722c76bb0fa50342"
+  "size": 12196,
+  "sha1": "a3e562fb8188d787503b103bd2e4e80a562c1e8e"
  },
  "brands/tag/loud-on-purpose.html": {
-  "size": 12335,
-  "sha1": "d799a73c831a81b577f2ccb18f2b518381ed47d6"
+  "size": 13287,
+  "sha1": "499896dee3c5e9c109f69c90854afb32f7067339"
  },
  "brands/tag/muni-energy.html": {
-  "size": 12776,
-  "sha1": "8ebce9e9c66ec910647b5d8b153e72fffb16359c"
+  "size": 13024,
+  "sha1": "2eea9ed938a0730be774d6c5dd195be803ceb4f4"
  },
  "brands/tag/member-guest.html": {
-  "size": 10655,
-  "sha1": "34af9f26af38ac7d78d32a7ca2b7b5a2d13e12bb"
+  "size": 10803,
+  "sha1": "b90f5374cd9e152ad4fc61fa7394222e1af17d1b"
  },
  "brands/tag/course-merch.html": {
-  "size": 10649,
-  "sha1": "f15e45b6a228ff049084b45fdc22b83efbc28990"
+  "size": 10797,
+  "sha1": "950722f0c62ce183c8f76d45006346cc43a838ab"
  },
  "brands/tag/design-nerd.html": {
-  "size": 13866,
-  "sha1": "77b0dd3237db0534fa4ecf232b2a1fb544e49d63"
+  "size": 14556,
+  "sha1": "9fe4abd177c4df0e05038922d2a2c47cb0a8ef9d"
  },
  "brands/tag/dad-golf.html": {
   "size": 10395,
   "sha1": "a779acd24bfe2aeffcd30e8cff13c7af56ed5784"
  },
  "brands/tag/range-rat.html": {
-  "size": 10708,
-  "sha1": "2409e2a6d449e2b1aabae8081a2f28680b8944cd"
+  "size": 10837,
+  "sha1": "f39d07e5ecae9dbb7c1edb1cd016b577c2970455"
  },
  "drops/students-golf-summer-2026.html": {
-  "size": 88367,
-  "sha1": "5dd897b02351e99401309930342928b1ca1e5391"
+  "size": 88375,
+  "sha1": "55ec76af27e8a4b46a305568f366d4f1c0b5ea15"
  },
  "drops/radry-hats-the-full-lineup.html": {
-  "size": 54723,
-  "sha1": "00ac4ae3f492eb67c9516529ea05c61c1b69020e"
+  "size": 54731,
+  "sha1": "9cc214c680f462d4e3c25790bbf4207743db5403"
  },
  "drops/roy-kizer-from-sewage-plant-to-links-style-gem.html": {
-  "size": 34979,
-  "sha1": "06c322fd4c44bc06fe188e7e17dd6ce911ed45af"
+  "size": 34987,
+  "sha1": "606828d51660665927adbc633729cb87007dde79"
  },
  "drops/australian-golf-brands-and-trips.html": {
-  "size": 78530,
-  "sha1": "b99a52251ecdc1d65789d1f4c9967099247a091a"
+  "size": 78538,
+  "sha1": "55c57cefd98062f08301dfc6125e554c196c5367"
  },
  "drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf.html": {
-  "size": 26902,
-  "sha1": "85b76c31ceb961be7b4b34da1f4e1579432d66c1"
+  "size": 26910,
+  "sha1": "18f200563ca97bab203017b41e788c8343a1ddd1"
  },
  "drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag.html": {
-  "size": 26615,
-  "sha1": "d9e02a7177d57d5c086ba4a62757704d5fe406a5"
+  "size": 26623,
+  "sha1": "77dd456515d1280c2d5f95369d0b726e9f6160fd"
  },
  "drops/the-golf-tech-edit.html": {
-  "size": 38722,
-  "sha1": "ed59138dee491010b3fe625dfcd454d96b798e24"
+  "size": 38730,
+  "sha1": "cd1707bdcda7ca9e9a6b02fea9ef77d60e01a6ff"
  },
  "drops/malbon-fall-2026-the-ironworks-collection.html": {
-  "size": 90461,
-  "sha1": "cf8ab421e3eb5844c3ad7870367be4eb7d5ee8bd"
+  "size": 90469,
+  "sha1": "cb92b945110b8c297c6bd33a33fa69bd2d3e5f8e"
  },
  "drops/brand-to-know-random-golf-club.html": {
-  "size": 69270,
-  "sha1": "1686dfce9ab32cad9e9fbabbdeab67ef51af14d7"
+  "size": 69278,
+  "sha1": "7c159199211a1dac5f3dcd7cc9c9701f1094afa3"
  },
  "drops/malbon-x-grateful-dead.html": {
-  "size": 39305,
-  "sha1": "b12db063e3c1c4515e795562e56f4c21714843c8"
+  "size": 39313,
+  "sha1": "06badfdb537494a03ced669b910e7ce71be314da"
  },
  "drops/brand-to-know-sentinel-golf.html": {
-  "size": 92105,
-  "sha1": "07d661d22fed54b8486f9983238bf486af9373b2"
+  "size": 92113,
+  "sha1": "623d87372669b1d4234389cb9abb0651c5ca1375"
  },
  "drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush.html": {
-  "size": 32522,
-  "sha1": "62a7f2225b26f8465a4a185ba50059ae5faa4b16"
+  "size": 32530,
+  "sha1": "aa69a045db850eecbe1854b02b1e5cc3f18bbb4d"
  },
  "drops/brand-to-know-forden-golf.html": {
-  "size": 67469,
-  "sha1": "4f5e13dc632cd4ac108cbe4e339d24bd86b1674e"
+  "size": 67477,
+  "sha1": "ccd69c0c494a3496fde74ace7b5b5e698eaa7419"
  },
  "drops/sandwiches-before-the-round.html": {
-  "size": 35545,
-  "sha1": "c1f3ab7b8f7772ef401ad00efd312d313c76b8d6"
+  "size": 35553,
+  "sha1": "d597b58b7e862ebecb9d4f45b31a18a36af8662b"
  },
  "drops/rodeo-dunes-the-great-divide.html": {
-  "size": 35664,
-  "sha1": "74ceb8d68eec7f56badd5e559726b7d631b509dc"
+  "size": 35672,
+  "sha1": "874edf68b0bd2c6bfdea54e98f851e900a45e5d2"
  },
  "drops/off-course-golf-brands-doing-non-golf-things.html": {
-  "size": 40937,
-  "sha1": "f0827d3b24a25011e83ebbbef021c57fac19956b"
+  "size": 40945,
+  "sha1": "1ae1251dd2a2f2a5d8e9f70c513de2483151f4c3"
  },
  "drops/brand-to-know-gramicci.html": {
-  "size": 63822,
-  "sha1": "f9b67bf3433b1a24706a6d51ba6d8a9db87e78a2"
+  "size": 63830,
+  "sha1": "6507e4133b543be21f80a4b7320b7b97b7bb0ec7"
  },
  "drops/10-technical-fabric-tops-for-summer.html": {
-  "size": 32089,
-  "sha1": "2cf115c99a6416a8e474315d509ba0062a4ce358"
+  "size": 32097,
+  "sha1": "8fe92e6065f75311e6297e90c08d0d73a87320b3"
  },
  "drops/agronomy-workshop-a-golf-shirt-with-a-hidden-tee-slot-and-no.html": {
-  "size": 27368,
-  "sha1": "315012beef7e14f5e7adf07210bbd3d9f5dd89df"
+  "size": 27376,
+  "sha1": "a34d743a72502a98c6c5eeda4661ce841516604d"
  },
  "drops/7-divot-tools-actually-worth-carrying.html": {
-  "size": 27864,
-  "sha1": "ecb75bf2f52b067524b21cd4a04506b6c87e69a6"
+  "size": 27872,
+  "sha1": "049ebb563f5d64affc1b28a5d889baf4ad117589"
  },
  "drops/the-payntr-collab-edit.html": {
-  "size": 97109,
-  "sha1": "a9bd2ef0381b3bba001d5167303cbfae25dda90b"
+  "size": 97117,
+  "sha1": "8475ad4447918f3ef4fe4efb75e39a5718fb3430"
  },
  "drops/brand-to-know-read-the-green.html": {
-  "size": 82595,
-  "sha1": "593be0c9581b817352143fb771fe5800d4b419d6"
+  "size": 82603,
+  "sha1": "c69c4a122e79e2cd9bad621bea81faada861d96a"
  },
  "drops/brand-to-know-cloud-and-wind-golf.html": {
-  "size": 55209,
-  "sha1": "76d088783458ed45a7660ab418d5587042435e04"
+  "size": 55217,
+  "sha1": "2ef8e0e270dc0e4b689f79a27408d6c0dff16b89"
  },
  "drops/the-golf-shoe-edit.html": {
-  "size": 40366,
-  "sha1": "9c78634ccd114399ba40f6352184484fc7367ac5"
+  "size": 40374,
+  "sha1": "a6c956f642f35e9daa27195c61d8953f8ea24c1d"
  },
  "drops/best-pizza-in-austin.html": {
-  "size": 32874,
-  "sha1": "b712435146cd4f11fe3552636c7bfcba9e1d188e"
+  "size": 32882,
+  "sha1": "5b17db799bd57f751d0b75f15055d6f29d6e8e25"
  },
  "drops/brand-to-know-sugarloaf-social-club.html": {
-  "size": 98735,
-  "sha1": "560604bc476c52bc0ce21b89cbcbc1956e6415bd"
+  "size": 98743,
+  "sha1": "346934dbebde58798445f69d84d5f19848803252"
  },
  "drops/10-nikes-that-belong-on-the-course.html": {
-  "size": 33476,
-  "sha1": "ef5cbca5b1a4fb31e56e92b4189a50c4fab13740"
+  "size": 33484,
+  "sha1": "89fb02248435a7bfd45e58e26d16cd5f07e6b2e1"
  },
  "drops/brand-to-know-takomo-golf.html": {
-  "size": 59773,
-  "sha1": "94559d004ff66467c9c73219c88ca40d27b46cd1"
+  "size": 59781,
+  "sha1": "1f891bb287e1ab505afacca0ec731b0f8b832c2b"
  },
  "drops/arsham-malbon-chapter-three.html": {
-  "size": 35895,
-  "sha1": "303aec0d3de0e0e51bc10584b69b13ad3d4bc9a7"
+  "size": 35903,
+  "sha1": "e3a885d2c110b4e4ee54dc8b5c08185b36896476"
  },
  "drops/the-best-non-golfing-golf-shoe-5-trail-runners-that-belong-o.html": {
-  "size": 27007,
-  "sha1": "ea34efa0ce283c86d2529386fb6846067a497a4a"
+  "size": 27015,
+  "sha1": "60046a5f7b0616ba9a8c4634d3e28179cf1b3df0"
  },
  "drops/ovo-golf-2026-collection.html": {
-  "size": 58729,
-  "sha1": "851d2501b8f833657b35c88a50c1e6a14c9d8029"
+  "size": 58737,
+  "sha1": "90142f18f0299654e052b0a550f467c15a645d48"
  },
  "drops/brand-to-know-twentyfour-golf.html": {
-  "size": 51718,
-  "sha1": "76a71d0bb249f450dd46874e48ee73cf0ee5cd56"
+  "size": 51726,
+  "sha1": "c5ee9f400780cbe05e2a4b07a72a82d18bfe51ae"
  },
  "drops/8-special-day-rounds-near-austin.html": {
-  "size": 29151,
-  "sha1": "fad796f58f724be0d2ef2c66adc8a359d77d72fe"
+  "size": 29159,
+  "sha1": "9d56368280d746cdbf2feeba7f1bfea483cf1cae"
  },
  "drops/brand-to-know-olydoe.html": {
-  "size": 39246,
-  "sha1": "6b5181bb5d250e35e2bedd14e9888cb0f3a40deb"
+  "size": 39254,
+  "sha1": "b4765b57c9459f79a64bdb7a25433a75d65a4800"
  },
  "drops/lions-municipal-golf-course-austin.html": {
-  "size": 49841,
-  "sha1": "bfa02687d328b0849198c813f354cc0a246570a7"
+  "size": 49849,
+  "sha1": "4c9e2ee622cf5d5bd60249d95c2a9e8027f51d6e"
  },
  "drops/loud-on-purpose-headcovers.html": {
-  "size": 62644,
-  "sha1": "84d7ae0ec97360aebcc2cd062ff5234719df5c70"
+  "size": 62652,
+  "sha1": "44042d5d9c6ed4578400fa53f7eb67d2b5052ed3"
  },
  "drops/the-fyfe-putter-cover-edit.html": {
-  "size": 58418,
-  "sha1": "e9e9863fea2959ada543040b8489a73c496e0d98"
+  "size": 58426,
+  "sha1": "7d5240373bdcc8b1d586677e61449863eb526722"
  },
  "drops/brand-to-know-sun-mountain.html": {
-  "size": 79072,
-  "sha1": "aca20676918b0387b014ea69060b3a5b2c261e7e"
+  "size": 79080,
+  "sha1": "a8663ddda9229395c0d0beb4e2765fa78a0332e6"
  },
  "drops/brand-to-know-criquet.html": {
-  "size": 76560,
-  "sha1": "896ac3481c8abbacc2ecbd54615696504f212f5c"
+  "size": 76568,
+  "sha1": "733393e18a21500eee23b9b7c9992c36517d77bf"
  },
  "drops/water-when-dry-the-garden-metaphor-that-actually-works.html": {
-  "size": 28909,
-  "sha1": "be7ac8eeec5cef8d60e69c23c2bc3b7b9045e3cc"
+  "size": 28917,
+  "sha1": "952dd1b26ec664001f517fa17df397bebc82bf15"
  },
  "drops/public-drip-fw26-nightshift.html": {
-  "size": 58617,
-  "sha1": "e916a604589a3fbb75efb079bae40f5c7f7c01f0"
+  "size": 58625,
+  "sha1": "75de5c0d2ad56fda8c77be172e579ca1169d8536"
  },
  "drops/oakley-golf-collection.html": {
-  "size": 37675,
-  "sha1": "0018f4c133079f76ca07144cd683f7f146f7f0e1"
+  "size": 37683,
+  "sha1": "8b8229e964109993f683286b78196f1c524368d2"
  },
  "drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site.html": {
-  "size": 114248,
-  "sha1": "a428891133938c58e4d4d799ed72d18c8ca995af"
+  "size": 114256,
+  "sha1": "60280b182fec5847c15effdf561d929a8712dbef"
  },
  "drops/the-jordan-golf-spring-edit-chicago-drops-may-10.html": {
-  "size": 26428,
-  "sha1": "5f2141e6de35cb4ca6e5f020e4c934d512a1655c"
+  "size": 26436,
+  "sha1": "7556f601f8f39345a649a4dd0bff4edfa0b62da6"
  },
  "drops/11-water-bottles-wed-actually-carry.html": {
-  "size": 33994,
-  "sha1": "e95823f982497849b237568a0ea0e4c2e6cb203d"
+  "size": 34002,
+  "sha1": "04bb25b55e766ef8150ebc7901d6edc9dc3c3183"
  },
  "drops/the-hat-edit-6-lids-for-golfers-who-skip-the-pro-shop.html": {
-  "size": 26511,
-  "sha1": "a378b96c7ee86b2438268353ff3ff3da9a07ae51"
+  "size": 26519,
+  "sha1": "6ffdb7ed1eb0ecb0d7c3dd8bbe048699bac80090"
  },
  "drops/7-grips-to-add-a-little-flavor.html": {
-  "size": 27630,
-  "sha1": "666d83543fff576f7f09f82595cc177a511906f5"
+  "size": 27638,
+  "sha1": "f9ac68cf0bb78950debd4b15c596fc017d2d8668"
  },
  "drops/best-wings-in-austin.html": {
-  "size": 38521,
-  "sha1": "cc626c5b651cfa9a7395801bf9b41087af6612fa"
+  "size": 38529,
+  "sha1": "cabc6c7b7e0d66496d202e3e336c4b81bb04bd30"
  },
  "drops/the-2026-driver-drop-12-new-sticks.html": {
-  "size": 34278,
-  "sha1": "18292499343d025e79e0b253af8cc6a65337dacc"
+  "size": 34286,
+  "sha1": "47168868c4aea9c275b4c90a36a040163a9c1cd8"
  },
  "drops/new-york-golf-trip-sedgewood-union-vale-bethpage-black.html": {
-  "size": 38663,
-  "sha1": "4fe3e7aeda59a3292617ceeb465fd1f84d6497d4"
+  "size": 38671,
+  "sha1": "3d3966dd769901588dfd162873618e4c186571de"
  },
  "drops/7-indoor-simulators-for-austins-gross-rainy-days.html": {
-  "size": 31521,
-  "sha1": "d688db2c49336b073b40bc1f4b99ccac26146ae4"
+  "size": 31529,
+  "sha1": "16daab201b425551948416456019e2433e4fecc6"
  },
  "drops/the-towel-edit-vol-3.html": {
-  "size": 62545,
-  "sha1": "844aad6e81abdbce16d8c3bb59e720e73093c039"
+  "size": 62553,
+  "sha1": "0eb6f7dcf165b9bab65757f08966f13541101765"
  },
  "drops/brand-to-know-midiron.html": {
-  "size": 64042,
-  "sha1": "adc3d141f1a8e2f5ffa209e95d6e86d8b8656812"
+  "size": 64050,
+  "sha1": "28b34b593816678f828e8ddafa100acc16904006"
  },
  "drops/walker-golf-blooming-grounds-drop.html": {
-  "size": 79907,
-  "sha1": "b40846e6a8c10c33cb92cfcfb6497580a32ee9c1"
+  "size": 79915,
+  "sha1": "3f2dd1e98ee53e2c6ee1cd76ef2173c3b54f8079"
  },
  "drops/fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca.html": {
-  "size": 28144,
-  "sha1": "12da3db67c6a0b7bae6b1a44a326c1438dd3138f"
+  "size": 28152,
+  "sha1": "8a3b018eac9e03f1817532e7804f9646f19038eb"
  },
  "drops/walker-golf-the-par-tec-drop.html": {
-  "size": 84495,
-  "sha1": "da7f5c869db82e84dd5026fd91d661a9ccde2a9b"
+  "size": 84503,
+  "sha1": "6c980991588dd325cf6f8125c7a676846ede2be1"
  },
  "drops/fourteen-independent-austin-coffee-shops.html": {
-  "size": 55024,
-  "sha1": "ecfe7ecb14277c8e9b265c4c8474ad679a6980b4"
+  "size": 55032,
+  "sha1": "871be7969edf01721f0506000fb002e5f39046f9"
  },
  "drops/brand-to-know-beams-golf.html": {
-  "size": 41080,
-  "sha1": "c8ba4d0c4174bffcbcd0efaad99d0769e3334e12"
+  "size": 41088,
+  "sha1": "63590e316164496b759bf503ffce1d565a9d1091"
  },
  "drops/apc-golf-cph-golf-collab.html": {
-  "size": 71828,
-  "sha1": "2bb6402b1e6113496c814acb73b4f6e6128a11eb"
+  "size": 71836,
+  "sha1": "5870564d434d82a9598dea22e223f358dbba3755"
  },
  "drops/technical-fabrics-heating-up-heres-12-of-our-favs.html": {
-  "size": 33508,
-  "sha1": "9e23039b639d96847d215975b74d6a942def6f04"
+  "size": 33516,
+  "sha1": "62b9b4a519c0fd690f0ac9a42ce48560169ab78f"
  },
  "drops/maxfli-siegelman-stable-harness-the-drive.html": {
-  "size": 32288,
-  "sha1": "953e7ccca41b6707ec8051a2a599a723e5a375ae"
+  "size": 32296,
+  "sha1": "e3c07f16ca92437a6eeea291032db9252e2ec887"
  },
  "drops/golf-brands-founded-by-women.html": {
-  "size": 83625,
-  "sha1": "89fbbb9cbe01d266217625f268411d0c68210d26"
+  "size": 83633,
+  "sha1": "2c841deab4ad479645297ed4b266e3b871d4f914"
  },
  "drops/aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater.html": {
-  "size": 29997,
-  "sha1": "3711a26a7ac5592c8654478bc09ee1073ce17d7d"
+  "size": 30005,
+  "sha1": "5da5fbe927e7d1b3fe6d20b5947dcbac0bec5e68"
  },
  "drops/gumtree-golf-x-puma-the-field-notes-collection-lands.html": {
-  "size": 26912,
-  "sha1": "d427a73f16ae4a9d100e417a23b922f81a07baa3"
+  "size": 26920,
+  "sha1": "b1e60cdf6350b00924fa68b67402e8806dea5773"
  },
  "drops/the-summer-style-list-10-golfers-who-get-it.html": {
-  "size": 31917,
-  "sha1": "cc149d8f55fd182cd79d9c108be37940a32b808f"
+  "size": 31925,
+  "sha1": "bd24591853cb6e92ef4f574159548bb2abcae4c8"
  },
  "drops/10-texas-courses-worth-the-trip.html": {
-  "size": 34106,
-  "sha1": "65e7f3f9781c974abdc6b7ab789aa1bbdf1d0f2e"
+  "size": 34114,
+  "sha1": "9e69fd3f1d21ea644640fa82e68fe901236b1d4f"
  },
  "drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin.html": {
-  "size": 28920,
-  "sha1": "144e6c5c1807dc8f5adcae210d7c8d5aceb020ba"
+  "size": 28928,
+  "sha1": "e6be50d08f7b8282de28f99ae1bf85418bfa44c4"
  },
  "drops/8-bucket-hats-worth-the-brim.html": {
-  "size": 29465,
-  "sha1": "79dbd6ebf37403804a2bf8754a28ea9be587a268"
+  "size": 29473,
+  "sha1": "682b4eeac24b5e5d7bb3d5180e405b0fd681f292"
  },
  "drops/brand-to-know-kingfisher-golf.html": {
-  "size": 76257,
-  "sha1": "6626bc864aa22d55f2206d9178e11be2946a315b"
+  "size": 76265,
+  "sha1": "572a1b8f06e4722c4bfc23c101aef959c3f29044"
  },
  "drops/the-retreat-guide.html": {
-  "size": 35673,
-  "sha1": "49573af1ccea9618206734ba1f6868e7eb0b24a6"
+  "size": 35681,
+  "sha1": "3309e35f956a1e10fd162bed9f8aa7017e492d2d"
  },
  "drops/fresh-pieces-for-the-warm-weather.html": {
-  "size": 33702,
-  "sha1": "225726e88061bc6eb9b682f23b4658e8b90f3364"
+  "size": 33710,
+  "sha1": "044e0ab34e8b273acfc5c14786d8a4e49b11c103"
  },
  "drops/the-firecracker-open-81-years-at-the-muny.html": {
-  "size": 32908,
-  "sha1": "79a412bf246fc9f453a39a92dc71de0815354a23"
+  "size": 32916,
+  "sha1": "8d0514e9eeb578e202990efc94d5d34b5f60a32e"
  },
  "drops/the-water-bottle-edit.html": {
-  "size": 46942,
-  "sha1": "d5b4a6483775de5a33227160e07e14931ee53129"
+  "size": 46950,
+  "sha1": "509b528020e70910260e197f003b137722a0f590"
  },
  "drops/best-golf-streetwear-brands-2026.html": {
-  "size": 68146,
-  "sha1": "f29719c99e5f87ca5f9b13fce60f44133200b9f8"
+  "size": 68154,
+  "sha1": "b040ca41e3a0a353b980ba04c243139dcf37ed53"
  },
  "drops/the-all-black-edit.html": {
-  "size": 74050,
-  "sha1": "d0856156704dd7e4f28f9e559e7307264618f62c"
+  "size": 74058,
+  "sha1": "86c0290fe5f5fc3df960c0480af8b5b4e80316c4"
  },
  "drops/brand-to-know-left-of-field-golf.html": {
-  "size": 118582,
-  "sha1": "7fbed67c31147a0815c055e37f42208e2741dd43"
+  "size": 118590,
+  "sha1": "0e0d4a1fd0d238506deaafed7f4871f194e89cf4"
  },
  "drops/austin-coffee-guide.html": {
-  "size": 38816,
-  "sha1": "5dbec357c1c958ad93d29afb392c81dab4614016"
+  "size": 38824,
+  "sha1": "982d65884b6b90fe588e6c957845946263d69c40"
  },
  "drops/the-towel-edit-vol-2.html": {
-  "size": 38864,
-  "sha1": "ce8232d168b836ed4cbf8bbcff9ef1a17d0a8ed8"
+  "size": 38872,
+  "sha1": "d157691bfb5b910e6cf149984b98768df548b9b7"
  },
  "drops/no-budget.html": {
-  "size": 63838,
-  "sha1": "02672014d7b3f19f0b6f12fdc91baa20270bc4bd"
+  "size": 63846,
+  "sha1": "1c4f72b922e155c73cead8ddf33a13bc822897ac"
  },
  "drops/brand-revisited-jones-sports-co.html": {
-  "size": 109268,
-  "sha1": "3a592d55b4bf9056a21592c6aea3a463b989ce14"
+  "size": 109276,
+  "sha1": "62633810ef1445fcb0e6baab0faf6b7920ce0592"
  },
  "drops/brand-to-know-merrill-golf.html": {
-  "size": 33663,
-  "sha1": "fa525ab8902c83c6a61f7b5b3f9b6a4d84d9bf04"
+  "size": 33671,
+  "sha1": "17eb2566a001d94e6beb763f9411fa42320db5bc"
  },
  "drops/brand-to-know-bluegrass-fairway.html": {
-  "size": 72162,
-  "sha1": "3aa279989fc8341f9c0e7b2f90bf8d0a9c91c09b"
+  "size": 72170,
+  "sha1": "7eedda6a9f260387e394fbac1f47503804998aa9"
  },
  "drops/6-shinnecock-capsules-before-the-first-tee.html": {
-  "size": 27845,
-  "sha1": "c64f39803906ed9dd093f3efce3162d389f354ba"
+  "size": 27853,
+  "sha1": "f8e13047b883ea6776398b2327bc7c10b5484019"
  },
  "drops/sugarloaf-ss26.html": {
-  "size": 28367,
-  "sha1": "a0df7d5081eed4fa0d9d8e3106941627fc4c9597"
+  "size": 28375,
+  "sha1": "cf61967104c72e2b1e1543e84a083a95ec3a4202"
  },
  "drops/the-niche-grip-report.html": {
-  "size": 46514,
-  "sha1": "4144b52c67cea94bb990516b0ec621bf1f91527d"
+  "size": 46522,
+  "sha1": "519329c3ec0b6cec61848a78c0f288ecd06f025c"
  },
  "drops/swag-golf-college-program.html": {
-  "size": 66180,
-  "sha1": "6c695002eb76699fc4ecc4315c33c5db45778508"
+  "size": 66188,
+  "sha1": "0c4ee1984be1aa7ff34bdb182273d197b8464262"
  },
  "drops/sugarloaf-summer-sailing.html": {
-  "size": 31553,
-  "sha1": "681f50624a8bd447d20021f5ebdeab5b6a0a206b"
+  "size": 31561,
+  "sha1": "26f6c33f52d73ecec2cee15d29992a10bc45ad04"
  },
  "drops/austin-golf-road-trip.html": {
-  "size": 42641,
-  "sha1": "7fa98ebb8378471c24d14cca34561ef371a481b7"
+  "size": 42649,
+  "sha1": "43d54a9b1e8813e358531e0cbaf08d5fdb25f0c0"
  },
  "drops/7-bags-that-stand-out.html": {
-  "size": 52427,
-  "sha1": "ab6841a80cd67af944fa404ece0a483bcebec5f8"
+  "size": 52435,
+  "sha1": "c275af0ff3ed2c6a940c97a239920d4d7df0fa8d"
  },
  "drops/ald-golf-ss26-new-releases.html": {
-  "size": 38374,
-  "sha1": "2ec7a664b877587563551834f8464046188b08e9"
+  "size": 38382,
+  "sha1": "3d96c0f95df8f52be9d178fa09f1963671ecf5e7"
  },
  "drops/3-putt-round-golf-tees-disguised-as-bad-habits.html": {
-  "size": 31289,
-  "sha1": "7088941eaaf25e1b38186be19812e4aaf286f603"
+  "size": 31297,
+  "sha1": "c45c554c5e1e8035ea4a019d856596bfe72ab78c"
  },
  "drops/brand-to-know-metalwood-studio.html": {
-  "size": 77173,
-  "sha1": "779711bb77bfaddaea5cb99df9493073bb48cf37"
+  "size": 77181,
+  "sha1": "0b3c6de1ca15acbae45746dc63129f91bfb4e6a6"
  },
  "drops/the-shoe-edit-6-pairs-that-belong-on-and-off-the-course.html": {
-  "size": 26507,
-  "sha1": "1962f830894315e1c494d8c3f7faf3c7f11419e4"
+  "size": 26515,
+  "sha1": "ef4dc61476fa89513c5a6b35cdd3cf34b1fc8a57"
  },
  "drops/brand-to-know-radry-golf.html": {
-  "size": 86502,
-  "sha1": "ade98610cf566324925d836a36ea539946c8fb52"
+  "size": 86510,
+  "sha1": "87d09a0ef065406d28137f7d24f9b18c6037b75b"
  },
  "drops/date-night-after-36.html": {
-  "size": 63576,
-  "sha1": "1fcce73180224429dadc0dfad0c169058f13d581"
+  "size": 63584,
+  "sha1": "151652e9b761e701494563812d2715a8eefc0134"
  },
  "drops/the-hydration-edit.html": {
-  "size": 67625,
-  "sha1": "cc150128032af0964c10a457d90a218e05a3aa5a"
+  "size": 67633,
+  "sha1": "89babb77f910b05b627aeec2aa3f8366d2a4bfe4"
  },
  "drops/brand-to-know-huega-house.html": {
-  "size": 93754,
-  "sha1": "4b788376720fb5ba22224f3708856705fa14aa68"
+  "size": 93762,
+  "sha1": "a128d96eb2bdec2b7f17824c06bf86ad4f9bf399"
  },
  "drops/reebok-x-manors-ii.html": {
-  "size": 67956,
-  "sha1": "19c2cdf0dad87ea51fb8929a73e3b8400c1be435"
+  "size": 67964,
+  "sha1": "1449edeb8efcc63093c301b1c0522ef63b368460"
  },
  "drops/brand-to-know-rouqe-golf.html": {
-  "size": 82986,
-  "sha1": "9c68fee0986871f7cdc3ea29624debb453333024"
+  "size": 82994,
+  "sha1": "d869023b3fa66bc8ee3aaef1bddb0ec0486b6f1d"
  },
  "drops/texas-golf-brands-and-makers.html": {
-  "size": 79639,
-  "sha1": "0503ef97e8e1f91e6248568c90bee755d684adf5"
+  "size": 79647,
+  "sha1": "e6530278f796daba948446f1322ca4e5e53a7b88"
  },
  "drops/the-ball-marker-atlas.html": {
-  "size": 109783,
-  "sha1": "db2d12dddd60348a7f9b6f285c8c9e8a3246c3ad"
+  "size": 109791,
+  "sha1": "dae211bfc15c2c29cff3217484e9022750449964"
  },
  "drops/10-rangefinders-from-90-to-600.html": {
-  "size": 33037,
-  "sha1": "44946ba47b9eba57fb379801ca05096005fb18ea"
+  "size": 33045,
+  "sha1": "8f834e9eb3920b5f281e58ec6f2c4b93054e7cbd"
  },
  "drops/12-putter-covers-were-eyeing.html": {
-  "size": 34326,
-  "sha1": "b09daca4a99a73571644b0634b0a1ed8f4683f59"
+  "size": 34334,
+  "sha1": "92120e7a34bd3535300b7f227b71b6f7c0c65380"
  },
  "drops/brand-to-know-found-golf.html": {
-  "size": 30530,
-  "sha1": "f09c7ece24d18692f8dac740f6171f7ee0f08927"
+  "size": 30538,
+  "sha1": "edec99d3b07976adfb162988802681222ed7c7ab"
  },
  "drops/the-stand-bag-edit.html": {
-  "size": 45094,
-  "sha1": "033657dd332bbf959cdd53e01c2bc1ee6750bd64"
+  "size": 45102,
+  "sha1": "d6afeea4bde6017c29591fe3c925f5bd46e8f67d"
  },
  "drops/home-golf-decor-edit.html": {
-  "size": 39162,
-  "sha1": "26ce84f8ac5561623898f282ba5d992c94c9f3ee"
+  "size": 39170,
+  "sha1": "41b402ef00a124614d17a8cddfe353977cf8d51b"
  },
  "drops/vessel-season-opener-26-masters-green-croc-texture-already-s.html": {
-  "size": 27018,
-  "sha1": "8368b50ab9dfe0a1b88e02c6f1ba954d7b40aebb"
+  "size": 27026,
+  "sha1": "63065755600e40703e902af551f1c13e788fa827"
  },
  "drops/ssc-x-byrdie-golf-social-wear-just-dropped.html": {
-  "size": 32391,
-  "sha1": "7713f193ec957c338fdcf16ceca0b5a7c5b34ddf"
+  "size": 32399,
+  "sha1": "187bf647f4122c59bb391b1e273de1cc01729ab3"
  },
  "drops/5-zero-torque-putters-worth-your-attention.html": {
-  "size": 53023,
-  "sha1": "83ae1d4ca241452d9a2e463e0c159f59285558cd"
+  "size": 53031,
+  "sha1": "87dfb140296d83be2015671d003c16fc14b26fb8"
  },
  "drops/the-push-cart-edit.html": {
-  "size": 35933,
-  "sha1": "ee3d1b777a048c891e6dc586d24b5a863bb33395"
+  "size": 35941,
+  "sha1": "d87be7108d77f3de4d6106b5bd36c3ca34fb47be"
  },
  "drops/accessories-on-and-off-the-course.html": {
-  "size": 30117,
-  "sha1": "2401bf192f1319bcd55616c38fe89f313b230960"
+  "size": 30125,
+  "sha1": "be9ddfbb29c6ad953c5ed5ff6651cc9c8d58e924"
  },
  "drops/brand-to-know-seamus.html": {
-  "size": 83151,
-  "sha1": "8fe21ae7f64a5ba0162c1dc48441b819630ced8a"
+  "size": 83159,
+  "sha1": "4380fb799ac9fc3c0ea091b184a705d3c790c2a9"
  },
  "drops/the-2026-putter-drop-8-worth-the-cash.html": {
-  "size": 31371,
-  "sha1": "d89c649fbd39c3b8f5b94ce5317c6a07095aab7e"
+  "size": 31379,
+  "sha1": "4c334fd94fbe477cf33ed135f991cb3c68e08444"
  },
  "drops/10-indie-ball-marker-brands-worth-knowing.html": {
-  "size": 33399,
-  "sha1": "e6d1acc18c1dcbd9c52b20afaf25b4ad9c3a187c"
+  "size": 33407,
+  "sha1": "779c9f7f4f7fea5419f97a1d683cd18330412e3a"
  },
  "drops/summer-practice-guide-austin.html": {
-  "size": 38714,
-  "sha1": "ea50f05159146a3405ee2d1ab4edf946b0e02427"
+  "size": 38722,
+  "sha1": "89da5c135e5c556f1ac2287b3d73906e96f5f53d"
  },
  "drops/5-post-round-evening-spots-in-austin.html": {
-  "size": 27243,
-  "sha1": "ea7377eb45c795813c2d1e9aa873fc12b5f7a80d"
+  "size": 27251,
+  "sha1": "6f736f05ccec20ae8da3da49d0c69d249806dcf5"
  },
  "drops/brand-to-know-edel-golf.html": {
-  "size": 79572,
-  "sha1": "35ed6defa391c04254daaf54d9802a9bdfceba39"
+  "size": 79580,
+  "sha1": "f06f37f89195cab6b2c11628367307a88e72dbcf"
  },
  "drops/the-rain-gear-edit.html": {
-  "size": 39219,
-  "sha1": "f17faeb7f24033127089c359a70a50e40c16e1a6"
+  "size": 39227,
+  "sha1": "f4c747c6b722eed1dd429ae8d210cd185663ced2"
  },
  "drops/the-driver-headcover-edit.html": {
-  "size": 52339,
-  "sha1": "14ef97d02d6ffbaf2dc5d0309823afa6d1035af5"
+  "size": 52347,
+  "sha1": "99bf781aac1827f0fb427f9c6a4bfae529b3b8c1"
  },
  "drops/the-glove-edit.html": {
-  "size": 36996,
-  "sha1": "355a2d38f6a66d1db1137ad665c2d6fb4caf0afb"
+  "size": 37004,
+  "sha1": "5667ef679f0c5b23588cf3421afec80e2c889e63"
  },
  "drops/brand-to-know-manors.html": {
-  "size": 73250,
-  "sha1": "0105cc5aefd7bad60c8803b59b353b236e48c5b3"
+  "size": 73258,
+  "sha1": "f28115c5787a52efa503c8a62abb88494f3d0b6a"
  },
  "drops/7-post-round-moves-in-austin.html": {
-  "size": 30640,
-  "sha1": "3d062a12b0616f5de71a9d400e00958397158fcd"
+  "size": 30648,
+  "sha1": "6de832362d65fa987a0915967914d1181e837b96"
  },
  "drops/ssc-hidden-gem-collection.html": {
-  "size": 67680,
-  "sha1": "80558192d59476adfab4d9110800eb194f1562ca"
+  "size": 67688,
+  "sha1": "7a0f0db474cbf70c91770e09ec4c180042d794bd"
  },
  "drops/the-hot-weather-roundup.html": {
-  "size": 38448,
-  "sha1": "3254f48cffb5b4d9b2233f599266d55b0d5aca8d"
+  "size": 38456,
+  "sha1": "1239d795de17ea77f5ca467c2913a8d06a3deef7"
  },
  "drops/where-to-watch-the-world-cup-in-austin.html": {
-  "size": 33725,
-  "sha1": "92b2cf96bbe841e11f64a25e4455598580eeebb3"
+  "size": 33733,
+  "sha1": "cb05ee4a55705c383d822aff16939ec585aff3df"
  },
  "drops/manors-golf-ss26-collection.html": {
-  "size": 34537,
-  "sha1": "510a0d1156ba7db1270d05983d5f12f9dc0b58d8"
+  "size": 34545,
+  "sha1": "c609d8124769c1619f21eb8fe931e40ff358a249"
  },
  "drops/world-cup-jersey-edit-pitch-to-green.html": {
-  "size": 39276,
-  "sha1": "f96a8f8e9fa05e3be841202ed208867f800e77f0"
+  "size": 39284,
+  "sha1": "e61a13358390ebfd4c46432b598a13fbf2a6bf46"
  },
  "drops/japan-golf-roundup.html": {
-  "size": 37463,
-  "sha1": "7456dadc33e8ec5f4db7d0fa116ca629168f1b47"
+  "size": 37471,
+  "sha1": "e7aa5d025cd4b45eeb279c1cd9ca2fe274629538"
  },
  "drops/the-golf-ball-edit.html": {
-  "size": 36276,
-  "sha1": "9da68a1b231e805f3fe23615e68f5ff8340c0751"
+  "size": 36284,
+  "sha1": "4bde4c87187148d030ccf63506f8fa08899366cc"
  },
  "drops/8-best-practice-facilities-around-austin.html": {
-  "size": 32471,
-  "sha1": "8c70682164aa65762dd712f2d4329eca696d60ff"
+  "size": 32479,
+  "sha1": "66200194cec1f237510766213033674d41c61f73"
  },
  "drops/brand-to-know-devereux-golf.html": {
-  "size": 94728,
-  "sha1": "c121578d660b1acd954a0867eb1239c83f32392d"
+  "size": 94736,
+  "sha1": "279a8deb7b50f632bcae23b647b9c2acf47a85bf"
  },
  "drops/nike-acg-golf-edit.html": {
-  "size": 38471,
-  "sha1": "153d5deb12ed3273292e8977eb9c4aa584b1024e"
+  "size": 38479,
+  "sha1": "571c8626bb098e2b6f6ada10319b5f3d89de4ec0"
  },
  "drops/public-drip-brooklyns-muni-born-golf-label.html": {
-  "size": 34897,
-  "sha1": "5a3c01c172c78c4b4c44297839aa453a13d1034c"
+  "size": 34905,
+  "sha1": "7c1895070bc5c74f7ccb603704c83e70592f0464"
  },
  "drops/the-sock-edit.html": {
-  "size": 36659,
-  "sha1": "e0ea1e61742f48fd95239b894c1b24cf1ed4cd95"
+  "size": 36667,
+  "sha1": "57db82fb1ff682b49af1ce7e74e4ce398932d9ce"
  },
  "drops/the-magazine-edit.html": {
-  "size": 54710,
-  "sha1": "36b3626545b84fdb62f7e92454c0fa861058e0a5"
+  "size": 54718,
+  "sha1": "a039af30a84f46a1bdb5008df27fd7cfccfa1c5e"
  },
  "drops/the-wedge-drop.html": {
-  "size": 47643,
-  "sha1": "b7d94955da97fcde2271f4e29e6071e5d1a99fa2"
+  "size": 47651,
+  "sha1": "7509d505040942684533bb95c3f898829d96a349"
  },
  "drops/brand-to-know-odd-ritual.html": {
-  "size": 97169,
-  "sha1": "bd81033a497b40d8d9130ea06d28c6e1292ac80a"
+  "size": 97177,
+  "sha1": "98f3f12a75234d9f4d9db29b19d2ba3d54d25495"
  },
  "drops/the-technical-brands-roundup.html": {
-  "size": 49070,
-  "sha1": "e88701ab63d32ad1428a8ab5860645ee10fdce02"
+  "size": 49078,
+  "sha1": "292db4e7773f973672b37425c4974b2f46664e1a"
  },
  "drops/brand-to-know-aug-11.html": {
-  "size": 39617,
-  "sha1": "32986bbcbf3c69e565a18113fbb1cf5d5d70c1c1"
+  "size": 39625,
+  "sha1": "1017b109e6a31d90b602f53287af35fa61f66874"
  },
  "drops/brand-to-know-siegelman-stable.html": {
-  "size": 58922,
-  "sha1": "dafdb4c1a7de39bcfa3c0fbdd69e0c66aee9d764"
+  "size": 58930,
+  "sha1": "1013f80306ce4ca51d30cd723523f57daa71b099"
  },
  "drops/fella-golf.html": {
-  "size": 62309,
-  "sha1": "7920850ed29b71808488ebc1a45e65fc8480a5e2"
+  "size": 62317,
+  "sha1": "0a18d072f449f10f5a7b3fb0d60c2d4deba51310"
  },
  "drops/malbon-golf-studio-seoul-ss26.html": {
-  "size": 31601,
-  "sha1": "62958b2837d8c9f3aee7f9a4323ea59ff91074b3"
+  "size": 31609,
+  "sha1": "3e0dd947bbd338cbcf1e5fe013f8979118a365a8"
  },
  "drops/the-hat-edit-austin-summer.html": {
-  "size": 95089,
-  "sha1": "77ff87f33ccfa621b81b3cc425017d524cbf8bd2"
+  "size": 95097,
+  "sha1": "f82a35376114b9eee258333076462747bd1b9adc"
  },
  "drops/the-custom-wedge-report.html": {
-  "size": 108331,
-  "sha1": "fde79248fa8ea9e9250ea0dd370f0f921f5e740b"
+  "size": 108339,
+  "sha1": "4b7a01fc6b10562a8cf15d46b3d26856dc1b67be"
  },
  "drops/the-jersey-polo-edit.html": {
-  "size": 35851,
-  "sha1": "53ab1ca7c320bad24d96599b0601064a2d266118"
+  "size": 35859,
+  "sha1": "1f1ba74e91494f5287ad708a04b08b4926fe0c37"
  },
  "drops/brand-to-know-mogshade.html": {
-  "size": 67105,
-  "sha1": "77aebcc2e7b3d2fb0cd451820cb0ed79fe531a43"
+  "size": 67113,
+  "sha1": "32b9c77867525e74511ad98d38b5df9f6a87f3fa"
  },
  "drops/brand-to-know-morning-people-clothiers.html": {
-  "size": 35265,
-  "sha1": "1b4271548daa6aa63f9e0495637b75fc9ccc74aa"
+  "size": 35273,
+  "sha1": "76d541c947171c4bbb87ad5e3c44a0aab08492a3"
  },
  "drops/14-hoodies-that-caught-my-eye.html": {
-  "size": 36532,
-  "sha1": "9fe78441d0d4c1a6f4a9f95a8acd9d3e96d3adf8"
+  "size": 36540,
+  "sha1": "798b94405dc472cb574e72350539b8d786009fb5"
  },
  "drops/the-bag-edit-6-bags-for-golfers-who-care-what-they-carry.html": {
-  "size": 26347,
-  "sha1": "a5de67cee9e8f162b7fa709ce1d08f5174328eb3"
+  "size": 26355,
+  "sha1": "ac1a67265884c19cb88a7e8e958d2fb3e9b3805d"
  },
  "drops/students-golf-our-15-favorites.html": {
-  "size": 57788,
-  "sha1": "bdfe884d07dada9fd2e941a40349c347cc7573ef"
+  "size": 57796,
+  "sha1": "5eac0debb5b017e2f8d54336d108b68419e6e92b"
+ },
+ "drops/brand-to-know-gamut-golf.html": {
+  "size": 79770,
+  "sha1": "efccf6e56970b783725a5650783be656250ca3bc"
  },
  "drops/brand-to-know-casualist.html": {
-  "size": 62808,
-  "sha1": "5431cd21eecc67a0a94b5ab122942ee601a27d41"
+  "size": 62816,
+  "sha1": "a45173b80f6a313591343a9dae200673b26d1fd2"
  },
  "drops/no-budget-malbon.html": {
-  "size": 87260,
-  "sha1": "ac9674e7b3a6856cdf0fe6c4a8a9885bb40d1253"
+  "size": 87268,
+  "sha1": "e14ddde842c48c251b9fbed19e27b6a775710f6c"
  },
  "drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond.html": {
-  "size": 36615,
-  "sha1": "09cd3dfb5f5e5ad25f58c6b6e53995b18274e849"
+  "size": 36623,
+  "sha1": "9cb76be3a3be5ffc15dd91ce22527ca059fcd65d"
  },
  "drops/the-bird-edit.html": {
-  "size": 73276,
-  "sha1": "e07cd8eca689f98cb9f3f5e5519c25075e0c0fea"
+  "size": 73284,
+  "sha1": "40421ce2d0cc4f798621fae9fa43d46a2dd0975f"
  },
  "drops/the-towel-edit-12-worth-clipping-to-your-bag.html": {
-  "size": 36580,
-  "sha1": "709b4d26ff6b01057ae203e9ba919da899625dd7"
+  "size": 36588,
+  "sha1": "9e37388e2231f3afdda822ba46c58d403ccdbf28"
  },
  "drops/10-of-the-best-post-round-burgers.html": {
-  "size": 33452,
-  "sha1": "105ebbecd6ac178e8b01907c961d353efe919e6f"
+  "size": 33460,
+  "sha1": "ecce18e71881b09c27b29f547b9d562f800d6688"
  },
  "drops/the-white-tee-edit-2026.html": {
-  "size": 69264,
-  "sha1": "0de9b3dadc13954fcef35c6b96beefb63ab5c13c"
+  "size": 69272,
+  "sha1": "20cf97bea185ce45e34752046580ec0552791092"
  },
  "drops/austin-bbq-field-guide.html": {
-  "size": 33721,
-  "sha1": "4feb33c8f793a015b2f257e1879f2a78b6bae1c7"
+  "size": 33729,
+  "sha1": "e80cda8ce8e4463c9a355679da99189290c55f67"
  },
  "drops/manors-ss26.html": {
-  "size": 30500,
-  "sha1": "937e96c509773b90a7ef3046befa93f088170215"
+  "size": 30508,
+  "sha1": "022b0354fba8b554f1e1fa684ae70d509e2a661f"
  },
  "drops/break-80-kit.html": {
-  "size": 38268,
-  "sha1": "decfc3b00045dc3a89ca64c0b708b1a2be4e2c3b"
+  "size": 38276,
+  "sha1": "26fba32063bf17a8d285f2cf923cfd756dbd8368"
  },
  "drops/hancock-golf-course-austin.html": {
-  "size": 45933,
-  "sha1": "edd67d58d4918fff2c9c4f6df2c097895bb95abc"
+  "size": 45941,
+  "sha1": "93179ef338568e66c5aee1815091341f4d5ac02d"
  },
  "drops/zara-home-made-a-golf-collection-and-its-weirdly-good.html": {
-  "size": 27118,
-  "sha1": "28533b54b2f98b27800bb225f9f17abf22a2460a"
+  "size": 27126,
+  "sha1": "cbc123aef27ce7a08fabf63237599ac367d5a8c6"
  },
  "drops/7-books-to-elevate-your-golf-game.html": {
-  "size": 30443,
-  "sha1": "1357bc5bc79b54acb49b58b2381a83c1fc1c0edb"
+  "size": 30451,
+  "sha1": "f03e12141976040926dca945d5e21d647c8138a8"
  },
  "drops/puma-golf-x-realtree-precision-in-the-wild.html": {
-  "size": 62336,
-  "sha1": "57cf46c8ce819f1c2dd14ace442d7aa6d7f0095f"
+  "size": 62344,
+  "sha1": "df12c91dbf3c6972a3df3b82e2383da9e464f73a"
  },
  "drops/the-camo-edit.html": {
-  "size": 39156,
-  "sha1": "22aceb7b573882f4ef6de49b5936808fd2bca770"
+  "size": 39164,
+  "sha1": "953a22d90fd9f2f2993b0adc793351f182a0a744"
  },
  "drops/the-summer-tee-edit.html": {
-  "size": 52317,
-  "sha1": "69944c786e3767d158750303ec07c15f9ee3d178"
+  "size": 52325,
+  "sha1": "def0b205160b55bf095797dc7721c5e33d4b0b89"
  },
  "drops/gumtree-nature-club-drop.html": {
-  "size": 39137,
-  "sha1": "d8ba5188f585fc0fe935ae2ff068a21973f434aa"
+  "size": 39145,
+  "sha1": "f6dc6c530b65187cce1dfe0e911ca64be223b6a3"
  },
  "drops/brand-to-know-quiet-golf.html": {
-  "size": 73756,
-  "sha1": "7ec673c94adcea2f81cc7ea74db728617d3f8d90"
+  "size": 73764,
+  "sha1": "3cda01234eed3c18b4ab576197c3032243f6748e"
  },
  "drops/brand-to-know-jlindeberg.html": {
-  "size": 80145,
-  "sha1": "243de4eafe658bdf84433052aa897c16c0e78259"
+  "size": 80153,
+  "sha1": "1bc815c2acca883e6b49f1488dcd0c4f026b4c5b"
  },
  "drops/the-masters-ticket-lottery-is-open-you-have-twenty-days.html": {
-  "size": 23817,
-  "sha1": "9e8d80238ab55e1b3b6a4d5f0fbbbbdd4d15f239"
+  "size": 23825,
+  "sha1": "2f8fd3bc36287585530eda6ed680162344b0ed3d"
  },
  "drops/the-lottery-round-austin-private-clubs.html": {
-  "size": 67043,
-  "sha1": "cd1d75cd05714e316c934e8eb08320052f2f502b"
+  "size": 67051,
+  "sha1": "31b5da8e0d52f820b0553fdc844c69c160d9a5bf"
  },
  "drops/the-ball-marker-edit-6-markers-worth-pocketing.html": {
-  "size": 26220,
-  "sha1": "6a0100103e1f7d4ec19fe3fef8a45ccc60636009"
+  "size": 26228,
+  "sha1": "cf9fbd7c306c82d7ac1b06a45ba20f12e7be1a05"
  },
  "drops/fyfe-x-mackenzie-every-edition.html": {
-  "size": 39132,
-  "sha1": "544253d71def56a1c6592aba824b821a17e3fd4e"
+  "size": 39140,
+  "sha1": "3b9f55baa5a8fa0888f7a5da5d3c9fa136ee6880"
  },
  "drops/the-putter-cover-edit-11-covers-worth-the-pocket.html": {
-  "size": 34804,
-  "sha1": "41a48b19b713be2dc04598eacbb70015cf165d44"
+  "size": 34812,
+  "sha1": "5f40968c54139d26350bd0eda90ad562d0228540"
  },
  "drops/brand-to-watch-kingfisher-golf.html": {
-  "size": 30610,
-  "sha1": "8dd0caf731e6cf015524130b7c84a0a66b301eb2"
+  "size": 30618,
+  "sha1": "d6c4c37dbc10823e229522400e4864e0d0b81071"
  },
  "guides/index.html": {
-  "size": 22825,
-  "sha1": "84ceccb2b2785bc51e7d4518303c75d6179304f8"
+  "size": 22833,
+  "sha1": "1ea7f79a40454abb38aaa297e76599d36bd2e174"
  },
  "guides/lions-6.html": {
-  "size": 30031,
-  "sha1": "3d2689169178d1c444b604d6bc4af24321d45bbc"
+  "size": 30039,
+  "sha1": "5191b13d2c15ac904ea2acf33d79cddd719684c0"
  },
  "guides/roy-kizer-15.html": {
-  "size": 28559,
-  "sha1": "150df9e99662d34d99eda3027e2287af8e25b87b"
+  "size": 28567,
+  "sha1": "c79ef237efe441ee0fbec708b10766347d37a146"
  },
  "guides/hancock-1.html": {
-  "size": 28554,
-  "sha1": "31762741f87891c5ff2da31c561bf390b19f4b58"
+  "size": 28562,
+  "sha1": "4a9a5212f7245ff8fef64c6444bd81512e8ad877"
  },
  "guides/morris-williams-7.html": {
-  "size": 28691,
-  "sha1": "05fe37bd2384f9cb4c863aa3f52985e76e4ad0ee"
+  "size": 28699,
+  "sha1": "a23aa011f0876bf6b401677f2e1e237d4b6b2d22"
  },
  "events/index.html": {
-  "size": 34340,
-  "sha1": "95d7c7f59639e55d89439415e9fd058e204e53df"
+  "size": 34348,
+  "sha1": "9e32b2324b76c126ef0ec4f688d3da37b87d09c1"
  },
  "events/texas-childrens-classic-2026.html": {
-  "size": 22716,
-  "sha1": "45467ebd6ff5319e1281a7b44da06d1ce326b43b"
+  "size": 22724,
+  "sha1": "4458d5420d23c4dc53a2bfb6c61adbcc4ae3b8f0"
  },
  "events/hill-country-amateur-2026.html": {
-  "size": 22015,
-  "sha1": "696e42f0fb4b2c2eb4e8365d27693c2fae4982ae"
+  "size": 22023,
+  "sha1": "b3ee97939680c26e54d41ed24a5fc293bc2def9f"
  },
  "events/the-long-walk.html": {
-  "size": 30960,
-  "sha1": "ed96ff4f703e54556ca535b77f5b5048439bbfc7"
+  "size": 30968,
+  "sha1": "bffdce7723a401deb7f77564650112c67542dd1e"
  }
 }

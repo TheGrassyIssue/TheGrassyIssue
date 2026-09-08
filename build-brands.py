@@ -640,7 +640,12 @@ def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
         href = f'/brands/{b["slug"]}' if men else b["url"]
         thumb = (f'<div class="bp-thumb"><img src="{f}" loading="lazy" alt="{H.escape(b["name"])}"></div>'
                  if f else '<div class="bp-thumb bp-nothumb"></div>')
-        others = "".join(f'<a class="bi-tag" href="/brands/tag/{t}">{TAGL[t]}</a>'
+        # NOTE: <span>, not <a>. The tile itself is <a class="bp-card">, and an
+        # anchor nested inside an anchor is invalid HTML — the parser silently
+        # splits each tile into three sibling fragments, so a 31-brand tag page
+        # reported 67 cards and the chips were unreliable to click. The brand
+        # index gets away with <a class="bi-tag"> because its card is a <div>.
+        others = "".join(f'<span class="bi-tag">{TAGL[t]}</span>'
                          for t in b.get("tags", []) if t != tag and t in TAGL)
         locx = H.escape(b["loc"]) if b["loc"] != EMDASH else ""
         tagbar = '<div class="bi-tags">' + others + '</div>' if others else ""
@@ -694,7 +699,15 @@ def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
   </div>
   <p class="bp-foot"><a href="/brands/">&larr; Back to the Brand Index</a></p>
 '''
-    out = re.sub(r"(<main[^>]*>).*?(</main>)", lambda m: m.group(1) + "\n" + body + m.group(2), out, 1, re.S)
+    # The generated brand pages have NO <main> element, so the original
+    # <main>...</main> swap silently matched nothing and every tag/attr page
+    # shipped as an unmodified clone of the template brand. Swap on the real
+    # boundaries instead: everything between </nav> and <footer>. At build time
+    # the template is freshly generated, so the mobile drawer and search block
+    # (added later in the chain) are not yet present and cannot be clobbered.
+    out, n = re.subn(r"(</nav>).*?(<footer)", lambda m: m.group(1) + "\n" + body + m.group(2), out, 1, re.S)
+    if n != 1:
+        raise SystemExit(f"tag_page: body swap failed for {tag} — nav/footer anchors not found")
     return out
 
 os.makedirs(os.path.join(ROOT, "brands", "tag"), exist_ok=True)
