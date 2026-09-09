@@ -32,6 +32,17 @@ Crayon *Limited Edition*, which is a different SKU from the standard Augusta
 Green. Only SKUs with no limited-quantity language are called restock
 candidates.
 
+SWAP 2026-09-09: the Birdicorn 6-in-1 was pulled at Lenny's request and replaced
+by Provision Machining & Design's Stainless Steel Minimalist ($35.99). Provision
+was found by search, not by the brand sweep — it is a machine shop that happens
+to make golf tools, so it does not surface on any golf-brand list. Specs are the
+product page's own: CNC machined from solid stainless, 2.735" x .75" x .2", 1.1
+oz, and the shop describes itself as Ohio-based on /pages/about-us. Verified in
+stock (live Add to Cart, no sold-out state) on 9 Sept 2026. Maker count holds at
+16 and the in-stock group holds at 8, so no section header needed rewriting.
+NOTE: the VESSEL x Birdicorn collab in the same section is a separate SKU and is
+deliberately left in place — its brand slot is Vessel.
+
 Deliberately NOT asserted (no source):
   - a restock date, or that any specific piece WILL return
   - production numbers for anything without a stated cap
@@ -54,7 +65,8 @@ SHOP = {
  "edelgolf.com":"https://edelgolf.com/products/","seamusgolf.com":"https://www.seamusgolf.com/products/",
  "swag.golf":"https://swag.golf/products/","ghostgolf.com":"https://ghostgolf.com/products/",
  "vesselgolf.com":"https://vesselgolf.com/products/","froggergolf.com":"https://froggergolf.com/products/",
- "sentinelgolf.us":"https://www.sentinelgolf.us/shop/p/","birdicorn.com":"https://birdicorn.com/products/",
+ "sentinelgolf.us":"https://www.sentinelgolf.us/shop/p/",
+ "provisionmachiningdesign.com":"https://www.provisionmachiningdesign.com/products/",
  "krakengolf.com":"https://krakengolf.com/products/","bettinardi.com":"https://bettinardi.com/products/",
  "gamutgolf.com":"https://gamutgolf.com/products/","matchstickgolf.com":"https://matchstickgolf.com/products/",
  "fyfegolf.com":"https://www.fyfegolf.com/products/","malbon.com":"https://malbon.com/products/",
@@ -62,7 +74,8 @@ SHOP = {
 }
 BRAND = {
  "edelgolf.com":"Edel Golf","seamusgolf.com":"Seamus Golf","swag.golf":"Swag Golf","ghostgolf.com":"Ghost Golf",
- "vesselgolf.com":"Vessel","froggergolf.com":"Frogger","sentinelgolf.us":"Sentinel Golf","birdicorn.com":"Birdicorn",
+ "vesselgolf.com":"Vessel","froggergolf.com":"Frogger","sentinelgolf.us":"Sentinel Golf",
+ "provisionmachiningdesign.com":"Provision Machining &amp; Design",
  "krakengolf.com":"Kraken Golf","bettinardi.com":"Bettinardi","gamutgolf.com":"Gamut Golf",
  "matchstickgolf.com":"Matchstick Golf","fyfegolf.com":"Fyfe Golf","malbon.com":"Malbon",
  "sugarloafsocialclub.com":"Sugarloaf Social Club","miuragolf.com":"Miura Golf",
@@ -70,7 +83,7 @@ BRAND = {
 # hand-written display names + copy, keyed by the image slug
 COPY = {
  "frogger":("HOP! Green Repair Tool","The cheapest thing here and the one most likely to already be clipped to a bag. Frogger builds a sprung two-prong head that pops open with a thumb, which is the whole pitch &mdash; you can work it one-handed while the other hand holds a putter."),
- "birdicorn":("6-in-1 Divot Tool","Six functions in an anodised aluminium body: repair prongs, ball marker, line stencil, groove cleaner, bottle opener and grip rest. Multi-tools usually do everything adequately and nothing well; at $20 that is a reasonable trade."),
+ "provision":("Minimalist Divot Tool &mdash; Stainless","Provision runs a CNC and plasma-table machine shop in Ohio, and the golf pieces come off the same machines as the rest of the work. This one is a flat stainless slab &mdash; 2.735 inches long, a fifth of an inch thick, 1.1 oz &mdash; with the prongs cut out of the body rather than pressed into it. The face carries no logo and no motif."),
  "ghost":("Divot Tool","A stamped stainless two-prong at the lowest end of the range, sold through Ghost's own shop. The listing photograph carries True Putt branding on the face, so treat it as a piece Ghost sells rather than one it manufactures."),
  "vessel":("&times; Birdicorn Divot Tool","Vessel is a bag house, so a divot tool is a side quest &mdash; and it went to Birdicorn to make it. Blacked-out finish with the Vessel mark cut into the head, and the only collaboration in this group at under $30."),
  "edel":("Fine Milled Repair Tool","Milled rather than stamped, which is the meaningful line in this category: a milled tool starts as a solid billet and holds an edge on the prongs instead of rolling over. Edel scripts its name across the face and leaves the rest alone."),
@@ -105,7 +118,9 @@ def frames(s):
 
 def gal(s, name):
     n = frames(s)
-    pl = re.sub(r'<[^>]+>|&[a-z]+;|&#\d+;', '', name).strip()
+    # collapse whitespace AFTER stripping entities — otherwise "Jimmy Bar &mdash;
+    # Titanium" leaves a double space in the alt text where the dash was.
+    pl = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>|&[a-z]+;|&#\d+;', '', name)).strip()
     if n == 1:
         return (f'<div class="product-gallery"><div class="pg-track"><div class="pg-frame">'
                 f'<img src="{IMG}{s}.jpg" alt="{pl}" loading="lazy" /></div></div></div>')
@@ -184,10 +199,21 @@ FAQ_ITEMS = [
  ("Do sold-out divot tools come back?",
   "It depends on the piece. Makers rerun standard colourways without announcing dates. Numbered limited drops do not return &mdash; Kraken states the cap in the product copy, such as &ldquo;Limited to 30&rdquo; on Blacklist 024. The watchlist in this edit only includes pieces with no stated cap."),
 ]
+# HOUSE FAQ MARKUP IS <details class="faq-q"><summary>, NOT div.faq-q + div.faq-a.
+# Built 2026-09-09 with the div form and it failed two ways at once:
+#   * verify-post.py flagged `faq-a` as a class with no CSS rule, because the
+#     house sheet only styles .faq-q / .faq-q p / .faq (there is no .faq-a rule
+#     anywhere on the site — the answer is a <p> inside the <details>).
+#   * apply-faq-style.py's add_visible() looks for "<details" to decide whether
+#     a page already shows its FAQ. Div markup is invisible to that test, so it
+#     appended a SECOND FAQ rendered from the page's own schema. Same duplicate
+#     bug as the Takomo page.
+# Emitting <details> directly makes apply-faq-style.py a no-op here.
 FAQ = """<section class="products">
-  <h2 class="products-hdr">The Questions</h2>
+  <h2 class="products-hdr" id="faq">The Questions</h2>
   <div class="faq">
-""" + "\n".join(f'    <div class="faq-q">{q}</div>\n    <div class="faq-a">{a}</div>' for q, a in FAQ_ITEMS) + """
+""" + "\n".join(f'    <details class="faq-q"><summary>{q}</summary><p>{a}</p></details>'
+                for q, a in FAQ_ITEMS) + """
   </div>
 </section>
 """

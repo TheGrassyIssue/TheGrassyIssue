@@ -54,7 +54,18 @@ became become becomes learned learn learns thought think thinks
 left leave leaves lived live lives spent spend spends
 spans span shows show showed sits sit stands stand spreads spread
 offers offer offered pairs pair paired suits suit suited weighs weigh
-launches launch launched forges forge forged""".split())
+launches launch launched forges forge forged
+buys buy bought sews sew sewed sewn resells resell resold collects collect collected
+publishes publish published sources source sourced prints print printed dyes dye dyed
+names name named lists list listed answers answer answered describes describe described
+knits knit knitted stitches stitch stitched""".split())
+# The five lines above were added 2026-09-09 after the verbless-opener check
+# fired on "Après buys secondhand..." and "Après publishes three named...".
+# Both sentences plainly have a finite verb; the set simply had no entry for
+# buy/publish. This is a false-positive fix, not a loosening: every word added
+# is an ordinary English verb, and the check still requires one to be present.
+# If this fires again on an obvious verb, extend the set — do not reword good
+# copy to satisfy a lookup table.
 
 
 def sentences(t):

@@ -104,3 +104,53 @@ Manors (endpoint pulled), Cloud & Wind (Squarespace), Metalwood Studio (moved to
 ## Note
 
 You already have a page at `/drops/lions-muny-is-getting-a-world-class-renovation-heres-whats-c`. Worth a look next to what the city's site currently says — their only posted project is the May driving-range resurfacing.
+
+---
+
+## Re-index queue — deploy of 9 Sept 2026
+
+Submit in this order. Priority 1 is a genuine indexability fix and should go
+first while daily quota is fresh.
+
+**Priority 1 — the seven pages that had NO navigation at all.** These were
+built without a `<nav>`, so Google had them as orphans with no internal link
+path out. Nav, search box and mobile menu are now installed on every one.
+Re-submitting is the point of this deploy.
+
+*(URLs as listed in the audit section above.)*
+
+**Priority 2 — new page.**
+
+- `https://thegrassyissue.com/drops/brand-to-know-apres-golf`
+  Brand to Know: Après Golf. New page, 50 products, ~4,350 words, FAQPage
+  schema. Also creates `/brands/apres-golf`, which is linked from `/brands`
+  and from the three taste-tag pages Après now appears on
+  (loud-on-purpose, made-by-hand, design-nerd).
+
+**Priority 3 — substantially changed pages.**
+
+- `https://thegrassyissue.com/drops/7-divot-tools-actually-worth-carrying`
+  The Birdicorn 6-in-1 was replaced by Provision Machining & Design's
+  Stainless Steel Minimalist ($35.99). One product card swapped, three images
+  changed, FAQ markup converted from divs to `<details>`. Content otherwise
+  unchanged from the 9 Sept rebuild.
+
+- `https://thegrassyissue.com/brands` — 115 brands now, up from 114.
+
+**Priority 4 — three coverage pages that were never in the sitemap.**
+
+Found while verifying this push. These have been live and linked from /brands
+for days, but no sitemap listed them, so Google had only the /brands page as a
+route in. Now added.
+
+- `https://thegrassyissue.com/brands/apc-golf`      (live since 2 Sept)
+- `https://thegrassyissue.com/brands/cph-golf`      (live since 2 Sept)
+- `https://thegrassyissue.com/brands/public-drip`   (live since 31 Aug)
+
+Cause: build-brands.py writes a coverage page per brand, but each post's wire
+script only added its own /drops/ URL. `sync-brand-sitemap.py` now reconciles
+the two and should be run after build-brands.py from here on.
+
+Everything else that moved in this deploy (133 pages picked up wordmark and
+nav-search changes) does NOT need manual submission. The text content is
+identical and Google will take it on normal recrawl. Do not spend quota there.

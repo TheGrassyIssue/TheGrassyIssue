@@ -1,30 +1,534 @@
 {
- "drops/bold-tees-carousel.html": {
-  "size": 36604,
-  "sha1": "805ceb4f58f221bedfa564d828b75f818528aa2e"
+ "brands/3-putt-round.html": {
+  "size": 10024,
+  "sha1": "7dc3bcc2128b6bb381edeacae2985f94ebc9bd1d"
  },
- "drops/hats-carousel.html": {
-  "size": 39173,
-  "sha1": "8581ac104093c55e907ef0a333b03462a9e97525"
+ "brands/agronomy-workshop.html": {
+  "size": 11489,
+  "sha1": "1708cc292e4f25ddb7a85c116cc48d07fc4deef6"
  },
- "drops/malbon-summer-gallo-colorido.html": {
-  "size": 32135,
-  "sha1": "a23cfa7af52ad2d221ebc66f8ee5182f09770593"
+ "brands/aime-leon-dore.html": {
+  "size": 11510,
+  "sha1": "c35c315110105553b0570bf5993a91d4b82c5b97"
  },
- "drops/manors-gentleman-jack.html": {
-  "size": 34275,
-  "sha1": "8e281e3d3627a327e032afc41f4bb946a0fcef73"
+ "brands/ally-aiken.html": {
+  "size": 10270,
+  "sha1": "a3b029464b601cb531eb38af7fa1a1815fed3b1d"
  },
- "drops/metalwood-ss26-picks.html": {
-  "size": 36139,
-  "sha1": "0eeb77c7625cd09d19a1edc96ca9c66176581b04"
+ "brands/anti-country-club-tokyo.html": {
+  "size": 10600,
+  "sha1": "76f7b4ff188238a4a1536d51edb66ff76a176b67"
  },
- "drops/muni-kids-10-years.html": {
-  "size": 35770,
-  "sha1": "34560c3b7a5f49276ae9084da7b10273a893cd88"
+ "brands/apc-golf.html": {
+  "size": 10240,
+  "sha1": "0f7d6899383555fcfe5eb2669ffa578bfe958d59"
  },
- "drops/premium-tees-carousel.html": {
-  "size": 32263,
-  "sha1": "155d5dbb5600e37544d8df319eccff614281c64d"
+ "brands/apres-golf.html": {
+  "size": 10222,
+  "sha1": "c0a54ef8b1946c806984a540ceba9179af5493ce"
+ },
+ "brands/artisan-golf.html": {
+  "size": 10946,
+  "sha1": "cdd7588e5c8670680ff30d21e5a2278a8de6563f"
+ },
+ "brands/attr/drops-and-vanishes.html": {
+  "size": 17613,
+  "sha1": "f8cc35d53bd4e63641db9e5648d688323a5df1a4"
+ },
+ "brands/attr/heritage.html": {
+  "size": 19602,
+  "sha1": "9d9071568d0a61ceb1a82f04cf4e942ecec0b217"
+ },
+ "brands/attr/new-to-index.html": {
+  "size": 33108,
+  "sha1": "77ff202eb9ef4fc2409bff5744140429329fec43"
+ },
+ "brands/attr/tour-proven.html": {
+  "size": 16962,
+  "sha1": "61f5cacbf2cfad71590a3d812a4c77cf7c654989"
+ },
+ "brands/attr/women-founded.html": {
+  "size": 21832,
+  "sha1": "1e7d10e352ee8c924d0edc0794755cd50d4c580d"
+ },
+ "brands/aug-11.html": {
+  "size": 10062,
+  "sha1": "032ee9e497a39fd3ea2f67683636c2f0282f3f30"
+ },
+ "brands/austinknittylimits.html": {
+  "size": 10304,
+  "sha1": "6da04c9782096f20b8cd9e21431fa6b52b9539d4"
+ },
+ "brands/badlands.html": {
+  "size": 10449,
+  "sha1": "3c62e975634b9997005306c95b3b9b60c3ccc70e"
+ },
+ "brands/bag-boy.html": {
+  "size": 10932,
+  "sha1": "8b5f4f172eca189ed2fbcd6815423fa1ac345cd0"
+ },
+ "brands/beams-golf.html": {
+  "size": 10650,
+  "sha1": "45135d8446b9091e1442315a4e5e0dac2ca2edc7"
+ },
+ "brands/bestgrips.html": {
+  "size": 10706,
+  "sha1": "d6fb07e95330beaee0259ac3253a96c7d6daa407"
+ },
+ "brands/bettinardi.html": {
+  "size": 13786,
+  "sha1": "e3e6fa8c7ade1448a77a3015c86910c6653e0f2f"
+ },
+ "brands/big-dog-golf.html": {
+  "size": 10375,
+  "sha1": "9862a126d17647e9c76bddf16829a85aeece7640"
+ },
+ "brands/birds-of-condor.html": {
+  "size": 17382,
+  "sha1": "5b95dc7ab1d26cc07b5006d57051451397742375"
+ },
+ "brands/bluegrass-fairway.html": {
+  "size": 10785,
+  "sha1": "91baea96dd548ac41d0f35b059b4ae7c439ce93f"
+ },
+ "brands/bluetross.html": {
+  "size": 10164,
+  "sha1": "24f79f2ef8c3d848f3db1eedddeb86209b13a904"
+ },
+ "brands/bunker-mentality.html": {
+  "size": 10261,
+  "sha1": "022e1b086c17a12b91ea8d831aa5c9bfb7abb745"
+ },
+ "brands/carhartt-wip.html": {
+  "size": 10820,
+  "sha1": "9be3c286cf9490be38fdeb9e88007e2046ce6c49"
+ },
+ "brands/casualist.html": {
+  "size": 12805,
+  "sha1": "6c511e7cac92320e766fcba5c78a28453b69d449"
+ },
+ "brands/chipp-golf.html": {
+  "size": 10250,
+  "sha1": "5d919dd5230645d46ec4a5c805f0acdceab1f3b2"
+ },
+ "brands/clint-orms.html": {
+  "size": 11223,
+  "sha1": "d8d0012ee76bfe92a7d4bc5aed96b241a8a0cfd3"
+ },
+ "brands/cloud-and-wind-golf.html": {
+  "size": 13019,
+  "sha1": "c9d60e2ca1818f926d1df0beebea69c1f5af0b9a"
+ },
+ "brands/cph-golf.html": {
+  "size": 10231,
+  "sha1": "4ff8027b115bce8f8ee0c81b0914a72d6d2e6621"
+ },
+ "brands/criquet.html": {
+  "size": 11320,
+  "sha1": "64297dfa110081fdc64970e28fdce5965380778a"
+ },
+ "brands/daphnes-headcovers.html": {
+  "size": 10278,
+  "sha1": "57655728ea6a4ed04f3eda0789c1af533ee6100f"
+ },
+ "brands/devant.html": {
+  "size": 10664,
+  "sha1": "77cdefa70462df25ed4a8ba7af47af4f7489e32e"
+ },
+ "brands/devereux-golf.html": {
+  "size": 18455,
+  "sha1": "18ba2a9f2c644ca2a93f93b93ad8b962d5a3da0b"
+ },
+ "brands/dormie-workshop.html": {
+  "size": 11948,
+  "sha1": "3d8acbccf9b3630e8974c75bb1410a52220ff4f7"
+ },
+ "brands/duca-del-cosma.html": {
+  "size": 10665,
+  "sha1": "aa05bc56abae615263ebd1d2e54575ac8b2b9522"
+ },
+ "brands/eastside-golf.html": {
+  "size": 16033,
+  "sha1": "17ca2159cb1338b2478c7b4098901028b353552d"
+ },
+ "brands/edel-golf.html": {
+  "size": 11482,
+  "sha1": "16e00e2df6147cba738023e06929bb2463fc5e7d"
+ },
+ "brands/edison-golf.html": {
+  "size": 10234,
+  "sha1": "cb063016fb0f9223036156651f08eec3a9bafcef"
+ },
+ "brands/evnroll.html": {
+  "size": 10520,
+  "sha1": "4b19324c25352b0c5f35ff2c49825ddb97a842a2"
+ },
+ "brands/fella-golf.html": {
+  "size": 12120,
+  "sha1": "2deecab750bed15726c87b7e4744d936267ab8ff"
+ },
+ "brands/forden-golf.html": {
+  "size": 10110,
+  "sha1": "15efc5c5f86af462b8c3256894eacacc917a732c"
+ },
+ "brands/found-golf.html": {
+  "size": 11494,
+  "sha1": "43eb58c1e95aac47f9a3f17059b1606c3686ffbc"
+ },
+ "brands/fyfe-golf.html": {
+  "size": 16231,
+  "sha1": "00a7a6474be4838f53d1c84b8e42d9f2498e7f2c"
+ },
+ "brands/gamut-golf.html": {
+  "size": 10202,
+  "sha1": "9ec42d14a71b38e6a7f8cfc9451357a8c659dcab"
+ },
+ "brands/garsen-golf.html": {
+  "size": 10070,
+  "sha1": "8dc06a258a0c536fb3f3113d83845a38a6e11b82"
+ },
+ "brands/gfore.html": {
+  "size": 11053,
+  "sha1": "aa78fab8e31c2db2aa05438fdd2c0faaa96b96ea"
+ },
+ "brands/ghost-golf.html": {
+  "size": 12701,
+  "sha1": "ca1dd2364ec6c849cdc92499f567ae8462552463"
+ },
+ "brands/gramicci.html": {
+  "size": 10082,
+  "sha1": "001b7878de027f15434140157f291f9cc8b6d322"
+ },
+ "brands/gray-haast.html": {
+  "size": 10328,
+  "sha1": "9c3f8f8015e4aa017970c75af073b38be81526f3"
+ },
+ "brands/gumtree-golf.html": {
+  "size": 17499,
+  "sha1": "55c64d720d91411f406c9634ec065223b86912fb"
+ },
+ "brands/gumtree-nature-club.html": {
+  "size": 15092,
+  "sha1": "6a5974efa764090ec9cff9fe36d3a59d6671f18b"
+ },
+ "brands/hedge.html": {
+  "size": 10125,
+  "sha1": "8368e1a77a4d60b5548cff3b7f99bc6d32e9564e"
+ },
+ "brands/huega-house.html": {
+  "size": 11834,
+  "sha1": "2ce4eca8d8fc2c77c7b6621ae412239616d66f46"
+ },
+ "brands/index.html": {
+  "size": 205790,
+  "sha1": "83db34137e89a1ad9c4219d2b37e5865931ed722"
+ },
+ "brands/inside-story.html": {
+  "size": 10235,
+  "sha1": "4d1f9cd953167e885339b7fe62d84d7dd329b752"
+ },
+ "brands/jan-craig.html": {
+  "size": 10235,
+  "sha1": "95fa46b95784d4df0a27ff4238c9e48d115ca960"
+ },
+ "brands/jlindeberg.html": {
+  "size": 11470,
+  "sha1": "a35d5f394943f05b3acd008da142b53f08a7cb0c"
+ },
+ "brands/jones-sports-co.html": {
+  "size": 19608,
+  "sha1": "10f7b1f25dcccba0fed3ed01ad09443e4dd17595"
+ },
+ "brands/juniper-james.html": {
+  "size": 10307,
+  "sha1": "a1eed101ba20488c31acde844bc9ff27535ffc90"
+ },
+ "brands/kingfisher-golf.html": {
+  "size": 14373,
+  "sha1": "334d8194f736d68e5cdc2231c348c452fe4ac816"
+ },
+ "brands/lamb-crafted.html": {
+  "size": 10263,
+  "sha1": "9f2f13241894934e04066ee5df3bb7a25888407d"
+ },
+ "brands/left-of-field-golf.html": {
+  "size": 13794,
+  "sha1": "34b13334bafe8420d77e95ed23ae26cc298bdae1"
+ },
+ "brands/lululemon.html": {
+  "size": 10663,
+  "sha1": "7566ae92fc7521d3076996b6b83a51271fad22ad"
+ },
+ "brands/mackem-golf.html": {
+  "size": 10868,
+  "sha1": "8e6df83aff3deaea02f838404accb7f386a021d9"
+ },
+ "brands/mackenzie.html": {
+  "size": 13843,
+  "sha1": "2692caaadf6551d2ee020fa5ca5d523f6d0abc68"
+ },
+ "brands/malbon.html": {
+  "size": 31021,
+  "sha1": "1319174b1368fdfee39811e8c0020c524cf08ddf"
+ },
+ "brands/manors.html": {
+  "size": 26469,
+  "sha1": "3dd5a891d8b19f100b4fb680a4ea210bba83efc3"
+ },
+ "brands/merrill-golf.html": {
+  "size": 12232,
+  "sha1": "8d4a5a034f8d3e2d2df6fc7ded04a470ec208539"
+ },
+ "brands/metalwood-studio.html": {
+  "size": 16907,
+  "sha1": "0a019f0c11fee88d5db3f68b22b033ca2bcbb76d"
+ },
+ "brands/midiron.html": {
+  "size": 10903,
+  "sha1": "cd7fbf4c34a76d031adde9c08ca49afa4926e757"
+ },
+ "brands/mogshade.html": {
+  "size": 13334,
+  "sha1": "cd87d69ddd599f3540e185a3c4962ae51a48c9ea"
+ },
+ "brands/morning-people-clothiers.html": {
+  "size": 11450,
+  "sha1": "966c96a9cbdc67859e0648f598aaa79701cf3bee"
+ },
+ "brands/no-laying-up.html": {
+  "size": 10640,
+  "sha1": "410bc9afbded8b57dcc5d37c47042814d0d779fb"
+ },
+ "brands/odd-ritual.html": {
+  "size": 11055,
+  "sha1": "77d2712e674f6989391e6d78e42e6e2f2d829cc9"
+ },
+ "brands/okka-golf.html": {
+  "size": 10265,
+  "sha1": "a3ba8a4b6ddc96ecc4bafab31ba37d87b128e1e6"
+ },
+ "brands/olydoe.html": {
+  "size": 11273,
+  "sha1": "28adaa0d7e58eb4db4ccb499cd6361b0ed958246"
+ },
+ "brands/orkai.html": {
+  "size": 10112,
+  "sha1": "c786665bfbb77dc4bdbae6025fb55505aef458b4"
+ },
+ "brands/ovo.html": {
+  "size": 10559,
+  "sha1": "04f0d6fc2ab2271266802e62d3af3aa1f0aeccab"
+ },
+ "brands/owala.html": {
+  "size": 10561,
+  "sha1": "488b6a356ffbea454eb00bca42297d18545f55df"
+ },
+ "brands/p53.html": {
+  "size": 10190,
+  "sha1": "21b9c884dd0228f59d90d26d3462eeb49c14c3b1"
+ },
+ "brands/penta-golf.html": {
+  "size": 10766,
+  "sha1": "5947c1f186c1213743a3a5d92b2ab40de70346fc"
+ },
+ "brands/peter-millar.html": {
+  "size": 10691,
+  "sha1": "f995c37ea4848ee34a7994bca5bf1cd3c04693b8"
+ },
+ "brands/pins-and-aces.html": {
+  "size": 12467,
+  "sha1": "524459753743d553dd957b1176f997205bf5bd78"
+ },
+ "brands/piretti.html": {
+  "size": 10697,
+  "sha1": "258520acba73007f58b76f545cca0200dcc3eed1"
+ },
+ "brands/pluto-golf.html": {
+  "size": 10006,
+  "sha1": "77cd422a809a241f7f35ea553f867c7d203c87c3"
+ },
+ "brands/public-drip.html": {
+  "size": 10763,
+  "sha1": "0cdf5ef0ba5b28d0bfb3f2101e598cf9ee4b68f9"
+ },
+ "brands/puma-golf.html": {
+  "size": 12564,
+  "sha1": "5ea32ca5b282425b9379ea32dbf32dbd7577e7c7"
+ },
+ "brands/quiet-golf.html": {
+  "size": 18473,
+  "sha1": "8b137fcf0e64e48fb16ff3c62b60efac6d3c71fd"
+ },
+ "brands/radry-golf.html": {
+  "size": 15803,
+  "sha1": "b948d0c655c78f10c9014148374b5397de9c9ccc"
+ },
+ "brands/random-golf-club.html": {
+  "size": 16087,
+  "sha1": "58c3a523d4f873f5b3acabda98ffbebe3575c0f4"
+ },
+ "brands/read-the-green.html": {
+  "size": 11425,
+  "sha1": "64160906fa328ec097c1d0a40fc4418eed97173b"
+ },
+ "brands/realtree.html": {
+  "size": 12421,
+  "sha1": "78dd1cb934460316147bb27aa5b1878cad9da791"
+ },
+ "brands/rebolf.html": {
+  "size": 9963,
+  "sha1": "ee55d8d8f41e95c1836d09ca769c0def19466501"
+ },
+ "brands/rhoback.html": {
+  "size": 10117,
+  "sha1": "d99feafb5ce5613dda233fb835870aaac5d5a061"
+ },
+ "brands/ripit-grips.html": {
+  "size": 10073,
+  "sha1": "38dab781c1450c075ed495f978546c6e5e1c66d1"
+ },
+ "brands/rosemark-grips.html": {
+  "size": 10111,
+  "sha1": "0e0bcd07ab79395ffdecf9e7b611261c1983759f"
+ },
+ "brands/rouqe-golf.html": {
+  "size": 10091,
+  "sha1": "275ed5327e31eee35660c702e62bdc8ea3fed1e9"
+ },
+ "brands/royal-albartross.html": {
+  "size": 10237,
+  "sha1": "c22cad59739c2048e0ee1470706207f011e870de"
+ },
+ "brands/seamus.html": {
+  "size": 19106,
+  "sha1": "c1e50e7f44048413118c729e13af7f86e1acf3cd"
+ },
+ "brands/sentinel-golf.html": {
+  "size": 15058,
+  "sha1": "af8bbbb420a9907f4bc91488cf6c002bbbe48126"
+ },
+ "brands/siegelman-stable.html": {
+  "size": 11958,
+  "sha1": "db2389af28ddde26b7bfed698df185ab327fe128"
+ },
+ "brands/sierra-madre.html": {
+  "size": 10303,
+  "sha1": "ae0fe947f72a6dace94aee6dcaac03699f327dbd"
+ },
+ "brands/sinking-birdies.html": {
+  "size": 10249,
+  "sha1": "ae1408bd2c49d6a66fdcf81291281e271e286d2c"
+ },
+ "brands/sounder.html": {
+  "size": 12211,
+  "sha1": "15b8b6534dbaf11ef55be1878b899485e8e58fbf"
+ },
+ "brands/stick-grips.html": {
+  "size": 10082,
+  "sha1": "39c6208b2e777b334bccdd7d3466dc15f01b1e5f"
+ },
+ "brands/stitch-golf.html": {
+  "size": 13832,
+  "sha1": "ac017ff0c91a225014a8738095c3a9001720f229"
+ },
+ "brands/students-golf.html": {
+  "size": 19076,
+  "sha1": "26161d38def66fc86746a3f639f52cb2736986a3"
+ },
+ "brands/sugarloaf-social-club.html": {
+  "size": 22521,
+  "sha1": "6ecf0c1e8ac6a10dab124509aa1b509963116686"
+ },
+ "brands/sun-mountain.html": {
+  "size": 11750,
+  "sha1": "607fe0d25395352c4d4a9b7c513bebf5872fd467"
+ },
+ "brands/sunday-golf.html": {
+  "size": 13099,
+  "sha1": "bf0239849decb8302d5040aade72d86dc4ca976d"
+ },
+ "brands/swag-golf.html": {
+  "size": 10202,
+  "sha1": "c6bab1b4caacc2dc7dea9c83a29d25459ccd6ed3"
+ },
+ "brands/tag/collab-machine.html": {
+  "size": 19671,
+  "sha1": "4dbcb21188ea6e0808e7ab9f6b32782d7df122a5"
+ },
+ "brands/tag/course-merch.html": {
+  "size": 12818,
+  "sha1": "7d1d2980ac836b92fa404e505febc02d5e7a9176"
+ },
+ "brands/tag/dad-golf.html": {
+  "size": 11415,
+  "sha1": "6f0c66d9142ad6dd4782bf12c09fa546e58d725f"
+ },
+ "brands/tag/design-nerd.html": {
+  "size": 30678,
+  "sha1": "acf47c5e880d7ca302d683c259cde89ed0ebd628"
+ },
+ "brands/tag/gorpcore.html": {
+  "size": 15617,
+  "sha1": "682d71ae518436fc82db00dc61b35d2f902b3c1e"
+ },
+ "brands/tag/loud-on-purpose.html": {
+  "size": 24661,
+  "sha1": "39e6dc91e7c96417127d9b86be9eeb0d5393b409"
+ },
+ "brands/tag/made-by-hand.html": {
+  "size": 24423,
+  "sha1": "82814d79106f1da3419fc02bb3cdd45ef3fa926f"
+ },
+ "brands/tag/member-guest.html": {
+  "size": 12753,
+  "sha1": "caa92c31d938e9d02c9bf3159aac715eb1bd79d7"
+ },
+ "brands/tag/muni-energy.html": {
+  "size": 23173,
+  "sha1": "ce3225b658c10f1b6468b6064132e4492ad11734"
+ },
+ "brands/tag/post-round-friendly.html": {
+  "size": 21091,
+  "sha1": "b293f5db532d47e5b8e73d7cdbce84f34c5e5c50"
+ },
+ "brands/tag/quiet-luxury.html": {
+  "size": 16710,
+  "sha1": "510059eb24a865782de71932a3fea64ad2710326"
+ },
+ "brands/tag/range-rat.html": {
+  "size": 13059,
+  "sha1": "69b2aab0f6faa1787794f25320c0b0fe591bb461"
+ },
+ "brands/takomo-golf.html": {
+  "size": 11077,
+  "sha1": "2cf082a965b520de1c2df0764108ee4f5982c4ec"
+ },
+ "brands/twentyfour-golf.html": {
+  "size": 10347,
+  "sha1": "7fa3f8e98548c48340f24f4e50ee41a4d7bb0b01"
+ },
+ "brands/vessel.html": {
+  "size": 14226,
+  "sha1": "36e2d30dfff688bb816a7cc28c332679a9bf270f"
+ },
+ "brands/vuori.html": {
+  "size": 10718,
+  "sha1": "d1770ca18a174baf6b2b7a59e4d6f31f71958e1d"
+ },
+ "brands/walker-golf-things.html": {
+  "size": 14949,
+  "sha1": "7f27f00847f641dc5a3f595dae95115dcd8147cf"
+ },
+ "brands/water-when-dry.html": {
+  "size": 11874,
+  "sha1": "463ed1cedb0ff8a776e840f29ac0a9601e491fa5"
+ },
+ "brands/winston-collection.html": {
+  "size": 12990,
+  "sha1": "dc734a1a6d12d44f7a94286a7ac9b35c30bcc527"
+ },
+ "brands/zaleas-golf.html": {
+  "size": 10238,
+  "sha1": "e3ce8003424b58e82d48eb2f198793937482275b"
  }
 }
