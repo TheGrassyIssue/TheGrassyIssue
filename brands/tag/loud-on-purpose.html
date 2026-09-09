@@ -38,7 +38,8 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-meta{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6e736c;margin-bottom:12px;}
 .bp-line{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}
 .bp-profile{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}
-.bp-grid{max-width:1200px;margin:30px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}
+.bp-gridhdr{max-width:1200px;margin:34px auto 0;padding:0 24px;font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:-.01em;}
+    .bp-grid{max-width:1200px;margin:18px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}
 .bp-card{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}
 .bp-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}
 .bp-thumb{aspect-ratio:16/10;overflow:hidden;background:#eceae2;position:relative;}
@@ -71,26 +72,6 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 .nav-drawer.open{display:flex;opacity:1}
 .nav-drawer a{padding:12px 24px;border-bottom:1px solid transparent;transition:border-color .15s;min-height:44px;display:flex;align-items:center}
 .nav-drawer a:hover{border-bottom-color:var(--ink)}
-/*TGI-NAV-MOBILE-V1*/
-@media(max-width:820px){
-  /* The 89 brand pages never hid .nav-links on mobile (their only query tweaks
-     gap), so the links stayed visible and overflowed. Normalise every nav here
-     rather than depending on each page's own rules. */
-  .nav-inner{gap:12px;padding-left:16px;padding-right:16px;justify-content:space-between}
-  .nav-links{display:none!important}
-  .nav-toggle{display:flex!important}
-  .nav-wordmark{font-size:17px;letter-spacing:.06em;flex:0 0 auto}
-  #tgi-sbox{flex:1 1 60px;min-width:0}
-  #tgi-search-input{width:100%;min-width:0}
-  #tgi-search-results{width:min(300px,calc(100vw - 32px))}
-}
-@media(max-width:360px){
-  .nav-inner{flex-wrap:wrap;gap:10px 12px}
-  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
-  .nav-toggle{flex:0 0 auto;order:2}
-  #tgi-sbox{flex:1 0 100%;order:3}
-  #tgi-search-results{width:100%;right:auto;left:0}
-}
 </style>
 </head>
 <body>
@@ -117,6 +98,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
     <p class="bp-intro">Print, colour and graphics are the product, not a finish applied to it afterwards.</p>
   </header>
   <div class="tg-crit"><b>What earns this tag</b><p>All-over prints, bold colourways, or graphics as the primary design element across the range rather than on one capsule.</p></div>
+  <h2 class="bp-gridhdr">22 Brands &mdash; Loud on purpose</h2>
   <div class="bp-grid">
   <a class="bp-card" href="/brands/anti-country-club-tokyo">
     <div class="bp-thumb"><img src="/images/whitetee26/anti-0.jpg" loading="lazy" alt="ANTi Country Club Tokyo"></div>
@@ -596,7 +578,9 @@ function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getE
 
 /*TGI-ENT-V1*/
 @font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
-.bp-line{font-family:var(--serif)}
+body{font-family:var(--serif)}
+.product-desc,.faq-q p,.sec-intro,.cat-kicker,.writeup-body,.more-card-desc,.prog-desc,.sec-note{font-family:var(--serif)}
+body{font-size:16px;line-height:1.6}
 .card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
 .card-title,.more-card-name{font-style:normal}
 /*/TGI-ENT-V1*/

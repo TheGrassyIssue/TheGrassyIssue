@@ -35,18 +35,6 @@ TARGETS = {
     "brands/index.html": "/brands/",
     "field-guide/index.html": "/field-guide/",
     "events/index.html": "/events/",
-    # Seven drop pages shipped with a full <head>, title, canonical and h1 but
-    # NO <nav> at all (audit 2026-09-09). They are in the sitemap and indexable,
-    # so a visitor arriving from search landed on a page with no header, no
-    # navigation and no way back into the site. Added here so they inherit the
-    # standard banner + nav + CSS like any other page.
-    "drops/bold-tees-carousel.html": "",
-    "drops/hats-carousel.html": "",
-    "drops/malbon-summer-gallo-colorido.html": "",
-    "drops/manors-gentleman-jack.html": "",
-    "drops/metalwood-ss26-picks.html": "",
-    "drops/muni-kids-10-years.html": "",
-    "drops/premium-tees-carousel.html": "",
 }
 MARK = "<!--TGI-HDR-V1-->"        # markup only
 # A separate CSS-safe marker. An HTML comment inside <style> is NOT a comment to
@@ -136,17 +124,6 @@ def fix(path, banner, nav, css, js, active, apply_):
         if rebuilt != m.group(0):
             s = s[:m.start()] + rebuilt + s[m.end():]
             notes.append("header markup unified")
-    else:
-        # NO <nav> ON THE PAGE AT ALL.
-        # Seven drop pages were built without one (audit 2026-09-09). The regex
-        # above needs an existing </nav> to anchor on, so without this branch
-        # they silently received the banner CSS and the weather script while the
-        # banner and nav markup itself was never inserted — dead CSS styling an
-        # element that does not exist. Insert the whole header after <body>.
-        mb = re.search(r"(<body[^>]*>)", s)
-        if mb:
-            s = s[:mb.end()] + "\n\n" + new_block + s[mb.end():]
-            notes.append("header markup INSERTED (page had no nav)")
 
     # 2. CSS — append once, before the last </style>
     if ".weather-banner" not in orig:

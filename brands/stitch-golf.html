@@ -38,7 +38,8 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-meta{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6e736c;margin-bottom:12px;}
 .bp-line{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}
 .bp-profile{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}
-.bp-grid{max-width:1200px;margin:30px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}
+.bp-gridhdr{max-width:1200px;margin:34px auto 0;padding:0 24px;font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:-.01em;}
+    .bp-grid{max-width:1200px;margin:18px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}
 .bp-card{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}
 .bp-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}
 .bp-thumb{aspect-ratio:16/10;overflow:hidden;background:#eceae2;position:relative;}
@@ -90,6 +91,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
     <div class="bp-kickline">[ All Coverage &middot; 8 Posts ]</div>
     <h1>STITCH</h1>
     <div class="bp-meta">Apex, North Carolina &middot; Bags &middot; Headcovers &middot; Apparel</div>
+  <h2 class="bp-gridhdr">Every Grassy Issue Post Featuring STITCH</h2>
     <p class="bp-line">Golf bags, travel covers and leather headcovers, in business since 2012.</p>
     <a class="bp-profile" href="/drops/loud-on-purpose-headcovers">Read the full profile &rarr;</a>
   </div>
@@ -432,7 +434,9 @@ function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getE
 
 /*TGI-ENT-V1*/
 @font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
-.bp-line{font-family:var(--serif)}
+body{font-family:var(--serif)}
+.product-desc,.faq-q p,.sec-intro,.cat-kicker,.writeup-body,.more-card-desc,.prog-desc,.sec-note{font-family:var(--serif)}
+body{font-size:16px;line-height:1.6}
 .card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
 .card-title,.more-card-name{font-style:normal}
 /*/TGI-ENT-V1*/

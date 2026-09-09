@@ -415,7 +415,6 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 {chr(10).join("  "+p for p in pills)}
 </div>
 
-<h2 class="bp-gridhdr">All {N} Brands in the Index</h2>
 <div class="bi-grid" id="bi-grid">
 {chr(10).join(cards)}
 </div>
@@ -521,8 +520,7 @@ h1{{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);li
 .bp-meta{{font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:#6e736c;margin-bottom:12px;}}
 .bp-line{{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}}
 .bp-profile{{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}}
-.bp-gridhdr{{max-width:1200px;margin:34px auto 0;padding:0 24px;font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:-.01em;}}
-    .bp-grid{{max-width:1200px;margin:18px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}}
+.bp-grid{{max-width:1200px;margin:30px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}}
 .bp-card{{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}}
 .bp-card:hover{{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}}
 .bp-thumb{{aspect-ratio:16/10;overflow:hidden;background:#eceae2;position:relative;}}
@@ -557,7 +555,6 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
     <div class="bp-kickline">[ All Coverage &middot; {len(men)} Post{"s" if len(men)!=1 else ""} ]</div>
     <h1>{name}</h1>
     <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
-  <h2 class="bp-gridhdr">Every Grassy Issue Post Featuring {name}</h2>
     <p class="bp-line">{b["line"]}</p>
     <a class="bp-profile" href="{b["url"]}">Read the full profile &rarr;</a>
   </div>
@@ -697,7 +694,6 @@ def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
     <p class="bp-intro">{blurb}</p>
   </header>
   <div class="tg-crit"><b>What earns this tag</b><p>{criteria}</p></div>
-  <h2 class="bp-gridhdr">{len(members)} Brand{"s" if len(members)!=1 else ""} &mdash; {label}</h2>
   <div class="bp-grid">
 {chr(10).join(tiles)}
   </div>
