@@ -1,0 +1,362 @@
+{
+ "norda": {
+  "brand": "norda",
+  "product": "001A - M - Abyss",
+  "url": "https://nordarun.com/products/001-m-abyss",
+  "price": "295.00",
+  "currency": "CAD (store base; nordarun.com page renders \"$295.00 CAD\" to the fetcher). US MSRP $295 USD corroborated at LESS 17 (lessoneseven.com, available, $295.00 USD)",
+  "availability": "available; all 12 sizes M8-M14 listed on nordarun.com (no inventory counts exposed); LESS 17 available=true",
+  "dyneema_content_verbatim": "\"the world's first seamless Dyneema® upper\" / Upper: \"Woven with bio-circular Dyneema® for the highest performance, abrasion resistance and the lightest footprint.\" / Laces: \"Diamond design pattern with bio-based Dyneema® and recycled polyester.\" / FAQ: \"The bio-based Dyneema® upper is engineered for extreme abrasion resistance. By weight, Dyneema® is up to 15x stronger than steel\"",
+  "specs": [
+   "Weight: 268g / 9.45 oz (US M 8.5)",
+   "Drop 5mm; Stack heel 26mm / forefoot 21mm; lug depth 5mm",
+   "Arnitel® TPEE midsole; exclusive norda x Vibram® soleplate (Litebase/Megagrip per LESS 17)",
+   "Runs slightly small: most runners size up 1/2 size (maker FAQ)"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0820/7020/8817/files/001a-m-abyss-shoes-4739325.png",
+   "https://cdn.shopify.com/s/files/1/0820/7020/8817/files/001a-m-abyss-shoes-9987981.png",
+   "https://cdn.shopify.com/s/files/1/0820/7020/8817/files/001a-m-abyss-shoes-1423232.png",
+   "https://cdn.shopify.com/s/files/1/0820/7020/8817/files/001a-m-abyss-shoes-6938466.png",
+   "https://cdn.shopify.com/s/files/1/0820/7020/8817/files/001a-m-abyss-shoes-3630833.png"
+  ],
+  "verified_how": "nordarun.com .json + product HTML + lessoneseven.com suggest.json fetched 2026-09-10",
+  "frames": [
+   "norda-1.jpg",
+   "norda-2.jpg",
+   "norda-3.jpg",
+   "norda-4.jpg",
+   "norda-5.jpg"
+  ]
+ },
+ "porter": {
+  "brand": "Porter-Yoshida & Co.",
+  "product": "Freestyle Dyneema Coin Case",
+  "url": "https://www.monohawaii.com/products/freestyle-dyneema-coin-case",
+  "price": "172.00",
+  "currency": "USD",
+  "availability": "available; inventory_quantity 1 (MONO Hawaii .json 2026-09-10) - single unit, flag",
+  "dyneema_content_verbatim": "\"first among Japanese bag brands to use Dyneema Bonded Leather, developed by ECCO LEATHER, as its main material. This ultimate hybrid leather is created by bonding cowhide with Dyneema, the world's strongest fiber.\" / Materials: \"Exterior: Dyneema Bonded Leather (surface: cowhide, interior: ultra-high molecular weight polyethylene fiber (Dyneema)) Lining: Nylon jacquard (interior: acrylic coating)\"",
+  "specs": [
+   "Dimensions: W110mm / H65mm / D20mm",
+   "Made in Japan",
+   "Interior pocket for cards; D-ring on back for carabiner attachment to a belt loop",
+   "Maker note: colour fading/discolouration from water and sunlight \"cannot be avoided\""
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0546/4997/files/Dyneema_8a4b229b-9844-4948-99b3-8a2b6278e655.jpg",
+   "https://cdn.shopify.com/s/files/1/0546/4997/files/Dyneema2_33dd9a90-caa5-417b-ace4-04c3269029c0.jpg",
+   "https://cdn.shopify.com/s/files/1/0546/4997/files/Dyneema3_d242097a-54eb-420c-bb5c-a991e6665a68.jpg"
+  ],
+  "verified_how": "monohawaii.com /products/<handle>.json fetched 2026-09-10",
+  "frames": [
+   "porter-1.jpg",
+   "porter-2.jpg",
+   "porter-3.jpg"
+  ]
+ },
+ "vollebak": {
+  "brand": "Vollebak",
+  "product": "Indestructible Belt. Black edition",
+  "url": "https://vollebak.com/products/indestructible-belt-black-edition",
+  "price": "395.00",
+  "currency": "USD (en-us market .js price 39500; GBP 295 base currency)",
+  "availability": "in stock: S/M 25, L/XL 25 (2026-09-10)",
+  "dyneema_content_verbatim": "\"It's built with an ultrastrong core made from Dyneema®, the single strongest fibre known to man today. Weight for weight Dyneema® is up to 15x stronger than steel. Which means the strap of this belt is so strong you'd need to hang more than 4 tonnes off it before it breaks\"",
+  "specs": [
+   "COBRA® buckle, patented locking mechanism, withstands 1.8 tonnes of force before breaking",
+   "12 rows of ultrastrong bonded thread; engraved metal tip by Riri",
+   "Ships in a custom anodized metal case with a 3D printed latch",
+   "Variant weight 150 g (Shopify); sizes S/M and L/XL"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0924/6362/files/indestructiblebeltdetail0354.webp",
+   "https://cdn.shopify.com/s/files/1/0924/6362/files/indestructiblebeltdetail0372.webp",
+   "https://cdn.shopify.com/s/files/1/0924/6362/files/indestructiblebeltdetail0412.webp",
+   "https://cdn.shopify.com/s/files/1/0924/6362/files/indestructiblebelt4198.webp",
+   "https://cdn.shopify.com/s/files/1/0924/6362/files/indestructiblecase7110.webp"
+  ],
+  "verified_how": "vollebak.com .json + /en-us/ .js fetched 2026-09-10",
+  "frames": [
+   "vollebak-1.jpg",
+   "vollebak-2.jpg",
+   "vollebak-3.jpg",
+   "vollebak-4.jpg",
+   "vollebak-5.jpg"
+  ]
+ },
+ "satisfy": {
+  "brand": "Satisfy",
+  "product": "Justice™ Dyneema® Trail Band",
+  "url": "https://satisfyrunning.com/products/justice-dyneema-trail-band",
+  "price": "160",
+  "currency": "EUR (storefront geolocated to France; US market price not exposed to fetch - candidates note ~190 USD; FLAG, confirm at US checkout)",
+  "availability": "available; Black in sizes 0 (XS) - 4 (XL), all listed (no inventory counts exposed)",
+  "dyneema_content_verbatim": "\"Constructed with Justice™ Dyneema® (abrasion resistant, fast dry, moisture control, odor control, 4-way stretch) panels to create abrasion resistant zones while carrying poles and other gear.\" / Composition: \"Justice™ Dyneema® / Origin Italy - 64% Dyneema® - 19% Elastane - 17% Polyester\" ; \"Justice™ / Origin Italy - 67% Polyester - 33% Elastane\"",
+  "specs": [
+   "75 g in size M",
+   "9-pocket cargo system including 1 zippered pocket; adjustable bungee cords; mini S-carabiner",
+   "Belt width 30 cm / height 17 cm (size M, product measurement)",
+   "Fabric origin Italy; Justice™ is produced in France by a silk maker founded 1839"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0075/4617/5546/files/34043.jpg",
+   "https://cdn.shopify.com/s/files/1/0075/4617/5546/files/5332-BK-CO_justice-dyneema-trail-band_black_front.jpg",
+   "https://cdn.shopify.com/s/files/1/0075/4617/5546/files/5332-BK-CO_justice-dyneema-trail-band_black_back.jpg",
+   "https://cdn.shopify.com/s/files/1/0075/4617/5546/files/5332-BK-CO_justice-dyneema-trail-band_black_pockets.jpg",
+   "https://cdn.shopify.com/s/files/1/0075/4617/5546/files/34004-BK_1_01248050-c23a-495e-9e2c-7b9fa5c802c2.jpg"
+  ],
+  "verified_how": "satisfyrunning.com .json + product HTML fetched 2026-09-10",
+  "frames": [
+   "satisfy-1.jpg",
+   "satisfy-2.jpg",
+   "satisfy-3.jpg",
+   "satisfy-4.jpg",
+   "satisfy-5.jpg"
+  ]
+ },
+ "andwander": {
+  "brand": "and wander",
+  "product": "UL Wallet with Dyneema® - Dark Gray",
+  "url": "https://outnaboutboutique.com/en-us/products/and-wander-ul-wallet-with-dyneema%c2%ae-black",
+  "price": "156.00",
+  "currency": "CAD (Out n About Boutique, Canadian store; approx US$115 - FLAG, no USD retailer stock-verified)",
+  "availability": "listed at Out n About (no inventory count exposed; .json 2026-09-10)",
+  "dyneema_content_verbatim": "\"Made from Dyneema, this wallet is perfect for outdoor activities and everyday use.\" / \"100% Polyethylene\"",
+  "specs": [
+   "Weight: 11 g",
+   "Size closed 10.5 x 9.5 cm; open 22.5 x 9.5 cm",
+   "3 card slots, 1 coin slot, 1 slot for bank notes",
+   "Zipper is taped/waterproof"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0015/5045/0749/files/IMG_9902.jpg",
+   "https://cdn.shopify.com/s/files/1/0015/5045/0749/files/IMG_9903.jpg",
+   "https://cdn.shopify.com/s/files/1/0015/5045/0749/files/IMG_9904.jpg",
+   "https://cdn.shopify.com/s/files/1/0015/5045/0749/files/IMG_9905.jpg"
+  ],
+  "verified_how": "outnaboutboutique.com .json fetched 2026-09-10",
+  "frames": [
+   "andwander-1.jpg",
+   "andwander-2.jpg",
+   "andwander-3.jpg",
+   "andwander-4.jpg"
+  ]
+ },
+ "hilltop": {
+  "brand": "Hilltop Packs",
+  "product": "Ultralight Dyneema Wallet (printed / plain)",
+  "url": "https://hilltoppacks.com/products/dyneema-zipper-wallets-printed",
+  "price": "22.00",
+  "currency": "USD (compare at 24.00)",
+  "availability": "available; 26 variants (23 prints + White/Black/Gray Dyneema) all listed 2026-09-10",
+  "dyneema_content_verbatim": "\"built from the same waterproof, tear-resistant Dyneema fabric we use in our backpacks\" / \"Waterproof Dyneema construction — your cards and cash stay dry no matter what\"",
+  "specs": [
+   "Weighs 0.28 ounces (7.9 g)",
+   "5.25 x 3.25 inches",
+   "Weatherproof YKK zipper, taped seams",
+   "Made in Waynesburg, Pennsylvania; printed and sewn in-house"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0528/9613/7401/files/ultralight-dyneema-wallet-5419956.webp",
+   "https://cdn.shopify.com/s/files/1/0528/9613/7401/files/ultralight-dyneema-wallet-8194809.webp",
+   "https://cdn.shopify.com/s/files/1/0528/9613/7401/files/ultralight-dyneema-wallet-2796102.webp",
+   "https://cdn.shopify.com/s/files/1/0528/9613/7401/files/ultralight-dyneema-wallet-6770912.webp"
+  ],
+  "verified_how": "hilltoppacks.com .json fetched 2026-09-10",
+  "frames": [
+   "hilltop-1.jpg",
+   "hilltop-2.jpg",
+   "hilltop-3.jpg",
+   "hilltop-4.jpg"
+  ]
+ },
+ "laces": {
+  "brand": "Windthrow (Adventure Andy)",
+  "product": "Unbreakable Laces (listing title \"Unbreakable Laces in Brown\"; handle says red)",
+  "url": "https://windthrow.store/products/unbreakable-laces-in-red",
+  "price": "15.75",
+  "currency": "USD",
+  "availability": "available; 54\" (Trail Runners) and 63\" (Hiking Boots) listed",
+  "dyneema_content_verbatim": "\"These shoelaces are made with Dyneema®, a material that's 15x stronger than steel.\" / \"a waxed exterior and a compressible loose core to keep knots tight and ward off freezing.\"",
+  "specs": [
+   "Two sizes: 63in for boots, 51in for trail runners (body copy; variants read 54\" and 63\")",
+   "Load tested +1,000 lbs",
+   "Do not absorb water; will not rot or freeze",
+   "Highly resistant to corrosion from acids, alkalies, solvents and oils"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0679/8046/0348/files/unbreakablelaces.png"
+  ],
+  "verified_how": "windthrow.store .json fetched 2026-09-10; only 1 product image exists",
+  "frames": [
+   "laces-1.jpg"
+  ]
+ },
+ "drybag": {
+  "brand": "Hammock Gear",
+  "product": "Dry Bags (Dyneema® Fiber, S/M/L)",
+  "url": "https://hammockgear.com/product/dry-bags/",
+  "price": "19.00 - 45.00",
+  "currency": "USD",
+  "availability": "add to cart live, in-stock item (1-2 business day lead per site banner) 2026-09-10",
+  "dyneema_content_verbatim": "\"These Dry Bags are built from ultra-light 1.3 oz/yd² Dyneema® Fiber with fully taped seams\" / \"Fabric: Dyneema® Fiber, approx. 1.3 oz/yd²\"",
+  "specs": [
+   "Small: rolled ~5 x 7 in, ~2.2 L, ~0.63 oz (17.9 g)",
+   "Medium: rolled ~7 x 14 in, ~8.5 L, ~0.91 oz (25.9 g)",
+   "Large: rolled ~8 x 18 in, ~14 L, ~1.20 oz (34.1 g)",
+   "Roll-top with 3/4 in backpack buckles; not rated for submersion; Hammock Gear is in Reynoldsburg, Ohio"
+  ],
+  "image_sources": [
+   "https://hammockgear.com/wp-content/uploads/2025/03/DryBag_Reboot_2__65181.1711323356.1280.1280.jpg",
+   "https://hammockgear.com/wp-content/uploads/2025/03/DryBag_Reboot_1__11393.1711323357.1280.1280.jpg"
+  ],
+  "verified_how": "hammockgear.com product page fetched 2026-09-10; images needed a Referer header",
+  "frames": [
+   "drybag-1.jpg",
+   "drybag-2.jpg"
+  ]
+ },
+ "leash": {
+  "brand": "Been Campin",
+  "product": "Ultralight Dog Leash - Black Amsteel",
+  "url": "https://beencampin.com/products/ultralight-dog-leash-black-amsteel",
+  "price": "26.49 (Been Campin biner) / 28.99 (ProClimb Micro 900 biner)",
+  "currency": "USD",
+  "availability": "available; 9 carabiner variants listed 2026-09-10",
+  "dyneema_content_verbatim": "\"The rope for this leash is ultra-high strength AmSteel cordage, made of Dyneema fibers. Dyneema is the strongest fiber on earth, 15x stronger than steel, so despite the cord being just 7/64\\\" and very light, the cord has break strength of 1600 lbs.\" / \"Material: 7/64\\\" Dyneema AmSteel rope\" / \"The handle is made of ultralight Venom UHMWPE webbing.\"",
+  "specs": [
+   "Dimensions: 66\" long (approx. 5.5 ft handle-to-carabiner)",
+   "Weight: 23 g with Been Campin biner, 24 g with ProClimb biner",
+   "Rope spliced rather than knotted; Venom webbing handle rated 1800 lbs",
+   "Handmade; ProClimb biner rated 4 kN (~900 lbs)"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0505/4840/8480/products/20211114_181010.jpg",
+   "https://cdn.shopify.com/s/files/1/0505/4840/8480/products/20211114_180821.jpg",
+   "https://cdn.shopify.com/s/files/1/0505/4840/8480/products/20211114_181150.jpg"
+  ],
+  "verified_how": "beencampin.com .json fetched 2026-09-10; photos are maker phone shots on a cutting mat (cover-cropped)",
+  "frames": [
+   "leash-1.jpg",
+   "leash-2.jpg",
+   "leash-3.jpg"
+  ]
+ },
+ "goldwin": {
+  "brand": "Goldwin",
+  "product": "Goldwin Moon Trail Pack (GM95799)",
+  "url": "https://usshop.goldwin-global.com/products/gm95799",
+  "price": "320.00",
+  "currency": "USD",
+  "availability": "limited: Black size 3 (qty 2) and Quarry Gray size 3 (qty 3) in stock; size 1 and Silver sold out (2026-09-10)",
+  "dyneema_content_verbatim": "\"Durable Fabric: 3-layer waterproof/breathable; Dyneema reinforced.\" / Composition: \"[Main Fabric] 100% Polyester ... [Back Pocket Bag Cloth] Face Side: 80% Nylon, 13% Polyethylene, 7% Polyester\"",
+  "specs": [
+   "Weight approx. 240 g (size 3)",
+   "Size 3/M: width 41 cm, center back 44 cm; size 1/XS: width 39 cm, center back 40 cm",
+   "Country of origin: Vietnam",
+   "Chest strap with magnetic buckle; stretch mesh bottom pocket; vertical pole pocket"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95799_BK-b6_f26.jpg",
+   "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95799_BK.jpg",
+   "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95799_BK-b51.jpg",
+   "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95799_BK-b1_f26.jpg",
+   "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95799_BK-b7_f26.jpg"
+  ],
+  "verified_how": "usshop.goldwin-global.com .json + product HTML fetched 2026-09-10",
+  "frames": [
+   "goldwin-1.jpg",
+   "goldwin-2.jpg",
+   "goldwin-3.jpg",
+   "goldwin-4.jpg",
+   "goldwin-5.jpg"
+  ]
+ },
+ "acg": {
+  "brand": "Nike ACG",
+  "product": "Nike ACG Aysén Day Pack (32L) Black/Black/Metallic Silver (DV4054-011)",
+  "url": "https://www.nike.com/t/acg-aysen-day-pack-32l-MsDgs8/DV4054-011",
+  "price": "200",
+  "currency": "USD",
+  "availability": "listed at $200 on nike.com (two colourways, ONE SIZE) 2026-09-10; also $200 at Black Flag Outfitters (image source, available=true)",
+  "dyneema_content_verbatim": "\"Durable yet flexible Dyneema® material runs through the roll top of the bag so it stays in 1 piece, roll after roll, use after use.\" / \"100% polyester\" / \"made with at least 65% recycled polyester fibers\"",
+  "specs": [
+   "26\"H x 11\"W x 7\"D",
+   "Internal laptop organizational sleeve; expandable side water-bottle pocket",
+   "Aluminum trims and G-hooks with corded pulls; magnetic button closure",
+   "Imported; spot clean"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0345/5107/0851/files/Nike_ACG_Aysen_BLK_1.jpg",
+   "https://cdn.shopify.com/s/files/1/0345/5107/0851/files/Nike_ACG_Aysen_BLK_2.jpg",
+   "https://cdn.shopify.com/s/files/1/0345/5107/0851/files/Nike_ACG_Aysen_BLK_3.jpg",
+   "https://cdn.shopify.com/s/files/1/0345/5107/0851/files/Nike_ACG_Aysen_BLK_4.jpg",
+   "https://cdn.shopify.com/s/files/1/0345/5107/0851/files/Nike_ACG_Aysen_BLK_5.jpg"
+  ],
+  "verified_how": "nike.com product page + blackflagoutfitters.com .json fetched 2026-09-10; images from Black Flag (small ~690x820 source, upscaled)",
+  "frames": [
+   "acg-1.jpg",
+   "acg-2.jpg",
+   "acg-3.jpg",
+   "acg-4.jpg",
+   "acg-5.jpg"
+  ]
+ },
+ "thrudark": {
+  "brand": "ThruDark",
+  "product": "Strike Pants G2 - Khaki",
+  "url": "https://us.thrudark.com/products/strike-pants-g2-khaki",
+  "price": "230",
+  "currency": "GBP (us.thrudark.com redirected to www.thrudark.com GBP storefront; USD checkout price not exposed - FLAG, ~US$300)",
+  "availability": "in stock all sizes: XS 20, S 24, M 36, L 149, XL 95, XXL 73, 3XL 35 (2026-09-10)",
+  "dyneema_content_verbatim": "\"Dyneema® and Cordura® composite blend on lower legs for abrasion resistance.\" / \"Dyneema® rear harness loop\" / Technology: \"Manju® - European-made fabric combining Cordura®, Polyamide, and Dyneema®. 15x stronger than steel, 30% lighter, with superior abrasion resistance.\" (No percentage published on the current page; the 9% figure in candidates could not be re-verified.)",
+  "specs": [
+   "Made in Vietnam",
+   "Bamboo-charcoal infused nylon, water repellent and windproof",
+   "Inside leg 31\" all sizes; waist XS 28-29\" to 3XL 40-41\"; tapered regular fit",
+   "Variant weight 615 g; magnetised rear pockets and zip adjusters; YKK zips"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0591/0164/2941/files/strike-pants-g2-khaki_m_khaki_ss_5_252fd750-bc84-41dc-91fc-9e768c3a2b58.jpg",
+   "https://cdn.shopify.com/s/files/1/0591/0164/2941/files/strike-pants-g2-khaki_m_khaki_ss_1_e38eca4c-722c-49b8-ad90-5113e6504ae8.jpg",
+   "https://cdn.shopify.com/s/files/1/0591/0164/2941/files/strike-pants-g2-khaki_m_khaki_ss_7_5c7c46bd-5f24-4df6-9b9d-25112fe969bc.jpg"
+  ],
+  "verified_how": "thrudark.com .json/.js + product HTML fetched 2026-09-10",
+  "frames": [
+   "thrudark-1.jpg",
+   "thrudark-2.jpg",
+   "thrudark-3.jpg"
+  ]
+ },
+ "goruck": {
+  "brand": "GORUCK",
+  "product": "MACV-2 Safety Boot - Mid Top",
+  "url": "https://www.goruck.com/products/macv-2-safety-boot",
+  "price": "185.00",
+  "currency": "USD",
+  "availability": "available; sizes 7 (W9) through 14 listed 2026-09-10",
+  "dyneema_content_verbatim": "\"a composite toe, a Dyneema puncture-resistant sole, an extra padded perforated foam upper for all-day comfort. They are ASTM-certified\"",
+  "specs": [
+   "Variant weight 3.81-3.88 lb per pair (Shopify)",
+   "Sizes 7-14 (women's 9-10 equivalents noted on 7-8)",
+   "Composite toe; ASTM certified",
+   "Colour: Coyote brown"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0275/4985/9940/files/macv2_coy_lead.jpg",
+   "https://cdn.shopify.com/s/files/1/0275/4985/9940/files/macv2_coyote_2.jpg",
+   "https://cdn.shopify.com/s/files/1/0275/4985/9940/files/26_6a2300c3-6b1b-4908-8984-9d7199d2c22a.jpg",
+   "https://cdn.shopify.com/s/files/1/0275/4985/9940/files/12_f51ba067-0557-45d5-9cd4-2322423cfdcc.jpg",
+   "https://cdn.shopify.com/s/files/1/0275/4985/9940/files/11_c3bcf658-4779-4526-b63b-52e143ebd7b4.jpg"
+  ],
+  "verified_how": "goruck.com .json fetched 2026-09-10",
+  "frames": [
+   "goruck-1.jpg",
+   "goruck-2.jpg",
+   "goruck-3.jpg",
+   "goruck-4.jpg",
+   "goruck-5.jpg"
+  ]
+ }
+}

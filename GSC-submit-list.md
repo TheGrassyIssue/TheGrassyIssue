@@ -119,7 +119,12 @@ Re-submitting is the point of this deploy.
 
 *(URLs as listed in the audit section above.)*
 
-**Priority 2 — new page.**
+**Priority 2 — new pages.**
+
+- `https://thegrassyissue.com/drops/the-dyneema-edit`
+  The Dyneema Edit (10 Sept). 28 pieces, 17 makers, ~4,500 words, FAQPage
+  schema, sourced material explainer. Also adds a mention on
+  `/brands/sentinel-golf` (re-submit that too).
 
 - `https://thegrassyissue.com/drops/brand-to-know-apres-golf`
   Brand to Know: Après Golf. New page, 50 products, ~4,350 words, FAQPage

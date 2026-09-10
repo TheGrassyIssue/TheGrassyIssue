@@ -1,0 +1,253 @@
+{
+  "wg-cover": {
+    "brand": "Western Gales (State Apparel)",
+    "product": "Dyneema Project 1.0 - NASA White - DR, FW, HY",
+    "url": "https://stateapparel.com/products/dyneema-project-dr-fw-hy",
+    "price": "$75 Driver / $70 Fairway / $65 Hybrid",
+    "status": "sold out (all three variants inventory_quantity 0, inventory_policy deny, as of 2026-09-10)",
+    "sizes": [
+      "Driver",
+      "Fairway",
+      "Hybrid"
+    ],
+    "specs": [
+      "Color 1: NASA White",
+      "Top Stitch: Black",
+      "Binding: Black",
+      "Interior Fleece: Black",
+      "Personalize with a Hand-Painted Monogram",
+      "Driver Cover: approximately 12.5\" tall x 4\" across and fits securely on all modern drivers.",
+      "Fairway Cover: approximately 10\" tall x 3.5\" across and fits securely on all fairway woods.",
+      "Hybrid Cover: approximately 8.5\" tall x 2.5\" across and fits securely on all hybrids."
+    ],
+    "verbatim": "Dyneema is the ultimate technical fabric- ultralight, waterproof, and 15 times stronger than steel. These handcrafted covers are ideal for your most extreme outdoor adventures. Size & Fit- Our unique triangular shape and puffy filling are like a warm hug for your clubs.",
+    "related": {
+      "product": "Dyneema Project 2.0 - Space Gray - DR, FW, HY",
+      "url": "https://stateapparel.com/products/dyneema-project-2-0-space-gray-dr-fw-hy",
+      "price": "$75 / $70 / $65",
+      "status": "sold out (inventory 0, deny)",
+      "verbatim": "Our new version of the Dyneema cover is ultra soft and puffy, like a cloud. Dyneema is the ultimate technical fabric- ultralight, waterproof, and 15 times stronger than steel. These handcrafted covers are ideal for your most extreme outdoor adventures.",
+      "specs": [
+        "Color 1: Ice Blue",
+        "Top Stitch: White",
+        "Binding: White",
+        "Interior Fleece: Gray"
+      ],
+      "note": "Title says Space Gray but body copy lists Color 1: Ice Blue (verbatim from Shopify JSON). Frames wg-cover-3 and wg-cover-4 are from this 2.0 listing."
+    },
+    "frames": [
+      "images/dyneema/wg-cover-1.jpg",
+      "images/dyneema/wg-cover-2.jpg",
+      "images/dyneema/wg-cover-3.jpg",
+      "images/dyneema/wg-cover-4.jpg"
+    ],
+    "image_sources": [
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/IMG_8797.jpg",
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/IMG_8755.jpg",
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/01_e4a3b846-d3b5-48fa-a2c6-0e8cfbedb265.jpg",
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/07_92cfbd5b-4434-4e11-b501-52c630e83cd1.jpg"
+    ],
+    "frame_notes": {
+      "wg-cover-1": "1.0 NASA White lifestyle",
+      "wg-cover-2": "1.0 NASA White lifestyle",
+      "wg-cover-3": "2.0 Space Gray packshot",
+      "wg-cover-4": "2.0 Space Gray packshot"
+    }
+  },
+  "wg-pouch": {
+    "brand": "Western Gales (State Apparel)",
+    "product": "Dyneema SP - NASA White",
+    "url": "https://stateapparel.com/products/dyneema-sp-nasa-white",
+    "price": "$30",
+    "status": "sold out (inventory_quantity 0, inventory_policy deny, as of 2026-09-10)",
+    "specs": [
+      "Triangular shaped pouch measures 5.5\" on all sides",
+      "Fastens with a heavy duty snap at the vertex",
+      "2 compartments",
+      "Regatta rope detail for convenient attachment to your golf bag",
+      "Color 1: NASA White",
+      "Regatta Rope: White Fleck",
+      "Personalize your pouch with a Hand-Painted Monogram"
+    ],
+    "verbatim": "Dyneema is the ultimate technical fabric- ultralight, waterproof, and 15 times stronger than steel. This handcrafted snap pouch is designed for the modern minimalist golfer. The slim pouch has 2 compartments for a tidy round with all the tees and tools you need and nothing you don't. The triangular shaped pouch measures 5.5\" on all sides and fastens with a heavy duty snap at the vertex. Regatta rope detail for convenient attachment to your golf bag.",
+    "frames": [
+      "images/dyneema/wg-pouch-1.jpg",
+      "images/dyneema/wg-pouch-2.jpg",
+      "images/dyneema/wg-pouch-3.jpg"
+    ],
+    "image_sources": [
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/shot_20201007210857.jpg",
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/shot_20201007210930.jpg",
+      "https://cdn.shopify.com/s/files/1/1056/6024/products/shot_20201007210916.jpg"
+    ]
+  },
+  "seamus-moon": {
+    "brand": "Seamus Golf",
+    "product": "Golf on the Moon collection (Dyneema Composite Fabric), Feb 2021",
+    "url": "https://www.seamusgolf.com/collections/golf-on-the-moon",
+    "press_url": "https://golf.com/gear/golf-accessories/seamus-golf-celebrates-anniversary-golf-on-moon/",
+    "press_byline": "Emily Haas, GOLF.com, February 5, 2021; photos Christian Hafer",
+    "archive_url": "https://web.archive.org/web/20210216022848/https://www.seamusgolf.com/collections/golf-on-the-moon",
+    "price": "Fescue Bag $695; Kit (Limited Run of 14) $895; Driver $125; Fairway $95; Hybrid (n/a, listed); Blade Magnet Putter $95; GOLF.com listed the collection at \"$35+\"",
+    "status": "nothing live. /collections/golf-on-the-moon now 301s to /collections/best-selling-head-covers; product URLs 404; products.json (2 pages, full catalog) has zero moon/dyneema items; site search \"dyneema\" = 1 unrelated result (Hand Forged Seamus Goat Money Clip), \"moon\" = 11 fuzzy matches (Pendleton towels, money clips), none from the collection. Archived collection page (2021-02-16) already showed Fescue Bag, Kit, Driver, Fairway, Hybrid, Putter, Hoodie and Shirt as Sold Out.",
+    "pieces": [
+      "Golf on the Moon Kit (Limited Run of 14) - $895 (bag numbered 1-14 + reflective gold hood, Fisher space pen, black moon marker, Seamus x Slowtide towel with titanium carabiner, fairway cover)",
+      "Golf on the Moon Fescue Bag - $695 (numbered 15-25)",
+      "Golf on the Moon Driver - $125",
+      "Golf on the Moon Fairway - $95",
+      "Golf on the Moon Hybrid",
+      "Golf on the Moon Blade Magnet Putter - $95",
+      "Golf on the Moon SLOWTIDE x Seamus Golf Towel",
+      "Golf on the Moon Meatball Sticker",
+      "Golf on the Moon Hoodie - White",
+      "Golf on the Moon Shirt - White"
+    ],
+    "specs": [
+      "Made of Dyneema Composite Fabric",
+      "Bag weighs 1.4 pounds (GOLF.com)",
+      "15x stronger than steel at the same weight",
+      "30% lighter than Nylon and Polyester",
+      "Bag designed to resemble the A7-L Pressure Suit worn by Alan Shepard",
+      "Driver: angled exterior pouch pocket, removable hook-and-loop US flag patch on the lid, Seamus worm logo up the barrel, comes with a black moon marker (91,196,160:1 scale)",
+      "Golf Bags numbered on the scorecard pocket"
+    ],
+    "verbatim": "The products in the collection are made from Dyneema Composite Fabric, a super technical, waterproof material that's fifteen times stronger than steel (yes, you read that right), yet 30 percent lighter than nylon. The Golf on the Moon bag weighs in at a mere 1.4 pounds and was designed to resemble the spacesuit worn by Shepard during his famous moonwalk. (GOLF.com, Emily Haas, Feb 5 2021)",
+    "verbatim_seamus_bag": "This limited run Bag was designed to resemble the Pressure Suit, A7-L worn on mission by Shepard, who snuck a Wilson Staff Dyna-Power 6-iron head into the suit and later attached it to a collapsible rock sampling tool. On February 6th 1971 during a moonwalk, Shepard revealed the club and proceeded to hit two balls \"Miles and miles and miles\" as he said. Made of Dyneema Composite Fabric. Dyneema is a fiber that is produced in a patented gel spinning process in which the fibers are drawn, heated, elongated, and cooled. Dyneema fiber is 15x stronger than steel at the same weight. Besides its incredible strength, the fabric is 30% lighter than Nylon and Polyester and it excels in cut and abrasion resistance and has a high resistance to chemicals and UV. Perfect for your time on the golf course in any weather conditions. All Golf Bags will be numbered 15- 25, on the scorecard pocket of the bag. (seamusgolf.com Fescue Bag listing, via Wayback 2021-02-26)",
+    "verbatim_seamus_driver": "The Golf on the Moon Driver is a limited run and was designed to reflect the aesthetic of a spacesuit used on Lunar Objectives. Added details include an angled exterior pouch pocket, a removable hook and loop US flag patch on the lid, along with the Seamus worm logo up the barrel. Each Driver comes with a black moon marker (91,196,160:1 scale design of the surface texture of earth's moon). (seamusgolf.com Driver listing, via Wayback 2021-02-26)",
+    "frames": [
+      "images/dyneema/seamus-moon-1.jpg",
+      "images/dyneema/seamus-moon-2.jpg",
+      "images/dyneema/seamus-moon-3.jpg",
+      "images/dyneema/seamus-moon-4.jpg",
+      "images/dyneema/seamus-moon-5.jpg"
+    ],
+    "image_sources": [
+      "https://golf.com/wp-content/uploads/2021/02/seamusspace.jpg",
+      "https://golf.com/wp-content/uploads/2021/02/Hafer_Seamus_SpaceBag_13021-01704.jpg",
+      "https://golf.com/wp-content/uploads/2021/02/headcover.jpg",
+      "https://cdn.shopify.com/s/files/1/0129/1462/products/20210128-GolfontheMoon-GolfBag-007-Edit.jpg",
+      "https://cdn.shopify.com/s/files/1/0129/1462/products/20210128-GolfontheMoon-DR-001.jpg"
+    ],
+    "frame_notes": {
+      "seamus-moon-1": "GOLF.com hero (Christian Hafer): bag + headcovers laid out",
+      "seamus-moon-2": "GOLF.com: bag detail, \"14\" panel + flag patch",
+      "seamus-moon-3": "GOLF.com: headcover with SEAMUS meatball",
+      "seamus-moon-4": "seamusgolf.com Fescue Bag packshot (Shopify CDN still live)",
+      "seamus-moon-5": "seamusgolf.com Driver packshot (Shopify CDN still live)"
+    }
+  },
+  "sen-scout": {
+    "brand": "Sentinel",
+    "product": "Basecamp Scout - Olive Dyneema",
+    "url": "https://www.sentinelgolf.us/shop/p/do-chua-ss2px-2ab6f-n44hy-wb8rn-mr5da",
+    "price": "$110",
+    "status": "sold out (page shows \"Sold Out\" product-mark; stock {\"unlimited\":false,\"quantity\":0}, as of 2026-09-10)",
+    "specs": [
+      "Dimensions: Fits 3.5”w x 5”h x 2”d",
+      "Face Fabric: Dyneema® Body Fabric / Vinyl Base",
+      "Lining Fabric: 1.5mm Neoprene",
+      "Fidlock™ Magnet Closure",
+      "Matte Black Brass Swivel Hook",
+      "Two-Way Waterproof YKK™ Zipper",
+      "275 Paracord Zipper Pulls",
+      "3/4” Nylon Cordura Utility Webbing",
+      "Made in U.S.A."
+    ],
+    "verbatim": "The Sentinel Scout is our take on a universal range finder case. Built with industry leading performance materials and components, the Scout is sure to be a trusted companion. Waterproof from head to toe, easy to use with a quick draw, and made in U.S.A.",
+    "verbatim_dyneema_blurb": "Dyneema® is an ultra-high-molecular-weight polyethylene (UHMWPE) developed in 1969 and backed by groundbreaking engineering making it the world's strongest fiber™.",
+    "frames": [
+      "images/dyneema/sen-scout-1.jpg",
+      "images/dyneema/sen-scout-2.jpg",
+      "images/dyneema/sen-scout-3.jpg"
+    ],
+    "image_sources": [
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/a8123ffd-5632-4d48-a76c-be91ad5a5c4a/os1.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/f0db88c4-f2c8-49c9-b5cc-ef15603b8abc/BC+2025+Misc+Images+Bulk_0154_IMG_0908.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/a34b6235-3828-45c7-95d3-8b6ed591e4f0/BC+2025+Misc+Images+Bulk_0151_IMG_0913.jpg?format=1500w"
+    ]
+  },
+  "sen-shoebag": {
+    "brand": "Sentinel",
+    "product": "Basecamp Shoe Bag - Olive Dyneema",
+    "url": "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-kjjr6-6gc6d-ar5fg-ykh5a-dbfwy-mkdrf-ze83c-t6mze-njngz-bez54-kckwy",
+    "price": "$148",
+    "status": "sold out (page shows \"Sold Out\" product-mark; stock {\"unlimited\":false,\"quantity\":0}, as of 2026-09-10)",
+    "specs": [
+      "34cm x 23cm x 15cm (13.4in x 9in x 5.9in)",
+      "8L (488 cubic in) capacity",
+      "Made in USA by 1733",
+      "Triple Layer Construction",
+      "275 Paracord Drawstring",
+      "YKK Aquaguard Zipper",
+      "Made in U.S.A."
+    ],
+    "verbatim": "1733 is a detail-heavy design and manufacturing outfit based in Chicago. Our collaboration churns out a material focused take on the classic shoe bag. Built using triple-layer construction starting with a Dyneema shell, cotton batting mid-layer, then lined with a 400D Packcloth interior. Finished with a 2-way YKK Aquaguard zipper, mil-spec nylon webbing, and hand-tied 275 paracord zipper pulls.",
+    "verbatim_dyneema_blurb": "Dyneema® is an ultra-high-molecular-weight polyethylene (UHMWPE) developed in 1969 and backed by groundbreaking engineering making it the world's strongest fiber™.",
+    "frames": [
+      "images/dyneema/sen-shoebag-1.jpg",
+      "images/dyneema/sen-shoebag-2.jpg",
+      "images/dyneema/sen-shoebag-3.jpg"
+    ],
+    "image_sources": [
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/e1324883-595e-4098-9b68-4f2cb2bf9223/osb1.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/374efd38-38fe-4b24-b654-7573571101af/BC+2025+Misc+Images+Bulk_0012_IMG_1559.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/e028e7ab-6cff-410f-a34f-c2803c1d008d/BC+2025+Misc+Images+Bulk+4_0002_IMG_1683.jpg?format=1500w"
+    ]
+  },
+  "sen-sock": {
+    "brand": "Sentinel",
+    "product": "Basecamp Sock - Dyneema Heather",
+    "url": "https://www.sentinelgolf.us/shop/p/mwqw2hk7jsxug69d9fa1t1gk7kdu6e-jg7sw-kz2dg-ftpet-ajk8r-myp3l-hzctp-wtgnr-axb2y",
+    "price": "$38",
+    "status": "sold out (page shows \"Sold Out\" product-mark; stock {\"unlimited\":false,\"quantity\":0}, as of 2026-09-10)",
+    "specs": [
+      "ONE SIZE: Fits Mens Sz. 9 to 13",
+      "Merino Wool (Suedwolle) & Dyneema Blend",
+      "Made in U.S.A."
+    ],
+    "verbatim": "Please note, these fabrics are not stain-proof. ONE SIZE: Fits Mens Sz. 9 to 13. Merino Wool (Suedwolle) & Dyneema Blend. Made in U.S.A.",
+    "verbatim_dyneema_blurb": "Dyneema® is an ultra-high-molecular-weight polyethylene (UHMWPE) developed in 1969 and backed by groundbreaking engineering making it the world's strongest fiber™.",
+    "frames": [
+      "images/dyneema/sen-sock-1.jpg",
+      "images/dyneema/sen-sock-2.jpg",
+      "images/dyneema/sen-sock-3.jpg"
+    ],
+    "image_sources": [
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/219e66e0-81f5-437c-87e3-5c274170a5fa/s1.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/4faf3968-38d3-4dd8-b22b-e16e1e88d634/BC+2025+Misc+Images+Bulk+2_0000_IMG_0717+2.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/e17d9f87-e4df-4a4f-9bfa-0d60f7616d62/BC+2025+Misc+Images+Bulk+4_0004_IMG_0461.jpg?format=1500w"
+    ]
+  },
+  "sen-drybag": {
+    "brand": "Sentinel",
+    "product": "Basecamp Drybag - Olive Dyneema",
+    "url": "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-nctfn-cx85f-wm89j-nrcwb-amgxm-7lchk",
+    "price": "$82",
+    "status": "sold out (page shows \"Sold Out\" product-mark; stock {\"unlimited\":false,\"quantity\":0}, as of 2026-09-10)",
+    "specs": [
+      "18h\" x 13.5\"w x 4.5”d",
+      "Fidlock Magnetic Closure",
+      "1” Cordura Webbing",
+      "Paracord loop pull",
+      "Made in USA"
+    ],
+    "verbatim": "The Basecamp Drybag is constructed with a custom printed Dyneema composite fabric. All seams are finished with water-proof heat tape giving a complete seal to the inside and outside of the bag.",
+    "verbatim_dyneema_blurb": "Dyneema® is an ultra-high-molecular-weight polyethylene (UHMWPE) developed in 1969 and backed by groundbreaking engineering making it the world's strongest fiber™.",
+    "frames": [
+      "images/dyneema/sen-drybag-1.jpg",
+      "images/dyneema/sen-drybag-2.jpg",
+      "images/dyneema/sen-drybag-3.jpg"
+    ],
+    "image_sources": [
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/54eb139e-b97d-4ff7-b4e9-e58b752916f3/dbo1.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/73020abe-8d4c-4978-80bc-c9a2a075219c/BC+2025+Misc+Images+Bulk+2_0041_IMG_1592.jpg?format=1500w",
+      "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/f044885c-1c58-4ea3-af5f-8af745cc9838/BC+2025+Misc+Images+Bulk+4_0012_Sentinel-Expidition01-00128.jpg?format=1500w"
+    ]
+  },
+  "_meta": {
+    "collected": "2026-09-10",
+    "frame_spec": "800x1000 JPEG, contain-fit, corner-colour pad",
+    "sentinel_category": "https://www.sentinelgolf.us/shop/basecamp",
+    "notes": "Sentinel og:image URLs are static1.squarespace.com variants of the same first gallery image; frames used the images.squarespace-cdn.com ?format=1500w originals."
+  }
+}
