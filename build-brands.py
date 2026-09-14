@@ -467,6 +467,9 @@ def brand_page(b):
         ti = t.get("img")
         cat = H.escape(t.get("cat", "Drops & Brands"))
         badge = '<span class="bp-badge">The Profile</span>' if e.get("profile") else ""
+        # titles in brand-mentions.json arrive both as plain text and as entity
+        # strings ("&mdash;"); unescape first or the page shows "&amp;mdash;" (2026-09-14)
+        e = dict(e, title=H.unescape(e["title"]))
         thumb = (f'<div class="bp-thumb"><img src="{ti}" loading="lazy" alt="{H.escape(e["title"])}">{badge}</div>'
                  if ti else f'<div class="bp-thumb bp-nothumb">{badge}</div>')
         tiles.append(f'''  <a class="bp-card" href="{e["url"]}">

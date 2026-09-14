@@ -170,3 +170,15 @@ the two and should be run after build-brands.py from here on.
 Everything else that moved in this deploy (133 pages picked up wordmark and
 nav-search changes) does NOT need manual submission. The text content is
 identical and Google will take it on normal recrawl. Do not spend quota there.
+
+- 2026-09-14 · brand-page thumbnails fixed sitewide (204 blank post cards → 0; `gen-post-thumbs.py` now a required pre-step). Re-request indexing for `/brands/*` after deploy — e.g. /brands/jlindeberg, /brands/manors, /brands/sentinel-golf.
+
+## 2026-09-14 — Fyfe Golf Brand to Know
+
+**Priority 1 (submit first):**
+- https://thegrassyissue.com/drops/brand-to-know-fyfe-golf — NEW, ~6,250 words, 32 products, FAQ schema
+
+**Priority 2 (substantially updated, re-request indexing):**
+- https://thegrassyissue.com/drops/fyfe-x-mackenzie-every-edition — editions 21 & 22 added, meta + counts corrected 20→22
+- https://thegrassyissue.com/brands/fyfe-golf — profile now points at the BTK
+- https://thegrassyissue.com/brands/ — brand card + lead image updated
