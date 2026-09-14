@@ -1,0 +1,648 @@
+{
+ "_meta": {
+  "generated": "2026-09-14",
+  "frames_dir": "site/images/alignment/",
+  "frame_spec": "800x1000 JPEG q86; contain-fit with corner-colour pad for packshots, cover-crop for lifestyle/turf photos",
+  "hero": {
+   "file": "hero.jpg",
+   "size": "1600x900 cover-crop",
+   "maker": "Ekorre Golf",
+   "source": "https://static.wixstatic.com/media/6cfd49_3b5a1712a42b4ecba97ff60b991e6d3b~mv2.jpg",
+   "description": "Sebastián Mateu's Sigtuna workshop: golf bag with alignment sticks against a Sjöbergs cabinetmaker's bench, ash blanks leaning behind (homepage og:image / about-5 gallery)",
+   "alternates": [
+    "thwack raw Selection_of_alignment_sticks.jpg (bundle on turf, portrait)",
+    "hickoryheath 675a51_cd38bb7c... (green/white sticks on grass, square)",
+    "beavertail il_...6215367953 (five colorways on grass, only 1080x720)"
+   ]
+  },
+  "fetch_notes": "Shopify makers verified via /products/<handle>.json today; Wix (Hickory & Heath, Ekorre) via og:availability; Etsy via listing pages. Etsy and Wix block plain urllib page fetches (403/429) but image CDNs (i.etsystatic.com, static.wixstatic.com) serve with a UA+Referer."
+ },
+ "thwack": {
+  "brand": "Thwack Sporting Co.",
+  "product": "Pioneer Series Alignment Sticks - Pair",
+  "url": "https://www.thwacksportingco.com/products/pioneer-series-alignment-stick-set",
+  "price": "$109.00",
+  "currency": "USD",
+  "lead_time": "Handcrafted in small batches; allow up to 14 calendar days to be made and shipped, shipping time on top. Ships within the United States only.",
+  "length": "42 in",
+  "wood": "American hickory",
+  "finish": "Hand-wrapped with Crawford waxed Irish linen thread (accent wrap 1.5\"/6\"/1.5\" on one stick, solid 9\" wrap on the other); natural grain otherwise",
+  "caps": "Small metal ferrule/tip on each end (visible in photos; not described in copy)",
+  "origin": "Wrapped by hand in West Virginia, USA (Appalachia)",
+  "colorways": [
+   "New River (Navy Blue + Williamsburg Blue)",
+   "Spruce Knob (Dark Forest Green + Butterscotch)",
+   "Cranberry Glades (Maroon + Dark Rust)",
+   "Blackwater (Slate Grey + Black)"
+  ],
+  "configurator": {
+   "name": "Pick Your Own Hickory Switch",
+   "price": "$139.00",
+   "url": "https://www.thwacksportingco.com/products/pick-your-own-switch",
+   "notes": "Choose thread colors, wrap style and finishing details; both sticks get the primary-and-accent wrap pattern; built to order in small batches."
+  },
+  "verbatim": [
+   "Two handcrafted American hickory alignment sticks in complementary wrap designs—one accented and one solid.",
+   "Each set begins with American hickory and is finished by hand with traditional Irish linen thread.",
+   "Each stick is prepared and wrapped by hand in small batches rather than produced on an assembly line.",
+   "Thwack exists for golfers who believe equipment can be useful without feeling disposable—and that sometimes the simplest parts of the game are the ones worth holding on to.",
+   "The thread wrapping also draws from the outdoor traditions found throughout Appalachia. Its texture and detail bring to mind wrapped fishing rods, hand-tied flies, and the practical craftsmanship passed down by people who took pride in making ordinary objects both useful and beautiful.",
+   "If you grew up anywhere near Appalachia, there's a decent chance you heard the words: \"Go pick your own switch.\""
+  ],
+  "quotes": [
+   {
+    "who": "Thwack Sporting Co. founder (unnamed on site; 'Our Story' is written in first person)",
+    "text": "The idea for Thwack Sporting Co. began to take shape after a Fried Egg Golf trip, where I met several golfers who shared that same appreciation for the traditional side of the game.",
+    "source": "https://www.thwacksportingco.com/pages/about-us"
+   },
+   {
+    "who": "Thwack Sporting Co. founder (unnamed)",
+    "text": "When I returned home, I started working on an idea for a different kind of alignment stick—one that felt less like a piece of plastic training equipment and more connected to the clubs and traditions that made me love the game in the first place.",
+    "source": "https://www.thwacksportingco.com/pages/about-us"
+   },
+   {
+    "who": "Thwack Sporting Co. founder (unnamed)",
+    "text": "The name comes from one of golf's simplest pleasures: the unmistakable sound of a well-struck shot.",
+    "source": "https://www.thwacksportingco.com/pages/about-us"
+   }
+  ],
+  "origin_story": "Founder (unnamed) grew up on the tactile side of golf (persimmon, blades, hickory shafts); idea formed after a Fried Egg Golf trip; company created in West Virginia; products published July 17, 2026. About page is titled 'Our Story' at /pages/about-us. No press quotes found.",
+  "frames": [
+   "thwack-1.jpg",
+   "thwack-2.jpg",
+   "thwack-3.jpg",
+   "thwack-4.jpg",
+   "thwack-5.jpg"
+  ],
+  "frame_notes": [
+   "1 colorway grid (lead)",
+   "2 Cranberry Glades packshot on pine board",
+   "3 bundle of wrapped sticks on turf (homepage)",
+   "4 in bag on course (homepage)",
+   "5 custom Pick-Your-Own-Switch pair on grass"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0716/0335/5763/files/Image_Jul_24_2026_08_49_08_PM.png",
+   "https://cdn.shopify.com/s/files/1/0716/0335/5763/files/IMG_6577.png",
+   "https://www.thwacksportingco.com/cdn/shop/files/Selection_of_alignment_sticks.jpg",
+   "https://www.thwacksportingco.com/cdn/shop/files/IMG_4326.jpg",
+   "https://cdn.shopify.com/s/files/1/0716/0335/5763/files/pick-your-own-switch-custom-wrap-cropped.png"
+  ],
+  "availability": "Purchasable 2026-09-14: Shopify product JSON shows all 4 colorway variants at $109.00 (inventory tracked, add-to-cart live on page); Pick Your Own Switch $139 available:true."
+ },
+ "bubbawhips": {
+  "brand": "BubbaWhips USA",
+  "product": "2-Color Custom Alignment Sticks (Simple Custom Builder)",
+  "url": "https://bubbawhips.com/products/custom-bubbawhips-alignment-sticks",
+  "price": "$99.00 (3-4 Color Custom Builder from $120.00)",
+  "currency": "USD",
+  "lead_time": "Made to order via on-site builder; no turnaround stated on product page. Ships from Minnesota.",
+  "length": "45 in x 3/8 in (per Golf.com; maker site does not state dimensions)",
+  "wood": "Genuine hickory",
+  "finish": "Hand painted, weather-sealed matte finish (per Golf.com); base colour + ring colours chosen in builder; optional custom engraving (+$25)",
+  "caps": "Silver nail cap on each end (per Golf.com)",
+  "origin": "Hand painted and finished in Minnesota, USA",
+  "verbatim": [
+   "PUTTING THE HICKORY BACK IN THE BAG.",
+   "Hand painted and finished in Minnesota with the same care and attention to detail we have for our golf swing. Visually inspired by archery arrows of the past and using genuine hickory, golf's original wood shaft.",
+   "BubbaWhips was founded in the cold Minnesota winter of 2017 at a clubhouse bar…the meaning, well Bubba and Whip are the nicknames of my two boys."
+  ],
+  "quotes": [
+   {
+    "who": "Erik Heltne, BubbaWhips founder",
+    "text": "It was one of those ideas where I just wanted to see if it had any traction.",
+    "source": "https://golf.com/gear/bubbawhips-hickory-alignment-sticks-ryder-cup/"
+   },
+   {
+    "who": "Erik Heltne, BubbaWhips founder",
+    "text": "Most golfers, myself included, went to Home Depot and fashioned the goofy bright orange and bright yellow alignment sticks as training aids. They work, but I've found if you use them consistently, the fiberglass starts shredding and you could catch a piece in your hand if you aren't careful.",
+    "source": "https://golf.com/gear/bubbawhips-hickory-alignment-sticks-ryder-cup/"
+   },
+   {
+    "who": "Erik Heltne, BubbaWhips founder",
+    "text": "It's kind of surreal as we've only really been at this since March. To get the sticks in the bags of some of the biggest names at the Ryder Cup was something I never imagined would happen this early on.",
+    "source": "https://golf.com/gear/bubbawhips-hickory-alignment-sticks-ryder-cup/"
+   },
+   {
+    "who": "Erik Heltne (About page, first person)",
+    "text": "BubbaWhips was founded in the cold Minnesota winter of 2017 at a clubhouse bar…the meaning, well Bubba and Whip are the nicknames of my two boys.",
+    "source": "https://bubbawhips.com/pages/about-us"
+   }
+  ],
+  "about": "Founded winter 2017 at a clubhouse bar by Erik Heltne (Minnesota commercial real estate); Golf.com (Jonathan Wall, Nov 28 2018) covered the sticks reaching Rickie Fowler / Dustin Johnson bags at the 2018 Ryder Cup via Claude Harmon III, plus a blue-and-yellow set for Sam Torrance's European squad; Seminole GC among early club accounts. Edel Golf's 'BubbaWhips x Edel Alignment Sticks' page (edelgolf.com/products/bubbawhips-x-edel-alignment-sticks) now returns 404 — treat the Edel collab as past. Plugged In Golf review Dec 2019 ($69/pair then). Retailer Field Day Sporting Co. still lists Black Knight 'Short' $49 / 'Long' $69.",
+  "frames": [
+   "bubbawhips-1.jpg",
+   "bubbawhips-2.jpg",
+   "bubbawhips-3.jpg",
+   "bubbawhips-4.jpg",
+   "bubbawhips-5.jpg"
+  ],
+  "frame_notes": [
+   "1 2-color builder render (rotated to portrait, lead)",
+   "2 sticks on the range with balls and shag bag (homepage)",
+   "3 3-4 color builder render (rotated)",
+   "4 B&W tee-box shot (homepage)",
+   "5 Black Knight pair (retailer Field Day Sporting Co. image)"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0384/4689/1140/products/3.png",
+   "https://bubbawhips.com/cdn/shop/files/1_0f841742-d1fd-4c31-adaf-2a110a33a378_2048x.png",
+   "https://cdn.shopify.com/s/files/1/0384/4689/1140/products/2.png",
+   "https://bubbawhips.com/cdn/shop/files/1_393a4356-0b17-4b61-a17c-243146564296_2048x.png",
+   "https://cdn.shopify.com/s/files/1/0532/6048/4807/products/Black-Knigh-2t--Bubbawhips-Golf-Alignment-Sticks---Hickory-Wood-Premium-Sticks_1024x1024_2x_11038450-96de-40b2-bcb8-b83b336b1b54.png"
+  ],
+  "availability": "Purchasable 2026-09-14: /products/custom-bubbawhips-alignment-sticks.json published at $99.00 (inventory untracked); products.json shows customer builder orders created as recently as Sept 2026, so the builder is live. The stock 'Classics' colorways are no longer listed on bubbawhips.com."
+ },
+ "scotchskins": {
+  "brand": "Scotch & Skins",
+  "product": "Sawgrass Hickory Alignment Sticks",
+  "url": "https://www.scotchandskins.com/products/green-grass",
+  "price": "$75.00",
+  "currency": "USD",
+  "lead_time": "Not stated (stocked item, inventory tracked). Matching leather cover ($38) sold out.",
+  "length": "42 in",
+  "wood": "Grade A Appalachian hickory (sourced from Atlas Dowel & Wood, Ohio)",
+  "finish": "Custom stain and paint (green with white bands), sealed with a beeswax protective coat, laser-engraved wordmark",
+  "caps": "Bronze metal end caps",
+  "origin": "Handcrafted in U.S.A.",
+  "verbatim": [
+   "Fill out your bag with an alignment stick set that celebrates the sports great heritage with natural materials and a custom stain and paint finish.",
+   "42\" Long Grade A Appalachian Hickory. Sealed With A Beeswax Protective Coat. Handcrafted in U.S.A. Bronze Metal End Caps.",
+   "Our wood is sourced from Atlas Dowel & Wood in Ohio who is committed to responsible forest management."
+  ],
+  "quotes": [
+   {
+    "who": "Adam & Brice, Scotch & Skins co-founders (signed About page)",
+    "text": "We're both lifelong golfers who simply wanted more out of our gloves.",
+    "source": "https://www.scotchandskins.com/pages/about"
+   },
+   {
+    "who": "Adam & Brice, Scotch & Skins co-founders",
+    "text": "We believe that, as with all things in life, you get what you pay for, and as the great Ben Hogan once said, \"There are no shortcuts in the quest for perfection,\" so each of our products is crafted of only the highest-quality natural materials.",
+    "source": "https://www.scotchandskins.com/pages/about"
+   }
+  ],
+  "frames": [
+   "scotchskins-1.jpg",
+   "scotchskins-2.jpg",
+   "scotchskins-3.jpg",
+   "scotchskins-4.jpg",
+   "scotchskins-5.jpg"
+  ],
+  "frame_notes": [
+   "1 Sawgrass close-up (lead)",
+   "2 bronze end caps on grass",
+   "3 stick on course, low angle (autumn)",
+   "4 sighting down the stick outdoors",
+   "5 engraved wordmark detail"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0504/4456/6701/products/GreenGrass.jpg",
+   "https://cdn.shopify.com/s/files/1/0504/4456/6701/files/AlignmentStickEnds_629ad64a-26a9-4cec-b42d-d5e553133ee5.png",
+   "https://cdn.shopify.com/s/files/1/0504/4456/6701/products/alignmentcover_ef2e5a28-c2c5-493d-8841-9f060cdfa8f3.jpg",
+   "https://cdn.shopify.com/s/files/1/0504/4456/6701/products/AlignmentStickWood_adbd99d5-4a82-46e8-9c44-b2a3853f029e.jpg",
+   "https://cdn.shopify.com/s/files/1/0504/4456/6701/products/Scotch_SkinsBrand_e836d8cd-ff40-40ae-8290-b717ba02a9aa.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: product JSON $75.00, inventory tracked, updated today; collection JSON earlier today showed available:true (Red Raiders, White Knight, Burnt Orange colorways sold out)."
+ },
+ "gamut": {
+  "brand": "Gamut Golf",
+  "product": "GG Alignment Sticks V3",
+  "url": "https://gamutgolf.com/products/gg-sticks-v3",
+  "price": "$98.00",
+  "currency": "USD",
+  "lead_time": "Not stated (stocked; inventory tracked). V4, Lone Wolf, Shibori, Gamut x Otey editions sold out.",
+  "length": "42 in x 3/8 in, 6 in of taper",
+  "wood": "American-grown hickory, square profile",
+  "finish": "Stained/painted blue with white and blue-striped band, engraved Gamut wordmark; square profile",
+  "caps": "None (tapered square ends)",
+  "origin": "American-grown hickory; place of manufacture not stated",
+  "verbatim": [
+   "The GG V3 Sticks are built on an appreciation for quality, craftsmanship, and the traditions of the game. Made from American-grown hickory, they blend the heritage we love with the clean, modern simplicity Gamut stands on.",
+   "Over time, the hickory develops its own character, telling the story of every range session along the way.",
+   "Built to last, made to age.",
+   "42\" long x 3/8\" wide. 6\" of taper."
+  ],
+  "quotes": [],
+  "brand_line": "We're driven by a passion for the game. Our journey is built on years of craftsmanship, where quality meets precision, and every detail matters. (gamutgolf.com homepage 'Welcome')",
+  "frames": [
+   "gamut-1.jpg",
+   "gamut-2.jpg",
+   "gamut-3.jpg",
+   "gamut-4.jpg",
+   "gamut-5.jpg"
+  ],
+  "frame_notes": [
+   "1 studio packshot, dark bg (lead)",
+   "2 pair angled",
+   "3 band detail",
+   "4 leaning on whitewashed brick wall outdoors",
+   "5 pair, full length"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0696/0047/7218/files/L1120326.jpg",
+   "https://cdn.shopify.com/s/files/1/0696/0047/7218/files/L1120320.jpg",
+   "https://cdn.shopify.com/s/files/1/0696/0047/7218/files/L1120327.jpg",
+   "https://cdn.shopify.com/s/files/1/0696/0047/7218/files/8F0FB7A0-5D1F-45D5-8FEE-16EAC3782BBD-labbet-app.jpg",
+   "https://cdn.shopify.com/s/files/1/0696/0047/7218/files/L1120322.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: product JSON $98.00, published, inventory tracked; homepage lists V3 without a 'Sold out' badge while V4/Lone Wolf/Shibori show Sold out."
+ },
+ "noreaster": {
+  "brand": "Nor'easter Sticks",
+  "product": "ACK-ley Hickory Alignment Sticks",
+  "url": "https://noreastersticks.com/products/ackley",
+  "price": "$99.00 per pair",
+  "currency": "USD",
+  "lead_time": "Order turnaround 3-4 weeks. Maker on break Sept 20 - Oct 10, 2026: orders stay open but ship mid-October. Free US shipping over $99.",
+  "length": "Not stated",
+  "wood": "Premium hickory hardwood",
+  "finish": "Painted Navy Blue base with 'Nantucket Red' outline, personalized laser etching included",
+  "caps": "None visible (bare hickory ends)",
+  "origin": "Handcrafted; New England maker (Nantucket/ACK themed), place not stated explicitly on site",
+  "verbatim": [
+   "The \"ACK-ley\" is a non-custom golf alignment stick with a \"Nantucket Red\" outline and a Navy Blue base.",
+   "Unlike traditional alignment sticks, which are typically made from fiberglass or plastic, Nor'easter Sticks are handcrafted from premium hickory hardwood.",
+   "Nor'easter Sticks are high-quality hickory alignment sticks for golfers that are fully customizable from colors to laser etching.",
+   "Personalized laser etching included. Price is per pair."
+  ],
+  "quotes": [
+   {
+    "who": "Nor'easter Sticks maker (unnamed, first-person site banner)",
+    "text": "Nor'easter Sticks will be taking a short break from Sept. 20-Oct. 10. ORDERS will remain OPEN during this time, but please note that any ORDERS placed during the shutdown will begin shipping in mid-October once I'm back.",
+    "source": "https://noreastersticks.com/"
+   }
+  ],
+  "frames": [
+   "noreaster-1.jpg",
+   "noreaster-2.jpg",
+   "noreaster-3.jpg",
+   "noreaster-4.jpg",
+   "noreaster-5.jpg"
+  ],
+  "frame_notes": [
+   "1 ACK-ley pair packshot (lead)",
+   "2 ACK-ley single, etching visible",
+   "3 custom sticks leaning on cedar shingles (gallery)",
+   "4 club-order bundle on wood table (homepage 'Pasatiempo1')",
+   "5 navy/white club batch"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0725/9989/6352/files/IMG-5244.jpg",
+   "https://cdn.shopify.com/s/files/1/0725/9989/6352/files/IMG-5245.jpg",
+   "https://noreastersticks.com/cdn/shop/files/IMG_3350.jpg",
+   "https://noreastersticks.com/cdn/shop/files/Pasatiempo1.jpg",
+   "https://noreastersticks.com/cdn/shop/files/IMG_7788.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: product JSON $99.00, published, inventory tracked; homepage lists ACK-ley at $99 with no sold-out badge. Note the Sept 20 - Oct 10 shipping pause."
+ },
+ "hazy": {
+  "brand": "Hazy Golf",
+  "product": "Hazy Golf x Sun Mountain Limited Edition Alignment Sticks",
+  "url": "https://hazygolf.com/products/hazy-golf-x-sun-mountain",
+  "price": "$130.00",
+  "currency": "USD",
+  "lead_time": "Not stated; free shipping on all U.S. orders. Run of 50 numbered pairs.",
+  "length": "Not stated for this edition (Hazy core sticks: 43 in x 3/8 in)",
+  "wood": "Handcrafted hickory",
+  "finish": "Red-white-and-navy paintwork, gloss protective coating, engraved 'Hazy Golf x Sun Mountain', commemorative 250 mark, numbered x/50",
+  "caps": "Brass end caps",
+  "origin": "Handcrafted, finished by hand in Newburgh, New York, USA",
+  "core_line": "Core custom designs (The 218's, The Brook, The Nautical, Carolina Blues, etc.) $99/pair; Stock Alignment Sticks $84; Classic Crest $75; Minimalist Premium $59; Signature Custom $149. Core specs: 100% genuine hickory, 43\" x 3/8\", gloss protective coating, nickel or brass end caps, one stick custom engraved, the other with the Hazy Golf logo; 35+ colour options. Optional $60 crazy-horse leather see-through cover. Junior 35\" ($25) and toddler 25\" ($20) singles. Founded Oct 2019 / trading since 2020.",
+  "verbatim": [
+   "Created to honor Sun Mountain's Hometown USA golf bag and 250 years of American independence, this limited release brings together handcrafted hickory, red-white-and-navy blue paintwork, brass end caps, and a commemorative 250th anniversary mark.",
+   "Handcrafted from genuine hickory and finished by hand in New York, The Brook brings a more considered look to the range, the bag, and the way you practice.",
+   "Quiet design. Honest materials. Golf objects made to last.",
+   "Trusted by Golf Professionals and Country Clubs Nationwide"
+  ],
+  "quotes": [
+   {
+    "who": "Hazy Golf founder (unnamed; 'Our Story' in first person; daughters Hazel and Georgia)",
+    "text": "So I went into the workshop and made my own alignment sticks. Those first sticks eventually became Hazy.",
+    "source": "https://hazygolf.com/pages/our-story"
+   },
+   {
+    "who": "Hazy Golf founder (unnamed)",
+    "text": "The name Hazy began as something personal, inspired by my daughter Hazel. After the birth of my second daughter, Georgia, the name grew into Hazy Golf.",
+    "source": "https://hazygolf.com/pages/our-story"
+   },
+   {
+    "who": "Hazy Golf founder (unnamed)",
+    "text": "I chose solid hickory, the same wood used in early golf clubs. Not for nostalgia, but for how it feels.",
+    "source": "https://hazygolf.com/pages/our-story"
+   }
+  ],
+  "frames": [
+   "hazy-1.jpg",
+   "hazy-2.jpg",
+   "hazy-3.jpg",
+   "hazy-4.jpg",
+   "hazy-5.jpg"
+  ],
+  "frame_notes": [
+   "1 LE pair packshot with 250 mark (lead)",
+   "2 pair angled",
+   "3 engraving close-up",
+   "4 Hazy sticks in bag with driver, leather backdrop (homepage)",
+   "5 Sleepy Hollow CC club batch on turf (homepage)"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0507/4708/0858/files/HazyGolfxSMS-3.png",
+   "https://cdn.shopify.com/s/files/1/0507/4708/0858/files/HazyxSunMtn-4.png",
+   "https://cdn.shopify.com/s/files/1/0507/4708/0858/files/HazyxSunMtn-7.png",
+   "https://cdn.shopify.com/s/files/1/0507/4708/0858/files/hazysticks_part3_20260326-4.jpg",
+   "https://cdn.shopify.com/s/files/1/0507/4708/0858/files/2024-09-21_08.48.14.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: product JSON $130.00, published (SKU 61026HAZYXSM), inventory tracked, updated today."
+ },
+ "clutch": {
+  "brand": "Clutch Golf Company",
+  "product": "Hickory Alignment Sticks - Midnight Fairway",
+  "url": "https://clutchgolfcompany.com/products/hickory-alignment-sticks-midnight-fairway",
+  "price": "$54.99",
+  "currency": "USD",
+  "lead_time": "Not stated (stocked; inventory tracked).",
+  "length": "42 in",
+  "wood": "Real hickory wood",
+  "finish": "Painted black/navy with white bands (Midnight Fairway); Blue Devil colorway also live; engraved 'Clutch' wordmark",
+  "caps": "None visible (bare wood ends)",
+  "origin": "Handmade in the USA",
+  "verbatim": [
+   "Meet your new favorite training partner: Clutch Golf's 42-inch Hickory Alignment Sticks. Handmade in the USA, these beauties bring vintage charm and dead-serious functionality straight to your practice routine.",
+   "Crafted from real hickory wood (yeah, the kind your grandpa might've used to build a barn and break par), these sticks aren't just eye candy—they're precision tools designed to keep your setup square, your aim true, and your playing partners jealous.",
+   "Clutch Golf was born from a simple idea: if you can't find the gear you want, make it yourself.",
+   "We focus on timeless design, traditional materials, and American craftsmanship—because quality never goes out of style."
+  ],
+  "quotes": [],
+  "frames": [
+   "clutch-1.jpg",
+   "clutch-2.jpg",
+   "clutch-3.jpg",
+   "clutch-4.jpg"
+  ],
+  "frame_notes": [
+   "1 Midnight Fairway pair on turf (lead)",
+   "2 with wedge and ball",
+   "3 Blue Devil colorway on turf",
+   "4 Blue Devil with wedge"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0701/8456/6921/files/IMG_6985.jpg",
+   "https://cdn.shopify.com/s/files/1/0701/8456/6921/files/IMG_6986.jpg",
+   "https://cdn.shopify.com/s/files/1/0701/8456/6921/files/IMG_5954.jpg",
+   "https://clutchgolfcompany.com/cdn/shop/files/IMG_5951.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: product JSON $54.99, published, inventory tracked, updated today."
+ },
+ "hickoryheath": {
+  "brand": "Hickory & Heath",
+  "product": "Custom Alignment Sticks",
+  "url": "https://www.hickoryandheath.com/products/custom-alignment-sticks",
+  "price": "$75.00",
+  "currency": "USD",
+  "lead_time": "Allow 10-14 business days for production. No returns or refunds on custom orders.",
+  "length": "43 in",
+  "wood": "Premier hickory",
+  "finish": "Cut, hand stained and painted; choose main + secondary colour and one of five stripe designs; optional personalized engraving (on one stick, 'Hickory & Heath' on the other)",
+  "caps": "None visible (bare stained ends)",
+  "origin": "Built by hand in the USA; family-owned",
+  "verbatim": [
+   "Our alignment sticks are made from premier hickory wood, cut, hand stained and painted. Made in the USA.",
+   "43\" long - Sticks fit below most woods to protect the stick ends, while still showing off your custom design in the bag.",
+   "No plastic. No fiberglass. Just premium wood hickory wood cut, stained, and finished by hand.",
+   "Family Built. Player Tested. We use what we make."
+  ],
+  "quotes": [],
+  "frames": [
+   "hickoryheath-1.jpg",
+   "hickoryheath-2.jpg",
+   "hickoryheath-3.jpg",
+   "hickoryheath-4.jpg",
+   "hickoryheath-5.jpg"
+  ],
+  "frame_notes": [
+   "1 sticks in bag with knit headcovers (product lead)",
+   "2 green/white pairs on grass",
+   "3 in bag on course with 'Walking Only' cover",
+   "4 custom colour combinations on fence",
+   "5 sticks with hang tag on navy cloth"
+  ],
+  "image_sources": [
+   "https://static.wixstatic.com/media/675a51_3bbf550445ef4a40aca187f6877582bd~mv2.jpg",
+   "https://static.wixstatic.com/media/675a51_cd38bb7c5bb14dc79aafe16458fec771~mv2.png",
+   "https://static.wixstatic.com/media/675a51_3a32582f26844562bb389ad278686486~mv2.png",
+   "https://static.wixstatic.com/media/675a51_e092616d42044d7e958fb04d7711314b~mv2.png",
+   "https://static.wixstatic.com/media/675a51_06c20a811f3e4e668b34c81a3c7386f9~mv2.png"
+  ],
+  "availability": "Purchasable 2026-09-14: Wix product page og:availability InStock, $75.00, Add to Cart with colour/design/engraving fields; homepage tags it 'Top Seller'."
+ },
+ "beavertail": {
+  "brand": "Beavertail Golf Co.",
+  "product": "The Beaversticks - Hickory Golf Alignment Sticks",
+  "url": "https://www.etsy.com/listing/1757675930/the-beaversticks-hickory-golf-alignment",
+  "price": "$72.22 (The Custom: $82.22); shipping $8.99",
+  "currency": "USD",
+  "lead_time": "Made to order, up to a week; Etsy estimate 'Get it by Sep 21-24 if you order today'. Ships from Dickinson, ND. Returns accepted within 30 days.",
+  "length": "Not stated",
+  "wood": "Hickory hardwood",
+  "finish": "Hand painted (six stock designs: The Cotton Candy, The OG, The Natural, The Frat Boy, The Jordan, The Collegiate, plus The Custom); free name/phrase customization on both ends of each stick",
+  "caps": "Silver or black end caps (tacks), buyer's choice",
+  "origin": "Hand painted in Dickinson, North Dakota, USA (est. 2024)",
+  "verbatim": [
+   "The Beaversticks are hand painted and custom hickory golf alignment sticks. Every pair is crafted from hand start to finish.",
+   "With these authentic hickory alignment sticks you'll feel energized every time you get to the range and actually want to practice. Plus they just look really good sitting in your bag.",
+   "Every stick is made to order and is guaranteed to impress."
+  ],
+  "quotes": [
+   {
+    "who": "Hunter Myran, Beavertail Golf Co. (sole shop member; listing written in first person)",
+    "text": "I strive to get you product out as quickly as possible but it could take up to a week depending on circumstances. If there is anything wrong or unsatisfactory I will do everything I can to make it right.",
+    "source": "https://www.etsy.com/listing/1757675930/the-beaversticks-hickory-golf-alignment"
+   },
+   {
+    "who": "Hunter Myran, Beavertail Golf Co.",
+    "text": "I am always willing to work with you on custom designs and orders. Whether or not it's one pair or 50 pairs for an event.",
+    "source": "https://www.etsy.com/listing/1757675930/the-beaversticks-hickory-golf-alignment"
+   }
+  ],
+  "frames": [
+   "beavertail-1.jpg",
+   "beavertail-2.jpg",
+   "beavertail-3.jpg",
+   "beavertail-4.jpg",
+   "beavertail-5.jpg"
+  ],
+  "frame_notes": [
+   "1 five colorways on grass (lead)",
+   "2 The OG black/white crossed on grass",
+   "3 The Cotton Candy",
+   "4 engraving close-up",
+   "5 The Frat Boy against fence"
+  ],
+  "image_sources": [
+   "https://i.etsystatic.com/53500184/r/il/9bec11/6215367953/il_1080xN.6215367953_irvh.jpg",
+   "https://i.etsystatic.com/53500184/r/il/1fe044/6215370103/il_1080xN.6215370103_gjjd.jpg",
+   "https://i.etsystatic.com/53500184/r/il/29ad0f/6215369999/il_1080xN.6215369999_46qr.jpg",
+   "https://i.etsystatic.com/53500184/r/il/63316c/6215366091/il_1080xN.6215366091_hhjv.jpg",
+   "https://i.etsystatic.com/53500184/r/il/34f0c5/6254084501/il_1080xN.6254084501_2l0c.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: Etsy listing live, 'In 6 carts', all 7 colour options selectable, Add to cart present; Star Seller, 235 sales, 4.9 (24 reviews); listing renewed Aug 22, 2026."
+ },
+ "outwest": {
+  "brand": "Out West Atelier",
+  "product": "Painted Handmade Walnut Alignment Sticks",
+  "url": "https://www.etsy.com/listing/4540540713/painted-handmade-walnut-alignment-sticks",
+  "price": "$69.99; shipping $32.50",
+  "currency": "USD",
+  "lead_time": "Lead time 1 week; Etsy estimate 'Order today to get by Sep 23-Oct 1'. Ships from Panama City, FL; US shipping only.",
+  "length": "42 in",
+  "wood": "Solid black walnut (sister listing in cypress)",
+  "finish": "Single painted centre band (White or Red), low-VOC protective compound finish, branded with the shop's desert-landscape mark; optional engraving",
+  "caps": "None (bare walnut ends)",
+  "origin": "Handmade to order in Panama City Beach, Florida, USA",
+  "verbatim": [
+   "Solid black walnut alignment sticks, built for the golfer who cares about the details. The weight and feel of real hardwood puts these in a different category entirely.",
+   "Handmade to order in Panama City Beach, Florida.",
+   "Out West Atelier builds small-batch hardwood goods in Panama City Beach, Florida. Every piece is made to be used, lived with, and kept for years."
+  ],
+  "quotes": [],
+  "maker": "Josh (Etsy shop owner), Panama City Beach, Florida; 11 sales, 5.0 (3 reviews), 3 years on Etsy; this listing has no reviews yet (listed Jul 19, 2026).",
+  "frames": [
+   "outwest-1.jpg",
+   "outwest-2.jpg",
+   "outwest-3.jpg",
+   "outwest-4.jpg"
+  ],
+  "frame_notes": [
+   "1 red-band pair on grass (lead)",
+   "2 pair on concrete",
+   "3 pair held against siding",
+   "4 branded shop mark on stock rods"
+  ],
+  "image_sources": [
+   "https://i.etsystatic.com/44356179/r/il/020e1d/8272403172/il_1080xN.8272403172_9418.jpg",
+   "https://i.etsystatic.com/44356179/r/il/157914/8320318941/il_1080xN.8320318941_kkzl.jpg",
+   "https://i.etsystatic.com/44356179/r/il/74db41/8320318913/il_1080xN.8320318913_a9bl.jpg",
+   "https://i.etsystatic.com/44356179/r/il/baaa9d/8260576871/il_1080xN.8260576871_kk09.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: Etsy listing live, 'Only 7 left and in 1 cart', $69.99, White/Red selectable, Add to cart present. Shipping is steep ($32.50)."
+ },
+ "scotsticks": {
+  "brand": "ScotSticks",
+  "product": "Anniversary 6",
+  "url": "https://www.scotsticks.com/products/anniversary-6",
+  "price": "£51.00",
+  "currency": "GBP",
+  "lead_time": "Made to order, 21-day lead time (FAQ: 14-21 days). Ships worldwide from Scotland; import duties are the customer's responsibility.",
+  "length": "45 in x 3/8 in",
+  "wood": "100% ash",
+  "finish": "Painted yellow base with green and red accents, chamfered edges, engraved wordmark",
+  "caps": "No end caps on this release (chamfered edges)",
+  "origin": "Handcrafted in Scotland",
+  "verbatim": [
+   "In celebration of our 6th year in business we have pulled on the classic combination of a yellow base with green and red accents. Think of it as yellow sun, green turf and seeing red when the snap hooks begin to plague the round...",
+   "No end caps - this time we're going chamfered edges",
+   "Ash was the original wood used in golf (before hickory hit our shores from the US).",
+   "Our traditional ash alignment sticks are more sustainable than fibreglass or plastic alternatives on the market."
+  ],
+  "quotes": [
+   {
+    "who": "Al, ScotSticks founder ('Meet The Maker')",
+    "text": "I'm Al and in short…I'm obsessed with golf.",
+    "source": "https://www.scotsticks.com/pages/meet-the-maker"
+   },
+   {
+    "who": "Al, ScotSticks founder",
+    "text": "Somehow I managed to bring even my studies back to golf, when I completed a PhD in golf ball design funded by The R&A (The Royal and Ancient Golf Club of St Andrews). Wandering up the 18th of the Old Course was a fine stroll to work.",
+    "source": "https://www.scotsticks.com/pages/meet-the-maker"
+   },
+   {
+    "who": "Al, ScotSticks founder",
+    "text": "My goal is to provide golfers with high quality, high performing golf accessories from the home of golf.",
+    "source": "https://www.scotsticks.com/pages/meet-the-maker"
+   }
+  ],
+  "frames": [
+   "scotsticks-1.jpg",
+   "scotsticks-2.jpg",
+   "scotsticks-3.jpg",
+   "scotsticks-4.jpg",
+   "scotsticks-5.jpg"
+  ],
+  "frame_notes": [
+   "1 Anniversary Edition 6 graphic (product lead)",
+   "2 sticks in Sunday bag on turf (product image, converted from HEIC)",
+   "3 club-order batch (homepage)",
+   "4 bag on links course (homepage)",
+   "5 stock colorway lineup"
+  ],
+  "image_sources": [
+   "https://cdn.shopify.com/s/files/1/0476/2668/2536/files/Anni6.jpg",
+   "https://www.scotsticks.com/cdn/shop/files/IMG_2475.heic",
+   "https://www.scotsticks.com/cdn/shop/files/IMG_5835_2048x.jpg",
+   "https://www.scotsticks.com/cdn/shop/files/IMG_6317_2048x.jpg",
+   "https://www.scotsticks.com/cdn/shop/files/WebGroup_2048x.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: product JSON £51.00 GBP, published Aug 26 2026, inventory tracked, updated today."
+ },
+ "ekorre": {
+  "brand": "Ekorre Golf",
+  "product": "Alignment Sticks - three stripes",
+  "url": "https://www.ekorregolf.com/product-page/alignment-sticks-three-stripes",
+  "price": "2 400,00 kr (approx. USD 255); custom colour +200 SEK, name personalisation +50 SEK",
+  "currency": "SEK",
+  "lead_time": "Normal delivery within Sweden for stock items is two weeks; shipping fee by destination at checkout; import fees/VAT/customs outside the EU paid by buyer; 30-day withdrawal for unused non-custom products.",
+  "length": "Not stated (each stick 80-85 g)",
+  "wood": "Swedish ash, six glued sections forming a hexagonal rod (split-cane fishing-rod construction)",
+  "finish": "Painted three-stripe band (lilac/green/red on the stock version), engraved wordmark; custom colours on request",
+  "caps": "None (bare hexagonal ends)",
+  "origin": "Handmade in Sigtuna, Sweden (workshop at Venngarn 443, 193 41 Sigtuna)",
+  "verbatim": [
+   "Ekorre Golf's wooden alignment sticks combine classic style with unmatched durability and precision. Their special construction ensures exceptional flexibility and durability, minimizing the natural bending of the wood.",
+   "We make our wooden alignment sticks in the same way traditional split-cane bamboo fishing rods are built: six carefully matched sections working together to keep your stock as straight as possible.",
+   "Ekorre Golf alignment sticks are constructed from six pieces that form a hexagonal shape, similar to many bamboo fishing rods. This gives them a sort of \"memory\" that allows them to return to their straight shape.",
+   "A bent stick is hard to make perfectly straight again; in contrast, a hexagonal rod can be rotated to find its straightest point.",
+   "Owning wooden sticks is a luxury and they require some care."
+  ],
+  "quotes": [
+   {
+    "who": "Sebastián Mateu, cabinetmaker and founder of Ekorre Golf",
+    "text": "My name is Sebastián Mateu, and my journey in the world of golf began long before these products - it started when I was a child working as a caddie in Chile. By the age of 14, I was already supporting professional players on tour.",
+    "source": "https://www.ekorregolf.com/"
+   },
+   {
+    "who": "Sebastián Mateu",
+    "text": "In addition to our fabric products, I am especially proud of my alignment sticks - unmatched in quality and craftsmanship, reflecting the perfect blend of my woodworking skills and passion for golf.",
+    "source": "https://www.ekorregolf.com/"
+   },
+   {
+    "who": "Ekorre Golf (About page)",
+    "text": "This project is the result of Sebastian's thesis at Malmstens Liu, which focused on exploring the flexibility of wood and how to make the most of its natural elasticity.",
+    "source": "https://www.ekorregolf.com/about-5"
+   }
+  ],
+  "about": "Sebastián Mateu: former caddie in Chile from childhood, brief pro career, cabinetmaker trained at Malmstens (Linköping University, Stockholm), returned to caddie on a European tour in 2024; headcovers made with designer Katarina Sjöstrand; ambassador Sebastián García on the DP World Tour 2026.",
+  "frames": [
+   "ekorre-1.jpg",
+   "ekorre-2.jpg",
+   "ekorre-3.jpg",
+   "ekorre-4.jpg",
+   "ekorre-5.jpg"
+  ],
+  "frame_notes": [
+   "1 three-stripe stick on grey barn wood (product lead)",
+   "2 bundle of hexagonal blanks in the workshop",
+   "3 pair on the green with a ball",
+   "4 hexagonal ends detail",
+   "5 sticks in bag on course"
+  ],
+  "image_sources": [
+   "https://static.wixstatic.com/media/6cfd49_35aff1b357b345868d5c89e3d7d15c93~mv2.jpg",
+   "https://static.wixstatic.com/media/6cfd49_20b955e02e0e4d0aba62949a08ebd012~mv2.jpg",
+   "https://static.wixstatic.com/media/6cfd49_20f0502303b64fe19efe07eef2d9b275~mv2.jpg",
+   "https://static.wixstatic.com/media/6cfd49_4fbfda004ab148318229262816b8be0f~mv2.jpg",
+   "https://static.wixstatic.com/media/6cfd49_a557caf971304cec8b6ab1a95207777d~mv2.jpg"
+  ],
+  "availability": "Purchasable 2026-09-14: Wix product page og:availability InStock, 2 400,00 kr, Add to Cart live; listed on homepage collection."
+ }
+}

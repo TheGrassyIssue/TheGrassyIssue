@@ -121,6 +121,13 @@ Re-submitting is the point of this deploy.
 
 **Priority 2 — new pages.**
 
+- `https://thegrassyissue.com/drops/the-alignment-stick-edit`
+  The Alignment Stick Edit (14 Sept). 12 wooden pairs, ~3,200 words, FAQPage
+  schema. Also creates 11 new coverage pages under /brands/ (thwack-sporting-co,
+  bubbawhips, scotch-and-skins, noreaster-sticks, hazy-golf, clutch-golf-company,
+  hickory-and-heath, beavertail-golf-co, out-west-atelier, scotsticks, ekorre-golf)
+  — all in the sitemap via sync-brand-sitemap.
+
 - `https://thegrassyissue.com/drops/the-dyneema-edit`
   The Dyneema Edit (10 Sept). 28 pieces, 17 makers, ~4,500 words, FAQPage
   schema, sourced material explainer. Also adds a mention on

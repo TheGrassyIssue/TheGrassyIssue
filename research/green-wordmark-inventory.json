@@ -32,16 +32,16 @@
   "sha1": "cdd7588e5c8670680ff30d21e5a2278a8de6563f"
  },
  "brands/attr/drops-and-vanishes.html": {
-  "size": 17613,
-  "sha1": "f8cc35d53bd4e63641db9e5648d688323a5df1a4"
+  "size": 17562,
+  "sha1": "595088fbcb7a541144cdf9bafb33547b14176ede"
  },
  "brands/attr/heritage.html": {
   "size": 19602,
-  "sha1": "9d9071568d0a61ceb1a82f04cf4e942ecec0b217"
+  "sha1": "9c247fc2a8c19437ae88378a8a5bf0b411212284"
  },
  "brands/attr/new-to-index.html": {
-  "size": 33108,
-  "sha1": "77ff202eb9ef4fc2409bff5744140429329fec43"
+  "size": 40496,
+  "sha1": "742e5b0af79fc8fc038517558c9ce0857874bd8d"
  },
  "brands/attr/tour-proven.html": {
   "size": 16962,
@@ -71,6 +71,10 @@
   "size": 10650,
   "sha1": "45135d8446b9091e1442315a4e5e0dac2ca2edc7"
  },
+ "brands/beavertail-golf-co.html": {
+  "size": 10405,
+  "sha1": "50958a4976ceec0f3ef9f8e4993bf4a2f60aaec1"
+ },
  "brands/bestgrips.html": {
   "size": 10706,
   "sha1": "d6fb07e95330beaee0259ac3253a96c7d6daa407"
@@ -95,13 +99,17 @@
   "size": 10164,
   "sha1": "24f79f2ef8c3d848f3db1eedddeb86209b13a904"
  },
+ "brands/bubbawhips.html": {
+  "size": 10341,
+  "sha1": "34f492b733249a9d738e1032d7363ff1752f8e16"
+ },
  "brands/bunker-mentality.html": {
   "size": 10261,
   "sha1": "022e1b086c17a12b91ea8d831aa5c9bfb7abb745"
  },
  "brands/carhartt-wip.html": {
   "size": 10820,
-  "sha1": "9be3c286cf9490be38fdeb9e88007e2046ce6c49"
+  "sha1": "3f149a41c37862644a7e0776fbff74cf39183264"
  },
  "brands/casualist.html": {
   "size": 12805,
@@ -118,6 +126,10 @@
  "brands/cloud-and-wind-golf.html": {
   "size": 13019,
   "sha1": "c9d60e2ca1818f926d1df0beebea69c1f5af0b9a"
+ },
+ "brands/clutch-golf-company.html": {
+  "size": 10393,
+  "sha1": "54168b202f8db100be74f926149cf693816bdebe"
  },
  "brands/cph-golf.html": {
   "size": 10231,
@@ -159,6 +171,10 @@
   "size": 10234,
   "sha1": "cb063016fb0f9223036156651f08eec3a9bafcef"
  },
+ "brands/ekorre-golf.html": {
+  "size": 10329,
+  "sha1": "db17d59b5f9de8cf84755a8389226f55e478b116"
+ },
  "brands/evnroll.html": {
   "size": 10520,
   "sha1": "4b19324c25352b0c5f35ff2c49825ddb97a842a2"
@@ -180,8 +196,8 @@
   "sha1": "00a7a6474be4838f53d1c84b8e42d9f2498e7f2c"
  },
  "brands/gamut-golf.html": {
-  "size": 10202,
-  "sha1": "9ec42d14a71b38e6a7f8cfc9451357a8c659dcab"
+  "size": 10915,
+  "sha1": "b62fe2e58a1d5bb8e54293878dd4b8c2bdefa72f"
  },
  "brands/garsen-golf.html": {
   "size": 10070,
@@ -211,17 +227,25 @@
   "size": 15092,
   "sha1": "6a5974efa764090ec9cff9fe36d3a59d6671f18b"
  },
+ "brands/hazy-golf.html": {
+  "size": 10323,
+  "sha1": "cb3a8a093a676c977f4fabf9997d159430b95acd"
+ },
  "brands/hedge.html": {
   "size": 10125,
   "sha1": "8368e1a77a4d60b5548cff3b7f99bc6d32e9564e"
+ },
+ "brands/hickory-and-heath.html": {
+  "size": 10368,
+  "sha1": "4ae502a1de03785b710aa99c8e8538844a9aca08"
  },
  "brands/huega-house.html": {
   "size": 11834,
   "sha1": "2ce4eca8d8fc2c77c7b6621ae412239616d66f46"
  },
  "brands/index.html": {
-  "size": 205791,
-  "sha1": "1763c1f05d54ebdbb06a54fe68637ac637520530"
+  "size": 219012,
+  "sha1": "a8b36f4dfb26589a6312281e6d59bd3dcc41727c"
  },
  "brands/inside-story.html": {
   "size": 10235,
@@ -299,6 +323,10 @@
   "size": 10640,
   "sha1": "410bc9afbded8b57dcc5d37c47042814d0d779fb"
  },
+ "brands/noreaster-sticks.html": {
+  "size": 10385,
+  "sha1": "57115ef555f626095cbbc80c43a8743e6d517909"
+ },
  "brands/odd-ritual.html": {
   "size": 11055,
   "sha1": "77d2712e674f6989391e6d78e42e6e2f2d829cc9"
@@ -314,6 +342,10 @@
  "brands/orkai.html": {
   "size": 10112,
   "sha1": "c786665bfbb77dc4bdbae6025fb55505aef458b4"
+ },
+ "brands/out-west-atelier.html": {
+  "size": 10386,
+  "sha1": "51c32934dc1f3401473960bdfdba7f9c296963c5"
  },
  "brands/ovo.html": {
   "size": 10559,
@@ -399,13 +431,21 @@
   "size": 10237,
   "sha1": "c22cad59739c2048e0ee1470706207f011e870de"
  },
+ "brands/scotch-and-skins.html": {
+  "size": 10363,
+  "sha1": "b4f327559a71d9130352a3f0abd61efdc9fbfe30"
+ },
+ "brands/scotsticks.html": {
+  "size": 10298,
+  "sha1": "7f9e674811414ca161725c296a2a50c0c2433e60"
+ },
  "brands/seamus.html": {
   "size": 19106,
   "sha1": "c1e50e7f44048413118c729e13af7f86e1acf3cd"
  },
  "brands/sentinel-golf.html": {
-  "size": 15573,
-  "sha1": "986649583c71d17167e1a18f87a78141a0b26fe2"
+  "size": 15707,
+  "sha1": "9effd84dfba0da279d1c789e2d573b80c7dcc76e"
  },
  "brands/siegelman-stable.html": {
   "size": 11958,
@@ -464,36 +504,36 @@
   "sha1": "6f0c66d9142ad6dd4782bf12c09fa546e58d725f"
  },
  "brands/tag/design-nerd.html": {
-  "size": 30678,
-  "sha1": "acf47c5e880d7ca302d683c259cde89ed0ebd628"
+  "size": 32004,
+  "sha1": "f9e83c98dc2ad0ecec6ee2d48cb11d0741540e29"
  },
  "brands/tag/gorpcore.html": {
   "size": 15617,
-  "sha1": "682d71ae518436fc82db00dc61b35d2f902b3c1e"
+  "sha1": "71c929360478517303f87bf2532894097d3b20fb"
  },
  "brands/tag/loud-on-purpose.html": {
   "size": 24661,
   "sha1": "39e6dc91e7c96417127d9b86be9eeb0d5393b409"
  },
  "brands/tag/made-by-hand.html": {
-  "size": 24423,
-  "sha1": "82814d79106f1da3419fc02bb3cdd45ef3fa926f"
+  "size": 31341,
+  "sha1": "ac14f4b2b0e4bd438c744c8afc5f70f9a0e0d8b8"
  },
  "brands/tag/member-guest.html": {
   "size": 12753,
   "sha1": "caa92c31d938e9d02c9bf3159aac715eb1bd79d7"
  },
  "brands/tag/muni-energy.html": {
-  "size": 23173,
-  "sha1": "ce3225b658c10f1b6468b6064132e4492ad11734"
+  "size": 24497,
+  "sha1": "a9c60b32c1799e759f6d2d23f8943bd0593f8cab"
  },
  "brands/tag/post-round-friendly.html": {
-  "size": 21091,
-  "sha1": "b293f5db532d47e5b8e73d7cdbce84f34c5e5c50"
+  "size": 21064,
+  "sha1": "6245b5c6b243ad362f1f1d6fbc0ccfebf70f3737"
  },
  "brands/tag/quiet-luxury.html": {
-  "size": 16710,
-  "sha1": "510059eb24a865782de71932a3fea64ad2710326"
+  "size": 18682,
+  "sha1": "00a824eb6b684535cd9a71036b74e5ca6049aa18"
  },
  "brands/tag/range-rat.html": {
   "size": 13059,
@@ -502,6 +542,10 @@
  "brands/takomo-golf.html": {
   "size": 11077,
   "sha1": "2cf082a965b520de1c2df0764108ee4f5982c4ec"
+ },
+ "brands/thwack-sporting-co.html": {
+  "size": 10415,
+  "sha1": "a3ffcd3204ae8939ebd17c56b1665fa7f7f75ee4"
  },
  "brands/twentyfour-golf.html": {
   "size": 10347,
@@ -512,16 +556,16 @@
   "sha1": "36e2d30dfff688bb816a7cc28c332679a9bf270f"
  },
  "brands/vuori.html": {
-  "size": 10718,
-  "sha1": "d1770ca18a174baf6b2b7a59e4d6f31f71958e1d"
+  "size": 10691,
+  "sha1": "44f48c68fb3627b2d13654fd7949f69e99e5ad8f"
  },
  "brands/walker-golf-things.html": {
   "size": 14949,
   "sha1": "7f27f00847f641dc5a3f595dae95115dcd8147cf"
  },
  "brands/water-when-dry.html": {
-  "size": 11874,
-  "sha1": "463ed1cedb0ff8a776e840f29ac0a9601e491fa5"
+  "size": 11823,
+  "sha1": "17227d9209ebae1a57d5ec5e36b7ddd96f1dcc06"
  },
  "brands/winston-collection.html": {
   "size": 12990,
