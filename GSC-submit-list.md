@@ -134,6 +134,10 @@ Re-submitting is the point of this deploy.
 
 **Priority 3 — substantially changed pages.**
 
+- `https://thegrassyissue.com/brands/` — redesigned 14 Sept as the field-guide
+  Brand Index (new title/description, hero, vibe tiles, filter drawer, one-image
+  cards, editorial cuts). Same URL, same 115 brands.
+
 - `https://thegrassyissue.com/drops/7-divot-tools-actually-worth-carrying`
   The Birdicorn 6-in-1 was replaced by Provision Machining & Design's
   Stainless Steel Minimalist ($35.99). One product card swapped, three images
