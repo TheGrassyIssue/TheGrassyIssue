@@ -313,6 +313,20 @@ head = re.sub(r'(<meta property="og:url" content=")[^"]*(")',
               lambda m: m.group(1) + f"https://thegrassyissue.com/drops/{SLUG}" + m.group(2), head)
 head = re.sub(r'(<meta property="og:image" content=")[^"]*(")',
               lambda m: m.group(1) + f"https://thegrassyissue.com{IMG}gumtree-almond.jpg" + m.group(2), head)
+# ---- MIRROR og: -> twitter: --------------------------------------------------
+# Every build script in this repo copies a model page's <head> and rewrites the
+# og: tags. None of them ever rewrote the twitter: tags, so those rode along
+# from the model — and on 2026-09-15 eleven live posts were found sharing on X
+# under "Students Golf Summer 2026 — Summer School Is in Session". The page
+# renders fine; it only shows when something reads the card. Never rewrite og:
+# without rewriting twitter: alongside it.
+for _k, _v in [("twitter:title", PLAIN), ("twitter:description", DESC)]:
+    head = re.sub(rf'(<meta name="{_k}" content=")[^"]*(")',
+                  lambda m, v=_v: m.group(1) + v + m.group(2), head)
+_twt = re.search(r'<meta name="twitter:title" content="([^"]*)"', head)
+if _twt and _twt.group(1) != PLAIN:
+    raise SystemExit("twitter:title did not take — the share card would carry "
+                     "another post's headline")
 _sb = '<script type="application/ld+json">' + json.dumps(SCHEMA) + '</script>'
 head = re.sub(r'<script type="application/ld\+json">.*?</script>', lambda m: _sb, head, flags=re.S)
 

@@ -184,6 +184,24 @@ def verify(path):
     chk("no legacy .more-kicker/.more-title markup",
         'more-kicker' not in h and 'more-title' not in h)
     chk("word count >= 1200", words >= 1200, str(words))
+    # Share-card tags. Added 2026-09-15 after eleven live posts were found
+    # sharing on X under "Students Golf Summer 2026 — Summer School Is in
+    # Session": every build script copies a model page's <head> and rewrites
+    # the og: tags without ever touching twitter:. The page renders perfectly,
+    # so nothing caught it until the live URL was fetched and read back.
+    def _meta(k, a):
+        m = re.search(r'<meta %s="%s" content="([^"]*)"' % (a, re.escape(k)), h)
+        return html.unescape(m.group(1)).strip() if m else None
+    _ogt, _twt = _meta("og:title", "property"), _meta("twitter:title", "name")
+    _ogd, _twd = _meta("og:description", "property"), _meta("twitter:description", "name")
+    _suf = " — The Grassy Issue"
+    if _ogt and _twt:
+        _want = _ogt[:-len(_suf)] if _ogt.endswith(_suf) else _ogt
+        chk("twitter:title matches og:title (share card is this post)",
+            _twt == _want or _want.startswith(_twt[:30]), f"tw={_twt[:48]!r}")
+    if _ogd and _twd:
+        chk("twitter:description matches og:description",
+            _twd == _ogd or _ogd.startswith(_twd[:40]), f"tw={_twd[:48]!r}")
     print("\n  %s — %d check(s) failed\n" % (os.path.basename(path), len(fails)))
     return len(fails)
 
