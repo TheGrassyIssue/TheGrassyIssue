@@ -154,7 +154,7 @@ CSS = r"""
 #bx .bx-hero h1{font-size:clamp(52px,7.4vw,112px);letter-spacing:-.025em;line-height:.92;margin:24px 0 24px}
 #bx .bx-hero h1 em{font-style:italic;font-weight:400}
 #bx .bx-hero p{font-size:clamp(17px,1.35vw,20px);line-height:1.45;max-width:38ch;color:var(--bx-ink60)}
-#bx .search{margin-top:32px;border-bottom:1.5px solid var(--bx-ink);display:flex;align-items:center;gap:14px;padding-bottom:12px;max-width:560px}
+#bx .search{margin:2px 0 26px;border-bottom:1.5px solid var(--bx-ink);display:flex;align-items:center;gap:14px;padding-bottom:12px;max-width:560px}
 #bx .search input{flex:1;background:transparent;border:0;outline:0;font-family:var(--bx-serif);font-size:22px;color:var(--bx-ink);border-radius:0;-webkit-appearance:none;padding:0}
 #bx .search input::placeholder{color:var(--bx-ink30)}
 #bx .search .k{font-family:var(--bx-mono);font-size:10px;letter-spacing:.12em;color:var(--bx-ink60);border:.5px solid var(--bx-rule);padding:4px 7px}
@@ -224,7 +224,6 @@ BODY = f"""<!--BX-BRAND-INDEX-->
     <div class="eyebrow">THE BRAND INDEX &middot; CURATED FROM AUSTIN</div>
     <h1>{N} brands<br>to <em>know.</em></h1>
     <p>Independent golf brands, makers and oddities from Texas to Tokyo. Researched and selected by The Grassy Issue.</p>
-    <div class="search"><input id="bx-q" type="search" placeholder="Search brands, gear, or a vibe&hellip;" autocomplete="off" aria-label="Search the Brand Index"><span class="k">/</span></div>
     <div class="modes"><button type="button" id="bx-m-discover">DISCOVER</button><button type="button" id="bx-m-az">BROWSE A&ndash;Z</button><button type="button" data-open-filter>FILTER</button></div>
   </div>
   <div class="bx-hero-img"><img src="{HERO_IMG}" alt="Lions Municipal Golf Course at dusk, Austin"><div class="cap">LIONS MUNICIPAL &middot; AUSTIN, TX</div></div>
@@ -237,6 +236,7 @@ BODY = f"""<!--BX-BRAND-INDEX-->
 
 <section class="sec" id="directory"><div class="wrap">
   <div class="sh"><h2>All brands</h2><span class="sub" id="bx-count">{N} BRANDS</span></div>
+  <div class="search"><input id="bx-q" type="search" placeholder="Search brands, gear, or a vibe&hellip;" autocomplete="off" aria-label="Search the Brand Index"><span class="k">/</span></div>
   <div class="dir-tools"><div class="azbar" role="navigation" aria-label="Jump to letter">{AZ}</div>
     <div class="dir-state"><span id="bx-label">ALPHABETICAL</span><button type="button" data-open-filter>FILTER &rarr;</button></div></div>
   {GRID}
@@ -290,8 +290,8 @@ function labelOf(v){const el=document.querySelector('#bx .fo input[value="'+v+'"
 function describe(){const p=[];if(state.q.trim())p.push('“'+state.q.trim()+'”');if(state.vibe)p.push(labelOf(state.vibe));if(state.picks)p.push('TGI PICKS');[...state.cats,...state.tags,...state.regions].forEach(v=>p.push(labelOf(v)));return p.join(' · ');}
 function clearAll(){state.q='';$('#bx-q').value='';state.cats.clear();state.tags.clear();state.regions.clear();state.vibe=null;state.picks=false;$$('#bx .fo input').forEach(i=>i.checked=false);apply();}
 function goDir(){$('#directory').scrollIntoView({behavior:'smooth',block:'start'});}
-$('#bx-q').addEventListener('input',e=>{state.q=e.target.value;state.vibe=null;state.picks=false;apply();if(e.target.value.length>1)goDir();});
-document.addEventListener('keydown',e=>{const t=document.activeElement.tagName;if(e.key==='/'&&t!=='INPUT'&&t!=='TEXTAREA'){e.preventDefault();$('#bx-q').focus();}});
+$('#bx-q').addEventListener('input',e=>{state.q=e.target.value;state.vibe=null;state.picks=false;apply();});
+document.addEventListener('keydown',e=>{const t=document.activeElement.tagName;if(e.key==='/'&&t!=='INPUT'&&t!=='TEXTAREA'){e.preventDefault();goDir();$('#bx-q').focus({preventScroll:true});}});
 $$('#bx .vibe').forEach(v=>v.addEventListener('click',e=>{e.preventDefault();clearAll();state.vibe=VIBE[v.dataset.vibe];apply();goDir();}));
 $$('#bx [data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();clearAll();const j=a.dataset.jump;if(j.startsWith('region:'))state.regions.add(j.split(':')[1]);if(j==='picks')state.picks=true;apply();goDir();}));
 $$('#bx .az').forEach(b=>b.addEventListener('click',()=>{const t=cards.find(c=>!c.classList.contains('hide')&&c.dataset.letter===b.dataset.letter);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'instant'});}}));
@@ -333,6 +333,15 @@ tail = re.sub(r'<script>\s*\(function\(\)\{\s*var pills=.*?</script>\s*', "", ta
 tail = re.sub(r'<script id="bx-js">.*?</script>\s*', "", tail, flags=re.S)
 tail = tail.replace("<footer", JS.replace("__PICKS__", json.dumps(PICKS)).replace("__ENDPOINT__", ENDPOINT) + "<footer", 1)
 out = head + CSS + page[head_end:nav_end] + "\n" + BODY + tail
+hero_html = out.split('<section class="bx-hero">')[1].split("</section>")[0]
+assert 'id="bx-q"' not in hero_html, (
+    "the search input is back in the hero. It was moved into #directory on\n"
+    "2026-09-14 because typing in it fired goDir(), which smooth-scrolled the\n"
+    "page away from the box mid-keystroke. Lenny: \"move the search bar lower\n"
+    "so it dosent glitch out.\"")
+dir_html = out.split('id="directory"')[1]
+assert 'id="bx-q"' in dir_html.split("</section>")[0], "search input is not in #directory"
+assert "if(e.target.value.length>1)goDir()" not in out, "auto-scroll-on-type is back"
 assert out.count("<!--BX-BRAND-INDEX-->") == 1 and out.count('id="bx-js"') == 1 and out.count('id="bx-css"') == 1
 assert "bi-card" not in out.split("<!--BX-BRAND-INDEX-->")[1].split("<!--/BX-BRAND-INDEX-->")[0]
 assert not re.search(r"\bworth\b", re.sub(r"fort worth", "", re.sub(r"<[^>]+>", " ", BODY), flags=re.I), re.I), "banned word in body copy"
