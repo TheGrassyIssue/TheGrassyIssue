@@ -1,7 +1,7 @@
 {
- "_tmp_preview-fyfe.html": {
-  "bytes": 106277,
-  "sha": "57a674d1e7180ea05a1ddcf00ab361fc05407b1d9ae81ad499bc727568c5e68c"
+ "_tmp_preview-dropreport.html": {
+  "bytes": 72317,
+  "sha": "edf9c5ac18893a37cc7492f1140c989ec784112b2f8f642465e1ca4ce51cb62a"
  },
  "about.html": {
   "bytes": 24889,
@@ -32,8 +32,8 @@
   "sha": "07bf79ada67466a60c47e488370535a02ae57b27ba95020bcb1f25939395d4e6"
  },
  "brands/apres-golf.html": {
-  "bytes": 9111,
-  "sha": "20a322a576f9b194af39ea5522de4097ab85882e4f62ec395b292a26a27a81bd"
+  "bytes": 9714,
+  "sha": "7cbef6960c592e5e00045da6c6b51ef3d63fb0231f05bce552e41cab04dc3f0a"
  },
  "brands/artisan-golf.html": {
   "bytes": 9699,
@@ -48,8 +48,8 @@
   "sha": "57af0e9f44e9d73e626ef1d27e4b79410c742c0218d49a984b568b5861d4099d"
  },
  "brands/attr/new-to-index.html": {
-  "bytes": 39249,
-  "sha": "db0ac7fba1b4065551130499f3e683a090d53827c55793082a03489a4bbda31c"
+  "bytes": 39906,
+  "sha": "b128294ceeb884562febf10b89a60167270672b54033765d4b74770d94a78ec1"
  },
  "brands/attr/tour-proven.html": {
   "bytes": 15715,
@@ -168,8 +168,8 @@
   "sha": "6606e0afe4b6e53e01ef3bd4b5b7511bf88e47321b1546c4052daab550e887de"
  },
  "brands/eastside-golf.html": {
-  "bytes": 15031,
-  "sha": "a09fea1bd1725b8ed8b98844371ce8653faa704ce0acd1ff1c958839cccf7f6f"
+  "bytes": 15633,
+  "sha": "3404385ddca207d03d243874ed5b662c971264c088b004b557f18ae969e1a2f7"
  },
  "brands/edel-golf.html": {
   "bytes": 10235,
@@ -204,8 +204,8 @@
   "sha": "fa62e6322bb83ec1872af022b5860435c9449bbc70edc6f257480b5af37eb62b"
  },
  "brands/gamut-golf.html": {
-  "bytes": 9806,
-  "sha": "41eef690e9169554209bc2aad54e62be18286a000e24044846d4b9176dd38f0b"
+  "bytes": 10407,
+  "sha": "5f95018eee1f5e0dfbe0a8ab5951bad589e3cbae3bbdd9fc95a4d3296b5fc278"
  },
  "brands/garsen-golf.html": {
   "bytes": 8823,
@@ -252,8 +252,8 @@
   "sha": "899cd9d006d0334524809085f62f57df0a07eb0b76c03810f65012a87ea4cb4d"
  },
  "brands/index.html": {
-  "bytes": 217081,
-  "sha": "bdbdd34464442206f72d87ecbe3af49d29df011799d30ab73b4b9c6ee4e2489f"
+  "bytes": 218239,
+  "sha": "4c102edd523d1aac98e6794f063eb4bab134cb3f8463dad03c9d997e579e7acf"
  },
  "brands/inside-story.html": {
   "bytes": 8988,
@@ -268,8 +268,8 @@
   "sha": "b2a7a2c0bdff90b2c0f6f070bf093afdce9583344d0dd3c0bf48e3f1196592b8"
  },
  "brands/jones-sports-co.html": {
-  "bytes": 18555,
-  "sha": "089f72a745b66ebb94822f980ac62863c00b9237cdc1b5ee0e15589a0f01e226"
+  "bytes": 19157,
+  "sha": "c72498274c9177c90749057f161e135a247d85885f3e6adb7d4af2e577b24493"
  },
  "brands/juniper-james.html": {
   "bytes": 9060,
@@ -300,8 +300,8 @@
   "sha": "12eb39146d3fbc5bfd5307bdf0b702deb8f31d930be3c5f2b2602205a4122d4f"
  },
  "brands/malbon.html": {
-  "bytes": 30956,
-  "sha": "d65632420e6a6bda895f41b9d44f1f160d2754b2989b6a4af50ca5e5ad833e93"
+  "bytes": 31558,
+  "sha": "b5be8e1d8a1305b8253c303a8da8b5b2b96a2744edf25386ccfafdecb1bad30a"
  },
  "brands/manors.html": {
   "bytes": 25422,
@@ -320,8 +320,8 @@
   "sha": "b360525647a79d5031b73967f3889bc3ce9e2efc3e562d786d3828ab68dd55ef"
  },
  "brands/mogshade.html": {
-  "bytes": 12087,
-  "sha": "fa3ba2d0e08fc9d033efead5ebb6469aba88a180dd8b2361c8c1131c75b922fa"
+  "bytes": 12688,
+  "sha": "48b5ea014ed744d3a14fdf953d0b03d7c00272abd6fe6c98789728be9e382fee"
  },
  "brands/morning-people-clothiers.html": {
   "bytes": 10203,
@@ -366,6 +366,10 @@
  "brands/p53.html": {
   "bytes": 8943,
   "sha": "60be4f5a39738146a60b1e985022e0032ab985a687744d91a0406230a1f25bd6"
+ },
+ "brands/payntr.html": {
+  "bytes": 8969,
+  "sha": "012714ae2be882c17512f5cc460289a3d2618f5047f654f984af497f6f95eeb2"
  },
  "brands/penta-golf.html": {
   "bytes": 9519,
@@ -448,16 +452,16 @@
   "sha": "523d3172bcf4974fef5a02292534cd4e41f5ba66f54ed708578a4555885d12d1"
  },
  "brands/seamus.html": {
-  "bytes": 17859,
-  "sha": "cdb7679ba2bb7a91d7321a99a890c891028731efffabb7c5ef793016093047f2"
+  "bytes": 18461,
+  "sha": "1643dfdfa50a453cd89e2e4d342cb4329fa159f888a08956f70beeb5e32586dd"
  },
  "brands/sentinel-golf.html": {
   "bytes": 14541,
   "sha": "7dccfe50fd063ad5410ca35f278a293ae8c261ba67bab6572ba0be2815017cb7"
  },
  "brands/siegelman-stable.html": {
-  "bytes": 10807,
-  "sha": "217b5ac49dff5af173fe89912fe9c949fd465c9827cf1afcd712fbe2b076899d"
+  "bytes": 11408,
+  "sha": "be206892c637d0fb5b36ad9bc399b219f9a38727aea2ed6365bc884d1324f8d0"
  },
  "brands/sierra-madre.html": {
   "bytes": 9056,
@@ -480,12 +484,12 @@
   "sha": "e06a6af94216450e4bd771bdcab29a12992f7f414bd7d096a7f9ede24f7fb19d"
  },
  "brands/students-golf.html": {
-  "bytes": 18003,
-  "sha": "7bf777494a1474b7f3b08f3e3576b3749fbb6857651e49a15946745a87becd6a"
+  "bytes": 18605,
+  "sha": "980f7b8fc75fd60aa889b461922243eeb848f526cc93e6c25fb413cfdba3d561"
  },
  "brands/sugarloaf-social-club.html": {
-  "bytes": 21355,
-  "sha": "09fae7d12fcdb729dffe198dc7bfa2367848f20058e79d13e894bc949c9c5b1b"
+  "bytes": 21957,
+  "sha": "a8b7478f74680aaa00d75e10aae246fe4345806307107ed1410c3e520a1eb672"
  },
  "brands/sun-mountain.html": {
   "bytes": 10583,
@@ -512,8 +516,8 @@
   "sha": "bbf989192bbae38033308bd6f4cbdc12254fe8f4d342560e9b762e2fa6ecb8d5"
  },
  "brands/tag/design-nerd.html": {
-  "bytes": 30784,
-  "sha": "662ea783b7fc8487e2a56aac513f2c678d38bb58107cb4a06311351d386af63d"
+  "bytes": 31375,
+  "sha": "9030d381bcfa91d296cb3c65c561e2715ebc6f0af2c84b1239c43cb5fd3e1e0a"
  },
  "brands/tag/gorpcore.html": {
   "bytes": 14370,
@@ -588,804 +592,808 @@
   "sha": "97176156d3ddff9d1d025ef225cc1a6383c441f7fb646f0d4b7ee4767c8122d3"
  },
  "drops/10-indie-ball-marker-brands-worth-knowing.html": {
-  "bytes": 33443,
-  "sha": "8e762587e481b0af221adccab35df92b33a13724946a4d21e9ae8fe92d7fc5a9"
+  "bytes": 33453,
+  "sha": "fbf9e13e3f0d8a0eaaf78aee72ec0366344534feeaa774ab7750cec6a8c2a048"
  },
  "drops/10-nikes-that-belong-on-the-course.html": {
-  "bytes": 33520,
-  "sha": "7a0c8b8cda0f1d77a9fe509a10ec492514c17a686a75d6f7faa71b445e39b0d1"
+  "bytes": 33530,
+  "sha": "809a2b09cab30bd8a94217c7f75340ad86e2a530fdfda0058d7feceb1cceab14"
  },
  "drops/10-of-the-best-post-round-burgers.html": {
-  "bytes": 33496,
-  "sha": "6fdd14bff88fe6f5dfb714c83be0811750d815333c840a2cc62ae7d3c3a73ab2"
+  "bytes": 33506,
+  "sha": "393db52cc856f87ae56620d66172d9edd91b2053b2791a7868c44a7bdfbf64f4"
  },
  "drops/10-rangefinders-from-90-to-600.html": {
-  "bytes": 33081,
-  "sha": "e229f08e258d26b8f542bf0f3eada71a6c34ab3b5b57811572ac73551eede7bf"
+  "bytes": 33091,
+  "sha": "25ff78496b796756eb920b9b42da278cc34d0b36b803b7593be5f420e690f380"
  },
  "drops/10-technical-fabric-tops-for-summer.html": {
-  "bytes": 32133,
-  "sha": "1cb437598661dc3ae712b033b60f4515d8e4bf42873dacdfdf0dc8bfdc3573cf"
+  "bytes": 32143,
+  "sha": "fe847a602bce8aa7f7409b672867cc1a30626cf3616458552a0641a2c907b8ce"
  },
  "drops/10-texas-courses-worth-the-trip.html": {
-  "bytes": 34150,
-  "sha": "df813b79687074fbd99acd5edae41c32ccb62a253de58fbf87587e9440dc92d5"
+  "bytes": 34160,
+  "sha": "de072921e56bf393a137078414d908005ab19145c3f15b453a9e7ff37bc24082"
  },
  "drops/11-water-bottles-wed-actually-carry.html": {
-  "bytes": 34038,
-  "sha": "bc15f3e9de969c69cc0d5231e73a77e33b7c8d40bd63eeb8944cbe8692027742"
+  "bytes": 34048,
+  "sha": "47e70361546ba5e820de611524d239489dc6de05545ef01cc1175270871d9b50"
  },
  "drops/12-putter-covers-were-eyeing.html": {
-  "bytes": 34370,
-  "sha": "e200c46e65ba61427507921351e044458afb1c7dc334383f80eedbcbed7acdbe"
+  "bytes": 34380,
+  "sha": "21390baf658d379aa12eea0669e44c1610be45d68fc6ca221cc96ef6a0b148e8"
  },
  "drops/14-hoodies-that-caught-my-eye.html": {
-  "bytes": 36576,
-  "sha": "d3c69e46644163700fad79a1fd4f823c9f25e8847e281cd7d37a17ddf6701adc"
+  "bytes": 36586,
+  "sha": "993255d08244f96ebae826492c2c07256298b858781adcc7eccd42205c12c84c"
  },
  "drops/3-putt-round-golf-tees-disguised-as-bad-habits.html": {
-  "bytes": 31333,
-  "sha": "bdd9be4191014c435dbe6c8dabcc7bffc5ecb4998abbea1b08693fd1a2cf65a3"
+  "bytes": 31343,
+  "sha": "8bb3ecc0f208522a49d5f9822be3171ed565ad9c801b0a6998dee1f6a7a55324"
  },
  "drops/5-post-round-evening-spots-in-austin.html": {
-  "bytes": 27287,
-  "sha": "c4af19f933efb551b389e9c07092a253ecce4789c408b6e00dd51e73bb88831d"
+  "bytes": 27297,
+  "sha": "0d4be34012a1c9de7c64c698d77c9f6121dfe0d2af3d57cfd86470f8a4b2dd32"
  },
  "drops/5-zero-torque-putters-worth-your-attention.html": {
-  "bytes": 53067,
-  "sha": "b4826ab33ca33981831f32ad6337ceb4909721bcd3fd16568c2c074796c78449"
+  "bytes": 53077,
+  "sha": "43d477557f05b8d4ed084069769fbf1ed885466ba9be3f52bc38f9f603246270"
  },
  "drops/6-shinnecock-capsules-before-the-first-tee.html": {
-  "bytes": 27889,
-  "sha": "38b6b48425ea861f0991f4e6dc6987674afab6913b6e5e4436b828b0a1ae1b54"
+  "bytes": 27899,
+  "sha": "32554177c0c334ba5d6a698e791aee4df48911f77a7bf107eaf2b77d65bed002"
  },
  "drops/7-bags-that-stand-out.html": {
-  "bytes": 52471,
-  "sha": "84f1823d8576e30e48eff8389b5d2fcf9951da80b7bf4f86155c0b6945774deb"
+  "bytes": 52481,
+  "sha": "7fb8b0efe09a47d6a7773852dd9b0c333c9c7cdbe4cffcfded4e7b9edbcc5152"
  },
  "drops/7-books-to-elevate-your-golf-game.html": {
-  "bytes": 30487,
-  "sha": "dccf1c76d96c9662269d43f83e6c8841f864d731f263db29638ba4e63fd123d4"
+  "bytes": 30497,
+  "sha": "b39f36fcc6723feb55acbebe9cc9778f06455bbe296c6633fe9b81e24d79f26f"
  },
  "drops/7-divot-tools-actually-worth-carrying.html": {
-  "bytes": 58839,
-  "sha": "4b609ca52ddea00809b7d51549476f2187bdf6d5e0d2208d300623de0a88c12e"
+  "bytes": 58849,
+  "sha": "2f86bd0d31fab8a955e19319f745e5e434da72f78e6e66bf8db12c3eb1da67ee"
  },
  "drops/7-grips-to-add-a-little-flavor.html": {
-  "bytes": 27674,
-  "sha": "ed1c7b595e667b7030898c60150b94da04ba4f6e988a52b5121cf22694bb747b"
+  "bytes": 27684,
+  "sha": "b817458b8d5a4c6f7ecb65c763f3c9dc040e5fd10f9198dc0b7aaace31db8ad5"
  },
  "drops/7-indoor-simulators-for-austins-gross-rainy-days.html": {
-  "bytes": 31565,
-  "sha": "51c2a00476c831c901851619039ed4210f5e5677147df4ab549d53c6200c28f1"
+  "bytes": 31575,
+  "sha": "e35962a89c15a8926556c87bff049e92c4adfab60701a473e6fb3bf8572db998"
  },
  "drops/7-post-round-moves-in-austin.html": {
-  "bytes": 30684,
-  "sha": "c2e7ead8918b779ac583e381971510155dbbe37f899433e2aa7824baa649884e"
+  "bytes": 30694,
+  "sha": "63f5b282e0047b0bbc49c615121b9b1d54b0cf80ea4a2eee2b4a1efde2aaae75"
  },
  "drops/8-best-practice-facilities-around-austin.html": {
-  "bytes": 32515,
-  "sha": "5aed2e49c2065cd841fc096cf02f9e86c192739efaf7ab7667b401728fa55fac"
+  "bytes": 32525,
+  "sha": "29bb63ec68a95d313d53080377698a4d298144275b0e00db59c737c944777bdc"
  },
  "drops/8-bucket-hats-worth-the-brim.html": {
-  "bytes": 29509,
-  "sha": "7da85282f3c24c58dfdf482566c8713bddbffe0fc143b9b28bf90ddf9b092f48"
+  "bytes": 29519,
+  "sha": "5bf2f8dd4b2e72b28f7fa87abf58da262d081f22746e216eddabc9781270a2bd"
  },
  "drops/8-special-day-rounds-near-austin.html": {
-  "bytes": 29195,
-  "sha": "e9eb1c3002027cc2747ebbc057175a26f2f613655fa0d6b837c870bbf05d815b"
+  "bytes": 29205,
+  "sha": "b21ce71b0c31330351939a993745beb2bb4598eeca28cd20de3c84c5ec63f488"
  },
  "drops/accessories-on-and-off-the-course.html": {
-  "bytes": 30161,
-  "sha": "24ceb66b7e63f44b46b77b5be4aefd1547aeef581c9d5ae12029ae50300d961b"
+  "bytes": 30171,
+  "sha": "b90655a21f14e5307defceaaee9ed03c82cfe403c9a7b69215906b2647155ec4"
  },
  "drops/agronomy-workshop-a-golf-shirt-with-a-hidden-tee-slot-and-no.html": {
-  "bytes": 27412,
-  "sha": "56a9a524d962ac94491f20dce841579e96b867ca518923960458560bc9114d6f"
+  "bytes": 27422,
+  "sha": "32e031cd451a88966de1588a8370ab19bc8b02bd16beb0ca248d1cc28bbe26d5"
  },
  "drops/aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater.html": {
-  "bytes": 30041,
-  "sha": "ad1a5229fde03a3063a1fdc5f5d068c2cf6f908b125b6d95bda26326b413d938"
+  "bytes": 30051,
+  "sha": "766eafac89a319567f06de8b13ad46f74c687dd866c5bc4ba703c7332498dafb"
  },
  "drops/ald-golf-ss26-new-releases.html": {
-  "bytes": 38416,
-  "sha": "9781ac7f5986d48f8f2d495f0803d9e9136fdb905d5c97668740017472df0db5"
+  "bytes": 38426,
+  "sha": "0d72fda866e0a7bab6efeb752f54eceb5ad9e34225582b90e884499c23751e0c"
  },
  "drops/apc-golf-cph-golf-collab.html": {
-  "bytes": 71872,
-  "sha": "62fe0cea592cf2bc0c3ce5b5068dd3612674161ea17dd14767b60c79df5532ea"
+  "bytes": 71882,
+  "sha": "b96c2d1c038fd99e3912c1b569e3444e3e68068b80c9da86d1889af36008f9c6"
  },
  "drops/arsham-malbon-chapter-three.html": {
-  "bytes": 35939,
-  "sha": "1e6f4d75f3ad3b43fe6181a40c4284afb37345cbdf387855ff277c58dde58d4b"
+  "bytes": 35949,
+  "sha": "c1660064db3d4b1a35a9525950e4728f78853466c8ef68dd2b47408361ca4f8d"
  },
  "drops/austin-bbq-field-guide.html": {
-  "bytes": 33765,
-  "sha": "3a7ae5ea1bed85abbd3fb4f72a12ff1d63a4b660b3805bf7f2a0a78611297963"
+  "bytes": 33775,
+  "sha": "ae4568ad91b8b2f3b95d766964fac56c01d44026ced2f76e0fa17de05f8e83f2"
  },
  "drops/austin-coffee-guide.html": {
-  "bytes": 38860,
-  "sha": "7662bc549203a64d0304b4a38bb0ca8af50d0d157e4e69279ac332f510ada7dc"
+  "bytes": 38870,
+  "sha": "d637a66f6faae2ad6a3f5aa4a11d941022a7deb816f86eb4bd842b497c4c7ea9"
  },
  "drops/austin-golf-road-trip.html": {
-  "bytes": 42685,
-  "sha": "13dc183555eca0a9c8f599340538997dc0274813a1aaa0cbbc4fe42482e7c686"
+  "bytes": 42695,
+  "sha": "a859c59a6765f52f04a4e42260973594eb92221ce3675ce59d58b9367946b934"
  },
  "drops/australian-golf-brands-and-trips.html": {
-  "bytes": 78574,
-  "sha": "58cf28aa1b80cf30f1af6e48df23a3385f3211729f6b18198e24321877a8a3dd"
+  "bytes": 78584,
+  "sha": "4bbce8c9779709630ce61ebb1dff96e0238b6889d966d435b91e012fe67deccd"
  },
  "drops/best-golf-streetwear-brands-2026.html": {
-  "bytes": 68190,
-  "sha": "ced7fd4f498b80fa550f8e549b31cfd9058d720bdf8307a12793e85f80db401d"
+  "bytes": 68200,
+  "sha": "028d9dab86b03d972868a925ab21068effd5b83d27fea12232734576d0d04bae"
  },
  "drops/best-pizza-in-austin.html": {
-  "bytes": 32918,
-  "sha": "69b82d0d6ce414474f9651e5b8023d8150fd90fa1bd865cc25a29f6bb4b7a1a6"
+  "bytes": 32928,
+  "sha": "b106aa03e75c4eeb70c0e6ba994ff76b42ec73d21cd93f2ed6f6d53a0c90292d"
  },
  "drops/best-wings-in-austin.html": {
-  "bytes": 38565,
-  "sha": "3700f63629e02bc71a3c99a35f3f800cad0081d704118fe0dc38c7105037c43e"
+  "bytes": 38575,
+  "sha": "5ee30721a4c8b5b65e9893d8ba7affbf87feb782cbe480d87ce0208ec8609e88"
  },
  "drops/bold-tees-carousel.html": {
-  "bytes": 36691,
-  "sha": "dbd20f684d42ee8490f48c5184f7e915eb62d95ffa38cc41d5ea731e5b02e1c8"
+  "bytes": 36701,
+  "sha": "ebbf4ca92db6d60e95310e633f0efd085d490f2c91aaa30d0448a66f83d1bff0"
  },
  "drops/brand-revisited-jones-sports-co.html": {
-  "bytes": 109312,
-  "sha": "99ef2c23ca67a8ee0f60d2265d07dfa4041b854378f1c5e8e362521ac130c808"
+  "bytes": 109322,
+  "sha": "3bb0711acbcc1f3ca536faf9e9645579aacddac857ec2cb8cb5e90bdbc5aa0f0"
  },
  "drops/brand-to-know-apres-golf.html": {
-  "bytes": 116060,
-  "sha": "fb88565dea1c6a7d124037d698cc636d9fb47f3729f0d22ff713d4d86d0f78e7"
+  "bytes": 116070,
+  "sha": "a6a8fd2293f9c143b5bc5f725a399ba7a816c3c70dbe1c65d7d9b19496921440"
  },
  "drops/brand-to-know-aug-11.html": {
-  "bytes": 39661,
-  "sha": "47c69d32a97b0a22ce975a30faae584a22fa5a1e1507029986a00b0a7eef0a57"
+  "bytes": 39671,
+  "sha": "d13a0af601876486c7e53f80a9803e108fbdce06dd2a81823fda5ab737338d06"
  },
  "drops/brand-to-know-beams-golf.html": {
-  "bytes": 41124,
-  "sha": "4627aa59efcb6d2da8b8b8cd242f30402f96911ff7671006489c5d972c3492e9"
+  "bytes": 41134,
+  "sha": "4b17c4d81b5176bf27f01899a2d4efcb375cb1a26bd37b3e47a26fb6876a8efe"
  },
  "drops/brand-to-know-bluegrass-fairway.html": {
-  "bytes": 72206,
-  "sha": "978273889ce54908224492dfa5c6ff5e7da680e3add9289a357c5f84b3bfe67e"
+  "bytes": 72216,
+  "sha": "e69bd062a5d8a04563f00693889da262c2aaa0ae1c98e4ab1026bc85f2795d29"
  },
  "drops/brand-to-know-casualist.html": {
-  "bytes": 62852,
-  "sha": "da29ae3c3d939421a5d2bb5f869aae10ee353d0096679433c3bf83b56dbfe226"
+  "bytes": 62862,
+  "sha": "f0d270bb97b342553c5ce5a88f0a21e6bbf4877a4b5f0c5f953d40ad847621da"
  },
  "drops/brand-to-know-cloud-and-wind-golf.html": {
-  "bytes": 55253,
-  "sha": "3ae8ce26ca6c371773ca07d2c43a418889d3d167c32ff071eab45454d84fe5a3"
+  "bytes": 55263,
+  "sha": "937109f12516f98408cf22b69f034e5133bc295e9565c32e0315b9b28bcbcb0d"
  },
  "drops/brand-to-know-criquet.html": {
-  "bytes": 76604,
-  "sha": "1d119a45251af1308692a2e57be848a05a9e2f1bb0296bd832c76e226d178ea1"
+  "bytes": 76614,
+  "sha": "e9420b385f0015180aa554e3de1178401b5ec690f56f0684008342f05078ec71"
  },
  "drops/brand-to-know-devereux-golf.html": {
-  "bytes": 94772,
-  "sha": "46ce9ed57b0e0ec0b5ba3a902c62f8bb2a45c6f321e88766da8cfd4179dad086"
+  "bytes": 94782,
+  "sha": "5da1b1265d822ef9213d5e5575992af96287c7dd7aa07c95b36bfb0594b6e8ee"
  },
  "drops/brand-to-know-edel-golf.html": {
-  "bytes": 79616,
-  "sha": "4f7950a700f3fc6b8f14904ea35648adf4720a98ea692fa793671763b85644d3"
+  "bytes": 79626,
+  "sha": "f4b300fde136ea6a8ccf59f20b1605bc71cbaa3f23315f955e9c6513828cf91f"
  },
  "drops/brand-to-know-forden-golf.html": {
-  "bytes": 67513,
-  "sha": "6a7f3affd39ad90284a0997dd1b3dc7a63487ca9da463fb8be6a7303490e6074"
+  "bytes": 67523,
+  "sha": "1c2b2e01f6dfdb5816366f6aac343ee27eaf3c03807a2495cdbf77ad2dbe7c34"
  },
  "drops/brand-to-know-found-golf.html": {
-  "bytes": 30574,
-  "sha": "614f0168709627ef7e8090774afbdc426218ef3f87f254392d9f3b2b6066d8a9"
+  "bytes": 30584,
+  "sha": "c1378304706545b35b16c355f46225e210bae9f1079cc3dddf7dee74e867e3ba"
  },
  "drops/brand-to-know-fyfe-golf.html": {
-  "bytes": 106690,
-  "sha": "04159b6e476d7e24be8cce09ce9bc18037a62a475074b1f0aedcc7a0f70a2603"
+  "bytes": 106700,
+  "sha": "eb1c17668f8df346d70bfe62747b7b2ca092e5644a68eb9d6397dd8ab3f3b6f6"
  },
  "drops/brand-to-know-gamut-golf.html": {
-  "bytes": 79806,
-  "sha": "3212c17883a6f5087f25c2f098b7cb2d3214c67292989d3e158f0af8aa17932b"
+  "bytes": 79816,
+  "sha": "e45e8ec9abbfe3ba5525caf2ba3ee8d08eb10c43e74aa98135170dc3d8eaeb18"
  },
  "drops/brand-to-know-gramicci.html": {
-  "bytes": 63866,
-  "sha": "8a6c8a52113cd8244a35c1b943994f0b8cbf2c4ec268495bd05c82e8ba6a83a6"
+  "bytes": 63876,
+  "sha": "d0c75bdd670829a37c3b70b09e1ae607fd50f08921afe78392fc80230215705a"
  },
  "drops/brand-to-know-huega-house.html": {
-  "bytes": 93798,
-  "sha": "42bf86c8dc21cf08a26e707215e97256e6bc103c119dfea23fb164d23c2f9579"
+  "bytes": 93808,
+  "sha": "14ee23124f48928b7a1f7bd48c0c2663f630ae6730b25b316005f55c22c592d8"
  },
  "drops/brand-to-know-jlindeberg.html": {
-  "bytes": 80189,
-  "sha": "2c8a043cd77f06f2fa09fc9e0254a82dd3d25de15487c5620dc310669282b2ba"
+  "bytes": 80199,
+  "sha": "9caae923cb7e6ce8b94f52148a746820f7a404ddb74ac63922797dcd27ae2be0"
  },
  "drops/brand-to-know-kingfisher-golf.html": {
-  "bytes": 76301,
-  "sha": "52978b26292304fd13f67a90755789800e1947b09d0e8feee64a32ffd8ec94d4"
+  "bytes": 76311,
+  "sha": "3d4a9993ef1b3362dda271f202adb1e34e5556654e95ba49321320f9b8eae809"
  },
  "drops/brand-to-know-left-of-field-golf.html": {
-  "bytes": 118626,
-  "sha": "79ebdfc24dc73a42370f5cd8820701c7e1e1c039165a85da15e742f5e5bcfd09"
+  "bytes": 118636,
+  "sha": "283fe84045bbcd4d808dea54571b21e839349cb08a0187859632ded728fbf4a8"
  },
  "drops/brand-to-know-manors.html": {
-  "bytes": 73294,
-  "sha": "0bd4697573bc65f8aa1c4725ee7e8df47b398eaec8837e5b1a1a704c9c9bbbc4"
+  "bytes": 73304,
+  "sha": "30d3f6e3a98ad1153a7e21281032620c2d50c6ceb8f96c3c3f0c7526d37cdb22"
  },
  "drops/brand-to-know-merrill-golf.html": {
-  "bytes": 33707,
-  "sha": "aea2f45923b650a605e6adf90bee0fb7b5a354fb26d3e952aca9dafd9975c349"
+  "bytes": 33717,
+  "sha": "7e99e5c89dd4920454ad4c06faa263e9901a5724673be87803565911ad528f6a"
  },
  "drops/brand-to-know-metalwood-studio.html": {
-  "bytes": 77217,
-  "sha": "249120e503bd15c6949568684fb859326a47bb2a7ac4128d9f41b1ef53fbb229"
+  "bytes": 77227,
+  "sha": "6f9cb8df7231d458ed3188a5540c3954bfed5096bdc6b2c59c3b1240731c6189"
  },
  "drops/brand-to-know-midiron.html": {
-  "bytes": 64086,
-  "sha": "d57a7a112ef33aeccc1429dbd3be5da2f5b1f24347b8c96eb26691cd6cd918de"
+  "bytes": 64096,
+  "sha": "ba9c6e77975a56119385dd01b3edf34f502cad96c7e20f469bf51042b7a794b8"
  },
  "drops/brand-to-know-mogshade.html": {
-  "bytes": 67149,
-  "sha": "0fd5a42e3b71daca3e9630b862145f954797ac62a60f37fa8a1855be47a56000"
+  "bytes": 67159,
+  "sha": "5128d6bdf24fac9867f4535cefa428d8f35f5b20cb503ddcc37eed31220590c5"
  },
  "drops/brand-to-know-morning-people-clothiers.html": {
-  "bytes": 35309,
-  "sha": "84cb1daaf7bcf21bac3f2841cabc4b8981d96ca090075ada8f194f4aa085bbed"
+  "bytes": 35319,
+  "sha": "749b60fe84bd67bf68b2ca55114d79f19b78f66a69c5bb4480cab25a09ee163d"
  },
  "drops/brand-to-know-odd-ritual.html": {
-  "bytes": 97213,
-  "sha": "d3f10bd3378e0952b6434b6cbc06cf8051277f65977efd38b625e9d303c10a48"
+  "bytes": 97223,
+  "sha": "6d837043ec9074fd478ff1be29ef3cdf125740f908120d828a886a0c34a99a8a"
  },
  "drops/brand-to-know-olydoe.html": {
-  "bytes": 39290,
-  "sha": "6c51d9eea16c746f1308089a7fc2cb677669d3dac28f0b437a3c03b63575656c"
+  "bytes": 39300,
+  "sha": "caf5bdd2e1c899a1b742de54f3c2c3bca8574f9f42497fd0ff5fa3cd288285a6"
  },
  "drops/brand-to-know-quiet-golf.html": {
-  "bytes": 73800,
-  "sha": "929e1ea16f55e505f717535d66fcfb6e05c35acbe3cf9ae1decb3bde458919a0"
+  "bytes": 73810,
+  "sha": "409732d1b1b4aa78af70a24866d90ffa94a48c1f3a6d1808137e8da31390e616"
  },
  "drops/brand-to-know-radry-golf.html": {
-  "bytes": 86546,
-  "sha": "0e15adaa3ff57134b7da51341a4bcc96817acfe07afad8092e15f04f3a90574a"
+  "bytes": 86556,
+  "sha": "44cae3e4d17a01aeeacd22308715832fa23f703fecf5c1bec08559ff9d6f0207"
  },
  "drops/brand-to-know-random-golf-club.html": {
-  "bytes": 69314,
-  "sha": "8d6d7f243783819ac0f29bc3e3da2c6274c35d40dbbb89544acd9a9c17546a1c"
+  "bytes": 69324,
+  "sha": "89db9abc7cabfd98659907a4074aa1b41a8a449e14c2b1e671c2e7c7e4195943"
  },
  "drops/brand-to-know-read-the-green.html": {
-  "bytes": 82639,
-  "sha": "f0392b2e092c99540c84249ccd310d96ef5e212837ee7490f11e21a954fef6f8"
+  "bytes": 82649,
+  "sha": "c553d0f7ef6fc27e6dd750bcbfefd2efbbb1826f48de48b1bbe22a0737a9acb4"
  },
  "drops/brand-to-know-rouqe-golf.html": {
-  "bytes": 83030,
-  "sha": "bcabea864a925f8af1c1284ff80795fca95562d9c30dff7cecbdbc3d2c92967e"
+  "bytes": 83040,
+  "sha": "7b6467b81e373079e0f18d02e9b3b464ad0a14bfd1cd953d730180656a05a1da"
  },
  "drops/brand-to-know-seamus.html": {
-  "bytes": 83195,
-  "sha": "5fa2075bb3302aa3154328b654057e4c6eb311840a5effb47cf793c089116d55"
+  "bytes": 83205,
+  "sha": "9e9a0f794defc92c3245a8f2495fa694148fa9d2ea5cf9a30045a103494143f8"
  },
  "drops/brand-to-know-sentinel-golf.html": {
-  "bytes": 92149,
-  "sha": "f5b2447d6b5cb83c032001c4f491996673e09d884c3f9281cb1e31a70f30f9c1"
+  "bytes": 92159,
+  "sha": "cdb21a86938f93eaab700207b0c8d90c53aff5f8b4a9f58ab60c26273497d617"
  },
  "drops/brand-to-know-siegelman-stable.html": {
-  "bytes": 58966,
-  "sha": "60dd28ecbbf45b177c1ed5ff87d4582c61916a4a85b605632b14df9575af209c"
+  "bytes": 58976,
+  "sha": "20616032d261bd3b4faf2e3c526fb02a1fa28f149a1c2a961388e0cdfff1e1d1"
  },
  "drops/brand-to-know-sugarloaf-social-club.html": {
-  "bytes": 98779,
-  "sha": "342aad5a3a97e5b64e341c5117f9e01b5f3b0ed6116cdc827ad096428d55ef97"
+  "bytes": 98789,
+  "sha": "a7c5b7ea247d197961c7301cc708e99ad92cd24fde6d27157bcb8ea7943a8b81"
  },
  "drops/brand-to-know-sun-mountain.html": {
-  "bytes": 79116,
-  "sha": "3e875ed699561405df0866593146a18c190c1eeb20b1066d6d596444cc0e083c"
+  "bytes": 79126,
+  "sha": "1a9f2ce90325b00923ba0ce89c095140e0598b7d7f750679bc303cd415902374"
  },
  "drops/brand-to-know-takomo-golf.html": {
-  "bytes": 59817,
-  "sha": "cb61570ab7592e6ce3a8ef4d51c6db467557b411353569fec9145fe05b52341b"
+  "bytes": 59827,
+  "sha": "11fcfe00f01b279e7efa8de6d5df3aa14f56568c8c243ee723b3dfffb93903ab"
  },
  "drops/brand-to-know-twentyfour-golf.html": {
-  "bytes": 51762,
-  "sha": "fd52d525ab1fd34f1e32e1222d2e11cf6331768ef11877b99cfc5d54ce2365f4"
+  "bytes": 51772,
+  "sha": "3fe5fa2da65c1653696a1ca3a7c39f878c1e651e7cf86664b7cefe44f0b12fb3"
  },
  "drops/brand-to-watch-kingfisher-golf.html": {
-  "bytes": 30654,
-  "sha": "cce38ef269cd0a36359bcb2865756b427d1ba5344f0b246d41c98786a45ce959"
+  "bytes": 30664,
+  "sha": "7b825f75ffbf274d85a1c548a791741872023d102f7d1748663505ba522c3676"
  },
  "drops/break-80-kit.html": {
-  "bytes": 38312,
-  "sha": "488132b7ba0ca2b8447b471d0e3fd348033627200012dc2609aac8cdd78b4534"
+  "bytes": 38322,
+  "sha": "c22bfde299bdcc65254a13eee82975e50b2646e60bfb43625149953c706cdbc1"
  },
  "drops/date-night-after-36.html": {
-  "bytes": 63620,
-  "sha": "2efbef150069f29734b3082fd1a272662989194168ca60fea2e9ae43c5864d08"
+  "bytes": 63630,
+  "sha": "4c0f8ae5555fec413836f7f8353aed8bde48faa6be9241e34e9568c5ff15efef"
  },
  "drops/fella-golf.html": {
-  "bytes": 62353,
-  "sha": "38fdaf9dc3832164ac28fd937c168d7b2dfcb2e56d9b85df99ec4fb4ce6c4736"
+  "bytes": 62363,
+  "sha": "f70275bcbe4d77d59ab40e93244f1ad90c75f2fac397b51f013b28543eef1be1"
  },
  "drops/fourteen-independent-austin-coffee-shops.html": {
-  "bytes": 55068,
-  "sha": "a374b0e9fc41db1ed0b00dff7ee3ca15458c0a0e3038175dbefe6edd15d80a52"
+  "bytes": 55078,
+  "sha": "4cc408acedb5f1f4818fef757c0441c660d7310271ce55f0d69cd221f2c9c156"
  },
  "drops/fresh-pieces-for-the-warm-weather.html": {
-  "bytes": 33746,
-  "sha": "2766a2436bd34545e43f4caf690f540512c0bc2f4b6c51460a32679250d2840d"
+  "bytes": 33756,
+  "sha": "440645d0299b89458776e6588804ba168791412047ad8cf41530bc399e2f59b4"
  },
  "drops/fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca.html": {
-  "bytes": 28188,
-  "sha": "9c0f092c026cffa4ceb18f0fe843e77d808d4e71f0472c71a804c7b15bed8eb8"
+  "bytes": 28198,
+  "sha": "4ec30e5260c8513ac4ad7c2e90f75d14211ff614cceb58b8942da7a1737b2cb0"
  },
  "drops/fyfe-x-mackenzie-every-edition.html": {
-  "bytes": 39176,
-  "sha": "be1546d09ad9bb670a4a0eaaf5d95d6a831d4be9ecf44011a90906a9fec08ca7"
+  "bytes": 43354,
+  "sha": "22abbfb871a2e6b210daa7d7b0fc07bf43a20b21bf3f7a30bad3c85565e0598b"
  },
  "drops/golf-brands-founded-by-women.html": {
-  "bytes": 83669,
-  "sha": "3e545eb274f990b78521983bab737949e4675b81e32d40618220f5c947516cf5"
+  "bytes": 83679,
+  "sha": "a02d09b0bb4c1f49fb1b94a2ad308f15ae0686ba4f94b1d2c82daa57b76d3765"
  },
  "drops/gumtree-golf-x-puma-the-field-notes-collection-lands.html": {
-  "bytes": 26956,
-  "sha": "e48586a8cffca24b2e0e5f9deac9e14d7850034bfa897e8e558e98500e79b980"
+  "bytes": 26966,
+  "sha": "19bb57084a9d04926ddb8a248561e852d220af40dca1c04a336f8fd838665306"
  },
  "drops/gumtree-nature-club-drop.html": {
-  "bytes": 39181,
-  "sha": "723e5a44d30861a7ca069651a5a9a34cb56f8bc7b6cd43c76440ab2b9804549e"
+  "bytes": 39191,
+  "sha": "885a6396697db5eecca7c4395bb1872a2fb9bb32a5be4e754d57e79fc15b48f3"
  },
  "drops/hancock-golf-course-austin.html": {
-  "bytes": 45977,
-  "sha": "d06ef8a1fd74b19ad91020136775d6c000f40fe14621fd60e68a877816824273"
+  "bytes": 45987,
+  "sha": "58510fa78a64d1a2d8282058c616740cf8b3be8dae57d474a0aa6494e2c41de4"
  },
  "drops/hats-carousel.html": {
-  "bytes": 39255,
-  "sha": "4e3a5d5e44e1b030f1da5c3d880fac20e97b8ba887a26d83a18176a0735ddc02"
+  "bytes": 39265,
+  "sha": "b68c2e2dfc23b4564732dd56335f851c833e6baf5ca7b1d5aa533e80249357ed"
  },
  "drops/home-golf-decor-edit.html": {
-  "bytes": 39206,
-  "sha": "35c6ecc4a4ccaa93a6e52868931725fe77a8c9b0020ce2f821ec3d4243b39a20"
+  "bytes": 39216,
+  "sha": "97d236b1221adfa7ed2fd38cfd26faa6e48b071f656e27d71dd72976ad4b6b3e"
  },
  "drops/japan-golf-roundup.html": {
-  "bytes": 37507,
-  "sha": "804044e75681e3f747e7e01a2284ecb6647b6bb2d6a627554952d9334d60c9a4"
+  "bytes": 37517,
+  "sha": "f80f7adfc16ef5a386ab5c29488e2fedc2fabc15b02e8332919870514373c206"
  },
  "drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf.html": {
-  "bytes": 26946,
-  "sha": "c196e18a60ee59fbab5e5b8e2a5540bece8f070c4dc5c724eeca557330d10de0"
+  "bytes": 26956,
+  "sha": "2fe2166d7f28a62a50824d6fea48ce458d3a810081f8eccdf6e66957a4d5ccaf"
  },
  "drops/lions-municipal-golf-course-austin.html": {
-  "bytes": 49885,
-  "sha": "5212f80e2fd491a84d4000db162d236bf91b4f3c20485924b6b0610ae5746ac1"
+  "bytes": 49895,
+  "sha": "bf0e3d83656818efb99a0643ea89e8c35b7a2c951c53c821cf2eb2176569ba04"
  },
  "drops/loud-on-purpose-headcovers.html": {
-  "bytes": 62688,
-  "sha": "d52f4704f761fa06dfaaeb0f350753338ec3cc91b9bb60ea2989b36daa09dd19"
+  "bytes": 62698,
+  "sha": "9d84f7a612566ab7e8dbf795b7d211591a9ba44881ba6c0fa3dd60f725af55d2"
  },
  "drops/malbon-fall-2026-the-ironworks-collection.html": {
-  "bytes": 90505,
-  "sha": "62545f13ed0fe338c2513331d61ac6b6ad2a027057c8e4bebe9d3f2661cd8d0e"
+  "bytes": 90515,
+  "sha": "d25319220a522f2d5c8be240bf1b89977541db2018469d74784d1ddceab16a7f"
  },
  "drops/malbon-golf-studio-seoul-ss26.html": {
-  "bytes": 31645,
-  "sha": "683e79055094024ca412389c2f5442e7ae623c1fa3ffd5643bf733201f51f0df"
+  "bytes": 31655,
+  "sha": "049e28d9d6227d859ab9b5a21d3d0c96c63ce081baa98c877dc816d2f65d9ba6"
  },
  "drops/malbon-summer-gallo-colorido.html": {
-  "bytes": 32245,
-  "sha": "666159f4f0b8f585f448f0c041cf535fa259ec4702354aeaef201081b66aca8b"
+  "bytes": 32255,
+  "sha": "bd4532649fb644c85ffa18d7993540b282b16e88ed686363957098beba65fb20"
  },
  "drops/malbon-x-grateful-dead.html": {
-  "bytes": 39349,
-  "sha": "7546ad10a5e33621eda17b9c3549a6660791458688e11ae125f28ce13fa3285a"
+  "bytes": 39359,
+  "sha": "b14a332be91ee2d835a66fcfee9921f36117dbddc4d85ec6ea33ecd2522124c5"
  },
  "drops/manors-gentleman-jack.html": {
-  "bytes": 34366,
-  "sha": "ffa04bc726ee2a11dd51dfc2cfcb635e3cb4f132f91d0ab2ebcb961d52491127"
+  "bytes": 34376,
+  "sha": "1df51f48cd704d9a89d9ddc5664605d79a4dea5e0ddc970531a5c0cb748ad17b"
  },
  "drops/manors-golf-aw26-collection.html": {
-  "bytes": 76132,
-  "sha": "d06cad448091e755b362290fadfbe8e6a889edb58578f696928d5ff2379ae04a"
+  "bytes": 76142,
+  "sha": "3da60eba485a555b1468b7e6546c127d27b9ee1f2632a8441cc1a55836d13e6f"
  },
  "drops/manors-golf-ss26-collection.html": {
-  "bytes": 34581,
-  "sha": "d68f761f82bb0d2bc5b163b0fc79788a290e47f224b5c7d276ad9b9b1bf920c7"
+  "bytes": 34591,
+  "sha": "e9d51352af9c44bc3a0526013cd621781f20eb456b9e184f414779a1c3ef7bce"
  },
  "drops/manors-ss26.html": {
-  "bytes": 30542,
-  "sha": "afad6696df2d1490bf9608aa019b9ba9efcf5d74bab13d174344119a300515d0"
+  "bytes": 30552,
+  "sha": "4ecdf4e7881942d4734edac77e97f1889b5e4930625d5c687a82d107a2515314"
  },
  "drops/maxfli-siegelman-stable-harness-the-drive.html": {
-  "bytes": 32332,
-  "sha": "6c10de490a8e0b4e8d8382acd72b3618c996d2f130cb968f9eda916af9985839"
+  "bytes": 32342,
+  "sha": "492f8fa88313b8330366a3231447f229ce3a1a5b6ef90e3e94e9dcd8a668be59"
  },
  "drops/metalwood-ss26-picks.html": {
-  "bytes": 36227,
-  "sha": "846baeab2f8277578c6565775c8241d6a79b2dec054ddf94ba2ccdcd04224994"
+  "bytes": 36237,
+  "sha": "ab6c71b97a49595ddabc7498af474715b99b449dad767b6f85d8c0fc83b94057"
  },
  "drops/muni-kids-10-years.html": {
-  "bytes": 35878,
-  "sha": "73ce4f3a22373eeb4295474ce7c35416ed9431efe943597d350cf9f6e6841c49"
+  "bytes": 35888,
+  "sha": "6956f0653456cb6025db52d8002fa622634e6b9e8bdd156a5954190ecfc26402"
  },
  "drops/new-york-golf-trip-sedgewood-union-vale-bethpage-black.html": {
-  "bytes": 38707,
-  "sha": "68e25f500afc90a30dfa653c9e1dfdf89e11ba0cc6d8ca423b556430decb1b8d"
+  "bytes": 38717,
+  "sha": "d83bb8537b531e01efd890ea6123b60d7299b540c00c32b2cfbdd6fb938d6e04"
  },
  "drops/nike-acg-golf-edit.html": {
-  "bytes": 38515,
-  "sha": "4d13dc339a4f8608980e54b7b4c927c6fbabefdfc8ae7ec58ae12ee7b23a7450"
+  "bytes": 38525,
+  "sha": "7a1290c64e3020ebbe2797dfa461d8465ae5a1b993e26db9cf53239acca736fc"
  },
  "drops/no-budget-malbon.html": {
-  "bytes": 87304,
-  "sha": "f97107655f08f6af603563758f861e28465a217bac544dda1a811c32af04bf24"
+  "bytes": 87314,
+  "sha": "d2d7f3c20256481beba2fe6d8ef32e327c1bbe27bef1202098e47600eb0a19ba"
  },
  "drops/no-budget.html": {
-  "bytes": 63882,
-  "sha": "d9328408a0b08ac7c0d38951c7ed67cc72a4eec6d8b6ac3b41e06e65c170fbe9"
+  "bytes": 63892,
+  "sha": "a8aa20819d6d7c1d0a5bf7181983223d81c17f04111d79ace7e428bc3b9c30c8"
  },
  "drops/oakley-golf-collection.html": {
-  "bytes": 37719,
-  "sha": "7244b0fd98a081ca6c45fda682c4b907eef9c136a7bda4aa9b616da2c3939d1d"
+  "bytes": 37729,
+  "sha": "548dacaf187225cefe166971bebb8f538a64220f92ef8a3eaad93cf383b8e819"
  },
  "drops/off-course-golf-brands-doing-non-golf-things.html": {
-  "bytes": 40981,
-  "sha": "3cf69a9f228407f3c4fba3ce332f5a463567cf2679ae0598efbc39681ef817d8"
+  "bytes": 40991,
+  "sha": "25aee8e59e8798c3e8449626596f297a35971e840f8a1ee6271533b4b87dd06a"
  },
  "drops/ovo-golf-2026-collection.html": {
-  "bytes": 58773,
-  "sha": "c097f75b6456564a17e24dfb523324500dc13328f3812df630f9c9064be86a7b"
+  "bytes": 58783,
+  "sha": "51681d61d52f393619cf15b920712ce7befb32753f00276ff8057d6061048961"
  },
  "drops/premium-tees-carousel.html": {
-  "bytes": 32371,
-  "sha": "0e06e543ab08b95bfa6d1ca7d08722d69cb4650b1a7414ed52ca16df66d93417"
+  "bytes": 32381,
+  "sha": "692a1dcaf4f8be6a7fac9d66d662678bfd2736384be34e4f75303ee8ef9eed16"
  },
  "drops/public-drip-brooklyns-muni-born-golf-label.html": {
-  "bytes": 34941,
-  "sha": "9755eef8860fd42438faf36d576d69cb07a1befa2d1d00b7c3b29fb3f3e455f3"
+  "bytes": 34951,
+  "sha": "40201f75174808c7d9975a0cd51878f48b08b3280dca670119925d4490b4721c"
  },
  "drops/public-drip-fw26-nightshift.html": {
-  "bytes": 58661,
-  "sha": "15227a9acb411a49aa2ffa2b45b3f96bceba2edcdb813fab2346f03db740487a"
+  "bytes": 58671,
+  "sha": "bda607372090b8f38a8929c4f849fdca3d04f37d22a9cfdd0b6de1fc0e29386d"
  },
  "drops/puma-golf-x-realtree-precision-in-the-wild.html": {
-  "bytes": 62380,
-  "sha": "3695bb9a499585e096f3c91b1a26a79d36ec4088200f2e6cc23f82dc02f45528"
+  "bytes": 62390,
+  "sha": "ea0b515305470c68ffc9e9c50d148596f682bca618ac5c99742bf2d868c1a4d8"
  },
  "drops/radry-hats-the-full-lineup.html": {
-  "bytes": 54767,
-  "sha": "a0f44bb419608ce53c63d8c88d0bd389032165f846ae71316001c459b5534143"
+  "bytes": 54777,
+  "sha": "bfae0c5e1efec5ece350195efcfe70590d707f8248d5095319a9ca3284dc5999"
  },
  "drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin.html": {
-  "bytes": 28964,
-  "sha": "0873e8a5b4cd2f0d17f9d2872eb46758c3d1ecd7d4c915214ba697a7ff4fe8f7"
+  "bytes": 28974,
+  "sha": "f7bafb0eff05eebb60c6ea60942f0bd3aeaaf84fcd4c65c28859684c9994073d"
  },
  "drops/reebok-x-manors-ii.html": {
-  "bytes": 68000,
-  "sha": "8ef9a0db1c4d1b3943ec1c47922cf72ef193366f2622ac2a2bcaada9edb41525"
+  "bytes": 68010,
+  "sha": "fc054199eaa5422f8d9c563d88429a1deb1b68575df6ccf328a08b82d0da5bbd"
  },
  "drops/rodeo-dunes-the-great-divide.html": {
-  "bytes": 35769,
-  "sha": "3c3ee20ef9e9365db0b079a69a2d41af102ea0409385f383a7fb8c4277d7fc90"
+  "bytes": 35779,
+  "sha": "198edff5995afb3ddc71a51e43eac56483fd2c3f9695732a751494a57b0448b6"
  },
  "drops/roy-kizer-from-sewage-plant-to-links-style-gem.html": {
-  "bytes": 35023,
-  "sha": "6f2e9c84c0598c425228e996997c2e46a1c48778cc2f014c6d808c99e135a6cb"
+  "bytes": 35033,
+  "sha": "e90db2c7c8f9905d046a66773fa3d1d7069c2d739c820e9e59b627cfd3066210"
  },
  "drops/sandwiches-before-the-round.html": {
-  "bytes": 35589,
-  "sha": "1f454be28cdc314a84aa72b11b28c848ed844df41083b6a4382c254c682a48f3"
+  "bytes": 35599,
+  "sha": "30bf13664530069adef99d6b35ecddeeb5bd31dcbfdb8da01e23436f916e7d9b"
  },
  "drops/sentinel-golf-x-1733-saltex-bags-and-v4-brush.html": {
-  "bytes": 32566,
-  "sha": "0612201959cb4e0893a4038b9408effbc3c74bd914dc9ce083519982f8c86c60"
+  "bytes": 32576,
+  "sha": "a814e14b96682fb6bf24b644a0b98af20b03708fa456a75e5c2e4fff216ae1e2"
  },
  "drops/ssc-hidden-gem-collection.html": {
-  "bytes": 67724,
-  "sha": "147059b6e5afd7dce1c38ba7de20fb612ca7e9b6d96514a24f2f8f3a0b95b070"
+  "bytes": 67734,
+  "sha": "9430c792463c3322c8e15986ffbe4511994220ade72eec6d797513f7dd798a63"
  },
  "drops/ssc-x-byrdie-golf-social-wear-just-dropped.html": {
-  "bytes": 32435,
-  "sha": "608d6e911cc352979ecb52b53ba453b000acd488fe426d729241c9dff40015a4"
+  "bytes": 32445,
+  "sha": "6c20700afb7aa4af151d172cc63acf7e0ac6a71e1dceda07293d193ccb412731"
  },
  "drops/students-golf-our-15-favorites.html": {
-  "bytes": 57832,
-  "sha": "9c14e8d33bb410565ab5b8acd6c5df97f3cb64d92bb5b26ac37f4f61da60485a"
+  "bytes": 57842,
+  "sha": "51e2bf398b1a3c40ce210d0256a93df3779a47c8f640fa8c91c526ee50a15eb9"
  },
  "drops/students-golf-summer-2026.html": {
-  "bytes": 88411,
-  "sha": "556cf7aa44728cbd63e2798ffe53d2100d9758ac2fae227f662d08ff7e6c1e41"
+  "bytes": 88421,
+  "sha": "107ea41a26bd32c9df6938962600ee83a0de40ddde6fb053686dd39352014710"
  },
  "drops/sugarloaf-ss26.html": {
-  "bytes": 28409,
-  "sha": "f6bceb175df8fc657eba00fa22af9113799fbba5496a67be962a2f1e2c15cfe2"
+  "bytes": 28419,
+  "sha": "7b7e9c9c7f3f0690e281fc69ad7c6ac6937d26e82d7de35bb0b826c2dd7ca5b1"
  },
  "drops/sugarloaf-summer-sailing.html": {
-  "bytes": 31597,
-  "sha": "7d5569aaab282cf195179d54273f832263e2c455268c5401fe2afc666ea41aaa"
+  "bytes": 31607,
+  "sha": "454f57d1a5184f6ae36cca9d24f3e494f31c26c205c48291c2a1f9cf73de6a3b"
  },
  "drops/summer-practice-guide-austin.html": {
-  "bytes": 38758,
-  "sha": "81d26c6a3e6b387427fdae01275838c79c8b0ca9477b22fb1c89f32c8f7deeb4"
+  "bytes": 38768,
+  "sha": "3f6f7ec1c1c2629ce74ae5b6e242d3983a5ad1058e037724938ed9587bbebf05"
  },
  "drops/swag-golf-college-program.html": {
-  "bytes": 66224,
-  "sha": "0ef7cab76263cdf01d6c5a991c45efb971852f6d186fd615c272268b665b687e"
+  "bytes": 66234,
+  "sha": "4b6c2f92f30968f7868d9e151fe7491888b19c42a0204a7faa1d7ced24a62afd"
  },
  "drops/technical-fabrics-heating-up-heres-12-of-our-favs.html": {
-  "bytes": 33552,
-  "sha": "d0b44590cfb717f8568db7c6d889233442ef05622a667a24baf792c311bf64cb"
+  "bytes": 33562,
+  "sha": "8a3e224721331e43ca29fa4e0aaf1dce10996f933c55cae9995c3ea8398ba060"
  },
  "drops/texas-golf-brands-and-makers.html": {
-  "bytes": 79683,
-  "sha": "2524cb44c4ae2f8c05c6670c9f90c0e519b99984fea27b3d9237b39a17888d92"
+  "bytes": 79693,
+  "sha": "95ca1a911ef87b462945c5268d4744dfafee2edc455c5fc831eeadc655952eae"
  },
  "drops/the-2026-driver-drop-12-new-sticks.html": {
-  "bytes": 34322,
-  "sha": "adbe82d7b6b4ae6011a2cdd8c910a8c08fe03feb93896a228be23325114ce9e7"
+  "bytes": 34332,
+  "sha": "6c9c55aa4f1254a5c6a6b6e01e9975fb031888a71bddbb0ac813cc4287310a8d"
  },
  "drops/the-2026-putter-drop-8-worth-the-cash.html": {
-  "bytes": 31415,
-  "sha": "e599a6a6d6e97fe60bb9992600fe779748248971e6dc4f3aadf9522966bdbef4"
+  "bytes": 31425,
+  "sha": "623900afc4ff4d4494f747f01928db4117fe76128f39acbffd787605a9a652f0"
  },
  "drops/the-alignment-stick-edit.html": {
-  "bytes": 64011,
-  "sha": "a67c34ed50205a2338af61317ade4182ce8cdc526d737eaa40f09777448138d3"
+  "bytes": 64021,
+  "sha": "cacd9f4775a8cc4a3a84a95eb5d269e874cc422f99f2ab0c26ddddca861dee5a"
  },
  "drops/the-all-black-edit.html": {
-  "bytes": 74094,
-  "sha": "4c2fddbd0f93d29da4692830a05917611c6fc07fbe77e62bba40fd657766573b"
+  "bytes": 74104,
+  "sha": "2bf456b5e34b7572823d244060aca1c4ab246e8f665020f7e6713a86388eba5b"
  },
  "drops/the-bag-edit-6-bags-for-golfers-who-care-what-they-carry.html": {
-  "bytes": 26391,
-  "sha": "19687f950b130e27376c31cfc0a2f64ffe4477e796fe089c681bbb763207904d"
+  "bytes": 26401,
+  "sha": "3b141bc9eef4c7c8a52c4cd2967a25e694a180ef8730554433ae76f9eb07e9d9"
  },
  "drops/the-ball-marker-atlas.html": {
-  "bytes": 109827,
-  "sha": "d3dc1059375781d91742a3c0677c503bece739d4f262fe225a7da2c1d2342a3d"
+  "bytes": 109837,
+  "sha": "4510074829db3fd790aad0fead2ca294662c3cc18b3c9a56ae6ead17cc62779a"
  },
  "drops/the-ball-marker-edit-6-markers-worth-pocketing.html": {
-  "bytes": 26264,
-  "sha": "54f95ec7d65c7a5f1f49bd2a3a9b03c7cb8b203df0afdba509560b910cfaf833"
+  "bytes": 26274,
+  "sha": "d210ab0ebdcd8d0490ea025f9beb3b95e6be8fb83560a943dd93cca690052db5"
  },
  "drops/the-best-non-golfing-golf-shoe-5-trail-runners-that-belong-o.html": {
-  "bytes": 27051,
-  "sha": "0f28313b64a06d81d70dcf3ca819bd2e19291fd084a3b8b2512c54ba2959eee0"
+  "bytes": 27061,
+  "sha": "6427bf9db4aa6f2bde04eb56233426ff0e1c4c0f688b209a8208593f7385563f"
  },
  "drops/the-bird-edit.html": {
-  "bytes": 73320,
-  "sha": "38f57431c5c594fea29609e8f526ec0787448605b59a4b498224ad2d11033b19"
+  "bytes": 73330,
+  "sha": "48067a66ab9d2e8d2ffbb5a10fde4f135ec0cc1a40ac2dcd8becb77c55ee648a"
  },
  "drops/the-camo-edit.html": {
-  "bytes": 39200,
-  "sha": "c44e6e340bb5ee851818b1873bb11141b988caba62e0a6d164a046bc820d5883"
+  "bytes": 39210,
+  "sha": "ca00ffffe140358097f34ebe1b9d230c89dc8db3e32db9d056fdc1b2fc948a52"
  },
  "drops/the-custom-wedge-report.html": {
-  "bytes": 108375,
-  "sha": "eaadee47694b49362739b9c7eb67fee1529c1bf07d7723dd3aa8af0e48a1dfae"
+  "bytes": 108385,
+  "sha": "c81ce173eb1842adc82fc98046deda0e3eda7487d82d986150c78de293077f55"
  },
  "drops/the-driver-headcover-edit.html": {
-  "bytes": 52383,
-  "sha": "e6b16f8f33bb39fa17d3af71d34fd9c08f55e5314b691e608f6946bff43cd2aa"
+  "bytes": 52393,
+  "sha": "ca7f25af742b96c60528cee1eaf3ce5f89d4568cc428c660407448ca27756390"
+ },
+ "drops/the-drop-report-september-2026.html": {
+  "bytes": 72943,
+  "sha": "6d4c6088a14fd2eb0cd463ecef992bc6170ff6428c6ee096f2838d5072cfc8f8"
  },
  "drops/the-dyneema-edit.html": {
-  "bytes": 87224,
-  "sha": "4f45f9425a90570a952cb3f38ce389c8b17a9026ace03c11f6f4c27208df4350"
+  "bytes": 87234,
+  "sha": "ed68c7ca0fb1c1ffb7a58b941d7685b6eb356f097e0e51a8fbf5090f87366ac0"
  },
  "drops/the-firecracker-open-81-years-at-the-muny.html": {
-  "bytes": 32952,
-  "sha": "31d713f3a23f9ab972d85f6b57e68c2006c1e6789834f9f5de182f9efec7f65a"
+  "bytes": 32962,
+  "sha": "dd97c6c448f9dd132da5fab5067c440fc67d2a3675097f1224fcff691c34327d"
  },
  "drops/the-fyfe-putter-cover-edit.html": {
-  "bytes": 58462,
-  "sha": "490afd8efe783c1b08a7e50975e682696627d4b888ccf0e8c8fe005acb20ba80"
+  "bytes": 58472,
+  "sha": "a6b4968b50724e6abc312f5c2e92a0a39c31282424f8d056d31f4af817e5c47f"
  },
  "drops/the-glove-edit.html": {
-  "bytes": 37040,
-  "sha": "4d17239863ecefbc3ed5c08b7e0085af6dd42b59cbe706b5762afdcca2db75d1"
+  "bytes": 37050,
+  "sha": "08c631ae4c9c3567c588dcc48ad12c3a680a6cb83cf2f6358b2cc7fbe97c6513"
  },
  "drops/the-golf-ball-edit.html": {
-  "bytes": 36815,
-  "sha": "0b7988f84fac5d8d1f1f32469237375f82dc193a7f5d1336c9b688950a45ba9a"
+  "bytes": 36825,
+  "sha": "4c244d5b699585b29bd64c03a7c27becbb7f4e27d75ec2fd742eba3bab2ab241"
  },
  "drops/the-golf-shoe-edit.html": {
-  "bytes": 40410,
-  "sha": "38fe94573f67706d29990698ea75ed924866acb7aab12365391b90ff78ef5395"
+  "bytes": 40420,
+  "sha": "67409a65937470d9863dd8d0d6571d8c4f16ad7e946ca1a7d5405a8f2bbe7c20"
  },
  "drops/the-golf-tech-edit.html": {
-  "bytes": 38766,
-  "sha": "c1e59ed919de700e543a6c90fa66321219199021d77de6453001ce059ed380ab"
+  "bytes": 38776,
+  "sha": "586464e651c5d3d0b58d8c8405f94382c47a58de94786d8473e606879cfe2580"
  },
  "drops/the-hat-edit-6-lids-for-golfers-who-skip-the-pro-shop.html": {
-  "bytes": 26555,
-  "sha": "d43f962e1238a8c22bca738c17c10b5f24389a1f8a52bac2ce6b1cbfaf1f747e"
+  "bytes": 26565,
+  "sha": "f64f4141c3d32069df750c3e719ba0fcaf61d20b961ba94a15440144fb1fd651"
  },
  "drops/the-hat-edit-austin-summer.html": {
-  "bytes": 95133,
-  "sha": "c8a0d689ad59d336f706c953f6527eeeb7e118832aa4917d520294d0eb301ba4"
+  "bytes": 95143,
+  "sha": "a7923a3db444272efc8a8ca5ad2a17acbc69cdc51d16e032e11529b7159b0e2c"
  },
  "drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag.html": {
-  "bytes": 26659,
-  "sha": "66c066d1b38edb2ad81b3f4ba9fe529e0af284b828c3c58c01be23b4585a4782"
+  "bytes": 26669,
+  "sha": "fb9cca02fe8dbf3d78edf33c072fb89bf34e687c508fe730511a2c4604640aef"
  },
  "drops/the-hot-weather-roundup.html": {
-  "bytes": 38492,
-  "sha": "65334e35bd339f9223987f9f604b449d60732dd193f1aad6220666c735eafe2d"
+  "bytes": 38502,
+  "sha": "3bd178a49e60e989044f53ef976fc23de4ab1da4d1bba30b62c4bfb75bb0f0ea"
  },
  "drops/the-hydration-edit.html": {
-  "bytes": 67669,
-  "sha": "d427f21b54dce9b8f09a7c72792b8a7e657cce11ffa753f412400f668bcd0412"
+  "bytes": 67679,
+  "sha": "f12cccbba9631820fb8c493b8f40d2da26c52e4d7b4b9ae45ba38e6deaa646ab"
  },
  "drops/the-jersey-polo-edit.html": {
-  "bytes": 36398,
-  "sha": "f3dd7fcbc1714c0013d899154967f17f63de91ac351732d65dc8a48dc3d8848d"
+  "bytes": 36408,
+  "sha": "d37eafff86a5599a44070f5b35f4e6a53058d211f06810cd9bd6cb9569d2735a"
  },
  "drops/the-jordan-golf-spring-edit-chicago-drops-may-10.html": {
-  "bytes": 26472,
-  "sha": "6ebb3b71e0c83e2ebf6ac2e29c7089a5411cfdd03b9ecd701a98ead03d4e1df7"
+  "bytes": 26482,
+  "sha": "b61a95efdbda9581b81eb06e611ee231d25235589b33f01ed17071a02f449d86"
  },
  "drops/the-lottery-round-austin-private-clubs.html": {
-  "bytes": 67087,
-  "sha": "08051b251d7ee30a65650183253f474e8a520442005ab795291cde09f9aa2f7a"
+  "bytes": 67097,
+  "sha": "3ea3c958e41642df222791d7fc3d303d7a81fdb33da9ce4ca6e0714914417fe2"
  },
  "drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site.html": {
-  "bytes": 114292,
-  "sha": "21e0382f1ab615ed0c17d3f9a4aaf9ff320f598d0e4d125b6a2d2a70865b875b"
+  "bytes": 114302,
+  "sha": "8f47cb649a9b574b80748377c07298d20d5b3ffaaa1e9b41da019084e8af10b9"
  },
  "drops/the-magazine-edit.html": {
-  "bytes": 54754,
-  "sha": "1c4b45f4e5e9e836fcdd6199619b21f0d3ce70b1e8175f94ab5b1ec203161edc"
+  "bytes": 54764,
+  "sha": "fa0af4a3fff42c4d22564985e0e1acf61999e86cf6b67bda87fe8836e8031068"
  },
  "drops/the-masters-ticket-lottery-is-open-you-have-twenty-days.html": {
-  "bytes": 23914,
-  "sha": "aafb918b000087928d34ebec391f838791d401ffad70e73f84eaea4196aec85e"
+  "bytes": 23924,
+  "sha": "1f48cfe88320de45f74e05595ccf89cdbf048700cd9b229c64c5ae557081db01"
  },
  "drops/the-niche-grip-report.html": {
-  "bytes": 46558,
-  "sha": "5134c423904c257ed8b7186545e201f3a3efe3a2c88c8d1412d8d6556cad0d1d"
+  "bytes": 46568,
+  "sha": "0d6ccfb8595bf262ad09d6a1a3232b864b2aafd5d72fda4db519e9692e47b17e"
  },
  "drops/the-payntr-collab-edit.html": {
-  "bytes": 97153,
-  "sha": "ab0bb3279b6678af419be100f445429087e5c2090ba66abb228c3f0bfc45c2a5"
+  "bytes": 97163,
+  "sha": "90a334c7f5388235a6c42ab37dde34d72081d2c1593cc840aa09ed8a3c8fa4ff"
  },
  "drops/the-push-cart-edit.html": {
-  "bytes": 35977,
-  "sha": "975007c89fba0129783365be7a9fda1a1aed6386d6aee5bf9f9b11e96c7cc967"
+  "bytes": 35987,
+  "sha": "6d08c9973a0e1b06577d00ff8ed7994751f460d1c12600aa667ebd29f7f0419c"
  },
  "drops/the-putter-cover-edit-11-covers-worth-the-pocket.html": {
-  "bytes": 34848,
-  "sha": "ffb236b67bbc96c3dc6ebaed81a7d26c80fb1cb05823e75580bf805a58bd0c58"
+  "bytes": 34858,
+  "sha": "e44748ee4888fe97a56d833578fb288369092add1ff7f2628a9601cbfa7a657d"
  },
  "drops/the-rain-gear-edit.html": {
-  "bytes": 39263,
-  "sha": "c490b5e56605f3396838f4f638a8673eb2bec322cf117208156552ecc7236ad2"
+  "bytes": 39273,
+  "sha": "4525b548d39ea3ed50fc0960bb2fc7539e151438d9ca7a66c687fd2ed8cf3552"
  },
  "drops/the-retreat-guide.html": {
-  "bytes": 35717,
-  "sha": "e06860e56a8481f7b42fdeafe0944bee82a9e5f56561b2d49c6652c0fa59c36d"
+  "bytes": 35727,
+  "sha": "1c7f167e9fab766995dcaf4edf856ad7c15fca040979ccc76adb7474fba0e5d0"
  },
  "drops/the-shoe-edit-6-pairs-that-belong-on-and-off-the-course.html": {
-  "bytes": 26551,
-  "sha": "5c4de0a4387699e98d8fd33c94d0c79caf4a54f7e81c7a0611165334e701e77d"
+  "bytes": 26561,
+  "sha": "9e01438eaf0e2271271537cce42aa8dfde21bb80870e69d3536abde91a70797c"
  },
  "drops/the-sock-edit.html": {
-  "bytes": 36703,
-  "sha": "4c5f00bf18d89e5edb0fbf5e0da73eb34a0cf1aa4fbb5cfaf3e28a2669de247a"
+  "bytes": 36713,
+  "sha": "7c2c5c2416b2ed0725f221aa6155e8e2dbfb305f643a232cd412d5545b7039a3"
  },
  "drops/the-stand-bag-edit.html": {
-  "bytes": 45138,
-  "sha": "1fe0ff133937c5b7fa660664d1ef0c04efea5f93c5524b9584b48b82011dddf6"
+  "bytes": 45148,
+  "sha": "a19c13f8888ed4a81a0e142eb1b9785c046e9e1b6abd25271d5d845ef50d4ac5"
  },
  "drops/the-summer-style-list-10-golfers-who-get-it.html": {
-  "bytes": 31961,
-  "sha": "8e54f57d79162e28fca3bc79ef856e1ad3ab026575336fcd51fe412b10123836"
+  "bytes": 31971,
+  "sha": "b14861d019275d295494bbb0ed92683bcc48d6a63e86a635032136ca08f85b1a"
  },
  "drops/the-summer-tee-edit.html": {
-  "bytes": 52361,
-  "sha": "13681316dc273b3984f832e42a8f252d0f72e0ce23c84f6c7a6b42edb79dc98c"
+  "bytes": 52371,
+  "sha": "1c608e612d7a52319bf17f0f00ef91ff72a3f03b65d835b6ba6897ea1e5b1859"
  },
  "drops/the-technical-brands-roundup.html": {
-  "bytes": 49114,
-  "sha": "23f15dc2cfbd1330a4b19e5b3ba5fce07638e23461bc8f51ae9a626afdc70651"
+  "bytes": 49124,
+  "sha": "97c6ba1918d566b6b478d844ee9d90723eaeb0514777f55f825c92daf0547243"
  },
  "drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond.html": {
-  "bytes": 36659,
-  "sha": "71d8343efc803fd482af0e13b6efbf46cce9ee2e3f9c2bdd1d1bf878f9c127fa"
+  "bytes": 36669,
+  "sha": "95162bf77f5132796f17b2b5dd6b003b8d3c1d43f20e52e7824896a5defda0f0"
  },
  "drops/the-towel-edit-12-worth-clipping-to-your-bag.html": {
-  "bytes": 36624,
-  "sha": "25883a62a984c619cc9e1812f390d403841d17adf51508570a64622a6733bf0a"
+  "bytes": 36634,
+  "sha": "6ec15be497df9ee577ea27884825f77dda1804e76e2feb25ed962a02f7114b85"
  },
  "drops/the-towel-edit-vol-2.html": {
-  "bytes": 38908,
-  "sha": "979bed3bad15e82baac5b7bb71280016937d9286f08ad97e1c5fc8f8f7584dfa"
+  "bytes": 38918,
+  "sha": "b9444fc83c7c7e5b05ab959e4a7009890bfe0e2488ffc523b58b12d9e3e93704"
  },
  "drops/the-towel-edit-vol-3.html": {
-  "bytes": 62589,
-  "sha": "e6fbc476a627230320fc8bb9c564aec206768edd6c6608ed26a36ee433e4296f"
+  "bytes": 62599,
+  "sha": "371597b688dabfee7f90b00ed52c0dfb294df65a86cdb5325e952a6a22b69b42"
  },
  "drops/the-water-bottle-edit.html": {
-  "bytes": 46986,
-  "sha": "1469acfbbaa96e0d8a8ab42548c1ae55e0087187b944f6209ebe8bc0149eeadf"
+  "bytes": 46996,
+  "sha": "ab3212c1ffbf3535fa06e9ffd3aa4e2c216f88eecd629660dc200ef102d41357"
  },
  "drops/the-wedge-drop.html": {
-  "bytes": 47687,
-  "sha": "52753b6a855841a333ad04422309f904577e9e8dc79c81f94730e3f7cbd49a12"
+  "bytes": 47697,
+  "sha": "192849ae9d51ae49c98eaa37b243127cc68103ff8fc33b42255e39a7347d1982"
  },
  "drops/the-white-tee-edit-2026.html": {
-  "bytes": 69308,
-  "sha": "761292387734758248bdf3616f80948c60e9b3e7fc4c2004d28288cc73a967be"
+  "bytes": 69318,
+  "sha": "bfe69927d4499c3553a3c472a99588af452e7733775f8a936a23bdd1dfca1c13"
  },
  "drops/vessel-season-opener-26-masters-green-croc-texture-already-s.html": {
-  "bytes": 27062,
-  "sha": "0595d2e3a9dbeb8ed9d1d2abda9c02c437f09caac7af0db4f6ef881794e6f734"
+  "bytes": 27072,
+  "sha": "57d27dfe5c07d670765bc93a70ce89688711a23ead507ef8379e24e7a01c5422"
  },
  "drops/walker-golf-blooming-grounds-drop.html": {
-  "bytes": 79951,
-  "sha": "e513fdc3a2e6a4699bdc7a7276444eac367ca4d86bfb3cebafad963a674b6340"
+  "bytes": 79961,
+  "sha": "30b05653d18e3ac6e26a012dac6afc55052abc93147b411b57bbc6ea882302cb"
  },
  "drops/walker-golf-the-par-tec-drop.html": {
-  "bytes": 84539,
-  "sha": "6d54ca826afb200c34516b7448c375e1c9600bdd637951f1c40da7be67d2998d"
+  "bytes": 84549,
+  "sha": "0d649b4a6951943b2a6138c9de84d8f8db2e53c34a31715b36a1e89993007b8f"
  },
  "drops/water-when-dry-the-garden-metaphor-that-actually-works.html": {
-  "bytes": 28953,
-  "sha": "19b5186174a118f5f4dfb3600bd1ddd233a96398d1b67d6444bb3713708359b1"
+  "bytes": 28963,
+  "sha": "baa9e0340b771489f7f59f371a950ffa2b4bc0ee731d731551edd666629b5d03"
  },
  "drops/where-to-watch-the-world-cup-in-austin.html": {
-  "bytes": 33769,
-  "sha": "6d3b3a605cbf02202df6940ce6b5769a47bf6fdaa43b1639f95ef43346ec7907"
+  "bytes": 33779,
+  "sha": "af15314fc2c14d29e1b0164643a84a8227c9b0be52e1f8f484e687a7b542b595"
  },
  "drops/world-cup-jersey-edit-pitch-to-green.html": {
-  "bytes": 39320,
-  "sha": "74d9ef3ef8a06a1474ffb1cbd1e900c54678c84be2033ddeee8f0815a3356c01"
+  "bytes": 39330,
+  "sha": "ed858e97b9a109083f5d22397f2098888df933a43160d97a7f4a45131acca769"
  },
  "drops/zara-home-made-a-golf-collection-and-its-weirdly-good.html": {
-  "bytes": 27162,
-  "sha": "b5f6cce13d2ca965dfde7c72cc9cdd44a7ba065a5c0d8d92826c8eebcb49d48a"
+  "bytes": 27172,
+  "sha": "8434af2f4fa68b69edfb91ad539f97204e00fedffb3e6199fc11a561e6e70820"
  },
  "events/hill-country-amateur-2026.html": {
-  "bytes": 22059,
-  "sha": "350fba2703c69388079d49e298f967ef169fa6f77e4497952a7c35f0692eb83f"
+  "bytes": 22069,
+  "sha": "8c3ca9cdf48857d36ca44ee4e4662b7baead00a6f6b8cb18eeda38d57fb319da"
  },
  "events/index.html": {
-  "bytes": 34384,
-  "sha": "56079c485e4e4810fbe5ba7b0c92be56473117e727a6321d6e9db593cb0c4559"
+  "bytes": 34394,
+  "sha": "f7fb926ac18935b7b0031e9e70bc1699e8f52f248dea935af50a156a74ef86ce"
  },
  "events/texas-childrens-classic-2026.html": {
-  "bytes": 22760,
-  "sha": "df01fc367bca15be5bc8b367ef42c9adbee780335ff629dbebf12f227b5c9f00"
+  "bytes": 22770,
+  "sha": "1c2924462ddf58544cbeb34f53f25947d802131c0b58103ece273d2747aba4d1"
  },
  "events/the-long-walk.html": {
-  "bytes": 31004,
-  "sha": "29e910dad8b377cc8e98e8bf06b9f68b8f10adad4166d4f107814d205e44ede6"
+  "bytes": 31014,
+  "sha": "d44c6fc6df72f5536500ee2fb9f414ab2ea392fb555080d9e8c434cd0927b357"
  },
  "field-guide/index.html": {
-  "bytes": 129145,
-  "sha": "e7fd100b53b49f17adc75bd74452f1f3b53955edc581acbbee8e3a15a0c77dc3"
+  "bytes": 129155,
+  "sha": "6be90bae7735e3b44908a8ff0dd260ee3fbae5c6f3daa653c42ec400a5206516"
  },
  "guides/hancock-1.html": {
-  "bytes": 28637,
-  "sha": "1a3545dee9da6f7ef58a549ec7367fd798c5001d2363541eece0ca511319c78e"
+  "bytes": 28647,
+  "sha": "0664f3a8a000f5cbd7bc71de503041f7ba77d4dd062533340d8cef8df7641cbf"
  },
  "guides/index.html": {
-  "bytes": 22869,
-  "sha": "f62d0d841f1084d872f1f30cb7a5c24f688da4d2cda9cf188f4938ab6cbf23a9"
+  "bytes": 22879,
+  "sha": "b42d1b4e4ffd59b4bc108b74d47808f25cd2408452d41f0434f312c2442653b9"
  },
  "guides/lions-6.html": {
-  "bytes": 30114,
-  "sha": "71fa27b1944df06d35e689867cf7f2a93db5a4dd46d51a7cdfb880bc12f1d077"
+  "bytes": 30124,
+  "sha": "8f6f5b422967eba876be08971b6ff55ce78de558103208637b29864877a74005"
  },
  "guides/morris-williams-7.html": {
-  "bytes": 28774,
-  "sha": "360c90870f7c96f3ae7aecb4938cf36a8cb0ca86530cf148150ddca092cabe23"
+  "bytes": 28784,
+  "sha": "c2981e93f5632fdf5552375b5741f51e40ad3a5ea1f35bcdc21ff4ff4d9891b8"
  },
  "guides/roy-kizer-15.html": {
-  "bytes": 28642,
-  "sha": "d0085c8f4a43be432a599fff0aefa44301be40f71e86a3308c05a925d9f9fe47"
+  "bytes": 28652,
+  "sha": "9dc64e808f7f0e60f697adbe2913125a27ac9e4286756469ec4d17afba7ffe02"
  },
  "ig.html": {
-  "bytes": 346975,
-  "sha": "187dcbeba26c7f07947af3c5d0dfa7979964f8c6a6ce8fee12d6a9c3be3bce56"
+  "bytes": 349096,
+  "sha": "c77cfb0422921ca831af27472f7075d5fa9494741625a8ec46e146407d48adfe"
  },
  "index.html": {
-  "bytes": 1239337,
-  "sha": "155bd3fb129afddccb294627b8c3a0243e5b40f65962b63d9e83f3310ae98580"
+  "bytes": 1243586,
+  "sha": "9ed3ef49f3120a5710dac0d7edef11952eaaeaf056a11afee6728c4922097d59"
  },
  "instagram-posts.html": {
   "bytes": 18536,

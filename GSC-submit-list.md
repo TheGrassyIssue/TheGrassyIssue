@@ -182,3 +182,13 @@ identical and Google will take it on normal recrawl. Do not spend quota there.
 - https://thegrassyissue.com/drops/fyfe-x-mackenzie-every-edition — editions 21 & 22 added, meta + counts corrected 20→22
 - https://thegrassyissue.com/brands/fyfe-golf — profile now points at the BTK
 - https://thegrassyissue.com/brands/ — brand card + lead image updated
+
+## 2026-09-14 — The Drop Report (September)
+
+**Priority 1 (submit first):**
+- https://thegrassyissue.com/drops/the-drop-report-september-2026 — NEW, 11 brands, 23 pieces, ItemList schema. Covers Malbon's unannounced 9/10 Arsham drop, which has no other coverage anywhere.
+
+**Priority 2 (new + updated):**
+- https://thegrassyissue.com/brands/payntr — NEW brand page (PAYNTR was missing from the index entirely despite the Collab Edit post)
+- https://thegrassyissue.com/brands/ — 127 brands now
+- 10 existing brand pages gained a coverage entry: malbon, mogshade, seamus, gamut-golf, sugarloaf-social-club, eastside-golf, siegelman-stable, students-golf, apres-golf, jones-sports-co
