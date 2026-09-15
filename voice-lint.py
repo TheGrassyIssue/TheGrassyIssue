@@ -58,8 +58,15 @@ launches launch launched forges forge forged
 buys buy bought sews sew sewed sewn resells resell resold collects collect collected
 publishes publish published sources source sourced prints print printed dyes dye dyed
 names name named lists list listed answers answer answered describes describe described
-knits knit knitted stitches stitch stitched""".split())
-# The five lines above were added 2026-09-09 after the verbless-opener check
+knits knit knitted stitches stitch stitched
+weaves weave wove woven calls call called pours pour poured casts cast
+mills mill milled grinds grind grinds carries carry carried holds hold held
+ships ship shipped""".split())
+# The three lines ending 'ships shipped' were added 2026-09-15 after the check
+# fired on "Mogshade weaves these to order..." — weave and call were simply
+# absent. Same false-positive class as the 2026-09-09 batch below; same fix.
+#
+# The five lines above those were added 2026-09-09 after the verbless-opener check
 # fired on "Après buys secondhand..." and "Après publishes three named...".
 # Both sentences plainly have a finite verb; the set simply had no entry for
 # buy/publish. This is a false-positive fix, not a loosening: every word added
