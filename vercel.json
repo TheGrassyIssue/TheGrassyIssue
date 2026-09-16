@@ -81,6 +81,11 @@
    "source": "/brands/gumtree-nature-club",
    "destination": "/brands/gumtree-golf",
    "permanent": true
+  },
+  {
+   "source": "/drops/7-indoor-simulators-for-austins-gross-rainy-days",
+   "destination": "/drops/austin-indoor-golf-simulators",
+   "permanent": true
   }
  ]
 }

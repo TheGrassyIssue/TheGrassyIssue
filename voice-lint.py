@@ -61,7 +61,11 @@ names name named lists list listed answers answer answered describes describe de
 knits knit knitted stitches stitch stitched
 weaves weave wove woven calls call called pours pour poured casts cast
 mills mill milled grinds grind grinds carries carry carried holds hold held
-ships ship shipped""".split())
+ships ship shipped
+fills fill filled drops drop dropped earns earn earned cannot
+runs run ran covers cover covered opens open opened books book booked
+differs differ differed varies vary varied measures measure measured
+charges charge charged lends lend lent rents rent rented""".split())
 # The three lines ending 'ships shipped' were added 2026-09-15 after the check
 # fired on "Mogshade weaves these to order..." — weave and call were simply
 # absent. Same false-positive class as the 2026-09-09 batch below; same fix.
