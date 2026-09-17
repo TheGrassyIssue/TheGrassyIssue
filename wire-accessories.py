@@ -4,21 +4,26 @@
 WHAT WAS THERE. A legacy six-slide card in the old format: data-type="drop"
 (singular), per-slide .card-text inline rather than in the canonical
 window._slideTexts map, a .card-source row of six outbound brand links, and a
-"See the Full Post →" anchor styled inline. Two of its six slides pointed at
-dead destinations — the Sentinel slug had been inherited by a different product
-and the Depeche link had decayed to a bare homepage — and two carried prices a
-year out of date. Every slide sent the reader OFF the site rather than to the
-post.
+"See the Full Post →" anchor styled inline. One slide pointed at a dead
+destination (Depeche had decayed to a bare homepage), two carried prices a year
+out of date, and one named a product that is no longer made. Every slide sent
+the reader OFF the site rather than to the post.
+
+CORRECTION 17 Sept 2026: an earlier version of this note also called the
+Sentinel slide a dead link. It is not. /shop/p/no-16-basket-galvanized-…cx85f
+resolves to BASECAMP WATER BOTTLE at $68, exactly as the slide said. Squarespace
+inherits slug stems between duplicated products, so the stem is cosmetic and is
+not evidence of anything. The guard below no longer treats it as such.
 
 WHAT REPLACES IT. The current house card for a multi-brand roundup:
 data-type="drops", the [Drops & Brands] chip, five slides that all link to
 /drops/accessories-on-and-off-the-course, captions in the canonical
-window._slideTexts literal, and "See all 19 ↗".
+window._slideTexts literal, and "See all 21 ↗".
 
 FIVE SLIDES, ONE BRAND EACH, chosen to span all three sections of the page so a
 reader who sees only one slide still gets the premise: a scorecard holder that
 lives in a back pocket, a hand-forged tool that only makes sense on a green, a
-ground chair from outside golf entirely, a milled brass crayon, and a $15
+ground chair from outside golf entirely, a set of hickory alignment sticks, and a $15
 squeeze bottle. Prices match the page, which matches the brands' own stores as
 read on 17 September 2026.
 
@@ -34,7 +39,7 @@ import re, json, sys, os
 
 URL   = "/drops/accessories-on-and-off-the-course"
 KEY   = "accessories"
-TITLE = "The Accessory Edit: 19 Small Things, On Course and Off"
+TITLE = "The Accessory Edit: 21 Small Things, On Course and Off"
 TODAY = "2026-09-17"
 IMG   = "/images/accessories/"
 
@@ -42,9 +47,9 @@ IMG   = "/images/accessories/"
 SLIDES = [
  (IMG + "bluegrass.jpg", "Bluegrass Fairway",
   "Horween Scorecard Holder &middot; $85",
-  "Nineteen accessories from nineteen brands, sorted by where each one actually lives. Bluegrass Fairway "
-  "cuts this one in Louisville from American full-grain leather, 6.75 by 8 inches opened, thin enough for a "
-  "back pocket. They will heat-stamp initials inside it if you ask at checkout."),
+  "Twenty-one accessories from twenty-one brands, sorted by where each one actually lives. Bluegrass "
+  "Fairway cuts this one in Louisville from American full-grain leather, 6.75 by 8 inches opened, thin "
+  "enough for a back pocket. They will heat-stamp initials inside it if you ask at checkout."),
  (IMG + "seamus.jpg", "Seamus Golf",
   "Hand Forged&reg; Greenskeeper Pitch Tool &middot; $76",
   "A three-eighths-inch aerification tyne at one end, a three-quarter-inch tip at the other, and a rounded "
@@ -91,7 +96,7 @@ f'''          <div class="gear-slide">
     <div class="card-body">
       <div class="card-title"><a href="{URL}" style="color:inherit;text-decoration:none;border-bottom:none;">{TITLE}</a></div>
       <div class="card-text" data-slidetext="{KEY}">{SLIDES[0][3]}</div>
-      <a href="{URL}" class="card-link">See all 19 &#8599;</a>
+      <a href="{URL}" class="card-link">See all 21 &#8599;</a>
     </div>
   </div>
 '''
@@ -145,7 +150,7 @@ while i != -1:
         j = m.end()
     if end and URL in h[s:end]:
         h = h[:s] + h[end:]
-        notes.append("removed the legacy six-slide card (2 dead links, 2 stale prices)")
+        notes.append("removed the legacy six-slide card (1 dead link, 2 stale prices, 1 discontinued)")
     else:
         break
     i = h.find(URL)
@@ -202,12 +207,11 @@ if apply_:
     # SCOPE THIS TO OUR OWN CARD. First pass checked the whole file and fired on
     # two unrelated cards that legitimately carry the same strings: the Magazine
     # Edit links depeche-golf.com as a publisher homepage (correct there), and
-    # the Water Bottle Edit still carries the dead Sentinel "Basecamp Water
-    # Bottle $68" slug. That second one is a real bug, but it belongs to that
-    # post, not this one — flagged to Lenny rather than fixed here.
+    # the water bottle posts link the Sentinel bottle — which, checked properly,
+    # is a correct live URL. Only the Depeche stem is evidence of rot.
     _s = h2.find(f'data-carousel="{KEY}"')
     _c = h2[h2.rfind('<div class="card"', 0, _s):h2.find('</div>', h2.find('class="card-link"', _s))]
-    for dead in ("depeche-golf.com", "76zkc-nctfn-cx85f", "dimpledivot.com"):
+    for dead in ("depeche-golf.com", "dimpledivot.com"):
         if dead in _c:
             raise SystemExit(f"a dead link from the old card survived: {dead}")
     if _c.count("<a href=\"" + URL) < len(SLIDES):

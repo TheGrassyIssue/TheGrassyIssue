@@ -4,15 +4,20 @@
 WHY THE REBUILD
 ---------------
 The original ran 553 words, six flat cards, one image each, no FAQ, no schema.
-Auditing its links found two broken:
+Auditing its links found:
 
-  * Sentinel "Basecamp Water Bottle $68" pointed at
-    /shop/p/no-16-basket-galvanized-76zkc-nctfn-cx85f — a galvanized basket.
-    Sentinel runs Squarespace and REUSES SLUG STEMS across products, so a stale
-    URL silently becomes a different item. Every Sentinel URL in this file was
-    re-read off the live shop on 17 Sept 2026 for that reason. No bottle by that
-    name exists in the current range.
-  * Depeche Golf "Issue #4" pointed at the bare homepage.
+  * Depeche Golf "Issue #4" pointed at the bare homepage — the one genuinely
+    broken link.
+  * Sentinel "Basecamp Water Bottle $68" — CORRECTION, 17 Sept 2026. This was
+    first reported here as a dead link pointing at a galvanized basket. THAT WAS
+    WRONG, and it was wrong because the slug was read instead of the page. The
+    URL /shop/p/no-16-basket-galvanized-76zkc-nctfn-cx85f resolves correctly to
+    BASECAMP WATER BOTTLE at $68. Sentinel runs Squarespace, which inherits the
+    slug stem from whatever product was duplicated to create a new one, so the
+    stem is cosmetic and says NOTHING about the destination. Never infer a dead
+    link from a Squarespace slug — open it. The bottle is sold out, not gone.
+  * Mogshade's Estate Headcover is discontinued; the Ranger Cooler that carried
+    the Jones slot is no longer made.
 
 Of the original six, two survive on merit (Dimple & Divot's Murphy brush, now
 $50 not $45; Walker's marker 3-pack, now $39.95 not $35), Jones survives on a
@@ -23,14 +28,14 @@ the existing links and rankings carry over.
 THE STRUCTURE IS THE PREMISE
 ----------------------------
 Lenny kept the on/off-course split and asked for it as the page's actual shape
-rather than a line in the intro. Three sections, in order: On the Course (8),
-Either Way (7), Off the Course (4). Nineteen products, ONE PER BRAND, which is
+rather than a line in the intro. Three sections, in order: On the Course (7),
+Either Way (7), Off the Course (7). Twenty-one products, ONE PER BRAND, which is
 the house no-repeat rule and also what makes the three-way grouping legible —
 no brand appears in two sections arguing with itself.
 
 PRICES: every one read off the brand's own store on 17 September 2026, and every
 product was in stock at the time of reading. Nothing here is converted from
-another currency; all nineteen list in USD on their own sites.
+another currency; all twenty-one list in USD on their own sites.
 
 THE FORDEN TIN: Lenny cleared saying plainly what it is (a nicotine-pouch tin —
 Forden's own copy names ZYN, Rogue and VELO). The card says so. Do not soften it
@@ -50,10 +55,10 @@ Deliberately NOT asserted (no source):
 import re, os, json
 
 SLUG  = "accessories-on-and-off-the-course"
-PLAIN = "The Accessory Edit — 19 Small Things, On Course and Off"
-TITLE = "The Accessory Edit &mdash; 19 Small Things, On Course and Off"
-DESC  = ("Nineteen accessories from nineteen independent brands, grouped by where they actually live: "
-         "in the bag, in both places, or nowhere near a fairway. Prices read live, 17 September 2026.")
+PLAIN = "The Accessory Edit — 21 Small Things, On Course and Off"
+TITLE = "The Accessory Edit &mdash; 21 Small Things, On Course and Off"
+DESC  = ("Twenty-one accessories from twenty-one independent brands, grouped by where they live: in the "
+         "bag, in both places, or nowhere near a fairway. Prices read live, 17 September 2026.")
 IMG   = "/images/accessories/"
 DATE  = "September 17, 2026"
 
@@ -67,13 +72,6 @@ ON = [
   "longer than the category standard so there is something to hold rather than something to pinch, and "
   "the bristles are firm nylon, which is the choice that lets it sit against a towel without snagging it. "
   "It comes off the bag on a nickel trigger snap. Dimple &amp; Divot handcrafts them in the United States."),
- ("grooveit", "Grooveit", "The Wet Club Scrub", "24.99",
-  "https://grooveitbrush.com/products/grooveit-the-wet-club-scrub",
-  "The other way to solve the same problem. The handle is a reservoir: fill it, press the pump, and the "
-  "water comes through the bristles while you scrub, so a face caked with Bermuda comes clean without a "
-  "trip to the ball washer. It attaches by magnet rather than clip &mdash; no cord, nothing to unhook &mdash; "
-  "and Grooveit backs it for three years. At $24.99 it is the cheapest thing in this section and the most "
-  "obviously useful."),
  ("seamus", "Seamus Golf", "Hand Forged&reg; Greenskeeper Pitch Tool &mdash; Steel", "76",
   "https://www.seamusgolf.com/products/hand-forged-greenskeeper-pitch-tool-steel",
   "Not a fork. One end is a three-eighths-inch aerification tyne, the other is a three-quarter-inch tip "
@@ -185,6 +183,24 @@ OFF = [
   "sixteenths of an inch thick. A bifold sized for notes in six currencies and two pockets that Birds of "
   "Condor rates at eight-plus cards. Vegan and recyclable, per the brand. Under twenty dollars, and it is "
   "the item on this page you would carry every day without thinking about golf once."),
+ ("quiet", "Quiet Golf", "Quiet Please Incense Holder", "25",
+  "https://quietgolf.com/products/quiet-please-incense-holder",
+  "Ten inches of solid acrylic, cut to hold a stick of incense and catch what falls off it. The name is the "
+  "sign a marshal holds up on a tee box, which is roughly the whole joke and also the whole point: Quiet "
+  "Golf&rsquo;s register is a course etiquette phrase applied to a living room. Nothing about it is golf "
+  "equipment. It is the only object in this edit that has a smell."),
+ ("students", "Students Golf", "All-Terrain Tote Bag", "60",
+  "https://studentsgolf.com/products/all-terrain-tote-bag",
+  "Cotton duck canvas with a screen-printed mountainscape across the face, a twill liner, an inside pouch "
+  "pocket and heavy cotton webbing for handles. Duck canvas is the plain-weave cotton that work aprons and "
+  "boat covers are made from &mdash; it goes soft with use and holds a crease. A tote is the least "
+  "golf-specific thing a golf brand can make, which is why it is the one that ends up carrying groceries."),
+ ("sunmountain", "Sun Mountain", "Colter II Blanket", "99.99",
+  "https://www.sunmountain.com/products/colter-ii-blanket",
+  "Sun Mountain builds this from the same materials as its Colter jackets, which is the interesting part: "
+  "37.5 insulation, a synthetic fill engineered to move moisture rather than trap it, so the blanket "
+  "regulates instead of simply getting hotter. It packs down into its own pillow. Sun Mountain calls it a "
+  "summer camping piece and it is the largest object on this page by a distance."),
 ]
 
 ALL = ON + BOTH + OFF
@@ -249,21 +265,22 @@ def sec(hdr, kicker, items):
 
 INTRO = """<div class="writeup">
   <div class="writeup-body">
-    <p>This is nineteen accessories from nineteen different brands, organised not by price or by maker but by where each one actually lives.</p>
-    <p>Some of this stuff only makes sense on a golf course. A pitch repair tool has one job and it is a job that exists nowhere else. Some of it never goes near one &mdash; a dopp kit is a dopp kit. And then there is the middle group, which is the interesting one: objects that go out in a bag on Saturday and stay in a pocket, on a desk or on a kitchen counter for the rest of the week without looking like sports equipment that wandered indoors.</p>
-    <p>That middle group is where independent golf brands have got noticeably better in the last few years, and it is why the page is split three ways rather than sorted by price. Everything below was checked on the brand&rsquo;s own store on 17 September 2026 and was in stock at the time of reading. One product per brand, so nobody is here twice.</p>
+    <p>Twenty-one accessories from twenty-one brands, sorted not by price or by maker but by where each one actually lives.</p>
+    <p>Some of it only makes sense on a golf course. A pitch repair tool does one job and that job exists nowhere else on earth. Some of it never goes near one: a blanket is a blanket, a tote carries groceries, an incense holder sits on a shelf. The interesting group is the middle. Those are the objects that go out in a bag on Saturday and then stay in a pocket, on a desk or on a kitchen counter all week without ever looking like sports equipment that wandered indoors by mistake.</p>
+    <p>Golf did not really have that middle category ten years ago. A brand made clubs, or it made shirts, and anything else was a logo applied to somebody else&rsquo;s blank. What changed is that a lot of small brands started designing the object first and putting the name on afterwards &mdash; which is why a Harris Tweed pouch works as a valuables bag and equally as the dish you empty your pockets into, and why a folding chair from a fifty-year-old outdoor company reads as golf the moment a golf brand picks the colour.</p>
+    <p>Every price below came off the brand&rsquo;s own store on 17 September 2026, and everything was in stock at the time of reading. One product per brand, so nobody appears twice.</p>
   </div>
 </div>
 """
 
 CRAFT = """<section class="products">
-  <h2 class="products-hdr">What Separates the $15 Version From the $85 One</h2>
-  <p class="cat-kicker">Four things do most of the work, and none of them is branding.</p>
+  <h2 class="products-hdr">Where the Extra Money Goes</h2>
+  <p class="cat-kicker">Three times over, two accessories here do the same job at different prices. This is what the gap buys.</p>
   <div class="writeup-body">
-    <p><strong>Material that changes.</strong> Hickory and full-grain leather both move under handling &mdash; they darken, they go lighter where a thumb sits, they take on the marks of whatever they have been through. Gamut&rsquo;s hickory sticks and Bluegrass Fairway&rsquo;s Horween holder both cost more than the moulded alternative and both look different after a season, which is either the whole appeal or completely beside the point depending on the buyer. Stainless and food-grade plastic do the opposite and stay exactly as they arrived.</p>
-    <p><strong>Forged versus pressed.</strong> A forged piece is beaten into shape from solid stock; a pressed one is stamped out of sheet. It matters most on anything with a working edge. Seamus forges its pitch tool by hand and the tip holds its geometry rather than rolling over under load. On a ball marker, which does nothing but sit still, it matters a good deal less &mdash; though Walker&rsquo;s 2.8mm enamel-embossed discs still feel like objects rather than tokens.</p>
-    <p><strong>Woven versus printed.</strong> On towels this is the entire difference. A jacquard weave &mdash; Radry&rsquo;s animals, Devereux&rsquo;s skull &mdash; puts the pattern into the cloth, so it reads on both faces and does not crack off after twenty washes the way a screen print does. Weight is the other variable: 550gsm is the middle, heavy enough to actually dry something and light enough to dry itself out before the back nine.</p>
-    <p><strong>Lining, and other things you cannot see.</strong> The cream fleece inside Fyfe&rsquo;s tweed pouch is what makes it a valuables pouch instead of a tee bag. The second compartment in Forden&rsquo;s tin is the only reason to buy a tin. The reservoir in the handle of the Grooveit brush is the product. The cheapest way to tell a considered accessory from a merchandised one is to look for the part that solves a problem nobody mentions in the product title.</p>
+    <p><strong>Two bottles: $15 and $59.</strong> The clearest gap on the page, and a straightforwardly physical one. Huega&rsquo;s is a single wall of flexible food-grade plastic at 550ml &mdash; which is what lets you squeeze it one-handed, and also what means your drink is the temperature of the air within the hour. Mogshade&rsquo;s is 90 per cent recycled stainless, double-walled with a vacuum drawn between the layers, rated by the brand for six hours hot and eighteen cold, and dishwasher safe. A vacuum is the most expensive thing anyone can build into a container, and it is most of the $44.</p>
+    <p><strong>Three markers, and the arithmetic goes backwards.</strong> Fella&rsquo;s pizza slice is $15 for one. Walker&rsquo;s crest pack is $39.95 for three, which is $13.32 each &mdash; less per marker, at 2.8mm with enamel embossed into the face. Malbon&rsquo;s sits between them at $34 for a single inch-wide stainless disc with the logo printed in enamel and the script debossed into the back. Unit price and unit cost stop tracking each other quickly in a category where you are partly buying a design and partly buying the fact that you will lose one.</p>
+    <p><strong>Two towels: $38 and $45.</strong> Devereux knits its from cotton French terry; Radry weaves its as a cotton jacquard at 550gsm. Both put the pattern into the cloth rather than printing it on top, which is the thing that matters over twenty washes &mdash; a screen print cracks, a weave does not. The seven dollars is mostly size and weight: Radry&rsquo;s runs sixteen by thirty-eight inches, heavy enough to dry a face properly and still dry itself before the back nine.</p>
+    <p>The pattern underneath all three is the same. The money goes into the part that is hard to see: a vacuum drawn between two walls, a pattern woven in rather than laid on top, a fleece lining inside a tweed pouch, a reservoir hidden in a handle. Almost none of it appears in the product title, and all of it is what you are actually choosing between.</p>
   </div>
 </section>
 """
@@ -272,7 +289,7 @@ PRICES = """<section class="products">
   <h2 class="products-hdr">A Note on Prices, Stock and Dead Links</h2>
   <p class="cat-kicker">Small-brand accessory lists go stale faster than almost anything else in golf.</p>
   <div class="writeup-body">
-    <p>The earlier version of this page listed six accessories and, by September, two of its links no longer went where they said. One pointed at a product that had been discontinued and had its URL quietly inherited by something else entirely; another had decayed to a bare homepage. Two of the six had gone up in price. That is not unusual for a small-brand roundup left alone for a year &mdash; independent makers retire colourways, run out of a batch and move on &mdash; but it does mean a list like this is only as good as the last time somebody opened every link.</p>
+    <p>The earlier version of this page listed six accessories, and by September the list had drifted. One link had decayed to a bare homepage. One product had been discontinued outright. Two of the six had gone up in price, and a third was no longer made in the version described. That is not unusual for a small-brand roundup left alone for a year &mdash; independent makers retire colourways, run out of a batch and move on &mdash; but it does mean a list like this is only as good as the last time somebody opened every link.</p>
     <p>So every price on this page was read off the brand&rsquo;s own store on 17 September 2026, and every item was buyable at the time of reading. Nothing has been converted from another currency; all nineteen list in dollars on their own sites. Two pieces from the original six earned their way back in &mdash; Dimple &amp; Divot&rsquo;s Murphy brush and Walker&rsquo;s marker three-pack &mdash; and both are listed at their current prices rather than the old ones.</p>
     <p>Small-batch accessories sell out. If something here is gone by the time you get to it, the maker almost certainly reruns it; none of these are numbered editions.</p>
   </div>
@@ -286,8 +303,8 @@ FAQ_ITEMS = [
   "Between $38 and $45 buys a cotton jacquard caddie towel at around 550gsm, which is the useful middle weight. The thing to check is whether the pattern is woven in or printed on: a woven jacquard reads on both faces and survives washing, a screen print cracks. Both the Radry and the Devereux here are knitted or woven rather than printed."),
  ("Is a hand-forged pitch tool better than a cheap two-prong fork?",
   "The shape matters more than the price. A single prong or a bar is hard to misuse, because the natural motion is pushing turf inward from the edge of the mark — which is the correct repair. A two-prong fork invites you to straddle the mark and lever the centre up, which tears the roots still holding it together. Seamus's Greenskeeper is a single-point tool for that reason, with a rounded face on the same head for tamping the surface flat afterwards."),
- ("What is the difference between a golf brush with a water reservoir and a dry one?",
-  "A dry brush needs a wet towel or a ball washer to be much use on a caked face. A reservoir brush like the Grooveit carries its own water and pumps it through the bristles, so it works anywhere on the course. The trade-off is that a dry hickory-handled brush like Dimple & Divot's is a simpler object with nothing to fail and nothing to refill."),
+ ("What should I look for in a golf club brush?",
+  "Bristle stiffness, handle material and how it attaches. Firm nylon cleans a grooved face without scratching it and, unlike brass, will not snag the towel it hangs against. A wooden handle — Dimple & Divot cuts theirs from American hickory — gives you something to hold rather than something to pinch, which matters more than it sounds once your hands are wet. And check the fixing: a trigger snap comes off the bag one-handed, a sewn loop does not."),
  ("Why do so many small golf brands sell pouches?",
   "Because a round creates a specific storage problem — keys, a watch, a wedding ring, tees, a marker — and nothing else in the bag solves it. The detail that separates a valuables pouch from a tee bag is the lining: a fleece or soft interior stops a watch face getting scratched. Fyfe's tweed pouch is lined in cream fleece; that is what the $48 is for."),
  ("Were all of these in stock when this was written?",
@@ -353,10 +370,10 @@ body = ('<div class="breadcrumb">\n  <a href="/">Feed</a><span>/</span>\n'
         'alt="A brown leather golf scorecard holder being drawn out of a back pocket on a fairway" /></div></div>\n'
         + INTRO
         + sec(f"On the Course &mdash; {len(ON)} Pieces",
-              "Each of these does one job, and it is a job that exists nowhere else.", ON)
+              "Each of these has a single purpose, and it exists in exactly one place.", ON)
         + CRAFT
         + sec(f"Either Way &mdash; {len(BOTH)} Pieces",
-              "Goes out in the bag, stays in a pocket or on a desk the rest of the week.", BOTH)
+              "These go out in the bag on Saturday and live in a pocket or on a desk all week.", BOTH)
         + sec(f"Off the Course &mdash; {len(OFF)} Pieces",
               "Never sees a fairway. Made by people who spend their lives on them.", OFF)
         + PRICES
