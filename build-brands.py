@@ -10,8 +10,26 @@ hubs get their own static pages (built separately) so discovery is crawl-safe.
 
 House rules honored: H1 avoids the banned word ("Worth Knowing" from the brief
 is replaced with the existing franchise name "Brands to Know"). All images local.
+
+!! THIS SCRIPT DOES NOT PRODUCE THE PAGE THAT SHIPS. !!
+------------------------------------------------------
+The /brands design Lenny approved on 2026-09-14 is built by build-brand-index.py,
+which scopes everything under id="bx" and reads its card images out of the .bi-card
+page THIS script writes. So this script is a necessary intermediate step, not the
+final one — every run of it reverts /brands to the old design until
+build-brand-index.py runs again.
+
+That is exactly what went wrong on 17 September 2026. Adding Hidden Links Society
+to data/brands.json meant rerunning this script, nobody reran build-brand-index.py,
+and the old design went live. Nothing errored. Nothing looked broken in the build
+log. Lenny found it by looking at the site.
+
+A printed warning would have been missed the same way, so this no longer relies on
+anyone reading one: the tail of this file detects whether it just clobbered the
+approved design and, if so, runs build-brand-index.py itself and fails loudly if
+that does not work. See RESTORE THE APPROVED DESIGN at the bottom.
 """
-import json, os, re, html as H
+import json, os, re, html as H, subprocess, sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -441,7 +459,15 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 </html>'''
 
 os.makedirs(os.path.join(ROOT, "brands"), exist_ok=True)
-open(os.path.join(ROOT, "brands", "index.html"), "w", encoding="utf-8").write(page)
+
+# Read the page we are about to replace FIRST. id="bx" is the root element of the
+# approved field-guide design; if it is there, the file on disk is the one that
+# ships and we are about to revert it. Recorded here, acted on at the bottom.
+_IDX = os.path.join(ROOT, "brands", "index.html")
+_CLOBBERED_APPROVED = (os.path.exists(_IDX)
+                       and 'id="bx"' in open(_IDX, encoding="utf-8").read())
+
+open(_IDX, "w", encoding="utf-8").write(page)
 print(f"wrote brands/index.html — {N} brands, {len(page)} bytes")
 if missing_img: print("no image resolved for:", missing_img)
 if DUPES:
@@ -754,3 +780,30 @@ for a, (label, blurb, criteria) in ATTR_COPY.items():
     open(os.path.join(ROOT, "brands", "attr", a + ".html"), "w", encoding="utf-8").write(page)
     nattr += 1
 print(f"wrote {nattr} attribute pages in /brands/attr/")
+
+# ------------------------------------------------- RESTORE THE APPROVED DESIGN
+#
+# build-brand-index.py wants to run after the header chain, and normally does.
+# But a silent revert to a design Lenny did not approve is a worse outcome than
+# running it a step early: it only replaces the page BODY, leaving the head, nav,
+# weather banner, footer and analytics exactly as this script just wrote them, so
+# a later header-chain pass still lands correctly on top of it.
+#
+# This fires ONLY when the page being replaced was the approved one. A first-ever
+# build, or a deliberate run against the old design, is left alone.
+if _CLOBBERED_APPROVED:
+    print("\n/brands was on the APPROVED design and this script just reverted it.")
+    print("Re-running build-brand-index.py to put it back...")
+    r = subprocess.run([sys.executable,
+                        os.path.join(ROOT, "build-brand-index.py"), "--apply"],
+                       capture_output=True, text=True)
+    sys.stdout.write("   " + (r.stdout or "").replace("\n", "\n   ").rstrip() + "\n")
+    ok = r.returncode == 0 and 'id="bx"' in open(_IDX, encoding="utf-8").read()
+    if not ok:
+        sys.stderr.write((r.stderr or "").rstrip() + "\n")
+        raise SystemExit(
+            "\n!! /brands IS LEFT ON THE OLD DESIGN AND WILL SHIP THAT WAY.\n"
+            "   build-brand-index.py did not restore it. Do not deploy until\n"
+            "   `python3 build-brand-index.py --apply` succeeds and the page\n"
+            "   contains id=\"bx\".")
+    print("   approved design restored — /brands is safe to ship")
