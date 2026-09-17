@@ -560,12 +560,12 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
     <div class="bp-kickline">[ All Coverage &middot; {len(men)} Post{"s" if len(men)!=1 else ""} ]</div>
     <h1>{name}</h1>
     <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
-  <h2 class="bp-gridhdr">Every Grassy Issue Post Featuring {name}</h2>
     <p class="bp-line">{b["line"]}</p>
     <a class="bp-profile" href="{b["url"]}">Read the full profile &rarr;</a>
   </div>
 </header>
 
+<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring {name}</h2>
 <div class="bp-grid">
 {chr(10).join(tiles)}
 </div>

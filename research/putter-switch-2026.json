@@ -1,0 +1,326 @@
+{
+  "_note": "Late-season putter switch roundup. 18 buyable + 2 presale. Every price and stock state read off the brand's own live product page on 2026-09-16. Where a figure differs from the earlier research pass, the live figure wins and the correction is recorded in `correction`.",
+  "_captured": "2026-09-16",
+  "picks": [
+    {
+      "key": "macgregor",
+      "brand": "MacGregor",
+      "model": "MT Milled 002 Wing Back Mallet CS",
+      "price": 169.99,
+      "was": 199.99,
+      "available": true,
+      "url": "https://www.macgregorgolf.com/putters/macgregor-golf-mt-milled-002-wing-back-mallet-center-shaft-putter/",
+      "imgs": [
+        "https://cdn11.bigcommerce.com/s-p2fi4ihyaw/images/stencil/1280x1280/products/502/2886/___0010_MacG_MT2_Hero__01557.1732624185.jpg",
+        "https://cdn11.bigcommerce.com/s-p2fi4ihyaw/images/stencil/1280x1280/products/502/2885/___0009_MacG_MT2_Address__26092.1732624185.jpg",
+        "https://cdn11.bigcommerce.com/s-p2fi4ihyaw/images/stencil/1280x1280/products/502/2887/___0011_MacG_MT2_FaceOn__90847.1732624185.jpg",
+        "https://cdn11.bigcommerce.com/s-p2fi4ihyaw/images/stencil/1280x1280/products/502/2884/___0008_MacG_MT2_Back__13939.1732624185.jpg"
+      ],
+      "_host_note": "macgregorgolf.com is a BigCommerce storefront; the images live on cdn11.bigcommerce.com. Requests to the www host 404."
+    },
+    {
+      "key": "cobra",
+      "brand": "Cobra",
+      "model": "Widesport Vintage",
+      "price": 199.0,
+      "was": 249.99,
+      "available": true,
+      "url": "https://www.cobragolf.com/products/vintage-widesport-putter",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0634/7833/3657/files/p8511_back_angled.jpg",
+        "https://cdn.shopify.com/s/files/1/0634/7833/3657/files/p8511_address.jpg",
+        "https://cdn.shopify.com/s/files/1/0634/7833/3657/files/p8511_face.jpg",
+        "https://cdn.shopify.com/s/files/1/0634/7833/3657/files/p8511_sole.jpg"
+      ]
+    },
+    {
+      "key": "sub70-001z",
+      "brand": "Sub 70",
+      "model": "Sycamore 001Z Zero Torque Blade",
+      "price": 199.0,
+      "available": true,
+      "url": "https://www.golfsub70.com/sub-70-001z-zero-torque-blade-putter.html",
+      "imgs": [
+        "https://www.golfsub70.com/media/clubshots/001zputter/1.webp",
+        "https://www.golfsub70.com/media/clubshots/001zputter/2.webp",
+        "https://www.golfsub70.com/media/clubshots/001zputter/3.webp",
+        "https://www.golfsub70.com/media/clubshots/001zputter/4.webp"
+      ]
+    },
+    {
+      "key": "sub70-taiii",
+      "brand": "Sub 70",
+      "model": "TAIII 254 Limited Edition Wide Blade",
+      "price": 199.0,
+      "available": true,
+      "url": "https://www.golfsub70.com/sub-70-taiii-254-wide-blade-putter.html",
+      "correction": "earlier pass logged this as 'TAIII Desert Inn, $249'. The model has no Desert Inn in its name -- the Vegas reference is a sight dot and a Vegas sign milled into the sole, an homage to Tommy Armour III. Live price is $199.",
+      "imgs": [
+        "https://www.golfsub70.com/media/clubshots/ta254putter/1.webp",
+        "https://www.golfsub70.com/media/clubshots/ta254putter/2.webp",
+        "https://www.golfsub70.com/media/clubshots/ta254putter/3.webp",
+        "https://www.golfsub70.com/media/clubshots/ta254putter/5.webp"
+      ]
+    },
+    {
+      "key": "vice",
+      "brand": "Vice Golf",
+      "model": "VGP03",
+      "price": 224.0,
+      "available": true,
+      "url": "https://www.vicegolf.com/golf-club-customization/putters/vgp03",
+      "correction": "earlier pass logged $189. The live configurator reads 'From $224.00'. Vice sells this build-to-order, so 224 is a floor, not a sticker.",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0835/8445/0850/files/vice-golf-club-putter-vgp-03-angle-1-pdp.png",
+        "https://cdn.shopify.com/s/files/1/0835/8445/0850/files/vice-golf-club-putter-vgp-03-angle-2-pdp.png",
+        "https://cdn.shopify.com/s/files/1/0835/8445/0850/files/vice-golf-club-putter-vgp-03-angle-3-pdp.png",
+        "https://cdn.shopify.com/s/files/1/0835/8445/0850/files/vice-golf-club-putter-vgp-03-angle-4-pdp.png"
+      ]
+    },
+    {
+      "key": "odyssey-aione",
+      "brand": "Odyssey",
+      "model": "Ai-ONE #1 CH",
+      "price": 249.99,
+      "was": 299.99,
+      "available": true,
+      "url": "https://odyssey.callawaygolf.com/putters/ai-one/putters-2024-ai-one-one-ch.html",
+      "imgs": [
+        "https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1789537234631/sits/putters-2024-ai-one-one-ch/putters-2024-ai-one-one-ch___1.jpg?sw=1200&q=90&bgcolor=F7F7F7&sfrm=png",
+        "https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1789537234631/sits/putters-2024-ai-one-one-ch/putters-2024-ai-one-one-ch___2.jpg?sw=1200&q=90&bgcolor=F7F7F7&sfrm=png",
+        "https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1789537234631/sits/putters-2024-ai-one-one-ch/putters-2024-ai-one-one-ch___3.jpg?sw=1200&q=90&bgcolor=F7F7F7&sfrm=png",
+        "https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1789537234631/sits/putters-2024-ai-one-one-ch/putters-2024-ai-one-one-ch___4.jpg?sw=1200&q=90&bgcolor=F7F7F7&sfrm=png"
+      ],
+      "_host_note": "Callaway's SFCC image service rejects a param set it did not issue. Keep sw=1200&q=90&bgcolor=F7F7F7&sfrm=png verbatim; sw=1400 returns 404."
+    },
+    {
+      "key": "edel",
+      "brand": "Edel Golf",
+      "model": "Array B-1",
+      "price": 350.0,
+      "available": true,
+      "url": "https://edelgolf.com/products/array-b-1-putter",
+      "correction": "earlier pass flagged edelgolf.com as http-only. It serves https fine.",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0184/9996/files/player_square_b1_long_line.jpg",
+        "https://cdn.shopify.com/s/files/1/0184/9996/files/rear_B1_line_long.jpg",
+        "https://cdn.shopify.com/s/files/1/0184/9996/files/B1_bottom_long_array.jpg"
+      ],
+      "_frame_note": "Edel's remaining frames (slant-neck, bent-neck, dot alignment) are indistinguishable from the long-neck lead at card size. Three frames that differ beats four where two repeat."
+    },
+    {
+      "key": "odyssey-aidual",
+      "brand": "Odyssey",
+      "model": "Ai-DUAL Square 2 Square MAX ½ Ball Cruiser Broomstick CS",
+      "price": 349.99,
+      "was": 449.99,
+      "available": true,
+      "url": "https://odyssey.callawaygolf.com/putters/putters-2026-square-to-square-ai-dual-max-1-2-ball-broomstick.html",
+      "imgs": [
+        "https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1789537234631/sits/putters-2026-square-to-square-ai-dual-max-1-2-ball-broomstick/putters-2026-square-to-square-ai-dual-max-1-2-ball-broomstick___4.jpg?sw=1200&q=90&bgcolor=F7F7F7&sfrm=png",
+        "https://prd-sfcc.callawaygolf.com/dw/image/v2/AADH_PRD/on/demandware.static/-/Sites-CGI-ItemMaster/en_US/v1789537234631/sits/putters-2026-square-to-square-ai-dual-max-1-2-ball-broomstick/putters-2026-square-to-square-ai-dual-max-1-2-ball-broomstick___3.jpg?sw=1200&q=90&bgcolor=F7F7F7&sfrm=png"
+      ],
+      "_host_note": "Callaway's SFCC image service rejects a param set it did not issue. Keep sw=1200&q=90&bgcolor=F7F7F7&sfrm=png verbatim; sw=1400 returns 404.",
+      "_frame_note": "frames 1, 2 and 3 all carry Golf Digest Hot List and Zero Torque badges composited in; 5 is a RED colourway, 6 is loose shafts, 7-8 are headcovers. Frame 4 is clean. Frame 3 is a good studio shot with the badges in the top-right, so pre_crop trims that corner.",
+      "pre_crop": {
+        "1": [
+          0.0,
+          0.12,
+          0.86,
+          1.0
+        ]
+      }
+    },
+    {
+      "key": "roark",
+      "brand": "Roark",
+      "model": "Lightning 1.0",
+      "price": 399.0,
+      "available": true,
+      "url": "https://roarkgolf.com/products/lightning",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0880/4945/1298/files/0003_Lightning-Product-Image.png",
+        "https://cdn.shopify.com/s/files/1/0880/4945/1298/files/0003_Lightning-Product-Image-2.png",
+        "https://cdn.shopify.com/s/files/1/0880/4945/1298/files/0003_Lightning-Product-Image-3.png",
+        "https://cdn.shopify.com/s/files/1/0880/4945/1298/files/0002_Lightning-Product-Image-4.png"
+      ]
+    },
+    {
+      "key": "ping",
+      "brand": "Ping",
+      "model": "Scottsdale TEC Ally Blue H CB",
+      "price": 399.99,
+      "available": true,
+      "price_source": "Ping publishes no price on ping.com. $399.99 is the figure GOLF.com reported at launch for every Scottsdale TEC model.",
+      "url": "https://ping.com/en-us/golf-clubs/putters/all-putters/scottsdale-tec-ally-blue-h-cb-putter",
+      "imgs": [
+        "https://api.next.ping.com/media/catalog/product/c/l/clubs.putters.scottsdale_tec.ally_blue_h.address_1600x1600_219c.png",
+        "https://api.next.ping.com/media/catalog/product/c/l/clubs.putters.scottsdale_tec.ally_blue_h.face_1600x1600_ac91.png",
+        "https://api.next.ping.com/media/catalog/product/c/l/clubs.putters.scottsdale_tec.ally_blue_h.cavity_1600x1600_0b52.png"
+      ]
+    },
+    {
+      "key": "evnroll",
+      "brand": "Evnroll",
+      "model": "V Series V5.1 MidLock Mallet",
+      "price": 429.0,
+      "available": true,
+      "url": "https://evnroll.com/products/v-series-v5-1-midlock-mallet-putter",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0776/9142/0992/files/V5.1_Long_Slant_Back-Photoroom.jpg",
+        "https://cdn.shopify.com/s/files/1/0776/9142/0992/files/V5.1_Long_Slant-Photoroom_1_8d7b26b7-d3e9-42f8-a7a2-79969dd60703.jpg",
+        "https://cdn.shopify.com/s/files/1/0776/9142/0992/files/V5.1_Long_Slant_top_-Photoroom.jpg"
+      ],
+      "_frame_note": "frame 4 on the product record (RS586_Midlock-Mallet-1) is the HEADCOVER, and frames 6-8 are lifestyle composites with a grip inset. Three clean frames beats four with a cover in the set."
+    },
+    {
+      "key": "bettinardi-an2",
+      "brand": "Bettinardi",
+      "model": "Antidote SB2 Long",
+      "price": 480.0,
+      "available": true,
+      "url": "https://bettinardi.com/products/antidote-sb2-long-putter",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/26-AN2-Long-01.png",
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/26-AN2-Long-04.png",
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/26-AN2-Long-FACE.png",
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/26-AN2-Long-03.png"
+      ]
+    },
+    {
+      "key": "bettinardi-bb28",
+      "brand": "Bettinardi",
+      "model": "BB28 Armlock",
+      "price": 495.0,
+      "available": true,
+      "url": "https://bettinardi.com/products/bb28-armlock-putter-1",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/26-BB28SBAL-POCKET_bf6dbf6f-ff84-4eba-9e14-37f03b66562d.png",
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/BB28AL-TOEHANG_156cd3db-ea84-41f1-98ca-762b0958ac3d.png",
+        "https://cdn.shopify.com/s/files/1/2513/8806/files/26-BB28SBAL-FACE_e1d2273f-0e71-47b4-9c1c-2bb8e2e50d8e.png"
+      ],
+      "_frame_note": "THREE of Bettinardi's frames (SOLE, SIGHTLINE, FACE) carry a Golf Digest Hot List badge composited into a corner. POCKET and TOEHANG are clean as shot; FACE is a good photograph with the badge in the top-left, so pre_crop trims that corner before the 4:5 crop. Trimming a badge the brand pasted on top is not retouching the putter.",
+      "pre_crop": {
+        "2": [
+          0.0,
+          0.14,
+          0.92,
+          1.0
+        ]
+      }
+    },
+    {
+      "key": "lab",
+      "brand": "L.A.B. Golf",
+      "model": "VZN.1i Stock",
+      "price": 499.0,
+      "available": true,
+      "url": "https://labgolf.com/products/vzn1i-stock-putter",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0677/9184/7679/files/STOCK_VZN_SOLE_ON_BLACK.jpg",
+        "https://cdn.shopify.com/s/files/1/0677/9184/7679/files/STOCK_VZN_POV_ON_BLACK.jpg",
+        "https://cdn.shopify.com/s/files/1/0677/9184/7679/files/VZN_SOLE_IMAGE_800X800_03f32a01-0a8c-415e-a54f-4e594b9b5aa8.jpg"
+      ],
+      "_frame_note": "L.A.B. shoots black-on-black by house style. BUMPER, HEEL and SOLE_PLUS render as near-solid black rectangles at card size; these three carry enough light to read as a putter."
+    },
+    {
+      "key": "piretti",
+      "brand": "Piretti",
+      "model": "No-Torque Series Savona 2.5 365g",
+      "price": 549.0,
+      "available": true,
+      "url": "https://pirettigolf.com/products/no-torque-series-savona-2-5",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0594/1424/9641/files/350B943F-0F12-4D44-AB2F-A9AC1EBF5775_resized.jpg",
+        "https://cdn.shopify.com/s/files/1/0594/1424/9641/files/E1B2CF29-791F-436C-B4F5-DB48857022AA_resized.jpg",
+        "https://cdn.shopify.com/s/files/1/0594/1424/9641/files/42BF43B3-5A91-42DB-966E-153608B9821E_resized.jpg",
+        "https://cdn.shopify.com/s/files/1/0594/1424/9641/files/3E5881B8-E97B-4278-AC4C-EAD7131DF70E_resized.jpg"
+      ]
+    },
+    {
+      "key": "makefield-al",
+      "brand": "Makefield",
+      "model": "Arm Lock [A] Series",
+      "price": 599.0,
+      "available": true,
+      "url": "https://makefieldgolf.com/products/makefield-arm-lock-a-series",
+      "_frame_note": "4198907968 AND 4070664814 are both the same fitting SPEC CHART; 4070708331 and 4070711274 are grips; 2984554140 is a headcover. Armlock.png is the full-length shot and stays last: on an armlock the length IS the product, so it earns a frame - just not the lead.",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0889/2019/5346/files/4070606969.jpg",
+        "https://cdn.shopify.com/s/files/1/0889/2019/5346/files/3772793237_68e7aa43-7351-4da6-bf52-1f847ef8cc30.jpg",
+        "https://cdn.shopify.com/s/files/1/0889/2019/5346/files/Armlock.png"
+      ]
+    },
+    {
+      "key": "makefield-long",
+      "brand": "Makefield",
+      "model": "Long Putter [A] Series",
+      "price": 599.0,
+      "available": true,
+      "url": "https://makefieldgolf.com/products/makefield-broomstick-a-series",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0889/2019/5346/files/3449411598_c1af5cba-0809-456d-83cd-f77149cfbe1d.jpg",
+        "https://cdn.shopify.com/s/files/1/0889/2019/5346/files/4070595244.jpg",
+        "https://cdn.shopify.com/s/files/1/0889/2019/5346/files/Long_Putter.png"
+      ],
+      "_frame_note": "4198906983 is the same fitting spec chart, 4070626472 is a SuperStroke grip, 4334450957 is a bare shaft. Long_Putter.png last, same reasoning as the arm lock."
+    },
+    {
+      "key": "machine",
+      "brand": "Machine",
+      "model": "M12 ZTX Mallet Converter STOCK",
+      "price": 799.0,
+      "available": true,
+      "url": "https://machineputters.com/products/m12-ztx-mallet-converter-stock",
+      "correction": "earlier pass logged $699 off a GolfWRX thread. Machine's own stock listing is $799. The $699 figure belongs to the M12 Mini-Megalodon Converter, a different head.",
+      "imgs": [
+        "https://cdn.shopify.com/s/files/1/0730/9551/2306/files/IMG_7937.jpg",
+        "https://cdn.shopify.com/s/files/1/0730/9551/2306/files/IMG_7938.jpg",
+        "https://cdn.shopify.com/s/files/1/0730/9551/2306/files/IMG_7942.jpg",
+        "https://cdn.shopify.com/s/files/1/0730/9551/2306/files/IMG_7939.jpg"
+      ]
+    }
+  ],
+  "presale": [
+    {
+      "key": "mizuno",
+      "brand": "Mizuno",
+      "model": "M.Craft X Z2 / Z3",
+      "price": 399.99,
+      "status": "Pre-order opened 9 September. Retail 30 October.",
+      "url": "https://mizunogolf.com/us/golf-clubs/m-craft-x-putters/",
+      "imgs": [
+        "https://mizunogolf.com/us/wp-content/themes/mizunotheme2015/images/mcraftx/model-main-z2.webp",
+        "https://mizunogolf.com/us/wp-content/themes/mizunotheme2015/images/mcraftx/model-main-z3.webp",
+        "https://mizunogolf.com/us/wp-content/themes/mizunotheme2015/images/mcraftx/mcraft-x_above_z2.webp",
+        "https://mizunogolf.com/us/wp-content/themes/mizunotheme2015/images/mcraftx/mcraft-x_face_z3.webp"
+      ]
+    },
+    {
+      "key": "scotty",
+      "brand": "Scotty Cameron",
+      "model": "Phantom 9.5R",
+      "price": 549.0,
+      "status": "Pre-sale now; in golf shops from 30 September (U.S. only).",
+      "price_source": "MAP $549 and the 30 September date are stated in Titleist's own release; scottycameron.com publishes neither on the model page.",
+      "url": "https://www.scottycameron.com/putters/phantom/phantom-9-5r/",
+      "imgs": [
+        "https://d21buns5ku92am.cloudfront.net/68636/images/695431-000260811_Scotty_Cameron_9.5R_Hamilton_76759_R1-2cd43e-large-1787156822.jpg",
+        "https://d21buns5ku92am.cloudfront.net/68636/images/695387-260811_Scotty_Cameron_9.5R_Hamilton_76773_R1-0b0e3f-large-1787149173.jpg",
+        "https://d21buns5ku92am.cloudfront.net/68636/images/695393-260811_Scotty_Cameron_9.5R_Hamilton_76784_R1-820b25-large-1787149174.jpg",
+        "https://d21buns5ku92am.cloudfront.net/68636/images/695369-260811_Scotty_Cameron_9.5R_Hamilton_76653_R1-d4429c-large-1787149041.jpg"
+      ],
+      "_host_note": "scottycameron.com's own /media/ path returns 403 to every request that is not an in-page fetch, so these four frames come from Titleist's Media Center instead (mediacenter.titleist.com, release 269435, 25 Aug 2026), which publishes the same Hamilton studio shoot for editorial use. The group shot (695406) is deliberately NOT used: it pictures the 9R and 9.2R alongside the 9.5R and would misrepresent the card."
+    }
+  ],
+  "hero": {
+    "url": "https://cdn.shopify.com/s/files/1/0730/9551/2306/files/IMG_7940.jpg",
+    "why": "The hero must NOT repeat a card frame - the build guard fails if any image appears twice on the page. This is a fifth Machine M12 ZTX frame from the same shoot, unused on any card: a clean head on leather with no headcover in shot, and the only source in the set wide enough to take a 21:9 band without slicing the putter.",
+    "alt": "A milled putter head resting on leather, one of twenty putters in this late-season switch guide",
+    "out": "images/putter-switch/hero.jpg",
+    "size": [
+      1600,
+      685
+    ]
+  }
+}

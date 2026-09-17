@@ -85,6 +85,18 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
   #tgi-search-results{width:100%;right:auto;left:0}
 }
 </style>
+<style id="tx-chip-css">
+.bp-taxo{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.bp-taxo .bp-taxo-lab{font-family:var(--mono,ui-monospace,monospace);font-size:9.5px;letter-spacing:.15em;
+ text-transform:uppercase;opacity:.55;margin-right:2px}
+.bp-taxo a{font-family:var(--mono,ui-monospace,monospace);font-size:9.5px;letter-spacing:.13em;
+ text-transform:uppercase;padding:6px 9px;border:1px solid rgba(20,20,20,.18);text-decoration:none;
+ color:inherit;line-height:1}
+.bp-taxo a:hover{background:#141414;color:#fff;border-color:#141414}
+</style>
+
+
+
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -111,12 +123,15 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
     <div class="bp-kickline">[ All Coverage &middot; 1 Post ]</div>
     <h1>Rosemark Grips</h1>
     <div class="bp-meta">United States &middot; Grips</div>
-  <h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Rosemark Grips</h2>
+    <!--TX-CHIPS--><div class="bp-taxo"><span class="bp-taxo-lab">Also in</span><a href="/brands/tag/range-rat">Range rat</a><a href="/brands/attr/new-to-index">New to the Index</a><a href="/brands/attr/tour-proven">Tour-proven</a></div><!--/TX-CHIPS-->
+    
+    
     <p class="bp-line">Moulded micro-texture putter grips with a tour record to match — more than ten million dollars won, and a Travelers title.</p>
-    <a class="bp-profile" href="/drops/the-niche-grip-report#rosemark">Read the full profile &rarr;</a>
+    <!--TX-NOCTA <a class="bp-profile" href="/drops/the-niche-grip-report#rosemark">Read the full profile &rarr;</a> TX-NOCTA-->
   </div>
 </header>
 
+<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Rosemark Grips</h2>
 <div class="bp-grid">
   <a class="bp-card" href="/drops/the-niche-grip-report">
     <div class="bp-thumb"><img src="/images/grips/hero.jpg" loading="lazy" alt="The Niche Grip Report"></div>

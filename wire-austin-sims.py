@@ -8,7 +8,7 @@ rather than 404 — same pattern as the Australian post on 2026-09-04 and the Li
 rename. The old file is deleted once the redirect is in, because a file on disk wins
 over a vercel.json redirect.
 
-CARD TYPE is data-type="guide". This is a guide, not a drop and not a Field Note, and
+CARD TYPE is data-type="field". Lenny relabelled this a Field Note on 9/16/26, and
 the homepage filter chips read that attribute.
 
 FIVE SLIDES, one per image we actually hold, and the captions name the room each frame
@@ -43,9 +43,9 @@ _ENT = re.compile(r'&[a-z]+;|&#\d+;')
 def _alt(b, n):
     return re.sub(r'\s+', ' ', _ENT.sub('', f"{b} {n}")).strip()
 
-CARD = f'''      <div class="card" data-type="guide">
+CARD = f'''      <div class="card" data-type="field">
     <div class="card-media" style="position:relative;">
-      <span class="card-tag grass">[Guides]</span>
+      <span class="card-tag grass">[Field Notes]</span>
       <div class="gear-carousel" data-carousel="{KEY}">
         <div class="gear-carousel-track">
 ''' + "".join(
@@ -63,7 +63,7 @@ f'''          <div class="gear-slide">
     <div class="card-body">
       <div class="card-title"><a href="{URL}" style="color:inherit;text-decoration:none;border-bottom:none;">{TITLE}</a></div>
       <div class="card-text" data-slidetext="{KEY}">{SLIDES[0][3]}</div>
-      <a href="{URL}" class="card-link">Read the guide ↗</a>
+      <a href="{URL}" class="card-link">Read the field note ↗</a>
     </div>
   </div>
 '''

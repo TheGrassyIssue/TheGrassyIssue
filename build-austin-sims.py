@@ -413,10 +413,10 @@ head = re.sub(r'<script type="application/ld\+json">.*?</script>',
               head, flags=re.S)
 
 body = ('<div class="breadcrumb">\n  <a href="/">Feed</a><span>/</span>\n'
-        '  <a href="/#feed">Guides</a><span>/</span>\n  Austin Indoor Simulators</div>\n'
+        '  <a href="/#feed">Field Notes</a><span>/</span>\n  Austin Indoor Simulators</div>\n'
         f'<header class="drop-header">\n  <h1>{TITLE}</h1>\n  <div class="drop-meta">\n'
         f'    <span>{TODAY}</span><span class="dot"></span>\n'
-        '    <span>Guide</span><span class="dot"></span>\n'
+        '    <span>Field Notes</span><span class="dot"></span>\n'
         f'    <span>Austin, Texas &middot; {len(TABLE)} Rooms</span>\n  </div>\n</header>\n\n'
         f'<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}xgolf-sim.jpg" '
         'alt="A private simulator bay at X-Golf Cedar Park, one of fourteen indoor golf simulators in the Austin metro" /></div></div>\n'

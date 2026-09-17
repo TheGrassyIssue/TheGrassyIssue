@@ -74,6 +74,14 @@ for f in sorted(glob.glob(f"{SITE}/brands/*.html")):
     if slug != "index":
         items.append(extract(f, f"/brands/{slug}"))
 
+# The /brands/tag and /brands/attr taxonomy pages (added 9/17/26). They are real
+# landing pages with their own editorial copy, so on-site search should find them
+# the same way it finds a brand page.
+for sub in ("tag", "attr"):
+    for f in sorted(glob.glob(f"{SITE}/brands/{sub}/*.html")):
+        slug = os.path.basename(f)[:-5]
+        items.append(extract(f, f"/brands/{sub}/{slug}"))
+
 extra = [("field-guide/index.html", "/field-guide/"), ("brands/index.html", "/brands/"), ("events/index.html", "/events/"), ("guides/index.html", "/guides"), ("scoreboard.html", "/scoreboard")]
 for rel, url in extra:
     p = f"{SITE}/{rel}"

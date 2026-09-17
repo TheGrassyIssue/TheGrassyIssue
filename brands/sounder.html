@@ -85,6 +85,18 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
   #tgi-search-results{width:100%;right:auto;left:0}
 }
 </style>
+<style id="tx-chip-css">
+.bp-taxo{margin:14px 0 0;display:flex;flex-wrap:wrap;gap:7px;align-items:center}
+.bp-taxo .bp-taxo-lab{font-family:var(--mono,ui-monospace,monospace);font-size:9.5px;letter-spacing:.15em;
+ text-transform:uppercase;opacity:.55;margin-right:2px}
+.bp-taxo a{font-family:var(--mono,ui-monospace,monospace);font-size:9.5px;letter-spacing:.13em;
+ text-transform:uppercase;padding:6px 9px;border:1px solid rgba(20,20,20,.18);text-decoration:none;
+ color:inherit;line-height:1}
+.bp-taxo a:hover{background:#141414;color:#fff;border-color:#141414}
+</style>
+
+
+
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -111,12 +123,15 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
     <div class="bp-kickline">[ All Coverage &middot; 5 Posts ]</div>
     <h1>Sounder</h1>
     <div class="bp-meta">London, United Kingdom &middot; Apparel &middot; Accessories</div>
-  <h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Sounder</h2>
+    <!--TX-CHIPS--><div class="bp-taxo"><span class="bp-taxo-lab">Also in</span><a href="/brands/tag/independent">Independent</a><a href="/brands/tag/post-round-friendly">Post-round friendly</a><a href="/brands/tag/quiet-luxury">Quiet</a><a href="/brands/tag/gorpcore">Gorpcore</a></div><!--/TX-CHIPS-->
+    
+    
     <p class="bp-line">British golf clothing from the founders of Folk and Urban Golf.</p>
-    <a class="bp-profile" href="/drops/the-ball-marker-atlas">Read the full profile &rarr;</a>
+    <!--TX-NOCTA <a class="bp-profile" href="/drops/the-ball-marker-atlas">Read the full profile &rarr;</a> TX-NOCTA-->
   </div>
 </header>
 
+<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Sounder</h2>
 <div class="bp-grid">
   <a class="bp-card" href="/drops/14-hoodies-that-caught-my-eye">
     <div class="bp-thumb"><img src="/images/feed/c45a91a3-EGMC3004-Core_Fleece_Hoodie_Swingman-Heather_Grey-Front.jpg" loading="lazy" alt="14 Hoodies That Caught My Eye"></div>
