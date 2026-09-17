@@ -677,133 +677,7 @@
     z-index: 2;
   }
 
-  /* GIVEAWAYS */
-  .giveaways {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 32px 48px;
-  }
-  .giveaways-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 0 20px;
-    border-top: 0.5px solid var(--ink);
-  }
-  .giveaways-label {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-  }
-  .giveaways-label .pulse-dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--flag);
-    animation: pulse 1.8s ease-in-out infinite;
-  }
-  .giveaways-count {
-    font-family: var(--mono);
-    font-size: 10px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.55;
-  }
-  .giveaways-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-  }
-  .giveaway-card {
-    border: 0.5px solid var(--ink);
-    overflow: hidden;
-    display: block;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .giveaway-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 0 -1px var(--ink);
-  }
-  .giveaway-img {
-    aspect-ratio: 1/1;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 18px;
-  }
-  .giveaway-live {
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    padding: 3px 7px;
-    background: var(--flag);
-    color: var(--paper);
-    font-family: var(--mono);
-    font-size: 8px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-  .giveaway-live::before {
-    content: '';
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: var(--paper);
-    animation: pulse 1.8s ease-in-out infinite;
-  }
-  .giveaway-ends {
-    position: absolute;
-    bottom: 8px;
-    right: 8px;
-    padding: 3px 7px;
-    background: rgba(var(--ink-rgb),0.75);
-    color: var(--paper);
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-  }
-  .giveaway-body {
-    padding: 12px;
-  }
-  .giveaway-brand {
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    opacity: 0.55;
-    margin-bottom: 4px;
-  }
-  .giveaway-title {
-    font-family: var(--serif);
-    font-style: italic;
-    font-size: 15px;
-    line-height: 1.25;
-  }
-  .giveaway-source {
-    margin-top: 8px;
-    font-family: var(--mono);
-    font-size: 9px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    opacity: 0.4;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-  }
-
-  /* EVENTS */
+/* EVENTS */
   .events {
     max-width: 1400px;
     margin: 0 auto;
@@ -1677,9 +1551,7 @@
     .filter-pills::-webkit-scrollbar { display: none; }
     .pill { flex-shrink: 0; padding: 9px 14px; }
     .feed { padding: 20px 20px 60px; gap: 6px; }
-    .giveaways { padding: 0 20px 36px; }
-    .giveaways-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
-    .events { padding: 0 20px 36px; }
+.events { padding: 0 20px 36px; }
     .events-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
     .card { margin-bottom: 0px; }
     .footer { padding: 48px 20px 24px; }
@@ -1705,8 +1577,7 @@
   @media (max-width: 480px) {
     .feed .card { width: 100%; }
     .hero-caption { display: none; }
-    .giveaways-grid { grid-template-columns: 1fr 1fr; }
-    .events-grid { grid-template-columns: 1fr 1fr; }
+.events-grid { grid-template-columns: 1fr 1fr; }
     .footer-inner { grid-template-columns: 1fr; }
     .scoreboard-strip { padding: 10px 0; }
     .scoreboard-strip-scores { gap: 12px; }
@@ -13996,72 +13867,6 @@
 
 </section>
 
-<!-- GIVEAWAYS -->
-<section class="giveaways">
-  <div class="giveaways-header">
-    <div class="giveaways-label">
-      <span class="pulse-dot"></span>
-      Live Giveaways
-    </div>
-    <span class="giveaways-count">4 active</span>
-  </div>
-  <div class="giveaways-grid">
-
-    <a href="https://www.reynoldslakeoconee.com/reynolds-insider-sweepstakes" target="_blank" rel="noopener" class="giveaway-card">
-      <div class="giveaway-img" style="background: linear-gradient(135deg, #2D4A2B 0%, #1a2d19 100%); color: var(--paper);">
-        <span class="giveaway-live">Live</span>
-        <span class="giveaway-ends">Ends Sep 3</span>
-        Reynolds
-      </div>
-      <div class="giveaway-body">
-        <div class="giveaway-brand">Reynolds Lake Oconee</div>
-        <div class="giveaway-title">Win a 3-night trip for 4 to Reynolds Lake Oconee, GA &mdash; Ritz-Carlton stay, round at Tom Fazio&rsquo;s Richland course, spa, chef experiences, flights. ~$15,000 value.</div>
-        <div class="giveaway-source">reynoldslakeoconee.com ↗</div>
-      </div>
-    </a>
-
-    <a href="https://topgolf.com/us/promo/events-sweepstakes-official-rules/" target="_blank" rel="noopener" class="giveaway-card">
-      <div class="giveaway-img" style="background: var(--flag); color: var(--paper);">
-        <span class="giveaway-live">Live</span>
-        <span class="giveaway-ends">Ends Sep 7</span>
-        Topgolf
-      </div>
-      <div class="giveaway-body">
-        <div class="giveaway-brand">Topgolf Ultimate Summer</div>
-        <div class="giveaway-title">One-year Topgolf membership, private golf instruction, party for 10, VIP food &amp; beverage package + exclusive merch. ~$3,500 value.</div>
-        <div class="giveaway-source">topgolf.com ↗</div>
-      </div>
-    </a>
-
-    <a href="https://www.callawaygolf.com/gift-card-sweeps" target="_blank" rel="noopener" class="giveaway-card">
-      <div class="giveaway-img" style="background: var(--ink); color: var(--paper);">
-        <span class="giveaway-live">Live</span>
-        <span class="giveaway-ends">Ends Sep 30</span>
-        Callaway
-      </div>
-      <div class="giveaway-body">
-        <div class="giveaway-brand">Callaway Q3 Gift Card Sweeps</div>
-        <div class="giveaway-title">Win a $600 Callaway Golf gift card &mdash; redeemable at callawaygolf.com. One entry per person per quarter. No purchase necessary.</div>
-        <div class="giveaway-source">callawaygolf.com ↗</div>
-      </div>
-    </a>
-
-    <a href="https://www.coronausa.com/pages/golf-2026" target="_blank" rel="noopener" class="giveaway-card">
-      <div class="giveaway-img" style="background: var(--rough); color: var(--ink);">
-        <span class="giveaway-live">Live</span>
-        <span class="giveaway-ends">Draws Dec 31</span>
-        Corona
-      </div>
-      <div class="giveaway-body">
-        <div class="giveaway-brand">Corona Premier Golf 2026</div>
-        <div class="giveaway-title">5 grand-prize golf trips for 4 (flights + 2-night hotel + $1,200 GolfNow credit) plus Corona × TravisMathew gear bundles with Vice balls. Runs all year.</div>
-        <div class="giveaway-source">coronausa.com ↗</div>
-      </div>
-    </a>
-
-  </div>
-</section>
-
 <!-- EVENTS -->
 <section class="events">
   <div class="events-header">
@@ -14260,7 +14065,7 @@
       <h4>More</h4>
       <ul>
         <li><a href="#feed" onclick="activateFilter('field');return false;">Field Notes</a></li>
-        <li><a href="/about">About</a><a href="mailto:L4harrington@gmail.com">Contact</a></li>
+        <li><a href="/about">About</a><a href="/work-with-us">Work With Us</a><a href="mailto:L4harrington@gmail.com">Contact</a></li>
       </ul>
     </div>
     <div class="footer-col">

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Work With Us &mdash; The Grassy Issue</title>
+<meta name="description" content="How The Grassy Issue works with golf brands — what we are open to, what we do not sell, and how to start a conversation." />
+<link rel="icon" href="/favicon.ico" />
+<link rel="canonical" href="https://thegrassyissue.com/work-with-us" />
+<meta name="robots" content="index, follow" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<style>
+@font-face{font-family:'In The Margins';src:url('/assets/fonts/inthemargins.woff2') format('woff2'),url('/assets/fonts/inthemargins.woff') format('woff'),url('/assets/fonts/inthemargins.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
+
+:root{--ink:#141414;--paper:#F4F1EA;--grass:#2D4A2B;--rough:#A8A878;--flag:#C7362C;--serif:'Editors Note Text',Georgia,serif;--display:'In The Margins','Editors Note Text',Georgia,serif;--sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+html,body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}a:focus-visible,button:focus-visible{outline:2px solid var(--grass);outline-offset:2px}img{max-width:100%;display:block}button{font:inherit;cursor:pointer;border:none;background:none}
+.nav{position:sticky;top:0;background:var(--paper);border-bottom:.5px solid var(--ink);z-index:15}
+.nav-inner{max-width:1400px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.nav-wordmark{/*TGI-WM-V1*/font-family:var(--serif);font-style:normal;font-weight:700;font-size:21px;letter-spacing:.085em;text-transform:uppercase;line-height:1;white-space:nowrap;border-bottom:none;text-decoration:none;color:var(--grass)}
+.nav-links{display:flex;gap:24px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase}
+.nav-links a{padding:6px 0;border-bottom:1px solid transparent;transition:border-color .15s}.nav-links a:hover{border-bottom-color:var(--ink)}
+.nav-cta{padding:9px 16px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .2s;display:inline-block}.nav-cta:hover{background:var(--grass)}
+.nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0}.nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink)}
+.breadcrumb{max-width:1400px;margin:0 auto;padding:16px 32px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6}.breadcrumb a:hover{opacity:1}.breadcrumb span{margin:0 8px}
+.drop-header{max-width:1400px;margin:0 auto;padding:0 32px 40px}
+.drop-tag{display:inline-block;padding:5px 10px;font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:16px}
+.drop-tag.flag{background:var(--flag);color:var(--paper)}.drop-tag.grass{background:var(--grass);color:var(--paper)}
+.drop-header h1{font-family:var(--serif);font-style:normal;font-weight:400;font-size:clamp(32px,4.5vw,56px);line-height:1.05;letter-spacing:-.02em;margin-bottom:16px;max-width:800px}
+.drop-meta{display:flex;align-items:center;gap:24px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;flex-wrap:wrap}
+.drop-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ink);opacity:.4}
+.drop-hero{max-width:1400px;margin:0 auto;padding:0 32px}.drop-hero-img{width:100%;aspect-ratio:21/9;border:.5px solid var(--ink);overflow:hidden}.drop-hero-img img{width:100%;height:100%;object-fit:cover}
+.writeup{max-width:1400px;margin:0 auto;padding:40px 32px;display:grid;grid-template-columns:2fr 1fr;gap:60px;align-items:start}
+.writeup-body{font-size:16px;line-height:1.7;max-width:700px}.writeup-body p+p{margin-top:16px}
+.sidebar{position:sticky;top:80px}
+.sidebar-card{border:.5px solid var(--ink);padding:24px}
+.sidebar-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55;margin-bottom:16px}
+.sidebar-detail{font-size:13px;margin-bottom:8px;display:flex;justify-content:space-between}.sidebar-detail .l{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.55}
+.sidebar-cta{display:block;margin-top:20px;padding:14px 24px;background:var(--ink);color:var(--paper);text-align:center;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;transition:background .2s}.sidebar-cta:hover{background:var(--grass)}
+.hashtags{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;padding-top:16px;border-top:.5px solid rgba(20,20,20,.12)}
+.hashtag{display:inline-block;padding:4px 10px;border:.5px solid var(--ink);font-family:var(--mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;transition:opacity .15s,background .15s}.hashtag:hover{opacity:1;background:var(--ink);color:var(--paper)}
+.products{max-width:1400px;margin:0 auto;padding:0 32px;border-top:.5px solid var(--ink);padding-top:40px}
+/*TGI-HDR-BOLD-V1*/.products-hdr{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.6vw,32px);line-height:1.15;margin:0 0 20px}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.products-section{margin-bottom:48px}.products-section:last-child{margin-bottom:0}
+.product-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s,box-shadow .2s;display:block}.product-card:hover{transform:translateY(-3px);box-shadow:0 6px 0 -2px var(--ink)}
+.product-img{aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}.product-img img{width:100%;height:100%;object-fit:cover;transition:transform .3s}.product-card:hover .product-img img{transform:scale(1.03)}
+.product-body{padding:20px 22px}
+.product-brand{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.5;margin-bottom:6px}
+.product-name{font-family:var(--serif);font-style:italic;font-size:20px;line-height:1.25;margin-bottom:10px}
+.product-desc{font-family:var(--sans);font-size:13px;line-height:1.55;opacity:.75;margin-bottom:12px}
+.product-link{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;opacity:.7;transition:opacity .15s}.product-link:hover{opacity:1}
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
+.pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
+.more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
+.more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.more-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55}
+.more-link{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.more-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s;display:block}.more-card:hover{transform:translateY(-2px)}
+.more-card-img{aspect-ratio:1/1;overflow:hidden;background:#e8e5dc}.more-card-img img{width:100%;height:100%;object-fit:cover}
+.more-card-body{padding:12px}
+.more-card-name{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.25;margin-bottom:4px}
+.more-card-tag{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+footer{border-top:.5px solid var(--ink);margin-top:80px;padding:40px 32px 24px}
+footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-family:var(--mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;opacity:.55}
+@media(max-width:1024px){.products-grid{grid-template-columns:repeat(2,1fr)}}
+.tl{max-width:760px}.tl-row{display:grid;grid-template-columns:88px 1fr;gap:20px;padding:14px 0;border-bottom:.5px solid rgba(20,20,20,.12)}.tl-year{font-family:var(--mono);font-size:13px;letter-spacing:.06em;opacity:.55}.tl-text{font-size:15px;line-height:1.65}
+.ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.ig-grid a,.ig-grid figure{display:block;border:.5px solid var(--ink);overflow:hidden;margin:0}.ig-grid img{width:100%;aspect-ratio:4/5;object-fit:cover}.ig-cap{font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;padding:8px 10px}
+@media(max-width:820px){.ig-grid{grid-template-columns:repeat(2,1fr)}.tl-row{grid-template-columns:64px 1fr;gap:14px}.nav-links,.nav-cta{display:none}.nav-toggle{display:flex}.nav-inner{padding:14px 20px}.breadcrumb{padding:12px 20px}.drop-header{padding:0 20px 32px}.drop-hero{padding:0 20px}.writeup{padding:32px 20px;grid-template-columns:1fr;gap:24px}.sidebar{position:static}.products{padding:0 20px;padding-top:32px}.pull-quote{padding:0 20px}.more{padding:0 20px;padding-top:24px}.more-grid{grid-template-columns:repeat(2,1fr)}footer{padding:32px 20px 20px;margin-top:48px}}
+@media(max-width:480px){.products-grid{grid-template-columns:1fr}.more-grid{grid-template-columns:1fr 1fr}.drop-header h1{font-size:28px}}
+
+/*TGI-ABOUT-SIG*/
+.writeup-body .sig{font-family:var(--mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-top:30px;line-height:1.9}
+.writeup-body .sig span{opacity:.5}
+/*/TGI-ABOUT-SIG*/
+/*TGI-ABOUT-PHOTOS*/
+.about-photos{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0 8px;
+  width:min(1060px,calc(100vw - 72px))}
+.about-photos figure{margin:0}
+.about-photos .ph{aspect-ratio:4/5;overflow:hidden;border:.5px solid var(--ink);background:#e8e5dc}
+.about-photos .ph img{width:100%;height:100%;object-fit:cover}
+.about-photos figcaption{font-family:var(--mono);font-size:10px;letter-spacing:.1em;
+  text-transform:uppercase;opacity:.55;margin-top:9px;line-height:1.5}
+@media(max-width:820px){.about-photos{grid-template-columns:1fr;width:100%}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebPage", "name": "Work With Us", "url": "https://thegrassyissue.com/work-with-us", "description": "How The Grassy Issue works with golf brands \u2014 what we are open to, what we do not sell, and how to start a conversation.", "isPartOf": {"@type": "WebSite", "name": "The Grassy Issue", "url": "https://thegrassyissue.com"}, "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Feed", "item": "https://thegrassyissue.com/"}, {"@type": "ListItem", "position": 2, "name": "Work With Us"}]}, "publisher": {"@type": "Organization", "name": "The Grassy Issue", "url": "https://thegrassyissue.com", "founder": {"@type": "Person", "name": "Lenny Harrington"}, "email": "L4harrington@gmail.com"}}</script>
+
+<meta property="og:title" content="Work With Us">
+<meta property="og:description" content="How The Grassy Issue works with golf brands — what we are open to, what we do not sell, and how to start a conversation.">
+<meta property="og:url" content="https://thegrassyissue.com/work-with-us">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Work With Us">
+<meta name="twitter:description" content="How The Grassy Issue works with golf brands — what we are open to, what we do not sell, and how to start a conversation."></head>
+<body>
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-wordmark">The Grassy Issue</a>
+    <div class="nav-links">
+      <a href="/#feed">The Feed</a>
+      <a href="/brands/">Brands</a>
+      <a href="/field-guide/">Field Guide</a>
+      <a href="/events/">Events</a>
+      <a href="/about">About</a>
+    </div>
+    <button class="nav-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <div id="tgi-sbox">
+      <input id="tgi-search-input" type="search" placeholder="Search" autocomplete="off" aria-label="Search the site" />
+      <div id="tgi-search-results"></div>
+    </div>
+  </div>
+</nav>
+
+<div class="breadcrumb"><a href="/">Feed</a><span>/</span>Work With Us</div>
+
+<header class="drop-header">
+  <h1>Work With Us</h1>
+</header>
+<div class="writeup" style="grid-template-columns:1fr;">
+  <div class="writeup-body" style="max-width:720px">
+
+    <p>If you make something and you have found your way here, it is probably because you searched
+    your own brand name and this site came up. That happens a fair amount now, and for a long time
+    there was nothing on the other end of it. This page is the other end of it.</p>
+
+    <p><strong>The Grassy Issue</strong> is a golf publication run out of Austin, Texas. It covers
+    the municipal scene here and the independent side of golf apparel and equipment everywhere else.
+    The <a href="/brands/" style="border-bottom:1px solid var(--ink)">Brand Index</a> currently runs
+    to 131 brands and roughly 200 thousand words of coverage written about them. More on
+    who is behind it is <a href="/about" style="border-bottom:1px solid var(--ink)">on the About
+    page</a>.</p>
+
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:24px;margin:32px 0 14px">Who reads it</h2>
+
+    <p>People who walk. The audience skews toward golfers who care what a thing is made of and where
+    it came from, who play municipal courses more often than private ones, and who are as likely to
+    be looking at a headcover from a two-person studio as at anything with a tour logo on it. There
+    is a heavy Austin concentration and a long tail everywhere else.</p>
+
+    <p>If you want numbers before a conversation, ask and you will get them. They are not printed
+    here because a figure on a page goes stale the week after it is written.</p>
+
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:24px;margin:32px 0 14px">What we are open to</h2>
+
+    <p><strong>Sending product.</strong> The simplest one and usually the best. Gear gets shot in
+    Austin, on real courses, in the weather it was built for. Seeded product does not buy coverage,
+    but it does mean the photography is ours rather than a lookbook frame everybody else is running.</p>
+
+    <p><strong>Sponsored Field Notes.</strong> A piece of reporting a brand underwrites &mdash; a
+    course, a trip, an event, a making-of. The brand pays for the work to exist. The brand does not
+    approve the copy. Anything sponsored is labelled as sponsored, on the page, where a reader sees
+    it before they read it.</p>
+
+    <p><strong>Newsletter and social placements.</strong> Straightforward, clearly marked.</p>
+
+    <p><strong>Longer partnerships.</strong> A season, a capsule, a recurring slot. These work best
+    when there is an actual editorial reason for them, so they tend to start as a conversation about
+    the work rather than about a placement.</p>
+
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:24px;margin:32px 0 14px">What we do not sell</h2>
+
+    <p><strong>Placement in a roundup.</strong> Every brand in an Edit is there because it earned
+    the slot. No exceptions, and no paid entries mixed in with chosen ones.</p>
+
+    <p><strong>Approval over what gets written.</strong> Facts get checked with you gladly &mdash;
+    prices, materials, founding dates, spellings. Opinions do not.</p>
+
+    <p><strong>Display advertising.</strong> There are no banners here and there is not going to be
+    a banner slot.</p>
+
+    <p><strong>Links to somebody else's promotion.</strong> Sweepstakes, giveaways, affiliate
+    round-ups for gear nobody here has looked at &mdash; these send a reader away from the site for
+    nothing and they are not something TGI carries.</p>
+
+    <p><strong>Coverage of one brand at another's expense.</strong> Comparisons stay on the facts.
+    Nobody pays to have a competitor described badly.</p>
+
+    <p>None of that is posturing about purity. It is the reason the brand pages rank: they read as
+    reporting, so people trust them, so Google surfaces them, so you ended up here.</p>
+
+    <h2 style="font-family:var(--serif);font-weight:600;font-size:24px;margin:32px 0 14px">Getting in touch</h2>
+
+    <p>Email is best, and it reaches one person rather than an inbox:
+    <a href="mailto:L4harrington@gmail.com?subject=Working%20with%20The%20Grassy%20Issue"
+       style="border-bottom:1px solid var(--ink)">L4harrington@gmail.com</a>.</p>
+
+    <p>Useful things to put in a first email: what you make, what you are trying to do, and roughly
+    when. If there is already coverage of you on the site, a link to it saves a step. If there is
+    not, that is fine too &mdash; a good part of the Index started with somebody sending a note.</p>
+
+    <p class="sig">&mdash; Lenny Harrington<br><span>Austin, Texas</span></p>
+
+  </div>
+</div>
+
+<footer><div class="inner"><span>&copy; 2026 The Grassy Issue</span><a href="/work-with-us">Work With Us</a><a href="/">Back to Feed</a></div></footer>
+<!-- TGI SEARCH -->
+<style>
+#tgi-sbox{position:relative}
+#tgi-search-input{width:150px;background:transparent;border:.5px solid #141414;padding:7px 10px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:#141414;outline:none;border-radius:0;-webkit-appearance:none}
+#tgi-search-input:focus{border-color:#2D4A2B;outline:2px solid #2D4A2B;outline-offset:1px}
+#tgi-search-input::placeholder{color:#141414;opacity:.45}
+#tgi-search-results{display:none;position:absolute;top:calc(100% + 10px);right:0;width:340px;max-height:65vh;overflow-y:auto;background:#F4F1EA;border:.5px solid #141414;box-shadow:0 6px 0 -2px #141414;z-index:60}
+@media(max-width:820px){#tgi-search-input{width:104px;padding:6px 8px}#tgi-search-results{width:280px}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TGI-ENT-V1*/
+@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-regular.woff2') format('woff2'),url('/assets/fonts/editors-note-text-regular.woff') format('woff');font-weight:400;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-italic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-italic.woff') format('woff');font-weight:400;font-style:italic;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bold.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bold.woff') format('woff');font-weight:700;font-style:normal;font-display:swap}@font-face{font-family:'Editors Note Text';src:url('/assets/fonts/editors-note-text-bolditalic.woff2') format('woff2'),url('/assets/fonts/editors-note-text-bolditalic.woff') format('woff');font-weight:700;font-style:italic;font-display:swap}
+body{font-family:var(--serif)}
+.product-desc,.faq-q p,.sec-intro,.cat-kicker,.writeup-body,.more-card-desc,.prog-desc,.sec-note{font-family:var(--serif)}
+body{font-size:16px;line-height:1.6}
+.card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
+.card-title,.more-card-name{font-style:normal}
+/*/TGI-ENT-V1*/
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
+/*TGI-MOBILE-MENU-CSS-V1*/
+.nav-drawer{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--paper);z-index:14;flex-direction:column;align-items:center;justify-content:center;gap:28px;font-family:var(--mono);font-size:13px;letter-spacing:.14em;text-transform:uppercase;opacity:0;transition:opacity .25s}
+.nav-drawer.open{display:flex;opacity:1}
+.nav-drawer a{padding:12px 24px;border-bottom:1px solid transparent;transition:border-color .15s;min-height:44px;display:flex;align-items:center}
+.nav-drawer a:hover{border-bottom-color:var(--ink)}
+/*TGI-NAV-MOBILE-V1*/
+@media(max-width:820px){
+  /* The 89 brand pages never hid .nav-links on mobile (their only query tweaks
+     gap), so the links stayed visible and overflowed. Normalise every nav here
+     rather than depending on each page's own rules. */
+  .nav-inner{gap:12px;padding-left:16px;padding-right:16px;justify-content:space-between}
+  .nav-links{display:none!important}
+  .nav-toggle{display:flex!important}
+  .nav-wordmark{font-size:17px;letter-spacing:.06em;flex:0 0 auto}
+  #tgi-sbox{flex:1 1 60px;min-width:0}
+  #tgi-search-input{width:100%;min-width:0}
+  #tgi-search-results{width:min(300px,calc(100vw - 32px))}
+}
+@media(max-width:360px){
+  .nav-inner{flex-wrap:wrap;gap:10px 12px}
+  .nav-wordmark{font-size:19px;letter-spacing:.07em;flex:1 1 auto}
+  .nav-toggle{flex:0 0 auto;order:2}
+  #tgi-sbox{flex:1 0 100%;order:3}
+  #tgi-search-results{width:100%;right:auto;left:0}
+}
+</style>
+<script>
+(function(){
+  var idx=null,inp,res;
+  function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+  function init(){inp=document.getElementById('tgi-search-input');res=document.getElementById('tgi-search-results');if(!inp)return;
+    inp.addEventListener('focus',function(){if(!idx){fetch('/search-index.json').then(function(r){return r.json();}).then(function(d){idx=d;if(inp.value)render(inp.value);});}});
+    inp.addEventListener('input',function(){render(inp.value);});
+    inp.addEventListener('keydown',function(e){if(e.key==='Escape'){inp.value='';hide();inp.blur();}});
+    document.addEventListener('click',function(e){var box=document.getElementById('tgi-sbox');if(box&&!box.contains(e.target))hide();});}
+  function hide(){if(res)res.style.display='none';}
+  function score(it,terms){var s=0,t=it.t.toLowerCase(),k=(it.k||'').toLowerCase(),d=(it.d||'').toLowerCase(),g=(it.g||'').toLowerCase();
+    for(var i=0;i<terms.length;i++){var w=terms[i];if(!w)continue;var hit=0;
+      if(t.indexOf(w)>-1){s+=5;hit=1;}if(g.indexOf(w)>-1){s+=2;hit=1;}if(k.indexOf(w)>-1){s+=2;hit=1;}if(d.indexOf(w)>-1){s+=1;hit=1;}
+      if(!hit)return 0;}
+    return s;}
+  function render(q){if(!res)return;q=(q||'').trim().toLowerCase();
+    if(!q){hide();return;}
+    res.style.display='block';
+    if(!idx){res.innerHTML='<div style="padding:14px;font-family:JetBrains Mono,monospace;font-size:10px;letter-spacing:.1em;opacity:.5;">Loading&hellip;</div>';return;}
+    var terms=q.split(/\s+/),out=[],i;
+    for(i=0;i<idx.length;i++){var s=score(idx[i],terms);if(s>0)out.push([s,idx[i]]);}
+    out.sort(function(a,b){return b[0]-a[0];});out=out.slice(0,8);
+    if(!out.length){res.innerHTML='<div style="padding:14px;font-family:JetBrains Mono,monospace;font-size:10px;letter-spacing:.1em;opacity:.5;">No results</div>';return;}
+    res.innerHTML=out.map(function(p){var it=p[1];
+      return '<a href="'+esc(it.u)+'" style="display:flex;gap:10px;padding:10px 12px;border-bottom:.5px solid rgba(20,20,20,.12);align-items:center;text-decoration:none;color:#141414;">'
+      +(it.i?'<img src="'+esc(it.i)+'" style="width:36px;height:36px;object-fit:cover;border:.5px solid #141414;flex-shrink:0;" loading="lazy" alt="" />':'<span style="width:36px;height:36px;background:#2D4A2B;flex-shrink:0;"></span>')
+      +'<span style="min-width:0;"><span style="display:block;font-family:JetBrains Mono,monospace;font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;">'+esc(it.g)+'</span>'
+      +'<span style="display:block;font-family:\'Editors Note Text\',Georgia,serif;font-style:italic;font-size:13px;line-height:1.25;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">'+esc(it.t)+'</span></span></a>';}).join('');}
+  if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
+})();
+</script>
+
+<!-- Google Analytics 4 (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-G89M4116SB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-G89M4116SB');
+</script>
+<!-- GoatCounter analytics -->
+<script data-goatcounter="https://thegrassyissue.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+<!--TGI-MOBILE-MENU-V1-->
+<div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
+  <a href="/#feed" onclick="closeMenu();">The Feed</a>
+  <a href="/brands/" onclick="closeMenu();">Brands</a>
+  <a href="/field-guide/" onclick="closeMenu();">Field Guide</a>
+  <a href="/events/" onclick="closeMenu();">Events</a>
+  <a href="/about" onclick="closeMenu();">About</a>
+</div>
+<script>
+function toggleMenu(){var b=document.querySelector('.nav-toggle'),d=document.getElementById('navDrawer');
+  if(!b||!d)return; var o=b.classList.toggle('open'); d.classList.toggle('open',o);
+  b.setAttribute('aria-expanded',o); document.body.style.overflow=o?'hidden':'';}
+function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getElementById('navDrawer');
+  if(!b||!d)return; b.classList.remove('open'); d.classList.remove('open');
+  b.setAttribute('aria-expanded','false'); document.body.style.overflow='';}
+/* Most pages ship the toggle with NO onclick attribute (only index.html has one),
+   so bind here. Strip any inline handler first or index.html would fire twice and
+   cancel itself out. */
+(function(){var b=document.querySelector('.nav-toggle');
+  if(!b)return; b.removeAttribute('onclick');
+  if(!b.hasAttribute('aria-expanded'))b.setAttribute('aria-expanded','false');
+  b.addEventListener('click',function(e){e.preventDefault();toggleMenu();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});})();
+</script>
+</body>
+</html>
