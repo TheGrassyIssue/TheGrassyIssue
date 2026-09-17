@@ -194,7 +194,7 @@ NEW_NIGHT = "".join((
          ("Pricing", "Resort rates"), ("Best for", "Mixed groups, anniversaries")],
         "https://www.lacanteragolfclub.com/"),
  course(SD + "lajitas.jpg",
-        "Desert fairway above the Rio Grande at Black Jack's Crossing, Lajitas Golf Resort",
+        "Putting green at dusk below the Chihuahuan Desert mesas at Black Jack's Crossing, Lajitas Golf Resort",
         "Lajitas Golf Resort &mdash; Black Jack&rsquo;s Crossing.",
         "Resort · Lajitas · 7 hours west",
         "The far end of the list and the one that needs real commitment: seven hours west, on "

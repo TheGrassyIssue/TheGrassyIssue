@@ -43,8 +43,19 @@ ten-minute job the moment there is photography for them.
 
 IMAGE NOTE: Lajitas' own golf page serves a file named
 "ChatGPT-Image-Dec-21-2025-10_33_04-AM-1024x683.png". That is AI-generated art,
-not course photography, and is deliberately NOT used here. The Lajitas frame is
-their photograph 333.jpg.
+not course photography, and is deliberately NOT used here.
+
+CORRECTION, 17 September 2026 — THE LAJITAS FRAME.
+images/special-day/lajitas.jpg was first published here as a JSX AIRLINE PROMO
+BANNER: a fly-in-package advert with "SAVE UP TO 40% ON FLY-IN GOLF PACKAGES" set
+across a photo of a parked jet. No golf course in it at all. It shipped into this
+post AND into the Field Guide, because the file was pulled off their page by name
+and never opened. Replaced with black-jack.jpg from their own uploads — a real
+photograph of a green at dusk below the Chihuahuan Desert mesas, centre-cropped
+from 1200x800 to the house 4:3 rather than stretched, so the mesa is not warped.
+THE LESSON, AND IT IS CHEAP: OPEN EVERY IMAGE BEFORE IT SHIPS. A plausible
+filename on the right domain is not a check. The guard below only catches the one
+failure mode I already knew about; it could not have caught this one.
 
 RANKINGS ARE ATTRIBUTED, NEVER ASSERTED. Black Jack's Crossing rankings are
 quoted to the publications that made them (Golfweek, Dallas Morning News), as

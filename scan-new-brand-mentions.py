@@ -28,6 +28,9 @@ import json, re, os, html, glob, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 DOMAINS = {
+    # hiddenlinkssociety.com ONLY. hiddenlinksgolf.com is a different company
+    # entirely — a custom club builder — and must never map to this slug.
+    "hidden-links-society": ["hiddenlinkssociety.com"],
     "bettinardi":        ["bettinardi.com"],
     "eastside-golf":     ["eastsidegolf.com"],
     "ghost-golf":        ["ghostgolf.com"],

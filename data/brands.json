@@ -1208,7 +1208,8 @@
    "post-round-friendly"
   ],
   "added": "2026-08-24",
-  "attrs": []
+  "attrs": [],
+  "img": "/images/huega-house/brand-hero.jpg"
  },
  {
   "slug": "inside-story",
@@ -1657,7 +1658,8 @@
    "gorpcore"
   ],
   "added": "2026-08-24",
-  "attrs": []
+  "attrs": [],
+  "img": "/images/odd-ritual/brand-hero.jpg"
  },
  {
   "slug": "okka-golf",
@@ -2624,7 +2626,8 @@
    "muni-energy"
   ],
   "added": "2026-08-24",
-  "attrs": []
+  "attrs": [],
+  "img": "/images/twentyfour-golf/brand-hero.jpg"
  },
  {
   "slug": "vessel",
@@ -2776,5 +2779,28 @@
   "attrs": [
    "women-founded"
   ]
+ },
+ {
+  "slug": "hidden-links-society",
+  "name": "Hidden Links Society",
+  "loc": "United States",
+  "regions": [
+   "usa"
+  ],
+  "cats": [
+   "headwear",
+   "apparel",
+   "accessories"
+  ],
+  "tags": [
+   "muni-energy",
+   "independent",
+   "collab-machine"
+  ],
+  "line": "Anti-country-club headwear and heavyweight cotton. Gives 2% of every sale to Youth on Course and is documenting Golf Digest's Top 100 Public courses one at a time.",
+  "url": "/drops/brand-to-know-hidden-links-society",
+  "attrs": [],
+  "added": "2026-09-17",
+  "img": "/images/hls/play-faster-fairway-wood-cover-black-1.jpg"
  }
 ]
