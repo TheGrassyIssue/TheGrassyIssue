@@ -45,6 +45,22 @@ SPECS = ROOT / "research" / "btk"
 
 TAKES = {
 
+# The two Brand Revisited-style pages. They were converted after the first 30
+# Takes were written, so they were still carrying the derived first paragraph
+# — 62 and 41 words against a 118-word average. Same three beats, same rule:
+# every fact below is read off the page, the opinion is ours.
+"jones-sports-co": [
+ "Jones has been making the same bag since 1971 and the restraint is the whole product. No legs, no cart strap, no panelling &mdash; a 2.9 lb carry bag with a three-way divider and an unstructured spine, which is why an Original off the shelf today still looks like the photographs from 1975. The 2011 owners found no patterns, no inventory and no factory, and reverse-engineered the shape from bags borrowed off old customers rather than redrawing it.",
+ "The Original at $125 in Burnt Clay is the proof piece. It is the cheapest bag they make and it is the same bag as the $215 Evergreen underneath &mdash; the price difference is material, not construction, which is a rare thing to be able to say about a range.",
+ "This is for the walker who wants the bag to disappear and does not need it to do anything else. The line runs $45 to $520 across 32 pieces, so a headcover or a ball pouch is an easy way to test the making before committing to a bag.",
+],
+
+"walker-golf": [
+ "Walker Golf is built on a specifically Australian relationship to the game &mdash; municipal, unfussy, cheap to join &mdash; and the clothes are cut to match rather than to signal. Jack Fardell competed in the X Games at eleven and rode for adidas before he and co-founder Glenn Walker shipped the first collection in July 2022, and the skate background shows up as fit and restraint, not graphics.",
+ "The Par-Tec Quarter Zip Fleece at $110 is the clearest version of it: the house performance fabric is lightweight, stretchy and moisture-wicking, and nothing on the garment announces any of that.",
+ "It suits the player who wants to wear the same thing to the muni and the pub afterwards, and who would rather the piece read as clothes than as kit. Twenty-two pieces run $44.95 to $229.95, and a Kooka cap is the cheapest way to see whether the making is for you.",
+],
+
 "apres-golf": [
  "What Apr&egrave;s Golf is actually selling is provenance you cannot order twice. The fleece is hi-loft sherpa, hand-sewn in California, but the reason a cover costs $88 is the patch on the front &mdash; Chamonix, St. Moritz, Alta, Mad River Glen &mdash; cut off a ski jacket that someone wore somewhere before it got anywhere near a golf bag.",
  "The Fruit Looper&trade; at $88 is the one to look at first, because it is the clearest version of the trick: a sherpa cover carrying a crest that has nothing to do with golf and somehow belongs on a bag anyway.",
@@ -242,7 +258,14 @@ if __name__ == "__main__":
         # own write-up; it belongs in The Story, so it goes back to the front of
         # story_extra rather than off the page.
         if apply_:
-            keep = [p for p in d.get("take", []) if p not in d.get("story_extra", [])]
+            # RUN THIS TWICE AND IT USED TO EAT ITSELF. On the second run
+            # d["take"] is already the hand-written Take, so "the old paragraph"
+            # was the NEW one — and it got prepended to The Story, printing the
+            # Take twice on the page. Thirty specs did exactly that before the
+            # check below caught it. A paragraph that IS the new Take is never
+            # displaced copy, so it never moves.
+            keep = [p for p in d.get("take", [])
+                    if p not in d.get("story_extra", []) and p not in paras]
             d["story_extra"] = keep + d.get("story_extra", [])
             d["take"] = paras
             f.write_text(json.dumps(d, indent=1, ensure_ascii=False) + "\n",

@@ -240,6 +240,50 @@ def do_brand(slug, apply_=False, want=3):
             f"short {len(made)}/{want}", "bands": made}
 
 
+def squares(slug, apply_=False, want=6):
+    """The Walker treatment: one gallery of square frames instead of lone bands
+    spliced between sections.
+
+    Lenny: "The Walker golf brand to know page is really nicely formatted. I want
+    all the brands to know pages and the brands revisited pages to follow similar
+    designs." Walker carries SIX 1:1 frames in a three-across grid under its own
+    heading. The band crops cannot be reused for that — they are 16:9, and
+    letting CSS square them with object-fit would re-introduce exactly the
+    decapitation this file was written to prevent. So the squares are cut here,
+    from the archived originals, with the same upward bias as best_top.
+    """
+    frames = candidates(slug)
+    if not frames:
+        return {"slug": slug, "n": 0, "status": "no frames"}
+    # widest first: a frame with room to spare on both axes survives squaring best
+    frames = sorted(frames, key=lambda f: -min(f[1]))
+    made = 0
+    d = ROOT / "images" / slug
+    for p, (w, h) in frames[:want]:
+        with Image.open(p) as src:
+            src = src.convert("RGB")
+            s = min(src.width, src.height)
+            if src.height > src.width:                 # portrait: bias upward
+                top = best_top(src, s)
+                box = (0, top, s, top + s)
+            else:                                      # landscape: centre
+                x = (src.width - s) // 2
+                box = (x, 0, x + s, s)
+            sq = src.crop(box).resize((1000, 1000), Image.LANCZOS)
+        made += 1
+        if apply_:
+            d.mkdir(parents=True, exist_ok=True)
+            sq.save(d / f"ig-{made}.jpg", "JPEG", quality=88, optimize=True)
+        del sq
+    # A RAGGED LAST ROW LOOKS LIKE A MISTAKE. Three across, so the gallery is
+    # only ever 3 or 6 frames; anything else is trimmed rather than left hanging.
+    keep = 6 if made >= 6 else (3 if made >= 3 else 0)
+    if apply_:
+        for n in range(keep + 1, made + 1):
+            (d / f"ig-{n}.jpg").unlink(missing_ok=True)
+    return {"slug": slug, "n": keep, "status": "ok" if keep else f"only {made} usable"}
+
+
 def contact_sheet(results, path):
     rows = [(r["slug"], b) for r in results for b in r["bands"]]
     if not rows:
@@ -274,6 +318,15 @@ if __name__ == "__main__":
     except Exception:
         pass
     slugs = args or [p.stem for p in sorted(MANIFESTS.glob("*.json"))]
+    if "--squares" in sys.argv:
+        tot = 0
+        for s in slugs:
+            r = squares(s, apply_)
+            tot += r["n"]
+            print(f"  {s:<24} {r['status']:<18} {r['n']} square(s)")
+        print(f"\n  {tot} square frame(s) "
+              + ("written" if apply_ else "ready — pass --apply"))
+        raise SystemExit
     results = []
     for s in slugs:
         w = need.get(s) or next((v for k, v in need.items() if k in s or s in k), 3)

@@ -173,6 +173,11 @@ def h2_of(block):
     return re.sub(r"<[^>]+>", "", m.group(1)).strip() if m else ""
 
 
+def _nowild(h):
+    """The page without our generated gallery — see the prose check."""
+    return re.sub(r'<section[^>]*data-btk="wild".*?</section>', " ", h, flags=re.S)
+
+
 def _words(h):
     """Visible words in the body — script and style stripped out."""
     b = h[h.find("<body"):]
@@ -291,19 +296,70 @@ section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
    measuring the file. A landscape frame runs the article measure; a portrait
    frame is set narrow and floated so the copy wraps beside it rather than
    leaving a column of empty paper down one side. */
-section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
-.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
-  object-fit:contain}
-.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
-  object-fit:contain}
-section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+/* THE BUG THAT MADE THESE LOOK BROKEN. The site's base rule is
+       .drop-hero-img{width:100%;aspect-ratio:21/9;border:.5px solid var(--ink)}
+   and it is written for a DIV that WRAPS a picture. The body bands put that
+   class on the IMG element itself, so every one inherited a 21:9 bordered BOX and
+   then letterboxed the photograph inside it with object-fit:contain. That is
+   exactly what Lenny saw: a visible rectangle, the picture too narrow for it,
+   and dead paper down both sides. Undo the container styling first; everything
+   below is only meaningful once that is off. */
+section.drop-hero:not(:first-of-type) img.drop-hero-img{
+  aspect-ratio:auto;border:0;overflow:visible;height:auto}
+
+/* A BREAK, NOT A SLAB. Lenny: "it should just have a smaller break and have
+   better design between sections." So the band is sized to sit in a clear
+   relationship with the 760px text measure rather than bullying it, is centred
+   on the page, and carries its own air above and below so it reads as a
+   transition between two sections instead of an object dropped between them. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;
+  margin:0 auto;display:flex;justify-content:center}
+.drop-hero-img.btk-land{width:100%;max-width:1040px;height:auto;display:block;
+  margin:56px auto 60px}
+.drop-hero-img.btk-port{width:100%;max-width:520px;height:auto;display:block;
+  margin:56px auto 60px}
+/* the portrait exception: floated so copy wraps beside it rather than leaving a
+   column of empty paper down one side */
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden;display:block}
 section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
   max-width:400px}
 @media(max-width:820px){
   section.drop-hero:not(:first-of-type){padding:0 20px}
-  .drop-hero-img.btk-port{max-width:100%}
+  .drop-hero-img.btk-land,.drop-hero-img.btk-port{max-width:100%;
+    margin:36px auto 40px}
   section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
     max-width:100%}
+}
+
+/* THE GALLERY. Walker's .ig-grid lives in that page's own <style>, so pages
+   that never had one have no rule for it — the generated grid would stack one
+   image per row. Restated here, identically, so every page renders it the same. */
+.btk-wild-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.btk-wild-grid.n2{grid-template-columns:repeat(2,1fr)}
+.btk-wild-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;
+  border:.5px solid var(--ink)}
+.btk-wild-credit{font-family:var(--mono);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;opacity:.45;margin-top:14px}
+@media(max-width:820px){.btk-wild-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+/* THE SECTION DECK — the other "special sentence".
+   Lenny: "Those sentences pulled out are too small and dont sit right on the
+   page." He was looking at <p class="cat-kicker">, NOT .pull-quote — which is
+   why the 38px treatment above never reached it. The site default sets it 15px
+   with a left rule, so it sat as a small note hard against the left margin
+   underneath a CENTRED heading, which is the "doesn't sit right" part. Here it
+   is a proper deck: large, centred under its heading, no rule. */
+section[data-btk] .cat-kicker,
+section[data-btk] .sec-intro{font-family:var(--serif);font-style:italic;
+  font-size:25px;line-height:1.42;letter-spacing:-.01em;color:var(--ink);
+  opacity:.82;border-left:0;padding:0;max-width:720px;
+  margin:0 auto 44px;text-align:center}
+/* inside the Take the column is left-aligned, so the deck follows it */
+section[data-btk="take"] .cat-kicker,
+section[data-btk="take"] .sec-intro{margin-left:0;text-align:left}
+@media(max-width:820px){
+  section[data-btk] .cat-kicker,
+  section[data-btk] .sec-intro{font-size:20px;margin-bottom:32px}
 }
 
 /* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
@@ -729,6 +785,84 @@ def render_band(src, brand, first=False):
             "</section>\n\n")
 
 
+# FRAMES TURNED DOWN FOR THE GALLERY.
+# A photograph can be the brand's own, high-resolution and still not editorial.
+# Lenny on Hiroki's second tile: "it's just a field" — no product, no person,
+# nothing of the brand in it. Listed here rather than deleted, because the file
+# is still the page's own photography and may be wanted somewhere else.
+WILD_DROP = {"/images/hiroki/jacks-point-1.jpg"}
+
+
+def wild_frames(slug, html=""):
+    """The square frames btk-lookbook.py --squares cut for this brand.
+
+    THE FOLDER IS NOT ALWAYS THE SLUG. Hiroki's page slug is hiroki-golf but its
+    pictures live in /images/hiroki/, so looking only under the slug found none,
+    the gallery fell below two tiles and the build correctly refused rather than
+    drop the page's photographs. Ask the page where its own images are."""
+    # ...BUT ONLY THIS BRAND'S FOLDER. Falling back to whatever folder the page
+    # mentions most is wrong: every page links four related brands and a feed
+    # block, so Forden's gallery came back as Random Golf Club's photographs,
+    # Gramicci's as Après Golf's and Jones's as Sun Mountain's — under a credit
+    # line naming the wrong brand. A folder qualifies only if its name and the
+    # slug are the same thing spelled two ways (hiroki / hiroki-golf).
+    dirs = [slug]
+    if html:
+        body = re.sub(r'<(section|div)[^>]*class="more".*?</\1>', " ", html, flags=re.S)
+        body = re.sub(r'<section[^>]*data-btk="related".*?</section>', " ", body, flags=re.S)
+        for d in dict.fromkeys(re.findall(r'src="/images/([^/"]+)/', body)):
+            if d == slug or d.startswith(slug) or slug.startswith(d):
+                dirs.append(d)
+    for d in dict.fromkeys(dirs):
+        out = [f"/images/{d}/ig-{n}.jpg" for n in range(1, 7)]
+        got = [s for s in out if (ROOT / s.lstrip("/")).exists()]
+        if got:
+            return got
+    return []
+
+
+def wild_title(html):
+    """"In the Wild" unless the page already uses it for something else.
+
+    Rouqe Golf names a PRODUCT CATEGORY "In the Wild", so titling the gallery
+    that put two identical h2s on the page. Take the first title that is free."""
+    have = {re.sub(r"<[^>]+>", "", h).strip().lower()
+            for h in re.findall(r"<h2[^>]*>(.*?)</h2>", html, re.S)}
+    for t in ("In the Wild", "The Lookbook", "On Course", "The Photographs"):
+        if t.lower() not in have:
+            return t
+    return "The Photographs"
+
+
+def render_wild(srcs, brand, title="In the Wild"):
+    """WALKER'S SECTION, WHICH IS THE ONE THAT WORKS.
+
+    Lenny, looking at Hiroki and Hidden Links: "there's no transition and the
+    formatting sucks" — then, pointing at Walker: "I want all the brands to know
+    pages and the brands revisited pages to follow similar designs."
+
+    Measuring the two explains it exactly. Every section on Walker is separated
+    the same way — a hairline rule, 40px of air, a heading — and its photographs
+    live TOGETHER in one gallery under a heading of their own. The other pages
+    splice lone photographs between sections with no rule, no padding and no
+    heading, so the picture interrupts the page instead of dividing it. That
+    missing rule IS the missing transition.
+
+    So the body bands are gone and this takes their place: one gallery, in the
+    same slot on every page, built like Walker's."""
+    if not srcs:
+        return ""
+    cells = "\n".join(
+        f'    <img src="{s}" alt="{esc(brand)} on course &mdash; lookbook photograph" '
+        f'loading="lazy" />' for s in srcs)
+    n2 = " n2" if len(srcs) == 2 else ""
+    return (f'<section class="products" data-btk="wild">\n'
+            f'  <h2 class="products-hdr">{title}</h2>\n'
+            f'  <div class="ig-grid btk-wild-grid{n2}">\n{cells}\n  </div>\n'
+            f'  <p class="btk-wild-credit">Photography courtesy of {esc(brand)}</p>\n'
+            f'</section>\n\n')
+
+
 def build(slug, apply_=False):
     spec = json.loads((SPECS / f"{slug}.json").read_text(encoding="utf-8"))
     page = ROOT / "drops" / spec["page"]
@@ -741,6 +875,7 @@ def build(slug, apply_=False):
     crumb = header = collection = None
     heroes, story, coda, faq, more = [], [], [], None, None
     writeup_imgs = []
+    wild_template, wild_curated = [], []
     already_merged = False
     for tag, b in blocks:
         if tag.startswith('<div class="breadcrumb"'):
@@ -776,6 +911,18 @@ def build(slug, apply_=False):
             # now live inside this generated section, and dropping it threw them
             # away again — Devereux lost its collar photograph, Birds of Condor
             # lost Frankie Kimpton's quote. Take them back out before it goes.
+            # OUR OWN GALLERY, ON A RE-RUN. It is regenerated, so it is dropped
+            # here — but it holds two different kinds of picture and they must
+            # be treated differently. The ig-N.jpg squares this template cut are
+            # template output and may vanish. Anything else in there was a
+            # CURATED photograph promoted into the gallery on an earlier run
+            # (Hiroki's leather-detail.jpg and jacks-point-1.jpg), and losing
+            # those would be losing the page's own photography.
+            if mark and mark.group(1) == "wild":
+                for s in re.findall(r'<img[^>]+src="([^"]+)"', b):
+                    (wild_template if re.search(r"/ig-\d+\.jpg$", s)
+                     else wild_curated).append(s)
+                continue
             if mark and mark.group(1) in ("story", "take"):
                 writeup_imgs.extend(re.findall(r'<img class="writeup-img"[^>]*>', b))
                 writeup_imgs.extend(
@@ -887,6 +1034,30 @@ def build(slug, apply_=False):
         dropped_imgs = set(re.findall(r'<img[^>]+src="([^"]+)"', legacy_hero.group(0)))
         header = header[:legacy_hero.start()] + header[legacy_hero.end():]
 
+    # DOES THIS PAGE ALREADY HAVE A PHOTO GALLERY OF ITS OWN?
+    # .ig-grid is also what the related-brands block uses, so a bare search for
+    # the class says yes on every page. A native gallery is one that is neither
+    # ours (data-btk="wild") nor the related block (.more).
+    # ...and .ig-grid is not the only way a page builds one. Après, Fyfe, Rouqe
+    # and TwentyFour each hand-rolled a grid class of their own under an "In the
+    # Wild" heading, so a class-only test said no and the template emitted a
+    # SECOND section with the same heading. Detect the heading as well.
+    def _is_gallery(s):
+        if 'data-btk="wild"' in s or 'class="more"' in s:
+            return False
+        # A HEADING IS NOT A GALLERY. Rouqe Golf names a PRODUCT CATEGORY "In
+        # the Wild" — thirteen product cards under it — and a heading-only test
+        # read that as a gallery, so the page got none at all. Photographs, not
+        # products: a section holding product cards is never the gallery.
+        if 'class="product-card"' in s or 'data-btk="collection' in s:
+            return False
+        if "ig-grid" in s:
+            return True
+        return (re.search(r"<h2[^>]*>\s*(In the Wild|On Course|The Craft|The Lookbook)", s)
+                and len(re.findall(r"<img", s)) >= 3)
+    _has_native_wild = any(
+        _is_gallery(s) for s in re.findall(r"<section\b.*?</section>", html, re.S))
+
     parts = [ensure_css(head), crumb, header]
 
     # THE PHOTOGRAPHS. Lenny: "let's always separate each section with an
@@ -937,8 +1108,13 @@ def build(slug, apply_=False):
     _seq = list(joins)
 
     def pic(first=False, kind="category"):
-        """Emit a band at this join only if this join earned one."""
-        if not pics:
+        """Emit a band at this join only if this join earned one.
+
+        ONLY THE MASTHEAD NOW. The body joins used to get a lone photograph each;
+        see render_wild for why that is gone. Keeping the machinery rather than
+        deleting it means the masthead still picks the best frame by the same
+        rules, and the ranking comment below still documents a real decision."""
+        if not pics or kind != "masthead":
             return ""
         for j in _seq:                      # next unconsumed join of this kind
             if j[1] == kind:
@@ -1001,6 +1177,36 @@ def build(slug, apply_=False):
     parts.extend(mark_prose(story, "prose"))            # any other prose sections
     if not SIDEBAR_IN_WRITEUP:
         parts.append('<div class="btk-card">\n' + card_html + "</div>\n\n")
+    # THE RETIRED BODY BANDS. Only the btk-body-N crops this template made are
+    # exempt from the image check — named literally, so a real photograph going
+    # missing still fails. Hiroki proved why that matters: its body bands were
+    # not template crops at all but two curated originals (leather-detail.jpg,
+    # jacks-point-1.jpg), and a looser exemption would have deleted them.
+    dropped_imgs |= {s for s in re.findall(r'<img[^>]+src="([^"]+)"', html)
+                     if re.search(r"/btk-body-\d+\.jpg$", s)}
+    # ...and the curated ones are not dropped, they are PROMOTED: a photograph
+    # the page already chose leads the gallery, with generated squares filling
+    # in behind it.
+    dropped_imgs |= set(wild_template)      # template squares may come and go
+    dropped_imgs |= WILD_DROP               # ...and so may a turned-down frame
+    _own = [s for s in wild_curated if s not in WILD_DROP] + [
+        m.group(1) for b in heroes[1:]
+        for m in [re.search(r'<img[^>]+src="([^"]+)"', b)]
+        if m and not re.search(r"/btk-(hero|body-\d+)\.jpg$", m.group(1))
+        and m.group(1) not in WILD_DROP]
+    # THE GALLERY, in Walker's slot: after the reading, before the browsing.
+    # A page that already has a gallery of its own (Devereux, Manors, Mogshade,
+    # Radry, Read The Green, Takomo, Walker) keeps it — generating a second one
+    # would put two photo grids on the same page, which is the inconsistency
+    # this is meant to remove, not a fix for it.
+    if not _has_native_wild:
+        _g = list(dict.fromkeys(_own + wild_frames(slug, html)))
+        # Three across, so 6 or 3 — never a hanging last tile. TWO is allowed as
+        # its own two-across row: Hiroki has exactly two curated photographs and
+        # no lifestyle harvest, and the alternative was dropping them.
+        _g = (_g[:6] if len(_g) >= 6 else _g[:3] if len(_g) >= 3
+              else _g[:2] if len(_g) == 2 else [])
+        parts.append(render_wild(_g, spec["brand"], wild_title(html)))
     parts.append(pic(kind="precollection"))
     if spec.get("start_here"):
         parts.append(render_start_here(spec, cards))
@@ -1052,8 +1258,12 @@ def build(slug, apply_=False):
         # greens. Takomo lost 362 words and Gramicci 85 before this existed, and
         # both went live until verify-post caught them afterwards. A reorderer
         # must not lose sentences either.
-        ("no prose lost", _words(out) >= _words(html),
-         f"{_words(html)} in, {_words(out)} out"),
+        # Counted with OUR OWN gallery stripped from both sides. Its heading and
+        # credit line are template chrome that legitimately appears or vanishes
+        # as a page gains or loses a generated gallery, and that 8-word swing
+        # read as lost editorial copy. Every real paragraph is still counted.
+        ("no prose lost", _words(_nowild(out)) >= _words(_nowild(html)),
+         f"{_words(_nowild(html))} in, {_words(_nowild(out))} out"),
         ("section tags balance",
          out.count("<section") == out.count("</section>"),
          f"{out.count('<section')}/{out.count('</section>')}"),

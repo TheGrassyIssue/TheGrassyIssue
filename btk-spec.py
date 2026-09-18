@@ -167,8 +167,25 @@ def derive_card(slug, html, B):
             "hashtags": tags}
 
 
+# Pages that carry the Brand to Know architecture under a different filename.
+# The two Brand Revisited-style posts have a sidebar card, a product grid, an
+# FAQ and pull-quotes like any other — they were only ever missed because this
+# file globbed for the brand-to-know- prefix.
+ALIASES = {
+    "jones-sports-co": "brand-revisited-jones-sports-co.html",
+    "walker-golf": "walker-golf-the-par-tec-drop.html",
+}
+
+# A page slug and a brands.json slug are not always the same string. Walker's
+# page is walker-golf-*; its entry in brands.json is "walker-golf-things". Every
+# lookup here — the brand name, the related set, the derived card — went looking
+# for a brand that does not exist and came back empty, which surfaced as the
+# misleading "only 0 related brands with an image and a line".
+BRAND_SLUG = {"walker-golf": "walker-golf-things"}
+
+
 def build(slug, B):
-    page = ROOT / "drops" / f"brand-to-know-{slug}.html"
+    page = ROOT / "drops" / ALIASES.get(slug, f"brand-to-know-{slug}.html")
     if not page.exists():
         return None, "no page"
     h = page.read_text(encoding="utf-8")
@@ -178,11 +195,12 @@ def build(slug, B):
     col = collection(h)
     if not col:
         return None, "could not group products under headings"
-    card = sidebar(h) or derive_card(slug, h, B)
+    bslug = BRAND_SLUG.get(slug, slug)
+    card = sidebar(h) or derive_card(bslug, h, B)
     if not card:
         return None, "no Brand Card, and not enough in brands.json to derive one"
-    name = next((b["name"] for b in B if b["slug"] == slug), slug.replace("-", " ").title())
-    rel = related(slug, B)
+    name = next((b["name"] for b in B if b["slug"] == bslug), slug.replace("-", " ").title())
+    rel = related(bslug, B)
     if len(rel) < 3:
         return None, f"only {len(rel)} related brands with an image and a line"
     return {"slug": slug, "brand": name, "page": page.name,

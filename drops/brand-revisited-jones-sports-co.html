@@ -153,6 +153,194 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+/* THE BUG THAT MADE THESE LOOK BROKEN. The site's base rule is
+       .drop-hero-img{width:100%;aspect-ratio:21/9;border:.5px solid var(--ink)}
+   and it is written for a DIV that WRAPS a picture. The body bands put that
+   class on the IMG element itself, so every one inherited a 21:9 bordered BOX and
+   then letterboxed the photograph inside it with object-fit:contain. That is
+   exactly what Lenny saw: a visible rectangle, the picture too narrow for it,
+   and dead paper down both sides. Undo the container styling first; everything
+   below is only meaningful once that is off. */
+section.drop-hero:not(:first-of-type) img.drop-hero-img{
+  aspect-ratio:auto;border:0;overflow:visible;height:auto}
+
+/* A BREAK, NOT A SLAB. Lenny: "it should just have a smaller break and have
+   better design between sections." So the band is sized to sit in a clear
+   relationship with the 760px text measure rather than bullying it, is centred
+   on the page, and carries its own air above and below so it reads as a
+   transition between two sections instead of an object dropped between them. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;
+  margin:0 auto;display:flex;justify-content:center}
+.drop-hero-img.btk-land{width:100%;max-width:1040px;height:auto;display:block;
+  margin:56px auto 60px}
+.drop-hero-img.btk-port{width:100%;max-width:520px;height:auto;display:block;
+  margin:56px auto 60px}
+/* the portrait exception: floated so copy wraps beside it rather than leaving a
+   column of empty paper down one side */
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden;display:block}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-land,.drop-hero-img.btk-port{max-width:100%;
+    margin:36px auto 40px}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE GALLERY. Walker's .ig-grid lives in that page's own <style>, so pages
+   that never had one have no rule for it — the generated grid would stack one
+   image per row. Restated here, identically, so every page renders it the same. */
+.btk-wild-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.btk-wild-grid.n2{grid-template-columns:repeat(2,1fr)}
+.btk-wild-grid img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;
+  border:.5px solid var(--ink)}
+.btk-wild-credit{font-family:var(--mono);font-size:9px;letter-spacing:.12em;
+  text-transform:uppercase;opacity:.45;margin-top:14px}
+@media(max-width:820px){.btk-wild-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+/* THE SECTION DECK — the other "special sentence".
+   Lenny: "Those sentences pulled out are too small and dont sit right on the
+   page." He was looking at <p class="cat-kicker">, NOT .pull-quote — which is
+   why the 38px treatment above never reached it. The site default sets it 15px
+   with a left rule, so it sat as a small note hard against the left margin
+   underneath a CENTRED heading, which is the "doesn't sit right" part. Here it
+   is a proper deck: large, centred under its heading, no rule. */
+section[data-btk] .cat-kicker,
+section[data-btk] .sec-intro{font-family:var(--serif);font-style:italic;
+  font-size:25px;line-height:1.42;letter-spacing:-.01em;color:var(--ink);
+  opacity:.82;border-left:0;padding:0;max-width:720px;
+  margin:0 auto 44px;text-align:center}
+/* inside the Take the column is left-aligned, so the deck follows it */
+section[data-btk="take"] .cat-kicker,
+section[data-btk="take"] .sec-intro{margin-left:0;text-align:left}
+@media(max-width:820px){
+  section[data-btk] .cat-kicker,
+  section[data-btk] .sec-intro{font-size:20px;margin-bottom:32px}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who founded Jones Sports Co?", "acceptedAnswer": {"@type": "Answer", "text": "George Jones, in Portland, Oregon, in 1971. Jones' own history page describes him as a 40-year-old taxi driver who began sewing bags in his basement and selling them out of the trunk of his cab. Their line on it: 'Who could have known? George Jones, that's who.'"}}, {"@type": "Question", "name": "Did Jones invent the single-strap golf bag?", "acceptedAnswer": {"@type": "Answer", "text": "Jones does not make that claim. Their own site says only that the company has crafted single-strap carry bags since 1971, and that its stand system is patented and 'remains the gold standard.' Chris Carnahan, one of the current owners, told Golf Digest in 2017 that George Jones was 'the innovator behind the stand and the straps that are now ubiquitous in golf' ' that is his characterisation, not a documented first."}}, {"@type": "Question", "name": "What happened to Jones between 1971 and now?", "acceptedAnswer": {"@type": "Answer", "text": "George Jones sold the company in 1990. Sports Illustrated reported in 2020 that the new owners changed what made the bags distinctive in order to compete with larger manufacturers, the strategy failed, and the company declined. The Lemman family and Chris Carnahan acquired it in 2011. Matt Lemman's description of what they bought: 'Just the name, that was all.'"}}, {"@type": "Question", "name": "How did they rebuild the bag with no patterns left?", "acceptedAnswer": {"@type": "Answer", "text": "By finding old ones. Carnahan told Golf Digest there was no inventory and no production facilities, but 'being in Portland, a lot of our family and friends had the old bags, so we were able to gather them and rebuild the Jones bag to the exact specifications but using modern materials.'"}}, {"@type": "Question", "name": "What are Jones bags actually made of?", "acceptedAnswer": {"@type": "Answer", "text": "Not waxed canvas, despite the look. The stand bags use what Jones call F-35 recycled ripstop, rated water resistant. The Graystone line is a 300d recycled ripstop with a wax-effect top coating. Heritage colourways use vegan leather, the Stripeshow and Bomber use leather-look vinyl, and some Players Series colours use a ripstop Jones says is woven from 100' PET single-use bottles. There is no real leather in the current line."}}, {"@type": "Question", "name": "Where are Jones bags made?", "acceptedAnswer": {"@type": "Answer", "text": "Jones is based in Portland, Oregon, and states that customisation and embroidery are done in house there. The company does not state a country of manufacture for the bags themselves on any product page, and the University of Oregon's 2021 profile refers to overseas manufacturing relationships without naming a country."}}, {"@type": "Question", "name": "Why do the Campus Collection bags cost more?", "acceptedAnswer": {"@type": "Answer", "text": "Because they are officially licensed, and the licence carries a markup. A Trouper is $315 in the standard line and $385 in school colours. A Rider is $520 standard and $555 licensed. Eighteen schools are covered."}}, {"@type": "Question", "name": "Do tour players use Jones bags?", "acceptedAnswer": {"@type": "Answer", "text": "Jones names one player on its own site: James Nicholas, a brand ambassador on the Korn Ferry Tour who Jones say won in Bogot', Colombia in February 2026. Beyond that they make no tour claim. Carnahan told Golf Digest the company does not pay players: 'They buy it because they want it, not because we're paying them to carry it.'"}}]}</script>
 </head>
@@ -192,8 +380,13 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 <div class="drop-hero"><div class="drop-hero-img"><img src="/images/jones-sports-co/hero.jpg" alt="Jones Sports Co single strap carry bag, made in Portland Oregon since 1971" /></div></div>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
+    <p>Jones has been making the same bag since 1971 and the restraint is the whole product. No legs, no cart strap, no panelling &mdash; a 2.9 lb carry bag with a three-way divider and an unstructured spine, which is why an Original off the shelf today still looks like the photographs from 1975. The 2011 owners found no patterns, no inventory and no factory, and reverse-engineered the shape from bags borrowed off old customers rather than redrawing it.</p>
+    <p>The Original at $125 in Burnt Clay is the proof piece. It is the cheapest bag they make and it is the same bag as the $215 Evergreen underneath &mdash; the price difference is material, not construction, which is a rare thing to be able to say about a range.</p>
+    <p>This is for the walker who wants the bag to disappear and does not need it to do anything else. The line runs $45 to $520 across 32 pieces, so a headcover or a ball pouch is an easy way to test the making before committing to a bag.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Jones makes the best carry bag in golf by leaving things off it &mdash; no legs, no cart strap, no panelling to break the surface &mdash; and has been doing that from Portland, Oregon since 1971. The founding story is better than most because it is small. George Jones was a forty-year-old taxi driver who sewed the first bags in his basement and sold them out of the trunk of his cab. Jones still tells it that way on their own history page, and finishes the thought with a line that is hard to improve on: &ldquo;Who could have known? George Jones, that&rsquo;s who.&rdquo;</p>
     <p>What their site skips is the middle. George sold the company in 1990, and the new owners tried to make a Jones bag compete with the big manufacturers by making it less like a Jones bag. By the early 2000s the brand was effectively gone. The Lemman family and Chris Carnahan bought it in 2011, and what they bought was almost nothing: no patterns, no inventory, no factory. Matt Lemman, asked later what came with the deal: &ldquo;Just the name, that was all.&rdquo;</p>
     <p>They reverse-engineered it from the bags that were still around Portland. Carnahan has said they gathered old ones from family and friends, and there were plenty to gather, because the bags last. They rebuilt to the original specifications in modern materials, which is why the Original still looks like the photographs from 1975 and weighs 2.9 lbs.</p>
@@ -206,7 +399,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-detail"><span class="l">Brands</span><span>1</span></div>
       <div class="sidebar-detail"><span class="l">Categories</span><span>9</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$45 &ndash; $520</span></div>
-      <a href="/"  class="sidebar-cta">&larr; Back to Feed</a>
+      <a href="/" target="_blank" rel="noopener" class="sidebar-cta">&larr; Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -216,13 +409,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
+</section>
 
-<section class="products">
-<h2 id="original">The Original</h2>
-<p class="cat-kicker"><strong>The 1971 Bag, Still Made</strong>The Original is the shape everything else came from &mdash; 2.9 lbs, three-way divider, unstructured spine. Jones claim only to have been making them since 1971, which is a narrower and more defensible thing to say. Prices run $125 to $215 on material alone.</p>
-<div class="products-grid">
-    <div class="product-card" data-frames="5">
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 32 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Original</h2>
+    <p class="cat-kicker"><strong>The 1971 Bag, Still Made</strong>The Original is the shape everything else came from &mdash; 2.9 lbs, three-way divider, unstructured spine. Jones claim only to have been making them since 1971, which is a narrower and more defensible thing to say. Prices run $125 to $215 on material alone.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-evergreen-0.jpg" alt="Jones Sports Co Original Jones Bag - Evergreen" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-evergreen-1.jpg" alt="Jones Sports Co Original Jones Bag - Evergreen" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-evergreen-2.jpg" alt="Jones Sports Co Original Jones Bag - Evergreen" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-evergreen-3.jpg" alt="Jones Sports Co Original Jones Bag - Evergreen" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-evergreen-4.jpg" alt="Jones Sports Co Original Jones Bag - Evergreen" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -231,7 +426,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/original-jones-bag-dark-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-2" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-espresso-0.jpg" alt="Jones Sports Co Original Jones Bag - Espresso" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-espresso-1.jpg" alt="Jones Sports Co Original Jones Bag - Espresso" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-espresso-2.jpg" alt="Jones Sports Co Original Jones Bag - Espresso" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-espresso-3.jpg" alt="Jones Sports Co Original Jones Bag - Espresso" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-espresso-4.jpg" alt="Jones Sports Co Original Jones Bag - Espresso" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -240,7 +435,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/original-jones-bag-espresso" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-3" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-0.jpg" alt="Jones Sports Co Original Jones Bag - Burnt Clay" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-1.jpg" alt="Jones Sports Co Original Jones Bag - Burnt Clay" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-2.jpg" alt="Jones Sports Co Original Jones Bag - Burnt Clay" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-3.jpg" alt="Jones Sports Co Original Jones Bag - Burnt Clay" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-burnt-clay-4.jpg" alt="Jones Sports Co Original Jones Bag - Burnt Clay" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -249,7 +444,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/original-jones-bag-burnt-clay" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-4" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-navy-red-white-0.jpg" alt="Jones Sports Co Original Jones Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-navy-red-white-1.jpg" alt="Jones Sports Co Original Jones Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-navy-red-white-2.jpg" alt="Jones Sports Co Original Jones Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-navy-red-white-3.jpg" alt="Jones Sports Co Original Jones Bag - Navy/Red/White" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -258,7 +453,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/original-jones-bag-navy-red-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-5" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-moss-0.jpg" alt="Jones Sports Co Original Jones Bag - Moss" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-moss-1.jpg" alt="Jones Sports Co Original Jones Bag - Moss" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-moss-2.jpg" alt="Jones Sports Co Original Jones Bag - Moss" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-moss-3.jpg" alt="Jones Sports Co Original Jones Bag - Moss" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/original-jones-bag-moss-4.jpg" alt="Jones Sports Co Original Jones Bag - Moss" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -267,11 +462,19 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/original-jones-bag-moss" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
+    <div class="pull-quote">
+  <div class="pull-quote-inner">&ldquo;We didn&rsquo;t want the bags to be a billboard. The logo is small and the quality of the product is what speaks.&rdquo;<span class="pull-quote-attr">&mdash; Chris Carnahan, Jones Sports Co partner and creative director</span></div>
 </div>
-<h2 id="stand">The Stand Bags</h2>
-<p class="cat-kicker"><strong>Where the Patent Lives</strong>Jones call their stand system patented and say it &ldquo;remains the gold standard.&rdquo; All of these are built in F-35 recycled ripstop and rated water resistant, from the four-pound Short Course, sized for ten clubs, up to the Utility X and its insulated cooler pocket.</p>
-<div class="products-grid">
-    <div class="product-card" data-frames="5">
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Stand Bags</h2>
+    <p class="cat-kicker"><strong>Where the Patent Lives</strong>Jones call their stand system patented and say it &ldquo;remains the gold standard.&rdquo; All of these are built in F-35 recycled ripstop and rated water resistant, from the four-pound Short Course, sized for ten clubs, up to the Utility X and its insulated cooler pocket.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-6" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-pageant-blue-0.jpg" alt="Jones Sports Co Utility X - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-pageant-blue-1.jpg" alt="Jones Sports Co Utility X - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-pageant-blue-2.jpg" alt="Jones Sports Co Utility X - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-pageant-blue-3.jpg" alt="Jones Sports Co Utility X - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-pageant-blue-4.jpg" alt="Jones Sports Co Utility X - Pageant Blue" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -280,7 +483,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/utility-x-pageant-blue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-7" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-graystone-0.jpg" alt="Jones Sports Co Utility X - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-graystone-1.jpg" alt="Jones Sports Co Utility X - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-graystone-2.jpg" alt="Jones Sports Co Utility X - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-graystone-3.jpg" alt="Jones Sports Co Utility X - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/utility-x-graystone-4.jpg" alt="Jones Sports Co Utility X - Graystone" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -289,7 +492,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/utility-x-graystone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-8" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/trouper-evergreen-kodiak-0.jpg" alt="Jones Sports Co Trouper - Evergreen/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-evergreen-kodiak-1.jpg" alt="Jones Sports Co Trouper - Evergreen/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-evergreen-kodiak-2.jpg" alt="Jones Sports Co Trouper - Evergreen/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-evergreen-kodiak-3.jpg" alt="Jones Sports Co Trouper - Evergreen/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-evergreen-kodiak-4.jpg" alt="Jones Sports Co Trouper - Evergreen/Kodiak" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -298,7 +501,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/trouper-4-0-evergreen-kodiak" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-9" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/trouper-olive-gray-0.jpg" alt="Jones Sports Co Trouper - Olive Gray" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-olive-gray-1.jpg" alt="Jones Sports Co Trouper - Olive Gray" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-olive-gray-2.jpg" alt="Jones Sports Co Trouper - Olive Gray" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-olive-gray-3.jpg" alt="Jones Sports Co Trouper - Olive Gray" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/trouper-olive-gray-4.jpg" alt="Jones Sports Co Trouper - Olive Gray" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -307,7 +510,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/trouper-4-0-olive-gray" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-10" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-high-desert-0.jpg" alt="Jones Sports Co Rover Stand Bag - High Desert" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-high-desert-1.jpg" alt="Jones Sports Co Rover Stand Bag - High Desert" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-high-desert-2.jpg" alt="Jones Sports Co Rover Stand Bag - High Desert" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-high-desert-3.jpg" alt="Jones Sports Co Rover Stand Bag - High Desert" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-high-desert-4.jpg" alt="Jones Sports Co Rover Stand Bag - High Desert" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -316,7 +519,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/rover-stand-bag-high-desert" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-11" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-graystone-0.jpg" alt="Jones Sports Co Rover Stand Bag - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-graystone-1.jpg" alt="Jones Sports Co Rover Stand Bag - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-graystone-2.jpg" alt="Jones Sports Co Rover Stand Bag - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-graystone-3.jpg" alt="Jones Sports Co Rover Stand Bag - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rover-stand-bag-graystone-4.jpg" alt="Jones Sports Co Rover Stand Bag - Graystone" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -325,7 +528,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/rover-stand-bag-graystone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-12" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/short-course-bag-navy-0.jpg" alt="Jones Sports Co Short Course Bag - Navy" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/short-course-bag-navy-1.jpg" alt="Jones Sports Co Short Course Bag - Navy" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/short-course-bag-navy-2.jpg" alt="Jones Sports Co Short Course Bag - Navy" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/short-course-bag-navy-3.jpg" alt="Jones Sports Co Short Course Bag - Navy" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/short-course-bag-navy-4.jpg" alt="Jones Sports Co Short Course Bag - Navy" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -334,7 +537,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/short-course-bag-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-13" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/jr-trouper-dark-green-0.jpg" alt="Jones Sports Co Jr. Trouper - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jr-trouper-dark-green-1.jpg" alt="Jones Sports Co Jr. Trouper - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jr-trouper-dark-green-2.jpg" alt="Jones Sports Co Jr. Trouper - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jr-trouper-dark-green-3.jpg" alt="Jones Sports Co Jr. Trouper - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jr-trouper-dark-green-4.jpg" alt="Jones Sports Co Jr. Trouper - Dark Green" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -343,15 +546,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/jr-trouper-dark-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-</div>
+    </div>
+  </div>
+</section>
 
-<div class="pull-quote">
-  <div class="pull-quote-inner">&ldquo;We didn&rsquo;t want the bags to be a billboard. The logo is small and the quality of the product is what speaks.&rdquo;<span class="pull-quote-attr">&mdash; Chris Carnahan, Jones Sports Co partner and creative director</span></div>
-</div>
-<h2 id="players">Players Series and The Rider</h2>
-<p class="cat-kicker"><strong>Structured Spine, and the One You Ride With</strong>The Players Series is the Original with a structured spine and a two-way divider instead of three, and Jones say the Olive and Sonoma ripstop is woven from 100&percnt; PET single-use bottles. The Rider is the only cart bag they make.</p>
-<div class="products-grid">
-    <div class="product-card" data-frames="5">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Players Series and The Rider</h2>
+    <p class="cat-kicker"><strong>Structured Spine, and the One You Ride With</strong>The Players Series is the Original with a structured spine and a two-way divider instead of three, and Jones say the Olive and Sonoma ripstop is woven from 100&percnt; PET single-use bottles. The Rider is the only cart bag they make.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-14" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/players-series-ecru-0.jpg" alt="Jones Sports Co Players Series - Ecru" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-ecru-1.jpg" alt="Jones Sports Co Players Series - Ecru" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-ecru-2.jpg" alt="Jones Sports Co Players Series - Ecru" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-ecru-3.jpg" alt="Jones Sports Co Players Series - Ecru" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-ecru-4.jpg" alt="Jones Sports Co Players Series - Ecru" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -360,7 +564,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/players-series-ecru" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-15" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/players-series-deep-green-kodiak-0.jpg" alt="Jones Sports Co Players Series - Deep Green/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-deep-green-kodiak-1.jpg" alt="Jones Sports Co Players Series - Deep Green/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-deep-green-kodiak-2.jpg" alt="Jones Sports Co Players Series - Deep Green/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-deep-green-kodiak-3.jpg" alt="Jones Sports Co Players Series - Deep Green/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/players-series-deep-green-kodiak-4.jpg" alt="Jones Sports Co Players Series - Deep Green/Kodiak" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -369,7 +573,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/players-series-deep-green-kodiak" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-16" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-sienna-0.jpg" alt="Jones Sports Co Rider Bag - Sienna" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-sienna-1.jpg" alt="Jones Sports Co Rider Bag - Sienna" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-sienna-2.jpg" alt="Jones Sports Co Rider Bag - Sienna" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-sienna-3.jpg" alt="Jones Sports Co Rider Bag - Sienna" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-sienna-4.jpg" alt="Jones Sports Co Rider Bag - Sienna" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -378,7 +582,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/rider-bag-sienna" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-17" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-navy-red-white-0.jpg" alt="Jones Sports Co Rider Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-navy-red-white-1.jpg" alt="Jones Sports Co Rider Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-navy-red-white-2.jpg" alt="Jones Sports Co Rider Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-navy-red-white-3.jpg" alt="Jones Sports Co Rider Bag - Navy/Red/White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/rider-bag-navy-red-white-4.jpg" alt="Jones Sports Co Rider Bag - Navy/Red/White" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -387,11 +591,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/rider-bag-navy-red-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-</div>
-<h2 id="collabs">The Collaborations</h2>
-<p class="cat-kicker"><strong>Shoes, Slides and a Japanese Fiftieth</strong>Jones work with more partners than most brands their size. The PAYNTR shoe landed in May 2026 and put the name on footwear for the first time, and the BEAMS capsule marks the Japanese retailer&rsquo;s fiftieth in a bronze canvas made for it.</p>
-<div class="products-grid">
-    <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Collaborations</h2>
+    <p class="cat-kicker"><strong>Shoes, Slides and a Japanese Fiftieth</strong>Jones work with more partners than most brands their size. The PAYNTR shoe landed in May 2026 and put the name on footwear for the first time, and the BEAMS capsule marks the Japanese retailer&rsquo;s fiftieth in a bronze canvas made for it.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-18" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-white-field-0.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - White/Field Khaki" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-white-field-1.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - White/Field Khaki" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-white-field-2.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - White/Field Khaki" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-white-field-3.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - White/Field Khaki" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-white-field-4.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - White/Field Khaki" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -400,7 +609,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/jones-sports-co-rs-by-payntr-golf-white-black-tan" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-19" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-gray-olive-0.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - Gray/Olive" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-gray-olive-1.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - Gray/Olive" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-gray-olive-2.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - Gray/Olive" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-gray-olive-3.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - Gray/Olive" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-sports-co-rs-by-payntr-golf-gray-olive-4.jpg" alt="Jones Sports Co Jones Sports Co. RS by Payntr Golf - Gray/Olive" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -409,7 +618,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/jones-sports-co-rs-by-payntr-golf-gray-black-olive" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-20" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/beams-passenger-tote-bronze-0.jpg" alt="Jones Sports Co Beams Passenger Tote - Bronze" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/beams-passenger-tote-bronze-1.jpg" alt="Jones Sports Co Beams Passenger Tote - Bronze" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/beams-passenger-tote-bronze-2.jpg" alt="Jones Sports Co Beams Passenger Tote - Bronze" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -418,7 +627,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/passenger-tote-beams-brown" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-21" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/beams-dopp-kit-bronze-0.jpg" alt="Jones Sports Co Beams Dopp Kit - Bronze" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/beams-dopp-kit-bronze-1.jpg" alt="Jones Sports Co Beams Dopp Kit - Bronze" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/beams-dopp-kit-bronze-2.jpg" alt="Jones Sports Co Beams Dopp Kit - Bronze" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -427,7 +636,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/dopp-kit-beams-brown" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-22" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/clockwork-hoodie-steel-blue-0.jpg" alt="Jones Sports Co Clockwork Hoodie - Steel Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/clockwork-hoodie-steel-blue-1.jpg" alt="Jones Sports Co Clockwork Hoodie - Steel Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/clockwork-hoodie-steel-blue-2.jpg" alt="Jones Sports Co Clockwork Hoodie - Steel Blue" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -436,7 +645,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/clockwork-hoodie-steel-blue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-23" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/jones-x-lusso-cloud-scenario-slide-rocket-swir-0.jpg" alt="Jones Sports Co Jones X Lusso Cloud Scenario Slide - Rocket Swirl" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-x-lusso-cloud-scenario-slide-rocket-swir-1.jpg" alt="Jones Sports Co Jones X Lusso Cloud Scenario Slide - Rocket Swirl" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-x-lusso-cloud-scenario-slide-rocket-swir-2.jpg" alt="Jones Sports Co Jones X Lusso Cloud Scenario Slide - Rocket Swirl" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-x-lusso-cloud-scenario-slide-rocket-swir-3.jpg" alt="Jones Sports Co Jones X Lusso Cloud Scenario Slide - Rocket Swirl" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/jones-x-lusso-cloud-scenario-slide-rocket-swir-4.jpg" alt="Jones Sports Co Jones X Lusso Cloud Scenario Slide - Rocket Swirl" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -445,11 +654,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/jones-x-lusso-cloud-scenario-slide-rocket-swirl" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-</div>
-<h2 id="campus">The Campus Collection</h2>
-<p class="cat-kicker"><strong>Eighteen Officially Licensed Schools</strong>Eighteen schools carry an official Jones licence, from Arizona to Wake Forest, and the licence carries a markup. A Trouper is $315 in the standard line and $385 in school colours; a Rider goes from $520 to $555. Know that before you shop.</p>
-<div class="products-grid">
-    <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Campus Collection</h2>
+    <p class="cat-kicker"><strong>Eighteen Officially Licensed Schools</strong>Eighteen schools carry an official Jones licence, from Arizona to Wake Forest, and the licence carries a markup. A Trouper is $315 in the standard line and $385 in school colours; a Rider goes from $520 to $555. Know that before you shop.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-24" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/michigan-st-rover-stand-dark-green-0.jpg" alt="Jones Sports Co Michigan St. Rover Stand - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/michigan-st-rover-stand-dark-green-1.jpg" alt="Jones Sports Co Michigan St. Rover Stand - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/michigan-st-rover-stand-dark-green-2.jpg" alt="Jones Sports Co Michigan St. Rover Stand - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/michigan-st-rover-stand-dark-green-3.jpg" alt="Jones Sports Co Michigan St. Rover Stand - Dark Green" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/michigan-st-rover-stand-dark-green-4.jpg" alt="Jones Sports Co Michigan St. Rover Stand - Dark Green" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -458,7 +672,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/michigan-st-rover-stand-dark-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-25" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/georgia-original-jones-stripeshow-white-0.jpg" alt="Jones Sports Co Georgia Original Jones Stripeshow - White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/georgia-original-jones-stripeshow-white-1.jpg" alt="Jones Sports Co Georgia Original Jones Stripeshow - White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/georgia-original-jones-stripeshow-white-2.jpg" alt="Jones Sports Co Georgia Original Jones Stripeshow - White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/georgia-original-jones-stripeshow-white-3.jpg" alt="Jones Sports Co Georgia Original Jones Stripeshow - White" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/georgia-original-jones-stripeshow-white-4.jpg" alt="Jones Sports Co Georgia Original Jones Stripeshow - White" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -467,7 +681,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/georgia-original-jones-stripeshow-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-26" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/missouri-trouper-onyx-kodiak-0.jpg" alt="Jones Sports Co Missouri Trouper - Onyx/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/missouri-trouper-onyx-kodiak-1.jpg" alt="Jones Sports Co Missouri Trouper - Onyx/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/missouri-trouper-onyx-kodiak-2.jpg" alt="Jones Sports Co Missouri Trouper - Onyx/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/missouri-trouper-onyx-kodiak-3.jpg" alt="Jones Sports Co Missouri Trouper - Onyx/Kodiak" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/missouri-trouper-onyx-kodiak-4.jpg" alt="Jones Sports Co Missouri Trouper - Onyx/Kodiak" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -476,11 +690,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/missouri-trouper-onyx-kodiak" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-</div>
-<h2 id="rest">Everything That Isn't a Bag</h2>
-<p class="cat-kicker"><strong>Headcovers, Packs and a 1951 Outerwear Label</strong>The Circa &rsquo;71 headcovers take their name from the founding year. Forrester&rsquo;s looks like a collaboration and is nothing of the kind &mdash; Jones own the heritage outerwear label and revived it, and their own copy dates it to 1951.</p>
-<div class="products-grid">
-    <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Everything That Isn't a Bag</h2>
+    <p class="cat-kicker"><strong>Headcovers, Packs and a 1951 Outerwear Label</strong>The Circa &rsquo;71 headcovers take their name from the founding year. Forrester&rsquo;s looks like a collaboration and is nothing of the kind &mdash; Jones own the heritage outerwear label and revived it, and their own copy dates it to 1951.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-27" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-w-sock-black-0.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover w/ Sock - Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-w-sock-black-1.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover w/ Sock - Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-w-sock-black-2.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover w/ Sock - Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-w-sock-black-3.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover w/ Sock - Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-w-sock-black-4.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover w/ Sock - Black" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -489,7 +708,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/circa-71-headcover-black-w-sock" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-28" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-orange-0.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover - Orange" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-orange-1.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover - Orange" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/circa-71-headcover-orange-2.jpg" alt="Jones Sports Co Circa &#x27;71 Headcover - Orange" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -498,7 +717,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/circa-71-headcover-orange" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-29" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/a2-backpack-graystone-0.jpg" alt="Jones Sports Co A2 Backpack - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/a2-backpack-graystone-1.jpg" alt="Jones Sports Co A2 Backpack - Graystone" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/a2-backpack-graystone-2.jpg" alt="Jones Sports Co A2 Backpack - Graystone" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -507,7 +726,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/a2-backpack-graystone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-30" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/out-of-office-backpack-wheat-black-0.jpg" alt="Jones Sports Co Out of Office Backpack - Wheat/Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/out-of-office-backpack-wheat-black-1.jpg" alt="Jones Sports Co Out of Office Backpack - Wheat/Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/out-of-office-backpack-wheat-black-2.jpg" alt="Jones Sports Co Out of Office Backpack - Wheat/Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/out-of-office-backpack-wheat-black-3.jpg" alt="Jones Sports Co Out of Office Backpack - Wheat/Black" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/out-of-office-backpack-wheat-black-4.jpg" alt="Jones Sports Co Out of Office Backpack - Wheat/Black" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -516,7 +735,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/out-of-office-backpack-wheat-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-31" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/range-hoodie-pageant-blue-0.jpg" alt="Jones Sports Co Range Hoodie - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/range-hoodie-pageant-blue-1.jpg" alt="Jones Sports Co Range Hoodie - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/range-hoodie-pageant-blue-2.jpg" alt="Jones Sports Co Range Hoodie - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/range-hoodie-pageant-blue-3.jpg" alt="Jones Sports Co Range Hoodie - Pageant Blue" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/range-hoodie-pageant-blue-4.jpg" alt="Jones Sports Co Range Hoodie - Pageant Blue" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -525,7 +744,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/range-hoodie-pageant-blue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="5">
+<div class="product-card" id="p-32" data-frames="5">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/jones-sports-co/arizona-rangefinder-pouch-alpine-0.jpg" alt="Jones Sports Co Arizona Rangefinder Pouch - Alpine" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/arizona-rangefinder-pouch-alpine-1.jpg" alt="Jones Sports Co Arizona Rangefinder Pouch - Alpine" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/arizona-rangefinder-pouch-alpine-2.jpg" alt="Jones Sports Co Arizona Rangefinder Pouch - Alpine" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/arizona-rangefinder-pouch-alpine-3.jpg" alt="Jones Sports Co Arizona Rangefinder Pouch - Alpine" loading="lazy" /></div><div class="pg-frame"><img src="/images/jones-sports-co/arizona-rangefinder-pouch-alpine-4.jpg" alt="Jones Sports Co Arizona Rangefinder Pouch - Alpine" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Jones Sports Co</div>
@@ -534,18 +753,62 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.jonessportsco.com/products/arizona-rangefinder-pouch-alpine" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-</div>
+    </div>
+  </div>
+</section>
 
-  <h2 class="products-hdr sec">Questions</h2>
+<section class="products" data-btk="faq">
+<h2 class="products-hdr sec">Questions</h2>
   <div class="faq">
-    <details class="faq-q"><summary>Who founded Jones Sports Co?</summary><p>George Jones, in Portland, Oregon, in 1971. Jones&rsquo; own history page describes him as a 40-year-old taxi driver who began sewing bags in his basement and selling them out of the trunk of his cab. Their line on it: &ldquo;Who could have known? George Jones, that&rsquo;s who.&rdquo;</p></details>
-    <details class="faq-q"><summary>Did Jones invent the single-strap golf bag?</summary><p>Jones does not make that claim. Their own site says only that the company has crafted single-strap carry bags since 1971, and that its stand system is patented and &ldquo;remains the gold standard.&rdquo; Chris Carnahan, one of the current owners, told Golf Digest in 2017 that George Jones was &ldquo;the innovator behind the stand and the straps that are now ubiquitous in golf&rdquo; &mdash; that is his characterisation, not a documented first.</p></details>
-    <details class="faq-q"><summary>What happened to Jones between 1971 and now?</summary><p>George Jones sold the company in 1990. Sports Illustrated reported in 2020 that the new owners changed what made the bags distinctive in order to compete with larger manufacturers, the strategy failed, and the company declined. The Lemman family and Chris Carnahan acquired it in 2011. Matt Lemman&rsquo;s description of what they bought: &ldquo;Just the name, that was all.&rdquo;</p></details>
-    <details class="faq-q"><summary>How did they rebuild the bag with no patterns left?</summary><p>By finding old ones. Carnahan told Golf Digest there was no inventory and no production facilities, but &ldquo;being in Portland, a lot of our family and friends had the old bags, so we were able to gather them and rebuild the Jones bag to the exact specifications but using modern materials.&rdquo;</p></details>
-    <details class="faq-q"><summary>What are Jones bags actually made of?</summary><p>Not waxed canvas, despite the look. The stand bags use what Jones call F-35 recycled ripstop, rated water resistant. The Graystone line is a 300d recycled ripstop with a wax-effect top coating. Heritage colourways use vegan leather, the Stripeshow and Bomber use leather-look vinyl, and some Players Series colours use a ripstop Jones says is woven from 100&percnt; PET single-use bottles. There is no real leather in the current line.</p></details>
-    <details class="faq-q"><summary>Where are Jones bags made?</summary><p>Jones is based in Portland, Oregon, and states that customisation and embroidery are done in house there. The company does not state a country of manufacture for the bags themselves on any product page, and the University of Oregon&rsquo;s 2021 profile refers to overseas manufacturing relationships without naming a country.</p></details>
-    <details class="faq-q"><summary>Why do the Campus Collection bags cost more?</summary><p>Because they are officially licensed, and the licence carries a markup. A Trouper is $315 in the standard line and $385 in school colours. A Rider is $520 standard and $555 licensed. Eighteen schools are covered.</p></details>
-    <details class="faq-q"><summary>Do tour players use Jones bags?</summary><p>Jones names one player on its own site: James Nicholas, a brand ambassador on the Korn Ferry Tour who Jones say won in Bogot&aacute;, Colombia in February 2026. Beyond that they make no tour claim. Carnahan told Golf Digest the company does not pay players: &ldquo;They buy it because they want it, not because we&rsquo;re paying them to carry it.&rdquo;</p></details>
+    <details open class="faq-q"><summary>Who founded Jones Sports Co?</summary><p>George Jones, in Portland, Oregon, in 1971. Jones&rsquo; own history page describes him as a 40-year-old taxi driver who began sewing bags in his basement and selling them out of the trunk of his cab. Their line on it: &ldquo;Who could have known? George Jones, that&rsquo;s who.&rdquo;</p></details>
+    <details open class="faq-q"><summary>Did Jones invent the single-strap golf bag?</summary><p>Jones does not make that claim. Their own site says only that the company has crafted single-strap carry bags since 1971, and that its stand system is patented and &ldquo;remains the gold standard.&rdquo; Chris Carnahan, one of the current owners, told Golf Digest in 2017 that George Jones was &ldquo;the innovator behind the stand and the straps that are now ubiquitous in golf&rdquo; &mdash; that is his characterisation, not a documented first.</p></details>
+    <details open class="faq-q"><summary>What happened to Jones between 1971 and now?</summary><p>George Jones sold the company in 1990. Sports Illustrated reported in 2020 that the new owners changed what made the bags distinctive in order to compete with larger manufacturers, the strategy failed, and the company declined. The Lemman family and Chris Carnahan acquired it in 2011. Matt Lemman&rsquo;s description of what they bought: &ldquo;Just the name, that was all.&rdquo;</p></details>
+    <details open class="faq-q"><summary>How did they rebuild the bag with no patterns left?</summary><p>By finding old ones. Carnahan told Golf Digest there was no inventory and no production facilities, but &ldquo;being in Portland, a lot of our family and friends had the old bags, so we were able to gather them and rebuild the Jones bag to the exact specifications but using modern materials.&rdquo;</p></details>
+    <details open class="faq-q"><summary>What are Jones bags actually made of?</summary><p>Not waxed canvas, despite the look. The stand bags use what Jones call F-35 recycled ripstop, rated water resistant. The Graystone line is a 300d recycled ripstop with a wax-effect top coating. Heritage colourways use vegan leather, the Stripeshow and Bomber use leather-look vinyl, and some Players Series colours use a ripstop Jones says is woven from 100&percnt; PET single-use bottles. There is no real leather in the current line.</p></details>
+    <details open class="faq-q"><summary>Where are Jones bags made?</summary><p>Jones is based in Portland, Oregon, and states that customisation and embroidery are done in house there. The company does not state a country of manufacture for the bags themselves on any product page, and the University of Oregon&rsquo;s 2021 profile refers to overseas manufacturing relationships without naming a country.</p></details>
+    <details open class="faq-q"><summary>Why do the Campus Collection bags cost more?</summary><p>Because they are officially licensed, and the licence carries a markup. A Trouper is $315 in the standard line and $385 in school colours. A Rider is $520 standard and $555 licensed. Eighteen schools are covered.</p></details>
+    <details open class="faq-q"><summary>Do tour players use Jones bags?</summary><p>Jones names one player on its own site: James Nicholas, a brand ambassador on the Korn Ferry Tour who Jones say won in Bogot&aacute;, Colombia in February 2026. Beyond that they make no tour claim. Carnahan told Golf Digest the company does not pay players: &ldquo;They buy it because they want it, not because we&rsquo;re paying them to carry it.&rdquo;</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Jones Sports Co</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/mackenzie">
+      <div class="more-card-img"><img src="/images/mackenzie/bandon-new-waxed-canvas-golf-bag-bandon-trails-1.png" alt="MacKenzie Golf Bags" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">MacKenzie Golf Bags</div>
+        <div class="more-card-tag">Oregon, USA &middot; bags</div>
+        <div class="more-card-desc">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf, Miura and Bandon Dunes.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/sentinel-golf">
+      <div class="more-card-img"><img src="/images/sentinel-golf/basecamp-walker-black-dyneema-0.jpg" alt="Sentinel Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Sentinel Golf</div>
+        <div class="more-card-tag">Minneapolis, MN &middot; bags</div>
+        <div class="more-card-desc">Minneapolis walker bags from $810 — Dyneema, Danish textiles, and no interest in compromise.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/sun-mountain">
+      <div class="more-card-img"><img src="/images/sun-mountain/eclipse-e-2-5-stand-bag-0.jpg" alt="Sun Mountain" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Sun Mountain</div>
+        <div class="more-card-tag">Missoula, MT &middot; bags/accessories</div>
+        <div class="more-card-desc">Invented the modern stand bag in 1986 and the folding push cart in 1999; still assembles its bags in Montana.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/carhartt-wip">
+      <div class="more-card-img"><img src="/images/feed/8ff0b520-I023807_00F_XX-ST-01_ec7ea475-afc0-4120-a447-6c952bcf0391.jp.jpg" alt="Carhartt WIP" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Carhartt WIP</div>
+        <div class="more-card-tag">Weil am Rhein, Germany &middot; apparel/headwear</div>
+        <div class="more-card-desc">Workwear-derived apparel, hats and bags, made in Europe under licence from Carhartt since 1994.</div>
+      </div>
+    </a>
   </div>
 </section>
 
