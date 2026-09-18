@@ -146,27 +146,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -231,30 +307,21 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/criquet/btk-hero.jpg" alt="Criquet Shirts &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/criquet/btk-hero.jpg" alt="Criquet Shirts &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Criquet has held one idea for fifteen years and never blinked: the shirt should pass as a shirt. Billy Nachman and Hobson Brown rebuilt a vintage four-button placket from Nachman&rsquo;s grandfather&rsquo;s closet, put it on organic cotton before that was a talking point, and added removable collar stays so the points never bacon by the ninth.</p>
+    <p>The Players Shirt at $98 is the whole thesis in one garment &mdash; it reads as golf on a tee box and as nothing in particular on South Congress three hours later.</p>
+    <p>It is for the muni player who goes somewhere afterwards, and for anyone who would rather not be a walking logo. The collabs &mdash; Austin FC, YETI, Jones &mdash; are the fun; the core is the reason. A $45 bottle gets you in the door, and the range tops out at $150.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Criquet makes golf shirts that never announce themselves as golf shirts, which is how the same four-button placket ends up on a Butler tee box and at a South Congress bar three hours later. Billy Nachman and Hobson Brown have known each other since kindergarten in Manhattan, where they grew up in prep-school polos and coat-and-tie dress codes, and they started the company in Austin in 2010. It begins in a closet, with the vintage golf shirt Nachman&rsquo;s grandfather left behind: four buttons, a long placket, a collar that had opinions. They rebuilt it with a flap chest pocket, removable collar stays so the collar never bacons at the tip, and an organic-cotton pitch that was ahead of its time, and called it the Players Shirt. It runs in 100 per cent Peruvian pima today and still costs ninety-eight dollars.</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-1.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>The name comes from the sound of crickets, by the brand&rsquo;s own telling: the noise of being comfortably off-course. Criquet has never fully committed to being a golf brand. One half of the catalogue is Range Polos in brrr&deg;, a mineral-infused yarn that moves heat off the skin, and Players Shirts you could tee off in at Butler. The other half runs pearl snaps, fine-wale corduroy in burnt orange and a loop-terry shirt called Midnight Toker, which belongs on a pool deck more than a first tee. The two halves hang in the same closet.</p>
     <p>Criquet is an Austin company in a way that shows up in the product. The longtime clubhouse-headquarters on South First had a putting green, an outdoor bar and a Bill Murray mural. The collaboration list reads like a city directory: Zilker Belts from across the river, YETI from fifteen minutes up the road, the home team Austin FC under an official MLS license, and a Willie Nelson &ldquo;Willie Forever&rdquo; collection that has since been delisted. Discmania, the Finnish house that supplies most of disc golf, printed the brand&rsquo;s mascot Carl onto a three-disc set. The store currently carries a belt strap in Save Muny colors and a tee with a Lions badge, which is more Lions Municipal product than some golf labels carry product at all.</p>
     <p>The catalogue runs past a thousand SKUs and all of it radiates from that one shirt: six live collabs at $45 to $150, six core staples at $98 to $128, and an Early Fall drop that puts sleeves on the Players Shirt in four colorways.</p>
   </div>
-</section>
-
-<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -272,10 +339,14 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
+</section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-2.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/criquet/btk-body-1.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/criquet/btk-body-2.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -346,7 +417,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-3.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/criquet/btk-body-3.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -413,7 +484,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-4.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/criquet/btk-body-4.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -480,21 +551,21 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-5.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/criquet/btk-body-5.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="faq">
 <div class="faq">
-    <details class="faq-q"><summary>Who founded Criquet Shirts?</summary><p>Billy Nachman and Hobson Brown, friends since kindergarten in Manhattan who grew up in prep-school polos and coat-and-tie dress codes. They founded Criquet in Austin in 2010, after Nachman found his late grandfather's vintage four-button golf shirt in a closet and the pair decided to rebuild it properly.</p></details>
-    <details class="faq-q"><summary>Where is Criquet based?</summary><p>Austin, Texas — the brand has said it plainly since day one: "We founded Criquet here in 2010." Its longtime clubhouse-headquarters sat at 1603 South 1st Street in Bouldin Creek, complete with a putting green, an outdoor bar and a Bill Murray mural.</p></details>
-    <details class="faq-q"><summary>What is the Criquet Players Shirt?</summary><p>The signature: a four-button extended placket, a flap chest pocket, and removable collar stays so the collar lies flat instead of curling. The Classic runs $98 in 100 per cent Peruvian pima cotton, with Performance, Throwback, Terrycloth, Long Sleeve and Indigo Knit versions built on the same body.</p></details>
-    <details class="faq-q"><summary>Is Criquet organic cotton?</summary><p>That was the founding pitch — the original Players Shirt was built around organic cotton, and early press leaned on it. The current Classic Players Shirt is listed as 100 per cent Peruvian pima; the organic language has largely left the product pages, so check the specific item if that matters to you.</p></details>
-    <details class="faq-q"><summary>Did Criquet really do a Willie Nelson collection?</summary><p>Yes — an officially licensed "Willie Forever" collection sold on both criquetshirts.com and willienelson.com. It has since been delisted from Criquet's store, which makes it a collector's item and arguably the most Texas collab any golf-adjacent brand has done.</p></details>
-    <details class="faq-q"><summary>What is the Save Muny belt?</summary><p>A hand-stitched gaucho belt made with fellow Austin company Zilker Belts in a colorway supporting Save Muny, the campaign to preserve Lions Municipal Golf Course. It sells for $125 alongside a dozen other Criquet x Zilker designs, including Texas Exes and Moontowers.</p></details>
-    <details class="faq-q"><summary>Is Criquet a golf brand?</summary><p>Deliberately half of one. The brrr° cooling Range Polos and Players Shirts are genuine golf pieces — the brand was stocked at PGA Tour Superstore — but the stated thesis has always been "comfortably off-course": one shirt for the round, the office and the bar. The pearl snaps and corduroy are the other half of the argument.</p></details>
-    <details class="faq-q"><summary>What does Criquet cost?</summary><p>The core runs $98 to $128 — Classic Players at $98, Performance at $104, brrr° Range Polos and pearl snaps at $128. Collabs span $45 for the YETI bottle to $150 for the Jones duffle. Fall pieces top out at $148 for pants and knits.</p></details>
-    <details class="faq-q"><summary>Does Criquet make an Austin FC collection?</summary><p>Yes — officially licensed MLS gear, with the Coaches Players Shirt and Range Polo carrying Austin FC's tree crest and ATX marks in verde, black and white. It is part of a wider MLS x Criquet program that covers most of the league.</p></details>
-    <details class="faq-q"><summary>How big is Criquet?</summary><p>Bigger than it plays. The catalogue runs over a thousand products including licensed collegiate and MLS lines, the company raised a $1.4 million Series A led by CircleUp back in 2016, and the press file includes CNBC and Details magazine, which once called the Players Shirt "The Perfect Polo."</p></details>
+    <details open class="faq-q"><summary>Who founded Criquet Shirts?</summary><p>Billy Nachman and Hobson Brown, friends since kindergarten in Manhattan who grew up in prep-school polos and coat-and-tie dress codes. They founded Criquet in Austin in 2010, after Nachman found his late grandfather's vintage four-button golf shirt in a closet and the pair decided to rebuild it properly.</p></details>
+    <details open class="faq-q"><summary>Where is Criquet based?</summary><p>Austin, Texas — the brand has said it plainly since day one: "We founded Criquet here in 2010." Its longtime clubhouse-headquarters sat at 1603 South 1st Street in Bouldin Creek, complete with a putting green, an outdoor bar and a Bill Murray mural.</p></details>
+    <details open class="faq-q"><summary>What is the Criquet Players Shirt?</summary><p>The signature: a four-button extended placket, a flap chest pocket, and removable collar stays so the collar lies flat instead of curling. The Classic runs $98 in 100 per cent Peruvian pima cotton, with Performance, Throwback, Terrycloth, Long Sleeve and Indigo Knit versions built on the same body.</p></details>
+    <details open class="faq-q"><summary>Is Criquet organic cotton?</summary><p>That was the founding pitch — the original Players Shirt was built around organic cotton, and early press leaned on it. The current Classic Players Shirt is listed as 100 per cent Peruvian pima; the organic language has largely left the product pages, so check the specific item if that matters to you.</p></details>
+    <details open class="faq-q"><summary>Did Criquet really do a Willie Nelson collection?</summary><p>Yes — an officially licensed "Willie Forever" collection sold on both criquetshirts.com and willienelson.com. It has since been delisted from Criquet's store, which makes it a collector's item and arguably the most Texas collab any golf-adjacent brand has done.</p></details>
+    <details open class="faq-q"><summary>What is the Save Muny belt?</summary><p>A hand-stitched gaucho belt made with fellow Austin company Zilker Belts in a colorway supporting Save Muny, the campaign to preserve Lions Municipal Golf Course. It sells for $125 alongside a dozen other Criquet x Zilker designs, including Texas Exes and Moontowers.</p></details>
+    <details open class="faq-q"><summary>Is Criquet a golf brand?</summary><p>Deliberately half of one. The brrr° cooling Range Polos and Players Shirts are genuine golf pieces — the brand was stocked at PGA Tour Superstore — but the stated thesis has always been "comfortably off-course": one shirt for the round, the office and the bar. The pearl snaps and corduroy are the other half of the argument.</p></details>
+    <details open class="faq-q"><summary>What does Criquet cost?</summary><p>The core runs $98 to $128 — Classic Players at $98, Performance at $104, brrr° Range Polos and pearl snaps at $128. Collabs span $45 for the YETI bottle to $150 for the Jones duffle. Fall pieces top out at $148 for pants and knits.</p></details>
+    <details open class="faq-q"><summary>Does Criquet make an Austin FC collection?</summary><p>Yes — officially licensed MLS gear, with the Coaches Players Shirt and Range Polo carrying Austin FC's tree crest and ATX marks in verde, black and white. It is part of a wider MLS x Criquet program that covers most of the league.</p></details>
+    <details open class="faq-q"><summary>How big is Criquet?</summary><p>Bigger than it plays. The catalogue runs over a thousand products including licensed collegiate and MLS lines, the company raised a $1.4 million Series A led by CircleUp back in 2016, and the press file includes CNBC and Details magazine, which once called the Players Shirt "The Perfect Polo."</p></details>
   </div>
 </section>
 

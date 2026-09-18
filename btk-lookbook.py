@@ -75,6 +75,7 @@ def bands_for(n):
 
 BANDS = bands_for(3)
 TARGET_W = 1800
+NATIVE = "--native" in sys.argv   # body bands keep the shape they were shot in
 MIN_SRC_W = 1400           # below this a 1800px band is an upscale
 
 
@@ -214,12 +215,22 @@ def do_brand(slug, apply_=False, want=3):
         used.add(p)
         with Image.open(p) as src:
             src = src.convert("RGB")
-            band = crop_band(src, ratio).resize(
-                (TARGET_W, int(TARGET_W / ratio)), Image.LANCZOS)
+            if NATIVE and name != "hero":
+                # Lenny: "formatted how they are provided so either landscape or
+                # portrait." Cropping every body frame to one ratio is what threw
+                # that away — a portrait shot became a letterbox and a wide one
+                # got cropped twice. In native mode the body bands are resized
+                # and nothing else; only the masthead is still cut to 21:9.
+                sw = min(1600, src.width)
+                band = src.resize((sw, round(src.height * sw / src.width)),
+                                  Image.LANCZOS)
+            else:
+                band = crop_band(src, ratio).resize(
+                    (TARGET_W, int(TARGET_W / ratio)), Image.LANCZOS)
         risky = shape_cost(w / h, ratio) > 0.45
         made.append({"band": name, "src": p.name, "risky": risky,
                      "cost": round(shape_cost(w / h, ratio), 2),
-                     "thumb": band.resize((520, int(520 / ratio)), Image.LANCZOS)})
+                     "thumb": band.resize((520, round(band.height*520/band.width)), Image.LANCZOS)})
         if apply_:
             d = ROOT / "images" / slug
             d.mkdir(parents=True, exist_ok=True)

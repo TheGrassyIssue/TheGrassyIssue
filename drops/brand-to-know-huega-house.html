@@ -154,27 +154,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -242,27 +318,40 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/huega-house/btk-hero.jpg" alt="Huega House &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/huega-house/btk-hero.jpg" alt="Huega House &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Huega House solved fit before it solved anything else, which is why it grew the way it did. Jonathan Ruley and Jake Ryan &mdash; the latter a former Green Bay linebacker &mdash; split $10,000 in 2022 because neither could find a hat that sat right, and reached $2.3 million in annual revenue by mid-2024 without venture money.</p>
+    <p>The Athletics Hat at $45 is the one that did it: a rope-free, low-drama cap that holds shape through a wet round.</p>
+    <p>This is for the player who has a drawer of hats that nearly work. Thirty pieces run $22 to $88, and the name &mdash; from the Danish hygge &mdash; tells you the register they are aiming for.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>The name comes from the Danish word hygge &mdash; the art of cherishing the little things. The spelling changed because Americans kept butchering the pronunciation, but the idea stuck. Jonathan Ruley, a 30-year-old marketer from Boise State, and Jake Ryan, the former Green Bay Packers linebacker who played 48 NFL games including five postseason, are future brothers-in-law who bonded over one shared frustration: they couldn&rsquo;t find a hat that fit right. So they split $10,000 and made their own.</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/huega-house/btk-body-1.jpg" alt="Huega House lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>That was 2022. By mid-2024, Huega House hit $2.3 million in annual revenue &mdash; profitable, no venture capital, fewer than ten employees. The growth came organically. Aaron Rodgers wore one on the Pat McAfee Show and at a Knicks playoff game. Shohei Ohtani, Josh Allen, Nick Bosa, and TJ Watt all started showing up in them. Nobody was paid. Golf Digest featured the brand. Jake Ryan does all the photography himself. The aesthetic pulls from 90s sports and automotive culture &mdash; vintage graphics, structured crowns, clean embroidery &mdash; and the result is headwear that reads equally well on the course, at the range, or walking the dog.</p>
     <p>The line has grown beyond hats into performance tees, hybrid shorts, hoodies, crewnecks, and sweats. Everything runs $22 to $88. Based in Carlsbad, shipping worldwide, and building a community around their HH Run Club and ambassador program. No big-box retail. No paid endorsements. Just product that people keep coming back for.</p>
     <p><em>Updated, August 2026:</em> the machine keeps rolling. The range now runs from $14 beanies to performance packs, the Flow Running Hat gives the run-club crowd a course-ready option, and the drops keep selling through — most of the Legacy and Athletics colorways below are restocks of sellouts. The brand's Instagram tells the story best: hometown San Diego baseball graphics, studio campaigns, and the moodboard-on-a-wall design process, which is why we've added a proper In the Wild section below.</p>
   </div>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Quick Look</div>
+      <div class="sidebar-detail"><span class="l">Founded</span><span>2022</span></div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>Carlsbad, CA</span></div>
+      <div class="sidebar-detail"><span class="l">Founders</span><span>Jake Ryan &amp; Jonathan Ruley</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$22 &ndash; $88</span></div>
+      <div class="sidebar-detail"><span class="l">Known For</span><span>Headwear</span></div>
+      <a href="https://huegahouse.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Huega House &rarr;</a>
+      <div class="hashtags">
+        <span class="hashtag">#huegahouse</span>
+        <span class="hashtag">#brandtoknow</span>
+        <span class="hashtag">#headwear</span>
+        <span class="hashtag">#golfstyle</span>
+        <span class="hashtag">#sandiego</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
 </section>
 
 <section class="products" style="border-top:none;padding-top:48px">
@@ -324,30 +413,8 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
-<div class="btk-card">
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Quick Look</div>
-      <div class="sidebar-detail"><span class="l">Founded</span><span>2022</span></div>
-      <div class="sidebar-detail"><span class="l">Based</span><span>Carlsbad, CA</span></div>
-      <div class="sidebar-detail"><span class="l">Founders</span><span>Jake Ryan &amp; Jonathan Ruley</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$22 &ndash; $88</span></div>
-      <div class="sidebar-detail"><span class="l">Known For</span><span>Headwear</span></div>
-      <a href="https://huegahouse.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Huega House &rarr;</a>
-      <div class="hashtags">
-        <span class="hashtag">#huegahouse</span>
-        <span class="hashtag">#brandtoknow</span>
-        <span class="hashtag">#headwear</span>
-        <span class="hashtag">#golfstyle</span>
-        <span class="hashtag">#sandiego</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
-
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/huega-house/btk-body-2.jpg" alt="Huega House lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/huega-house/btk-body-1.jpg" alt="Huega House lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -468,7 +535,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/huega-house/btk-body-3.jpg" alt="Huega House lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/huega-house/btk-body-2.jpg" alt="Huega House lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -552,7 +619,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/huega-house/btk-body-4.jpg" alt="Huega House lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/huega-house/btk-body-3.jpg" alt="Huega House lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -653,15 +720,19 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/huega-house/btk-body-4.jpg" alt="Huega House lookbook photograph" loading="lazy" />
+</section>
+
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Huega House &mdash; FAQ</h2>
   <div class="faq">
-    <details class="faq-q"><summary>What is Huega House?</summary><p>Huega House is a San Diego-area headwear and performance apparel brand based in Carlsbad, California. The aesthetic pulls from '90s sports and automotive culture — vintage graphics, structured crowns, clean embroidery — across hats, performance tees, shorts, hoodies, and sweats priced roughly $14 to $88.</p></details>
-    <details class="faq-q"><summary>Who founded Huega House?</summary><p>Future brothers-in-law Jake Ryan — the former Green Bay Packers linebacker who played 48 NFL games — and Jonathan Ruley, a marketer out of Boise State. They bonded over not being able to find a hat that fit right, split $10,000, and started the brand in 2022. By mid-2024 it was doing $2.3 million in annual revenue with no venture capital.</p></details>
-    <details class="faq-q"><summary>What does Huega mean?</summary><p>It comes from hygge, the Danish concept of cherishing life's small comforts. The founders respelled it 'Huega' (hue-guh) because Americans kept butchering the Danish pronunciation. The brand motto is 'cherish the little things.'</p></details>
-    <details class="faq-q"><summary>Who wears Huega House hats?</summary><p>Aaron Rodgers wore one on the Pat McAfee Show and at a Knicks playoff game; Shohei Ohtani, Josh Allen, Aaron Judge, Nick Bosa, and TJ Watt have all been spotted in them. None of them were paid — the brand has no paid endorsements.</p></details>
-    <details class="faq-q"><summary>Are Huega House hats good for golf?</summary><p>Yes — the Icon Performance and Aero Nylon hats are lightweight, sweat-ready course options, the Flow Running Hat works for hot-weather rounds, and the structured high-profile styles read like '90s tour hats. Golf Digest has featured the brand's headwear.</p></details>
-    <details class="faq-q"><summary>Where can you buy Huega House?</summary><p>Direct at huegahouse.com, plus Hat Club carries a selection. The brand has deliberately avoided big-box retail, and runs a membership, ambassador program, and the HH Run Club out of its San Diego community.</p></details>
+    <details open class="faq-q"><summary>What is Huega House?</summary><p>Huega House is a San Diego-area headwear and performance apparel brand based in Carlsbad, California. The aesthetic pulls from '90s sports and automotive culture — vintage graphics, structured crowns, clean embroidery — across hats, performance tees, shorts, hoodies, and sweats priced roughly $14 to $88.</p></details>
+    <details open class="faq-q"><summary>Who founded Huega House?</summary><p>Future brothers-in-law Jake Ryan — the former Green Bay Packers linebacker who played 48 NFL games — and Jonathan Ruley, a marketer out of Boise State. They bonded over not being able to find a hat that fit right, split $10,000, and started the brand in 2022. By mid-2024 it was doing $2.3 million in annual revenue with no venture capital.</p></details>
+    <details open class="faq-q"><summary>What does Huega mean?</summary><p>It comes from hygge, the Danish concept of cherishing life's small comforts. The founders respelled it 'Huega' (hue-guh) because Americans kept butchering the Danish pronunciation. The brand motto is 'cherish the little things.'</p></details>
+    <details open class="faq-q"><summary>Who wears Huega House hats?</summary><p>Aaron Rodgers wore one on the Pat McAfee Show and at a Knicks playoff game; Shohei Ohtani, Josh Allen, Aaron Judge, Nick Bosa, and TJ Watt have all been spotted in them. None of them were paid — the brand has no paid endorsements.</p></details>
+    <details open class="faq-q"><summary>Are Huega House hats good for golf?</summary><p>Yes — the Icon Performance and Aero Nylon hats are lightweight, sweat-ready course options, the Flow Running Hat works for hot-weather rounds, and the structured high-profile styles read like '90s tour hats. Golf Digest has featured the brand's headwear.</p></details>
+    <details open class="faq-q"><summary>Where can you buy Huega House?</summary><p>Direct at huegahouse.com, plus Hat Club carries a selection. The brand has deliberately avoided big-box retail, and runs a membership, ambassador program, and the HH Run Club out of its San Diego community.</p></details>
   </div>
 </section>
 

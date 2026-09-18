@@ -122,27 +122,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -206,18 +282,37 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </header>
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/bluegrass-fairway/btk-hero.jpg" alt="Bluegrass Fairway &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/bluegrass-fairway/btk-hero.jpg" alt="Bluegrass Fairway &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
-    <p>Bluegrass Fairway is a small workshop in Louisville, Kentucky making leather, Harris Tweed and waxed canvas golf goods by hand &mdash; headcovers, yardage book covers, valuables pouches, rangefinder cases and the occasional needlepoint belt. Around 172 products are live at any one time, priced from about $38 for a hat to $1,100 for a bag built out of a repurposed Barbour jacket.</p>
+    <p>Bluegrass Fairway exists because a yardage book cover fell apart and Matt Reynolds took it to a cobbler instead of binning it, and you can still see that decision in the goods. This is a Louisville workshop building in leather, Harris Tweed and waxed canvas at a standard that assumes you are keeping the thing.</p>
+    <p>The Field in hunter green and cream leather at $115 makes the case: a headcover built like a small piece of luggage rather than a novelty.</p>
+    <p>It suits the player who replaces gear when it wears out rather than when it bores him. Eighteen pieces run from $68 to $850, and the tweed and canvas covers around the $100 mark are the honest entry point.</p>
   </div>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>Louisville, Kentucky</span></div>
+      <div class="sidebar-detail"><span class="l">Known For</span><span>Headcovers, Accessories, Bags</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>18 items</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$68 &ndash; $850</span></div>
+      <a href="https://www.bluegrassfairway.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Bluegrass Fairway &rarr;</a>
+      <div class="hashtags">
+        <span class="hashtag">#bluegrassfairway</span>
+        <span class="hashtag">#brandtoknow</span>
+        <span class="hashtag">#headcovers</span>
+        <span class="hashtag">#accessories</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/bluegrass-fairway/btk-body-1.jpg" alt="Bluegrass Fairway lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/bluegrass-fairway/btk-body-1.jpg" alt="Bluegrass Fairway lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="prose">
@@ -226,9 +321,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <cite>&mdash; Matt Reynolds, founder, to Etsy Journal, May 2017</cite>
   </blockquote>
 </section>
-<section class="products" data-btk="prose">
+<section class="products" data-btk="story-native">
   <h2 class="products-hdr">The Story</h2>
   <div class="writeup-body">
+    <p>Bluegrass Fairway is a small workshop in Louisville, Kentucky making leather, Harris Tweed and waxed canvas golf goods by hand &mdash; headcovers, yardage book covers, valuables pouches, rangefinder cases and the occasional needlepoint belt. Around 172 products are live at any one time, priced from about $38 for a hat to $1,100 for a bag built out of a repurposed Barbour jacket.</p>
     <p>The company exists because a cheap yardage book cover fell apart. Matt Reynolds took it to a local shoe cobbler to be repaired, and the cobbler told him they could simply build a better one. They went through roughly three versions. Friends asked for copies, a friend&rsquo;s wife suggested Etsy, and in October 2015 he listed it. One sale came in the first month. Then about a hundred arrived over the next forty days, and the cobbler could not keep up.</p>
     <p>For anyone who likes the idea of golf equipment made from named materials by identifiable people, this is a straightforward recommendation. It is also cheaper to get into than that description implies: a Horween scorecard holder is $85, and a waxed canvas headcover is $100.</p>
   </div>
@@ -251,28 +347,8 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <p><strong>Construction.</strong> Vinymo thread, hand-finished edges, and the standard line across the pouch range: all bags are handmade in the USA. The Single Barrel pieces are one-offs cut from single hides &mdash; when the hide is gone, the piece is not repeatable.</p>
   </div>
 </section>
-<div class="btk-card">
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Based</span><span>Louisville, Kentucky</span></div>
-      <div class="sidebar-detail"><span class="l">Known For</span><span>Headcovers, Accessories, Bags</span></div>
-      <div class="sidebar-detail"><span class="l">Pieces</span><span>18 items</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$68 &ndash; $850</span></div>
-      <a href="https://www.bluegrassfairway.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Bluegrass Fairway &rarr;</a>
-      <div class="hashtags">
-        <span class="hashtag">#bluegrassfairway</span>
-        <span class="hashtag">#brandtoknow</span>
-        <span class="hashtag">#headcovers</span>
-        <span class="hashtag">#accessories</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
-
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/bluegrass-fairway/btk-body-2.jpg" alt="Bluegrass Fairway lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/bluegrass-fairway/btk-body-2.jpg" alt="Bluegrass Fairway lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -448,17 +524,17 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/bluegrass-fairway/btk-body-3.jpg" alt="Bluegrass Fairway lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/bluegrass-fairway/btk-body-3.jpg" alt="Bluegrass Fairway lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products">
   <h2 class="products-hdr">The Questions</h2>
   <div class="faq">
-    <details class="faq-q"><summary>Who makes Bluegrass Fairway?</summary><p>Matt Reynolds, in Louisville, Kentucky. He founded it in October 2015 after a cobbler offered to rebuild a yardage book cover that had fallen apart. Production moved early on into the Louisville workshop of Will Jacoby of Steurer & Co.</p></details>
-    <details class="faq-q"><summary>What is the Single Barrel collection?</summary><p>A run of one-off pieces the brand describes as "one-off only customs that we make in our Custom Shop in Louisville, KY... Each piece is 1 of 1." Roughly 34 products carry the tag, priced from about $80 to $300. Each is cut from a specific hide or a specific part of a blanket, so it cannot be reordered.</p></details>
-    <details class="faq-q"><summary>Is Bluegrass Fairway independent?</summary><p>There is no public record of a parent company, outside investment or acquisition, and it has been founder-led since 2015. The brand describes itself as "a small team focused on making each piece right."</p></details>
-    <details class="faq-q"><summary>What does it cost to get in?</summary><p>A cotton logo hat is $38 and the minimalist Horween scorecard holder is $85. Waxed canvas headcovers are $100 and leather ones $115. The Steurer & Co. collaboration bags run $850 to $1,100.</p></details>
-    <details class="faq-q"><summary>Do they sell anything they do not make?</summary><p>A little. Around 28 products are Bluegrass Fairway apparel produced by partners — the Tour Visor is made by Holderness & Bourne — and a Vintage Pro Shop collection of about nine items launched in May 2026, selling secondhand and new-old-stock golf clothing under the labels "Gently Used," "New Old Stock" and "New." The other 135 products are their own.</p></details>
+    <details open class="faq-q"><summary>Who makes Bluegrass Fairway?</summary><p>Matt Reynolds, in Louisville, Kentucky. He founded it in October 2015 after a cobbler offered to rebuild a yardage book cover that had fallen apart. Production moved early on into the Louisville workshop of Will Jacoby of Steurer & Co.</p></details>
+    <details open class="faq-q"><summary>What is the Single Barrel collection?</summary><p>A run of one-off pieces the brand describes as "one-off only customs that we make in our Custom Shop in Louisville, KY... Each piece is 1 of 1." Roughly 34 products carry the tag, priced from about $80 to $300. Each is cut from a specific hide or a specific part of a blanket, so it cannot be reordered.</p></details>
+    <details open class="faq-q"><summary>Is Bluegrass Fairway independent?</summary><p>There is no public record of a parent company, outside investment or acquisition, and it has been founder-led since 2015. The brand describes itself as "a small team focused on making each piece right."</p></details>
+    <details open class="faq-q"><summary>What does it cost to get in?</summary><p>A cotton logo hat is $38 and the minimalist Horween scorecard holder is $85. Waxed canvas headcovers are $100 and leather ones $115. The Steurer & Co. collaboration bags run $850 to $1,100.</p></details>
+    <details open class="faq-q"><summary>Do they sell anything they do not make?</summary><p>A little. Around 28 products are Bluegrass Fairway apparel produced by partners — the Tour Visor is made by Holderness & Bourne — and a Vintage Pro Shop collection of about nine items launched in May 2026, selling secondhand and new-old-stock golf clothing under the labels "Gently Used," "New Old Stock" and "New." The other 135 products are their own.</p></details>
   </div>
 </section>
 <section class="more" data-btk="related">

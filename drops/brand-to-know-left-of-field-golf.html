@@ -146,27 +146,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -234,32 +310,23 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/left-of-field-golf/btk-hero.jpg" alt="Left of Field Golf &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/left-of-field-golf/btk-hero.jpg" alt="Left of Field Golf &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Left of Field is the funniest brand in golf that also makes clothes you would wear without the joke attached, and both halves matter. Nick Ilias started it in his brother&rsquo;s old bedroom in Sydney in 2022, out of a frustration a lot of players share &mdash; that dressing for golf felt like choosing between looking wrong on the course and looking wrong everywhere else.</p>
+    <p>The Elements Polo at $105 is the serious end of the range and the reason the humour lands elsewhere.</p>
+    <p>This suits the player who wants a wardrobe with a sense of humour and a straight face available when needed. Thirty-nine pieces across eight collections, from $4 to $330.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Left of Field is the funniest brand in golf that also makes clothes you would wear without the joke attached. Nick Ilias has run it out of Sydney for four years, starting in 2022 in his brother&rsquo;s old bedroom, which he described in a journal entry written in Paris three years later as &ldquo;a small room filled with everything from late-night brainstorming sessions to boxes stacked high with stock.&rdquo;</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/left-of-field-golf/btk-body-1.jpg" alt="Left of Field Golf lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>Ilias started from a complaint a lot of players will recognise. &ldquo;When I first started playing the game, getting dressed for golf felt like a lose-lose situation. The outfits I wanted to wear made me feel out of place in the pro shop. Adhering to the dress code just didn&rsquo;t feel natural, either.&rdquo;</p>
     <p>What he built is not, as it is often described, a brand about Australian landscapes. It is a brand about <strong>silhouette</strong>. The aim in their own words is clothing &ldquo;inspired by the attitude and silhouettes of surf and skate apparel, with design touches golfers can appreciate as their own,&rdquo; and then, flatly: &ldquo;Our mission isn&rsquo;t to create products that scream &lsquo;golf&rsquo;.&rdquo; That is why the shorts are roomy and cut to sit just above the knee, and why the trousers are pleated and wide. The tees follow the same logic, mid-weight and closer to a skate shirt than a golf one.</p>
     <p>The landscape part is real, but it operates one level down, in the naming. Every collection ties to a specific stretch of Australian coast and the products take their names from places inside it. Elements is Barnbougle in Tasmania, photographed on the same ground. SOUTH is the Mornington Peninsula. RNP is Royal National Park, south of Sydney. The earliest polos were named after beaches in Sydney Harbour, the one case where they said so outright: &ldquo;the Clontarf and Nielsen, named after iconic beaches within Sydney Harbour.&rdquo;</p>
     <p>Two other things stand out. They spent seven months sampling fabric before releasing their first polo, landed on a recycled-PET yarn, and wrote about it plainly: &ldquo;We know we are stepping into an industry which is regarded as one of the biggest polluters on earth. But we don&rsquo;t plan to follow the footsteps of the past.&rdquo; In February 2025 they showed at the Paris Golf Gallery during fashion week, their first international outing, in a room shared with Hiroki, Club 72 and Parmore.</p>
     <p>The range runs by collection rather than by garment, from the Barnbougle line down to a $4.90 ball marker. Prices come from the American storefront in US dollars, and they ship worldwide.</p>
   </div>
-</section>
-
-<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -277,10 +344,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
+</section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/left-of-field-golf/btk-body-2.jpg" alt="Left of Field Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/left-of-field-golf/btk-body-1.jpg" alt="Left of Field Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -357,6 +424,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   <div class="pull-quote-inner">&ldquo;When I first started playing the game, getting dressed for golf felt like a lose-lose situation.&rdquo;<span class="pull-quote-attr">&mdash; Nick Ilias, Left of Field Golf founder</span></div>
 </div>
   </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/left-of-field-golf/btk-body-2.jpg" alt="Left of Field Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -712,16 +783,16 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 
 <section class="products" data-btk="faq">
 <div class="faq">
-    <details class="faq-q"><summary>Who founded Left of Field Golf?</summary><p>Nick Ilias, who started the brand in Sydney in 2022. He has written that he began it in his brother&rsquo;s old bedroom, surrounded by boxes of stock. The company trades as LOFG Clubhaus Pty Ltd and is based in Beverly Hills, in Sydney&rsquo;s St George district.</p></details>
-    <details class="faq-q"><summary>What is Left of Field Golf's design philosophy?</summary><p>Their stated aim is golf clothing built on surf and skate silhouettes rather than traditional golf ones. In their own words: &ldquo;Our mission isn&rsquo;t to create products that scream &lsquo;golf&rsquo;. It&rsquo;s to make clothing that pushes the game&rsquo;s evolving style, while staying accessible enough to cut through the hype.&rdquo; The founding frustration was feeling out of place in a pro shop wearing what he actually wanted to wear.</p></details>
-    <details class="faq-q"><summary>Why are Left of Field products named after Australian places?</summary><p>Each collection is tied to a specific stretch of coast and the products are named for places within it. Elements takes its names from around Barnbougle in Tasmania (Bridport, Anderson, Bass). SOUTH is the Mornington Peninsula in Victoria (Portsea, Sorrento, Mornington, Bridgewater). RNP is Royal National Park south of Sydney (Audley, Stanwell, Garie). The brand confirmed the convention when it described two early polos as &ldquo;named after iconic beaches within Sydney Harbour.&rdquo;</p></details>
-    <details class="faq-q"><summary>What is the Elements collection?</summary><p>Elements is Left of Field&rsquo;s flagship technical range, launched in October 2025. It was designed after a 2024 trip to Barnbougle Dunes in Tasmania for a friend&rsquo;s 30th birthday, and the campaign was later shot at the same course. It includes the Elements Polo, Bass Polo, Elements Weather Jacket, Bridport Crewneck, Anderson Insulated Gilet, Dune Short and a pleated wide-leg technical trouser.</p></details>
-    <details class="faq-q"><summary>What is the Pintuck short?</summary><p>The Pintuck is Left of Field&rsquo;s signature golf short and, by their own description, their best seller. The brand pitched the original as &ldquo;our answer to everything wrong with golf shorts today&rdquo; &mdash; a roomier fit through the trunk, a wider leg opening, and a length that sits just above the knee. Pintuck 2.0 arrived in 2026 as a refined version and runs in cream, navy, black and slate.</p></details>
-    <details class="faq-q"><summary>Is Sydney Harbour Golf &amp; Country Club a real club?</summary><p>No. It is invented. Left of Field&rsquo;s entire product description for the cap is &ldquo;The greatest course to never exist.&rdquo; The crest shows the Sydney Harbour Bridge with its two pylons replaced by bags of golf clubs. It has been one of their longest-running products since August 2024.</p></details>
-    <details class="faq-q"><summary>What is the Southern Slam cap?</summary><p>An unofficial, self-made tribute to the Australian summer of golf, sold at a three-day Left of Field pop-up in Fitzroy, Melbourne, over the weekend of the 2025 Australian Open at Royal Melbourne. The brand states clearly that it is &ldquo;an independent artistic interpretation and is not affiliated with, endorsed by, or sponsored by any official tournament or venue.&rdquo; There is no event actually called the Southern Slam.</p></details>
-    <details class="faq-q"><summary>Who is Ciel Glue?</summary><p>A French collage artist based on the Portuguese coast, who collaborates with Left of Field on their Golf Art prints. He began surfing at eleven and spent fifteen years doing graffiti in Paris before moving to collage. He works entirely analogue, hand-cutting vintage magazines, old books and coloured paper. His originals were shown at Left of Field&rsquo;s Melbourne pop-up in December 2025 and the prints were added in January 2026.</p></details>
-    <details class="faq-q"><summary>Does Left of Field Golf ship to the United States?</summary><p>Yes. They run a US storefront at lofgolf.com/en-us priced in US dollars, and ship internationally from Australia. Their published international rates are A$29.95 standard, which they quote at six to twelve business days, and A$66.95 express at three to seven. Returns are free within 30 days.</p></details>
-    <details class="faq-q"><summary>Where can I buy Left of Field Golf in a shop?</summary><p>They list five stockists: Playfair Golf Club and Woolooware Golf Pro Shop in Australia, Club 72 and Soft Hands Club in the United Kingdom, and Happy Golfer in Sweden. Otherwise it is direct from lofgolf.com. They have no permanent retail of their own and trade through occasional pop-ups.</p></details>
+    <details open class="faq-q"><summary>Who founded Left of Field Golf?</summary><p>Nick Ilias, who started the brand in Sydney in 2022. He has written that he began it in his brother&rsquo;s old bedroom, surrounded by boxes of stock. The company trades as LOFG Clubhaus Pty Ltd and is based in Beverly Hills, in Sydney&rsquo;s St George district.</p></details>
+    <details open class="faq-q"><summary>What is Left of Field Golf's design philosophy?</summary><p>Their stated aim is golf clothing built on surf and skate silhouettes rather than traditional golf ones. In their own words: &ldquo;Our mission isn&rsquo;t to create products that scream &lsquo;golf&rsquo;. It&rsquo;s to make clothing that pushes the game&rsquo;s evolving style, while staying accessible enough to cut through the hype.&rdquo; The founding frustration was feeling out of place in a pro shop wearing what he actually wanted to wear.</p></details>
+    <details open class="faq-q"><summary>Why are Left of Field products named after Australian places?</summary><p>Each collection is tied to a specific stretch of coast and the products are named for places within it. Elements takes its names from around Barnbougle in Tasmania (Bridport, Anderson, Bass). SOUTH is the Mornington Peninsula in Victoria (Portsea, Sorrento, Mornington, Bridgewater). RNP is Royal National Park south of Sydney (Audley, Stanwell, Garie). The brand confirmed the convention when it described two early polos as &ldquo;named after iconic beaches within Sydney Harbour.&rdquo;</p></details>
+    <details open class="faq-q"><summary>What is the Elements collection?</summary><p>Elements is Left of Field&rsquo;s flagship technical range, launched in October 2025. It was designed after a 2024 trip to Barnbougle Dunes in Tasmania for a friend&rsquo;s 30th birthday, and the campaign was later shot at the same course. It includes the Elements Polo, Bass Polo, Elements Weather Jacket, Bridport Crewneck, Anderson Insulated Gilet, Dune Short and a pleated wide-leg technical trouser.</p></details>
+    <details open class="faq-q"><summary>What is the Pintuck short?</summary><p>The Pintuck is Left of Field&rsquo;s signature golf short and, by their own description, their best seller. The brand pitched the original as &ldquo;our answer to everything wrong with golf shorts today&rdquo; &mdash; a roomier fit through the trunk, a wider leg opening, and a length that sits just above the knee. Pintuck 2.0 arrived in 2026 as a refined version and runs in cream, navy, black and slate.</p></details>
+    <details open class="faq-q"><summary>Is Sydney Harbour Golf &amp; Country Club a real club?</summary><p>No. It is invented. Left of Field&rsquo;s entire product description for the cap is &ldquo;The greatest course to never exist.&rdquo; The crest shows the Sydney Harbour Bridge with its two pylons replaced by bags of golf clubs. It has been one of their longest-running products since August 2024.</p></details>
+    <details open class="faq-q"><summary>What is the Southern Slam cap?</summary><p>An unofficial, self-made tribute to the Australian summer of golf, sold at a three-day Left of Field pop-up in Fitzroy, Melbourne, over the weekend of the 2025 Australian Open at Royal Melbourne. The brand states clearly that it is &ldquo;an independent artistic interpretation and is not affiliated with, endorsed by, or sponsored by any official tournament or venue.&rdquo; There is no event actually called the Southern Slam.</p></details>
+    <details open class="faq-q"><summary>Who is Ciel Glue?</summary><p>A French collage artist based on the Portuguese coast, who collaborates with Left of Field on their Golf Art prints. He began surfing at eleven and spent fifteen years doing graffiti in Paris before moving to collage. He works entirely analogue, hand-cutting vintage magazines, old books and coloured paper. His originals were shown at Left of Field&rsquo;s Melbourne pop-up in December 2025 and the prints were added in January 2026.</p></details>
+    <details open class="faq-q"><summary>Does Left of Field Golf ship to the United States?</summary><p>Yes. They run a US storefront at lofgolf.com/en-us priced in US dollars, and ship internationally from Australia. Their published international rates are A$29.95 standard, which they quote at six to twelve business days, and A$66.95 express at three to seven. Returns are free within 30 days.</p></details>
+    <details open class="faq-q"><summary>Where can I buy Left of Field Golf in a shop?</summary><p>They list five stockists: Playfair Golf Club and Woolooware Golf Pro Shop in Australia, Club 72 and Soft Hands Club in the United Kingdom, and Happy Golfer in Sweden. Otherwise it is direct from lofgolf.com. They have no permanent retail of their own and trade through occasional pop-ups.</p></details>
   </div>
 </section>
 

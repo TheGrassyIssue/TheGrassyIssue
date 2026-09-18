@@ -196,27 +196,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -283,25 +359,39 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/cloud-and-wind-golf/btk-hero.jpg" alt="Cloud & Wind Golf &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/cloud-and-wind-golf/btk-hero.jpg" alt="Cloud & Wind Golf &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Cloud &amp; Wind makes one thing and has thought about it more than most brands think about a whole catalogue. Grips are the only part of the club you actually touch, and they are the cheapest component to change &mdash; a fact the industry treats as a commodity and this brand treats as an opportunity.</p>
+    <p>Every grip carries a line of Chinese verse printed along the shaft, which is the detail that gives the game away: $18 a grip, and somebody still costed in the poetry.</p>
+    <p>It is for the tinkerer, and for anyone whose clubs are fine but feel anonymous. Fifteen-plus colourways at $18 each, or $50 for three &mdash; the least expensive way to change how a set feels in your hands.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Cloud &amp; Wind Golf makes one thing — grips — and they make them differently. Every design draws from traditional Eastern aesthetics and Pacific Coast nature. The Blossom series pulls from floral motifs and Chinese poetry. The Cloud &amp; Wave collection captures the mood of twilight rounds on the California coast. The Zen strips everything back to texture and tone. Each grip ships with a line of Chinese verse printed along the shaft — a detail most brands would never think to include.</p>
+    <p>The construction is straightforward: natural and synthetic rubber blend, Standard+ sizing with a gentle taper, 56–58 grams, rated for 60 rounds. At $18 a grip, they're priced below the big names but built with more intention than anything in the pro shop. Bundles drop the per-grip cost further — a 3-grip set runs $50, a 7-grip set is $112. The new Pacific Summer collection just landed with three colorways inspired by June Gloom mornings and SoCal sunsets. This is a grip brand for golfers who care about what they touch 50+ times a round.</p>
   </div>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Grips</span><span>15+ colorways</span></div>
+      <div class="sidebar-detail"><span class="l">Price</span><span>$18/grip</span></div>
+      <div class="sidebar-detail"><span class="l">Bundles</span><span>$50 (3-grip) / $112 (7-grip)</span></div>
+      <a href="https://www.cloudandwindgolf.com/products" target="_blank" rel="noopener" class="sidebar-cta">Shop the Collection ↗</a>
+      <div class="hashtags">
+        <span class="hashtag">#TheGrassyIssue</span>
+        <span class="hashtag">#GolfCulture</span>
+        <span class="hashtag">#BrandToKnow</span>
+        <span class="hashtag">#GolfGrips</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/cloud-and-wind-golf/btk-body-1.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
-    <p>The construction is straightforward: natural and synthetic rubber blend, Standard+ sizing with a gentle taper, 56–58 grams, rated for 60 rounds. At $18 a grip, they're priced below the big names but built with more intention than anything in the pro shop. Bundles drop the per-grip cost further — a 3-grip set runs $50, a 7-grip set is $112. The new Pacific Summer collection just landed with three colorways inspired by June Gloom mornings and SoCal sunsets. This is a grip brand for golfers who care about what they touch 50+ times a round.</p>
-  </div>
+  <img class="drop-hero-img btk-land" src="/images/cloud-and-wind-golf/btk-body-1.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section style="max-width:1400px;margin:48px auto 0;padding:32px 32px 0;border-top:.5px solid var(--ink);">
@@ -338,27 +428,8 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
-<div class="btk-card">
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Grips</span><span>15+ colorways</span></div>
-      <div class="sidebar-detail"><span class="l">Price</span><span>$18/grip</span></div>
-      <div class="sidebar-detail"><span class="l">Bundles</span><span>$50 (3-grip) / $112 (7-grip)</span></div>
-      <a href="https://www.cloudandwindgolf.com/products" target="_blank" rel="noopener" class="sidebar-cta">Shop the Collection ↗</a>
-      <div class="hashtags">
-        <span class="hashtag">#TheGrassyIssue</span>
-        <span class="hashtag">#GolfCulture</span>
-        <span class="hashtag">#BrandToKnow</span>
-        <span class="hashtag">#GolfGrips</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
-
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/cloud-and-wind-golf/btk-body-2.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/cloud-and-wind-golf/btk-body-2.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -479,7 +550,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/cloud-and-wind-golf/btk-body-3.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/cloud-and-wind-golf/btk-body-3.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -563,19 +634,19 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/cloud-and-wind-golf/btk-body-4.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/cloud-and-wind-golf/btk-body-4.jpg" alt="Cloud & Wind Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Frequently Asked</h2>
   <div class="faq">
-    <details class="faq-q"><summary>What is Cloud & Wind Golf?</summary><p>Cloud & Wind Golf is a grip brand that makes one thing and makes it differently. Every design draws from traditional Eastern aesthetics and Pacific Coast nature — floral Blossom motifs, twilight Cloud & Wave colorways, stripped-back Zen textures — with a line of Chinese verse printed along each shaft.</p></details>
-    <details class="faq-q"><summary>Are Cloud & Wind golf grips any good?</summary><p>The construction is legitimate: a natural and synthetic rubber blend, Standard+ sizing with a gentle taper, 56–58 grams, rated for roughly 60 rounds. They're built with more intention than most pro-shop grips at a lower price than the big names.</p></details>
-    <details class="faq-q"><summary>How much do Cloud & Wind grips cost?</summary><p>$18 per grip, with bundles that bring the cost down — a 3-grip set runs $50 and a 7-grip set is $112.</p></details>
-    <details class="faq-q"><summary>Where can I buy Cloud & Wind grips?</summary><p>Directly from cloudandwindgolf.com. New collections drop seasonally — the Pacific Summer series is the latest, with colorways inspired by June Gloom mornings and SoCal sunsets.</p></details>
-    <details class="faq-q"><summary>What's the story behind Cloud & Wind Golf?</summary><p>In the brand's own words, 'We dig back into our heritage and look for inspiration.' Cloud & Wind Golf brings traditional Eastern design elements into the golf bag — inspired by nature, rooted in heritage, and crafted with passion. Rather than chase logos, the team builds grips around a feeling: capturing the beauty of the course so you can carry it in your hands.</p></details>
-    <details class="faq-q"><summary>What inspires each grip design?</summary><p>The brand says the best part of golf is the privilege to immerse yourself in the nature on the course, so every colorway captures a specific moment. Cloud & Wave traces the Pacific horizon where the sky meets the ocean; The Blossom: After the Rain marks the moment the grey clears and the flower remains; The Zen Grip is built for the bunker as a reminder to find calm in precision — hit the shot, rake the sand, move on; Palace Wall relives blooming branches against red palace walls in early spring.</p></details>
-    <details class="faq-q"><summary>How are Cloud & Wind grips built?</summary><p>Every grip uses a natural and synthetic rubber blend for touch, performance, and durability, in Standard+ sizing — a slightly wider diameter with a gentle taper toward the lower hand for a soft, relaxed handle. They weigh roughly 56 to 60 grams depending on the design, are rated for about 60 rounds, and can be built up to mid-size by adding three wraps of tape.</p></details>
+    <details open class="faq-q"><summary>What is Cloud & Wind Golf?</summary><p>Cloud & Wind Golf is a grip brand that makes one thing and makes it differently. Every design draws from traditional Eastern aesthetics and Pacific Coast nature — floral Blossom motifs, twilight Cloud & Wave colorways, stripped-back Zen textures — with a line of Chinese verse printed along each shaft.</p></details>
+    <details open class="faq-q"><summary>Are Cloud & Wind golf grips any good?</summary><p>The construction is legitimate: a natural and synthetic rubber blend, Standard+ sizing with a gentle taper, 56–58 grams, rated for roughly 60 rounds. They're built with more intention than most pro-shop grips at a lower price than the big names.</p></details>
+    <details open class="faq-q"><summary>How much do Cloud & Wind grips cost?</summary><p>$18 per grip, with bundles that bring the cost down — a 3-grip set runs $50 and a 7-grip set is $112.</p></details>
+    <details open class="faq-q"><summary>Where can I buy Cloud & Wind grips?</summary><p>Directly from cloudandwindgolf.com. New collections drop seasonally — the Pacific Summer series is the latest, with colorways inspired by June Gloom mornings and SoCal sunsets.</p></details>
+    <details open class="faq-q"><summary>What's the story behind Cloud & Wind Golf?</summary><p>In the brand's own words, 'We dig back into our heritage and look for inspiration.' Cloud & Wind Golf brings traditional Eastern design elements into the golf bag — inspired by nature, rooted in heritage, and crafted with passion. Rather than chase logos, the team builds grips around a feeling: capturing the beauty of the course so you can carry it in your hands.</p></details>
+    <details open class="faq-q"><summary>What inspires each grip design?</summary><p>The brand says the best part of golf is the privilege to immerse yourself in the nature on the course, so every colorway captures a specific moment. Cloud & Wave traces the Pacific horizon where the sky meets the ocean; The Blossom: After the Rain marks the moment the grey clears and the flower remains; The Zen Grip is built for the bunker as a reminder to find calm in precision — hit the shot, rake the sand, move on; Palace Wall relives blooming branches against red palace walls in early spring.</p></details>
+    <details open class="faq-q"><summary>How are Cloud & Wind grips built?</summary><p>Every grip uses a natural and synthetic rubber blend for touch, performance, and durability, in Standard+ sizing — a slightly wider diameter with a gentle taper toward the lower hand for a soft, relaxed handle. They weigh roughly 56 to 60 grams depending on the design, are rated for about 60 rounds, and can be built up to mid-size by adding three wraps of tape.</p></details>
   </div>
 </section>
 

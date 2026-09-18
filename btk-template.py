@@ -53,8 +53,10 @@ component rather than moving it:
   - From the sidebar it is on screen from the first screenful AND still beside
     the reader at The Story. After The Story it is only ever in one place.
 
-Say the word and SIDEBAR_IN_WRITEUP = False moves it; the renderer already
-handles both.
+UPDATE, 18 Sep: Lenny picked the J.Lindeberg page as the reference — "I like the
+box on the right" — so SIDEBAR_IN_WRITEUP is True and the card sits beside THE
+TGI TAKE on every page. The renderer handles both; set it False to put the card
+back in the flow as a full-width band.
 
 THE SPEC FILE
 -------------
@@ -86,7 +88,7 @@ ROOT = pathlib.Path(__file__).resolve().parent
 SPECS = ROOT / "research" / "btk"
 
 # See the long note above. False puts the Brand Card in the flow after The Story.
-SIDEBAR_IN_WRITEUP = False
+SIDEBAR_IN_WRITEUP = True   # the J.Lindeberg treatment: box on the right
 
 # Sections that are furniture rather than editorial, matched on their h2. They
 # keep their own place in the order instead of being swept into THE STORY.
@@ -234,27 +236,103 @@ CSS = CSS_OPEN + """
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"\201C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -311,15 +389,27 @@ def esc(s):
     return (s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;"))
 
 
-def render_writeup(spec, card_html):
-    """.writeup — THE TGI TAKE, with the Brand Card in its sticky sidebar."""
+def render_writeup(spec, card_html, story_paras=(), story_imgs=()):
+    """THE TGI TAKE and THE STORY in one column, the Brand Card sticky beside it.
+
+    Lenny: "Does the box scroll with the page a little? I liked that feature."
+    It was not scrolling. position:sticky only travels inside its containing
+    block, and with the card alone beside a 110-word Take the grid row was
+    SHORTER than the card — zero range, so it just scrolled away like any other
+    element. J.Lindeberg's box travels because it sits beside the whole opening
+    write-up. So the Take and the Story share one column here and the card has
+    something to travel against."""
     paras = "\n".join(f"    <p>{p}</p>" for p in spec["take"])
+    body = ('    <div class="drop-tag grass">The TGI Take</div>\n' + paras)
+    if story_paras:
+        body += ('\n    <h2 class="products-hdr btk-story-hdr">The Story</h2>\n'
+                 + "\n".join(f"    {i}" for i in story_imgs)
+                 + "\n".join(f"    <p>{p}</p>" for p in story_paras))
     aside = card_html if SIDEBAR_IN_WRITEUP else ""
     return (
         '<section class="products" data-btk="take">\n'
         '  <div class="writeup-body">\n'
-        '    <div class="drop-tag grass">The TGI Take</div>\n'
-        f"{paras}\n"
+        f"{body}\n"
         "  </div>\n"
         f"{aside}"
         "</section>\n\n")
@@ -604,14 +694,37 @@ def bands(slug):
     return [f"/images/{slug}/{p.name}" for p in hero + body]
 
 
+def orientation(src):
+    """Landscape or portrait, measured off the actual file.
+
+    Lenny: "formatted how they are provided so either landscape or portrait."
+    The template used to force every band into one aspect-ratio box, which meant
+    a portrait frame was cropped to a letterbox and a landscape one was cropped
+    again. Reading the real dimensions is two lines and removes the guessing."""
+    p = ROOT / src.lstrip("/")
+    try:
+        from PIL import Image
+        with Image.open(p) as im:
+            w, h = im.size
+    except Exception:
+        return "land"                     # unreadable: treat as the common case
+    return "port" if h > w * 1.08 else "land"
+
+
 def render_band(src, brand, first=False):
     """Lenny: separate each section with an image. The first is the masthead
     band at 21:9; the rest are 16:9. object-fit on .drop-hero-img is what keeps
     them from stretching — the bug from the first Hiroki build."""
     alt = (f"{brand} lookbook photograph" if not first
            else f"{brand} &mdash; lookbook photograph")
+    if first:
+        # the masthead keeps its full width and its drama
+        return ('<section class="drop-hero">\n'
+                f'  <img class="drop-hero-img" src="{src}" alt="{alt}" />\n'
+                "</section>\n\n")
+    kind = orientation(src)
     return ('<section class="drop-hero">\n'
-            f'  <img class="drop-hero-img{"" if first else " btk-16x9"}" '
+            f'  <img class="drop-hero-img btk-{kind}" '
             f'src="{src}" alt="{alt}" loading="lazy" />\n'
             "</section>\n\n")
 
@@ -628,6 +741,7 @@ def build(slug, apply_=False):
     crumb = header = collection = None
     heroes, story, coda, faq, more = [], [], [], None, None
     writeup_imgs = []
+    already_merged = False
     for tag, b in blocks:
         if tag.startswith('<div class="breadcrumb"'):
             crumb = b
@@ -655,19 +769,32 @@ def build(slug, apply_=False):
                 re.findall(r'<div class="pull-quote">.*?</div>\s*</div>', b, re.S))
         else:
             mark = re.search(r'data-btk="([a-z-]+)"', b[:120])
-            # MIGRATION. Pages built before The Story got its own marker carry it
-            # as data-btk="prose", which now reads as a page's own leftover prose:
-            # it would be kept AND regenerated, giving the page two "The Story"
-            # headings. Recognise the old shape by its heading and drop it — the
-            # spec rebuilds it either way. Safe to delete once every page has been
-            # rebuilt at least once; harmless until then.
-            # ...but ONLY when the spec can actually rebuild it. Hiroki's spec is
-            # hand-written and carries no story_extra, so dropping its Story
-            # section left render_story with nothing to emit and the page lost
-            # 308 words. Never delete something you cannot put back.
-            if (mark and mark.group(1) == "prose" and spec.get("story_extra")
-                    and re.search(r'<h2 class="products-hdr">The Story</h2>', b)):
+            # RESCUE BEFORE REGENERATING. The Story section is rebuilt from the
+            # spec, but on the FIRST run it was given things the spec does not
+            # hold: the write-up's own image and its founder pull-quote, lifted
+            # out of a block that was about to be dropped. On a SECOND run those
+            # now live inside this generated section, and dropping it threw them
+            # away again — Devereux lost its collar photograph, Birds of Condor
+            # lost Frankie Kimpton's quote. Take them back out before it goes.
+            if mark and mark.group(1) in ("story", "take"):
+                writeup_imgs.extend(re.findall(r'<img class="writeup-img"[^>]*>', b))
+                writeup_imgs.extend(
+                    re.findall(r'<div class="pull-quote">.*?</div>\s*</div>', b, re.S))
                 continue
+            # A native Story we already merged into keeps its own marker so a
+            # later run neither drops it nor injects the spec paragraphs twice.
+            if mark and mark.group(1) == "story-native":
+                story.append(b)
+                already_merged = True
+                continue
+            # (A migration rule lived here that dropped any data-btk="prose"
+            # block headed "The Story", on the assumption it was our own output
+            # from before The Story got its own marker. Every page has since been
+            # rebuilt, so the generated one now carries data-btk="story" and is
+            # handled above — which left this rule matching nothing but NATIVE
+            # Story sections, and deleting them. Bluegrass Fairway lost 430 words
+            # and both Matt Reynolds interviews to it. A migration that has
+            # finished migrating is not neutral; it is a live grenade.)
             if mark and mark.group(1) in ("prose", "coda"):
                 (coda if mark.group(1) == "coda" else story).append(b)
                 continue
@@ -778,15 +905,61 @@ def build(slug, apply_=False):
             if pics and not setattr(band, "used", True) else ""
     band.used = False
 
-    def pic(first=False):
+    # WHICH JOINS GET A PICTURE WHEN THERE AREN'T ENOUGH TO GO ROUND.
+    #
+    # pic() used to pop greedily in reading order, so a brand with two frames
+    # spent both at the top. Hidden Links Society has a FOUR-part write-up (the
+    # Take, the Story, The Public 100 Project, Where the 2% Goes) and exactly two
+    # photographs: one became the masthead, the second landed between the Take
+    # and the Story — cutting the argument in half after one paragraph — and the
+    # entire 18-piece collection then ran with no break at all.
+    #
+    # A join inside continuous prose is the LEAST useful place for a scarce
+    # picture and the most damaging: it reads as an interruption. The most
+    # useful is where the page changes mode, from reading to browsing. So when
+    # there are fewer frames than joins, they are spent by rank, not by order:
+    #
+    #   0  the masthead
+    #   1  the write-up ending and the products starting
+    #   2  between one product category and the next
+    #   3  after the coda
+    #   4  inside the write-up
+    #
+    # With enough frames every join still gets one and nothing changes.
+    RANK = {"masthead": 0, "precollection": 1, "category": 2, "coda": 3, "writeup": 4}
+    n_cat_joins = max(0, len(spec.get("collection", [])) - 1)
+    kinds = (["masthead", "writeup", "precollection"]
+             + (["precollection"] if spec.get("start_here") else [])
+             + ["category"] * n_cat_joins + ["coda"])
+    # (document order, kind) — the order index is the unique key, so no id() games
+    joins = list(enumerate(kinds))
+    chosen = {n for n, _ in sorted(joins, key=lambda j: (RANK[j[1]], j[0]))[:len(pics)]}
+    _seq = list(joins)
+
+    def pic(first=False, kind="category"):
+        """Emit a band at this join only if this join earned one."""
         if not pics:
             return ""
-        return render_band(pics.pop(0), spec["brand"], first=first)
+        for j in _seq:                      # next unconsumed join of this kind
+            if j[1] == kind:
+                _seq.remove(j)
+                if j[0] not in chosen:
+                    return ""
+                return render_band(pics.pop(0), spec["brand"], first=first)
+        return ""
 
     # THE READING ORDER, with a picture at every join.
-    parts.append(pic(first=True))                       # masthead band
-    parts.append(render_writeup(spec, card_html))       # THE TGI TAKE
-    parts.append(pic())
+    parts.append(pic(first=True, kind="masthead"))      # masthead band
+    # The Story rides in the same column as the Take so the Brand Card beside
+    # them has something to stay level with as the reader scrolls.
+    # ...unless the page already has a Story section of its own (Bluegrass
+    # Fairway does). Emitting our heading as well gave it two "The Story"s.
+    _has_native_story = any(re.search(r"<h2[^>]*>\s*The Story\s*</h2>", b)
+                            for b in story)
+    _story_in_take = ((spec.get("story_extra") or [])
+                      if SIDEBAR_IN_WRITEUP and not _has_native_story else [])
+    parts.append(render_writeup(spec, card_html, _story_in_take, writeup_imgs))
+    parts.append(pic(kind="writeup"))
     # THE NATIVE "THE STORY". Bluegrass Fairway already has a section headed
     # The Story of its own, so emitting ours beside it gave the page two
     # identical headings. Both bodies are real copy and neither may be dropped,
@@ -795,26 +968,47 @@ def build(slug, apply_=False):
     native_story = next(
         (i for i, b in enumerate(story)
          if re.search(r"<h2[^>]*>\s*The Story\s*</h2>", b)), None)
-    if native_story is not None and spec.get("story_extra"):
+    if _story_in_take:
+        pass                    # already emitted beside the Brand Card, above
+    elif already_merged:
+        pass                    # the paragraphs are already in the page's own Story
+    elif native_story is not None and spec.get("story_extra"):
         b = story[native_story]
         k = b.find("</h2>") + len("</h2>")
         body = "\n".join(f"    {i}" for i in writeup_imgs) \
             + "\n".join(f"    <p>{x}</p>" for x in spec["story_extra"])
-        story[native_story] = (b[:k] + '\n  <div class="writeup-body">\n'
-                               + body + "\n  </div>\n" + b[k:])
+        b = (b[:k] + '\n  <div class="writeup-body">\n'
+             + body + "\n  </div>\n" + b[k:])
+        # STAMP IT. Without a marker of its own this merged section reads on the
+        # next run as an ordinary prose block headed "The Story", which the
+        # migration rule drops — taking the page's native story with it.
+        # Bluegrass Fairway lost 430 words that way, including both Matt
+        # Reynolds interviews.
+        # Stamp whether or not the section already carries a marker. A plain
+        # string replace of '<section class="products">' matched nothing once an
+        # earlier run had stamped it data-btk="prose", so the stamp silently
+        # failed and the spec paragraphs were injected again on every run —
+        # Bluegrass grew by 778 characters a pass.
+        if re.search(r'<section[^>]*data-btk="[a-z-]+"', b[:160]):
+            b = re.sub(r'(<section[^>]*)data-btk="[a-z-]+"',
+                       r'\1data-btk="story-native"', b, count=1)
+        else:
+            b = b.replace('<section class="products"',
+                          '<section class="products" data-btk="story-native"', 1)
+        story[native_story] = b
     else:
         parts.append(render_story(spec, writeup_imgs))   # the main write-up
     parts.extend(mark_prose(story, "prose"))            # any other prose sections
     if not SIDEBAR_IN_WRITEUP:
         parts.append('<div class="btk-card">\n' + card_html + "</div>\n\n")
-    parts.append(pic())
+    parts.append(pic(kind="precollection"))
     if spec.get("start_here"):
         parts.append(render_start_here(spec, cards))
-        parts.append(pic())
+        parts.append(pic(kind="precollection"))
     # THE COLLECTION, with a picture between each category
     parts.append(render_collection(spec, collection, cards, pic))
     parts.extend(mark_prose(coda, "coda"))              # the shorter write-up
-    parts.append(pic())
+    parts.append(pic(kind="coda"))
     if faq:
         parts.append(faq)
     parts.append(render_related(spec, brands))
@@ -822,6 +1016,14 @@ def build(slug, apply_=False):
         parts.append(more)
     parts.append(tail)
     out = "".join(p for p in parts if p)
+
+    # THE FAQ IS OPEN. Lenny: "automatically expand all the FAQ sections so we're
+    # not clicking to expand." <details open> shows the answer on load and keeps
+    # the disclosure triangle working, so a reader can still collapse one. It
+    # also means the answers are in the rendered text for anyone — or anything —
+    # reading the page without running the click.
+    out = re.sub(r'<details(?![^>]*\bopen\b)([^>]*class="faq-q")', r'<details open\1', out)
+    out = re.sub(r'<details(?![^>]*\bopen\b)(\s*>)', r'<details open\1', out)
 
     # ---- assertions. A reorderer that loses things is worse than no reorderer.
     checks = [

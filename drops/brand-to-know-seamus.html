@@ -146,27 +146,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -231,30 +307,21 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/seamus/btk-hero.jpg" alt="Seamus Golf &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/seamus/btk-hero.jpg" alt="Seamus Golf &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Seamus is the rare brand where the manufacturing story and the product story are the same story. Akbar and Megan Chisti cut and sew in Beaverton rather than placing an order offshore, which is why the range can carry registered Irish tartans and licensed Pendleton wool at all &mdash; those are relationships and mill minimums, not prints.</p>
+    <p>The Glen Affric Tartan Driver at $130 makes the case on its own: a pattern dated to roughly the sixteenth century, fleece-lined, stretched over a titanium head. Nothing else in the bag does that.</p>
+    <p>This is for the walker who notices materials, and for anyone who wants one object in the bag that did not come out of the same factory as everyone else&rsquo;s. A $36 ball marker is the cheapest way to find out whether you care; the covers run to $170.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Seamus turns the headcover into the most personal object in the bag, in registered Irish tartans and licensed Pendleton wool, and the company started with one that was falling apart. Akbar Chisti&rsquo;s father had given him a wool cover from a famous links club, Royal Troon by the company&rsquo;s own telling, and it had worn through. His wife Megan was a womenswear designer at Pendleton Woolen Mills, so in 2011 she remade it from fabric remnants, sewed a few more for his golf group, and then the two of them were running a company out of their garage. It is named after their Irish Terrier, Seamus O&rsquo;Reily, and you pronounce it SHAY-mus.</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/seamus/btk-body-1.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>The first wholesale order came from Bandon Dunes, where Akbar had caddied in college. Fifteen years later the operation still cuts and sews everything in Beaverton, Oregon, in wool, leather, canvas and seersucker, with fabric from Pendleton and from UK mills including parliament-protected Harris Tweed. It wholesales to roughly 700 shops worldwide and the Chistis still own all of it.</p>
     <p>Two things make Seamus more than a nice accessories company. The first is the 2016 Ryder Cup, when Matt Kuchar commissioned personalized American flag covers for the entire U.S. team: thirteen hand-cut stripes, fifty embroidered stars, each one sewn in Oregon. The second is the blacksmith. The Hand Forged line of markers, pitch tools and money clips is hammered rather than cast, by a smith in Portland who now does about ninety per cent of his business with Seamus. The USGA lets them set up and hammer markers on-site at U.S. Open merchandise pavilions, where the brand has sold every year since Chambers Bay in 2015.</p>
     <p>The catalogue has three parts. Driver and fairway covers are the engine of the company, at $120 to $170. The putter shelf is where the fabric library shows off, in registered Irish tartans, Hawaiian barkcloth and licensed Pendleton patterns. The forged bench runs $36 to $76, and hand-stamped personalization on it is free.</p>
   </div>
-</section>
-
-<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -272,10 +339,14 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
+</section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/seamus/btk-body-2.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/seamus/btk-body-1.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/seamus/btk-body-2.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -373,7 +444,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/seamus/btk-body-3.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/seamus/btk-body-3.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -440,7 +511,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/seamus/btk-body-4.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/seamus/btk-body-4.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -525,21 +596,21 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/seamus/btk-body-5.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/seamus/btk-body-5.jpg" alt="Seamus Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="faq">
 <div class="faq">
-    <details class="faq-q"><summary>Who founded Seamus Golf?</summary><p>Akbar and Megan Chisti, in 2011, working out of their garage in the Portland area. Megan was a womenswear designer at Pendleton Woolen Mills; the company began when she remade a worn-out wool headcover that Akbar's father had given him from a famous links club, then sewed prototypes for his golf group.</p></details>
-    <details class="faq-q"><summary>Where are Seamus headcovers made?</summary><p>Beaverton, Oregon — designed, hand-cut, sewn and packaged in their own workshop, with a storefront at the same address. Wool comes from Pacific Northwest mills including Pendleton and from mills in the UK, including genuine Harris Tweed from the Outer Hebrides.</p></details>
-    <details class="faq-q"><summary>What is the Seamus Ryder Cup story?</summary><p>At the 2016 Ryder Cup, Matt Kuchar commissioned personalized American flag covers for the entire U.S. team — thirteen hand-cut stripes and fifty embroidered stars each. Kuchar also carried Seamus at the 2016 Olympics, and Bill Murray used one in the Ryder Cup celebrity match. The USA Wool "Patriot" cover in the standing line descends from that commission.</p></details>
-    <details class="faq-q"><summary>Does Seamus make official U.S. Open merchandise?</summary><p>Yes — they have sold at every U.S. Open since Chambers Bay in 2015, and they hammer ball markers on-site at the championship merchandise pavilion. The 2026 Shinnecock Hills capsule (driver cover, mallet cover, pouch, flask, markers) is on their site now.</p></details>
-    <details class="faq-q"><summary>What does Hand Forged mean at Seamus?</summary><p>The metal pieces — ball markers, pitch tools, money clips, bag tags — are hand-hammered by the brand's blacksmith in Portland, who now does roughly ninety per cent of his work for Seamus. They are not cast or poured, each comes out slightly different, and hand-stamped personalization up to five characters is free.</p></details>
-    <details class="faq-q"><summary>Why is it called Seamus?</summary><p>The company is named after the founders' Irish Terrier, Seamus O'Reily. It is pronounced SHAY-mus.</p></details>
-    <details class="faq-q"><summary>What is the Seamus tartan program?</summary><p>Authentic registered tartans — Scottish patterns, a full Irish county collection, and custom tartan work. For the 2019 U.S. Open at Pebble Beach they registered an original design with the Scottish Register of Tartans. It is the most serious fabric program in golf accessories.</p></details>
-    <details class="faq-q"><summary>What do Seamus headcovers cost?</summary><p>Driver covers run roughly $120 to $170 depending on fabric — seersucker and corduroy at the low end, full leather at the top. Putter covers sit between $120 and $170, hand-forged markers at $36 to $48, and the entry point is a $20 wooden bag tag.</p></details>
-    <details class="faq-q"><summary>What was Seamus's connection to Bandon Dunes?</summary><p>Akbar Chisti caddied at Bandon Dunes in college, and the resort placed the brand's first wholesale order — Seamus credits it with getting the company off the ground. Megan quit her Pendleton job shortly after. The pro shops there still carry a dedicated Seamus line.</p></details>
-    <details class="faq-q"><summary>How big is Seamus Golf now?</summary><p>Roughly 700 wholesale accounts worldwide — up from about 45 in the early days — including Japan, the UK and Australia, while the couple still owns the company outright and production stays in Oregon.</p></details>
+    <details open class="faq-q"><summary>Who founded Seamus Golf?</summary><p>Akbar and Megan Chisti, in 2011, working out of their garage in the Portland area. Megan was a womenswear designer at Pendleton Woolen Mills; the company began when she remade a worn-out wool headcover that Akbar's father had given him from a famous links club, then sewed prototypes for his golf group.</p></details>
+    <details open class="faq-q"><summary>Where are Seamus headcovers made?</summary><p>Beaverton, Oregon — designed, hand-cut, sewn and packaged in their own workshop, with a storefront at the same address. Wool comes from Pacific Northwest mills including Pendleton and from mills in the UK, including genuine Harris Tweed from the Outer Hebrides.</p></details>
+    <details open class="faq-q"><summary>What is the Seamus Ryder Cup story?</summary><p>At the 2016 Ryder Cup, Matt Kuchar commissioned personalized American flag covers for the entire U.S. team — thirteen hand-cut stripes and fifty embroidered stars each. Kuchar also carried Seamus at the 2016 Olympics, and Bill Murray used one in the Ryder Cup celebrity match. The USA Wool "Patriot" cover in the standing line descends from that commission.</p></details>
+    <details open class="faq-q"><summary>Does Seamus make official U.S. Open merchandise?</summary><p>Yes — they have sold at every U.S. Open since Chambers Bay in 2015, and they hammer ball markers on-site at the championship merchandise pavilion. The 2026 Shinnecock Hills capsule (driver cover, mallet cover, pouch, flask, markers) is on their site now.</p></details>
+    <details open class="faq-q"><summary>What does Hand Forged mean at Seamus?</summary><p>The metal pieces — ball markers, pitch tools, money clips, bag tags — are hand-hammered by the brand's blacksmith in Portland, who now does roughly ninety per cent of his work for Seamus. They are not cast or poured, each comes out slightly different, and hand-stamped personalization up to five characters is free.</p></details>
+    <details open class="faq-q"><summary>Why is it called Seamus?</summary><p>The company is named after the founders' Irish Terrier, Seamus O'Reily. It is pronounced SHAY-mus.</p></details>
+    <details open class="faq-q"><summary>What is the Seamus tartan program?</summary><p>Authentic registered tartans — Scottish patterns, a full Irish county collection, and custom tartan work. For the 2019 U.S. Open at Pebble Beach they registered an original design with the Scottish Register of Tartans. It is the most serious fabric program in golf accessories.</p></details>
+    <details open class="faq-q"><summary>What do Seamus headcovers cost?</summary><p>Driver covers run roughly $120 to $170 depending on fabric — seersucker and corduroy at the low end, full leather at the top. Putter covers sit between $120 and $170, hand-forged markers at $36 to $48, and the entry point is a $20 wooden bag tag.</p></details>
+    <details open class="faq-q"><summary>What was Seamus's connection to Bandon Dunes?</summary><p>Akbar Chisti caddied at Bandon Dunes in college, and the resort placed the brand's first wholesale order — Seamus credits it with getting the company off the ground. Megan quit her Pendleton job shortly after. The pro shops there still carry a dedicated Seamus line.</p></details>
+    <details open class="faq-q"><summary>How big is Seamus Golf now?</summary><p>Roughly 700 wholesale accounts worldwide — up from about 45 in the early days — including Japan, the UK and Australia, while the couple still owns the company outright and production stays in Oregon.</p></details>
   </div>
 </section>
 

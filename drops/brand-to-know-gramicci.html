@@ -169,27 +169,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -256,21 +332,33 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/gramicci/btk-hero.jpg" alt="Gramicci &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/gramicci/btk-hero.jpg" alt="Gramicci &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Gramicci is not a golf brand, which is exactly why it works for golf. Mike Graham designed the original climbing pant in 1982 for big walls in Yosemite &mdash; integrated webbing belt, gusseted crotch, full range of motion &mdash; and those three decisions turn out to describe a good walking trouser better than most things sold as one.</p>
+    <p>The G-Short at $70 is the piece to start with: the climbing pattern cut short, in cotton that breathes in July.</p>
+    <p>This is for the player who walks munis in real heat and would rather not be dressed as a golfer while doing it. Eighteen pieces, with the UPF tops from $53.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Gramicci started in 1982 when rock climber Mike Graham needed pants that could handle big-wall climbs without restricting movement. The integrated webbing belt, the gusseted crotch, the freedom-of-movement philosophy &mdash; it all started on the granite faces of Yosemite. Forty-plus years later, Gramicci makes everything from the original climbing pant to UPF-rated rashguards, and the brand has quietly become a favorite among golfers who walk munis in the summer heat. The same design principles that work on El Capitan &mdash; unrestricted range of motion, durable natural fabrics, easy-adjust fit &mdash; work just as well walking 18 in August.</p>
-  </div>
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>The range runs from the $44 Nylon Gramicci Cap to the $170 Taos Canvas Jacket. Organic cotton twill, nylon-cotton blends with water-repellent finishes, UPF-Shield stretch fabric &mdash; Gramicci builds clothes for people who actually move. No logos screaming, no performance marketing jargon, just well-made pieces with real climbing DNA. Eighteen picks here that prove you don't need a golf brand to play great golf.</p>
   </div>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>18 items</span></div>
+      <a href="https://gramicci.com" target="_blank" rel="noopener" class="sidebar-cta">Shop the Collection &#8599;</a>
+      <div class="hashtags">
+        <span class="hashtag">#TheGrassyIssue</span>
+        <span class="hashtag">#GolfCulture</span>
+        <span class="hashtag">#BrandToKnow</span>
+        <span class="hashtag">#Gramicci</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
 </section>
 
 <section style="max-width:1400px;margin:48px auto 0;padding:32px 32px 0;border-top:.5px solid var(--ink);">
@@ -302,23 +390,6 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   </div>
 </section>
-
-<div class="btk-card">
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Pieces</span><span>18 items</span></div>
-      <a href="https://gramicci.com" target="_blank" rel="noopener" class="sidebar-cta">Shop the Collection &#8599;</a>
-      <div class="hashtags">
-        <span class="hashtag">#TheGrassyIssue</span>
-        <span class="hashtag">#GolfCulture</span>
-        <span class="hashtag">#BrandToKnow</span>
-        <span class="hashtag">#Gramicci</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
 
 <section class="products" data-btk="collection">
   <div class="drop-tag grass">The Collection &mdash; 18 Pieces</div>
@@ -494,11 +565,11 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Brand to Know &mdash; Gramicci &mdash; FAQ</h2>
   <div class="faq">
-    <details class="faq-q"><summary>What is Gramicci?</summary><p>An outdoor clothing brand started in 1982 by rock climber Mike Graham, who needed pants that could handle big-wall climbing without restricting movement. The integrated webbing belt and gusseted crotch both originated on the granite of Yosemite.</p></details>
-    <details class="faq-q"><summary>Why do golfers wear Gramicci?</summary><p>The design principles that work on El Capitan — unrestricted range of motion, durable natural fabrics, easy-adjust fit — work just as well walking 18 in August. It has quietly become a favourite among golfers who walk municipal courses in summer heat.</p></details>
-    <details class="faq-q"><summary>What is the Gramicci webbing belt?</summary><p>An integrated belt built into the waistband of the pants, one of the brand’s original 1982 features and still its signature detail.</p></details>
-    <details class="faq-q"><summary>What fabrics does Gramicci use?</summary><p>Organic cotton twill, nylon-cotton blends with water-repellent finishes, and UPF-Shield stretch fabric.</p></details>
-    <details class="faq-q"><summary>How much does Gramicci cost?</summary><p>From $44 for the Nylon Gramicci Cap up to $170 for the Taos Canvas Jacket.</p></details>
+    <details open class="faq-q"><summary>What is Gramicci?</summary><p>An outdoor clothing brand started in 1982 by rock climber Mike Graham, who needed pants that could handle big-wall climbing without restricting movement. The integrated webbing belt and gusseted crotch both originated on the granite of Yosemite.</p></details>
+    <details open class="faq-q"><summary>Why do golfers wear Gramicci?</summary><p>The design principles that work on El Capitan — unrestricted range of motion, durable natural fabrics, easy-adjust fit — work just as well walking 18 in August. It has quietly become a favourite among golfers who walk municipal courses in summer heat.</p></details>
+    <details open class="faq-q"><summary>What is the Gramicci webbing belt?</summary><p>An integrated belt built into the waistband of the pants, one of the brand’s original 1982 features and still its signature detail.</p></details>
+    <details open class="faq-q"><summary>What fabrics does Gramicci use?</summary><p>Organic cotton twill, nylon-cotton blends with water-repellent finishes, and UPF-Shield stretch fabric.</p></details>
+    <details open class="faq-q"><summary>How much does Gramicci cost?</summary><p>From $44 for the Nylon Gramicci Cap up to $170 for the Taos Canvas Jacket.</p></details>
   </div>
 </section>
 

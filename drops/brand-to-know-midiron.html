@@ -141,27 +141,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -226,23 +302,17 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/midiron/btk-hero.jpg" alt="Midiron &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/midiron/btk-hero.jpg" alt="Midiron &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Midiron writes better than anyone else in golf and will not tell you who is doing it &mdash; no founder name, no photograph, no byline. What is on the site is a line about a grandad&rsquo;s hand-me-down Titleist cap, lowercase and unsigned, and then the brand went and found vintage Titleist caps, had a Melbourne studio rework three, gave one away and sold the other two.</p>
+    <p>The Tour Spec Cap at A$69 (about US$49) is the everyday version of that sensibility.</p>
+    <p>This is for the player who reads the product page. Nine pieces exist, seven releases so far, A$69 to A$129 &mdash; a small catalogue held to an unusually high standard of attention.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Midiron writes better product copy than anyone else in golf and will not tell you who is doing it. There is no founder name on the site, no photograph and no byline on any of the writing. On a product page for a sold-out cap, in lowercase and unsigned, is this:</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/midiron/btk-body-1.jpg" alt="Midiron lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>&ldquo;when i was 10, my
     grandad gave me a hand me down titleist cap because i didn&rsquo;t have one to wear when we played golf
     together. sure, it was nothing special to anyone else, but it meant everything to me.&rdquo;</p>
@@ -252,9 +322,6 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <p>The photography does at least half the work. Most of what they shoot happens at night, on a floodlit par-three, with a hard flash: long shadows, wet grass, headlights and someone swinging in the dark. It matches a line from the Tour Spec Cap page exactly, which says the brand is for &ldquo;early starts, empty fairways, late finishes. The moments that don&rsquo;t need witnesses.&rdquo;</p>
     <p>Six of the nine products sign off &ldquo;Golf Apparel Research approved,&rdquo; which reads like third-party validation and is not. Golf Apparel Research is Midiron&rsquo;s own house descriptor, and the line sits at the bottom of the spec list, straight after <em>custom Midiron branded trims</em>, like any other feature. They are approving themselves, on purpose, with a straight face. Nothing else on the site carries a signature either, so a house descriptor standing in for an authority fits the pattern.</p>
   </div>
-</section>
-
-<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -272,10 +339,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
+</section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/midiron/btk-body-2.jpg" alt="Midiron lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/midiron/btk-body-1.jpg" alt="Midiron lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -343,7 +410,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/midiron/btk-body-3.jpg" alt="Midiron lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/midiron/btk-body-2.jpg" alt="Midiron lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -373,6 +440,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/midiron/btk-body-3.jpg" alt="Midiron lookbook photograph" loading="lazy" />
+</section>
+
 <section class="products" data-btk="collection-cont">
   <div class="products-section">
     <h2 class="products-hdr">Everything Else</h2>
@@ -393,16 +464,16 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 
 <section class="products" data-btk="faq">
 <div class="faq">
-    <details class="faq-q"><summary>Who is behind Midiron?</summary><p>Midiron does not say, and that appears to be deliberate. There is no founder name anywhere on the site and no signature on any of the writing &mdash; including the lowercase, first-person story about a grandad&rsquo;s hand-me-down Titleist cap that is the most personal thing on the site. What they do publish is that the brand is Australian: &ldquo;100% Australian owned, independent Australian business,&rdquo; run out of Sydney. No interviews with the founders have been published anywhere.</p></details>
-    <details class="faq-q"><summary>Where is Midiron based?</summary><p>Sydney, Australia. Their business registration publishes a postcode rather than an address &mdash; NSW 2232, in the Sutherland Shire in the city&rsquo;s south. Their own image descriptions name the location of the night shoots: &ldquo;At night time on Shortees Golf Course&rdquo; &mdash; the LED-floodlit eighteen-hole par-three at Terrey Hills, about thirty-five minutes north of the CBD and open until ten at night. The line above their mailing-list signup reads &ldquo;Built down under, played everywhere.&rdquo;</p></details>
-    <details class="faq-q"><summary>Is Midiron clothing made in Australia?</summary><p>They do not say. Every geographic claim on the site is about design and ownership rather than manufacturing &mdash; &ldquo;100% Australian owned, independent Australian business,&rdquo; and &ldquo;designed in Australia&rdquo; in their page metadata &mdash; and there is no country of origin listed on any product page. We would not assume either way. What they do publish is construction detail: 100 per cent cotton twill caps, a 300gsm cotton polo, a mid-weight perforated polyester polo.</p></details>
-    <details class="faq-q"><summary>How much does Midiron cost?</summary><p>Caps are A$69 and polos are A$129, with the headcover also at A$69. At late-August 2026 rates that is roughly US$49 and US$92. The store is priced in Australian dollars by default, with a currency selector in the site header offering USD, CAD, GBP, EUR, DKK, NZD and SEK.</p></details>
-    <details class="faq-q"><summary>Does Midiron ship internationally?</summary><p>Yes. Shipping is free within Australia, and the checkout quotes international rates directly &mdash; around US$15 to the United States and New Zealand and about US$21 to the United Kingdom, both quoted at six to ten business days. The store sells into fifteen countries. Their contact form also covers &ldquo;international shipping, swing thoughts or general enquiries&rdquo; if you need something specific.</p></details>
-    <details class="faq-q"><summary>Why is everything sold out on Midiron?</summary><p>Because they built it that way, and they answer this on their own FAQ page: &ldquo;We release in small runs. We only open the store periodically.&rdquo; Asked whether they restock, the answer is &ldquo;Sometimes. Usually not.&rdquo; Nine products have gone up since December 2025 and three are already gone. The mailing list gets first access to drops.</p></details>
-    <details class="faq-q"><summary>What does &ldquo;Golf Apparel Research approved&rdquo; mean?</summary><p>It means Midiron approves of Midiron. Golf Apparel Research is the brand&rsquo;s own house descriptor &mdash; their Instagram display name is &ldquo;MIDIRON | Golf Apparel Research&trade;&rdquo; and the footer of every page reads &ldquo;Midiron Mission: Golf Apparel Research&trade;. Engineered for the course, built for everything after.&rdquo; It appears in the spec list on each product page alongside genuine details like mesh internal binding, which is the joke. There is no outside body doing the approving.</p></details>
-    <details class="faq-q"><summary>What is the Upcycled Vintage Titleist Cap?</summary><p>Three one-off caps, released in July 2026 and gone immediately. Midiron sourced vintage Titleist caps and sent them to Oxy Customs, a Melbourne screen-printing and garment-rework studio, to be reworked. It is the only outside collaboration the brand has done. The reason given is the closest thing to a mission statement they have published: recreating the feeling of being handed a cap by a grandparent, &ldquo;for anyone who gets it.&rdquo;</p></details>
-    <details class="faq-q"><summary>How many drops has Midiron done?</summary><p>Seven releases between December 2025 and August 2026, producing nine distinct products &mdash; six caps, two polos and a headcover. They have never numbered their drops publicly, so anyone describing this as Drop 3 or Drop 4 is inventing it. The pace works out to roughly one release a month, with two of the seven being two-piece releases.</p></details>
-    <details class="faq-q"><summary>Is Midiron a good brand to buy from?</summary><p>If you like the aesthetic, buy it when you see it, because it will not be there later. The construction detail they publish is real &mdash; metal clasp closures, mesh internal binding, 300gsm cotton, custom woven labels &mdash; and A$69 for a cap is normal money for an independent label. The caveats are that they publish no manufacturing origin, most of the catalogue is gone at any given moment, and this is a very new and very small operation with almost nothing in stock at any given moment.</p></details>
+    <details open class="faq-q"><summary>Who is behind Midiron?</summary><p>Midiron does not say, and that appears to be deliberate. There is no founder name anywhere on the site and no signature on any of the writing &mdash; including the lowercase, first-person story about a grandad&rsquo;s hand-me-down Titleist cap that is the most personal thing on the site. What they do publish is that the brand is Australian: &ldquo;100% Australian owned, independent Australian business,&rdquo; run out of Sydney. No interviews with the founders have been published anywhere.</p></details>
+    <details open class="faq-q"><summary>Where is Midiron based?</summary><p>Sydney, Australia. Their business registration publishes a postcode rather than an address &mdash; NSW 2232, in the Sutherland Shire in the city&rsquo;s south. Their own image descriptions name the location of the night shoots: &ldquo;At night time on Shortees Golf Course&rdquo; &mdash; the LED-floodlit eighteen-hole par-three at Terrey Hills, about thirty-five minutes north of the CBD and open until ten at night. The line above their mailing-list signup reads &ldquo;Built down under, played everywhere.&rdquo;</p></details>
+    <details open class="faq-q"><summary>Is Midiron clothing made in Australia?</summary><p>They do not say. Every geographic claim on the site is about design and ownership rather than manufacturing &mdash; &ldquo;100% Australian owned, independent Australian business,&rdquo; and &ldquo;designed in Australia&rdquo; in their page metadata &mdash; and there is no country of origin listed on any product page. We would not assume either way. What they do publish is construction detail: 100 per cent cotton twill caps, a 300gsm cotton polo, a mid-weight perforated polyester polo.</p></details>
+    <details open class="faq-q"><summary>How much does Midiron cost?</summary><p>Caps are A$69 and polos are A$129, with the headcover also at A$69. At late-August 2026 rates that is roughly US$49 and US$92. The store is priced in Australian dollars by default, with a currency selector in the site header offering USD, CAD, GBP, EUR, DKK, NZD and SEK.</p></details>
+    <details open class="faq-q"><summary>Does Midiron ship internationally?</summary><p>Yes. Shipping is free within Australia, and the checkout quotes international rates directly &mdash; around US$15 to the United States and New Zealand and about US$21 to the United Kingdom, both quoted at six to ten business days. The store sells into fifteen countries. Their contact form also covers &ldquo;international shipping, swing thoughts or general enquiries&rdquo; if you need something specific.</p></details>
+    <details open class="faq-q"><summary>Why is everything sold out on Midiron?</summary><p>Because they built it that way, and they answer this on their own FAQ page: &ldquo;We release in small runs. We only open the store periodically.&rdquo; Asked whether they restock, the answer is &ldquo;Sometimes. Usually not.&rdquo; Nine products have gone up since December 2025 and three are already gone. The mailing list gets first access to drops.</p></details>
+    <details open class="faq-q"><summary>What does &ldquo;Golf Apparel Research approved&rdquo; mean?</summary><p>It means Midiron approves of Midiron. Golf Apparel Research is the brand&rsquo;s own house descriptor &mdash; their Instagram display name is &ldquo;MIDIRON | Golf Apparel Research&trade;&rdquo; and the footer of every page reads &ldquo;Midiron Mission: Golf Apparel Research&trade;. Engineered for the course, built for everything after.&rdquo; It appears in the spec list on each product page alongside genuine details like mesh internal binding, which is the joke. There is no outside body doing the approving.</p></details>
+    <details open class="faq-q"><summary>What is the Upcycled Vintage Titleist Cap?</summary><p>Three one-off caps, released in July 2026 and gone immediately. Midiron sourced vintage Titleist caps and sent them to Oxy Customs, a Melbourne screen-printing and garment-rework studio, to be reworked. It is the only outside collaboration the brand has done. The reason given is the closest thing to a mission statement they have published: recreating the feeling of being handed a cap by a grandparent, &ldquo;for anyone who gets it.&rdquo;</p></details>
+    <details open class="faq-q"><summary>How many drops has Midiron done?</summary><p>Seven releases between December 2025 and August 2026, producing nine distinct products &mdash; six caps, two polos and a headcover. They have never numbered their drops publicly, so anyone describing this as Drop 3 or Drop 4 is inventing it. The pace works out to roughly one release a month, with two of the seven being two-piece releases.</p></details>
+    <details open class="faq-q"><summary>Is Midiron a good brand to buy from?</summary><p>If you like the aesthetic, buy it when you see it, because it will not be there later. The construction detail they publish is real &mdash; metal clasp closures, mesh internal binding, 300gsm cotton, custom woven labels &mdash; and A$69 for a cap is normal money for an independent label. The caveats are that they publish no manufacturing origin, most of the catalogue is gone at any given moment, and this is a very new and very small operation with almost nothing in stock at any given moment.</p></details>
   </div>
 </section>
 

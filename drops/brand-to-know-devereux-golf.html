@@ -195,27 +195,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -282,20 +358,17 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/devereux-golf/btk-hero.jpg" alt="Devereux Golf &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/devereux-golf/btk-hero.jpg" alt="Devereux Golf &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
-    <p>Robert Brunner studied geology at TCU, went to work in the gas industry, and hated it. He quit, spent a year at fashion school in Los Angeles, and came back with an idea for a golf line. He pitched his brother Will, who took on business operations. That was 2013.</p>
-  </div>
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
-    <img class="writeup-img" src="/images/devereux-golf/r-detail-collar.jpg" alt="Devereux polo collar and skull caddie print detail" loading="lazy" />
+    <p>Devereux is an apparel brand that happens to be famous for headcovers, and it is better to know that going in. Robert Brunner left the gas industry, spent a year at fashion school in Los Angeles and came back with a clothing line; the leather covers are the signature, not the business.</p>
+    <p>The Devco Twill Jacket at $138 is the piece that shows the training &mdash; cut closer to a work coat than a golf shell, and fine off the course.</p>
+    <p>It suits desert and shoulder-season golf, and the player who wants the round to be one part of the day rather than an outfit change. Twenty-six pieces run $18 to $248.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
+    <img class="writeup-img" src="/images/devereux-golf/r-detail-collar.jpg" alt="Devereux polo collar and skull caddie print detail" loading="lazy" />    <p>Robert Brunner studied geology at TCU, went to work in the gas industry, and hated it. He quit, spent a year at fashion school in Los Angeles, and came back with an idea for a golf line. He pitched his brother Will, who took on business operations. That was 2013.</p>
     <p>They named it after their grandmother. Asked about it in the brand&rsquo;s first year, Robert didn&rsquo;t dress it up: <em>&ldquo;It&rsquo;s my grandmother&rsquo;s name. She turns 90 in March. We just named it after her, we wanted to keep it in the family. She still wears high heels to this day, she&rsquo;s a neat old lady.&rdquo;</em></p>
     <p>The reason it exists is the same reason a lot of good brands exist, which is that the founder couldn&rsquo;t find what he wanted. <em>&ldquo;It all came from when I played, thinking, &lsquo;What can I wear?&rsquo;&rdquo;</em> he said. <em>&ldquo;There&rsquo;s Puma, which is all flashy. I went through my Puma phase. The problem is that there&rsquo;s nothing that was fun on the course and off the course. Nothing for a night out.&rdquo;</em> In 2013 that was a real gap. Golf shirts were boxy, mass produced, and cut for nobody.</p>
     <p>What&rsquo;s striking about going back to that interview is how little the technical brief has moved. Robert named three details then that Devereux is still building around now: a slightly smaller spread collar that stays out of the way through the swing, a placket thinned down so it lies flat, and a fit shaped around how men are actually built. Add a smaller chest pocket and you have described the Homestead and the Phoenician, twelve years later.</p>
@@ -303,6 +376,26 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <p>The headcovers are where that lands hardest. They&rsquo;re leather, they&rsquo;re $54, and the embroidery is dense enough to survive a macro shot. That is a real test, and most embroidered golf product fails it. If you only ever buy one Devereux thing, buy a cover.</p>
     <p>Below is everything new since we first wrote about them: outerwear, polos, shorts, headcovers, hats, tees and accessories. One thing to flag: Devereux doesn&rsquo;t currently make pants or joggers. Shorts are the only bottoms in the line.</p>
   </div>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Founded</span><span>2013</span></div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>Scottsdale, AZ</span></div>
+      <div class="sidebar-detail"><span class="l">Founders</span><span>Robert &amp; Will Brunner</span></div>
+      <div class="sidebar-detail"><span class="l">Named for</span><span>Their grandmother</span></div>
+      <div class="sidebar-detail"><span class="l">Signature</span><span>Leather headcovers</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$18&ndash;$248</span></div>
+      <a href="https://devereuxgolf.com" target="_blank" rel="noopener" class="sidebar-cta">Shop Devereux &#8599;</a>
+      <div class="hashtags">
+        <span class="hashtag">#TheGrassyIssue</span>
+        <span class="hashtag">#DevereuxGolf</span>
+        <span class="hashtag">#GolfCulture</span>
+        <span class="hashtag">#IndieGolf</span>
+        <span class="hashtag">#GolfStyle</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
 </section>
 
 <section class="products" style="margin-top:44px;">
@@ -359,29 +452,6 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   </div>
 </section>
-
-<div class="btk-card">
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Founded</span><span>2013</span></div>
-      <div class="sidebar-detail"><span class="l">Based</span><span>Scottsdale, AZ</span></div>
-      <div class="sidebar-detail"><span class="l">Founders</span><span>Robert &amp; Will Brunner</span></div>
-      <div class="sidebar-detail"><span class="l">Named for</span><span>Their grandmother</span></div>
-      <div class="sidebar-detail"><span class="l">Signature</span><span>Leather headcovers</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$18&ndash;$248</span></div>
-      <a href="https://devereuxgolf.com" target="_blank" rel="noopener" class="sidebar-cta">Shop Devereux &#8599;</a>
-      <div class="hashtags">
-        <span class="hashtag">#TheGrassyIssue</span>
-        <span class="hashtag">#DevereuxGolf</span>
-        <span class="hashtag">#GolfCulture</span>
-        <span class="hashtag">#IndieGolf</span>
-        <span class="hashtag">#GolfStyle</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
 
 <section class="products" data-btk="collection">
   <div class="drop-tag grass">The Collection &mdash; 26 Pieces</div>
@@ -676,15 +746,15 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Frequently Asked</h2>
   <div class="faq">
-    <details class="faq-q"><summary>What is Devereux Golf?</summary><p>Devereux is a golf apparel brand founded in 2013 by brothers Robert and Will Brunner. It is based in Scottsdale, Arizona, with Will and the warehouse in Fort Worth, Texas. The aesthetic is rooted in the American Southwest — tattoo flash, old sign painting, desert iconography — applied to polos, graphic tees, headwear and leather headcovers.</p></details>
-    <details class="faq-q"><summary>Who founded Devereux Golf?</summary><p>Robert and Will Brunner. Robert studied geology at TCU and went to work in the gas industry before deciding he hated it. He spent a year at fashion school in Los Angeles, then came up with the idea for a contemporary men's golf line. As he put it in a 2014 interview, "Things took off a lot faster than I expected." He pitched it to his brother Will, who runs business operations.</p></details>
-    <details class="faq-q"><summary>Where does the name Devereux come from?</summary><p>It is the Brunner brothers' grandmother's name. Robert explained it in 2014: "It's my grandmother's name. She turns 90 in March. We just named it after her, we wanted to keep it in the family. She still wears high heels to this day, she's a neat old lady."</p></details>
-    <details class="faq-q"><summary>Why did they start a golf brand?</summary><p>Because Robert couldn't find anything he wanted to wear. "It all came from when I played, thinking, 'What can I wear?'" he said. "There's Puma, which is all flashy. I went through my Puma phase. The problem is that there's nothing that was fun on the course and off the course. Nothing for a night out." The fix was a slimmer, more tailored cut at a time when most golf shirts were boxy and mass produced.</p></details>
-    <details class="faq-q"><summary>What makes a Devereux polo different?</summary><p>Robert has named the same three details since the brand's first year: a slightly smaller spread collar that stays out of the way through the swing, a thinned-out placket, and a fit built around the male build rather than a boxy default. There is usually a smaller chest pocket too. Those details have survived a decade and a rebrand.</p></details>
-    <details class="faq-q"><summary>What are Devereux headcovers?</summary><p>Leather club covers with dense raised embroidery, and the thing the brand is best known for. Recurring motifs include the Skull Caddie, pin-up figures, motorcycles, eagles and invented club crests like the Pioneer Country Club. They run $54 for drivers, fairways, hybrids and putters.</p></details>
-    <details class="faq-q"><summary>Has Devereux done collaborations?</summary><p>Yes. The brand released a capsule with Michelob ULTRA in 2023, and has an ongoing line with Mount Gay Rum that includes a Sunday bag, towels and tees. Devereux also rebranded in 2021 to target a younger and more diverse golfer as the sport's demographics shifted.</p></details>
-    <details class="faq-q"><summary>How much does Devereux Golf cost?</summary><p>Graphic tees run $38 to $44, headwear is $38, headcovers are $54, polos land between $74 and $88, layering pieces run $74 to $128, and jackets go from $88 to $154. The Mount Gay Sunday Bag at $248 is the most expensive item they sell.</p></details>
-    <details class="faq-q"><summary>Where is Devereux Golf made and sold?</summary><p>The brand sells direct through devereuxgolf.com and is stocked in pro shops and golf retailers. Robert and the company are based in Scottsdale, Arizona; his brother Will and the warehouse operate out of Fort Worth, Texas.</p></details>
+    <details open class="faq-q"><summary>What is Devereux Golf?</summary><p>Devereux is a golf apparel brand founded in 2013 by brothers Robert and Will Brunner. It is based in Scottsdale, Arizona, with Will and the warehouse in Fort Worth, Texas. The aesthetic is rooted in the American Southwest — tattoo flash, old sign painting, desert iconography — applied to polos, graphic tees, headwear and leather headcovers.</p></details>
+    <details open class="faq-q"><summary>Who founded Devereux Golf?</summary><p>Robert and Will Brunner. Robert studied geology at TCU and went to work in the gas industry before deciding he hated it. He spent a year at fashion school in Los Angeles, then came up with the idea for a contemporary men's golf line. As he put it in a 2014 interview, "Things took off a lot faster than I expected." He pitched it to his brother Will, who runs business operations.</p></details>
+    <details open class="faq-q"><summary>Where does the name Devereux come from?</summary><p>It is the Brunner brothers' grandmother's name. Robert explained it in 2014: "It's my grandmother's name. She turns 90 in March. We just named it after her, we wanted to keep it in the family. She still wears high heels to this day, she's a neat old lady."</p></details>
+    <details open class="faq-q"><summary>Why did they start a golf brand?</summary><p>Because Robert couldn't find anything he wanted to wear. "It all came from when I played, thinking, 'What can I wear?'" he said. "There's Puma, which is all flashy. I went through my Puma phase. The problem is that there's nothing that was fun on the course and off the course. Nothing for a night out." The fix was a slimmer, more tailored cut at a time when most golf shirts were boxy and mass produced.</p></details>
+    <details open class="faq-q"><summary>What makes a Devereux polo different?</summary><p>Robert has named the same three details since the brand's first year: a slightly smaller spread collar that stays out of the way through the swing, a thinned-out placket, and a fit built around the male build rather than a boxy default. There is usually a smaller chest pocket too. Those details have survived a decade and a rebrand.</p></details>
+    <details open class="faq-q"><summary>What are Devereux headcovers?</summary><p>Leather club covers with dense raised embroidery, and the thing the brand is best known for. Recurring motifs include the Skull Caddie, pin-up figures, motorcycles, eagles and invented club crests like the Pioneer Country Club. They run $54 for drivers, fairways, hybrids and putters.</p></details>
+    <details open class="faq-q"><summary>Has Devereux done collaborations?</summary><p>Yes. The brand released a capsule with Michelob ULTRA in 2023, and has an ongoing line with Mount Gay Rum that includes a Sunday bag, towels and tees. Devereux also rebranded in 2021 to target a younger and more diverse golfer as the sport's demographics shifted.</p></details>
+    <details open class="faq-q"><summary>How much does Devereux Golf cost?</summary><p>Graphic tees run $38 to $44, headwear is $38, headcovers are $54, polos land between $74 and $88, layering pieces run $74 to $128, and jackets go from $88 to $154. The Mount Gay Sunday Bag at $248 is the most expensive item they sell.</p></details>
+    <details open class="faq-q"><summary>Where is Devereux Golf made and sold?</summary><p>The brand sells direct through devereuxgolf.com and is stocked in pro shops and golf retailers. Robert and the company are based in Scottsdale, Arizona; his brother Will and the warehouse operate out of Fort Worth, Texas.</p></details>
   </div>
 </section>
 

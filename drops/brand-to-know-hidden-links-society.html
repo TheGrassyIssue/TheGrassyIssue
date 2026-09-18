@@ -107,27 +107,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -193,26 +269,37 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </header>
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/hidden-links-society/btk-hero.jpg" alt="Hidden Links Society &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/hidden-links-society/btk-hero.jpg" alt="Hidden Links Society &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>The ratio is the story here. Hidden Links Society sells about thirty products and is documenting a hundred golf courses, and that is a lopsided way to run a clothing brand &mdash; which is the point. The catalogue is good on its own terms: real weight in the brass, an overshirt heavier than it needs to be, headcovers made in Oregon.</p>
+    <p>But the Public 100 project is what the shop is funding, and the 2% is accounted for rather than implied.</p>
+    <p>It suits the player who wants the purchase to point at something beyond the purchase. Eighteen pieces run $20 to $82.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Hidden Links Society sells thirty products and is documenting a hundred golf courses. That ratio is the most interesting thing about them, and it is the reason they are in here.</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/hidden-links-society/btk-body-1.jpg" alt="Hidden Links Society lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>On the surface this is another small-batch golf brand doing rope caps and chenille patches. The catalogue is good &mdash; the brass has real weight to it, the overshirt is heavier than it needs to be, the headcovers are made in Oregon &mdash; but it is not, by itself, unusual. What is unusual is what they are doing alongside it.</p>
     <p>Every price below was read from their own store on 17 September 2026.</p>
   </div>
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>United States</span></div>
+      <div class="sidebar-detail"><span class="l">Known For</span><span>Headwear, Apparel, Accessories</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>18 items</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$20 &ndash; $82</span></div>
+      <a href="https://hiddenlinkssociety.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Hidden Links Society &rarr;</a>
+      <div class="hashtags">
+        <span class="hashtag">#hiddenlinkssociety</span>
+        <span class="hashtag">#brandtoknow</span>
+        <span class="hashtag">#headwear</span>
+        <span class="hashtag">#apparel</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
 </section>
 
 <section class="products" data-btk="prose">
@@ -233,25 +320,9 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <p>Two per cent is not a headline number, which is rather the point. It is a share of revenue rather than a share of profit, it applies to every order rather than to a special collection, and it points at the same thing the Public 100 Project points at: getting more people onto more golf courses for less money.</p>
   </div>
 </section>
-<div class="btk-card">
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Based</span><span>United States</span></div>
-      <div class="sidebar-detail"><span class="l">Known For</span><span>Headwear, Apparel, Accessories</span></div>
-      <div class="sidebar-detail"><span class="l">Pieces</span><span>18 items</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$20 &ndash; $82</span></div>
-      <a href="https://hiddenlinkssociety.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Hidden Links Society &rarr;</a>
-      <div class="hashtags">
-        <span class="hashtag">#hiddenlinkssociety</span>
-        <span class="hashtag">#brandtoknow</span>
-        <span class="hashtag">#headwear</span>
-        <span class="hashtag">#apparel</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/hidden-links-society/btk-body-1.jpg" alt="Hidden Links Society lookbook photograph" loading="lazy" />
+</section>
 
 <section class="products" data-btk="collection">
   <div class="drop-tag grass">The Collection &mdash; 18 Pieces</div>
@@ -446,12 +517,12 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 <section class="products">
   <h2 class="products-hdr" id="faq">The Questions</h2>
   <div class="faq">
-    <details class="faq-q"><summary>What is Hidden Links Society?</summary><p>A small golf apparel and accessories brand selling headwear, headcovers, overshirts, tees, brass tools and art prints, direct through its own store. Its stated mission is to make golf less exclusive — in its own words, to bring streetwear attitude to the fairway. It also donates 2% of every purchase to Youth on Course and runs a documentary series called The Public 100 Project.</p></details>
-    <details class="faq-q"><summary>What is The Public 100 Project?</summary><p>Hidden Links Society's long-form documentary series playing, walking and documenting the courses on Golf Digest's Top 100 Public list — one course at a time, through photography, short-form video, writing and maps. The brand describes the courses as places anyone can book with no memberships, no private gates and no invitations required. Some are already played; the rest are still ahead.</p></details>
-    <details class="faq-q"><summary>Is Hidden Links Society the same as Hidden Links Golf?</summary><p>No. They are unrelated companies with similar names. Hidden Links Society is the apparel and accessories brand at hiddenlinkssociety.com. Hidden Links Golf is a separate business at a different domain.</p></details>
-    <details class="faq-q"><summary>How much does Hidden Links Society gear cost?</summary><p>Read on 17 September 2026, the range runs from a $6 enamel pin to an $88 framed print. Hats sit between $32 and $48, headcovers between $40 and $82, tees $43 to $48, and the heavyweight Society Overshirt is $78. The Ransom Note rope caps are half price at $15.</p></details>
-    <details class="faq-q"><summary>Who founded Hidden Links Society?</summary><p>The brand does not name a founder anywhere on its site, and we could not find a named founder in any published interview. All of its copy is written in the first person plural. We have quoted the brand rather than an individual throughout this piece for that reason.</p></details>
-    <details class="faq-q"><summary>Does Hidden Links Society ship preorders?</summary><p>Several pieces are sold as preorder or made to order rather than from stock, and the brand states timings on the individual product pages. As of 17 September 2026 the Play Faster fairway cover is listed as shipping the first week of October, and the made-to-order tees and overshirts ask for roughly two weeks.</p></details>
+    <details open class="faq-q"><summary>What is Hidden Links Society?</summary><p>A small golf apparel and accessories brand selling headwear, headcovers, overshirts, tees, brass tools and art prints, direct through its own store. Its stated mission is to make golf less exclusive — in its own words, to bring streetwear attitude to the fairway. It also donates 2% of every purchase to Youth on Course and runs a documentary series called The Public 100 Project.</p></details>
+    <details open class="faq-q"><summary>What is The Public 100 Project?</summary><p>Hidden Links Society's long-form documentary series playing, walking and documenting the courses on Golf Digest's Top 100 Public list — one course at a time, through photography, short-form video, writing and maps. The brand describes the courses as places anyone can book with no memberships, no private gates and no invitations required. Some are already played; the rest are still ahead.</p></details>
+    <details open class="faq-q"><summary>Is Hidden Links Society the same as Hidden Links Golf?</summary><p>No. They are unrelated companies with similar names. Hidden Links Society is the apparel and accessories brand at hiddenlinkssociety.com. Hidden Links Golf is a separate business at a different domain.</p></details>
+    <details open class="faq-q"><summary>How much does Hidden Links Society gear cost?</summary><p>Read on 17 September 2026, the range runs from a $6 enamel pin to an $88 framed print. Hats sit between $32 and $48, headcovers between $40 and $82, tees $43 to $48, and the heavyweight Society Overshirt is $78. The Ransom Note rope caps are half price at $15.</p></details>
+    <details open class="faq-q"><summary>Who founded Hidden Links Society?</summary><p>The brand does not name a founder anywhere on its site, and we could not find a named founder in any published interview. All of its copy is written in the first person plural. We have quoted the brand rather than an individual throughout this piece for that reason.</p></details>
+    <details open class="faq-q"><summary>Does Hidden Links Society ship preorders?</summary><p>Several pieces are sold as preorder or made to order rather than from stock, and the brand states timings on the individual product pages. As of 17 September 2026 the Play Faster fairway cover is listed as shipping the first week of October, and the made-to-order tees and overshirts ask for roughly two weeks.</p></details>
   </div>
 </section>
 <section class="more" data-btk="related">

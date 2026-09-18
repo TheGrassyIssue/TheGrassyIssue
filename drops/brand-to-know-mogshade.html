@@ -150,27 +150,103 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* An open <details open> keeps its marker, so the indicator has to follow state. */
+.faq-q[open] summary{margin-bottom:2px}
+.faq-q summary{outline:none}
 /* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
    far less of a frame, which is what stopped the crops clipping people's heads.
    object-fit is not optional — without it a fixed aspect-ratio box stretches
    whatever is inside it. */
-.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+/* ONE COLUMN, LEFT, WITH THE BOX BESIDE IT.
+   Lenny: "move the first box of text to the left so there's room for the box on
+   the right." Two columns, the J.Lindeberg layout — and because a page cannot
+   have its opening paragraph left-aligned and everything under it centred, the
+   WHOLE article column moves left. That is what makes the 34 pages consistent:
+   one measure, one left edge, from the Take to the last word of the coda. */
+/* NO align-items:start HERE. That was the bug behind "does the box scroll?" —
+   it shrink-wrapped the grid row to each item's own height, so the card's
+   containing block was the card, and a sticky element with no room to move is
+   just an element. Letting the row stretch gives it the full height of the
+   write-up to travel against. */
+section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px;
+  column-gap:56px;max-width:1400px;margin:0 auto}
+section[data-btk="take"] .writeup-body{max-width:760px}
+section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
+.btk-story-hdr{margin-top:44px}
+@media(max-width:1000px){
+  section[data-btk="take"]{grid-template-columns:1fr;row-gap:28px}
+  section[data-btk="take"] .sidebar{position:static;max-width:760px}
+}
+
+/* THE SPECIAL SENTENCES — larger, and made to stop the eye.
+   Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
+   brand green on the opening mark, generous air above and below, and a rule
+   only under the credit so the sentence itself floats free. */
+.pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
+
+/* THE PICTURES, AT THE SHAPE THEY WERE SHOT.
+   Lenny: "formatted how they are provided so either landscape or portrait with
+   the text wrapped appropriately." So no forced aspect-ratio — the band renders
+   at its own proportions, and the template stamps which it is at build time by
+   measuring the file. A landscape frame runs the article measure; a portrait
+   frame is set narrow and floated so the copy wraps beside it rather than
+   leaving a column of empty paper down one side. */
+section.drop-hero:not(:first-of-type){max-width:1400px;padding:0 32px;margin:0 auto}
+.drop-hero-img.btk-land{width:100%;max-width:900px;height:auto;display:block;
+  object-fit:contain}
+.drop-hero-img.btk-port{width:100%;max-width:420px;height:auto;display:block;
+  object-fit:contain}
+section.drop-hero.btk-wrap{max-width:1400px;overflow:hidden}
+section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
+  max-width:400px}
+@media(max-width:820px){
+  section.drop-hero:not(:first-of-type){padding:0 20px}
+  .drop-hero-img.btk-port{max-width:100%}
+  section.drop-hero.btk-wrap .drop-hero-img{float:none;margin:0 0 20px;
+    max-width:100%}
+}
+
+/* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
+.btk-left{max-width:1400px;margin:0 auto;padding-left:32px;padding-right:32px}
+@media(max-width:820px){.btk-left{padding-left:20px;padding-right:20px}}
 .products-section{margin-bottom:48px}
 .products-section:last-child{margin-bottom:0}
 
-/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
-   a publication." One column, one width, centred, used by every piece of
-   running text on the page — the Take, both write-ups, the Start Here list and
-   the section headings over the product grid. The grid itself stays full
-   width; a magazine sets its pictures wide and its type narrow. */
+/* THE MEASURE, AND WHEN IT MOVES.
+   Lenny's rule: "if there's a box or an image we can push the text to the side
+   otherwise let's keep the text centered." So centred is the default — the
+   publication setting he asked for originally — and the only sections that go
+   left are the ones with something standing beside them: the Take, which
+   carries the Brand Card, and any section with a floated picture. */
 .btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
 section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
-section[data-btk="coda"] .writeup-body,
-section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+
+/* ...and the exception: a section with a box or a picture alongside it sets
+   its type to the left, because centred type next to a right-hand box reads as
+   a mistake rather than a choice. */
+section[data-btk="take"] .writeup-body,
+section.btk-wrap .writeup-body{margin:0 auto 0 0}
+section[data-btk="take"] .products-hdr,
+section[data-btk="take"] .drop-tag{margin-left:0;margin-right:auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
 /* the Brand Card, out of the sticky sidebar and set as a centred block */
@@ -238,42 +314,21 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/mogshade/btk-hero.jpg" alt="Mogshade &mdash; lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img" src="/images/mogshade/btk-hero.jpg" alt="Mogshade &mdash; lookbook photograph" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
+    <p>Mogshade makes to order, which is the whole ethic rather than a delivery inconvenience. Nothing is overproduced because nothing is produced until it is bought, and the fabrics are natural, recycled, upcycled, offcut or deadstock &mdash; including rescued wool from the Serra da Estrela mountain factories.</p>
+    <p>The Churra Mono headcover at &euro;84 is built on that rescued wool and is the piece that explains the name, an old dialect word for light and shadow moving through leaves.</p>
+    <p>It suits the player who would rather wait three weeks for something made for him than have it tomorrow from a warehouse. The Contour towel at &euro;39 is the low-commitment way in.</p>
+    <h2 class="products-hdr btk-story-hdr">The Story</h2>
     <p>Mogshade makes golf headcovers by hand in Portugal, and the name tells you everything about the sensibility: it comes from an old English dialect word for the play of light and shadow — sun filtering through leaves onto the course. The whole operation runs on what the brand calls ethical circularity. Everything is made to order (current lead time is about three weeks), which means no overproduction, and the fabrics are natural, recycled, upcycled, offcut, or deadstock — including rescued wool from the Serra da Estrela mountain factories that anchors the Re.Weave and Churra collections. Every piece is slightly different because the fabric was never mass-produced; what you get is what's left from the loom.</p>
-  </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/mogshade/btk-body-1.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
-</section>
-
-<section class="products" data-btk="story">
-  <h2 class="products-hdr">The Story</h2>
-  <div class="writeup-body">
     <p>Since we first covered them in June, the catalog has kept moving — small handmade batches sell out fast here, which is half the appeal. The Depeche Golf magazine collab dropped in August with a special-edition headcover. The wall art program is real now: hand-tufted wool posters of imagined holes and pin sheets that take eight weeks to make. There's an Ocean Bottle collab, sweats, and socks. And for American readers, the practical note: since June, US orders ship with import duties and customs fees already included.</p>
     <p>The other thing that sets Mogshade apart is how much company it keeps. For a one-workshop operation, the collab sheet reads like a map of independent golf: an artist series with Fabricaal that turned headcovers into canvases, a capsule with IGG that sold through in weeks, Projeto Serra — a tribute to the brand's home mountains, down to the "Ovelha Preta" black-sheep cover — and an "On Set with <a href="/drops/manors-ss26" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--grass,#2D4A2B);">Manors</a>" edit curated with the London golfwear brand. Add the Depeche Golf magazine bundle, the Ocean Bottle, a Fiumani cap, and the early Parmore run that was capped at 50 pieces, and you get the picture: almost everything they touch disappears. There's also a custom-made program if you want a cover built to your spec from whatever's on the shelf that month.</p>
     <p><em>Updated, August 2026 — we re-checked every piece below against the current catalog, pruned what's sold out, and added twelve new items from the workshop.</em></p>
   </div>
-</section>
-
-<section class="products" style="border-top:none;margin-top:48px;">
-  <h2 class="products-hdr">In the Wild — @mogshade_golf</h2>
-  <div class="ig-grid">
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" alt="Mogshade headcovers on a golf bag in the hills — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DadiCd_Dt7v.jpg" alt="Checkered Mogshade headcover with wool spools in the workshop — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DaugsxJjimz.jpg" alt="Threads of the Serra — Serra da Estrela editorial — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbKsHrzDmrK.jpg" alt="Aberdovey links editorial — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Dbk7KSoDucn.jpg" alt="Fabricaal x Mogshade mural artwork — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbvJe1lDqU0.jpg" alt="Mogshade gear on course — @mogshade_golf" loading="lazy" /></a>
-  </div>
-</section>
-
-<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -290,10 +345,22 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
+</section>
+
+<section class="products" style="border-top:none;margin-top:48px;">
+  <h2 class="products-hdr">In the Wild — @mogshade_golf</h2>
+  <div class="ig-grid">
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" alt="Mogshade headcovers on a golf bag in the hills — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DadiCd_Dt7v.jpg" alt="Checkered Mogshade headcover with wool spools in the workshop — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DaugsxJjimz.jpg" alt="Threads of the Serra — Serra da Estrela editorial — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbKsHrzDmrK.jpg" alt="Aberdovey links editorial — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Dbk7KSoDucn.jpg" alt="Fabricaal x Mogshade mural artwork — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbvJe1lDqU0.jpg" alt="Mogshade gear on course — @mogshade_golf" loading="lazy" /></a>
+  </div>
+</section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/mogshade/btk-body-2.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/mogshade/btk-body-1.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection">
@@ -351,7 +418,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </section>
 
 <section class="drop-hero">
-  <img class="drop-hero-img btk-16x9" src="/images/mogshade/btk-body-3.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
+  <img class="drop-hero-img btk-land" src="/images/mogshade/btk-body-2.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="collection-cont">
@@ -470,6 +537,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
+<section class="drop-hero">
+  <img class="drop-hero-img btk-land" src="/images/mogshade/btk-body-3.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
+</section>
+
 <section class="products" data-btk="collection-cont">
   <div class="products-section">
     <h2 class="products-hdr">The Collab Archive — What You Missed</h2>
@@ -535,13 +606,13 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 <section class="faq">
   <h2 class="products-hdr">Mogshade — Frequently Asked</h2>
   <div class="faq">
-    <details class="faq-q"><summary>What does the name Mogshade mean?</summary><p>Mogshade comes from an old English dialect word describing the interplay of light and shadow - like sunlight filtering through leaves and branches onto the course. The brand chose it to capture those quiet moments on a golf course, and its woven patterns play on the same idea.</p></details>
-    <details class="faq-q"><summary>Where are Mogshade headcovers made?</summary><p>Every Mogshade piece is handmade in Portugal. Headcovers are made to order with a current lead time of roughly three weeks, which is central to the brand's no-overproduction model.</p></details>
-    <details class="faq-q"><summary>What materials does Mogshade use?</summary><p>Mogshade builds around what it calls ethical circularity: natural, recycled, upcycled, offcut, and deadstock materials. The Re.Weave and Churra collections use rescued high-quality wool fabrics from factories in Portugal's Serra da Estrela mountains.</p></details>
-    <details class="faq-q"><summary>What is the Churra collection?</summary><p>Churra is Mogshade's textured wool line named after the Churra sheep breed native to the Serra da Estrela region. The covers are made from rescued mountain-woven fabrics with a handwoven character you can feel.</p></details>
-    <details class="faq-q"><summary>Does Mogshade make anything besides headcovers?</summary><p>Yes - golf towels, cases and pouches, ball markers, clothing, an Ocean Bottle collaboration, and a wall art line of hand-tufted wool posters of imagined golf holes that ship in about eight weeks.</p></details>
-    <details class="faq-q"><summary>What collabs has Mogshade done?</summary><p>Mogshade has collaborated with the artist Fabricaal, IGG, Projeto Serra, the London golfwear brand Manors (the On Set with Manors edit), Depeche Golf magazine, Ocean Bottle, Fiumani, and Parmore. Most collaboration pieces sold out quickly.</p></details>
-    <details class="faq-q"><summary>Do US orders pay import duties on Mogshade?</summary><p>No. Since June 2026, Mogshade includes import duties and customs handling fees in the price for US orders, so there are no surprise charges at delivery.</p></details>
+    <details open class="faq-q"><summary>What does the name Mogshade mean?</summary><p>Mogshade comes from an old English dialect word describing the interplay of light and shadow - like sunlight filtering through leaves and branches onto the course. The brand chose it to capture those quiet moments on a golf course, and its woven patterns play on the same idea.</p></details>
+    <details open class="faq-q"><summary>Where are Mogshade headcovers made?</summary><p>Every Mogshade piece is handmade in Portugal. Headcovers are made to order with a current lead time of roughly three weeks, which is central to the brand's no-overproduction model.</p></details>
+    <details open class="faq-q"><summary>What materials does Mogshade use?</summary><p>Mogshade builds around what it calls ethical circularity: natural, recycled, upcycled, offcut, and deadstock materials. The Re.Weave and Churra collections use rescued high-quality wool fabrics from factories in Portugal's Serra da Estrela mountains.</p></details>
+    <details open class="faq-q"><summary>What is the Churra collection?</summary><p>Churra is Mogshade's textured wool line named after the Churra sheep breed native to the Serra da Estrela region. The covers are made from rescued mountain-woven fabrics with a handwoven character you can feel.</p></details>
+    <details open class="faq-q"><summary>Does Mogshade make anything besides headcovers?</summary><p>Yes - golf towels, cases and pouches, ball markers, clothing, an Ocean Bottle collaboration, and a wall art line of hand-tufted wool posters of imagined golf holes that ship in about eight weeks.</p></details>
+    <details open class="faq-q"><summary>What collabs has Mogshade done?</summary><p>Mogshade has collaborated with the artist Fabricaal, IGG, Projeto Serra, the London golfwear brand Manors (the On Set with Manors edit), Depeche Golf magazine, Ocean Bottle, Fiumani, and Parmore. Most collaboration pieces sold out quickly.</p></details>
+    <details open class="faq-q"><summary>Do US orders pay import duties on Mogshade?</summary><p>No. Since June 2026, Mogshade includes import duties and customs handling fees in the price for US orders, so there are no surprise charges at delivery.</p></details>
   </div>
 </section>
 
