@@ -135,6 +135,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who founded Criquet Shirts?", "acceptedAnswer": {"@type": "Answer", "text": "Billy Nachman and Hobson Brown, friends since kindergarten in Manhattan who grew up in prep-school polos and coat-and-tie dress codes. They founded Criquet in Austin in 2010, after Nachman found his late grandfather's vintage four-button golf shirt in a closet and the pair decided to rebuild it properly."}}, {"@type": "Question", "name": "Where is Criquet based?", "acceptedAnswer": {"@type": "Answer", "text": "Austin, Texas — the brand has said it plainly since day one: \"We founded Criquet here in 2010.\" Its longtime clubhouse-headquarters sat at 1603 South 1st Street in Bouldin Creek, complete with a putting green, an outdoor bar and a Bill Murray mural."}}, {"@type": "Question", "name": "What is the Criquet Players Shirt?", "acceptedAnswer": {"@type": "Answer", "text": "The signature: a four-button extended placket, a flap chest pocket, and removable collar stays so the collar lies flat instead of curling. The Classic runs $98 in 100 per cent Peruvian pima cotton, with Performance, Throwback, Terrycloth, Long Sleeve and Indigo Knit versions built on the same body."}}, {"@type": "Question", "name": "Is Criquet organic cotton?", "acceptedAnswer": {"@type": "Answer", "text": "That was the founding pitch — the original Players Shirt was built around organic cotton, and early press leaned on it. The current Classic Players Shirt is listed as 100 per cent Peruvian pima; the organic language has largely left the product pages, so check the specific item if that matters to you."}}, {"@type": "Question", "name": "Did Criquet really do a Willie Nelson collection?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — an officially licensed \"Willie Forever\" collection sold on both criquetshirts.com and willienelson.com. It has since been delisted from Criquet's store, which makes it a collector's item and arguably the most Texas collab any golf-adjacent brand has done."}}, {"@type": "Question", "name": "What is the Save Muny belt?", "acceptedAnswer": {"@type": "Answer", "text": "A hand-stitched gaucho belt made with fellow Austin company Zilker Belts in a colorway supporting Save Muny, the campaign to preserve Lions Municipal Golf Course. It sells for $125 alongside a dozen other Criquet x Zilker designs, including Texas Exes and Moontowers."}}, {"@type": "Question", "name": "Is Criquet a golf brand?", "acceptedAnswer": {"@type": "Answer", "text": "Deliberately half of one. The brrr° cooling Range Polos and Players Shirts are genuine golf pieces — the brand was stocked at PGA Tour Superstore — but the stated thesis has always been \"comfortably off-course\": one shirt for the round, the office and the bar. The pearl snaps and corduroy are the other half of the argument."}}, {"@type": "Question", "name": "What does Criquet cost?", "acceptedAnswer": {"@type": "Answer", "text": "The core runs $98 to $128 — Classic Players at $98, Performance at $104, brrr° Range Polos and pearl snaps at $128. Collabs span $45 for the YETI bottle to $150 for the Jones duffle. Fall pieces top out at $148 for pants and knits."}}, {"@type": "Question", "name": "Does Criquet make an Austin FC collection?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — officially licensed MLS gear, with the Coaches Players Shirt and Range Polo carrying Austin FC's tree crest and ATX marks in verde, black and white. It is part of a wider MLS x Criquet program that covers most of the league."}}, {"@type": "Question", "name": "How big is Criquet?", "acceptedAnswer": {"@type": "Answer", "text": "Bigger than it plays. The catalogue runs over a thousand products including licensed collegiate and MLS lines, the company raised a $1.4 million Series A led by CircleUp back in 2016, and the press file includes CNBC and Details magazine, which once called the Players Shirt \"The Perfect Polo.\""}}]}</script>
 </head>
@@ -169,15 +230,31 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/criquet/austinfc-3.jpg" alt="Criquet Austin FC Coaches Players Shirts at the clubhouse bar" style="object-position:center 30%;" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/criquet/btk-hero.jpg" alt="Criquet Shirts &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Criquet makes golf shirts that never announce themselves as golf shirts, which is how the same four-button placket ends up on a Butler tee box and at a South Congress bar three hours later. Billy Nachman and Hobson Brown have known each other since kindergarten in Manhattan, where they grew up in prep-school polos and coat-and-tie dress codes, and they started the company in Austin in 2010. It begins in a closet, with the vintage golf shirt Nachman&rsquo;s grandfather left behind: four buttons, a long placket, a collar that had opinions. They rebuilt it with a flap chest pocket, removable collar stays so the collar never bacons at the tip, and an organic-cotton pitch that was ahead of its time, and called it the Players Shirt. It runs in 100 per cent Peruvian pima today and still costs ninety-eight dollars.</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-1.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>The name comes from the sound of crickets, by the brand&rsquo;s own telling: the noise of being comfortably off-course. Criquet has never fully committed to being a golf brand. One half of the catalogue is Range Polos in brrr&deg;, a mineral-infused yarn that moves heat off the skin, and Players Shirts you could tee off in at Butler. The other half runs pearl snaps, fine-wale corduroy in burnt orange and a loop-terry shirt called Midnight Toker, which belongs on a pool deck more than a first tee. The two halves hang in the same closet.</p>
     <p>Criquet is an Austin company in a way that shows up in the product. The longtime clubhouse-headquarters on South First had a putting green, an outdoor bar and a Bill Murray mural. The collaboration list reads like a city directory: Zilker Belts from across the river, YETI from fifteen minutes up the road, the home team Austin FC under an official MLS license, and a Willie Nelson &ldquo;Willie Forever&rdquo; collection that has since been delisted. Discmania, the Finnish house that supplies most of disc golf, printed the brand&rsquo;s mascot Carl onto a three-disc set. The store currently carries a belt strap in Save Muny colors and a tee with a Lions badge, which is more Lions Municipal product than some golf labels carry product at all.</p>
     <p>The catalogue runs past a thousand SKUs and all of it radiates from that one shirt: six live collabs at $45 to $150, six core staples at $98 to $128, and an Early Fall drop that puts sleeves on the Players Shirt in four colorways.</p>
   </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -185,7 +262,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-detail"><span class="l">Founders</span><span>Nachman &amp; Brown</span></div>
       <div class="sidebar-detail"><span class="l">Signature</span><span>Players Shirt, $98</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$45 &ndash; $150</span></div>
-      <a href="/"  class="sidebar-cta">&larr; Back to Feed</a>
+      <a href="/" target="_blank" rel="noopener" class="sidebar-cta">&larr; Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#Criquet</span>
@@ -197,11 +274,17 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<section class="products">
-<h2 id="collabs">The Collabs</h2>
-<p class="cat-kicker"><strong>Six live collabs &middot; $45 to $150</strong>Criquet collaborates the way Austin institutions do, which is locally first. Zilker Belts and YETI are neighbors, Austin FC is the home team, and Jones and Discmania make up the out-of-state guest list.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="4" id="savemuny">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-2.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 18 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Collabs</h2>
+    <p class="cat-kicker"><strong>Six live collabs &middot; $45 to $150</strong>Criquet collaborates the way Austin institutions do, which is locally first. Zilker Belts and YETI are neighbors, Austin FC is the home team, and Jones and Discmania make up the out-of-state guest list.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="4" id="savemuny">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/savemuny-0.jpg" loading="lazy" alt="Zilker Belts Save Muny Gaucho Belt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/savemuny-1.jpg" loading="lazy" alt="Zilker Belts Save Muny Gaucho Belt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/savemuny-2.jpg" loading="lazy" alt="Zilker Belts Save Muny Gaucho Belt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/savemuny-3.jpg" loading="lazy" alt="Zilker Belts Save Muny Gaucho Belt by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -210,7 +293,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/save-muny" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="austinfc">
+<div class="product-card" id="p-2" data-frames="4" id="austinfc">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/austinfc-0.jpg" loading="lazy" alt="Austin FC Coaches Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/austinfc-1.jpg" loading="lazy" alt="Austin FC Coaches Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/austinfc-2.jpg" loading="lazy" alt="Austin FC Coaches Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/austinfc-3.jpg" loading="lazy" alt="Austin FC Coaches Players Shirt by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -219,7 +302,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/austin-fc-coaches-players-shirt-tree-golf-green" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="2" id="yeti-bottle">
+<div class="product-card" id="p-3" data-frames="2" id="yeti-bottle">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/yeti-bottle-0.jpg" loading="lazy" alt="Criquet  YETI 26 oz Water Bottle by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/yeti-bottle-1.jpg" loading="lazy" alt="Criquet  YETI 26 oz Water Bottle by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -228,7 +311,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/criquet-x-yeti-criquet-flag-26-oz-water-bottle" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="jones-duffle">
+<div class="product-card" id="p-4" data-frames="4" id="jones-duffle">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/jones-duffle-0.jpg" loading="lazy" alt="Criquet  Jones Letterman Duffle by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/jones-duffle-1.jpg" loading="lazy" alt="Criquet  Jones Letterman Duffle by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/jones-duffle-2.jpg" loading="lazy" alt="Criquet  Jones Letterman Duffle by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/jones-duffle-3.jpg" loading="lazy" alt="Criquet  Jones Letterman Duffle by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -237,7 +320,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/criquet-x-jones-letterman-duffle-criquet-patch-black" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="discmania">
+<div class="product-card" id="p-5" data-frames="4" id="discmania">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/discmania-0.jpg" loading="lazy" alt="Discmania Carls Greatest Hits Disc Golf 3-Pack by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/discmania-1.jpg" loading="lazy" alt="Discmania Carls Greatest Hits Disc Golf 3-Pack by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/discmania-2.jpg" loading="lazy" alt="Discmania Carls Greatest Hits Disc Golf 3-Pack by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/discmania-3.jpg" loading="lazy" alt="Discmania Carls Greatest Hits Disc Golf 3-Pack by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -246,7 +329,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/discmania-x-criquet-carls-greatest-hits-disc-golf-3-pack" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="2" id="manolo">
+<div class="product-card" id="p-6" data-frames="2" id="manolo">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/manolo-0.jpg" loading="lazy" alt="Manolo Limited Performance Players  Velvet Elvis by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/manolo-1.jpg" loading="lazy" alt="Manolo Limited Performance Players  Velvet Elvis by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -255,16 +338,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/limited-edition-players-shirt-manolo-velvet-elvis" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-</div>
-
-
-<div class="pull-quote">
+    </div>
+    <div class="pull-quote">
   <div class="pull-quote-inner">&ldquo;Hobson and I always loved the vintage, classic golf shirt that Jack, Arnie, and Seve used to wear back in the day.&rdquo;<span class="pull-quote-attr">&mdash; Billy Nachman, Criquet co-founder</span></div>
 </div>
-<h2 id="core">The Core</h2>
-<p class="cat-kicker"><strong>Six staples &middot; $98 to $128</strong>The catalogue runs past a thousand SKUs and all of it radiates from one shirt: the four-button, flap-pocketed, collar-stayed Players that started the company. The rest of the core lives on the honky-tonk side of the closet, in pearl snaps and corduroy and terry.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="4" id="classic-players">
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-3.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Core</h2>
+    <p class="cat-kicker"><strong>Six staples &middot; $98 to $128</strong>The catalogue runs past a thousand SKUs and all of it radiates from one shirt: the four-button, flap-pocketed, collar-stayed Players that started the company. The rest of the core lives on the honky-tonk side of the closet, in pearl snaps and corduroy and terry.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-7" data-frames="4" id="classic-players">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/classic-players-0.jpg" loading="lazy" alt="Classic Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/classic-players-1.jpg" loading="lazy" alt="Classic Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/classic-players-2.jpg" loading="lazy" alt="Classic Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/classic-players-3.jpg" loading="lazy" alt="Classic Players Shirt by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -273,7 +363,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/classic-players-shirt-navy-microstripe" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="performance-players">
+<div class="product-card" id="p-8" data-frames="4" id="performance-players">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/performance-players-0.jpg" loading="lazy" alt="Performance Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/performance-players-1.jpg" loading="lazy" alt="Performance Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/performance-players-2.jpg" loading="lazy" alt="Performance Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/performance-players-3.jpg" loading="lazy" alt="Performance Players Shirt by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -282,7 +372,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/performance-players-shirt-midnight" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="throwback">
+<div class="product-card" id="p-9" data-frames="4" id="throwback">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/throwback-0.jpg" loading="lazy" alt="Throwback Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/throwback-1.jpg" loading="lazy" alt="Throwback Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/throwback-2.jpg" loading="lazy" alt="Throwback Players Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/throwback-3.jpg" loading="lazy" alt="Throwback Players Shirt by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -291,7 +381,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/throwback-players-shirt-navy" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="brrr-polo">
+<div class="product-card" id="p-10" data-frames="4" id="brrr-polo">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/brrr-polo-0.jpg" loading="lazy" alt="brrr Long Sleeve Range Polo by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/brrr-polo-1.jpg" loading="lazy" alt="brrr Long Sleeve Range Polo by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/brrr-polo-2.jpg" loading="lazy" alt="brrr Long Sleeve Range Polo by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/brrr-polo-3.jpg" loading="lazy" alt="brrr Long Sleeve Range Polo by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -300,7 +390,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/brrr-long-sleeve-range-polo-navy" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="cord-pearlsnap">
+<div class="product-card" id="p-11" data-frames="4" id="cord-pearlsnap">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/cord-pearlsnap-0.jpg" loading="lazy" alt="Short Sleeve Corduroy Pearl Snap by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/cord-pearlsnap-1.jpg" loading="lazy" alt="Short Sleeve Corduroy Pearl Snap by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/cord-pearlsnap-2.jpg" loading="lazy" alt="Short Sleeve Corduroy Pearl Snap by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/cord-pearlsnap-3.jpg" loading="lazy" alt="Short Sleeve Corduroy Pearl Snap by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -309,7 +399,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/short-sleeve-corduroy-pearl-snap-burnt-orange" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="terry-toker">
+<div class="product-card" id="p-12" data-frames="4" id="terry-toker">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/terry-toker-0.jpg" loading="lazy" alt="Terrycloth Players Shirt  Midnight Toker by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/terry-toker-1.jpg" loading="lazy" alt="Terrycloth Players Shirt  Midnight Toker by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/terry-toker-2.jpg" loading="lazy" alt="Terrycloth Players Shirt  Midnight Toker by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/terry-toker-3.jpg" loading="lazy" alt="Terrycloth Players Shirt  Midnight Toker by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -318,12 +408,20 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/terrycloth-players-shirt-navy" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-</div>
+    </div>
+  </div>
+</section>
 
-<h2 id="newseason">The New Season</h2>
-<p class="cat-kicker"><strong>Six fall pieces &middot; $58 to $148</strong>The Early Fall drop is live: long-sleeve Players Shirts in four colorways, a garment-washed canvas pant, and a Lions badge tee that belongs in this town&rsquo;s golf conversation. All of it is built for the fortnight of actual autumn Austin receives.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="4" id="ls-bluesteel">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-4.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The New Season</h2>
+    <p class="cat-kicker"><strong>Six fall pieces &middot; $58 to $148</strong>The Early Fall drop is live: long-sleeve Players Shirts in four colorways, a garment-washed canvas pant, and a Lions badge tee that belongs in this town&rsquo;s golf conversation. All of it is built for the fortnight of actual autumn Austin receives.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="4" id="ls-bluesteel">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/ls-bluesteel-0.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Blue Steel by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/ls-bluesteel-1.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Blue Steel by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/ls-bluesteel-2.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Blue Steel by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/ls-bluesteel-3.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Blue Steel by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -332,7 +430,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/long-sleeve-players-shirt-blue-steel" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="ls-mrfreeze">
+<div class="product-card" id="p-14" data-frames="4" id="ls-mrfreeze">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/ls-mrfreeze-0.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Mr. Freeze by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/ls-mrfreeze-1.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Mr. Freeze by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/ls-mrfreeze-2.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Mr. Freeze by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/ls-mrfreeze-3.jpg" loading="lazy" alt="Long Sleeve Players Shirt  Mr. Freeze by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -341,7 +439,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/long-sleeve-players-shirt-mr-freeze" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="3" id="lions-tee">
+<div class="product-card" id="p-15" data-frames="3" id="lions-tee">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/lions-tee-0.jpg" loading="lazy" alt="Slub Graphic Tee  Lions Badge by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/lions-tee-1.jpg" loading="lazy" alt="Slub Graphic Tee  Lions Badge by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/lions-tee-2.jpg" loading="lazy" alt="Slub Graphic Tee  Lions Badge by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -350,7 +448,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/slub-graphic-t-shirt-lions-badge-vintage-indigo" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="canvas-pant">
+<div class="product-card" id="p-16" data-frames="4" id="canvas-pant">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/canvas-pant-0.jpg" loading="lazy" alt="Comfort Canvas Pant by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/canvas-pant-1.jpg" loading="lazy" alt="Comfort Canvas Pant by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/canvas-pant-2.jpg" loading="lazy" alt="Comfort Canvas Pant by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/canvas-pant-3.jpg" loading="lazy" alt="Comfort Canvas Pant by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -359,7 +457,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/comfort-canvas-pant-camel" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="waffle-rugby">
+<div class="product-card" id="p-17" data-frames="4" id="waffle-rugby">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/waffle-rugby-0.jpg" loading="lazy" alt="Waffle Rugby Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/waffle-rugby-1.jpg" loading="lazy" alt="Waffle Rugby Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/waffle-rugby-2.jpg" loading="lazy" alt="Waffle Rugby Shirt by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/waffle-rugby-3.jpg" loading="lazy" alt="Waffle Rugby Shirt by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -368,7 +466,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/waffle-rugby-shirt-heather-green" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4" id="oxford-knit">
+<div class="product-card" id="p-18" data-frames="4" id="oxford-knit">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/criquet/oxford-knit-0.jpg" loading="lazy" alt="Oxford Knit Button Down by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/oxford-knit-1.jpg" loading="lazy" alt="Oxford Knit Button Down by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/oxford-knit-2.jpg" loading="lazy" alt="Oxford Knit Button Down by Criquet Shirts, Austin Texas"></div><div class="pg-frame"><img src="/images/criquet/oxford-knit-3.jpg" loading="lazy" alt="Oxford Knit Button Down by Criquet Shirts, Austin Texas"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet &middot; In stock</div>
@@ -377,8 +475,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/oxford-knit-button-down-light-blue" target="_blank" rel="noopener" class="product-link">View &#8599;</a>
       </div>
   </div>
-</div>
+    </div>
+  </div>
+</section>
 
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/criquet/btk-body-5.jpg" alt="Criquet Shirts lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="faq">
 <div class="faq">
     <details class="faq-q"><summary>Who founded Criquet Shirts?</summary><p>Billy Nachman and Hobson Brown, friends since kindergarten in Manhattan who grew up in prep-school polos and coat-and-tie dress codes. They founded Criquet in Austin in 2010, after Nachman found his late grandfather's vintage four-button golf shirt in a closet and the pair decided to rebuild it properly.</p></details>
     <details class="faq-q"><summary>Where is Criquet based?</summary><p>Austin, Texas — the brand has said it plainly since day one: "We founded Criquet here in 2010." Its longtime clubhouse-headquarters sat at 1603 South 1st Street in Bouldin Creek, complete with a putting green, an outdoor bar and a Bill Murray mural.</p></details>
@@ -390,6 +495,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>What does Criquet cost?</summary><p>The core runs $98 to $128 — Classic Players at $98, Performance at $104, brrr° Range Polos and pearl snaps at $128. Collabs span $45 for the YETI bottle to $150 for the Jones duffle. Fall pieces top out at $148 for pants and knits.</p></details>
     <details class="faq-q"><summary>Does Criquet make an Austin FC collection?</summary><p>Yes — officially licensed MLS gear, with the Coaches Players Shirt and Range Polo carrying Austin FC's tree crest and ATX marks in verde, black and white. It is part of a wider MLS x Criquet program that covers most of the league.</p></details>
     <details class="faq-q"><summary>How big is Criquet?</summary><p>Bigger than it plays. The catalogue runs over a thousand products including licensed collegiate and MLS lines, the company raised a $1.4 million Series A led by CircleUp back in 2016, and the press file includes CNBC and Details magazine, which once called the Players Shirt "The Perfect Polo."</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Criquet Shirts</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/juniper-james">
+      <div class="more-card-img"><img src="/images/texas-brands/juniperjames-0.jpg" alt="Juniper &amp; James" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Juniper &amp; James</div>
+        <div class="more-card-tag">New Braunfels, TX &middot; apparel</div>
+        <div class="more-card-desc">From the founder of Duck Camp, named for his twins — breathable polos for Hill Country heat.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/olydoe">
+      <div class="more-card-img"><img src="/images/olydoe/polo-stripe-blue.jpg" alt="Olydoe" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Olydoe</div>
+        <div class="more-card-tag">Dallas, TX &middot; apparel</div>
+        <div class="more-card-desc">An ex-banker's anti-polyester manifesto — Supima cotton polos, launched October 2025.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/sierra-madre">
+      <div class="more-card-img"><img src="/images/texas-brands/sierramadre-2.jpg" alt="Sierra Madre Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Sierra Madre Golf</div>
+        <div class="more-card-tag">Austin, TX &middot; apparel</div>
+        <div class="more-card-desc">Women's golf clothes by two women who play — built-in bras, real pockets, a glove loop on the skort.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
   </div>
 </section>
 

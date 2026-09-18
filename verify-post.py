@@ -178,8 +178,19 @@ def verify(path):
     # one FAQ block only — a second one means a donor page's FAQ came along
     chk("exactly one FAQ block", body.count('<div class="faq">') <= 1)
     # the page must actually close; a bad graft can truncate the tail
-    chk("document closes (</body></html>)",
-        '</body>' in h and '</html>' in h and '<footer' in h)
+    # THE CAROUSEL VIEWERS ARE A DIFFERENT PAGE TYPE.
+    # Seven pages under drops/ are standalone slide viewers, not articles:
+    # no .drop-header, no .products-grid, no .writeup, and dozens of
+    # .gear-slide blocks. They have never had a footer and should not — on
+    # 18 Sep 2026 this check was read as "these pages are broken", a footer was
+    # injected into all seven, and it rendered unstyled in the corner of a
+    # layout that has no place for it. A footer is required of articles only.
+    _is_viewer = ('class="drop-header"' not in h and 'products-grid' not in h
+                  and 'gear-slide' in h)
+    chk("document closes (</body></html>)" if not _is_viewer
+        else "document closes (slide viewer — no footer expected)",
+        '</body>' in h and '</html>' in h
+        and ('<footer' in h or _is_viewer))
     words = len(html.unescape(re.sub(r'<[^>]+>', ' ', body)).split())
     # more-cards must use the styled structure — .more-kicker/.more-title have no CSS
     mc = re.findall(r'<a[^>]*class="more-card".*?</a>', h, re.S)

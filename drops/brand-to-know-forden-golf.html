@@ -130,6 +130,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 .oos{font:500 10px/1 'JetBrains Mono',monospace;letter-spacing:.08em;text-transform:uppercase;
  color:#9a3b3b;border:1px solid #d9b3b3;border-radius:3px;padding:3px 6px;margin-left:5px;white-space:nowrap}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who founded Forden Golf?", "acceptedAnswer": {"@type": "Answer", "text": "Chad Gurman. The brand publishes his founding statement on its About page: Forden Golf was founded on the belief that golf fashion should be as dynamic and expressive as the game itself."}}, {"@type": "Question", "name": "What is the Forden Swingman logo?", "acceptedAnswer": {"@type": "Answer", "text": "A figure mid-swing drawn as overlapping strokes. Forden states it references Harold Doc Edgerton's stroboscopic golf photography Edgerton was the MIT engineer who invented the stroboscope and in 1938 photographed pro Densmore Shute at 100 flashes per second, capturing the shaft bending after impact."}}, {"@type": "Question", "name": "Does Forden Golf work with New Era?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. The headwear line is made with New Era across the 9Forty A-Frame and Golfer snapback shapes, plus a 59Fifty fitted. All the snapbacks are $48 and, unlike the apparel, are not discounted."}}, {"@type": "Question", "name": "What are the Swing Kings tee picks?", "acceptedAnswer": {"@type": "Answer", "text": "A collaboration with N 33 six stamped wooden tees in a foil sachet designed to read as a cigarette pack, in Newport green with a gold stripe. $14, down from $20."}}, {"@type": "Question", "name": "Is Forden Golf on sale?", "acceptedAnswer": {"@type": "Answer", "text": "Most of it, at the time of writing. Collection II is around thirty per cent off and the Collection 1 archive is half price. Headwear is excluded."}}]}</script>
 </head>
@@ -161,49 +222,57 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 <div class="drop-hero"><div class="drop-hero-img"><img src="/images/forden/hero-tee-picks.jpg" alt="Forden Golf x No33 Swing Kings tee packets in Newport green" loading="eager"></div></div>
 
-<div class="writeup">
-    <div class="writeup-body"><p>Forden Golf makes clothes for municipal golf, and it is specific about it. The
+<section class="products" data-btk="take">
+  <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
+    <p>Forden Golf makes clothes for municipal golf, and it is specific about it. The
 graphics are in-jokes about the local muni, the scorecard and the putt you left short. The cuts are
 boxy cotton and heavyweight fleece rather than anything technical. The whole range runs from fourteen
 dollars to seventy-seven. None of it is trying to get you through the gate at a club that would ask
 what you shot.</p>
+  </div>
+</section>
 
-<p>The reference points are skate graphics and mid-century sports print, and the logo tells you which
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
+    <p>The reference points are skate graphics and mid-century sports print, and the logo tells you which
 one the brand takes seriously. Forden calls the mark the Swingman, and it comes from Harold Edgerton's
 strobe photography at MIT in 1938: a golfer dissolved into fifty superimposed selves, the shaft still
 bending after the ball has gone. Flattened to one colour on a hat panel, the figure keeps what made
 the original work. It is a picture of motion rather than a picture of a golfer.</p>
-
-<p>Chad Gurman founded the brand and has kept the brief narrow. <em>&ldquo;Forden Golf was
+    <p>Chad Gurman founded the brand and has kept the brief narrow. <em>&ldquo;Forden Golf was
 founded on the belief that golf fashion should be as dynamic and expressive as the game itself. Our
 mission is to provide a wardrobe that effortlessly blends the elegance of the sport with the boldness
 of street style,&rdquo;</em> Gurman says on the brand's own site. In practice that means cotton
 fleece, boxy tees, type-led graphics about municipal golf, and a hat line made with New Era.</p>
-
-<p>Who it is for: the golfer who walks nine after work, keeps a cheap towel clipped to the bag, and
+    <p>Who it is for: the golfer who walks nine after work, keeps a cheap towel clipped to the bag, and
 would rather look like they came from somewhere than from a pro shop. The tee packet is the entry
 point at fourteen dollars, the New Era caps are the piece that will outlast the trend, and the
 sweatshirts are what you will actually wear off the course.</p>
-
-<p>The range is on its second collection. Collection II is the current one and most of it is thirty
+    <p>The range is on its second collection. Collection II is the current one and most of it is thirty
 per cent off; Collection 1 has been moved to an archive and cut in half. The hats are the exception
 &mdash; every New Era piece holds at forty-eight dollars while the apparel discounts around it, which
 is usually a sign of where the demand actually is.</p>
-
-<p>What Forden does not have is photography of anyone wearing any of it. There is no lookbook, no
+    <p>What Forden does not have is photography of anyone wearing any of it. There is no lookbook, no
 on-course imagery, no on-model shots at all; the Gallery page on their site is an empty template. For
 a brand whose stated business is expression, that is the obvious gap, and it is the one thing holding
 the range back from reading as clearly as it deserves to. The clothes are better than the pictures of
-them.</p></div>
+them.</p>
+  </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
-    <div class="sidebar-card"><div class="sidebar-label">Details</div>
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Founded by</span><span>Chad Gurman</span></div>
       <div class="sidebar-detail"><span class="l">Logo</span><span>The Swingman</span></div>
       <div class="sidebar-detail"><span class="l">After</span><span>Doc Edgerton, 1938</span></div>
       <div class="sidebar-detail"><span class="l">Hats with</span><span>New Era</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$14&ndash;$77</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>Aug 2026</span></div>
-      <a href="/brands/" class="sidebar-cta">Browse the Brand Index &rarr;</a>
+      <a href="/brands/" target="_blank" rel="noopener" class="sidebar-cta">Browse the Brand Index &rarr;</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#FordenGolf</span>
@@ -214,11 +283,13 @@ them.</p></div>
   </aside>
 </div>
 
-<section class="products">
-  <h2 id="swing-kings">The Tee Packet</h2>
-  <p class="cat-kicker"><strong>SWING KINGS &middot; $14</strong> &mdash; Start here, because it is the most Forden object Forden makes. The tee picks come in a foil sachet in Newport green, gold and white stripe across the top, the wordmark set in the same heavy slab a cigarette pack uses, and SWING KINGS printed across the bottom where the format would normally go. The tees inside are wooden and stamped 33. It is a joke that took real work to land, and it is the only thing in the range photographed with any styling at all.</p>
-  <div class="products-grid">
-  <div class="product-card" id="teepicks" data-frames="3">
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 27 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Tee Packet</h2>
+    <p class="cat-kicker"><strong>SWING KINGS &middot; $14</strong> &mdash; Start here, because it is the most Forden object Forden makes. The tee picks come in a foil sachet in Newport green, gold and white stripe across the top, the wordmark set in the same heavy slab a cigarette pack uses, and SWING KINGS printed across the bottom where the format would normally go. The tees inside are wooden and stamped 33. It is a joke that took real work to land, and it is the only thing in the range photographed with any styling at all.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" id="teepicks" data-frames="3">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/teepicks-0.jpg" loading="lazy" alt="Forden Golf x No33 Swing Kings tee picks in green foil packets &middot; view 1 of 3"></div><div class="pg-frame"><img src="/images/forden/teepicks-1.jpg" loading="lazy" alt="Forden Golf x No33 Swing Kings tee picks in green foil packets &middot; view 2 of 3"></div><div class="pg-frame"><img src="/images/forden/teepicks-2.jpg" loading="lazy" alt="Forden Golf x No33 Swing Kings tee picks in green foil packets &middot; view 3 of 3"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Forden &times; N&ordm;33 &middot; In stock</div>
@@ -227,11 +298,16 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/forden-x-the-number-thirty-three-tee-picks" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
-  <h2 id="swingman">The Swingman Line</h2>
-  <p class="cat-kicker"><strong>THE LOGO, ON EVERYTHING ELSE</strong> &mdash; The Swingman mark is a figure mid-swing rendered as overlapping strokes, and it is a direct reference to a photograph. Doc Edgerton fired a strobe a hundred times a second at a golfer at MIT in 1938 and produced a body dissolving into fifty superimposed selves. Forden has flattened that into a logo, and it works hardest on the accessories, where the repeat has room to run.</p>
-  <div class="products-grid">
-  <div class="product-card" id="umbrella" data-frames="4">
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Swingman Line</h2>
+    <p class="cat-kicker"><strong>THE LOGO, ON EVERYTHING ELSE</strong> &mdash; The Swingman mark is a figure mid-swing rendered as overlapping strokes, and it is a direct reference to a photograph. Doc Edgerton fired a strobe a hundred times a second at a golfer at MIT in 1938 and produced a body dissolving into fifty superimposed selves. Forden has flattened that into a logo, and it works hardest on the accessories, where the repeat has room to run.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-2" id="umbrella" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/umbrella-0.jpg" loading="lazy" alt="Forden Golf Swingman golf umbrella in green &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/forden/umbrella-1.jpg" loading="lazy" alt="Forden Golf Swingman golf umbrella in green &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/forden/umbrella-2.jpg" loading="lazy" alt="Forden Golf Swingman golf umbrella in green &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/forden/umbrella-3.jpg" loading="lazy" alt="Forden Golf Swingman golf umbrella in green &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Accessories &middot; In stock</div>
@@ -240,7 +316,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/swingman-umbrella-1" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="mallet-cover" data-frames="2">
+<div class="product-card" id="p-3" id="mallet-cover" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/mallet-cover-0.jpg" loading="lazy" alt="Forden Golf Swingman mallet putter cover in black &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/mallet-cover-1.jpg" loading="lazy" alt="Forden Golf Swingman mallet putter cover in black &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Accessories &middot; In stock</div>
@@ -249,7 +325,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/black-swingman-putter-cover-2" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="tin" data-frames="3">
+<div class="product-card" id="p-4" id="tin" data-frames="3">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/tin-0.jpg" loading="lazy" alt="Forden Golf aluminium pouch tin in black &middot; view 1 of 3"></div><div class="pg-frame"><img src="/images/forden/tin-1.jpg" loading="lazy" alt="Forden Golf aluminium pouch tin in black &middot; view 2 of 3"></div><div class="pg-frame"><img src="/images/forden/tin-2.jpg" loading="lazy" alt="Forden Golf aluminium pouch tin in black &middot; view 3 of 3"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Accessories &middot; In stock</div>
@@ -258,11 +334,16 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/forden-golf-aluminem-alloy-pouch-can" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
-  <h2 id="tees">The Tees and Long Sleeves</h2>
-  <p class="cat-kicker"><strong>COLLECTION II &middot; $42&ndash;$45.50</strong> &mdash; This is where the brand does its talking. The graphics are in-jokes about being a normal golfer: municipal courses, missed putts, the scorecard as a document of failure. They are set in type rather than illustration, which keeps them the right side of novelty. Everything here is cotton, cut boxy, and currently thirty per cent off.</p>
-  <div class="products-grid">
-  <div class="product-card" id="script-tee" data-frames="2">
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Tees and Long Sleeves</h2>
+    <p class="cat-kicker"><strong>COLLECTION II &middot; $42&ndash;$45.50</strong> &mdash; This is where the brand does its talking. The graphics are in-jokes about being a normal golfer: municipal courses, missed putts, the scorecard as a document of failure. They are set in type rather than illustration, which keeps them the right side of novelty. Everything here is cotton, cut boxy, and currently thirty per cent off.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-5" id="script-tee" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/script-tee-0.jpg" loading="lazy" alt="Forden Golf script t-shirt in cream &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/script-tee-1.jpg" loading="lazy" alt="Forden Golf script t-shirt in cream &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -271,7 +352,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/white-forden-script-tshirt" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="local-muni-tee" data-frames="1">
+<div class="product-card" id="p-6" id="local-muni-tee" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/local-muni-tee-0.jpg" loading="lazy" alt="Forden Golf Local Muni t-shirt in lavender &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -280,7 +361,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/lavendar-local-muni-tshirt" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="scorecard-tee" data-frames="1">
+<div class="product-card" id="p-7" id="scorecard-tee" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/scorecard-tee-0.jpg" loading="lazy" alt="Forden Golf Scorecard t-shirt in indigo &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -289,7 +370,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/lightblue-scorecard-tshirt" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="divot-masters" data-frames="2">
+<div class="product-card" id="p-8" id="divot-masters" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/divot-masters-0.jpg" loading="lazy" alt="Forden Golf Divot Masters t-shirt in black &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/divot-masters-1.jpg" loading="lazy" alt="Forden Golf Divot Masters t-shirt in black &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -298,7 +379,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/black-divot-masters" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="geo-putter-ls" data-frames="1">
+<div class="product-card" id="p-9" id="geo-putter-ls" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/geo-putter-ls-0.jpg" loading="lazy" alt="Forden Golf Geo Putter long sleeve in brown &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -307,7 +388,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/brown-geo-putter-longsleeve-tshirt" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="swinging-ls" data-frames="2">
+<div class="product-card" id="p-10" id="swinging-ls" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/swinging-ls-0.jpg" loading="lazy" alt="Forden Golf Swinging Golf long sleeve in white &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/swinging-ls-1.jpg" loading="lazy" alt="Forden Golf Swinging Golf long sleeve in white &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -316,11 +397,16 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/white-swinging-golf-longsleeve-tshirt" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
-  <h2 id="sweats">Crewnecks and Hoodies</h2>
-  <p class="cat-kicker"><strong>$63&ndash;$77 &middot; DOWN FROM $90&ndash;$110</strong> &mdash; The heavier pieces are where the price drops start to look serious, and where the brand's collegiate instinct comes out. Nothing here is technical. These are cotton fleece sweatshirts with golf graphics on them, which is either the whole point or a limitation depending on how you feel about playing in a hoodie.</p>
-  <div class="products-grid">
-  <div class="product-card" id="retro-club-hoodie" data-frames="1">
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Crewnecks and Hoodies</h2>
+    <p class="cat-kicker"><strong>$63&ndash;$77 &middot; DOWN FROM $90&ndash;$110</strong> &mdash; The heavier pieces are where the price drops start to look serious, and where the brand's collegiate instinct comes out. Nothing here is technical. These are cotton fleece sweatshirts with golf graphics on them, which is either the whole point or a limitation depending on how you feel about playing in a hoodie.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-11" id="retro-club-hoodie" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/retro-club-hoodie-0.jpg" loading="lazy" alt="Forden Golf Retro Club hoodie in brown &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -329,7 +415,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/brown-retro-club-hoodie" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="cut-spin-hoodie" data-frames="2">
+<div class="product-card" id="p-12" id="cut-spin-hoodie" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/cut-spin-hoodie-0.jpg" loading="lazy" alt="Forden Golf Cut Spin hoodie in black &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/cut-spin-hoodie-1.jpg" loading="lazy" alt="Forden Golf Cut Spin hoodie in black &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -338,7 +424,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/black-cut-spin-hoodie" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="flag-crew" data-frames="2">
+<div class="product-card" id="p-13" id="flag-crew" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/flag-crew-0.jpg" loading="lazy" alt="Forden Golf Flag crewneck in black &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/flag-crew-1.jpg" loading="lazy" alt="Forden Golf Flag crewneck in black &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -347,7 +433,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/indigo-flag-crewneck" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="undulations-crew" data-frames="1">
+<div class="product-card" id="p-14" id="undulations-crew" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/undulations-crew-0.jpg" loading="lazy" alt="Forden Golf Undulations crewneck in black &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -356,7 +442,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/black-undulations-crewneck" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="last-priority-crew" data-frames="1">
+<div class="product-card" id="p-15" id="last-priority-crew" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/last-priority-crew-0.jpg" loading="lazy" alt="Forden Golf Last Priority crewneck in glacier grey &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -365,11 +451,16 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/glaciergrey-last-priority-crewneck" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
-  <h2 id="hats">The New Era Line</h2>
-  <p class="cat-kicker"><strong>ALL $48 &middot; NOT ON SALE</strong> &mdash; Forden makes hats with New Era, which for a brand this size is the real credential in the range. The 9Forty A-Frame comes in eight two-tone colourways and the Golfer snapback in six, all at forty-eight dollars, and none of them are discounted while nearly everything else is &mdash; which tells you which part of the business is working.</p>
-  <div class="products-grid">
-  <div class="product-card" id="9forty-walnut" data-frames="2">
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The New Era Line</h2>
+    <p class="cat-kicker"><strong>ALL $48 &middot; NOT ON SALE</strong> &mdash; Forden makes hats with New Era, which for a brand this size is the real credential in the range. The 9Forty A-Frame comes in eight two-tone colourways and the Golfer snapback in six, all at forty-eight dollars, and none of them are discounted while nearly everything else is &mdash; which tells you which part of the business is working.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-16" id="9forty-walnut" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/9forty-walnut-0.jpg" loading="lazy" alt="Forden Golf x New Era 9Forty A-Frame snapback in walnut two-tone &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/9forty-walnut-1.jpg" loading="lazy" alt="Forden Golf x New Era 9Forty A-Frame snapback in walnut two-tone &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Forden &times; New Era &middot; In stock</div>
@@ -378,7 +469,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/black-and-walnut-two-tone-new-era-9forty-a-frame-swingman-snapback-copy" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="9forty-khaki" data-frames="2">
+<div class="product-card" id="p-17" id="9forty-khaki" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/9forty-khaki-0.jpg" loading="lazy" alt="Forden Golf x New Era 9Forty A-Frame snapback in khaki two-tone &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/9forty-khaki-1.jpg" loading="lazy" alt="Forden Golf x New Era 9Forty A-Frame snapback in khaki two-tone &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Forden &times; New Era &middot; In stock</div>
@@ -387,7 +478,7 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/khaki-two-tone-new-era-9forty-a-frame-swingman-snapback" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
-  <div class="product-card" id="golfer-snapback" data-frames="2">
+<div class="product-card" id="p-18" id="golfer-snapback" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/golfer-snapback-0.jpg" loading="lazy" alt="Forden Golf x New Era Golfer snapback in brown &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/forden/golfer-snapback-1.jpg" loading="lazy" alt="Forden Golf x New Era Golfer snapback in brown &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Forden &times; New Era &middot; In stock</div>
@@ -396,11 +487,16 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/brown-forden-x-new-era-golfer-snapback" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
-  <h2 id="bottoms">Bottoms</h2>
-  <p class="cat-kicker"><strong>THE SHORT LIST, LITERALLY</strong> &mdash; Bottoms are the thinnest part of the range and Forden knows it &mdash; three shorts and three sweat pants, most of them plain. The mesh short is the one with any design in it.</p>
-  <div class="products-grid">
-  <div class="product-card" id="scorecard-short" data-frames="1">
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Bottoms</h2>
+    <p class="cat-kicker"><strong>THE SHORT LIST, LITERALLY</strong> &mdash; Bottoms are the thinnest part of the range and Forden knows it &mdash; three shorts and three sweat pants, most of them plain. The mesh short is the one with any design in it.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-19" id="scorecard-short" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/scorecard-short-0.jpg" loading="lazy" alt="Forden Golf Scorecard mesh short in navy &middot; view 1 of 1"></div></div><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Collection II &middot; In stock</div>
@@ -409,50 +505,94 @@ them.</p></div>
         <a class="product-link" href="https://www.fordengolf.com/products/indigo-scorecard-nylon-short" target="_blank" rel="noopener">fordengolf.com &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
-  <h2 id="details">In the Details</h2>
-  <p class="cat-kicker"><strong>NO LOOKBOOK, SO: DETAILS</strong> &mdash; Forden has no on-model or on-course photography &mdash; no lookbook, and a Gallery page with nothing on it. So this is the range close up instead: the repeats, the embroidery, the inside of the tin. It is the most you can see of these clothes until somebody photographs them being worn.</p>
-  <div class="products-grid">
-    <div class="product-card" id="det0" data-frames="1">
+  <div class="products-section">
+    <div class="products-grid">
+<div class="product-card" id="det0" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-umbrella-canopy.jpg" loading="lazy" alt="Looked at from beneath, the umbrella canopy runs the Swingman on every panel"></div></div></div>
       <div class="product-body"><div class="product-desc">Looked at from beneath, the umbrella canopy runs the Swingman on every panel</div></div>
     </div>
-    <div class="product-card" id="det1" data-frames="1">
+<div class="product-card" id="det1" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-tee-picks.jpg" loading="lazy" alt="The Swing Kings sachets come in Newport green and gold"></div></div></div>
       <div class="product-body"><div class="product-desc">The Swing Kings sachets come in Newport green and gold</div></div>
     </div>
-    <div class="product-card" id="det2" data-frames="1">
+<div class="product-card" id="det2" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-swinging-ls-red.jpg" loading="lazy" alt="The red long sleeve carries the Swingman large across the back"></div></div></div>
       <div class="product-body"><div class="product-desc">The red long sleeve carries the Swingman large across the back</div></div>
     </div>
-    <div class="product-card" id="det3" data-frames="1">
+<div class="product-card" id="det3" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-towel-weave.jpg" loading="lazy" alt="The golf towel runs the Swingman small and repeated"></div></div></div>
       <div class="product-body"><div class="product-desc">The golf towel runs the Swingman small and repeated</div></div>
     </div>
-    <div class="product-card" id="det4" data-frames="1">
+<div class="product-card" id="det4" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-tin-open.jpg" loading="lazy" alt="The aluminium pouch tin opens to a plain interior"></div></div></div>
       <div class="product-body"><div class="product-desc">The aluminium pouch tin opens to a plain interior</div></div>
     </div>
-    <div class="product-card" id="det5" data-frames="1">
+<div class="product-card" id="det5" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-sweatpant-embroidery.jpg" loading="lazy" alt="The wordmark is embroidered at the hip of the classic logo sweat pant"></div></div></div>
       <div class="product-body"><div class="product-desc">The wordmark is embroidered at the hip of the classic logo sweat pant</div></div>
     </div>
-    <div class="product-card" id="det6" data-frames="1">
+<div class="product-card" id="det6" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-umbrella-handle.jpg" loading="lazy" alt="The umbrella handle and collar are finished in matte black"></div></div></div>
       <div class="product-body"><div class="product-desc">The umbrella handle and collar are finished in matte black</div></div>
     </div>
-    <div class="product-card" id="det7" data-frames="1">
+<div class="product-card" id="det7" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/forden/d-mallet-on-club.jpg" loading="lazy" alt="The mallet cover sits over a putter head"></div></div></div>
       <div class="product-body"><div class="product-desc">The mallet cover sits over a putter head</div></div>
     </div>
+    </div>
   </div>
+</section>
 
+<section class="products" data-btk="faq">
 <div class="faq">
     <details class="faq-q"><summary>Who founded Forden Golf?</summary><p>Chad Gurman. The brand publishes his founding statement on its About page: Forden Golf was founded on the belief that golf fashion should be as dynamic and expressive as the game itself.</p></details>
     <details class="faq-q"><summary>What is the Forden Swingman logo?</summary><p>A figure mid-swing drawn as overlapping strokes. Forden states it references Harold Doc Edgerton's stroboscopic golf photography Edgerton was the MIT engineer who invented the stroboscope and in 1938 photographed pro Densmore Shute at 100 flashes per second, capturing the shaft bending after impact.</p></details>
     <details class="faq-q"><summary>Does Forden Golf work with New Era?</summary><p>Yes. The headwear line is made with New Era across the 9Forty A-Frame and Golfer snapback shapes, plus a 59Fifty fitted. All the snapbacks are $48 and, unlike the apparel, are not discounted.</p></details>
     <details class="faq-q"><summary>What are the Swing Kings tee picks?</summary><p>A collaboration with N 33 six stamped wooden tees in a foil sachet designed to read as a cigarette pack, in Newport green with a gold stripe. $14, down from $20.</p></details>
     <details class="faq-q"><summary>Is Forden Golf on sale?</summary><p>Most of it, at the time of writing. Collection II is around thirty per cent off and the Collection 1 archive is half price. Headwear is excluded.</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Forden Golf</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/hidden-links-society">
+      <div class="more-card-img"><img src="/images/hls/play-faster-fairway-wood-cover-black-1.jpg" alt="Hidden Links Society" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Hidden Links Society</div>
+        <div class="more-card-tag">United States &middot; headwear/apparel</div>
+        <div class="more-card-desc">Anti-country-club headwear and heavyweight cotton. Gives 2% of every sale to Youth on Course and is documenting Golf Digest's Top 100 Public courses one at a time.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/travismathew">
+      <div class="more-card-img"><img src="/images/off-course-vol2/travismathew-offdaze.jpg" alt="TravisMathew" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">TravisMathew</div>
+        <div class="more-card-tag">Huntington Beach, California &middot; apparel/headwear</div>
+        <div class="more-card-desc">California golf and lifestyle apparel, plus an eyewear line made from Italian acetate.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/cph-golf">
+      <div class="more-card-img"><img src="/images/apcph-golf/halfzip-1.jpg" alt="Cph/Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Cph/Golf</div>
+        <div class="more-card-tag">Tokyo, Japan &middot; apparel/headwear</div>
+        <div class="more-card-desc">CAPTAINS HELM's golf line — California outdoor lifestyle read through Tokyo streetwear.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/water-when-dry">
+      <div class="more-card-img"><img src="/images/feed/46afe75b-ROSE-CLAY.png" alt="water when dry" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">water when dry</div>
+        <div class="more-card-tag">— &middot; apparel/headwear</div>
+        <div class="more-card-desc">Tees, hats, socks and accessories sold in timed online drops.</div>
+      </div>
+    </a>
   </div>
 </section>
 

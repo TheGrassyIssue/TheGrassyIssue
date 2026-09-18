@@ -135,6 +135,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who founded Left of Field Golf?", "acceptedAnswer": {"@type": "Answer", "text": "Nick Ilias, who started the brand in Sydney in 2022. He has written that he began it in his brother’s old bedroom, surrounded by boxes of stock. The company trades as LOFG Clubhaus Pty Ltd and is based in Beverly Hills, in Sydney’s St George district."}}, {"@type": "Question", "name": "What is Left of Field Golf's design philosophy?", "acceptedAnswer": {"@type": "Answer", "text": "Their stated aim is golf clothing built on surf and skate silhouettes rather than traditional golf ones. In their own words: “Our mission isn’t to create products that scream ‘golf’. It’s to make clothing that pushes the game’s evolving style, while staying accessible enough to cut through the hype.” The founding frustration was feeling out of place in a pro shop wearing what he actually wanted to wear."}}, {"@type": "Question", "name": "Why are Left of Field products named after Australian places?", "acceptedAnswer": {"@type": "Answer", "text": "Each collection is tied to a specific stretch of coast and the products are named for places within it. Elements takes its names from around Barnbougle in Tasmania (Bridport, Anderson, Bass). SOUTH is the Mornington Peninsula in Victoria (Portsea, Sorrento, Mornington, Bridgewater). RNP is Royal National Park south of Sydney (Audley, Stanwell, Garie). The brand confirmed the convention when it described two early polos as “named after iconic beaches within Sydney Harbour.”"}}, {"@type": "Question", "name": "What is the Elements collection?", "acceptedAnswer": {"@type": "Answer", "text": "Elements is Left of Field’s flagship technical range, launched in October 2025. It was designed after a 2024 trip to Barnbougle Dunes in Tasmania for a friend’s 30th birthday, and the campaign was later shot at the same course. It includes the Elements Polo, Bass Polo, Elements Weather Jacket, Bridport Crewneck, Anderson Insulated Gilet, Dune Short and a pleated wide-leg technical trouser."}}, {"@type": "Question", "name": "What is the Pintuck short?", "acceptedAnswer": {"@type": "Answer", "text": "The Pintuck is Left of Field’s signature golf short and, by their own description, their best seller. The brand pitched the original as “our answer to everything wrong with golf shorts today” — a roomier fit through the trunk, a wider leg opening, and a length that sits just above the knee. Pintuck 2.0 arrived in 2026 as a refined version and runs in cream, navy, black and slate."}}, {"@type": "Question", "name": "Is Sydney Harbour Golf & Country Club a real club?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is invented. Left of Field’s entire product description for the cap is “The greatest course to never exist.” The crest shows the Sydney Harbour Bridge with its two pylons replaced by bags of golf clubs. It has been one of their longest-running products since August 2024."}}, {"@type": "Question", "name": "What is the Southern Slam cap?", "acceptedAnswer": {"@type": "Answer", "text": "An unofficial, self-made tribute to the Australian summer of golf, sold at a three-day Left of Field pop-up in Fitzroy, Melbourne, over the weekend of the 2025 Australian Open at Royal Melbourne. The brand states clearly that it is “an independent artistic interpretation and is not affiliated with, endorsed by, or sponsored by any official tournament or venue.” There is no event actually called the Southern Slam."}}, {"@type": "Question", "name": "Who is Ciel Glue?", "acceptedAnswer": {"@type": "Answer", "text": "A French collage artist based on the Portuguese coast, who collaborates with Left of Field on their Golf Art prints. He began surfing at eleven and spent fifteen years doing graffiti in Paris before moving to collage. He works entirely analogue, hand-cutting vintage magazines, old books and coloured paper. His originals were shown at Left of Field’s Melbourne pop-up in December 2025 and the prints were added in January 2026."}}, {"@type": "Question", "name": "Does Left of Field Golf ship to the United States?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. They run a US storefront at lofgolf.com/en-us priced in US dollars, and ship internationally from Australia. Their published international rates are A$29.95 standard, which they quote at six to twelve business days, and A$66.95 express at three to seven. Returns are free within 30 days."}}, {"@type": "Question", "name": "Where can I buy Left of Field Golf in a shop?", "acceptedAnswer": {"@type": "Answer", "text": "They list five stockists: Playfair Golf Club and Woolooware Golf Pro Shop in Australia, Club 72 and Soft Hands Club in the United Kingdom, and Happy Golfer in Sweden. Otherwise it is direct from lofgolf.com. They have no permanent retail of their own and trade through occasional pop-ups."}}]}</script>
 </head>
@@ -172,17 +233,33 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/left-of-field/hero-left-of-field.jpg" alt="Golf hats from independent brands, chosen for summer heat" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/left-of-field-golf/btk-hero.jpg" alt="Left of Field Golf &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Left of Field is the funniest brand in golf that also makes clothes you would wear without the joke attached. Nick Ilias has run it out of Sydney for four years, starting in 2022 in his brother&rsquo;s old bedroom, which he described in a journal entry written in Paris three years later as &ldquo;a small room filled with everything from late-night brainstorming sessions to boxes stacked high with stock.&rdquo;</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/left-of-field-golf/btk-body-1.jpg" alt="Left of Field Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>Ilias started from a complaint a lot of players will recognise. &ldquo;When I first started playing the game, getting dressed for golf felt like a lose-lose situation. The outfits I wanted to wear made me feel out of place in the pro shop. Adhering to the dress code just didn&rsquo;t feel natural, either.&rdquo;</p>
     <p>What he built is not, as it is often described, a brand about Australian landscapes. It is a brand about <strong>silhouette</strong>. The aim in their own words is clothing &ldquo;inspired by the attitude and silhouettes of surf and skate apparel, with design touches golfers can appreciate as their own,&rdquo; and then, flatly: &ldquo;Our mission isn&rsquo;t to create products that scream &lsquo;golf&rsquo;.&rdquo; That is why the shorts are roomy and cut to sit just above the knee, and why the trousers are pleated and wide. The tees follow the same logic, mid-weight and closer to a skate shirt than a golf one.</p>
     <p>The landscape part is real, but it operates one level down, in the naming. Every collection ties to a specific stretch of Australian coast and the products take their names from places inside it. Elements is Barnbougle in Tasmania, photographed on the same ground. SOUTH is the Mornington Peninsula. RNP is Royal National Park, south of Sydney. The earliest polos were named after beaches in Sydney Harbour, the one case where they said so outright: &ldquo;the Clontarf and Nielsen, named after iconic beaches within Sydney Harbour.&rdquo;</p>
     <p>Two other things stand out. They spent seven months sampling fabric before releasing their first polo, landed on a recycled-PET yarn, and wrote about it plainly: &ldquo;We know we are stepping into an industry which is regarded as one of the biggest polluters on earth. But we don&rsquo;t plan to follow the footsteps of the past.&rdquo; In February 2025 they showed at the Paris Golf Gallery during fashion week, their first international outing, in a room shared with Hiroki, Club 72 and Parmore.</p>
     <p>The range runs by collection rather than by garment, from the Barnbougle line down to a $4.90 ball marker. Prices come from the American storefront in US dollars, and they ship worldwide.</p>
   </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -190,7 +267,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-detail"><span class="l">Collections</span><span>8</span></div>
       <div class="sidebar-detail"><span class="l">Categories</span><span>9</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$4 &ndash; $330</span></div>
-      <a href="/"  class="sidebar-cta">&larr; Back to Feed</a>
+      <a href="/" target="_blank" rel="noopener" class="sidebar-cta">&larr; Back to Feed</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfCulture</span>
@@ -202,11 +279,17 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<section class="products">
-<h2 id="elements">Elements</h2>
-<p class="cat-kicker"><strong>The Barnbougle Collection</strong>Elements is the flagship technical line, built after a 2024 trip to Barnbougle in Tasmania and photographed later on the same ground. Ilias wrote it up himself: &ldquo;At Barnbougle, the land doesn&rsquo;t host the course &mdash; it <em>is</em> the course. The wind becomes your caddie and your rival.&rdquo;</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/left-of-field-golf/btk-body-2.jpg" alt="Left of Field Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 39 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">Elements</h2>
+    <p class="cat-kicker"><strong>The Barnbougle Collection</strong>Elements is the flagship technical line, built after a 2024 trip to Barnbougle in Tasmania and photographed later on the same ground. Ilias wrote it up himself: &ldquo;At Barnbougle, the land doesn&rsquo;t host the course &mdash; it <em>is</em> the course. The wind becomes your caddie and your rival.&rdquo;</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xelements-polo-0-0.jpg" loading="lazy" alt="Elements Polo Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-polo-0-1.jpg" loading="lazy" alt="Elements Polo Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-polo-0-2.jpg" loading="lazy" alt="Elements Polo Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-polo-0-3.jpg" loading="lazy" alt="Elements Polo Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-polo-0-4.jpg" loading="lazy" alt="Elements Polo Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -215,7 +298,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xelements-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-2" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xbass-polo-black-1-0.jpg" loading="lazy" alt="Bass Polo - Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbass-polo-black-1-1.jpg" loading="lazy" alt="Bass Polo - Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbass-polo-black-1-2.jpg" loading="lazy" alt="Bass Polo - Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbass-polo-black-1-3.jpg" loading="lazy" alt="Bass Polo - Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbass-polo-black-1-4.jpg" loading="lazy" alt="Bass Polo - Black Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -224,7 +307,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xbass-polo-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4">
+<div class="product-card" id="p-3" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xelements-weather-jacket-sand-moss-2-0.jpg" loading="lazy" alt="Elements Weather Jacket - Sand/Moss Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-weather-jacket-sand-moss-2-1.jpg" loading="lazy" alt="Elements Weather Jacket - Sand/Moss Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-weather-jacket-sand-moss-2-2.jpg" loading="lazy" alt="Elements Weather Jacket - Sand/Moss Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xelements-weather-jacket-sand-moss-2-3.jpg" loading="lazy" alt="Elements Weather Jacket - Sand/Moss Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -233,7 +316,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xelements-weather-jacket-sand-moss" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-4" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xbridport-wind-breaker-crew-neck-green-3-0.jpg" loading="lazy" alt="Bridport Crewneck Pullover - Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbridport-wind-breaker-crew-neck-green-3-1.jpg" loading="lazy" alt="Bridport Crewneck Pullover - Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbridport-wind-breaker-crew-neck-green-3-2.jpg" loading="lazy" alt="Bridport Crewneck Pullover - Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbridport-wind-breaker-crew-neck-green-3-3.jpg" loading="lazy" alt="Bridport Crewneck Pullover - Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbridport-wind-breaker-crew-neck-green-3-4.jpg" loading="lazy" alt="Bridport Crewneck Pullover - Green Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -242,7 +325,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xbridport-wind-breaker-crew-neck-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-5" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xanderson-insulated-vest-4-0.jpg" loading="lazy" alt="Anderson Insulated Gilet Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xanderson-insulated-vest-4-1.jpg" loading="lazy" alt="Anderson Insulated Gilet Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xanderson-insulated-vest-4-2.jpg" loading="lazy" alt="Anderson Insulated Gilet Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xanderson-insulated-vest-4-3.jpg" loading="lazy" alt="Anderson Insulated Gilet Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xanderson-insulated-vest-4-4.jpg" loading="lazy" alt="Anderson Insulated Gilet Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -251,7 +334,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xanderson-insulated-vest" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-6" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xdune-golf-short-sage-5-0.jpg" loading="lazy" alt="Dune Golf Short - Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xdune-golf-short-sage-5-1.jpg" loading="lazy" alt="Dune Golf Short - Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xdune-golf-short-sage-5-2.jpg" loading="lazy" alt="Dune Golf Short - Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xdune-golf-short-sage-5-3.jpg" loading="lazy" alt="Dune Golf Short - Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xdune-golf-short-sage-5-4.jpg" loading="lazy" alt="Dune Golf Short - Sage Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -260,7 +343,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xdune-golf-short-sage" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-7" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xpleated-wide-leg-tech-trouser-6-0.jpg" loading="lazy" alt="Elements Pleated Wide Leg Tech Trouser Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xpleated-wide-leg-tech-trouser-6-1.jpg" loading="lazy" alt="Elements Pleated Wide Leg Tech Trouser Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xpleated-wide-leg-tech-trouser-6-2.jpg" loading="lazy" alt="Elements Pleated Wide Leg Tech Trouser Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xpleated-wide-leg-tech-trouser-6-3.jpg" loading="lazy" alt="Elements Pleated Wide Leg Tech Trouser Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xpleated-wide-leg-tech-trouser-6-4.jpg" loading="lazy" alt="Elements Pleated Wide Leg Tech Trouser Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -269,11 +352,19 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xpleated-wide-leg-tech-trouser" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
+    </div>
+    <div class="pull-quote">
+  <div class="pull-quote-inner">&ldquo;When I first started playing the game, getting dressed for golf felt like a lose-lose situation.&rdquo;<span class="pull-quote-attr">&mdash; Nick Ilias, Left of Field Golf founder</span></div>
 </div>
-<h2 id="south">SOUTH</h2>
-<p class="cat-kicker"><strong>The Mornington Peninsula</strong>SOUTH takes its names from the Victorian coast, an hour south of Melbourne. Portsea and Sorrento sit at the tip of the peninsula and Bridgewater Bay is on the ocean side. Mornington is the town the collection is named for.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">SOUTH</h2>
+    <p class="cat-kicker"><strong>The Mornington Peninsula</strong>SOUTH takes its names from the Victorian coast, an hour south of Melbourne. Portsea and Sorrento sit at the tip of the peninsula and Bridgewater Bay is on the ocean side. Mornington is the town the collection is named for.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-8" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/portsea-jacket-7-0.jpg" loading="lazy" alt="Portsea Jacket Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/portsea-jacket-7-1.jpg" loading="lazy" alt="Portsea Jacket Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/portsea-jacket-7-2.jpg" loading="lazy" alt="Portsea Jacket Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/portsea-jacket-7-3.jpg" loading="lazy" alt="Portsea Jacket Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/portsea-jacket-7-4.jpg" loading="lazy" alt="Portsea Jacket Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -282,7 +373,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/portsea-jacket" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-9" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/bridgewater-1-4-zip-8-0.jpg" loading="lazy" alt="Bridgewater 1/4 Zip Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/bridgewater-1-4-zip-8-1.jpg" loading="lazy" alt="Bridgewater 1/4 Zip Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/bridgewater-1-4-zip-8-2.jpg" loading="lazy" alt="Bridgewater 1/4 Zip Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/bridgewater-1-4-zip-8-3.jpg" loading="lazy" alt="Bridgewater 1/4 Zip Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/bridgewater-1-4-zip-8-4.jpg" loading="lazy" alt="Bridgewater 1/4 Zip Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -291,7 +382,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/bridgewater-1-4-zip" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-10" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/sorento-polo-royal-blue-9-0.jpg" loading="lazy" alt="Sorrento Polo Royal Blue Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sorento-polo-royal-blue-9-1.jpg" loading="lazy" alt="Sorrento Polo Royal Blue Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sorento-polo-royal-blue-9-2.jpg" loading="lazy" alt="Sorrento Polo Royal Blue Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sorento-polo-royal-blue-9-3.jpg" loading="lazy" alt="Sorrento Polo Royal Blue Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sorento-polo-royal-blue-9-4.jpg" loading="lazy" alt="Sorrento Polo Royal Blue Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -300,7 +391,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/sorento-polo-royal-blue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-11" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-beige-white-stripe-10-0.jpg" loading="lazy" alt="Mornington Polo Beige/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-beige-white-stripe-10-1.jpg" loading="lazy" alt="Mornington Polo Beige/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-beige-white-stripe-10-2.jpg" loading="lazy" alt="Mornington Polo Beige/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-beige-white-stripe-10-3.jpg" loading="lazy" alt="Mornington Polo Beige/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-beige-white-stripe-10-4.jpg" loading="lazy" alt="Mornington Polo Beige/White Stripe Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -309,7 +400,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/mornington-polo-beige-white-stripe" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-12" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-blue-white-stripe-11-0.jpg" loading="lazy" alt="Mornington Polo Blue/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-blue-white-stripe-11-1.jpg" loading="lazy" alt="Mornington Polo Blue/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-blue-white-stripe-11-2.jpg" loading="lazy" alt="Mornington Polo Blue/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-blue-white-stripe-11-3.jpg" loading="lazy" alt="Mornington Polo Blue/White Stripe Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/mornington-polo-blue-white-stripe-11-4.jpg" loading="lazy" alt="Mornington Polo Blue/White Stripe Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -318,15 +409,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/mornington-polo-blue-white-stripe" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
+    </div>
+  </div>
+</section>
 
-<div class="pull-quote">
-  <div class="pull-quote-inner">&ldquo;When I first started playing the game, getting dressed for golf felt like a lose-lose situation.&rdquo;<span class="pull-quote-attr">&mdash; Nick Ilias, Left of Field Golf founder</span></div>
-</div>
-<h2 id="rnp">RNP</h2>
-<p class="cat-kicker"><strong>Royal National Park</strong>Royal National Park is Australia&rsquo;s oldest, gazetted in 1879 and running down the coast south of Sydney. Audley is the village at its river crossing and Stanwell sits at its southern edge. The polos carry what Left of Field call an RNP yardage print.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">RNP</h2>
+    <p class="cat-kicker"><strong>Royal National Park</strong>Royal National Park is Australia&rsquo;s oldest, gazetted in 1879 and running down the coast south of Sydney. Audley is the village at its river crossing and Stanwell sits at its southern edge. The polos carry what Left of Field call an RNP yardage print.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/audley-padded-golf-vest-sage-12-0.jpg" loading="lazy" alt="Audley Padded Golf Vest Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/audley-padded-golf-vest-sage-12-1.jpg" loading="lazy" alt="Audley Padded Golf Vest Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/audley-padded-golf-vest-sage-12-2.jpg" loading="lazy" alt="Audley Padded Golf Vest Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/audley-padded-golf-vest-sage-12-3.jpg" loading="lazy" alt="Audley Padded Golf Vest Sage Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/audley-padded-golf-vest-sage-12-4.jpg" loading="lazy" alt="Audley Padded Golf Vest Sage Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -335,7 +427,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/audley-padded-golf-vest-sage" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-14" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/stanwell-pleated-wide-trouser-black-left-13-0.jpg" loading="lazy" alt="Stanwell Pleated Wide Trouser Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/stanwell-pleated-wide-trouser-black-left-13-1.jpg" loading="lazy" alt="Stanwell Pleated Wide Trouser Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/stanwell-pleated-wide-trouser-black-left-13-2.jpg" loading="lazy" alt="Stanwell Pleated Wide Trouser Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/stanwell-pleated-wide-trouser-black-left-13-3.jpg" loading="lazy" alt="Stanwell Pleated Wide Trouser Black Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/stanwell-pleated-wide-trouser-black-left-13-4.jpg" loading="lazy" alt="Stanwell Pleated Wide Trouser Black Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -344,11 +436,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/stanwell-pleated-wide-trouser-black-left-of-field-golf" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="the-pintuck">The Pintuck</h2>
-<p class="cat-kicker"><strong>The Short That Made Them</strong>Left of Field call the original &ldquo;our answer to everything wrong with golf shorts today&rdquo; &mdash; roomy through the trunk, wider at the leg opening, cut to sit just above the knee. It became their best seller, and the 2.0 is a refit of the same idea.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Pintuck</h2>
+    <p class="cat-kicker"><strong>The Short That Made Them</strong>Left of Field call the original &ldquo;our answer to everything wrong with golf shorts today&rdquo; &mdash; roomy through the trunk, wider at the leg opening, cut to sit just above the knee. It became their best seller, and the 2.0 is a refit of the same idea.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-15" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-1-14-0.jpg" loading="lazy" alt="Pintuck 2.0 Short Cream Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-1-14-1.jpg" loading="lazy" alt="Pintuck 2.0 Short Cream Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-1-14-2.jpg" loading="lazy" alt="Pintuck 2.0 Short Cream Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-1-14-3.jpg" loading="lazy" alt="Pintuck 2.0 Short Cream Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-1-14-4.jpg" loading="lazy" alt="Pintuck 2.0 Short Cream Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -357,7 +454,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/pintuck-h2-short-cream-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-16" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-15-0.jpg" loading="lazy" alt="Pintuck 2.0 Short Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-15-1.jpg" loading="lazy" alt="Pintuck 2.0 Short Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-15-2.jpg" loading="lazy" alt="Pintuck 2.0 Short Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-15-3.jpg" loading="lazy" alt="Pintuck 2.0 Short Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-h2-short-cream-15-4.jpg" loading="lazy" alt="Pintuck 2.0 Short Navy Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -366,7 +463,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/pintuck-h2-short-cream" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-17" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/pintuck-2-0-short-slate-16-0.jpg" loading="lazy" alt="Pintuck 2.0 Short Slate Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-2-0-short-slate-16-1.jpg" loading="lazy" alt="Pintuck 2.0 Short Slate Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-2-0-short-slate-16-2.jpg" loading="lazy" alt="Pintuck 2.0 Short Slate Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-2-0-short-slate-16-3.jpg" loading="lazy" alt="Pintuck 2.0 Short Slate Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/pintuck-2-0-short-slate-16-4.jpg" loading="lazy" alt="Pintuck 2.0 Short Slate Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -375,7 +472,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/pintuck-2-0-short-slate" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-18" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/resort-golf-short-mocha-17-0.jpg" loading="lazy" alt="Resort Golf Short Mocha Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/resort-golf-short-mocha-17-1.jpg" loading="lazy" alt="Resort Golf Short Mocha Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/resort-golf-short-mocha-17-2.jpg" loading="lazy" alt="Resort Golf Short Mocha Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/resort-golf-short-mocha-17-3.jpg" loading="lazy" alt="Resort Golf Short Mocha Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/resort-golf-short-mocha-17-4.jpg" loading="lazy" alt="Resort Golf Short Mocha Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -384,11 +481,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/resort-golf-short-mocha" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="tees">Tees</h2>
-<p class="cat-kicker"><strong>Where the Thesis Is Most Literal</strong>The tees are boxy and mid-weight, closer to a skate shirt than a golf one. The early Clovelly and Huskisson runs were cut from US cotton with the artwork finished in Marrickville, in Sydney&rsquo;s inner west.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Tees</h2>
+    <p class="cat-kicker"><strong>Where the Thesis Is Most Literal</strong>The tees are boxy and mid-weight, closer to a skate shirt than a golf one. The early Clovelly and Huskisson runs were cut from US cotton with the artwork finished in Marrickville, in Sydney&rsquo;s inner west.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-19" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/coastal-classic-t-shirt-18-0.jpg" loading="lazy" alt="Coastal Classic T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-classic-t-shirt-18-1.jpg" loading="lazy" alt="Coastal Classic T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-classic-t-shirt-18-2.jpg" loading="lazy" alt="Coastal Classic T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-classic-t-shirt-18-3.jpg" loading="lazy" alt="Coastal Classic T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-classic-t-shirt-18-4.jpg" loading="lazy" alt="Coastal Classic T-Shirt Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -397,7 +499,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/coastal-classic-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-20" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/coastal-birds-t-shirt-19-0.jpg" loading="lazy" alt="Coastal Birds T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-birds-t-shirt-19-1.jpg" loading="lazy" alt="Coastal Birds T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-birds-t-shirt-19-2.jpg" loading="lazy" alt="Coastal Birds T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-birds-t-shirt-19-3.jpg" loading="lazy" alt="Coastal Birds T-Shirt Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/coastal-birds-t-shirt-19-4.jpg" loading="lazy" alt="Coastal Birds T-Shirt Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -406,7 +508,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/coastal-birds-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-21" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/cgg-tee-white-20-0.jpg" loading="lazy" alt="Huskisson Tee - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/cgg-tee-white-20-1.jpg" loading="lazy" alt="Huskisson Tee - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/cgg-tee-white-20-2.jpg" loading="lazy" alt="Huskisson Tee - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/cgg-tee-white-20-3.jpg" loading="lazy" alt="Huskisson Tee - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/cgg-tee-white-20-4.jpg" loading="lazy" alt="Huskisson Tee - White Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -415,7 +517,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/cgg-tee-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-22" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xsprayed-t-shirt-white-21-0.jpg" loading="lazy" alt="Sprayed T-Shirt - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xsprayed-t-shirt-white-21-1.jpg" loading="lazy" alt="Sprayed T-Shirt - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xsprayed-t-shirt-white-21-2.jpg" loading="lazy" alt="Sprayed T-Shirt - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xsprayed-t-shirt-white-21-3.jpg" loading="lazy" alt="Sprayed T-Shirt - White Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xsprayed-t-shirt-white-21-4.jpg" loading="lazy" alt="Sprayed T-Shirt - White Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -424,11 +526,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xsprayed-t-shirt-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="caps">Caps</h2>
-<p class="cat-kicker"><strong>Including Two Very Good Jokes</strong>Left of Field run at least five separate marks: a script wordmark, a chainstitched L, a reversed L patch, a flag insignia and a black cockatoo. Two of the caps below are not really about the logo at all.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Caps</h2>
+    <p class="cat-kicker"><strong>Including Two Very Good Jokes</strong>Left of Field run at least five separate marks: a script wordmark, a chainstitched L, a reversed L patch, a flag insignia and a black cockatoo. Two of the caps below are not really about the logo at all.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-23" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/sydney-harbour-gacc-cap-ferry-green-22-0.jpg" loading="lazy" alt="Sydney Harbour GACC Cap - Ferry Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sydney-harbour-gacc-cap-ferry-green-22-1.jpg" loading="lazy" alt="Sydney Harbour GACC Cap - Ferry Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sydney-harbour-gacc-cap-ferry-green-22-2.jpg" loading="lazy" alt="Sydney Harbour GACC Cap - Ferry Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sydney-harbour-gacc-cap-ferry-green-22-3.jpg" loading="lazy" alt="Sydney Harbour GACC Cap - Ferry Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/sydney-harbour-gacc-cap-ferry-green-22-4.jpg" loading="lazy" alt="Sydney Harbour GACC Cap - Ferry Green Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -437,7 +544,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/sydney-harbour-gacc-cap-ferry-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-24" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/fitzroy-pop-up-cap-23-0.jpg" loading="lazy" alt="Southern Slam Pop-Up Cap Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/fitzroy-pop-up-cap-23-1.jpg" loading="lazy" alt="Southern Slam Pop-Up Cap Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/fitzroy-pop-up-cap-23-2.jpg" loading="lazy" alt="Southern Slam Pop-Up Cap Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/fitzroy-pop-up-cap-23-3.jpg" loading="lazy" alt="Southern Slam Pop-Up Cap Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/fitzroy-pop-up-cap-23-4.jpg" loading="lazy" alt="Southern Slam Pop-Up Cap Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -446,7 +553,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/fitzroy-pop-up-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="2">
+<div class="product-card" id="p-25" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/wwog-cap-navy-24-0.jpg" loading="lazy" alt="WWOG Cap - Navy Blue Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/wwog-cap-navy-24-1.jpg" loading="lazy" alt="WWOG Cap - Navy Blue Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -455,7 +562,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/wwog-cap-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-26" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/xbackwards-l-cap-navy-25-0.jpg" loading="lazy" alt="Backwards L Cap - Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbackwards-l-cap-navy-25-1.jpg" loading="lazy" alt="Backwards L Cap - Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbackwards-l-cap-navy-25-2.jpg" loading="lazy" alt="Backwards L Cap - Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbackwards-l-cap-navy-25-3.jpg" loading="lazy" alt="Backwards L Cap - Navy Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/xbackwards-l-cap-navy-25-4.jpg" loading="lazy" alt="Backwards L Cap - Navy Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -464,7 +571,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/xbackwards-l-cap-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-27" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/heritage-plaid-cap-red-26-0.jpg" loading="lazy" alt="Heritage Plaid Cap Red Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/heritage-plaid-cap-red-26-1.jpg" loading="lazy" alt="Heritage Plaid Cap Red Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/heritage-plaid-cap-red-26-2.jpg" loading="lazy" alt="Heritage Plaid Cap Red Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/heritage-plaid-cap-red-26-3.jpg" loading="lazy" alt="Heritage Plaid Cap Red Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/heritage-plaid-cap-red-26-4.jpg" loading="lazy" alt="Heritage Plaid Cap Red Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -473,11 +580,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/heritage-plaid-cap-red" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="golf-art">Golf Art</h2>
-<p class="cat-kicker"><strong>The Ciel Glue Collaboration</strong>Ciel Glue is a French collage artist based on the Portuguese coast, working entirely analogue with vintage magazines, old books and coloured paper. His organising idea is literary &mdash; <em>to read the wave</em>, extended into reading the green. Left of Field added the prints in January 2026.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="1">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Golf Art</h2>
+    <p class="cat-kicker"><strong>The Ciel Glue Collaboration</strong>Ciel Glue is a French collage artist based on the Portuguese coast, working entirely analogue with vintage magazines, old books and coloured paper. His organising idea is literary &mdash; <em>to read the wave</em>, extended into reading the green. Left of Field added the prints in January 2026.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-28" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/albatross-ciel-glue-27-0.jpg" loading="lazy" alt="Albatross | Ciel Glue Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -486,7 +598,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/albatross-ciel-glue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-29" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/birdie-ciel-glue-28-0.jpg" loading="lazy" alt="Birdie | Ciel Glue Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -495,7 +607,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/birdie-ciel-glue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-30" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/the-search-ciel-glue-29-0.jpg" loading="lazy" alt="The Search | Ciel Glue Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -504,7 +616,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/the-search-ciel-glue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-31" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/it-comes-in-sets-ciel-glue-30-0.jpg" loading="lazy" alt="It Comes in Sets | Ciel Glue Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -513,11 +625,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/it-comes-in-sets-ciel-glue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="the-archive">The Archive</h2>
-<p class="cat-kicker"><strong>Sold Out, and Instructive</strong>Left of Field make small runs and let them go. What follows is a $330 collaboration bag and a $4.90 ball marker, made by the same eight-person operation four years apart.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="5">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Archive</h2>
+    <p class="cat-kicker"><strong>Sold Out, and Instructive</strong>Left of Field make small runs and let them go. What follows is a $330 collaboration bag and a $4.90 ball marker, made by the same eight-person operation four years apart.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-32" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/left-of-field-x-hiroki-sunday-carry-bag--31-0.jpg" loading="lazy" alt="Left of Field x Hiroki Sunday Carry Bag - Sage Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/left-of-field-x-hiroki-sunday-carry-bag--31-1.jpg" loading="lazy" alt="Left of Field x Hiroki Sunday Carry Bag - Sage Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/left-of-field-x-hiroki-sunday-carry-bag--31-2.jpg" loading="lazy" alt="Left of Field x Hiroki Sunday Carry Bag - Sage Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/left-of-field-x-hiroki-sunday-carry-bag--31-3.jpg" loading="lazy" alt="Left of Field x Hiroki Sunday Carry Bag - Sage Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/left-of-field-x-hiroki-sunday-carry-bag--31-4.jpg" loading="lazy" alt="Left of Field x Hiroki Sunday Carry Bag - Sage Green Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -526,7 +643,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/left-of-field-x-hiroki-sunday-carry-bag-sage-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="3">
+<div class="product-card" id="p-33" data-frames="3">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/down-under-par-championship-cap-bone-32-0.jpg" loading="lazy" alt="Down Under (Par) Championship Cap - Bone Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/down-under-par-championship-cap-bone-32-1.jpg" loading="lazy" alt="Down Under (Par) Championship Cap - Bone Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/down-under-par-championship-cap-bone-32-2.jpg" loading="lazy" alt="Down Under (Par) Championship Cap - Bone Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -535,7 +652,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/down-under-par-championship-cap-bone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-34" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/wattamolla-polo-beige-brown-33-0.jpg" loading="lazy" alt="Era Golf Polo Beige/Brown Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/wattamolla-polo-beige-brown-33-1.jpg" loading="lazy" alt="Era Golf Polo Beige/Brown Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/wattamolla-polo-beige-brown-33-2.jpg" loading="lazy" alt="Era Golf Polo Beige/Brown Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/wattamolla-polo-beige-brown-33-3.jpg" loading="lazy" alt="Era Golf Polo Beige/Brown Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/wattamolla-polo-beige-brown-33-4.jpg" loading="lazy" alt="Era Golf Polo Beige/Brown Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -544,7 +661,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/wattamolla-polo-beige-brown" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-35" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/garie-polo-forest-green-34-0.jpg" loading="lazy" alt="Garie Polo Forest/Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/garie-polo-forest-green-34-1.jpg" loading="lazy" alt="Garie Polo Forest/Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/garie-polo-forest-green-34-2.jpg" loading="lazy" alt="Garie Polo Forest/Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/garie-polo-forest-green-34-3.jpg" loading="lazy" alt="Garie Polo Forest/Green Left of Field Golf"></div><div class="pg-frame"><img src="/images/left-of-field/garie-polo-forest-green-34-4.jpg" loading="lazy" alt="Garie Polo Forest/Green Left of Field Golf"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -553,7 +670,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/garie-polo-forest-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-36" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/hook-ciel-glue-35-0.jpg" loading="lazy" alt="Hook | Ciel Glue Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -562,7 +679,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/hook-ciel-glue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-37" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/black-cockatoo-golf-ball-marker-36-0.jpg" loading="lazy" alt="Black Cockatoo Golf Ball Marker Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -571,7 +688,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/black-cockatoo-golf-ball-marker" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-38" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/script-ball-marker-dark-green-37-0.jpg" loading="lazy" alt="Script Ball Marker - Dark Green Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -580,7 +697,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/script-ball-marker-dark-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="1">
+<div class="product-card" id="p-39" data-frames="1">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/left-of-field/camo-towel-38-0.jpg" loading="lazy" alt="Flower Golf Towel - Brown Left of Field Golf"></div></div></div>
       <div class="product-body">
         <div class="product-brand">Left of Field Golf</div>
@@ -589,8 +706,12 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://lofgolf.com/en-us/products/camo-towel" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
   </div>
-</div>
-  <div class="faq">
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="faq">
+<div class="faq">
     <details class="faq-q"><summary>Who founded Left of Field Golf?</summary><p>Nick Ilias, who started the brand in Sydney in 2022. He has written that he began it in his brother&rsquo;s old bedroom, surrounded by boxes of stock. The company trades as LOFG Clubhaus Pty Ltd and is based in Beverly Hills, in Sydney&rsquo;s St George district.</p></details>
     <details class="faq-q"><summary>What is Left of Field Golf's design philosophy?</summary><p>Their stated aim is golf clothing built on surf and skate silhouettes rather than traditional golf ones. In their own words: &ldquo;Our mission isn&rsquo;t to create products that scream &lsquo;golf&rsquo;. It&rsquo;s to make clothing that pushes the game&rsquo;s evolving style, while staying accessible enough to cut through the hype.&rdquo; The founding frustration was feeling out of place in a pro shop wearing what he actually wanted to wear.</p></details>
     <details class="faq-q"><summary>Why are Left of Field products named after Australian places?</summary><p>Each collection is tied to a specific stretch of coast and the products are named for places within it. Elements takes its names from around Barnbougle in Tasmania (Bridport, Anderson, Bass). SOUTH is the Mornington Peninsula in Victoria (Portsea, Sorrento, Mornington, Bridgewater). RNP is Royal National Park south of Sydney (Audley, Stanwell, Garie). The brand confirmed the convention when it described two early polos as &ldquo;named after iconic beaches within Sydney Harbour.&rdquo;</p></details>
@@ -601,6 +722,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>Who is Ciel Glue?</summary><p>A French collage artist based on the Portuguese coast, who collaborates with Left of Field on their Golf Art prints. He began surfing at eleven and spent fifteen years doing graffiti in Paris before moving to collage. He works entirely analogue, hand-cutting vintage magazines, old books and coloured paper. His originals were shown at Left of Field&rsquo;s Melbourne pop-up in December 2025 and the prints were added in January 2026.</p></details>
     <details class="faq-q"><summary>Does Left of Field Golf ship to the United States?</summary><p>Yes. They run a US storefront at lofgolf.com/en-us priced in US dollars, and ship internationally from Australia. Their published international rates are A$29.95 standard, which they quote at six to twelve business days, and A$66.95 express at three to seven. Returns are free within 30 days.</p></details>
     <details class="faq-q"><summary>Where can I buy Left of Field Golf in a shop?</summary><p>They list five stockists: Playfair Golf Club and Woolooware Golf Pro Shop in Australia, Club 72 and Soft Hands Club in the United Kingdom, and Happy Golfer in Sweden. Otherwise it is direct from lofgolf.com. They have no permanent retail of their own and trade through occasional pop-ups.</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Left of Field Golf</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/birds-of-condor">
+      <div class="more-card-img"><img src="/images/birds-of-condor/tokyo-snapback.jpg" alt="Birds of Condor" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Birds of Condor</div>
+        <div class="more-card-tag">Byron Bay, Australia &middot; apparel/headwear</div>
+        <div class="more-card-desc">Byron Bay's cult label — started with ten hats, now a flagship store with a restored 80s buggy inside.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/golf-gods">
+      <div class="more-card-img"><img src="/images/off-course-vol2/golfgods-koozie.jpg" alt="Golf Gods" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Golf Gods</div>
+        <div class="more-card-tag">Australia &middot; apparel/accessories</div>
+        <div class="more-card-desc">Australian golf apparel and accessories with the volume turned up, from headcovers to insulated stubby holders.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/walker-golf-things">
+      <div class="more-card-img"><img src="/images/walker-blooming-grounds/blooming-grounds-knit-polo-1-0.jpg" alt="Walker Golf Things" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Walker Golf Things</div>
+        <div class="more-card-tag">Gold Coast, Australia &middot; apparel/headwear</div>
+        <div class="more-card-desc">Pro skater Jack Fardell's label — named after Nicklaus, collabs with adidas, Wahine and Coopers.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/apc-golf">
+      <div class="more-card-img"><img src="/images/apcph-golf/polo-1.jpg" alt="A.P.C. Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">A.P.C. Golf</div>
+        <div class="more-card-tag">Paris, France &middot; apparel/accessories</div>
+        <div class="more-card-desc">Jean Touitou's golf line, launched in Korea and Japan first. Collaborated with Cph/Golf, 2026.</div>
+      </div>
+    </a>
   </div>
 </section>
 

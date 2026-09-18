@@ -184,6 +184,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
 .faq-q[open] summary:before{content:"\2212 "}
 .faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 </head>
 <body>
@@ -220,343 +281,27 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/devereux-golf/r-hero-course.jpg" alt="A golfer in Devereux Golf on an Arizona course" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/devereux-golf/btk-hero.jpg" alt="Devereux Golf &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
+  <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
+    <p>Robert Brunner studied geology at TCU, went to work in the gas industry, and hated it. He quit, spent a year at fashion school in Los Angeles, and came back with an idea for a golf line. He pitched his brother Will, who took on business operations. That was 2013.</p>
+  </div>
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
   <div class="writeup-body">
     <img class="writeup-img" src="/images/devereux-golf/r-detail-collar.jpg" alt="Devereux polo collar and skull caddie print detail" loading="lazy" />
-    <p>Robert Brunner studied geology at TCU, went to work in the gas industry, and hated it. He quit, spent a year at fashion school in Los Angeles, and came back with an idea for a golf line. He pitched his brother Will, who took on business operations. That was 2013.</p>
     <p>They named it after their grandmother. Asked about it in the brand&rsquo;s first year, Robert didn&rsquo;t dress it up: <em>&ldquo;It&rsquo;s my grandmother&rsquo;s name. She turns 90 in March. We just named it after her, we wanted to keep it in the family. She still wears high heels to this day, she&rsquo;s a neat old lady.&rdquo;</em></p>
     <p>The reason it exists is the same reason a lot of good brands exist, which is that the founder couldn&rsquo;t find what he wanted. <em>&ldquo;It all came from when I played, thinking, &lsquo;What can I wear?&rsquo;&rdquo;</em> he said. <em>&ldquo;There&rsquo;s Puma, which is all flashy. I went through my Puma phase. The problem is that there&rsquo;s nothing that was fun on the course and off the course. Nothing for a night out.&rdquo;</em> In 2013 that was a real gap. Golf shirts were boxy, mass produced, and cut for nobody.</p>
     <p>What&rsquo;s striking about going back to that interview is how little the technical brief has moved. Robert named three details then that Devereux is still building around now: a slightly smaller spread collar that stays out of the way through the swing, a placket thinned down so it lies flat, and a fit shaped around how men are actually built. Add a smaller chest pocket and you have described the Homestead and the Phoenician, twelve years later.</p>
     <p>The part that did change is the artwork. Devereux rebranded in 2021 toward a younger golfer, and somewhere in there it stopped being a contemporary-fit polo company and became a Southwestern graphics house that also makes polos. The current run is eagles, sunbursts, scorpions, motorcycles, pin-up girls, Our Lady of Guadalupe, and an invented club called the Pioneer Country Club rendered as a neon sign. It&rsquo;s tattoo flash and old highway signage, and it is doing something nobody else in golf is doing.</p>
     <p>The headcovers are where that lands hardest. They&rsquo;re leather, they&rsquo;re $54, and the embroidery is dense enough to survive a macro shot. That is a real test, and most embroidered golf product fails it. If you only ever buy one Devereux thing, buy a cover.</p>
     <p>Below is everything new since we first wrote about them: outerwear, polos, shorts, headcovers, hats, tees and accessories. One thing to flag: Devereux doesn&rsquo;t currently make pants or joggers. Shorts are the only bottoms in the line.</p>
-  </div>
-  <aside class="sidebar">
-    <div class="sidebar-card">
-      <div class="sidebar-label">Details</div>
-      <div class="sidebar-detail"><span class="l">Founded</span><span>2013</span></div>
-      <div class="sidebar-detail"><span class="l">Based</span><span>Scottsdale, AZ</span></div>
-      <div class="sidebar-detail"><span class="l">Founders</span><span>Robert &amp; Will Brunner</span></div>
-      <div class="sidebar-detail"><span class="l">Named for</span><span>Their grandmother</span></div>
-      <div class="sidebar-detail"><span class="l">Signature</span><span>Leather headcovers</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$18&ndash;$248</span></div>
-      <a href="https://devereuxgolf.com" target="_blank" rel="noopener" class="sidebar-cta">Shop Devereux &#8599;</a>
-      <div class="hashtags">
-        <span class="hashtag">#TheGrassyIssue</span>
-        <span class="hashtag">#DevereuxGolf</span>
-        <span class="hashtag">#GolfCulture</span>
-        <span class="hashtag">#IndieGolf</span>
-        <span class="hashtag">#GolfStyle</span>
-      </div>
-    </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
-  </aside>
-</div>
-
-
-<section class="products" style="margin-top:44px;">
-  <h2 class="products-hdr">Outerwear &amp; Layering &mdash; 7</h2>
-  <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Where Devereux gets least loud and most useful. The jackets are cut closer to a work coat than a golf shell, and most of them read fine off the course.</p>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket-a2.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket-a3.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket-a4.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Devco Twill Jacket - Vintage Sky &middot; $138</div>
-        <div class="product-desc">The Devco. Vintage Sky twill with a spread collar and zip hand pockets, cut short enough to sit right on a swing. The most restrained thing in the lineup and probably the one you&rsquo;d wear most.</div>
-        <a href="https://devereuxgolf.com/products/devco-twill-jacket-vintage-sky" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake-a2.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake-a3.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake-a4.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Anorak Jacket - Mineral Snake &middot; $148</div>
-        <div class="product-desc">Half-zip anorak in a mineral snake print, kangaroo pocket across the front. Packs down small enough to live in the bag from October through March.</div>
-        <a href="https://devereuxgolf.com/products/anorak-jacket-mineral-snake" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird-a2.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird-a3.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird-a4.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Thunderbird Bomber Jacket - Dark Slate &middot; $134</div>
-        <div class="product-desc">Dark slate bomber with the Thunderbird motif. Ribbed collar and cuffs, satin-ish body. This is the one that gets worn to dinner and never makes it back to the course.</div>
-        <a href="https://devereuxgolf.com/products/thunderbird-bomber-jacket-dark-slate" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane-a2.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane-a3.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane-a4.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Sandy Lane Pullover - Red &middot; $128</div>
-        <div class="product-desc">Red quarter-zip pullover named after the Barbados resort. Heavier knit than the Devereux average and the only piece here doing preppy without irony.</div>
-        <a href="https://devereuxgolf.com/products/sandy-lane-pullover-red" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz-a2.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz-a3.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz-a4.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Mechanic QTR Zip - Faded Black Pinstripe &middot; $104</div>
-        <div class="product-desc">Faded black pinstripe quarter-zip, cut like a mechanic&rsquo;s shirt. The pinstripe is subtle enough that it reads as texture from ten feet.</div>
-        <a href="https://devereuxgolf.com/products/mechanic-qtr-zip-faded-black-pinstripe" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew-a2.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew-a3.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew-a4.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Waffle Crew - Mineral &middot; $74</div>
-        <div class="product-desc">Mineral waffle crew. No graphic, no logo on the chest, just a small tag at the hem. Proof they can do quiet when they want to.</div>
-        <a href="https://devereuxgolf.com/products/waffle-crew-mineral" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest-a2.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest-a3.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest-a4.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Highly Addictive Sweater Vest &middot; $94</div>
-        <div class="product-desc">Called the Highly Addictive and it does what a sweater vest should: adds a layer without adding a sleeve. Wear it over the Waffle Crew in November.</div>
-        <a href="https://devereuxgolf.com/products/highly-addictive-sweater-vest" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="products" style="margin-top:44px;">
-  
-<div class="pull-quote">
-  <div class="pull-quote-inner">&ldquo;Family values and ideals are paramount in everything we do, including our business, so naming it after her is a nod to what we&rsquo;re all about.&rdquo;<span class="pull-quote-attr">&mdash; Robert Brunner, Devereux co-founder</span></div>
-</div>
-<h2 class="products-hdr">Polos &mdash; 5</h2>
-  <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Six shapes, and the ones with a point of view are better than the ones without. Robert Brunner has been naming the same three details since 2013: a smaller spread collar that stays out of the way, a thinned placket, and a fit built for how men are actually shaped.</p>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician-a2.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician-a3.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician-a4.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Phoenician Polo - Black &middot; $88</div>
-        <div class="product-desc">Black knit with a camp collar and a chest pocket, named for the Scottsdale resort. The most expensive polo they make and the one that looks least like golf.</div>
-        <a href="https://devereuxgolf.com/products/phoenician-polo-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon-a2.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon-a3.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon-a4.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">High Noon Polo - Clay &middot; $74</div>
-        <div class="product-desc">Clay ground with a black contrast collar and a small scattered print. The best-looking polo Devereux makes right now and it isn&rsquo;t especially close.</div>
-        <a href="https://devereuxgolf.com/products/high-noon-polo-clay" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-homestead.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-homestead-a2.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-homestead-a3.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-homestead-a4.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Homestead Polo - Black &middot; $74</div>
-        <div class="product-desc">Black vertical stripe, tonal, with a spread collar. Reads as a shirt rather than a golf shirt, which is the whole brief.</div>
-        <a href="https://devereuxgolf.com/products/homestead-polo-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo-a2.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo-a3.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo-a4.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Disco Rodeo Polo - Bone &middot; $74</div>
-        <div class="product-desc">Bone with a repeating geometric in mauve. Quarter-placket. The name tells you everything about the register Devereux operates in.</div>
-        <a href="https://devereuxgolf.com/products/disco-rodeo-polo-bone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-rattler.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-rattler-a2.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-rattler-a3.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-rattler-a4.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Rattler Polo - Light Grey &middot; $74</div>
-        <div class="product-desc">Light grey with a snakeskin-derived micro print. Subtle from distance, weird up close. That&rsquo;s the good version of a golf print.</div>
-        <a href="https://devereuxgolf.com/products/rattler-polo-light-grey" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="products" style="margin-top:44px;">
-  <h2 class="products-hdr">Shorts &mdash; 2</h2>
-  <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">No pants or joggers in the current run. Shorts are the only bottoms Devereux makes, and two of them earn a spot in the bag.</p>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short-a2.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short-a3.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short-a4.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Corduroy Short - Brindle &middot; $58</div>
-        <div class="product-desc">Brindle corduroy. Corduroy shorts are a risk and these clear it, mostly because the wale is fine and the length is right at the knee.</div>
-        <a href="https://devereuxgolf.com/products/corduroy-short-brindle" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short-a2.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short-a3.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short-a4.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Cargo Short - Succulent Green &middot; $68</div>
-        <div class="product-desc">Succulent green with a drawstring waist and a proper cargo pocket. The most useful thing on this page in an Austin August.</div>
-        <a href="https://devereuxgolf.com/products/cargo-short-succulent-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="products" style="margin-top:44px;">
-  <h2 class="products-hdr">Headcovers &mdash; The Real Reason &mdash; 4</h2>
-  <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">This is where Devereux separates from every other golf brand. The covers are leather, the artwork is tattoo flash and old sign painting, and the embroidery is dense enough that it holds up in a macro shot.</p>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl-a2.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl-a3.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl-a4.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Range Girl Driver Cover - Red / White &middot; $54</div>
-        <div class="product-desc">Pin-up girl in a red bikini leaning on a Devereux pennant, in raised embroidery on white leather. The single most Devereux object they sell.</div>
-        <a href="https://devereuxgolf.com/products/range-girl-driver-cover-red-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign-a2.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign-a3.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign-a4.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Neon Sign Driver Barrel Cover - Black &middot; $54</div>
-        <div class="product-desc">Black leather barrel cover done as a neon sign for the &ldquo;Pioneer Country Club,&rdquo; a place that does not exist. Yellow, red and cyan thread on black. Best piece in the range.</div>
-        <a href="https://devereuxgolf.com/products/neon-sign-driver-barrel-cover-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway-a2.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway-a3.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway-a4.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Spirit of the West Fairway Cover - White &middot; $54</div>
-        <div class="product-desc">Eagle, sunburst, and Spirit of the West lettering on white leather. Reads like the back of a 1970s denim jacket.</div>
-        <a href="https://devereuxgolf.com/products/spirit-of-the-west-fairway-cover-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sidecar-mallet.jpg" alt="Devereux Golf Check Sidecar Mallet Putter Cover - Blue / White &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sidecar-mallet-a2.jpg" alt="Devereux Golf Check Sidecar Mallet Putter Cover - Blue / White &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sidecar-mallet-a3.jpg" alt="Devereux Golf Check Sidecar Mallet Putter Cover - Blue / White &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Check Sidecar Mallet Putter Cover - Blue / White &middot; $54</div>
-        <div class="product-desc">Motorcycle sidecar with a rider in an 18 bib, and KEEP PACE OF PLAY underneath. Mallet fit, blue and white check trim.</div>
-        <a href="https://devereuxgolf.com/products/check-sidecar-mallet-putter-cover-blue-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="products" style="margin-top:44px;">
-  <h2 class="products-hdr">Headwear &amp; Tees &mdash; 4</h2>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat-a2.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat-a3.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat-a4.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Spirit of the West - Hat &middot; $38</div>
-        <div class="product-desc">Tan rope hat, eagle and sunburst embroidery, DEVEREUX GOLF arched over the top. Unstructured, low crown.</div>
-        <a href="https://devereuxgolf.com/products/spirit-of-the-west-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-scorpion-hat.jpg" alt="Devereux Golf Heffy Scorpion Two Tone Hat - Olive/Black &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-scorpion-hat-a2.jpg" alt="Devereux Golf Heffy Scorpion Two Tone Hat - Olive/Black &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-scorpion-hat-a3.jpg" alt="Devereux Golf Heffy Scorpion Two Tone Hat - Olive/Black &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Heffy Scorpion Two Tone Hat - Olive/Black &middot; $38</div>
-        <div class="product-desc">Olive crown, black brim, a single scorpion stitched off-centre. Restraint from a brand that usually doesn&rsquo;t.</div>
-        <a href="https://devereuxgolf.com/products/heffy-scorpion-two-tone-hat-olive-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee-a2.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee-a3.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee-a4.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Gateway To The West Tee - Faded Black &middot; $38</div>
-        <div class="product-desc">Faded black with the Gateway to the West motorcycle graphic across the back. Heavyweight cotton, boxy cut.</div>
-        <a href="https://devereuxgolf.com/products/gateway-to-the-west-tee-faded-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-guadalupe-tee.jpg" alt="Devereux Golf Our Lady of Guadalupe Tee - Coal &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-guadalupe-tee-a2.jpg" alt="Devereux Golf Our Lady of Guadalupe Tee - Coal &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-guadalupe-tee-a3.jpg" alt="Devereux Golf Our Lady of Guadalupe Tee - Coal &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Our Lady of Guadalupe Tee - Coal &middot; $44</div>
-        <div class="product-desc">Our Lady of Guadalupe on coal. Devereux at its most Southwestern and least golf, which is generally when it is at its best.</div>
-        <a href="https://devereuxgolf.com/products/our-lady-of-guadalupe-tee-coal" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="products" style="margin-top:44px;">
-  <h2 class="products-hdr">Accessories &mdash; 4</h2>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag-a2.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag-a3.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag-a4.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Mount Gay Sunday Bag - Red &middot; $248</div>
-        <div class="product-desc">The Mount Gay Sunday Bag in red. A proper carry bag, and the most expensive thing Devereux sells. Rum-brand collab, which explains the colourway.</div>
-        <a href="https://devereuxgolf.com/products/mount-gay-sunday-bag-red" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag-a2.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag-a3.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag-a4.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Never Lay Up Shoe Bag - Yellow &middot; $88</div>
-        <div class="product-desc">Never Lay Up shoe bag in yellow. Solves a problem most people ignore until their trunk smells.</div>
-        <a href="https://devereuxgolf.com/products/never-lay-up-shoe-bag-yellow" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks-a2.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks-a3.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks-a4.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Skull Caddy Crew Sock - 3 pack - Black &middot; $34</div>
-        <div class="product-desc">Skull Caddie crew socks, three pack. The skull caddie is the brand&rsquo;s recurring character and this is the cheapest way to own him.</div>
-        <a href="https://devereuxgolf.com/products/skull-caddy-crew-sock-3-pack-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees-a2.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees-a3.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees-a4.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Devereux Golf</div>
-        <div class="product-name">Smokin' Zaleas Golf Tees - Black &middot; $18</div>
-        <div class="product-desc">Smokin&rsquo; Zaleas wooden tees. Eighteen dollars for tees is silly and you will buy them anyway.</div>
-        <a href="https://devereuxgolf.com/products/smokin-zaleas-golf-tees-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -615,6 +360,319 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 
+<div class="btk-card">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Founded</span><span>2013</span></div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>Scottsdale, AZ</span></div>
+      <div class="sidebar-detail"><span class="l">Founders</span><span>Robert &amp; Will Brunner</span></div>
+      <div class="sidebar-detail"><span class="l">Named for</span><span>Their grandmother</span></div>
+      <div class="sidebar-detail"><span class="l">Signature</span><span>Leather headcovers</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$18&ndash;$248</span></div>
+      <a href="https://devereuxgolf.com" target="_blank" rel="noopener" class="sidebar-cta">Shop Devereux &#8599;</a>
+      <div class="hashtags">
+        <span class="hashtag">#TheGrassyIssue</span>
+        <span class="hashtag">#DevereuxGolf</span>
+        <span class="hashtag">#GolfCulture</span>
+        <span class="hashtag">#IndieGolf</span>
+        <span class="hashtag">#GolfStyle</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
+</div>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 26 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">Outerwear &amp; Layering &mdash; 7</h2>
+    <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Where Devereux gets least loud and most useful. The jackets are cut closer to a work coat than a golf shell, and most of them read fine off the course.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket-a2.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket-a3.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-devco-jacket-a4.jpg" alt="Devereux Golf Devco Twill Jacket - Vintage Sky &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Devco Twill Jacket - Vintage Sky &middot; $138</div>
+        <div class="product-desc">The Devco. Vintage Sky twill with a spread collar and zip hand pockets, cut short enough to sit right on a swing. The most restrained thing in the lineup and probably the one you&rsquo;d wear most.</div>
+        <a href="https://devereuxgolf.com/products/devco-twill-jacket-vintage-sky" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-2" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake-a2.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake-a3.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-anorak-snake-a4.jpg" alt="Devereux Golf Anorak Jacket - Mineral Snake &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Anorak Jacket - Mineral Snake &middot; $148</div>
+        <div class="product-desc">Half-zip anorak in a mineral snake print, kangaroo pocket across the front. Packs down small enough to live in the bag from October through March.</div>
+        <a href="https://devereuxgolf.com/products/anorak-jacket-mineral-snake" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-3" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird-a2.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird-a3.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-thunderbird-a4.jpg" alt="Devereux Golf Thunderbird Bomber Jacket - Dark Slate &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Thunderbird Bomber Jacket - Dark Slate &middot; $134</div>
+        <div class="product-desc">Dark slate bomber with the Thunderbird motif. Ribbed collar and cuffs, satin-ish body. This is the one that gets worn to dinner and never makes it back to the course.</div>
+        <a href="https://devereuxgolf.com/products/thunderbird-bomber-jacket-dark-slate" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-4" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane-a2.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane-a3.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sandy-lane-a4.jpg" alt="Devereux Golf Sandy Lane Pullover - Red &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Sandy Lane Pullover - Red &middot; $128</div>
+        <div class="product-desc">Red quarter-zip pullover named after the Barbados resort. Heavier knit than the Devereux average and the only piece here doing preppy without irony.</div>
+        <a href="https://devereuxgolf.com/products/sandy-lane-pullover-red" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-5" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz-a2.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz-a3.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-mechanic-qz-a4.jpg" alt="Devereux Golf Mechanic QTR Zip - Faded Black Pinstripe &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Mechanic QTR Zip - Faded Black Pinstripe &middot; $104</div>
+        <div class="product-desc">Faded black pinstripe quarter-zip, cut like a mechanic&rsquo;s shirt. The pinstripe is subtle enough that it reads as texture from ten feet.</div>
+        <a href="https://devereuxgolf.com/products/mechanic-qtr-zip-faded-black-pinstripe" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-6" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew-a2.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew-a3.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-waffle-crew-a4.jpg" alt="Devereux Golf Waffle Crew - Mineral &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Waffle Crew - Mineral &middot; $74</div>
+        <div class="product-desc">Mineral waffle crew. No graphic, no logo on the chest, just a small tag at the hem. Proof they can do quiet when they want to.</div>
+        <a href="https://devereuxgolf.com/products/waffle-crew-mineral" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-7" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest-a2.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest-a3.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sweater-vest-a4.jpg" alt="Devereux Golf Highly Addictive Sweater Vest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Highly Addictive Sweater Vest &middot; $94</div>
+        <div class="product-desc">Called the Highly Addictive and it does what a sweater vest should: adds a layer without adding a sleeve. Wear it over the Waffle Crew in November.</div>
+        <a href="https://devereuxgolf.com/products/highly-addictive-sweater-vest" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+    <div class="pull-quote">
+  <div class="pull-quote-inner">&ldquo;Family values and ideals are paramount in everything we do, including our business, so naming it after her is a nod to what we&rsquo;re all about.&rdquo;<span class="pull-quote-attr">&mdash; Robert Brunner, Devereux co-founder</span></div>
+</div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Polos &mdash; 5</h2>
+    <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">Six shapes, and the ones with a point of view are better than the ones without. Robert Brunner has been naming the same three details since 2013: a smaller spread collar that stays out of the way, a thinned placket, and a fit built for how men are actually shaped.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-8" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician-a2.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician-a3.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-phoenician-a4.jpg" alt="Devereux Golf Phoenician Polo - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Phoenician Polo - Black &middot; $88</div>
+        <div class="product-desc">Black knit with a camp collar and a chest pocket, named for the Scottsdale resort. The most expensive polo they make and the one that looks least like golf.</div>
+        <a href="https://devereuxgolf.com/products/phoenician-polo-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-9" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon-a2.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon-a3.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-high-noon-a4.jpg" alt="Devereux Golf High Noon Polo - Clay &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">High Noon Polo - Clay &middot; $74</div>
+        <div class="product-desc">Clay ground with a black contrast collar and a small scattered print. The best-looking polo Devereux makes right now and it isn&rsquo;t especially close.</div>
+        <a href="https://devereuxgolf.com/products/high-noon-polo-clay" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-10" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-homestead.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-homestead-a2.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-homestead-a3.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-homestead-a4.jpg" alt="Devereux Golf Homestead Polo - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Homestead Polo - Black &middot; $74</div>
+        <div class="product-desc">Black vertical stripe, tonal, with a spread collar. Reads as a shirt rather than a golf shirt, which is the whole brief.</div>
+        <a href="https://devereuxgolf.com/products/homestead-polo-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-11" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo-a2.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo-a3.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-disco-rodeo-a4.jpg" alt="Devereux Golf Disco Rodeo Polo - Bone &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Disco Rodeo Polo - Bone &middot; $74</div>
+        <div class="product-desc">Bone with a repeating geometric in mauve. Quarter-placket. The name tells you everything about the register Devereux operates in.</div>
+        <a href="https://devereuxgolf.com/products/disco-rodeo-polo-bone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-12" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-rattler.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-rattler-a2.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-rattler-a3.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-rattler-a4.jpg" alt="Devereux Golf Rattler Polo - Light Grey &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Rattler Polo - Light Grey &middot; $74</div>
+        <div class="product-desc">Light grey with a snakeskin-derived micro print. Subtle from distance, weird up close. That&rsquo;s the good version of a golf print.</div>
+        <a href="https://devereuxgolf.com/products/rattler-polo-light-grey" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Shorts &mdash; 2</h2>
+    <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">No pants or joggers in the current run. Shorts are the only bottoms Devereux makes, and two of them earn a spot in the bag.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short-a2.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short-a3.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cord-short-a4.jpg" alt="Devereux Golf Corduroy Short - Brindle &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Corduroy Short - Brindle &middot; $58</div>
+        <div class="product-desc">Brindle corduroy. Corduroy shorts are a risk and these clear it, mostly because the wale is fine and the length is right at the knee.</div>
+        <a href="https://devereuxgolf.com/products/corduroy-short-brindle" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-14" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short-a2.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short-a3.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-cargo-short-a4.jpg" alt="Devereux Golf Cargo Short - Succulent Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Cargo Short - Succulent Green &middot; $68</div>
+        <div class="product-desc">Succulent green with a drawstring waist and a proper cargo pocket. The most useful thing on this page in an Austin August.</div>
+        <a href="https://devereuxgolf.com/products/cargo-short-succulent-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Headcovers &mdash; The Real Reason &mdash; 4</h2>
+    <p style="max-width:700px;font-size:14px;line-height:1.65;opacity:.8;margin:-8px 0 24px;">This is where Devereux separates from every other golf brand. The covers are leather, the artwork is tattoo flash and old sign painting, and the embroidery is dense enough that it holds up in a macro shot.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-15" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl-a2.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl-a3.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-range-girl-a4.jpg" alt="Devereux Golf Range Girl Driver Cover - Red / White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Range Girl Driver Cover - Red / White &middot; $54</div>
+        <div class="product-desc">Pin-up girl in a red bikini leaning on a Devereux pennant, in raised embroidery on white leather. The single most Devereux object they sell.</div>
+        <a href="https://devereuxgolf.com/products/range-girl-driver-cover-red-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-16" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign-a2.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign-a3.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-neon-sign-a4.jpg" alt="Devereux Golf Neon Sign Driver Barrel Cover - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Neon Sign Driver Barrel Cover - Black &middot; $54</div>
+        <div class="product-desc">Black leather barrel cover done as a neon sign for the &ldquo;Pioneer Country Club,&rdquo; a place that does not exist. Yellow, red and cyan thread on black. Best piece in the range.</div>
+        <a href="https://devereuxgolf.com/products/neon-sign-driver-barrel-cover-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-17" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway-a2.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway-a3.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-fairway-a4.jpg" alt="Devereux Golf Spirit of the West Fairway Cover - White &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Spirit of the West Fairway Cover - White &middot; $54</div>
+        <div class="product-desc">Eagle, sunburst, and Spirit of the West lettering on white leather. Reads like the back of a 1970s denim jacket.</div>
+        <a href="https://devereuxgolf.com/products/spirit-of-the-west-fairway-cover-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-18" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sidecar-mallet.jpg" alt="Devereux Golf Check Sidecar Mallet Putter Cover - Blue / White &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sidecar-mallet-a2.jpg" alt="Devereux Golf Check Sidecar Mallet Putter Cover - Blue / White &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sidecar-mallet-a3.jpg" alt="Devereux Golf Check Sidecar Mallet Putter Cover - Blue / White &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Check Sidecar Mallet Putter Cover - Blue / White &middot; $54</div>
+        <div class="product-desc">Motorcycle sidecar with a rider in an 18 bib, and KEEP PACE OF PLAY underneath. Mallet fit, blue and white check trim.</div>
+        <a href="https://devereuxgolf.com/products/check-sidecar-mallet-putter-cover-blue-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Headwear &amp; Tees &mdash; 4</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-19" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat-a2.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat-a3.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-spirit-hat-a4.jpg" alt="Devereux Golf Spirit of the West - Hat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Spirit of the West - Hat &middot; $38</div>
+        <div class="product-desc">Tan rope hat, eagle and sunburst embroidery, DEVEREUX GOLF arched over the top. Unstructured, low crown.</div>
+        <a href="https://devereuxgolf.com/products/spirit-of-the-west-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-20" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-scorpion-hat.jpg" alt="Devereux Golf Heffy Scorpion Two Tone Hat - Olive/Black &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-scorpion-hat-a2.jpg" alt="Devereux Golf Heffy Scorpion Two Tone Hat - Olive/Black &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-scorpion-hat-a3.jpg" alt="Devereux Golf Heffy Scorpion Two Tone Hat - Olive/Black &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Heffy Scorpion Two Tone Hat - Olive/Black &middot; $38</div>
+        <div class="product-desc">Olive crown, black brim, a single scorpion stitched off-centre. Restraint from a brand that usually doesn&rsquo;t.</div>
+        <a href="https://devereuxgolf.com/products/heffy-scorpion-two-tone-hat-olive-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-21" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee-a2.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee-a3.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-gateway-tee-a4.jpg" alt="Devereux Golf Gateway To The West Tee - Faded Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Gateway To The West Tee - Faded Black &middot; $38</div>
+        <div class="product-desc">Faded black with the Gateway to the West motorcycle graphic across the back. Heavyweight cotton, boxy cut.</div>
+        <a href="https://devereuxgolf.com/products/gateway-to-the-west-tee-faded-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-22" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-guadalupe-tee.jpg" alt="Devereux Golf Our Lady of Guadalupe Tee - Coal &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-guadalupe-tee-a2.jpg" alt="Devereux Golf Our Lady of Guadalupe Tee - Coal &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-guadalupe-tee-a3.jpg" alt="Devereux Golf Our Lady of Guadalupe Tee - Coal &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Our Lady of Guadalupe Tee - Coal &middot; $44</div>
+        <div class="product-desc">Our Lady of Guadalupe on coal. Devereux at its most Southwestern and least golf, which is generally when it is at its best.</div>
+        <a href="https://devereuxgolf.com/products/our-lady-of-guadalupe-tee-coal" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Accessories &mdash; 4</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-23" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag-a2.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag-a3.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-sunday-bag-a4.jpg" alt="Devereux Golf Mount Gay Sunday Bag - Red &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Mount Gay Sunday Bag - Red &middot; $248</div>
+        <div class="product-desc">The Mount Gay Sunday Bag in red. A proper carry bag, and the most expensive thing Devereux sells. Rum-brand collab, which explains the colourway.</div>
+        <a href="https://devereuxgolf.com/products/mount-gay-sunday-bag-red" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-24" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag-a2.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag-a3.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-shoe-bag-a4.jpg" alt="Devereux Golf Never Lay Up Shoe Bag - Yellow &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Never Lay Up Shoe Bag - Yellow &middot; $88</div>
+        <div class="product-desc">Never Lay Up shoe bag in yellow. Solves a problem most people ignore until their trunk smells.</div>
+        <a href="https://devereuxgolf.com/products/never-lay-up-shoe-bag-yellow" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-25" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks-a2.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks-a3.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-crew-socks-a4.jpg" alt="Devereux Golf Skull Caddy Crew Sock - 3 pack - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Skull Caddy Crew Sock - 3 pack - Black &middot; $34</div>
+        <div class="product-desc">Skull Caddie crew socks, three pack. The skull caddie is the brand&rsquo;s recurring character and this is the cheapest way to own him.</div>
+        <a href="https://devereuxgolf.com/products/skull-caddy-crew-sock-3-pack-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-26" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees-a2.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees-a3.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/devereux-golf/r-golf-tees-a4.jpg" alt="Devereux Golf Smokin' Zaleas Golf Tees - Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Devereux Golf</div>
+        <div class="product-name">Smokin' Zaleas Golf Tees - Black &middot; $18</div>
+        <div class="product-desc">Smokin&rsquo; Zaleas wooden tees. Eighteen dollars for tees is silly and you will buy them anyway.</div>
+        <a href="https://devereuxgolf.com/products/smokin-zaleas-golf-tees-black" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Frequently Asked</h2>
   <div class="faq">
@@ -627,6 +685,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>Has Devereux done collaborations?</summary><p>Yes. The brand released a capsule with Michelob ULTRA in 2023, and has an ongoing line with Mount Gay Rum that includes a Sunday bag, towels and tees. Devereux also rebranded in 2021 to target a younger and more diverse golfer as the sport's demographics shifted.</p></details>
     <details class="faq-q"><summary>How much does Devereux Golf cost?</summary><p>Graphic tees run $38 to $44, headwear is $38, headcovers are $54, polos land between $74 and $88, layering pieces run $74 to $128, and jackets go from $88 to $154. The Mount Gay Sunday Bag at $248 is the most expensive item they sell.</p></details>
     <details class="faq-q"><summary>Where is Devereux Golf made and sold?</summary><p>The brand sells direct through devereuxgolf.com and is stocked in pro shops and golf retailers. Robert and the company are based in Scottsdale, Arizona; his brother Will and the warehouse operate out of Fort Worth, Texas.</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Devereux Golf</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/foray-golf">
+      <div class="more-card-img"><img src="/images/off-course-vol2/foray-planter.jpg" alt="Foray Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Foray Golf</div>
+        <div class="more-card-tag">New York, New York &middot; apparel/accessories</div>
+        <div class="more-card-desc">Women's golf apparel out of New York, alongside a curated capsule of genuinely vintage homeware sold one piece at a time.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/forden-golf">
+      <div class="more-card-img"><img src="/images/forden/9forty-khaki-0.jpg" alt="Forden Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Forden Golf</div>
+        <div class="more-card-tag">United States &middot; apparel/headwear</div>
+        <div class="more-card-desc">Streetwear-leaning golf label. The Swingman logo comes from Doc Edgerton's 1938 strobe photograph of a swing at MIT.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/gramicci">
+      <div class="more-card-img"><img src="/images/gramicci/cliff-pant-a2.jpg" alt="Gramicci" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Gramicci</div>
+        <div class="more-card-tag">Est. 1982, Yosemite &middot; apparel</div>
+        <div class="more-card-desc">Climbing pants born on Yosemite granite in 1982 that quietly became golf-course staples.</div>
+      </div>
+    </a>
   </div>
 </section>
 
@@ -981,6 +1080,8 @@ body{font-size:16px;line-height:1.6}
 .card-link,.card-readmore,.special-course-link{font-family:var(--mono)}
 .card-title,.more-card-name{font-style:normal}
 /*/TGI-ENT-V1*/
+
+.writeup-img{width:100%;height:auto;display:block;border:.5px solid var(--ink);margin:18px 0}
 </style>
 <script>
 (function(){

@@ -112,7 +112,68 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .faq-q[open] summary:before{content:"\2212 "}
 .faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
 </style>
-<style>@media(max-width:760px){.fy-look{grid-template-columns:repeat(2,1fr)!important}.fy-pair{grid-template-columns:1fr!important}}</style>
+<style>@media(max-width:760px){.fy-look{grid-template-columns:repeat(2,1fr)!important}.fy-pair{grid-template-columns:1fr!important}}
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -145,130 +206,30 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <span>32 Pieces &middot; &pound;12.95 to &pound;75</span>
   </div>
 </header>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/fyfe-golf/btk-hero.jpg" alt="Fyfe Golf &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/fyfe-btk/sc-hero.jpg" alt="A golfer standing with a full set of Fyfe Golf covers and a MacKenzie bag in Glen Affric, Scotland" /></div></div>
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Fyfe Golf makes headcovers to order in a workshop in Fife, out of Harris Tweed, Scottish tartan, waxed canvas from Dundee and, several times a year, something that used to be a completely different object &mdash; an RAF flight suit, a caddie&rsquo;s coverall from Augusta, a deck chair, a bolt of sail cloth off a yacht on the west coast. Thirty-two pieces are below, twenty-three of them headcovers, all in stock on 14 September 2026.</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-1.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>The brand started with a complaint. Neil Rennie had spent years walking into Scottish pro shops and finding nothing in them that had anything to do with Scotland. <em>&ldquo;Going around the pro shops and golf retailers, I couldn&rsquo;t find that more elevated product, with heritage and provenance,&rdquo;</em> he told The Wandering Golfers in 2022. <em>&ldquo;Everything was mass-produced and heavily branded.&rdquo;</em> He had come out of fashion rather than golf, which meant he already knew who still wove cloth in Scotland and how to reach them. Fyfe launched in November 2021.</p>
     <p>If you want the short version: the Harris Tweed covers are the reason to know the brand, the tartans are the ones people ask about, and the reclaimed-material projects are where it gets interesting &mdash; and where almost everything sells out inside a week.</p>
   </div>
-</div>
-<section class="products">
-  <h2 class="products-hdr">The Headcovers &mdash; Harris Tweed</h2>
-  <p class="cat-kicker">Twelve Harris Tweed cloths are in stock today. This is the heart of the range and the reason to know the brand.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/rothesay.jpg" alt="Rothesay &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/rothesay-a2.jpg" alt="Rothesay &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/rothesay-a3.jpg" alt="Rothesay &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Rothesay &middot; &pound;75</div>
-        <div class="product-desc">The one that costs the most and looks the least like a golf product. Orange, royal blue and melange tones in a Harris Tweed cut for The Stripes 2.0: Island Edition, named for the harbour town on Bute. Fyfe shot that collection on the island itself, and the colourway reads as a deliberate record of a place rather than a seasonal palette.</div>
-        <a href="https://www.fyfegolf.com/products/rothesay" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/arran.jpg" alt="Arran &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/arran-a2.jpg" alt="Arran &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/arran-a3.jpg" alt="Arran &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/arran-a4.jpg" alt="Arran &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Arran &middot; &pound;65</div>
-        <div class="product-desc">Oatmeal tweed with a rich green Harris Tweed accent band and dark green plush fleece inside. The two-tone construction is the house signature &mdash; a body cloth and a contrast band, seamed rather than printed, so the join is a real edge you can feel through the wool.</div>
-        <a href="https://www.fyfegolf.com/products/arran-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/dunbar.jpg" alt="Dunbar &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/dunbar-a2.jpg" alt="Dunbar &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/dunbar-a3.jpg" alt="Dunbar &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/dunbar-a4.jpg" alt="Dunbar &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Dunbar &middot; &pound;65</div>
-        <div class="product-desc">Duck egg Harris Tweed with a baby blue accent band and light blue fleece lining, drawn from the beaches and rock shelves at Dunbar on the East Lothian coast. It is the softest colourway Fyfe currently lists and the one that looks least severe against a tan leather bag.</div>
-        <a href="https://www.fyfegolf.com/products/dunbar-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc.jpg" alt="Black Grouse &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc-a2.jpg" alt="Black Grouse &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc-a3.jpg" alt="Black Grouse &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc-a4.jpg" alt="Black Grouse &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Black Grouse &middot; &pound;65</div>
-        <div class="product-desc">Black and white houndstooth Harris Tweed with a red plush lining. The houndstooth is the loudest weave in the range from three feet away and the most restrained from thirty, which is roughly the distance at which anyone else sees your bag.</div>
-        <a href="https://www.fyfegolf.com/products/black-grouse" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/balmedie.jpg" alt="Balmedie &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/balmedie-a2.jpg" alt="Balmedie &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Balmedie &middot; &pound;65</div>
-        <div class="product-desc">Two Harris Tweeds split horizontally in seaweed and soft purple, named for the dunes north of Aberdeen. Published on 11 August 2026, so it is one of the two newest covers in the range. Dark green fleece lining.</div>
-        <a href="https://www.fyfegolf.com/products/balmedie-harris-tweed-headcover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/cambo.jpg" alt="Cambo &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/cambo-a2.jpg" alt="Cambo &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Cambo &middot; &pound;65</div>
-        <div class="product-desc">The other August 2026 arrival, built the same way as Balmedie &mdash; two tweeds split across the horizontal &mdash; in aqua and soft blue, with a black fleece lining. Cambo sits on the Fife coast a few miles from where these are sewn.</div>
-        <a href="https://www.fyfegolf.com/products/cambo-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc.jpg" alt="Galloway &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc-a2.jpg" alt="Galloway &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc-a3.jpg" alt="Galloway &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc-a4.jpg" alt="Galloway &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Galloway &middot; &pound;65</div>
-        <div class="product-desc">Black Harris Tweed shot through with multi-coloured fleck, over black organic cotton fleece. The fleck is what stops it reading as a plain black cover; in low light it is simply dark, and in sun it turns over with colour.</div>
-        <a href="https://www.fyfegolf.com/products/galloway-driver-fairwaywood-headcovers" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc.jpg" alt="Fortrose &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc-a2.jpg" alt="Fortrose &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc-a3.jpg" alt="Fortrose &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc-a4.jpg" alt="Fortrose &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Fortrose &middot; &pound;65</div>
-        <div class="product-desc">A navy base with soft red and orange overcheck, named for the links on the Black Isle. The overcheck is fine enough that the cover passes as navy until someone picks it up.</div>
-        <a href="https://www.fyfegolf.com/products/fortrose-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/huntsman.jpg" alt="Huntsman &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/huntsman-a2.jpg" alt="Huntsman &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/huntsman-a3.jpg" alt="Huntsman &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Huntsman &middot; &pound;65</div>
-        <div class="product-desc">Herringbone plaid in highland country colours &mdash; the estate-cloth register Fyfe returns to more than any other, and the closest thing in the standing range to the sold-out Shooters Club tweeds.</div>
-        <a href="https://www.fyfegolf.com/products/huntsman" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-hc.jpg" alt="Five Glens &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-hc-a2.jpg" alt="Five Glens &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-hc-a3.jpg" alt="Five Glens &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Five Glens &middot; &pound;65</div>
-        <div class="product-desc">Another herringbone plaid mix, lined in navy. Five Glens runs across several products in the range, including the slip-on putter cover further down, which makes it the easiest way to match a driver to a putter without ordering a set.</div>
-        <a href="https://www.fyfegolf.com/products/five-glens" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/moray.jpg" alt="Moray &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/moray-a2.jpg" alt="Moray &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Moray &middot; &pound;65</div>
-        <div class="product-desc">Harris Tweed in plain weave rather than twill &mdash; a light grey ground with subtle teals and oranges worked through it, and a light blue fleece lining. Plain weave gives a flatter, tighter surface than the herringbones, so the colour does the work instead of the texture.</div>
-        <a href="https://www.fyfegolf.com/products/moray" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hc.jpg" alt="Modern Herringbone &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hc-a2.jpg" alt="Modern Herringbone &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hc-a3.jpg" alt="Modern Herringbone &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Modern Herringbone &middot; &pound;65</div>
-        <div class="product-desc">Dark charcoal herringbone with a black lining. The default, in the useful sense: the cover that disappears into a bag and lets the rest of the set be the interesting part.</div>
-        <a href="https://www.fyfegolf.com/products/modern-herringbone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
 </section>
-<section class="products">
+
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">Made in Scotland, and Specifically Where</h2>
   <p class="cat-kicker">Fyfe names its mills. That is rarer than it sounds, and it is checkable.</p>
   <div class="writeup-body">
@@ -278,67 +239,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p><strong>And they publish an Honesty Box.</strong> On the fabrics page Fyfe names the two materials in its own products that are not natural &mdash; elastane in the internal grip of a headcover, switched over from organic cotton and rubber because the tension was inconsistent, and polycotton in some linings, chosen over pure organic cotton for strength. Plenty of brands publish a sustainability page. Very few use it to list what they have compromised on and why.</p>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">The Headcovers &mdash; Tartan</h2>
-  <p class="cat-kicker">Registered setts in pure new wool, woven in Perthshire and Selkirk, cut and placed by hand.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/douglas-grey.jpg" alt="Douglas Grey Tartan &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/douglas-grey-a2.jpg" alt="Douglas Grey Tartan &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/douglas-grey-a3.jpg" alt="Douglas Grey Tartan &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Douglas Grey Tartan &middot; &pound;65</div>
-        <div class="product-desc">Pure new wool in Douglas Grey, black fleece lining. Tartan behaves differently to tweed on a headcover &mdash; the sett is a fixed grid, so the pattern has to be cut and placed rather than simply wrapped, and the line where the panels meet is where you can see whether it was done carefully.</div>
-        <a href="https://www.fyfegolf.com/products/douglas-grey" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/campbell-argyll.jpg" alt="Campbell of Argyll Tartan &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/campbell-argyll-a2.jpg" alt="Campbell of Argyll Tartan &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/campbell-argyll-a3.jpg" alt="Campbell of Argyll Tartan &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Campbell of Argyll Tartan &middot; &pound;65</div>
-        <div class="product-desc">One of the older registered setts in Scotland, in 100% pure new wool, available for driver and fairway. Fyfe finishes it with the black tag label rather than the green, which suits the darker ground.</div>
-        <a href="https://www.fyfegolf.com/products/campbell-of-argyll-tartan-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/mackenzie-hc.jpg" alt="MacKenzie Tartan &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/mackenzie-hc-a2.jpg" alt="MacKenzie Tartan &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">MacKenzie Tartan &middot; &pound;65</div>
-        <div class="product-desc">The tartan that ties the standing range to the collaboration &mdash; the same cloth family used on the MacKenzie bag editions. If you own one of those bags, this is the cover that matches it, and at &pound;65 it is a considerably less demanding way to buy into the same idea.</div>
-        <a href="https://www.fyfegolf.com/products/mackenzie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/kerry-county.jpg" alt="Kerry County &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/kerry-county-a2.jpg" alt="Kerry County &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Kerry County &middot; &pound;65</div>
-        <div class="product-desc">An Irish county tartan, woven in Scotland and sewn in Fife, with a plush cotton fleece lining. Fyfe's copy is specific about the chain: the cloth is <em>&ldquo;woven by grandmasters in historic fabric mills across Scotland&rdquo;</em> and made up at the workshop.</div>
-        <a href="https://www.fyfegolf.com/products/kerry-county-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/irish-national.jpg" alt="Irish National &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/irish-national-a2.jpg" alt="Irish National &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/irish-national-a3.jpg" alt="Irish National &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Irish National &middot; &pound;49</div>
-        <div class="product-desc">The Irish National sett at &pound;49, which is where the tartan line starts. Same wool, same lining, smaller cover &mdash; this is the fairway and hybrid end of the range rather than a lesser build.</div>
-        <a href="https://www.fyfegolf.com/products/irish-national-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/clare-county.jpg" alt="Clare County &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/clare-county-a2.jpg" alt="Clare County &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/clare-county-a3.jpg" alt="Clare County &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Clare County &middot; &pound;49</div>
-        <div class="product-desc">The second Irish county tartan currently in stock, also &pound;49. The county tartans move in and out of the range faster than the Scottish setts, which are more or less permanent &mdash; so this one is a narrower window than it looks.</div>
-        <a href="https://www.fyfegolf.com/products/clare-county-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">In His Words</h2>
   <p class="cat-kicker">Neil Rennie has given two long interviews in five years. These are from both.</p>
   <div class="writeup-body">
@@ -371,58 +272,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <figure style="margin:0;border:.5px solid var(--ink);overflow:hidden"><img src="/images/fyfe-btk/ct-elie.jpg" alt="The Coastal Tones campaign, shot at Elie in Fife" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" /></figure>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">Mini Drivers and Hybrids</h2>
-  <p class="cat-kicker">The club shapes most cover makers skip, in the same cloths as the drivers.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-mini.jpg" alt="Jura Sunset Mini Driver Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-mini-a2.jpg" alt="Jura Sunset Mini Driver Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-mini-a3.jpg" alt="Jura Sunset Mini Driver Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Jura Sunset Mini Driver Cover &middot; &pound;69</div>
-        <div class="product-desc">Blues, oranges and purples in a Harris Tweed tartan, cut for a mini driver &mdash; a club shape most cover makers still ignore. Light blue fleece lining. If you have put a mini driver in the bag in the last two seasons you already know how short the list of options is.</div>
-        <a href="https://www.fyfegolf.com/products/jura-sunset-harris-tweed-headcover-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-sunset-hc.jpg" alt="Jura Sunset Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-sunset-hc-a2.jpg" alt="Jura Sunset Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-sunset-hc-a3.jpg" alt="Jura Sunset Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Jura Sunset Headcover &middot; &pound;65</div>
-        <div class="product-desc">The full-size driver and fairway version of the same cloth. Jura Sunset is the brightest thing Fyfe weaves into a standing product, and it is the cover that makes the most sense in a bag that is otherwise all black leather.</div>
-        <a href="https://www.fyfegolf.com/products/jura-sunset" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="1">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-hybrid.jpg" alt="Jura Sunset Hybrid Cover" loading="lazy" /></div></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Jura Sunset Hybrid Cover &middot; &pound;49</div>
-        <div class="product-desc">Hybrid cut, same tweed, &pound;49. Hybrids are the clubs people stop covering because nothing matches; this is the fix for a set built around Jura Sunset.</div>
-        <a href="https://www.fyfegolf.com/products/jura-sunset-hybrid" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="1">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hyb.jpg" alt="Modern Herringbone Hybrid Cover" loading="lazy" /></div></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Modern Herringbone Hybrid Cover &middot; &pound;49</div>
-        <div class="product-desc">Charcoal herringbone in hybrid form. Pairs with the driver cover above, which is the whole point of Fyfe running most cloths across all four club shapes.</div>
-        <a href="https://www.fyfegolf.com/products/modern-herringbone-hybrid" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="1">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/earl-st-andrews.jpg" alt="Earl of St Andrews Hybrid Cover" loading="lazy" /></div></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Earl of St Andrews Hybrid Cover &middot; &pound;49</div>
-        <div class="product-desc">Pure new wool in the Earl of St Andrews tartan. The name is doing some work here, but the sett is a registered one and the build is the same as everything else on this page.</div>
-        <a href="https://www.fyfegolf.com/products/earl-of-st-andrews-hybrid-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">The Habit: Making Golf Covers Out of Something Else</h2>
   <p class="cat-kicker">Seven collections in four years built from cloth that had a previous job.</p>
   <div class="writeup-body">
@@ -432,7 +282,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>The three projects below are the ones that best explain how it works.</p>
   </div>
 </section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">One &mdash; The Drop Zone: RAF Flight Kit, Cut Up</h2>
   <p class="cat-kicker">Fyfe cut vintage flight suits and quilted liners into covers and pouches in April 2025.</p>
   <div class="writeup-body">
@@ -443,7 +293,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>Fyfe commissioned a map for the shoot, tracing where Scotland&rsquo;s historic RAF airfields overlap its golf courses, and photographed the collection at Aberdour across the Forth from Rosyth. The store records show the collection published on 22 April 2025 with the lookbook up the next day, and a small restock followed on 4 September. Everything is now gone &mdash; the collection page is still live and reads zero products, which is a fairly exact picture of how this brand operates.</p>
   </div>
 </section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">Two &mdash; Vintage Chubbs: Masters Week, Unlicensed</h2>
   <p class="cat-kicker">Fyfe has run four releases with a UK reseller, two of them landing on the Wednesday of the Masters.</p>
   <div class="writeup-body">
@@ -454,7 +304,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>No licence is claimed and none is implied; the word Masters appears in Fyfe&rsquo;s copy exactly once, in the phrase about champions&rsquo; numbers, and Augusta National is never named. What Fyfe is selling is the material and the week, and it is selling twenty-four units of it. Releases one and three are harder to pin down &mdash; the product pages are gone, as they always are &mdash; but the pattern across the two that are documented is unusually disciplined for something this opportunistic.</p>
   </div>
 </section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">Three &mdash; The Shooters Club: Glen Affric, With a Dog</h2>
   <p class="cat-kicker">Fyfe published twenty-two pieces in October 2025, alongside the best photography it has produced.</p>
   <div class="writeup-body">
@@ -464,58 +314,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>One honest note on the cloth. The lookbook says the tweeds are <em>&ldquo;limited-edition estate tweeds from some of Scotland&rsquo;s most storied grounds&rdquo;</em> but names no estate, mill or weaver. The product pages tell a plainer story &mdash; Harris Tweed woven in the Outer Hebrides, Peregrine Houndstooth Waverley Tweed woven in Selkirk, and a Gamekeeper cloth described as a pattern <em>&ldquo;inspired by&rdquo;</em> Scotland&rsquo;s estate tweeds. It is good cloth from named mills, dressed in a slightly bigger story than it needs. The pictures, on the other hand, do not oversell anything.</p>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">Between Tides and the Putter Covers</h2>
-  <p class="cat-kicker">Marine suede, seersucker and leather &mdash; the materials Fyfe reaches for when it leaves tweed behind.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-tan.jpg" alt="Marine Suede Blade Cover Light Tan &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-tan-a2.jpg" alt="Marine Suede Blade Cover Light Tan &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-tan-a3.jpg" alt="Marine Suede Blade Cover Light Tan &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Marine Suede Blade Cover &mdash; Light Tan &middot; &pound;69</div>
-        <div class="product-desc">Marine suede from the Clyde, in light tan, over a sherpa fleece lining with a leather seam label. Fyfe's own line on the material is that it was <em>&ldquo;chosen for strength, texture, and the particular quality of a material that improves with exposure&rdquo;</em> &mdash; which is the honest pitch for suede on a golf course rather than a warning against it.</div>
-        <a href="https://www.fyfegolf.com/products/marine-suede-blade-cover-light-tan" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-white.jpg" alt="Marine Suede Blade Cover Optic White &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-white-a2.jpg" alt="Marine Suede Blade Cover Optic White &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-white-a3.jpg" alt="Marine Suede Blade Cover Optic White &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Marine Suede Blade Cover &mdash; Optic White &middot; &pound;69</div>
-        <div class="product-desc">The same construction in optic white. It will not stay optic white, and that is more or less the proposition &mdash; the Between Tides collection was built around materials that record use rather than resist it.</div>
-        <a href="https://www.fyfegolf.com/products/marine-suede-blade-cover-optic-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/harbour-seersucker.jpg" alt="Harbour Seersucker Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/harbour-seersucker-a2.jpg" alt="Harbour Seersucker Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/harbour-seersucker-a3.jpg" alt="Harbour Seersucker Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Harbour Seersucker Blade Putter Cover &middot; &pound;69</div>
-        <div class="product-desc">Blue and white striped cotton seersucker, sherpa lined. Seersucker is woven at two tensions so the surface puckers permanently, which is why it holds air and dries fast &mdash; a genuinely sensible fabric for a cover that spends half a round damp.</div>
-        <a href="https://www.fyfegolf.com/products/harbour-seersucker-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-slipon.jpg" alt="Five Glens Blade Putter Slip-On &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-slipon-a2.jpg" alt="Five Glens Blade Putter Slip-On &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Five Glens Blade Putter Slip-On &middot; &pound;35</div>
-        <div class="product-desc">Five Glens herringbone Harris Tweed with mahogany heritage Scottish leather, cut as a slip-on rather than a magnetic-close blade cover. At &pound;35 it is the cheapest way into the tweed, and it fits all standard blades.</div>
-        <a href="https://www.fyfegolf.com/products/five-glens-blade-putter-slip-on-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud-a2.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud-a3.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud-a4.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">GT Rosso Scuderia Leather Mallet Cover &middot; &pound;69</div>
-        <div class="product-desc">The outlier: Italian leather in racing red, cream sherpa lining, neodymium magnet strips, debossed leather seam labels. The GT line is the one place Fyfe leaves Scottish cloth entirely, and it is deliberately styled against everything else in the catalogue.</div>
-        <a href="https://www.fyfegolf.com/products/gt-rosso-scuderia-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">And the One That Runs and Runs: MacKenzie</h2>
   <p class="cat-kicker">Twenty-two numbered editions have come and gone since 2021 &mdash; Dundee canvas, Oregon stitching, &pound;650 a bag.</p>
   <div class="writeup-body">
@@ -525,49 +324,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>We have written up every edition, with the stories behind each one, on a separate page: <a href="/drops/fyfe-x-mackenzie-every-edition">Fyfe x MacKenzie &mdash; Every Edition</a>.</p>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">Everything Else in the Bag</h2>
-  <p class="cat-kicker">A rangefinder case, a forged marker, a pouch and a box of tees.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green-a2.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green-a3.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green-a4.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Marksman Rangefinder Case &mdash; Vintage Green &middot; &pound;69</div>
-        <div class="product-desc">P270 waxed canvas from Dundee, space mesh lining, a two-way waterproof YKK zip with 275 paracord pulls, matte black brass swivel hook, nylon webbing and dark brown leather. The spec list is longer than anything else Fyfe makes, and it is the piece that shows the workshop can build something with structure rather than just cut and line a cover.</div>
-        <a href="https://www.fyfegolf.com/products/marksman-vintage-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/brave-marker.jpg" alt="The Brave Copper Ball Marker &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/brave-marker-a2.jpg" alt="The Brave Copper Ball Marker &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/brave-marker-a3.jpg" alt="The Brave Copper Ball Marker &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">The Brave Copper Ball Marker &middot; &pound;25</div>
-        <div class="product-desc">Hand-forged from high-grade copper at what Fyfe describes as a partnership forge in the heart of Scotland, <em>&ldquo;where age old battle swords are made with traditional artisan methods passed down through the generations.&rdquo;</em> Copper tarnishes, so it will not look like this in a year.</div>
-        <a href="https://www.fyfegolf.com/products/the-brave-copper-hand-forged-ball-marker" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-pouch.jpg" alt="Jura Sunset Drawstring Pouch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-pouch-a2.jpg" alt="Jura Sunset Drawstring Pouch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Jura Sunset Drawstring Pouch &middot; &pound;35</div>
-        <div class="product-desc">Harris Tweed with a premium leather drawstring &mdash; a valuables pouch for a watch and a wedding ring, or a ball and tee bag if you would rather. The pouches turn over faster than anything else Fyfe lists; most of the range is sold out at any given moment.</div>
-        <a href="https://www.fyfegolf.com/products/jura-sunset-harris-tweed-drawstring-pouch" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="1">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/wb-24k.jpg" alt="Western Birch Fyfe Bamboo Tees" loading="lazy" /></div></div></div>
-      <div class="product-body">
-        <div class="product-brand">Fyfe Golf</div>
-        <div class="product-name">Western Birch &times; Fyfe Bamboo Tees &middot; &pound;12.95</div>
-        <div class="product-desc">Fifty striped 70mm bamboo tees in a box, with a curved top and Fyfe branding on the cup. Western Birch is a US tee brand; the collaboration has been running since 2022, which makes it Fyfe's longest-standing partnership after MacKenzie.</div>
-        <a href="https://www.fyfegolf.com/products/western-birch-x-fyfe-premium-bamboo-golf-tees-24k-magic" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">Where You Actually Find Them</h2>
   <p class="cat-kicker">Roughly seventy pro shops, and Canada is the biggest market outside the UK.</p>
   <div class="writeup-body">
@@ -576,6 +333,383 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>For clubs, the offer on the wholesale page is a logo embroidery service rather than a bespoke tartan programme: <em>&ldquo;We work with golf clubs worldwide, providing unique designs and best-selling items, along with a full club logo embroidery service.&rdquo;</em> Minimums are described only as relatively low, and no figure is published.</p>
   </div>
 </section>
+<div class="btk-card">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>UK</span></div>
+      <div class="sidebar-detail"><span class="l">Known For</span><span>Accessories, Headcovers</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>32 items</span></div>
+      <a href="https://www.fyfegolf.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Fyfe Golf &rarr;</a>
+      <div class="hashtags">
+        <span class="hashtag">#fyfegolf</span>
+        <span class="hashtag">#brandtoknow</span>
+        <span class="hashtag">#accessories</span>
+        <span class="hashtag">#headcovers</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
+</div>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-2.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 32 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Headcovers &mdash; Harris Tweed</h2>
+    <p class="cat-kicker">Twelve Harris Tweed cloths are in stock today. This is the heart of the range and the reason to know the brand.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/rothesay.jpg" alt="Rothesay &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/rothesay-a2.jpg" alt="Rothesay &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/rothesay-a3.jpg" alt="Rothesay &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Rothesay &middot; &pound;75</div>
+        <div class="product-desc">The one that costs the most and looks the least like a golf product. Orange, royal blue and melange tones in a Harris Tweed cut for The Stripes 2.0: Island Edition, named for the harbour town on Bute. Fyfe shot that collection on the island itself, and the colourway reads as a deliberate record of a place rather than a seasonal palette.</div>
+        <a href="https://www.fyfegolf.com/products/rothesay" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-2" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/arran.jpg" alt="Arran &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/arran-a2.jpg" alt="Arran &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/arran-a3.jpg" alt="Arran &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/arran-a4.jpg" alt="Arran &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Arran &middot; &pound;65</div>
+        <div class="product-desc">Oatmeal tweed with a rich green Harris Tweed accent band and dark green plush fleece inside. The two-tone construction is the house signature &mdash; a body cloth and a contrast band, seamed rather than printed, so the join is a real edge you can feel through the wool.</div>
+        <a href="https://www.fyfegolf.com/products/arran-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-3" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/dunbar.jpg" alt="Dunbar &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/dunbar-a2.jpg" alt="Dunbar &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/dunbar-a3.jpg" alt="Dunbar &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/dunbar-a4.jpg" alt="Dunbar &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Dunbar &middot; &pound;65</div>
+        <div class="product-desc">Duck egg Harris Tweed with a baby blue accent band and light blue fleece lining, drawn from the beaches and rock shelves at Dunbar on the East Lothian coast. It is the softest colourway Fyfe currently lists and the one that looks least severe against a tan leather bag.</div>
+        <a href="https://www.fyfegolf.com/products/dunbar-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-4" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc.jpg" alt="Black Grouse &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc-a2.jpg" alt="Black Grouse &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc-a3.jpg" alt="Black Grouse &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/black-grouse-hc-a4.jpg" alt="Black Grouse &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Black Grouse &middot; &pound;65</div>
+        <div class="product-desc">Black and white houndstooth Harris Tweed with a red plush lining. The houndstooth is the loudest weave in the range from three feet away and the most restrained from thirty, which is roughly the distance at which anyone else sees your bag.</div>
+        <a href="https://www.fyfegolf.com/products/black-grouse" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-5" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/balmedie.jpg" alt="Balmedie &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/balmedie-a2.jpg" alt="Balmedie &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Balmedie &middot; &pound;65</div>
+        <div class="product-desc">Two Harris Tweeds split horizontally in seaweed and soft purple, named for the dunes north of Aberdeen. Published on 11 August 2026, so it is one of the two newest covers in the range. Dark green fleece lining.</div>
+        <a href="https://www.fyfegolf.com/products/balmedie-harris-tweed-headcover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-6" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/cambo.jpg" alt="Cambo &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/cambo-a2.jpg" alt="Cambo &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Cambo &middot; &pound;65</div>
+        <div class="product-desc">The other August 2026 arrival, built the same way as Balmedie &mdash; two tweeds split across the horizontal &mdash; in aqua and soft blue, with a black fleece lining. Cambo sits on the Fife coast a few miles from where these are sewn.</div>
+        <a href="https://www.fyfegolf.com/products/cambo-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-7" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc.jpg" alt="Galloway &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc-a2.jpg" alt="Galloway &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc-a3.jpg" alt="Galloway &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/galloway-hc-a4.jpg" alt="Galloway &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Galloway &middot; &pound;65</div>
+        <div class="product-desc">Black Harris Tweed shot through with multi-coloured fleck, over black organic cotton fleece. The fleck is what stops it reading as a plain black cover; in low light it is simply dark, and in sun it turns over with colour.</div>
+        <a href="https://www.fyfegolf.com/products/galloway-driver-fairwaywood-headcovers" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-8" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc.jpg" alt="Fortrose &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc-a2.jpg" alt="Fortrose &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc-a3.jpg" alt="Fortrose &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/fortrose-hc-a4.jpg" alt="Fortrose &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Fortrose &middot; &pound;65</div>
+        <div class="product-desc">A navy base with soft red and orange overcheck, named for the links on the Black Isle. The overcheck is fine enough that the cover passes as navy until someone picks it up.</div>
+        <a href="https://www.fyfegolf.com/products/fortrose-harris-tweed-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-9" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/huntsman.jpg" alt="Huntsman &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/huntsman-a2.jpg" alt="Huntsman &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/huntsman-a3.jpg" alt="Huntsman &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Huntsman &middot; &pound;65</div>
+        <div class="product-desc">Herringbone plaid in highland country colours &mdash; the estate-cloth register Fyfe returns to more than any other, and the closest thing in the standing range to the sold-out Shooters Club tweeds.</div>
+        <a href="https://www.fyfegolf.com/products/huntsman" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-10" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-hc.jpg" alt="Five Glens &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-hc-a2.jpg" alt="Five Glens &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-hc-a3.jpg" alt="Five Glens &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Five Glens &middot; &pound;65</div>
+        <div class="product-desc">Another herringbone plaid mix, lined in navy. Five Glens runs across several products in the range, including the slip-on putter cover further down, which makes it the easiest way to match a driver to a putter without ordering a set.</div>
+        <a href="https://www.fyfegolf.com/products/five-glens" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-11" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/moray.jpg" alt="Moray &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/moray-a2.jpg" alt="Moray &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Moray &middot; &pound;65</div>
+        <div class="product-desc">Harris Tweed in plain weave rather than twill &mdash; a light grey ground with subtle teals and oranges worked through it, and a light blue fleece lining. Plain weave gives a flatter, tighter surface than the herringbones, so the colour does the work instead of the texture.</div>
+        <a href="https://www.fyfegolf.com/products/moray" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-12" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hc.jpg" alt="Modern Herringbone &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hc-a2.jpg" alt="Modern Herringbone &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hc-a3.jpg" alt="Modern Herringbone &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Modern Herringbone &middot; &pound;65</div>
+        <div class="product-desc">Dark charcoal herringbone with a black lining. The default, in the useful sense: the cover that disappears into a bag and lets the rest of the set be the interesting part.</div>
+        <a href="https://www.fyfegolf.com/products/modern-herringbone" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-3.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Headcovers &mdash; Tartan</h2>
+    <p class="cat-kicker">Registered setts in pure new wool, woven in Perthshire and Selkirk, cut and placed by hand.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/douglas-grey.jpg" alt="Douglas Grey Tartan &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/douglas-grey-a2.jpg" alt="Douglas Grey Tartan &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/douglas-grey-a3.jpg" alt="Douglas Grey Tartan &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Douglas Grey Tartan &middot; &pound;65</div>
+        <div class="product-desc">Pure new wool in Douglas Grey, black fleece lining. Tartan behaves differently to tweed on a headcover &mdash; the sett is a fixed grid, so the pattern has to be cut and placed rather than simply wrapped, and the line where the panels meet is where you can see whether it was done carefully.</div>
+        <a href="https://www.fyfegolf.com/products/douglas-grey" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-14" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/campbell-argyll.jpg" alt="Campbell of Argyll Tartan &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/campbell-argyll-a2.jpg" alt="Campbell of Argyll Tartan &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/campbell-argyll-a3.jpg" alt="Campbell of Argyll Tartan &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Campbell of Argyll Tartan &middot; &pound;65</div>
+        <div class="product-desc">One of the older registered setts in Scotland, in 100% pure new wool, available for driver and fairway. Fyfe finishes it with the black tag label rather than the green, which suits the darker ground.</div>
+        <a href="https://www.fyfegolf.com/products/campbell-of-argyll-tartan-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-15" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/mackenzie-hc.jpg" alt="MacKenzie Tartan &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/mackenzie-hc-a2.jpg" alt="MacKenzie Tartan &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">MacKenzie Tartan &middot; &pound;65</div>
+        <div class="product-desc">The tartan that ties the standing range to the collaboration &mdash; the same cloth family used on the MacKenzie bag editions. If you own one of those bags, this is the cover that matches it, and at &pound;65 it is a considerably less demanding way to buy into the same idea.</div>
+        <a href="https://www.fyfegolf.com/products/mackenzie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-16" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/kerry-county.jpg" alt="Kerry County &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/kerry-county-a2.jpg" alt="Kerry County &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Kerry County &middot; &pound;65</div>
+        <div class="product-desc">An Irish county tartan, woven in Scotland and sewn in Fife, with a plush cotton fleece lining. Fyfe's copy is specific about the chain: the cloth is <em>&ldquo;woven by grandmasters in historic fabric mills across Scotland&rdquo;</em> and made up at the workshop.</div>
+        <a href="https://www.fyfegolf.com/products/kerry-county-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-17" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/irish-national.jpg" alt="Irish National &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/irish-national-a2.jpg" alt="Irish National &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/irish-national-a3.jpg" alt="Irish National &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Irish National &middot; &pound;49</div>
+        <div class="product-desc">The Irish National sett at &pound;49, which is where the tartan line starts. Same wool, same lining, smaller cover &mdash; this is the fairway and hybrid end of the range rather than a lesser build.</div>
+        <a href="https://www.fyfegolf.com/products/irish-national-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-18" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/clare-county.jpg" alt="Clare County &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/clare-county-a2.jpg" alt="Clare County &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/clare-county-a3.jpg" alt="Clare County &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Clare County &middot; &pound;49</div>
+        <div class="product-desc">The second Irish county tartan currently in stock, also &pound;49. The county tartans move in and out of the range faster than the Scottish setts, which are more or less permanent &mdash; so this one is a narrower window than it looks.</div>
+        <a href="https://www.fyfegolf.com/products/clare-county-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-4.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Mini Drivers and Hybrids</h2>
+    <p class="cat-kicker">The club shapes most cover makers skip, in the same cloths as the drivers.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-19" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-mini.jpg" alt="Jura Sunset Mini Driver Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-mini-a2.jpg" alt="Jura Sunset Mini Driver Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-mini-a3.jpg" alt="Jura Sunset Mini Driver Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Jura Sunset Mini Driver Cover &middot; &pound;69</div>
+        <div class="product-desc">Blues, oranges and purples in a Harris Tweed tartan, cut for a mini driver &mdash; a club shape most cover makers still ignore. Light blue fleece lining. If you have put a mini driver in the bag in the last two seasons you already know how short the list of options is.</div>
+        <a href="https://www.fyfegolf.com/products/jura-sunset-harris-tweed-headcover-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-20" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-sunset-hc.jpg" alt="Jura Sunset Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-sunset-hc-a2.jpg" alt="Jura Sunset Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-sunset-hc-a3.jpg" alt="Jura Sunset Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Jura Sunset Headcover &middot; &pound;65</div>
+        <div class="product-desc">The full-size driver and fairway version of the same cloth. Jura Sunset is the brightest thing Fyfe weaves into a standing product, and it is the cover that makes the most sense in a bag that is otherwise all black leather.</div>
+        <a href="https://www.fyfegolf.com/products/jura-sunset" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-21" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-hybrid.jpg" alt="Jura Sunset Hybrid Cover" loading="lazy" /></div></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Jura Sunset Hybrid Cover &middot; &pound;49</div>
+        <div class="product-desc">Hybrid cut, same tweed, &pound;49. Hybrids are the clubs people stop covering because nothing matches; this is the fix for a set built around Jura Sunset.</div>
+        <a href="https://www.fyfegolf.com/products/jura-sunset-hybrid" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-22" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/modern-herringbone-hyb.jpg" alt="Modern Herringbone Hybrid Cover" loading="lazy" /></div></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Modern Herringbone Hybrid Cover &middot; &pound;49</div>
+        <div class="product-desc">Charcoal herringbone in hybrid form. Pairs with the driver cover above, which is the whole point of Fyfe running most cloths across all four club shapes.</div>
+        <a href="https://www.fyfegolf.com/products/modern-herringbone-hybrid" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-23" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/earl-st-andrews.jpg" alt="Earl of St Andrews Hybrid Cover" loading="lazy" /></div></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Earl of St Andrews Hybrid Cover &middot; &pound;49</div>
+        <div class="product-desc">Pure new wool in the Earl of St Andrews tartan. The name is doing some work here, but the sett is a registered one and the build is the same as everything else on this page.</div>
+        <a href="https://www.fyfegolf.com/products/earl-of-st-andrews-hybrid-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-5.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Between Tides and the Putter Covers</h2>
+    <p class="cat-kicker">Marine suede, seersucker and leather &mdash; the materials Fyfe reaches for when it leaves tweed behind.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-24" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-tan.jpg" alt="Marine Suede Blade Cover Light Tan &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-tan-a2.jpg" alt="Marine Suede Blade Cover Light Tan &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-tan-a3.jpg" alt="Marine Suede Blade Cover Light Tan &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Marine Suede Blade Cover &mdash; Light Tan &middot; &pound;69</div>
+        <div class="product-desc">Marine suede from the Clyde, in light tan, over a sherpa fleece lining with a leather seam label. Fyfe's own line on the material is that it was <em>&ldquo;chosen for strength, texture, and the particular quality of a material that improves with exposure&rdquo;</em> &mdash; which is the honest pitch for suede on a golf course rather than a warning against it.</div>
+        <a href="https://www.fyfegolf.com/products/marine-suede-blade-cover-light-tan" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-25" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-white.jpg" alt="Marine Suede Blade Cover Optic White &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-white-a2.jpg" alt="Marine Suede Blade Cover Optic White &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marine-suede-white-a3.jpg" alt="Marine Suede Blade Cover Optic White &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Marine Suede Blade Cover &mdash; Optic White &middot; &pound;69</div>
+        <div class="product-desc">The same construction in optic white. It will not stay optic white, and that is more or less the proposition &mdash; the Between Tides collection was built around materials that record use rather than resist it.</div>
+        <a href="https://www.fyfegolf.com/products/marine-suede-blade-cover-optic-white" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-26" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/harbour-seersucker.jpg" alt="Harbour Seersucker Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/harbour-seersucker-a2.jpg" alt="Harbour Seersucker Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/harbour-seersucker-a3.jpg" alt="Harbour Seersucker Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Harbour Seersucker Blade Putter Cover &middot; &pound;69</div>
+        <div class="product-desc">Blue and white striped cotton seersucker, sherpa lined. Seersucker is woven at two tensions so the surface puckers permanently, which is why it holds air and dries fast &mdash; a genuinely sensible fabric for a cover that spends half a round damp.</div>
+        <a href="https://www.fyfegolf.com/products/harbour-seersucker-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-27" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-slipon.jpg" alt="Five Glens Blade Putter Slip-On &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/five-glens-slipon-a2.jpg" alt="Five Glens Blade Putter Slip-On &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Five Glens Blade Putter Slip-On &middot; &pound;35</div>
+        <div class="product-desc">Five Glens herringbone Harris Tweed with mahogany heritage Scottish leather, cut as a slip-on rather than a magnetic-close blade cover. At &pound;35 it is the cheapest way into the tweed, and it fits all standard blades.</div>
+        <a href="https://www.fyfegolf.com/products/five-glens-blade-putter-slip-on-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-28" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud-a2.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud-a3.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/gt-rosso-scud-a4.jpg" alt="GT Rosso Scuderia Leather Mallet Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">GT Rosso Scuderia Leather Mallet Cover &middot; &pound;69</div>
+        <div class="product-desc">The outlier: Italian leather in racing red, cream sherpa lining, neodymium magnet strips, debossed leather seam labels. The GT line is the one place Fyfe leaves Scottish cloth entirely, and it is deliberately styled against everything else in the catalogue.</div>
+        <a href="https://www.fyfegolf.com/products/gt-rosso-scuderia-leather-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-6.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Everything Else in the Bag</h2>
+    <p class="cat-kicker">A rangefinder case, a forged marker, a pouch and a box of tees.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-29" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green-a2.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green-a3.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/marksman-green-a4.jpg" alt="Marksman Rangefinder Case Vintage Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Marksman Rangefinder Case &mdash; Vintage Green &middot; &pound;69</div>
+        <div class="product-desc">P270 waxed canvas from Dundee, space mesh lining, a two-way waterproof YKK zip with 275 paracord pulls, matte black brass swivel hook, nylon webbing and dark brown leather. The spec list is longer than anything else Fyfe makes, and it is the piece that shows the workshop can build something with structure rather than just cut and line a cover.</div>
+        <a href="https://www.fyfegolf.com/products/marksman-vintage-green" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-30" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/brave-marker.jpg" alt="The Brave Copper Ball Marker &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/brave-marker-a2.jpg" alt="The Brave Copper Ball Marker &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/brave-marker-a3.jpg" alt="The Brave Copper Ball Marker &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">The Brave Copper Ball Marker &middot; &pound;25</div>
+        <div class="product-desc">Hand-forged from high-grade copper at what Fyfe describes as a partnership forge in the heart of Scotland, <em>&ldquo;where age old battle swords are made with traditional artisan methods passed down through the generations.&rdquo;</em> Copper tarnishes, so it will not look like this in a year.</div>
+        <a href="https://www.fyfegolf.com/products/the-brave-copper-hand-forged-ball-marker" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-31" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/jura-pouch.jpg" alt="Jura Sunset Drawstring Pouch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/fyfe-btk/jura-pouch-a2.jpg" alt="Jura Sunset Drawstring Pouch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Jura Sunset Drawstring Pouch &middot; &pound;35</div>
+        <div class="product-desc">Harris Tweed with a premium leather drawstring &mdash; a valuables pouch for a watch and a wedding ring, or a ball and tee bag if you would rather. The pouches turn over faster than anything else Fyfe lists; most of the range is sold out at any given moment.</div>
+        <a href="https://www.fyfegolf.com/products/jura-sunset-harris-tweed-drawstring-pouch" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-32" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/fyfe-btk/wb-24k.jpg" alt="Western Birch Fyfe Bamboo Tees" loading="lazy" /></div></div></div>
+      <div class="product-body">
+        <div class="product-brand">Fyfe Golf</div>
+        <div class="product-name">Western Birch &times; Fyfe Bamboo Tees &middot; &pound;12.95</div>
+        <div class="product-desc">Fifty striped 70mm bamboo tees in a box, with a curved top and Fyfe branding on the cup. Western Birch is a US tee brand; the collaboration has been running since 2022, which makes it Fyfe's longest-standing partnership after MacKenzie.</div>
+        <a href="https://www.fyfegolf.com/products/western-birch-x-fyfe-premium-bamboo-golf-tees-24k-magic" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/fyfe-golf/btk-body-7.jpg" alt="Fyfe Golf lookbook photograph" loading="lazy" />
+</section>
+
 <section class="products">
   <h2 class="products-hdr" id="faq">The Questions</h2>
   <div class="faq">
@@ -590,6 +724,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>Is Fyfe Golf sustainable?</summary><p>Fyfe makes to order rather than to forecast, buys from Scottish mills to keep the supply chain short, and has built at least seven collections from reclaimed cloth. It also publishes an Honesty Box naming the synthetics in its own products &mdash; elastane in headcover grips, polycotton in some linings &mdash; and why they are there. It avoids broad claims, and its current language is deliberately hedged.</p></details>
   </div>
 </section>
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Fyfe Golf</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/bluetross">
+      <div class="more-card-img"><img src="/images/women-founded/bluetross-2.jpg" alt="Bluetross" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Bluetross</div>
+        <div class="more-card-tag">Charleston, SC &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Horween and Italian leather covers, belts and wallets, co-founded by Gail Hanson.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/hiroki-golf">
+      <div class="more-card-img"><img src="/images/hiroki/kinloch-army-green.jpg" alt="Hiroki Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Hiroki Golf</div>
+        <div class="more-card-tag">Auckland, New Zealand &middot; bags/headcovers</div>
+        <div class="more-card-desc">Sunday bags, stand bags and covers from Auckland, with a Japanese name chosen on purpose.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/seamus">
+      <div class="more-card-img"><img src="/images/seamus/glacier-driver-0.jpg" alt="Seamus Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Seamus Golf</div>
+        <div class="more-card-tag">Beaverton, OR &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that covered the 2016 U.S. Ryder Cup team.</div>
+      </div>
+    </a>
+  </div>
+</section>
+
 <section class="more">
   <div class="more-hdr">
     <span class="more-label">More from TGI</span>

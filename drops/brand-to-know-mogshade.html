@@ -139,6 +139,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .faq-q summary:before{content:"+ ";font-family:var(--mono);opacity:.5}
 .faq-q[open] summary:before{content:"\2212 "}
 .faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 </head>
 <body>
@@ -176,22 +237,49 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" alt="Mogshade handmade Portuguese golf headcovers on the course" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/mogshade/btk-hero.jpg" alt="Mogshade &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Mogshade makes golf headcovers by hand in Portugal, and the name tells you everything about the sensibility: it comes from an old English dialect word for the play of light and shadow — sun filtering through leaves onto the course. The whole operation runs on what the brand calls ethical circularity. Everything is made to order (current lead time is about three weeks), which means no overproduction, and the fabrics are natural, recycled, upcycled, offcut, or deadstock — including rescued wool from the Serra da Estrela mountain factories that anchors the Re.Weave and Churra collections. Every piece is slightly different because the fabric was never mass-produced; what you get is what's left from the loom.</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/mogshade/btk-body-1.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>Since we first covered them in June, the catalog has kept moving — small handmade batches sell out fast here, which is half the appeal. The Depeche Golf magazine collab dropped in August with a special-edition headcover. The wall art program is real now: hand-tufted wool posters of imagined holes and pin sheets that take eight weeks to make. There's an Ocean Bottle collab, sweats, and socks. And for American readers, the practical note: since June, US orders ship with import duties and customs fees already included.</p>
     <p>The other thing that sets Mogshade apart is how much company it keeps. For a one-workshop operation, the collab sheet reads like a map of independent golf: an artist series with Fabricaal that turned headcovers into canvases, a capsule with IGG that sold through in weeks, Projeto Serra — a tribute to the brand's home mountains, down to the "Ovelha Preta" black-sheep cover — and an "On Set with <a href="/drops/manors-ss26" style="color:inherit;text-decoration:none;border-bottom:1px solid var(--grass,#2D4A2B);">Manors</a>" edit curated with the London golfwear brand. Add the Depeche Golf magazine bundle, the Ocean Bottle, a Fiumani cap, and the early Parmore run that was capped at 50 pieces, and you get the picture: almost everything they touch disappears. There's also a custom-made program if you want a cover built to your spec from whatever's on the shelf that month.</p>
     <p><em>Updated, August 2026 — we re-checked every piece below against the current catalog, pruned what's sold out, and added twelve new items from the workshop.</em></p>
   </div>
+</section>
+
+<section class="products" style="border-top:none;margin-top:48px;">
+  <h2 class="products-hdr">In the Wild — @mogshade_golf</h2>
+  <div class="ig-grid">
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" alt="Mogshade headcovers on a golf bag in the hills — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DadiCd_Dt7v.jpg" alt="Checkered Mogshade headcover with wool spools in the workshop — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DaugsxJjimz.jpg" alt="Threads of the Serra — Serra da Estrela editorial — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbKsHrzDmrK.jpg" alt="Aberdovey links editorial — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Dbk7KSoDucn.jpg" alt="Fabricaal x Mogshade mural artwork — @mogshade_golf" loading="lazy" /></a>
+    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbvJe1lDqU0.jpg" alt="Mogshade gear on course — @mogshade_golf" loading="lazy" /></a>
+  </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>17 items</span></div>
       <div class="sidebar-detail"><span class="l">Made In</span><span>Portugal</span></div>
       <div class="sidebar-detail"><span class="l">Lead Time</span><span>~3 weeks</span></div>
-      
       <a href="https://www.mogshadegolf.com" target="_blank" rel="noopener" class="sidebar-cta">Shop the Collection ↗</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
@@ -204,12 +292,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<section class="products">
-  <h2 class="products-hdr">The Collection — 5 Still in Stock (Checked Aug 2026)</h2>
-  <div class="products-grid">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/mogshade/btk-body-2.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
+</section>
 
-
-    <div class="product-card" data-frames="1">
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 23 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Collection — 5 Still in Stock (Checked Aug 2026)</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/3fc927e4-azulejo-bronze-green-909098.jpg" alt="Mogshade Azulejo Bronze Green &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -218,8 +310,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/azulejo-bronze-and-green" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-2" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088.jpg" alt="Mogshade Contour Golf Towel &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088-a2.jpg" alt="Mogshade Contour Golf Towel &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088-a3.jpg" alt="Mogshade Contour Golf Towel &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/37c84c01-contour-golf-towel-9807088-a4.jpg" alt="Mogshade Contour Golf Towel &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -228,8 +319,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/contour-golf-towel" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-3" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/bb402924-churra-mono-headcover-8190609.jpg" alt="Mogshade Churra Mono Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/bb402924-churra-mono-headcover-8190609-a2.jpg" alt="Mogshade Churra Mono Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/bb402924-churra-mono-headcover-8190609-a3.jpg" alt="Mogshade Churra Mono Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -238,10 +328,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/churra-mono-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-
-
-    <div class="product-card" data-frames="1">
+<div class="product-card" id="p-4" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/664086b8-deco-blue-headcover-1821868.jpg" alt="Mogshade Deco Blue Headcover &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -250,8 +337,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/deco-blue-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-5" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449-a2.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449-a3.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/feed/597b304a-alfatex-headcover-730449-a4.jpg" alt="Mogshade Alfa.Tex Headcover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -260,16 +346,19 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/alfa-tex-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-
+    </div>
   </div>
 </section>
 
-<section class="products" style="border-top:none;margin-top:8px;">
-  <h2 class="products-hdr">New from the Workshop — 12 Pieces</h2>
-  <div class="products-grid">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/mogshade/btk-body-3.jpg" alt="Mogshade lookbook photograph" loading="lazy" />
+</section>
 
-    <div class="product-card" data-frames="2">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">New from the Workshop — 12 Pieces</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-6" data-frames="2">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-vintage-white.jpg" alt="Mogshade Vintage White Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-vintage-white-a2.jpg" alt="Mogshade Vintage White Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -278,8 +367,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/vintage-white-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-7" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-depeche-5.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-depeche-5-a2.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-depeche-5-a3.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-depeche-5-a4.jpg" alt="Mogshade Depeche Magazine #5 + Special Headcover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -288,8 +376,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/depeche-magazine-5-special-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-8" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster-a2.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster-a3.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-eighteen-poster-a4.jpg" alt="Mogshade Eighteen Wool Poster &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -298,8 +385,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/eighteen-wool-poster-1" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-9" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster-a2.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster-a3.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-pin-position-poster-a4.jpg" alt="Mogshade Pin Position Wool Poster &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -308,8 +394,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/pin-position-wool-poste" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-10" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-churra-risca.jpg" alt="Mogshade Churra Risca Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-churra-risca-a2.jpg" alt="Mogshade Churra Risca Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-churra-risca-a3.jpg" alt="Mogshade Churra Risca Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -318,8 +403,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/churra-risca-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-11" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-tiles-olive-orange.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-tiles-olive-orange-a2.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-tiles-olive-orange-a3.jpg" alt="Mogshade Tiles Olive &amp; Orange Headcover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -328,8 +412,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/tile-olive-orange-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="2">
+<div class="product-card" id="p-12" data-frames="2">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-dot-gray.jpg" alt="Mogshade Dot Gray &amp; Pale Yellow Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-dot-gray-a2.jpg" alt="Mogshade Dot Gray &amp; Pale Yellow Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -338,8 +421,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/dot-gray-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="2">
+<div class="product-card" id="p-13" data-frames="2">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-waffle-yellow.jpg" alt="Mogshade Waffle Yellow Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-waffle-yellow-a2.jpg" alt="Mogshade Waffle Yellow Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -348,8 +430,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/waffle-yellow-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="2">
+<div class="product-card" id="p-14" data-frames="2">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-desert-yellow-gray.jpg" alt="Mogshade Desert Yellow &amp; Gray Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-desert-yellow-gray-a2.jpg" alt="Mogshade Desert Yellow &amp; Gray Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -358,8 +439,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/desert-yellow-gray-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="2">
+<div class="product-card" id="p-15" data-frames="2">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-vintage-fern.jpg" alt="Mogshade Vintage Fern Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-vintage-fern-a2.jpg" alt="Mogshade Vintage Fern Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -368,8 +448,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/vintage-fern-headcover" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-16" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle-a2.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle-a3.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ocean-bottle-a4.jpg" alt="Mogshade Ocean Bottle x Mogshade &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -378,8 +457,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/ocean-bottle-x-mogshade" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-17" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat-a2.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat-a3.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/mogshade/new-ob-sweat-a4.jpg" alt="Mogshade O.B. Oversized Sweat &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade</div>
@@ -388,14 +466,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/products/o-b-oversized-sweat" target="_blank" rel="noopener" class="product-link">Shop ↗</a>
       </div>
     </div>
+    </div>
   </div>
 </section>
 
-<section class="products" style="border-top:none;margin-top:48px;">
-  <h2 class="products-hdr">The Collab Archive — What You Missed</h2>
-  <div class="products-grid">
-
-    <div class="product-card" data-frames="1">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Collab Archive — What You Missed</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-18" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-fabricaal-crow.jpg" alt="Mogshade Fabricaal x Mogshade &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
@@ -404,8 +483,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/collections/fabricaal-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="1">
+<div class="product-card" id="p-19" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-igg-sand.jpg" alt="Mogshade IGG x Mogshade &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
@@ -414,8 +492,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/collections/fabricaal-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="1">
+<div class="product-card" id="p-20" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-serra-ovelha.jpg" alt="Mogshade Projeto Serra x Mogshade &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
@@ -424,8 +501,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/collections/projeto-serra-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="1">
+<div class="product-card" id="p-21" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-serra-vest.jpg" alt="Mogshade S&atilde;o Miguel Sherpa Vest &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
@@ -434,8 +510,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/collections/projeto-serra-x-mogshade" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="1">
+<div class="product-card" id="p-22" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-manors-tartan.jpg" alt="Mogshade On Set with Manors &middot; Mostly Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
@@ -444,8 +519,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.mogshadegolf.com/collections/on-set-with-manors" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
     </div>
-
-    <div class="product-card" data-frames="1">
+<div class="product-card" id="p-23" data-frames="1">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/mogshade/collab-fiumani-cap.jpg" alt="Mogshade Fiumani x Mogshade Cap &middot; Sold Out &middot; view 1 of 1" loading="lazy" /></div></div></div>
       <div class="product-body">
         <div class="product-brand">Mogshade &middot; Archive</div>
@@ -453,6 +527,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <div class="product-desc">From the Course Flip collection — a lightweight two-tone cap made with Fiumani. €32 and gone, like most of that collection&#39;s hats, towels, and ball markers.</div>
         <a href="https://www.mogshadegolf.com/collections/course-flip" target="_blank" rel="noopener" class="product-link">View ↗</a>
       </div>
+    </div>
     </div>
   </div>
 </section>
@@ -470,15 +545,44 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 
-<section class="products" style="border-top:none;margin-top:48px;">
-  <h2 class="products-hdr">In the Wild — @mogshade_golf</h2>
-  <div class="ig-grid">
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Da_hJrqRyIp.jpg" alt="Mogshade headcovers on a golf bag in the hills — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DadiCd_Dt7v.jpg" alt="Checkered Mogshade headcover with wool spools in the workshop — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DaugsxJjimz.jpg" alt="Threads of the Serra — Serra da Estrela editorial — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbKsHrzDmrK.jpg" alt="Aberdovey links editorial — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-Dbk7KSoDucn.jpg" alt="Fabricaal x Mogshade mural artwork — @mogshade_golf" loading="lazy" /></a>
-    <a href="https://www.instagram.com/mogshade_golf/" target="_blank" rel="noopener"><img src="/images/mogshade/ig-DbvJe1lDqU0.jpg" alt="Mogshade gear on course — @mogshade_golf" loading="lazy" /></a>
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Mogshade</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/fyfe-golf">
+      <div class="more-card-img"><img src="/images/fyfe-btk/rothesay.jpg" alt="Fyfe Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Fyfe Golf</div>
+        <div class="more-card-tag">UK &middot; accessories/headcovers</div>
+        <div class="more-card-desc">Harris Tweed and tartan headcovers made to order in Fife — plus RAF flight suits and Augusta coveralls cut into covers.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/bluetross">
+      <div class="more-card-img"><img src="/images/women-founded/bluetross-2.jpg" alt="Bluetross" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Bluetross</div>
+        <div class="more-card-tag">Charleston, SC &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Horween and Italian leather covers, belts and wallets, co-founded by Gail Hanson.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/hiroki-golf">
+      <div class="more-card-img"><img src="/images/hiroki/kinloch-army-green.jpg" alt="Hiroki Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Hiroki Golf</div>
+        <div class="more-card-tag">Auckland, New Zealand &middot; bags/headcovers</div>
+        <div class="more-card-desc">Sunday bags, stand bags and covers from Auckland, with a Japanese name chosen on purpose.</div>
+      </div>
+    </a>
   </div>
 </section>
 

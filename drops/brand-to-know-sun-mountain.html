@@ -135,6 +135,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who founded Sun Mountain and when?", "acceptedAnswer": {"@type": "Answer", "text": "Rick Reimers founded Sun Mountain in 1981. He started it in San Jose, California, and moved the company to Missoula, Montana in 1984 — a detail often lost, because Sun Mountain is so thoroughly identified with Montana now. Reimers was a club and teaching pro in Northern California before he quit, and by his own account designed his first bag in his head on the drive north."}}, {"@type": "Question", "name": "Did Sun Mountain invent the golf stand bag?", "acceptedAnswer": {"@type": "Answer", "text": "Sun Mountain is credited with creating the first modern lightweight stand bag — the Eclipse, in 1986 — and the company says it was the first to patent the stand mechanism used on essentially every stand bag since. No source we found establishes an earlier bag with built-in legs. Their nylon BACK 9 (around 1981) and FRONT 9 (1984) came first and made the lightweight carry bag viable; the legs came after."}}, {"@type": "Question", "name": "Is Sun Mountain still family owned?", "acceptedAnswer": {"@type": "Answer", "text": "No. Reimers ran it for 41 years as founder, director and sole shareholder — no partners, no outside investors, no board. In March 2022 he sold Sun Mountain Sports to Solace Capital Partners, a Los Angeles private equity firm. He kept Sun Mountain Motor Sports, which makes the Finn golf scooter he launched in 2019."}}, {"@type": "Question", "name": "Are Sun Mountain bags made in the USA?", "acceptedAnswer": {"@type": "Answer", "text": "They are assembled in the USA — specifically in Missoula, Montana, which is the company's own wording and the accurate one. Fabrics and components are sourced overseas. The Montana assembly operation is real and unusual for the category; \"made in the USA\" would be overstating it."}}, {"@type": "Question", "name": "What is the Sun Mountain C-130?", "acceptedAnswer": {"@type": "Answer", "text": "Their cart bag, introduced in 2005, and arguably the most widely used cart bag in golf. The current version has a 10.5-inch fourteen-way top, thirteen pockets, and a top reversed so the pockets face the player when the bag is strapped to a cart."}}, {"@type": "Question", "name": "Did Sun Mountain invent the push cart?", "acceptedAnswer": {"@type": "Answer", "text": "Not the push cart, but the modern folding one. The Speed Cart, launched in 1999, was the first easily foldable three-wheel cart, and the company's own line is that it \"created an entirely new category.\" The four-wheel Micro-Cart followed in 2004."}}, {"@type": "Question", "name": "What is a ClubGlider?", "acceptedAnswer": {"@type": "Answer", "text": "Sun Mountain's travel bag with retractable legs and wheels that take the weight off your arm — you tilt it and tow it rather than drag it. It launched in 2008 and grew travel covers from roughly half a per cent of company sales to about seven per cent."}}, {"@type": "Question", "name": "Was Sun Mountain really the best-selling golf bag brand?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, by retail market share. Golf Datatech's 2012 report had them as the best-selling golf bag brand for a third consecutive year, and they accounted for 16.5% of US golf bag sales in 2010."}}, {"@type": "Question", "name": "Which Sun Mountain bag should I buy?", "acceptedAnswer": {"@type": "Answer", "text": "Walking and want light: the Eclipse E-2.5 at $224. Walking and want the nice one: the Matchplay Ballistic at $435. Riding: the C-130 at $325. Rain: the H2NO line. Buying an object rather than equipment: the Hometown waxed canvas or the Legacy Leather."}}, {"@type": "Question", "name": "Does Sun Mountain make anything besides bags?", "acceptedAnswer": {"@type": "Answer", "text": "Push carts since 1999, travel covers since 2008, and outerwear since 1990 — the Headwind windshirt in 1990 and golf fleece in 1991 were both firsts for the category. They supplied the US Presidents Cup team's outerwear in 2011 and 2013."}}]}</script>
 </head>
@@ -169,16 +230,32 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/sun-mountain/hero.jpg" alt="A golfer walking under live oaks carrying a Sun Mountain stand bag" style="object-position:center center;" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/sun-mountain/btk-hero.jpg" alt="Sun Mountain &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Sun Mountain invented the bag with legs, and four decades on it still makes the lightest way to walk a golf course. In 1981 a club pro named Rick Reimers quit his job in Northern California and got in the car to drive north to Montana, to ski and think. The car radio was broken, so he spent the whole drive designing a golf bag in his head. What came out the other end was a nylon carry bag that weighed less than half what the leather and vinyl bags of the day weighed.</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sun-mountain/btk-body-1.jpg" alt="Sun Mountain lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>That was the BACK 9, and it was more interesting than it was successful. The FRONT 9 arrived in 1984 with a moulded top and bottom, sold properly, and became the shape every other carry bag copied. It also earned Sun Mountain the job of building the L8 bag for Ping, which put a Missoula startup in the position of manufacturing for one of golf&rsquo;s giants.</p>
     <p>Then, in 1986, they put legs on it. The Eclipse is the bag Sun Mountain is credited with inventing, and its patented stand mechanism is now hinged onto almost every carry bag in the game. They ran the same trick twice more. The Speed Cart in 1999 folded down small enough that people bought one, and a walking-cart category appeared where there had not been one. The ClubGlider in 2008 put retractable legs on a travel bag, so an airport stopped being a workout.</p>
     <p>Here is the part that gets left out. Reimers ran the company for 41 years as founder, director and sole shareholder, with no partners, no investors and no board. In March 2022 he sold Sun Mountain Sports to Solace Capital Partners, a Los Angeles private equity firm, and kept the scooter business. The bags are still assembled in Missoula, which remains unusual for the category. The fabrics come from Asia, and the company says &ldquo;assembled in the USA&rdquo; rather than made, which is the honest version.</p>
     <p>The line runs across four categories: bags from the $224 Eclipse up to a $1,200 leather stand bag, push carts, travel covers, and small goods down to a $35 headcover. Three of those four are categories Sun Mountain either created or reshaped, which is a strange thing to say about the sensible default.</p>
   </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -198,11 +275,17 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<section class="products">
-<h2 id="bags">The Bags</h2>
-<p class="cat-kicker"><strong>Nine picks &middot; $224&ndash;$1,200</strong>Bags are where the company actually lives. The Eclipse descends from the 1986 bag that started all of this and the Matchplay is the modern flagship, while the C-130 has been the default cart bag since 2005.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="6">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sun-mountain/btk-body-2.jpg" alt="Sun Mountain lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 18 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Bags</h2>
+    <p class="cat-kicker"><strong>Nine picks &middot; $224&ndash;$1,200</strong>Bags are where the company actually lives. The Eclipse descends from the 1986 bag that started all of this and the Matchplay is the modern flagship, while the C-130 has been the default cart bag since 2005.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/legacy-leather-stand-bag-0.jpg" loading="lazy" alt="Legacy Leather Stand Bag  $1,200 &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/legacy-leather-stand-bag-1.jpg" loading="lazy" alt="Legacy Leather Stand Bag  $1,200 &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/legacy-leather-stand-bag-2.jpg" loading="lazy" alt="Legacy Leather Stand Bag  $1,200 &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/legacy-leather-stand-bag-3.jpg" loading="lazy" alt="Legacy Leather Stand Bag  $1,200 &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/legacy-leather-stand-bag-4.jpg" loading="lazy" alt="Legacy Leather Stand Bag  $1,200 &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-06.jpg" loading="lazy" alt="Legacy Leather Stand Bag  $1,200 &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -211,7 +294,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/legacy-leather-stand-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-2" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/hometown-waxed-canvas-stand-bag-0.jpg" loading="lazy" alt="Hometown Waxed Canvas Stand Bag  $450 &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/hometown-waxed-canvas-stand-bag-1.jpg" loading="lazy" alt="Hometown Waxed Canvas Stand Bag  $450 &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/hometown-waxed-canvas-stand-bag-2.jpg" loading="lazy" alt="Hometown Waxed Canvas Stand Bag  $450 &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/hometown-waxed-canvas-stand-bag-3.jpg" loading="lazy" alt="Hometown Waxed Canvas Stand Bag  $450 &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/hometown-waxed-canvas-stand-bag-4.jpg" loading="lazy" alt="Hometown Waxed Canvas Stand Bag  $450 &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -220,7 +303,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/hometown-waxed-canvas-stand-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="8">
+<div class="product-card" id="p-3" data-frames="8">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/matchplay-ballistic-14-way-stand-bag-0.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 1 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-ballistic-14-way-stand-bag-1.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 2 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-ballistic-14-way-stand-bag-2.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 3 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-ballistic-14-way-stand-bag-3.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 4 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-ballistic-14-way-stand-bag-4.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 5 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-18.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 6 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-16.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 7 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-19.jpg" loading="lazy" alt="Matchplay Ballistic 14-way  $435 &middot; view 8 of 8"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/8</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button><button class="pg-dot" data-i="6" aria-label="View image 7"></button><button class="pg-dot" data-i="7" aria-label="View image 8"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -229,7 +312,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/matchplay-ballistic-14-way-stand-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="5">
+<div class="product-card" id="p-4" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/matchplay-swift-sunday-0.jpg" loading="lazy" alt="Matchplay Swift Sunday  $315 &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-swift-sunday-1.jpg" loading="lazy" alt="Matchplay Swift Sunday  $315 &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-swift-sunday-2.jpg" loading="lazy" alt="Matchplay Swift Sunday  $315 &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-swift-sunday-3.jpg" loading="lazy" alt="Matchplay Swift Sunday  $315 &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-swift-sunday-4.jpg" loading="lazy" alt="Matchplay Swift Sunday  $315 &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -238,7 +321,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/matchplay-swift-sunday" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4">
+<div class="product-card" id="p-5" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/eclipse-e-2-5-stand-bag-0.jpg" loading="lazy" alt="Eclipse E-2.5 Stand Bag  $224 &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/eclipse-e-2-5-stand-bag-1.jpg" loading="lazy" alt="Eclipse E-2.5 Stand Bag  $224 &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/eclipse-e-2-5-stand-bag-2.jpg" loading="lazy" alt="Eclipse E-2.5 Stand Bag  $224 &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-29.jpg" loading="lazy" alt="Eclipse E-2.5 Stand Bag  $224 &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -247,7 +330,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/eclipse-e-2-5-stand-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4">
+<div class="product-card" id="p-6" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/h2no-e-4-5-vlo-stand-bag-0.jpg" loading="lazy" alt="H2NO E-4.5 VLO Stand Bag  $380 &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/h2no-e-4-5-vlo-stand-bag-1.jpg" loading="lazy" alt="H2NO E-4.5 VLO Stand Bag  $380 &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/h2no-e-4-5-vlo-stand-bag-2.jpg" loading="lazy" alt="H2NO E-4.5 VLO Stand Bag  $380 &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/h2no-e-4-5-vlo-stand-bag-3.jpg" loading="lazy" alt="H2NO E-4.5 VLO Stand Bag  $380 &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -256,7 +339,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/h2no-e-4-5-vlo-stand-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="6">
+<div class="product-card" id="p-7" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/c-series-c-130-cart-bag-0.jpg" loading="lazy" alt="C-Series C-130 Cart Bag  $325 &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/c-series-c-130-cart-bag-1.jpg" loading="lazy" alt="C-Series C-130 Cart Bag  $325 &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/c-series-c-130-cart-bag-2.jpg" loading="lazy" alt="C-Series C-130 Cart Bag  $325 &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/c-series-c-130-cart-bag-3.jpg" loading="lazy" alt="C-Series C-130 Cart Bag  $325 &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-30.jpg" loading="lazy" alt="C-Series C-130 Cart Bag  $325 &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-03.jpg" loading="lazy" alt="C-Series C-130 Cart Bag  $325 &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -265,7 +348,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/c-series-c-130-cart-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4">
+<div class="product-card" id="p-8" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/matchplay-cart-bag-0.jpg" loading="lazy" alt="Matchplay Cart Bag  $450 &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-cart-bag-1.jpg" loading="lazy" alt="Matchplay Cart Bag  $450 &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/matchplay-cart-bag-2.jpg" loading="lazy" alt="Matchplay Cart Bag  $450 &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-12.jpg" loading="lazy" alt="Matchplay Cart Bag  $450 &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -274,7 +357,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/matchplay-cart-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="4">
+<div class="product-card" id="p-9" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/h2no-c-130-cart-bag-0.jpg" loading="lazy" alt="H2NO C-130 Cart Bag  $400 &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/h2no-c-130-cart-bag-1.jpg" loading="lazy" alt="H2NO C-130 Cart Bag  $400 &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/h2no-c-130-cart-bag-2.jpg" loading="lazy" alt="H2NO C-130 Cart Bag  $400 &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/h2no-c-130-cart-bag-3.jpg" loading="lazy" alt="H2NO C-130 Cart Bag  $400 &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -283,15 +366,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/h2no-c-130-cart-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-</div>
-
-<div class="pull-quote">
+    </div>
+    <div class="pull-quote">
   <div class="pull-quote-inner">&ldquo;And by the time I got to Montana, I had pretty much designed a new sort of golf bag in my head.&rdquo;<span class="pull-quote-attr">&mdash; Rick Reimers, Sun Mountain founder, on the drive north with a broken car radio</span></div>
 </div>
-<h2 id="carts">The Push Carts</h2>
-<p class="cat-kicker"><strong>Three picks &middot; $75&ndash;$330</strong>Sun Mountain did to walking carts in 1999 what it had done to bags in 1986. The Speed Cart folded down small enough that people actually bought one, and a category appeared where there had not been one.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="6">
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sun-mountain/btk-body-3.jpg" alt="Sun Mountain lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Push Carts</h2>
+    <p class="cat-kicker"><strong>Three picks &middot; $75&ndash;$330</strong>Sun Mountain did to walking carts in 1999 what it had done to bags in 1986. The Speed Cart folded down small enough that people actually bought one, and a category appeared where there had not been one.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-10" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-x-push-cart-0.jpg" loading="lazy" alt="Speed Cart X  $300 &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-x-push-cart-1.jpg" loading="lazy" alt="Speed Cart X  $300 &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-x-push-cart-2.jpg" loading="lazy" alt="Speed Cart X  $300 &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-x-push-cart-3.jpg" loading="lazy" alt="Speed Cart X  $300 &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-x-push-cart-4.jpg" loading="lazy" alt="Speed Cart X  $300 &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-31.jpg" loading="lazy" alt="Speed Cart X  $300 &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -300,7 +391,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/speed-cart-x-push-cart" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="6">
+<div class="product-card" id="p-11" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/px4-push-cart-0.jpg" loading="lazy" alt="PX4 Push Cart  $330 &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/px4-push-cart-1.jpg" loading="lazy" alt="PX4 Push Cart  $330 &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/px4-push-cart-2.jpg" loading="lazy" alt="PX4 Push Cart  $330 &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/px4-push-cart-3.jpg" loading="lazy" alt="PX4 Push Cart  $330 &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/px4-push-cart-4.jpg" loading="lazy" alt="PX4 Push Cart  $330 &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-23.jpg" loading="lazy" alt="PX4 Push Cart  $330 &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -309,7 +400,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/px4-push-cart" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="2">
+<div class="product-card" id="p-12" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-seat-0.jpg" loading="lazy" alt="Speed Cart Seat  $75 &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/sun-mountain/speed-cart-seat-1.jpg" loading="lazy" alt="Speed Cart Seat  $75 &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -318,11 +409,20 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/speed-cart-seat" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="travel">Travel</h2>
-<p class="cat-kicker"><strong>Two picks &middot; $290&ndash;$450</strong>The ClubGlider is the third Sun Mountain invention here, after the legs and the folding cart: retractable wheels that carry the weight for you through an airport. The Kube is the armoured alternative, a rigid shell instead of a mechanism.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="8">
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sun-mountain/btk-body-4.jpg" alt="Sun Mountain lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Travel</h2>
+    <p class="cat-kicker"><strong>Two picks &middot; $290&ndash;$450</strong>The ClubGlider is the third Sun Mountain invention here, after the legs and the folding cart: retractable wheels that carry the weight for you through an airport. The Kube is the armoured alternative, a rigid shell instead of a mechanism.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="8">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/clubglider3-travel-bag-0.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 1 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/clubglider3-travel-bag-1.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 2 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/clubglider3-travel-bag-2.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 3 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/clubglider3-travel-bag-3.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 4 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/clubglider3-travel-bag-4.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 5 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-13.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 6 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-11.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 7 of 8"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-05.jpg" loading="lazy" alt="ClubGlider3 Travel Bag  $450 &middot; view 8 of 8"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/8</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button><button class="pg-dot" data-i="6" aria-label="View image 7"></button><button class="pg-dot" data-i="7" aria-label="View image 8"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -331,7 +431,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/clubglider3-travel-bag" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="6">
+<div class="product-card" id="p-14" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/kube-travel-cover-0.jpg" loading="lazy" alt="Kube Travel Cover  $290 &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/kube-travel-cover-1.jpg" loading="lazy" alt="Kube Travel Cover  $290 &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/kube-travel-cover-2.jpg" loading="lazy" alt="Kube Travel Cover  $290 &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/kube-travel-cover-3.jpg" loading="lazy" alt="Kube Travel Cover  $290 &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/kube-travel-cover-4.jpg" loading="lazy" alt="Kube Travel Cover  $290 &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-14.jpg" loading="lazy" alt="Kube Travel Cover  $290 &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -340,11 +440,20 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/kube-travel-cover" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="accessories">Accessories</h2>
-<p class="cat-kicker"><strong>Four picks &middot; $35&ndash;$130</strong>Headcovers, alignment sticks and a blanket named after a mountain man make up the small goods. They are also the place Sun Mountain&rsquo;s current collaboration habit shows up first.</p>
-<div class="products-grid">
-  <div class="product-card" data-frames="4">
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sun-mountain/btk-body-5.jpg" alt="Sun Mountain lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Accessories</h2>
+    <p class="cat-kicker"><strong>Four picks &middot; $35&ndash;$130</strong>Headcovers, alignment sticks and a blanket named after a mountain man make up the small goods. They are also the place Sun Mountain&rsquo;s current collaboration habit shows up first.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-15" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/hazy-golf-x-sun-mountain-limited-edition-alignment-sticks-0.jpg" loading="lazy" alt="Limited Edition Alignment Sticks  $130 &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/hazy-golf-x-sun-mountain-limited-edition-alignment-sticks-1.jpg" loading="lazy" alt="Limited Edition Alignment Sticks  $130 &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/hazy-golf-x-sun-mountain-limited-edition-alignment-sticks-2.jpg" loading="lazy" alt="Limited Edition Alignment Sticks  $130 &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/sun-mountain/irl-27.jpg" loading="lazy" alt="Limited Edition Alignment Sticks  $130 &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hazy Golf &times; Sun Mountain</div>
@@ -353,7 +462,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/hazy-golf-x-sun-mountain-limited-edition-alignment-sticks" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="3">
+<div class="product-card" id="p-16" data-frames="3">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/canvas-leather-headcover-driver-1-0.jpg" loading="lazy" alt="Canvas/Leather Headcover  Driver  $40 &middot; view 1 of 3"></div><div class="pg-frame"><img src="/images/sun-mountain/canvas-leather-headcover-driver-1-1.jpg" loading="lazy" alt="Canvas/Leather Headcover  Driver  $40 &middot; view 2 of 3"></div><div class="pg-frame"><img src="/images/sun-mountain/canvas-leather-headcover-driver-1-2.jpg" loading="lazy" alt="Canvas/Leather Headcover  Driver  $40 &middot; view 3 of 3"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -362,7 +471,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/canvas-leather-headcover-driver-1" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="2">
+<div class="product-card" id="p-17" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/leather-headcover-chevron-driver-0.jpg" loading="lazy" alt="Leather Headcover Chevron  $35 &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/sun-mountain/leather-headcover-chevron-driver-1.jpg" loading="lazy" alt="Leather Headcover Chevron  $35 &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -371,7 +480,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/leather-headcover-chevron-driver" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-  <div class="product-card" data-frames="3">
+<div class="product-card" id="p-18" data-frames="3">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/sun-mountain/colter-ii-blanket-0.jpg" loading="lazy" alt="Colter II Blanket  $100 &middot; view 1 of 3"></div><div class="pg-frame"><img src="/images/sun-mountain/colter-ii-blanket-1.jpg" loading="lazy" alt="Colter II Blanket  $100 &middot; view 2 of 3"></div><div class="pg-frame"><img src="/images/sun-mountain/colter-ii-blanket-2.jpg" loading="lazy" alt="Colter II Blanket  $100 &middot; view 3 of 3"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sun Mountain</div>
@@ -380,8 +489,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://www.sunmountain.com/products/colter-ii-blanket" target="_blank" rel="noopener" class="product-link">Shop Sun Mountain &#8599;</a>
       </div>
   </div>
-</div>
+    </div>
+  </div>
+</section>
 
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sun-mountain/btk-body-6.jpg" alt="Sun Mountain lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="faq">
 <div class="faq">
     <details class="faq-q"><summary>Who founded Sun Mountain and when?</summary><p>Rick Reimers founded Sun Mountain in 1981. He started it in San Jose, California, and moved the company to Missoula, Montana in 1984 — a detail often lost, because Sun Mountain is so thoroughly identified with Montana now. Reimers was a club and teaching pro in Northern California before he quit, and by his own account designed his first bag in his head on the drive north.</p></details>
     <details class="faq-q"><summary>Did Sun Mountain invent the golf stand bag?</summary><p>Sun Mountain is credited with creating the first modern lightweight stand bag — the Eclipse, in 1986 — and the company says it was the first to patent the stand mechanism used on essentially every stand bag since. No source we found establishes an earlier bag with built-in legs. Their nylon BACK 9 (around 1981) and FRONT 9 (1984) came first and made the lightweight carry bag viable; the legs came after.</p></details>
@@ -393,6 +509,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>Was Sun Mountain really the best-selling golf bag brand?</summary><p>Yes, by retail market share. Golf Datatech's 2012 report had them as the best-selling golf bag brand for a third consecutive year, and they accounted for 16.5% of US golf bag sales in 2010.</p></details>
     <details class="faq-q"><summary>Which Sun Mountain bag should I buy?</summary><p>Walking and want light: the Eclipse E-2.5 at $224. Walking and want the nice one: the Matchplay Ballistic at $435. Riding: the C-130 at $325. Rain: the H2NO line. Buying an object rather than equipment: the Hometown waxed canvas or the Legacy Leather.</p></details>
     <details class="faq-q"><summary>Does Sun Mountain make anything besides bags?</summary><p>Push carts since 1999, travel covers since 2008, and outerwear since 1990 — the Headwind windshirt in 1990 and golf fleece in 1991 were both firsts for the category. They supplied the US Presidents Cup team's outerwear in 2011 and 2013.</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Sun Mountain</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/hiroki-golf">
+      <div class="more-card-img"><img src="/images/hiroki/kinloch-army-green.jpg" alt="Hiroki Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Hiroki Golf</div>
+        <div class="more-card-tag">Auckland, New Zealand &middot; bags/headcovers</div>
+        <div class="more-card-desc">Sunday bags, stand bags and covers from Auckland, with a Japanese name chosen on purpose.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/beavertail-golf-co">
+      <div class="more-card-img"><img src="/images/alignment/beavertail-1.jpg" alt="Beavertail Golf Co." loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Beavertail Golf Co.</div>
+        <div class="more-card-tag">Dickinson, ND &middot; accessories</div>
+        <div class="more-card-desc">Hunter Myran hand paints hickory alignment sticks in North Dakota, names on both ends included, since 2024.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/bluetross">
+      <div class="more-card-img"><img src="/images/women-founded/bluetross-2.jpg" alt="Bluetross" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Bluetross</div>
+        <div class="more-card-tag">Charleston, SC &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Horween and Italian leather covers, belts and wallets, co-founded by Gail Hanson.</div>
+      </div>
+    </a>
   </div>
 </section>
 

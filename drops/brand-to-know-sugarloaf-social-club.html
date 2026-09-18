@@ -132,6 +132,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">
 {
@@ -240,15 +301,31 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/ssc-brand/hero-irons.jpg" alt="SSC + BB&amp;F Don White irons, raw forged heads hand-ground and laid in a flight case" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/sugarloaf-social-club/btk-hero.jpg" alt="Sugarloaf Social Club &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Sugarloaf Social Club runs the widest price range in independent golf and holds a single point of view across all of it. The catalogue reaches from a MacKenzie sailcloth bag at $1,400 down to a paper fan at $14, and both read as the same company. It started as a group chat. A few college roommates were graduating in 2011 and wanted somewhere to keep talking about golf, so they named the thread after the course they had spent four years on. The chat became an annual trip, and the trip became an Instagram account that at one point had more followers than Golf Digest. Ian Gilley filed the LLC in 2017 and has described the sequence as &ldquo;a happy little accident.&rdquo;</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sugarloaf-social-club/btk-body-1.jpg" alt="Sugarloaf Social Club lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>The course they named it after is dead. Sugarloaf Mountain in Minneola, Florida was Coore &amp; Crenshaw's first design in the state, built in 2008 across more than 250 feet of elevation, and it opened directly into the financial crisis. It never recovered and it is permanently closed. A brand named after a course you can no longer play is an on-the-nose metaphor for how golf nostalgia works, and to their credit SSC has never leaned on it.</p>
     <p>Sugarloaf is a subsidiary of Pro Shop, Inc., the media company founded by <em>Full Swing</em> producer Chad Mumm and Joe Purzycki, which raised around $20 million from the PGA Tour and Powerhouse Capital and also owns Skratch and GolfWRX. Skratch discloses this in its own coverage. It explains how an independent-looking brand from McLean, Virginia ends up with an officially licensed THE PLAYERS capsule in the navy, gold and white it drew up for TPC Sawgrass.</p>
     <p>The catalogue reads as thirty-three projects. MacKenzie bags built from retired sailcloth sit next to a $14 paper fan printed for a Japanese golf media brand, a teal-striped soccer kit made for a coffee bar, and a Western Golf Association line supporting the Evans Scholars program. Most of it has sold out.</p>
   </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -268,11 +345,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<section class="products">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sugarloaf-social-club/btk-body-2.jpg" alt="Sugarloaf Social Club lookbook photograph" loading="lazy" />
+</section>
 
-  <h2 class="products-hdr sec">The MacKenzie Bags</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 33 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The MacKenzie Bags</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-sail-1.jpg" alt="MacKenzie Golf Bags Sail Bag “8185” · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-sail-2.jpg" alt="MacKenzie Golf Bags Sail Bag “8185” · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-sail-3.jpg" alt="MacKenzie Golf Bags Sail Bag “8185” · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-sail-4.jpg" alt="MacKenzie Golf Bags Sail Bag “8185” · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -285,7 +367,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-mackenzie-sail-bag-8185" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-2" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-white-1.jpg" alt="MacKenzie Golf Bags White Leather Double Seve 8” · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-white-2.jpg" alt="MacKenzie Golf Bags White Leather Double Seve 8” · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-white-3.jpg" alt="MacKenzie Golf Bags White Leather Double Seve 8” · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-white-4.jpg" alt="MacKenzie Golf Bags White Leather Double Seve 8” · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -298,7 +380,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-mackenzie-white-leather-double-seve-8-bag" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-3" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-seve-1.jpg" alt="MacKenzie Golf Bags Double Seve 8” · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-seve-2.jpg" alt="MacKenzie Golf Bags Double Seve 8” · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-seve-3.jpg" alt="MacKenzie Golf Bags Double Seve 8” · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-seve-4.jpg" alt="MacKenzie Golf Bags Double Seve 8” · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -311,7 +393,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-mackenzie-double-seve-8-golf-bag" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-4" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-shoe-1.jpg" alt="MacKenzie Golf Bags Shoe Bag · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-shoe-2.jpg" alt="MacKenzie Golf Bags Shoe Bag · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-shoe-3.jpg" alt="MacKenzie Golf Bags Shoe Bag · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/mackenzie-shoe-4.jpg" alt="MacKenzie Golf Bags Shoe Bag · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -324,15 +406,22 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-mackenzie-shoe-bag" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-  </div>
-
-  
-<div class="pull-quote">
+    </div>
+    <div class="pull-quote">
   <div class="pull-quote-inner">&ldquo;All I&rsquo;ve ever wanted to do is make cool stuff with my friends.&rdquo;<span class="pull-quote-attr">&mdash; Ian Gilley, Sugarloaf Social Club founder</span></div>
 </div>
-<h2 class="products-hdr sec">THE PLAYERS, Officially</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sugarloaf-social-club/btk-body-3.jpg" alt="Sugarloaf Social Club lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">THE PLAYERS, Officially</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-5" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/players-polo-1.jpg" alt="THE PLAYERS “Major” Stripe Sport Polo · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-polo-2.jpg" alt="THE PLAYERS “Major” Stripe Sport Polo · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-polo-3.jpg" alt="THE PLAYERS “Major” Stripe Sport Polo · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-polo-4.jpg" alt="THE PLAYERS “Major” Stripe Sport Polo · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -345,7 +434,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/the-players-x-ssc-major-stripe-sport-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-6" data-frames="3">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/players-crew-1.jpg" alt="THE PLAYERS Caddie Crew · view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-crew-2.jpg" alt="THE PLAYERS Caddie Crew · view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-crew-3.jpg" alt="THE PLAYERS Caddie Crew · view 3 of 3" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span>
@@ -358,7 +447,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/the-players-x-ssc-caddie-crew" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-7" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/players-vest-1.jpg" alt="THE PLAYERS Tech Vest · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-vest-2.jpg" alt="THE PLAYERS Tech Vest · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-vest-3.jpg" alt="THE PLAYERS Tech Vest · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-vest-4.jpg" alt="THE PLAYERS Tech Vest · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -371,7 +460,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/the-players-x-ssc-tech-vest" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-8" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/players-cap-1.jpg" alt="THE PLAYERS Runner Cap · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-cap-2.jpg" alt="THE PLAYERS Runner Cap · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-cap-3.jpg" alt="THE PLAYERS Runner Cap · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/players-cap-4.jpg" alt="THE PLAYERS Runner Cap · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -384,11 +473,19 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/the-players-x-ssc-runner-cap" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">The Caddie Scholarship Work</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/sugarloaf-social-club/btk-body-4.jpg" alt="Sugarloaf Social Club lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Caddie Scholarship Work</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-9" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/wga-tee-1.jpg" alt="Western Golf Association Evans Scholars T-Shirt · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-tee-2.jpg" alt="Western Golf Association Evans Scholars T-Shirt · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-tee-3.jpg" alt="Western Golf Association Evans Scholars T-Shirt · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-tee-4.jpg" alt="Western Golf Association Evans Scholars T-Shirt · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -401,7 +498,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/wga-evans-scholars-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="2">
+<div class="product-card" id="p-10" data-frames="2">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/wga-sling-1.jpg" alt="Western Golf Association Caddie Sling · view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-sling-2.jpg" alt="Western Golf Association Caddie Sling · view 2 of 2" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span>
@@ -414,7 +511,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/wga-caddie-sling" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-11" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/wga-polo-1.jpg" alt="Western Golf Association Sport Polo · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-polo-2.jpg" alt="Western Golf Association Sport Polo · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-polo-3.jpg" alt="Western Golf Association Sport Polo · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/wga-polo-4.jpg" alt="Western Golf Association Sport Polo · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -427,7 +524,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/wga-sport-polo" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-12" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/evans-bag-1.jpg" alt="Evans Scholars “Team Bag” · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/evans-bag-2.jpg" alt="Evans Scholars “Team Bag” · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/evans-bag-3.jpg" alt="Evans Scholars “Team Bag” · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/evans-bag-4.jpg" alt="Evans Scholars “Team Bag” · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -440,11 +537,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-evans-team-bag" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">Clubhaus, Japan</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Clubhaus, Japan</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-hedgehog-1.jpg" alt="Clubhaus Hedgehog Knit Headcover · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-hedgehog-2.jpg" alt="Clubhaus Hedgehog Knit Headcover · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-hedgehog-3.jpg" alt="Clubhaus Hedgehog Knit Headcover · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-hedgehog-4.jpg" alt="Clubhaus Hedgehog Knit Headcover · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -457,7 +558,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-clubhaus-knit-hedgehog-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-14" data-frames="3">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-fan-1.jpg" alt="Clubhaus Sensu Fan · view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-fan-2.jpg" alt="Clubhaus Sensu Fan · view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-fan-3.jpg" alt="Clubhaus Sensu Fan · view 3 of 3" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span>
@@ -470,7 +571,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-clubhaus-sensu-fan" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-15" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-windshirt-1.jpg" alt="Clubhaus Windshirt · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-windshirt-2.jpg" alt="Clubhaus Windshirt · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-windshirt-3.jpg" alt="Clubhaus Windshirt · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-windshirt-4.jpg" alt="Clubhaus Windshirt · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -483,7 +584,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-clubhaus-windshirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-16" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-pouch-1.jpg" alt="Clubhaus Valuables Pouch · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-pouch-2.jpg" alt="Clubhaus Valuables Pouch · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-pouch-3.jpg" alt="Clubhaus Valuables Pouch · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/clubhaus-pouch-4.jpg" alt="Clubhaus Valuables Pouch · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -496,11 +597,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-clubhaus-valuables-pouch" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">Brand on Brand</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Brand on Brand</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-17" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/payntr-87-1.jpg" alt="PAYNTR Golf “SUMMER P.O.P.” Eighty Seven · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/payntr-87-2.jpg" alt="PAYNTR Golf “SUMMER P.O.P.” Eighty Seven · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/payntr-87-3.jpg" alt="PAYNTR Golf “SUMMER P.O.P.” Eighty Seven · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/payntr-87-4.jpg" alt="PAYNTR Golf “SUMMER P.O.P.” Eighty Seven · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -513,7 +618,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-eighty-seven" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-18" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/payntr-slides-1.jpg" alt="PAYNTR Golf Summer Slides · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/payntr-slides-2.jpg" alt="PAYNTR Golf Summer Slides · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/payntr-slides-3.jpg" alt="PAYNTR Golf Summer Slides · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/payntr-slides-4.jpg" alt="PAYNTR Golf Summer Slides · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -526,7 +631,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-slide" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-19" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/sentinel-case-1.jpg" alt="Sentinel Golf Rangefinder Case · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/sentinel-case-2.jpg" alt="Sentinel Golf Rangefinder Case · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/sentinel-case-3.jpg" alt="Sentinel Golf Rangefinder Case · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/sentinel-case-4.jpg" alt="Sentinel Golf Rangefinder Case · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -539,7 +644,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/sugarloaf-x-sentinel-rangefinder-case-2026" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-20" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/sentinel-jacket-1.jpg" alt="Sentinel Golf Red Field Jacket · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/sentinel-jacket-2.jpg" alt="Sentinel Golf Red Field Jacket · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/sentinel-jacket-3.jpg" alt="Sentinel Golf Red Field Jacket · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/sentinel-jacket-4.jpg" alt="Sentinel Golf Red Field Jacket · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -552,7 +657,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-sentinel-golf-red-field-jacket" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-21" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/students-polo-1.jpg" alt="Students Golf Students of SSC Polo · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/students-polo-2.jpg" alt="Students Golf Students of SSC Polo · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/students-polo-3.jpg" alt="Students Golf Students of SSC Polo · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/students-polo-4.jpg" alt="Students Golf Students of SSC Polo · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -565,7 +670,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/students-of-ssc-polo-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-22" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/students-hat-1.jpg" alt="Students Golf Scout Hat · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/students-hat-2.jpg" alt="Students Golf Scout Hat · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/students-hat-3.jpg" alt="Students Golf Scout Hat · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/students-hat-4.jpg" alt="Students Golf Scout Hat · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -578,11 +683,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/students-x-ssc-scout-hat" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">Objects</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Objects</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-23" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/irons-1.jpg" alt="SSC + BB&amp;F Don White Irons &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/irons-2.jpg" alt="SSC + BB&amp;F Don White Irons &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/irons-3.jpg" alt="SSC + BB&amp;F Don White Irons &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/irons-4.jpg" alt="SSC + BB&amp;F Don White Irons &middot; view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -595,7 +704,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-bb-f-irons-b012" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-24" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/makino-1.jpg" alt="Makino TOUR 3 Putter · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/makino-2.jpg" alt="Makino TOUR 3 Putter · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/makino-3.jpg" alt="Makino TOUR 3 Putter · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/makino-4.jpg" alt="Makino TOUR 3 Putter · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -608,7 +717,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/makino-tour-3-putter" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-25" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/bellroy-1.jpg" alt="Bellroy Lite Sling · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/bellroy-2.jpg" alt="Bellroy Lite Sling · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/bellroy-3.jpg" alt="Bellroy Lite Sling · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/bellroy-4.jpg" alt="Bellroy Lite Sling · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -621,7 +730,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-bellroy-lite-sling" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-26" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/totem-1.jpg" alt="TOTEM 3-Piece Divot Tool · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/totem-2.jpg" alt="TOTEM 3-Piece Divot Tool · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/totem-3.jpg" alt="TOTEM 3-Piece Divot Tool · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/totem-4.jpg" alt="TOTEM 3-Piece Divot Tool · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -634,7 +743,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-totem-3-piece-divot-tool" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-27" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/charlie-1.jpg" alt="Charlie Junior Golf Bag · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/charlie-2.jpg" alt="Charlie Junior Golf Bag · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/charlie-3.jpg" alt="Charlie Junior Golf Bag · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/charlie-4.jpg" alt="Charlie Junior Golf Bag · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -647,11 +756,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-charlie-junior-golf-bag" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">The Ones That Make No Sense</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Ones That Make No Sense</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-28" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/gleezy-tee-1.jpg" alt="Gleezy Queen City Quail T-Shirt · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/gleezy-tee-2.jpg" alt="Gleezy Queen City Quail T-Shirt · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/gleezy-tee-3.jpg" alt="Gleezy Queen City Quail T-Shirt · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/gleezy-tee-4.jpg" alt="Gleezy Queen City Quail T-Shirt · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -664,7 +777,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-gleezy-queen-city-quail-t-shirt" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-29" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/queencity-hc-1.jpg" alt="Gleezy Queen City Quail Knit Headcover · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/queencity-hc-2.jpg" alt="Gleezy Queen City Quail Knit Headcover · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/queencity-hc-3.jpg" alt="Gleezy Queen City Quail Knit Headcover · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/queencity-hc-4.jpg" alt="Gleezy Queen City Quail Knit Headcover · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -677,7 +790,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/queen-city-quail-knit-fairway-wood-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-30" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/trellis-1.jpg" alt="Trellis Coffee Bar Soccer Kit · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/trellis-2.jpg" alt="Trellis Coffee Bar Soccer Kit · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/trellis-3.jpg" alt="Trellis Coffee Bar Soccer Kit · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/trellis-4.jpg" alt="Trellis Coffee Bar Soccer Kit · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -690,7 +803,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-trellis-soccer-kit-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-31" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/jain-hoody-1.jpg" alt="Jain Grownup Hoody · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/jain-hoody-2.jpg" alt="Jain Grownup Hoody · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/jain-hoody-3.jpg" alt="Jain Grownup Hoody · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/jain-hoody-4.jpg" alt="Jain Grownup Hoody · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -703,11 +816,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-jain-grownup-hoody" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">What You Can Buy Today</h2>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">What You Can Buy Today</h2>
+    <div class="products-grid">
+<div class="product-card" id="p-32" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/tour-towel-1.jpg" alt="Sugarloaf Social Club The Tour Towel · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/tour-towel-2.jpg" alt="Sugarloaf Social Club The Tour Towel · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/tour-towel-3.jpg" alt="Sugarloaf Social Club The Tour Towel · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/tour-towel-4.jpg" alt="Sugarloaf Social Club The Tour Towel · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -720,7 +837,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-byrdie-tour-towel" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-33" data-frames="4">
       <div class="product-gallery">
         <div class="pg-track"><div class="pg-frame"><img src="/images/ssc-brand/terry-anorak-1.jpg" alt="Sugarloaf Social Club The Terry Anorak · view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/terry-anorak-2.jpg" alt="Sugarloaf Social Club The Terry Anorak · view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/terry-anorak-3.jpg" alt="Sugarloaf Social Club The Terry Anorak · view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/ssc-brand/terry-anorak-4.jpg" alt="Sugarloaf Social Club The Terry Anorak · view 4 of 4" loading="lazy" /></div></div>
         <button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span>
@@ -733,9 +850,12 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sugarloafsocialclub.com/products/ssc-x-brydie-terry-anorak" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
+</section>
 
-  <h2 class="products-hdr sec">Questions</h2>
+<section class="products" data-btk="faq">
+<h2 class="products-hdr sec">Questions</h2>
   <div class="faq">
     <details class="faq-q"><summary>Who founded Sugarloaf Social Club?</summary><p>Ian Gilley. He is the founder and CEO, and the brand is based in McLean, Virginia.</p></details>
     <details class="faq-q"><summary>How did Sugarloaf Social Club start?</summary><p>As a group chat in 2011 between college roommates who had just graduated. It became an annual golf trip, then an Instagram account, then a brand. The LLC was filed in 2017. Gilley has described the whole thing as “a happy little accident.”</p></details>
@@ -745,6 +865,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>What are the Evans Scholars products?</summary><p>A line made with the Western Golf Association supporting the Evans Scholars program, which sends caddies to college on full tuition and housing scholarships.</p></details>
     <details class="faq-q"><summary>Is Sugarloaf Social Club gear hard to get?</summary><p>Most of the collaboration work is. Of the thirty-three projects catalogued here, the majority are sold out. The current in-house range — the Terry run, the Tour Towel, headwear — restocks more reliably.</p></details>
     <details class="faq-q"><summary>What is the cheapest Sugarloaf collaboration?</summary><p>The SSC x Clubhaus Sensu Fan at $14, a folding paper fan printed with the Clubhaus mark.</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Sugarloaf Social Club</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/devereux-golf">
+      <div class="more-card-img"><img src="/images/devereux-golf/front9-polo.jpg" alt="Devereux Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Devereux Golf</div>
+        <div class="more-card-tag">Scottsdale, AZ &middot; apparel</div>
+        <div class="more-card-desc">Scottsdale brothers, est. 2013, named after their grandfather — relaxed silhouettes before that was normal.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/foray-golf">
+      <div class="more-card-img"><img src="/images/off-course-vol2/foray-planter.jpg" alt="Foray Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Foray Golf</div>
+        <div class="more-card-tag">New York, New York &middot; apparel/accessories</div>
+        <div class="more-card-desc">Women's golf apparel out of New York, alongside a curated capsule of genuinely vintage homeware sold one piece at a time.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/forden-golf">
+      <div class="more-card-img"><img src="/images/forden/9forty-khaki-0.jpg" alt="Forden Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Forden Golf</div>
+        <div class="more-card-tag">United States &middot; apparel/headwear</div>
+        <div class="more-card-desc">Streetwear-leaning golf label. The Swingman logo comes from Doc Edgerton's 1938 strobe photograph of a swing at MIT.</div>
+      </div>
+    </a>
   </div>
 </section>
 

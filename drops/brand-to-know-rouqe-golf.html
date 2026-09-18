@@ -135,6 +135,67 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .pull-quote-inner{font-family:var(--serif);font-style:italic;font-size:22px;line-height:1.4;padding:32px 0;margin:0;border-top:.5px solid rgba(20,20,20,.15);border-bottom:.5px solid rgba(20,20,20,.15);color:var(--grass)}
 .pull-quote-attr{font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);opacity:.45;margin-top:12px;display:block}
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
+
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What is Rouqe Golf?", "acceptedAnswer": {"@type": "Answer", "text": "A direct-to-consumer golf apparel label selling polos, mock necks, tees, skorts, dresses, knit sweaters, hats, headcovers and accessories through its own Shopify store at rouqegolf.com. The storefront defaults to Canada and prices in Canadian dollars. The legal name appears as Rouqe Golf Inc."}}, {"@type": "Question", "name": "Who founded Rouqe Golf?", "acceptedAnswer": {"@type": "Answer", "text": "Not publicly named. There is no About page on the site — it returns a 404 — and no founder is credited on the store, in any press, or in any interview we could find. The domain's WHOIS record is privacy-shielded. The only named person connected to the brand is Marko Mijaljevic, its Head of Design, who is credited with the SS25 collection. He is not described anywhere as the founder and we are not treating him as one."}}, {"@type": "Question", "name": "How much does Rouqe Golf cost?", "acceptedAnswer": {"@type": "Answer", "text": "Polos run $59 to $79, mock necks $59, knit polos $34, tees $29, skorts $69, dresses $89, sweaters $39 to $89, hats $49, headcovers $24 to $34 with a three-pack at $79, towels and sunglasses $19 each, and the golf bag $199. All Canadian dollars. Shipping is free over $150."}}, {"@type": "Question", "name": "Is Rouqe Golf men's or women's?", "acceptedAnswer": {"@type": "Answer", "text": "Both, and the women's collection is the larger of the two — 23 pieces against 21 for the men. Several styles are colour-matched across both lines, in sage green and chocolate brown, and the campaign photography shoots them together."}}, {"@type": "Question", "name": "What is Rouqe Golf's signature piece?", "acceptedAnswer": {"@type": "Answer", "text": "The mock neck. They make it in six colours at $59 and it is the silhouette the brand keeps returning to across both collections, in short sleeve for men and as a sleeveless tank for women. It is the clearest thing separating them from labels defaulting to a standard three-button polo."}}, {"@type": "Question", "name": "Why is so much of it sold out?", "acceptedAnswer": {"@type": "Answer", "text": "Twelve of the 21 men's pieces and nine of the 23 women's pieces were unavailable when we checked in August 2026. Small-batch production is normal at this size, and the pieces that go first — the burgundy rugby stripe, the script long-sleeve — are the loudest and most distinctive ones rather than the safe basics."}}, {"@type": "Question", "name": "Where is Rouqe Golf made?", "acceptedAnswer": {"@type": "Answer", "text": "The brand does not say. There is no manufacturing, factory or materials information anywhere on the store, which is common for labels at this scale but a fair thing to know if it matters to you."}}, {"@type": "Question", "name": "Does Rouqe Golf sell in shops?", "acceptedAnswer": {"@type": "Answer", "text": "No stockists, wholesale accounts or retail partners turned up anywhere. Everything points to direct-to-consumer through their own site only."}}, {"@type": "Question", "name": "What does Rouqe Golf's clothing actually look like?", "acceptedAnswer": {"@type": "Answer", "text": "Muted and tonal rather than bright — sage green, chocolate brown, burgundy, cream, black and pale blue, with retro rugby and Breton stripes doing most of the pattern work. Silhouettes are boxy rather than fitted. Two logo lockups run in parallel: a cursive script wordmark and a block letter R."}}, {"@type": "Question", "name": "Is the photography theirs?", "acceptedAnswer": {"@type": "Answer", "text": "Yes, and it is the strongest thing about the brand. They run two modes — hard-lit studio portraits against black and maroon backdrops, styled closer to streetwear than golf, and genuine on-course work shot at golden hour on a dry mountain course. Every image in this post is Rouqe's own."}}, {"@type": "Question", "name": "Where do I start?", "acceptedAnswer": {"@type": "Answer", "text": "The brown or green mock neck at $59 if you want the piece that defines the brand. The Script Polo at $24 if you want the cheapest way in. The RQ Sweater at $39 is the best value in the store by some distance."}}]}</script>
 </head>
@@ -169,15 +230,31 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/rouqe/hero.jpg" alt="A golfer in the Rouqe Golf Blue Blade Collar polo on a dry hillside course, from the brand&rsquo;s own campaign" /></div></div>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/rouqe-golf/btk-hero.jpg" alt="Rouqe Golf &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Rouqe Golf does 1974 club-pro styling better than any label its size, and the proof is which pieces are missing. The burgundy and cream rugby stripe has sold out. So has the black long-sleeve with the cream chest banding, and so has the houndstooth. Twelve of the twenty-one pieces in the men&rsquo;s collection are gone, and the loudest ones went first, which tells you more about the brand than a fabric spec would.</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/rouqe-golf/btk-body-1.jpg" alt="Rouqe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>What is left is a small and unusually coherent range. The mock neck is the silhouette everything is built on, cut in six colours at fifty-nine dollars, in a category where nearly everyone defaults to a three-button placket. Around it sit retro stripes and a palette of sage green, chocolate brown, burgundy and cream that runs across both lines. The brown mock neck and the brown skort are shot on the same couple, which is more coordination than most labels this size bother with.</p>
     <p>The photography is the other thing. Rouqe shoots two ways: hard-lit studio portraits against black and deep maroon, styled closer to a streetwear campaign than a golf catalogue, and on-course work at golden hour on a dry mountain course with a lake in the middle distance. Every image on the site is the brand&rsquo;s own, and it carries more atmosphere than labels ten times the size manage.</p>
     <p>What Rouqe will not tell you is who runs it. There is no About page, and the URL returns a 404. No founder is named on the store or in any interview, and the domain registration is privacy-shielded. The one person publicly attached to the brand is Marko Mijaljevic, its Head of Design, credited with the SS25 collection. The domain was registered in spring 2023, which dates the shopfront rather than the company. For a label whose whole pitch is a point of view, the anonymity is a strange choice, and the clothes are good enough that it is the only thing holding the story back.</p>
   </div>
+</section>
+
+<div class="btk-card">
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
@@ -186,7 +263,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
       <div class="sidebar-detail"><span class="l">Women&rsquo;s</span><span>23</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$19&ndash;$199 CAD</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>Aug 2026</span></div>
-      <a href="/brands/" class="sidebar-cta">Browse the Brand Index &rarr;</a>
+      <a href="/brands/" target="_blank" rel="noopener" class="sidebar-cta">Browse the Brand Index &rarr;</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#RouqeGolf</span>
@@ -198,11 +275,17 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<section class="products">
-<h2 id="mens">The Men&rsquo;s Collection</h2>
-<p class="cat-kicker"><strong>Eleven of twenty-one &middot; polos, mocks, knits</strong>The men&rsquo;s side runs to twenty-one pieces and twelve of them have sold out, so it reads as much like an archive as a shopping list. Mock necks and retro stripes are the throughline.</p>
-<div class="products-grid">
-  <div class="product-card" id="brown-mock-neck" data-frames="6">
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/rouqe-golf/btk-body-2.jpg" alt="Rouqe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 20 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Men&rsquo;s Collection</h2>
+    <p class="cat-kicker"><strong>Eleven of twenty-one &middot; polos, mocks, knits</strong>The men&rsquo;s side runs to twenty-one pieces and twelve of them have sold out, so it reads as much like an archive as a shopping list. Mock necks and retro stripes are the throughline.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" id="brown-mock-neck" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/brown-mock-neck-0.jpg" loading="lazy" alt="Rouqe Golf Brown Mock Neck &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/brown-mock-neck-1.jpg" loading="lazy" alt="Rouqe Golf Brown Mock Neck &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/brown-mock-neck-2.jpg" loading="lazy" alt="Rouqe Golf Brown Mock Neck &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/brown-mock-neck-3.jpg" loading="lazy" alt="Rouqe Golf Brown Mock Neck &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/brown-mock-neck-4.jpg" loading="lazy" alt="Rouqe Golf Brown Mock Neck &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/brown-mock-neck-5.jpg" loading="lazy" alt="Rouqe Golf Brown Mock Neck &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mock neck &middot; $59</div>
@@ -211,7 +294,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="burgundy-stripe" data-frames="5">
+<div class="product-card" id="p-2" id="burgundy-stripe" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/burgundy-stripe-0.jpg" loading="lazy" alt="Rouqe Golf Burgundy Striped Polo &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/rouqe/burgundy-stripe-1.jpg" loading="lazy" alt="Rouqe Golf Burgundy Striped Polo &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/rouqe/burgundy-stripe-2.jpg" loading="lazy" alt="Rouqe Golf Burgundy Striped Polo &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/rouqe/burgundy-stripe-3.jpg" loading="lazy" alt="Rouqe Golf Burgundy Striped Polo &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/rouqe/burgundy-stripe-4.jpg" loading="lazy" alt="Rouqe Golf Burgundy Striped Polo &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69 &middot; sold out</div>
@@ -220,7 +303,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="blue-blade-collar" data-frames="5">
+<div class="product-card" id="p-3" id="blue-blade-collar" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/blue-blade-collar-0.jpg" loading="lazy" alt="Rouqe Golf Blue Blade Collar &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/rouqe/blue-blade-collar-1.jpg" loading="lazy" alt="Rouqe Golf Blue Blade Collar &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/rouqe/blue-blade-collar-2.jpg" loading="lazy" alt="Rouqe Golf Blue Blade Collar &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/rouqe/blue-blade-collar-3.jpg" loading="lazy" alt="Rouqe Golf Blue Blade Collar &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/rouqe/blue-blade-collar-4.jpg" loading="lazy" alt="Rouqe Golf Blue Blade Collar &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69</div>
@@ -229,7 +312,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="green-mock-neck" data-frames="5">
+<div class="product-card" id="p-4" id="green-mock-neck" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/green-mock-neck-0.jpg" loading="lazy" alt="Rouqe Golf Green Mock Neck &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/rouqe/green-mock-neck-1.jpg" loading="lazy" alt="Rouqe Golf Green Mock Neck &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/rouqe/green-mock-neck-2.jpg" loading="lazy" alt="Rouqe Golf Green Mock Neck &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/rouqe/green-mock-neck-3.jpg" loading="lazy" alt="Rouqe Golf Green Mock Neck &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/rouqe/green-mock-neck-4.jpg" loading="lazy" alt="Rouqe Golf Green Mock Neck &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Mock neck &middot; $59</div>
@@ -238,7 +321,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="script-ls" data-frames="4">
+<div class="product-card" id="p-5" id="script-ls" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/script-ls-0.jpg" loading="lazy" alt="Rouqe Golf Script Long-Sleeve Polo &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/rouqe/script-ls-1.jpg" loading="lazy" alt="Rouqe Golf Script Long-Sleeve Polo &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/rouqe/script-ls-2.jpg" loading="lazy" alt="Rouqe Golf Script Long-Sleeve Polo &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/rouqe/script-ls-3.jpg" loading="lazy" alt="Rouqe Golf Script Long-Sleeve Polo &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Long sleeve &middot; $79 &middot; sold out</div>
@@ -247,7 +330,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="bw-stripe" data-frames="6">
+<div class="product-card" id="p-6" id="bw-stripe" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/bw-stripe-0.jpg" loading="lazy" alt="Rouqe Golf B/W Striped Polo &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/bw-stripe-1.jpg" loading="lazy" alt="Rouqe Golf B/W Striped Polo &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/bw-stripe-2.jpg" loading="lazy" alt="Rouqe Golf B/W Striped Polo &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/bw-stripe-3.jpg" loading="lazy" alt="Rouqe Golf B/W Striped Polo &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/bw-stripe-4.jpg" loading="lazy" alt="Rouqe Golf B/W Striped Polo &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/bw-stripe-5.jpg" loading="lazy" alt="Rouqe Golf B/W Striped Polo &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69 &middot; sold out</div>
@@ -256,7 +339,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="two-tone" data-frames="5">
+<div class="product-card" id="p-7" id="two-tone" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/two-tone-0.jpg" loading="lazy" alt="Rouqe Golf Two Tone Polo Blue &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/rouqe/two-tone-1.jpg" loading="lazy" alt="Rouqe Golf Two Tone Polo Blue &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/rouqe/two-tone-2.jpg" loading="lazy" alt="Rouqe Golf Two Tone Polo Blue &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/rouqe/two-tone-3.jpg" loading="lazy" alt="Rouqe Golf Two Tone Polo Blue &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/rouqe/two-tone-4.jpg" loading="lazy" alt="Rouqe Golf Two Tone Polo Blue &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69</div>
@@ -265,7 +348,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="eagle-polo" data-frames="6">
+<div class="product-card" id="p-8" id="eagle-polo" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/eagle-polo-0.jpg" loading="lazy" alt="Rouqe Golf Eagle Polo Black &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/eagle-polo-1.jpg" loading="lazy" alt="Rouqe Golf Eagle Polo Black &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/eagle-polo-2.jpg" loading="lazy" alt="Rouqe Golf Eagle Polo Black &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/eagle-polo-3.jpg" loading="lazy" alt="Rouqe Golf Eagle Polo Black &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/eagle-polo-4.jpg" loading="lazy" alt="Rouqe Golf Eagle Polo Black &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/eagle-polo-5.jpg" loading="lazy" alt="Rouqe Golf Eagle Polo Black &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69 &middot; sold out</div>
@@ -274,7 +357,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="roq-polo" data-frames="5">
+<div class="product-card" id="p-9" id="roq-polo" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/roq-polo-0.jpg" loading="lazy" alt="Rouqe Golf ROQ Polo &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/rouqe/roq-polo-1.jpg" loading="lazy" alt="Rouqe Golf ROQ Polo &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/rouqe/roq-polo-2.jpg" loading="lazy" alt="Rouqe Golf ROQ Polo &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/rouqe/roq-polo-3.jpg" loading="lazy" alt="Rouqe Golf ROQ Polo &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/rouqe/roq-polo-4.jpg" loading="lazy" alt="Rouqe Golf ROQ Polo &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69 &middot; sold out</div>
@@ -283,7 +366,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="knit-beige" data-frames="6">
+<div class="product-card" id="p-10" id="knit-beige" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/knit-beige-0.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Knit Sweater Beige &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/knit-beige-1.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Knit Sweater Beige &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/knit-beige-2.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Knit Sweater Beige &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/knit-beige-3.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Knit Sweater Beige &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/knit-beige-4.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Knit Sweater Beige &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/knit-beige-5.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Knit Sweater Beige &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sweater &middot; $59</div>
@@ -292,7 +375,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="rq-sweater" data-frames="6">
+<div class="product-card" id="p-11" id="rq-sweater" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/rq-sweater-0.jpg" loading="lazy" alt="Rouqe Golf RQ Sweater &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/rq-sweater-1.jpg" loading="lazy" alt="Rouqe Golf RQ Sweater &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/rq-sweater-2.jpg" loading="lazy" alt="Rouqe Golf RQ Sweater &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/rq-sweater-3.jpg" loading="lazy" alt="Rouqe Golf RQ Sweater &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/rq-sweater-4.jpg" loading="lazy" alt="Rouqe Golf RQ Sweater &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/rq-sweater-5.jpg" loading="lazy" alt="Rouqe Golf RQ Sweater &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sweater &middot; $39</div>
@@ -301,15 +384,23 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-</div>
-
-<div class="pull-quote">
+    </div>
+    <div class="pull-quote">
   <div class="pull-quote-inner">&ldquo;As Head of Design at Rouqe Golf, I oversee the creative direction of the brand, designing seasonal apparel collections, graphics, and visual assets that bridge the gap between golf and modern fashion.&rdquo;<span class="pull-quote-attr">&mdash; Marko Mijaljevic, Head of Design, Rouqe Golf</span></div>
 </div>
-<h2 id="womens">From the Women&rsquo;s Side</h2>
-<p class="cat-kicker"><strong>Three &middot; the dresses and the skort</strong>The women&rsquo;s collection is the larger of the two and carries the higher price points. These three define it, and all three have sold out.</p>
-<div class="products-grid">
-  <div class="product-card" id="w-dress-black" data-frames="6">
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/rouqe-golf/btk-body-3.jpg" alt="Rouqe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">From the Women&rsquo;s Side</h2>
+    <p class="cat-kicker"><strong>Three &middot; the dresses and the skort</strong>The women&rsquo;s collection is the larger of the two and carries the higher price points. These three define it, and all three have sold out.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-12" id="w-dress-black" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/w-dress-black-0.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Black &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-black-1.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Black &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-black-2.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Black &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-black-3.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Black &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-black-4.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Black &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-black-5.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Black &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Dress &middot; $89 &middot; sold out</div>
@@ -318,7 +409,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/womens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="w-dress-pink" data-frames="6">
+<div class="product-card" id="p-13" id="w-dress-pink" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/w-dress-pink-0.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Pink &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-pink-1.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Pink &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-pink-2.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Pink &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-pink-3.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Pink &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-pink-4.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Pink &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-dress-pink-5.jpg" loading="lazy" alt="Rouqe Golf &ldquo;R&rdquo; Dress Pink &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Dress &middot; $89 &middot; sold out</div>
@@ -327,7 +418,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/womens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="w-black-skort" data-frames="6">
+<div class="product-card" id="p-14" id="w-black-skort" data-frames="6">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/w-black-skort-0.jpg" loading="lazy" alt="Rouqe Golf Black Skort &middot; view 1 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-black-skort-1.jpg" loading="lazy" alt="Rouqe Golf Black Skort &middot; view 2 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-black-skort-2.jpg" loading="lazy" alt="Rouqe Golf Black Skort &middot; view 3 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-black-skort-3.jpg" loading="lazy" alt="Rouqe Golf Black Skort &middot; view 4 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-black-skort-4.jpg" loading="lazy" alt="Rouqe Golf Black Skort &middot; view 5 of 6"></div><div class="pg-frame"><img src="/images/rouqe/w-black-skort-5.jpg" loading="lazy" alt="Rouqe Golf Black Skort &middot; view 6 of 6"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/6</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button><button class="pg-dot" data-i="5" aria-label="View image 6"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Skort &middot; $69 &middot; sold out</div>
@@ -336,11 +427,20 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/womens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="accessories">The Accessories</h2>
-<p class="cat-kicker"><strong>Three &middot; headcovers, towel, hat</strong>Rouqe barely makes accessories: headcovers, a towel, sunglasses, five hats and one bag. These three are what the brand does when it leaves fabric behind.</p>
-<div class="products-grid">
-  <div class="product-card" id="acc-headcovers" data-frames="2">
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/rouqe-golf/btk-body-4.jpg" alt="Rouqe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Accessories</h2>
+    <p class="cat-kicker"><strong>Three &middot; headcovers, towel, hat</strong>Rouqe barely makes accessories: headcovers, a towel, sunglasses, five hats and one bag. These three are what the brand does when it leaves fabric behind.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-15" id="acc-headcovers" data-frames="2">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/acc-headcovers-0.jpg" loading="lazy" alt="Rouqe Golf Script Head Covers, 3 Pack &middot; view 1 of 2"></div><div class="pg-frame"><img src="/images/rouqe/acc-headcovers-1.jpg" loading="lazy" alt="Rouqe Golf Script Head Covers, 3 Pack &middot; view 2 of 2"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Headcovers &middot; $79 &middot; sold out</div>
@@ -349,7 +449,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/accessories" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="acc-towel" data-frames="3">
+<div class="product-card" id="p-16" id="acc-towel" data-frames="3">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/acc-towel-0.jpg" loading="lazy" alt="Rouqe Golf RQ Jacquard Towel &middot; view 1 of 3"></div><div class="pg-frame"><img src="/images/rouqe/acc-towel-1.jpg" loading="lazy" alt="Rouqe Golf RQ Jacquard Towel &middot; view 2 of 3"></div><div class="pg-frame"><img src="/images/rouqe/acc-towel-2.jpg" loading="lazy" alt="Rouqe Golf RQ Jacquard Towel &middot; view 3 of 3"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Towel &middot; $19 &middot; sold out</div>
@@ -358,7 +458,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/accessories" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="acc-hat" data-frames="4">
+<div class="product-card" id="p-17" id="acc-hat" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/acc-hat-0.jpg" loading="lazy" alt="Rouqe Golf Eagle Hat Green &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/rouqe/acc-hat-1.jpg" loading="lazy" alt="Rouqe Golf Eagle Hat Green &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/rouqe/acc-hat-2.jpg" loading="lazy" alt="Rouqe Golf Eagle Hat Green &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/rouqe/acc-hat-3.jpg" loading="lazy" alt="Rouqe Golf Eagle Hat Green &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Hat &middot; $49 &middot; sold out</div>
@@ -367,11 +467,20 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/accessories" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-</div>
-<h2 id="wild">In the Wild</h2>
-<p class="cat-kicker"><strong>Three &middot; the brand&rsquo;s own course photography</strong>Rouqe shoots its own campaigns on what looks like a dry mountain course at golden hour, and the results carry more atmosphere than labels ten times the size manage.</p>
-<div class="products-grid">
-  <div class="product-card" id="shorts-black" data-frames="4">
+    </div>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/rouqe-golf/btk-body-5.jpg" alt="Rouqe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">In the Wild</h2>
+    <p class="cat-kicker"><strong>Three &middot; the brand&rsquo;s own course photography</strong>Rouqe shoots its own campaigns on what looks like a dry mountain course at golden hour, and the results carry more atmosphere than labels ten times the size manage.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-18" id="shorts-black" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/shorts-black-0.jpg" loading="lazy" alt="Rouqe Golf Straight Cut Shorts &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/rouqe/shorts-black-1.jpg" loading="lazy" alt="Rouqe Golf Straight Cut Shorts &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/rouqe/shorts-black-2.jpg" loading="lazy" alt="Rouqe Golf Straight Cut Shorts &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/rouqe/shorts-black-3.jpg" loading="lazy" alt="Rouqe Golf Straight Cut Shorts &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Shorts &middot; $69</div>
@@ -380,7 +489,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="range-tee" data-frames="4">
+<div class="product-card" id="p-19" id="range-tee" data-frames="4">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/range-tee-0.jpg" loading="lazy" alt="Rouqe Golf Range Tee Black &middot; view 1 of 4"></div><div class="pg-frame"><img src="/images/rouqe/range-tee-1.jpg" loading="lazy" alt="Rouqe Golf Range Tee Black &middot; view 2 of 4"></div><div class="pg-frame"><img src="/images/rouqe/range-tee-2.jpg" loading="lazy" alt="Rouqe Golf Range Tee Black &middot; view 3 of 4"></div><div class="pg-frame"><img src="/images/rouqe/range-tee-3.jpg" loading="lazy" alt="Rouqe Golf Range Tee Black &middot; view 4 of 4"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Tee &middot; $29</div>
@@ -389,7 +498,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-  <div class="product-card" id="fw24-green" data-frames="5">
+<div class="product-card" id="p-20" id="fw24-green" data-frames="5">
     <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/rouqe/fw24-green-0.jpg" loading="lazy" alt="Rouqe Golf F/W 24 Polo Green &middot; view 1 of 5"></div><div class="pg-frame"><img src="/images/rouqe/fw24-green-1.jpg" loading="lazy" alt="Rouqe Golf F/W 24 Polo Green &middot; view 2 of 5"></div><div class="pg-frame"><img src="/images/rouqe/fw24-green-2.jpg" loading="lazy" alt="Rouqe Golf F/W 24 Polo Green &middot; view 3 of 5"></div><div class="pg-frame"><img src="/images/rouqe/fw24-green-3.jpg" loading="lazy" alt="Rouqe Golf F/W 24 Polo Green &middot; view 4 of 5"></div><div class="pg-frame"><img src="/images/rouqe/fw24-green-4.jpg" loading="lazy" alt="Rouqe Golf F/W 24 Polo Green &middot; view 5 of 5"></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/5</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button><button class="pg-dot" data-i="4" aria-label="View image 5"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Polo &middot; $69 &middot; sold out</div>
@@ -398,8 +507,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://rouqegolf.com/collections/mens" target="_blank" rel="noopener" class="product-link">Shop Rouqe Golf &#8599;</a>
       </div>
   </div>
-</div>
+    </div>
+  </div>
+</section>
 
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/rouqe-golf/btk-body-6.jpg" alt="Rouqe Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="faq">
 <div class="faq">
     <details class="faq-q"><summary>What is Rouqe Golf?</summary><p>A direct-to-consumer golf apparel label selling polos, mock necks, tees, skorts, dresses, knit sweaters, hats, headcovers and accessories through its own Shopify store at rouqegolf.com. The storefront defaults to Canada and prices in Canadian dollars. The legal name appears as Rouqe Golf Inc.</p></details>
     <details class="faq-q"><summary>Who founded Rouqe Golf?</summary><p>Not publicly named. There is no About page on the site — it returns a 404 — and no founder is credited on the store, in any press, or in any interview we could find. The domain's WHOIS record is privacy-shielded. The only named person connected to the brand is Marko Mijaljevic, its Head of Design, who is credited with the SS25 collection. He is not described anywhere as the founder and we are not treating him as one.</p></details>
@@ -412,6 +528,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>What does Rouqe Golf's clothing actually look like?</summary><p>Muted and tonal rather than bright — sage green, chocolate brown, burgundy, cream, black and pale blue, with retro rugby and Breton stripes doing most of the pattern work. Silhouettes are boxy rather than fitted. Two logo lockups run in parallel: a cursive script wordmark and a block letter R.</p></details>
     <details class="faq-q"><summary>Is the photography theirs?</summary><p>Yes, and it is the strongest thing about the brand. They run two modes — hard-lit studio portraits against black and maroon backdrops, styled closer to streetwear than golf, and genuine on-course work shot at golden hour on a dry mountain course. Every image in this post is Rouqe's own.</p></details>
     <details class="faq-q"><summary>Where do I start?</summary><p>The brown or green mock neck at $59 if you want the piece that defines the brand. The Script Polo at $24 if you want the cheapest way in. The RQ Sweater at $39 is the best value in the store by some distance.</p></details>
+  </div>
+</section>
+
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Rouqe Golf</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/apres-golf">
+      <div class="more-card-img"><img src="/images/apres-golf/fruit-looper.jpg" alt="Après Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Après Golf</div>
+        <div class="more-card-tag">California &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/devereux-golf">
+      <div class="more-card-img"><img src="/images/devereux-golf/front9-polo.jpg" alt="Devereux Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Devereux Golf</div>
+        <div class="more-card-tag">Scottsdale, AZ &middot; apparel</div>
+        <div class="more-card-desc">Scottsdale brothers, est. 2013, named after their grandfather — relaxed silhouettes before that was normal.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/foray-golf">
+      <div class="more-card-img"><img src="/images/off-course-vol2/foray-planter.jpg" alt="Foray Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Foray Golf</div>
+        <div class="more-card-tag">New York, New York &middot; apparel/accessories</div>
+        <div class="more-card-desc">Women's golf apparel out of New York, alongside a curated capsule of genuinely vintage homeware sold one piece at a time.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/forden-golf">
+      <div class="more-card-img"><img src="/images/forden/9forty-khaki-0.jpg" alt="Forden Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Forden Golf</div>
+        <div class="more-card-tag">United States &middot; apparel/headwear</div>
+        <div class="more-card-desc">Streetwear-leaning golf label. The Swingman logo comes from Doc Edgerton's 1938 strobe photograph of a swing at MIT.</div>
+      </div>
+    </a>
   </div>
 </section>
 

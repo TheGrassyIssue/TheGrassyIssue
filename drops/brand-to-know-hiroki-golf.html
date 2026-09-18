@@ -121,6 +121,13 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
 
 /* THE MEASURE. Lenny: "all the wording to be more centered and read more like
    a publication." One column, one width, centred, used by every piece of
@@ -132,6 +139,8 @@ section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
 section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
@@ -197,7 +206,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/hiroki/hero.jpg" alt="Two golfers walking a coastal New Zealand fairway carrying Hiroki stand bags" />
+  <img class="drop-hero-img" src="/images/hiroki/hero.jpg" alt="Hiroki Golf &mdash; lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="take">
@@ -206,6 +215,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <p>A New Zealand label with a Japanese name usually means a marketing department got there first. Hiroki is the other case &mdash; the name is deliberate, and what sits under it is plain, quiet and built to be carried rather than wheeled.</p>
     <p>The leather Sunday bag is the piece that tells you what the brand thinks it is: full-grain, no loud branding, the sort of thing meant to age rather than date. If you carry your own bag and would rather it read as considered than as technical, this is a short range aimed squarely at you &mdash; and the $279 FTE is the cheapest way to find out whether you agree.</p>
   </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/hiroki/leather-detail.jpg" alt="Hiroki Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="prose">
@@ -251,7 +264,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </div>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/hiroki/leather-detail.jpg" alt="Close detail of the leather body and strap on a Hiroki Luxury Leather Sunday Bag" />
+  <img class="drop-hero-img btk-16x9" src="/images/hiroki/jacks-point-1.jpg" alt="Hiroki Golf lookbook photograph" loading="lazy" />
 </section>
 
 <section class="products" data-btk="start-here">
@@ -334,6 +347,9 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
     </div>
   </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
   <div class="products-section">
     <h2 class="products-hdr">Sunday Bags</h2>
     <div class="products-grid">
@@ -402,6 +418,9 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
     </div>
   </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
   <div class="products-section">
     <h2 class="products-hdr">Headcovers &amp; Putter Covers</h2>
     <div class="products-grid">
@@ -443,6 +462,9 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
     </div>
   </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
   <div class="products-section">
     <h2 class="products-hdr">Hats</h2>
     <div class="products-grid">
@@ -466,10 +488,6 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
     </div>
   </div>
-</section>
-
-<section class="drop-hero">
-  <img class="drop-hero-img" src="/images/hiroki/jacks-point-1.jpg" alt="Players on the course at the Hiroki Summer Shootout at Jack&rsquo;s Point, New Zealand" />
 </section>
 
 <section class="products" data-btk="coda">

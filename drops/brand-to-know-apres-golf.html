@@ -112,7 +112,68 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 .faq-q[open] summary:before{content:"\2212 "}
 .faq-q p{font-family:var(--serif);font-size:13px;line-height:1.6;opacity:.8;margin:10px 0 0}
 </style>
-<style>@media(max-width:760px){.ap-look{grid-template-columns:repeat(2,1fr)!important}}</style>
+<style>@media(max-width:760px){.ap-look{grid-template-columns:repeat(2,1fr)!important}}
+/* btk-template: start-here — generated, edit btk-template.py */
+.start-here{list-style:none;counter-reset:sh;border-top:.5px solid var(--ink)}
+.sh-row{counter-increment:sh;display:grid;grid-template-columns:28px 1fr 1.1fr;
+  gap:18px;align-items:baseline;padding:14px 0;border-bottom:.5px solid rgba(0,0,0,.18)}
+.sh-row::before{content:counter(sh,decimal-leading-zero);font-family:var(--mono);
+  font-size:10px;letter-spacing:.1em;opacity:.45}
+.sh-name{font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.3;
+  border-bottom:1px solid transparent;transition:border-color .15s}
+.sh-name:hover{border-bottom-color:var(--ink)}
+.sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
+
+/* THE MEASURE. Lenny: "all the wording to be more centered and read more like
+   a publication." One column, one width, centred, used by every piece of
+   running text on the page — the Take, both write-ups, the Start Here list and
+   the section headings over the product grid. The grid itself stays full
+   width; a magazine sets its pictures wide and its type narrow. */
+.btk-measure{max-width:760px;margin-left:auto;margin-right:auto}
+section[data-btk] .products-hdr,
+section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
+section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
+section[data-btk="take"]{padding-top:34px}
+section[data-btk="take"] .writeup-body{font-size:17px}
+/* the Brand Card, out of the sticky sidebar and set as a centred block */
+/* the masthead, centred with everything else. A left-aligned headline over a
+   centred page reads as two designs sharing a screen. */
+.drop-header{text-align:center}
+.drop-header .drop-meta{justify-content:center}
+.drop-header h1{max-width:900px;margin-left:auto;margin-right:auto}
+.breadcrumb{text-align:center}
+/* START HERE sits between the two measures: wider than the text column because
+   it is two columns, narrower than the product grid because it is type. */
+.start-here{max-width:1040px;margin-left:auto;margin-right:auto}
+.btk-card{max-width:1400px;margin:0 auto;padding:0 32px 8px}
+.btk-card .sidebar{position:static;max-width:520px;margin:0 auto}
+@media(max-width:820px){
+  .btk-card{padding:0 20px 8px}
+}
+/* THE PROSE SECTIONS. .writeup-body is a 700px measure built for the 2fr
+   column of the .writeup grid. Dropped into a full-width .products section it
+   keeps that 700px and hugs the left edge under a rule that spans 1400 — half
+   the band empty, which reads as broken rather than airy. Centred, with the
+   heading centred to match, the full-bleed rule over a narrow measure is a
+   deliberate magazine setting instead of a layout mistake. */
+.more-card-desc{font-size:13px;line-height:1.5;opacity:.7;margin-top:6px}
+@media(max-width:820px){
+  .sh-row{grid-template-columns:24px 1fr;gap:6px 14px}
+  .sh-row .sec-note{grid-column:2}
+}
+/* btk-template: end */
+</style>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -145,259 +206,30 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <span>50 Pieces &middot; $38 to $138</span>
   </div>
 </header>
+<section class="drop-hero">
+  <img class="drop-hero-img" src="/images/apres-golf/btk-hero.jpg" alt="Après Golf &mdash; lookbook photograph" loading="lazy" />
+</section>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/apres-golf/hero.jpg" alt="A tie-dyed Apr&egrave;s Golf sherpa fleece headcover being lifted off a driver beside a golf bag" /></div></div>
-<div class="writeup">
+<section class="products" data-btk="take">
   <div class="writeup-body">
+    <div class="drop-tag grass">The TGI Take</div>
     <p>Apr&egrave;s Golf makes hi-loft sherpa fleece headcovers, hand-sewn in California, and sews vintage patches onto them &mdash; ski resorts, country clubs, and whatever else turns up. Fifty pieces are below, across eight groups, all of them in stock on 9 September 2026.</p>
+  </div>
+</section>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/apres-golf/btk-body-1.jpg" alt="Après Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="story">
+  <h2 class="products-hdr">The Story</h2>
+  <div class="writeup-body">
     <p>The idea starts with the name. Apr&egrave;s-ski is the part of a ski day that happens after the skiing, and the patches that end up on these covers came off ski jackets: Chamonix, St. Moritz, Alta, Mad River Glen. Apr&egrave;s buys them, cuts fleece around them, and sells the result to golfers. The brand describes what it does plainly on its own site &mdash; <em>&ldquo;We source vintage patches, create new patches, embroider logos and print custom designs.&rdquo;</em> The sewing happens in a California factory that has been running since 1992, at a mill that also supplies fleece to outdoor and fashion labels.</p>
     <p>If you want the short version: the tie-dye prints are the ones people stop you about, the vintage patches are the ones that will not be repeatable, and the whole catalogue is really an advertisement for the custom programme, where you post them a patch of your own.</p>
   </div>
-</div>
-<section class="products">
-  <h2 class="products-hdr">The Tie-Dye Rack &mdash; 12 Prints</h2>
-  <p class="cat-kicker">Apr&egrave;s prints and dyes its own fleece, and this is the part of the catalogue that looks like nothing else on a first tee.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/fruit-looper.jpg" alt="The Fruit Looper &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-a2.jpg" alt="The Fruit Looper &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-a3.jpg" alt="The Fruit Looper &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-a4.jpg" alt="The Fruit Looper &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">The Fruit Looper&trade; &middot; $88</div>
-        <div class="product-desc">The Fruit Looper is the print the brand is built around, and it behaves like actual dye rather than a repeat pattern &mdash; magenta, marigold and teal bleeding into a navy ground with no two panels landing the same way. On hi-loft sherpa the colour sinks into the pile instead of sitting on top of it.</div>
-        <a href="https://apresgolf.com/products/the-fruit-looper-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille.jpg" alt="The Fruit Looper Chenille Patch &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille-a2.jpg" alt="The Fruit Looper Chenille Patch &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille-a3.jpg" alt="The Fruit Looper Chenille Patch &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille-a4.jpg" alt="The Fruit Looper Chenille Patch &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">The Fruit Looper&trade; Chenille Patch &middot; $88</div>
-        <div class="product-desc">Same print, with a chenille-lettered Apr&egrave;s-Golf patch stitched across the crown. Chenille is the varsity-jacket material, so the letters stand a few millimetres proud of the fleece and catch light from the side.</div>
-        <a href="https://apresgolf.com/products/fruit-looper-chenille-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/yuppie-scum.jpg" alt="Die Yuppie Scum Fruit Looper &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/yuppie-scum-a2.jpg" alt="Die Yuppie Scum Fruit Looper &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Die Yuppie Scum Fruit Looper&trade; &middot; $98</div>
-        <div class="product-desc">The Fruit Looper ground under a shield patch reading DIE YUPPIE SCUM &mdash; a line borrowed from 1980s Manhattan graffiti and later a Wall Street movie. On a golf headcover it is the most pointed thing in the catalogue.</div>
-        <a href="https://apresgolf.com/products/die-yuppie-scum-fruit-looper-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/parparazzi.jpg" alt="The Parparazzi &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/parparazzi-a2.jpg" alt="The Parparazzi &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/parparazzi-a3.jpg" alt="The Parparazzi &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/parparazzi-a4.jpg" alt="The Parparazzi &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">The Parparazzi &middot; $88</div>
-        <div class="product-desc">Cobalt and violet dropped into a lilac field, sold as a three-piece set with a matching alignment-stick sleeve. This one photographs closest to a genuine spiral tie-dye of anything Apr&egrave;s prints.</div>
-        <a href="https://apresgolf.com/products/le-blender-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/transfused.jpg" alt="Transfused &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/transfused-a2.jpg" alt="Transfused &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/transfused-a3.jpg" alt="Transfused &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/transfused-a4.jpg" alt="Transfused &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Transfused&trade; &middot; $88</div>
-        <div class="product-desc">Magenta and violet speckle over black, named for the drink you order at the turn. The trademark suggests Apr&egrave;s intends to keep running it rather than retire the colourway after a season.</div>
-        <a href="https://apresgolf.com/products/transfused-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/crayon-clouds.jpg" alt="Crayon Clouds &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/crayon-clouds-a2.jpg" alt="Crayon Clouds &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/crayon-clouds-a3.jpg" alt="Crayon Clouds &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Crayon Clouds &middot; $88</div>
-        <div class="product-desc">Cream ground with navy, sage and rust shapes laid over it in soft-edged blocks. It reads as the quietest print here and is the one that survives a bag otherwise full of black leather.</div>
-        <a href="https://apresgolf.com/products/crayon-clouds-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/digital-drops.jpg" alt="Digital Drops &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/digital-drops-a2.jpg" alt="Digital Drops &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/digital-drops-a3.jpg" alt="Digital Drops &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Digital Drops &middot; $88</div>
-        <div class="product-desc">White pixel-scatter on royal blue, printed rather than dyed, which is why the edges stay hard where the Fruit Looper's bleed.</div>
-        <a href="https://apresgolf.com/products/digital-drops-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sand-mosaic.jpg" alt="Sand Mosaic &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sand-mosaic-a2.jpg" alt="Sand Mosaic &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sand-mosaic-a3.jpg" alt="Sand Mosaic &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sand Mosaic &middot; $38</div>
-        <div class="product-desc">Speckled confetti over off-white, and the cheapest cover in the whole range at $38. Apr&egrave;s puts its price floor on the prints rather than on a stripped-down blank.</div>
-        <a href="https://apresgolf.com/products/sandy-mosaic-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/multi-mosaic.jpg" alt="Multi Mosaic Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/multi-mosaic-a2.jpg" alt="Multi Mosaic Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/multi-mosaic-a3.jpg" alt="Multi Mosaic Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Multi Mosaic Blade Putter Cover &middot; $88</div>
-        <div class="product-desc">Orange, cobalt and cream diamonds on a blade cover with a magnetic closure. The blade shape gives the print a flat panel to sit on, so the geometry stays legible instead of wrapping out of shape.</div>
-        <a href="https://apresgolf.com/products/multi-mosaic-sherpa-fleece-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/azalea.jpg" alt="Azalea &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/azalea-a2.jpg" alt="Azalea &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/azalea-a3.jpg" alt="Azalea &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Azalea &middot; $68</div>
-        <div class="product-desc">Pink and yellow blooms scattered over forest green, part of a small floral run named after flowering shrubs. Sold as a set with a matching blade cover.</div>
-        <a href="https://apresgolf.com/products/azalea-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/magnolia.jpg" alt="Magnolia &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/magnolia-a2.jpg" alt="Magnolia &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/magnolia-a3.jpg" alt="Magnolia &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Magnolia &middot; $68</div>
-        <div class="product-desc">White magnolia over pale pink, the softest thing in the printed line and the one that looks least like golf equipment sitting on a table.</div>
-        <a href="https://apresgolf.com/products/magnolia-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/yellow-jasmine.jpg" alt="Yellow Jasmine &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/yellow-jasmine-a2.jpg" alt="Yellow Jasmine &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/yellow-jasmine-a3.jpg" alt="Yellow Jasmine &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Yellow Jasmine &middot; $68</div>
-        <div class="product-desc">Yellow stars over navy paisley, which is the loudest of the three florals despite being the one named after the smallest flower.</div>
-        <a href="https://apresgolf.com/products/yellow-jasmine-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">The Neon Capsule &mdash; @HallyLead &times; Apr&egrave;s-Golf</h2>
-  <p class="cat-kicker">Five solid neons designed by Hally Leadbetter, each sold as a three-piece set with a matching alignment-stick sleeve.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-sherbet.jpg" alt="@HallyLead Aprs-Golf Sherbet &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sherbet-a2.jpg" alt="@HallyLead Aprs-Golf Sherbet &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sherbet-a3.jpg" alt="@HallyLead Aprs-Golf Sherbet &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Sherbet &middot; $38</div>
-        <div class="product-desc">Coral pink with a scarlet trim, sold as a three-piece with an alignment sleeve. Hally Leadbetter designed the five-colour capsule after Apr&egrave;s spotted an order under her name and got in touch.</div>
-        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-sherbet-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-cotton-candy.jpg" alt="@HallyLead Aprs-Golf Cotton Candy &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-cotton-candy-a2.jpg" alt="@HallyLead Aprs-Golf Cotton Candy &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-cotton-candy-a3.jpg" alt="@HallyLead Aprs-Golf Cotton Candy &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Cotton Candy &middot; $38</div>
-        <div class="product-desc">Hot pink over a black trim, the highest-saturation piece in a capsule that is already the brightest thing Apr&egrave;s makes.</div>
-        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-cotton-candy-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-blue-raspberry.jpg" alt="@HallyLead Aprs-Golf Blue Raspberry &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-blue-raspberry-a2.jpg" alt="@HallyLead Aprs-Golf Blue Raspberry &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-blue-raspberry-a3.jpg" alt="@HallyLead Aprs-Golf Blue Raspberry &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Blue Raspberry &middot; $38</div>
-        <div class="product-desc">Process blue against a red base tape. The neons are solid rather than printed, which puts all the work on the trim colour.</div>
-        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-blue-raspberry-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-grapeness.jpg" alt="@HallyLead Aprs-Golf Grapeness Wins &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-grapeness-a2.jpg" alt="@HallyLead Aprs-Golf Grapeness Wins &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-grapeness-a3.jpg" alt="@HallyLead Aprs-Golf Grapeness Wins &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Grapeness Wins &middot; $38</div>
-        <div class="product-desc">Lilac with a cyan trim, and the only piece in the capsule where the trim reads brighter than the body.</div>
-        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-grapeness-wins-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-sea-foam.jpg" alt="@HallyLead Aprs-Golf Sea Foam Honeycomb &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sea-foam-a2.jpg" alt="@HallyLead Aprs-Golf Sea Foam Honeycomb &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sea-foam-a3.jpg" alt="@HallyLead Aprs-Golf Sea Foam Honeycomb &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Sea Foam Honeycomb &middot; $38</div>
-        <div class="product-desc">Mint green over a coral trim, textured with a honeycomb pile rather than the flat sherpa loft used elsewhere in the capsule.</div>
-        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-sea-foam-honeycomb-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
-  <h2 class="products-hdr">The Dead Rack &mdash; 8 Pieces</h2>
-  <p class="cat-kicker">Bears and bolts, across headcovers, a blade cover and a mallet.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/dancing-bears.jpg" alt="Dancing Bears Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/dancing-bears-a2.jpg" alt="Dancing Bears Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Dancing Bears Patch &middot; $128</div>
-        <div class="product-desc">A row of marching bears on a cream ground, and the most expensive piece in the Dead run at $128. The bears are stitched as a single wide patch rather than assembled from individual ones.</div>
-        <a href="https://apresgolf.com/products/dancing-bear-patch-sherpa-fleece-headcover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/steal-clubface.jpg" alt="Steal Your Clubface Patch &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-a2.jpg" alt="Steal Your Clubface Patch &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-a3.jpg" alt="Steal Your Clubface Patch &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-a4.jpg" alt="Steal Your Clubface Patch &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Steal Your Clubface Patch &middot; $88</div>
-        <div class="product-desc">The lightning-bolt skull, rendered in red, white and blue on a cream cover, under a name that puns the artwork into golf. It is the most recognisable object Apr&egrave;s sells and the one that gets stopped on the first tee.</div>
-        <a href="https://apresgolf.com/products/steal-your-clubface-patch-sherpa-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-putter.jpg" alt="Steal Your Clubface Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-putter-a2.jpg" alt="Steal Your Clubface Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-putter-a3.jpg" alt="Steal Your Clubface Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Steal Your Clubface Blade Putter Cover &middot; $88</div>
-        <div class="product-desc">The same bolt-and-skull patch shrunk onto a navy blade cover. On a putter it sits at eye level over the bag, which is where this artwork wants to be.</div>
-        <a href="https://apresgolf.com/products/steal-your-clubface-vintage-patch-sherpa-fleece-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet-a2.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet-a3.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet-a4.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Mini Bears Mallet Putter Cover &middot; $108</div>
-        <div class="product-desc">Small bears repeated across a mallet-shaped cover, cut wide enough for a modern high-MOI head rather than a blade.</div>
-        <a href="https://apresgolf.com/products/mini-bears-sherpa-fleece-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-green-navy.jpg" alt="Green Bear Patch Navy &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-green-navy-a2.jpg" alt="Green Bear Patch Navy &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-green-navy-a3.jpg" alt="Green Bear Patch Navy &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Green Bear Patch &mdash; Navy &middot; $88</div>
-        <div class="product-desc">One bear, embroidered green, on navy sherpa. The single-bear covers run a colour per cover, so a full set spells out the sequence across a bag.</div>
-        <a href="https://apresgolf.com/products/green-bear-patch-sherpa-fleece-headcover-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-blue.jpg" alt="Blue Bear Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-blue-a2.jpg" alt="Blue Bear Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-blue-a3.jpg" alt="Blue Bear Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Blue Bear Patch &middot; $88</div>
-        <div class="product-desc">The blue bear on navy, sold as a three-piece. Buying by colour rather than by club is how the Dead rack is designed to be collected.</div>
-        <a href="https://apresgolf.com/products/blue-bear-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-pink.jpg" alt="Pink Bear Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-pink-a2.jpg" alt="Pink Bear Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-pink-a3.jpg" alt="Pink Bear Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Pink Bear Patch &middot; $88</div>
-        <div class="product-desc">Pink bear on navy, and the brightest of the single-bear set against its ground.</div>
-        <a href="https://apresgolf.com/products/pink-bear-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-orange.jpg" alt="Orange Bear Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-orange-a2.jpg" alt="Orange Bear Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-orange-a3.jpg" alt="Orange Bear Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Orange Bear Patch &middot; $88</div>
-        <div class="product-desc">Orange bear on navy, the highest-contrast pairing in the run and the easiest to pick out of a bag at ten paces.</div>
-        <a href="https://apresgolf.com/products/orange-bear-patch-sherpa-fleece-headcover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
+
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">Where the Patches Come From</h2>
   <p class="cat-kicker">A supply chain that runs on ski swaps and clubhouse drawers rather than on a production calendar.</p>
   <div class="writeup-body">
@@ -421,178 +253,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <figure style="margin:0;border:.5px solid var(--ink);overflow:hidden"><img src="/images/apres-golf/irl-archive.jpg" alt="Dozens of Apr&egrave;s headcovers piled together, showing the range of patches and prints" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block" /></figure>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">The Ski Patches &mdash; 6 Resorts</h2>
-  <p class="cat-kicker">Where the name stops being a pun. Genuine resort patches, sewn onto golf headcovers.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/chamonix.jpg" alt="Chamonix Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/chamonix-a2.jpg" alt="Chamonix Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Chamonix Vintage Patch &middot; $108</div>
-        <div class="product-desc">A Chamonix resort patch on cream sherpa. Chamonix hosted the first Winter Olympics in 1924, which makes this the oldest piece of ski history in the archive.</div>
-        <a href="https://apresgolf.com/products/chamonix-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/st-moritz.jpg" alt="St. Moritz Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/st-moritz-a2.jpg" alt="St. Moritz Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">St. Moritz Vintage Patch &middot; $98</div>
-        <div class="product-desc">The St. Moritz sun crest, sewn onto cream. The Engadine resort is the other 1920s Winter Games host, and its patches turn up in European ski-swap boxes far more often than American ones do.</div>
-        <a href="https://apresgolf.com/products/st-moritz-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/alta.jpg" alt="Alta Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/alta-a2.jpg" alt="Alta Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Alta Vintage Patch &middot; $88</div>
-        <div class="product-desc">Alta's patch on cream, from the Little Cottonwood resort that still bans snowboards. At $88 it is the cheapest entry into the vintage patch archive.</div>
-        <a href="https://apresgolf.com/products/alta-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/mad-river-glen.jpg" alt="Mad River Glen Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mad-river-glen-a2.jpg" alt="Mad River Glen Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Mad River Glen Vintage Patch &middot; $108</div>
-        <div class="product-desc">The Mad River Glen snowflake on black sherpa. The Vermont co-operative trades on being difficult, and its patch is the one skiers recognise across a crowded room.</div>
-        <a href="https://apresgolf.com/products/mad-river-glen-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="1">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sugarloaf.jpg" alt="Sugarloaf Vintage Patch" loading="lazy" /></div></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sugarloaf Vintage Patch &middot; $128</div>
-        <div class="product-desc">A Sugarloaf patch on cream, and the most expensive ski piece at $128. Maine's Carrabassett Valley mountain is the outlier in a rack otherwise weighted to the Alps and the Rockies.</div>
-        <a href="https://apresgolf.com/products/sugarloaf-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/heavenly-valley.jpg" alt="Heavenly Valley Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/heavenly-valley-a2.jpg" alt="Heavenly Valley Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Heavenly Valley Vintage Patch &middot; $118</div>
-        <div class="product-desc">The Heavenly Valley crest in red and blue over cream, from the Tahoe resort that straddles the California&ndash;Nevada line.</div>
-        <a href="https://apresgolf.com/products/heavenly-valley-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
-  <h2 class="products-hdr">The Club Patches &mdash; 6 Crests</h2>
-  <p class="cat-kicker">Fifty-six club patches are in stock today. These six are the ones a reader is most likely to recognise.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/lacc.jpg" alt="LACC Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/lacc-a2.jpg" alt="LACC Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/lacc-a3.jpg" alt="LACC Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">LACC Vintage Patch &middot; $118</div>
-        <div class="product-desc">The Los Angeles Country Club crest on cream sherpa. LACC hosted the 2023 U.S. Open, which pulled a famously private club into general view for a week.</div>
-        <a href="https://apresgolf.com/products/lacc-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="1">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/olympic-club.jpg" alt="The Olympic Club Vintage Patch" loading="lazy" /></div></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">The Olympic Club Vintage Patch &middot; $138</div>
-        <div class="product-desc">The Olympic Club's winged-O patch on navy, and the most expensive cover in the range at $138. The San Francisco club has hosted five U.S. Opens.</div>
-        <a href="https://apresgolf.com/products/olympic-club-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/pine-tree.jpg" alt="Pine Tree GC Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/pine-tree-a2.jpg" alt="Pine Tree GC Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/pine-tree-a3.jpg" alt="Pine Tree GC Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Pine Tree GC Vintage Patch &middot; $138</div>
-        <div class="product-desc">A Pine Tree Golf Club patch on cream. The Boynton Beach course is a Dick Wilson design and an architecture-nerd pick rather than a name-recognition one.</div>
-        <a href="https://apresgolf.com/products/pine-tree-gc-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sea-pines.jpg" alt="Sea Pines Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sea-pines-a2.jpg" alt="Sea Pines Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sea-pines-a3.jpg" alt="Sea Pines Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sea Pines Vintage Patch &middot; $118</div>
-        <div class="product-desc">The Sea Pines patch on cream, sold as a set. Hilton Head's resort is where Harbour Town sits, and the patch predates the lighthouse becoming the logo.</div>
-        <a href="https://apresgolf.com/products/sea-pines-vintage-patch-sherpa-fleece-headcover-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="4">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/wianno.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wianno-a2.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wianno-a3.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wianno-a4.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Wianno Club Vintage Patch Topper &middot; $128</div>
-        <div class="product-desc">A Wianno Club burgee on navy, cut as a Topper rather than a full cover &mdash; a shorter shape that sits over the crown of the driver instead of sheathing the shaft.</div>
-        <a href="https://apresgolf.com/products/wianno-club-vintage-patch-topper-driver" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="3">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/wilshire.jpg" alt="Wilshire CC Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wilshire-a2.jpg" alt="Wilshire CC Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wilshire-a3.jpg" alt="Wilshire CC Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Wilshire CC Vintage Patch &middot; $108</div>
-        <div class="product-desc">The Wilshire Country Club crest on cream, from the Norman Macbeth course sitting in the middle of Los Angeles with an oil derrick on the property.</div>
-        <a href="https://apresgolf.com/products/wilshire-cc-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
-  <h2 class="products-hdr">The Sunday Sweaters &mdash; 5 Knits</h2>
-  <p class="cat-kicker">Apr&egrave;s buys secondhand intarsia golf sweaters from the 1980s and 90s and resells them one at a time.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-payne.jpg" alt="Sunday Sweater: The Payne &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-payne-a2.jpg" alt="Sunday Sweater: The Payne &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sunday Sweater: The Payne &middot; $98</div>
-        <div class="product-desc">A navy 1980s intarsia sweater with a full golf scene knitted across the chest, named for Payne Stewart. These are secondhand garments Apr&egrave;s buys and resells, so each one is a single unit in a single size.</div>
-        <a href="https://apresgolf.com/products/sunday-sweater-4" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-snead.jpg" alt="Sunday Sweater: The Snead &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-snead-a2.jpg" alt="Sunday Sweater: The Snead &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sunday Sweater: The Snead &middot; $98</div>
-        <div class="product-desc">Cream ground, a lone golfer at the top of the backswing, and a navy-and-red tipped collar. The knit is the giveaway on age: intarsia panels this detailed largely stopped being made in volume after the early nineties.</div>
-        <a href="https://apresgolf.com/products/sunday-sweater-12-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-jack.jpg" alt="Sunday Sweater: The Jack &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-jack-a2.jpg" alt="Sunday Sweater: The Jack &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sunday Sweater: The Jack &middot; $98</div>
-        <div class="product-desc">Navy with a foursome walking a fairway in colour blocks. The line is named after players rather than after the sweaters' original makers, which are mostly long gone.</div>
-        <a href="https://apresgolf.com/products/sunday-sweater-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-ernie.jpg" alt="Sunday Sweater: The Ernie &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-ernie-a2.jpg" alt="Sunday Sweater: The Ernie &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sunday Sweater: The Ernie &middot; $98</div>
-        <div class="product-desc">A four-golfer scene on navy, cut in the boxy fit of its decade rather than resized to modern proportions.</div>
-        <a href="https://apresgolf.com/products/sunday-sweater-11" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-    <div class="product-card" data-frames="2">
-      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-watson.jpg" alt="Sunday Sweater: The Watson &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-watson-a2.jpg" alt="Sunday Sweater: The Watson &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
-      <div class="product-body">
-        <div class="product-brand">Apr&egrave;s Golf</div>
-        <div class="product-name">Sunday Sweater: The Watson &middot; $88</div>
-        <div class="product-desc">Cream, a single figure mid-swing, and the cheapest sweater on the rail at $88. The Sunday Sweaters and the patch covers come from the same instinct &mdash; buy the old thing, keep it in circulation.</div>
-        <a href="https://apresgolf.com/products/sunday-sweater-8" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
-      </div>
-    </div>
-  </div>
-</section>
-<section class="products">
+<section class="products" data-btk="prose">
   <h2 class="products-hdr">What Other People Say About It</h2>
   <p class="cat-kicker">Apr&egrave;s publishes three named endorsements on its own site. All three run here in full.</p>
   <div class="writeup-body">
@@ -605,11 +266,469 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <p>Apr&egrave;s publishes no founder name on its About, Custom, Careers or Contact pages, and none surfaced elsewhere, so there is no maker&rsquo;s quote to run alongside these.</p>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">The Hoodies &mdash; 5 Pieces</h2>
-  <p class="cat-kicker">Apr&egrave;s puts its own private-label blank under the graphics: 9.4 oz, 80% cotton and 20% recycled poly, cut relaxed and sold unisex.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="3">
+<div class="btk-card">
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-label">Details</div>
+      <div class="sidebar-detail"><span class="l">Based</span><span>California</span></div>
+      <div class="sidebar-detail"><span class="l">Known For</span><span>Headcovers, Accessories, Apparel</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>50 items</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$38 &ndash; $138</span></div>
+      <a href="https://apresgolf.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Après Golf &rarr;</a>
+      <div class="hashtags">
+        <span class="hashtag">#apresgolf</span>
+        <span class="hashtag">#brandtoknow</span>
+        <span class="hashtag">#headcovers</span>
+        <span class="hashtag">#accessories</span>
+      </div>
+    </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
+  </aside>
+</div>
+
+<section class="drop-hero">
+  <img class="drop-hero-img btk-16x9" src="/images/apres-golf/btk-body-2.jpg" alt="Après Golf lookbook photograph" loading="lazy" />
+</section>
+
+<section class="products" data-btk="collection">
+  <div class="drop-tag grass">The Collection &mdash; 50 Pieces</div>
+  <div class="products-section">
+    <h2 class="products-hdr">The Tie-Dye Rack &mdash; 12 Prints</h2>
+    <p class="cat-kicker">Apr&egrave;s prints and dyes its own fleece, and this is the part of the catalogue that looks like nothing else on a first tee.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-1" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/fruit-looper.jpg" alt="The Fruit Looper &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-a2.jpg" alt="The Fruit Looper &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-a3.jpg" alt="The Fruit Looper &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-a4.jpg" alt="The Fruit Looper &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">The Fruit Looper&trade; &middot; $88</div>
+        <div class="product-desc">The Fruit Looper is the print the brand is built around, and it behaves like actual dye rather than a repeat pattern &mdash; magenta, marigold and teal bleeding into a navy ground with no two panels landing the same way. On hi-loft sherpa the colour sinks into the pile instead of sitting on top of it.</div>
+        <a href="https://apresgolf.com/products/the-fruit-looper-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-2" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille.jpg" alt="The Fruit Looper Chenille Patch &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille-a2.jpg" alt="The Fruit Looper Chenille Patch &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille-a3.jpg" alt="The Fruit Looper Chenille Patch &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/fruit-looper-chenille-a4.jpg" alt="The Fruit Looper Chenille Patch &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">The Fruit Looper&trade; Chenille Patch &middot; $88</div>
+        <div class="product-desc">Same print, with a chenille-lettered Apr&egrave;s-Golf patch stitched across the crown. Chenille is the varsity-jacket material, so the letters stand a few millimetres proud of the fleece and catch light from the side.</div>
+        <a href="https://apresgolf.com/products/fruit-looper-chenille-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-3" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/yuppie-scum.jpg" alt="Die Yuppie Scum Fruit Looper &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/yuppie-scum-a2.jpg" alt="Die Yuppie Scum Fruit Looper &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Die Yuppie Scum Fruit Looper&trade; &middot; $98</div>
+        <div class="product-desc">The Fruit Looper ground under a shield patch reading DIE YUPPIE SCUM &mdash; a line borrowed from 1980s Manhattan graffiti and later a Wall Street movie. On a golf headcover it is the most pointed thing in the catalogue.</div>
+        <a href="https://apresgolf.com/products/die-yuppie-scum-fruit-looper-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-4" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/parparazzi.jpg" alt="The Parparazzi &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/parparazzi-a2.jpg" alt="The Parparazzi &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/parparazzi-a3.jpg" alt="The Parparazzi &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/parparazzi-a4.jpg" alt="The Parparazzi &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">The Parparazzi &middot; $88</div>
+        <div class="product-desc">Cobalt and violet dropped into a lilac field, sold as a three-piece set with a matching alignment-stick sleeve. This one photographs closest to a genuine spiral tie-dye of anything Apr&egrave;s prints.</div>
+        <a href="https://apresgolf.com/products/le-blender-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-5" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/transfused.jpg" alt="Transfused &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/transfused-a2.jpg" alt="Transfused &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/transfused-a3.jpg" alt="Transfused &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/transfused-a4.jpg" alt="Transfused &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Transfused&trade; &middot; $88</div>
+        <div class="product-desc">Magenta and violet speckle over black, named for the drink you order at the turn. The trademark suggests Apr&egrave;s intends to keep running it rather than retire the colourway after a season.</div>
+        <a href="https://apresgolf.com/products/transfused-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-6" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/crayon-clouds.jpg" alt="Crayon Clouds &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/crayon-clouds-a2.jpg" alt="Crayon Clouds &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/crayon-clouds-a3.jpg" alt="Crayon Clouds &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Crayon Clouds &middot; $88</div>
+        <div class="product-desc">Cream ground with navy, sage and rust shapes laid over it in soft-edged blocks. It reads as the quietest print here and is the one that survives a bag otherwise full of black leather.</div>
+        <a href="https://apresgolf.com/products/crayon-clouds-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-7" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/digital-drops.jpg" alt="Digital Drops &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/digital-drops-a2.jpg" alt="Digital Drops &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/digital-drops-a3.jpg" alt="Digital Drops &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Digital Drops &middot; $88</div>
+        <div class="product-desc">White pixel-scatter on royal blue, printed rather than dyed, which is why the edges stay hard where the Fruit Looper's bleed.</div>
+        <a href="https://apresgolf.com/products/digital-drops-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-8" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sand-mosaic.jpg" alt="Sand Mosaic &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sand-mosaic-a2.jpg" alt="Sand Mosaic &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sand-mosaic-a3.jpg" alt="Sand Mosaic &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sand Mosaic &middot; $38</div>
+        <div class="product-desc">Speckled confetti over off-white, and the cheapest cover in the whole range at $38. Apr&egrave;s puts its price floor on the prints rather than on a stripped-down blank.</div>
+        <a href="https://apresgolf.com/products/sandy-mosaic-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-9" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/multi-mosaic.jpg" alt="Multi Mosaic Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/multi-mosaic-a2.jpg" alt="Multi Mosaic Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/multi-mosaic-a3.jpg" alt="Multi Mosaic Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Multi Mosaic Blade Putter Cover &middot; $88</div>
+        <div class="product-desc">Orange, cobalt and cream diamonds on a blade cover with a magnetic closure. The blade shape gives the print a flat panel to sit on, so the geometry stays legible instead of wrapping out of shape.</div>
+        <a href="https://apresgolf.com/products/multi-mosaic-sherpa-fleece-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-10" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/azalea.jpg" alt="Azalea &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/azalea-a2.jpg" alt="Azalea &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/azalea-a3.jpg" alt="Azalea &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Azalea &middot; $68</div>
+        <div class="product-desc">Pink and yellow blooms scattered over forest green, part of a small floral run named after flowering shrubs. Sold as a set with a matching blade cover.</div>
+        <a href="https://apresgolf.com/products/azalea-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-11" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/magnolia.jpg" alt="Magnolia &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/magnolia-a2.jpg" alt="Magnolia &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/magnolia-a3.jpg" alt="Magnolia &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Magnolia &middot; $68</div>
+        <div class="product-desc">White magnolia over pale pink, the softest thing in the printed line and the one that looks least like golf equipment sitting on a table.</div>
+        <a href="https://apresgolf.com/products/magnolia-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-12" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/yellow-jasmine.jpg" alt="Yellow Jasmine &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/yellow-jasmine-a2.jpg" alt="Yellow Jasmine &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/yellow-jasmine-a3.jpg" alt="Yellow Jasmine &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Yellow Jasmine &middot; $68</div>
+        <div class="product-desc">Yellow stars over navy paisley, which is the loudest of the three florals despite being the one named after the smallest flower.</div>
+        <a href="https://apresgolf.com/products/yellow-jasmine-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Neon Capsule &mdash; @HallyLead &times; Apr&egrave;s-Golf</h2>
+    <p class="cat-kicker">Five solid neons designed by Hally Leadbetter, each sold as a three-piece set with a matching alignment-stick sleeve.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-13" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-sherbet.jpg" alt="@HallyLead Aprs-Golf Sherbet &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sherbet-a2.jpg" alt="@HallyLead Aprs-Golf Sherbet &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sherbet-a3.jpg" alt="@HallyLead Aprs-Golf Sherbet &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Sherbet &middot; $38</div>
+        <div class="product-desc">Coral pink with a scarlet trim, sold as a three-piece with an alignment sleeve. Hally Leadbetter designed the five-colour capsule after Apr&egrave;s spotted an order under her name and got in touch.</div>
+        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-sherbet-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-14" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-cotton-candy.jpg" alt="@HallyLead Aprs-Golf Cotton Candy &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-cotton-candy-a2.jpg" alt="@HallyLead Aprs-Golf Cotton Candy &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-cotton-candy-a3.jpg" alt="@HallyLead Aprs-Golf Cotton Candy &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Cotton Candy &middot; $38</div>
+        <div class="product-desc">Hot pink over a black trim, the highest-saturation piece in a capsule that is already the brightest thing Apr&egrave;s makes.</div>
+        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-cotton-candy-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-15" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-blue-raspberry.jpg" alt="@HallyLead Aprs-Golf Blue Raspberry &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-blue-raspberry-a2.jpg" alt="@HallyLead Aprs-Golf Blue Raspberry &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-blue-raspberry-a3.jpg" alt="@HallyLead Aprs-Golf Blue Raspberry &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Blue Raspberry &middot; $38</div>
+        <div class="product-desc">Process blue against a red base tape. The neons are solid rather than printed, which puts all the work on the trim colour.</div>
+        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-blue-raspberry-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-16" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-grapeness.jpg" alt="@HallyLead Aprs-Golf Grapeness Wins &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-grapeness-a2.jpg" alt="@HallyLead Aprs-Golf Grapeness Wins &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-grapeness-a3.jpg" alt="@HallyLead Aprs-Golf Grapeness Wins &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Grapeness Wins &middot; $38</div>
+        <div class="product-desc">Lilac with a cyan trim, and the only piece in the capsule where the trim reads brighter than the body.</div>
+        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-grapeness-wins-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-17" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hally-sea-foam.jpg" alt="@HallyLead Aprs-Golf Sea Foam Honeycomb &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sea-foam-a2.jpg" alt="@HallyLead Aprs-Golf Sea Foam Honeycomb &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hally-sea-foam-a3.jpg" alt="@HallyLead Aprs-Golf Sea Foam Honeycomb &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">@HallyLead &times; Apr&egrave;s-Golf Sea Foam Honeycomb &middot; $38</div>
+        <div class="product-desc">Mint green over a coral trim, textured with a honeycomb pile rather than the flat sherpa loft used elsewhere in the capsule.</div>
+        <a href="https://apresgolf.com/products/hallylead-x-apres-golf-sea-foam-honeycomb-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Dead Rack &mdash; 8 Pieces</h2>
+    <p class="cat-kicker">Bears and bolts, across headcovers, a blade cover and a mallet.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-18" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/dancing-bears.jpg" alt="Dancing Bears Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/dancing-bears-a2.jpg" alt="Dancing Bears Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Dancing Bears Patch &middot; $128</div>
+        <div class="product-desc">A row of marching bears on a cream ground, and the most expensive piece in the Dead run at $128. The bears are stitched as a single wide patch rather than assembled from individual ones.</div>
+        <a href="https://apresgolf.com/products/dancing-bear-patch-sherpa-fleece-headcover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-19" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/steal-clubface.jpg" alt="Steal Your Clubface Patch &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-a2.jpg" alt="Steal Your Clubface Patch &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-a3.jpg" alt="Steal Your Clubface Patch &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-a4.jpg" alt="Steal Your Clubface Patch &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Steal Your Clubface Patch &middot; $88</div>
+        <div class="product-desc">The lightning-bolt skull, rendered in red, white and blue on a cream cover, under a name that puns the artwork into golf. It is the most recognisable object Apr&egrave;s sells and the one that gets stopped on the first tee.</div>
+        <a href="https://apresgolf.com/products/steal-your-clubface-patch-sherpa-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-20" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-putter.jpg" alt="Steal Your Clubface Blade Putter Cover &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-putter-a2.jpg" alt="Steal Your Clubface Blade Putter Cover &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/steal-clubface-putter-a3.jpg" alt="Steal Your Clubface Blade Putter Cover &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Steal Your Clubface Blade Putter Cover &middot; $88</div>
+        <div class="product-desc">The same bolt-and-skull patch shrunk onto a navy blade cover. On a putter it sits at eye level over the bag, which is where this artwork wants to be.</div>
+        <a href="https://apresgolf.com/products/steal-your-clubface-vintage-patch-sherpa-fleece-blade-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-21" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet-a2.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet-a3.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mini-bears-mallet-a4.jpg" alt="Mini Bears Mallet Putter Cover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Mini Bears Mallet Putter Cover &middot; $108</div>
+        <div class="product-desc">Small bears repeated across a mallet-shaped cover, cut wide enough for a modern high-MOI head rather than a blade.</div>
+        <a href="https://apresgolf.com/products/mini-bears-sherpa-fleece-mallet-putter-cover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-22" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-green-navy.jpg" alt="Green Bear Patch Navy &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-green-navy-a2.jpg" alt="Green Bear Patch Navy &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-green-navy-a3.jpg" alt="Green Bear Patch Navy &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Green Bear Patch &mdash; Navy &middot; $88</div>
+        <div class="product-desc">One bear, embroidered green, on navy sherpa. The single-bear covers run a colour per cover, so a full set spells out the sequence across a bag.</div>
+        <a href="https://apresgolf.com/products/green-bear-patch-sherpa-fleece-headcover-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-23" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-blue.jpg" alt="Blue Bear Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-blue-a2.jpg" alt="Blue Bear Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-blue-a3.jpg" alt="Blue Bear Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Blue Bear Patch &middot; $88</div>
+        <div class="product-desc">The blue bear on navy, sold as a three-piece. Buying by colour rather than by club is how the Dead rack is designed to be collected.</div>
+        <a href="https://apresgolf.com/products/blue-bear-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-24" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-pink.jpg" alt="Pink Bear Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-pink-a2.jpg" alt="Pink Bear Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-pink-a3.jpg" alt="Pink Bear Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Pink Bear Patch &middot; $88</div>
+        <div class="product-desc">Pink bear on navy, and the brightest of the single-bear set against its ground.</div>
+        <a href="https://apresgolf.com/products/pink-bear-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-25" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/bear-orange.jpg" alt="Orange Bear Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-orange-a2.jpg" alt="Orange Bear Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/bear-orange-a3.jpg" alt="Orange Bear Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Orange Bear Patch &middot; $88</div>
+        <div class="product-desc">Orange bear on navy, the highest-contrast pairing in the run and the easiest to pick out of a bag at ten paces.</div>
+        <a href="https://apresgolf.com/products/orange-bear-patch-sherpa-fleece-headcover-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Ski Patches &mdash; 6 Resorts</h2>
+    <p class="cat-kicker">Where the name stops being a pun. Genuine resort patches, sewn onto golf headcovers.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-26" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/chamonix.jpg" alt="Chamonix Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/chamonix-a2.jpg" alt="Chamonix Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Chamonix Vintage Patch &middot; $108</div>
+        <div class="product-desc">A Chamonix resort patch on cream sherpa. Chamonix hosted the first Winter Olympics in 1924, which makes this the oldest piece of ski history in the archive.</div>
+        <a href="https://apresgolf.com/products/chamonix-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-27" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/st-moritz.jpg" alt="St. Moritz Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/st-moritz-a2.jpg" alt="St. Moritz Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">St. Moritz Vintage Patch &middot; $98</div>
+        <div class="product-desc">The St. Moritz sun crest, sewn onto cream. The Engadine resort is the other 1920s Winter Games host, and its patches turn up in European ski-swap boxes far more often than American ones do.</div>
+        <a href="https://apresgolf.com/products/st-moritz-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-28" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/alta.jpg" alt="Alta Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/alta-a2.jpg" alt="Alta Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Alta Vintage Patch &middot; $88</div>
+        <div class="product-desc">Alta's patch on cream, from the Little Cottonwood resort that still bans snowboards. At $88 it is the cheapest entry into the vintage patch archive.</div>
+        <a href="https://apresgolf.com/products/alta-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-29" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/mad-river-glen.jpg" alt="Mad River Glen Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/mad-river-glen-a2.jpg" alt="Mad River Glen Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Mad River Glen Vintage Patch &middot; $108</div>
+        <div class="product-desc">The Mad River Glen snowflake on black sherpa. The Vermont co-operative trades on being difficult, and its patch is the one skiers recognise across a crowded room.</div>
+        <a href="https://apresgolf.com/products/mad-river-glen-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-30" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sugarloaf.jpg" alt="Sugarloaf Vintage Patch" loading="lazy" /></div></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sugarloaf Vintage Patch &middot; $128</div>
+        <div class="product-desc">A Sugarloaf patch on cream, and the most expensive ski piece at $128. Maine's Carrabassett Valley mountain is the outlier in a rack otherwise weighted to the Alps and the Rockies.</div>
+        <a href="https://apresgolf.com/products/sugarloaf-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-31" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/heavenly-valley.jpg" alt="Heavenly Valley Vintage Patch &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/heavenly-valley-a2.jpg" alt="Heavenly Valley Vintage Patch &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Heavenly Valley Vintage Patch &middot; $118</div>
+        <div class="product-desc">The Heavenly Valley crest in red and blue over cream, from the Tahoe resort that straddles the California&ndash;Nevada line.</div>
+        <a href="https://apresgolf.com/products/heavenly-valley-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Club Patches &mdash; 6 Crests</h2>
+    <p class="cat-kicker">Fifty-six club patches are in stock today. These six are the ones a reader is most likely to recognise.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-32" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/lacc.jpg" alt="LACC Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/lacc-a2.jpg" alt="LACC Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/lacc-a3.jpg" alt="LACC Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">LACC Vintage Patch &middot; $118</div>
+        <div class="product-desc">The Los Angeles Country Club crest on cream sherpa. LACC hosted the 2023 U.S. Open, which pulled a famously private club into general view for a week.</div>
+        <a href="https://apresgolf.com/products/lacc-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-33" data-frames="1">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/olympic-club.jpg" alt="The Olympic Club Vintage Patch" loading="lazy" /></div></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">The Olympic Club Vintage Patch &middot; $138</div>
+        <div class="product-desc">The Olympic Club's winged-O patch on navy, and the most expensive cover in the range at $138. The San Francisco club has hosted five U.S. Opens.</div>
+        <a href="https://apresgolf.com/products/olympic-club-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-34" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/pine-tree.jpg" alt="Pine Tree GC Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/pine-tree-a2.jpg" alt="Pine Tree GC Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/pine-tree-a3.jpg" alt="Pine Tree GC Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Pine Tree GC Vintage Patch &middot; $138</div>
+        <div class="product-desc">A Pine Tree Golf Club patch on cream. The Boynton Beach course is a Dick Wilson design and an architecture-nerd pick rather than a name-recognition one.</div>
+        <a href="https://apresgolf.com/products/pine-tree-gc-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-35" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sea-pines.jpg" alt="Sea Pines Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sea-pines-a2.jpg" alt="Sea Pines Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sea-pines-a3.jpg" alt="Sea Pines Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sea Pines Vintage Patch &middot; $118</div>
+        <div class="product-desc">The Sea Pines patch on cream, sold as a set. Hilton Head's resort is where Harbour Town sits, and the patch predates the lighthouse becoming the logo.</div>
+        <a href="https://apresgolf.com/products/sea-pines-vintage-patch-sherpa-fleece-headcover-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-36" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/wianno.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wianno-a2.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wianno-a3.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wianno-a4.jpg" alt="Wianno Club Vintage Patch Topper &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Wianno Club Vintage Patch Topper &middot; $128</div>
+        <div class="product-desc">A Wianno Club burgee on navy, cut as a Topper rather than a full cover &mdash; a shorter shape that sits over the crown of the driver instead of sheathing the shaft.</div>
+        <a href="https://apresgolf.com/products/wianno-club-vintage-patch-topper-driver" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-37" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/wilshire.jpg" alt="Wilshire CC Vintage Patch &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wilshire-a2.jpg" alt="Wilshire CC Vintage Patch &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/wilshire-a3.jpg" alt="Wilshire CC Vintage Patch &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Wilshire CC Vintage Patch &middot; $108</div>
+        <div class="product-desc">The Wilshire Country Club crest on cream, from the Norman Macbeth course sitting in the middle of Los Angeles with an oil derrick on the property.</div>
+        <a href="https://apresgolf.com/products/wilshire-cc-vintage-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Sunday Sweaters &mdash; 5 Knits</h2>
+    <p class="cat-kicker">Apr&egrave;s buys secondhand intarsia golf sweaters from the 1980s and 90s and resells them one at a time.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-38" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-payne.jpg" alt="Sunday Sweater: The Payne &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-payne-a2.jpg" alt="Sunday Sweater: The Payne &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sunday Sweater: The Payne &middot; $98</div>
+        <div class="product-desc">A navy 1980s intarsia sweater with a full golf scene knitted across the chest, named for Payne Stewart. These are secondhand garments Apr&egrave;s buys and resells, so each one is a single unit in a single size.</div>
+        <a href="https://apresgolf.com/products/sunday-sweater-4" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-39" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-snead.jpg" alt="Sunday Sweater: The Snead &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-snead-a2.jpg" alt="Sunday Sweater: The Snead &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sunday Sweater: The Snead &middot; $98</div>
+        <div class="product-desc">Cream ground, a lone golfer at the top of the backswing, and a navy-and-red tipped collar. The knit is the giveaway on age: intarsia panels this detailed largely stopped being made in volume after the early nineties.</div>
+        <a href="https://apresgolf.com/products/sunday-sweater-12-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-40" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-jack.jpg" alt="Sunday Sweater: The Jack &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-jack-a2.jpg" alt="Sunday Sweater: The Jack &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sunday Sweater: The Jack &middot; $98</div>
+        <div class="product-desc">Navy with a foursome walking a fairway in colour blocks. The line is named after players rather than after the sweaters' original makers, which are mostly long gone.</div>
+        <a href="https://apresgolf.com/products/sunday-sweater-1" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-41" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-ernie.jpg" alt="Sunday Sweater: The Ernie &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-ernie-a2.jpg" alt="Sunday Sweater: The Ernie &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sunday Sweater: The Ernie &middot; $98</div>
+        <div class="product-desc">A four-golfer scene on navy, cut in the boxy fit of its decade rather than resized to modern proportions.</div>
+        <a href="https://apresgolf.com/products/sunday-sweater-11" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+<div class="product-card" id="p-42" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/sweater-watson.jpg" alt="Sunday Sweater: The Watson &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/sweater-watson-a2.jpg" alt="Sunday Sweater: The Watson &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
+      <div class="product-body">
+        <div class="product-brand">Apr&egrave;s Golf</div>
+        <div class="product-name">Sunday Sweater: The Watson &middot; $88</div>
+        <div class="product-desc">Cream, a single figure mid-swing, and the cheapest sweater on the rail at $88. The Sunday Sweaters and the patch covers come from the same instinct &mdash; buy the old thing, keep it in circulation.</div>
+        <a href="https://apresgolf.com/products/sunday-sweater-8" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">The Hoodies &mdash; 5 Pieces</h2>
+    <p class="cat-kicker">Apr&egrave;s puts its own private-label blank under the graphics: 9.4 oz, 80% cotton and 20% recycled poly, cut relaxed and sold unisex.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-43" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hoodie-find-your-line.jpg" alt="Find Your Line Aprs-Golf Hoodie &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-find-your-line-a2.jpg" alt="Find Your Line Aprs-Golf Hoodie &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-find-your-line-a3.jpg" alt="Find Your Line Aprs-Golf Hoodie &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -618,7 +737,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/i-will-not-apres-golf%C2%AE-hoodie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-44" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hoodie-i-will-not.jpg" alt="I Will Not Aprs-Golf Hoodie &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-i-will-not-a2.jpg" alt="I Will Not Aprs-Golf Hoodie &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-i-will-not-a3.jpg" alt="I Will Not Aprs-Golf Hoodie &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -627,7 +746,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/find-your-line-apres-golf%C2%AE-hoodie-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-45" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hoodie-cotton-candy.jpg" alt="Cotton Candy Scratch Text Hoodie &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-cotton-candy-a2.jpg" alt="Cotton Candy Scratch Text Hoodie &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-cotton-candy-a3.jpg" alt="Cotton Candy Scratch Text Hoodie &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -636,7 +755,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/cotton-candy-scratch-text-hoodie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-46" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hoodie-twirl-blue.jpg" alt="Sunset Twirl Original Blue Logo Hoodie &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-twirl-blue-a2.jpg" alt="Sunset Twirl Original Blue Logo Hoodie &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-twirl-blue-a3.jpg" alt="Sunset Twirl Original Blue Logo Hoodie &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -645,7 +764,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/sunset-twirl-original-blue-logo-hoodie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="3">
+<div class="product-card" id="p-47" data-frames="3">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/hoodie-twirl-pink.jpg" alt="Sunset Twirl Original Pink Logo Hoodie &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-twirl-pink-a2.jpg" alt="Sunset Twirl Original Pink Logo Hoodie &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/hoodie-twirl-pink-a3.jpg" alt="Sunset Twirl Original Pink Logo Hoodie &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -654,13 +773,16 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/sunset-twirl-original-pink-logo-hoodie" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
 </section>
-<section class="products">
-  <h2 class="products-hdr">Your Patch, Their Fleece &mdash; 3 Ways In</h2>
-  <p class="cat-kicker">The custom programme, the two-logo cover, and the house print.</p>
-  <div class="products-grid">
-    <div class="product-card" data-frames="4">
+
+<section class="products" data-btk="collection-cont">
+  <div class="products-section">
+    <h2 class="products-hdr">Your Patch, Their Fleece &mdash; 3 Ways In</h2>
+    <p class="cat-kicker">The custom programme, the two-logo cover, and the house print.</p>
+    <div class="products-grid">
+<div class="product-card" id="p-48" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/send-your-patch.jpg" alt="Send Us Your Patch! Custom Headcover &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/send-your-patch-a2.jpg" alt="Send Us Your Patch! Custom Headcover &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/send-your-patch-a3.jpg" alt="Send Us Your Patch! Custom Headcover &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/send-your-patch-a4.jpg" alt="Send Us Your Patch! Custom Headcover &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -669,7 +791,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/send-us-your-patch-custom-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="2">
+<div class="product-card" id="p-49" data-frames="2">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/reversible.jpg" alt="Aprs-Golf Reversible Patch Headcover &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/reversible-a2.jpg" alt="Aprs-Golf Reversible Patch Headcover &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -678,7 +800,7 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/apres-golf-reversible-patch-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
-    <div class="product-card" data-frames="4">
+<div class="product-card" id="p-50" data-frames="4">
       <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/apres-golf/big-retro-cream.jpg" alt="BIG RETRO Logo Fruit Looper &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/big-retro-cream-a2.jpg" alt="BIG RETRO Logo Fruit Looper &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/big-retro-cream-a3.jpg" alt="BIG RETRO Logo Fruit Looper &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/apres-golf/big-retro-cream-a4.jpg" alt="BIG RETRO Logo Fruit Looper &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Apr&egrave;s Golf</div>
@@ -687,8 +809,10 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://apresgolf.com/products/big-swig-retro-logo-sherpa-fleece-headcover" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
       </div>
     </div>
+    </div>
   </div>
 </section>
+
 <section class="products">
   <h2 class="products-hdr" id="faq">The Questions</h2>
   <div class="faq">
@@ -701,6 +825,47 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
     <details class="faq-q"><summary>How much do Apr&egrave;s headcovers cost?</summary><p>The range runs $38 to $138. Printed and solid fleece starts at $38, the Grateful-Dead-style bear covers sit at $88, and the vintage club and resort patches occupy the top of the range from $88 to $138. Shipping is free on all orders.</p></details>
   </div>
 </section>
+<section class="more" data-btk="related">
+  <div class="more-hdr">
+    <div class="more-label">If You Like Après Golf</div>
+    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
+  </div>
+  <div class="more-grid">
+    <a class="more-card" href="/brands/bluetross">
+      <div class="more-card-img"><img src="/images/women-founded/bluetross-2.jpg" alt="Bluetross" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Bluetross</div>
+        <div class="more-card-tag">Charleston, SC &middot; headcovers/accessories</div>
+        <div class="more-card-desc">Horween and Italian leather covers, belts and wallets, co-founded by Gail Hanson.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/foray-golf">
+      <div class="more-card-img"><img src="/images/off-course-vol2/foray-planter.jpg" alt="Foray Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Foray Golf</div>
+        <div class="more-card-tag">New York, New York &middot; apparel/accessories</div>
+        <div class="more-card-desc">Women's golf apparel out of New York, alongside a curated capsule of genuinely vintage homeware sold one piece at a time.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/forden-golf">
+      <div class="more-card-img"><img src="/images/forden/9forty-khaki-0.jpg" alt="Forden Golf" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Forden Golf</div>
+        <div class="more-card-tag">United States &middot; apparel/headwear</div>
+        <div class="more-card-desc">Streetwear-leaning golf label. The Swingman logo comes from Doc Edgerton's 1938 strobe photograph of a swing at MIT.</div>
+      </div>
+    </a>
+    <a class="more-card" href="/brands/hidden-links-society">
+      <div class="more-card-img"><img src="/images/hls/play-faster-fairway-wood-cover-black-1.jpg" alt="Hidden Links Society" loading="lazy" /></div>
+      <div class="more-card-body">
+        <div class="more-card-name">Hidden Links Society</div>
+        <div class="more-card-tag">United States &middot; headwear/apparel</div>
+        <div class="more-card-desc">Anti-country-club headwear and heavyweight cotton. Gives 2% of every sale to Youth on Course and is documenting Golf Digest's Top 100 Public courses one at a time.</div>
+      </div>
+    </a>
+  </div>
+</section>
+
 <section class="more">
   <div class="more-hdr">
     <span class="more-label">More from TGI</span>

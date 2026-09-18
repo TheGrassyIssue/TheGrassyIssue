@@ -120,7 +120,50 @@ _ANCHOR = re.compile(
     r'|<div class="writeup"[^>]*>'
     r'|<div class="btk-card"[^>]*>'
     r'|<section class="more"[^>]*>'
+    # Random Golf Club and Siegelman Stable write More from the Feed as a DIV.
+    # Same glue problem as the classless section below: not an anchor, so it
+    # rode along inside the product block and its four feed thumbnails were
+    # dropped. The closing quote keeps this off "more-card" and "more-grid".
+    r'|<div class="more"[^>]*>'
+    # A CLASSLESS SECTION IS STILL A SECTION. Several pages carry editorial
+    # blocks written as <section style="..."> with no class at all — Sentinel's
+    # "In the Wild — Basecamp Expedition One" photo grid is one. Without this
+    # alternative they are not boundaries, so they ride along glued to the END of
+    # the preceding products block; that block is re-split into product cards and
+    # everything that is not a card is discarded. Seven Sentinel photographs went
+    # that way. Alternation is left-to-right, so the classed patterns above still
+    # win at the same position and this only catches what they miss.
+    r'|<section[^>]*>'
     r'|<footer')
+
+
+def split_faq(block):
+    """Pull the FAQ out of a block that also holds product cards.
+
+    On most Brand to Know pages the questions live inside the SAME
+    <section class="products"> as the catalogue. render_collection rebuilds
+    that section from its product cards alone, so anything else in there —
+    the entire FAQ, schema-backed and all — would be dropped on the floor.
+    Returns (block-without-faq, faq-html-or-None)."""
+    i = block.find('<div class="faq">')
+    if i < 0:
+        return block, None
+    # take the heading immediately above it, if there is one
+    # Only adopt the heading directly above the FAQ, and only if nothing else
+    # lives between them. Taking the nearest h2 unconditionally swallowed eight
+    # product cards on Seamus, because that h2 was a category heading.
+    h = block.rfind("<h2", 0, i)
+    start = i
+    if h >= 0 and '<div class="product-card"' not in block[h:i] \
+            and '<div class="products-grid"' not in block[h:i]:
+        start = h
+    depth, j = 0, i
+    for m in re.finditer(r"<div\b[^>]*>|</div>", block[i:]):
+        depth += 1 if m.group(0).startswith("<div") else -1
+        if depth == 0:
+            j = i + m.end()
+            break
+    return block[:start] + block[j:], block[start:j]
 
 
 def h2_of(block):
@@ -128,10 +171,32 @@ def h2_of(block):
     return re.sub(r"<[^>]+>", "", m.group(1)).strip() if m else ""
 
 
+def _words(h):
+    """Visible words in the body — script and style stripped out."""
+    b = h[h.find("<body"):]
+    b = re.sub(r"<(script|style)\b[^>]*>.*?</\1>", " ", b, flags=re.S)
+    return len(re.sub(r"<[^>]+>", " ", b).split())
+
+
 def parse(html):
     """Cut a Brand to Know page into named blocks. Lossless: the concatenation
     of head + every block + tail is the input, byte for byte."""
-    marks = [(m.start(), m.group(0)) for m in _ANCHOR.finditer(html)]
+    # TOP LEVEL ONLY. Several pages nest a <section> inside another one, and a
+    # naive anchor list cuts the page in the middle of the outer section: the
+    # halves land in different blocks, the reorderer moves them apart, and the
+    # document comes out with more <section> than </section>. Takomo went from
+    # 8/8 to 11/9 that way and lost 362 words of prose with it. So an anchor only
+    # counts as a boundary where the section nesting depth is back to zero.
+    depth, marks = 0, []
+    for m in re.finditer(r'<section\b[^>]*>|</section>|' + _ANCHOR.pattern, html):
+        t = m.group(0)
+        if t == "</section>":
+            depth = max(0, depth - 1)
+            continue
+        if _ANCHOR.fullmatch(t) and depth == 0:
+            marks.append((m.start(), t))
+        if t.startswith("<section"):
+            depth += 1
     if not marks:
         raise SystemExit("no section anchors found — is this a Brand to Know page?")
 
@@ -169,6 +234,13 @@ CSS = CSS_OPEN + """
   border-bottom:1px solid transparent;transition:border-color .15s}
 .sh-name:hover{border-bottom-color:var(--ink)}
 .sec-note{font-size:14px;line-height:1.6;opacity:.68}
+/* the in-body lookbook bands. 21:9 is the masthead; 16:9 in the body discards
+   far less of a frame, which is what stopped the crops clipping people's heads.
+   object-fit is not optional — without it a fixed aspect-ratio box stretches
+   whatever is inside it. */
+.drop-hero-img.btk-16x9{aspect-ratio:16/9}
+.products-section{margin-bottom:48px}
+.products-section:last-child{margin-bottom:0}
 
 /* THE MEASURE. Lenny: "all the wording to be more centered and read more like
    a publication." One column, one width, centred, used by every piece of
@@ -180,6 +252,8 @@ section[data-btk] .products-hdr,
 section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
+section[data-btk="story"] .writeup-body,
+section[data-btk="coda"] .writeup-body,
 section[data-btk="take"] .writeup-body{max-width:760px;margin:0 auto}
 section[data-btk="take"]{padding-top:34px}
 section[data-btk="take"] .writeup-body{font-size:17px}
@@ -249,6 +323,31 @@ def render_writeup(spec, card_html):
         "  </div>\n"
         f"{aside}"
         "</section>\n\n")
+
+
+def render_story(spec, imgs=()):
+    """The rest of the page's own opening write-up, set as The Story.
+
+    These paragraphs are not new: btk-spec.py took them off the page's existing
+    .writeup, which is live and already approved. The first paragraph became the
+    Take; everything after it lands here, unchanged."""
+    paras = spec.get("story_extra") or []
+    if not paras:
+        return ""
+    body = "\n".join(f"    <p>{x}</p>" for x in paras)
+    if imgs:
+        body = "\n".join(f"    {i}" for i in imgs) + "\n" + body
+    # "story", NOT "prose". They used to share a marker, and on a second run the
+    # re-parser could not tell this generated section from a page's own leftover
+    # prose: it kept this one AND regenerated it, so the page grew a second "The
+    # Story" heading with the same paragraphs under it. Generated sections need
+    # names of their own or idempotency is a coin flip.
+    return ('<section class="products" data-btk="story">\n'
+            '  <h2 class="products-hdr">The Story</h2>\n'
+            '  <div class="writeup-body">\n'
+            f"{body}\n"
+            "  </div>\n"
+            "</section>\n\n")
 
 
 def render_card(spec):
@@ -363,13 +462,25 @@ def split_cards(block):
     return out
 
 
-def find_card(cards, needle):
-    hits = [i for i, c in enumerate(cards) if needle.lower() in c["name"].lower()]
-    if len(hits) != 1:
-        raise SystemExit(
-            f'"{needle}" matched {len(hits)} products — make it unique.\n  '
-            + "\n  ".join(cards[i]["name"] for i in hits))
-    return hits[0]
+def _norm(s):
+    import html as _h
+    return re.sub(r"\s+", " ", _h.unescape(re.sub(r"<[^>]+>", "", s))).strip().lower()
+
+
+def find_card(cards, needle, used=None):
+    """Exact on normalised text first, substring second, and a name that genuinely
+    appears twice (two colourways with one title) is consumed in page order
+    rather than treated as an error."""
+    used = used if used is not None else set()
+    n = _norm(needle)
+    exact = [i for i, c in enumerate(cards) if _norm(c["name"]) == n and i not in used]
+    if exact:
+        return exact[0]
+    part = [i for i, c in enumerate(cards)
+            if n and n in _norm(c["name"]) and i not in used]
+    if part:
+        return part[0]
+    raise SystemExit(f'"{needle[:60]}" matched no unused product')
 
 
 def collection_kicker(block):
@@ -378,27 +489,63 @@ def collection_kicker(block):
     names — so read the kicker back rather than promoting "Stand Bags" to the
     title of the whole collection."""
     m = re.search(r'<div class="drop-tag grass">(.*?)</div>', block, re.S)
-    return re.sub(r"<[^>]+>", "", m.group(1)).strip() if m else h2_of(block)
+    if m:
+        return re.sub(r"<[^>]+>", "", m.group(1)).strip()
+    n = block.count('<div class="product-card"')
+    return f"The Collection &mdash; {n} Pieces" if n else "The Collection"
 
 
-def render_collection(spec, block, cards):
+def render_collection(spec, block, cards, pic=None):
     """THE COLLECTION — the same cards, in the same order of appearance,
     grouped under .products-section headings. Nothing is dropped: the count
     is asserted below, and an unassigned card is an error, not a silent loss."""
     hdr = collection_kicker(block)
     used, groups = set(), []
     for g in spec["collection"]:
-        idxs = sorted(find_card(cards, n) for n in g["match"])
-        for i in idxs:
-            if i in used:
-                raise SystemExit(f"product in two categories: {cards[i]['name']}")
+        idxs = []
+        for n in g["match"]:
+            i = find_card(cards, n, used)
             used.add(i)
+            idxs.append(i)
+        idxs.sort()
         groups.append((g["hdr"], idxs))
+
+    # A CARD WITH NO NAME IS NOT A PRODUCT. Forden's section mixes 19 products
+    # with 8 caption-only cards (id="det0".."det7") that are detail photographs
+    # of the goods — a gallery wearing card markup. They have no name to match a
+    # category against, so they read as "products in no category" and stopped the
+    # build. They are not dropped and they are not filed under a heading either:
+    # they come back as their own strip once the categories are done.
+    details = [i for i in range(len(cards))
+               if i not in used and not cards[i]["name"].strip()]
+    used.update(details)
 
     missing = [c["name"] for i, c in enumerate(cards) if i not in used]
     if missing:
         raise SystemExit("products in no category (constraint 1 — nothing is "
                          "dropped):\n  " + "\n  ".join(missing))
+
+    # THE PER-CATEGORY COPY. Each category heading on these pages is followed by
+    # its own intro paragraph (.cat-kicker on most, .sec-intro on some), and the
+    # rebuild kept exactly one of them for the whole collection. Seamus lost
+    # three — "Nine covers · $120 to $170 / Driver and fairway covers are the
+    # engine of the company..." and two more. They are re-attached to the
+    # category they belong to, matched on the heading text.
+    _norm = lambda s: re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", s)).strip().lower()
+    kickers = {}
+    # ANY paragraph directly under the heading, not just the classed ones.
+    # Devereux writes its category intros as a bare <p style="..."> with no
+    # class at all, so a pattern keyed on .cat-kicker/.sec-intro missed all six
+    # of them. What identifies an intro is its position — first thing after the
+    # h2 — not the class someone happened to give it.
+    for m in re.finditer(r'<h2[^>]*>(.*?)</h2>\s*(<p[^>]*>.*?</p>)', block, re.S):
+        kickers[_norm(m.group(1))] = m.group(2)
+
+    # PULL-QUOTES. A sourced, attributed founder quote sits between categories
+    # inside the products block — Akbar Chisti on Seamus, Mike Graham on
+    # Gramicci. Splitting the block into cards threw them away. Verbatim quotes
+    # from a named person are the last thing on a TGI page that may be lost.
+    quotes = re.findall(r'<div class="pull-quote">.*?</div>\s*</div>', block, re.S)
 
     parts = []
     for name, idxs in groups:
@@ -410,8 +557,28 @@ def render_collection(spec, block, cards):
         parts.append(
             '  <div class="products-section">\n'
             f'    <h2 class="products-hdr">{name}</h2>\n'
-            '    <div class="products-grid">\n'
+            + (("    " + kickers.pop(_norm(name)) + "\n")
+               if _norm(name) in kickers else "")
+            + '    <div class="products-grid">\n'
             f"{body}\n"
+            "    </div>\n"
+            + ("    " + quotes.pop(0) + "\n" if quotes else "")
+            + "  </div>\n")
+        # a picture between one category and the next, never after the last
+        if pic and (name, idxs) != groups[-1]:
+            parts.append("</section>\n\n" + pic()
+                         + '<section class="products" data-btk="collection-cont">\n')
+
+    # any quote that did not land beside a category still belongs on the page
+    if quotes:
+        parts.append("".join("  " + q + "\n" for q in quotes))
+
+    # the nameless detail cards, kept together at the end of the collection
+    if details:
+        parts.append(
+            '  <div class="products-section">\n'
+            '    <div class="products-grid">\n'
+            + "\n".join(cards[i]["html"] for i in details) + "\n"
             "    </div>\n"
             "  </div>\n")
 
@@ -426,6 +593,29 @@ def render_collection(spec, block, cards):
 
 # ---------------------------------------------------------------- the order
 
+def bands(slug):
+    """The cropped lookbook bands for this brand, hero first."""
+    d = ROOT / "images" / slug
+    if not d.is_dir():
+        return []
+    hero = sorted(d.glob("btk-hero.jpg"))
+    body = sorted(d.glob("btk-body-*.jpg"),
+                  key=lambda p: int(re.search(r"(\d+)", p.stem).group(1)))
+    return [f"/images/{slug}/{p.name}" for p in hero + body]
+
+
+def render_band(src, brand, first=False):
+    """Lenny: separate each section with an image. The first is the masthead
+    band at 21:9; the rest are 16:9. object-fit on .drop-hero-img is what keeps
+    them from stretching — the bug from the first Hiroki build."""
+    alt = (f"{brand} lookbook photograph" if not first
+           else f"{brand} &mdash; lookbook photograph")
+    return ('<section class="drop-hero">\n'
+            f'  <img class="drop-hero-img{"" if first else " btk-16x9"}" '
+            f'src="{src}" alt="{alt}" loading="lazy" />\n'
+            "</section>\n\n")
+
+
 def build(slug, apply_=False):
     spec = json.loads((SPECS / f"{slug}.json").read_text(encoding="utf-8"))
     page = ROOT / "drops" / spec["page"]
@@ -437,6 +627,7 @@ def build(slug, apply_=False):
 
     crumb = header = collection = None
     heroes, story, coda, faq, more = [], [], [], None, None
+    writeup_imgs = []
     for tag, b in blocks:
         if tag.startswith('<div class="breadcrumb"'):
             crumb = b
@@ -444,12 +635,39 @@ def build(slug, apply_=False):
             header = b
         elif tag.startswith('<section class="drop-hero"'):
             heroes.append(b)
-        elif tag.startswith('<section class="more"'):
-            more = b
+        elif tag.startswith('<section class="more"') or tag.startswith('<div class="more"'):
+            # ...unless it is OUR related block from a previous run. That block
+            # is regenerated from the spec, and letting it land here would
+            # overwrite the page's real More from the Feed with a copy of
+            # something we are about to rebuild anyway.
+            if 'data-btk=' not in b[:120]:
+                more = b
         elif tag.startswith('<div class="writeup"') or tag.startswith('<div class="btk-card"'):
-            pass                      # a previous run's — rebuilt from the spec
+            # Rebuilt from the spec — but the spec holds TEXT only, so an image
+            # set inside the write-up (Devereux opens with a .writeup-img of a
+            # polo collar) would be dropped with the rest of the block. Keep any
+            # such image and hand it to The Story.
+            writeup_imgs.extend(re.findall(r'<img class="writeup-img"[^>]*>', b))
+            # ...and the founder quote, for the same reason. Gramicci's Mike
+            # Graham and Metalwood's Cole Young both sit in a .pull-quote inside
+            # the write-up, which the spec (paragraphs only) cannot carry.
+            writeup_imgs.extend(
+                re.findall(r'<div class="pull-quote">.*?</div>\s*</div>', b, re.S))
         else:
             mark = re.search(r'data-btk="([a-z-]+)"', b[:120])
+            # MIGRATION. Pages built before The Story got its own marker carry it
+            # as data-btk="prose", which now reads as a page's own leftover prose:
+            # it would be kept AND regenerated, giving the page two "The Story"
+            # headings. Recognise the old shape by its heading and drop it — the
+            # spec rebuilds it either way. Safe to delete once every page has been
+            # rebuilt at least once; harmless until then.
+            # ...but ONLY when the spec can actually rebuild it. Hiroki's spec is
+            # hand-written and carries no story_extra, so dropping its Story
+            # section left render_story with nothing to emit and the page lost
+            # 308 words. Never delete something you cannot put back.
+            if (mark and mark.group(1) == "prose" and spec.get("story_extra")
+                    and re.search(r'<h2 class="products-hdr">The Story</h2>', b)):
+                continue
             if mark and mark.group(1) in ("prose", "coda"):
                 (coda if mark.group(1) == "coda" else story).append(b)
                 continue
@@ -457,21 +675,57 @@ def build(slug, apply_=False):
                 # our own output from a previous run. The collection is kept and
                 # re-split; everything else we generated is dropped and rebuilt,
                 # which is what makes a second run a no-op instead of a double.
-                if mark.group(1) == "collection":
-                    collection = b
+                # PREFIX, AND ACCUMULATE. render_collection emits one section
+                # per category: the first is data-btk="collection", the rest
+                # are data-btk="collection-cont". An equality test matched only
+                # the first and silently dropped the others, so a second run on
+                # Seamus saw 9 of its 23 cards. It refused to write rather than
+                # publish a page missing 14 products — the guard doing its job,
+                # but the bug is here. Both halves matter: the prefix finds the
+                # continuations, the += keeps them all.
+                if mark.group(1).startswith("collection"):
+                    collection = (collection or "") + b
+                # The FAQ is LIFTED, not regenerated — there is nothing in the
+                # spec to rebuild it from. On a second run it arrives already
+                # wrapped in its own marked section, and dropping it here (as
+                # every other marked block is dropped) deleted the whole FAQ.
+                elif mark.group(1) == "faq":
+                    faq = b
                 continue
             h = h2_of(b)
-            if COLLECTION_H2.search(h):
-                collection = b
-            elif FAQ_H2.search(h):
+            # ONLY on a block that also holds products. Run against the FAQ's
+            # own section it empties that section, and the classifier below then
+            # overwrites the good extraction with the empty remainder — which is
+            # exactly how the Hiroki rebuild lost its FAQ.
+            if '<div class="product-card"' in b:
+                b, got_faq = split_faq(b)
+            else:
+                got_faq = None
+            if got_faq and not faq:
+                faq = ('<section class="products" data-btk="faq">\n'
+                       + got_faq + "\n</section>\n\n")
+            if '<div class="product-card"' in b:
+                collection = (collection or "") + b
+            # THE FAQ IS THE ACCORDION, NOT EVERY BLOCK THAT SAYS "FAQ".
+            # These pages carry TWO blocks matching the heading pattern: the
+            # schema-backed <div class="faq"> accordion, and a separate prose
+            # section headed "The Story — FAQ" that is ordinary editorial
+            # writing (and on Gramicci, Quiet Golf and Huega House also holds
+            # the founder's pull-quote). Assigning faq on the heading alone let
+            # the second overwrite the first, and whichever lost went in the
+            # bin — 492 words on Metalwood, 438 on Odd Ritual. The accordion is
+            # identified by its own markup; a heading match with no accordion
+            # anywhere on the page still counts, for older pages that predate it.
+            elif '<div class="faq"' in b or (
+                    FAQ_H2.search(h) and '<div class="faq"' not in html):
                 faq = b
             elif CODA_H2.search(h):
                 coda.append(b)
             else:
                 story.append(b)
 
-    if collection is None:
-        raise SystemExit("no collection section found")
+    if not collection:
+        raise SystemExit("no product cards found anywhere on the page")
     cards = split_cards(collection)
     n_before = html.count('<div class="product-card"')
     if len(cards) != n_before:
@@ -486,26 +740,81 @@ def build(slug, apply_=False):
                 for b in blocks]
 
     card_html = render_card(spec)
+
+    # THE LEGACY MASTHEAD. 40 of the 41 Brand to Know pages open with
+    #     <div class="drop-hero"><div class="drop-hero-img"><img ...></div></div>
+    # and it is a DIV, not a <section>, so parse() never split it off — it rides
+    # along inside the header block. The template then appended its own 21:9 band
+    # directly beneath it and the page opened with two photographs stacked, no
+    # type between them. Invisible in the section scan (which looks for
+    # <section class="drop-hero">), obvious the moment you look at the render.
+    #
+    # The band replaces it, so it is removed — but ONLY when there is a band to
+    # replace it with. A brand whose harvest came up empty keeps the one picture
+    # it has rather than losing its masthead entirely.
+    dropped_imgs = set()
+    legacy_hero = re.search(
+        r'\s*<div class="drop-hero">\s*<div class="drop-hero-img">.*?</div>\s*</div>',
+        header or "", re.S)
+    if legacy_hero and bands(slug):
+        dropped_imgs = set(re.findall(r'<img[^>]+src="([^"]+)"', legacy_hero.group(0)))
+        header = header[:legacy_hero.start()] + header[legacy_hero.end():]
+
     parts = [ensure_css(head), crumb, header]
 
-    # THE READING ORDER.
-    #   hero -> the opinion -> who they are -> the card -> picture
-    #   -> where to start -> the products -> picture -> the coda -> questions
-    # The piece is read before the catalogue is shown, which is the change
-    # Lenny asked for and the reason The Story now sits above The Collection.
-    if heroes:
-        parts.append(heroes[0])
-    parts.append(render_writeup(spec, card_html))      # THE TGI TAKE
-    parts.extend(mark_prose(story, "prose"))           # the main write-up
+    # THE PHOTOGRAPHS. Lenny: "let's always separate each section with an
+    # image." bands(slug) returns the crops btk-lookbook.py made, hero first.
+    # They are spent in order and never repeated: when a brand's harvest runs
+    # out the remaining joins simply have no picture, which is honest, where
+    # showing the same photograph twice would read as padding.
+    pics = bands(slug) or [
+        # a page that already had heroes of its own keeps them
+        m.group(1) for b in heroes
+        for m in [re.search(r'src="([^"]+)"', b)] if m]
+    pics = list(dict.fromkeys(pics))
+
+    def band():
+        return render_band(pics.pop(0), spec["brand"], first=not band.used) \
+            if pics and not setattr(band, "used", True) else ""
+    band.used = False
+
+    def pic(first=False):
+        if not pics:
+            return ""
+        return render_band(pics.pop(0), spec["brand"], first=first)
+
+    # THE READING ORDER, with a picture at every join.
+    parts.append(pic(first=True))                       # masthead band
+    parts.append(render_writeup(spec, card_html))       # THE TGI TAKE
+    parts.append(pic())
+    # THE NATIVE "THE STORY". Bluegrass Fairway already has a section headed
+    # The Story of its own, so emitting ours beside it gave the page two
+    # identical headings. Both bodies are real copy and neither may be dropped,
+    # so they are merged: our paragraphs go into the top of the page's own
+    # section and no second one is emitted.
+    native_story = next(
+        (i for i, b in enumerate(story)
+         if re.search(r"<h2[^>]*>\s*The Story\s*</h2>", b)), None)
+    if native_story is not None and spec.get("story_extra"):
+        b = story[native_story]
+        k = b.find("</h2>") + len("</h2>")
+        body = "\n".join(f"    {i}" for i in writeup_imgs) \
+            + "\n".join(f"    <p>{x}</p>" for x in spec["story_extra"])
+        story[native_story] = (b[:k] + '\n  <div class="writeup-body">\n'
+                               + body + "\n  </div>\n" + b[k:])
+    else:
+        parts.append(render_story(spec, writeup_imgs))   # the main write-up
+    parts.extend(mark_prose(story, "prose"))            # any other prose sections
     if not SIDEBAR_IN_WRITEUP:
         parts.append('<div class="btk-card">\n' + card_html + "</div>\n\n")
-    if len(heroes) > 1:
-        parts.append(heroes[1])
-    parts.append(render_start_here(spec, cards))
-    parts.append(render_collection(spec, collection, cards))
-    if len(heroes) > 2:
-        parts.extend(heroes[2:])
-    parts.extend(mark_prose(coda, "coda"))             # the shorter write-up
+    parts.append(pic())
+    if spec.get("start_here"):
+        parts.append(render_start_here(spec, cards))
+        parts.append(pic())
+    # THE COLLECTION, with a picture between each category
+    parts.append(render_collection(spec, collection, cards, pic))
+    parts.extend(mark_prose(coda, "coda"))              # the shorter write-up
+    parts.append(pic())
     if faq:
         parts.append(faq)
     parts.append(render_related(spec, brands))
@@ -523,8 +832,11 @@ def build(slug, apply_=False):
         # by src, not by count: IF YOU LIKE legitimately ADDS four brand
         # thumbnails, so a raw == here fails a correct render. What has to hold
         # is that nothing arrived without leaving.
+        # ...with ONE deliberate exception: the legacy masthead the 21:9 band
+        # replaces. dropped_imgs holds exactly that one src and nothing else, so
+        # this stays a real check rather than a loosened one.
         ("every image survived",
-         set(re.findall(r'<img[^>]+src="([^"]+)"', html))
+         set(re.findall(r'<img[^>]+src="([^"]+)"', html)) - dropped_imgs
          <= set(re.findall(r'<img[^>]+src="([^"]+)"', out)),
          f"{html.count('<img')} in, {out.count('<img')} out"),
         ("both JSON-LD blocks survived",
@@ -532,6 +844,17 @@ def build(slug, apply_=False):
         ("FAQ block intact",
          out.count('<div class="faq">') == html.count('<div class="faq">'), ""),
         ("document closes", "</body>" in out and "</html>" in out and "<footer" in out, ""),
+        # THE CHECK THAT WAS MISSING. Every assertion above counts THINGS —
+        # cards, links, images, schema blocks. None of them counts WORDS, so a
+        # run could drop whole paragraphs of prose and still report eleven
+        # greens. Takomo lost 362 words and Gramicci 85 before this existed, and
+        # both went live until verify-post caught them afterwards. A reorderer
+        # must not lose sentences either.
+        ("no prose lost", _words(out) >= _words(html),
+         f"{_words(html)} in, {_words(out)} out"),
+        ("section tags balance",
+         out.count("<section") == out.count("</section>"),
+         f"{out.count('<section')}/{out.count('</section>')}"),
         ("no duplicated h2",
          len(set(re.findall(r'<h2[^>]*>(.*?)</h2>', out, re.S)))
          == len(re.findall(r'<h2[^>]*>(.*?)</h2>', out, re.S)), ""),
@@ -554,7 +877,9 @@ def build(slug, apply_=False):
         # cries wolf gets switched off, so it counts opening tags only.
         ("exactly one of each generated section",
          all(len(re.findall(r'<(?:section|div)[^>]*data-btk="' + k + '"', out)) == 1
-             for k in ("take", "start-here", "collection", "related")),
+             for k in (("take", "start-here", "collection", "related")
+                       if spec.get("start_here") else
+                       ("take", "collection", "related"))),
          ", ".join(k + "=" + str(len(re.findall(r'<(?:section|div)[^>]*data-btk="' + k + '"', out)))
                    for k in ("take", "start-here", "collection", "related"))),
         ("start-here anchors resolve",
@@ -569,7 +894,7 @@ def build(slug, apply_=False):
 
     print(f"\n  {len(html):,} -> {len(out):,} bytes    "
           f"{len(cards)} products in {len(spec['collection'])} categories, "
-          f"{len(spec['start_here'])} picks, {len(spec['related'])} related brands")
+          f"{len(spec.get('start_here') or [])} picks, {len(spec['related'])} related brands")
 
     if apply_:
         # NOT next to the page. Anything left in drops/ ships to Vercel, and a
@@ -592,6 +917,19 @@ if __name__ == "__main__":
              if "--all" in sys.argv else args)
     if not slugs:
         raise SystemExit(__doc__.strip().split("USAGE")[-1])
+    # --all must not stop at the first page that refuses. A page that fails its
+    # checks is left exactly as it was and named at the end; the rest still get
+    # built. Stopping the batch would leave the site half-converted.
+    done, failed = [], []
     for s in slugs:
         print(f"\n=== {s}")
-        build(s, apply_)
+        try:
+            build(s, apply_)
+            done.append(s)
+        except SystemExit as e:
+            print(f"  -- skipped: {e}")
+            failed.append((s, str(e).strip().splitlines()[0][:70]))
+    if len(slugs) > 1:
+        print(f"\n{'='*60}\n  built {len(done)}   skipped {len(failed)}")
+        for s, why in failed:
+            print(f"    {s:<26} {why}")
