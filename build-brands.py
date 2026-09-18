@@ -29,7 +29,7 @@ anyone reading one: the tail of this file detects whether it just clobbered the
 approved design and, if so, runs build-brand-index.py itself and fails loudly if
 that does not work. See RESTORE THE APPROVED DESIGN at the bottom.
 """
-import json, os, re, html as H, subprocess, sys
+import json, os, re, html as H, subprocess, sys, glob
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
@@ -288,9 +288,31 @@ pills += [f'<button class="bi-pill bi-pill-attr" data-f="{k}">{v}</button>' for 
 pills += [f'<button class="bi-pill" data-f="{k}">{v}</button>' for k, v in CATS if k != "community"]
 pills += [f'<button class="bi-pill" data-f="{k}">{v}</button>' for k, v in REGIONS if k != "world"]
 
+# VOCABULARY, 17 September 2026.
+#
+# First attempt at this put "directory" in the title, because that was the word
+# Lenny used when he tested the query. Lenny pushed back — "I don't think people
+# are actually googling directory" — and he was right. Checking the pages that
+# actually rank for this category:
+#
+#   "to know" / "you should know" / "you need to know"   5 of 8
+#   title leads with a NUMBER                            6 of 8
+#   "indie"                                              2 of 8
+#   "under-the-radar"                                    2 of 8
+#   "directory"                                          0 of 8
+#
+# So the original title was already carrying the phrase that wins — "Brands to
+# Know" is the house franchise name and it happens to be the exact idiom the
+# category searches in. What it lacked was the LEADING NUMBER, and 132 is the
+# one number nobody else here can print: every competing page is at 30 or fewer.
+#
+# "indie" and "under-the-radar" are real query variants this page used zero
+# times despite TGI using "indie" on 32 other pages, so they go in the body copy
+# where they read naturally — not stuffed into the title.
 itemlist = json.dumps({"@context":"https://schema.org","@type":"CollectionPage",
-  "name":"Independent Golf Brands to Know — The Brand Index",
-  "description":"A running index of independent golf brands — apparel, clubs, bags, headcovers and accessories — researched and curated by The Grassy Issue in Austin, Texas.",
+  "name":f"{len(BRANDS)} Independent Golf Brands to Know — The Grassy Issue",
+  "alternateName":"The Brand Index",
+  "description":f"A running list of {len(BRANDS)} independent and indie golf brands — apparel, clubs, bags, headcovers and accessories — researched and selected by The Grassy Issue in Austin, Texas.",
   "url":"https://thegrassyissue.com/brands/",
   "mainEntity":{"@type":"ItemList","numberOfItems":len(BRANDS),
     "itemListElement":[{"@type":"ListItem","position":i+1,"name":b["name"],
@@ -304,16 +326,21 @@ margins = re.search(r'@font-face\s*\{[^}]*In The Margins[^}]*\}', site)
 margins_css = margins.group(0) if margins else ""
 
 N = len(BRANDS)
+# The year in the title is DERIVED, not typed. Every competing page hardcodes it
+# ("...Brands Worth Knowing (2026)"), which is fine until January, when the page
+# starts advertising that it is a year old. This is a living list — it gets a new
+# brand most weeks — so the current year is the honest label and it rolls itself.
+YEAR = __import__("datetime").date.today().year
 page = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Independent Golf Brands to Know — The Brand Index | The Grassy Issue</title>
-<meta name="description" content="A running index of {N} independent golf brands — apparel, clubs, bags, headcovers and accessories from Texas, Australia, Japan and beyond. Researched and curated from Austin.">
+<title>{N} Independent Golf Brands to Know ({YEAR}) | The Grassy Issue</title>
+<meta name="description" content="A running list of {N} independent and indie golf brands — apparel, bags, headcovers and under-the-radar makers from Texas to Tokyo, searchable by product, vibe and location.">
 <link rel="canonical" href="https://thegrassyissue.com/brands/">
-<meta property="og:title" content="Independent Golf Brands to Know — The Brand Index">
-<meta property="og:description" content="A running index of {N} independent golf brands, researched and curated by The Grassy Issue.">
+<meta property="og:title" content="{N} Independent Golf Brands to Know ({YEAR})">
+<meta property="og:description" content="A running list of {N} independent and indie golf brands, searchable by product, vibe and location.">
 <meta property="og:url" content="https://thegrassyissue.com/brands/">
 <meta property="og:type" content="website">
 {fonts}
@@ -781,29 +808,67 @@ for a, (label, blurb, criteria) in ATTR_COPY.items():
     nattr += 1
 print(f"wrote {nattr} attribute pages in /brands/attr/")
 
-# ------------------------------------------------- RESTORE THE APPROVED DESIGN
+# ------------------------------------------------------- RESTORE WHAT WE BROKE
 #
-# build-brand-index.py wants to run after the header chain, and normally does.
-# But a silent revert to a design Lenny did not approve is a worse outcome than
-# running it a step early: it only replaces the page BODY, leaving the head, nav,
-# weather banner, footer and analytics exactly as this script just wrote them, so
-# a later header-chain pass still lands correctly on top of it.
+# Everything above writes /brands from templates that carry NONE of the sitewide
+# furniture: no search box, no search JS, no mobile drawer, no work-with-us line,
+# and the old index design. Those are added afterwards by separate scripts, so a
+# bare run of this file leaves 133 pages looking subtly gutted — and nothing
+# errors, which is why it went unnoticed for a full day on 17 September 2026.
 #
-# This fires ONLY when the page being replaced was the approved one. A first-ever
-# build, or a deliberate run against the old design, is left alone.
-if _CLOBBERED_APPROVED:
-    print("\n/brands was on the APPROVED design and this script just reverted it.")
-    print("Re-running build-brand-index.py to put it back...")
-    r = subprocess.run([sys.executable,
-                        os.path.join(ROOT, "build-brand-index.py"), "--apply"],
-                       capture_output=True, text=True)
-    sys.stdout.write("   " + (r.stdout or "").replace("\n", "\n   ").rstrip() + "\n")
-    ok = r.returncode == 0 and 'id="bx"' in open(_IDX, encoding="utf-8").read()
-    if not ok:
-        sys.stderr.write((r.stderr or "").rstrip() + "\n")
-        raise SystemExit(
-            "\n!! /brands IS LEFT ON THE OLD DESIGN AND WILL SHIP THAT WAY.\n"
-            "   build-brand-index.py did not restore it. Do not deploy until\n"
-            "   `python3 build-brand-index.py --apply` succeeds and the page\n"
-            "   contains id=\"bx\".")
-    print("   approved design restored — /brands is safe to ship")
+# So this file now finishes its own job. The order below is the documented one
+# from build-brand-index.py's docstring, with two specifics that are easy to get
+# wrong and were both got wrong today:
+#
+#   install-search.py takes EXPLICIT PATHS. It does not glob. Called bare it
+#   silently does nothing, which leaves a search box that renders, focuses,
+#   accepts typing and never queries anything — worse than no box at all.
+#
+#   apply-header.py runs TWICE, once at each end. build-brand-index.py replaces
+#   the page body including its <style>, which drops the weather-banner CSS that
+#   the first pass added — leaving banner markup with no rules. The second pass
+#   puts the CSS back, and does not disturb the #bx body.
+#
+# Every script here is idempotent, so running the chain from a pipeline that also
+# runs it afterwards is harmless.
+CHAIN = [
+    (["apply-header.py", "--apply"],                      "unify header + weather banner"),
+    (["fix-mobile-menu.py", "--apply"],                   "mobile drawer"),
+    (["add-nav-search-box.py", "--apply"],                "search BOX into the nav"),
+    (["install-search.py"] + sorted(glob.glob(os.path.join(ROOT, "brands", "*.html")))
+                           + ["--apply"],                 "search JS (explicit paths!)"),
+    (["fix-mobile-nav.py", "--apply"],                    "mobile nav links"),
+    (["wire-work-with-us.py", "--apply"],                 "work-with-us line"),
+    (["sync-brand-sitemap.py", "--apply"],                "sitemap rows"),
+    (["build-brand-index.py", "--apply"],                 "THE APPROVED /brands DESIGN"),
+    (["apply-header.py", "--apply"],                      "weather CSS back after the body swap"),
+]
+
+print("\nrestoring the sitewide furniture this script does not write:")
+for argv, what in CHAIN:
+    argv = [argv[0] if os.path.isabs(argv[0]) else os.path.join(ROOT, argv[0])] + argv[1:]
+    r = subprocess.run([sys.executable] + argv, capture_output=True, text=True, cwd=ROOT)
+    if r.returncode:
+        sys.stderr.write((r.stderr or r.stdout or "").rstrip() + "\n")
+        raise SystemExit(f"\n!! {os.path.basename(argv[0])} FAILED ({what}).\n"
+                         f"   /brands is incomplete and must not be deployed.")
+    print(f"   · {os.path.basename(argv[0]):<24} {what}")
+
+# Prove it rather than trust it — these are the four things that were missing.
+_idx = open(_IDX, encoding="utf-8").read()
+_pages = [p for p in glob.glob(os.path.join(ROOT, "brands", "*.html")) if p != _IDX]
+_gaps = []
+if 'id="bx"' not in _idx:
+    _gaps.append("/brands is on the OLD design")
+if not re.search(r"\.weather-banner\s*\{", _idx):
+    _gaps.append("/brands has weather-banner markup with no CSS")
+for _need, _label in [("search-index.json", "search JS"), ("tgi-sbox", "search box"),
+                      ("work-with-us", "work-with-us line"), ("navDrawer", "mobile drawer")]:
+    _n = sum(1 for p in _pages if _need not in open(p, encoding="utf-8").read())
+    if _n:
+        _gaps.append(f"{_n}/{len(_pages)} brand pages missing {_label}")
+if _gaps:
+    raise SystemExit("\n!! /brands IS STILL INCOMPLETE — DO NOT DEPLOY:\n   "
+                     + "\n   ".join(_gaps))
+print(f"   verified: approved design + search + drawer + work-with-us on all "
+      f"{len(_pages)} brand pages")

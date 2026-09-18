@@ -179,6 +179,15 @@ CSS = r"""
 #bx .dir-state b{color:var(--bx-ink);font-weight:500}#bx .dir-state button{background:none;border:0;cursor:pointer;font:inherit;color:var(--bx-ink);border-bottom:1px solid var(--bx-ink);padding:0 0 2px;letter-spacing:inherit;text-transform:inherit}
 #bx .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(22px,2.4vw,36px) clamp(16px,1.6vw,26px);padding-bottom:40px}
 #bx .bc{display:flex;flex-direction:column;gap:12px}#bx .bc.hide{display:none}
+/* .bc-body and .vibe-body are the text halves of their cards. They looked like
+   they needed no rule — every child is styled and the parent flex gap does the
+   spacing — so they shipped without one, which verify-post correctly flagged
+   (house rule: every class used has a CSS rule). min-width:0 is the right rule
+   rather than a placeholder: a flex child defaults to min-width:auto, so a long
+   unbroken brand name would push the card wider than its column instead of
+   wrapping. Costs nothing on the other 131. */
+#bx .bc-body{min-width:0}
+#bx .vibe-body{min-width:0}
 #bx .bc-img{aspect-ratio:4/5;overflow:hidden;background:var(--bx-paper2);position:relative}
 #bx .bc-img img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}#bx .bc:hover .bc-img img{transform:scale(1.035)}
 #bx .bc-view{position:absolute;left:12px;bottom:10px;background:var(--bx-paper);padding:6px 9px;font-family:var(--bx-mono);font-size:9.5px;letter-spacing:.16em;opacity:0;transform:translateY(4px);transition:all .35s}
@@ -221,9 +230,9 @@ BODY = f"""<!--BX-BRAND-INDEX-->
 <div id="bx">
 <section class="bx-hero"><div class="wrap">
   <div>
-    <div class="eyebrow">THE BRAND INDEX &middot; CURATED FROM AUSTIN</div>
+    <div class="eyebrow">{N} INDEPENDENT GOLF BRANDS &middot; AUSTIN</div>
     <h1>{N} brands<br>to <em>know.</em></h1>
-    <p>Independent golf brands, makers and oddities from Texas to Tokyo. Researched and selected by The Grassy Issue.</p>
+    <p>A running list of independent golf brands, makers and oddities from Texas to Tokyo &mdash; indie labels, small-batch workshops and under-the-radar names, every one with its own page. Researched and selected by The Grassy Issue.</p>
     <div class="modes"><button type="button" id="bx-m-discover">DISCOVER</button><button type="button" id="bx-m-az">BROWSE A&ndash;Z</button><button type="button" data-open-filter>FILTER</button></div>
   </div>
   <div class="bx-hero-img"><img src="{HERO_IMG}" alt="Lions Municipal Golf Course at dusk, Austin"><div class="cap">LIONS MUNICIPAL &middot; AUSTIN, TX</div></div>
@@ -235,7 +244,7 @@ BODY = f"""<!--BX-BRAND-INDEX-->
 </div></section>
 
 <section class="sec" id="directory"><div class="wrap">
-  <div class="sh"><h2>All brands</h2><span class="sub" id="bx-count">{N} BRANDS</span></div>
+  <div class="sh"><h2>The full list</h2><span class="sub" id="bx-count">{N} BRANDS</span></div>
   <div class="search"><input id="bx-q" type="search" placeholder="Search brands, gear, or a vibe&hellip;" autocomplete="off" aria-label="Search the Brand Index"><span class="k">/</span></div>
   <div class="dir-tools"><div class="azbar" role="navigation" aria-label="Jump to letter">{AZ}</div>
     <div class="dir-state"><span id="bx-label">ALPHABETICAL</span><button type="button" data-open-filter>FILTER &rarr;</button></div></div>
@@ -322,11 +331,20 @@ assert nav_end > 6 and foot > nav_end, "could not find nav/footer boundaries"
 head_end = page.find("</head>")
 head = page[:head_end]
 head = re.sub(r'<style id="bx-css">.*?</style>\n?', "", head, flags=re.S)
-head = re.sub(r'<title>[^<]*</title>', f"<title>The Brand Index — {N} Independent Golf Brands to Know | The Grassy Issue</title>", head)
+# SEE THE VOCABULARY NOTE IN build-brands.py — it carries the evidence for why
+# the title reads the way it does. This file writes the head LAST, so THESE are
+# the strings that ship; the equivalents over there only matter between build
+# steps. Keep the two in agreement or the next person debugging a title will
+# read the wrong file. The year is derived there and imported here for the same
+# reason: a hardcoded year goes stale in January without anyone noticing.
+YEAR = __import__("datetime").date.today().year
+head = re.sub(r'<title>[^<]*</title>', f"<title>{N} Independent Golf Brands to Know ({YEAR}) | The Grassy Issue</title>", head)
 head = re.sub(r'(<meta name="description" content=")[^"]*(")',
-              lambda m: m.group(1) + f"A field guide to {N} independent golf brands — makers and oddities from Texas to Tokyo, searchable by product, vibe and location. Researched and selected in Austin." + m.group(2), head)
+              lambda m: m.group(1) + f"A running list of {N} independent and indie golf brands — apparel, bags, headcovers and under-the-radar makers from Texas to Tokyo, searchable by product, vibe and location." + m.group(2), head)
+head = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
+              lambda m: m.group(1) + f"{N} Independent Golf Brands to Know ({YEAR})" + m.group(2), head)
 head = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
-              lambda m: m.group(1) + f"A field guide to {N} independent golf brands, searchable by product, vibe and location." + m.group(2), head)
+              lambda m: m.group(1) + f"A running list of {N} independent and indie golf brands, searchable by product, vibe and location." + m.group(2), head)
 tail = page[foot:]
 # drop the old page's own pill/gallery script(s) and any previous bx-js
 tail = re.sub(r'<script>\s*\(function\(\)\{\s*var pills=.*?</script>\s*', "", tail, count=1, flags=re.S)
