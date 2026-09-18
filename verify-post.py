@@ -164,6 +164,22 @@ def verify(path):
     txt = re.sub(r'\bFort\s+Worth\b', ' ', txt, flags=re.I)
     chk("no banned word 'worth'", not re.search(r'\bworth\b', txt, re.I))
     body = re.sub(r'<(script|style)[^>]*>.*?</\1>', ' ', h, flags=re.S)
+    # TEMPLATE LEAK. These pages are built by grafting a new middle between a
+    # donor page's head and its tail, and the join is easy to put in the wrong
+    # place — on 18 Sep 2026 the Hiroki build inherited Bluegrass Fairway's
+    # "What It Is Made Of" and "The Questions" wholesale, five foreign FAQ
+    # answers and all. A duplicated h2 is the signature of that mistake and is
+    # never intentional in this format, so it fails here rather than shipping.
+    h2s = [re.sub(r'<[^>]+>', '', x).strip().lower()
+           for x in re.findall(r'<h2[^>]*>(.*?)</h2>', body, re.S)]
+    dupes = sorted({x for x in h2s if h2s.count(x) > 1})
+    chk("no duplicated h2 (template leak)", not dupes,
+        "repeated: " + ", ".join(dupes) if dupes else "")
+    # one FAQ block only — a second one means a donor page's FAQ came along
+    chk("exactly one FAQ block", body.count('<div class="faq">') <= 1)
+    # the page must actually close; a bad graft can truncate the tail
+    chk("document closes (</body></html>)",
+        '</body>' in h and '</html>' in h and '<footer' in h)
     words = len(html.unescape(re.sub(r'<[^>]+>', ' ', body)).split())
     # more-cards must use the styled structure — .more-kicker/.more-title have no CSS
     mc = re.findall(r'<a[^>]*class="more-card".*?</a>', h, re.S)
