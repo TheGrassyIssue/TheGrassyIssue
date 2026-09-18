@@ -277,18 +277,31 @@ section.products[style*="border-top:none"]{
    why the 38px treatment above never reached it. The site default sets it 15px
    with a left rule, so it sat as a small note hard against the left margin
    underneath a CENTRED heading, which is the "doesn't sit right" part. Here it
-   is a proper deck: large, centred under its heading, no rule. */
+   is a proper deck: large, centred under its heading, no rule.
+
+   ROMAN, NOT ITALIC. The first pass set these 25px ITALIC, and Lenny: "I find
+   this font kinda hard to read." He was right, and the typeface was not the
+   problem — Editors Note Text is a display serif whose italic is fine for a
+   one-line pull-quote and punishing over five or six centred lines. Body copy
+   uses the same face roman at 17px and reads perfectly well. So: roman, a
+   shorter measure so lines break sooner, and looser leading.
+
+   AND REGULAR WEIGHT, NOT BOLD. Bold was tried and pulled: the h2 above it is
+   already set in the same family at 600, which the family resolves to its 700,
+   so a bold deck sat at exactly the heading's weight and the two competed.
+   Lenny: "clashes with the title." The hierarchy is carried by size — 21px
+   under a 32px heading — which only works while the weights differ. */
 section[data-btk] .cat-kicker,
-section[data-btk] .sec-intro{font-family:var(--serif);font-style:italic;
-  font-size:25px;line-height:1.42;letter-spacing:-.01em;color:var(--ink);
-  opacity:.82;border-left:0;padding:0;max-width:720px;
+section[data-btk] .sec-intro{font-family:var(--serif);font-style:normal;
+  font-weight:400;font-size:21px;line-height:1.6;letter-spacing:0;
+  color:var(--ink);opacity:.88;border-left:0;padding:0;max-width:620px;
   margin:0 auto 44px;text-align:center}
 /* inside the Take the column is left-aligned, so the deck follows it */
 section[data-btk="take"] .cat-kicker,
 section[data-btk="take"] .sec-intro{margin-left:0;text-align:left}
 @media(max-width:820px){
   section[data-btk] .cat-kicker,
-  section[data-btk] .sec-intro{font-size:20px;margin-bottom:32px}
+  section[data-btk] .sec-intro{font-size:18px;margin-bottom:32px}
 }
 
 /* THE ARTICLE COLUMN. Left, not centred — see the note on the Take above. */
