@@ -36,6 +36,10 @@ DOMAINS = {
     "ghost-golf":        ["ghostgolf.com"],
     "gumtree-golf":      ["gumtreegolf.com", "gumtreegolfandnature.com"],
     "pins-and-aces":     ["pinsandaces.com"],
+    # Added 2026-09-18 with Salomon. Three other posts say the word "Salomon"
+    # without linking out; by this script's domain rule they are not coverage,
+    # which is right — a passing mention is not a post about the brand.
+    "salomon":           ["salomon.com"],
     "sounder":           ["soundergolf.com"],
     "stitch-golf":       ["stitchgolf.com"],
     "sunday-golf":       ["sundaygolf.com"],          # NOT sundayrollsgolf.com

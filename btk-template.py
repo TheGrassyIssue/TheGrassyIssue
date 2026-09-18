@@ -857,7 +857,17 @@ def wild_title(html):
     """"In the Wild" unless the page already uses it for something else.
 
     Rouqe Golf names a PRODUCT CATEGORY "In the Wild", so titling the gallery
-    that put two identical h2s on the page. Take the first title that is free."""
+    that put two identical h2s on the page. Take the first title that is free.
+
+    _nowild IS LOad-BEARING HERE, and leaving it out was a real bug. On a
+    REBUILD the page already carries last run's gallery, whose h2 is "In the
+    Wild" — so this read its own previous heading as "taken", fell through to
+    "The Lookbook", and the next run fell back again. The page oscillated
+    between two headings forever and never went byte-stable. Strip our own
+    generated gallery first: the only headings that should block a title are
+    the page's OWN, not the one we are about to replace.
+    """
+    html = _nowild(html)
     have = {re.sub(r"<[^>]+>", "", h).strip().lower()
             for h in re.findall(r"<h2[^>]*>(.*?)</h2>", html, re.S)}
     for t in ("In the Wild", "The Lookbook", "On Course", "The Photographs"):
