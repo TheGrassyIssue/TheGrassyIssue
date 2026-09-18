@@ -55,7 +55,13 @@ from PIL import Image, ImageStat
 ROOT = pathlib.Path(__file__).resolve().parent
 LIMIT = 170
 MIN_WRITEUP = 60      # below this a text slide reads as blank, so it is skipped
-TAGS = {"drop": "Drops &amp; Brands", "field": "Field Notes", "news": "News"}
+# "drops" (plural) was missing until 17 September 2026, so the 12 multi-brand
+# roundup cards fell through to the generic "The Grassy Issue" chip — on /ig and
+# in the export both. The feed only ever uses these four types, and the site's
+# own .card-tag text for drop and drops is identical, so they map to the same
+# label here rather than inventing a second one.
+TAGS = {"drop": "Drops &amp; Brands", "drops": "Drops &amp; Brands",
+        "field": "Field Notes", "news": "News"}
 
 
 def clean(frag):
