@@ -259,6 +259,25 @@ section.drop-hero.btk-wrap .drop-hero-img{float:right;margin:4px 0 20px 36px;
     max-width:100%}
 }
 
+/* EVERY SECTION THE SAME WAY — the last two things that gave the set away.
+   Measuring the rendered pages turned up two breaks in the rhythm that the
+   markup checks could not see:
+
+   1. Headings switched between centred and left depending on whether the
+      section happened to carry a data-btk marker. On Walker "The Collection"
+      sat centred while "In the Wild" and "Frequently Asked" sat hard left; on
+      Après the same split ran down the whole page. Centre them all. The Take
+      keeps its left alignment because it shares a column with the Brand Card.
+   2. A handful of sections were written with border-top:none inline, so the
+      hairline that separates every other section simply wasn't there — the
+      missing transition again, in the few places it was hardest to spot.
+      An inline style only loses to !important, which is why it is used here. */
+section.products .products-hdr{max-width:760px;margin-left:auto;margin-right:auto;
+  display:block;width:fit-content}
+section[data-btk="take"] .products-hdr{margin-left:0;margin-right:auto}
+section.products[style*="border-top:none"]{
+  border-top:.5px solid var(--ink) !important;padding-top:40px !important}
+
 /* THE GALLERY. Walker's .ig-grid lives in that page's own <style>, so pages
    that never had one have no rule for it — the generated grid would stack one
    image per row. Restated here, identically, so every page renders it the same. */
