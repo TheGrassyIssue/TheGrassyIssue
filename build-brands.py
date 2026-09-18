@@ -748,7 +748,7 @@ def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
 
     body = f'''  <div class="bp-crumb"><a href="/">Feed</a> <span>/</span> <a href="/brands/">Brands</a> <span>/</span> {label}</div>
   <header class="bp-head">
-    <span class="bp-kicker">[ " + ("Taste tag" if base=="tag" else "Attribute") + " ]</span>
+    <span class="bp-kicker">[ {"Taste tag" if base == "tag" else "Attribute"} ]</span>
     <h1>{label}</h1>
     <p class="bp-intro">{blurb}</p>
   </header>
