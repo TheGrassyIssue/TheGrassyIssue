@@ -33,8 +33,19 @@ POST = ROOT / "drops/agronomy-workshop-a-golf-shirt-with-a-hidden-tee-slot-and-n
 IDX = ROOT / "index.html"
 
 PHRASE = "greenkeeper who reads design blogs"
-NEW = (" The whole operation reads like a {p} — practical first, "
+# A COLON, NOT AN EM-DASH. The first version used an em-dash and voice-lint
+# flagged the paragraph for a pile-up: the sentence after it already carries two
+# ("The mock neck heavyweight work shirt — 17.5 oz cotton, made in LA — is..."),
+# so adding a third tipped a passage that had been clean. The punctuation of a
+# sentence has to answer to the paragraph it lands in, not just to itself.
+NEW = (" The whole operation reads like a {p}: practical first, "
        "considered second, and loud about neither.").format(p=PHRASE)
+# Wording of the inserted sentence has changed once; supersede the old form in
+# place rather than leaving two variants across the post and the homepage card.
+SUPERSEDE = [
+    " The whole operation reads like a {p} — practical first, "
+    "considered second, and loud about neither.".format(p=PHRASE),
+]
 
 # THE ANCHOR MUST BE SCOPED TO VISIBLE BODY COPY. The bare sentence "and called
 # it a golf brand." occurs FIVE times in the post: once in the <p> a reader
@@ -54,6 +65,9 @@ ANCHORS = {
 
 
 def patch(text, label):
+    for old in SUPERSEDE:                      # migrate an earlier wording
+        if old in text:
+            return text.replace(old, NEW), f"{label}: sentence updated"
     if PHRASE in text:
         return text, f"{label}: already present"
     a = ANCHORS[label]
