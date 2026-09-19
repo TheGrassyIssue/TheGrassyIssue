@@ -1,0 +1,16 @@
+.more{max-width:1400px;margin:48px auto 0;padding:0 32px;border-top:.5px solid var(--ink);padding-top:32px}
+.more-hdr{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.more-label{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.55}
+.more-link{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px}
+.more-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.more-card{border:.5px solid var(--ink);overflow:hidden;transition:transform .2s;display:block}
+.more-card:hover{transform:translateY(-2px)}
+.more-card-img{aspect-ratio:1/1;overflow:hidden;background:#e8e5dc}
+.more-card-img img{width:100%;height:100%;object-fit:cover}
+.more-card-body{padding:12px}
+.more-card-name{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.25;margin-bottom:4px}
+.more-card-tag{font-family:var(--mono);font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.55}
+.more{padding:0 20px;padding-top:24px}
+.more-grid{grid-template-columns:repeat(2,1fr)}
+.more-grid{grid-template-columns:1fr 1fr}
+

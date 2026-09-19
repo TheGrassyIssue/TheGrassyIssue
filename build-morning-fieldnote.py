@@ -210,8 +210,14 @@ def build():
     head = re.sub(r'(name="twitter:description" content=)"[^"]*"', rf'\1"{DESC}"', head)
     head = head.replace("/drops/austin-coffee-guide", SLUG)
     head = re.sub(r'("description"\s*:\s*)"[^"]*"', rf'\1"{DESC}"', head, count=1)
-    head = re.sub(r'(content=")/images/[^"]*(" *)(/?>)',
-                  rf'\1{IMG}\2\3', head)
+    # BOTH forms. The donor carries relative /images/... paths AND absolute
+    # https://thegrassyissue.com/images/... ones (og:image, twitter:image).
+    # Rewriting only the relative form left this post's share card pointing at
+    # the coffee guide's Radio Coffee photo — invisible on the page itself,
+    # wrong in every Slack / iMessage / Twitter unfurl of the link.
+    head = re.sub(r'(content=")/images/[^"]*(" *)(/?>)', rf'\1{IMG}\2\3', head)
+    head = re.sub(r'(content=")https://thegrassyissue\.com/images/[^"]*(")',
+                  rf'\1https://thegrassyissue.com{IMG}\2', head)
 
     cafes = "\n".join(card(*c, "cafe") for c in CAFES)
     lunch = "\n".join(card(*l, "lunch") for l in LUNCH)
@@ -358,6 +364,8 @@ def main(apply_):
         # sidebar. What must not survive cloning is the sibling's slug in the
         # HEAD — canonical, og:url, schema — where it would point this page at
         # the wrong URL. So check the head, not the body.
+        ("share card uses THIS post's image, not the donor's",
+         "/images/austin-coffee/" not in page[:page.find("<body")], ""),
         ("no sibling slug in the head",
          "austin-coffee-guide" not in page[:page.find("<body")], ""),
         ("sibling is linked from the body on purpose",
