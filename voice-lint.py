@@ -125,8 +125,34 @@ def check(text, label, out):
         out.append((label, t, hits))
 
 
+def _prose_only(h):
+    """Drop everything that is not reader-facing copy.
+
+    WHY THIS EXISTS. The BTK furniture carries a CSS comment that quotes Lenny
+    and names the selector it is about:
+
+        /* THE SECTION DECK ...
+           He was looking at <p class="cat-kicker">, NOT .pull-quote — which is
+           why the 38px treatment above never reached it. ... */
+
+    The kicker pattern below is `<p class="cat-kicker">(.*?)</p>` under re.S, so
+    it matched that literal string inside the stylesheet and then ran `.*?` all
+    the way to the next real `</p>` — swallowing a slab of CSS and reporting it
+    as "kicker 1" with an em-dash pile-up. Every page built on this furniture
+    reported the same phantom flag, on prose no reader will ever see.
+
+    A lint that cries wolf on every page is a lint people learn to skip, which
+    is worse than no lint. Scope it to prose: no <style>, no <script>, no HTML
+    comments. Engineering notes are allowed to contain markup-shaped text and
+    as many em-dashes as they like.
+    """
+    h = re.sub(r"<style\b.*?</style>", " ", h, flags=re.S | re.I)
+    h = re.sub(r"<script\b.*?</script>", " ", h, flags=re.S | re.I)
+    return re.sub(r"<!--.*?-->", " ", h, flags=re.S)
+
+
 def scan_html(path, out):
-    h = open(path, encoding="utf-8").read()
+    h = _prose_only(open(path, encoding="utf-8").read())
     slug = os.path.basename(path)
     for m in re.finditer(r'id="([^"]+)"[^>]*>.*?<div class="product-desc">(.*?)</div>', h, re.S):
         check(m.group(2), f"{slug} :: card #{m.group(1)}", out)

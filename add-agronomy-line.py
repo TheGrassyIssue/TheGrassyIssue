@@ -24,6 +24,27 @@ cultivating conditions that last.
 Also updates the homepage feed card, which carries the same copy — leaving the
 two out of step is how a post and its card drift apart.
 
+WHAT THIS SCRIPT IS NOW, AND WHY THAT CHANGED. It ran once and did its job, and
+then build-agronomy.py rebuilt the whole post body for the Brand Revisited
+treatment and deleted BOTH lines DEAS had quoted — this one and "a catalog so
+small it fits on a scorecard", which had been original copy on the old page. For
+a while /about credited an Agronomy piece that no longer contained either
+sentence. Lenny caught it; the guards here did not, because this script only
+runs when someone runs it.
+
+Both lines are now authored directly in build-agronomy.py and defended by a
+guard there (see CITED_LINES), which is the end that can actually destroy them.
+So this script is no longer the thing that puts the sentence on the post — it is
+a CHECKER that the post and the homepage card still agree. Running it should
+report "already present" on both. If it ever reports "line added" again, the
+builder has dropped it and that is the bug to fix.
+
+Comparisons are whitespace-normalised: HTML collapses runs of whitespace, so a
+sentence broken across two source lines is still one sentence to a reader. The
+raw-substring version of the sameness check failed the moment the builder's copy
+wrapped, which is a false alarm of exactly the kind that tempts an editor to
+loosen a guard.
+
 Idempotent. Dry run by default.
 """
 import pathlib, re, sys
@@ -83,18 +104,19 @@ def main(apply_):
     print(f"  {m1}\n  {m2}")
 
     idx_cards = len(re.findall(r'<div class="card"', idx))
+    flat_post, flat_idx = (re.sub(r"\s+", " ", post), re.sub(r"\s+", " ", idx))
     checks = [
-        ("the phrase is on the post", PHRASE in post, ""),
-        ("the phrase is on the homepage card", PHRASE in idx, ""),
-        ("it appears exactly once on the post", post.count(PHRASE) == 1,
-         str(post.count(PHRASE))),
-        ("it appears exactly once on the homepage", idx.count(PHRASE) == 1,
-         str(idx.count(PHRASE))),
+        ("the phrase is on the post", PHRASE in flat_post, ""),
+        ("the phrase is on the homepage card", PHRASE in flat_idx, ""),
+        ("it appears exactly once on the post", flat_post.count(PHRASE) == 1,
+         str(flat_post.count(PHRASE))),
+        ("it appears exactly once on the homepage", flat_idx.count(PHRASE) == 1,
+         str(flat_idx.count(PHRASE))),
         # The two must carry IDENTICAL wording, or the post and its card drift.
         ("post and card use the same sentence",
-         NEW.strip() in post and NEW.strip() in idx, ""),
+         NEW.strip() in flat_post and NEW.strip() in flat_idx, ""),
         ("the other cited line is still intact",
-         "a catalog so small it fits on a scorecard" in post, ""),
+         "a catalog so small it fits on a scorecard" in flat_post, ""),
         ("no card was lost from the homepage",
          idx_cards == len(re.findall(r'<div class="card"',
                                      IDX.read_text(encoding="utf-8"))), ""),

@@ -61,6 +61,29 @@ DESC  = ("Agronomy Workshop makes twelve things in San Francisco: a 17.5 oz "
 HERO  = "/images/agronomy/hero.jpg"
 STORE = "https://agronomywork.shop"
 
+# LINES OTHER PUBLICATIONS HAVE QUOTED FROM THIS PAGE. THEY MUST SURVIVE EVERY
+# REBUILD.
+#
+# DEAS MAG cited The Grassy Issue twice in "The Raw Material of the Fairway"
+# (27 August 2026), both times from this post, and /about now carries a Press
+# block that says "Both lines are from our Agronomy Workshop piece."
+#
+# The first version of this builder replaced the whole body with fresh copy and
+# deleted both lines. For a while the citation on our own About page pointed at
+# a page that no longer contained what it claimed, and DEAS's link landed on a
+# piece missing the words they had quoted. add-press.py has a guard for exactly
+# this, but it only fires when the ABOUT page is rebuilt — nothing stopped the
+# POST from dropping them. That guard is now duplicated here, at the end that
+# can actually destroy them.
+#
+# If a future edit genuinely needs to drop one of these, it has to be a
+# deliberate decision that also updates /about — not a silent casualty of a
+# rewrite.
+CITED_LINES = [
+    "a catalog so small it fits on a scorecard",
+    "greenkeeper who reads design blogs",
+]
+
 SECTIONS = [
     ("Tops", "The Work Shirt &mdash; 5",
      "One garment in two lengths and three colourways. 17.5 oz cotton, "
@@ -355,10 +378,14 @@ def build():
     creative director: Wondersauce through the mid-2010s, then product design at
     Vimeo, then independent practice in San Francisco with Field Mag, Treaty,
     Lalo and Soft Services on the list, then Head of Design at the sports
-    streaming startup Playback.</p>
+    streaming startup Playback.
+    The whole operation reads like a greenkeeper who reads design blogs:
+    practical first, considered second, and loud about neither.</p>
 
     <p>Read the catalogue that way and the decisions stop looking like restraint
-    and start looking like art direction. Twelve SKUs. A shirt whose logo is
+    and start looking like art direction.
+    Twelve SKUs &mdash; a catalog so small it fits on a scorecard.
+    A shirt whose logo is
     embroidered tonal on the back, legible from about a foot away. A cap called
     the Golf Brand&copy; Hat, whose entire graphic is the words &ldquo;Golf
     Brand&rdquo; with a copyright symbol. A site set in Gerstner Programm, a
@@ -503,6 +530,7 @@ def main(apply_):
     d = json.loads(CAT.read_text(encoding="utf-8"))
     prods = d["products"]
     head = page[:page.find("<body")]
+    flat = re.sub(r"\s+", " ", page)      # what the browser collapses it to
     words = len(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ",
                 page[page.find("<body"):])).split())
 
@@ -530,6 +558,30 @@ def main(apply_):
          page.index("The Five Questions") > page.rindex('<h2 class="products-hdr">The Towel'), ""),
         ("the Five Questions sit above the FAQ",
          page.index("The Five Questions") < page.index('id="faq"'), ""),
+        # THE CITATION GUARD. See CITED_LINES at the top of this file. The first
+        # run of this builder dropped both DEAS-quoted lines, which left /about
+        # crediting this page for words it no longer contained. Rebuilding is
+        # allowed to change anything on this page EXCEPT these.
+        # Checked against whitespace-NORMALISED markup, because that is what a
+        # reader and a quoting journalist actually see: HTML collapses runs of
+        # whitespace, so a phrase broken across two source lines still renders
+        # as one sentence. The first version of this guard compared against raw
+        # source and failed on my own restored copy purely because the line
+        # wrapped — a false alarm that would have tempted a future editor to
+        # loosen the check. Normalise, then compare.
+        ("lines DEAS MAG quoted are still on the page",
+         all(q in flat for q in CITED_LINES),
+         str([q for q in CITED_LINES if q not in flat])),
+        ("each cited line appears exactly once",
+         all(flat.count(q) == 1 for q in CITED_LINES),
+         str({q: flat.count(q) for q in CITED_LINES})),
+        # And the other direction: /about must still be claiming them, or the
+        # quotes are orphaned here and the Press block has gone stale.
+        ("/about still credits this page for those lines",
+         all(q in (ROOT / "about.html").read_text(encoding="utf-8")
+             for q in CITED_LINES)
+         and "agronomy-workshop-a-golf-shirt" in
+             (ROOT / "about.html").read_text(encoding="utf-8"), ""),
         # Two lookbook bands, and the hero photograph is not reused in either.
         ("two lookbook bands render",
          page.count('class="btk-wild-grid"') == 2, ""),
