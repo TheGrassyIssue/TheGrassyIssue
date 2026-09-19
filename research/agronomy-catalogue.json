@@ -1,0 +1,771 @@
+{
+  "_meta": {
+    "brand": "Agronomy Workshop",
+    "captured": "2026-09-19",
+    "storefront": "https://agronomywork.shop (Framer front-end; agronomyworkshop.com 301-redirects here)",
+    "commerce_backend": "Shopify — stv0e1-s1.myshopify.com (redirects to checkout.agronomywork.shop)",
+    "currency": "USD",
+    "currency_source": "Shopify /products/unusual-lies-towel.json -> variants[0].price_currency = \"USD\"",
+    "sources_used": [
+      "https://agronomywork.shop/sitemap.xml",
+      "https://stv0e1-s1.myshopify.com/products.json?limit=250",
+      "https://stv0e1-s1.myshopify.com/products/<handle>.js (per sample-sale SKU)",
+      "https://stv0e1-s1.myshopify.com/products/unusual-lies-towel.json",
+      "https://framerusercontent.com/sites/4mRYj7NSN48HoTN9JyPupf/searchIndex-irM1aEoXDJOJ.json",
+      "https://agronomywork.shop/ , /shop , /shop/{headwear,towels,tops} , /sample-sale , /old-home-2 , /newsletter , /info",
+      "https://shop.app/m/4702bdp3ya"
+    ],
+    "catalogue_count": 12,
+    "sample_sale_count": 5,
+    "categories": ["Tops", "Headwear", "Towels"],
+    "note_on_product_type": "Shopify product_type is an empty string on every SKU. The three categories are Framer collection pages, not Shopify product types. Category below is derived from which /shop/<category> page the product appears on.",
+    "note_on_inventory_quantity": "inventory_quantity is NOT exposed on any public endpoint of this store. Verified absent from products.json, /products/<handle>.js and /products/<handle>.json. Variants carry inventory_management:\"shopify\" but no numeric quantity. qty is therefore null everywhere; the available flag is the only public stock signal."
+  },
+
+  "products": [
+    {
+      "title": "L/S Heavyweight Work Shirt",
+      "colour": "Earth (Pigment Dye)",
+      "handle": "work-shirt",
+      "product_url": "https://agronomywork.shop/store/work-shirt",
+      "price": "172.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Tops",
+      "shopify_id": 10769775165633,
+      "sizes": [
+        {"size": "S", "available": true, "qty": null},
+        {"size": "M", "available": true, "qty": null},
+        {"size": "L", "available": true, "qty": null},
+        {"size": "XL", "available": false, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Front.png?v=1759272153",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-3.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-4.png?v=1773679915",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-1.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-2.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_E-1.png?v=1773679915"
+      ],
+      "image_classification": {
+        "packshot_front": ["Mock-Neck-Earth-Front.png"],
+        "detail": ["Mock-Neck-Earth-Detail-1.png", "Mock-Neck-Earth-Detail-2.png", "Mock-Neck-Earth-Detail-3.png", "Mock-Neck-Earth-Detail-4.png"],
+        "lifestyle_on_model": ["Lifestyle-WS_E-1.png (2000x2000)"]
+      },
+      "video": "https://cdn.shopify.com/videos/c/vp/54583c015be541f88e9e881b2292ad6c/54583c015be541f88e9e881b2292ad6c.HD-1080p-7.2Mbps-58593706.mp4",
+      "description_verbatim": "The Work Shirt is a 100% cotton heavyweight mock neck.\n\nDesigned to last and get better with age. Hand-dyed and hand-sewn in Los Angeles. Chest pocket with a hidden tee holder (holds up to 3 tees).",
+      "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns. Cotton rib around the collar. Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back."
+    },
+    {
+      "title": "L/S Heavyweight Work Shirt",
+      "colour": "Navy (Pigment Dyed)",
+      "handle": "heavyweight-work-shirt-navy",
+      "product_url": "https://agronomywork.shop/store/heavyweight-work-shirt-navy",
+      "price": "172.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Tops",
+      "shopify_id": 10783102533825,
+      "sizes": [
+        {"size": "S", "available": true, "qty": null},
+        {"size": "M", "available": true, "qty": null},
+        {"size": "L", "available": true, "qty": null},
+        {"size": "XL", "available": true, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Front.png?v=1759273793",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-2.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-4.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-3.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-1.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_N-2.png?v=1764097980",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_N-1.png?v=1764097980"
+      ],
+      "image_classification": {
+        "packshot_front": ["Mock-Neck-Navy-Front.png"],
+        "detail": ["Mock-Neck-Navy-Detail-1.png", "Mock-Neck-Navy-Detail-2.png", "Mock-Neck-Navy-Detail-3.png", "Mock-Neck-Navy-Detail-4.png"],
+        "lifestyle_on_model": ["Lifestyle-WS_N-1.png (2000x2000)", "Lifestyle-WS_N-2.png (2000x2000)"]
+      },
+      "description_verbatim": "The Work Shirt is a 100% cotton heavyweight mock neck.\n\nDesigned to last and get better with age. Hand-dyed and hand-sewn in Los Angeles. Chest pocket with a hidden tee holder (holds up to 3 tees).",
+      "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns. Cotton rib around the collar. Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back."
+    },
+    {
+      "title": "L/S Heavyweight Work Shirt",
+      "colour": "Natural (Undyed)",
+      "handle": "heavyweight-work-shirt-natural",
+      "product_url": "https://agronomywork.shop/store/heavyweight-work-shirt-natural",
+      "price": "172.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Tops",
+      "shopify_id": 10783102861505,
+      "sizes": [
+        {"size": "S", "available": true, "qty": null},
+        {"size": "M", "available": true, "qty": null},
+        {"size": "L", "available": true, "qty": null},
+        {"size": "XL", "available": false, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Natural-Front_1.png?v=1759280147",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Natural-Detail-2.png?v=1759280147",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Natural-Detail-4.png?v=1764097646",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Natural-Detail-3.png?v=1764097646",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Natural-Detail-1.png?v=1759280147",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_Nat-1_2.jpg?v=1759280147"
+      ],
+      "image_classification": {
+        "packshot_front": ["Mock-Neck-Natural-Front_1.png"],
+        "detail": ["Mock-Neck-Natural-Detail-1.png", "Mock-Neck-Natural-Detail-2.png", "Mock-Neck-Natural-Detail-3.png", "Mock-Neck-Natural-Detail-4.png"],
+        "lifestyle_on_model": ["Lifestyle-WS_Nat-1_2.jpg (2048x2048)"]
+      },
+      "description_verbatim": "The Work Shirt is a 100% cotton heavyweight mock neck.\n\nDesigned to last and get better with age. Hand-dyed and hand-sewn in Los Angeles. Chest pocket with a hidden tee holder (holds up to 3 tees).",
+      "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns. Cotton rib around the collar. Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back."
+    },
+    {
+      "title": "S/S Heavyweight Work Shirt",
+      "colour": "Earth (Pigment Dye)",
+      "handle": "heavyweight-work-shirt-ss-earth",
+      "product_url": "https://agronomywork.shop/store/heavyweight-work-shirt-ss-earth",
+      "price": "136.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Tops",
+      "shopify_id": 10911024316609,
+      "sizes": [
+        {"size": "S", "available": true, "qty": null},
+        {"size": "M", "available": true, "qty": null},
+        {"size": "L", "available": true, "qty": null},
+        {"size": "XL", "available": false, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/S_Workshirt_Earth.png?v=1773679915",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Embroidery-scan_6.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-3.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-1.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-2.png?v=1774371337",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250364.png?v=1781018284"
+      ],
+      "image_classification": {
+        "packshot_front": ["S_Workshirt_Earth.png"],
+        "detail": ["Embroidery-scan_6.png (878x1098, embroidery scan)", "Mock-Neck-Earth-Detail-1.png", "Mock-Neck-Earth-Detail-2.png", "Mock-Neck-Earth-Detail-3.png"],
+        "lifestyle_on_model": ["62250364.png (2160x2880)"]
+      },
+      "description_verbatim": "The Short Sleeve Work Shirt is a 100% cotton heavyweight mock neck.\n\nDesigned to last and get better with age. Hand-dyed and hand-sewn in Los Angeles. Chest pocket with a hidden tee holder (holds up to 3 tees).",
+      "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns. Cotton rib around the collar. Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back."
+    },
+    {
+      "title": "S/S Heavyweight Work Shirt",
+      "colour": "Navy (Pigment Dyed)",
+      "handle": "heavyweight-work-shirt-ss-navy",
+      "product_url": "https://agronomywork.shop/store/heavyweight-work-shirt-ss-navy",
+      "price": "136.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Tops",
+      "shopify_id": 10911024087233,
+      "sizes": [
+        {"size": "S", "available": true, "qty": null},
+        {"size": "M", "available": true, "qty": null},
+        {"size": "L", "available": true, "qty": null},
+        {"size": "XL", "available": false, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/S_Workshirt_Navy.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-2.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-4.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-3.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-1.png?v=1774638978",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250432_39ef2562-a847-4827-986b-3735b62ab1df.png?v=1775427235"
+      ],
+      "image_classification": {
+        "packshot_front": ["S_Workshirt_Navy.png"],
+        "detail": ["Mock-Neck-Navy-Detail-1.png", "Mock-Neck-Navy-Detail-2.png", "Mock-Neck-Navy-Detail-3.png", "Mock-Neck-Navy-Detail-4.png"],
+        "lifestyle_on_model": ["62250432_39ef2562-a847-4827-986b-3735b62ab1df.png (2160x2880)"]
+      },
+      "description_verbatim": "The Short Sleeve Work Shirt is a 100% cotton heavyweight mock neck.\n\nDesigned to last and get better with age. Hand-dyed and hand-sewn in Los Angeles. Chest pocket with a hidden tee holder (holds up to 3 tees).",
+      "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns. Cotton rib around the collar. Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back."
+    },
+    {
+      "title": "Golf Brand© Hat",
+      "colour": "Earth",
+      "handle": "golf-brand-hat-earth",
+      "product_url": "https://agronomywork.shop/store/golf-brand-hat-earth",
+      "price": "64.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Headwear",
+      "shopify_id": 10924251185345,
+      "sizes": [
+        {"size": "Default Title (one size)", "available": true, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Earth-Front.png?v=1774639961",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Earth-Angle.png?v=1774649630",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Earth-Side.png?v=1774649647",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Earth-Back.png?v=1774649647"
+      ],
+      "image_classification": {
+        "packshot_front": ["GB-Earth-Front.png"],
+        "packshot_other_angles": ["GB-Earth-Angle.png", "GB-Earth-Side.png", "GB-Earth-Back.png"],
+        "lifestyle_on_model": []
+      },
+      "description_verbatim": "5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+      "material_verbatim": "100% Recycled Nylon"
+    },
+    {
+      "title": "Golf Brand© Hat",
+      "colour": "Black",
+      "handle": "golf-brand-hat-black",
+      "product_url": "https://agronomywork.shop/store/golf-brand-hat-black",
+      "price": "64.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Headwear",
+      "shopify_id": 10907745386689,
+      "sizes": [
+        {"size": "Black (one size)", "available": true, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Black-Front.png?v=1774639457",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Black-Angle.png?v=1774649216",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Black-Side.png?v=1774649216",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/GB-Black-Back.png?v=1774649216",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250358.png?v=1774896552",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250372_514995de-b9bc-4856-a79c-51a128b2844a.jpg?v=1775427263"
+      ],
+      "image_classification": {
+        "packshot_front": ["GB-Black-Front.png"],
+        "packshot_other_angles": ["GB-Black-Angle.png", "GB-Black-Side.png", "GB-Black-Back.png"],
+        "lifestyle_on_model": ["62250358.png (1080x1440)", "62250372_514995de-b9bc-4856-a79c-51a128b2844a.jpg (1080x1440)"]
+      },
+      "description_verbatim": "5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+      "material_verbatim": "100% Recycled Nylon"
+    },
+    {
+      "title": "Tree Hat",
+      "colour": "Navy",
+      "handle": "tree-hat",
+      "product_url": "https://agronomywork.shop/store/tree-hat",
+      "price": "64.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Headwear",
+      "shopify_id": 10769776836801,
+      "sizes": [
+        {"size": "Default Title (one size)", "available": true, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Transparent_2654290b-dd19-460f-96d9-5c03e1019102.png?v=1759341020",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Angle_c7b0f86a-98cf-4af8-992d-7fb9a3d0232e.png?v=1759341020",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Side.png?v=1759341020",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Back.png?v=1759341020",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/tree-hat-Navy-01.jpg?v=1759341020",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/TH_01.png?v=1774903113"
+      ],
+      "image_classification": {
+        "packshot_front": ["Tree-Navy-Hero-Transparent_2654290b-....png"],
+        "packshot_other_angles": ["Tree-Navy-Hero-Angle_....png", "Tree-Navy-Hero-Side.png", "Tree-Navy-Hero-Back.png"],
+        "lifestyle_on_model": ["tree-hat-Navy-01.jpg (2048x2048, styled in-context)", "TH_01.png (2160x2700, on-model)"]
+      },
+      "description_verbatim": "5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+      "material_verbatim": "100% Recycled Nylon"
+    },
+    {
+      "title": "Tree Hat",
+      "colour": "Earth",
+      "handle": "tree-hat-earth",
+      "product_url": "https://agronomywork.shop/store/tree-hat-earth",
+      "price": "64.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Headwear",
+      "shopify_id": 10813595025601,
+      "sizes": [
+        {"size": "Default Title (one size)", "available": true, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Hero.png?v=1759340542",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Angle.png?v=1759340542",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Side.png?v=1759340636",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Back.png?v=1759340636",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/tree-hat-Earth-01.jpg?v=1759282193"
+      ],
+      "image_classification": {
+        "packshot_front": ["Tree-Earth-Hero.png"],
+        "packshot_other_angles": ["Tree-Earth-Angle.png", "Tree-Earth-Side.png", "Tree-Earth-Back.png"],
+        "lifestyle_on_model": ["tree-hat-Earth-01.jpg (2048x2048, styled in-context)"]
+      },
+      "description_verbatim": "5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+      "material_verbatim": "100% Recycled Nylon"
+    },
+    {
+      "title": "Agronomy Workshop Hat",
+      "colour": "Navy",
+      "handle": "agronomy-work-hat",
+      "product_url": "https://agronomywork.shop/store/agronomy-work-hat",
+      "price": "64.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Headwear",
+      "shopify_id": 10783107907777,
+      "sizes": [
+        {"size": "Default Title (one size)", "available": true, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Hero-Transparent.png?v=1759341186",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Logo-Hat-Angle.png?v=1759341186",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Logo-Hat-Side_ff1d7b14-c526-4aab-8ab3-e382ea8d032a.png?v=1759341186",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Logo-Hat-Back.png?v=1759341186",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Instagram_post_-_22.jpg?v=1764098219"
+      ],
+      "image_classification": {
+        "packshot_front": ["AW-Hero-Transparent.png"],
+        "packshot_other_angles": ["AW-Logo-Hat-Angle.png", "AW-Logo-Hat-Side_....png", "AW-Logo-Hat-Back.png"],
+        "lifestyle_on_model": ["Instagram_post_-_22.jpg (2160x2700)"]
+      },
+      "description_verbatim": "5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+      "material_verbatim": "100% Recycled Nylon."
+    },
+    {
+      "title": "Unusual Lies Towel",
+      "colour": "Earth",
+      "handle": "unusual-lies-towel",
+      "product_url": "https://agronomywork.shop/store/unusual-lies-towel",
+      "price": "56.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Towels",
+      "shopify_id": 10769775853761,
+      "sold_out": true,
+      "sizes": [
+        {"size": "Default Title (one size)", "available": false, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Hero-Towel-earth_84bde363-7c50-418c-8476-49c3bbf50edc.png?v=1759339011",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-towel-flat-lay-offset.png?v=1759339011",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-label-detail.png?v=1759339011",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-towel-01.jpg?v=1759339011",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Untitled-2_b8982eb1-8cc8-46fa-88c7-64ba7f7f3103.png?v=1774896151"
+      ],
+      "image_classification": {
+        "packshot_front": ["Hero-Towel-earth_....png"],
+        "flat_lay": ["earth-towel-flat-lay-offset.png"],
+        "detail": ["earth-label-detail.png"],
+        "lifestyle_on_model": ["earth-towel-01.jpg (2048x2048, styled in-context)", "Untitled-2_....png (1080x1350)"]
+      },
+      "description_verbatim": "Golf towel made from 100% woven terry cloth cotton. Extra absorbent. Won’t improve your lies.",
+      "material_verbatim": "100% Woven terrycloth cotton"
+    },
+    {
+      "title": "Unusual Lies Towel",
+      "colour": "Blueprint",
+      "handle": "unusual-lies-towel-navy",
+      "product_url": "https://agronomywork.shop/store/unusual-lies-towel-navy",
+      "price": "56.00",
+      "currency": "USD",
+      "product_type": "",
+      "category": "Towels",
+      "shopify_id": 10783104237761,
+      "sold_out": true,
+      "sizes": [
+        {"size": "Default Title (one size)", "available": false, "qty": null}
+      ],
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Hero-Towel-blueprint_62032b55-73b7-4584-ac3a-3ce59735b529.png?v=1759339217",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Blueprint-towel-flat-foffset.png?v=1759339217",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/blueprint-label-detail.png?v=1759339217",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Blueprint-towel-01.jpg?v=1759339217",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Blueprint-Model.png?v=1774650711",
+        "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Untitled-1_050f75cd-b465-4a28-ae77-b43cad46f109.png?v=1774717289"
+      ],
+      "image_classification": {
+        "packshot_front": ["Hero-Towel-blueprint_....png"],
+        "flat_lay": ["Blueprint-towel-flat-foffset.png"],
+        "detail": ["blueprint-label-detail.png"],
+        "lifestyle_on_model": ["Blueprint-towel-01.jpg (2048x2048, styled in-context)", "Blueprint-Model.png (2160x2880, explicitly on-model)", "Untitled-1_....png (1080x1350)"]
+      },
+      "description_verbatim": "Golf towel made from 100% woven terry cloth cotton. Extra absorbent. Won’t improve your lies.",
+      "material_verbatim": "100% Woven terry cloth cotton"
+    }
+  ],
+
+  "sample_sale": {
+    "url": "https://agronomywork.shop/sample-sale",
+    "headline_verbatim": "40% OFF (FINAL SALE)",
+    "title_verbatim": "Limited Sample Sale",
+    "body_verbatim": "With every production run a number of pieces get set to the side for inconsistencies. They usually have a small issue that most people wouldn’t notice. Every piece has its issue called out specifically. If that sounds like something you can live with, it's yours.",
+    "discount_actual": "Shirts $99.00 from $172.00 (42.4% off); hats $38.00 from $64.00 (40.6% off). Headline says 40%.",
+    "IMPORTANT_price_display_bug": "The /sample-sale listing page and the Framer product pages render the COMPARE-AT price (172.00 / 64.00), not the actual sale price. The real charged prices are 99.00 and 38.00 per Shopify. Do not quote 172.00/64.00 as sample-sale prices.",
+    "products": [
+      {
+        "title": "L/S Heavyweight Work Shirt (Thread Pull)",
+        "colour": "Earth (Pigment Dye)",
+        "handle": "l-s-heavyweight-work-shirt-thread-pull-sample-sale",
+        "product_url": "https://agronomywork.shop/store/l-s-heavyweight-work-shirt-thread-pull-sample-sale",
+        "price": "99.00",
+        "compare_at_price": "172.00",
+        "currency": "USD",
+        "product_type": "",
+        "shopify_id": 10983179223233,
+        "defect_verbatim": "*Issue: Small Knitting Thread Pull*",
+        "sizes": [
+          {"size": "S", "available": true, "qty": null},
+          {"size": "M", "available": true, "qty": null},
+          {"size": "L", "available": true, "qty": null},
+          {"size": "XL", "available": true, "qty": null}
+        ],
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Front.png?v=1759272153",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-workshirt.png?v=1779819293",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-3.png?v=1774371337",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-4.png?v=1773679915",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-1.png?v=1774371337",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Earth-Detail-2.png?v=1774371337",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_E-1.png?v=1773679915"
+        ],
+        "description_verbatim": "(FINAL SALE)\n\n*Issue: Small Knitting Thread Pull*\n\nThe Work Shirt is a 100% cotton heavyweight long-sleeve mock neck. Cotton rib for mock neck collar and wrist cuffs. Chest pocket with a hidden tee holder (holds up to 3 tees). Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back. Designed in San Francisco. Made in Los Angeles.",
+        "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns."
+      },
+      {
+        "title": "L/S Heavyweight Work Shirt (Thread Pull)",
+        "colour": "Navy (Pigment Dyed)",
+        "handle": "l-s-heavyweight-work-shirt-sample-sale",
+        "product_url": "https://agronomywork.shop/store/l-s-heavyweight-work-shirt-sample-sale",
+        "price": "99.00",
+        "compare_at_price": "172.00",
+        "currency": "USD",
+        "product_type": "",
+        "shopify_id": 10983249608897,
+        "defect_verbatim": "*Issue: Small Knitting Thread Pull*",
+        "sizes": [
+          {"size": "S", "available": true, "qty": null},
+          {"size": "M", "available": true, "qty": null},
+          {"size": "L", "available": true, "qty": null},
+          {"size": "XL", "available": true, "qty": null}
+        ],
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Front.png?v=1759273793",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/navy-workshirt.png?v=1779819764",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-2.png?v=1774638978",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-4.png?v=1774638978",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-3.png?v=1774638978",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Mock-Neck-Navy-Detail-1.png?v=1774638978",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_N-2.png?v=1764097980",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_N-1.png?v=1764097980"
+        ],
+        "description_verbatim": "(FINAL SALE)\n\n*Issue: Small Knitting Thread Pull*\n\nThe Work Shirt is a 100% cotton heavyweight long-sleeve mock neck. Cotton rib for mock neck collar and wrist cuffs. Chest pocket with a hidden tee holder (holds up to 3 tees). Slightly curved hem to make it easier to tuck in. Tonal logo embroidery on the back. Designed in San Francisco. Made in Los Angeles.",
+        "material_verbatim": "100% Heavyweight Cotton (17.5 oz). Made in the USA from imported yarns."
+      },
+      {
+        "title": "Agronomy Workshop Hat (Missing Front Rope)",
+        "colour": "Navy",
+        "handle": "agronomy-workshop-hat-missing-front-rope",
+        "product_url": "https://agronomywork.shop/store/agronomy-workshop-hat-missing-front-rope",
+        "price": "38.00",
+        "compare_at_price": "64.00",
+        "currency": "USD",
+        "product_type": "",
+        "shopify_id": 10984034828481,
+        "sold_out": true,
+        "defect_verbatim": "*Issue: Missing Front Rope*",
+        "sizes": [
+          {"size": "Default Title (one size)", "available": false, "qty": null}
+        ],
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Hero-Transparent.png?v=1759341186",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/aw-rope.png?v=1779817147",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Logo-Hat-Angle.png?v=1759341186",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Logo-Hat-Side_ff1d7b14-c526-4aab-8ab3-e382ea8d032a.png?v=1759341186",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/AW-Logo-Hat-Back.png?v=1759341186",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Instagram_post_-_22.jpg?v=1764098219"
+        ],
+        "description_verbatim": "(FINAL SALE)\n\n*Issue: Missing Front Rope*\n\n5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+        "material_verbatim": "100% Recycled Nylon."
+      },
+      {
+        "title": "Tree Hat (Minor Brim Scratch)",
+        "colour": "Earth",
+        "handle": "tree-hat-minor-brim-scratch",
+        "product_url": "https://agronomywork.shop/store/tree-hat-minor-brim-scratch",
+        "price": "38.00",
+        "compare_at_price": "64.00",
+        "currency": "USD",
+        "product_type": "",
+        "shopify_id": 10984035745985,
+        "sold_out": true,
+        "defect_verbatim": "*Issue: Minor surface scratch on the brim*",
+        "sizes": [
+          {"size": "Default Title (one size)", "available": false, "qty": null}
+        ],
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Hero.png?v=1759340542",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-treehat.png?v=1779817024",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Angle.png?v=1759340542",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Side.png?v=1759340636",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Earth-Back.png?v=1759340636",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/tree-hat-Earth-01.jpg?v=1759282193"
+        ],
+        "description_verbatim": "(FINAL SALE)\n\n*Issue: Minor surface scratch on the brim*\n\n5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+        "material_verbatim": "100% Recycled Nylon"
+      },
+      {
+        "title": "Tree Hat (Minor Brim Scratch)",
+        "colour": "Navy",
+        "handle": "tree-hat-minor-brim-scratch-1",
+        "product_url": "https://agronomywork.shop/store/tree-hat-minor-brim-scratch-1",
+        "price": "38.00",
+        "compare_at_price": "64.00",
+        "currency": "USD",
+        "product_type": "",
+        "shopify_id": 10985963028673,
+        "defect_verbatim": "*Issue: Minor surface scratch on the brim*",
+        "sizes": [
+          {"size": "Default Title (one size)", "available": true, "qty": null}
+        ],
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Transparent_2654290b-dd19-460f-96d9-5c03e1019102.png?v=1759341020",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/navy-tree-hat.png?v=1779816923",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Angle_c7b0f86a-98cf-4af8-992d-7fb9a3d0232e.png?v=1759341020",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Side.png?v=1759341020",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Tree-Navy-Hero-Back.png?v=1759341020",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/tree-hat-Navy-01.jpg?v=1759341020",
+          "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/TH_01.png?v=1774903113"
+        ],
+        "description_verbatim": "(FINAL SALE)\n\n*Issue: Minor surface scratch on the brim*\n\n5-panel rope hat made from 100% recycled nylon. Quick-adjust rope closure. Matching rope along the front of the base panel. Golf pencil holder. Pre-curved brim. Comes with an Agronomy Workshop pencil.",
+        "material_verbatim": "100% Recycled Nylon"
+      }
+    ]
+  },
+
+  "lifestyle_images": [
+    {
+      "url": "https://framerusercontent.com/images/RGJjyMpLI8OZPXPjH3OJuFpTik.jpg?width=3441&height=4096",
+      "source_page": "https://agronomywork.shop/shop and https://agronomywork.shop/sample-sale",
+      "dimensions": "3441x4096 (portrait)",
+      "shows": "Large full-bleed editorial photograph used as the shop-page and sample-sale-page background band.",
+      "hero_band_note": "BEST candidate for a 1600x685 hero. Highest resolution asset on the site; a full-width centre slice yields 3441x1474, well above 1600x685."
+    },
+    {
+      "url": "https://framerusercontent.com/images/4pFkkWXgTWL94dUYHnwZgvCRRc.jpg?width=3341&height=4096",
+      "source_page": "https://agronomywork.shop/ (homepage, question 3 'Can a shirt bring you joy?')",
+      "dimensions": "3341x4096 (portrait)",
+      "shows": "Editorial shot accompanying the neck-label / tees-in-pocket detail story.",
+      "hero_band_note": "Second-best hero candidate; centre slice yields 3341x1431."
+    },
+    {
+      "url": "https://framerusercontent.com/images/uUAGMwa0Ffch3NDDYReX7UacAo.png?width=1600&height=2715",
+      "source_page": "https://agronomywork.shop/old-home-2",
+      "dimensions": "1600x2715 (portrait)",
+      "shows": "'for the long game' hero image from the previous homepage layout.",
+      "hero_band_note": "Exactly 1600 wide — a 685px-tall crop works with no upscaling."
+    },
+    {
+      "url": "https://framerusercontent.com/images/j5v37ieWACRwqnPRIJZuZcNBYlM.png?width=1600&height=2715",
+      "source_page": "https://agronomywork.shop/old-home-2",
+      "dimensions": "1600x2715 (portrait)",
+      "shows": "Second 'for the long game' hero variant from the previous homepage layout.",
+      "hero_band_note": "Exactly 1600 wide — a 685px-tall crop works with no upscaling."
+    },
+    {
+      "url": "https://framerusercontent.com/images/gUUOPQk9EnVKyc1Veix3FbVHA.png?width=2160&height=2880",
+      "source_page": "https://agronomywork.shop/ (homepage, newsletter / '10% Off First Order' block)",
+      "dimensions": "2160x2880 (portrait 3:4)",
+      "shows": "Lifestyle image behind the email-capture block.",
+      "hero_band_note": "Croppable to 2160x925."
+    },
+    {
+      "url": "https://framerusercontent.com/images/eTgZgkqFrRnyONj1pqiW1MRPsHM.png?width=2048&height=2048",
+      "source_page": "https://agronomywork.shop/ (homepage, question 1 'Does a golf shirt need to be made of plastic?')",
+      "dimensions": "2048x2048 (square)",
+      "shows": "Material / fabric image supporting the anti-polyester argument."
+    },
+    {
+      "url": "https://framerusercontent.com/images/5jrxW3msUFcky0eLHosHyz27RQ.png?width=2000&height=2000",
+      "source_page": "https://agronomywork.shop/ (homepage, question 4 'Does everything need to be so obvious?')",
+      "dimensions": "2000x2000 (square)",
+      "shows": "Subtle-branding image supporting the anti-logo argument."
+    },
+    {
+      "url": "https://framerusercontent.com/images/tOGfhNh5VvMEk7MZBGaaYIms.png?width=908&height=1272",
+      "source_page": "https://agronomywork.shop/old-home-2",
+      "dimensions": "908x1272 (portrait)",
+      "shows": "Footer editorial image on the previous homepage layout. Too small for a 1600-wide hero."
+    },
+    {
+      "url": "https://framerusercontent.com/images/CULBNCNAbgtCeCAwePGc6WsCaA.png",
+      "source_page": "og:image / twitter:image on every page",
+      "dimensions": "not declared",
+      "shows": "Social share card image for the brand."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_N-1.png?v=1764097980",
+      "source_page": "Shopify product: heavyweight-work-shirt-navy",
+      "dimensions": "2000x2000 (square)",
+      "shows": "L/S Work Shirt Navy worn on-model. Filename prefix 'Lifestyle-' is the brand's own label."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_N-2.png?v=1764097980",
+      "source_page": "Shopify product: heavyweight-work-shirt-navy",
+      "dimensions": "2000x2000 (square)",
+      "shows": "L/S Work Shirt Navy worn on-model, second frame."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_E-1.png?v=1773679915",
+      "source_page": "Shopify product: work-shirt (L/S Earth)",
+      "dimensions": "2000x2000 (square)",
+      "shows": "L/S Work Shirt Earth worn on-model."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Lifestyle-WS_Nat-1_2.jpg?v=1759280147",
+      "source_page": "Shopify product: heavyweight-work-shirt-natural",
+      "dimensions": "2048x2048 (square)",
+      "shows": "L/S Work Shirt Natural worn on-model."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Blueprint-Model.png?v=1774650711",
+      "source_page": "Shopify product: unusual-lies-towel-navy",
+      "dimensions": "2160x2880 (portrait 3:4)",
+      "shows": "Unusual Lies Towel Blueprint carried/worn on-model. Filename says 'Model' explicitly."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/TH_01.png?v=1774903113",
+      "source_page": "Shopify product: tree-hat (Navy)",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Tree Hat Navy worn on-model."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Instagram_post_-_22.jpg?v=1764098219",
+      "source_page": "Shopify product: agronomy-work-hat",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Agronomy Workshop Hat, social/editorial frame. Filename indicates it was cut for Instagram."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250432_39ef2562-a847-4827-986b-3735b62ab1df.png?v=1775427235",
+      "source_page": "Shopify product: heavyweight-work-shirt-ss-navy",
+      "dimensions": "2160x2880 (portrait 3:4)",
+      "shows": "S/S Work Shirt Navy on-model, from a numbered shoot roll."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250364.png?v=1781018284",
+      "source_page": "Shopify product: heavyweight-work-shirt-ss-earth",
+      "dimensions": "2160x2880 (portrait 3:4)",
+      "shows": "S/S Work Shirt Earth on-model, same shoot roll."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250358.png?v=1774896552",
+      "source_page": "Shopify product: golf-brand-hat-black",
+      "dimensions": "1080x1440 (portrait 3:4)",
+      "shows": "Golf Brand© Hat Black on-model, same shoot roll."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/62250372_514995de-b9bc-4856-a79c-51a128b2844a.jpg?v=1775427263",
+      "source_page": "Shopify product: golf-brand-hat-black",
+      "dimensions": "1080x1440 (portrait 3:4)",
+      "shows": "Golf Brand© Hat Black on-model, second frame."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/tree-hat-Navy-01.jpg?v=1759341020",
+      "source_page": "Shopify product: tree-hat",
+      "dimensions": "2048x2048 (square)",
+      "shows": "Tree Hat Navy styled in context (on grass / in situ rather than seamless white)."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/tree-hat-Earth-01.jpg?v=1759282193",
+      "source_page": "Shopify product: tree-hat-earth",
+      "dimensions": "2048x2048 (square)",
+      "shows": "Tree Hat Earth styled in context."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-towel-01.jpg?v=1759339011",
+      "source_page": "Shopify product: unusual-lies-towel",
+      "dimensions": "2048x2048 (square)",
+      "shows": "Unusual Lies Towel Earth styled in context."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Blueprint-towel-01.jpg?v=1759339217",
+      "source_page": "Shopify product: unusual-lies-towel-navy",
+      "dimensions": "2048x2048 (square)",
+      "shows": "Unusual Lies Towel Blueprint styled in context."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Untitled-1_050f75cd-b465-4a28-ae77-b43cad46f109.png?v=1774717289",
+      "source_page": "Shopify product: unusual-lies-towel-navy",
+      "dimensions": "1080x1350 (portrait 4:5)",
+      "shows": "Blueprint towel social/editorial frame."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Untitled-2_b8982eb1-8cc8-46fa-88c7-64ba7f7f3103.png?v=1774896151",
+      "source_page": "Shopify product: unusual-lies-towel",
+      "dimensions": "1080x1350 (portrait 4:5)",
+      "shows": "Earth towel social/editorial frame."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-workshirt.png?v=1779819293",
+      "source_page": "Shopify product: l-s-heavyweight-work-shirt-thread-pull-sample-sale",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Close documentation of the thread-pull defect on the Earth shirt."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/navy-workshirt.png?v=1779819764",
+      "source_page": "Shopify product: l-s-heavyweight-work-shirt-sample-sale",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Close documentation of the thread-pull defect on the Navy shirt."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/aw-rope.png?v=1779817147",
+      "source_page": "Shopify product: agronomy-workshop-hat-missing-front-rope",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Documentation of the missing front rope on the AW Hat."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/earth-treehat.png?v=1779817024",
+      "source_page": "Shopify product: tree-hat-minor-brim-scratch",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Documentation of the brim scratch on the Earth Tree Hat."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/navy-tree-hat.png?v=1779816923",
+      "source_page": "Shopify product: tree-hat-minor-brim-scratch-1",
+      "dimensions": "2160x2700 (portrait 4:5)",
+      "shows": "Documentation of the brim scratch on the Navy Tree Hat."
+    },
+    {
+      "url": "https://cdn.shopify.com/s/files/1/0832/6378/3105/files/Embroidery-scan_6.png?v=1774371337",
+      "source_page": "Shopify product: heavyweight-work-shirt-ss-earth",
+      "dimensions": "878x1098 (portrait)",
+      "shows": "Flatbed scan of the tonal back embroidery. Texture/detail asset, not lifestyle."
+    },
+    {
+      "url": "https://cdn.shopify.com/videos/c/vp/54583c015be541f88e9e881b2292ad6c/54583c015be541f88e9e881b2292ad6c.HD-1080p-7.2Mbps-58593706.mp4",
+      "source_page": "Shopify product media: work-shirt; also embedded on the Framer homepage",
+      "dimensions": "864x1080 video, 3.93s",
+      "shows": "Product motion clip of the L/S Work Shirt. Also served from Framer as https://framerusercontent.com/assets/06vghcnQhPygfQYIwiOv8sQHo.mp4"
+    },
+    {
+      "url": "https://attachments.are.na/39956823/e1df5c7eaf1bb554383d270cc81d95b4.mp4?1759208345",
+      "source_page": "https://agronomywork.shop/store/work-shirt (embedded from the brand's Are.na channel)",
+      "dimensions": "not declared",
+      "shows": "Secondary motion clip embedded on the L/S Work Shirt product page, hosted on Are.na."
+    }
+  ],
+
+  "sold_out_summary": {
+    "fully_sold_out_products_main_catalogue": [
+      "Unusual Lies Towel — Earth (unusual-lies-towel)",
+      "Unusual Lies Towel — Blueprint (unusual-lies-towel-navy)"
+    ],
+    "fully_sold_out_products_sample_sale": [
+      "Agronomy Workshop Hat (Missing Front Rope) — Navy",
+      "Tree Hat (Minor Brim Scratch) — Earth"
+    ],
+    "sold_out_at_size_level": [
+      "L/S Heavyweight Work Shirt — Earth: XL sold out",
+      "L/S Heavyweight Work Shirt — Natural: XL sold out",
+      "S/S Heavyweight Work Shirt — Earth: XL sold out",
+      "S/S Heavyweight Work Shirt — Navy: XL sold out"
+    ],
+    "fully_in_stock_all_sizes": [
+      "L/S Heavyweight Work Shirt — Navy (S, M, L, XL all available)"
+    ]
+  }
+}
