@@ -1,0 +1,280 @@
+{
+  "_note": "The Bold Tee Edit. 27 tees, one per brand. Every price read from the brand's own store on 19 September 2026 and reproduced in the currency that store displays. Nothing converted. Stock confirmed per-size via Shopify /products/<handle>.js or the product page; /search/suggest.json was never trusted for stock because it reports available:true for sold-out items.",
+  "_row": "[slug, brand, name, price, currency, product_url, image_url, description]",
+  "muni": [
+    [
+      "guerrilla-golf",
+      "Guerrilla Golf",
+      "Bushwood C.C. T-Shirt",
+      "$25",
+      "USD",
+      "https://www.guerrilla-golf.com/products/bushwood-tournament-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0438/7920/2966/files/bushwood.jpg?v=1776796431",
+      "A Rochester, New York outfit that has run its own screen-printing shop since 2005 and prints every shirt in house, one pass at a time. &ldquo;100% combed cotton jersey&rdquo; with a screen printed logo, and a Caddyshack reference that needs no explaining."
+    ],
+    [
+      "fried-egg-golf",
+      "Fried Egg Golf",
+      "Width &amp; Angles T-Shirt",
+      "$29",
+      "USD",
+      "https://proshop.thefriedegg.com/products/fried-egg-golf-width-angles-t-shirt-ivory",
+      "https://cdn.shopify.com/s/files/1/0221/0031/2160/files/Cream10thShirt1.jpg?v=1764824359",
+      "The architecture desk&rsquo;s pro shop, reissuing its original 2015 shirt for the brand&rsquo;s tenth year. &ldquo;Comfort Colors 100% cotton&rdquo; that is &ldquo;garment-dyed soft ring spun fabric&rdquo; with a &ldquo;topstitched, classic width, rib collar&rdquo; and twill taped neck and shoulders. Marked down from $35."
+    ],
+    [
+      "butler-pitch-and-putt",
+      "Butler Pitch &amp; Putt",
+      "This Ain&rsquo;t No Country Club Tee",
+      "$35",
+      "USD",
+      "https://shop.butlerpitchandputt.com/products/this-aint-no-country-club-tee",
+      "https://cdn.shopify.com/s/files/1/0584/8688/2484/files/593D5985-9F9E-48E0-B316-3DF3C59543DA_1_105_c.jpg?v=1762634823",
+      "Par 3 the whole way round, on Lee Barton Drive by Lady Bird Lake, and open since 1949. The shop runs its own Comfort Colors program rather than licensing the logo out, and this is the shirt that says what the place is."
+    ],
+    [
+      "goat-hill-park",
+      "Goat Hill Park",
+      "The Seal Graphic T-Shirt",
+      "$35",
+      "USD",
+      "https://ghpshop.com/products/the-seal-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0586/8925/7607/files/A13A1448.jpg?v=1787589898",
+      "&ldquo;Featuring a large seal graphic center back, and a smaller graphic left chest. Silk screened in our hometown of Oceanside on a plush and high quality cotton t-shirt.&rdquo; 100% combed ring-spun cotton. The muni that sells World Class, Working Class on a hat."
+    ],
+    [
+      "linksoul",
+      "Linksoul",
+      "The Backwoods Tee",
+      "$38",
+      "USD",
+      "https://linksoul.com/products/the-backwoods-tee",
+      "https://cdn.shopify.com/s/files/1/2048/2939/files/LS1491_FRH_1.jpg?v=1786658230",
+      "John Ashworth left the brand that carried his name and built this one in Oceanside, and it is the reason Goat Hill Park is still standing. The whole tee category is filed on their own store under the product type &ldquo;Graphic Tee.&rdquo;"
+    ],
+    [
+      "southside-golf-co",
+      "Southside Golf Co",
+      "No Country Club Golf T-Shirt",
+      "$39.99",
+      "USD",
+      "https://shop.southsidegolfco.com/products/southside-no-country-club-tee",
+      "https://cdn.shopify.com/s/files/1/0690/3473/7825/files/OrangeFront.png?v=1764615475",
+      "PGA professional Justin Aragon&rsquo;s label out of Manchaca, attached to an indoor facility opening this month. &ldquo;100% Airlume combed &amp; ring-spun cotton&rdquo; with &ldquo;screen-printed front and back graphics.&rdquo; The listing adds: &ldquo;First edition. Limited run. No restocks.&rdquo;"
+    ],
+    [
+      "random-golf-club",
+      "Random Golf Club",
+      "City Golf Clubhouse Tee",
+      "$40",
+      "USD",
+      "https://randomgolfclub.com/products/golf-club-clubhouse-tee-green",
+      "https://cdn.shopify.com/s/files/1/0024/4350/9869/files/CITY.GOLF.TEE.GREEN1.jpg?v=1759940840",
+      "&ldquo;The uniform for anyone who finds their fairways in the city.&rdquo; The spec is four lines long: 100% cotton, box fit, heavy weight, printed graphic. Full size run, all five sizes live."
+    ],
+    [
+      "muni-kids",
+      "Muni Kids",
+      "I Am Tiger T-Shirt",
+      "$45",
+      "USD",
+      "https://munikids.com/products/i-am-tiger-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-I-Am-Tiger-T-Shirt-Back.webp?v=1740671420",
+      "A Portland label built on municipal golf since 2015, with a shop of its own on Alberta Street. &ldquo;100% COTTON (PRE-SHRUNK) / MADE IN THE USA / SCREENPRINT ON FRONT AND BACK.&rdquo; Every size is currently sold on backorder rather than held in stock."
+    ],
+    [
+      "hidden-links-society",
+      "Hidden Links Society",
+      "The Play Faster Tee",
+      "$48",
+      "USD",
+      "https://hiddenlinkssociety.com/products/the-play-faster-tee-ivory",
+      "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/58_059b06e2-e71f-4885-98d8-18de78542eee.png?v=1788571088",
+      "&ldquo;230 gsm (6.8 oz) 100% cotton, garment-washed&rdquo; with drop shoulders and the Play Faster imprint front and back. Made to order &mdash; the brand asks for two weeks. Their own framing: &ldquo;Some messages are better said than shouted from on the tee box.&rdquo;"
+    ]
+  ],
+  "weight": [
+    [
+      "gumtree-golf",
+      "Gumtree Golf &amp; Nature Club",
+      "State Flower Reference Tee",
+      "$38",
+      "USD",
+      "https://www.gumtreegolfandnature.com/shop/p/state-flower-reference-tee",
+      "https://static1.squarespace.com/static/62df2055174c772d5220ba18/62df3a67d3f6270c6d7e2e1f/64a9c225c2dd9263f9967b34/1789501178082/DSCF4916.jpg?format=1500w",
+      "&ldquo;The limited-edition graphic is printed on 6.5 oz 100 American cotton and was sewn in the USA.&rdquo; The back carries the full official list of American state flowers. Oversized boxy fit, down from $60."
+    ],
+    [
+      "radry-golf",
+      "Radry Golf",
+      "Golf&rsquo;s Hard Tee",
+      "$42",
+      "USD",
+      "https://radry.com/products/golfs-hard-tee",
+      "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/golfishard_tee_front_web.jpg?v=1762996050",
+      "&ldquo;100% cotton. Relaxed fit. Medium weight - 5.5oz. Screen printed art.&rdquo; Over-dyed for a vintage hand, with the artwork carried through to the interior tag."
+    ],
+    [
+      "badlands",
+      "Badlands",
+      "Support Your Local T-Shirt",
+      "$45",
+      "USD",
+      "https://badlands1st.com/products/badlands-bird-t-shirt-black-orange",
+      "https://cdn.shopify.com/s/files/1/0692/2128/6180/files/20251006_143636.jpg?v=1759781487",
+      "The most specific spec sheet in this post: &ldquo;Heavy Weight Jersey / 100% USA Cotton / 6.5 sq oz | 220 GSM / Side-seamed garment construction. 1x1 rib collar with straddle stitching. Cover stitched sleeves and bottom hem. Shoulder to shoulder taping.&rdquo; Out of Atlantic Highlands, New Jersey."
+    ],
+    [
+      "walker-golf-things",
+      "Walker Golf Things",
+      "Torana T-Shirt",
+      "$48.95",
+      "USD",
+      "https://www.walkergolfthings.com/en-us/products/torana-t-shirt-1",
+      "https://cdn.shopify.com/s/files/1/0558/3346/0817/files/D25A3919.jpg?v=1783381831",
+      "&ldquo;Premium 250gsm 100% cotton on our oversized block, with full-colour graphic print across the front and a larger artwork running across the back.&rdquo; Twin-needle stitch through the body, 2.5cm ribbed crew. Price read on their US storefront."
+    ],
+    [
+      "merrill-golf",
+      "Merrill Golf",
+      "Go For Broke Tee",
+      "$50",
+      "USD",
+      "https://merrillgolf.com/products/go-for-broke-tee-cream",
+      "https://cdn.shopify.com/s/files/1/0560/2646/4443/files/GFBteefront.jpg?v=1780073395",
+      "Four lines, all of them the point: &ldquo;Heavy weight garment dye cotton tee shirt. Screen print detail on front and back. Fit is true to size. Made in USA.&rdquo; Full size run, every size live."
+    ],
+    [
+      "students-golf",
+      "Students Golf",
+      "Grass Obsession S/S T-Shirt",
+      "$52",
+      "USD",
+      "https://studentsgolf.com/products/grass-obsession-s-s-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf699d3ccbc79eb5699d3ccbc7b8f.21719842699d3ccbc7b8f.jpg?v=1771912451",
+      "&ldquo;100% Cotton - 280G.&rdquo; The brand&rsquo;s own line for it: &ldquo;Show them why you live &amp; breathe with this classic Students T-shirt.&rdquo; Also runs in white at the same price."
+    ],
+    [
+      "manors-golf",
+      "Manors Golf",
+      "Reebok x Manors Graphic T-Shirt",
+      "$61",
+      "USD",
+      "https://manorsgolf.com/en-us/products/manors-x-reebok-graphic-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/Graphic_T-Shirt_Espresso_475_crop.jpg?v=1785236647",
+      "&ldquo;240gsm cotton with a soft hand feel&rdquo; in a relaxed fit, carrying the United Kingdom of Golf crest. Three colourways on the US storefront: Espresso, Chalk and Gorse Yellow."
+    ],
+    [
+      "fella-golf",
+      "Fella Golf",
+      "Butter Bistro Graphic T-Shirt",
+      "$65",
+      "USD",
+      "https://fellagolf.com/products/butter-bistro-graphic-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0279/7482/8066/files/fella-butter-bistro-graphic-tee-0-2560_1.png?v=1780064126",
+      "&ldquo;240GSM premium 100% cotton / Carbon finish with velvet handfeel / embroidered logo on chest / Screenprinted back graphic / Relaxed fit.&rdquo; The Chez Fella graphic runs in a butter yellow colourway."
+    ],
+    [
+      "seamus-golf",
+      "Seamus Golf",
+      "Obviously You&rsquo;re Not A Golfer Tee",
+      "$65",
+      "USD",
+      "https://www.seamusgolf.com/products/seamus-obviously-youre-not-a-golfer-shirt",
+      "https://cdn.shopify.com/s/files/1/0129/1462/files/DSC02111.png?v=1784928085",
+      "&ldquo;Heavy weight, 6.5 oz, 22-singles, 100% combed cotton (heathers 15% viscose) preshrunk to minimize shrinkage.&rdquo; Screen printed with the line in green at the chest and The Dude large on the back. Artwork by SlackerTide."
+    ],
+    [
+      "bold-golf",
+      "BOLD GOLF",
+      "Premium Cotton T-Shirt",
+      "$70",
+      "USD",
+      "https://bold-golf.com/products/premium-cotton-graphic-t-shirt-heritage-edition",
+      "https://cdn.shopify.com/s/files/1/0847/0695/1492/files/masters-GRANITE-flatlay-front.png?v=1743787563",
+      "Dublin, with Shane Lowry among the founding investors. &ldquo;240gsm Premium Cotton&rdquo;, &ldquo;Made in Portugal&rdquo;, and a screen print the brand says is &ldquo;designed not to fade wash after wash.&rdquo; Pre-shrunk garment wash, graphics front and back."
+    ],
+    [
+      "casualist",
+      "Casualist",
+      "Good Enough Tee",
+      "$95",
+      "USD",
+      "https://casualist.com/products/good-enough-tee",
+      "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Good_Enough_Tee_front_view_white_organic_cotton.png?v=1777111425",
+      "The heaviest cotton on the page: &ldquo;380gsm 100% organic cotton / Relaxed oversized fit / Screen printed front and back logo / Swing motif label detail / Made in Portugal.&rdquo; Their own description reads: &ldquo;Heavyweight (380gsm), but not emotionally.&rdquo;"
+    ],
+    [
+      "odd-ritual",
+      "Odd Ritual",
+      "Heritage Badge T-Shirt",
+      "R1,000",
+      "ZAR",
+      "https://oddritualgolf.com/products/heritage-badge-t-shirtwhite",
+      "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/OR_OC_WHT_FRONTcopy2.jpg?v=1758349873",
+      "&ldquo;100% cotton / ORGC box silhouette / Screen print branding / 220gsm.&rdquo; A chest banner lockup &mdash; Swing Easy type, the Cape Town heritage badge, the Odd Ritual script &mdash; all in sage green. Their store prices in rand, so that is what is printed here."
+    ]
+  ],
+  "art": [
+    [
+      "olydoe",
+      "Olydoe",
+      "OG Tee",
+      "$30",
+      "USD",
+      "https://olydoe.com/products/locker-room-t-shirt-1",
+      "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/DSC00453_40debdf1-e5e5-4cd5-8283-bdbec48b5442.jpg?v=1778597746",
+      "&ldquo;Made in Los Angeles and finished with embroidered branding on the chest, a graphic print on the back, and a woven Olydoe label.&rdquo; A modern drop-shoulder fit, and the cheapest US-made shirt here."
+    ],
+    [
+      "swag-golf",
+      "Swag Golf",
+      "Death Taxes &amp; 3-Putts T-Shirt",
+      "$33.33",
+      "USD",
+      "https://swag.golf/products/death-taxes-3-putts-t-shirt",
+      "https://cdn.shopify.com/s/files/1/2622/0470/files/DEATH-TAXES-3-PUTTS-shirt-1000-1.jpg?v=1782319931",
+      "Printed on Comfort Colors: &ldquo;Garment Dyed, Heavyweight, Lived In Feel&rdquo;, &ldquo;100% Soft Ring Spun U.S. Cotton&rdquo;, twill label and shoulder to shoulder twill tape. The artwork is traditional tattoo flash. Their care note: &ldquo;Always wash separately before wearing to avoid bleeding issues.&rdquo;"
+    ],
+    [
+      "sugarloaf-social-club",
+      "Sugarloaf Social Club",
+      "SSC x Jain Grownup T-Shirt",
+      "$34",
+      "USD",
+      "https://sugarloafsocialclub.com/products/ssc-x-jain-grownup-t-shirt",
+      "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_Jain_Final-46_copy.jpg?v=1755722333",
+      "&ldquo;Fabric: 100% Cotton, heavyweight jersey. Logos: Screenprinted Puff JSSC chest logo + oversized back graphic. Fit: Boxy, slightly oversized cut.&rdquo; Down from $44. The shirt is called the Grownup, which we did not plan."
+    ],
+    [
+      "devereux-golf",
+      "Devereux Golf",
+      "Gateway To The West Tee",
+      "$38",
+      "USD",
+      "https://devereuxgolf.com/products/gateway-to-the-west-tee-faded-black",
+      "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_4044_FADEDBLACK_02.jpg?v=1785120651",
+      "Filed on their own store under the product type &ldquo;Graphic Tee.&rdquo; Vintage racing-inspired artwork with a golfer illustration across the back, in a faded black. Full size run."
+    ],
+    [
+      "criquet",
+      "Criquet",
+      "Slub Graphic Tee, Lions Badge",
+      "$58",
+      "USD",
+      "https://criquetshirts.com/products/slub-graphic-t-shirt-lions-badge-vintage-indigo",
+      "https://cdn.shopify.com/s/files/1/2546/6304/files/WB-35.jpg?v=1762271239",
+      "&ldquo;100% slub cotton jersey / Rib collar / Signature Criquet pocket with screen printed logo / Designed in Austin, TX / Made in Peru.&rdquo; The badge is Lions Municipal, which is about as Austin as a shirt gets."
+    ],
+    [
+      "metalwood-studio",
+      "Metalwood Studio",
+      "Free Metalwood T-Shirt",
+      "$62",
+      "USD",
+      "https://metalwood.studio/products/free-metalwood-t-shirt-sky",
+      "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-03-04_SKY_V1.jpg?v=1773376934",
+      "100% cotton with screen printed detail, in the Sky colourway &mdash; black is sold out. The product copy is the graphic: &ldquo;What if I got drafted / Then it&rsquo;s no longer What&rsquo;s In My Bag / It&rsquo;s / What&rsquo;s in my loadout.&rdquo;"
+    ]
+  ]
+}
