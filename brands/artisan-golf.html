@@ -47,6 +47,29 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-line{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}
 .bp-profile{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}
 .bp-gridhdr{max-width:1200px;margin:34px auto 0;padding:0 24px;font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:-.01em;}
+/* --- reworked brand-page header, 21 Sept 2026 ---------------------------- */
+/* Two CTAs sit side by side now: the profile link (only where a profile really
+   exists) and the brand's own store. .bp-store is the filled one because for
+   most of these pages it is the only thing a reader can actually act on. */
+.bp-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px;}
+.bp-store{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--ink);color:var(--paper);text-decoration:none;
+  padding:9px 14px;border:1px solid var(--ink);}
+.bp-store:hover{background:var(--grass);border-color:var(--grass);}
+.bp-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;}
+.bp-chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid rgba(20,20,20,.22);border-radius:999px;padding:4px 10px;color:#4a4f49;
+  text-decoration:none;}
+.bp-chip:hover{border-color:var(--grass);color:var(--grass);}
+/* Related brands. A page with one post card used to end in white space; this
+   gives it somewhere to go and the index some internal linking. */
+.bp-kins{max-width:1200px;margin:14px auto 0;padding:0 24px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;}
+.bp-kin{border:1px solid rgba(20,20,20,.14);padding:14px 15px;text-decoration:none;
+  color:var(--ink);background:rgba(255,255,255,.35);display:block;}
+.bp-kin:hover{border-color:var(--grass);}
+.bp-kin-name{display:block;font-family:var(--serif);font-size:16px;font-weight:700;margin-bottom:5px;}
+.bp-kin-line{display:block;font-size:12.5px;line-height:1.5;color:#5a5f58;}
     .bp-grid{max-width:1200px;margin:18px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}
 .bp-card{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}
 .bp-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}
@@ -109,11 +132,12 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
     <h1>Artisan Golf</h1>
     <div class="bp-meta">Fort Worth, TX &middot; Clubs</div>
     <p class="bp-line">Two ex-Nike craftsmen in Nike's old Fort Worth building — wedges ground by hand, fitting required.</p>
-    <a class="bp-profile" href="/drops/texas-golf-brands-and-makers#artisan">Read the full profile &rarr;</a>
+    <div class="bp-actions"></div>
+    <div class="bp-chips"><a class="bp-chip" href="/brands/tag/made-by-hand">Made by Hand</a></div>
   </div>
 </header>
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Artisan Golf</h2>
+<h2 class="bp-gridhdr">Where Artisan Golf Has Appeared</h2>
 <div class="bp-grid">
   <a class="bp-card" href="/drops/texas-golf-brands-and-makers">
     <div class="bp-thumb"><img src="/images/texas-brands/hero-texas-brands.jpg" loading="lazy" alt="Made in Texas — The Golf Brands and Makers Built Here"><span class="bp-badge">The Profile</span></div>
@@ -132,6 +156,10 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </div>
 <!--TGI-WWU--><section class="wwu"><div class="wwu-in"><span class="wwu-lab">For Artisan Golf</span><p>Work at Artisan Golf? This coverage is independent and always will be, but if you want to talk about sending product, a sponsored Field Note or something longer, <a href="/work-with-us">here is how that works</a>.</p></div></section><!--/TGI-WWU-->
 
+<h2 class="bp-gridhdr">More Made by Hand</h2>
+<div class="bp-kins"><a class="bp-kin" href="/brands/ally-aiken"><span class="bp-kin-name">Ally Aiken Design</span><span class="bp-kin-line">Watercolour golf course maps from Austin — hundreds of courses, commissions open.</span></a><a class="bp-kin" href="/brands/apres-golf"><span class="bp-kin-name">Après Golf</span><span class="bp-kin-line">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and co</span></a><a class="bp-kin" href="/brands/austinknittylimits"><span class="bp-kin-name">AustinKnittyLimits</span><span class="bp-kin-line">Hand-knit retro headcovers from Austin, one at a time, taught by the maker&#x27;s mother</span></a><a class="bp-kin" href="/brands/beavertail-golf-co"><span class="bp-kin-name">Beavertail Golf Co.</span><span class="bp-kin-line">Hunter Myran hand paints hickory alignment sticks in North Dakota, names on both ends in</span></a><a class="bp-kin" href="/brands/bestgrips"><span class="bp-kin-name">BestGrips</span><span class="bp-kin-line">A father and son making leather grips in Texas — Horween leathers, no minimums, no paid </span></a><a class="bp-kin" href="/brands/bluegrass-fairway"><span class="bp-kin-name">Bluegrass Fairway</span><span class="bp-kin-line">Handmade leather, Harris Tweed and waxed canvas golf goods, made in Louisville since 201</span></a></div>
+
+<div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin:26px auto 0;max-width:1200px;padding:0 24px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
 <footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>
 <!-- Google Analytics 4 (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G89M4116SB"></script>
@@ -526,5 +554,6 @@ body{font-size:16px;line-height:1.6}
   if(document.readyState==='loading'){document.addEventListener('DOMContentLoaded',init);}else{init();}
 })();
 </script>
+<!--TGI-AFF-SKIM--><script type="text/javascript" src="https://s.skimresources.com/js/308476X1796792.skimlinks.js"></script>
 </body>
 </html>

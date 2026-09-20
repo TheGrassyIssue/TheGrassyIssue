@@ -196,18 +196,40 @@ def verify(path):
     mc = re.findall(r'<a[^>]*class="more-card".*?</a>', h, re.S)
     chk("more-cards carry an image and use .more-card-img/-body",
         all('more-card-img' in c and '<img' in c for c in mc))
-    # the sidebar must be nested INSIDE .writeup — if .writeup closes early the
-    # sidebar overlaps the first section instead of sitting beside the copy
-    _w = h.find('<div class="writeup">')
-    _a = h.find('<aside class="sidebar">')
-    _depth = None
-    if _w >= 0 and _a > _w:
-        _d = 0
-        for _m in re.finditer(r'<div\b[^>]*>|</div>', h[_w:_a]):
-            _d += 1 if _m.group(0).startswith('<div') else -1
-        _depth = _d
-    chk("sidebar is nested inside .writeup (not closed early)",
-        _depth is None or _depth >= 1)
+    # THE SIDEBAR MUST SIT IN A CONTAINER THAT GIVES IT A COLUMN.
+    # Exactly two containers on this site do that, and the CSS is the authority:
+    #   legacy    <div class="writeup">      .writeup{display:grid;2fr 1fr}
+    #   template  <section data-btk="take">  section[data-btk="take"]{display:grid;
+    #                                          minmax(0,1fr) 300px}
+    # Anywhere else the aside has no column: it spans the full band under the
+    # copy, and because the position:static override is scoped to "take" it also
+    # keeps position:sticky from the base .sidebar rule and rides down the page.
+    #
+    # The previous version only knew the legacy form — it did
+    # h.find('<div class="writeup">') and, when that returned -1, left _depth as
+    # None and passed. On all 37 template-era pages that div does not exist, so
+    # this check COULD NOT FAIL on any of them. It duly reported OK for the AXXA
+    # page on 20 Sept, whose aside sat in data-btk="story" (no grid rule at all)
+    # — the layout Lenny reported as broken. A guard that returns a plausible
+    # value rather than a correct one.
+    #
+    # Find the aside's immediate parent by walking a stack, and name it.
+    _stack, _parent = [], None
+    for _m in re.finditer(r'<(div|section|aside)\b[^>]*>|</(?:div|section|aside)>', h):
+        _t = _m.group(0)
+        if _t.startswith("</"):
+            if _stack:
+                _stack.pop()
+        elif _t.startswith('<aside class="sidebar"'):
+            _parent = _stack[-1] if _stack else ""
+            break
+        elif not _t.rstrip().endswith("/>"):
+            _stack.append(_t)
+    _ok = (_parent is None                                   # page has no sidebar
+           or 'class="writeup"' in _parent
+           or 'data-btk="take"' in _parent)
+    chk("sidebar sits in a container that gives it a column",
+        _ok, "" if _ok else f"parent is {(_parent or '(top level)')[:60]}")
     chk("no legacy .more-kicker/.more-title markup",
         'more-kicker' not in h and 'more-title' not in h)
     chk("word count >= 1200", words >= 1200, str(words))

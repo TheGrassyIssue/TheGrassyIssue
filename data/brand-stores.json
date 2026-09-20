@@ -1,0 +1,571 @@
+{
+ "_": "Brand -> own store. Derived 21 Sept 2026 from outbound links already on the site, kept ONLY where the domain stem equals the brand name or slug exactly. Fuzzy substring matching was tried and rejected: it mapped apc-golf, artisan-golf, cph-golf, beavertail-golf-co and left-of-field-golf all to golf.com, a magazine, because 'golf' appears in both. Media and marketplace domains are blocklisted. Brands absent here get NO store button rather than a guessed one.",
+ "_blocked": [
+  "2ndswing.com",
+  "amazon.com",
+  "dickssportinggoods.com",
+  "ebay.com",
+  "endclothing.com",
+  "etsy.com",
+  "golf.com",
+  "golfdigest.com",
+  "golfwrx.com",
+  "hypebeast.com",
+  "insidehook.com",
+  "nordstrom.com",
+  "pgatoursuperstore.com",
+  "revolve.com",
+  "ssense.com"
+ ],
+ "_omitted": [
+  "agronomy-workshop",
+  "apc-golf",
+  "artisan-golf",
+  "badlands",
+  "beams-golf",
+  "beavertail-golf-co",
+  "carhartt-wip",
+  "cph-golf",
+  "devant",
+  "duca-del-cosma",
+  "found-golf",
+  "gray-haast",
+  "hedge",
+  "juniper-james",
+  "left-of-field-golf",
+  "lululemon",
+  "metalwood-studio",
+  "mogshade",
+  "odd-ritual",
+  "orkai",
+  "out-west-atelier",
+  "ovo",
+  "owala",
+  "piretti",
+  "pluto-golf",
+  "realtree",
+  "royal-albartross",
+  "sentinel-golf",
+  "sounder",
+  "stick-grips",
+  "vessel",
+  "vuori"
+ ],
+ "stores": {
+  "3-putt-round": {
+   "url": "https://3puttround.com/",
+   "domain": "3puttround.com",
+   "match": "exact"
+  },
+  "aime-leon-dore": {
+   "url": "https://aimeleondore.com/",
+   "domain": "aimeleondore.com",
+   "match": "exact"
+  },
+  "ally-aiken": {
+   "url": "https://allyaikendesign.com/",
+   "domain": "allyaikendesign.com",
+   "match": "exact"
+  },
+  "anti-country-club-tokyo": {
+   "url": "https://anticountryclubtokyo.com/",
+   "domain": "anticountryclubtokyo.com",
+   "match": "exact"
+  },
+  "apres-golf": {
+   "url": "https://apresgolf.com/",
+   "domain": "apresgolf.com",
+   "match": "exact"
+  },
+  "aug-11": {
+   "url": "https://aug11.co/",
+   "domain": "aug11.co",
+   "match": "exact"
+  },
+  "austinknittylimits": {
+   "url": "https://austinknittylimits.com/",
+   "domain": "austinknittylimits.com",
+   "match": "exact"
+  },
+  "bag-boy": {
+   "url": "https://bagboy.com/",
+   "domain": "bagboy.com",
+   "match": "exact"
+  },
+  "bestgrips": {
+   "url": "https://bestgrips.com/",
+   "domain": "bestgrips.com",
+   "match": "exact"
+  },
+  "bettinardi": {
+   "url": "https://bettinardi.com/",
+   "domain": "bettinardi.com",
+   "match": "exact"
+  },
+  "big-dog-golf": {
+   "url": "https://bigdoggolfco.com/",
+   "domain": "bigdoggolfco.com",
+   "match": "exact"
+  },
+  "birds-of-condor": {
+   "url": "https://birdsofcondor.com/",
+   "domain": "birdsofcondor.com",
+   "match": "exact"
+  },
+  "bluegrass-fairway": {
+   "url": "https://bluegrassfairway.com/",
+   "domain": "bluegrassfairway.com",
+   "match": "exact"
+  },
+  "bluetross": {
+   "url": "https://bluetross.com/",
+   "domain": "bluetross.com",
+   "match": "exact"
+  },
+  "bubbawhips": {
+   "url": "https://bubbawhips.com/",
+   "domain": "bubbawhips.com",
+   "match": "exact"
+  },
+  "bunker-mentality": {
+   "url": "https://bunker-mentality.com/",
+   "domain": "bunker-mentality.com",
+   "match": "exact"
+  },
+  "casualist": {
+   "url": "https://casualist.com/",
+   "domain": "casualist.com",
+   "match": "exact"
+  },
+  "chipp-golf": {
+   "url": "https://chippgolfco.com/",
+   "domain": "chippgolfco.com",
+   "match": "exact"
+  },
+  "clint-orms": {
+   "url": "https://clintorms.com/",
+   "domain": "clintorms.com",
+   "match": "exact"
+  },
+  "cloud-and-wind-golf": {
+   "url": "https://cloudandwindgolf.com/",
+   "domain": "cloudandwindgolf.com",
+   "match": "exact"
+  },
+  "clutch-golf-company": {
+   "url": "https://clutchgolfcompany.com/",
+   "domain": "clutchgolfcompany.com",
+   "match": "exact"
+  },
+  "criquet": {
+   "url": "https://criquetshirts.com/",
+   "domain": "criquetshirts.com",
+   "match": "exact"
+  },
+  "daphnes-headcovers": {
+   "url": "https://daphnesheadcovers.com/",
+   "domain": "daphnesheadcovers.com",
+   "match": "exact"
+  },
+  "devereux-golf": {
+   "url": "https://devereuxgolf.com/",
+   "domain": "devereuxgolf.com",
+   "match": "exact"
+  },
+  "dormie-workshop": {
+   "url": "https://dormieworkshop.com/",
+   "domain": "dormieworkshop.com",
+   "match": "exact"
+  },
+  "eastside-golf": {
+   "url": "https://eastsidegolf.com/",
+   "domain": "eastsidegolf.com",
+   "match": "exact"
+  },
+  "edel-golf": {
+   "url": "https://edelgolf.com/",
+   "domain": "edelgolf.com",
+   "match": "exact"
+  },
+  "edison-golf": {
+   "url": "https://edisongolf.com/",
+   "domain": "edisongolf.com",
+   "match": "exact"
+  },
+  "ekorre-golf": {
+   "url": "https://ekorregolf.com/",
+   "domain": "ekorregolf.com",
+   "match": "exact"
+  },
+  "evnroll": {
+   "url": "https://evnroll.com/",
+   "domain": "evnroll.com",
+   "match": "exact"
+  },
+  "fella-golf": {
+   "url": "https://fellagolf.com/",
+   "domain": "fellagolf.com",
+   "match": "exact"
+  },
+  "foray-golf": {
+   "url": "https://foraygolf.com/",
+   "domain": "foraygolf.com",
+   "match": "exact"
+  },
+  "forden-golf": {
+   "url": "https://fordengolf.com/",
+   "domain": "fordengolf.com",
+   "match": "exact"
+  },
+  "fyfe-golf": {
+   "url": "https://fyfegolf.com/",
+   "domain": "fyfegolf.com",
+   "match": "exact"
+  },
+  "gamut-golf": {
+   "url": "https://gamutgolf.com/",
+   "domain": "gamutgolf.com",
+   "match": "exact"
+  },
+  "garsen-golf": {
+   "url": "https://garsengolf.com/",
+   "domain": "garsengolf.com",
+   "match": "exact"
+  },
+  "gfore": {
+   "url": "https://gfore.com/",
+   "domain": "gfore.com",
+   "match": "exact"
+  },
+  "ghost-golf": {
+   "url": "https://ghostgolf.com/",
+   "domain": "ghostgolf.com",
+   "match": "exact"
+  },
+  "golf-gods": {
+   "url": "https://golfgods.com.au/",
+   "domain": "golfgods.com.au",
+   "match": "exact"
+  },
+  "gramicci": {
+   "url": "https://gramicci.com/",
+   "domain": "gramicci.com",
+   "match": "exact"
+  },
+  "gumtree-golf": {
+   "url": "https://gumtreegolf.com/",
+   "domain": "gumtreegolf.com",
+   "match": "exact"
+  },
+  "hazy-golf": {
+   "url": "https://hazygolf.com/",
+   "domain": "hazygolf.com",
+   "match": "exact"
+  },
+  "hickory-and-heath": {
+   "url": "https://hickoryandheath.com/",
+   "domain": "hickoryandheath.com",
+   "match": "exact"
+  },
+  "huega-house": {
+   "url": "https://huegahouse.com/",
+   "domain": "huegahouse.com",
+   "match": "exact"
+  },
+  "inside-story": {
+   "url": "https://insidestory.co/",
+   "domain": "insidestory.co",
+   "match": "exact"
+  },
+  "jan-craig": {
+   "url": "https://jancraigheadcovers.com/",
+   "domain": "jancraigheadcovers.com",
+   "match": "exact"
+  },
+  "jlindeberg": {
+   "url": "https://jlindeberg.com/",
+   "domain": "jlindeberg.com",
+   "match": "exact"
+  },
+  "jones-sports-co": {
+   "url": "https://jonessportsco.com/",
+   "domain": "jonessportsco.com",
+   "match": "exact"
+  },
+  "kingfisher-golf": {
+   "url": "https://kingfisher-golf.com/",
+   "domain": "kingfisher-golf.com",
+   "match": "exact"
+  },
+  "lamb-crafted": {
+   "url": "https://lambcrafted.com/",
+   "domain": "lambcrafted.com",
+   "match": "exact"
+  },
+  "mackem-golf": {
+   "url": "https://mackemgolf.com/",
+   "domain": "mackemgolf.com",
+   "match": "exact"
+  },
+  "mackenzie": {
+   "url": "https://mackenziegolfbags.com/",
+   "domain": "mackenziegolfbags.com",
+   "match": "exact"
+  },
+  "malbon": {
+   "url": "https://malbon.com/",
+   "domain": "malbon.com",
+   "match": "exact-multi"
+  },
+  "manors": {
+   "url": "https://manorsgolf.com/",
+   "domain": "manorsgolf.com",
+   "match": "exact-multi"
+  },
+  "merrill-golf": {
+   "url": "https://merrillgolf.com/",
+   "domain": "merrillgolf.com",
+   "match": "exact"
+  },
+  "midiron": {
+   "url": "https://midiron.shop/",
+   "domain": "midiron.shop",
+   "match": "exact"
+  },
+  "morning-people-clothiers": {
+   "url": "https://morningpeopleclothiers.com/",
+   "domain": "morningpeopleclothiers.com",
+   "match": "exact"
+  },
+  "no-laying-up": {
+   "url": "https://nolayingup.com/",
+   "domain": "nolayingup.com",
+   "match": "exact"
+  },
+  "noreaster-sticks": {
+   "url": "https://noreastersticks.com/",
+   "domain": "noreastersticks.com",
+   "match": "exact"
+  },
+  "okka-golf": {
+   "url": "https://okkagolf.com/",
+   "domain": "okkagolf.com",
+   "match": "exact"
+  },
+  "olydoe": {
+   "url": "https://olydoe.com/",
+   "domain": "olydoe.com",
+   "match": "exact"
+  },
+  "p53": {
+   "url": "https://p53irons.com/",
+   "domain": "p53irons.com",
+   "match": "exact"
+  },
+  "payntr": {
+   "url": "https://payntrgolf.com/",
+   "domain": "payntrgolf.com",
+   "match": "exact"
+  },
+  "penta-golf": {
+   "url": "https://penta-golf.com/",
+   "domain": "penta-golf.com",
+   "match": "exact"
+  },
+  "peter-millar": {
+   "url": "https://petermillar.com/",
+   "domain": "petermillar.com",
+   "match": "exact"
+  },
+  "pins-and-aces": {
+   "url": "https://pinsandaces.com/",
+   "domain": "pinsandaces.com",
+   "match": "exact"
+  },
+  "public-drip": {
+   "url": "https://publicdrip.com/",
+   "domain": "publicdrip.com",
+   "match": "exact"
+  },
+  "puma-golf": {
+   "url": "https://pumagolf.com/",
+   "domain": "pumagolf.com",
+   "match": "exact"
+  },
+  "pxg": {
+   "url": "https://pxg.com/",
+   "domain": "pxg.com",
+   "match": "exact"
+  },
+  "quiet-golf": {
+   "url": "https://quietgolf.com/",
+   "domain": "quietgolf.com",
+   "match": "exact"
+  },
+  "radry-golf": {
+   "url": "https://radrygolf.com/",
+   "domain": "radrygolf.com",
+   "match": "exact"
+  },
+  "random-golf-club": {
+   "url": "https://randomgolfclub.com/",
+   "domain": "randomgolfclub.com",
+   "match": "exact"
+  },
+  "read-the-green": {
+   "url": "https://readthegreen.com/",
+   "domain": "readthegreen.com",
+   "match": "exact"
+  },
+  "rebolf": {
+   "url": "https://rebolf.com/",
+   "domain": "rebolf.com",
+   "match": "exact"
+  },
+  "rhoback": {
+   "url": "https://rhoback.com/",
+   "domain": "rhoback.com",
+   "match": "exact"
+  },
+  "ripit-grips": {
+   "url": "https://ripitgrips.com/",
+   "domain": "ripitgrips.com",
+   "match": "exact"
+  },
+  "rosemark-grips": {
+   "url": "https://rosemarkgrips.com/",
+   "domain": "rosemarkgrips.com",
+   "match": "exact"
+  },
+  "rouqe-golf": {
+   "url": "https://rouqegolf.com/",
+   "domain": "rouqegolf.com",
+   "match": "exact"
+  },
+  "salomon": {
+   "url": "https://salomon.com/",
+   "domain": "salomon.com",
+   "match": "exact"
+  },
+  "scotch-and-skins": {
+   "url": "https://scotchandskins.com/",
+   "domain": "scotchandskins.com",
+   "match": "exact"
+  },
+  "scotsticks": {
+   "url": "https://scotsticks.com/",
+   "domain": "scotsticks.com",
+   "match": "exact"
+  },
+  "seamus": {
+   "url": "https://seamusgolf.com/",
+   "domain": "seamusgolf.com",
+   "match": "exact"
+  },
+  "siegelman-stable": {
+   "url": "https://siegelmanstable.com/",
+   "domain": "siegelmanstable.com",
+   "match": "exact"
+  },
+  "sierra-madre": {
+   "url": "https://sierramadregolf.com/",
+   "domain": "sierramadregolf.com",
+   "match": "exact"
+  },
+  "sinking-birdies": {
+   "url": "https://sinkingbirdies.co.uk/",
+   "domain": "sinkingbirdies.co.uk",
+   "match": "exact"
+  },
+  "stitch-golf": {
+   "url": "https://stitchgolf.com/",
+   "domain": "stitchgolf.com",
+   "match": "exact"
+  },
+  "students-golf": {
+   "url": "https://studentsgolf.com/",
+   "domain": "studentsgolf.com",
+   "match": "exact"
+  },
+  "sugarloaf-social-club": {
+   "url": "https://sugarloafsocialclub.com/",
+   "domain": "sugarloafsocialclub.com",
+   "match": "exact"
+  },
+  "sun-mountain": {
+   "url": "https://sunmountain.com/",
+   "domain": "sunmountain.com",
+   "match": "exact"
+  },
+  "sunday-golf": {
+   "url": "https://sundaygolf.com/",
+   "domain": "sundaygolf.com",
+   "match": "exact"
+  },
+  "swag-golf": {
+   "url": "https://swaggolf.com/",
+   "domain": "swaggolf.com",
+   "match": "exact"
+  },
+  "takomo-golf": {
+   "url": "https://takomogolf.com/",
+   "domain": "takomogolf.com",
+   "match": "exact"
+  },
+  "thwack-sporting-co": {
+   "url": "https://thwacksportingco.com/",
+   "domain": "thwacksportingco.com",
+   "match": "exact"
+  },
+  "travismathew": {
+   "url": "https://travismathew.com/",
+   "domain": "travismathew.com",
+   "match": "exact"
+  },
+  "twentyfour-golf": {
+   "url": "https://twentyfourgolf.com/",
+   "domain": "twentyfourgolf.com",
+   "match": "exact"
+  },
+  "walker-golf-things": {
+   "url": "https://walkergolfthings.com/",
+   "domain": "walkergolfthings.com",
+   "match": "exact"
+  },
+  "water-when-dry": {
+   "url": "https://waterwhendry.com/",
+   "domain": "waterwhendry.com",
+   "match": "exact"
+  },
+  "whim-golf": {
+   "url": "https://whimgolf.com/",
+   "domain": "whimgolf.com",
+   "match": "exact"
+  },
+  "winston-collection": {
+   "url": "https://winstoncollection.com/",
+   "domain": "winstoncollection.com",
+   "match": "exact"
+  },
+  "zaleas-golf": {
+   "url": "https://zaleasgolf.com/",
+   "domain": "zaleasgolf.com",
+   "match": "exact"
+  },
+  "hidden-links-society": {
+   "url": "https://hiddenlinkssociety.com/",
+   "domain": "hiddenlinkssociety.com",
+   "match": "exact"
+  },
+  "hiroki-golf": {
+   "url": "https://hirokigolf.com/",
+   "domain": "hirokigolf.com",
+   "match": "exact"
+  },
+  "axxa": {
+   "url": "https://axxa.com.au/",
+   "domain": "axxa.com.au",
+   "match": "exact"
+  }
+ }
+}

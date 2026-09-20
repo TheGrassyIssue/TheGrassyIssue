@@ -47,6 +47,29 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-line{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}
 .bp-profile{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}
 .bp-gridhdr{max-width:1200px;margin:34px auto 0;padding:0 24px;font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:-.01em;}
+/* --- reworked brand-page header, 21 Sept 2026 ---------------------------- */
+/* Two CTAs sit side by side now: the profile link (only where a profile really
+   exists) and the brand's own store. .bp-store is the filled one because for
+   most of these pages it is the only thing a reader can actually act on. */
+.bp-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px;}
+.bp-store{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--ink);color:var(--paper);text-decoration:none;
+  padding:9px 14px;border:1px solid var(--ink);}
+.bp-store:hover{background:var(--grass);border-color:var(--grass);}
+.bp-chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;}
+.bp-chip{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid rgba(20,20,20,.22);border-radius:999px;padding:4px 10px;color:#4a4f49;
+  text-decoration:none;}
+.bp-chip:hover{border-color:var(--grass);color:var(--grass);}
+/* Related brands. A page with one post card used to end in white space; this
+   gives it somewhere to go and the index some internal linking. */
+.bp-kins{max-width:1200px;margin:14px auto 0;padding:0 24px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;}
+.bp-kin{border:1px solid rgba(20,20,20,.14);padding:14px 15px;text-decoration:none;
+  color:var(--ink);background:rgba(255,255,255,.35);display:block;}
+.bp-kin:hover{border-color:var(--grass);}
+.bp-kin-name{display:block;font-family:var(--serif);font-size:16px;font-weight:700;margin-bottom:5px;}
+.bp-kin-line{display:block;font-size:12.5px;line-height:1.5;color:#5a5f58;}
     .bp-grid{max-width:1200px;margin:18px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}
 .bp-card{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}
 .bp-card:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}
@@ -130,7 +153,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Paris, France</div>
       <div class="bp-title">A.P.C. Golf</div>
       <p class="bp-line">Jean Touitou's golf line, launched in Korea and Japan first. Collaborated with Cph/Golf, 2026.</p>
-      <div class="bi-tags"><span class="bi-tag">Quiet luxury</span><span class="bi-tag">Collab machine</span></div>
+      <div class="bi-tags"><span class="bi-tag">Quiet Luxury</span><span class="bi-tag">Collab Machine</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/apres-golf">
@@ -139,7 +162,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">California</div>
       <div class="bp-title">Après Golf</div>
       <p class="bp-line">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and country-club patches sewn on top.</p>
-      <div class="bi-tags"><span class="bi-tag">Loud on purpose</span><span class="bi-tag">Made by hand</span></div>
+      <div class="bi-tags"><span class="bi-tag">Loud on Purpose</span><span class="bi-tag">Made by Hand</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/axxa">
@@ -148,7 +171,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Sydney, Australia</div>
       <div class="bp-title">AXXA</div>
       <p class="bp-line">Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted heavyweight knits, and its own GolfComfort polo fabric.</p>
-      <div class="bi-tags"><span class="bi-tag">Post-round friendly</span></div>
+      <div class="bi-tags"><span class="bi-tag">Independent</span><span class="bi-tag">Post-Round Friendly</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/beams-golf">
@@ -157,7 +180,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Tokyo, Japan</div>
       <div class="bp-title">BEAMS Golf</div>
       <p class="bp-line">The golf line of Tokyo's BEAMS empire, running since 2011 — Japanese fairway fashion at its most complete.</p>
-      <div class="bi-tags"><span class="bi-tag">Quiet luxury</span><span class="bi-tag">Collab machine</span></div>
+      <div class="bi-tags"><span class="bi-tag">Quiet Luxury</span><span class="bi-tag">Collab Machine</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/bettinardi">
@@ -166,7 +189,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Tinley Park, Illinois</div>
       <div class="bp-title">Bettinardi Golf</div>
       <p class="bp-line">Family-owned putter maker milling in Illinois since 1998.</p>
-      
+      <div class="bi-tags"><span class="bi-tag">Independent</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/cloud-and-wind-golf">
@@ -184,7 +207,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Tokyo, Japan</div>
       <div class="bp-title">Cph/Golf</div>
       <p class="bp-line">CAPTAINS HELM's golf line — California outdoor lifestyle read through Tokyo streetwear.</p>
-      <div class="bi-tags"><span class="bi-tag">Collab machine</span><span class="bi-tag">Post-round friendly</span></div>
+      <div class="bi-tags"><span class="bi-tag">Collab Machine</span><span class="bi-tag">Post-Round Friendly</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/edel-golf">
@@ -193,7 +216,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Arvada, CO</div>
       <div class="bp-title">Edel Golf</div>
       <p class="bp-line">David Edel fitted putters by where you actually aim, measured with a mirror and a laser. He sold the company in 2023; the method outlived him.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/edison-golf">
@@ -211,7 +234,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Sigtuna, Sweden</div>
       <div class="bp-title">Ekorre Golf</div>
       <p class="bp-line">A cabinetmaker's hexagonal ash alignment sticks, laminated like a split-cane fly rod so they flex and return straight.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/evnroll">
@@ -229,7 +252,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">United States</div>
       <div class="bp-title">Forden Golf</div>
       <p class="bp-line">Streetwear-leaning golf label. The Swingman logo comes from Doc Edgerton's 1938 strobe photograph of a swing at MIT.</p>
-      <div class="bi-tags"><span class="bi-tag">Loud on purpose</span><span class="bi-tag">Muni energy</span></div>
+      <div class="bi-tags"><span class="bi-tag">Loud on Purpose</span><span class="bi-tag">Muni Energy</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/fyfe-golf">
@@ -238,7 +261,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">UK</div>
       <div class="bp-title">Fyfe Golf</div>
       <p class="bp-line">Harris Tweed and tartan headcovers made to order in Fife — plus RAF flight suits and Augusta coveralls cut into covers.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/ghost-golf">
@@ -247,7 +270,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Irvine, California</div>
       <div class="bp-title">Ghost Golf</div>
       <p class="bp-line">Bags and accessories founded 2020, built around a patented magnetic towel.</p>
-      <div class="bi-tags"><span class="bi-tag">Gorpcore</span></div>
+      <div class="bi-tags"><span class="bi-tag">Independent</span><span class="bi-tag">Gorpcore</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/inside-story">
@@ -265,7 +288,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Stockholm, Sweden</div>
       <div class="bp-title">J.Lindeberg</div>
       <p class="bp-line">Founded 1996. Put Jesper Parnevik in tight pink trousers and changed how golf dresses.</p>
-      <div class="bi-tags"><span class="bi-tag">Loud on purpose</span></div>
+      <div class="bi-tags"><span class="bi-tag">Loud on Purpose</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/jones-sports-co">
@@ -292,7 +315,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Dallas, TX</div>
       <div class="bp-title">Kingfisher Golf</div>
       <p class="bp-line">Started at a kitchen counter in East Dallas by a former PepsiCo art director; first athlete signed via a Worst Golfer in Dallas contest.</p>
-      <div class="bi-tags"><span class="bi-tag">Muni energy</span></div>
+      <div class="bi-tags"><span class="bi-tag">Muni Energy</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/left-of-field-golf">
@@ -301,7 +324,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Sydney, Australia</div>
       <div class="bp-title">Left of Field Golf</div>
       <p class="bp-line">Surf and skate silhouettes for the course, every collection named for a stretch of Australian coast.</p>
-      <div class="bi-tags"><span class="bi-tag">Post-round friendly</span><span class="bi-tag">Gorpcore</span></div>
+      <div class="bi-tags"><span class="bi-tag">Post-Round Friendly</span><span class="bi-tag">Gorpcore</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/mackenzie">
@@ -310,7 +333,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Oregon, USA</div>
       <div class="bp-title">MacKenzie Golf Bags</div>
       <p class="bp-line">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf, Miura and Bandon Dunes.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span><span class="bi-tag">Collab machine</span><span class="bi-tag">Quiet luxury</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span><span class="bi-tag">Collab Machine</span><span class="bi-tag">Quiet Luxury</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/manors">
@@ -319,7 +342,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">London, UK</div>
       <div class="bp-title">Manors Golf</div>
       <p class="bp-line">London, 2019. Launched against technical golf apparel, then relaunched as a technical golf brand in 2023.</p>
-      <div class="bi-tags"><span class="bi-tag">Quiet luxury</span><span class="bi-tag">Member-guest</span></div>
+      <div class="bi-tags"><span class="bi-tag">Quiet Luxury</span><span class="bi-tag">Member-Guest</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/merrill-golf">
@@ -328,7 +351,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat"></div>
       <div class="bp-title">Merrill Golf</div>
       <p class="bp-line">A design venture through the lens of golf — heavyweight graphic tees, mohair cardigans and headcovers handmade in Japan.</p>
-      <div class="bi-tags"><span class="bi-tag">Muni energy</span><span class="bi-tag">Post-round friendly</span></div>
+      <div class="bi-tags"><span class="bi-tag">Muni Energy</span><span class="bi-tag">Post-Round Friendly</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/metalwood-studio">
@@ -337,7 +360,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Los Angeles, CA</div>
       <div class="bp-title">Metalwood Studio</div>
       <p class="bp-line">Cole Young's LA studio mining Y2K tour aesthetics — the blueprint for modern golf nostalgia.</p>
-      <div class="bi-tags"><span class="bi-tag">Loud on purpose</span><span class="bi-tag">Collab machine</span></div>
+      <div class="bi-tags"><span class="bi-tag">Loud on Purpose</span><span class="bi-tag">Collab Machine</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/mogshade">
@@ -346,7 +369,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Portugal</div>
       <div class="bp-title">Mogshade</div>
       <p class="bp-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span><span class="bi-tag">Collab machine</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span><span class="bi-tag">Collab Machine</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/morning-people-clothiers">
@@ -355,7 +378,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">USA / South Korea</div>
       <div class="bp-title">Morning People Clothiers</div>
       <p class="bp-line">Designed in the USA, sewn in South Korea — early-tee-time clothes with a five-piece discipline.</p>
-      <div class="bi-tags"><span class="bi-tag">Muni energy</span></div>
+      <div class="bi-tags"><span class="bi-tag">Muni Energy</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/olydoe">
@@ -400,7 +423,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Australia</div>
       <div class="bp-title">RIPIT Grips</div>
       <p class="bp-line">Todd Watts spent three years getting a print to survive the moulding — art-series golf grips with alignment marks at both ends.</p>
-      <div class="bi-tags"><span class="bi-tag">Loud on purpose</span></div>
+      <div class="bi-tags"><span class="bi-tag">Loud on Purpose</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/seamus">
@@ -409,7 +432,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Beaverton, OR</div>
       <div class="bp-title">Seamus Golf</div>
       <p class="bp-line">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that covered the 2016 U.S. Ryder Cup team.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/sentinel-golf">
@@ -418,7 +441,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Minneapolis, MN</div>
       <div class="bp-title">Sentinel Golf</div>
       <p class="bp-line">Minneapolis walker bags from $810 — Dyneema, Danish textiles, and no interest in compromise.</p>
-      <div class="bi-tags"><span class="bi-tag">Gorpcore</span><span class="bi-tag">Collab machine</span></div>
+      <div class="bi-tags"><span class="bi-tag">Gorpcore</span><span class="bi-tag">Collab Machine</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/sierra-madre">
@@ -445,7 +468,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Chicago, IL</div>
       <div class="bp-title">Swag Golf</div>
       <p class="bp-line">Painted headcovers and putter covers, and a 62-piece licensed college program across fifteen schools.</p>
-      
+      <div class="bi-tags"><span class="bi-tag">Loud</span><span class="bi-tag">Collector</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/thwack-sporting-co">
@@ -454,7 +477,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">West Virginia</div>
       <div class="bp-title">Thwack Sporting Co.</div>
       <p class="bp-line">American hickory alignment sticks wrapped by hand in waxed Irish linen thread — a first run out of West Virginia, 2026.</p>
-      <div class="bi-tags"><span class="bi-tag">Made by hand</span></div>
+      <div class="bi-tags"><span class="bi-tag">Made by Hand</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/walker-golf-things">
@@ -463,7 +486,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Gold Coast, Australia</div>
       <div class="bp-title">Walker Golf Things</div>
       <p class="bp-line">Pro skater Jack Fardell's label — named after Nicklaus, collabs with adidas, Wahine and Coopers.</p>
-      <div class="bi-tags"><span class="bi-tag">Loud on purpose</span></div>
+      <div class="bi-tags"><span class="bi-tag">Loud on Purpose</span></div>
     </div>
   </a>
   <a class="bp-card" href="/brands/whim-golf">
@@ -472,7 +495,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-cat">Los Angeles, California</div>
       <div class="bp-title">Whim Golf</div>
       <p class="bp-line">A design-led golf label that treats objects as seriously as garments — concrete paperweights, gallery installations, and the Reebok Classic Leather.</p>
-      
+      <div class="bi-tags"><span class="bi-tag">Independent</span></div>
     </div>
   </a>
   </div>

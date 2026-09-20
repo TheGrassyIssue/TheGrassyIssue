@@ -71,7 +71,17 @@ def process(path, merchants, snippet, apply_):
         nonlocal changed_links
         pre, url, dom, post = mt.group(1), mt.group(2), mt.group(3), mt.group(4)
         attrs = pre + post
-        if 'class="product-link"' not in attrs and "gear-slide" not in attrs:
+        # WHICH LINKS COUNT AS SHOPPING LINKS.
+        # This used to be product-link and gear-slide only, which quietly left
+        # three kinds of buy button un-tagged: the "Shop <brand> →" CTA in a
+        # Brand to Know sidebar (.sidebar-cta), and — once the brand-page
+        # template grew one — the store button on 103 brand pages (.bp-store).
+        # Both are the most prominent buy action on their page, and on a thin
+        # brand page .bp-store is the ONLY thing a reader can act on. Leaving
+        # them out meant the attribution silently missed exactly the clicks most
+        # likely to convert.
+        if not any(c in attrs for c in ('class="product-link"', "gear-slide",
+                                        "sidebar-cta", "bp-store")):
             # only rewrite product links / slide links; leave editorial links alone
             return mt.group(0)
         if 'data-aff="1"' in attrs:
@@ -91,7 +101,7 @@ def process(path, merchants, snippet, apply_):
 
     h = LINK.sub(sub, h)
 
-    has_outbound = ('class="product-link"' in h and "http" in h) or \
+    has_outbound = (("class=\"product-link\"" in h or "bp-store" in h or "sidebar-cta" in h) and "http" in h) or \
         bool(re.search(r'<div class="gear-slide">\s*<a href="https?://(?!thegrassyissue)', h))
     monetized = changed_links > 0 or (snippet and has_outbound)
 
@@ -108,6 +118,24 @@ def process(path, merchants, snippet, apply_):
             # homepage footer: tuck the line under the brand tag
             h = h.replace('<div class="footer-brand">',
                 '<div class="footer-brand">' + DISCLOSURE.replace('margin-top:14px;','margin:0 0 10px;'), 1)
+        elif re.search(r"<footer\b", h):
+            # PLAIN FOOTER — the brand pages. They carry no <aside> and no
+            # wrapped footer, so without this branch every one of them would
+            # take a commission through .bp-store while showing no notice. That
+            # is precisely the hole the AXXA post fell into on 20 Sept: links
+            # tagged, disclosure silently skipped for want of an anchor. A
+            # monetised page with no disclosure is the one outcome this script
+            # exists to prevent, so it now has a last-resort anchor rather than
+            # failing open.
+            # Match <footer ...> with attributes too — three drop pages carry a
+            # styled footer tag and an exact "<footer>" test skipped every one
+            # of them, which is how they sat monetised-and-undisclosed.
+            h = re.sub(r"<footer\b", DISCLOSURE.replace(
+                "margin-top:14px;", "margin:26px auto 0;max-width:1200px;padding:0 24px;")
+                + "\n<footer", h, count=1)
+        else:
+            # No anchor at all: say so rather than shipping a silent commission.
+            print(f"   !! {os.path.basename(path)}: monetised but NO disclosure anchor")
 
     if h != orig and apply_:
         open(path, "w", encoding="utf-8").write(h)
@@ -133,8 +161,12 @@ def main():
     rev = "--revert" in sys.argv
     merchants = active_merchants()
     snippet = skim_snippet()
+    # brands/ was missing from this list, so the 103 store buttons the brand-page
+    # template now emits were never seen by the rewriter at all — "affiliate
+    # ready" would have been true of the markup and false in practice.
     pages = sorted(glob.glob(os.path.join(S, "drops", "*.html")) +
                    glob.glob(os.path.join(S, "guides", "*.html")) +
+                   glob.glob(os.path.join(S, "brands", "*.html")) +
                    [os.path.join(S, "index.html")])
     if rev:
         n = sum(1 for p in pages if revert(p, apply_))

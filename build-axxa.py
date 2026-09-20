@@ -313,7 +313,17 @@ def build():
 
     body = [nav]
 
-    body.append(f'''<section class="products" data-btk="story">
+    # data-btk="take", NOT "story". This section carries the sidebar, and the
+    # two-column layout that puts the sidebar in a 300px right rail comes from
+    #   section[data-btk="take"]{display:grid;grid-template-columns:minmax(0,1fr) 300px}
+    # plus its paired  section[data-btk="take"] .sidebar{position:sticky...}.
+    # "story" has no grid rule at all, so the aside dropped out of any column,
+    # spanned the full 1400px band under the copy, and — because the static
+    # override is scoped to "take" — kept position:sticky from the base .sidebar
+    # rule and travelled down the page with the reader. All 37 other
+    # template-era pages put the sidebar in "take"; AXXA was the only one in
+    # "story", which is what Lenny saw as broken formatting on 20 Sept.
+    body.append(f'''<section class="products" data-btk="take">
   <h2 class="products-hdr">The Story</h2>
   <p class="cat-kicker">Northern Beaches, 2022, and a catalogue that refuses to pick a sport.</p>
   <div class="writeup-body">
@@ -371,8 +381,24 @@ def build():
   </div>
 </section>''')
 
-    tail = src[src.find('<section class="more-from"'):] if '<section class="more-from"' in src \
-        else src[src.rfind("<footer"):]
+    # THE TAIL — the Brand Index link, "More from TGI", and the footer.
+    # This used to read:
+    #     src[src.find('<section class="more-from"'):] if '...' in src
+    #     else src[src.rfind("<footer"):]
+    # '<section class="more-from"' appears on NO page of this site; the house
+    # markup is <div class="more">. So the test was never true, the ternary fell
+    # through to the footer alone, and AXXA shipped as the only one of 198 drop
+    # pages with no "More from the Feed" block — a guessed selector with a
+    # silent fallback, which is the failure mode that hides longest.
+    # Anchor on the class, not on a tag+class guess, and refuse to build if the
+    # donor cannot supply it rather than quietly emitting a page without one.
+    _m = re.search(r'<\w+[^>]*class="more"', src)
+    if not _m:
+        sys.exit("! donor carries no .more block — refusing to build a tail-less page")
+    tail = src[_m.start():]
+    for _need in ("more-grid", "more-card", "<footer"):
+        if _need not in tail:
+            sys.exit(f"! donor tail is missing {_need!r}")
     body.append(tail)
 
     return head + "\n".join(body)
@@ -436,8 +462,17 @@ def main(apply_):
         # <style> block long before any grid markup — so "after the first band"
         # actually meant "after the stylesheet", and the page's own hero <img>
         # tripped it. Anchor on the opening tag instead.
+        # ...AND SCOPE THE NEEDLE TOO, not just the haystack. The fixed version
+        # above searched for the bare string "hero.jpg" across everything after
+        # the first band. Once the .more tail was restored on 20 Sept that range
+        # included four thumbnails from other posts, one of which is
+        # /images/loud-headcovers/hero.jpg — so the guard failed on a page that
+        # was correct. The claim is "AXXA's own hero is not reused inside an
+        # AXXA lookbook band": match the full HERO path, and look only inside
+        # the band markup rather than in the whole remainder of the document.
         ("hero not reused in a band",
-         "hero.jpg" not in page[page.find('<div class="btk-wild-grid">'):], ""),
+         not any(HERO in page[m.start():page.find("</section>", m.start())]
+                 for m in re.finditer(r'<div class="btk-wild-grid">', page)), ""),
         ("every local image exists",
          all((ROOT / p.lstrip("/")).exists()
              for p in re.findall(r'src="(/images/axxa/[^"]+)"', page)), ""),

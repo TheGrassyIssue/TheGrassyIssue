@@ -507,10 +507,83 @@ if DUPES:
 # ------------------------------------------------- per-brand coverage pages
 THUMBS = json.load(open(os.path.join(ROOT, "data", "post-thumbs.json")))
 
+# ---- data the reworked brand-page header needs ----------------------------
+# REAL_PROFILES: the 49 brands that actually have a dedicated profile post.
+# Everything else was being given a "Read the full profile →" link pointing at
+# whichever roundup happened to mention it — 86 of 135 pages made a promise the
+# destination did not keep. Vuori's went to "10 Technical Fabric Tops for
+# Summer"; Daphne's went to an anchor inside a women-founded-brands roundup. The
+# CTA is now only emitted where a real profile exists.
+try:
+    REAL_PROFILES = set(json.load(open(os.path.join(ROOT, "research", "profile-truth.json"),
+                                       encoding="utf-8"))["real"])
+except (OSError, KeyError):
+    REAL_PROFILES = set()
+
+# STORES: brand -> its own shop. Derived only where a domain stem matched the
+# brand name or slug EXACTLY. Fuzzy substring matching was tried and thrown
+# away: it sent five brands with "golf" in the name to golf.com, a magazine.
+# A brand missing here gets no button rather than a guessed one.
+try:
+    STORES = json.load(open(os.path.join(ROOT, "data", "brand-stores.json"),
+                            encoding="utf-8"))["stores"]
+except (OSError, KeyError):
+    STORES = {}
+
+TAGL = {"design-nerd": "Design Nerd", "made-by-hand": "Made by Hand",
+        "independent": "Independent", "loud-on-purpose": "Loud on Purpose",
+        "muni-energy": "Muni Energy", "post-round-friendly": "Post-Round Friendly",
+        "collab-machine": "Collab Machine", "quiet-luxury": "Quiet Luxury",
+        "gorpcore": "Gorpcore", "range-rat": "Range Rat", "course-merch": "Course Merch",
+        "member-guest": "Member-Guest", "dad-golf": "Dad Golf", "collector": "Collector",
+        "loud": "Loud"}
+
+
 def brand_page(b):
     slug = b["slug"]; name = H.escape(b["name"])
     men = MENTIONS.get(slug, [])
     men = sorted(men, key=lambda e: not e.get("profile"))
+
+    # --- the CTA that used to lie ------------------------------------------
+    profile_cta = (f'<a class="bp-profile" href="{b["url"]}">Read the full profile &rarr;</a>'
+                   if slug in REAL_PROFILES else "")
+    st = STORES.get(slug)
+    store_cta = (f'<a class="bp-store" href="{st["url"]}" target="_blank" '
+                 f'rel="noopener">Shop {name} &#8599;</a>' if st else "")
+
+    # --- tag chips: navigation instead of white space ----------------------
+    chips = "".join(
+        f'<a class="bp-chip" href="/brands/tag/{t}">{TAGL.get(t, t.replace("-", " ").title())}</a>'
+        for t in b.get("tags", []))
+    tag_chips = f'<div class="bp-chips">{chips}</div>' if chips else ""
+
+    # --- honest grid heading ------------------------------------------------
+    # "Every Grassy Issue Post Featuring X" over a single card read as a boast
+    # about nothing. Say the number.
+    n = len(men)
+    grid_hdr = (f"Every Grassy Issue Post Featuring {name}" if n > 2
+                else (f"Where {name} Has Appeared" if n > 1 else f"Our Coverage of {name}"))
+
+    # --- related brands: the thin-page filler that is actually useful --------
+    # A page with one post card dies below the fold. Brands sharing a taste tag
+    # give the reader somewhere to go and give the index internal links it
+    # otherwise lacks. Self is excluded; capped at six.
+    mine = set(b.get("tags", []))
+    kin = [x for x in BRANDS
+           if x["slug"] != slug and mine & set(x.get("tags", []))
+           and MENTIONS.get(x["slug"])]
+    kin.sort(key=lambda x: (-len(mine & set(x.get("tags", []))), x["name"]))
+    kin = kin[:6]
+    related_block = ""
+    if kin:
+        shared = sorted(mine & set(kin[0].get("tags", [])))
+        lab = TAGL.get(shared[0], shared[0]) if shared else "the index"
+        cards = "".join(
+            f'<a class="bp-kin" href="/brands/{k["slug"]}">'
+            f'<span class="bp-kin-name">{H.escape(k["name"])}</span>'
+            f'<span class="bp-kin-line">{H.escape(k["line"])[:88]}</span></a>' for k in kin)
+        related_block = (f'\n<h2 class="bp-gridhdr">More {lab}</h2>\n'
+                         f'<div class="bp-kins">{cards}</div>')
     loc = H.escape(b["loc"]) if b["loc"] != "—" else ""
     cats_txt = " &middot; ".join(CATL[c] for c in b["cats"])
     img = resolve_img(b)
@@ -586,6 +659,29 @@ h1{{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);li
 .bp-line{{font-size:16px;line-height:1.65;color:#3f443e;max-width:60ch;margin-bottom:16px;}}
 .bp-profile{{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;color:var(--ink);text-decoration:none;}}
 .bp-gridhdr{{max-width:1200px;margin:34px auto 0;padding:0 24px;font-family:var(--serif);font-size:20px;font-weight:700;letter-spacing:-.01em;}}
+/* --- reworked brand-page header, 21 Sept 2026 ---------------------------- */
+/* Two CTAs sit side by side now: the profile link (only where a profile really
+   exists) and the brand's own store. .bp-store is the filled one because for
+   most of these pages it is the only thing a reader can actually act on. */
+.bp-actions{{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px;}}
+.bp-store{{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;
+  text-transform:uppercase;background:var(--ink);color:var(--paper);text-decoration:none;
+  padding:9px 14px;border:1px solid var(--ink);}}
+.bp-store:hover{{background:var(--grass);border-color:var(--grass);}}
+.bp-chips{{display:flex;flex-wrap:wrap;gap:6px;margin-top:2px;}}
+.bp-chip{{font-family:var(--mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;
+  border:1px solid rgba(20,20,20,.22);border-radius:999px;padding:4px 10px;color:#4a4f49;
+  text-decoration:none;}}
+.bp-chip:hover{{border-color:var(--grass);color:var(--grass);}}
+/* Related brands. A page with one post card used to end in white space; this
+   gives it somewhere to go and the index some internal linking. */
+.bp-kins{{max-width:1200px;margin:14px auto 0;padding:0 24px;display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:12px;}}
+.bp-kin{{border:1px solid rgba(20,20,20,.14);padding:14px 15px;text-decoration:none;
+  color:var(--ink);background:rgba(255,255,255,.35);display:block;}}
+.bp-kin:hover{{border-color:var(--grass);}}
+.bp-kin-name{{display:block;font-family:var(--serif);font-size:16px;font-weight:700;margin-bottom:5px;}}
+.bp-kin-line{{display:block;font-size:12.5px;line-height:1.5;color:#5a5f58;}}
     .bp-grid{{max-width:1200px;margin:18px auto 80px;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:22px;}}
 .bp-card{{background:#fff;border:1px solid rgba(20,20,20,.12);border-radius:8px;overflow:hidden;color:var(--ink);text-decoration:none;display:flex;flex-direction:column;transition:transform .15s ease, box-shadow .15s ease;}}
 .bp-card:hover{{transform:translateY(-3px);box-shadow:0 10px 28px rgba(20,20,20,.10);}}
@@ -622,14 +718,16 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
     <h1>{name}</h1>
     <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
     <p class="bp-line">{b["line"]}</p>
-    <a class="bp-profile" href="{b["url"]}">Read the full profile &rarr;</a>
+    <div class="bp-actions">{profile_cta}{store_cta}</div>
+    {tag_chips}
   </div>
 </header>
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring {name}</h2>
+<h2 class="bp-gridhdr">{grid_hdr}</h2>
 <div class="bp-grid">
 {chr(10).join(tiles)}
 </div>
+{related_block}
 
 <footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>
 {GA}
