@@ -1,0 +1,76 @@
+{
+  "_read": "found.golf products.json, paged, country=AU pinned. 20 September 2026.",
+  "_currency": "AUD — confirmed. Six homepage figures matched to the cent (Daisy Chain 118, Tee Box Grey 85, Shiz Knit 265, Pleated Pants 198, Ciggie Box 25, Dad Cap 55). No conversion drift.",
+  "_paging_note": "A products.json response large enough to be written to a temp file can arrive TRUNCATED mid-record. limit=30 truncated; limit=12 did not. Page small.",
+  "_totals": {"products": 65, "apparel": 30, "art": 35},
+
+  "apparel": [
+    {"h": "black-tee", "t": "BOX PAR TEE", "type": "Top", "aud": 118, "avail": "3/6"},
+    {"h": "daisy-chain-tee", "t": "DAISY CHAIN TEE", "type": "Top", "aud": 118, "avail": "4/6"},
+    {"h": "tee-box-grey", "t": "TEE BOX | GREY", "type": "Top", "aud": 85, "avail": "3/5"},
+    {"h": "tee-box-white", "t": "TEE BOX | WHITE", "type": "Top", "aud": 85, "avail": "0/5 SOLD OUT"},
+    {"h": "paradox-polo-black", "t": "PARADOX POLO | BLACK", "type": "Top", "aud": 150, "avail": "1/5"},
+    {"h": "white-long-sleeve-polo", "t": "LONG SLEEVE KNITTED POLO", "type": "Top", "aud": 265, "avail": "3/5"},
+    {"h": "the-shiz-knit", "t": "THE SHIZ KNIT", "type": "Top", "aud": 265, "avail": "2/5"},
+    {"h": "shiz-vest", "t": "THE SHIZ VEST", "type": "Top", "aud": 200, "avail": "4/6"},
+    {"h": "box-crew-black", "t": "BOX CREW | BLACK", "type": "Top", "aud": 165, "avail": "4/6"},
+    {"h": "1-4-zip", "t": "1/4 ZIP", "type": "Top", "aud": 190, "avail": "4/6"},
+    {"h": "wind-breaker", "t": "COLLARED WINDCHEATER", "type": "Top", "aud": 260, "avail": "3/6"},
+    {"h": "bell-sleeve-white", "t": "BELL SLEEVE | WHITE", "type": "Top", "aud": 198, "avail": "3/6"},
+    {"h": "bell-sleeve-striped", "t": "BELL SLEEVE | STRIPED", "type": "Top", "aud": 198, "avail": "2/5"},
+    {"h": "pleated-trouser", "t": "PLEATED PANTS | BLACK", "type": "Bottom", "aud": 198, "avail": "5/7"},
+    {"h": "the-slacker-navy", "t": "THE SLACKER | NAVY", "type": "Bottom", "aud": 198, "avail": "4/6"},
+    {"h": "short-game-black", "t": "SHORT GAME | BLACK", "type": "Bottom", "aud": 135, "avail": "3/5"},
+    {"h": "skirt-more-black", "t": "SKIRT-MORE | BLACK", "type": "Bottom", "aud": 115, "avail": "3/5"},
+    {"h": "golf-tees-ciggie-box", "t": "Golf Tees | Reusable Ciggie Box", "type": "", "aud": 25, "avail": "1/1"},
+    {"h": "found-golf-gift-card", "t": "Found Golf Gift Card", "type": "", "aud": "50-300 ladder", "avail": "6/6"}
+  ],
+
+  "_all_eight_caps_sold_out": {
+    "_fact": "Every DAD CAP colourway is sold out — 8 of them, each 0/1 available, all A$55.",
+    "colourways": ["OFF-WHITE", "RED", "CHESTERFIELD", "NAVY", "FG BASEBALL LOGO", "OLIVE", "CREAM", "POWDER PINK"],
+    "_editorial": "Our live page links to the Olive cap as one of five 'picks'. It has been unbuyable. A sold-out run of eight colourways is a fact worth stating plainly rather than a link worth shipping."
+  },
+
+  "collab": {
+    "name": "Soof Flash x Found Golf — 'Good Sport Bad Sport'",
+    "pieces": [
+      {"h": "soof-flash-bell-sleeve", "t": "Bell Sleeve", "aud": 350, "avail": "6/6"},
+      {"h": "soof-flash-shiz-knit", "t": "Shiz Knit", "aud": 450, "avail": "2/2"},
+      {"h": "soof-flash-box-sweater", "t": "Box Sweater", "aud": 300, "avail": "6/6"}
+    ]
+  },
+
+  "art": {
+    "_count": 35,
+    "_range": "A$0 (XYX Lab, Keep Running — genuinely zero, not POA) to A$16,000 (Damien Wright & Tony Birch, Country-club). Lowest non-zero A$114.",
+    "_all_available": "All 35 have their single variant available.",
+    "_title_format": "Artist | Work",
+    "_UNVERIFIED_LEAD": "Most art image files are named UPTHERE_MDW_Installation_*.jpg, which suggests a Melbourne Design Week installation at UPTHERE. That is an inference from filenames, NOT a sourced fact. Confirm before writing it — do not publish the venue or the event on filename evidence alone.",
+    "notable": [
+      {"artist": "Darcy Vescio", "works": 7, "_note": "Most-represented artist. Lip Service A$1,400; Almost Won, Devastated, Next Year, Choked, Losers all A$650; plus Break Point Bench with Locki Humphrey A$5,990. The titles read as a series about losing."},
+      {"artist": "Damien Wright & Tony Birch", "work": "Country-club", "aud": 16000, "_note": "Most expensive object in the store."},
+      {"artist": "Damien Wright & Bonhula Yunupingu", "work": "Symbolic Capitalist", "aud": 1000},
+      {"artist": "Cody Weightman & Alessandro Calderwood", "work": "Reflection", "aud": 15000},
+      {"artist": "Andrew Hustwaite", "work": "Dumbbells", "aud": 12000},
+      {"artist": "Jackson Morgan", "work": "S.U.P (Sauce Table)", "aud": 12000},
+      {"artist": "Shaun Daniel Allen", "work": "Between Lands – L5", "aud": 9600},
+      {"artist": "Adam Lynch", "work": "Pila", "aud": 8000},
+      {"artist": "Gabriel Cole & Jack Del-Rennie", "work": "11/1/1967", "aud": 6000},
+      {"artist": "Jake Rollins", "works": 2, "_note": "Stool S-12 A$4,000; Stool L-12 A$5,000"},
+      {"artist": "Objects for Thought", "works": 3, "_note": "Sequence Lamp Plinth A$3,050; Sequence Lamp (Hammersley Brown) A$4,450; Sequence Lamp Small (Blue Ridge) A$3,050"},
+      {"artist": "Millie Savage & Kate Rohde", "work": "#1 Participant Medal (inside) Victorious Cabinet", "aud": 3000},
+      {"artist": "Karabo Tlokotsi", "work": "The Silver Screen", "aud": 2500},
+      {"artist": "Charlie White", "work": "Ghost Floor Lamp", "aud": 2000},
+      {"artist": "Maddison Kitching", "work": "Earth Casting", "aud": 1500},
+      {"artist": "Safa El Samad", "work": "Men Not Allowed (Set of 3)", "aud": 1200},
+      {"artist": "Locki Humphrey", "work": "Upholstered monoblock chair", "aud": 1200},
+      {"artist": "Danielle Brustman", "work": "HOT/NOT Dartboard", "aud": 750},
+      {"artist": "Ben Jones", "work": "Own Goal", "aud": 350},
+      {"artist": "Maliek Njoroge", "works": 4, "_note": "Chess Dhurrie I-IV, A$250-300"},
+      {"artist": "Briony Wright – Crushes Flowers", "work": "Cone Piece Vase", "aud": 190},
+      {"artist": "Simone LeAmon", "work": "Bowling Arm®", "aud": 114},
+      {"artist": "XYX Lab", "work": "Keep Running", "aud": 0}
+    ]
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "_brand": "Local Rule",
+  "_legal": "Local Rule AB",
+  "_slug": "local-rule",
+  "_researched": "20 September 2026",
+  "_store": "https://local-rule.com/",
+
+  "_CURRENCY_WARNING": [
+    "HOME MARKET IS SWEDEN. PRICES ARE SEK.",
+    "products.json?country=US returns CONVERTED USD, not prices Local Rule set.",
+    "Proof, read 20 Sep 2026: Irons Coach Jacket 1199 SEK / 125 USD; Headcover FW",
+    "799 / 83; Headcover Driver 899 / 94. Ratios 9.59, 9.63, 9.56 — a constant",
+    "multiplier, i.e. auto-conversion rather than per-market pricing.",
+    "The product page's own og:price:currency says SEK.",
+    "PUBLISH SEK ONLY. Never the USD figure — house rule: nothing converted."
+  ],
+
+  "story": {
+    "founded": "Founded 2021, first collection launched May 2022",
+    "_founded_note": "Golfbranschen (19 May 2022) says 'grundades i fjol' — founded the previous year, i.e. 2021 — and that they had worked 'drygt ett år' (a good year) on collection, brand and platform before launch. Local Rule's own site says 'Launched in 2022'. Both are true; say launched 2022.",
+    "base": "Stockholm, Sweden",
+    "founders": [
+      {"name": "Simon Madeling", "role": "CEO (vd), co-founder", "_prior": "Founded and was CEO of the advertising agency Think Agency"},
+      {"name": "David Zetterlund", "role": "Marketing and product director; co-founder", "_prior": "Partner and strategist at Think Agency"},
+      {"name": "Henrik Svensson", "role": "Operations director (operativ chef)"}
+    ],
+    "_founders_note": "Golfbranschen 31 May 2023 names all three explicitly: 'De tre grundarna är Henrik Svensson, operativ chef, David Zetterlund, marknads- och produktchef, samt Simon Madeling, vd.' The 2022 piece frames Madeling and Zetterlund as the founding pair with Svensson joining as operations. Safe to publish all three with those roles.",
+    "name_origin": "'Local rule' is the club's own supplementary rulebook — the local exception to the general rules of golf.",
+    "_name_origin_note": "Reported by Swedish press as the naming logic. Reads as fact, not brand copy.",
+
+    "PRODUCTION_ARC": [
+      "THIS IS THE SPINE OF THE PAGE.",
+      "2022 launch: 'Produkterna är designade i Sverige och producerade i Portugal' with",
+      "materials sourced primarily from ITALY. (Golfbranschen, 19 May 2022.)",
+      "2025: Local Rule moves production home. Their own blog, 3 July 2025, bylined",
+      "David Zetterlund: first Swedish-made garment is the Performance Shorts, produced",
+      "in BORÅS — a city with a long textile heritage. Socks also moved to Sweden.",
+      "2026: the Ripstop Headcovers carry 'Made in Sweden' in their own bullet list.",
+      "A brand called LOCAL RULE spent three years making the 'local' part literal.",
+      "That is the story, and it is entirely sourced."
+    ],
+
+    "first_collection": "18 garments — polos, windbreakers, vests, trousers — plus bucket hats, caps, tees, towels and golf bags. Original price ladder 50 kr (markers) to 2950 kr (a bag).",
+    "first_season_aesthetic": "Chinos, polos, shorts and caps — described by Golfbranschen as 'en tydlig flört med vintage golf' (a clear flirtation with vintage golf).",
+    "drop_model": "No traditional seasons. Repeated drops through the year, in runs small enough that everything sells and gets worn. (Golfbranschen, 31 May 2023.)",
+    "_drop_model_note": "Good editorial detail — it explains why the catalogue is broad but thin per size, and why sold-out colourways sit alongside live ones.",
+
+    "retail": {
+      "store": "Humlegårdsgatan 14, Stockholm — about 55 sqm, in the Skvalberget 34 property",
+      "opened": "March 2026; announced 3 February 2026",
+      "_note": "First permanent retail after years of e-commerce and selected wholesale.",
+      "wholesale": "Stadium and Dormy (Sweden)",
+      "reach": "21 countries via own e-commerce plus retailers (Feb 2026). Their own site says 18 countries and 31 U.S. states in 2024 alone."
+    }
+  },
+
+  "press": [
+    {"outlet": "Skratch", "what": "Named in 'The 45 Best Men's Golf Clothing Brands'", "date": "31 July 2025", "author": "Raymond Williams", "url": "https://www.skratch.golf/style/mens-style/best-golf-clothing-brands-men"},
+    {"outlet": "The Wall Street Journal", "what": "Ranked among top brands for technical polos that transition from course to office", "_source": "Local Rule's own About page and product copy. NOT independently verified — the WSJ piece itself was not located. Attribute as 'the brand says' or leave out."},
+    {"outlet": "Sportfack / Gear of the Year", "what": "Voted Newcomer of the Year (årets nykomling) by readers", "date": "31 May 2023"},
+    {"outlet": "Golfbranschen", "what": "Launch coverage and ongoing trade reporting", "author": "Tommy Jeppsson"}
+  ],
+
+  "quotes": {
+    "_rule": "VERBATIM ONLY. The Swedish quotes below are transcribed exactly. English renderings are LABELLED TRANSLATIONS, not quotes — if a translated line is used on the page it must be presented as a translation, never inside quote marks as if spoken in English.",
+    "verified": [
+      {
+        "who": "David Zetterlund, co-founder",
+        "source": "Golfbranschen, 31 May 2023",
+        "sv": "Vi känner själva att golf är för roligt, för att slösa bort på fula kläder.",
+        "en_translation": "We feel that golf is too much fun to waste on ugly clothes.",
+        "_note": "STRONGEST LINE. Candidate for the big pull-quote. Names no brand, so it clears the never-talk-down rule — it is aimed at the old status quo, not a competitor. Flagged to Lenny anyway."
+      },
+      {
+        "who": "David Zetterlund, co-founder",
+        "source": "Golfbranschen, 31 May 2023",
+        "sv": "Ända sedan vi var små har vi känt att kläderna känns löjliga men inget annat fanns, och inget annat fick bäras.",
+        "en_translation": "Ever since we were small we have felt that the clothes feel ridiculous, but nothing else existed, and nothing else was allowed to be worn.",
+        "_note": "Runs directly on from the line above in the original. 'Inget annat fick bäras' — nothing else was ALLOWED — is the dress-code point, and it is the reason the brand is called Local Rule."
+      },
+      {
+        "who": "Simon Madeling, co-founder and CEO",
+        "source": "Golfbranschen, 19 May 2022 (launch)",
+        "sv": "Efter sju år av att driva eget konsultbolag och kreativt skapande för våra kunder bestämde vi oss för att bygga vårt eget varumärke. Vi har jobbat i drygt ett år med kollektion, varumärke och teknisk plattform och nu känns det fantastiskt att äntligen vara på banan.",
+        "en_translation": "After seven years of running our own consultancy and making creative work for our clients, we decided to build our own brand. We have worked for a good year on the collection, the brand and the technical platform, and now it feels fantastic to finally be on the course.",
+        "_note": "'Äntligen vara på banan' — finally being on the course — is a pun that survives translation."
+      },
+      {
+        "who": "Simon Madeling, CEO",
+        "source": "Golfbranschen, 3 February 2026 (store announcement)",
+        "sv": "Sedan starten 2022 har vårt mål varit att skapa moderna golfplagg som du stolt kan bära på fairway som i vardagen. Att nu ta steget och öppna vår första butik i Stockholm känns både naturligt och väldigt inspirerande.",
+        "en_translation": "Since we started in 2022 our goal has been to make modern golf clothing you can wear proudly on the fairway and in everyday life. To now take the step and open our first store in Stockholm feels both natural and very inspiring."
+      },
+      {
+        "who": "Sportfack Gear of the Year jury citation",
+        "source": "Golfbranschen, 31 May 2023",
+        "sv": "Märket har momentum, och insikten om att golfvärlden behövde något nytt visar sig i den stora uppmärksamhet de skapat på kort tid.",
+        "en_translation": "The brand has momentum, and the insight that the golf world needed something new shows in the attention they have created in a short time.",
+        "_note": "Award citation, not an individual. Attribute to the citation."
+      },
+      {
+        "who": "Raymond Williams, Skratch",
+        "source": "The 45 Best Men's Golf Clothing Brands, 31 July 2025",
+        "en": "Local Rule loves honoring golf's history while adding a modern twist. They mix traditional cuts with contemporary details, making their collections the perfect blend of old and new.",
+        "_note": "Already in English. The only third-party English-language verbatim line found."
+      }
+    ]
+  },
+
+  "_HELD_BACK_DELIBERATELY": [
+    "AI-LOOKING PRODUCT IMAGERY. The three newest Lightweight Tech Polo colourways",
+    "(Gray, Light Blue, Blue) use images named 'generated-image-1-<epoch>.png/.jpg' at",
+    "1024x1024, 773x966 and 502x627. The filename and the square 1024 output are the",
+    "signatures of AI image generation. THIS IS AN INFERENCE FROM FILENAMES AND SIZES,",
+    "exactly like the UPTHERE/Melbourne Design Week guess on Found Golf. It is NOT",
+    "published anywhere on the page and must not be without asking the brand.",
+    "Practical consequence for the build: use the real lookbook frames that sit deeper",
+    "in those same products (LR_collegekids_lores_*.jpg, 3000x4500) for the grid.",
+    "",
+    "THE WSJ CLAIM. Local Rule states it in their own About page and product copy, but",
+    "the WSJ article itself was not located and the ranking not independently verified.",
+    "Either attribute it to the brand explicitly or leave it out.",
+    "",
+    "SOLD-OUT NEW ARRIVALS. The newest drop — Irons Coach Jacket, all four Ripstop",
+    "Headcovers, the three 6-panel Cotton Caps, both LR Players Gloves in most sizes —",
+    "reads sold out. 20 of 123 products are fully gone. Do not ship a card to any of",
+    "them. See the catalogue file for the live list."
+  ]
+}

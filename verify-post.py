@@ -233,6 +233,55 @@ def verify(path):
     chk("no legacy .more-kicker/.more-title markup",
         'more-kicker' not in h and 'more-title' not in h)
     chk("word count >= 1200", words >= 1200, str(words))
+
+    # PULL-QUOTES ARE ROMAN, in EVERY .pull-quote-inner block.
+    # Lenny, on Birds of Condor: "I dont love the italics". The page carries
+    # several .pull-quote-inner blocks (22px, 26px, 38px) and the LAST one wins.
+    # A re.search-based check in the build script passed on a page that rendered
+    # italic on screen, because it only ever saw the first, roman, block. And a
+    # build-time check cannot catch this at all: btk-template.py re-injects the
+    # 38px rule AFTER the build. This has to read the finished file.
+    # NO TWO PULL-QUOTES BACK TO BACK. Lenny's rhythm rule: a section carries
+    # images or a big quote BETWEEN passages of text. Two 38px quotes with
+    # nothing between them reads as a wall of green -- how the Found Golf story
+    # section first rendered.
+    #
+    # This needs the END of each .pull-quote element, so it walks div depth from
+    # the opening tag to its matching close. A first version measured from the
+    # opening tag of one quote to the opening tag of the next, which swallowed
+    # the quote's own text and reported every page as stacked -- it returned the
+    # same count with the fault injected and removed, i.e. it measured nothing.
+    def _close_of(html, open_at):
+        depth, i = 0, open_at
+        for m in re.finditer(r"<div\b[^>]*>|</div>", html[open_at:]):
+            depth += 1 if m.group(0) != "</div>" else -1
+            if depth == 0:
+                return open_at + m.end()
+        return None
+
+    _opens = [m.start() for m in re.finditer(r'<div class="pull-quote"', h)]
+    _stacked = 0
+    for _i in range(len(_opens) - 1):
+        _e = _close_of(h, _opens[_i])
+        if _e is None or _e > _opens[_i + 1]:
+            continue
+        _raw = h[_e:_opens[_i + 1]]
+        # A heading, an image or a product grid IS a break, even with few words
+        # -- on Birds of Condor an h2 + kicker sits between two quotes and a
+        # bare 15-word threshold called that a defect. Lenny's rule is about
+        # what separates the quotes, not how chatty it is.
+        _structural = re.search(r"<h[23]\b|<img\b|<figure\b|products-grid", _raw)
+        _between = re.sub(r"&[#a-z0-9]+;", " ", re.sub(r"<[^>]+>", " ", _raw))
+        if not _structural and len(_between.split()) < 15:
+            _stacked += 1
+    chk("no two pull-quotes stacked with no prose between", _stacked == 0,
+        "%d adjacent pair(s) with < 15 words between" % _stacked)
+
+
+    _qb = re.findall(r"\.pull-quote-inner\b[^{]*\{([^}]*)\}", h)
+    _ital = [i for i, b in enumerate(_qb, 1) if "font-style:italic" in b]
+    chk("pull-quotes roman in every rule block", not _ital,
+        "italic in block(s) %s of %d" % (_ital, len(_qb)))
     # Share-card tags. Added 2026-09-15 after eleven live posts were found
     # sharing on X under "Students Golf Summer 2026 — Summer School Is in
     # Session": every build script copies a model page's <head> and rewrites

@@ -1,0 +1,63 @@
+{
+  "slug": "found-golf",
+  "brand": "Found Golf",
+  "page": "brand-to-know-found-golf.html",
+
+  "take": [
+    "A golf brand that sells a A$16,000 sculpture is either doing a bit or means it. Found means it. The Melbourne store carries thirty-five art objects alongside the clothes &mdash; stools, a dartboard, a bench, a carved textile by Damien Wright and Tony Birch titled <em>Country-club</em> &mdash; against thirty apparel pieces. The line about activating golf as creative culture, which every brand writes, is here just a description of the inventory.",
+    "The clothes are quieter than the art suggests. The Shiz Knit and Shiz Vest are cricket-jumper shapes with a single red tab; the 1/4 Zip puts FOUND down the spine. It was born in Cape Town, designed in London, and is now made back in Cape Town and sold out of Melbourne &mdash; a longer way round than most brands take to a polo. If you want golf clothes that read as design-studio rather than pro-shop, the A$85 Tee Box is the cheapest way in. Move quickly on anything you like: all eight cap colourways are already gone."
+  ],
+
+  "card": {
+    "label": "Details",
+    "rows": [
+      ["Based", "Melbourne, Australia"],
+      ["Made", "Cape Town, South Africa"],
+      ["Founded by", "Lance and Ellen"],
+      ["Known for", "Apparel, art and design"],
+      ["Pieces", "65 items &mdash; 30 apparel, 35 art"],
+      ["Range", "A$25 &ndash; A$16,000"],
+      ["Prices", "AUD, read 20 Sep 2026"]
+    ],
+    "cta": {"href": "https://found.golf/", "text": "Shop Found Golf &rarr;"},
+    "hashtags": ["#foundgolf", "#brandtoknow", "#melbourne", "#capetown", "#golfart"]
+  },
+
+  "_match_note": "These MUST be the display names build-found-golf.py writes into .product-brand, not the ALL-CAPS Shopify titles. The template matches against the rendered page, and it refuses the whole build if a match string finds nothing — which is how the first attempt failed on 'BOX PAR TEE'.",
+
+  "collection": [
+    {"hdr": "The Tees and the Knits",
+     "match": ["Box Par Tee", "Daisy Chain Tee", "Tee Box | Grey", "The Shiz Knit", "The Shiz Vest", "Box Crew | Black"]},
+    {"hdr": "Layers",
+     "match": ["1/4 Zip", "Collared Windcheater", "Long Sleeve Knitted Polo"]},
+    {"hdr": "Bottoms",
+     "match": ["Pleated Pants | Black", "The Slacker | Navy", "Short Game | Black"]},
+    {"hdr": "The Art Side",
+     "match": ["Country-club", "Symbolic Capitalist", "Break Point Bench", "Lip Service", "Losers", "HOT/NOT Dartboard"]}
+  ],
+
+  "related": [
+    {"slug": "birds-of-condor", "why": "The other Australian brand on the site that treats the graphic as the point."},
+    {"slug": "axxa", "why": "Sydney, and the same refusal to pick one sport."},
+    {"slug": "manors", "why": "Design-led golf clothing with an art-school accent."},
+    {"slug": "casualist", "why": "London, and the same habit of dressing golf as everyday clothing."}
+  ],
+
+  "_notes": [
+    "PRICES: AUD, read from found.golf 20 September 2026 with country=AU pinned so Shopify",
+    "did not serve a converted figure. Six homepage reference prices matched to the cent.",
+    "",
+    "HELD BACK DELIBERATELY:",
+    "  * The art image filenames read UPTHERE_MDW_Installation_*, which points at a Melbourne",
+    "    Design Week installation at UPTHERE. That is an inference from filenames and is NOT",
+    "    published anywhere on the page. Verify with the brand before it ever is.",
+    "  * Darcy Vescio is the most-represented artist (7 works, six of which read as one series",
+    "    about losing). The page describes the works and does not describe the person, because",
+    "    no source was checked for who they are.",
+    "  * 'Tight joggers and 1500 private jets at The Masters' is a real verbatim line from the",
+    "    same interview and is NOT used &mdash; flagged to Lenny, never explicitly cleared.",
+    "  * BELL SLEEVE (white, striped) and SKIRT-MORE are in stock but womenswear-cut, and the",
+    "    house default is menswear/unisex. Left out pending Lenny's call, which matters more",
+    "    than usual here because Ellen co-founded the brand."
+  ]
+}

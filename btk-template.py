@@ -173,6 +173,63 @@ def h2_of(block):
     return re.sub(r"<[^>]+>", "", m.group(1)).strip() if m else ""
 
 
+FAQ_TITLE = "The Questions"
+
+
+def _faq_h2_in(html):
+    """The heading that actually sits above the FAQ accordion in a finished
+    page. Used by the assertion, so it reads the document rather than trusting
+    the function that wrote it."""
+    i = html.find('<div class="faq">')
+    if i < 0:
+        return ""
+    m = None
+    for m in re.finditer(r"<h2[^>]*>(.*?)</h2>", html[:i], re.S):
+        pass                                    # the last one before the block
+    return re.sub(r"<[^>]+>", "", m.group(1)).strip() if m else ""
+
+
+def canonical_faq_h2(faq):
+    """Force the FAQ heading to the house name. See research/btk/SPEC.md.
+
+    THE ONE PIECE OF COPY THIS FILE IS ALLOWED TO REWRITE.
+    Everywhere else the rule holds — "this file never writes product copy,
+    because copy nobody checked is the thing that gets a price wrong in
+    public". A section heading that names a fixed piece of furniture is not
+    that kind of copy: it is navigation, and the reader learns it once and
+    expects it on every page.
+
+    Treating it as copy is why the audit on 20 Sept found the same section
+    under ~18 names across 46 pages -- "The Questions", "Frequently Asked",
+    "The Story - FAQ", and title-prefixed forms like "Brand to Know - BEAMS
+    Golf - FAQ" and "Metalwood Studio - Brand to Know - FAQ". Lenny: "all the
+    different brands to know pages are all a little different. I want them
+    more cohesive."
+
+    Scoped to the FAQ block the caller already isolated, and to its FIRST h2
+    only. A sitewide search-and-replace for these strings would also hit body
+    prose and the JSON-LD, and the block can legitimately contain <h3>s.
+    Attributes are preserved: several pages carry id="faq" on this heading and
+    at least one in-page link depends on it.
+
+    SOME FAQS ARRIVE HEADLESS, and that is the worse defect. On seven pages
+    (Criquet, Forden, Left of Field, Midiron, Rouqe, Seamus, Sun Mountain) the
+    block is `<section data-btk="faq"><div class="faq">` with no h2 at all —
+    the accordion just starts. `split_faq` is right not to adopt the heading
+    above it, because on those pages the nearest h2 is a PRODUCT CATEGORY
+    ("The Accessories", "The New Season"), and stealing it would retitle the
+    catalogue. So: rename a heading if there is one, insert the house heading
+    if there is not.
+    """
+    if re.search(r"<h2\b", faq):
+        return re.sub(r"(<h2\b[^>]*>).*?(</h2>)",
+                      lambda m: m.group(1) + FAQ_TITLE + m.group(2),
+                      faq, count=1, flags=re.S)
+    return faq.replace('<div class="faq">',
+                       f'<h2 class="products-hdr">{FAQ_TITLE}</h2>\n'
+                       f'<div class="faq">', 1)
+
+
 def _nowild(h):
     """The page without our generated gallery — see the prose check."""
     return re.sub(r'<section[^>]*data-btk="wild".*?</section>', " ", h, flags=re.S)
@@ -272,10 +329,17 @@ section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
 /* THE SPECIAL SENTENCES — larger, and made to stop the eye.
    Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
    brand green on the opening mark, generous air above and below, and a rule
-   only under the credit so the sentence itself floats free. */
+   only under the credit so the sentence itself floats free.
+
+   ROMAN, NOT ITALIC. Lenny, on Birds of Condor: "I dont love the italics but
+   everything else is super solid." This block used to say italic, and because
+   the template is a POST-PROCESSOR it re-injected that italic on every page it
+   touched -- silently undoing deitalicise-pullquotes.py on 38 pages. The CSS
+   text read "normal" higher up the file and this block, sitting last, won. Do
+   not set this back to italic without also fixing the script. */
 .pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
 .pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
-  font-style:italic;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  font-style:normal;font-size:38px;line-height:1.24;letter-spacing:-.015em;
   padding:8px 0 0;position:relative}
 .pull-quote-inner:before{content:"\201C";position:absolute;left:-.52em;top:-.18em;
   font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
@@ -1258,7 +1322,7 @@ def build(slug, apply_=False):
     parts.extend(mark_prose(coda, "coda"))              # the shorter write-up
     parts.append(pic(kind="coda"))
     if faq:
-        parts.append(faq)
+        parts.append(canonical_faq_h2(faq))
     parts.append(render_related(spec, brands))
     if more:
         parts.append(more)
@@ -1293,6 +1357,17 @@ def build(slug, apply_=False):
          out.count("application/ld+json") == html.count("application/ld+json"), ""),
         ("FAQ block intact",
          out.count('<div class="faq">') == html.count('<div class="faq">'), ""),
+        # THE FURNITURE IS NAMED, AND NAMED ONCE. Counting the block is not
+        # enough: an intact FAQ under the wrong heading is exactly the defect
+        # this pass exists to remove.
+        #
+        # ASSERT AGAINST `out`, NOT AGAINST canonical_faq_h2(). The first cut of
+        # this check re-ran the renaming function and tested ITS return value,
+        # which is the function agreeing with itself — it would have passed on a
+        # page where the rename never reached the document. Read the heading
+        # that actually sits above the accordion in the finished page.
+        ("FAQ heading is the house name",
+         (not faq) or _faq_h2_in(out) == FAQ_TITLE, _faq_h2_in(out)),
         ("document closes", "</body>" in out and "</html>" in out and "<footer" in out, ""),
         # THE CHECK THAT WAS MISSING. Every assertion above counts THINGS —
         # cards, links, images, schema blocks. None of them counts WORDS, so a

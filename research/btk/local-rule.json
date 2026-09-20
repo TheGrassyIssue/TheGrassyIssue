@@ -1,0 +1,70 @@
+{
+  "slug": "local-rule",
+  "brand": "Local Rule",
+  "page": "brand-to-know-local-rule.html",
+
+  "take": [
+    "A golf brand named after the club&rsquo;s own supplementary rulebook &mdash; the local exception to the general rules &mdash; spent its first three years having its clothes made somewhere else. Local Rule launched out of Stockholm in 2022 with a collection designed in Sweden, produced in Portugal and cut from Italian cloth. In July 2025 it moved production home to Bor&aring;s. The shorts went first, then the socks. The 2026 headcovers now say Made in Sweden on the label.",
+    "The clothes are quieter than that story suggests, and the bench is deeper than almost anything we cover: ninety-one live pieces across polos, midlayers, trousers, shorts, outerwear, caps, beanies, belts and towels, from 250 kr to 1,499 kr. It is a three-man company &mdash; two ad-agency founders and an operations chief &mdash; that sells into twenty-one countries, sits in Stadium and Dormy, and opened its first shop on Humleg&aring;rdsgatan in March. If you want golf clothes that look like Swedish sportswear rather than pro-shop stock, the 699 kr Tech Polo is the cheapest way in. Move quickly on the new drops: the whole autumn delivery is already gone."
+  ],
+
+  "card": {
+    "label": "Details",
+    "rows": [
+      ["Based", "Stockholm, Sweden"],
+      ["Made", "Bor&aring;s, Sweden (since 2025)"],
+      ["Founded", "2022, by three"],
+      ["Known for", "Technical polos and tech pants"],
+      ["Pieces", "91 live &mdash; 123 including archive"],
+      ["Range", "250 &ndash; 1,499 kr"],
+      ["Prices", "SEK, read 20 Sep 2026"]
+    ],
+    "cta": {"href": "https://local-rule.com/", "text": "Shop Local Rule &rarr;"},
+    "_hashtag_note": "NO leading # — btk-template.py line 602 emits #{t} itself, so a # here renders as ##.",
+    "hashtags": ["localrule", "brandtoknow", "stockholm", "boras", "scandinaviangolf"]
+  },
+
+  "_match_note": "These MUST be the display names build-local-rule.py writes into .product-name, not the raw Shopify titles. btk-template.py matches against the rendered page and refuses the whole build if a match string finds nothing.",
+
+  "collection": [
+    {"hdr": "The Polos",
+     "match": ["Lightweight Tech Polo | Light Brown", "Knit Polo | Off-White", "Performance Polo | Dark Green", "Long-Sleeve Performance Polo | Dark Navy", "Football Jersey | Striped Navy"]},
+    {"hdr": "Layers",
+     "match": ["Q-zip Fleece Sweatshirt | Light Blue", "Fleece Pullover | Blue", "Tech Vest | Light Green", "Tech Anorak | Navy"]},
+    {"hdr": "Bottoms",
+     "match": ["Pleated Trousers | Offwhite", "Lightweight Tech Pants | Light Grey", "Shibuya Shorts | Dark Navy", "Tech Shorts | Dusty Olive"]},
+    {"hdr": "Caps, Beanies and the Rest",
+     "match": ["Wool Cap | Burgundy", "Buckethat | Military Green", "Pom Pom Beanie | Navy", "Leather Belt | Black", "LCLRL Towel | Dark Green"]}
+  ],
+
+  "related": [
+    {"slug": "jlindeberg", "why": "The other Swedish brand that took golf clothing somewhere else."},
+    {"slug": "forden-golf", "why": "Scandinavian simplicity with a streetwear accent."},
+    {"slug": "manors", "why": "Design-led golf clothing built on heritage shapes."},
+    {"slug": "quiet-golf", "why": "The same refusal to shout."}
+  ],
+
+  "_notes": [
+    "PRICES: SEK, read from local-rule.com 20 September 2026 with country=SE pinned.",
+    "country=US serves a CONVERTED figure at a constant ~9.6x (1199/125, 799/83,",
+    "899/94) — not a price the brand set. og:price:currency on the product page is",
+    "SEK. Never publish the dollar figure.",
+    "",
+    "QUOTES ARE SWEDISH. Two of the three pull-quotes are verbatim Swedish from",
+    "Golfbranschen. The page prints the Swedish inside the quote marks and the",
+    "English underneath as a labelled translation — never an English sentence in",
+    "quote marks that the speaker did not say.",
+    "",
+    "HELD BACK DELIBERATELY:",
+    "  * AI-LOOKING IMAGERY. Three Lightweight Tech Polo colourways carry images",
+    "    named generated-image-1-<epoch> at 1024x1024. That is an inference from",
+    "    filenames and sizes, NOT a sourced fact, and appears nowhere on the page.",
+    "    The build uses the Light Brown colourway, which has ordinary photography.",
+    "  * THE WSJ RANKING. Local Rule states it on their own About page and in product",
+    "    copy, but the WSJ article was not located and the claim is not independently",
+    "    verified. The page attributes it to the brand rather than asserting it.",
+    "  * WHICH SKU IS THE BORÅS ONE. The blog names 'Performance Shorts' and socks as",
+    "    the first Swedish-made pieces; the current catalogue lists 'Tech Shorts' and",
+    "    'Cargo shorts'. The page does not claim a specific SKU is Swedish-made."
+  ]
+}

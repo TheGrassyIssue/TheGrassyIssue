@@ -1,0 +1,104 @@
+{
+  "_brand": "Found Golf",
+  "_slug": "found-golf",
+  "_researched": "20 September 2026",
+
+  "_THE_EXISTING_TGI_PAGE_IS_WRONG": [
+    "Our live page calls Found Golf 'a tight five-piece lineup' and 'Melbourne's Found Golf'.",
+    "Both are wrong. The brand is SOUTH AFRICAN BORN and Melbourne based, splits its",
+    "operation between Melbourne and Cape Town, manufactures in Cape Town, designed its",
+    "first collection while based in LONDON, and carries far more than five pieces —",
+    "tops, bottoms, knitwear and headwear collections, plus an art-and-design practice",
+    "and a consultancy arm. The page also states AUD prices with no read date, which",
+    "breaks the house rule. It must be rebuilt, not patched."
+  ],
+
+  "story": {
+    "founders": ["Lance", "Ellen"],
+    "_founders_note": "Good Sport gives first names only: 'we spoke with the founders Lance and Ellen'. Surnames not published in any source found. Do what the Agronomy and AXXA pages do — publish what they publish and stop.",
+    "origin": "South African born, Melbourne based",
+    "cape_town": "Manufacturing returned to Cape Town, where the idea was originally born",
+    "london": "First collection was designed while the founders were based in London",
+    "melbourne_launch": "Launch party held at Molly Rose Brewery, Melbourne",
+    "acknowledgement": "Site carries an Acknowledgement of Country to the Wurundjeri people of the Kulin Nation",
+    "brand_self_description": "An independent Melbourne based brand that is more than just fashion, we activate golf as a creative culture through clothing, art, design and storytelling. We are the curated clever that looks to the future and paves a way for establishment reform."
+  },
+
+  "quotes": {
+    "_source": "Good Sport Magazine interview, published on found.golf 29 April 2024, campaign photographed by Kent Andreasen. https://found.golf/blogs/articles/good-sport-magazine-interviews-found",
+    "_rule": "VERBATIM ONLY. Attribute to the named founder where the interview names them, and to 'Found' where the interview answers as the brand.",
+    "verified": [
+      {"who": "Lance", "text": "I am obsessed with it all. Connecting with the challenge against yourself. The surroundings, the sounds, and out of bounds."},
+      {"who": "Ellen", "text": "Now that I finally have clothes to wear, I am really getting into it! For now, I'm still on par 3 courses, but the bug has bitten."},
+      {"who": "Found", "text": "It's a lifestyle, not a sport. Golf should be the same."},
+      {"who": "Found", "text": "Mainly that you can dress like a skater (even if you can't skate) because you aspire to the culture or to be a part of the movement."},
+      {"who": "Lance", "text": "When I first really started obsessing over golf, I was confused at the obvious conformity in what everyone was wearing and how disconnected that was from modern fashion trends.", "_note": "Interview renders this as 'When I (Lance) first really started...'. The parenthetical is the magazine's attribution device, not Lance's words — quote it without the interpolation, attributed to Lance."},
+      {"who": "Found", "text": "the only negative is the old school holding onto the wrong traditions and the new school ignoring the right traditions.", "_note": "STRONGEST LINE IN THE INTERVIEW. Candidate for the big pull-quote."},
+      {"who": "Found", "text": "Tight joggers and 1500 private jets at The Masters.", "_note": "Answer to 'What do you find tasteless about the mainstream world of Golf?' — reads as punching at the sport's excesses, not at another brand, so it clears the never-talk-down rule. Check with Lenny before using."},
+      {"who": "Found", "text": "In Cape Town, freedom is a way of being (think mountain hikes and less rules). For Melburnians, freedom is self expression"},
+      {"who": "Found", "text": "André 3000 playing flute.", "_note": "Answer to 'what does left field mean to you?'. Lovely coda line."}
+    ]
+  },
+
+  "press": [
+    "Good Sport Magazine — interview, Apr 2024",
+    "Connect Everything Collective — 'FROM STREET TO SKATE, TENNIS TO THE TATE'",
+    "Boss Hunting — 'The 13 Best Golf Clothing Brands', Jul 2024",
+    "GQ South Africa",
+    "The Age",
+    "Sydney Morning Herald"
+  ],
+
+  "commerce": {
+    "ships_from": "Melbourne; free shipping within Australia",
+    "currency": "AUD",
+    "try_before_you_buy": "Up to 3 items, 3 days at home, A$10 restocking fee if all are returned (via Mirra)",
+    "collections": ["TOPS", "BOTTOMS", "KNITWEAR", "HEADWEAR", "SALE"],
+    "other_arms": ["ART & DESIGN", "CONSULTANCY"],
+    "campaigns": ["Daisy Thomas Winter", "Street Smart Yet Golf Cart", "Found S/S 2025"]
+  },
+
+  "prices_seen_on_homepage": {
+    "_read": "found.golf homepage, 20 September 2026. NOT a complete catalogue — see _PRODUCT_DATA_INCOMPLETE below.",
+    "pleated-trouser": "A$198 — PLEATED PANTS | BLACK",
+    "white-long-sleeve-polo": "A$265 — LONG SLEEVE KNITTED POLO",
+    "golf-tees-ciggie-box": "A$25 — Golf Tees | Reusable Ciggie Box",
+    "wind-breaker": "A$260 — COLLARED WINDCHEATER",
+    "daisy-chain-tee": "A$118 — DAISY CHAIN TEE",
+    "dad-cap": "A$55 — DAD CAP | NAVY (SOLD OUT)",
+    "skirt-more-black": "A$115 — SKIRT-MORE | BLACK",
+    "1-4-zip": "A$190 — 1/4 ZIP",
+    "box-crew-black": "A$165 — BOX CREW | BLACK",
+    "short-game-black": "A$135 — SHORT GAME | BLACK",
+    "tee-box-grey": "A$85 — TEE BOX | GREY",
+    "the-shiz-knit": "A$265 — THE SHIZ KNIT"
+  },
+
+  "_PRODUCT_DATA_INCOMPLETE": [
+    "products.json?limit=250&country=AU was fetched but the saved response was TRUNCATED",
+    "mid-record at the 22nd product. Do NOT treat that 22 as the full catalogue and do",
+    "NOT publish a piece count from it.",
+    "",
+    "What the truncated slice did show, and what is worth chasing: seven DAD CAP",
+    "colourways all with zero available variants (every cap sold out); three",
+    "'Soof Flash x Found Golf | Good Sport Bad Sport' tops at A$300-450; and twelve ART",
+    "objects priced A$190 to A$12,000 — lamps, stools, benches, a vase, a sauce table —",
+    "by named artists including Adam Lynch, Andrew Hustwaite, Briony Wright, Darcy Vescio",
+    "& Locki Humphrey, Gabriel Cole & Jack Del-Rennie, Jackson Morgan, Jake Rollins, and",
+    "Damien Wright & Bonhula Yunupingu.",
+    "",
+    "THAT IS THE STORY THE CURRENT PAGE MISSES ENTIRELY. A golf apparel brand whose own",
+    "store also sells a A$12,000 sculpture makes the 'we activate golf as a creative",
+    "culture through clothing, art, design and storytelling' line literal rather than",
+    "marketing. Verify the full catalogue before writing it up.",
+    "",
+    "NEXT STEP: re-pull the catalogue in pages (limit=50 with page=1,2,3...) so no",
+    "response is truncated, and confirm every price with a stated read date."
+  ],
+
+  "imagery": {
+    "_status": "NOT YET LOCALISED. This is the only one of the seven legacy pages with no images/ directory and a single scored gallery frame.",
+    "cdn_prefix": "https://cdn.shopify.com/s/files/1/0758/8524/8814/files/",
+    "note": "Product and campaign photography is on their Shopify CDN. Download locally, never hot-link."
+  }
+}

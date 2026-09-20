@@ -1,0 +1,61 @@
+{
+  "_read": "local-rule.com/products.json, paged limit=250, country=SE pinned. 20 September 2026.",
+  "_currency": "SEK — confirmed. country=US returns a converted figure at a constant ~9.6x (1199/125, 799/83, 899/94). The product page's og:price:currency is SEK. Publish SEK only.",
+  "_totals": {"products": 123, "in_stock": 103, "sold_out": 20, "live_non_archive": 91},
+  "_price_range_live": "250–1499 kr",
+
+  "_by_type_live": {
+    "Tops": 31, "Headwear": 22, "Accessories": 19, "Bottoms": 15, "Outerwear": 4
+  },
+
+  "_SOLD_OUT_DO_NOT_LINK": {
+    "_fact": "20 products are fully sold out, and they are the NEWEST drop — which is why a naive sample of the first page reads as a dead store. It is not.",
+    "items": [
+      "Irons Coach Jacket (1199 kr) — all 5 sizes",
+      "Headcover Ripstop Driver (899) and FW (799), plus both Irons versions",
+      "6-panel Cotton Cap — Gray, Light Green, Stone (499) [NOTE: these read 1/1 available in the SE pull; re-check at build time]",
+      "Tee Box / assorted older colourways"
+    ],
+    "_method": "A variant-level availability count was taken for every product; see the live list below. Anything shipped as a card must have a>0."
+  },
+
+  "_IMAGERY_FLAG": [
+    "Lightweight Tech Polo in Gray, Light Blue and Blue uses images named",
+    "'generated-image-1-<epoch>' at 1024x1024 / 773x966 / 502x627. Those are the",
+    "signatures of AI generation. NOT PUBLISHED — inference only. But do not use those",
+    "frames in a grid: the same products carry real lookbook photography deeper in the",
+    "image array (LR_collegekids_lores_8.jpg and LR_collegekids_lores41.jpg, 3000x4500).",
+    "The Light Brown / Dark Red / Forest Green / Dark Navy Tech Polos use ordinary",
+    "product photography and are safe."
+  ],
+
+  "shortlist_18": [
+    {"n": 1,  "t": "Lightweight Tech Polo - Light Brown", "h": "tech-polo-light-brown", "sek": 699,  "a": "7/7",  "why": "The polo the brand is known for, fully stocked, real photography."},
+    {"n": 2,  "t": "Knit Polo - Off-White",               "h": "knit-polo-offwhite",    "sek": 1199, "a": "6/6",  "why": "The dressed-up end of the polo range."},
+    {"n": 3,  "t": "Performance Polo - Dark Green",       "h": "performance-polo-dark-green", "sek": 799, "a": "5/6", "why": "House green."},
+    {"n": 4,  "t": "Long-Sleeve Performance Polo - Dark Navy", "h": "long-sleeve-performance-polo-dark-navy", "sek": 899, "a": "6/6", "why": "Shoulder-season layer, full size run."},
+    {"n": 5,  "t": "Football Jersey - Striped Navy",      "h": "football-jersey-striped-navy", "sek": 999, "a": "5/7", "why": "The odd one out in a golf catalogue — a football jersey."},
+    {"n": 6,  "t": "Q-zip Fleece Sweatshirt - Light Blue","h": "q-zip-fleece-sweatshirt-light-blue", "sek": 1099, "a": "6/6", "why": "Full size run."},
+    {"n": 7,  "t": "Fleece Pullover - Blue",              "h": "fleece-pullover-blue",  "sek": 1299, "a": "6/6",  "why": "Full size run."},
+    {"n": 8,  "t": "Pleated Trousers - Offwhite",         "h": "pleated-trousers-offwhite", "sek": 1499, "a": "4/12", "why": "Top of the range; the vintage-golf flirtation made literal."},
+    {"n": 9,  "t": "Lightweight Tech Pants - Light Grey", "h": "tech-pants-light-grey", "sek": 899,  "a": "11/12", "why": "Best-stocked piece in the whole catalogue. Regular and tapered."},
+    {"n": 10, "t": "Shibuya Shorts - Dark Navy",          "h": "shibuya-shorts-dark-navy", "sek": 1199, "a": "3/6", "why": "Named for Tokyo, made by a Stockholm brand."},
+    {"n": 11, "t": "Tech Shorts - Dusty Olive",           "h": "tech-shorts-green",     "sek": 699,  "a": "5/6",  "why": "Cheapest way into the technical range."},
+    {"n": 12, "t": "Tech Vest - Light Green",             "h": "tech-vest-light-green", "sek": 1499, "a": "3/6",  "why": "Outerwear; the colour the brand keeps returning to."},
+    {"n": 13, "t": "Tech Anorak - Navy",                  "h": "tech-anorak-navy",      "sek": 1299, "a": "1/6",  "why": "ONE SIZE LEFT — include only if Lenny is happy to flag it."},
+    {"n": 14, "t": "Wool Cap - Burgundy",                 "h": "vintage-wool-cap-burgundy", "sek": 499, "a": "1/1", "why": "Wool, not a tech cap."},
+    {"n": 15, "t": "Buckethat - Military Green",          "h": "buckethat-military-green", "sek": 599, "a": "1/2", "why": "In the first-collection lineage."},
+    {"n": 16, "t": "Pom Pom Beanie - Navy",               "h": "pom-pom-beanie-navy",   "sek": 599,  "a": "1/1",  "why": "Scandinavian winter golf is a real category."},
+    {"n": 17, "t": "Leather Belt - Black",                "h": "leather-belt",          "sek": 599,  "a": "2/2",  "why": "Accessory depth beyond caps and towels."},
+    {"n": 18, "t": "LCLRL Towel - Dark Green",            "h": "lclrl-towel",           "sek": 399,  "a": "2/2",  "why": "The wordmark piece."}
+  ],
+
+  "_notes_for_the_build": [
+    "Tech Anorak Navy and Dusty Olive are both 1/6. If Lenny wants an anorak, say the size.",
+    "Pleated Trousers run 12 variants (waist x length) so 4/12 is thinner than it looks.",
+    "Headwear is one-size, so 1/1 means in stock, not nearly gone.",
+    "Socks and the Performance Shorts are the Swedish-made pieces per the brand's own blog —",
+    "the current catalogue names 'Tech Shorts' and 'Cargo shorts'; do NOT assert which SKU",
+    "is the Borås one without asking."
+  ]
+}
