@@ -1,0 +1,67 @@
+{
+  "_": "AXXA — Brand to Know. 18 locked picks + verified brand facts.",
+  "_date": "All prices and stock read from axxa.com.au on 20 September 2026.",
+
+  "_CURRENCY_WARNING": "READ THIS BEFORE TOUCHING A PRICE. axxa.com.au runs Shopify Markets and geolocates. From a US IP the whole storefront — INCLUDING /products.json and /products/<handle>.js — serves prices auto-converted to USD at rate 0.72652152. The Golf-Surf Club Hoodie reads '$87' that way; AXXA's own price is A$119. Appending ?country=AU to the same endpoints returns the real AUD figures, which is what is recorded below. Nothing here was converted by us; every number was read from their store in their own currency. If these are ever refreshed, refresh them WITH ?country=AU or every price on the page silently drops about 27%.",
+
+  "_fields": "[slug, name, category, price_aud, was_aud_or_null, stock_available, stock_total, product_url, image_url, spec]",
+  "carousel": ["golfer-knit", "birdies-please-hoodie", "golf-surf-club-hoodie", "blossom-bogey-polo", "golf-bag-cap"],
+
+  "rows": [
+    ["brushed-surfer-knit", "Brushed Surfer Knit", "Knit", 169, null, 5, 5, "https://www.axxa.com.au/products/brushed-surfer-knit", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00275.jpg?v=1786070904", "980g heavyweight, brushed nylon-viscose blend, jacquard-knitted surfer motif, jacquard-knitted logo at left chest, relaxed fit"],
+    ["golfer-knit", "Golfer Knit", "Knit", 159, null, 5, 5, "https://www.axxa.com.au/products/golfer-knit", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00295.jpg?v=1785910835", "730g heavyweight, 100% cotton, jacquard-knitted golfer motif, embroidered logo, ribbed hem and cuffs"],
+    ["staple-knit", "Staple Knit", "Knit", 149, null, 5, 5, "https://www.axxa.com.au/products/staple-knit", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00001.jpg?v=1786070618", "550g heavyweight, 100% cotton, jacquard-knitted Axxa wordmark, ribbed hem and cuffs"],
+    ["chasing-landscapes-canvas-jacket", "Chasing Landscapes Canvas Jacket", "Jacket", 129, null, 5, 5, "https://www.axxa.com.au/products/chasing-landscapes-canvas-jacket", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL07709.jpg?v=1767917191", "Heavyweight cotton canvas, structured workwear silhouette, back graphic, relaxed boxy fit"],
+    ["birdies-please-hoodie", "Birdies Please Hoodie", "Hoodie", 119, null, 6, 6, "https://www.axxa.com.au/products/birdies-please-hoodie", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL01000.jpg?v=1787897392", "420GSM fleece, 75% cotton / 25% polyester, slight oversized fit, ribbed hem and cuffs, screen and puff printed artwork"],
+    ["no-bad-weather-hoodie", "No Bad Weather Hoodie", "Hoodie", 119, null, 12, 12, "https://www.axxa.com.au/products/no-bad-weather-hoodie", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00754.jpg?v=1787897081", "420GSM fleece, 75% cotton / 25% polyester, slight oversized fit, puff printed artwork"],
+    ["golf-surf-club-hoodie", "Golf-Surf Club Hoodie", "Hoodie", 119, null, 21, 42, "https://www.axxa.com.au/products/golf-surf-club-hoodie-1", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Black_AGSC.webp?v=1774867632", "420GSM heavyweight cotton/poly blend, oversized relaxed silhouette; seven colourways"],
+    ["manly-country-club-hoodie", "Manly Country Club Hoodie", "Hoodie", 119, null, 7, 18, "https://www.axxa.com.au/products/blue-stone-manly-country-club-hoodie", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/MCC_Cloud_grey_Hoodie_e3c29788-129c-4578-b5bd-05f70a26c1f2.webp?v=1779967551", "420GSM premium cotton blend, washed finish"],
+    ["golf-surf-club-sweatshirt", "Golf-Surf Club Sweatshirt", "Sweatshirt", 99, null, 8, 18, "https://www.axxa.com.au/products/grey-agsc-sweatshirt", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Navy_AGSC_sweatshirt.webp?v=1774871837", "Cotton-blend crew, three colourways"],
+    ["too-cold-to-golf-tee", "Too Cold To Golf Tee", "Tee", 69, null, 5, 5, "https://www.axxa.com.au/products/too-cold-to-golf-tee", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00577.jpg?v=1787899651", "270GSM 100% cotton, oversized box fit, ribbed neckline, dropped shoulders, screen printed front and back"],
+    ["shop-closed-tee", "Shop Closed Tee", "Tee", 69, null, 6, 6, "https://www.axxa.com.au/products/shop-closed-tee", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00649.jpg?v=1787898173", "270GSM 100% cotton, oversized box fit, puff printed front and back"],
+    ["golf-bag-tee", "Golf Bag Tee", "Tee", 69, null, 12, 12, "https://www.axxa.com.au/products/white-golf-bag-tee", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL08259.jpg?v=1761642797", "100% cotton, same base as the Founders Collection"],
+    ["liney-lip-out-polo", "Liney Lip Out Polo", "Polo", 59, null, 1, 5, "https://www.axxa.com.au/products/liney-lip-out-polo", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL05238.jpg?v=1768443311", "Axxa GolfComfort fabric — polyester/spandex, moisture-wicking and quick-drying; regular fit"],
+    ["blossom-bogey-polo", "Blossom Bogey Polo", "Polo", 59, 80, 4, 5, "https://www.axxa.com.au/products/blossom-bogey-polo", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/blossom-bogey-polo-836946.jpg?v=1750029423", "Axxa GolfComfort fabric — polyester/spandex, moisture-wicking and quick-drying; regular fit"],
+    ["paper-par-polo", "Paper Par Polo", "Polo", 59, null, 2, 5, "https://www.axxa.com.au/products/paper-par-polo", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/paper-par-polo-491804.jpg?v=1750029532", "Axxa GolfComfort fabric — polyester/spandex, moisture-wicking and quick-drying; regular fit"],
+    ["3-year-jersey", "3 Year Jersey", "Jersey", 59, 80, 4, 6, "https://www.axxa.com.au/products/3-year-anniversary-jersey", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL07837.jpg?v=1761298242", "Retro football kit cut, silicone printing; brand states limited to 50 pieces and never restocking"],
+    ["golf-bag-cap", "Golf Bag Cap", "Cap", 59, null, 2, 2, "https://www.axxa.com.au/products/expresso-golf-bag-cap", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Expresso_Golf_bag_Cap.jpg?v=1769315760", "Canvas and corduroy, embroidered golf bag at front, Axxa stitched at back, adjustable snap"],
+    ["surf-then-golf-cap", "Surf Then Golf Cap", "Cap", 59, null, 1, 1, "https://www.axxa.com.au/products/royal-blue-surf-then-golf-cap", "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Surf_then_golf_cap_front.png?v=1769315545", "Cotton, curved brim, front embroidery reading Surf in the Morning, Golf in the Arvo"]
+  ],
+
+  "facts": {
+    "founded": 2022,
+    "founder": "Axel. AXXA publishes a first name only and describes him as 14 at founding, which puts him around 17-18 now. EDITORIAL NOTE: report only what AXXA publishes about him. Do not go looking for a surname, school, town or exact age, and do not build the piece around his age as a novelty.",
+    "base": "Sydney's Northern Beaches, New South Wales",
+    "positioning": "Coastal lifestyle brand sitting between surf and golf. Their own word is 'youth-driven'.",
+    "core_lines": "Golf-Surf Club (abbreviated AGSC on product art), Manly Country Club, Founders Collection, Chasing Landscapes",
+    "manufacturing": "Product pages state 'Made in PRC' plainly on the knits, hoodies and tees. Report it as the neutral fact they disclose.",
+    "own_fabric": "Polos use what they call Axxa GolfComfort — a polyester/spandex blend they describe as moisture-wicking and quick-drying.",
+    "knit_construction": "The three knits use jacquard-knitted motifs rather than printed or appliqued graphics, at stated weights of 980g, 730g and 550g.",
+    "catalogue_size": "48 products listed, of which 4 are store furniture (gift card, shipping protection, an insurance checkbox, one untitled item).",
+    "sold_out_at_check": "Manly Country Club Zip Up Polo, Baby Blue Staple Trackies, Blossom driver head cover, both stripe quarter-zips, Anchor Ace Polo. The driver head cover is their only headcover and it is out of stock — mention, don't feature.",
+    "reviews": "Site displays 4.98 from 99 reviews at time of checking. That is their own widget's figure; attribute it to them, do not present it as independent."
+  },
+
+  "brand_copy": {
+    "_rule": "These are AXXA's own site copy, not interview quotes, and there is no named individual speaking. Attribute to the brand, exactly as the Agronomy page does. Never present as something a person said to TGI.",
+    "_source": "https://www.axxa.com.au/ (Who are we? block) and the 3 Year Jersey product page",
+    "items": [
+      "Axxa is a youth-driven coastal lifestyle brand born on Sydney's Northern Beaches, built in the space between surf, golf, and everyday life.",
+      "Founded in 2022 by then 14-year-old Axel.",
+      "We're not defined by one sport or trend, we represent the coastal rhythm of surf, golf, mates, and living well, all in one day.",
+      "From a 14 year olds dream to a growing Axxa family across Australia and beyond",
+      "Limited to 50 pieces — never restocking"
+    ]
+  },
+
+  "commercial": {
+    "_disclosure": "This post is monetised two ways and must carry the FTC disclosure line. apply-affiliates.py inserts it; do not hand-write it.",
+    "affiliate_program": "GoAffPro. Loader confirmed present on home and product pages.",
+    "ref_param": "?ref=gfinczjd",
+    "ref_verified": "Confirmed 20 Sept 2026: https://www.axxa.com.au/products/golf-surf-club-hoodie-1?ref=gfinczjd returns 200 with the param intact, not stripped or redirected.",
+    "coupon": "LENNY1085",
+    "coupon_value": "A$10 off — per Lenny, who holds the arrangement.",
+    "coupon_verified": "The store's cart recognises the code (returned in cart.discount_codes). Its VALUE was not machine-verified: establishing that would mean building a real cart and stepping into checkout, which was not done. State the value as supplied and in AUD, since overseas readers see converted prices.",
+    "first_active_merchant": "AXXA is the FIRST merchant to go status=active in data/affiliates.json, so apply-affiliates.py has never run for real. Prove it on this page alone before letting it touch the other 130+ pages of outbound links."
+  }
+}

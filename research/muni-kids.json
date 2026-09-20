@@ -1,0 +1,63 @@
+{
+  "_": "The 18 locked Muni Kids picks for the /drops/muni-kids-10-years rebuild.",
+  "_verified": "Every price read from munikids.com on 20 September 2026 via /products/<handle>.js, which is the only endpoint that exposes inventory_policy and inventory_quantity per variant.",
+  "_stock_warning": "products.json reports 300 of 350 products 'available'. That number is misleading. Most of the catalogue runs inventory_policy:'continue' at zero or NEGATIVE inventory_quantity, which on any other store would mean overselling. Here it does not: the product pages state 'MADE TO ORDER - MADE IN COLLABORATION X REINLAND GOLF CO.' So mode:'made-to-order' below is a fact about how the brand works, not a stock failure, and the post must say so plainly rather than implying same-day shipping OR implying sold out.",
+  "_fields": "[slug, name, category, price_usd, mode, product_url, image_url]",
+  "_currency": "USD, read from the brand's own US storefront. Nothing converted.",
+  "rows": [
+    ["swimming-in-circles", "Swimming In Circles Golf Headcovers", "Headcover", 90, "made-to-order", "https://munikids.com/products/swimming-in-circles-golf-headcovers-limited-edition", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Swimming-In-Circles-Limited-Edition-Canvas-Golf-Headcovers.jpg?v=1693586674"],
+    ["ol-dirty", "Ol' Dirty Headcover Golf Headcovers", "Headcover", 90, "made-to-order", "https://munikids.com/products/ol-dirty-headcover-golf-headcovers-limited-edition", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Ol_-Dirty-Headcover-Limited-Edition-Canvas-Golf-Headcovers.webp?v=1735431516"],
+    ["pdx-carpet", "PDX Carpet Golf Headcovers", "Headcover", 70, "made-to-order", "https://munikids.com/products/pdx-carpet-golf-headcovers", "https://cdn.shopify.com/s/files/1/0891/9858/products/Muni-Kids-PDX-Carpet-Canvas-Golf-Headcovers.png?v=1615588658"],
+    ["smiley-face", "Smiley Face Golf Headcovers", "Headcover", 75, "made-to-order", "https://munikids.com/products/smiley-face-golf-headcovers", "https://cdn.shopify.com/s/files/1/0891/9858/products/Muni-Kids-Smiley-Face-Golf-Headcovers.png?v=1632977868"],
+    ["married-to-the-game", "Married To The Game Golf Headcovers", "Headcover", 85, "made-to-order", "https://munikids.com/products/married-to-the-game-golf-headcovers", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-x-Reinland-Golf-Co-Married-To-The-Game-Canvas-Golf-Headcovers.webp?v=1774298887"],
+    ["new-faces-v3", "New Faces v3 Golf Headcovers", "Headcover", 90, "made-to-order", "https://munikids.com/products/new-faces-v3-golf-headcovers-limited-edition", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-New-Faces-v3-Canvas-Limited-Edition-Golf-Headcovers.webp?v=1768951904"],
+    ["monstera-putter", "Monstera Putter Headcovers", "Putter cover", 70, "made-to-order", "https://munikids.com/products/monstera-putter-headcovers", "https://cdn.shopify.com/s/files/1/0891/9858/products/Muni-Kids-Monstera-Canvas-Golf-Putter-Headcover-Standard.png?v=1651514493"],
+    ["mac-n-cheese-strap", "Mac 'n Cheese Golf Bag Strap Cover", "Bag strap cover", 60, "made-to-order", "https://munikids.com/products/mac-n-cheese-golf-bag-strap-cover", "https://cdn.shopify.com/s/files/1/0891/9858/products/Muni-Kids-Mac-N-Cheese-Golf-Bag-Strap-Cover-Swatch.jpg?v=1681514268"],
+    ["play-well-stick", "Play Well Alignment Stick Cover", "Alignment stick cover", 30, "made-to-order", "https://munikids.com/products/play-well-alignment-stick-cover", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Play-Well-Alignment-Stick-Cover.webp?v=1716411985"],
+    ["i-am-tiger", "I Am Tiger T-Shirt", "T-shirt", 45, "made-to-order", "https://munikids.com/products/i-am-tiger-t-shirt", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-I-Am-Tiger-T-Shirt-Front.webp?v=1740671413"],
+    ["manifesto-tee", "Manifesto T-Shirt", "T-shirt", 40, "made-to-order", "https://munikids.com/products/manifesto-t-shirt-1", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Manifesto-Forever-Collection-Golf-T-Shirt-Back.jpg?v=1702320379"],
+    ["pga-dropout-crew", "PGA Dropout Crewneck Sweatshirt", "Sweatshirt", 80, "in-stock", "https://munikids.com/products/pga-dropout-crewneck-sweatshirt", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-PGA-Dropout-Golf-Crewneck-Sweatshirt.jpg?v=1702341047"],
+    ["stroke-is-just-so-jacket", "The Stroke Is Just So PGA Water-Resistant Course Jacket", "Outerwear", 95, "made-to-order", "https://munikids.com/products/the-stroke-is-just-so-pga-water-resistant-course-jacket", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-The-Stroke-Is-Just-So-PGA-Water-Resistant-Course-Golf-Jacket.webp?v=1773347714"],
+    ["el-nino-jersey", "El Niño Training Jersey Kit", "Jersey", 85, "in-stock", "https://munikids.com/products/el-nino-training-jersey-kit-medium", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Laundry-El-Nino-Training-Golf-Jersey-Kit.webp?v=1739841535"],
+    ["country-club-opp", "Country Club Opp Golf Snapback Hat", "Hat", 40, "made-to-order", "https://munikids.com/products/country-club-opp-golf-snapback-hat", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Country-Club-Opp-Golf-Snapback-Black-Front.webp?v=1753923362"],
+    ["golf-needs-you", "Golf Needs You To Be Yourself Structured Snapback", "Hat", 40, "in-stock", "https://munikids.com/products/golf-needs-you-to-be-yourself-structured-golf-snapback-hat-khaki-black", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Golf-Needs-You-To-Be-Yourself-Structured-Snapback-Hat-Khaki-Black.webp?v=1768599353"],
+    ["golforia-hole-2", "Golforia Hole 2: Honest Hills Manor", "Children's book", 30, "in-stock", "https://munikids.com/products/golforia-hole-2-honest-hills-manor-childrens-book", "https://cdn.shopify.com/s/files/1/0891/9858/files/golforia-2-book.webp?v=1789699389"],
+    ["the-perfect-swing", "The Perfect Swing — acrylic painting by Drew Reinland", "Original art", 875, "in-stock", "https://munikids.com/products/the-perfect-swing-acrylic-painting-with-golf-clubs-by-drew-reinland", "https://cdn.shopify.com/s/files/1/0891/9858/files/Muni-Kids-Planet-Goddamn-Studio-The-Perfect-Swing-TW-Painting-by-Drew-Reinland.webp?v=1736037490"]
+  ],
+  "facts": {
+    "founded": 2015,
+    "founders": "Brothers Maxton Reinland and Drew Reinland",
+    "base": "Portland, Oregon",
+    "anniversary_note": "Their own press release, dated June 2025, is headed 'Muni Kids Celebrates 10 Years'. 2015 + 10 = 2025, so the anniversary falls mid-year and they are ELEVEN as of September 2026. The page being replaced said 'Turns 11' in its title, 'Ten Years of the Muni Kids Program' in a section head, and '10-years' in its slug. All three could not be right, and there is no entity called the 'Muni Kids Program' anywhere in their material. Use eleven.",
+    "junior_golf": "Brand states it donates 3% of annual sales to junior golf programs.",
+    "drew_role": "Co-founder and creative director; headcovers, canvas art, children's books.",
+    "books": "Golforia Hole 1: The Lost City of Etiquette; Golforia Hole 2: Honest Hills Manor (new); Muni Kids Magic World of Golf. All $30.",
+    "shop": "Neighborhood Golf Shop, 499 SE 2nd Ave, Portland OR 97214, inside the Memory Den. NOTE: the brand's own About page still says 'Alberta Street', which is out of date — the shop's own site and its Yelp listing both give 499 SE 2nd Ave. Do not repeat Alberta Street. Shop hours are published but the shop site carries a 2023 copyright, so hours are not printed here.",
+    "shop_scope": "Vintage golf clothing and clubs, streetwear, collectables; lessons, club repair, fittings. Sits inside the Memory Den alongside other vintage vendors.",
+    "made_to_order": "Headcovers carry the line 'MADE TO ORDER - MADE IN COLLABORATION X REINLAND GOLF CO.' Reinland Golf Co. is the brothers' separate venture (reinlandgolfco.com).",
+    "catalogue_size": "350 products listed at time of writing."
+  },
+  "quotes": {
+    "_rule": "Verbatim only. All four below are from the press release published on the brand's OWN about-us page, and must be attributed as the brand's own statement — not as an interview TGI conducted.",
+    "_source": "https://munikids.com/pages/about-us",
+    "items": [
+      ["Maxton Reinland", "A Muni Kid is something that you never stop being"],
+      ["Maxton Reinland", "It’s timeless … your roots, who you are."],
+      ["Drew Reinland", "We never set out to build a corporate empire"],
+      ["Drew Reinland", "We wanted to create something authentic—something personal that speaks to the love of muni golf."],
+      ["Muni Kids (brand copy)", "make golf more inclusive, not exclusive"]
+    ]
+  },
+  "press": [
+    ["Golf Digest", "https://www.golfdigest.com/story/street-golf-paris-mumbai-portland-inexpensive-accessible-attraction"],
+    ["Hypebeast", "https://hypebeast.com/2023/10/vintage-golf-clothing-gear-clubs-where-to-buy"],
+    ["GolfWRX", "https://www.golfwrx.com/363926/muni-kids-a-tribute-to-public-golf-and-its-golfers-everywhere/"]
+  ],
+  "stale_on_old_page": [
+    "Ol' Dirty Headcover listed $85 — now $90",
+    "Swimming In Circles listed $85 — now $90",
+    "PDX Carpet Golf Headcovers listed $65 — now $70",
+    "'PGA Dropout Headcovers $75' — no such product now; PGA Dropout exists as a crewneck ($80) and tee ($40)",
+    "'Bogeys Suck Old E Tee $40' — not in the catalogue as a tee; Old E survives as a mockneck ($50) and the Bogeys Suck name on snapbacks ($40)"
+  ]
+}

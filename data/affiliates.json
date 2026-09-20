@@ -15,7 +15,7 @@
    "links_on_site": 56
   },
   "malbon.com": {
-   "program": "unknown \u2014 mentions affiliate on site; likely invite via outreach",
+   "program": "unknown — mentions affiliate on site; likely invite via outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -23,7 +23,7 @@
    "links_on_site": 59
   },
   "metalwood.studio": {
-   "program": "unknown \u2014 mentions affiliate on site; likely invite via outreach",
+   "program": "unknown — mentions affiliate on site; likely invite via outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -31,7 +31,7 @@
    "links_on_site": 34
   },
   "sugarloafsocialclub.com": {
-   "program": "none detected \u2014 ask in outreach (Shopify Collabs)",
+   "program": "none detected — ask in outreach (Shopify Collabs)",
    "mode": "param",
    "template": null,
    "id": null,
@@ -39,7 +39,7 @@
    "links_on_site": 62
   },
   "radry.com": {
-   "program": "none detected \u2014 ask in outreach",
+   "program": "none detected — ask in outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -47,7 +47,7 @@
    "links_on_site": 46
   },
   "lofgolf.com": {
-   "program": "none detected \u2014 ask in outreach",
+   "program": "none detected — ask in outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -55,7 +55,7 @@
    "links_on_site": 44
   },
   "seamusgolf.com": {
-   "program": "none detected \u2014 ask in outreach",
+   "program": "none detected — ask in outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -63,7 +63,7 @@
    "links_on_site": 44
   },
   "walkergolfthings.com": {
-   "program": "none detected \u2014 ask in outreach",
+   "program": "none detected — ask in outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -71,7 +71,7 @@
    "links_on_site": 41
   },
   "jonessportsco.com": {
-   "program": "none detected \u2014 ask in outreach",
+   "program": "none detected — ask in outreach",
    "mode": "param",
    "template": null,
    "id": null,
@@ -79,12 +79,21 @@
    "links_on_site": 41
   },
   "manorsgolf.com": {
-   "program": "none detected \u2014 ask in outreach",
+   "program": "none detected — ask in outreach",
    "mode": "param",
    "template": null,
    "id": null,
    "status": "pending-outreach",
    "links_on_site": 40
+  },
+  "axxa.com.au": {
+   "program": "GoAffPro (axxa-golf.goaffpro.com) — Lenny holds the account",
+   "mode": "param",
+   "template": "?ref=gfinczjd",
+   "id": "gfinczjd",
+   "status": "active",
+   "links_on_site": 18,
+   "note": "Verified 20 Sept 2026: the GoAffPro loader is present on axxa.com.au home and product pages, and ?ref=gfinczjd survives on a product URL (200, param intact, no redirect strip). Reader code LENNY1085 gives A$10 off and is stated in the post body, not injected by this map. FIRST merchant to go active — every other entry is still pending-signup or pending-outreach."
   }
  }
 }
