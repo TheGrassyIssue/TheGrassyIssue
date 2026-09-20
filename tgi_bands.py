@@ -49,6 +49,11 @@ BAND_CSS = """
 .drop-hero.tgi-band{margin-top:40px;margin-bottom:40px}
 .drop-hero.tgi-band.is-port{max-width:840px}
 .drop-hero.tgi-band.is-sq{max-width:980px}
+/* A landscape band needs no narrower measure — it takes the .drop-hero width.
+   The rule is written out anyway because the shape class is emitted on every
+   band, and verify-post.py rightly refuses a class with no rule: an implied
+   rule is indistinguishable from a forgotten one. */
+.drop-hero.tgi-band.is-land{max-width:1400px}
 @media(max-width:900px){
   .drop-hero.tgi-band.is-port,.drop-hero.tgi-band.is-sq{max-width:100%}
 }

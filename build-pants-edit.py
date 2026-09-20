@@ -430,7 +430,11 @@ def verify(path):
 
     # A CLASS WITH NO RULE IS THE .axxa-note BUG. Check the finished file.
     for c in OWN_CLASSES:
-        if f'class="{c}"' not in h:
+        # a class can be used alone or alongside others (class="pg-arw prev"),
+        # so match the TOKEN inside any class attribute rather than requiring
+        # the attribute to equal it. The exact-match version reported .pg-arw
+        # as unused while it was on two buttons in every gallery.
+        if not re.search(rf'class="[^"]*\b{re.escape(c)}\b[^"]*"', h):
             bad.append(f"{c} is declared but never used")
         if f".{c}{{" not in h.replace(" ", "").replace("\n", ""):
             bad.append(f"{c} is used on the page but has no CSS rule")
