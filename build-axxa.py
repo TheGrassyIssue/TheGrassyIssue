@@ -43,6 +43,15 @@ F = DATA["facts"]
 
 SLUG = "brand-to-know-axxa"
 TITLE = "Brand to Know &mdash; AXXA"
+BRAND = "AXXA"
+# The byline. Must match the date the copy says prices were read
+# (research/axxa.json: "read from axxa.com.au on 20 September 2026") and the
+# sitemap lastmod. Inherited from the donor as 17 September on the first build,
+# which dated the post three days before its own price reads.
+DATE = "September 20, 2026"
+# Brands that must never appear on this page. The donor is the obvious one;
+# it supplies the head, the nav, the breadcrumb and the tail.
+DONOR_BRANDS = ["Hidden Links Society", "hidden-links-society"]
 DESC = ("AXXA, the Northern Beaches label built between surf and golf. Founded 2022, "
         "jacquard knits, the Golf-Surf Club line, and what it all costs in Australian dollars.")
 HERO = "/images/axxa/hero.jpg"
@@ -126,9 +135,12 @@ SECTIONS = [
       "The tees are 270GSM cotton in an oversized box fit, which is heavier than the usual "
       "graphic tee and cut deliberately loose. Too Cold To Golf and Shop Closed are both "
       "printed front and back.",
+      # The line from this product page is pulled out as a quote immediately
+      # below this section, so it is NOT repeated here. Quoting the fragment
+      # in the card and the full sentence forty pixels later just reads as a
+      # stutter.
       "The 3 Year Jersey is the one that dates the brand. A retro football kit marking three "
-      "years, which AXXA say is limited to fifty pieces and will not be restocked, and whose "
-      "product page describes the run so far as coming &ldquo;from a 14 year olds dream&rdquo;. "
+      "years, which AXXA say is limited to fifty pieces and will not be restocked. "
       "It has been discounted from A$80."]),
 ]
 
@@ -232,7 +244,46 @@ EXTRA_CSS = """
 .axxa-was{opacity:.5;text-decoration:line-through;font-weight:400;margin-left:6px;}
 .axxa-note{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
   text-transform:uppercase;color:#a33;margin:6px 0 2px;}
+
+/* --- pull-quotes, the Birds of Condor treatment ---------------------------
+   Lenny, 20 Sept: "I really like how brand-to-know-birds-of-condor is
+   formatted with the bigger quotes pulled out - I dont love the italics but
+   everything else is super solid."
+
+   The donor supplied the SMALL pull-quote variant (22px, rules top and
+   bottom). The one he means is the 38px setting with the oversized opening
+   mark, so that block is copied here verbatim to override the donor's, and
+   it is roman, matching the sitewide change made the same day. Everything
+   else about it - size, green, the mark, the mono attribution under a rule -
+   is exactly as it ships on Birds of Condor. */
+.pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
+  font-style:normal;font-size:38px;line-height:1.24;letter-spacing:-.015em;
+  padding:8px 0 0;position:relative;border:0}
+.pull-quote-inner:before{content:"C";position:absolute;left:-.52em;top:-.18em;
+  font-size:2.1em;line-height:1;color:var(--grass,#2f4f2f);opacity:.28}
+.pull-quote-attr{display:block;margin-top:24px;padding-top:16px;
+  border-top:.5px solid var(--ink);font-family:var(--mono);font-style:normal;
+  font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.6;
+  max-width:360px}
+@media(max-width:820px){
+  .pull-quote{padding:0 20px}
+  .pull-quote-inner{font-size:26px}
+  .pull-quote-inner:before{left:-.3em;font-size:1.6em}
+}
 """
+
+
+def pullquote(text, attr):
+    """A pulled quote. TEXT MUST BE VERBATIM — these are AXXA's own words,
+    reproduced with their punctuation and their mistakes. The anniversary
+    jersey really does read "14 year olds dream" with no apostrophe; that
+    stays. Attribution says where the line came from, not who said it: AXXA
+    publishes a first name and nothing else, so there is no named person to
+    credit and inventing one would be worse than crediting the brand."""
+    return (f'<div class="pull-quote">\n'
+            f'  <p class="pull-quote-inner">&ldquo;{text}&rdquo;'
+            f'<span class="pull-quote-attr">&mdash; {attr}</span></p>\n'
+            f'</div>')
 
 
 def band(frames, cls="btk-wild-grid"):
@@ -306,10 +357,32 @@ def build():
     if HERO not in nav:      # donor markup varies; force the hero in
         nav = re.sub(r'(<img[^>]+src=")[^"]*\.jpg"', rf'\1{HERO}"', nav, count=1)
 
-    k = head.rfind("</style>")
-    if k < 0:
-        sys.exit("! no </style> in the donor head to attach card CSS to")
-    head = head[:k] + EXTRA_CSS + head[k:]
+    # EVERYTHING ELSE THE DONOR NAV CARRIES IS STILL THE DONOR'S.
+    # The three lines above rewrote the hero src and the h1 and stopped, which
+    # left the whole visible masthead reading as Hidden Links Society:
+    #   · the breadcrumb said  Feed / Brands / Hidden Links Society
+    #   · the hero's alt text said "Hidden Links Society — lookbook photograph"
+    #   · the byline said September 17, 2026 — the donor's publish date, three
+    #     days BEFORE the date this page's own copy says its prices were read
+    #     (20 September 2026, per research/axxa.json). A wrong byline on a page
+    #     that quotes live prices is a factual error, not a cosmetic one.
+    # The old "no donor brand left" guard only scanned the <head>, so all three
+    # sat in plain sight at the top of the page while the build reported clean.
+    nav = re.sub(r'(<div class="breadcrumb">.*?<span>/</span>\s*)[^<]*(</div>)',
+                 rf'\g<1>{BRAND}\g<2>', nav, count=1, flags=re.S)
+    nav = re.sub(rf'(<img[^>]*src="{re.escape(HERO)}"[^>]*alt=")[^"]*(")',
+                 rf'\g<1>{BRAND} &mdash; lookbook photograph\g<2>', nav, count=1)
+    nav = re.sub(r"(<div class=\"drop-meta\">\s*<span>)[^<]*(</span>)",
+                 rf"\g<1>{DATE}\g<2>", nav, count=1)
+
+    # EXTRA_CSS IS ATTACHED AFTER ASSEMBLY, NOT TO THE HEAD.
+    # It used to go before the head's last </style>, which looked right and was
+    # wrong: the donor repeats its whole stylesheet in a SECOND <style> block
+    # inside the body, so the page carries four style blocks and the donor's
+    # own .pull-quote-inner (22px) reappears ~30KB after the head. Source order
+    # decided the tie and the override silently lost — the pulled quotes
+    # rendered at the small donor size, which is the opposite of the point.
+    # Attach to the LAST </style> in the finished document instead.
 
     body = [nav]
 
@@ -323,15 +396,34 @@ def build():
     # rule and travelled down the page with the reader. All 37 other
     # template-era pages put the sidebar in "take"; AXXA was the only one in
     # "story", which is what Lenny saw as broken formatting on 20 Sept.
+    # TWO GRID CHILDREN. EXACTLY TWO.
+    # section[data-btk="take"] is `display:grid` with two columns, so every
+    # DIRECT child is auto-placed into the next free cell. The working pages
+    # (Hidden Links, Merrill, and 35 others) have exactly two children —
+    # .writeup-body and .sidebar — with the h2 nested INSIDE .writeup-body.
+    #
+    # The first version of this section had five direct children: h2, kicker,
+    # writeup-body, sidebar, and the lookbook band. Grid dealt them out
+    # alternately, so the kicker landed in the 300px sidebar column above the
+    # Details card, and the lookbook band landed back in the copy column. That
+    # is what Lenny saw: the standfirst floating over in the rail, detached
+    # from the heading it belongs to.
+    #
+    # So: heading and kicker move inside .writeup-body, and the band moves out
+    # to its own section below (it is full-bleed furniture, not column copy).
     body.append(f'''<section class="products" data-btk="take">
-  <h2 class="products-hdr">The Story</h2>
-  <p class="cat-kicker">Northern Beaches, 2022, and a catalogue that refuses to pick a sport.</p>
   <div class="writeup-body">
+    <h2 class="products-hdr">The Story</h2>
+    <p class="cat-kicker">Northern Beaches, 2022, and a catalogue that refuses to pick a sport.</p>
     <p>AXXA describes itself as &ldquo;a youth-driven coastal lifestyle brand born on Sydney&rsquo;s Northern Beaches, built in the space between surf, golf, and everyday life.&rdquo; That is a lot of positioning for one sentence, and most brands that write it are describing a mood board. This one is describing the photography, which is the test that matters: the same jumper appears on a fairway at golden hour and on a clifftop above the break, shot the same week.</p>
-    <p>It started in 2022. The brand&rsquo;s own line is that it was &ldquo;founded in 2022 by then 14-year-old Axel&rdquo;, and the anniversary jersey describes the run since as coming &ldquo;from a 14 year olds dream to a growing Axxa family across Australia and beyond&rdquo;. They publish a first name and leave it there, and so will we.</p>
-    <p>The useful thing about the surf half is that it explains the clothes. A golf brand that only thinks about golf makes polos and caps and stops. AXXA makes 980g jacquard knitwear and a canvas workwear jacket, because the customer they have in mind is in the water at seven and on the first tee after lunch and at the pub after that. Their phrasing for it &mdash; &ldquo;the coastal rhythm of surf, golf, mates, and living well, all in one day&rdquo; &mdash; is marketing copy, but the catalogue actually matches it.</p>
+    <p>It started in 2022. The brand&rsquo;s own line is that it was &ldquo;founded in 2022 by then 14-year-old Axel&rdquo;. They publish a first name and leave it there, and so will we.</p>
+    <p>The useful thing about the surf half is that it explains the clothes. A golf brand that only thinks about golf makes polos and caps and stops. AXXA makes 980g jacquard knitwear and a canvas workwear jacket, because the customer they have in mind is in the water at seven and on the first tee after lunch and at the pub after that. Their own line for it is marketing copy, and the catalogue still matches it.</p>
   </div>
 {SIDEBAR}
+</section>
+{pullquote("The coastal rhythm of surf, golf, mates, and living well, all in one day.",
+           "AXXA, on its own site")}
+<section class="products" data-btk="look">
 {band(LOOK_A)}
 </section>''')
 
@@ -353,6 +445,13 @@ def build():
     {cards}
   </div>
 </section>''')
+
+    # Placed here deliberately: the last product section above is "Caps, Tees
+    # and the Anniversary Jersey", so this lands directly under the jersey it
+    # is printed on. Verbatim, including "14 year olds" without the apostrophe.
+    body.append(pullquote(
+        "From a 14 year olds dream to a growing Axxa family across Australia and beyond.",
+        "AXXA, printed on the anniversary jersey"))
 
     body.append(f'''<section class="products" data-btk="look">
   <h2 class="products-hdr">The Argument, Photographed</h2>
@@ -401,7 +500,12 @@ def build():
             sys.exit(f"! donor tail is missing {_need!r}")
     body.append(tail)
 
-    return head + "\n".join(body)
+    page = head + "\n".join(body)
+    k = page.rfind("</style>")
+    if k < 0:
+        sys.exit("! no </style> anywhere in the assembled page to attach CSS to")
+    page = page[:k] + EXTRA_CSS + page[k:]
+    return page
 
 
 def main(apply_):
@@ -491,9 +595,41 @@ def main(apply_):
         # emits must have a rule somewhere in it, or the markup renders naked.
         ("every class this page emits has a CSS rule",
          not _classless(page), ", ".join(_classless(page))),
-        ("no donor brand left in the head",
-         "hidden-links" not in page[:page.find("<body")].lower()
-         and "Hidden Links" not in page[:page.find("<body")], ""),
+        # THE WHOLE PAGE, NOT JUST THE HEAD.
+        # Scoped to page[:<body>] this passed while the donor's name sat in the
+        # breadcrumb and in the hero's alt text — the two most visible strings
+        # on the page after the h1. "No donor brand left" has to mean the
+        # document, or it means nothing. The .more tail links to other TGI
+        # posts by slug, so allow /drops/ hrefs and check everything else.
+        ("no donor brand left anywhere on the page",
+         not [b for b in DONOR_BRANDS
+              if b.lower() in re.sub(r'href="/drops/[^"]*"', "", page).lower()], ""),
+        # THE SIDEBAR SECTION IS A TWO-COLUMN GRID: exactly two direct children.
+        # Any extra child is auto-placed into the next cell, which is how the
+        # kicker ended up in the sidebar rail and the lookbook band ended up
+        # back in the copy column on the 20 Sept build.
+        # THE OVERRIDE MUST ACTUALLY WIN. Presence of the 38px rule proves
+        # nothing — the donor ships a competing 22px .pull-quote-inner in a
+        # second <style> block further down, and for one build it won on
+        # source order while every "is the CSS there?" check passed. Assert
+        # the LAST rule in the document is ours.
+        # First cut of this guard asserted our rule was the LAST
+        # .pull-quote-inner in the file. It isn't, and shouldn't be: our own
+        # mobile override (font-size:26px) trails it. Asserting "last" failed
+        # on a correct page. The actual claim is ORDERING — our 38px base rule
+        # must come after the donor's 22px one.
+        ("the 38px rule comes after the donor's 22px one",
+         max([m.start() for m in re.finditer(r"\.pull-quote-inner\{[^}]*38px[^}]*\}", page)],
+             default=-1)
+         > max([m.start() for m in re.finditer(r"\.pull-quote-inner\{[^}]*22px[^}]*\}", page)],
+               default=-1), ""),
+        ("both pulled quotes are present",
+         page.count('class="pull-quote"') == 2, ""),
+        ("the take section has exactly two grid children",
+         len(re.findall(r'^  <(?:div|aside)\b',
+                        page[page.find('data-btk="take"'):
+                             page.find("</section>", page.find('data-btk="take"'))],
+                        re.M)) == 2, ""),
         ("canonical points at this slug",
          f'href="https://thegrassyissue.com/drops/{SLUG}"' in page, ""),
         ("word count is a feature, not a stub", words >= 1200, str(words)),
