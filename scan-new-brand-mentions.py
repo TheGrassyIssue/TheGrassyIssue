@@ -40,6 +40,10 @@ DOMAINS = {
     # without linking out; by this script's domain rule they are not coverage,
     # which is right — a passing mention is not a post about the brand.
     "salomon":           ["salomon.com"],
+    # Added 2026-09-20 with the Local Rule Brand to Know. The brand's own store
+    # is local-rule.com; the slug and the domain stem match exactly, which is the
+    # bar this map sets. Do not add localrule.com — not theirs.
+    "local-rule":        ["local-rule.com"],
     "sounder":           ["soundergolf.com"],
     "stitch-golf":       ["stitchgolf.com"],
     "sunday-golf":       ["sundaygolf.com"],          # NOT sundayrollsgolf.com
