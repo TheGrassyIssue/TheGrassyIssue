@@ -1,0 +1,33 @@
+<!doctype html><html><head><meta charset="utf-8"><style>
+@font-face{font-family:"Editors Note Text";src:url("/fonts/EditorsNoteText-Regular.woff2") format("woff2");font-weight:400;font-display:swap}
+*{box-sizing:border-box}
+body{margin:0;background:#f4f2ed;font-family:"Editors Note Text",Georgia,serif;color:#141414;padding:40px 0 60px}
+.hd{text-align:center;font-size:30px;margin-bottom:6px}
+.sub{text-align:center;font-family:ui-monospace,Menlo,monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-bottom:30px}
+.mast img{width:100%;display:block}
+.w{max-width:900px;margin:0 auto;padding:0 28px}
+h2{font-size:22px;margin:48px 0 14px;font-weight:400}
+p{font-size:17px;line-height:1.72;margin:0 0 20px}
+figure{margin:40px auto;max-width:760px}
+figure img{width:100%;display:block}
+figcaption{font-family:ui-monospace,Menlo,monospace;font-size:9px;letter-spacing:.12em;text-transform:uppercase;opacity:.5;margin-top:8px}
+</style></head><body>
+<div class="hd">The Pants Edit &mdash; body text &amp; lookbook bands</div>
+<div class="sub">TGI Take drafted from a 20 Sep 2026 census of 158 live trouser styles &middot; 1 masthead + 5 body bands</div>
+<section class="mast"><img src="/images/pants-edit/band-hero.jpg" alt="Manors Golf lookbook photograph"></section>
+<div class="w" id="body"></div>
+<script>
+fetch('/research/pants-edit.json').then(r=>r.json()).then(d=>{
+  const secs=d.sections, take=d.take, w=document.getElementById('body');
+  // one paragraph per section heading, band after each
+  secs.forEach((s,i)=>{
+    const h=document.createElement('h2'); h.textContent=s.hdr; w.appendChild(h);
+    const p=document.createElement('p'); p.innerHTML=take[i]||''; w.appendChild(p);
+    if(s.band){const f=document.createElement('figure');
+      f.innerHTML='<img src="/images/pants-edit/'+s.band+'.jpg" alt="'+d.bands[s.band].brand+' lookbook photograph">'
+        +'<figcaption>'+d.bands[s.band].brand+' &mdash; '+d.bands[s.band].what+'</figcaption>';
+      w.appendChild(f);}
+  });
+});
+</script>
+</body></html>

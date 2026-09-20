@@ -1,0 +1,86 @@
+{
+  "slug": "the-pants-edit",
+  "title": "The Pants Edit",
+  "read_date": "2026-09-20",
+
+  "_evidence_note": [
+    "THE TAKE BELOW IS BUILT ON A COUNT, NOT ON A FEELING. On 20 September 2026",
+    "every trouser shelf in the TGI universe was read from each brand's own",
+    "products.json and the live SKUs were tallied. The numbers the copy uses:",
+    "",
+    "  * 21 universe stores swept. 16 carry trousers at all.",
+    "  * 158 distinct trouser styles live across those 16 (colourways collapsed",
+    "    to the base style, sold-out excluded, shorts/joggers/kids/womens excluded).",
+    "  * 16 of those 158 styles are pleated — about one in ten.",
+    "  * But 11 of the 16 brands carry at least one pleated style: ANTi,",
+    "    Casualist, Gramicci, Malbon, Merrill, Odd Ritual, Olydoe, Public Drip,",
+    "    Siegelman, Students, Walker.",
+    "  * Five carry none: Quiet Golf, Criquet, Birds of Condor, STITCH, Eastside.",
+    "",
+    "THAT SPREAD IS THE WHOLE STORY and the copy must not overstate it. Pleats",
+    "are not a majority of what is on sale. They are present at two-thirds of the",
+    "brands, which is a different and more interesting claim: this is a category",
+    "adding a shape back, not one that has swapped shapes.",
+    "",
+    "NO CROSS-CURRENCY PRICE CLAIM. The census read raw price fields, so Odd",
+    "Ritual's 1300 is ZAR and ANTi's 28600 is JPY. Any price band in the copy is",
+    "USD-native brands only. Do not publish a combined range.",
+    "",
+    "WIDE-VS-SLIM WAS MEASURED AND THEN NOT USED. Keyword matching on product",
+    "copy returned 125 wide/relaxed against 110 slim/tapered across 238 SKUs,",
+    "which is close to even and leans entirely on how each brand happens to",
+    "describe its own fit. 'Straight' counted as tapered; 'full' counted as wide.",
+    "That is too soft a measure to put a sentence on, so the copy says nothing",
+    "about a wide-leg majority. The pleat count is a structural fact about a",
+    "garment; a fit adjective is marketing."
+  ],
+
+  "take": [
+    "Golf spent twenty years making one trouser. Flat front, four-way stretch, a tapered leg that ended in a break so short it barely was one, and a waistband engineered to disappear. It was a good trouser and it solved a real problem, and by about 2020 every brand on earth was making the same one in eleven colours.",
+
+    "What the shelves actually show in September 2026 is not a revolt against that. Read every trouser live across sixteen brands in this universe today and you get 158 distinct styles, of which sixteen are pleated. One in ten. The performance chino is still the business. But those sixteen pleated styles are spread across eleven of the sixteen brands &mdash; ANTi, Casualist, Gramicci, Malbon, Merrill, Odd Ritual, Olydoe, Public Drip, Siegelman, Students and Walker all carry at least one, and only Quiet Golf, Criquet, Birds of Condor, STITCH and Eastside carry none at all. That is the part that matters. A shape does not arrive at two-thirds of a category by accident, and it does not arrive there as a majority either. It arrives as one option on a shelf that used to have none.",
+
+    "The pleat is doing something specific, which is why it came back rather than simply being cycled through. It adds cloth at the hip without adding it at the waist, so a wider leg hangs off a fitted waistband instead of a low one. Every trouser on this list that reads roomy gets there the same way. ANTi call theirs a one-tuck &mdash; a single pleat, the Japanese convention, and the name is a small tell about where the shape travelled from. Students double it. Odd Ritual, Casualist, Public Drip and Olydoe all put it in the product name, which is a brand telling you the pleat is the point rather than a construction detail it happens to use.",
+
+    "The second shift is what the cloth is. The stretch-poly chino is a fabric with one job: hold a crease in 95 degrees and go through a washing machine. The trousers here that are not that are cotton twill, corduroy, wool, denim and ripstop &mdash; Criquet's corduroy, Students' wool, Gramicci's Japanese denim, Malbon's cotton Station Pant. None of those recover the way a performance fabric does. They wrinkle at the back of the knee, they crease where you sit, and that is now being presented as a feature rather than apologised for. A trouser that shows it has been worn is a trouser that reads as clothing instead of equipment.",
+
+    "Where it goes: the interesting pressure is on the middle. The two ends of this are settled &mdash; there will always be a market for a trouser that does not crease and a market for a trouser that does. What is not settled is whether a course will let you play in the second one. Most of the pleated wide-leg trousers on this list are cut to a width that a strict dress code will look at twice, which is why so many of them photograph on a street and not on a fairway. The brands that solve that &mdash; a real pleat, a leg wide enough to read, in a cloth that survives eighteen holes in August &mdash; are the ones this category will be talking about next season. Nobody on this list has fully done it yet.",
+
+    "In the meantime the practical read is simple. If you have owned the same flat-front performance chino in four colours for six years, one pleated pair is the cheapest change you can make to how you look on a golf course, and it does not require you to like anything else about how fashion is going."
+  ],
+
+  "sections": [
+    {"hdr": "The Take", "band": null},
+    {"hdr": "Eighteen Trousers", "band": "band-1"},
+    {"hdr": "Why the Pleat Came Back", "band": "band-2"},
+    {"hdr": "The Cloth Changed Too", "band": "band-3"},
+    {"hdr": "What Happens Next", "band": "band-4"},
+    {"hdr": "How to Buy One", "band": "band-5"}
+  ],
+
+  "bands": {
+    "band-hero": {"brand": "Manors Golf", "what": "four on a links headland, three in trousers", "shape": "21:9 masthead"},
+    "band-1": {"brand": "Criquet Shirts", "what": "FW26 shoot, corduroy and a duffel", "shape": "square, native"},
+    "band-2": {"brand": "ANTi Country Club Tokyo", "what": "the one-tuck, panelled room", "shape": "portrait, native"},
+    "band-3": {"brand": "Odd Ritual", "what": "from behind &mdash; the cuff and the break", "shape": "portrait, native"},
+    "band-4": {"brand": "Students Golf", "what": "full length, taupe, the rise", "shape": "portrait, native"},
+    "band-5": {"brand": "Public Drip", "what": "foot on a rail, pinstripe", "shape": "portrait, native"}
+  },
+
+  "_held_back": [
+    "NO TOUR CLAIM. It is tempting to write that the tour still wears slim and",
+    "the independents went wide. Nobody counted what the tour wore in 2026 and",
+    "TGI has not, so the sentence is not on the page.",
+    "",
+    "NO ORIGIN STORY FOR THE PLEAT. The one-tuck is a Japanese naming convention",
+    "and ANTi is a Tokyo brand, which is a fact. 'The trend came from Japan' is",
+    "an inference and is written as a tell, not an assertion.",
+    "",
+    "NO DRESS-CODE SURVEY. 'A strict dress code will look at it twice' is a",
+    "judgement, framed as one. No club was called and none is named.",
+    "",
+    "PRICES: USD-native brands only for any range in the copy. Odd Ritual is ZAR",
+    "and ANTi is JPY, and the census read raw fields, so the 158-style tally is",
+    "safe but a combined price band is not."
+  ]
+}
