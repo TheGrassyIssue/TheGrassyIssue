@@ -29,6 +29,8 @@ Dry run by default.
 """
 import importlib.util, json, pathlib, re, sys
 
+import tgi_bands
+
 ROOT = pathlib.Path(__file__).resolve().parent
 DONOR = ROOT / "drops/the-bold-tee-edit.html"
 OUT = ROOT / "drops/the-pants-edit.html"
@@ -140,7 +142,14 @@ EXTRA_CSS = """
 """
 
 # Every custom class this builder writes. Each must have a rule in the page.
-OWN_CLASSES = ["pe-stock"]
+EXTRA_CSS = EXTRA_CSS + '\n/* SWIPEABLE PRODUCT GALLERIES — the house component, same markup, CSS and JS\n   as /drops/accessories-on-and-off-the-course. Lenny: "let\'s add the carosels\n   to the pants edit so we can cylce through the pics."\n   aspect-ratio 4/5 is why localize-pants-frames.py cuts 1200x1500 rather than\n   the 1200x1200 squares the first build used. */\n.product-card{position:relative}\n.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}\n.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}\n.pg-track::-webkit-scrollbar{display:none}\n.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}\n.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}\n.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}\n.pg-arw.prev{left:8px}.pg-arw.next{right:8px}\n.product-card:hover .pg-arw{opacity:.9}\n.pg-arw:hover{opacity:1}\n.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}\n.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}\n.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}\n.pg-dot.on{background:var(--ink);opacity:1}\n@media(max-width:900px){.pg-arw{opacity:.85}}\n' + tgi_bands.BAND_CSS
+GALLERY_JS = "\n<script>\n(function(){\n  document.querySelectorAll('.product-gallery').forEach(function(g){\n    var track=g.querySelector('.pg-track'),\n        dots=[].slice.call(g.querySelectorAll('.pg-dot')),\n        count=g.querySelector('.pg-count'),\n        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;\n    if(n<2) return;\n    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }\n    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }\n    function sync(){ var i=idx();\n      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });\n      if(count) count.textContent=(i+1)+'/'+n; }\n    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});\n    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });\n    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');\n    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });\n    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });\n  });\n})();\n</script>\n"
+OWN_CLASSES = ["pe-stock", "product-gallery", "pg-track", "pg-frame",
+               "pg-arw", "pg-count", "pg-dots", "pg-dot"]
+
+# slug -> ["odd-ritual-f1", ...]. Written by localize-pants-frames.py so
+# the page and the files cannot disagree about how many frames exist.
+FRAMES = json.loads((ROOT / "research/pants-frames.json").read_text())
 
 # WHICH PICKS THE BRAND ITSELF CALLS PLEATED, with the phrase that says so.
 # The sidebar count is computed from THIS, not typed. The first cut of the page
@@ -204,12 +213,11 @@ def head_block(donor_head):
 
 
 def band(src, alt, credit=None):
-    cap = (f'\n  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;'
-           f'text-transform:uppercase;opacity:.5;margin-top:8px;">{credit}</div>'
-           if credit else "")
-    return (f'<div class="drop-hero"><div class="drop-hero-img">'
-            f'<img src="/images/pants-edit/{src}.jpg" alt="{alt}" loading="lazy" />'
-            f'</div>{cap}\n</div>\n\n')
+    """Delegates to tgi_bands. The body bands on this page were being cropped
+    to 21:9 by .drop-hero-img, which discarded roughly two thirds of every
+    portrait frame the localiser had carefully preserved."""
+    return tgi_bands.band(ROOT, f"/images/pants-edit/{src}.jpg", alt,
+                          credit=credit, masthead=(src == "band-hero"))
 
 
 def writeup(paras, hdr=None, sidebar=""):
@@ -248,14 +256,34 @@ def sidebar_card():
 '''
 
 
+def gallery(slug, brand, name):
+    """The house .product-gallery. data-frames is written from the manifest,
+    never typed — verify-post.py checks it against the real .pg-frame count and
+    that check is only meaningful if the number is derived."""
+    names = FRAMES[slug]
+    n = len(names)
+    frames = "".join(
+        f'<div class="pg-frame"><img src="/images/pants-edit/{fn}.jpg" '
+        f'alt="{brand} {name} &middot; view {i} of {n}" loading="lazy" /></div>'
+        for i, fn in enumerate(names, 1))
+    dots = "".join(
+        f'<button class="pg-dot{" on" if i == 0 else ""}" data-i="{i}" '
+        f'aria-label="View image {i+1}"></button>' for i in range(n))
+    return (f'<div class="product-gallery"><div class="pg-track">{frames}</div>'
+            f'<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+            f'<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+            f'<span class="pg-count">1/{n}</span>'
+            f'<div class="pg-dots">{dots}</div></div>')
+
+
 def product_cards():
     out = []
     for slug, brand, name, price, avail, kind, url, img in PICKS:
         note = NOTES[slug]
         stock = f'<div class="pe-stock">{avail}</div>' if avail != "in stock" else ""
         out.append(f'''
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/{slug}.jpg" alt="{brand} {name}" loading="lazy" /></div>
+    <div class="product-card" data-frames="{len(FRAMES[slug])}">
+      {gallery(slug, brand, name)}
       <div class="product-body">
         <div class="product-brand">{brand}</div>
         <div class="product-name">{name}</div>
@@ -330,6 +358,11 @@ def build():
                  "Public Drip &mdash; photograph courtesy of the brand")
 
     page += tail
+    # The gallery driver, appended before the document closes. (An earlier
+    # patch targeted a variable called `p`; this function uses `page`, so the
+    # replace matched nothing and the JS silently never shipped. The guard
+    # below is what caught it.)
+    page = page.replace("</body>", GALLERY_JS + "</body>", 1)
     return page
 
 
@@ -353,12 +386,13 @@ def verify(path):
     if n_cards != len(PICKS):
         bad.append(f"{n_cards} product cards, expected {len(PICKS)}")
     for slug, brand, name, price, *_ in PICKS:
-        for needle, what in ((f"/images/pants-edit/{slug}.jpg", "image"),
+        # the card image is now frame 1 of the gallery, not {slug}.jpg
+        for needle, what in ((f"/images/pants-edit/{FRAMES[slug][0]}.jpg", "lead frame"),
                              (name, "name"), (price, "price")):
             if needle not in h:
                 bad.append(f"{slug} {what} missing")
-        if not (ROOT / f"images/pants-edit/{slug}.jpg").exists():
-            bad.append(f"{slug} image file not on disk")
+        if not (ROOT / f"images/pants-edit/{FRAMES[slug][0]}.jpg").exists():
+            bad.append(f"{slug} lead frame not on disk")
 
     for b in ("band-hero", "band-1", "band-2", "band-3", "band-4", "band-5"):
         if f"/images/pants-edit/{b}.jpg" not in h:
@@ -400,6 +434,33 @@ def verify(path):
             bad.append(f"{c} is declared but never used")
         if f".{c}{{" not in h.replace(" ", "").replace("\n", ""):
             bad.append(f"{c} is used on the page but has no CSS rule")
+
+    # EVERY GALLERY: data-frames must equal the real frame count, every frame
+    # file must exist, and the dots must match. A gallery whose counter says 4
+    # and whose track holds 3 is the class of bug that renders fine and then
+    # strands the reader on a blank slide.
+    cards = re.findall(r'<div class="product-card" data-frames="(\d+)">(.*?)(?=<div class="product-card"|</div>\s*</section>)',
+                       h, re.S)
+    if len(cards) != len(PICKS):
+        bad.append(f"{len(cards)} gallery cards, expected {len(PICKS)}")
+    for declared, body in cards:
+        n_frames = body.count('class="pg-frame"')
+        n_dots = len(re.findall(r'class="pg-dot(?: on)?" data-i=', body))
+        if int(declared) != n_frames:
+            bad.append(f"data-frames={declared} but {n_frames} pg-frames")
+        if n_dots != n_frames:
+            bad.append(f"{n_dots} dots for {n_frames} frames")
+        m = re.search(r'<span class="pg-count">1/(\d+)</span>', body)
+        if not m or int(m.group(1)) != n_frames:
+            bad.append(f"pg-count says {m.group(1) if m else '?'} for {n_frames} frames")
+    for slug in FRAMES:
+        for fn in FRAMES[slug]:
+            if not (ROOT / f"images/pants-edit/{fn}.jpg").exists():
+                bad.append(f"gallery frame missing on disk: {fn}.jpg")
+    if "pg-track" not in h or "querySelectorAll('.product-gallery')" not in h:
+        bad.append("the gallery JS is missing — arrows and dots will not work")
+
+    bad += tgi_bands.verify_bands(ROOT, h)
 
     if "</html>" not in h:
         bad.append("page is truncated")

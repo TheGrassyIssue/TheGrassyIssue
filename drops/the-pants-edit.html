@@ -115,6 +115,43 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 .pe-stock{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
   text-transform:uppercase;color:#555;margin:6px 0 2px;}
+
+/* SWIPEABLE PRODUCT GALLERIES — the house component, same markup, CSS and JS
+   as /drops/accessories-on-and-off-the-course. Lenny: "let's add the carosels
+   to the pants edit so we can cylce through the pics."
+   aspect-ratio 4/5 is why localize-pants-frames.py cuts 1200x1500 rather than
+   the 1200x1200 squares the first build used. */
+.product-card{position:relative}
+.product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#e8e5dc}
+.pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;-ms-overflow-style:none;scroll-behavior:smooth}
+.pg-track::-webkit-scrollbar{display:none}
+.pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+.pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+.pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:30px;height:30px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:17px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+.pg-arw.prev{left:8px}.pg-arw.next{right:8px}
+.product-card:hover .pg-arw{opacity:.9}
+.pg-arw:hover{opacity:1}
+.pg-count{position:absolute;top:8px;right:8px;font-family:var(--mono);font-size:9px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:2px 6px;z-index:2}
+.pg-dots{position:absolute;bottom:8px;left:0;right:0;display:flex;justify-content:center;gap:5px;z-index:2}
+.pg-dot{width:6px;height:6px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55;transition:opacity .15s}
+.pg-dot.on{background:var(--ink);opacity:1}
+@media(max-width:900px){.pg-arw{opacity:.85}}
+
+/* IN-BODY PHOTO BANDS — see tgi_bands.py. The masthead keeps the house 21:9
+   box because it is cut to 21:9. Body bands are NOT cut, so they must not be
+   dropped into a fixed-ratio box: that discarded ~70% of every portrait. */
+.drop-hero-img.tgi-free{aspect-ratio:auto;height:auto;overflow:visible}
+.drop-hero-img.tgi-free img{width:100%;height:auto;object-fit:contain;display:block}
+.drop-hero.tgi-band{margin-top:40px;margin-bottom:40px}
+.drop-hero.tgi-band.is-port{max-width:840px}
+.drop-hero.tgi-band.is-sq{max-width:980px}
+@media(max-width:900px){
+  .drop-hero.tgi-band.is-port,.drop-hero.tgi-band.is-sq{max-width:100%}
+}
+/* the photo credit under a band. Defined HERE rather than per page, because
+   the helper emits it and a class with no rule is the .axxa-note bug. */
+.tgi-band-credit{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  text-transform:uppercase;opacity:.5;margin-top:8px}
 </style>
 </head>
 <body>
@@ -140,8 +177,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <a href="/#feed">Feed</a> / <a href="/#feed">The Edit</a> / The Pants Edit
 </div>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-hero.jpg" alt="Four golfers on a links headland, three of them in trousers" loading="lazy" /></div>
-  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:8px;">Manors Golf &mdash; photograph courtesy of the brand</div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-hero.jpg" alt="Four golfers on a links headland, three of them in trousers" /></div>
+  <div class="tgi-band-credit">Manors Golf &mdash; photograph courtesy of the brand</div>
 </div>
 
 <header class="drop-header">
@@ -183,8 +220,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </aside>
 </div>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-1.jpg" alt="Criquet Shirts corduroy trousers, carrying a duffel" loading="lazy" /></div>
-  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:8px;">Criquet Shirts &mdash; photograph courtesy of the brand</div>
+<div class="drop-hero tgi-band is-sq"><div class="drop-hero-img tgi-free"><img src="/images/pants-edit/band-1.jpg" alt="Criquet Shirts corduroy trousers, carrying a duffel" loading="lazy" /></div>
+  <div class="tgi-band-credit">Criquet Shirts &mdash; photograph courtesy of the brand</div>
 </div>
 
 <section class="products">
@@ -192,8 +229,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   <div class="sec-note">All in stock as of 20 September 2026. Prices in the currency each brand sets, unconverted.</div>
   <div class="products-grid">
 
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/odd-ritual.jpg" alt="Odd Ritual Pleated Daily Trouser | Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/odd-ritual-f1.jpg" alt="Odd Ritual Pleated Daily Trouser | Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/odd-ritual-f2.jpg" alt="Odd Ritual Pleated Daily Trouser | Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/odd-ritual-f3.jpg" alt="Odd Ritual Pleated Daily Trouser | Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/odd-ritual-f4.jpg" alt="Odd Ritual Pleated Daily Trouser | Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Odd Ritual</div>
         <div class="product-name">Pleated Daily Trouser | Black</div>
@@ -202,8 +239,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://oddritualgolf.com/products/pleated-daily-trouser-black" target="_blank" rel="noopener" class="product-link">Visit Odd Ritual &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/manors.jpg" alt="Manors Golf Recycled Greenskeeper Trouser" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/manors-f1.jpg" alt="Manors Golf Recycled Greenskeeper Trouser &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/manors-f2.jpg" alt="Manors Golf Recycled Greenskeeper Trouser &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/manors-f3.jpg" alt="Manors Golf Recycled Greenskeeper Trouser &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/manors-f4.jpg" alt="Manors Golf Recycled Greenskeeper Trouser &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Manors Golf</div>
         <div class="product-name">Recycled Greenskeeper Trouser</div>
@@ -212,8 +249,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://manorsgolf.com/products/recycled-greenskeeper-trouser" target="_blank" rel="noopener" class="product-link">Visit Manors Golf &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/walker.jpg" alt="Walker Golf Things Kooka All Day Twill Pant | Forest" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/walker-f1.jpg" alt="Walker Golf Things Kooka All Day Twill Pant | Forest &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/walker-f2.jpg" alt="Walker Golf Things Kooka All Day Twill Pant | Forest &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/walker-f3.jpg" alt="Walker Golf Things Kooka All Day Twill Pant | Forest &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/walker-f4.jpg" alt="Walker Golf Things Kooka All Day Twill Pant | Forest &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Walker Golf Things</div>
         <div class="product-name">Kooka All Day Twill Pant | Forest</div>
@@ -222,8 +259,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://walkergolfthings.com/products/kooka-all-day-twill-pant-forest" target="_blank" rel="noopener" class="product-link">Visit Walker Golf Things &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/sentinel.jpg" alt="Sentinel Golf MajoTech Trouser | Olive" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/sentinel-f1.jpg" alt="Sentinel Golf MajoTech Trouser | Olive &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/sentinel-f2.jpg" alt="Sentinel Golf MajoTech Trouser | Olive &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/sentinel-f3.jpg" alt="Sentinel Golf MajoTech Trouser | Olive &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/sentinel-f4.jpg" alt="Sentinel Golf MajoTech Trouser | Olive &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Sentinel Golf</div>
         <div class="product-name">MajoTech Trouser | Olive</div>
@@ -232,8 +269,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://sentinelgolf.us/shop/p/8t95uvw1ec28h1za76ycshtzy2kvha-57hyk-8trkf-6g8w5-b2y36-a7r98-ldyan-4y4zm-x76y7-t9lmw-2mc83-t5y3y-tl3d6-zn6k2-n4wxj" target="_blank" rel="noopener" class="product-link">Visit Sentinel Golf &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/quiet-golf.jpg" alt="Quiet Golf San Marino Pant | Navy" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/quiet-golf-f1.jpg" alt="Quiet Golf San Marino Pant | Navy &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/quiet-golf-f2.jpg" alt="Quiet Golf San Marino Pant | Navy &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/quiet-golf-f3.jpg" alt="Quiet Golf San Marino Pant | Navy &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/quiet-golf-f4.jpg" alt="Quiet Golf San Marino Pant | Navy &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Quiet Golf</div>
         <div class="product-name">San Marino Pant | Navy</div>
@@ -242,8 +279,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://quietgolf.com/products/san-merino-pant" target="_blank" rel="noopener" class="product-link">Visit Quiet Golf &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/casualist.jpg" alt="Casualist Pleated Golf Trousers | Organic Cotton" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/casualist-f1.jpg" alt="Casualist Pleated Golf Trousers | Organic Cotton &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/casualist-f2.jpg" alt="Casualist Pleated Golf Trousers | Organic Cotton &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/casualist-f3.jpg" alt="Casualist Pleated Golf Trousers | Organic Cotton &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/casualist-f4.jpg" alt="Casualist Pleated Golf Trousers | Organic Cotton &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Casualist</div>
         <div class="product-name">Pleated Golf Trousers | Organic Cotton</div>
@@ -252,8 +289,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://casualist.com/products/pleated-trousers" target="_blank" rel="noopener" class="product-link">Visit Casualist &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/students.jpg" alt="Students Golf Tradition Double Pleated Wool Pants" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/students-f1.jpg" alt="Students Golf Tradition Double Pleated Wool Pants &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/students-f2.jpg" alt="Students Golf Tradition Double Pleated Wool Pants &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/students-f3.jpg" alt="Students Golf Tradition Double Pleated Wool Pants &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/students-f4.jpg" alt="Students Golf Tradition Double Pleated Wool Pants &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Students Golf</div>
         <div class="product-name">Tradition Double Pleated Wool Pants</div>
@@ -262,8 +299,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://studentsgolf.com/products/tradition-double-pleated-wool-pants" target="_blank" rel="noopener" class="product-link">Visit Students Golf &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/public-drip.jpg" alt="Public Drip Anywhere Pleated Pants | Pinstripe" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/public-drip-f1.jpg" alt="Public Drip Anywhere Pleated Pants | Pinstripe &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/public-drip-f2.jpg" alt="Public Drip Anywhere Pleated Pants | Pinstripe &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/public-drip-f3.jpg" alt="Public Drip Anywhere Pleated Pants | Pinstripe &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/public-drip-f4.jpg" alt="Public Drip Anywhere Pleated Pants | Pinstripe &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Public Drip</div>
         <div class="product-name">Anywhere Pleated Pants | Pinstripe</div>
@@ -272,8 +309,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://publicdrip.com/products/anywhere-pleated-pants-pinstripe" target="_blank" rel="noopener" class="product-link">Visit Public Drip &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/criquet.jpg" alt="Criquet Shirts Comfort Corduroy Pant | Khaki" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/criquet-f1.jpg" alt="Criquet Shirts Comfort Corduroy Pant | Khaki &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/criquet-f2.jpg" alt="Criquet Shirts Comfort Corduroy Pant | Khaki &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/criquet-f3.jpg" alt="Criquet Shirts Comfort Corduroy Pant | Khaki &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/criquet-f4.jpg" alt="Criquet Shirts Comfort Corduroy Pant | Khaki &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Criquet Shirts</div>
         <div class="product-name">Comfort Corduroy Pant | Khaki</div>
@@ -282,8 +319,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://criquetshirts.com/products/comfort-corduroy-pant-khaki" target="_blank" rel="noopener" class="product-link">Visit Criquet Shirts &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/gramicci.jpg" alt="Gramicci Japanese 5-Pocket Denim Pant" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/gramicci-f1.jpg" alt="Gramicci Japanese 5-Pocket Denim Pant &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/gramicci-f2.jpg" alt="Gramicci Japanese 5-Pocket Denim Pant &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/gramicci-f3.jpg" alt="Gramicci Japanese 5-Pocket Denim Pant &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/gramicci-f4.jpg" alt="Gramicci Japanese 5-Pocket Denim Pant &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Gramicci</div>
         <div class="product-name">Japanese 5-Pocket Denim Pant</div>
@@ -292,8 +329,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://gramicci.com/products/japanese-5-pocket-denim-pant" target="_blank" rel="noopener" class="product-link">Visit Gramicci &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/malbon.jpg" alt="Malbon Golf Station Pant | Military Green" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/malbon-f1.jpg" alt="Malbon Golf Station Pant | Military Green &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/malbon-f2.jpg" alt="Malbon Golf Station Pant | Military Green &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/malbon-f3.jpg" alt="Malbon Golf Station Pant | Military Green &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/malbon-f4.jpg" alt="Malbon Golf Station Pant | Military Green &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Malbon Golf</div>
         <div class="product-name">Station Pant | Military Green</div>
@@ -302,8 +339,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://malbon.com/products/station-pant-military-green" target="_blank" rel="noopener" class="product-link">Visit Malbon Golf &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/siegelman.jpg" alt="Siegelman Stable Retro Track Pant" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/siegelman-f1.jpg" alt="Siegelman Stable Retro Track Pant &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/siegelman-f2.jpg" alt="Siegelman Stable Retro Track Pant &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Siegelman Stable</div>
         <div class="product-name">Retro Track Pant</div>
@@ -312,8 +349,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://siegelmanstable.com/products/retro-track-pant-1" target="_blank" rel="noopener" class="product-link">Visit Siegelman Stable &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/birds-of-condor.jpg" alt="Birds of Condor Ranger Pant | Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/birds-of-condor-f1.jpg" alt="Birds of Condor Ranger Pant | Black &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/birds-of-condor-f2.jpg" alt="Birds of Condor Ranger Pant | Black &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/birds-of-condor-f3.jpg" alt="Birds of Condor Ranger Pant | Black &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/birds-of-condor-f4.jpg" alt="Birds of Condor Ranger Pant | Black &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Birds of Condor</div>
         <div class="product-name">Ranger Pant | Black</div>
@@ -322,8 +359,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://us.birdsofcondor.com/products/black-ranger-golf-walk-pants" target="_blank" rel="noopener" class="product-link">Visit Birds of Condor &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/merrill.jpg" alt="Merrill Golf Baggy Trousers | Black" loading="lazy" /></div>
+    <div class="product-card" data-frames="2">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/merrill-f1.jpg" alt="Merrill Golf Baggy Trousers | Black &middot; view 1 of 2" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/merrill-f2.jpg" alt="Merrill Golf Baggy Trousers | Black &middot; view 2 of 2" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/2</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Merrill Golf</div>
         <div class="product-name">Baggy Trousers | Black</div>
@@ -332,8 +369,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://merrillgolf.com/products/baggy-trousers-black" target="_blank" rel="noopener" class="product-link">Visit Merrill Golf &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/stitch.jpg" alt="STITCH Heston Five Pocket Pant" loading="lazy" /></div>
+    <div class="product-card" data-frames="3">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/stitch-f1.jpg" alt="STITCH Heston Five Pocket Pant &middot; view 1 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/stitch-f2.jpg" alt="STITCH Heston Five Pocket Pant &middot; view 2 of 3" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/stitch-f3.jpg" alt="STITCH Heston Five Pocket Pant &middot; view 3 of 3" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/3</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button></div></div>
       <div class="product-body">
         <div class="product-brand">STITCH</div>
         <div class="product-name">Heston Five Pocket Pant</div>
@@ -342,8 +379,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://stitchgolf.com/products/231sa5003" target="_blank" rel="noopener" class="product-link">Visit STITCH &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/anti-country-club.jpg" alt="ANTi Country Club Tokyo One-Tuck Chino Pants | Beige" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/anti-country-club-f1.jpg" alt="ANTi Country Club Tokyo One-Tuck Chino Pants | Beige &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/anti-country-club-f2.jpg" alt="ANTi Country Club Tokyo One-Tuck Chino Pants | Beige &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/anti-country-club-f3.jpg" alt="ANTi Country Club Tokyo One-Tuck Chino Pants | Beige &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/anti-country-club-f4.jpg" alt="ANTi Country Club Tokyo One-Tuck Chino Pants | Beige &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">ANTi Country Club Tokyo</div>
         <div class="product-name">One-Tuck Chino Pants | Beige</div>
@@ -352,8 +389,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://anticountryclubtokyo.com/products/anti-country-club-tokyo-2026-ss-chino-pants-beige" target="_blank" rel="noopener" class="product-link">Visit ANTi Country Club Tokyo &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/olydoe.jpg" alt="Olydoe Pleated Walker Pant" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/olydoe-f1.jpg" alt="Olydoe Pleated Walker Pant &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/olydoe-f2.jpg" alt="Olydoe Pleated Walker Pant &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/olydoe-f3.jpg" alt="Olydoe Pleated Walker Pant &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/olydoe-f4.jpg" alt="Olydoe Pleated Walker Pant &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Olydoe</div>
         <div class="product-name">Pleated Walker Pant</div>
@@ -362,8 +399,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
         <a href="https://olydoe.com/products/pleated-walker-pant" target="_blank" rel="noopener" class="product-link">Visit Olydoe &#8599;</a>
       </div>
     </div>
-    <div class="product-card">
-      <div class="product-img"><img src="/images/pants-edit/eastside.jpg" alt="Eastside Golf Khaki Field Pant" loading="lazy" /></div>
+    <div class="product-card" data-frames="4">
+      <div class="product-gallery"><div class="pg-track"><div class="pg-frame"><img src="/images/pants-edit/eastside-f1.jpg" alt="Eastside Golf Khaki Field Pant &middot; view 1 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/eastside-f2.jpg" alt="Eastside Golf Khaki Field Pant &middot; view 2 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/eastside-f3.jpg" alt="Eastside Golf Khaki Field Pant &middot; view 3 of 4" loading="lazy" /></div><div class="pg-frame"><img src="/images/pants-edit/eastside-f4.jpg" alt="Eastside Golf Khaki Field Pant &middot; view 4 of 4" loading="lazy" /></div></div><button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button><span class="pg-count">1/4</span><div class="pg-dots"><button class="pg-dot on" data-i="0" aria-label="View image 1"></button><button class="pg-dot" data-i="1" aria-label="View image 2"></button><button class="pg-dot" data-i="2" aria-label="View image 3"></button><button class="pg-dot" data-i="3" aria-label="View image 4"></button></div></div>
       <div class="product-body">
         <div class="product-brand">Eastside Golf</div>
         <div class="product-name">Khaki Field Pant</div>
@@ -382,8 +419,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </div>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-2.jpg" alt="ANTi Country Club Tokyo one-tuck chino, worn" loading="lazy" /></div>
-  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:8px;">ANTi Country Club Tokyo &mdash; photograph courtesy of the brand</div>
+<div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/pants-edit/band-2.jpg" alt="ANTi Country Club Tokyo one-tuck chino, worn" loading="lazy" /></div>
+  <div class="tgi-band-credit">ANTi Country Club Tokyo &mdash; photograph courtesy of the brand</div>
 </div>
 
 <div class="writeup">
@@ -393,8 +430,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </div>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-3.jpg" alt="Odd Ritual pleated trouser from behind, showing the break" loading="lazy" /></div>
-  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:8px;">Odd Ritual &mdash; photograph courtesy of the brand</div>
+<div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/pants-edit/band-3.jpg" alt="Odd Ritual pleated trouser from behind, showing the break" loading="lazy" /></div>
+  <div class="tgi-band-credit">Odd Ritual &mdash; photograph courtesy of the brand</div>
 </div>
 
 <div class="writeup">
@@ -404,8 +441,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </div>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-4.jpg" alt="Students Golf double-pleated wool trousers, full length" loading="lazy" /></div>
-  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:8px;">Students Golf &mdash; photograph courtesy of the brand</div>
+<div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/pants-edit/band-4.jpg" alt="Students Golf double-pleated wool trousers, full length" loading="lazy" /></div>
+  <div class="tgi-band-credit">Students Golf &mdash; photograph courtesy of the brand</div>
 </div>
 
 <div class="writeup">
@@ -415,8 +452,8 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </div>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="/images/pants-edit/band-5.jpg" alt="Public Drip pinstripe pleated trousers, foot raised on a rail" loading="lazy" /></div>
-  <div style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:8px;">Public Drip &mdash; photograph courtesy of the brand</div>
+<div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/pants-edit/band-5.jpg" alt="Public Drip pinstripe pleated trousers, foot raised on a rail" loading="lazy" /></div>
+  <div class="tgi-band-credit">Public Drip &mdash; photograph courtesy of the brand</div>
 </div>
 
 <div class="more">
@@ -846,6 +883,28 @@ function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getE
   if(!b.hasAttribute('aria-expanded'))b.setAttribute('aria-expanded','false');
   b.addEventListener('click',function(e){e.preventDefault();toggleMenu();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});})();
+</script>
+
+<script>
+(function(){
+  document.querySelectorAll('.product-gallery').forEach(function(g){
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){ return Math.round(track.scrollLeft/track.clientWidth); }
+    function go(i){ track.scrollTo({left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}); }
+    function sync(){ var i=idx();
+      dots.forEach(function(d,j){ d.classList.toggle('on',j===i); });
+      if(count) count.textContent=(i+1)+'/'+n; }
+    track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
+    dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+  });
+})();
 </script>
 </body>
 </html>
