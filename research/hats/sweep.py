@@ -9,8 +9,12 @@ NOT=re.compile(r"headcover|head cover|club cover|towel|shirt|polo|tee\b|sock|glo
 todo=[(k,v) for k,v in sorted(stores.items()) if k not in done]
 LIMIT=int(sys.argv[1]) if len(sys.argv)>1 else 25
 for slug,meta in todo[:LIMIT]:
-    dom=meta.get("domain"); done.add(slug)
-    if not dom: continue
+    # DO NOT mark done before the fetch succeeds.
+    # The first version added the slug to `done` on entry, so a 429 counted as
+    # "swept" and the store was never retried — the sweep reported 70/104 done
+    # while having actually read 15. Only a real response marks a store read.
+    dom=meta.get("domain")
+    if not dom: done.add(slug); continue
     d=None
     for attempt in (1,2):
         try:
@@ -19,8 +23,9 @@ for slug,meta in todo[:LIMIT]:
         except Exception as e:
             if getattr(e,"code",None)==429 and attempt==1: time.sleep(3); continue
             break
-    time.sleep(0.8)
-    if not d: continue
+    time.sleep(3.5)
+    if not d: continue          # left out of `done`, so a later pass retries it
+    done.add(slug)
     out=[]
     for p in d.get("products",[]):
         hay=" ".join([p.get("title",""),p.get("product_type","") or ""]+list(p.get("tags",[])))

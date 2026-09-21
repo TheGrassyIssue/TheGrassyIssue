@@ -39,12 +39,12 @@
     },
     {
       "source": "/drops/the-hats-and-towels-edit",
-      "destination": "/drops/hats-carousel",
+      "destination": "/drops/the-hat-and-towel-edit",
       "permanent": true
     },
     {
       "source": "/drops/14-hats-from-funky-brands",
-      "destination": "/drops/hats-carousel",
+      "destination": "/drops/the-hat-and-towel-edit",
       "permanent": true
     },
     {
@@ -90,6 +90,11 @@
     {
       "source": "/drops/bold-tees-carousel",
       "destination": "/drops/the-bold-tee-edit",
+      "permanent": true
+    },
+    {
+      "source": "/drops/hats-carousel",
+      "destination": "/drops/the-hat-and-towel-edit",
       "permanent": true
     }
   ]
