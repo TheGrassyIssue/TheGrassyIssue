@@ -78,8 +78,23 @@ def matches(host_set, domains):
 APPLY  = "--apply" in sys.argv
 brands = json.load(open(f"{ROOT}/data/brands.json"))
 ment   = json.load(open(f"{ROOT}/data/brand-mentions.json"))
-todo   = [b for b in brands if not ment.get(b["slug"])]
-print(f"brands with no mentions entry: {len(todo)}\n")
+import copy; was = copy.deepcopy(ment)   # pre-scan state, for sticky profile flags
+# --rescan RE-READS brands that already have entries.
+#
+# THE BUG THIS FIXES. The default pass only visits brands with NO mentions
+# entry. That is right for onboarding a new brand and wrong forever after: once
+# a brand has any entry it is never looked at again, so a NEW post about an
+# EXISTING brand never reaches its coverage page. Vuori had two roundup
+# mentions from 4 September, so when Brand to Know — Vuori shipped on the 21st
+# the scan skipped Vuori entirely and /brands/vuori showed the two roundups and
+# no profile card. Lenny found it by looking at the page.
+#
+# Matching is deterministic (outbound domain), so re-reading a mapped brand is
+# safe and idempotent — it recomputes the same list plus anything new.
+RESCAN = "--rescan" in sys.argv
+todo   = ([b for b in brands if DOMAINS.get(b["slug"])] if RESCAN
+          else [b for b in brands if not ment.get(b["slug"])])
+print(f"{'rescanning mapped brands' if RESCAN else 'brands with no mentions entry'}: {len(todo)}\n")
 
 for b in todo:
     doms = DOMAINS.get(b["slug"])
@@ -94,9 +109,33 @@ for b in todo:
         title = re.sub(r"\s*[—|]\s*The Grassy Issue\s*$", "",
                        html.unescape(t.group(1))).strip() if t else ""
         slug = os.path.basename(f)[:-5]
-        # a Brand to Know page for this brand is its profile
-        prof = slug.startswith("brand-to-know-") and b["slug"].split("-")[0] in slug
-        hits.append({"url": "/drops/" + slug, "title": title, "profile": prof})
+        # A Brand to Know page for this brand is its profile.
+        #
+        # PROFILE IS STICKY — never recompute it to False.
+        # This rule only recognises the brand-to-know- prefix, but 45 entries in
+        # the map are profiles under other slugs (texas-golf-brands-and-makers,
+        # golf-brands-founded-by-women, gumtree-nature-club-drop …), set outside
+        # this script. On the first --rescan the plain recomputation silently
+        # unset gumtree-golf's, which would have dropped the profile card off
+        # /brands/gumtree-golf while "fixing" /brands/vuori. A domain rescan
+        # knows what a post LINKS, not what it IS, so it may only ever promote.
+        prev = {x["url"]: x for x in was.get(b["slug"], [])}
+        url  = "/drops/" + slug
+        # THE TITLE IS THE HONEST SIGNAL, NOT THE SLUG.
+        # The slug rule misses any profile piece not named for the format.
+        # Late Nine's Brand Revisited lives at /drops/late-nine-stockholm-
+        # relaxed-fits-and-the-quiet-part-of-golf, so the prefix test failed and
+        # /brands/late-nine showed no profile card — the same symptom as Vuori,
+        # a different cause. The <title> says "Brand Revisited — Late Nine",
+        # which states what the post IS. Revisited counts as a profile: the
+        # precedent is /drops/brand-revisited-jones-sports-co, already flagged.
+        titled = bool(re.match(
+            rf"brand\s+(?:to\s+know|revisited)\s*[—–-]\s*{re.escape(b['name'].lower())}$",
+            title.strip().lower()))
+        prof = (titled
+                or (slug.startswith("brand-to-know-") and b["slug"].split("-")[0] in slug)
+                or bool(prev.get(url, {}).get("profile")))
+        hits.append({"url": url, "title": title, "profile": prof})
     ment[b["slug"]] = hits
     print(f"  {b['name']:30} {len(hits):3} posts   {', '.join(x['url'].split('/')[-1] for x in hits[:4])}{' …' if len(hits)>4 else ''}")
 

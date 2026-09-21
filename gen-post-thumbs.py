@@ -42,8 +42,17 @@ def derive(url):
     if not img or not os.path.exists(os.path.join(ROOT, img.lstrip("/"))): return None
     cat = next((c for c in CATS if re.search(r'<span>' + re.escape(c).replace(r'\&', r'(?:&amp;|&)') + r'</span>', body)), None)
     if not cat:
-        m = re.search(r'<a href="/#feed">([^<]+)</a>', body)
-        cat = (m.group(1).replace("&amp;", "&") if m else "Drops & Brands")
+        # "Feed" IS NOT A CATEGORY.
+        # This fallback reads the breadcrumb's category crumb. On pages whose
+        # breadcrumb says "FEED / FEED / <title>" it picks up the word Feed and
+        # stamps it on the card kicker, where every sibling card says "Drops &
+        # Brands" or "Field Notes". Three shipped entries already read "Feed"
+        # that way. The breadcrumbs on those pages are the real defect; until
+        # they are fixed, refuse the value rather than propagate it.
+        crumbs = [c.replace("&amp;", "&") for c in
+                  re.findall(r'<a href="/#feed">([^<]+)</a>', body)]
+        cat = next((c for c in crumbs if c.strip().lower() not in ("feed", "the feed")),
+                   "Drops & Brands")
     return {"img": img, "cat": cat}
 
 added, refreshed, failed = [], [], []
