@@ -500,7 +500,7 @@ def page(kind, slug, h1, title, desc, intro, notes):
     head += "\n" + BXCSS + "\n" + EXTRA
 
     body = f"""<main id="tx">
-  <div class="tx-crumb"><a href="/">Feed</a> &nbsp;/&nbsp; <a href="/brands/">The Brand Index</a> &nbsp;/&nbsp; {esc(h1)}</div>
+  <div class="tx-crumb"><a href="/">Feed</a> &nbsp;/&nbsp; <a href="/brands">The Brand Index</a> &nbsp;/&nbsp; {esc(h1)}</div>
   <h1>{esc(h1)}</h1>
   <div class="tx-count">{len(ms)} brands in the Index</div>
   <div class="tx-intro">
@@ -515,7 +515,7 @@ def page(kind, slug, h1, title, desc, intro, notes):
   <div class="tx-also">
     <h2>Other ways into the Index</h2>
     <div class="tx-also-list">{chips}</div>
-    <div class="tx-back"><a href="/brands/">&larr; All {len(brands)} brands</a></div>
+    <div class="tx-back"><a href="/brands">&larr; All {len(brands)} brands</a></div>
   </div>
 </main>
 

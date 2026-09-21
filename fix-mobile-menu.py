@@ -33,9 +33,9 @@ MARK = "<!--TGI-MOBILE-MENU-V1-->"
 DRAWER = MARK + """
 <div class="nav-drawer" id="navDrawer" role="dialog" aria-label="Navigation menu">
   <a href="/#feed" onclick="closeMenu();">The Feed</a>
-  <a href="/brands/" onclick="closeMenu();">Brands</a>
-  <a href="/field-guide/" onclick="closeMenu();">Field Guide</a>
-  <a href="/events/" onclick="closeMenu();">Events</a>
+  <a href="/brands" onclick="closeMenu();">Brands</a>
+  <a href="/field-guide" onclick="closeMenu();">Field Guide</a>
+  <a href="/events" onclick="closeMenu();">Events</a>
   <a href="/about" onclick="closeMenu();">About</a>
 </div>
 <script>

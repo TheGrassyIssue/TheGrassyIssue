@@ -55,7 +55,7 @@ BODY = """
 
     <p><strong>The Grassy Issue</strong> is a golf publication run out of Austin, Texas. It covers
     the municipal scene here and the independent side of golf apparel and equipment everywhere else.
-    The <a href="/brands/" style="border-bottom:1px solid var(--ink)">Brand Index</a> currently runs
+    The <a href="/brands" style="border-bottom:1px solid var(--ink)">Brand Index</a> currently runs
     to {nbrands} brands and roughly {kwords} thousand words of coverage written about them. More on
     who is behind it is <a href="/about" style="border-bottom:1px solid var(--ink)">on the About
     page</a>.</p>

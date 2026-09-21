@@ -313,7 +313,7 @@ itemlist = json.dumps({"@context":"https://schema.org","@type":"CollectionPage",
   "name":f"{len(BRANDS)} Independent Golf Brands to Know — The Grassy Issue",
   "alternateName":"The Brand Index",
   "description":f"A running list of {len(BRANDS)} independent and indie golf brands — apparel, clubs, bags, headcovers and accessories — researched and selected by The Grassy Issue in Austin, Texas.",
-  "url":"https://thegrassyissue.com/brands/",
+  "url":"https://thegrassyissue.com/brands",
   "mainEntity":{"@type":"ItemList","numberOfItems":len(BRANDS),
     "itemListElement":[{"@type":"ListItem","position":i+1,"name":b["name"],
       "url":"https://thegrassyissue.com"+b["url"]}
@@ -338,10 +338,10 @@ page = f'''<!DOCTYPE html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{N} Independent Golf Brands to Know ({YEAR}) | The Grassy Issue</title>
 <meta name="description" content="A running list of {N} independent and indie golf brands — apparel, bags, headcovers and under-the-radar makers from Texas to Tokyo, searchable by product, vibe and location.">
-<link rel="canonical" href="https://thegrassyissue.com/brands/">
+<link rel="canonical" href="https://thegrassyissue.com/brands">
 <meta property="og:title" content="{N} Independent Golf Brands to Know ({YEAR})">
 <meta property="og:description" content="A running list of {N} independent and indie golf brands, searchable by product, vibe and location.">
-<meta property="og:url" content="https://thegrassyissue.com/brands/">
+<meta property="og:url" content="https://thegrassyissue.com/brands">
 <meta property="og:type" content="website">
 {fonts}
 <script type="application/ld+json">{itemlist}</script>
@@ -427,9 +427,9 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
     <a href="/" class="nav-wordmark">The Grassy Issue</a>
     <div class="nav-links">
       <a href="/#feed">The Feed</a>
-      <a href="/brands/" class="active">Brands</a>
-      <a href="/field-guide/">Field Guide</a>
-      <a href="/events/">Events</a>
+      <a href="/brands" class="active">Brands</a>
+      <a href="/field-guide">Field Guide</a>
+      <a href="/events">Events</a>
     </div>
   </div>
 </nav>
@@ -703,9 +703,9 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
     <a href="/" class="nav-wordmark">The Grassy Issue</a>
     <div class="nav-links">
       <a href="/#feed">The Feed</a>
-      <a href="/brands/" class="active">Brands</a>
-      <a href="/field-guide/">Field Guide</a>
-      <a href="/events/">Events</a>
+      <a href="/brands" class="active">Brands</a>
+      <a href="/field-guide">Field Guide</a>
+      <a href="/events">Events</a>
     </div>
   </div>
 </nav>
@@ -713,7 +713,7 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 <header class="bp-head">
   <div class="bp-heroimg">{heroimg}</div>
   <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands/">The Brand Index</a><span>/</span>{name}</div>
+    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>{name}</div>
     <div class="bp-kickline">[ All Coverage &middot; {len(men)} Post{"s" if len(men)!=1 else ""} ]</div>
     <h1>{name}</h1>
     <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
@@ -852,7 +852,7 @@ def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
   padding:3px 7px;border-radius:3px;text-decoration:none;white-space:nowrap;}
 </style>""", 1)
 
-    body = f'''  <div class="bp-crumb"><a href="/">Feed</a> <span>/</span> <a href="/brands/">Brands</a> <span>/</span> {label}</div>
+    body = f'''  <div class="bp-crumb"><a href="/">Feed</a> <span>/</span> <a href="/brands">Brands</a> <span>/</span> {label}</div>
   <header class="bp-head">
     <span class="bp-kicker">[ {"Taste tag" if base == "tag" else "Attribute"} ]</span>
     <h1>{label}</h1>
@@ -863,7 +863,7 @@ def tag_page(tag, label, blurb, criteria, key="tags", base="tag"):
   <div class="bp-grid">
 {chr(10).join(tiles)}
   </div>
-  <p class="bp-foot"><a href="/brands/">&larr; Back to the Brand Index</a></p>
+  <p class="bp-foot"><a href="/brands">&larr; Back to the Brand Index</a></p>
 '''
     # The generated brand pages have NO <main> element, so the original
     # <main>...</main> swap silently matched nothing and every tag/attr page

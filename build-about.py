@@ -59,7 +59,7 @@ NOTE = f"""    <p>I grew up playing my parents&rsquo; course in the Hudson Valle
 """
 
 WHATS_HERE = f"""    <p><strong>Field Notes</strong> covers courses and the people who keep them, weighted toward the Austin municipals &mdash; Lions, Hancock, Jimmy Clay, Kizer and Morris Williams.</p>
-    <p><strong>Drops &amp; Brands</strong> covers what the independent side of golf is making, across a roster of {BRANDS} brands. Every one has its own page in the <a href="/brands/" style="border-bottom:1px solid var(--ink)">index</a>.</p>
+    <p><strong>Drops &amp; Brands</strong> covers what the independent side of golf is making, across a roster of {BRANDS} brands. Every one has its own page in the <a href="/brands" style="border-bottom:1px solid var(--ink)">index</a>.</p>
     <p><strong>News</strong> is everything else that moves.</p>
 """
 

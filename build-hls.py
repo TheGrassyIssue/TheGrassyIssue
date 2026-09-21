@@ -340,7 +340,7 @@ if len(_LD_RE.findall(head)) != 2:
     raise SystemExit(f"expected exactly 2 JSON-LD blocks, got {len(_LD_RE.findall(head))}")
 
 body = ('<div class="breadcrumb">\n  <a href="/">Feed</a><span>/</span>\n'
-        '  <a href="/brands/">Brands</a><span>/</span>\n  Hidden Links Society</div>\n'
+        '  <a href="/brands">Brands</a><span>/</span>\n  Hidden Links Society</div>\n'
         f'<header class="drop-header">\n  <h1>{TITLE}</h1>\n  <div class="drop-meta">\n'
         f'    <span>{DATE}</span><span class="dot"></span>\n'
         '    <span>Brand to Know</span><span class="dot"></span>\n'

@@ -49,7 +49,7 @@ POSTER = "/images/social-club-poster.jpg"
 SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyx5uBp5eQpGGhqRSfG7V2zUjFQEh3adgHLUIQFT-_ldfcqHmlQfnv8sCSBQ03eCjlr/exec"
 
 BODY = f"""
-<div class="breadcrumb"><a href="/">Feed</a><span>/</span><a href="/events/">Events</a><span>/</span>Social Club</div>
+<div class="breadcrumb"><a href="/">Feed</a><span>/</span><a href="/events">Events</a><span>/</span>Social Club</div>
 
 <header class="poster-hero">
   <div class="poster-hero-inner">
@@ -196,7 +196,7 @@ BODY = f"""
 </section>
 
 <div class="back-section">
-  <a href="/events/" class="back-link">&larr; All events</a>
+  <a href="/events" class="back-link">&larr; All events</a>
 </div>
 """
 

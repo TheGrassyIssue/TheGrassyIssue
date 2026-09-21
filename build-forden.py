@@ -398,7 +398,7 @@ SIDEBAR = """<div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Hats with</span><span>New Era</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$14&ndash;$77</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>Aug 2026</span></div>
-      <a href="/brands/" class="sidebar-cta">Browse the Brand Index &rarr;</a>
+      <a href="/brands" class="sidebar-cta">Browse the Brand Index &rarr;</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#FordenGolf</span>

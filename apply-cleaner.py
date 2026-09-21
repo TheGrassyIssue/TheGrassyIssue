@@ -164,7 +164,7 @@ def main(apply_=False):
     doc = doc[:m.start()] + "\n" + doc[m.end():]
     m = re.search(r'<h1 class="hero-sub">.*?</h1>', doc, re.S)
     assert m, "h1.hero-sub not found"
-    doc = doc[:m.end()] + '\n<a class="hero-cta" href="/field-guide/">Play Austin &rarr;</a>' + doc[m.end():]
+    doc = doc[:m.end()] + '\n<a class="hero-cta" href="/field-guide">Play Austin &rarr;</a>' + doc[m.end():]
 
     # lead card from the first feed card
     fi = doc.index('<section class="feed"') if '<section class="feed"' in doc else doc.index('class="feed"')

@@ -275,7 +275,7 @@ def main(apply_=False):
       <div class="sidebar-detail"><span class="l">4</span><span>Casualist</span></div>
       <div class="sidebar-detail"><span class="l">5</span><span>ANTi CC Tokyo</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>{CHECKED}</span></div>
-      <a href="/brands/" class="sidebar-cta">The full Brand Index &nearr;</a>
+      <a href="/brands" class="sidebar-cta">The full Brand Index &nearr;</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfStreetwear</span>

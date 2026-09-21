@@ -238,7 +238,7 @@ page = f'''<!DOCTYPE html>
       <div class="more-card-img"><img src="/images/hancock/hole4.jpg" alt="Hancock Golf Course, Austin" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">Hancock &mdash; The Oldest Nine in Texas</div><div class="more-card-tag">Field Notes</div></div>
     </a>
-    <a href="/field-guide/" class="more-card">
+    <a href="/field-guide" class="more-card">
       <div class="more-card-img"><img src="/images/lions/course.jpg" alt="The Austin Golf Field Guide" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">The Austin Golf Field Guide</div><div class="more-card-tag">Field Notes</div></div>
     </a>

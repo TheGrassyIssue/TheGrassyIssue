@@ -245,7 +245,7 @@ page = f'''<!DOCTYPE html>
   </div>
 </section>
 
-<div style="max-width:1400px;margin:48px auto 40px;padding:0 32px;"><a href="/field-guide/" style="display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:.5px solid var(--ink);padding:10px 14px;">&larr; Part of the Austin Golf Field Guide</a></div>
+<div style="max-width:1400px;margin:48px auto 40px;padding:0 32px;"><a href="/field-guide" style="display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:.5px solid var(--ink);padding:10px 14px;">&larr; Part of the Austin Golf Field Guide</a></div>
 
 <section class="products" style="border-top:none;padding-top:48px">
   <h2 class="products-hdr" id="faq">Frequently Asked</h2>
@@ -268,7 +268,7 @@ page = f'''<!DOCTYPE html>
       <div class="more-card-img"><img src="/images/feed/4f4867f3-Lions9329-1246x700.jpg" alt="The Firecracker Open at Lions Municipal" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">The Firecracker Open &mdash; 81 Years at the Muny</div><div class="more-card-tag">Field Notes</div></div>
     </a>
-    <a href="/field-guide/" class="more-card">
+    <a href="/field-guide" class="more-card">
       <div class="more-card-img"><img src="/images/field-guide/hero-austin-golf.jpg" alt="The Austin Golf Field Guide" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">The Austin Golf Field Guide</div><div class="more-card-tag">Field Notes</div></div>
     </a>

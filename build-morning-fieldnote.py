@@ -183,7 +183,7 @@ def more_block():
         '  </div>\n'
         '</div>\n\n'
         '<div style="max-width:1400px;margin:0 auto 40px;padding:0 32px;">'
-        '<a href="/field-guide/" style="display:inline-block;font-family:var(--mono);'
+        '<a href="/field-guide" style="display:inline-block;font-family:var(--mono);'
         'font-size:10px;letter-spacing:.14em;text-transform:uppercase;'
         'border:.5px solid var(--ink);padding:10px 14px;">'
         '&larr; Part of the Austin Golf Field Guide</a></div>\n\n')
@@ -267,7 +267,7 @@ def build():
       <div class="sidebar-detail"><span class="l">Latest door</span><span>11:00 AM &middot; Loro</span></div>
       <div class="sidebar-detail"><span class="l">Hours read</span><span>18 Sept 2026</span></div>
       <div class="sidebar-detail"><span class="l">Sourced from</span><span>Each venue&rsquo;s own site</span></div>
-      <a href="/field-guide/" class="sidebar-cta">The Austin Golf Guide &rarr;</a>
+      <a href="/field-guide" class="sidebar-cta">The Austin Golf Guide &rarr;</a>
       <a href="/drops/austin-coffee-guide" class="sidebar-cta" style="margin-top:8px;">The Pre-Round Pour &mdash; 17 more &rarr;</a>
       <a href="/drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin" class="sidebar-cta" style="margin-top:8px;">Ranking the Muni Grub &rarr;</a>
       <div class="hashtags">

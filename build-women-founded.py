@@ -261,7 +261,7 @@ WRITEUP = '''<div class="writeup">
       <div class="sidebar-detail"><span class="l">Oldest</span><span>1962</span></div>
       <div class="sidebar-detail"><span class="l">Newest</span><span>2025</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>Aug 2026</span></div>
-      <a href="/brands/" class="sidebar-cta">Browse the Brand Index &rarr;</a>
+      <a href="/brands" class="sidebar-cta">Browse the Brand Index &rarr;</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#WomenInGolf</span>

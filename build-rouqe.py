@@ -245,7 +245,7 @@ WRITEUP = '''<div class="writeup">
       <div class="sidebar-detail"><span class="l">Women&rsquo;s</span><span>23</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$19&ndash;$199 CAD</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>Aug 2026</span></div>
-      <a href="/brands/" class="sidebar-cta">Browse the Brand Index &rarr;</a>
+      <a href="/brands" class="sidebar-cta">Browse the Brand Index &rarr;</a>
       <div class="hashtags">
         <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#RouqeGolf</span>
