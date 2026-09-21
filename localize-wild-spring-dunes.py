@@ -75,6 +75,95 @@ FRAMES = [
 
 CREDIT = "Photography courtesy of Wild Spring Dunes"
 
+# ---------------------------------------------------------------------------
+# CARD FRAMES — 4:5, for the homepage carousel.
+#
+# WHY THIS SLOT EXISTS. The first version of the homepage card dropped the
+# 1800x771 masthead straight into .card-media. The masthead is 21:9 and
+# .card-media img is `width:100%; height:auto`, with no ratio of its own, so
+# the browser drew it exactly as handed over: a 130px letterbox strip above a
+# wall of text, in a row where every neighbouring card's media is 379px tall.
+# Lenny: "the wild dunes card on the homepage is formatted wierd."
+#
+# The house card slot is 4:5 and it is not a suggestion — `.gear-slide img`
+# sets `aspect-ratio:4/5; object-fit:cover`, so the browser crops whatever it
+# is given. Handing it a 2:3 portrait loses ~17%; handing it the 21:9 masthead
+# would show ~34% of the width. Cutting the frames to 4:5 here means the crop
+# is chosen against the photograph rather than discovered at render time.
+#
+# Sources are the ARCHIVED ORIGINALS, not the band JPEGs: a band is already
+# resized to 1400w, and cutting a 1200x1500 card out of it would upscale.
+CARD_W, CARD_H = 1200, 1500
+
+# card name, original to cut from, what the slide says.
+# The caption pairs come from research/wild-spring-dunes.json — the facts table
+# and the sourced take — never from looking at the picture and guessing.
+CARD_FRAMES = [
+    ("card-1", "band-hero", "Tom Doak &middot; opened 8 September 2026",
+     "Sandy bunkering, and a wall of East Texas pine"),
+    ("card-2", "band-4", "Walking only &mdash; caddies available",
+     "The bib, and the only way round"),
+    ("card-3", "band-3", "2,400 acres of former timber land",
+     "Two players, a boardwalk, and the Piney Woods"),
+    ("card-4", "band-2", "6,962 yds &middot; 74.6/147 &middot; par 72",
+     "A green above the ravine on the back nine"),
+    ("card-5", "band-1", "Mount Enterprise &middot; 4hr 15min from Austin",
+     "The spring-fed creek the place is named for"),
+]
+
+
+def cut_card(im):
+    """4:5 centre cut. The contact sheet was read before this was written:
+    all six originals hold their subject in a centred 4:5, so there is no
+    per-frame bias here. If a future frame needs one, measure it first."""
+    tw, th = CARD_W, CARD_H
+    scale = max(tw / im.width, th / im.height)
+    im = im.resize((round(im.width * scale), round(im.height * scale)), Image.LANCZOS)
+    cx = (im.width - tw) // 2
+    cy = (im.height - th) // 2
+    return im.crop((cx, cy, cx + tw, cy + th))
+
+
+def build_cards(apply_):
+    """Cut the card frames from the archived originals."""
+    made, skipped, failed = [], [], []
+    for name, src, _, _ in CARD_FRAMES:
+        dest = OUT / f"{name}.jpg"
+        orig = ARCHIVE / f"{src}.orig.jpg"
+        if dest.exists():
+            skipped.append(name); continue
+        if not orig.exists():
+            failed.append((name, f"no archived original {orig.name}")); continue
+        if not apply_:
+            made.append((name, f"would cut 4:5 from {orig.name}")); continue
+        try:
+            im = Image.open(orig).convert("RGB")
+            cut = cut_card(im)
+            cut.save(dest, "JPEG", quality=90, optimize=True)
+            made.append((name, f"{cut.width}x{cut.height} from {im.width}x{im.height} "
+                               f"({src})"))
+        except Exception as e:
+            failed.append((name, str(e)[:100]))
+
+    for n, d in made:   print(f"  ok    {n:11} {d}")
+    for n in skipped:   print(f"  skip  {n:11} already local")
+    for n, e in failed: print(f"  FAIL  {n:11} {e}")
+    if failed:
+        sys.exit(f"\n! {len(failed)} card frames failed")
+
+    if apply_:
+        # VERIFY ON DISK. The card slot is the whole point of this function,
+        # so the ratio is checked off the finished file, not off CARD_W/CARD_H.
+        for name, _, _, _ in CARD_FRAMES:
+            p = OUT / f"{name}.jpg"
+            if not p.exists():
+                sys.exit(f"! {name} missing after build")
+            im = Image.open(p)
+            if abs(im.width / im.height - 4 / 5) > 0.01:
+                sys.exit(f"! {name} is {im.width}x{im.height} "
+                         f"(ar {im.width/im.height:.3f}), not the 4:5 card slot")
+        print(f"\n  {len(CARD_FRAMES)} card frames at {CARD_W}x{CARD_H}")
+
 
 def fetch(path):
     url = CDN + path + "?format=2500w"
@@ -163,7 +252,10 @@ def main(apply_):
               f"images/wild-spring-dunes/")
         print(f"  credit line: {CREDIT}")
         print(f"  originals archived to {ARCHIVE.relative_to(ROOT)}/")
-    else:
+
+    build_cards(apply_)
+
+    if not apply_:
         print("\n  dry run — pass --apply")
 
 

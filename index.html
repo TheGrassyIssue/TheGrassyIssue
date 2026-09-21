@@ -1681,17 +1681,57 @@
 <!-- ON OUR RADAR — WILD SPRING DUNES -->
   <div class="card" data-type="field">
     <div class="card-media" style="position:relative;">
-      <span class="card-tag flag">[Field Notes]</span>
-      <a href="/drops/on-our-radar-wild-spring-dunes">
-        <img src="/images/wild-spring-dunes/band-hero.jpg" alt="Wild Spring Dunes &mdash; sandy bunkering running into scrub beneath a wall of East Texas pine" loading="lazy" style="width:100%;display:block;" />
-      </a>
+      <span class="card-tag grass">[Field Notes]</span>
+      <div class="gear-carousel" data-carousel="wsd26">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="/drops/on-our-radar-wild-spring-dunes">
+              <img src="/images/wild-spring-dunes/card-1.jpg" alt="Wild Spring Dunes &mdash; Sandy bunkering, and a wall of East Texas pine" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Tom Doak &middot; opened 8 September 2026</div><div class="gear-slide-name">Sandy bunkering, and a wall of East Texas pine</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/on-our-radar-wild-spring-dunes">
+              <img src="/images/wild-spring-dunes/card-2.jpg" alt="Wild Spring Dunes &mdash; The bib, and the only way round" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Walking only &mdash; caddies available</div><div class="gear-slide-name">The bib, and the only way round</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/on-our-radar-wild-spring-dunes">
+              <img src="/images/wild-spring-dunes/card-3.jpg" alt="Wild Spring Dunes &mdash; Two players, a boardwalk, and the Piney Woods" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">2,400 acres of former timber land</div><div class="gear-slide-name">Two players, a boardwalk, and the Piney Woods</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/on-our-radar-wild-spring-dunes">
+              <img src="/images/wild-spring-dunes/card-4.jpg" alt="Wild Spring Dunes &mdash; A green above the ravine on the back nine" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">6,962 yds &middot; 74.6/147 &middot; par 72</div><div class="gear-slide-name">A green above the ravine on the back nine</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/on-our-radar-wild-spring-dunes">
+              <img src="/images/wild-spring-dunes/card-5.jpg" alt="Wild Spring Dunes &mdash; The spring-fed creek the place is named for" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Mount Enterprise &middot; 4hr 15min from Austin</div><div class="gear-slide-name">The spring-fed creek the place is named for</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
     </div>
     <div class="card-body">
       <div class="card-title"><a href="/drops/on-our-radar-wild-spring-dunes" style="color:inherit;text-decoration:none;border-bottom:none;">On Our Radar &mdash; Wild Spring Dunes</a></div>
-      <div class="card-text">A Tom Doak course opened to the public on 8 September, on 2,400 acres of former timber land outside Mount Enterprise. Walking only, caddies available, $275 in peak season &mdash; and bookable by anyone, which is the part that matters in a state where the best golf is almost always behind a gate. The land was found by a Dallas office worker who taught himself to read soil surveys, and the reason it looks like this is that a logging company took the pines off first. Four hours and change from Austin.</div>
+      <div class="card-text" data-slidetext="wsd26">A Tom Doak course on 2,400 acres of former timber land outside Mount Enterprise, open to the public since 8 September. The reason it looks like this is that a logging company took the pines off first.</div>
+      <div class="gear-dots" data-dots="wsd26"></div>
+      <div class="gear-counter" data-counter="wsd26">1 / 5</div>
       <a href="/drops/on-our-radar-wild-spring-dunes" class="card-link">Read the Field Note &#8599;</a>
     </div>
   </div>
+
+
+
+
+
 
 <!-- THE PANTS EDIT -->
   <div class="card" data-type="drop">
@@ -14731,6 +14771,13 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    "wsd26": [
+      "A Tom Doak course on 2,400 acres of former timber land outside Mount Enterprise, open to the public since 8 September. The reason it looks like this is that a logging company took the pines off first.",
+      "Walking only, with caddies available &mdash; no carts, no exceptions. In a state where the best golf is almost always behind a gate, this one is bookable by anyone.",
+      "Eleven bridges and a boardwalk run the routing through the Piney Woods. The land was found by a Dallas office worker who taught himself to read soil surveys.",
+      "6,962 yards, 74.6/147, par 72 off the Pine tees. $275 in peak season, $195 December to February. Michael Keiser Jr. developed it; a Coore &amp; Crenshaw course is already in build.",
+      "The spring that gives the place its name. Mount Enterprise is 262 miles from Austin &mdash; about four and a quarter hours, and closer to two and a half from Dallas."
+    ],
     "axxa": [
       "730g of cotton with the golfer knitted into it rather than printed on top — jacquard, worked on the machine. AXXA publish the weight, which not everyone does.",
       "420GSM fleece at a 75/25 cotton-poly blend, cut slightly oversized, screen and puff printed. The house weight for everything they make in fleece.",
