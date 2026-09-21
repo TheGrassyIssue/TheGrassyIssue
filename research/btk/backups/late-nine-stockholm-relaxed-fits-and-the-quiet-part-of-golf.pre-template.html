@@ -339,27 +339,6 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 /* btk-template: end */
 </style>
 <style>
-/* IN-BODY PHOTO BANDS — see tgi_bands.py. The masthead keeps the house 21:9
-   box because it is cut to 21:9. Body bands are NOT cut, so they must not be
-   dropped into a fixed-ratio box: that discarded ~70% of every portrait. */
-.drop-hero-img.tgi-free{aspect-ratio:auto;height:auto;overflow:visible}
-.drop-hero-img.tgi-free img{width:100%;height:auto;object-fit:contain;display:block}
-.drop-hero.tgi-band{margin-top:40px;margin-bottom:40px}
-.drop-hero.tgi-band.is-port{max-width:840px}
-.drop-hero.tgi-band.is-sq{max-width:980px}
-/* A landscape band needs no narrower measure — it takes the .drop-hero width.
-   The rule is written out anyway because the shape class is emitted on every
-   band, and verify-post.py rightly refuses a class with no rule: an implied
-   rule is indistinguishable from a forgotten one. */
-.drop-hero.tgi-band.is-land{max-width:1400px}
-@media(max-width:900px){
-  .drop-hero.tgi-band.is-port,.drop-hero.tgi-band.is-sq{max-width:100%}
-}
-/* the photo credit under a band. Defined HERE rather than per page, because
-   the helper emits it and a class with no rule is the .axxa-note bug. */
-.tgi-band-credit{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
-  text-transform:uppercase;opacity:.5;margin-top:8px}
-
 /* LATE NINE — stock line under a product, and the family chip. Defined here
    because this page emits them; a class with no rule is indistinguishable
    from a forgotten one. */
@@ -368,9 +347,8 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 .ln-stock.thin{opacity:.85;color:#8A5A2B}
 .ln-family{font-family:var(--mono);font-size:8.5px;letter-spacing:.14em;
   text-transform:uppercase;opacity:.4;display:block;margin-bottom:4px}
-/* The donor styles .hashtags (the row) but not .hash (the chip inside it) —
-   it emits a different child element. verify-post.py caught the gap. */
-.hash{font-family:var(--mono);font-size:9px;letter-spacing:.1em;opacity:.55}
+.ln-restock{font-family:var(--mono);font-size:10px;letter-spacing:.06em;
+  opacity:.6;margin-top:18px;padding-top:14px;border-top:0.5px solid var(--ink)}
 </style>
 </head>
 <body>
@@ -406,24 +384,15 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/late-nine/hero.jpg" alt="Late Nine &mdash; lookbook photograph" />
+  <img class="drop-hero-img" src="/images/late-nine/hero.jpg" alt="Late Nine &mdash; ribbed knit vest and carry bag, on course" />
 </section>
 
-<section class="products" data-btk="take">
+<section class="writeup" data-btk="take">
   <div class="writeup-body">
-    <div class="drop-tag grass">The TGI Take</div>
-    <p>Late Nine make double-pleat slacks with a full straight leg, ribbed jersey polos with dropped shoulders and oversized buttons, cable knits in burgundy and light blue, a navy instructor&rsquo;s jacket, suede loop belts and a two-tone rope cap. Shot on plain grey, styled with no logo doing any heavy lifting. The first read is money &mdash; the kind that does not announce itself. The reference library underneath says something else entirely. The brand&rsquo;s own moodboard, per Hypebeast, is <em>The Sopranos</em> and <em>Seinfeld</em>. Co-founder Maxim Lundh grew up copying Sergio Garcia and Jesper Parnevik. Not a country club anywhere in it &mdash; New Jersey, Manhattan, and two players a Swedish teenager watched on television.</p>
-    <p>That teenager&rsquo;s golf was public by default, and it shows in the clothes. These look like a club because they are copying what the game looked like on a broadcast, and a broadcast belonged to everyone watching it. Put the slacks on at Lions or Hancock and nothing about them is out of place. The construction argues the same way: cotton, wide leg, no elastane, 215g brushed corduroy milled in the UK. In an Austin August that is a functional position rather than a styling one.</p>
-    <p>It is expensive, and there is no version of this that is not. The Double Pleat Slacks are 3,200 SEK, the Five-pocket Chino 2,700, the Instructors Jacket 4,350 &mdash; read from late-nine.com on 21 September 2026 in the brand&rsquo;s home currency, not converted. Late Nine ship to the US delivered-duty-paid, so nothing lands at customs, but the number is the number. The cheapest way into the look is the Twilight Cap at 500 SEK, which does more work than anything else in the range, or the belts at 1,400. For anyone who already owns the trousers, a plain tee finishes it.</p>
-    <h2 class="products-hdr btk-story-hdr">The Story</h2>
-    <p>The name is a time of day. Lundh&rsquo;s relationship with golf changed around the pandemic &mdash; from playing constantly to hunting for any window in the week. &ldquo;That led to a lot more rounds, either very early in the morning before work or meeting up with a friend for a late nine before sunset.&rdquo; He was also, by then, dressing for those rounds out of brands with nothing to do with golf, because what he wanted did not exist inside it.</p>
-    <p>&ldquo;There was a specific aesthetic we wanted to wear that we felt wasn&rsquo;t really available,&rdquo; he told The Old Ghosts. &ldquo;Coming from fashion and clothing backgrounds ourselves, we all shared an appreciation for craft, quality, and thoughtful design. We couldn&rsquo;t understand why the same level of attentiveness we expected from the clothes we wore every day wasn&rsquo;t being translated into golf. So we just took the decision to make it ourselves.&rdquo;</p>
-    <p>The period they went back to is narrow and deliberate: the last few years of the nineties and the first of the two-thousands, which Lundh calls &ldquo;a sort of goldilocks period for golf apparel.&rdquo; The Ryder Cup is the obsession underneath it &mdash; not only the players but the coaches, and the differences between how the American and European sides dressed. The garment copy carries the same specificity: the Orbit Cap cites the two-tone caps on tour in the early 2000s, the Twilight Cap the vintage members caps of the nineties, the Instructors Jacket the jackets worn by golf instructors throughout that decade.</p>
-    <p>Fit is where the nostalgia turns into an argument. &ldquo;One of the simplest ways to improve comfort and performance is by giving yourself more room to breathe,&rdquo; Lundh said. &ldquo;Which consequently reduces the reliance on excessive elastane. A win-win.&rdquo; Almost nothing in the range stretches. The trousers are cut full and straight, and the sizing notes tell you the chino runs tighter than the pleated trouser and to size up between.</p>
-    <p>Materials get named rather than gestured at: ultra-fine merino from the first shearing in the knitwear, Italian four-season wool, a durable textured Italian yarn in the Knit Crepe Polo, LWG-certified Italian cow hide in the belts, flat mother-of-pearl buttons on the plackets. Lundh says fabric has been the hard part. &ldquo;Pretty much every component, from the fabric to the buttons, has been carefully cherry-picked and sourced by us.&rdquo;</p>
-    <p>Stockholm is the other half of it. Asked what he can see from there that people closer to the game miss, Lundh went straight to access. &ldquo;I&rsquo;d say the access to great golf, almost all clubs are non-private. Throughout the whole country, we have absolutely beautiful courses, but very few months when we can actually play them. It makes the moment sweeter, but the wait in between can be absolutely dreadful.&rdquo; A brand built by someone for whom golf was public and seasonal, which is most of the reason it reads correctly on a muni in a city where the season never really stops.</p>
-    <p>In April the brand stopped being a menswear footnote. Tommy Fleetwood, who had split with Nike at the start of the year and was carrying no apparel deal, played the Masters in Late Nine&rsquo;s taupe ribbed jersey polo. Lundh on what that meant: &ldquo;when a player of Tommy&rsquo;s stature shows up in relaxed silhouettes and chooses to express his own style, I&rsquo;m sure it inspires every independent brand out there trying to make a difference within the game.&rdquo; That polo is 1,800 SEK and down to one size of five at the time of writing.</p>
-    <p>Four Knit Crepe Polo colourways &mdash; Forest, Dark Brown, Navy and Ivory &mdash; and the long-sleeve Ribbed Jersey Polo in Brown Melange are out of stock at the time of writing, and all five sit in Late Nine&rsquo;s own <em>Coming Soon</em> collection rather than being retired. Only the Flax Yellow survives on the shelf, down to one size of five.</p>
+    <span class="drop-tag">The TGI Take</span>
+      <p>Late Nine make double-pleat slacks with a full straight leg, ribbed jersey polos with dropped shoulders and oversized buttons, cable knits in burgundy and light blue, a navy instructor&rsquo;s jacket, suede loop belts and a two-tone rope cap. Shot on plain grey, styled with no logo doing any heavy lifting. The first read is money &mdash; the kind that does not announce itself. The reference library underneath says something else entirely. The brand&rsquo;s own moodboard, per Hypebeast, is <em>The Sopranos</em> and <em>Seinfeld</em>. Co-founder Maxim Lundh grew up copying Sergio Garcia and Jesper Parnevik. Not a country club anywhere in it &mdash; New Jersey, Manhattan, and two players a Swedish teenager watched on television.</p>
+      <p>That teenager&rsquo;s golf was public by default, and it shows in the clothes. These look like a club because they are copying what the game looked like on a broadcast, and a broadcast belonged to everyone watching it. Put the slacks on at Lions or Hancock and nothing about them is out of place. The construction argues the same way: cotton, wide leg, no elastane, 215g brushed corduroy milled in the UK. In an Austin August that is a functional position rather than a styling one.</p>
+      <p>It is expensive, and there is no version of this that is not. The Double Pleat Slacks are 3,200 SEK, the Five-pocket Chino 2,700, the Instructors Jacket 4,350 &mdash; read from late-nine.com on 21 September 2026 in the brand&rsquo;s home currency, not converted. Late Nine ship to the US delivered-duty-paid, so nothing lands at customs, but the number is the number. The cheapest way into the look is the Twilight Cap at 500 SEK, which does more work than anything else in the range, or the belts at 1,400. For anyone who already owns the trousers, a plain tee finishes it.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -434,35 +403,35 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       <div class="sidebar-detail"><span class="l">Range</span><span>500&ndash;4,350 SEK &middot; read 21 Sept 2026</span></div>
       <div class="sidebar-detail"><span class="l">Ships US</span><span>Delivered duty paid, $25 standard</span></div>
       <div class="sidebar-detail"><span class="l">Seen on</span><span>Tommy Fleetwood, 2026 Masters</span></div>
-      <a href="https://late-nine.com/" target="_blank" rel="noopener" class="sidebar-cta">Shop Late Nine &rarr;</a>
-      <div class="hashtags">
-        <span class="hashtag">##latenine</span>
-        <span class="hashtag">##scandinavian</span>
-        <span class="hashtag">##pleated</span>
-        <span class="hashtag">##ninetiesgolf</span>
-      </div>
+      <a class="sidebar-cta" href="https://late-nine.com/" target="_blank" rel="noopener">Shop Late Nine &rarr;</a>
+      <div class="hashtags"><span class="hash">#latenine</span><span class="hash">#scandinavian</span><span class="hash">#pleated</span><span class="hash">#ninetiesgolf</span></div>
     </div>
-  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
 </section>
 
-<section class="writeup" data-btk="prose">
-  <div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/late-nine/body-1.jpg" alt="Late Nine &mdash; the FW26 lookbook: Orbit Cap, knit polo, pleated slacks and a travel cover" loading="lazy" /></div>
-  <div class="tgi-band-credit">Photography courtesy of Late Nine &middot; FW26 lookbook</div>
+<section class="writeup" data-btk="story">
+  <div class="writeup-body">
+    <h2>The Story</h2>
+    <p>The name is a time of day. Lundh&rsquo;s relationship with golf changed around the pandemic &mdash; from playing constantly to hunting for any window in the week. &ldquo;That led to a lot more rounds, either very early in the morning before work or meeting up with a friend for a late nine before sunset.&rdquo; He was also, by then, dressing for those rounds out of brands with nothing to do with golf, because what he wanted did not exist inside it.</p>
+    <p>&ldquo;There was a specific aesthetic we wanted to wear that we felt wasn&rsquo;t really available,&rdquo; he told The Old Ghosts. &ldquo;Coming from fashion and clothing backgrounds ourselves, we all shared an appreciation for craft, quality, and thoughtful design. We couldn&rsquo;t understand why the same level of attentiveness we expected from the clothes we wore every day wasn&rsquo;t being translated into golf. So we just took the decision to make it ourselves.&rdquo;</p>
+    <div class="pull-quote">
+  <p class="pull-quote-inner">&ldquo;We couldn&rsquo;t understand why the same level of attentiveness we expected from the clothes we wore every day wasn&rsquo;t being translated into golf. So we just took the decision to make it ourselves.&rdquo;<span class="pull-quote-attr">&mdash; Maxim Lundh, co-founder, to The Old Ghosts</span></p>
 </div>
-
-
-  <div class="pull-quote">
-  <p class="pull-quote-inner">&ldquo;Tiger Woods won the US Open in 2000 by 15 shots, remember the size of his pants?&rdquo;<span class="pull-quote-attr">&mdash; Maxim Lundh, co-founder, to The Old Ghosts</span></p>
+    <p>The period they went back to is narrow and deliberate: the last few years of the nineties and the first of the two-thousands, which Lundh calls &ldquo;a sort of goldilocks period for golf apparel.&rdquo; The Ryder Cup is the obsession underneath it &mdash; not only the players but the coaches, and the differences between how the American and European sides dressed. The garment copy carries the same specificity: the Orbit Cap cites the two-tone caps on tour in the early 2000s, the Twilight Cap the vintage members caps of the nineties, the Instructors Jacket the jackets worn by golf instructors throughout that decade.</p>
+    <p>Fit is where the nostalgia turns into an argument. &ldquo;One of the simplest ways to improve comfort and performance is by giving yourself more room to breathe,&rdquo; Lundh said. &ldquo;Which consequently reduces the reliance on excessive elastane. A win-win. Tiger Woods won the US Open in 2000 by 15 shots, remember the size of his pants?&rdquo; Almost nothing in the range stretches. The trousers are cut full and straight, and the sizing notes tell you the chino runs tighter than the pleated trouser and to size up between.</p>
+    <p>Materials get named rather than gestured at: ultra-fine merino from the first shearing in the knitwear, Italian four-season wool, a durable textured Italian yarn in the Knit Crepe Polo, LWG-certified Italian cow hide in the belts, flat mother-of-pearl buttons on the plackets. Lundh says fabric has been the hard part. &ldquo;Pretty much every component, from the fabric to the buttons, has been carefully cherry-picked and sourced by us.&rdquo;</p>
+    <div class="pull-quote">
+  <p class="pull-quote-inner">&ldquo;I&rsquo;d say the access to great golf, almost all clubs are non-private. Throughout the whole country, we have absolutely beautiful courses, but very few months when we can actually play them.&rdquo;<span class="pull-quote-attr">&mdash; Maxim Lundh, co-founder, to The Old Ghosts</span></p>
 </div>
+    <p>Stockholm is the other half of it. Asked what he can see from there that people closer to the game miss, Lundh went straight to access. &ldquo;I&rsquo;d say the access to great golf, almost all clubs are non-private. Throughout the whole country, we have absolutely beautiful courses, but very few months when we can actually play them. It makes the moment sweeter, but the wait in between can be absolutely dreadful.&rdquo; A brand built by someone for whom golf was public and seasonal, which is most of the reason it reads correctly on a muni in a city where the season never really stops.</p>
+    <p>In April the brand stopped being a menswear footnote. Tommy Fleetwood, who had split with Nike at the start of the year and was carrying no apparel deal, played the Masters in Late Nine&rsquo;s taupe ribbed jersey polo. Lundh on what that meant: &ldquo;when a player of Tommy&rsquo;s stature shows up in relaxed silhouettes and chooses to express his own style, I&rsquo;m sure it inspires every independent brand out there trying to make a difference within the game.&rdquo; That polo is 1,800 SEK and down to one size of five at the time of writing.</p>
+  </div>
 </section>
 
-<section class="products" data-btk="collection">
-  <div class="drop-tag grass">The Collection &mdash; 18 Pieces</div>
-  <div class="products-section">
-    <h2 class="products-hdr">The Five &mdash; Where to Start</h2>
-    <div class="products-grid">
-<div class="product-card" id="p-1">
+<section class="products">
+  <div class="products-hdr"><h2>The Five &mdash; Where to Start</h2></div>
+  <div class="products-grid">
+<div class="product-card">
   <img src="/images/late-nine/ribbed-polo-taupe.jpg" alt="Late Nine &mdash; Ribbed Jersey Polo Taupe" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Ribbed Jersey Polo</span>
@@ -472,7 +441,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock thin">1 of 5 sizes live</span><a href="https://late-nine.com/products/ribbed-polo-taupe" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-2">
+<div class="product-card">
   <img src="/images/late-nine/5-pocket-cords-navy.jpg" alt="Late Nine &mdash; 5-Pocket Cords Navy" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Five-Pocket</span>
@@ -482,7 +451,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">4 of 5 sizes live</span><a href="https://late-nine.com/products/5-pocket-cords-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-3">
+<div class="product-card">
   <img src="/images/late-nine/five-pocket-chino-fawn.jpg" alt="Late Nine &mdash; Five-pocket Chino Fawn" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Five-Pocket</span>
@@ -492,7 +461,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">All 3 sizes live</span><a href="https://late-nine.com/products/five-pocket-chino-fawn" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-4">
+<div class="product-card">
   <img src="/images/late-nine/cable-knit-polo-burgundy.jpg" alt="Late Nine &mdash; Cable Knit Polo Burgundy" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Cable Knit Polo</span>
@@ -502,35 +471,33 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock thin">2 of 4 sizes live</span><a href="https://late-nine.com/products/cable-knit-polo-burgundy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-5">
+<div class="product-card">
   <img src="/images/late-nine/country-club-cap-beige.jpg" alt="Late Nine &mdash; Twilight Cap Beige" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Country Club Cap</span>
     <div class="product-brand">Late Nine</div>
     <div class="product-name">Twilight Cap Beige &middot; 500 SEK</div>
-    <div class="product-desc">It copies the vintage members caps of the nineties. At 500 SEK it is the cheapest way into the whole look.</div>
+    <div class="product-desc">Modelled on the vintage members caps of the nineties. At 500 SEK it is the cheapest way into the whole look.</div>
     <span class="ln-stock">All 1 size live</span><a href="https://late-nine.com/products/country-club-cap-beige" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-    </div>
-  </div>
+</div>
 </section>
 
-<section class="products" data-btk="collection-cont">
-  <div class="products-section">
-    <h2 class="products-hdr">The Core Collection &mdash; The Families They Keep Making</h2>
-    <div class="products-grid">
-<div class="product-card" id="p-6">
+<section class="products">
+  <div class="products-hdr"><h2>The Core Collection &mdash; The Families They Keep Making</h2></div>
+  <div class="products-grid">
+<div class="product-card">
   <img src="/images/late-nine/double-pleat-slacks-dark-brown.jpg" alt="Late Nine &mdash; Double Pleat Slacks Dark Brown" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Slacks</span>
     <div class="product-brand">Late Nine</div>
     <div class="product-name">Double Pleat Slacks Dark Brown &middot; 3,200 SEK</div>
-    <div class="product-desc">This is the archetype: double pleats, full straight leg, and no stretch anywhere in it.</div>
+    <div class="product-desc">The archetype. Double pleats, full straight leg, no stretch anywhere in it.</div>
     <span class="ln-stock">4 of 5 sizes live</span><a href="https://late-nine.com/products/double-pleat-slacks-dark-brown" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-7">
+<div class="product-card">
   <img src="/images/late-nine/double-pleat-slacks-dark-brown-copy.jpg" alt="Late Nine &mdash; Double Pleat Slacks Dark Navy" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Slacks</span>
@@ -540,7 +507,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">3 of 5 sizes live</span><a href="https://late-nine.com/products/double-pleat-slacks-dark-brown-copy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-8">
+<div class="product-card">
   <img src="/images/late-nine/double-pleats-beige.jpg" alt="Late Nine &mdash; Double Pleat Trousers Beige" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Double Pleats</span>
@@ -550,7 +517,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock thin">2 of 3 sizes live</span><a href="https://late-nine.com/products/double-pleats-beige" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-9">
+<div class="product-card">
   <img src="/images/late-nine/five-pocket-chino-navy.jpg" alt="Late Nine &mdash; Five-pocket Chino Navy" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Five-Pocket</span>
@@ -560,7 +527,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">All 3 sizes live</span><a href="https://late-nine.com/products/five-pocket-chino-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-10">
+<div class="product-card">
   <img src="/images/late-nine/5-pocket-cords-olive.jpg" alt="Late Nine &mdash; 5-Pocket Cords Olive" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Five-Pocket</span>
@@ -570,7 +537,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">3 of 5 sizes live</span><a href="https://late-nine.com/products/5-pocket-cords-olive" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-11">
+<div class="product-card">
   <img src="/images/late-nine/ribbed-polo-grey-mix.jpg" alt="Late Nine &mdash; Ribbed Jersey Polo Americano" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Ribbed Jersey Polo</span>
@@ -580,7 +547,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock thin">2 of 5 sizes live</span><a href="https://late-nine.com/products/ribbed-polo-grey-mix" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-12">
+<div class="product-card">
   <img src="/images/late-nine/cable-knit-polo-light-blue.jpg" alt="Late Nine &mdash; Cable Knit Polo Light Blue" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Cable Knit Polo</span>
@@ -590,7 +557,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">3 of 4 sizes live</span><a href="https://late-nine.com/products/cable-knit-polo-light-blue" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-13">
+<div class="product-card">
   <img src="/images/late-nine/ribbed-vest-grey.jpg" alt="Late Nine &mdash; Ribbed Knit Vest Grey" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Ribbed Vest</span>
@@ -600,27 +567,27 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock">All 4 sizes live</span><a href="https://late-nine.com/products/ribbed-vest-grey" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-14">
+<div class="product-card">
   <img src="/images/late-nine/ribbed-vest-dark-brown.jpg" alt="Late Nine &mdash; Ribbed Knit Vest Brown" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Ribbed Vest</span>
     <div class="product-brand">Late Nine</div>
     <div class="product-name">Ribbed Knit Vest Brown &middot; 2,450 SEK</div>
-    <div class="product-desc">The brown vest holds full stock and runs warmest of the three colourways.</div>
+    <div class="product-desc">The brown vest, also full stock, and the warmest of the three colourways.</div>
     <span class="ln-stock">All 4 sizes live</span><a href="https://late-nine.com/products/ribbed-vest-dark-brown" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-15">
+<div class="product-card">
   <img src="/images/late-nine/quarter-zip-windbreaker-beige.jpg" alt="Late Nine &mdash; Quarter Zip Windbreaker Beige" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Quarter Zip</span>
     <div class="product-brand">Late Nine</div>
     <div class="product-name">Quarter Zip Windbreaker Beige &middot; 3,750 SEK</div>
-    <div class="product-desc">It is cut from a water-repellent cotton blend, with a buttoned placket and metal hardware.</div>
+    <div class="product-desc">Water-repellent cotton blend with a buttoned placket and metal hardware.</div>
     <span class="ln-stock thin">2 of 3 sizes live</span><a href="https://late-nine.com/products/quarter-zip-windbreaker-beige" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-16">
+<div class="product-card">
   <img src="/images/late-nine/instructors-jacket-cotton-navy.jpg" alt="Late Nine &mdash; Instructors Jacket Navy" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Instructors Wool</span>
@@ -630,28 +597,28 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <span class="ln-stock thin">2 of 3 sizes live</span><a href="https://late-nine.com/products/instructors-jacket-cotton-navy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-17">
+<div class="product-card">
   <img src="/images/late-nine/loop-belt-brown-suede-silver.jpg" alt="Late Nine &mdash; Loop Belt Brown Suede" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Loop Belt</span>
     <div class="product-brand">Late Nine</div>
     <div class="product-name">Loop Belt Brown Suede &middot; 1,400 SEK</div>
-    <div class="product-desc">Suede takes a silver buckle here, on LWG-certified Italian hide.</div>
+    <div class="product-desc">Suede with a silver buckle, on LWG-certified Italian hide.</div>
     <span class="ln-stock">3 of 4 sizes live</span><a href="https://late-nine.com/products/loop-belt-brown-suede-silver" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-<div class="product-card" id="p-18">
+<div class="product-card">
   <img src="/images/late-nine/sports-cap-burgundy.jpg" alt="Late Nine &mdash; Orbit Cap Burgundy" loading="lazy" />
   <div class="product-body">
     <span class="ln-family">Sports Cap</span>
     <div class="product-brand">Late Nine</div>
     <div class="product-name">Orbit Cap Burgundy &middot; 500 SEK</div>
-    <div class="product-desc">This two-tone rope cap cites the caps worn on tour in the early 2000s.</div>
+    <div class="product-desc">The two-tone rope cap, citing the caps on tour in the early 2000s.</div>
     <span class="ln-stock">All 1 size live</span><a href="https://late-nine.com/products/sports-cap-burgundy" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a>
   </div>
 </div>
-    </div>
-  </div>
+</div>
+  <p class="ln-restock">Also in the range but out of stock at the time of writing, and listed by Late Nine as coming back: the Knit Crepe Polo in Forest, Dark Brown, Navy and Ivory, and the long-sleeve Ribbed Jersey Polo in Brown Melange.</p>
 </section>
 
 <section class="products" data-btk="faq">
@@ -664,47 +631,6 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <details open class="faq-q"><summary>Does Late Nine ship to the US?</summary><p>Yes, delivered duty paid. Standard delivery is $25 and the brand states that duties, taxes and fees are included in the amount shown at checkout, so nothing is charged on arrival.</p></details>
     <details open class="faq-q"><summary>Does Late Nine use stretch fabric?</summary><p>Largely no, and deliberately. Lundh's position is that more room to breathe &ldquo;reduces the reliance on excessive elastane.&rdquo; The trousers are cut full and straight in cotton, wool and corduroy.</p></details>
     <details open class="faq-q"><summary>Is Late Nine good for muni golf?</summary><p>The cut and the fabrics suit walking in heat &mdash; cotton, wide leg, no elastane. The prices are a different question, and the caps and belts are the cheapest way in.</p></details>
-  </div>
-</section>
-
-<section class="more" data-btk="related">
-  <div class="more-hdr">
-    <div class="more-label">If You Like Late Nine</div>
-    <a class="more-link" href="/brands">Explore the Brand Index &rarr;</a>
-  </div>
-  <div class="more-grid">
-    <a class="more-card" href="/brands/jlindeberg">
-      <div class="more-card-img"><img src="/images/jlindeberg/argyle-polo-1.jpg" alt="J.Lindeberg" loading="lazy" /></div>
-      <div class="more-card-body">
-        <div class="more-card-name">J.Lindeberg</div>
-        <div class="more-card-tag">Stockholm, Sweden &middot; apparel/bags</div>
-        <div class="more-card-desc">The other Swedish golf label, and the one Late Nine is inevitably read against at home.</div>
-      </div>
-    </a>
-    <a class="more-card" href="/brands/manors">
-      <div class="more-card-img"><img src="/images/manors/hero.jpg" alt="Manors Golf" loading="lazy" /></div>
-      <div class="more-card-body">
-        <div class="more-card-name">Manors Golf</div>
-        <div class="more-card-tag">London, UK &middot; apparel</div>
-        <div class="more-card-desc">London, and the same instinct to treat golf's own archive as a design library rather than a costume box.</div>
-      </div>
-    </a>
-    <a class="more-card" href="/brands/quiet-golf">
-      <div class="more-card-img"><img src="/images/quiet-golf/bristol-polo-sweater-a2.jpg" alt="Quiet Golf" loading="lazy" /></div>
-      <div class="more-card-body">
-        <div class="more-card-name">Quiet Golf</div>
-        <div class="more-card-tag">Costa Mesa, CA &middot; apparel</div>
-        <div class="more-card-desc">Logo restraint taken to a similar extreme, from a different direction.</div>
-      </div>
-    </a>
-    <a class="more-card" href="/brands/casualist">
-      <div class="more-card-img"><img src="/images/casualist/cart-path-ripstop-jacket-1.jpg" alt="Casualist" loading="lazy" /></div>
-      <div class="more-card-body">
-        <div class="more-card-name">Casualist</div>
-        <div class="more-card-tag">London, UK &middot; apparel</div>
-        <div class="more-card-desc">Pleats, drape and the off-course half of the wardrobe.</div>
-      </div>
-    </a>
   </div>
 </section>
 

@@ -18,6 +18,28 @@
     "added": "2026-08-29"
   },
   {
+    "slug": "apc-golf",
+    "name": "A.P.C. Golf",
+    "loc": "Paris, France",
+    "regions": [
+      "europe"
+    ],
+    "cats": [
+      "apparel",
+      "accessories"
+    ],
+    "line": "Jean Touitou's golf line, launched in Korea and Japan first. Collaborated with Cph/Golf, 2026.",
+    "url": "/drops/apc-golf-cph-golf-collab",
+    "img": "/images/apcph-golf/polo-1.jpg",
+    "tags": [
+      "quiet-luxury",
+      "design-nerd",
+      "collab-machine"
+    ],
+    "attrs": [],
+    "added": "2026-09-02"
+  },
+  {
     "slug": "agronomy-workshop",
     "name": "Agronomy Workshop",
     "loc": "San Francisco, California",
@@ -103,28 +125,6 @@
     "added": "2026-08-29"
   },
   {
-    "slug": "apc-golf",
-    "name": "A.P.C. Golf",
-    "loc": "Paris, France",
-    "regions": [
-      "europe"
-    ],
-    "cats": [
-      "apparel",
-      "accessories"
-    ],
-    "line": "Jean Touitou's golf line, launched in Korea and Japan first. Collaborated with Cph/Golf, 2026.",
-    "url": "/drops/apc-golf-cph-golf-collab",
-    "img": "/images/apcph-golf/polo-1.jpg",
-    "tags": [
-      "quiet-luxury",
-      "design-nerd",
-      "collab-machine"
-    ],
-    "attrs": [],
-    "added": "2026-09-02"
-  },
-  {
     "slug": "apres-golf",
     "name": "Après Golf",
     "loc": "California",
@@ -205,6 +205,28 @@
     ],
     "added": "2026-08-24",
     "attrs": []
+  },
+  {
+    "slug": "axxa",
+    "name": "AXXA",
+    "loc": "Sydney, Australia",
+    "regions": [
+      "australia"
+    ],
+    "cats": [
+      "apparel",
+      "headwear"
+    ],
+    "tags": [
+      "independent",
+      "post-round-friendly",
+      "design-nerd"
+    ],
+    "line": "Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted heavyweight knits, and its own GolfComfort polo fabric.",
+    "url": "/drops/brand-to-know-axxa",
+    "attrs": [],
+    "added": "2026-09-20",
+    "img": "/images/axxa/golfer-knit.jpg"
   },
   {
     "slug": "badlands",
@@ -953,6 +975,28 @@
     "img": "/images/fyfe-btk/rothesay.jpg"
   },
   {
+    "slug": "gfore",
+    "name": "G/FORE",
+    "loc": "Los Angeles, California",
+    "regions": [
+      "usa"
+    ],
+    "cats": [
+      "apparel",
+      "headwear",
+      "accessories"
+    ],
+    "line": "Golf apparel, shoes, gloves and accessories, designed in Los Angeles since 2011.",
+    "url": "/drops/the-camo-edit",
+    "tags": [
+      "loud-on-purpose"
+    ],
+    "attrs": [
+      "new-to-index"
+    ],
+    "added": "2026-09-04"
+  },
+  {
     "slug": "gamut-golf",
     "name": "Gamut Golf",
     "loc": "United States",
@@ -995,28 +1039,6 @@
     "attrs": [
       "new-to-index"
     ]
-  },
-  {
-    "slug": "gfore",
-    "name": "G/FORE",
-    "loc": "Los Angeles, California",
-    "regions": [
-      "usa"
-    ],
-    "cats": [
-      "apparel",
-      "headwear",
-      "accessories"
-    ],
-    "line": "Golf apparel, shoes, gloves and accessories, designed in Los Angeles since 2011.",
-    "url": "/drops/the-camo-edit",
-    "tags": [
-      "loud-on-purpose"
-    ],
-    "attrs": [
-      "new-to-index"
-    ],
-    "added": "2026-09-04"
   },
   {
     "slug": "ghost-golf",
@@ -1191,6 +1213,52 @@
     ]
   },
   {
+    "slug": "hidden-links-society",
+    "name": "Hidden Links Society",
+    "loc": "United States",
+    "regions": [
+      "usa"
+    ],
+    "cats": [
+      "headwear",
+      "apparel",
+      "accessories"
+    ],
+    "tags": [
+      "muni-energy",
+      "independent",
+      "collab-machine"
+    ],
+    "line": "Anti-country-club headwear and heavyweight cotton. Gives 2% of every sale to Youth on Course and is documenting Golf Digest's Top 100 Public courses one at a time.",
+    "url": "/drops/brand-to-know-hidden-links-society",
+    "attrs": [],
+    "added": "2026-09-17",
+    "img": "/images/hls/play-faster-fairway-wood-cover-black-1.jpg"
+  },
+  {
+    "slug": "hiroki-golf",
+    "name": "Hiroki Golf",
+    "loc": "Auckland, New Zealand",
+    "regions": [
+      "nz"
+    ],
+    "cats": [
+      "bags",
+      "headcovers",
+      "accessories"
+    ],
+    "line": "Sunday bags, stand bags and covers from Auckland, with a Japanese name chosen on purpose.",
+    "url": "/drops/brand-to-know-hiroki-golf",
+    "tags": [
+      "independent"
+    ],
+    "attrs": [
+      "new-to-index"
+    ],
+    "img": "/images/hiroki/kinloch-army-green.jpg",
+    "added": "2026-09-18"
+  },
+  {
     "slug": "huega-house",
     "name": "Huega House",
     "loc": "Carlsbad, CA",
@@ -1234,29 +1302,6 @@
     "img": "/images/women-founded/inside-story-0.jpg"
   },
   {
-    "slug": "jan-craig",
-    "name": "Jan Craig Headcovers",
-    "loc": "Chicago, IL",
-    "regions": [
-      "usa"
-    ],
-    "cats": [
-      "headcovers"
-    ],
-    "line": "Hand-knit wool headcovers since 1962. Nicklaus, Watson and Ryder Cup teams carried them.",
-    "url": "/drops/golf-brands-founded-by-women#jan-craig",
-    "tags": [
-      "made-by-hand"
-    ],
-    "added": "2026-08-27",
-    "attrs": [
-      "women-founded",
-      "heritage",
-      "tour-proven",
-      "new-to-index"
-    ]
-  },
-  {
     "slug": "jlindeberg",
     "name": "J.Lindeberg",
     "loc": "Stockholm, Sweden",
@@ -1279,6 +1324,29 @@
       "tour-proven"
     ],
     "img": "/images/jlindeberg/argyle-polo-1.jpg"
+  },
+  {
+    "slug": "jan-craig",
+    "name": "Jan Craig Headcovers",
+    "loc": "Chicago, IL",
+    "regions": [
+      "usa"
+    ],
+    "cats": [
+      "headcovers"
+    ],
+    "line": "Hand-knit wool headcovers since 1962. Nicklaus, Watson and Ryder Cup teams carried them.",
+    "url": "/drops/golf-brands-founded-by-women#jan-craig",
+    "tags": [
+      "made-by-hand"
+    ],
+    "added": "2026-08-27",
+    "attrs": [
+      "women-founded",
+      "heritage",
+      "tour-proven",
+      "new-to-index"
+    ]
   },
   {
     "slug": "jones-sports-co",
@@ -1364,6 +1432,26 @@
     "attrs": []
   },
   {
+    "slug": "late-nine",
+    "name": "Late Nine",
+    "loc": "Stockholm, Sweden",
+    "regions": [
+      "europe"
+    ],
+    "cats": [
+      "apparel"
+    ],
+    "line": "Maxim Lundh&rsquo;s Stockholm label, built on late-nineties tour golf &mdash; pleated slacks, ribbed jersey polos and merino knits, with no elastane in sight.",
+    "url": "/drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf",
+    "tags": [
+      "quiet-luxury",
+      "post-round-friendly"
+    ],
+    "added": "2026-09-21",
+    "attrs": [],
+    "img": "/images/late-nine/ribbed-polo-taupe.jpg"
+  },
+  {
     "slug": "left-of-field-golf",
     "name": "Left of Field Golf",
     "loc": "Sydney, Australia",
@@ -1383,6 +1471,28 @@
     "added": "2026-08-24",
     "attrs": [],
     "img": "/images/left-of-field/audley-padded-golf-vest-sage-12-0.jpg"
+  },
+  {
+    "slug": "local-rule",
+    "name": "Local Rule",
+    "loc": "Sweden",
+    "regions": [
+      "europe"
+    ],
+    "cats": [
+      "apparel",
+      "headwear",
+      "accessories"
+    ],
+    "line": "Stockholm label named for the club's own supplementary rulebook. Designed in Sweden, made in Portugal until 2025, now produced in Borås.",
+    "url": "/drops/brand-to-know-local-rule",
+    "tags": [
+      "quiet-luxury",
+      "design-nerd"
+    ],
+    "attrs": [],
+    "added": "2026-09-20",
+    "img": "/images/local-rule/tech-polo-light-brown.jpg"
   },
   {
     "slug": "lululemon",
@@ -2806,95 +2916,5 @@
     "attrs": [
       "women-founded"
     ]
-  },
-  {
-    "slug": "hidden-links-society",
-    "name": "Hidden Links Society",
-    "loc": "United States",
-    "regions": [
-      "usa"
-    ],
-    "cats": [
-      "headwear",
-      "apparel",
-      "accessories"
-    ],
-    "tags": [
-      "muni-energy",
-      "independent",
-      "collab-machine"
-    ],
-    "line": "Anti-country-club headwear and heavyweight cotton. Gives 2% of every sale to Youth on Course and is documenting Golf Digest's Top 100 Public courses one at a time.",
-    "url": "/drops/brand-to-know-hidden-links-society",
-    "attrs": [],
-    "added": "2026-09-17",
-    "img": "/images/hls/play-faster-fairway-wood-cover-black-1.jpg"
-  },
-  {
-    "slug": "hiroki-golf",
-    "name": "Hiroki Golf",
-    "loc": "Auckland, New Zealand",
-    "regions": [
-      "nz"
-    ],
-    "cats": [
-      "bags",
-      "headcovers",
-      "accessories"
-    ],
-    "line": "Sunday bags, stand bags and covers from Auckland, with a Japanese name chosen on purpose.",
-    "url": "/drops/brand-to-know-hiroki-golf",
-    "tags": [
-      "independent"
-    ],
-    "attrs": [
-      "new-to-index"
-    ],
-    "img": "/images/hiroki/kinloch-army-green.jpg",
-    "added": "2026-09-18"
-  },
-  {
-    "slug": "axxa",
-    "name": "AXXA",
-    "loc": "Sydney, Australia",
-    "regions": [
-      "australia"
-    ],
-    "cats": [
-      "apparel",
-      "headwear"
-    ],
-    "tags": [
-      "independent",
-      "post-round-friendly",
-      "design-nerd"
-    ],
-    "line": "Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted heavyweight knits, and its own GolfComfort polo fabric.",
-    "url": "/drops/brand-to-know-axxa",
-    "attrs": [],
-    "added": "2026-09-20",
-    "img": "/images/axxa/golfer-knit.jpg"
-  },
-  {
-    "slug": "local-rule",
-    "name": "Local Rule",
-    "loc": "Sweden",
-    "regions": [
-      "europe"
-    ],
-    "cats": [
-      "apparel",
-      "headwear",
-      "accessories"
-    ],
-    "line": "Stockholm label named for the club's own supplementary rulebook. Designed in Sweden, made in Portugal until 2025, now produced in Borås.",
-    "url": "/drops/brand-to-know-local-rule",
-    "tags": [
-      "quiet-luxury",
-      "design-nerd"
-    ],
-    "attrs": [],
-    "added": "2026-09-20",
-    "img": "/images/local-rule/tech-polo-light-brown.jpg"
   }
 ]
