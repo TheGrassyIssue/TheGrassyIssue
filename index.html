@@ -16375,67 +16375,6 @@ midiron26: [
   })();
 </script>
 
-<!-- ==================== NEWSLETTER POPUP ==================== -->
-<div id="nl-overlay" style="display:none;position:fixed;inset:0;background:rgba(var(--ink-rgb),0.55);z-index:9999;opacity:0;transition:opacity 0.3s;">
-  <div id="nl-popup" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.95);background:var(--paper);max-width:440px;width:90%;padding:48px 36px 40px;text-align:center;transition:transform 0.3s;">
-    <button id="nl-close" onclick="closeNL()" style="position:absolute;top:14px;right:16px;background:none;border:none;font-size:22px;color:var(--ink);cursor:pointer;opacity:0.5;font-family:'Inter',sans-serif;" aria-label="Close">&times;</button>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:var(--rough);margin-bottom:16px;">The Grassy Issue</div>
-    <div style="font-family:'Editors Note Text',Georgia,serif;font-style:italic;font-size:28px;line-height:1.15;color:var(--ink);margin-bottom:12px;">New drops.<br>No&nbsp;fluff.</div>
-    <p style="font-family:'Editors Note Text',Georgia,serif;font-size:15px;line-height:1.55;color:var(--ink);opacity:0.7;margin-bottom:28px;max-width:340px;margin-left:auto;margin-right:auto;">Gear drops, course intel, Austin muni culture, and be the first to know about Grassy Issue events — in your inbox before it hits the feed. One email a week, unsubscribe whenever.</p>
-    <form id="nl-form" onsubmit="return submitNL(event)" style="display:flex;gap:0;max-width:360px;margin:0 auto;">
-      <input id="nl-email" type="email" required placeholder="your@email.com" style="flex:1;padding:13px 16px;border:0.5px solid var(--ink);background:var(--paper);font-family:'Inter',sans-serif;font-size:14px;color:var(--ink);outline:none;" />
-      <button type="submit" style="padding:13px 20px;background:var(--ink);color:var(--paper);border:none;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.14em;text-transform:uppercase;cursor:pointer;white-space:nowrap;transition:background 0.2s;">Join &rarr;</button>
-    </form>
-    <iframe name="nl-hidden-frame" style="display:none;"></iframe>
-    <div id="nl-thanks" style="display:none;font-family:'Editors Note Text',Georgia,serif;font-style:italic;font-size:20px;color:#2D4A2B;margin-top:4px;">You're in. First drop incoming.</div>
-    <div style="font-family:'JetBrains Mono',monospace;font-size:9px;letter-spacing:0.12em;text-transform:uppercase;opacity:0.35;margin-top:20px;">No spam. No ads. Just the good stuff.</div>
-  </div>
-</div>
-<script>
-(function(){
-  if (sessionStorage.getItem('tgi_nl_seen')) return;
-  var triggered = false;
-  window.addEventListener('scroll', function() {
-    if (triggered) return;
-    var scrollPct = (window.scrollY + window.innerHeight) / document.body.scrollHeight;
-    if (scrollPct >= 0.5) {
-      triggered = true;
-      sessionStorage.setItem('tgi_nl_seen', '1');
-      var ov = document.getElementById('nl-overlay');
-      ov.style.display = 'block';
-      setTimeout(function(){ ov.style.opacity = '1'; document.getElementById('nl-popup').style.transform = 'translate(-50%,-50%) scale(1)'; }, 20);
-    }
-  });
-  document.getElementById('nl-overlay').addEventListener('click', function(e) {
-    if (e.target === this) closeNL();
-  });
-})();
-function closeNL(){
-  var ov = document.getElementById('nl-overlay');
-  ov.style.opacity = '0';
-  document.getElementById('nl-popup').style.transform = 'translate(-50%,-50%) scale(0.95)';
-  setTimeout(function(){ ov.style.display = 'none'; }, 300);
-}
-function submitNL(e){
-  e.preventDefault();
-  var email = document.getElementById('nl-email').value;
-  // Send to Google Sheets via hidden form (avoids CORS redirect issues with fetch)
-  var f = document.createElement('form');
-  f.method = 'POST';
-  f.action = 'https://script.google.com/macros/s/AKfycbwY5Q8KyPZssb0m1PHiDdBzEZhWERESK1W8XFduRsWvNFSRhwwxDtjxzo8tElys9H8d/exec';
-  f.target = 'nl-hidden-frame';
-  var inp = document.createElement('input');
-  inp.type = 'hidden'; inp.name = 'email'; inp.value = email;
-  f.appendChild(inp);
-  document.body.appendChild(f);
-  f.submit();
-  document.body.removeChild(f);
-  document.getElementById('nl-form').style.display = 'none';
-  document.getElementById('nl-thanks').style.display = 'block';
-  setTimeout(closeNL, 2200);
-  return false;
-}
-</script>
 
 <!-- Google Analytics 4 (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-G89M4116SB"></script>
