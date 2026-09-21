@@ -70,7 +70,68 @@ brand repeated between the two halves.</p>
 <p>Beanies and visors are both out. What is here starts at a thirteen-dollar
 microfibre towel and tops out at fifty, and every price was read from the
 brand&rsquo;s own store on %s rather than copied from a press
-release.</p>""" % READ
+release.</p>
+
+<p>The caps fall into two camps that are easy to see once you know to look.
+One puts technical fabric into shapes that predate it: Sinking Birdies run a
+water-resistant tech fabric on a rope crown, Devereux laser-perforate a
+performance panel and then trim it with classic rope, Eastside build on
+performance fabric with a perforated back and a gel badge. The other camp
+states cotton and stops there &mdash; Hidden Links Society list six panels, a
+flat peak and a metal clasp with no performance claim anywhere on the product
+page.</p>
+
+<p>The towels are where the construction talk actually lives. Waffle weave,
+woven jacquard, terry blends and Japanese gauze are four different answers to
+one problem, at prices that now overlap the hats entirely.</p>""" % READ
+
+# ---- THE TAKE ----
+# Lenny asked for "a TGI take on the trends we're seeing in Hats & towels going
+# into the late season". Every claim below is a fact already verified for the
+# thirty picks (research/hats/descs.json + verified2.json): stated dimensions,
+# stated fibre content, stated hardware, and prices read live on 21 Sep 2026.
+# The counts are asserted against the data at build time, further down, so the
+# prose cannot drift away from the products it describes.
+TAKE = """<p>Late season rearranges which of these two halves matters. Through
+an Austin summer the hat does the work &mdash; mesh backs, laser perforation, a
+rope crown that lets heat out &mdash; and the towel is mostly there to wipe a
+grip between shots. From October the order flips. Tee times move to the front of
+the morning, the grass holds dew until ten, and the towel becomes the thing that
+decides whether your grips are dry on the seventh hole.</p>
+
+<p>That shows up in how these towels are sized. Ghost cut theirs to eighteen by
+forty inches, caddie length. Jones size theirs oversized on purpose, so one half
+can be wet and the other dry &mdash; which is how caddies have always used a
+towel and how almost no retail towel is cut. Hiroki go to fifty-six by a hundred
+centimetres. Dimension is the specification that separates a dew-season towel
+from a summer one, and it is the first thing three of the twelve tell you.</p>
+
+<p>Texture is the second answer. Sierra Madre and Hiroki both use a waffle
+weave, which lifts dirt off a face rather than moving it around. Dormie blend
+86% terry cotton with 14% polyester so the cloth has weight to it. Sentinel
+import a Shinto gauze that replaces the middle layer of a traditional 20-count
+three-ply with a half-weight weave, making a 2.5-ply cloth that is light without
+being thin. Four brands, four readings of absorbency, none of them reaching for
+microfibre by default.</p>
+
+<p>The hardware is quietly moving off the carabiner. Seamus finish with a
+riveted leather loop. Radry built theirs with no hole and no clip at all, the
+towel draping over the irons instead. Those are design decisions rather than
+omissions, and two of them in a group this size is a pattern rather than a
+coincidence.</p>
+
+<p>On the hat side the turn favours the cotton camp. A rope crown and a mesh
+back are summer answers. The brands that stated cotton and structure &mdash;
+Read The Green with full buckram behind a seamless front panel, Random Golf
+Club, Merrill &mdash; make caps that keep their shape in wind and take a soaking
+without folding. The tech-fabric rope hats do not stop working in October. They
+simply stop being the reason you pick that hat over another one.</p>
+
+<p>Then there is price, which has quietly converged. A Seamus towel and a Read
+The Green cap both cost forty-five dollars. Sentinel&rsquo;s gauze towel at
+forty-six costs more than sixteen of the eighteen caps here. Towels used to be
+the thing thrown in at the till. On this evidence they are now a category these
+brands build properly and charge properly for.</p>"""
 
 HATS = [
  ("sinking-birdies","Sinking Birdies","Never Lay Up Rope Hat",19,
@@ -255,6 +316,11 @@ def main(apply_):
 {tows}
   </div>
 
+  <h2 class="products-hdr sec">The Take</h2>
+  <div class="writeup-body">
+{TAKE}
+  </div>
+
   <h2 class="products-hdr sec">The Questions</h2>
   <div class="faq">
 ''' + "\n".join(
@@ -386,6 +452,22 @@ def main(apply_):
     if claims and (min(claims) != int(min(prices)) or max(claims) != int(max(prices))):
         bad.append(f"intro claims ${min(claims)}-${max(claims)}, "
                    f"data says ${int(min(prices))}-${int(max(prices))}")
+    # ---- THE TAKE MUST AGREE WITH THE DATA IT DESCRIBES ----
+    # A trends piece is only as good as its arithmetic. These assertions fail
+    # the build if a price edit ever makes the prose wrong.
+    hat_p = sorted(p for _s, _b, _n, p, _t in HATS)
+    tow = {s: p for s, _b, _n, p, _t in TOWELS}
+    n_under = sum(1 for p in hat_p if p < tow["sentinel-golf"])
+    if "more than sixteen of the eighteen caps" in nb and n_under != 16:
+        bad.append(f"The Take says sixteen caps under the Sentinel towel; "
+                   f"the data says {n_under}")
+    if tow["seamus"] != 45 or dict((s, p) for s, _b, _n, p, _t in HATS)["read-the-green"] != 45:
+        bad.append("The Take pairs Seamus and Read The Green at $45; prices moved")
+    if "The Take" not in nb:
+        bad.append("The Take section is missing")
+    if nb.count('class="writeup-body"') < 1:
+        bad.append("The Take is not in a writeup-body block")
+
     mm = re.search(r'<div class="drop-meta">.*?<span>([^<]+)</span>', hh, re.S)
     if not mm or mm.group(1).strip() != f"{len(HATS)+len(TOWELS)} Picks":
         bad.append(f"drop-meta reads {mm.group(1).strip()!r}" if mm else "no drop-meta")

@@ -45,7 +45,13 @@ END = "<!-- /HAT & TOWEL EDIT -->"
 # other card is:
 #   div.card[data-type]  >  div.card-media[position:relative]
 #                             span.card-tag.grass   (the chip, overlaid)
-#                             a > img
+#                             a > img   (4:5 — see below)
+# THE MEDIA BOX HAS TO BE 4:5. `.card-media img` is height:auto, so the box is
+# whatever the file's ratio is; every neighbour's image comes through
+# `.gear-slide img { aspect-ratio: 4/5; object-fit: cover }`. A 1:1 product
+# square rendered 333px tall next to 416px neighbours — a 513px card in a row
+# of 630px cards, which is what "formatted a little off" looked like. The card
+# now uses a purpose-cut 1200x1500 frame and states the ratio inline.
 #                        >  div.card-body
 #                             div.card-title > a
 #                             div.card-text
@@ -55,7 +61,7 @@ CARD = f'''{MARK}
     <div class="card-media" style="position:relative;">
       <span class="card-tag grass">[Drops &amp; Brands]</span>
       <a href="{NEW}">
-        <img src="/images/hats-towels/hat-sugarloaf-social-club.jpg" alt="Cotton SSC Arrow Cap from Sugarloaf Social Club" loading="lazy" style="width:100%;display:block;" />
+        <img src="/images/hats-towels/card.jpg" alt="The Cotton SSC Arrow Cap from Sugarloaf Social Club, worn" loading="lazy" style="width:100%;aspect-ratio:4/5;object-fit:cover;display:block;" />
       </a>
     </div>
     <div class="card-body">
