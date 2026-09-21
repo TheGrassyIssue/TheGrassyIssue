@@ -5,6 +5,20 @@
 Lenny: "let's clean up all the homepage cards to be more consistent we shouldn't
 have that grey worded section on any card on the entire homepage."
 
+A SECOND CLASS, FOUND THE SAME WAY AS THE FIRST.
+
+Lenny, after the first pass shipped: "some of the older cards are still
+displaying that grey text." Older cards carry .card-meta — a byline and date,
+"The Grassy Issue | 26 Aug 2026" — which is the same grey mono treatment in the
+same slot, under a different class name. 68 cards had one. That is now removed
+too, on his explicit call, since a publication date is a real thing to drop and
+not something to assume.
+
+Three classes, three passes to find them all: card-source as a div, card-source
+as a span, card-meta as a div. The lesson is not "check for spans" — it is that
+an element is identified by what it LOOKS like to the reader, and the class name
+is an implementation detail that varies by whoever wrote the card that week.
+
 WHAT IT IS. A mono, 55%-opacity line between the carousel counter and the
 read-more link, carrying whatever the card's author felt like: a source domain
 ("merrillgolf.com"), a stat line ("77 markers · 20 brands · 9 categories ·
@@ -47,7 +61,7 @@ INDEX = ROOT / "index.html"
 # guard counted the thing it had been taught to look for. The render is what
 # disagreed: 61 .card-source elements still in #feed. Hence OPEN_RE, and hence
 # the guard below now counts by CSS class rather than by opening tag.
-OPEN_RE = re.compile(r'<(div|span) class="card-source"', re.I)
+OPEN_RE = re.compile(r'<(div|span) class="(?:card-source|card-meta)"', re.I)
 KEEP_ANCHOR = re.compile(r'<a\b[^>]*class="(?:card-readmore|card-link)"', re.I)
 
 
@@ -122,7 +136,7 @@ def strip_dead_css(h):
     """A rule for a class the page no longer emits is dead CSS — the same defect
     class as .lr-trans surviving a donor copy, just in the other direction."""
     notes = []
-    for cls in ("card-source", "source-link"):
+    for cls in ("card-source", "source-link", "card-meta"):
         if f'class="{cls}"' in h or f'class="{cls} ' in h:
             continue                                # still used somewhere
         h2 = re.sub(rf"\.{cls}\s*\{{[^}}]*\}}\s*", "", h)
@@ -153,7 +167,7 @@ def main(apply_):
     # ---- VERIFY THE FINISHED FILE ----
     hh = INDEX.read_text(encoding="utf-8")
     bad = []
-    left = hh.count('class="card-source"')
+    left = hh.count('class="card-source"') + hh.count('class="card-meta"')
     if left:
         bad.append(f"{left} card-source elements still on the page")
     if hh.count('<div class="card"') != before_cards:
