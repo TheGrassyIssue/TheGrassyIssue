@@ -93,7 +93,27 @@ assert not missing, f"PICKS not in brands.json: {missing}"
 for _, _, _, _, img, _, _ in VIBES: assert os.path.exists(ROOT + img), img
 for _, _, _, _, img, _ in INTERRUPT: assert os.path.exists(ROOT + img), img
 HERO_IMG = "/images/lions/dusk.jpg"; assert os.path.exists(ROOT + HERO_IMG)
-ENDPOINT = re.search(r"(https://script\.google\.com/macros/s/[A-Za-z0-9_-]+/exec)", open(os.path.join(ROOT, "index.html"), encoding="utf-8").read()).group(1)
+# THE SIGNUP ENDPOINT IS A CONSTANT NOW, NOT SCRAPED.
+#
+# This used to read the Apps Script URL out of index.html with a regex and
+# .group(1) it straight into a variable. That worked only for as long as the
+# homepage happened to contain a newsletter form. On 21 September 2026 the
+# homepage pop-up was removed (remove-newsletter-popup.py) because it was not
+# getting traction, the last occurrence of the URL on that page went with it,
+# and this line started raising AttributeError on None — which took /brands
+# down with it. The build could not run at all, so Late Nine could not appear
+# on the index, which is how the breakage surfaced: not as an error anyone saw,
+# but as a brand quietly missing from a page.
+#
+# The /brands signup (#bx-nl-email) is its own form and was never part of the
+# pop-up, so it still needs this URL. Scraping one page's markup for another
+# page's configuration was the actual defect; a page is not a config file.
+# The value below is the one live on the deployed /brands page and the one
+# preserved in remove-newsletter-popup.py's docstring — the two were compared
+# and are identical.
+ENDPOINT = ("https://script.google.com/macros/s/"
+            "AKfycbwY5Q8KyPZssb0m1PHiDdBzEZhWERESK1W8XFduRsWvNFSRhwwxDtjxzo8tElys9H8d"
+            "/exec")
 
 def esc(s): return html.escape(s, quote=True)
 

@@ -31,6 +31,12 @@ DOMAINS = {
     # hiddenlinkssociety.com ONLY. hiddenlinksgolf.com is a different company
     # entirely — a custom club builder — and must never map to this slug.
     "hidden-links-society": ["hiddenlinkssociety.com"],
+    "vuori":             ["vuoriclothing.com"],
+    # Added 21 September 2026 with the Late Nine Brand Revisited. The brand
+    # sat in brands.json with no domain here, so it got a row on the /brands
+    # index and no coverage page at all — exactly the gap this script exists
+    # to close, and the reason Lenny could not find it on the index.
+    "late-nine":         ["late-nine.com"],
     "bettinardi":        ["bettinardi.com"],
     "eastside-golf":     ["eastsidegolf.com"],
     "ghost-golf":        ["ghostgolf.com"],

@@ -36,7 +36,15 @@ FLIP_TAIL = [
     r"\babsolutely would not\b", r"\bnobody would blink\b",
     r"\band it is not\b", r"\bexcept it (?:is|does)n['’]t\b",
 ]
-VERBS = set("""is are was were be been being has have had do does did make makes made
+# Added 2026-09-21 on the Vuori build, where the check fired on "Flagged a best
+# seller in four colourways...", "Crossed over from the tennis side..." and
+# "That matters more in Austin...". All three carry a plain finite verb; the set
+# simply had no entry for flag/cross/matter. Same false-positive class as the
+# Mogshade and Après additions below, same fix — extend the table, do not reword
+# working copy to satisfy it.
+VERBS = set("""flags flag flagged crosses cross crossed matters matter mattered
+copies copy copied cites cite cited
+is are was were be been being has have had do does did make makes made
 comes come came sits sit sat runs run ran looks look looked reads read wears wear wore
 takes take took gets get got puts put keeps keep kept goes go went built build builds
 uses use used costs cost sells sell sold cuts cut ships ship shipped feels feel felt
