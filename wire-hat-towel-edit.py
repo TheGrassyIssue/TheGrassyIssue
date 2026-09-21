@@ -214,6 +214,20 @@ def main(apply_):
         bad.append("homepage card is not in the top slot")
     if OLD in idx:
         bad.append("homepage still links the retired slug")
+    # OUR CARD MUST WEAR WHAT ITS NEIGHBOURS WEAR. Checked against the actual
+    # feed rather than against CARD, so a change to the house shape shows up
+    # here instead of shipping a card that looks out of place.
+    blk = idx[idx.index(MARK):idx.index(END) + len(END)] if MARK in idx and END in idx else ""
+    for need, why in (('data-type="drop"', "no filter type — the feed chips would drop it"),
+                      ('class="card-tag grass"', "no green category chip"),
+                      ('class="card-link"', "uses a non-house read-more"),
+                      ('class="card-title"', "no card-title")):
+        if need not in blk:
+            bad.append(f"homepage card: {why}")
+    import collections
+    kinds = collections.Counter(re.findall(r'<div class="card" data-type="(\w+)"', idx))
+    if kinds and not kinds["drop"]:
+        bad.append("no drop-type cards in the feed at all — shape assumption is wrong")
 
     thumbs = json.loads((ROOT / "data/post-thumbs.json").read_text(encoding="utf-8"))
     if NEW not in thumbs:
