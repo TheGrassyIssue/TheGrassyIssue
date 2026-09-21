@@ -1,0 +1,56 @@
+{
+  "_read": "2026-09-21, all facts re-verified live on this date",
+  "_brief": "Lenny: beef up /drops/brand-to-know-casualist for Google page one, target the British/UK golf brand category, new hero shot.",
+
+  "_the_find": "The existing post calls Casualist a West London brand and dates it to 2023. It did not start in London. It started in MELBOURNE, Australia, as Casual Pro, and announced the move to London on 2 April 2024 — in a post that explicitly frames the UK as the most buttoned-up golf market it could have walked into. That is the single most interesting fact about the brand, it is absent from our page, and it is absent from every competing page in the category SERP.",
+
+  "_serp": {
+    "brand_name_queries": "TGI already ranks page one. Our post came 3rd for 'Casualist golf brand London Elie Reboul' and 3rd for 'Casualist golf clothing review brand', above the brand's own blog posts.",
+    "category_queries": "'best British golf clothing brands UK independent 2026' returns threeputtgolfclothing.co.uk in 5 of 9 slots — a brand blog running category listicles. Casualist appears in none of them. TGI appears nowhere.",
+    "honest_caveat": "A single-brand post will not outrank a listicle for 'best British golf clothing brands' — that query wants a list, and Google will keep giving it one. What this page can realistically win is the long tail that the listicles do not answer: is Casualist British, who makes it, where is it made, what does the Melbourne-to-London move mean. Owning the head term needs a British-brands roundup page, which TGI does not have and is unusually well placed to build (8 UK brands already covered, Manors alone with 31 posts).",
+    "uk_brands_already_covered": ["manors-golf", "sounder", "fyfe-golf", "bunker-mentality", "royal-albartross", "sinking-birdies", "scotsticks", "casualist"]
+  },
+
+  "facts": [
+    {"f": "Founded as Casual Pro; based in Melbourne, Australia before the UK move", "src": "casualist.com/blogs/news-blog/from-melbourne-to-london-with-love"},
+    {"f": "Announced the Melbourne to London move on 2 April 2024", "src": "same post, dated Apr 2, 2024"},
+    {"f": "Brand was trading in 2023 — an organic-cotton post is dated 18 September 2023", "src": "casualist.com/blogs/news-blog/embrace-organic-cotton-t-shirts"},
+    {"f": "Renamed Casual Pro to Casualist; the About page says the spirit was right but the name needed to grow up", "src": "casualist.com/pages/about-1"},
+    {"f": "Founder is Elie Reboul; the About page is signed 'Elie, Founder'", "src": "casualist.com/pages/about-1 + linkedin.com/in/elie-reboul1"},
+    {"f": "Designed in London, most pieces made in Portugal", "src": "casualist.com/pages/about-1"},
+    {"f": "The Facebook handle is still casualproclothing and the 2024 blog post still links casualproclub.com — the old name persists in the plumbing", "src": "casualist.com footer + blog body link"},
+    {"f": "Philosophy described as 'Masters of none, but enthusiasts of many' when Elie Reboul appeared on The Wedgies, ep. 018, 22 May 2024", "src": "shows.acast.com/the-wedgies/episodes/ep-018-qualities-of-a-casual-pro-w-elie-reboul"},
+    {"f": "The same phrase is printed on the back of the Windbreaker Coach Jacket, under the CASUAL PRO wordmark — visible in the brand's own product photograph used as our new masthead", "src": "casualist.com product image, winbreaker-1"},
+    {"f": "The brand also shoots tennis; a Roland Garros 2024 post sits on the same blog and the Leisure hat line appears in it", "src": "casualist.com/blogs/news-blog/first-time-at-roland-garros-2024"},
+    {"f": "Instagram is @casualistgolf", "src": "casualist.com footer"},
+    {"f": "Catalogue on 21 Sep 2026: 23 products, 21 in stock, from a GBP 15 ball marker to a GBP 12,000 Beach Rover cart", "src": "casualist.com/products.json"}
+  ],
+
+  "quotes": [
+    {"text": "we've swapped the laidback Aussie vibes for the traditional charm of the UK",
+     "who": "Casual Pro team", "where": "brand blog, 2 April 2024",
+     "note": "signed 'The Casual Pro team' — attribute to the brand, NOT to Elie personally"},
+    {"text": "things are a bit more buttoned-up in the UK. There, tradition still holds sway, and golfers tend to stick to more formal attire",
+     "who": "Casual Pro team", "where": "brand blog, 2 April 2024", "note": "same"},
+    {"text": "We firmly believe that a good sense of humor can beat even the gloomiest English weather.",
+     "who": "Casual Pro team", "where": "brand blog, 2 April 2024", "note": "same; keep the US spelling of humor, it is theirs"},
+    {"text": "The spirit was right, but the name needed to grow up a little.",
+     "who": "Elie Reboul", "where": "Casualist About page", "note": "About page is signed 'Elie, Founder', so this one is attributable to him"},
+    {"text": "fabrics chosen for how they actually feel after a full round, not just how they photograph",
+     "who": "Elie Reboul", "where": "Casualist About page", "note": "same"}
+  ],
+
+  "_held_back": [
+    "No transcript exists for The Wedgies episode, so nothing from the audio is quoted. Only the show's own written description is used, and it is attributed to the show, not put in Elie Reboul's mouth.",
+    "Casualist's blog has pivoted to 'Best X in 2026' category listicles across 16 pages. That is an observable fact about their site but it is a verdict on a brand's marketing, not reporting about their clothes — TGI does not run that, per house rule.",
+    "LinkedIn was returned by search but not fetched, so no employment dates or headcount are asserted.",
+    "The exact founding month in Melbourne is not stated anywhere primary. The page says trading by September 2023 and no more.",
+    "Whether the Portugal factories are shared with other brands is unknown and not implied."
+  ],
+
+  "hero": {
+    "file": "images/casualist/btk-hero-2026.jpg",
+    "why": "The only frame in the catalogue showing the old CASUAL PRO name being worn, which is the headline's claim. Two players walking away up a parkland fairway, big English sky.",
+    "src": "casualist.com product image winbreaker-1, 3812x4766, cut to 1800x771"
+  }
+}

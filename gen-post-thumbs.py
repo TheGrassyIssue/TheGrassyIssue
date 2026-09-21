@@ -30,8 +30,22 @@ def derive(url):
     body = re.sub(r'<section class="more".*', "", body, flags=re.S)          # More from the Feed
     body = re.sub(r'<nav.*?</nav>', "", body, flags=re.S)
     img = None
-    m = re.search(r'<div class="drop-hero-img">\s*<img[^>]+src="([^"]+)"', body)
+    # THE MASTHEAD HAS TWO MARKUP SHAPES.
+    # 150 drops wrap it: <div class="drop-hero-img"><img src=...>.
+    # 36 put the class on the image itself: <img class="drop-hero-img" src=...>.
+    # Matching only the wrapper meant those 36 silently fell through to the
+    # first stray /images/ element in the body — Casualist's coverage card was
+    # showing a snapback because of it. Try the wrapper, then the bare image.
+    #
+    # The negative lookahead matters: body bands are also .drop-hero-img, but
+    # carry .tgi-free alongside. Without it the FIRST band would win over the
+    # masthead on any page that has one.
+    m = re.search(r'<div class="drop-hero-img"[^>]*>\s*<img[^>]+src="([^"]+)"', body)
     if m: img = m.group(1)
+    if not img:
+        m = re.search(r'<img class="drop-hero-img(?![^"]*tgi-free)[^"]*"[^>]+src="([^"]+)"',
+                      body)
+        if m: img = m.group(1)
     if not img:
         m = re.search(r'<div class="pg-frame">\s*<img[^>]+src="([^"]+)"', body)
         if m: img = m.group(1)

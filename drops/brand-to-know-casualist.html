@@ -3,29 +3,29 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Casualist — The London Brand That Outgrew Its Own Name — The Grassy Issue</title>
-<meta name="description" content="Casualist started as Casual Pro in 2023 and renamed itself. Elie Reboul's West London brand designs in London, makes in Portugal, and sells everything from a £38 snapback with the old logo still on it to a £12,000 electric golf cart." />
+<title>Casualist — The Australian Brand That Became a British Golf Label &mdash; The Grassy Issue</title>
+<meta name="description" content="Casualist designs in London and makes in Portugal — but it started life as Casual Pro in Melbourne and moved to the UK in April 2024. A full look at the brand, its catalogue and what “British golf brand” actually means, with prices read on 21 September 2026." />
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://thegrassyissue.com/drops/brand-to-know-casualist" />
-<meta property="og:title" content="Casualist — The London Brand That Outgrew Its Own Name — The Grassy Issue" />
-<meta property="og:description" content="Casualist started as Casual Pro in 2023 and renamed itself. Elie Reboul's West London brand designs in London, makes in Portugal, and sells everything from a £38 snapback with the old logo still on it to a £12,000 electric golf cart." />
+<meta property="og:title" content="Casualist — The Australian Brand That Became a British Golf Label" />
+<meta property="og:description" content="Casualist designs in London and makes in Portugal — but it started life as Casual Pro in Melbourne and moved to the UK in April 2024. A full look at the brand, its catalogue and what “British golf brand” actually means, with prices read on 21 September 2026." />
 <meta property="og:image" content="https://thegrassyissue.com/images/og-image.jpg" />
 <meta property="og:site_name" content="The Grassy Issue" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="Casualist — The London Brand That Outgrew Its Own Name" />
-<meta name="twitter:description" content="Casualist started as Casual Pro in 2023 and renamed itself. Elie Reboul's West London brand designs in London, makes in Portugal, and sells everything from a £38 snapback with the old logo still on it to a £12,000 electric golf cart." />
+<meta name="twitter:title" content="Casualist — The Australian Brand That Became a British Golf Label" />
+<meta name="twitter:description" content="Casualist designs in London and makes in Portugal — but it started life as Casual Pro in Melbourne and moved to the UK in April 2024. A full look at the brand, its catalogue and what “British golf brand” actually means, with prices read on 21 September 2026." />
 <link rel="canonical" href="https://thegrassyissue.com/drops/brand-to-know-casualist" />
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Article",
-  "headline": "Casualist \u2014 The London Brand That Outgrew Its Own Name",
-  "description": "Casualist started as Casual Pro in 2023 and renamed itself. Elie Reboul's West London brand designs in London, makes in Portugal, and sells everything from a \u00a338 snapback with the old logo still on it to a \u00a312,000 electric golf cart.",
+  "headline": "Casualist — The Australian Brand That Became a British Golf Label",
+  "description": "Casualist designs in London and makes in Portugal — but it started life as Casual Pro in Melbourne and moved to the UK in April 2024. A full look at the brand, its catalogue and what “British golf brand” actually means, with prices read on 21 September 2026.",
   "url": "https://thegrassyissue.com/drops/brand-to-know-casualist",
   "datePublished": "2026-05-28",
-  "dateModified": "2026-08-14",
+  "dateModified": "2026-09-21",
   "author": {
     "@type": "Organization",
     "name": "The Grassy Issue"
@@ -347,9 +347,29 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   .sh-row .sec-note{grid-column:2}
 }
 /* btk-template: end */
+
+/* IN-BODY PHOTO BANDS — see tgi_bands.py. The masthead keeps the house 21:9
+   box because it is cut to 21:9. Body bands are NOT cut, so they must not be
+   dropped into a fixed-ratio box: that discarded ~70% of every portrait. */
+.drop-hero-img.tgi-free{aspect-ratio:auto;height:auto;overflow:visible}
+.drop-hero-img.tgi-free img{width:100%;height:auto;object-fit:contain;display:block}
+.drop-hero.tgi-band{margin-top:40px;margin-bottom:40px}
+.drop-hero.tgi-band.is-port{max-width:840px}
+.drop-hero.tgi-band.is-sq{max-width:980px}
+/* A landscape band needs no narrower measure — it takes the .drop-hero width.
+   The rule is written out anyway because the shape class is emitted on every
+   band, and verify-post.py rightly refuses a class with no rule: an implied
+   rule is indistinguishable from a forgotten one. */
+.drop-hero.tgi-band.is-land{max-width:1400px}
+@media(max-width:900px){
+  .drop-hero.tgi-band.is-port,.drop-hero.tgi-band.is-sq{max-width:100%}
+}
+/* the photo credit under a band. Defined HERE rather than per page, because
+   the helper emits it and a class with no rule is the .axxa-note bug. */
+.tgi-band-credit{font-family:var(--mono);font-size:9px;letter-spacing:.08em;
+  text-transform:uppercase;opacity:.5;margin-top:8px}
 </style>
-<script type="application/ld+json">
-{
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -358,7 +378,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       "name": "Who founded Casualist?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Elie Reboul. The about page on their site is signed simply  Elie, Founder. "
+        "text": "Elie Reboul. The about page on their site is signed simply “Elie, Founder.”"
       }
     },
     {
@@ -366,7 +386,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       "name": "Was Casualist always called Casualist?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No. It started as Casual Pro. In the brand's words:  The spirit was right, but the name needed to grow up a little.  The original Casual Pro snapback is still sold, still the best seller, and still carries the old logo."
+        "text": "No. It started as Casual Pro. In the brand's words: “The spirit was right, but the name needed to grow up a little.” The original Casual Pro snapback is still sold, still the best seller, and still carries the old logo."
       }
     },
     {
@@ -374,7 +394,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       "name": "Where is Casualist based?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "West London. Their Two Tone Course Cap has  Casualist Leisure Goods West London  embroidered on the front, and the Casual Pro snapback reads MELB   LDN   LA."
+        "text": "West London. Their Two Tone Course Cap has “Casualist Leisure Goods West London” embroidered on the front, and the Casual Pro snapback reads MELB – LDN – LA."
       }
     },
     {
@@ -406,7 +426,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       "name": "Is the Beach Rover real?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "It is listed on their store at  12,000 with a soft cream finish, striped canopy and electric drive, and the listing asks you to enquire for full specifications and delivery. It is currently sold out."
+        "text": "It is listed on their store at £12,000 with a soft cream finish, striped canopy and electric drive, and the listing asks you to enquire for full specifications and delivery. It is currently sold out."
       }
     },
     {
@@ -414,12 +434,43 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       "name": "What is the cheapest thing Casualist makes?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The ball marker at  15, followed by the Casual Pro snapback at  38 and the caps at  45."
+        "text": "The ball marker at £15, followed by the Casual Pro snapback at £38 and the caps at £45."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where is Casualist from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "London now, Melbourne originally. The brand began as Casual Pro in Australia and announced its move to the UK on 2 April 2024. It is based in West London."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Casualist a British golf brand?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Designed in Britain, made in Portugal, founded in Australia. It is a British-based independent rather than a British-manufactured one, and the brand is open about the Portuguese make on its own about page."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did Casualist move to the UK?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The brand's own explanation, in April 2024, was that Australian and American golf is relaxed about dress codes while in the UK “tradition still holds sway.” It moved toward the stricter market on purpose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does “master of none, enthusiast of many” mean?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It is the brand's own line, printed in small type on the back of the Windbreaker Coach Jacket. The Wedgies used the same phrase to describe the Casual Pro philosophy when Elie Reboul appeared on the show in May 2024."
       }
     }
   ]
-}
-</script>
+}</script>
 </head>
 <body>
 <nav class="nav" role="navigation" aria-label="Main navigation">
@@ -443,11 +494,11 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 <div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
   <a href="/#feed">Drops &amp; Brands</a><span>/</span>
-  Casualist — The London Brand That Outgrew Its Own Name
+  Casualist — The Australian Brand That Became a British Golf Label
 </div>
 
 <header class="drop-header">
-  <h1>Casualist — The London Brand That Outgrew Its Own Name</h1>
+  <h1>Casualist &mdash; The Australian Brand That Became a British Golf Label</h1>
   <div class="drop-meta">
 
 
@@ -456,13 +507,13 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </header>
 
 <section class="drop-hero">
-  <img class="drop-hero-img" src="/images/casualist/btk-hero.jpg" alt="Casualist &mdash; lookbook photograph" />
+  <img class="drop-hero-img" src="/images/casualist/btk-hero-2026.jpg" alt="Two golfers walking up a parkland fairway in Casual Pro windbreakers, the brand's original name across their backs" />
 </section>
 
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
-    <p>The most telling thing about Casualist is what Elie Reboul refused to throw away. He renamed the brand from Casual Pro in 2023 because the name needed to grow up &mdash; and then kept selling the old snapback, which is still the best-seller with the previous name stitched across the front.</p>
+    <p>The most telling thing about Casualist is what Elie Reboul refused to throw away. He renamed the brand from Casual Pro because the name needed to grow up &mdash; the move post of April 2024 is still signed by the Casual Pro team, so the change came after that &mdash; and then kept selling the old snapback, which is still the best-seller with the previous name stitched across the front.</p>
     <p>The Weekend Pique Polo at &pound;95 is where the grown-up version shows: made in Portugal, cut closer than an American golf polo, plain enough to wear somewhere that is not a golf course.</p>
     <p>This is for the player who wants a European cut and does not need the shirt to announce the sport. The range opens at &pound;38 for the hat that started it.</p>
     <h2 class="products-hdr btk-story-hdr">The Story</h2>
@@ -477,7 +528,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
       <div class="sidebar-detail"><span class="l">Founder</span><span>Elie Reboul</span></div>
       <div class="sidebar-detail"><span class="l">Based</span><span>West London</span></div>
       <div class="sidebar-detail"><span class="l">Made</span><span>Portugal</span></div>
-      <div class="sidebar-detail"><span class="l">Was</span><span>Casual Pro, 2023</span></div>
+      <div class="sidebar-detail"><span class="l">Was</span><span>Casual Pro, Melbourne</span></div>
       <div class="sidebar-detail"><span class="l">Prices</span><span>GBP</span></div>
       <a href="https://casualist.com" target="_blank" rel="noopener" class="sidebar-cta">casualist.com &#8599;</a>
       <div class="hashtags">
@@ -489,6 +540,105 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     </div>
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
+</section>
+
+<!-- TGI-CASUALIST-ORIGIN -->
+<section class="products" data-btk="prose">
+  <h2 class="products-hdr sec">From Melbourne to London</h2>
+  <div class="writeup-body">
+
+  <p>Casualist is not a London brand that grew up in London. It is an
+  Australian one that moved. On 2 April 2024 the brand &mdash; still trading as
+  Casual Pro &mdash; posted that it had gone &ldquo;from the sunny shores of
+  Melbourne, Australia, to the historic streets of London, UK.&rdquo; The post
+  is signed by the Casual Pro team, and it is blunt about the trade being
+  made.</p>
+
+  <div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/casualist/band-coast.jpg" alt="Casualist &mdash; mockneck tee photographed on a shingle beach under an English sky" loading="lazy" /></div>
+  <div class="tgi-band-credit">Photography courtesy of Casualist</div>
+</div>
+
+  <p>Australian and American golf, the brand wrote, is &ldquo;all about kicking
+  back&rdquo; &mdash; less fuss about dress codes, more room for a label built
+  on jokes and soft collars. Britain was the opposite bet.</p>
+
+  <div class="pull-quote">
+  <p class="pull-quote-inner">&ldquo;things are a bit more buttoned-up in the UK. There, tradition still holds sway, and golfers tend to stick to more formal attire&rdquo;<span class="pull-quote-attr">&mdash; the Casual Pro team, announcing the move, 2 April 2024</span></p>
+</div>
+
+  <h3>Why that matters to the clothes</h3>
+
+  <p>A brand that moves toward the strictest dress codes in the game has to
+  decide what it is willing to lose. What Casualist kept is the humour &mdash;
+  the team signed off that a good sense of humour &ldquo;can beat even the
+  gloomiest English weather&rdquo; &mdash; and what it added is the part that
+  gets you through the gate: collars, merino, pleats, Portuguese make. The
+  Grazer Cardigan Vest at &pound;185 and the Pleated Golf Trousers at &pound;160
+  are not Melbourne pieces. They are what the move cost, and they are the two
+  things on the site most likely to be mistaken for old British golf.</p>
+
+  <h3>The old name never fully left</h3>
+
+  <p>The rename came later, and the brand never scrubbed the first one. The
+  &pound;38 Casual Pro Snapback is still the oldest thing in the catalogue and
+  still carries the original logo. The Facebook page is still filed under
+  casualproclothing. The Windbreaker Coach Jacket carries CASUAL PRO across the
+  shoulders and, underneath in small type, <em>master of none, enthusiast of
+  many</em> &mdash; the same phrase The Wedgies used to describe the brand's
+  philosophy when Elie Reboul went on the show in May 2024. That jacket is the
+  photograph at the top of this page.</p>
+  </div>
+</section>
+
+<!-- TGI-CASUALIST-BRITISH -->
+<section class="products" data-btk="prose">
+  <h2 class="products-hdr sec">Is Casualist a British Golf Brand?</h2>
+  <div class="writeup-body">
+
+  <p>Partly, and the honest answer is more useful than a yes. Casualist is
+  designed in London, made mostly in Portugal, priced in pounds, and founded in
+  Melbourne. Which of those makes a brand British depends on what you are
+  actually asking.</p>
+
+  <h3>Designed in Britain</h3>
+
+  <p>Yes, and specifically West London &mdash; the Two Tone Course Cap prints
+  it under the words Leisure Goods. The house line is that fabrics are picked
+  for &ldquo;how they actually feel after a full round, not just how they
+  photograph,&rdquo; which is a British weather argument whether or not it is
+  framed as one.</p>
+
+  <div class="drop-hero tgi-band is-port"><div class="drop-hero-img tgi-free"><img src="/images/casualist/band-links.jpg" alt="Casualist &mdash; Weekend Pique Polo photographed on heath and gorse" loading="lazy" /></div>
+  <div class="tgi-band-credit">Photography courtesy of Casualist</div>
+</div>
+
+  <h3>Made in Britain</h3>
+
+  <p>No. Most pieces are made in Portugal, which is where a great many European
+  golf and knitwear labels have their cut-and-sew, and the brand says so plainly
+  on its own about page rather than leaving it to be discovered.</p>
+
+  <h3>British-owned</h3>
+
+  <p>The brand is run out of West London by its founder, Elie Reboul, and
+  arrived from Australia in 2024. If the question behind the question is
+  whether buying it keeps money in a small independent rather than a
+  multinational, the answer is yes &mdash; it is one person's brand with 23
+  products.</p>
+
+  <h3>Where it sits among the UK independents</h3>
+
+  <p>Casualist belongs to a specific cohort: small British labels that treat
+  golf clothing as clothing first. <a href="/brands/manors">Manors</a> is
+  the most established of them and the most overtly heritage.
+  <a href="/brands/sounder">Sounder</a>, also London, runs colder and more
+  technical. <a href="/brands/fyfe-golf">Fyfe</a> works the accessory end,
+  <a href="/brands/bunker-mentality">Bunker Mentality</a> the loud end from
+  Nottinghamshire, and <a href="/brands/royal-albartross">Royal Albartross</a>
+  the shoe end. Casualist's position in that group is the softest collar and
+  the driest joke. The whole set is in
+  <a href="/brands">our brand index</a>.</p>
+  </div>
 </section>
 
 <section class="products" data-btk="wild">
@@ -793,6 +943,10 @@ section[data-btk="take"] .writeup-body{font-size:17px}
     <details open class="faq-q"><summary>What does Casualist sell?</summary><p>Seventeen products: polos, mockneck and heavyweight tees, a sweatshirt, a cardigan vest, a ripstop jacket, pleated trousers, four caps, a ball marker, and an electric golf cart.</p></details>
     <details open class="faq-q"><summary>Is the Beach Rover real?</summary><p>It is listed on their store at &pound;12,000 with a soft cream finish, striped canopy and electric drive, and the listing asks you to enquire for full specifications and delivery. It is currently sold out.</p></details>
     <details open class="faq-q"><summary>What is the cheapest thing Casualist makes?</summary><p>The ball marker at &pound;15, followed by the Casual Pro snapback at &pound;38 and the caps at &pound;45.</p></details>
+    <details class="faq-q"><summary>Where is Casualist from?</summary><p>London now, Melbourne originally. The brand began as Casual Pro in Australia and announced its move to the UK on 2 April 2024. It is based in West London.</p></details>
+    <details class="faq-q"><summary>Is Casualist a British golf brand?</summary><p>Designed in Britain, made in Portugal, founded in Australia. It is a British-based independent rather than a British-manufactured one, and the brand is open about the Portuguese make on its own about page.</p></details>
+    <details class="faq-q"><summary>Why did Casualist move to the UK?</summary><p>The brand's own explanation, in April 2024, was that Australian and American golf is relaxed about dress codes while in the UK &ldquo;tradition still holds sway.&rdquo; It moved toward the stricter market on purpose.</p></details>
+    <details class="faq-q"><summary>What does &ldquo;master of none, enthusiast of many&rdquo; mean?</summary><p>It is the brand's own line, printed in small type on the back of the Windbreaker Coach Jacket. The Wedgies used the same phrase to describe the Casual Pro philosophy when Elie Reboul appeared on the show in May 2024.</p></details>
   </div>
 </section>
 
