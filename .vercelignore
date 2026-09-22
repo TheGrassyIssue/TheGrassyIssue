@@ -38,3 +38,17 @@ research/
 
 # Build/tooling scripts — static site, nothing server-side runs these
 *.py
+
+# ---- Cloud-sync conflict copies ----
+# iCloud/Dropbox append " 2", " 3" etc. when the same file is edited in two
+# places. 124 of them had accumulated between 28 Apr and 22 Sep 2026, and
+# `git add .` in Deploy TGI.command would have committed 113 of them — including
+# six duplicate .html files that would have gone live as real URLs
+# (/drops/lions-municipal-golf-course-austin 2 and five more). Duplicate content
+# on a site being optimised for search, permanently in git history.
+# No tracked file has " 2" in its name, so these patterns cannot catch real work.
+* 2.*
+* 3.*
+* [0-9].* copy*
+*\ copy.*
+*\ copy\ [0-9].*
