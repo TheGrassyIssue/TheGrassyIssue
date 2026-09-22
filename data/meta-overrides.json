@@ -1,0 +1,132 @@
+{
+ "_what": "Hand-written <title> and <meta name=description> for the pages that already earn search impressions. Applied by fix-meta.py, which is re-runnable so a page rebuild cannot silently lose these.",
+ "_why": "GSC 20 Jun — 19 Sep 2026: average position 8 but CTR 1.1%. Position 8 normally earns 2-3%, so roughly half to two thirds of the clicks the ranking already deserves are being lost at the SERP. Every title below was 66-118 characters and every description 153-304, so Google was truncating both mid-phrase.",
+ "_rules": [
+  "title <= 60 characters, brand or primary query FIRST",
+  "description 120-160 characters, the answer front-loaded",
+  "no site-name suffix on article pages — Google renders the site name on its own line above the title, so repeating it spent 19 characters to say nothing. The homepage keeps it, because that is the page Google derives the site name FROM.",
+  "house rules still apply: no banned word, no ranking other brands down, no selection-criteria explainers"
+ ],
+ "_source": "research/gsc/pages-2026-09-21.json",
+
+ "index.html": {
+  "title": "The Grassy Issue | Independent Golf Brands & Austin Golf",
+  "description": "A running feed of independent golf brands, gear drops, course guides and Austin golf culture, plus a permanent index of the brands to know."
+ },
+
+ "drops/brand-to-know-sentinel-golf.html": {
+  "_keep": "Lenny kept the original editorial title, 21 Sep 2026 — only the site-name suffix came off. It lands at 61 characters, one over the 60 rule of thumb, which is why the length check warns here instead of failing.",
+  "title": "Sentinel Golf — Brand to Know: The Grail Closet of Indie Golf",
+  "description": "Minneapolis-built carry bags from $810 — Dyneema shells, Danish textiles, stitched by hand. The founder, the materials and every bag in the line."
+ },
+ "drops/brand-to-know-kingfisher-golf.html": {
+  "_keep": "Lenny kept the original editorial title, 21 Sep 2026 — only the site-name suffix came off. 63 characters, three over the rule of thumb; warns rather than fails.",
+  "title": "Kingfisher Golf — Brand to Know: Dallas Golf Clothing Under $65",
+  "description": "Started at an East Dallas kitchen counter by a former PepsiCo art director. Screen-printed tees, performance polos and the Worst Golfer contest."
+ },
+ "drops/brand-to-know-aug-11.html": {
+  "title": "Aug 11 — The Atlanta Golf Hat Brand to Know",
+  "description": "Aug 11 is a hat brand out of Atlanta, not a date. Johnny Person founded it in 2023. The rope caps, the buckets and the story behind the name."
+ },
+ "drops/brand-to-know-read-the-green.html": {
+  "title": "Read The Green — NYC Golf Apparel and the '97 Pullover",
+  "description": "The New York golf label started by four friends, not a putting tip. The Founder's Cap, the viral '97 Vintage Pullover and the full range."
+ },
+ "drops/brand-to-know-cloud-and-wind-golf.html": {
+  "title": "Cloud & Wind Golf — $18 Grips With Chinese Verse",
+  "description": "A grips-only brand blending Eastern aesthetics and Pacific coast nature. Hand-blended rubber, verse printed on the box, eighteen dollars a grip."
+ },
+ "drops/brand-to-know-huega-house.html": {
+  "_note": "Carlsbad, not San Diego. The old title said San Diego; the page's own header, and brands.json, both say Carlsbad, CA. Carlsbad sits in San Diego County so the old line was not false, just inconsistent with the page it sat on. Founders, the $10,000 start and the unpaid Rodgers/Ohtani/Allen sightings were all verified against the page body before being put in the description.",
+  "title": "Huega House — The Carlsbad Hat Brand the Pros Wear",
+  "description": "Founded by ex-Packers linebacker Jake Ryan and Jonathan Ruley. The hygge name, the retro-modern prints, and why Rodgers and Ohtani wear the hats."
+ },
+ "drops/brand-to-know-siegelman-stable.html": {
+  "title": "Siegelman Stable — NYC Streetwear Meets Harness Racing",
+  "description": "Max Siegelman's New York label, built on harness-racing heritage. The caddie origin story, the Maxfli collab and the pieces that got it noticed."
+ },
+ "drops/brand-to-know-mogshade.html": {
+  "title": "Mogshade — Handmade Portuguese Golf Headcovers",
+  "description": "Headcovers, towels and wool wall art made by hand in Portugal, to order, from deadstock and rescued fabric. A three-week lead, and the full range."
+ },
+ "drops/brand-to-know-casualist.html": {
+  "title": "Casualist — The London Golf Label From Melbourne",
+  "description": "Designed in London, made in Portugal, started as Casual Pro in Melbourne and moved in 2024. Elie Reboul's quiet clothes for golf and after."
+ },
+ "drops/brand-to-know-olydoe.html": {
+  "title": "Olydoe — The Anti-Polyester Golf Brand From Dallas",
+  "description": "A former Wall Street banker's Supima cotton polos, launched from Dallas in October 2025. The hollow-core yarn, the fit and every piece in the line."
+ },
+ "drops/brand-to-know-sugarloaf-social-club.html": {
+  "title": "Sugarloaf Social Club — The Group Chat Turned Brand",
+  "description": "Ian Gilley's crew started as a 2011 college group chat and became one of golf's most prolific collaborators. The capsules, the collabs, the story."
+ },
+ "drops/ssc-hidden-gem-collection.html": {
+  "title": "Sugarloaf Social Club — The Hidden Gem Collection",
+  "description": "An $850 MacKenzie bag, USA-made wool headcovers, a Crazy Creek chair, a Nalgene and a frisbee. All fifteen pieces, with prices and six favourites."
+ },
+ "drops/brand-to-know-quiet-golf.html": {
+  "title": "Quiet Golf — Less Performance, More Presence",
+  "description": "Christion Lennon's Costa Mesa label from the Museum of Peace & Quiet orbit. The owl crest, the adidas Samba collab and the full collection."
+ },
+ "drops/best-golf-streetwear-brands-2026.html": {
+  "title": "The 5 Best Golf Streetwear Brands in 2026",
+  "description": "The five golf streetwear brands that earn the label in 2026 — Metalwood, Students, Malbon and two more, each status-checked with ownership listed."
+ },
+ "drops/brand-to-know-radry-golf.html": {
+  "title": "Radry Golf — The Wisconsin Artist Behind the Bird",
+  "description": "Tony Knapton draws in Sheboygan before anything gets stitched. One round eye for birdies, one square for bogeys — the hats, the tees, the story."
+ },
+ "drops/reebok-x-manors-ii.html": {
+  "title": "Reebok × Manors II — The United Kingdom of Golf",
+  "description": "All seventeen pieces and thirty colorways from Reebok × Manors II, broken down by colour with prices and stock, plus the campaign behind it."
+ },
+ "drops/the-magazine-edit.html": {
+  "title": "The Best Independent Golf Magazines — 24 Titles",
+  "description": "Twenty-four independent golf magazines and newsletters, from ad-free quarterlies to indie print coming out of the UK, Europe and Japan."
+ },
+ "drops/brand-to-know-odd-ritual.html": {
+  "title": "Odd Ritual — Cape Town Golf Clothes, Collection 03",
+  "description": "South Africa's golf culture label, revisited for Collection 03. The Caddie Jacket, pleated trousers, heavyweight knits and a 1990s palette."
+ },
+ "drops/gumtree-nature-club-drop.html": {
+  "title": "Gumtree Golf & Nature Club — The Nature Club Drop",
+  "description": "Sixteen pieces sewn by hand in New York from deadstock lace, wetsuit neoprene, Angora mohair and reclaimed cotton. Every piece, with prices."
+ },
+ "drops/australian-golf-brands-and-trips.html": {
+  "title": "Golf in Australia — 10 Brands and 12 Trips to Book",
+  "description": "Ten independent Australian golf brands, plus twelve organised trips you can actually book, from Random Golf Club's Australia Major onward."
+ },
+ "drops/walker-golf-the-par-tec-drop.html": {
+  "title": "Walker Golf — The Australian Skate-Golf Brand",
+  "description": "Pro skateboarder Jack Fardell's label out of the Gold Coast. The Kooka logo, the Par-Tec fabric and the whole drop, with prices and stock."
+ },
+ "drops/brand-to-know-metalwood-studio.html": {
+  "title": "Metalwood Studio — Cole Young's Y2K Golf Revival",
+  "description": "The Los Angeles studio mining late-nineties tour aesthetics. Cole Young's story, the adidas MC70 collab and the pieces that set the template."
+ },
+ "drops/hancock-golf-course-austin.html": {
+  "title": "Hancock Golf Course — The Oldest Course in Texas",
+  "description": "Nine holes and par 35 in central Austin for twenty dollars, no carts and no pro shop. The Harvey Penick history, and how the course plays."
+ },
+ "drops/brand-to-know-beams-golf.html": {
+  "title": "BEAMS Golf — Japan's First Select-Shop Golf Line",
+  "description": "Harajuku's most influential retailer started making golf clothes in 2011. The collabs, the silhouettes, and how to buy it from the United States."
+ },
+ "drops/brand-to-know-manors.html": {
+  "title": "Manors Golf — The Brand That Changed Its Mind",
+  "description": "Launched in London in 2019 arguing nobody needed a technical polo. In 2023 it relaunched as a technical golf brand. The full story, and the range."
+ },
+ "drops/brand-to-know-takomo-golf.html": {
+  "title": "Takomo Golf — Forged Irons From Finland, Direct",
+  "description": "Turku-built forged irons at roughly half the shop price. The fitting process, the model range and what the independent testing actually found."
+ },
+ "drops/brand-to-know-found-golf.html": {
+  "title": "Found Golf — Melbourne's Gallery-and-Golf Label",
+  "description": "Half gallery, half golf brand. Lance Peach and Ellen Keillar sell paintings beside the polos in Melbourne. The full range, in Australian dollars."
+ },
+ "drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin.html": {
+  "title": "Ranking Austin's Muni Golf Course Food",
+  "description": "Austin has five public courses and the on-course food at each one tells a different story. Every spot ranked, and what to order at each."
+ }
+}
