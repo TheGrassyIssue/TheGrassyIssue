@@ -141,7 +141,7 @@ TAKES = {
 
 "kingfisher-golf": [
  "Kingfisher treats a shirt like a design brief rather than a merchandise run, which follows from where it came from: Fiona Cohen spent years as an art director at PepsiCo specialising in animation and motion design before starting a golf label in Dallas.",
- "The tees are screen-printed at Lewellyn&rsquo;s in Old East Dallas and the polos come off the same lines as performance shirts you already own &mdash; the $40 Golfmobile Tee is the clearest piece of the thinking.",
+ "The $40 Golfmobile Tee is where that lands. One navy illustration, screen-printed at Lewellyn&rsquo;s in Old East Dallas, and nothing else on the shirt. The drawing is the considered part and the tee under it is built for frequent wear, which is the high-low blend the brand keeps getting right.",
  "It is for the player who wants the graphic to be good rather than loud. The brand&rsquo;s breakout was a city-wide search for the worst golfer in Dallas, which tells you the tone better than a lookbook would.",
 ],
 
