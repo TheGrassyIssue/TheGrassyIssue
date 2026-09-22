@@ -37,6 +37,8 @@ DOMAINS = {
     # the brand lives at metalwood.studio. Mapping the dead domain would
     # have matched nothing and silently produced no mentions.
     "metalwood-studio": ["metalwood.studio"],
+    "shapland": ["shaplandbags.com"],
+    "shoal-golf": ["shoalgolfco.com"],
     # Birds of Condor had NO entry at all, so every --rescan skipped it and its
     # brand page never picked up coverage. Both storefronts are listed: the .com
     # is the Australian store and us. is the USD one the post links.

@@ -63,6 +63,52 @@ JOBS = [
         (6, "texas-trouper-texas", "The Jones Texas Trouper laid flat, TEXAS across the panel"),
         (4, "texas-trouper-longhorns", "The Jones Texas Trouper laid flat, LONGHORNS across the panel"),
     ]),
+
+    # --- second pass, 22 Sep: Lenny asked for three picks per brand ---
+    # Shoal makes exactly one bag, so its three are colourways rather than
+    # models. Lenny's call, made knowing that. Sage and White are the two live
+    # from the August run; Navy is sold out and is in for colour separation.
+    ("shapland", "https://shaplandbags.com/products/kantle-3-1.json", [
+        (0, "kantle-31-a", "The Shapland Kantle 3.1 stand bag"),
+        (1, "kantle-31-b", "The Shapland Kantle 3.1 from the side"),
+        (2, "kantle-31-c", "The Shapland Kantle 3.1 with its stand legs out"),
+        # Index 3 is the NAVY colourway while 0-2 are cream — a gallery that
+        # changes colour halfway reads as a mistake. 8 is the cream detail.
+        (8, "kantle-31-d", "Detail of the Shapland Kantle 3.1 fabric and clasp"),
+    ]),
+    ("shapland", "https://shaplandbags.com/products/sunday-3-1.json", [
+        (0, "sunday-31-a", "The Shapland Sunday 3.1 carry bag"),
+        (1, "sunday-31-b", "The Shapland Sunday 3.1 from the side"),
+        (2, "sunday-31-c", "The Shapland Sunday 3.1 on a fairway"),
+    ]),
+    ("shoal-golf", "https://shoalgolfco.com/products/the-shoal-standard-bag-preorder-white.json", [
+        # Only four frames exist and index 1 has the bag lying flat on the
+        # grass, which is a weak lead. Reordered so it comes last.
+        (2, "standard-white", "The Shoal Standard Bag in white canvas, stand legs out"),
+        (0, "standard-white-b", "The Shoal Standard Bag in white on the course"),
+        (3, "standard-white-c", "The Shoal Standard Bag in white, further down the hole"),
+        (1, "standard-white-d", "The Shoal Standard Bag in white, laid on the grass"),
+    ]),
+    ("shoal-golf", "https://shoalgolfco.com/products/the-shoal-standard-navy-bag.json", [
+        (0, "standard-navy", "The Shoal Standard Bag in navy canvas"),
+        (1, "standard-navy-b", "The Shoal Standard Bag in navy, side view"),
+        (2, "standard-navy-c", "The Shoal Standard Bag in navy with stand legs out"),
+        (3, "standard-navy-d", "The Shoal Standard Bag in navy on the course"),
+    ]),
+    ("jones-sports-co", "https://www.jonessportsco.com/products/utility-x-olive.json", [
+        (0, "utility-x-a", "The Jones Utility X stand bag in olive"),
+        (1, "utility-x-b", "The Jones Utility X from the side"),
+        (2, "utility-x-c", "The Jones Utility X with stand legs out"),
+        (3, "utility-x-d", "Detail of the Jones Utility X pockets"),
+    ]),
+    ("jones-sports-co", "https://www.jonessportsco.com/products/original-jones-bag-navy-white.json", [
+        # Index 1 is a golfer actually carrying it up a fairway — the only
+        # lifestyle frame in the set, so it leads.
+        (1, "original-jones-a", "A golfer carrying the Original Jones Bag up a fairway"),
+        (0, "original-jones-b", "The Original Jones Bag in navy and white with its strap"),
+        (2, "original-jones-c", "The Original Jones Bag single strap"),
+        (3, "original-jones-d", "Detail of the Original Jones Bag panel"),
+    ]),
 ]
 
 
