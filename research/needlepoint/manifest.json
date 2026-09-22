@@ -274,5 +274,33 @@
    "/images/needlepoint/baldwin-belts-golf-ball-0.jpg"
   ],
   "kind": "key"
+ },
+ "fish-creek-custom": {
+  "brand": "Fish Creek",
+  "title": "Custom Needlepoint Belt",
+  "price": "$189.00",
+  "stock": "Made to order",
+  "url": "https://fishcreekbrands.com/products/custom-needlepoint-belt",
+  "frames": [
+   "/images/needlepoint/fish-creek-custom-0.jpg",
+   "/images/needlepoint/fish-creek-custom-1.jpg",
+   "/images/needlepoint/fish-creek-custom-2.jpg",
+   "/images/needlepoint/fish-creek-custom-3.jpg"
+  ],
+  "kind": "belt"
+ },
+ "fish-creek-bespoke-yachtsman": {
+  "brand": "Fish Creek",
+  "title": "Bespoke Yachtsman Belt",
+  "price": "$189.00",
+  "stock": "Made to order",
+  "url": "https://fishcreekbrands.com/products/bespoke-yachtsman-belt",
+  "frames": [
+   "/images/needlepoint/fish-creek-bespoke-yachtsman-0.jpg",
+   "/images/needlepoint/fish-creek-bespoke-yachtsman-1.jpg",
+   "/images/needlepoint/fish-creek-bespoke-yachtsman-2.jpg",
+   "/images/needlepoint/fish-creek-bespoke-yachtsman-3.jpg"
+  ],
+  "kind": "belt"
  }
 }

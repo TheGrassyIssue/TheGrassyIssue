@@ -44,8 +44,13 @@ KEY = "needlepoint"
 ANCHOR = "<!--TGI-SC-HOME-->"
 MARK, END = "<!-- NEEDLEPOINT -->", "<!-- /NEEDLEPOINT -->"
 
-TITLE = "Needlepoint Golf Belts &mdash; 18 Hand-Stitched Picks"
-BLURB = ("Eighteen hand-stitched belts from six makers, $124 to $220, plus three key fobs. "
+# THE CARD IS NOT AN INDEPENDENT PIECE OF COPY. It said "18 ... $124 to $220"
+# while the post said 20 and $124-$195, because the two were edited separately.
+# The verify block below now reads the post's own <title> and refuses to ship a
+# card that disagrees with it, so the feed cannot advertise a different roundup
+# from the one it links to.
+TITLE = "Needlepoint Golf Belts &mdash; 20 Hand-Stitched Picks"
+BLURB = ("Twenty hand-stitched belts from six makers, $124 to $195, plus three key fobs. "
          "Prices and stock read from each maker&rsquo;s own store on 22 September 2026.")
 CTA = "Read the belt report &#8599;"
 
@@ -198,6 +203,28 @@ def main(apply_):
     for src in re.findall(r'<img src="([^"]+)"', blk):
         if not (ROOT / src.lstrip("/")).is_file():
             bad.append(f"slide image missing: {src}")
+
+    # the card must advertise the same roundup the post actually is
+    post = (ROOT / ("drops" + POST.split("/drops")[1] + ".html")).read_text(encoding="utf-8")
+    import html as _h
+    ptitle = _h.unescape(re.search(r"<title>(.*?)</title>", post, re.S).group(1)).strip()
+    if _h.unescape(TITLE).strip() != ptitle:
+        bad.append(f"card title {_h.unescape(TITLE)!r} != post title {ptitle!r}")
+    n_cards = post.count('<div class="product-card"')
+    n_belts = n_cards - post.count('data-kind="key"') if 'data-kind="key"' in post else None
+    for num in ("Eighteen", "Nineteen", "Twenty", "Twenty-one"):
+        if num.lower() in _h.unescape(BLURB).lower():
+            word_n = {"eighteen": 18, "nineteen": 19, "twenty": 20, "twenty-one": 21}[num.lower()]
+            man_belts = sum(1 for m in json.loads(
+                (RES / "manifest.json").read_text(encoding="utf-8")).values()
+                if m["kind"] == "belt")
+            if word_n != man_belts:
+                bad.append(f"card blurb says {num} belts, manifest has {man_belts}")
+    for a, b in re.findall(r"\$(\d+)\s*(?:to|and|&ndash;|–|-)\s*\$(\d+)", _h.unescape(BLURB)):
+        man = json.loads((RES / "manifest.json").read_text(encoding="utf-8"))
+        v = [float(m["price"].replace("$", "")) for m in man.values() if m["kind"] == "belt"]
+        if (float(a), float(b)) != (min(v), max(v)):
+            bad.append(f"card blurb claims ${a}-${b}, belts are ${min(v):.0f}-${max(v):.0f}")
 
     sm = (ROOT / "sitemap.xml").read_text(encoding="utf-8")
     if sm.count(f"<loc>https://thegrassyissue.com{POST}</loc>") != 1:

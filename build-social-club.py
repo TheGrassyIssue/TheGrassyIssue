@@ -222,7 +222,7 @@ SCRIPT = f"""
     // would POST into the void and still show the success panel — the reader
     // would think they had signed up. Say so instead.
     if (GOOGLE_SCRIPT_URL.indexOf('PASTE_YOUR') === 0) {{
-      note.textContent = 'Sign-ups open shortly — the list is not live yet. Email L4harrington@gmail.com to be added now.';
+      note.textContent = 'Sign-ups open shortly — the list is not live yet. Email Lenny@thegrassyissue.com to be added now.';
       note.style.opacity = '1';
       return;
     }}

@@ -47,7 +47,7 @@ SLUG = "/drops/the-needlepoint-belt-report"
 # rank on the collection page. The first version of this title said neither golf
 # nor Grassy Issue, which left the one page on the site with the deepest coverage
 # of the category matching the category's own name only by accident. 47 chars.
-TITLE = "Needlepoint Golf Belts — 18 Hand-Stitched Picks"
+TITLE = "Needlepoint Golf Belts — 20 Hand-Stitched Picks"
 # CUT FROM THE ORIGINAL, NOT FROM THE LOCALISED FRAME. The gallery copies are
 # capped at 1100px, so cropping the hero out of one produced a 1100x471 band that
 # the 1336px hero container then stretched. The source on Shopify is 2048x2048,
@@ -81,7 +81,8 @@ MAKERS = [
   "actual interests rather than a merchandising plan. Sailboats, bourbon, a golf cart."),
  ("Fish Creek", "fishcreek", "BESPOKE FIRST",
   "Mostly a commission house — you send them the thing you want stitched and they "
-  "build it. A short rack of finished designs sits alongside the custom work."),
+  "build it, at $189 for either route. The short rack of finished designs is mostly "
+  "sold out, which tells you where the work actually goes."),
 ]
 
 COPY = {
@@ -116,6 +117,23 @@ COPY = {
    "Skull and crossbones on navy, an old New Haven wink that predates every other "
    "reference on this page. Same hand-stitching, same leather tabs, same brass. "
    "Worn with grey flannel it reads as heraldry rather than a joke.",
+ # THE TWO COMMISSION BELTS. Every detail below is from the product pages'
+ # own text on 22 September 2026 — the $189, the thirty-one lengths, "Unlimited
+ # Design Revisions", the lead-time acknowledgement you must tick, and the
+ # "boat, logo, burgee" field label. Deliberately NOT included: the "about 12
+ # weeks" figure, which exists only inside a How-It-Works JPEG on the page and
+ # was read off a thumbnail. Text inside an image is not a source.
+ "fish-creek-custom":
+   "The commission is the actual product here. You describe the belt, upload any "
+   "icons you cannot put into words, and their artists draw it up with unlimited "
+   "revisions until you sign it off. Thirty-one lengths. Checkout makes you tick a "
+   "box acknowledging the lead time, which says more about how these are made than "
+   "any marketing line would.",
+ "fish-creek-bespoke-yachtsman":
+   "The same commission narrowed to one subject: your boat. Their own upload field "
+   "asks for the boat, the logo, the burgee &mdash; and if you know what a burgee is, "
+   "this belt is already aimed at you. A pattern that means nothing to anyone else in "
+   "the room is a strange thing to want, and precisely the point of the category.",
  "charleston-ric-flair":
    "Charleston stitched the Nature Boy onto a belt: the robe, the sunglasses, the strut, "
    "rendered in yarn on a rose ground. It is the loudest thing here by a distance and "
@@ -187,7 +205,7 @@ INTRO = [
  "an inch and a quarter wide. That strip is then backed with leather and hung on a "
  "brass buckle. A single belt runs to ten thousand stitches or more. Nothing about "
  "the process has changed in a century, which is why the belts look the way they do "
- "and why they cost between a hundred and twenty-four and two hundred and twenty "
+ "and why they cost between a hundred and twenty-four and a hundred and ninety-five "
  "dollars.",
 
  "Smathers & Branson began as two roommates at Bowdoin in 2004 who had each been "
@@ -195,7 +213,7 @@ INTRO = [
  "the USGA, Ryder Cup and Pebble Beach licences. J.Press has been selling them out of "
  "New Haven for far longer without ever making a fuss about it.",
 
- "What follows is eighteen belts from six makers, every price read from the maker&rsquo;s "
+ "What follows is twenty belts from six makers, every price read from the maker&rsquo;s "
  "own store this week, and three key fobs at the end for anyone who wants the stitch "
  "without the commitment. Roughly half carry a golf motif. The other half are here "
  "because the brief was a belt that works on a Tuesday as well as a Saturday.",
@@ -243,7 +261,7 @@ FAQ = [
  ("What is a needlepoint belt?",
   "A strip of canvas hand-stitched with yarn, one stitch per hole of an open mesh, "
   "then backed with leather and fitted to a buckle. A belt runs to ten thousand "
-  "stitches or more, which is why they cost between $124 and $220 and why no two are "
+  "stitches or more, which is why they cost between $124 and $195 and why no two are "
   "quite identical."),
  ("Is an embroidered belt the same thing?",
   "No. Embroidery is thread worked onto fabric that is already finished, usually by "
@@ -444,7 +462,12 @@ def main(apply_):
     if not n:
         sys.exit("! breadcrumb not found — it would still name the donor post")
 
-    desc = ("Eighteen hand-stitched needlepoint golf belts from six makers, $124 to $220, "
+    # $195 IS THE REAL TOP OF THE RANGE. This said "$124 to $220" in the meta
+    # description, the intro and an FAQ answer, and shipped live that way. No
+    # product in the manifest has ever been $220 — the dearest belt is J.Press
+    # and Smathers & Branson at $195. An unsourced figure in three places is
+    # exactly what the read-it-off-the-store rule exists to prevent.
+    desc = ("Twenty hand-stitched needlepoint golf belts from six makers, $124 to $195, "
             "plus three key fobs — and what separates needlepoint from embroidery.")
     h = page[:page.find("</head>")]
     def sub1(pat, rep, s):
@@ -587,6 +610,45 @@ def main(apply_):
                     if im_.size != (int(w_.group(1)), int(h_.group(1))):
                         bad.append(f"{m_.group(1)}: declared {w_.group(1)}x{h_.group(1)}, "
                                    f"file is {im_.size[0]}x{im_.size[1]}")
+
+    # ---- PRICE CLAIMS MUST MATCH THE MANIFEST, IN DIGITS *AND* IN WORDS ----
+    # "$124 to $220" shipped live in the meta description, the intro and an FAQ
+    # answer. No product has ever been $220; the dearest belt is $195. Worse,
+    # the intro also spelled it out — "two hundred and twenty dollars" — so a
+    # grep for "$220" and "220" came back clean while the error was still on the
+    # page in words. Any figure a reader can check has to be checked both ways.
+    def span(kind):
+        v = [float(m["price"].replace("$", "").replace(",", ""))
+             for m in man.values() if m["kind"] == kind]
+        return (min(v), max(v))
+
+    lo, hi = span("belt")
+    # A range in the copy has to describe SOME real set of products. The key fob
+    # lede correctly says "between $32 and $35", so checking every range against
+    # the belt span alone failed a true sentence — the first version of this
+    # guard did exactly that. Both spans are legitimate; anything else is not.
+    valid_spans = {span("belt"), span("key")}
+    for a, b in re.findall(r"\$(\d+)\s*(?:to|and|&ndash;|–|-)\s*\$(\d+)", plain):
+        if (float(a), float(b)) not in valid_spans:
+            bad.append(f"copy claims ${a}-${b}, which is neither the belt span "
+                       f"${lo:.0f}-${hi:.0f} nor the fob span "
+                       f"${span('key')[0]:.0f}-${span('key')[1]:.0f}")
+    WORDS = {"a hundred and twenty-four": 124, "a hundred and ninety-five": 195,
+             "two hundred and twenty": 220, "two hundred and twenty-five": 225,
+             "a hundred and twenty-five": 125}
+    for phrase, val in WORDS.items():
+        if phrase in plain.lower() and val not in (lo, hi):
+            bad.append(f"copy spells out {phrase!r} (${val:.0f}), "
+                       f"outside the manifest range ${lo:.0f}-${hi:.0f}")
+    n_belts = sum(1 for m in man.values() if m["kind"] == "belt")
+    NUM = {18: "eighteen", 19: "nineteen", 20: "twenty", 21: "twenty-one"}
+    for k, w in NUM.items():
+        if k == n_belts:
+            continue
+        if re.search(rf"\b{w} belts\b", plain, re.I):
+            bad.append(f"copy says {w!r} belts, the page has {n_belts}")
+        if re.search(rf"\b{k} Hand-Stitched\b", plain):
+            bad.append(f"title says {k} picks, the page has {n_belts} belts")
 
     words = len(plain.split())
     if words < 1200:

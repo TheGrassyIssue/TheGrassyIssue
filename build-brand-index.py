@@ -307,7 +307,7 @@ BODY = f"""<!--BX-BRAND-INDEX-->
     <div class="dir-state"><span id="bx-label">ALPHABETICAL</span><button type="button" data-open-filter>FILTER &rarr;</button></div></div>
   {GRID}
   <p class="zero" id="bx-zero">Nothing in that combination yet &mdash; the Index grows every week.</p>
-  <div class="submit"><div><div class="eyebrow">KNOW SOMETHING WE DON&rsquo;T?</div><h2>The Index should never feel finished.</h2><p>Found a brand that belongs here? Send it our way.</p></div><a class="cta" href="mailto:L4harrington@gmail.com?subject=A%20brand%20for%20the%20Index">SUBMIT A BRAND &rarr;</a></div>
+  <div class="submit"><div><div class="eyebrow">KNOW SOMETHING WE DON&rsquo;T?</div><h2>The Index should never feel finished.</h2><p>Found a brand that belongs here? Send it our way.</p></div><a class="cta" href="mailto:Lenny@thegrassyissue.com?subject=A%20brand%20for%20the%20Index">SUBMIT A BRAND &rarr;</a></div>
 </div></section>
 
 <section class="nl" id="join"><div class="wrap">

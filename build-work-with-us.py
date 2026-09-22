@@ -111,8 +111,8 @@ BODY = """
     <h2 style="font-family:var(--serif);font-weight:600;font-size:24px;margin:32px 0 14px">Getting in touch</h2>
 
     <p>Email is best, and it reaches one person rather than an inbox:
-    <a href="mailto:L4harrington@gmail.com?subject=Working%20with%20The%20Grassy%20Issue"
-       style="border-bottom:1px solid var(--ink)">L4harrington@gmail.com</a>.</p>
+    <a href="mailto:Lenny@thegrassyissue.com?subject=Working%20with%20The%20Grassy%20Issue"
+       style="border-bottom:1px solid var(--ink)">Lenny@thegrassyissue.com</a>.</p>
 
     <p>Useful things to put in a first email: what you make, what you are trying to do, and roughly
     when. If there is already coverage of you on the site, a link to it saves a step. If there is
@@ -138,7 +138,7 @@ SCHEMA = {
     "publisher": {"@type": "Organization", "name": "The Grassy Issue",
                   "url": "https://thegrassyissue.com",
                   "founder": {"@type": "Person", "name": "Lenny Harrington"},
-                  "email": "L4harrington@gmail.com"},
+                  "email": "Lenny@thegrassyissue.com"},
 }
 
 apply_ = "--apply" in sys.argv

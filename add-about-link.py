@@ -24,9 +24,9 @@ for p in pages:
             if new != blk:
                 s = s.replace(blk, new, 1); nav_done += 1
     # footer: sit About next to Contact where that footer shape exists
-    if s.count('href="/about"') < 2 and 'mailto:L4harrington@gmail.com' in s:
-        new = s.replace('<a href="mailto:L4harrington@gmail.com">Contact</a>',
-                        '<a href="/about">About</a><a href="mailto:L4harrington@gmail.com">Contact</a>', 1)
+    if s.count('href="/about"') < 2 and 'mailto:Lenny@thegrassyissue.com' in s:
+        new = s.replace('<a href="mailto:Lenny@thegrassyissue.com">Contact</a>',
+                        '<a href="/about">About</a><a href="mailto:Lenny@thegrassyissue.com">Contact</a>', 1)
         if new != s:
             s = new; foot_done += 1
     if s == o:
