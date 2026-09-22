@@ -27,10 +27,14 @@ Shapland's sold-out state is stated on the card and again in the closing
 section. Lenny's call, and the honest one — a reader finds out here rather than
 after clicking.
 
-HERO. Shapland's group frame is the only natively wide composition in the
-twelve: eight bags in a row across a fairway, in a 1868x1868 square. A 21:9 band
-out of the middle keeps the whole line. Every other frame is a single bag stood
-upright, which a 21:9 crop decapitates.
+HERO, SECOND PASS. The first hero was Shapland's colour range lined up across a
+fairway, cut from a 1868px square. Lenny asked for something else and
+specifically for Jones. Their site turned out to publish almost no landscape
+imagery at all — the homepage renders nothing above 600px and the entire
+250-product catalogue holds exactly one frame wider than it is tall. That one
+frame is the hero now, and it is the right picture anyway: a golfer walking a
+fairway with the bag on its single strap, which is the argument the post makes.
+1600x686 at 21:9, no upscaling, house hero size exactly.
 
 Idempotent. Dry run by default.
 """
@@ -48,9 +52,14 @@ DONOR = ROOT / "drops/the-custom-wedge-report.html"
 OUT = ROOT / "drops/upgrading-your-golf-bag.html"
 SLUG = "/drops/upgrading-your-golf-bag"
 TITLE = "Upgrading Your Golf Bag — Three Makers a Step Above"
-HERO_SRC = ("https://cdn.shopify.com/s/files/1/1408/8378/files/"
-            "Rye_4_Group1_7c9ff1ae-e8f2-46f7-8985-6f91f3f215ab.jpg")
-HERO = "/images/shapland/hero.jpg"
+# THE ONLY LANDSCAPE FRAME JONES PUBLISHES. Their homepage renders nothing over
+# 600px and their whole 250-product catalogue contains exactly one image wider
+# than it is tall — this one, a golfer walking a fairway with the Original Jones
+# Bag on its single strap. At 1600px wide a 21:9 band is 1600x686, which is the
+# house hero size, so it lands at spec with no upscaling. It is also the most
+# on-message picture available: the post argues for the walker.
+HERO_SRC = "https://cdn.shopify.com/s/files/1/0693/6587/products/I3I1334-medium.jpg"
+HERO = "/images/jones-sports-co/bag-upgrade-hero.jpg"
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"}
 
@@ -285,7 +294,8 @@ def cut_hero(apply_):
     ch = round(w / (21 / 9))
     if ch > h:
         sys.exit(f"! hero source too short for 21:9 — {w}x{h}")
-    top = round((h - ch) * 0.46)          # bags sit just above centre
+    top = round((h - ch) * 0.25)          # keeps the golfer cap-to-shoes;
+                                          # 0.46 cut his head off
     band = im.crop((0, top, w, top + ch))
     tw = min(2000, w)                      # never upscale
     band = band.resize((tw, round(tw / (21 / 9))), Image.LANCZOS)
@@ -354,7 +364,7 @@ def body():
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{HERO}" alt="Shapland Rye 4.0 stand bags lined up across a fairway" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{HERO}" alt="A golfer walking a fairway carrying the Original Jones Bag on its single strap" /></div></div>
 
 <div class="writeup">
   <div class="writeup-body">

@@ -4,14 +4,13 @@
 Cuts the 4:5 feed card, inserts the homepage card in the top slot, and verifies
 the finished artefacts rather than the strings that went into them.
 
-WHY THE CARD IMAGE IS THE JONES FRAME AND NOT THE HERO. The hero is Shapland's
-colour range lined up across a fairway, which is the best picture in the post
-and completely unusable at 4:5 — it is a landscape composition, so a portrait
-crop either shrinks the bags into the bottom third or decapitates them. Five
-crops were cut and looked at before this was settled. The Jones clubhouse frame
-is warm, high contrast against a feed of mostly outdoor greens, and carries the
-Austin connection; it also means the card and the hero show two different
-makers, which suits a post about three of them.
+WHY THE CARD IS THE SHAPLAND KANTLE. The hero is now the Jones walker, so the
+card moved to Shapland to keep two of the three makers visible in the top of the
+feed. Shapland's own best picture — the colour range lined up across a fairway —
+cannot be the card: it is a landscape composition, and five 4:5 crops were cut
+and looked at before that was accepted. Every one either shrank the bags into
+the bottom third or cut their tops off. The Kantle standing on a stone path is
+the Shapland frame that survives a portrait crop with the product still legible.
 
 CARD SHAPE IS COPIED FROM THE FEED, NOT INVENTED. The house card is
 div.card[data-type] > div.card-media > span.card-tag.grass + a > img, then
@@ -36,8 +35,8 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent
 NEW = "/drops/upgrading-your-golf-bag"
-HERO = "/images/shapland/hero.jpg"
-CARD_SRC = ROOT / "images/jones-sports-co/texas-trouper-clubhouse.jpg"
+HERO = "/images/jones-sports-co/bag-upgrade-hero.jpg"
+CARD_SRC = ROOT / "images/shapland/kantle-31-a.jpg"
 CARD_IMG = "/images/bag-upgrade/card.jpg"
 ANCHOR = "<!--TGI-SC-HOME-->"
 MARK = "<!-- BAG UPGRADE -->"
@@ -47,7 +46,7 @@ TITLE = "Upgrading Your Golf Bag &mdash; Three Makers a Step Above"
 BLURB = ("Nine bags from Shapland, Shoal and Jones, $185 to $495. What the money buys, "
          "and the restock dates for the two that are sold out.")
 CTA = "Read the bag report &#8599;"
-ALT = "The Jones Texas Trouper carry bag resting against a clubhouse bar"
+ALT = "The Shapland Kantle 3.1 stand bag in cream, legs out on a stone path"
 
 CARD = f'''{MARK}
   <div class="card" data-type="drop">
