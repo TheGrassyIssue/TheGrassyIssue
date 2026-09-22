@@ -12,18 +12,6 @@
   "type": "Hat"
  },
  {
-  "n": 2,
-  "brand": "rebolf",
-  "title": "Apr\u00e8s Golf Club Hat",
-  "handle": "apres-golf-club-blue-yellow-hat",
-  "price": 25.0,
-  "url": "https://rebolf.com/products/apres-golf-club-blue-yellow-hat",
-  "img": "https://cdn.shopify.com/s/files/1/0672/1522/9214/files/RB-APC-blue-hat.jpg?v=1775820555",
-  "w": 1000,
-  "h": 1176,
-  "type": "Hats"
- },
- {
   "n": 3,
   "brand": "devereux-golf",
   "title": "Skull Caddie Performance Rope Hat - White",
@@ -132,18 +120,6 @@
   "type": "Trucker Hat"
  },
  {
-  "n": 12,
-  "brand": "bettinardi",
-  "title": "Bettinardi American Needle Gangster Cat Premium Cotton Hepcat Hat (Gray)",
-  "handle": "bettinardi-american-needle-gangster-cat-premium-cotton-hepcat-hat-gray",
-  "price": 40.0,
-  "url": "https://bettinardi.com/products/bettinardi-american-needle-gangster-cat-premium-cotton-hepcat-hat-gray",
-  "img": "https://cdn.shopify.com/s/files/1/2513/8806/files/25-0011-TBL-01-1..png?v=1785442228",
-  "w": 2048,
-  "h": 2048,
-  "type": "Baseball Hats"
- },
- {
   "n": 13,
   "brand": "sugarloaf-social-club",
   "title": "Cotton SSC Arrow Cap",
@@ -221,5 +197,19 @@
   "w": 1125,
   "h": 1500,
   "type": "Hat"
+ },
+ {
+  "brand": "birds-of-condor",
+  "title": "Coogi Bucket Hat",
+  "price": 55.0,
+  "url": "https://us.birdsofcondor.com/products/coogi-golf-tee-holder-bucket-hat",
+  "img": "https://cdn.shopify.com/s/files/1/0765/5486/2911/products/birds-of-condor-coogi-brand-collaboration-print-bucket-hat-with-tee-holder-front.jpg?v=1788305321"
+ },
+ {
+  "brand": "metalwood-studio",
+  "title": "Dewey Soft Brim Hat",
+  "price": 48.0,
+  "url": "https://metalwood.studio/products/dewey-soft-brim-hat-navy",
+  "img": "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-01-09_NVY_V1_3840x.progressive.jpg?v=1778803156&format=jpg&w=3840&q=75"
  }
 ]

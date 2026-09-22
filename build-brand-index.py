@@ -16,8 +16,10 @@ build-brands.py resolved into the page it just wrote (first slide of each
 
 Editorial choices (change here, not in brands.json):
   MATERIAL   — DRAFT "material-forward" list; not a brands.json tag yet.
-  PICKS      — the TGI PICKS dozen. Asserts every slug exists.
-  VIBES      — the six tiles + their images.
+  PICKS      — the TGI PICKS list. Asserts every slug exists. Eleven, on
+               purpose; see the note above the list before "fixing" the count.
+  VIBES      — the six tiles + their images. TGI PICKS is one of them as of
+               2026-09-21, in the slot MATERIAL FORWARD used to hold.
   INTERRUPT  — where the editorial cuts fall (card index) and their images.
   Start Here was removed at Lenny's request (2026-09-14).
 
@@ -73,9 +75,41 @@ N = len(data)
 by = {d["slug"]: d for d in data}
 def count(pred): return sum(1 for d in data if pred(d))
 
+# TGI PICKS — the editorial selection. Revised 21 September 2026 with Lenny:
+# out went Criquet, Edel, Clint Orms and Forden; in came Gumtree, Mogshade and
+# Metalwood. Forden was the clearest cut — one post of coverage on the whole
+# site, which is not enough to stand behind "we'd spend our money on it". The
+# three additions close the headcover gap: it was the site's deepest category
+# and had no representation here at all.
+#
+# ELEVEN, NOT TWELVE, AND THAT IS DELIBERATE. Lenny's call — a twelfth was
+# offered and declined. Nothing on the page types the number, and the count in
+# the tile is computed, so this list is free to grow or shrink. Do not "round it
+# up" to a dozen; an extra name nobody argued for is how a picks list stops
+# meaning anything.
+PICKS = ["sentinel-golf", "mackenzie", "sugarloaf-social-club", "kingfisher-golf",
+         "quiet-golf", "manors", "birds-of-condor", "cloud-and-wind-golf",
+         "gumtree-golf", "mogshade", "metalwood-studio"]
+missing = [p for p in PICKS if p not in by]
+assert not missing, f"PICKS not in brands.json: {missing}"
+assert len(set(PICKS)) == len(PICKS), "duplicate slug in PICKS"
+
+# THE PICKS TILE REPLACED "MATERIAL FORWARD" (Lenny, 21 September 2026). Two
+# reasons it was the one to go: its list was nine slugs hand-typed into MATERIAL
+# below and never promoted to a real tag, and its button was the only one of the
+# six pointing at "#directory" instead of a page — every other tile is a
+# crawlable route. The material-forward TAG is untouched; it still chips on the
+# cards and still appears in the filter drawer, so nothing was actually removed
+# from the page, only from this row.
+#
+# TGI PICKS also used to run as an editorial band after the 66th card, which is
+# far enough down that essentially nobody reached it. That band is gone — this
+# tile is where it lives now. Its "#picks" deep link is handled in the hash
+# block at the bottom of the JS; if you remove that, this tile becomes a link to
+# nowhere for anyone arriving from outside.
 VIBES = [
   ("quiet",    "QUIET",            "Understated. Considered. No giant logos.",                "QUIET LUXURY →",      "/images/quiet-golf/cardroom-corduroy-jacket-a2.jpg", "/brands/tag/quiet-luxury", lambda d: "quiet-luxury" in d["tags"]),
-  ("material", "MATERIAL FORWARD", "New materials. Smarter construction. Better golf stuff.", "EXPLORE MATERIALS →", "/images/dyneema/walker-3.jpg", "#directory", lambda d: "material-forward" in d["tags"]),
+  ("picks",    "TGI PICKS",        "The brands we&rsquo;d actually spend our money on.",       "SEE THE PICKS →",     "/images/ny-trip/bethpage-bag.jpg", "/brands#picks", lambda d: d["slug"] in PICKS),
   ("made",     "MADE",             "Small shops. Real hands. Limited quantities.",             "MADE BY HAND →",      "/images/texas-brands/artisan-3.jpg", "/brands/tag/made-by-hand", lambda d: "made-by-hand" in d["tags"]),
   ("muni",     "MUNI",             "More parking-lot beer than member-guest.",                "MUNI ENERGY →",       "/images/lions/hole16.jpg", "/brands/tag/muni-energy", lambda d: "muni-energy" in d["tags"]),
   ("outdoors", "OUTDOORS",         "Golf meets climbing, camping and trail culture.",         "GORPCORE →",          "/images/sentinel-golf/basecamp-walker-black-dyneema-0.jpg", "/brands/tag/gorpcore", lambda d: "gorpcore" in d["tags"]),
@@ -84,12 +118,9 @@ VIBES = [
 INTERRUPT = [
   (12, "FROM TEXAS", "Golf stuff being made in our backyard.", "EXPLORE TEXAS →", "/images/texas-brands/hero-texas-brands.jpg", "region:texas"),
   (36, "FROM JAPAN", "Golf culture looks different over here.", "EXPLORE JAPAN →", "/images/japan-golf/itobori-copper-wedge.jpg", "region:japan"),
-  (66, "TGI PICKS", "The brands we&rsquo;d actually spend our money on.", "SEE THE PICKS →", "/images/ny-trip/bethpage-bag.jpg", "picks"),
 ]
-PICKS = ["sentinel-golf","mackenzie","sugarloaf-social-club","kingfisher-golf","edel-golf","criquet",
-         "quiet-golf","manors","clint-orms","forden-golf","birds-of-condor","cloud-and-wind-golf"]
-missing = [p for p in PICKS if p not in by]
-assert not missing, f"PICKS not in brands.json: {missing}"
+assert not any(k == "TGI PICKS" for _, k, _, _, _, _ in INTERRUPT), \
+    "TGI PICKS is a vibe tile now — having it as an editorial band too shows it twice"
 for _, _, _, _, img, _, _ in VIBES: assert os.path.exists(ROOT + img), img
 for _, _, _, _, img, _ in INTERRUPT: assert os.path.exists(ROOT + img), img
 HERO_IMG = "/images/lions/dusk.jpg"; assert os.path.exists(ROOT + HERO_IMG)
@@ -145,6 +176,12 @@ GRID = '<div class="grid">' + "".join(grid) + '</div>'
 letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 have = {d["name"].lstrip("&").strip()[0].upper() for d in data}
 AZ = "".join(f'<button class="az{"" if L in have else " off"}" data-letter="{L}"{"" if L in have else " disabled"}>{L}</button>' for L in letters)
+# "SIX WAYS IN" was typed into the section header, which is exactly the kind of
+# number the copy rules say to compute. It happened to stay true through this
+# change only because a tile was swapped rather than added; the next person to
+# add one would have shipped a header that lied. Derived now.
+WORDS = {3: "THREE", 4: "FOUR", 5: "FIVE", 6: "SIX", 7: "SEVEN", 8: "EIGHT", 9: "NINE"}
+WAYS_IN = WORDS.get(len(VIBES), str(len(VIBES)))
 VIBE_HTML = "".join(
     f'<a class="vibe" href="{href}" data-vibe="{k}"><div class="vibe-img"><img src="{img}" alt="" loading="lazy"></div>'
     f'<div class="vibe-body"><div class="vibe-name">{name}</div><p class="vibe-p">{desc}</p>'
@@ -259,7 +296,7 @@ BODY = f"""<!--BX-BRAND-INDEX-->
 </div></section>
 
 <section class="sec" id="vibes"><div class="wrap">
-  <div class="sh"><h2>Browse by vibe</h2><span class="sub">SIX WAYS IN</span></div>
+  <div class="sh"><h2>Browse by vibe</h2><span class="sub">{WAYS_IN} WAYS IN</span></div>
   <div class="vibes">{VIBE_HTML}</div>
 </div></section>
 
@@ -294,7 +331,11 @@ JS = r"""
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const cards=$$('#bx .bc'),cuts=$$('#bx .cut'),state={q:'',cats:new Set(),tags:new Set(),regions:new Set(),vibe:null,picks:false};
 const PICKS=new Set(__PICKS__);
-const VIBE={quiet:'quiet-luxury',material:'material-forward',made:'made-by-hand',muni:'muni-energy',outdoors:'gorpcore',new:'__new'};
+// TGI PICKS is deliberately absent from this map. Every other tile filters on a
+// TAG the cards carry in data-tags; picks is a hand-picked slug list with no tag
+// behind it, so it sets state.picks instead and is branched on below. Adding
+// picks:'…' here would silently filter on a tag no card has and show nothing.
+const VIBE={quiet:'quiet-luxury',made:'made-by-hand',muni:'muni-energy',outdoors:'gorpcore',new:'__new'};
 function apply(){
   let q=state.q.trim().toLowerCase(),n=0;
   cards.forEach(c=>{
@@ -321,7 +362,7 @@ function clearAll(){state.q='';$('#bx-q').value='';state.cats.clear();state.tags
 function goDir(){$('#directory').scrollIntoView({behavior:'smooth',block:'start'});}
 $('#bx-q').addEventListener('input',e=>{state.q=e.target.value;state.vibe=null;state.picks=false;apply();});
 document.addEventListener('keydown',e=>{const t=document.activeElement.tagName;if(e.key==='/'&&t!=='INPUT'&&t!=='TEXTAREA'){e.preventDefault();goDir();$('#bx-q').focus({preventScroll:true});}});
-$$('#bx .vibe').forEach(v=>v.addEventListener('click',e=>{e.preventDefault();clearAll();state.vibe=VIBE[v.dataset.vibe];apply();goDir();}));
+$$('#bx .vibe').forEach(v=>v.addEventListener('click',e=>{e.preventDefault();clearAll();if(v.dataset.vibe==='picks'){state.picks=true;}else{state.vibe=VIBE[v.dataset.vibe];}apply();goDir();}));
 $$('#bx [data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();clearAll();const j=a.dataset.jump;if(j.startsWith('region:'))state.regions.add(j.split(':')[1]);if(j==='picks')state.picks=true;apply();goDir();}));
 $$('#bx .az').forEach(b=>b.addEventListener('click',()=>{const t=cards.find(c=>!c.classList.contains('hide')&&c.dataset.letter===b.dataset.letter);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'instant'});}}));
 const drawer=$('#bx-drawer');function openD(){drawer.classList.add('open');document.body.style.overflow='hidden'}function closeD(){drawer.classList.remove('open');document.body.style.overflow=''}
@@ -338,6 +379,11 @@ const h=new URLSearchParams(location.hash.replace(/^#/,''));
 if(h.get('tag')){state.tags.add(h.get('tag'));const i=document.querySelector('#bx .fo input[value="'+h.get('tag')+'"]');if(i)i.checked=true;}
 if(h.get('region')){state.regions.add(h.get('region'));const i=document.querySelector('#bx .fo input[value="'+h.get('region')+'"]');if(i)i.checked=true;}
 if(h.get('q')){state.q=h.get('q');$('#bx-q').value=h.get('q');}
+// #picks is a BARE fragment, not key=value — /brands#picks. URLSearchParams
+// parses that as the key 'picks' with an empty value, so .get() returns '' and
+// is falsy; .has() is the one that works. This is what makes the TGI PICKS tile
+// a real link: shareable, and something a crawler can follow.
+if(h.has('picks')){state.picks=true;$('#directory').scrollIntoView({block:'start'});}
 apply();
 window.addEventListener('hashchange',()=>location.reload());
 })();
@@ -350,7 +396,13 @@ foot = page.find("<footer")
 assert nav_end > 6 and foot > nav_end, "could not find nav/footer boundaries"
 head_end = page.find("</head>")
 head = page[:head_end]
-head = re.sub(r'<style id="bx-css">.*?</style>\n?', "", head, flags=re.S)
+# THE \n* IS LOAD-BEARING. CSS below opens with a newline and this strip only
+# ate the trailing one, so every run left one more blank line above the <style>
+# than the last. The page grew by a byte per build, forever, and the docstring
+# above said "Idempotent" the whole time — true of the markup, false of the
+# file, which is the version that matters when anyone diffs a build. Eating the
+# leading newlines too makes the round-trip exact.
+head = re.sub(r'\n*<style id="bx-css">.*?</style>\n?', "", head, flags=re.S)
 # SEE THE VOCABULARY NOTE IN build-brands.py — it carries the evidence for why
 # the title reads the way it does. This file writes the head LAST, so THESE are
 # the strings that ship; the equivalents over there only matter between build
@@ -383,6 +435,76 @@ assert "if(e.target.value.length>1)goDir()" not in out, "auto-scroll-on-type is 
 assert out.count("<!--BX-BRAND-INDEX-->") == 1 and out.count('id="bx-js"') == 1 and out.count('id="bx-css"') == 1
 assert "bi-card" not in out.split("<!--BX-BRAND-INDEX-->")[1].split("<!--/BX-BRAND-INDEX-->")[0]
 assert not re.search(r"\bworth\b", re.sub(r"fort worth", "", re.sub(r"<[^>]+>", " ", BODY), flags=re.I), re.I), "banned word in body copy"
+
+# ---- THE TGI PICKS TILE, CHECKED IN THE FINISHED PAGE --------------------
+# Every assertion below reads `out` — the string that becomes brands/index.html
+# — and not the pieces that went into it. That distinction is the whole reason
+# a hero from the wrong post shipped this morning: the build verified what it
+# had assembled rather than what a reader would load.
+body = out.split("<!--BX-BRAND-INDEX-->")[1].split("<!--/BX-BRAND-INDEX-->")[0]
+vibes_html = body.split('<div class="vibes">')[1].split("</div></section>")[0]
+bad = []
+
+tiles = re.findall(r'data-vibe="([^"]+)"', vibes_html)
+if len(tiles) != len(VIBES):
+    bad.append(f"{len(tiles)} tiles rendered, {len(VIBES)} defined")
+if "picks" not in tiles:
+    bad.append("no TGI PICKS tile in the vibe row")
+if "material" in tiles:
+    bad.append("the MATERIAL FORWARD tile is back — it was replaced, not moved")
+if f">{WAYS_IN} WAYS IN<" not in body:
+    bad.append(f"the section header does not say {WAYS_IN} WAYS IN")
+
+# the tile itself: label, destination, and a count that matches the list
+tile = re.search(r'<a class="vibe" href="([^"]*)" data-vibe="picks".*?</a>', vibes_html, re.S)
+if not tile:
+    bad.append("could not read the picks tile back out of the page")
+else:
+    if tile.group(1) != "/brands#picks":
+        bad.append(f"picks tile points at {tile.group(1)!r}; /brands/ 301s under "
+                   "trailingSlash:false, so the slash form costs a redirect hop")
+    if "TGI PICKS" not in tile.group(0):
+        bad.append("the picks tile is not labelled TGI PICKS")
+    m = re.search(r">(\d+) BRANDS<", tile.group(0))
+    if not m:
+        bad.append("the picks tile shows no brand count")
+    elif int(m.group(1)) != len(PICKS):
+        bad.append(f"tile says {m.group(1)} brands, PICKS holds {len(PICKS)}")
+
+# The band it replaced must not also survive lower down — one route, not two.
+#
+# THE FIRST VERSION OF THIS CHECK WAS WRONG AND SAID SO LOUDLY. It looked for
+# "TGI PICKS" in body.split('</div></section>')[1], assuming the first such
+# close tag ended the vibe row. It ends the HERO — so the slice still contained
+# the vibe row, the checker found the tile it was supposed to be ignoring, and
+# the build failed on a page that was correct. Positional slicing guessed at
+# structure. Match the structure instead: an editorial band is a
+# <section class="cut">, so look at those and nothing else.
+for cut in re.findall(r'<section class="cut".*?</section>', body, re.S):
+    if "TGI PICKS" in cut:
+        bad.append("TGI PICKS is still an editorial band in the grid as well as "
+                   "a tile — it would appear on the page twice")
+
+# every picked brand must actually have a card, or the filter shows fewer
+for slug in PICKS:
+    if f'data-slug="{slug}"' not in body:
+        bad.append(f"picked brand {slug} has no card in the grid")
+
+# dropping the tile must not have dropped the TAG: it still chips on cards and
+# still has to be offered in the filter drawer.
+if 'value="material-forward"' not in body:
+    bad.append("material-forward vanished from the filter drawer — the tag was "
+               "supposed to survive the tile being replaced")
+
+# the JS has to branch on picks rather than look it up as a tag
+if "v.dataset.vibe==='picks'" not in out:
+    bad.append("the vibe handler no longer special-cases picks; it would filter "
+               "on a tag no card carries and show an empty grid")
+if "h.has('picks')" not in out:
+    bad.append("the #picks deep link handler is gone; the tile links nowhere")
+
+if bad:
+    sys.exit("! TGI PICKS checks failed:\n    " + "\n    ".join(bad))
 
 print(f"{N} brands · vibes " + ", ".join(f"{n}={count(p)}" for _, n, _, _, _, _, p in VIBES) + f" · {len(out)//1024} KB")
 if "--apply" in sys.argv:

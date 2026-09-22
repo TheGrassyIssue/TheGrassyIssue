@@ -28,6 +28,19 @@ import json, re, os, html, glob, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 
 DOMAINS = {
+    # added 21 Sep 2026 with The Hat & Towel Edit. A brand with no DOMAINS
+    # entry is never visited by --rescan, gets no mentions row, and so
+    # build-brands.py silently skips its page — while /brands still lists
+    # it and links a 404. That is what happened here.
+    "matchstick-golf": ["matchstickgolf.com"],
+    # metalwoodstudio.com now redirects to an unrelated woodworking shop;
+    # the brand lives at metalwood.studio. Mapping the dead domain would
+    # have matched nothing and silently produced no mentions.
+    "metalwood-studio": ["metalwood.studio"],
+    # Birds of Condor had NO entry at all, so every --rescan skipped it and its
+    # brand page never picked up coverage. Both storefronts are listed: the .com
+    # is the Australian store and us. is the USD one the post links.
+    "birds-of-condor": ["birdsofcondor.com", "us.birdsofcondor.com"],
     # hiddenlinkssociety.com ONLY. hiddenlinksgolf.com is a different company
     # entirely — a custom club builder — and must never map to this slug.
     "hidden-links-society": ["hiddenlinkssociety.com"],

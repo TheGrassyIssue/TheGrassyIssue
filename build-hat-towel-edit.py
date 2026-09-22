@@ -26,8 +26,7 @@ stock here come from it. All 30 confirmed in stock at these prices on 21 Sep
 
 COPY IS GROUNDED IN THE BRAND'S OWN PRODUCT COPY (research/hats/descs.json).
 Dimensions, fabrics and constructions below are what the maker states. Where a
-brand says almost nothing (Rebolf, PUMA), the entry stays short rather than
-inventing a spec.
+brand says almost nothing, the entry stays short rather than inventing a spec.
 
 NO BEANIES, NO VISORS — filtered out of the candidate POOL, not just the
 shortlist, so brands were re-picked on a cap rather than dropped. Jones Sports
@@ -68,7 +67,7 @@ thirty of them &mdash; eighteen caps, twelve towels, one piece per brand, and no
 brand repeated between the two halves.</p>
 
 <p>Beanies and visors are both out. What is here starts at a thirteen-dollar
-microfibre towel and tops out at fifty, and every price was read from the
+microfibre towel and tops out at fifty-five, and every price was read from the
 brand&rsquo;s own store on %s rather than copied from a press
 release.</p>
 
@@ -129,15 +128,15 @@ simply stop being the reason you pick that hat over another one.</p>
 
 <p>Then there is price, which has quietly converged. A Seamus towel and a Read
 The Green cap both cost forty-five dollars. Sentinel&rsquo;s gauze towel at
-forty-six costs more than sixteen of the eighteen caps here. Towels used to be
+forty-six costs more than fourteen of the eighteen caps here. Towels used to be
 the thing thrown in at the till. On this evidence they are now a category these
 brands build properly and charge properly for.</p>"""
 
 HATS = [
  ("sinking-birdies","Sinking Birdies","Never Lay Up Rope Hat",19,
   "A water-resistant tech fabric on a rope hat, which is an unusual pairing &mdash; rope crowns are normally a cotton-and-nostalgia exercise. Snapback closure, moisture-absorbing sweatband, designed in the UK. Nineteen dollars, which is very little for a tech fabric and a proper sweatband."),
- ("rebolf","Rebolf","Apr&egrave;s Golf Club Hat",25,
-  "Rebolf calls it a vintage asset and leaves it there, which is either confidence or a thin product page. Twenty-five dollars, and the name tells you the hour it is aimed at."),
+ ("metalwood-studio","Metalwood Studio","Dewey Soft Brim Hat",48,
+  "100% nylon, low-profile six-panel, and a soft brim &mdash; the one shape here that will fold into a bag and come back out flat. The artwork on it is credited to Hendrik Esche, which is more than most brands bother to say about a hat graphic."),
  ("devereux-golf","Devereux Golf","Skull Caddie Performance Rope Hat",30,
   "Laser-perforated performance fabric under a classic rope, with the Skull Caddie badge on the front. Devereux keep putting technical fabric into shapes that look like they predate it, and this is the clearest example."),
  ("hidden-links-society","Hidden Links Society","Supplies and Gear Dad Hat",32,
@@ -156,10 +155,10 @@ HATS = [
   "Five panels of brushed cotton twill in black and cream, plastic snapback, the phrase on the front. Two-tone is doing the work here &mdash; it is a 1970s range-hat colourway on a current build."),
  ("sunday-golf","Sunday Golf","Trucker Hat, Mossy Oak Bottomland Orange",39.99,
   "Actual licensed Mossy Oak Bottomland, not a camo print drawn to look like it, in the orange colourway. A trucker back keeps it cool. The Sunday patch sits on the front doing very little, correctly."),
- ("bettinardi","Bettinardi Golf","Gangster Cat Hepcat Hat",40,
-  "Washed twill, six-panel, slightly pre-curved visor, Gangster Cat on the front and the wordmark small across the back. Made with American Needle, which is the second hat here from that factory."),
+ ("birds-of-condor","Birds of Condor","Coogi Bucket Hat",55,
+  "An officially licensed Coogi print on a golf bucket, from the Byron Bay label&rsquo;s collaboration with the Australian knitwear house. 100% recycled polyester, one size at 59cm, and a tee holder sewn into the band. Birds call it a bucket for the OG golf gang and the print does not argue."),
  ("sugarloaf-social-club","Sugarloaf Social Club","Cotton SSC Arrow Cap",40,
-  "The other American Needle build. Arrow woven on the front, the red Sugarloaf rectangle woven on the back, washed cotton. Four colourways live as of %s: Nantucket Red, Lavender, Lemon Ice and Snow White." % READ),
+  "An American Needle build. Arrow woven on the front, the red Sugarloaf rectangle woven on the back, washed cotton. Four colourways live as of %s: Nantucket Red, Lavender, Lemon Ice and Snow White." % READ),
  ("stitch-golf","STITCH","USA Rope Hat",42,
   "Red, white and blue on a rope crown. STITCH usually work in restraint and leather, so an Americana rope hat is them at their least typical and most wearable."),
  ("eastside-golf","Eastside Golf","Cranberry Pro Series Hat",45,
@@ -169,7 +168,7 @@ HATS = [
  ("merrill-golf","Merrill Golf","Logo Five Panel Hat",50,
   "Embroidered five-panel in brown, 100% cotton, snapback. Merrill do not over-explain it and it does not need explaining."),
  ("public-drip","Public Drip","&ldquo;P&rdquo; Script Nylon Bucket Hat",50,
-  "The only bucket in the eighteen. Lightweight quick-drying nylon, unstructured, with the P appliqu&eacute; on the front. Built for heat and for getting wet, which is most of the reason to own a bucket."),
+  "Lightweight quick-drying nylon, unstructured, with the P appliqu&eacute; on the front. Built for heat and for getting wet, which is most of the reason to own a bucket."),
 ]
 
 TOWELS = [
@@ -195,8 +194,8 @@ TOWELS = [
   "100% cotton jacquard, roughly 18 x 30in, finished with a riveted leather loop rather than a carabiner. Seamus put the hardware where it will still be working in five years."),
  ("hiroki-golf","Hiroki Golf","Hiroki Golf Towel, Grey",45,
   "56 x 100cm of microfibre waffle weave, absorbent and fast-drying. The largest towel in this group by some margin."),
- ("puma-golf","PUMA Golf","COBRA Cresting Golf Towel",34.99,
-  "The COBRA cresting towel, and PUMA&rsquo;s product page says almost nothing beyond that. It is in here as the one mass-market entry against eleven independents."),
+ ("matchstick-golf","Matchstick Golf","Pink Sugar Skull Golf Towel",29,
+  "23.75 x 15.75in of waffle material, two-sided so one face stays clean for the grips. The sugar skull is drawn from Matchstick&rsquo;s own Dana ball marker, which is how the Portland shop works &mdash; the art exists first and the object follows it."),
 ]
 
 FAQ = [
@@ -279,7 +278,7 @@ def main(apply_):
     money = lambda p: f"${p:.2f}".replace(".00", "")
     rng = f"{money(min(prices))} &ndash; {money(max(prices))}"
 
-    body = f'''<div class="drop-hero"><div class="drop-hero-img"><img src="/images/hats-towels/hero.jpg" alt="An independent-brand golf cap on course &mdash; the Cotton SSC Arrow Cap from Sugarloaf Social Club" /></div></div>
+    body = f'''<div class="drop-hero"><div class="drop-hero-img"><img src="/images/hats-towels/hero.jpg" alt="The Spider Rock jacquard golf towel from Seamus Golf, woven in cotton" /></div></div>
 
 <div class="writeup">
   <div class="writeup-body">
@@ -444,7 +443,7 @@ def main(apply_):
     # THE PROSE MUST AGREE WITH THE STATS CARD BESIDE IT. The first draft said
     # the run started at nineteen dollars while the sidebar said $13.30.
     words_n = {"thirteen": 13, "nineteen": 19, "thirty": 30, "thirty-four": 34,
-               "forty": 40, "forty-five": 45, "forty-six": 46, "fifty": 50}
+               "forty": 40, "forty-five": 45, "forty-six": 46, "forty-eight": 48, "fifty": 50, "fifty-five": 55}
     alts = "|".join(sorted(words_n, key=len, reverse=True))
     claims = [words_n[w] for w in
               re.findall(rf"\b({alts})(?=-dollar\b| dollars\b)|\bat ({alts})\b", INTRO)
@@ -458,8 +457,8 @@ def main(apply_):
     hat_p = sorted(p for _s, _b, _n, p, _t in HATS)
     tow = {s: p for s, _b, _n, p, _t in TOWELS}
     n_under = sum(1 for p in hat_p if p < tow["sentinel-golf"])
-    if "more than sixteen of the eighteen caps" in nb and n_under != 16:
-        bad.append(f"The Take says sixteen caps under the Sentinel towel; "
+    if "more than fourteen of the eighteen caps" in nb and n_under != 14:
+        bad.append(f"The Take says fourteen caps under the Sentinel towel; "
                    f"the data says {n_under}")
     if tow["seamus"] != 45 or dict((s, p) for s, _b, _n, p, _t in HATS)["read-the-green"] != 45:
         bad.append("The Take pairs Seamus and Read The Green at $45; prices moved")

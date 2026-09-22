@@ -7,15 +7,21 @@ body into drops/the-hat-edit-austin-summer.html, and the donor keeps its hero
 *above* the splice point, so the new post shipped with the old post's Nature
 Club bucket hat at the top. This script cuts a hero the new post owns.
 
-THE FRAME. Sugarloaf Social Club's own product photography for the Cotton SSC
-Arrow Cap — the cap Lenny picked out of the grid himself. It is the only
-candidate frame shot on a golf course rather than in a cabin or against a wall:
-cap, mown grass, a windmill and sky. A hat post should open on a hat outdoors.
+THE FRAME, SECOND PASS. The first hero was a Sugarloaf cap on a course, which
+was a good picture of a hat — and the problem with that is the post is half
+towels. Lenny asked for a different one.
 
-CROP BIAS 0.32, CHOSEN BY LOOKING. The source is square (3669x3669) and a 21:9
-band throws away 57% of the height, so the bias decides whether the cap keeps
-its crown or its brim. 0.20 cuts the brim; 0.45 cuts the crown and lands on the
-chin. 0.32 holds the whole cap with the course behind it.
+Seamus Golf's Spider Rock jacquard is the only frame in the thirty that is
+NATIVELY LANDSCAPE (2878x2120). Every other candidate is a 4:5 or square
+product shot, so a 21:9 band from them either throws away most of the picture
+or crops a model's face off — both of which I cut and looked at before ruling
+them out. The Birds of Condor lifestyle frames decapitate the model; the
+Metalwood Dewey is a grey cap on white; the Sierra Madre course scene is the
+best of the rest but caps out at 1200px wide, below the house masthead size.
+
+CROP BIAS 0.50. A landscape source loses only 42% of its height to the band and
+the woven pattern is symmetrical, so the centre is the right cut; there is no
+subject to protect at one edge.
 
 NO UPSCALING. target_w is clamped to the source width, and the verify block
 asserts the output is no wider than the source — the same guard as
@@ -33,12 +39,11 @@ from PIL import Image
 
 ROOT = pathlib.Path(__file__).resolve().parent
 OUT = ROOT / "images/hats-towels/hero.jpg"
-SRC = ("https://www.sugarloafsocialclub.com/cdn/shop/files/Untitled-45.jpg"
-       "?v=1776806155")
-CREDIT = "Sugarloaf Social Club"
+SRC = "https://cdn.shopify.com/s/files/1/0129/1462/files/spiderrocknewtag_edited.png?v=1765366515"
+CREDIT = "Seamus Golf"
 MAX_W = 2000
 RATIO = 21 / 9
-BIAS = 0.32
+BIAS = 0.50
 UA = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
                     "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124 Safari/537.36"}
 
