@@ -42,7 +42,14 @@ FLIP_TAIL = [
 # simply had no entry for flag/cross/matter. Same false-positive class as the
 # Mogshade and Après additions below, same fix — extend the table, do not reword
 # working copy to satisfy it.
-VERBS = set("""flags flag flagged crosses cross crossed matters matter mattered
+# spells/assembles/traces/hangs/packs added 2026-09-22 after the check fired on
+# "The holder spells QUIET PLEASE...", "George Peper ... assembles the hundred
+# greatest moments" and "Assouline traces golf in Morocco back to ...". All three
+# are plain finite verbs the set simply lacked. Same false-positive class as the
+# 2026-09-15 and 2026-09-09 batches; extending the set, not loosening the rule.
+VERBS = set("""spells spell spelled assembles assemble assembled
+traces trace traced hangs hang hung packs pack packed
+flags flag flagged crosses cross crossed matters matter mattered
 copies copy copied cites cite cited
 is are was were be been being has have had do does did make makes made
 comes come came sits sit sat runs run ran looks look looked reads read wears wear wore
