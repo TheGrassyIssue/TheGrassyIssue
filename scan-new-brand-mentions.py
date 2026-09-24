@@ -42,6 +42,11 @@ DOMAINS = {
     # added 24 Sep 2026 with Brand to Know — Galvin Green. The BTK links
     # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
     "galvin-green": ["galvingreen.com"],
+    # added 24 Sep 2026 with the Three Fall Drops roundup; neither had a DOMAINS
+    # entry, so --rescan never reached them and the post would not appear on
+    # /brands/students-golf or /brands/devereux-golf.
+    "students-golf": ["studentsgolf.com"],
+    "devereux-golf": ["devereuxgolf.com"],
     # Birds of Condor had NO entry at all, so every --rescan skipped it and its
     # brand page never picked up coverage. Both storefronts are listed: the .com
     # is the Australian store and us. is the USD one the post links.
@@ -161,6 +166,12 @@ for b in todo:
                 or (slug.startswith("brand-to-know-") and b["slug"].split("-")[0] in slug)
                 or bool(prev.get(url, {}).get("profile")))
         hits.append({"url": url, "title": title, "profile": prof})
+    # A RESCAN MAY ONLY ADD. Found 24 Sep 2026: the first --rescan of Students and
+    # Devereux dropped ten real mentions (Sugarloaf collab posts, the camo and tee
+    # carousels) because those posts name the brand but link the partner's store.
+    # Domain matching finds new coverage; it cannot prove old coverage is gone.
+    have = {x["url"] for x in hits}
+    hits += [x for x in was.get(b["slug"], []) if x["url"] not in have]
     ment[b["slug"]] = hits
     print(f"  {b['name']:30} {len(hits):3} posts   {', '.join(x['url'].split('/')[-1] for x in hits[:4])}{' …' if len(hits)>4 else ''}")
 
