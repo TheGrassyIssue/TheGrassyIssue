@@ -58,6 +58,8 @@ def install(path, blk, apply_):
 def main():
     apply_ = "--apply" in sys.argv
     paths = [a for a in sys.argv[1:] if not a.startswith("--")]
+    # Cloud-sync conflict copy ("x 2.html") is locked (Errno 35) and never ships.
+    paths = [_p for _p in paths if not re.search(r" \d+\.html$", _p)]
     blk = block()
     for p in paths:
         print("%-42s %s" % (os.path.basename(p), install(p, blk, apply_)))

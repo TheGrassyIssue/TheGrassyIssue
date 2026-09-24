@@ -39,6 +39,9 @@ DOMAINS = {
     "metalwood-studio": ["metalwood.studio"],
     "shapland": ["shaplandbags.com"],
     "shoal-golf": ["shoalgolfco.com"],
+    # added 24 Sep 2026 with Brand to Know — Galvin Green. The BTK links
+    # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
+    "galvin-green": ["galvingreen.com"],
     # Birds of Condor had NO entry at all, so every --rescan skipped it and its
     # brand page never picked up coverage. Both storefronts are listed: the .com
     # is the Australian store and us. is the USD one the post links.
@@ -117,7 +120,14 @@ for b in todo:
         print(f"  !! {b['name']}: no domain mapped, skipped"); continue
     hits = []
     for f in sorted(glob.glob(f"{ROOT}/drops/*.html")):
-        h = open(f, encoding="utf-8", errors="ignore").read()
+        # Cloud-sync conflict copies ("x 2.html") hold an OS lock (Errno 35) and
+        # are not real posts; skip them rather than crash the whole scan.
+        if re.search(r" \d+\.html$", f):
+            continue
+        try:
+            h = open(f, encoding="utf-8", errors="ignore").read()
+        except OSError:
+            continue
         if not matches(hosts(strip_chrome(h)), doms):
             continue
         t = re.search(r"<title>([^<]*)</title>", h)

@@ -61,15 +61,20 @@ def extract(path, url):
     kw = " ".join(html.unescape(x) for x in set(names + brands))
     return {"u": url, "t": title, "d": desc[:180], "g": tag, "i": img, "k": kw[:600]}
 
+# Cloud-sync conflict copies ("x 2.html") are locked (Errno 35) and are not
+# real pages; indexing one would also put a dead URL into on-site search.
+def _live(pat):
+    return [f for f in sorted(glob.glob(pat)) if not re.search(r" \d+\.html$", f)]
+
 items = []
-for f in sorted(glob.glob(f"{SITE}/drops/*.html")):
+for f in _live(f"{SITE}/drops/*.html"):
     slug = os.path.basename(f)[:-5]
     items.append(extract(f, f"/drops/{slug}"))
-for f in sorted(glob.glob(f"{SITE}/guides/*.html")):
+for f in _live(f"{SITE}/guides/*.html"):
     slug = os.path.basename(f)[:-5]
     if slug != "index":
         items.append(extract(f, f"/guides/{slug}"))
-for f in sorted(glob.glob(f"{SITE}/brands/*.html")):
+for f in _live(f"{SITE}/brands/*.html"):
     slug = os.path.basename(f)[:-5]
     if slug != "index":
         items.append(extract(f, f"/brands/{slug}"))
@@ -78,7 +83,7 @@ for f in sorted(glob.glob(f"{SITE}/brands/*.html")):
 # landing pages with their own editorial copy, so on-site search should find them
 # the same way it finds a brand page.
 for sub in ("tag", "attr"):
-    for f in sorted(glob.glob(f"{SITE}/brands/{sub}/*.html")):
+    for f in _live(f"{SITE}/brands/{sub}/*.html"):
         slug = os.path.basename(f)[:-5]
         items.append(extract(f, f"/brands/{sub}/{slug}"))
 

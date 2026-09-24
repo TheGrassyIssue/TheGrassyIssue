@@ -39,6 +39,8 @@ def main(apply_=False):
     missing = []
     for f in sorted(glob.glob("brands/*.html")):
         slug = os.path.basename(f)[:-5]
+        if re.search(r" \d+$", slug):
+            continue                       # Cloud-sync conflict copy, never ships
         if slug == "index":
             continue                       # /brands/ is listed separately
         loc = f"https://thegrassyissue.com/brands/{slug}"

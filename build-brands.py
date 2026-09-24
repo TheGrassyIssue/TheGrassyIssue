@@ -947,6 +947,12 @@ CHAIN = [
     (["wire-work-with-us.py", "--apply"],                 "work-with-us line"),
     (["sync-brand-sitemap.py", "--apply"],                "sitemap rows"),
     (["build-brand-index.py", "--apply"],                 "THE APPROVED /brands DESIGN"),
+    # The script above writes /brands/tag and /brands/attr in the OLD bare
+    # template, which clobbered the hand-written taxonomy pages (SEO titles,
+    # 90-word intros) on every run — the live site was serving the bare ones
+    # as of 24 Sep 2026. The taxonomy build lifts its cards from the approved
+    # index, so it must run after build-brand-index.py.
+    (["build-brand-taxonomy.py", "--apply"],             "the hand-written /brands/tag + /attr pages"),
     (["apply-header.py", "--apply"],                      "weather CSS back after the body swap"),
 ]
 
@@ -962,7 +968,7 @@ for argv, what in CHAIN:
 
 # Prove it rather than trust it — these are the four things that were missing.
 _idx = open(_IDX, encoding="utf-8").read()
-_pages = [p for p in glob.glob(os.path.join(ROOT, "brands", "*.html")) if p != _IDX]
+_pages = [p for p in glob.glob(os.path.join(ROOT, "brands", "*.html")) if p != _IDX and not re.search(r" \d+\.html$", p)]  # skip locked Cloud-sync conflict copies
 _gaps = []
 if 'id="bx"' not in _idx:
     _gaps.append("/brands is on the OLD design")

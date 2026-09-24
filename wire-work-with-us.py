@@ -93,6 +93,8 @@ if skipped:
 
 # ------------------------------------------------------- 2. footer sitewide
 pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html") + glob.glob("*/*/*.html")))
+# Cloud-sync conflict copy ("x 2.html") is locked (Errno 35) and never ships.
+pages = [_p for _p in pages if not re.search(r" \d+\.html$", _p)]
 pages = [p for p in pages if "drafts/" not in p and "research/" not in p
          and not os.path.basename(p).startswith("_")]
 foot = 0

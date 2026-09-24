@@ -51,6 +51,8 @@ CSS = MARK + """
 APPLY = "--apply" in sys.argv
 REVERT = "--revert" in sys.argv
 pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html") + glob.glob("*/*/*.html")))
+# Cloud-sync conflict copy ("x 2.html") is locked (Errno 35) and never ships.
+pages = [_p for _p in pages if not re.search(r" \d+\.html$", _p)]
 # drafts/ is vercelignored and eight 2026-04/05 draft files are unreadable through the
 # sandbox mount (OSError 35) — skipping them keeps the live pages processed (2026-09-14)
 pages = [p for p in pages if not p.startswith("drafts/")]

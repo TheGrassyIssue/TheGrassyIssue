@@ -317,6 +317,11 @@
       "domain": "malbon.com",
       "match": "exact-multi"
     },
+    "galvin-green": {
+      "url": "https://www.galvingreen.com/",
+      "domain": "galvingreen.com",
+      "match": "exact"
+    },
     "manors": {
       "url": "https://manorsgolf.com/",
       "domain": "manorsgolf.com",

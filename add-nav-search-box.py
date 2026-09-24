@@ -49,6 +49,8 @@ def fix(path, apply_):
 def main():
     apply_ = "--apply" in sys.argv
     paths = [a for a in sys.argv[1:] if not a.startswith("--")] or sorted(glob.glob("brands/*.html"))
+    # Cloud-sync conflict copy ("x 2.html") is locked (Errno 35) and never ships.
+    paths = [_p for _p in paths if not re.search(r" \d+\.html$", _p)]
     n = 0
     for p in paths:
         r = fix(p, apply_)

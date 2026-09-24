@@ -82,6 +82,8 @@ pages = sorted(set(glob.glob("*.html") + glob.glob("*/*.html") + glob.glob("*/*/
 # drafts/ is vercelignored and eight 2026-04/05 draft files are unreadable through the
 # sandbox mount (OSError 35) — skipping them keeps the live pages processed (2026-09-14)
 pages = [p for p in pages if not p.startswith("drafts/")]
+# Cloud-sync conflict copies ("x 2.html") are locked (Errno 35) and never ship.
+pages = [p for p in pages if not re.search(r" \d+\.html$", p)]
 
 done = already = skip = 0
 for p in pages:
