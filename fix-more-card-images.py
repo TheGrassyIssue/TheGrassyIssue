@@ -50,10 +50,33 @@ def page_for(href):
     return p if p.exists() else None
 
 
+def thumbs(_c={}):
+    """data/post-thumbs.json — the site's own thumbnail index."""
+    if not _c:
+        import json
+        f = ROOT / "data/post-thumbs.json"
+        _c["d"] = json.loads(f.read_text()) if f.is_file() else {}
+    return _c["d"]
+
+
 def lead_image(href, _cache={}):
     """The best real image the target post publishes, or None."""
     if href in _cache:
         return _cache[href]
+
+    # ASK THE THUMBNAIL INDEX FIRST. data/post-thumbs.json is the site's own
+    # answer to "what does this post look like", and it is better than anything
+    # derived by scraping the page: it survived /drops/manors-ss26 and
+    # /drops/sugarloaf-ss26, which publish no og:image and no hero band, so the
+    # derivation below gave up on both and left twelve cards on the logo.
+    e = thumbs().get(href)
+    if isinstance(e, dict) and e.get("img"):
+        c = e["img"]
+        if c.startswith("/images/") and c != FALLBACK and not SKIP_IMG.search(c) \
+                and (ROOT / c.lstrip("/")).exists():
+            _cache[href] = c
+            return c
+
     p = page_for(href)
     if p is None:
         _cache[href] = None
@@ -108,11 +131,19 @@ def files():
 
 
 def main(apply_):
+    locked = []
     fixed, unfixable, untouched = 0, {}, 0
     changed_files = []
 
     for f in files():
-        h = f.read_text(encoding="utf-8", errors="ignore")
+        # macOS Cloud-sync holds a file open mid-sync and the read raises
+        # Errno 35. Skipping and reporting beats dying halfway through a
+        # 200-file pass with some pages fixed and some not.
+        try:
+            h = f.read_text(encoding="utf-8", errors="ignore")
+        except OSError as e:
+            locked.append((f.name, e.errno))
+            continue
         if FALLBACK not in h:
             continue
         orig = h
@@ -143,6 +174,10 @@ def main(apply_):
         for k, v in sorted(unfixable.items(), key=lambda x: -x[1]):
             print(f"    {v:3}  {k}")
 
+    if locked:
+        print(f"\n  {len(locked)} file(s) skipped — locked by Cloud sync, rerun later:")
+        for n, e in locked[:8]:
+            print(f"      {n}  (errno {e})")
     if not apply_:
         print("\n  dry run — pass --apply")
         return
@@ -150,7 +185,12 @@ def main(apply_):
     # ---- VERIFY THE FILES ON DISK ----
     bad, still = [], 0
     for f in files():
-        h = f.read_text(encoding="utf-8", errors="ignore")
+        # same Cloud-sync guard as the write pass; a locked file was not
+        # written either, so skipping it here keeps the two passes consistent
+        try:
+            h = f.read_text(encoding="utf-8", errors="ignore")
+        except OSError:
+            continue
         page_imgs = []
         for m in CARD.finditer(h):
             src = m.group("src")
