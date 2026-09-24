@@ -382,7 +382,7 @@ function clearAll(){state.q='';$('#bx-q').value='';state.cats.clear();state.tags
 function goDir(){$('#directory').scrollIntoView({behavior:'smooth',block:'start'});}
 $('#bx-q').addEventListener('input',e=>{state.q=e.target.value;state.vibe=null;state.picks=false;apply();});
 document.addEventListener('keydown',e=>{const t=document.activeElement.tagName;if(e.key==='/'&&t!=='INPUT'&&t!=='TEXTAREA'){e.preventDefault();goDir();$('#bx-q').focus({preventScroll:true});}});
-$$('#bx .vibe').forEach(v=>v.addEventListener('click',e=>{e.preventDefault();clearAll();if(v.dataset.vibe==='picks'){state.picks=true;}else{state.vibe=VIBE[v.dataset.vibe];}apply();goDir();}));
+$$('#bx .vibe').forEach(v=>v.addEventListener('click',e=>{if(v.dataset.vibe==='best25')return;e.preventDefault();clearAll();if(v.dataset.vibe==='picks'){state.picks=true;}else{state.vibe=VIBE[v.dataset.vibe];}apply();goDir();}));
 $$('#bx [data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();clearAll();const j=a.dataset.jump;if(j.startsWith('region:'))state.regions.add(j.split(':')[1]);if(j==='picks')state.picks=true;apply();goDir();}));
 $$('#bx .az').forEach(b=>b.addEventListener('click',()=>{const t=cards.find(c=>!c.classList.contains('hide')&&c.dataset.letter===b.dataset.letter);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'instant'});}}));
 const drawer=$('#bx-drawer');function openD(){drawer.classList.add('open');document.body.style.overflow='hidden'}function closeD(){drawer.classList.remove('open');document.body.style.overflow=''}
@@ -517,6 +517,8 @@ if 'value="material-forward"' not in body:
                "supposed to survive the tile being replaced")
 
 # the JS has to branch on picks rather than look it up as a tag
+if "if(v.dataset.vibe==='best25')return;" not in out:
+    bad.append("the vibe-tile click handler would swallow the best25 link again — it must navigate to its own page")
 if "v.dataset.vibe==='picks'" not in out:
     bad.append("the vibe handler no longer special-cases picks; it would filter "
                "on a tag no card carries and show an empty grid")

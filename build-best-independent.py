@@ -192,6 +192,8 @@ who owns a brand in public records, interviews or the brand's own pages, it wait
 funding filings, trade press and founder interviews. The rank itself is the number of TGI pages that mention the
 brand. It updates whenever the Brand Index is rebuilt, so this page moves as our coverage does.</p>"""
 
+# Questions section removed (Lenny, 24 Sep 2026: "remove the questions at the bottom").
+# Kept here unused in case it comes back; the FAQPage schema went with it.
 FAQ = [
     ("What counts as an independent golf brand?",
      "A brand owned by its founders or a family, with no parent company, no public listing and no venture-capital, "
@@ -240,9 +242,7 @@ schema = {"@context": "https://schema.org", "@graph": [
      "mainEntity": {"@type": "ItemList", "itemListOrder": "https://schema.org/ItemListOrderDescending",
                     "numberOfItems": N_TOP, "itemListElement": [
                         {"@type": "ListItem", "position": i, "name": plain(b["name"]),
-                         "url": f"https://thegrassyissue.com/brands/{b['slug']}"} for i, b in enumerate(top, 1)]}},
-    {"@type": "FAQPage", "mainEntity": [
-        {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": plain(a)}} for q, a in FAQ]}]}
+                         "url": f"https://thegrassyissue.com/brands/{b['slug']}"} for i, b in enumerate(top, 1)]}}]}
 
 head = HEAD
 head = re.sub(r"<title>[^<]*</title>", f"<title>{esc(TITLE)}</title>", head)
@@ -278,7 +278,6 @@ body = f"""<main id="bi">
   <ol class="bi-list">
 {chr(10).join(rows)}
   </ol>
-  <section class="bi-faq"><h2>Questions</h2>{faq_html}</section>
   <div class="bi-back"><a href="/brands/tag/independent">All independent brands in the Index &rarr;</a> &nbsp;&middot;&nbsp; <a href="/brands">&larr; The full Brand Index</a></div>
 </main>
 
