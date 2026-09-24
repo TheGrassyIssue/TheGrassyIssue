@@ -938,6 +938,12 @@ print(f"wrote {nattr} attribute pages in /brands/attr/")
 # Every script here is idempotent, so running the chain from a pipeline that also
 # runs it afterwards is harmless.
 CHAIN = [
+    # Re-ranks /brands/best-independent-golf-brands from brand-mentions.json.
+    # FIRST, so the header/search/mobile/work-with-us furniture below is applied
+    # to it like every other /brands page (running it last left the page without
+    # the work-with-us line and the build refused). Card images come from the
+    # brands/index.html this script has just written.
+    (["build-best-independent.py", "--apply"],           "the 25 Best Independent ranking"),
     (["apply-header.py", "--apply"],                      "unify header + weather banner"),
     (["fix-mobile-menu.py", "--apply"],                   "mobile drawer"),
     (["add-nav-search-box.py", "--apply"],                "search BOX into the nav"),
@@ -968,7 +974,10 @@ for argv, what in CHAIN:
 
 # Prove it rather than trust it — these are the four things that were missing.
 _idx = open(_IDX, encoding="utf-8").read()
-_pages = [p for p in glob.glob(os.path.join(ROOT, "brands", "*.html")) if p != _IDX and not re.search(r" \d+\.html$", p)]  # skip locked Cloud-sync conflict copies
+_pages = [p for p in glob.glob(os.path.join(ROOT, "brands", "*.html")) if p != _IDX and not re.search(r" \d+\.html$", p)]
+# The ranked list is a /brands page but not a brand page: no "Work at <brand>?"
+# pitch belongs on it. Every other check still applies to it via the chain.
+_pages = [p for p in _pages if os.path.basename(p) != "best-independent-golf-brands.html"]  # skip locked Cloud-sync conflict copies
 _gaps = []
 if 'id="bx"' not in _idx:
     _gaps.append("/brands is on the OLD design")

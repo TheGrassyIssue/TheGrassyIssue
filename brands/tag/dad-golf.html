@@ -155,6 +155,11 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
    wrapping. Costs nothing on the other 131. */
 #tx .bc-body{min-width:0}
 #tx .vibe-body{min-width:0}
+#tx .vibe[data-vibe="best25"]{grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(20px,3vw,48px);align-items:center;padding-bottom:clamp(8px,1.5vw,18px);border-bottom:1px solid var(--bx-rule)}
+#tx .vibe[data-vibe="best25"] .vibe-img{aspect-ratio:16/9}
+#tx .vibe[data-vibe="best25"] .vibe-name{font-size:15px}
+#tx .vibe[data-vibe="best25"] .vibe-p{font-size:clamp(18px,1.6vw,22px);max-width:30ch}
+@media(max-width:640px){#tx .vibe[data-vibe="best25"]{grid-template-columns:1fr}}
 #tx .bc-img{aspect-ratio:4/5;overflow:hidden;background:var(--bx-paper2);position:relative}
 #tx .bc-img img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}#tx .bc:hover .bc-img img{transform:scale(1.035)}
 #tx .bc-view{position:absolute;left:12px;bottom:10px;background:var(--bx-paper);padding:6px 9px;font-family:var(--bx-mono);font-size:9.5px;letter-spacing:.16em;opacity:0;transform:translateY(4px);transition:all .35s}
@@ -305,7 +310,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 
   <div class="tx-also">
     <h2>Other ways into the Index</h2>
-    <div class="tx-also-list"><a href="/brands/attr/new-to-index">New to the Index <span class="dim">54</span></a><a href="/brands/tag/design-nerd">Design nerd <span class="dim">42</span></a><a href="/brands/tag/made-by-hand">Made by hand <span class="dim">34</span></a><a href="/brands/tag/independent">Independent <span class="dim">26</span></a><a href="/brands/tag/loud-on-purpose">Loud on purpose <span class="dim">25</span></a><a href="/brands/tag/muni-energy">Muni energy <span class="dim">23</span></a><a href="/brands/tag/post-round-friendly">Post-round friendly <span class="dim">23</span></a><a href="/brands/attr/women-founded">Women-founded <span class="dim">19</span></a><a href="/brands/attr/heritage">Heritage <span class="dim">16</span></a><a href="/brands/tag/collab-machine">Collab machine <span class="dim">15</span></a><a href="/brands/tag/quiet-luxury">Quiet <span class="dim">15</span></a><a href="/brands/attr/tour-proven">Tour-proven <span class="dim">11</span></a><a href="/brands/attr/drops-and-vanishes">Drops and vanishes <span class="dim">11</span></a><a href="/brands/tag/gorpcore">Gorpcore <span class="dim">10</span></a><a href="/brands/tag/range-rat">Range rat <span class="dim">5</span></a><a href="/brands/tag/course-merch">Course merch <span class="dim">4</span></a><a href="/brands/tag/member-guest">Member-guest <span class="dim">4</span></a></div>
+    <div class="tx-also-list"><a href="/brands/attr/new-to-index">New to the Index <span class="dim">54</span></a><a href="/brands/tag/independent">Independent <span class="dim">44</span></a><a href="/brands/tag/design-nerd">Design nerd <span class="dim">42</span></a><a href="/brands/tag/made-by-hand">Made by hand <span class="dim">34</span></a><a href="/brands/tag/loud-on-purpose">Loud on purpose <span class="dim">25</span></a><a href="/brands/tag/muni-energy">Muni energy <span class="dim">23</span></a><a href="/brands/tag/post-round-friendly">Post-round friendly <span class="dim">23</span></a><a href="/brands/attr/women-founded">Women-founded <span class="dim">19</span></a><a href="/brands/attr/heritage">Heritage <span class="dim">16</span></a><a href="/brands/tag/collab-machine">Collab machine <span class="dim">15</span></a><a href="/brands/tag/quiet-luxury">Quiet <span class="dim">15</span></a><a href="/brands/attr/tour-proven">Tour-proven <span class="dim">11</span></a><a href="/brands/attr/drops-and-vanishes">Drops and vanishes <span class="dim">11</span></a><a href="/brands/tag/gorpcore">Gorpcore <span class="dim">10</span></a><a href="/brands/tag/range-rat">Range rat <span class="dim">5</span></a><a href="/brands/tag/course-merch">Course merch <span class="dim">4</span></a><a href="/brands/tag/member-guest">Member-guest <span class="dim">4</span></a></div>
     <div class="tx-back"><a href="/brands">&larr; All 141 brands</a></div>
   </div>
 </main>

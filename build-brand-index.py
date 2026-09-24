@@ -107,7 +107,22 @@ assert len(set(PICKS)) == len(PICKS), "duplicate slug in PICKS"
 # tile is where it lives now. Its "#picks" deep link is handled in the hash
 # block at the bottom of the JS; if you remove that, this tile becomes a link to
 # nowhere for anyone arriving from outside.
+# THE 25 BEST INDEPENDENT GOLF BRANDS — a vibe tile (Lenny, 24 Sep 2026: "put it
+# into the index"). Its page is built by build-best-independent.py; this ranks
+# the same way (mention count, verified independents only) so the tile's count
+# and image cannot disagree with the page. It spans the whole row, which also
+# keeps the grid even with seven tiles.
+_ind = {k: v for k, v in json.load(open(os.path.join(ROOT, "data", "independence.json"), encoding="utf-8")).items()
+        if isinstance(v, dict) and v.get("status") == "independent"}
+_men = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json"), encoding="utf-8"))
+_best = sorted((d for d in data if d["slug"] in _ind),
+               key=lambda d: (-len(_men.get(d["slug"], [])), re.sub(r"&[a-z]+;", "", d["name"]).lower()))[:25]
+assert len(_best) == 25, "fewer than 25 verified independents"
+BEST25 = {d["slug"] for d in _best}
+BEST_IMG = _ind[_best[0]["slug"]].get("img") or _best[0]["img"]
+
 VIBES = [
+  ("best25",   "OUR 25 BEST INDEPENDENT GOLF BRANDS", "Founder- and family-owned. Ranked by how often we&rsquo;ve written about them.", "SEE THE 2026 LIST →", BEST_IMG, "/brands/best-independent-golf-brands", lambda d: d["slug"] in BEST25),
   ("quiet",    "QUIET",            "Understated. Considered. No giant logos.",                "QUIET LUXURY →",      "/images/quiet-golf/cardroom-corduroy-jacket-a2.jpg", "/brands/tag/quiet-luxury", lambda d: "quiet-luxury" in d["tags"]),
   ("picks",    "TGI PICKS",        "The brands we&rsquo;d actually spend our money on.",       "SEE THE PICKS →",     "/images/ny-trip/bethpage-bag.jpg", "/brands#picks", lambda d: d["slug"] in PICKS),
   ("made",     "MADE",             "Small shops. Real hands. Limited quantities.",             "MADE BY HAND →",      "/images/texas-brands/artisan-3.jpg", "/brands/tag/made-by-hand", lambda d: "made-by-hand" in d["tags"]),
@@ -245,6 +260,11 @@ CSS = r"""
    wrapping. Costs nothing on the other 131. */
 #bx .bc-body{min-width:0}
 #bx .vibe-body{min-width:0}
+#bx .vibe[data-vibe="best25"]{grid-column:1/-1;display:grid;grid-template-columns:1.35fr 1fr;gap:clamp(20px,3vw,48px);align-items:center;padding-bottom:clamp(8px,1.5vw,18px);border-bottom:1px solid var(--bx-rule)}
+#bx .vibe[data-vibe="best25"] .vibe-img{aspect-ratio:16/9}
+#bx .vibe[data-vibe="best25"] .vibe-name{font-size:15px}
+#bx .vibe[data-vibe="best25"] .vibe-p{font-size:clamp(18px,1.6vw,22px);max-width:30ch}
+@media(max-width:640px){#bx .vibe[data-vibe="best25"]{grid-template-columns:1fr}}
 #bx .bc-img{aspect-ratio:4/5;overflow:hidden;background:var(--bx-paper2);position:relative}
 #bx .bc-img img{transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}#bx .bc:hover .bc-img img{transform:scale(1.035)}
 #bx .bc-view{position:absolute;left:12px;bottom:10px;background:var(--bx-paper);padding:6px 9px;font-family:var(--bx-mono);font-size:9.5px;letter-spacing:.16em;opacity:0;transform:translateY(4px);transition:all .35s}

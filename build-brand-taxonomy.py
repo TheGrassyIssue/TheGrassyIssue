@@ -102,11 +102,13 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands — Founder-Owned | The Grassy Issue",
- "Twenty-two founder-owned golf brands with no parent company and no outside answer to give — the independent end of the Brand Index.",
+ "Forty-four founder- and family-owned golf brands with no parent company and no outside investors — the independent end of the Brand Index.",
  """<p>Independent here means structural, not stylistic: no parent conglomerate, no licensing group,
- nobody upstairs to approve the range. <strong>Bettinardi</strong> is still family-run out of
- Tinley Park. <strong>Eastside Golf</strong> is founder-owned by Olajuwon Ajanaku and Earl Cooper.
- <strong>No Laying Up</strong> answers to its own audience and nobody else.</p>
+ no outside investors, nobody upstairs to approve the range. <strong>Bettinardi</strong> is still
+ family-run out of Tinley Park. <strong>Seamus Golf</strong> is owned outright by Akbar and Megan
+ Chisti. <strong>No Laying Up</strong> answers to its own audience and nobody else. The
+ twenty-five we have covered most are ranked on
+ <a href="/brands/best-independent-golf-brands">Our 25 Best Independent Golf Brands</a>.</p>
  <p>It matters to a buyer in two specific ways. Independents tend to move faster — a
  <strong>Gamut Golf</strong> or a <strong>Dormie Workshop</strong> can decide on a Tuesday and ship
  in a month. And they tend to disappear faster, which is why a good number of the brands here also
@@ -571,7 +573,7 @@ for kind, slug, h1, title, desc, intro in TAX:
                          f"generic copy is what we are trying to stop shipping")
     # the printed count word must match the computed count
     WORDS = {2: "two", 4: "four", 5: "five", 7: "seven", 10: "ten", 11: "eleven", 13: "thirteen", 14: "fourteen",
-             19: "nineteen", 22: "twenty-two", 25: "twenty-five", 33: "thirty-three", 37: "thirty-seven",
+             19: "nineteen", 22: "twenty-two", 44: "forty-four", 25: "twenty-five", 33: "thirty-three", 37: "thirty-seven",
              52: "fifty-two"}
     w = WORDS.get(len(ms))
     if w and w not in (plain + " " + desc).lower():
