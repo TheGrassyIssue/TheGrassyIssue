@@ -50,6 +50,7 @@ BASE = f"https://{HOST}"
 ENDPOINT = "https://api.indexnow.org/IndexNow"
 UA = {"User-Agent": "TheGrassyIssue-IndexNow/1.0 (+https://thegrassyissue.com)"}
 MAX_URLS = 100
+LOG = ROOT / "research/indexnow-submitted.json"   # url -> date submitted
 
 
 def key_file():
@@ -92,6 +93,10 @@ def main():
     ap.add_argument("--days", type=int, default=2,
                     help="submit URLs with lastmod within this many days")
     ap.add_argument("--apply", action="store_true")
+    ap.add_argument("--backlog", action="store_true",
+                    help="submit OLDER URLs (lastmod outside --days) that the log "
+                         "has no record of, 100 at a time — the catch-up mode, "
+                         "added 24 Sep 2026 for the 278 URLs the first run left")
     ap.add_argument("--skip-live-check", action="store_true",
                     help="only for testing; submitting a dead URL is harmful")
     a = ap.parse_args()
@@ -106,8 +111,16 @@ def main():
                      "submitting, or IndexNow will reject every URL")
         print(f"  key live : yes")
 
-    rows = recent(a.days)
-    print(f"  {len(rows)} URLs with lastmod in the last {a.days} day(s)")
+    log = json.loads(LOG.read_text()) if LOG.exists() else {}
+    if a.backlog:
+        xml = SITEMAP.read_text(encoding="utf-8")
+        cutoff = (date.today() - timedelta(days=a.days)).isoformat()
+        rows = [(u, lm) for u, lm in re.findall(r"<loc>([^<]+)</loc>\s*<lastmod>([^<]+)</lastmod>", xml)
+                if lm < cutoff and u not in log]
+        print(f"  backlog: {len(rows)} older URLs with no submission on record")
+    else:
+        rows = recent(a.days)
+        print(f"  {len(rows)} URLs with lastmod in the last {a.days} day(s)")
     if not rows:
         print("  nothing to submit")
         return
@@ -152,7 +165,12 @@ def main():
 
     # 200 accepted, 202 accepted pending key validation
     if code in (200, 202):
+        today = date.today().isoformat()
+        log.update({u: today for u in urls})
+        LOG.parent.mkdir(parents=True, exist_ok=True)
+        LOG.write_text(json.dumps(log, indent=1, sort_keys=True))
         print(f"\n  submitted {len(urls)} URLs to IndexNow — HTTP {code}")
+        print(f"  log now records {len(log)} submitted URLs")
         print("  Bing, DuckDuckGo and Copilot all read this feed.")
     else:
         print(f"\n! IndexNow returned HTTP {code}: {body[:200]}")
