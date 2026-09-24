@@ -47,6 +47,11 @@ DOMAINS = {
     # /brands/students-golf or /brands/devereux-golf.
     "students-golf": ["studentsgolf.com"],
     "devereux-golf": ["devereuxgolf.com"],
+    # added 24 Sep 2026 with The Five Best Golf Pants
+    "manors": ["manorsgolf.com"],
+    "sentinel-golf": ["sentinelgolf.us"],
+    "odd-ritual": ["oddritualgolf.com"],
+    "lululemon": ["lululemon.com"],
     # Birds of Condor had NO entry at all, so every --rescan skipped it and its
     # brand page never picked up coverage. Both storefronts are listed: the .com
     # is the Australian store and us. is the USD one the post links.
