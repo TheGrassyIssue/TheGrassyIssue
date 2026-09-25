@@ -960,6 +960,13 @@ CHAIN = [
     # index, so it must run after build-brand-index.py.
     (["build-brand-taxonomy.py", "--apply"],             "the hand-written /brands/tag + /attr pages"),
     (["apply-header.py", "--apply"],                      "weather CSS back after the body swap"),
+    # THE MASTHEAD. Every page written above starts from an older brand-page
+    # template that still carries the In The Margins wordmark, so each rebuild
+    # put the old logo back on /brands and all brand pages (Lenny, 24 Sep 2026:
+    # "the old logo is showing up on the brands page"). These two restore the
+    # Editor's Note caps wordmark in house green, and must run last.
+    (["apply-wordmark.py", "--apply"],                    "Editor's Note caps wordmark"),
+    (["apply-green-wordmark.py", "--apply"],              "wordmark in house green"),
 ]
 
 print("\nrestoring the sitewide furniture this script does not write:")
@@ -988,6 +995,12 @@ for _need, _label in [("search-index.json", "search JS"), ("tgi-sbox", "search b
     _n = sum(1 for p in _pages if _need not in open(p, encoding="utf-8").read())
     if _n:
         _gaps.append(f"{_n}/{len(_pages)} brand pages missing {_label}")
+# the masthead: every /brands surface (index, brand pages, tag/attr, the ranked list)
+_all = [p for p in glob.glob(os.path.join(ROOT, "brands", "**", "*.html"), recursive=True)
+        if not re.search(r" \d+\.html$", p)]
+_wm = sum(1 for p in _all if "/*TGI-WM-V1*/" not in open(p, encoding="utf-8").read())
+if _wm:
+    _gaps.append(f"{_wm}/{len(_all)} /brands pages still carry the OLD wordmark")
 if _gaps:
     raise SystemExit("\n!! /brands IS STILL INCOMPLETE — DO NOT DEPLOY:\n   "
                      + "\n   ".join(_gaps))

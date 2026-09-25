@@ -102,7 +102,8 @@ def fix(path, apply_):
 
 def main(apply_=False):
     paths = [p for p in glob.glob(os.path.join(ROOT, "**", "*.html"), recursive=True)
-             if "/drafts/" not in p.replace(os.sep, "/")]
+             if "/drafts/" not in p.replace(os.sep, "/") and "/research/" not in p.replace(os.sep, "/")]
+    paths = [p for p in paths if not re.search(r" \d+\.html$", p)]  # skip locked Cloud-sync conflict copies (Errno 35)
     paths = [p for p in paths if "nav-wordmark" in open(p, encoding="utf-8",
                                                         errors="replace").read()]
     if apply_:
