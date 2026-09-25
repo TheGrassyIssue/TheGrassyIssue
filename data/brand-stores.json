@@ -576,6 +576,11 @@
       "url": "https://local-rule.com/",
       "domain": "local-rule.com",
       "match": "exact"
+    },
+    "sounder": {
+      "url": "https://soundergolf.com/en-us",
+      "domain": "soundergolf.com",
+      "match": "exact"
     }
   }
 }
