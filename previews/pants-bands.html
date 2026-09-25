@@ -25,7 +25,7 @@ fetch('/research/pants-edit.json').then(r=>r.json()).then(d=>{
     const h=document.createElement('h2'); h.textContent=s.hdr; w.appendChild(h);
     const p=document.createElement('p'); p.innerHTML=take[i]||''; w.appendChild(p);
     if(s.band){const f=document.createElement('figure');
-      f.innerHTML='<img src="/images/pants-edit/'+s.band+'.jpg" alt="'+d.bands[s.band].brand+' lookbook photograph">'
+      f.innerHTML='<img loading="lazy" decoding="async" src="/images/pants-edit/'+s.band+'.jpg" alt="'+d.bands[s.band].brand+' lookbook photograph">'
         +'<figcaption>'+d.bands[s.band].brand+' &mdash; '+d.bands[s.band].what+'</figcaption>';
       w.appendChild(f);}
   });

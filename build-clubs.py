@@ -260,13 +260,13 @@ CSS = """
 .club-place{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.09em;text-transform:uppercase;
  background:var(--grass);color:var(--paper);padding:5px 9px;border-radius:3px}
 .club-arch{font:400 12px/1.3 'JetBrains Mono',monospace;color:#5d5d55;letter-spacing:.02em}
-.club-name{font:400 25px/1.15 'Fraunces',Georgia,serif;color:var(--ink);margin:2px 0 10px}
+.club-name{font:400 25px/1.15 var(--serif);color:var(--ink);margin:2px 0 10px}
 .club-body p{font:400 15px/1.62 'Inter',sans-serif;color:#33332e;margin:0 0 11px}
 .club-body p:last-child{margin-bottom:0}
 .club-noimg{aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#EDE9E0,#EDE9E0 11px,#E5E0D5 11px,#E5E0D5 22px);
  border:1px solid #D8D2C4;border-radius:6px;display:flex;flex-direction:column;align-items:center;
  justify-content:center;gap:9px}
-.club-noimg-mark{font:400 40px/1 'Fraunces',Georgia,serif;color:#A8A29020}
+.club-noimg-mark{font:400 40px/1 var(--serif);color:#A8A29020}
 .club-noimg-txt{font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.11em;text-transform:uppercase;color:#8a8577}
 .part-lede{font:400 17px/1.6 'Inter',sans-serif;color:#3a3a34;margin:0 0 26px;max-width:64ch}
 .part2 p{font:400 16px/1.7 'Inter',sans-serif;color:#2b2b26;margin:0 0 17px;max-width:70ch}

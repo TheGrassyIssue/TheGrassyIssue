@@ -39,7 +39,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&family=Playfair+Display:ital,wght@1,500;1,600&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 <style>
 @font-face{font-family:'In The Margins';src:url('/assets/fonts/inthemargins.woff2') format('woff2'),url('/assets/fonts/inthemargins.woff') format('woff'),url('/assets/fonts/inthemargins.otf') format('opentype');font-weight:400;font-style:normal;font-display:swap}
 
@@ -1575,6 +1575,9 @@
     .gear-slide-name { font-size: 12px; }
     .gear-slide-price { font-size: 10px; }
   }
+/* lean: overflow cards stay unrendered until Load More, so their images are not fetched (25 Sep 2026) */
+.feed .card.card-overflow{display:none!important}
+.feed:not(.laid-out) > .card:nth-child(n+19){display:none}
 </style>
 <style>.feed .card{content-visibility:auto;contain-intrinsic-size:auto 640px}</style>
 </head>
@@ -10266,15 +10269,15 @@
       <div class="gear-carousel" data-carousel="munikids10">
         <div class="gear-carousel-track">
           <div class="gear-slide"><div style="width:100%;aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;font-family:'Editors Note Text',Georgia,serif;font-style:italic;font-size:24px;background:linear-gradient(135deg,#2D4A2B 0%,#1a2d19 100%);color:#F4F1EA;text-align:center;padding:20px;">Muni Kids<br>Est. 2015</div><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Portland, OR · Est. 2015</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/9d940a29-Muni-Kids-PDX-Carpet-Canvas-Golf-Headcovers_1200x1200.png" alt="PDX Carpet Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — PDX Carpet Golf Headcovers · $65</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/8a334506-Muni-Kids-Ol_-Dirty-Headcover-Limited-Edition-Canvas-Golf-He.jpg" alt="Ol' Dirty Headcover" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Ol' Dirty Headcover · $85</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/ed55d766-Muni-Kids-Swimming-In-Circles-Limited-Edition-Canvas-Golf-He.jpg" alt="Swimming In Circles Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Swimming In Circles Headcovers · $85</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/0b7d3a0c-Muni-Kids-PGA-Dropout-Golf-Headcovers-Front_1200x1200.png" alt="PGA Dropout Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — PGA Dropout Headcovers · $75</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/4fcdea58-Muni-Kids-Smiley-Face-Golf-Headcovers_1200x1200.png" alt="Smiley Face Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Smiley Face Headcovers · $75</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/eac21aa9-Muni-Kids-I-Am-Tiger-T-Shirt-Front_1200x1200.jpg" alt="I Am Tiger T-Shirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — I Am Tiger T-Shirt · $45</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/f62baf58-Muni-Kids-Bogeys-Suck-Old-E-Forever-Collection-Golf-T-Shirt_.jpg" alt="Bogeys Suck Old E Tee" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Bogeys Suck Old E Tee · $40</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/3825481a-Muni-Kids-Country-Club-Opp-Golf-Snapback-Black-Front_1200x12.jpg" alt="Country Club Opp Snapback" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Country Club Opp Snapback · $40</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/92ded625-Muni-Kids-Neighborhood-Golf-Shop-Planet-Golforia-Hole-1-The-.jpg" alt="Golforia Hole 1" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Golforia Hole 1 · $30</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/9d940a29-Muni-Kids-PDX-Carpet-Canvas-Golf-Headcovers_1200x1200.png" alt="PDX Carpet Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — PDX Carpet Golf Headcovers · $65</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/8a334506-Muni-Kids-Ol_-Dirty-Headcover-Limited-Edition-Canvas-Golf-He.jpg" alt="Ol' Dirty Headcover" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Ol' Dirty Headcover · $85</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/ed55d766-Muni-Kids-Swimming-In-Circles-Limited-Edition-Canvas-Golf-He.jpg" alt="Swimming In Circles Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Swimming In Circles Headcovers · $85</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/0b7d3a0c-Muni-Kids-PGA-Dropout-Golf-Headcovers-Front_1200x1200.png" alt="PGA Dropout Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — PGA Dropout Headcovers · $75</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/4fcdea58-Muni-Kids-Smiley-Face-Golf-Headcovers_1200x1200.png" alt="Smiley Face Headcovers" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Smiley Face Headcovers · $75</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/eac21aa9-Muni-Kids-I-Am-Tiger-T-Shirt-Front_1200x1200.jpg" alt="I Am Tiger T-Shirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — I Am Tiger T-Shirt · $45</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/f62baf58-Muni-Kids-Bogeys-Suck-Old-E-Forever-Collection-Golf-T-Shirt_.jpg" alt="Bogeys Suck Old E Tee" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Bogeys Suck Old E Tee · $40</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/3825481a-Muni-Kids-Country-Club-Opp-Golf-Snapback-Black-Front_1200x12.jpg" alt="Country Club Opp Snapback" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Country Club Opp Snapback · $40</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/92ded625-Muni-Kids-Neighborhood-Golf-Shop-Planet-Golforia-Hole-1-The-.jpg" alt="Golforia Hole 1" /><div class="gear-slide-info"><span class="gear-slide-caption">Muni Kids — Golforia Hole 1 · $30</span></div></div>
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this,-1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this,1)">&#8250;</button>
@@ -10295,20 +10298,20 @@
       <span class="card-tag grass">[Drops &amp; Brands]</span>
       <div class="gear-carousel" data-carousel="hats14">
         <div class="gear-carousel-track">
-          <div class="gear-slide"><img src="/images/feed/27ee250f-chargeit_hat_front_new_web.jpg" alt="Radry — Charge It Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Radry — Charge It Hat · ~$36</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/402d5e46-DSCF4741.jpg" alt="Gumtree Golf — State Flower 5-Panel" /><div class="gear-slide-info"><span class="gear-slide-caption">Gumtree Golf — State Flower 5-Panel · ~$48</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/a77fb203-DSCF3606.jpg" alt="Gumtree Golf — Fishing Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Gumtree Golf — Nature Club Fishing Hat · ~$65</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/b435f6c1-DSCF0358.jpg" alt="Gumtree Golf — Dad Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Gumtree Golf — Club di Golf e Natura Dad Hat · ~$42</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/27a250db-Gentleman_Jack_Retro_Crown_Cap_-_Antique_1.jpg" alt="Manors — GJ Cap" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors — GJ x MANORS Retro Crown Cap · $61</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/243e8ee9-DSCF9262.jpg" alt="Metalwood — 5-Panel" /><div class="gear-slide-info"><span class="gear-slide-caption">Metalwood Studio — 5-Panel · $42</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/ea64e1d7-26SS-ADI-01-01_BLK_V1.jpg" alt="Metalwood x adidas Cap" /><div class="gear-slide-info"><span class="gear-slide-caption">Metalwood Studio — adidas x Metalwood Cap · $50</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/3dcca1ca-60951660_19TWENTY_CUSTOM_NBAASG_NVY_3QR.jpg" alt="Eastside Golf x New Era" /><div class="gear-slide-info"><span class="gear-slide-caption">Eastside Golf — x New Era All-Star 19TWENTY · ~$40</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/0cf5fa39-RS.HAT.FLATS-1.jpg" alt="RGC — Royal Snowball" /><div class="gear-slide-info"><span class="gear-slide-caption">Random Golf Club — Royal Snowball Hat · ~$42</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/d5463891-HAT-COLORBLOCK-CAMPER-MULTICOLOR-WEB-1_620x.jpg" alt="Devereux — GORP Camper" /><div class="gear-slide-info"><span class="gear-slide-caption">Devereux — GORP Golf Camper Hat · ~$38</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/99bf808c-M-9860-CHV.jpg" alt="Malbon — Velasco Snapback" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Velasco Snapback · $48</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/1409241c-SGL-FISHNGVSR_2copy.jpg" alt="SSC — Fishing Visor" /><div class="gear-slide-info"><span class="gear-slide-caption">Sugarloaf Social Club — Fishing High Crown Visor · $42</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/02d6af4b-GB-Earth-Front.png" alt="Agronomy Workshop — Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Agronomy Workshop — Golf Brand Hat · ~$48</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/22c2082a-Casualist_Leisure_Hats_OG_snapback_navy_front_embroidery_yel.jpg" alt="Casualist — Leisure Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Casualist — Leisure Hat · ~$40</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/27ee250f-chargeit_hat_front_new_web.jpg" alt="Radry — Charge It Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Radry — Charge It Hat · ~$36</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/402d5e46-DSCF4741.jpg" alt="Gumtree Golf — State Flower 5-Panel" /><div class="gear-slide-info"><span class="gear-slide-caption">Gumtree Golf — State Flower 5-Panel · ~$48</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/a77fb203-DSCF3606.jpg" alt="Gumtree Golf — Fishing Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Gumtree Golf — Nature Club Fishing Hat · ~$65</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/b435f6c1-DSCF0358.jpg" alt="Gumtree Golf — Dad Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Gumtree Golf — Club di Golf e Natura Dad Hat · ~$42</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/27a250db-Gentleman_Jack_Retro_Crown_Cap_-_Antique_1.jpg" alt="Manors — GJ Cap" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors — GJ x MANORS Retro Crown Cap · $61</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/243e8ee9-DSCF9262.jpg" alt="Metalwood — 5-Panel" /><div class="gear-slide-info"><span class="gear-slide-caption">Metalwood Studio — 5-Panel · $42</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/ea64e1d7-26SS-ADI-01-01_BLK_V1.jpg" alt="Metalwood x adidas Cap" /><div class="gear-slide-info"><span class="gear-slide-caption">Metalwood Studio — adidas x Metalwood Cap · $50</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/3dcca1ca-60951660_19TWENTY_CUSTOM_NBAASG_NVY_3QR.jpg" alt="Eastside Golf x New Era" /><div class="gear-slide-info"><span class="gear-slide-caption">Eastside Golf — x New Era All-Star 19TWENTY · ~$40</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/0cf5fa39-RS.HAT.FLATS-1.jpg" alt="RGC — Royal Snowball" /><div class="gear-slide-info"><span class="gear-slide-caption">Random Golf Club — Royal Snowball Hat · ~$42</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/d5463891-HAT-COLORBLOCK-CAMPER-MULTICOLOR-WEB-1_620x.jpg" alt="Devereux — GORP Camper" /><div class="gear-slide-info"><span class="gear-slide-caption">Devereux — GORP Golf Camper Hat · ~$38</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/99bf808c-M-9860-CHV.jpg" alt="Malbon — Velasco Snapback" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Velasco Snapback · $48</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/1409241c-SGL-FISHNGVSR_2copy.jpg" alt="SSC — Fishing Visor" /><div class="gear-slide-info"><span class="gear-slide-caption">Sugarloaf Social Club — Fishing High Crown Visor · $42</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/02d6af4b-GB-Earth-Front.png" alt="Agronomy Workshop — Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Agronomy Workshop — Golf Brand Hat · ~$48</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/22c2082a-Casualist_Leisure_Hats_OG_snapback_navy_front_embroidery_yel.jpg" alt="Casualist — Leisure Hat" /><div class="gear-slide-info"><span class="gear-slide-caption">Casualist — Leisure Hat · ~$40</span></div></div>
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this,-1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this,1)">&#8250;</button>
@@ -10329,15 +10332,15 @@
       <span class="card-tag grass">[Drops &amp; Brands]</span>
       <div class="gear-carousel" data-carousel="manorsgj">
         <div class="gear-carousel-track">
-          <div class="gear-slide"><img src="/images/feed/6854840d-Gentleman_Jack_Paisely_Polo_-_Black_250_crop.jpg" alt="Manors x Gentleman Jack — Paisley Polo" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Paisley Polo · $115</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/d0894f7b-Gentleman_Jack_Blade_Polo_-_Green_217_crop.jpg" alt="Manors x Gentleman Jack — Blade Polo" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Blade Polo · $115</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/39341806-Gentleman_Jack_Merino_Crewneck_-_Black_280_crop.jpg" alt="Manors x Gentleman Jack — Merino Crewneck" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Merino Crewneck · $283</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/0513a879-Gentleman_Jack_T-Shirt_-_White_167_crop.jpg" alt="Manors x Gentleman Jack — Logo T-Shirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Logo T-Shirt · $61</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/27a250db-Gentleman_Jack_Retro_Crown_Cap_-_Antique_1.jpg" alt="Manors x Gentleman Jack — Retro Crown Cap" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Retro Crown Cap · $61</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/47715d97-Gentleman_Jack_Headcover_-_black.jpg" alt="Manors x Gentleman Jack — Driver Cover" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Driver Cover · $95</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/7c63acf8-139ceb47e4e8835bb2833c975b881d6421b85387-2048x1365.jpg" alt="Manors x Gentleman Jack — Paisley Towel" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Paisley Towel · $54</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/510623cc-66ac43b6cd0ffc596c8ac27e924154a6e0635f0f-2048x1365.jpg" alt="Manors x Gentleman Jack — Scorecard Holder" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Scorecard Holder · $34</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/fb7a21ab-8990b627a824368960fd144215709dd3eff9aa47-2048x1365.jpg" alt="Manors x Gentleman Jack — Ball Marker" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Ball Marker · $21</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/6854840d-Gentleman_Jack_Paisely_Polo_-_Black_250_crop.jpg" alt="Manors x Gentleman Jack — Paisley Polo" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Paisley Polo · $115</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/d0894f7b-Gentleman_Jack_Blade_Polo_-_Green_217_crop.jpg" alt="Manors x Gentleman Jack — Blade Polo" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Blade Polo · $115</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/39341806-Gentleman_Jack_Merino_Crewneck_-_Black_280_crop.jpg" alt="Manors x Gentleman Jack — Merino Crewneck" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Merino Crewneck · $283</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/0513a879-Gentleman_Jack_T-Shirt_-_White_167_crop.jpg" alt="Manors x Gentleman Jack — Logo T-Shirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Logo T-Shirt · $61</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/27a250db-Gentleman_Jack_Retro_Crown_Cap_-_Antique_1.jpg" alt="Manors x Gentleman Jack — Retro Crown Cap" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Retro Crown Cap · $61</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/47715d97-Gentleman_Jack_Headcover_-_black.jpg" alt="Manors x Gentleman Jack — Driver Cover" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Driver Cover · $95</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/7c63acf8-139ceb47e4e8835bb2833c975b881d6421b85387-2048x1365.jpg" alt="Manors x Gentleman Jack — Paisley Towel" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Paisley Towel · $54</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/510623cc-66ac43b6cd0ffc596c8ac27e924154a6e0635f0f-2048x1365.jpg" alt="Manors x Gentleman Jack — Scorecard Holder" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Scorecard Holder · $34</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/fb7a21ab-8990b627a824368960fd144215709dd3eff9aa47-2048x1365.jpg" alt="Manors x Gentleman Jack — Ball Marker" /><div class="gear-slide-info"><span class="gear-slide-caption">Manors x Gentleman Jack — Ball Marker · $21</span></div></div>
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this,-1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this,1)">&#8250;</button>
@@ -10359,12 +10362,12 @@
       <span class="card-tag grass">[Drops &amp; Brands]</span>
       <div class="gear-carousel" data-carousel="malbongallo">
         <div class="gear-carousel-track">
-          <div class="gear-slide"><img src="/images/feed/642116d0-M-9854-CHV-B.jpg" alt="Malbon — Playa Windshirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Playa Windshirt · $168</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/0af66af5-M-9855-CRM-B.jpg" alt="Malbon — Ventura Camp Shirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Ventura Camp Shirt · $128</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/ec78fa09-M-9859-CRM-A.jpg" alt="Malbon — Scooter Playa Short" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Scooter Playa Short · $148</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/877051c0-jday_1.jpg" alt="Malbon — Navarro Polo" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Navarro Polo · $148</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/99bf808c-M-9860-CHV.jpg" alt="Malbon — Velasco Snapback" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Velasco Snapback · $48</span></div></div>
-          <div class="gear-slide"><img src="/images/feed/b2c364c2-X260592M-HAV-6.jpg" alt="Malbon — Acetate Dice" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Acetate Dice · $45</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/642116d0-M-9854-CHV-B.jpg" alt="Malbon — Playa Windshirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Playa Windshirt · $168</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/0af66af5-M-9855-CRM-B.jpg" alt="Malbon — Ventura Camp Shirt" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Ventura Camp Shirt · $128</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/ec78fa09-M-9859-CRM-A.jpg" alt="Malbon — Scooter Playa Short" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Scooter Playa Short · $148</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/877051c0-jday_1.jpg" alt="Malbon — Navarro Polo" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Navarro Polo · $148</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/99bf808c-M-9860-CHV.jpg" alt="Malbon — Velasco Snapback" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Velasco Snapback · $48</span></div></div>
+          <div class="gear-slide"><img loading="lazy" decoding="async" src="/images/feed/b2c364c2-X260592M-HAV-6.jpg" alt="Malbon — Acetate Dice" /><div class="gear-slide-info"><span class="gear-slide-caption">Malbon — Acetate Dice · $45</span></div></div>
         </div>
         <button class="gear-arrow prev" onclick="gearSlide(this,-1)">&#8249;</button>
         <button class="gear-arrow next" onclick="gearSlide(this,1)">&#8250;</button>
@@ -13438,7 +13441,7 @@
         <div class="gear-carousel-track" data-gear="earth">
           <div class="gear-slide">
             <a href="https://quietgolf.com/products/montecito-cashmere-sweater?variant=44914946343094" target="_blank" rel="noopener">
-              <img src="/images/feed/357c7ebd-QG_Montecito_Sweater_pine_3_77c8cd8e-8cd9-4992-9dbd-42ed5070.jpg" alt="Quiet Golf Montecito Cashmere Sweater — Forest" />
+              <img loading="lazy" decoding="async" src="/images/feed/357c7ebd-QG_Montecito_Sweater_pine_3_77c8cd8e-8cd9-4992-9dbd-42ed5070.jpg" alt="Quiet Golf Montecito Cashmere Sweater — Forest" />
               <div class="gear-slide-info">
                 <div class="gear-slide-brand">Quiet Golf</div>
                 <div class="gear-slide-name">Montecito Cashmere Sweater — Forest</div>
@@ -13448,7 +13451,7 @@
           </div>
           <div class="gear-slide">
             <a href="https://manorsgolf.com/products/greenskeeper-chino-trousers" target="_blank" rel="noopener">
-              <img src="/images/feed/afaacd78-INSULATED_COURES_GILET_--_CHINO_GREENSKEEPER_TROUSER_-_MIDNI.jpg" alt="Manors Greenskeeper Chino Trouser" />
+              <img loading="lazy" decoding="async" src="/images/feed/afaacd78-INSULATED_COURES_GILET_--_CHINO_GREENSKEEPER_TROUSER_-_MIDNI.jpg" alt="Manors Greenskeeper Chino Trouser" />
               <div class="gear-slide-info">
                 <div class="gear-slide-brand">Manors</div>
                 <div class="gear-slide-name">Greenskeeper Chino Trouser — Midnight</div>
@@ -13458,7 +13461,7 @@
           </div>
           <div class="gear-slide">
             <a href="https://shop.aclgolf.com/products/mackenzie-x-acl-golf-8-olive-waxed-canvas-carry-bag" target="_blank" rel="noopener">
-              <img src="/images/feed/b1e2fde0-2025_05_11_ACL_Golf_ACL_GOLF_BAG_OLIVE_107.jpg" alt="MacKenzie × ACL Golf Olive Waxed Canvas Carry Bag" />
+              <img loading="lazy" decoding="async" src="/images/feed/b1e2fde0-2025_05_11_ACL_Golf_ACL_GOLF_BAG_OLIVE_107.jpg" alt="MacKenzie × ACL Golf Olive Waxed Canvas Carry Bag" />
               <div class="gear-slide-info">
                 <div class="gear-slide-brand">MacKenzie × ACL Golf</div>
                 <div class="gear-slide-name">8" Olive Waxed Canvas Carry Bag</div>
@@ -13468,7 +13471,7 @@
           </div>
           <div class="gear-slide">
             <a href="https://www.seamusgolf.com/products/brown-tribeca-suede" target="_blank" rel="noopener">
-              <img src="/images/feed/ba96fc3b-BROWNSUEDE_DR_BODY_a1f7ecce-d572-4428-b73e-e0898df44e96_edit.png" alt="Seamus Brown Tribeca Suede Headcover" />
+              <img loading="lazy" decoding="async" src="/images/feed/ba96fc3b-BROWNSUEDE_DR_BODY_a1f7ecce-d572-4428-b73e-e0898df44e96_edit.png" alt="Seamus Brown Tribeca Suede Headcover" />
               <div class="gear-slide-info">
                 <div class="gear-slide-brand">Seamus Golf</div>
                 <div class="gear-slide-name">Brown Tribeca Suede Headcover</div>
@@ -13478,7 +13481,7 @@
           </div>
           <div class="gear-slide">
             <a href="https://www.jonessportsco.com/collections/gear/products/script-jones-valuables-pouch-forest-green" target="_blank" rel="noopener">
-              <img src="/images/feed/53c1be04-JSC_Tremont_PouchGreen-1_540x.jpg" alt="Jones Sports Co. Valuables Pouch — Forest Green" />
+              <img loading="lazy" decoding="async" src="/images/feed/53c1be04-JSC_Tremont_PouchGreen-1_540x.jpg" alt="Jones Sports Co. Valuables Pouch — Forest Green" />
               <div class="gear-slide-info">
                 <div class="gear-slide-brand">Jones Sports Co.</div>
                 <div class="gear-slide-name">Script Jones Valuables Pouch — Forest Green</div>
@@ -14507,6 +14510,7 @@
     visibleCards.forEach(card => {
       card.classList.remove('card-overflow');
     });
+    feed.classList.add('laid-out');
 
     // Toggle load-more button visibility
     const loadMoreBtn = document.getElementById('loadMore');
@@ -14561,8 +14565,13 @@
   // Re-layout every time an image loads
   document.querySelectorAll('.feed img').forEach(img => {
     img.addEventListener('load', layoutMasonry);
-    // Also handle lazy-loaded images by removing lazy and forcing load
-    if (img.loading === 'lazy') {
+    // Force-load only the first image of each card that is on show — that is the
+    // one masonry measures. Other carousel slides and load-more cards stay lazy
+    // (25 Sep 2026: forcing all of them made the homepage fetch ~250 images up front).
+    const card = img.closest('.card');
+    const isLead = card && card.querySelector('img') === img &&
+      !card.classList.contains('card-overflow') && !card.classList.contains('hidden');
+    if (img.loading === 'lazy' && isLead) {
       img.loading = 'eager';
     }
   });
