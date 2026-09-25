@@ -113,7 +113,7 @@ assert len(set(PICKS)) == len(PICKS), "duplicate slug in PICKS"
 # and image cannot disagree with the page. It spans the whole row, which also
 # keeps the grid even with seven tiles.
 _ind = {k: v for k, v in json.load(open(os.path.join(ROOT, "data", "independence.json"), encoding="utf-8")).items()
-        if isinstance(v, dict) and v.get("status") == "independent"}
+        if isinstance(v, dict) and v.get("status") in ("independent", "editor-pick")}
 _men = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json"), encoding="utf-8"))
 _best = sorted((d for d in data if d["slug"] in _ind),
                key=lambda d: (-len(_men.get(d["slug"], [])), re.sub(r"&[a-z]+;", "", d["name"]).lower()))[:25]

@@ -19,7 +19,7 @@ marked "not" or "unclear", and brands never checked, are skipped. The build
 prints any unchecked brand whose post count would put it in the top 25 so it
 gets checked, rather than silently leaving it out forever.
 
-That rule took out several of the most-covered brands in the Index (Malbon,
+That rule (stated softly on the page since 25 Sep 2026 — Lenny: \"tone down the how this list works rule, they make good stuff, its consistent and theres a solid point of view\") took out several of the most-covered brands in the Index (Malbon,
 Manors, Sugarloaf, Quiet Golf, STITCH, Eastside) because each has outside
 investors or a corporate owner. The page does NOT list them or explain the cut
 (standing rule: no "what we cut" sections, never talk down on brands). It
@@ -36,6 +36,9 @@ import re
 import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
+# "editor-pick": Lenny's call to include a founder-run brand that has taken a
+# minority outside investment (Manors, 25 Sep 2026). The method copy names it.
+RANKS = ("independent", "editor-pick")
 N_TOP = 25
 YEAR = 2026
 SLUG = "best-independent-golf-brands"
@@ -63,7 +66,7 @@ def posts(slug):
     return len(ment.get(slug, []))
 
 
-ranked = sorted((b for s, b in brands.items() if ind.get(s, {}) and ind[s].get("status") == "independent"),
+ranked = sorted((b for s, b in brands.items() if ind.get(s, {}) and ind[s].get("status") in RANKS),
                 key=lambda b: (-posts(b["slug"]), plain(b["name"]).lower()))
 if len(ranked) < N_TOP:
     raise SystemExit(f"only {len(ranked)} verified independents — need {N_TOP}. Check more brands.")
@@ -183,14 +186,12 @@ Read the list as a map of where our attention has actually gone in {YEAR}: the b
 drops, gift guides, roundups and field notes.</p>"""
 
 HOW = f"""<h2>How this list works</h2>
-<p>Independent means structural here, not a matter of style. A brand makes the list only if its founders or a
-family still own it, with no corporate parent, no stock listing and no venture-capital, private-equity or
-strategic investor on the books. Crowdfunding, a friend's small angel cheque and bank debt do not count against a
-brand, because none of them hands control to anyone else. We also required a named owner: if we could not find
-who owns a brand in public records, interviews or the brand's own pages, it waits until we can.</p>
-<p>We checked ownership for every brand near the top of our coverage on {asof}, using company registers,
-funding filings, trade press and founder interviews. The rank itself is the number of TGI pages that mention the
-brand. It updates whenever the Brand Index is rebuilt, so this page moves as our coverage does.</p>"""
+<p>These are the brands we keep coming back to because they make good stuff, they are consistent about it, and
+they have a clear point of view. Every one is still run by the people who started it, or by a family, rather than
+by a parent company. Most are small, and a few have brought in outside partners along the way.</p>
+<p>The order comes from our own coverage: every TGI page that mentions a brand counts once, and the brands we have
+written about most sit at the top. We last checked who runs each one on {asof}. The list updates whenever the Brand
+Index is rebuilt, so it moves as we write.</p>"""
 
 # Questions section removed (Lenny, 24 Sep 2026: "remove the questions at the bottom").
 # Kept here unused in case it comes back; the FAQPage schema went with it.
@@ -301,7 +302,7 @@ for b in top:
     if f'href="/brands/{b["slug"]}"' not in out:
         bad.append(f"{b['slug']} not linked")
 for s, v in ind.items():
-    if v.get("status") != "independent" and s in brands and f'href="/brands/{s}"' in body:
+    if v.get("status") not in RANKS and s in brands and f'href="/brands/{s}"' in body:
         bad.append(f"{s} is marked {v.get('status')} but appears on the page")
 if out.count('application/ld+json') != 1:
     bad.append("expected exactly one JSON-LD block")
