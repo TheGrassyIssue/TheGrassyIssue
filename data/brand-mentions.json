@@ -965,17 +965,22 @@
  "takomo-golf": [
   {
    "url": "/drops/brand-to-know-takomo-golf",
-   "title": "Brand to Know — Takomo Golf",
+   "title": "Takomo Golf — Forged Irons From Finland, Direct",
    "profile": true
   },
   {
-   "url": "/drops/brand-to-know-odd-ritual",
-   "title": "Brand to Know — Odd Ritual",
+   "url": "/drops/dtc-golf-club-brands",
+   "title": "Buying Golf Clubs Direct: Six DTC Brands, From Entry to Absolute Stick",
    "profile": false
   },
   {
    "url": "/drops/the-wedge-drop",
    "title": "The Wedge Drop",
+   "profile": false
+  },
+  {
+   "url": "/drops/brand-to-know-odd-ritual",
+   "title": "Brand to Know — Odd Ritual",
    "profile": false
   }
  ],
@@ -1114,14 +1119,29 @@
  ],
  "edel-golf": [
   {
-   "url": "/drops/texas-golf-brands-and-makers",
-   "title": "Made in Texas — The Golf Brands and Makers Built Here",
+   "url": "/drops/7-divot-tools-actually-worth-carrying",
+   "title": "The Divot Tool Edit — Machined, Forged and Milled, From $20 to $130",
+   "profile": false
+  },
+  {
+   "url": "/drops/brand-to-know-edel-golf",
+   "title": "Brand to Know — Edel Golf",
    "profile": true
   },
   {
-   "url": "/drops/7-divot-tools-actually-worth-carrying",
-   "title": "7 divot tools actually worth carrying.",
+   "url": "/drops/dtc-golf-club-brands",
+   "title": "Buying Golf Clubs Direct: Six DTC Brands, From Entry to Absolute Stick",
    "profile": false
+  },
+  {
+   "url": "/drops/late-season-putter-switch",
+   "title": "Twenty Putters for the Late-Season Switch, From $170 to $799",
+   "profile": false
+  },
+  {
+   "url": "/drops/texas-golf-brands-and-makers",
+   "title": "Made in Texas — The Golf Brands and Makers Built Here",
+   "profile": true
   },
   {
    "url": "/drops/the-custom-wedge-report",
@@ -3458,6 +3478,49 @@
   {
    "url": "/drops/the-rain-gear-edit",
    "title": "Rain Gear — 18 Picks for Foul Weather Golf",
+   "profile": false
+  }
+ ],
+ "stix-golf": [
+  {
+   "url": "/drops/dtc-golf-club-brands",
+   "title": "Buying Golf Clubs Direct: Six DTC Brands, From Entry to Absolute Stick",
+   "profile": false
+  }
+ ],
+ "vice-golf": [
+  {
+   "url": "/drops/dtc-golf-club-brands",
+   "title": "Buying Golf Clubs Direct: Six DTC Brands, From Entry to Absolute Stick",
+   "profile": false
+  },
+  {
+   "url": "/drops/late-season-putter-switch",
+   "title": "Twenty Putters for the Late-Season Switch, From $170 to $799",
+   "profile": false
+  },
+  {
+   "url": "/drops/the-glove-edit",
+   "title": "The Glove Edit — 18 Picks From $10 to $48",
+   "profile": false
+  },
+  {
+   "url": "/drops/the-golf-ball-edit",
+   "title": "16 Golf Balls — $32 to $60 a Dozen",
+   "profile": false
+  }
+ ],
+ "haywood-golf": [
+  {
+   "url": "/drops/dtc-golf-club-brands",
+   "title": "Buying Golf Clubs Direct: Six DTC Brands, From Entry to Absolute Stick",
+   "profile": false
+  }
+ ],
+ "avoda-golf": [
+  {
+   "url": "/drops/dtc-golf-club-brands",
+   "title": "Buying Golf Clubs Direct: Six DTC Brands, From Entry to Absolute Stick",
    "profile": false
   }
  ]

@@ -581,6 +581,26 @@
       "url": "https://soundergolf.com/en-us",
       "domain": "soundergolf.com",
       "match": "exact"
+    },
+    "stix-golf": {
+      "url": "https://stix.golf/",
+      "domain": "stix.golf",
+      "match": "exact"
+    },
+    "vice-golf": {
+      "url": "https://www.vicegolf.com/",
+      "domain": "vicegolf.com",
+      "match": "exact"
+    },
+    "haywood-golf": {
+      "url": "https://www.haywoodgolf.com/",
+      "domain": "haywoodgolf.com",
+      "match": "exact"
+    },
+    "avoda-golf": {
+      "url": "https://avodagolf.com/",
+      "domain": "avodagolf.com",
+      "match": "exact"
     }
   }
 }

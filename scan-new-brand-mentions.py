@@ -42,6 +42,14 @@ DOMAINS = {
     # added 24 Sep 2026 with Brand to Know — Galvin Green. The BTK links
     # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
     "galvin-green": ["galvingreen.com"],
+    # added 25 Sep 2026 with Buying Golf Clubs Direct (DTC club brands). Edel and
+    # Takomo had no entry, so --rescan never refreshed their mention counts.
+    "edel-golf": ["edelgolf.com"],
+    "takomo-golf": ["takomogolf.com"],
+    "stix-golf": ["stix.golf", "stixgolf.com"],
+    "vice-golf": ["vicegolf.com"],
+    "haywood-golf": ["haywoodgolf.com"],
+    "avoda-golf": ["avodagolf.com"],
     # added 24 Sep 2026 with the Three Fall Drops roundup; neither had a DOMAINS
     # entry, so --rescan never reached them and the post would not appear on
     # /brands/students-golf or /brands/devereux-golf.
