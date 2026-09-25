@@ -133,7 +133,7 @@ TIERS = {
               "set costs at retail. STIX sells everything in one box; Vice lets you build clubs one at a time and "
               "send them back after playing them."),
     "Intermediate": ("tier-intermediate", "Intermediate",
-                     "This is the forged-iron middle. All three sell irons you would find in a good player&rsquo;s "
+                     "This is the middle tier. All three sell irons you would find in a good player&rsquo;s "
                      "bag for well under the big-brand price, and all three give you a real way to try before you "
                      "commit."),
     "Absolute Stick": ("tier-absolute-stick", "Absolute Stick",
@@ -192,12 +192,39 @@ def card(n, idx, brand):
             f'<a href="{p["url"]}" target="_blank" rel="noopener" class="product-link">Shop &#8599;</a></div></div>')
 
 
+# TIER BANDS. Lenny, 25 Sep 2026: "make the title sections between categories a
+# little bigger or better to better see the difference between Entry /
+# Intermediate / Stick". The tier heads were the same size and style as the
+# brand heads under them, so the three tiers read as six equal sections. Each
+# tier now opens with a heavy green rule, the tier number, a large green title,
+# the brands and price span, then the intro. (A full green band was tried first;
+# Lenny: "a little too much - let's find a nice middle ground".)
+TIER_META = {
+    "Entry": ("01", "STIX &middot; Vice", "Full sets from $699 &middot; clubs from $239"),
+    "Intermediate": ("02", "Takomo &middot; Haywood &middot; Edel", "Iron sets from $579 &middot; wedges from $99"),
+    "Absolute Stick": ("03", "Avoda", "Built to order from $985"),
+}
+TIER_CSS = """
+.tier-band{max-width:1336px;margin:72px auto 8px;padding:26px 0 30px;border-top:4px solid var(--grass,#2D4A2B);border-bottom:1px solid rgba(20,20,20,.15)}
+@media(max-width:1400px){.tier-band{margin-left:32px;margin-right:32px}}
+@media(max-width:700px){.tier-band{margin-left:20px;margin-right:20px}}
+.tier-band .tier-count{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--grass,#2D4A2B);font-weight:600}
+.tier-band h2.tier-title{font-family:var(--serif);font-weight:700;font-size:clamp(40px,5.2vw,64px);line-height:1;letter-spacing:-.02em;margin:10px 0 12px;color:var(--grass,#2D4A2B);text-align:left;border:0;padding:0}
+.tier-band .tier-brands{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 18px 14px 0}
+.tier-band .tier-price{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin:0 0 14px}
+.tier-band p.tier-intro{max-width:720px;font-size:16.5px;line-height:1.65;margin:0}
+"""
+
+
 def tier_head(t):
     anchor, label, text = TIERS[t]
-    return (f'\n<section class="products" style="margin-top:8px;">\n'
-            f'  <div class="drop-tag grass">The {label} Tier</div>\n'
-            f'  <h2 class="products-hdr" id="{anchor}">{label}</h2>\n'
-            f'  <div style="max-width:760px;font-size:16px;line-height:1.7;"><p>{text}</p></div>\n</section>\n')
+    num, brands, price = TIER_META[t]
+    return (f'\n<section class="tier-band" id="{anchor}">\n'
+            f'  <div class="tier-count">Tier {num} of 03</div>\n'
+            f'  <h2 class="tier-title">{label}</h2>\n'
+            f'  <div class="tier-brands">{brands}</div>\n'
+            f'  <div class="tier-price">{price}</div>\n'
+            f'  <p class="tier-intro">{text}</p>\n</section>\n')
 
 
 def brand_section(b, n0):
@@ -344,6 +371,7 @@ def head_top():
 def main(apply_):
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
+    head_rest = head_rest.replace("</style>", TIER_CSS + "</style>", 1)
     tail = d[d.index('<div class="more" data-brandindex="1">'):]
     n_picks = sum(len(b[5]) for b in BRANDS)
     body = f"""<div class="breadcrumb">

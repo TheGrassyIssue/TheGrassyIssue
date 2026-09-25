@@ -211,6 +211,15 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 @media(max-width:640px){.pull-quote{padding:0 20px}.pull-quote-inner{font-size:18px;padding:24px 0}}
 .products h2{font-family:var(--serif);font-weight:600;font-size:clamp(24px,2.6vw,32px);letter-spacing:-.01em;line-height:1.1;margin:14px 0 16px}.cat-kicker{font-size:15px;line-height:1.75;color:#3f443e;margin:0 0 36px;max-width:70ch;border-left:3px solid var(--rough);padding:4px 0 4px 18px}.cat-kicker strong{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--grass);opacity:1;display:block;margin-bottom:8px}
 .ig-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:0 0 34px}.ig-grid figure{margin:0}.ig-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#eceae5}.ig-cap{font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);opacity:.5;margin-top:8px;line-height:1.5}@media(max-width:720px){.ig-grid{grid-template-columns:repeat(2,1fr);gap:10px}}
+
+.tier-band{max-width:1336px;margin:72px auto 8px;padding:26px 0 30px;border-top:4px solid var(--grass,#2D4A2B);border-bottom:1px solid rgba(20,20,20,.15)}
+@media(max-width:1400px){.tier-band{margin-left:32px;margin-right:32px}}
+@media(max-width:700px){.tier-band{margin-left:20px;margin-right:20px}}
+.tier-band .tier-count{font-family:var(--mono);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--grass,#2D4A2B);font-weight:600}
+.tier-band h2.tier-title{font-family:var(--serif);font-weight:700;font-size:clamp(40px,5.2vw,64px);line-height:1;letter-spacing:-.02em;margin:10px 0 12px;color:var(--grass,#2D4A2B);text-align:left;border:0;padding:0}
+.tier-band .tier-brands{display:inline-block;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;margin:0 18px 14px 0}
+.tier-band .tier-price{display:inline-block;font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin:0 0 14px}
+.tier-band p.tier-intro{max-width:720px;font-size:16.5px;line-height:1.65;margin:0}
 </style>
 <style>
 /*TGI-FAQ-V1*/
@@ -533,10 +542,12 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </div>
 </section>
 
-<section class="products" style="margin-top:8px;">
-  <div class="drop-tag grass">The Entry Tier</div>
-  <h2 class="products-hdr" id="tier-entry">Entry</h2>
-  <div style="max-width:760px;font-size:16px;line-height:1.7;"><p>Entry is where the direct model is simplest: a full bag, or a set of irons, for less than a single set costs at retail. STIX sells everything in one box; Vice lets you build clubs one at a time and send them back after playing them.</p></div>
+<section class="tier-band" id="tier-entry">
+  <div class="tier-count">Tier 01 of 03</div>
+  <h2 class="tier-title">Entry</h2>
+  <div class="tier-brands">STIX &middot; Vice</div>
+  <div class="tier-price">Full sets from $699 &middot; clubs from $239</div>
+  <p class="tier-intro">Entry is where the direct model is simplest: a full bag, or a set of irons, for less than a single set costs at retail. STIX sells everything in one box; Vice lets you build clubs one at a time and send them back after playing them.</p>
 </section>
 
 <section class="products" style="margin-top:8px;">
@@ -572,10 +583,12 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </div>
 <!-- /TGI-DTC-PQ-vice -->
 
-<section class="products" style="margin-top:8px;">
-  <div class="drop-tag grass">The Intermediate Tier</div>
-  <h2 class="products-hdr" id="tier-intermediate">Intermediate</h2>
-  <div style="max-width:760px;font-size:16px;line-height:1.7;"><p>This is the forged-iron middle. All three sell irons you would find in a good player&rsquo;s bag for well under the big-brand price, and all three give you a real way to try before you commit.</p></div>
+<section class="tier-band" id="tier-intermediate">
+  <div class="tier-count">Tier 02 of 03</div>
+  <h2 class="tier-title">Intermediate</h2>
+  <div class="tier-brands">Takomo &middot; Haywood &middot; Edel</div>
+  <div class="tier-price">Iron sets from $579 &middot; wedges from $99</div>
+  <p class="tier-intro">This is the middle tier. All three sell irons you would find in a good player&rsquo;s bag for well under the big-brand price, and all three give you a real way to try before you commit.</p>
 </section>
 
 <section class="products" style="margin-top:8px;">
@@ -629,10 +642,12 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </div>
 <!-- /TGI-DTC-PQ-edel -->
 
-<section class="products" style="margin-top:8px;">
-  <div class="drop-tag grass">The Absolute Stick Tier</div>
-  <h2 class="products-hdr" id="tier-absolute-stick">Absolute Stick</h2>
-  <div style="max-width:760px;font-size:16px;line-height:1.7;"><p>Absolute Stick is one brand, and the fitting is not optional. Avoda builds irons you will not find anywhere else, to your numbers, and does not take them back.</p></div>
+<section class="tier-band" id="tier-absolute-stick">
+  <div class="tier-count">Tier 03 of 03</div>
+  <h2 class="tier-title">Absolute Stick</h2>
+  <div class="tier-brands">Avoda</div>
+  <div class="tier-price">Built to order from $985</div>
+  <p class="tier-intro">Absolute Stick is one brand, and the fitting is not optional. Avoda builds irons you will not find anywhere else, to your numbers, and does not take them back.</p>
 </section>
 
 <section class="products" style="margin-top:8px;">
