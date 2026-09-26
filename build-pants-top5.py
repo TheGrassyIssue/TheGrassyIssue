@@ -14,7 +14,9 @@ then the single product card with its gallery.
 
 PRICES, 24 Sep 2026, read from each brand's own store:
   Manors $172 (rendered page JSON-LD, USD) — Sentinel $210 (Squarespace page)
-  Odd Ritual R 1,300 (the store serves rand to a US browser; not converted)
+  Odd Ritual R 1,300 on 24 Sep, marked down to R 990 by 26 Sep (compare-at R 1,300);
+  the store serves rand to a US browser; not converted. 26 Sep: embroidery paragraph
+  added at Lenny's request ("talk a little about the embroidered details").
   Students $135 (.js) — lululemon $148 (page og:price, USD)
 
 QUOTES are verbatim with dated sources in research/pants-top5/notes.md. Where
@@ -73,19 +75,20 @@ PANTS = [
           "John Mooty, Sentinel founder, to The Old Ghosts, December 2025"),
       card="MajoTech nylon-spandex woven in Italy with a DWR face, YKK waterproof zips, KaneM snaps and internal ankle cord locks. Cut and sewn in New York. Sizes S to XL."),
  dict(n=3, key="oddritual", brand="Odd Ritual", name="Pleated Daily Trouser", colour="Black",
-      price="R 1,300", url="https://oddritualgolf.com/products/pleated-daily-trouser-black",
-      frames=["oddritual-1", "oddritual-0", "oddritual-3", "oddritual-4"],
-      band=[("oddritual-2", "Close detail of the black Odd Ritual Pleated Daily Trouser with a blue pouch", "The black, up close"),
-            ("oddritual_khaki-1", "A man in a cream polo and khaki Odd Ritual Pleated Daily Trousers holding a hickory club", "The same cut in khaki"),
-            ("oddritual_khaki-4", "A man from behind in khaki Pleated Daily Trousers leaning on a club", "Loose through the leg")],
-      kicker="<strong>No. 3 &middot; Odd Ritual, Cape Town &middot; R 1,300 &middot; read 24 September 2026</strong>Cotton twill, front pleats and a carrot-shaped leg, made locally in Cape Town. Priced in rand, the currency the store shows.",
+      price="R 990", url="https://oddritualgolf.com/products/pleated-daily-trouser-black",
+      frames=["oddritual-1", "oddritual-0", "oddritual-4"],
+      band=[("oddritual-2", "Close detail of the black Pleated Daily Trouser showing the embroidered RR monogram on the thigh, with a blue Odd Ritual cap in hand", "The RR monogram, on the thigh"),
+            ("oddritual-3", "The back of the trouser leg above a rolled hem, with Odd Ritual embroidered in script", "The script, low on the back of the leg"),
+            ("oddritual_khaki-1", "A man in a cream polo and khaki Odd Ritual Pleated Daily Trousers holding a hickory club", "The same cut in khaki")],
+      kicker="<strong>No. 3 &middot; Odd Ritual, Cape Town &middot; R 990, down from R 1,300 &middot; read 26 September 2026</strong>Cotton twill, front pleats and a carrot-shaped leg, made locally in Cape Town. Priced in rand, the currency the store shows.",
       body=[
-        "Odd Ritual is the only brand here working in cotton rather than a performance fabric. The Pleated Daily Trouser is 235gsm cotton twill with front pleats, a stretch band across the back of the waist and a small RR monogram. It is made in Cape Town, and the store prices it at R 1,300.",
+        "Odd Ritual is the only brand here working in cotton rather than a performance fabric. The Pleated Daily Trouser is 235gsm cotton twill with front pleats, a stretch band across the back of the waist. It is made in Cape Town. The store has it marked down to R 990 from R 1,300.",
+        "The embroidery is what makes it an Odd Ritual trouser. There are two pieces, both in the same gold-toned thread. The brand&rsquo;s RR monogram sits inside a small ring on the front of the thigh, just below the pocket, where you would normally find nothing at all. The Odd Ritual script is stitched low on the back of the leg, a few inches above the hem, where it only shows when you walk away. The brand calls them &ldquo;refined finishing details,&rdquo; and that is fair: on the black, from a few feet away, they read as texture rather than logos.",
         "It sits third because it is the most honest pair of trousers on the list. There is no stretch-nylon trick to it; it is a pleated cotton trouser cut wide at the top and narrow at the ankle, and it looks right with a polo, a knit or a tee. The black is in stock in M, L and XL; the khaki has sold through. We wrote about the brand in <a href=\"/drops/brand-to-know-odd-ritual\">our Odd Ritual Brand to Know</a>.",
       ],
       pq=("Designed for effortless everyday wear, these relaxed trousers are crafted from soft 235gsm cotton twill and cut in a loose fit with a subtle carrot silhouette.",
           "Odd Ritual, from the brand&rsquo;s product description"),
-      card="It is 235gsm cotton twill with front pleats, an elasticated back waistband and RR monogram embroidery. Made in Cape Town. In stock in M, L and XL on 24 September."),
+      card="It is 235gsm cotton twill with front pleats and an elasticated back waistband, with an RR monogram embroidered on the thigh and the Odd Ritual script on the back of the leg. Made in Cape Town. In stock in M, L and XL on 26 September."),
  dict(n=4, key="students", brand="Students", name="Science Adjustable Pleated Pants", colour="Black",
       price="$135", url="https://studentsgolf.com/products/science-adjustable-baggy-pants-1",
       frames=["students-10", "students-0", "students-11", "students-4"],
@@ -122,7 +125,7 @@ TAKE = f"""
     <div class="drop-tag grass">The TGI Take</div>
     <p>These are the five golf pants we would buy right now, counted down from No. 5 to No. 1. Four of the five have a pleat, which says a lot about where golf trousers have gone in the last two years: roomier, softer, and closer to what you would wear to dinner.</p>
     <p>The countdown opens with three pairs with plenty of personality: lululemon&rsquo;s casual trouser that golfers keep wearing on the course, a pant with a movable pleat, and a cotton trouser from Cape Town. It finishes with the two technical ones. Sentinel&rsquo;s MajoTech and Manors&rsquo; Greenskeeper both use stretch nylon with a water-resistant finish, and both handle a cold, windy Austin morning without looking like rain gear.</p>
-    <p>Each one gets a write-up, a quote from the brand, its own photography and then the card. Prices were read from each brand&rsquo;s store on 24 September 2026. Four are in US dollars; Odd Ritual prices in rand, and we have left that as the store shows it.</p>
+    <p>Each one gets a write-up, a quote from the brand, its own photography and then the card. Prices were read from each brand&rsquo;s store on 24 September 2026, and Odd Ritual&rsquo;s again on 26 September, when it had been marked down. Four are in US dollars; Odd Ritual prices in rand, and we have left that as the store shows it.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -157,7 +160,7 @@ FAQ = [
     ("What is the least expensive pair?",
      "The Students Science Adjustable Pleated Pants at $135 on 24 September 2026. The lululemon Daydrift is $148, the Manors Greenskeeper $172 and the Sentinel MajoTech $210."),
     ("Why is the Odd Ritual price in rand?",
-     "Odd Ritual is based in Cape Town and its store prices in South African rand, including for visitors from the US. We show the price the store shows, R 1,300, rather than converting it."),
+     "Odd Ritual is based in Cape Town and its store prices in South African rand, including for visitors from the US. We show the price the store shows, R 990 (marked down from R 1,300 when we checked on 26 September 2026), rather than converting it."),
     ("Is the lululemon Daydrift a golf pant?",
      "lululemon lists it as casual wear rather than golf. It is made from the brand's Luxtreme fabric, which wicks sweat and stretches four ways, and the latest version has belt loops, which makes it easy to wear on the course."),
 ]
@@ -269,7 +272,7 @@ def main(apply_):
   <div class="drop-meta">
     <span>September 24, 2026</span><span class="dot"></span>
     <span>5 pairs &middot; ranked</span><span class="dot"></span>
-    <span>$135&ndash;$210 &middot; plus R 1,300</span>
+    <span>$135&ndash;$210 &middot; plus R 990</span>
   </div>
 </header>
 
