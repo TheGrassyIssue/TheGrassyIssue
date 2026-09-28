@@ -43,7 +43,7 @@ SHOP = "https://dimpledivot.com/products/"
 
 TITLE = "Brand to Know: Dimple & Divot, the Hickory Golf Brush From Raleigh"
 DESC = ("Dimple & Divot makes hickory golf brushes by hand in Raleigh, North Carolina. The brothers "
-        "behind it, their fall In The Woods collection, and twelve picks from $13 to $120.")
+        "behind it, their fall In The Woods collection, and fourteen picks from $13 to $120.")
 H1 = "Brand to Know: Dimple &amp; Divot &mdash; The Hickory Brush From Raleigh"
 
 # handle -> (name, detail, price, copy, new-in-woods)
@@ -68,6 +68,10 @@ P = {
    "This is a flat Cordura pouch with a magnetic Fidlock closure and a mesh inside, for the gloves, tees and markers that rattle around a bag with too few pockets. It is cut and sewn in New York, and the rust is the only colour left in stock.", True),
  "d-d-icon-dad-hat-olive": ("D&amp;D Icon Dad Hat", "Olive", 35,
    "This is a washed, unstructured cotton cap with a curved brim and the D&amp;D mark. The brand says it pairs with the rest of the collection, or warm flannel.", True),
+ "fleece-reversible-headcover-fw": ("Fleece Reversible Headcover", "Fairway", 88,
+   "The fairway version of the same cover, in the same olive and orange sherpa with the In The Woods patch, also sewn by Apr&egrave;s Golf in San Francisco.", True),
+ "d-d-icon-dad-hat-navy": ("D&amp;D Icon Dad Hat", "Navy", 35,
+   "This is the same washed, unstructured cap in navy, with the D&amp;D mark on the front and the bright blue Dimple &amp; Divot label inside.", False),
  "d-d-fall-tees-50-ct": ("D&amp;D Fall Tees", "50 count", 13,
    "Fifty orange tees at the standard length, so they are easy to spot in the leaves. It is the least expensive thing on the page.", True),
  "infinity-leather-valet-tray": ("Infinity Leather Valet Tray", "Full-grain leather", 76,
@@ -78,11 +82,10 @@ SECTIONS = [
     ("brushes", "The Brushes", "the-brushes",
      ["carved-hickory-golf-brush", "hickory-golf-brush-highland", "hickory-golf-brush-murphy", "hickory-golf-brush-pro-hybrid-green", "hickory-golf-brush-mini-grass"],
      "<strong>Five brushes &middot; hand-assembled in Raleigh</strong>The new carved brush from the fall collection, and the three models that built the company: the Classic, the PRO+ and the Lite."),
-    ("woods", "In The Woods", "in-the-woods",
-     ["clay-pigeon-ballmarker", "every-round-carry-divot-tool", "fleece-reversible-headcover-driver", "essentials-pouch-rust", "d-d-icon-dad-hat-olive", "d-d-fall-tees-50-ct"],
-     "<strong>Six pieces &middot; the fall collection, 27 September</strong>Orange, olive and fleece, made with small American workshops in Denver, San Francisco and New York."),
-    ("desk", "For the Desk", "for-the-desk", ["infinity-leather-valet-tray"],
-     "<strong>One piece &middot; off the course</strong>This is somewhere to empty your pockets after the round."),
+    ("beyond", "Beyond the Brush", "beyond-the-brush",
+     ["clay-pigeon-ballmarker", "every-round-carry-divot-tool", "fleece-reversible-headcover-driver", "fleece-reversible-headcover-fw", "essentials-pouch-rust",
+      "d-d-icon-dad-hat-olive", "d-d-icon-dad-hat-navy", "d-d-fall-tees-50-ct", "infinity-leather-valet-tray"],
+     "<strong>Nine pieces &middot; mostly In The Woods</strong>The fall collection in orange, olive and fleece, made with small American workshops in Denver, San Francisco and New York, plus a navy cap and a leather tray for the desk."),
 ]
 
 PQ = {
@@ -273,7 +276,7 @@ def head_top():
 
 def main(apply_):
     ids = [h for s in SECTIONS for h in s[3]]
-    assert len(ids) == 12 == len(set(ids)) and set(ids) == set(P)
+    assert len(ids) == 14 == len(set(ids)) and set(ids) == set(P)
     for h in ids:
         assert FR.get(h), h
     d = DONOR.read_text(encoding="utf-8")
@@ -288,7 +291,7 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>Raleigh, NC &middot; since 2020</span><span class="dot"></span>
-    <span>12 pieces &middot; $13&ndash;$120</span>
+    <span>14 pieces &middot; $13&ndash;$120</span>
   </div>
 </header>
 
@@ -297,8 +300,7 @@ def main(apply_):
     body += TAKE + band("made") + pq("disrupt") + MADE + band("brushes")
     n = 1
     s, n = section(SECTIONS[0], n); body += s + pq("ahead") + band("woods")
-    s, n = section(SECTIONS[1], n); body += s + band("desk")
-    s, n = section(SECTIONS[2], n); body += s + pq("make")
+    s, n = section(SECTIONS[1], n); body += s + band("desk") + pq("make")
     body += faq_html()
     out = head_top() + head_rest + body + tail
     print(f"  {n-1} picks")
@@ -316,7 +318,7 @@ def verify():
     for leak in ("Burnt Orange", "Manors Revisited", "Nicklaus"):
         if leak in above:
             bad.append(f"should not appear: {leak}")
-    if fin.count('class="product-card"') != 12:
+    if fin.count('class="product-card"') != 14:
         bad.append("card count")
     for k, t in PQ.items():
         if fin.count(t[:50]) != 1:
