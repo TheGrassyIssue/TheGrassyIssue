@@ -29,6 +29,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 
 DOMAINS = {
     "dimple-divot": ["dimpledivot.com"],
+    "st-andre": ["standre.golf"],
     # added 21 Sep 2026 with The Hat & Towel Edit. A brand with no DOMAINS
     # entry is never visited by --rescan, gets no mentions row, and so
     # build-brands.py silently skips its page — while /brands still lists
