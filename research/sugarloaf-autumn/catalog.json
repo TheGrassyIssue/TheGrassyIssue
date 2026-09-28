@@ -1,0 +1,1755 @@
+{
+ "read": "2026-09-27",
+ "currency": "USD",
+ "items": [
+  {
+   "title": "SSC Tech Jacket",
+   "handle": "ssc-tech-jacket",
+   "type": "Outerwear",
+   "tags": [
+    "2026",
+    "Apparel",
+    "highertype:apparel",
+    "Outerwear",
+    "sept22",
+    "VENDOR:YIMENG"
+   ],
+   "price": 165.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Glow Green / S",
+     true
+    ],
+    [
+     "Glow Green / M",
+     true
+    ],
+    [
+     "Glow Green / L",
+     true
+    ],
+    [
+     "Glow Green / XL",
+     true
+    ],
+    [
+     "Glow Green / XXL",
+     true
+    ],
+    [
+     "Navy / S",
+     true
+    ],
+    [
+     "Navy / M",
+     true
+    ],
+    [
+     "Navy / L",
+     true
+    ],
+    [
+     "Navy / XL",
+     true
+    ],
+    [
+     "Navy / XXL",
+     true
+    ]
+   ],
+   "published": "2026-09-22",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_2copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_3copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_4copy.jpg?v=1789670245",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_5copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012607_67ad70d3-bf01-4793-80f1-2cca66282821.jpg?v=1789670272",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_2copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_3copy.jpg?v=1789670245",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_4copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_5copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012496.jpg?v=1789670425",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012471.jpg?v=1789670468",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070505.jpg?v=1790004568",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070213.png?v=1790004589"
+   ],
+   "desc": "A simple nylon stretch full zip jacket for y'all It's the same material as our tech vests; we love those vests so much, we wanted to do something else with the material! Note: We took these to Ireland with us and would definitely call them \"weather resistant\" -- they do a great job in a light sprinkle, but they are not quite \"fully waterproof.\" Fit is true to size!",
+   "variants_full": [
+    {
+     "title": "Glow Green / S",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Glow Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244"
+    },
+    {
+     "title": "Glow Green / M",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Glow Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244"
+    },
+    {
+     "title": "Glow Green / L",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Glow Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244"
+    },
+    {
+     "title": "Glow Green / XL",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Glow Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244"
+    },
+    {
+     "title": "Glow Green / XXL",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Glow Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244"
+    },
+    {
+     "title": "Navy / S",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245"
+    },
+    {
+     "title": "Navy / M",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245"
+    },
+    {
+     "title": "Navy / L",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245"
+    },
+    {
+     "title": "Navy / XL",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245"
+    },
+    {
+     "title": "Navy / XXL",
+     "price": 165.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_1copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_2copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_3copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_4copy.jpg?v=1789670245",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-GGRNS_5copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012607_67ad70d3-bf01-4793-80f1-2cca66282821.jpg?v=1789670272",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_1copy.jpg?v=1789670245",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_2copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_3copy.jpg?v=1789670245",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_4copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-JKT003-NVYS_5copy.jpg?v=1789670244",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012496.jpg?v=1789670425",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012471.jpg?v=1789670468",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070505.jpg?v=1790004568",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070213.png?v=1790004589"
+   ]
+  },
+  {
+   "title": "SSC Windcrew",
+   "handle": "windcrew",
+   "type": "Outerwear",
+   "tags": [
+    "2026",
+    "Apparel",
+    "highertype:apparel",
+    "Outerwear",
+    "sept22",
+    "VENDOR:YIMENG"
+   ],
+   "price": 150.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Stone / S",
+     true
+    ],
+    [
+     "Stone / M",
+     true
+    ],
+    [
+     "Stone / L",
+     true
+    ],
+    [
+     "Stone / XL",
+     true
+    ],
+    [
+     "Stone / XXL",
+     true
+    ],
+    [
+     "Navy / S",
+     true
+    ],
+    [
+     "Navy / M",
+     true
+    ],
+    [
+     "Navy / L",
+     true
+    ],
+    [
+     "Navy / XL",
+     true
+    ],
+    [
+     "Navy / XXL",
+     true
+    ]
+   ],
+   "published": "2026-09-22",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_2copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_3copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_4copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012473_3beb09a6-e656-4b51-970e-9f0b06e4c183.jpg?v=1789670066",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012479_6e6a414d-f0c6-4e60-a73d-df6970a9d875.jpg?v=1789670079",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012439.jpg?v=1789670137",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_2copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_3copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_4copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070653.jpg?v=1790004669",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070176.jpg?v=1790004681"
+   ],
+   "desc": "One day at the office we sat down, closed our eyes, and thought of what our dream 90s windshirt looked like. This is what we came up with... thin retro silhouette, stretchy, a bit flowy and roomy The waistband is flat in the front and stretchy in the back, this makes for something that just looks really good on you. Fit is dialed (true to size) -- this is one of the coolest things we have ever made.",
+   "variants_full": [
+    {
+     "title": "Stone / S",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888"
+    },
+    {
+     "title": "Stone / M",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888"
+    },
+    {
+     "title": "Stone / L",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888"
+    },
+    {
+     "title": "Stone / XL",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888"
+    },
+    {
+     "title": "Stone / XXL",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888"
+    },
+    {
+     "title": "Navy / S",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897"
+    },
+    {
+     "title": "Navy / M",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897"
+    },
+    {
+     "title": "Navy / L",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897"
+    },
+    {
+     "title": "Navy / XL",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897"
+    },
+    {
+     "title": "Navy / XXL",
+     "price": 150.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_1copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_2copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_3copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-STNS_4copy.jpg?v=1789669888",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012473_3beb09a6-e656-4b51-970e-9f0b06e4c183.jpg?v=1789670066",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012479_6e6a414d-f0c6-4e60-a73d-df6970a9d875.jpg?v=1789670079",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/IG012439.jpg?v=1789670137",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_1copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_2copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_3copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC-WC001-NVYS_4copy.jpg?v=1789669897",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070653.jpg?v=1790004669",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1070176.jpg?v=1790004681"
+   ]
+  },
+  {
+   "title": "SSC Milk Glass Mugs 2-Pack",
+   "handle": "ssc-milk-glass-mugs-2-pack",
+   "type": "Misc. Accessories",
+   "tags": [
+    "2026",
+    "Accessories",
+    "highertype:accessory",
+    "novholiday",
+    "sept22"
+   ],
+   "price": 48.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Default Title",
+     false
+    ]
+   ],
+   "published": "2026-09-22",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_1copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_2copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_3copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_7copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_4copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_8copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_5copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_9copy.jpg?v=1790002414",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_6copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_10copy.jpg?v=1790002413"
+   ],
+   "desc": "These mugs make me happy Set of two 8-oz milk glass mugs Tiny and perfect Stackable! Care instructions from Created: Made of soda-lime glass \u2014 handle with a little extra love Pre-warm with warm water before adding boiling water, avoid sudden temp changes. Don\u2019t microwave. Don\u2019t freeze. No dishwasher. Hand wash with soapy water and a soft sponge \u2014 skip the wire brush Chip or crack? Time to retire it \u2014 safety first",
+   "variants_full": [
+    {
+     "title": "Default Title",
+     "price": 48.0,
+     "avail": false,
+     "opt1": "Default Title",
+     "img": null
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_1copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_2copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_3copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_7copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_4copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_8copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_5copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_9copy.jpg?v=1790002414",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_6copy.jpg?v=1790002413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-MGMUGSET_10copy.jpg?v=1790002413"
+   ]
+  },
+  {
+   "title": "Hidden Gem Mallet Putter Cover",
+   "handle": "hidden-gem-mallet-putter-cover",
+   "type": "Headcover",
+   "tags": [
+    "2026",
+    "Headcover",
+    "highertype:accessory",
+    "sept22",
+    "VENDOR:EP"
+   ],
+   "price": 95.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Default Title",
+     true
+    ]
+   ],
+   "published": "2026-09-22",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_1copy.jpg?v=1789669847",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_2copy.jpg?v=1789669848",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_3copy.jpg?v=1789669847",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_4copy.jpg?v=1789669847"
+   ],
+   "desc": "Some nylon mallet love for the mallet lads! Made in the USA for SSC by EP",
+   "variants_full": [
+    {
+     "title": "Default Title",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Default Title",
+     "img": null
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_1copy.jpg?v=1789669847",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_2copy.jpg?v=1789669848",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_3copy.jpg?v=1789669847",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-MALLET_4copy.jpg?v=1789669847"
+   ]
+  },
+  {
+   "title": "Hidden Gem Blade Putter Cover",
+   "handle": "hidden-gem-blade-putter-cover",
+   "type": "Headcover",
+   "tags": [
+    "2026",
+    "Headcover",
+    "highertype:accessory",
+    "sept22",
+    "VENDOR:EP"
+   ],
+   "price": 95.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Default Title",
+     true
+    ]
+   ],
+   "published": "2026-09-22",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_1copy.jpg?v=1789669778",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_2copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_3copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_4copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_5copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_6copy.jpg?v=1789669777"
+   ],
+   "desc": "A little nylon sauce for you lads Made in the USA for SSC by EP",
+   "variants_full": [
+    {
+     "title": "Default Title",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Default Title",
+     "img": null
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_1copy.jpg?v=1789669778",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_2copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_3copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_4copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_5copy.jpg?v=1789669777",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-HGNYLON-BLADE_6copy.jpg?v=1789669777"
+   ]
+  },
+  {
+   "title": "SSC Tech Vest",
+   "handle": "tech-vest-2026",
+   "type": "Outerwear",
+   "tags": [
+    "2026",
+    "Apparel",
+    "collab",
+    "hiddengems",
+    "highertype:apparel",
+    "Outerwear",
+    "Payntr",
+    "sept1",
+    "us-open-payntr",
+    "VENDOR:YIMENG"
+   ],
+   "price": 115.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Teal / S",
+     true
+    ],
+    [
+     "Teal / M",
+     true
+    ],
+    [
+     "Teal / L",
+     true
+    ],
+    [
+     "Teal / XL",
+     true
+    ],
+    [
+     "Teal / XXL",
+     true
+    ],
+    [
+     "Dark Red / S",
+     true
+    ],
+    [
+     "Dark Red / M",
+     true
+    ],
+    [
+     "Dark Red / L",
+     true
+    ],
+    [
+     "Dark Red / XL",
+     true
+    ],
+    [
+     "Dark Red / XXL",
+     true
+    ],
+    [
+     "Stone / S",
+     true
+    ],
+    [
+     "Stone / M",
+     true
+    ],
+    [
+     "Stone / L",
+     true
+    ],
+    [
+     "Stone / XL",
+     true
+    ],
+    [
+     "Stone / XXL",
+     true
+    ],
+    [
+     "White / S",
+     true
+    ],
+    [
+     "White / M",
+     true
+    ],
+    [
+     "White / L",
+     true
+    ],
+    [
+     "White / XL",
+     true
+    ],
+    [
+     "White / XXL",
+     true
+    ],
+    [
+     "Navy / S",
+     true
+    ],
+    [
+     "Navy / M",
+     true
+    ],
+    [
+     "Navy / L",
+     true
+    ],
+    [
+     "Navy / XL",
+     true
+    ],
+    [
+     "Navy / XXL",
+     true
+    ],
+    [
+     "Hidden Gem Yellow / S",
+     true
+    ],
+    [
+     "Hidden Gem Yellow / M",
+     true
+    ],
+    [
+     "Hidden Gem Yellow / L",
+     true
+    ],
+    [
+     "Hidden Gem Yellow / XL",
+     true
+    ],
+    [
+     "Hidden Gem Yellow / XXL",
+     true
+    ]
+   ],
+   "published": "2026-08-31",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_2_copy.jpg?v=1788195640",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-159copy.jpg?v=1788195325",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_4_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_2_copy.jpg?v=1788195566",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_4_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-140copy.jpg?v=1788195281",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_2_copy.jpg?v=1788195490",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_4_copy.jpg?v=1788193249",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-117copy.jpg?v=1788195046",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-115copy.jpg?v=1788195129",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-WHT-S_2copy2.jpg?v=1780946297",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-WHT-S_3copy.jpg?v=1777907786",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-WHT-S_4copy.jpg?v=1777907786",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-NVY-S_2copy.jpg?v=1780946385",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-NVY-S_3copy.jpg?v=1777907787",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-NVY-S_4copy.jpg?v=1777907787",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_2copy.jpg?v=1786386561",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_3copy.jpg?v=1785527357",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_4copy.jpg?v=1785527357",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_5copy.jpg?v=1785527357",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-050copy.jpg?v=1786385688",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-052copy.jpg?v=1786385829",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_2_copy.jpg?v=1788195710",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_3_copy.jpg?v=1788193248",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_4_copy.jpg?v=1788193249",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_5_copy.jpg?v=1788193249",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_2_copy.jpg?v=1788195788",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_4_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/groupsquare.jpg?v=1788883411"
+   ],
+   "desc": "Perhaps our favorite piece we make Golfable, but also wearable when walking down Wall Street Zipper pockets, SSC Arrow on the back",
+   "variants_full": [
+    {
+     "title": "Teal / S",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Teal",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604"
+    },
+    {
+     "title": "Teal / M",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Teal",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604"
+    },
+    {
+     "title": "Teal / L",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Teal",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604"
+    },
+    {
+     "title": "Teal / XL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Teal",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604"
+    },
+    {
+     "title": "Teal / XXL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Teal",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604"
+    },
+    {
+     "title": "Dark Red / S",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Dark Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530"
+    },
+    {
+     "title": "Dark Red / M",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Dark Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530"
+    },
+    {
+     "title": "Dark Red / L",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Dark Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530"
+    },
+    {
+     "title": "Dark Red / XL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Dark Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530"
+    },
+    {
+     "title": "Dark Red / XXL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Dark Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530"
+    },
+    {
+     "title": "Stone / S",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420"
+    },
+    {
+     "title": "Stone / M",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420"
+    },
+    {
+     "title": "Stone / L",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420"
+    },
+    {
+     "title": "Stone / XL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420"
+    },
+    {
+     "title": "Stone / XXL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420"
+    },
+    {
+     "title": "White / S",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683"
+    },
+    {
+     "title": "White / M",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683"
+    },
+    {
+     "title": "White / L",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683"
+    },
+    {
+     "title": "White / XL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683"
+    },
+    {
+     "title": "White / XXL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683"
+    },
+    {
+     "title": "Navy / S",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752"
+    },
+    {
+     "title": "Navy / M",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752"
+    },
+    {
+     "title": "Navy / L",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752"
+    },
+    {
+     "title": "Navy / XL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752"
+    },
+    {
+     "title": "Navy / XXL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752"
+    },
+    {
+     "title": "Hidden Gem Yellow / S",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Hidden Gem Yellow",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540"
+    },
+    {
+     "title": "Hidden Gem Yellow / M",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Hidden Gem Yellow",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540"
+    },
+    {
+     "title": "Hidden Gem Yellow / L",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Hidden Gem Yellow",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540"
+    },
+    {
+     "title": "Hidden Gem Yellow / XL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Hidden Gem Yellow",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540"
+    },
+    {
+     "title": "Hidden Gem Yellow / XXL",
+     "price": 115.0,
+     "avail": true,
+     "opt1": "Hidden Gem Yellow",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_1_copy.jpg?v=1788195604",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_2_copy.jpg?v=1788195640",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-159copy.jpg?v=1788195325",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_4_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-TEAL-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_1_copy.jpg?v=1788195530",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_2_copy.jpg?v=1788195566",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_4_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-4-DKRED-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-140copy.jpg?v=1788195281",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_1_copy.jpg?v=1788195420",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_2_copy.jpg?v=1788195490",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_4_copy.jpg?v=1788193249",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-STON-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-117copy.jpg?v=1788195046",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-115copy.jpg?v=1788195129",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-WHT-S_2copy2.jpg?v=1780946297",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-WHT-S_3copy.jpg?v=1777907786",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-WHT-S_4copy.jpg?v=1777907786",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-NVY-S_2copy.jpg?v=1780946385",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-NVY-S_3copy.jpg?v=1777907787",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV005-3-NVY-S_4copy.jpg?v=1777907787",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_1copy.jpg?v=1786386540",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_2copy.jpg?v=1786386561",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_3copy.jpg?v=1785527357",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_4copy.jpg?v=1785527357",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCVHG-3-YLW-S_5copy.jpg?v=1785527357",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-050copy.jpg?v=1786385688",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-052copy.jpg?v=1786385829",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_1_copy.jpg?v=1788195683",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_2_copy.jpg?v=1788195710",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_3_copy.jpg?v=1788193248",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_4_copy.jpg?v=1788193249",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-WHT-S_5_copy.jpg?v=1788193249",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_1_copy.jpg?v=1788195752",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_2_copy.jpg?v=1788195788",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_3_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_4_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCV006-3-NVY-S_5_copy.jpg?v=1788193250",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/groupsquare.jpg?v=1788883411"
+   ]
+  },
+  {
+   "title": "SSC Windshirt",
+   "handle": "windshirt",
+   "type": "Outerwear",
+   "tags": [
+    "2026",
+    "Apparel",
+    "collab",
+    "highertype:apparel",
+    "Outerwear",
+    "Payntr",
+    "sept1",
+    "us-open-payntr",
+    "VENDOR:YIMENG"
+   ],
+   "price": 125.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Stone/Navy / S",
+     true
+    ],
+    [
+     "Stone/Navy / M",
+     true
+    ],
+    [
+     "Stone/Navy / L",
+     true
+    ],
+    [
+     "Stone/Navy / XL",
+     true
+    ],
+    [
+     "Stone/Navy / XXL",
+     true
+    ],
+    [
+     "White/Stone / S",
+     true
+    ],
+    [
+     "White/Stone / M",
+     true
+    ],
+    [
+     "White/Stone / L",
+     true
+    ],
+    [
+     "White/Stone / XL",
+     true
+    ],
+    [
+     "White/Stone / XXL",
+     false
+    ],
+    [
+     "Red / S",
+     false
+    ],
+    [
+     "Red / M",
+     false
+    ],
+    [
+     "Red / L",
+     false
+    ],
+    [
+     "Red / XL",
+     false
+    ],
+    [
+     "Red / XXL",
+     false
+    ]
+   ],
+   "published": "2026-09-01",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_3copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_2copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_4copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_5copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_3copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_2copy.jpg?v=1781121151",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-33.jpg?v=1782158813",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-43.jpg?v=1782159120",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-49.jpg?v=1782159162",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-59.jpg?v=1782159204",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_4copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_5copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_3copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_2copy.jpg?v=1781120757",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-201_3b8a7a91-a3b1-4aac-8f55-147e61746d57.jpg?v=1782160022",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-206.jpg?v=1782161046",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-207.jpg?v=1782161068",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_4copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_5copy.jpg?v=1777907684"
+   ],
+   "desc": "This windshirt might disrupt the space-time continuum Full disclosure: I do not know what the space-time continuum is If you are in between sizes, we recommend sizing up! Stretchy and breathable Repels wind and water Mesh lining Vented in the back",
+   "variants_full": [
+    {
+     "title": "Stone/Navy / S",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "Stone/Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557"
+    },
+    {
+     "title": "Stone/Navy / M",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "Stone/Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557"
+    },
+    {
+     "title": "Stone/Navy / L",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "Stone/Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557"
+    },
+    {
+     "title": "Stone/Navy / XL",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "Stone/Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557"
+    },
+    {
+     "title": "Stone/Navy / XXL",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "Stone/Navy",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557"
+    },
+    {
+     "title": "White/Stone / S",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "White/Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801"
+    },
+    {
+     "title": "White/Stone / M",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "White/Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801"
+    },
+    {
+     "title": "White/Stone / L",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "White/Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801"
+    },
+    {
+     "title": "White/Stone / XL",
+     "price": 125.0,
+     "avail": true,
+     "opt1": "White/Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801"
+    },
+    {
+     "title": "White/Stone / XXL",
+     "price": 125.0,
+     "avail": false,
+     "opt1": "White/Stone",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801"
+    },
+    {
+     "title": "Red / S",
+     "price": 125.0,
+     "avail": false,
+     "opt1": "Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730"
+    },
+    {
+     "title": "Red / M",
+     "price": 125.0,
+     "avail": false,
+     "opt1": "Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730"
+    },
+    {
+     "title": "Red / L",
+     "price": 125.0,
+     "avail": false,
+     "opt1": "Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730"
+    },
+    {
+     "title": "Red / XL",
+     "price": 125.0,
+     "avail": false,
+     "opt1": "Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730"
+    },
+    {
+     "title": "Red / XXL",
+     "price": 125.0,
+     "avail": false,
+     "opt1": "Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_1copy.jpg?v=1788283557",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_3copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_2copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_4copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-SNY-S_5copy.jpg?v=1787931234",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_1copy.jpg?v=1781120801",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_3copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_2copy.jpg?v=1781121151",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-33.jpg?v=1782158813",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-43.jpg?v=1782159120",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-49.jpg?v=1782159162",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-59.jpg?v=1782159204",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_4copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-WHTST-S_5copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_1copy.jpg?v=1781120730",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_3copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_2copy.jpg?v=1781120757",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-201_3b8a7a91-a3b1-4aac-8f55-147e61746d57.jpg?v=1782160022",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-206.jpg?v=1782161046",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-207.jpg?v=1782161068",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_4copy.jpg?v=1777907684",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCWS008-3-RED-S_5copy.jpg?v=1777907684"
+   ]
+  },
+  {
+   "title": "Big Arrow Cover",
+   "handle": "big-arrow-cover",
+   "type": "Headcover",
+   "tags": [
+    "2026",
+    "Headcover",
+    "highertype:accessory",
+    "sept1",
+    "VENDOR:JR&CO"
+   ],
+   "price": 120.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Fairway",
+     false
+    ],
+    [
+     "Driver",
+     true
+    ]
+   ],
+   "published": "2026-09-01",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_1copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_2copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_3copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_4copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_1copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_2copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_3copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_4copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_fairway_set_1copy.jpg?v=1787937525"
+   ],
+   "desc": "Super plush, super luxe leather headcover. Kind of a lot, but it works! Like an oven mitt, but for your driver Doubles as a boxing glove, maybe Made in the USA",
+   "variants_full": [
+    {
+     "title": "Fairway",
+     "price": 120.0,
+     "avail": false,
+     "opt1": "Fairway",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_1copy.jpg?v=1787937525"
+    },
+    {
+     "title": "Driver",
+     "price": 135.0,
+     "avail": true,
+     "opt1": "Driver",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_1copy.jpg?v=1787937525"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_1copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_2copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_3copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_4copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_1copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_2copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_3copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCOFAIRWAY_4copy.jpg?v=1787937525",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUG-JRCODRIVER_fairway_set_1copy.jpg?v=1787937525"
+   ]
+  },
+  {
+   "title": "The Club Stripe Polo",
+   "handle": "the-club-stripe-polo",
+   "type": "Polos",
+   "tags": [
+    "2026",
+    "Apparel",
+    "Apr21Lifestyle",
+    "Classics",
+    "highertype:apparel",
+    "Polo",
+    "Polos",
+    "sept1",
+    "VENDOR:GOODTRUST",
+    "wholesale",
+    "WHS"
+   ],
+   "price": 95.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Navy & Red / S",
+     true
+    ],
+    [
+     "Navy & Red / M",
+     true
+    ],
+    [
+     "Navy & Red / L",
+     true
+    ],
+    [
+     "Navy & Red / XL",
+     true
+    ],
+    [
+     "Navy & Red / XXL",
+     true
+    ],
+    [
+     "Spruce Green / S",
+     true
+    ],
+    [
+     "Spruce Green / M",
+     true
+    ],
+    [
+     "Spruce Green / L",
+     true
+    ],
+    [
+     "Spruce Green / XL",
+     true
+    ],
+    [
+     "Spruce Green / XXL",
+     false
+    ],
+    [
+     "Pink Dogwood / S",
+     true
+    ],
+    [
+     "Pink Dogwood / M",
+     true
+    ],
+    [
+     "Pink Dogwood / L",
+     true
+    ],
+    [
+     "Pink Dogwood / XL",
+     true
+    ],
+    [
+     "Pink Dogwood / XXL",
+     true
+    ],
+    [
+     "Lilac Stripe / S",
+     true
+    ],
+    [
+     "Lilac Stripe / M",
+     true
+    ],
+    [
+     "Lilac Stripe / L",
+     false
+    ],
+    [
+     "Lilac Stripe / XL",
+     true
+    ],
+    [
+     "Lilac Stripe / XXL",
+     false
+    ],
+    [
+     "Camellia Pink Stripe / S",
+     false
+    ],
+    [
+     "Camellia Pink Stripe / M",
+     true
+    ],
+    [
+     "Camellia Pink Stripe / L",
+     true
+    ],
+    [
+     "Camellia Pink Stripe / XL",
+     true
+    ],
+    [
+     "Camellia Pink Stripe / XXL",
+     false
+    ],
+    [
+     "Blueberry Stripe / S",
+     false
+    ],
+    [
+     "Blueberry Stripe / M",
+     false
+    ],
+    [
+     "Blueberry Stripe / L",
+     false
+    ],
+    [
+     "Blueberry Stripe / XL",
+     false
+    ],
+    [
+     "Blueberry Stripe / XXL",
+     false
+    ]
+   ],
+   "published": "2026-04-21",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_3copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_2copy.jpg?v=1787930472",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_4copy.jpg?v=1787930472",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-201copy_ba2685ab-398a-4a33-8afc-fea087a0bccf.jpg?v=1788200340",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-083_copy.jpg?v=1788196438",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_3copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_2copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_4copy.jpg?v=1787930472",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-045_copy.jpg?v=1788196487",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-104copy.jpg?v=1788201440",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-103copy.jpg?v=1788201093",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_3copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_2copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_4copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-198_copy.jpg?v=1788196172",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-197_copy.jpg?v=1788196413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_2copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A9329copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_3copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_4copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_2copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A9362copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_3copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_4copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_2copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A8722copy_a6f7cd38-c77a-42f5-aaea-5a9ce67d0bf4.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A1282copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_3copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_4copy.jpg?v=1776702524"
+   ],
+   "desc": "Our beloved Pique Polo dialed in just how we like it -- with a refined fit in 2026. We've still got these 'true to size' - certainly not slim fit, but not too boxy either and able to rock tucked or not, but with a soft lay shoulder this year for an even better fit. If you like your SSC shirt size, you should keep your shirt size! Model is 6'2\", Chest 40\", wearing a size Medium. Men's pique golf polo Moisture-wicking poly-spandex blend (94% poly / 6% spandex) Breathable and lightweight for warm weather Classic Relaxed Fit, true to size Four-button placket and structured collar Designed for on-course and everyday wear Care instructions: We recommend that you do not run these through the dryer -- hang to dry!",
+   "variants_full": [
+    {
+     "title": "Navy & Red / S",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Navy & Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Navy & Red / M",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Navy & Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Navy & Red / L",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Navy & Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Navy & Red / XL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Navy & Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Navy & Red / XXL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Navy & Red",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Spruce Green / S",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Spruce Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Spruce Green / M",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Spruce Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Spruce Green / L",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Spruce Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Spruce Green / XL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Spruce Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Spruce Green / XXL",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Spruce Green",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Pink Dogwood / S",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Pink Dogwood",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Pink Dogwood / M",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Pink Dogwood",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Pink Dogwood / L",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Pink Dogwood",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Pink Dogwood / XL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Pink Dogwood",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Pink Dogwood / XXL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Pink Dogwood",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471"
+    },
+    {
+     "title": "Lilac Stripe / S",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Lilac Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Lilac Stripe / M",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Lilac Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Lilac Stripe / L",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Lilac Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Lilac Stripe / XL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Lilac Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Lilac Stripe / XXL",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Lilac Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Camellia Pink Stripe / S",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Camellia Pink Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Camellia Pink Stripe / M",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Camellia Pink Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Camellia Pink Stripe / L",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Camellia Pink Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Camellia Pink Stripe / XL",
+     "price": 95.0,
+     "avail": true,
+     "opt1": "Camellia Pink Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Camellia Pink Stripe / XXL",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Camellia Pink Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Blueberry Stripe / S",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Blueberry Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Blueberry Stripe / M",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Blueberry Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Blueberry Stripe / L",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Blueberry Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Blueberry Stripe / XL",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Blueberry Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524"
+    },
+    {
+     "title": "Blueberry Stripe / XXL",
+     "price": 95.0,
+     "avail": false,
+     "opt1": "Blueberry Stripe",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_1copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_3copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_2copy.jpg?v=1787930472",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDNVYRDS_4copy.jpg?v=1787930472",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-201copy_ba2685ab-398a-4a33-8afc-fea087a0bccf.jpg?v=1788200340",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-083_copy.jpg?v=1788196438",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_1copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_3copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_2copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDGRNS_4copy.jpg?v=1787930472",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-045_copy.jpg?v=1788196487",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-104copy.jpg?v=1788201440",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-103copy.jpg?v=1788201093",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_1copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_3copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_2copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-4-WIDPNKDS_4copy.jpg?v=1787930471",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-198_copy.jpg?v=1788196172",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_WVACabinShoot_July2026-197_copy.jpg?v=1788196413",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_1copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_2copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A9329copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_3copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-LWSSS_4copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_1copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_2copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A9362copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_3copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-RWSSS_4copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_1copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_2copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A8722copy_a6f7cd38-c77a-42f5-aaea-5a9ce67d0bf4.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/195A1282copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_3copy.jpg?v=1776702524",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP003-3-BWSSS_4copy.jpg?v=1776702524"
+   ]
+  },
+  {
+   "title": "SSC Socks 3-Pack \"Sleeve\"",
+   "handle": "sock-3-pack",
+   "type": "Socks",
+   "tags": [
+    "2026",
+    "Accessories",
+    "Apparel",
+    "Classics",
+    "highertype:apparel",
+    "jan11",
+    "januaryrefresh",
+    "nordstrom",
+    "sept1"
+   ],
+   "price": 28.0,
+   "compare": 0.0,
+   "avail": [
+    [
+     "Grey, Navy & White / S/M",
+     true
+    ],
+    [
+     "Grey, Navy & White / M/L",
+     true
+    ],
+    [
+     "White / S/M",
+     true
+    ],
+    [
+     "White / M/L",
+     true
+    ]
+   ],
+   "published": "2026-09-01",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_1copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_1.jpg?v=1767976265",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_3.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_2.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_4.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-159.jpg?v=1782159751",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-156.jpg?v=1782159857",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1051347.jpg?v=1768177712",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1051350_1.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_2copy.jpg?v=1787859240",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_3copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_4copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_5copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_6copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_7copy.jpg?v=1787859241"
+   ],
+   "desc": "Just like you need a fresh sleeve of balls for that important round at your white whale, you also need a sleeve of fresh socks for golf season. And these guys are comfy and effective -- we can't stop wearing them. Made by SSC 3-pack of mid-ankle socks Bottoms come in 3 colors so you know which socks go together SSC Arrow on the back of the sock! S/M fits US M 5-9 | W 6-10 M/L fits US M 9-13 | W 10-15",
+   "variants_full": [
+    {
+     "title": "Grey, Navy & White / S/M",
+     "price": 28.0,
+     "avail": true,
+     "opt1": "Grey, Navy & White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_1copy.jpg?v=1787859241"
+    },
+    {
+     "title": "Grey, Navy & White / M/L",
+     "price": 28.0,
+     "avail": true,
+     "opt1": "Grey, Navy & White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_1copy.jpg?v=1787859241"
+    },
+    {
+     "title": "White / S/M",
+     "price": 28.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_1.jpg?v=1767976265"
+    },
+    {
+     "title": "White / M/L",
+     "price": 28.0,
+     "avail": true,
+     "opt1": "White",
+     "img": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_1.jpg?v=1767976265"
+    }
+   ],
+   "imgs_all": [
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_1copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_1.jpg?v=1767976265",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_3.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_2.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGSOCK-3PK-SM_4.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-159.jpg?v=1782159751",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSC_NY_FINALS-156.jpg?v=1782159857",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1051347.jpg?v=1768177712",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/I1051350_1.jpg?v=1768178327",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_2copy.jpg?v=1787859240",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_3copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_4copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_5copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_6copy.jpg?v=1787859241",
+    "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SUGCREWSOCK-3PK-SM_7copy.jpg?v=1787859241"
+   ]
+  }
+ ]
+}

@@ -6,9 +6,8 @@ reads more like a publication" (first asked about the DTC category text).
 Adds one CSS block (/*TGI-PUB-V1*/) before the LAST </style> of each page, so
 it wins over the templates' own rules, several of which repeat inside <body>.
 Nothing in the markup changes. Headings, tags, section decks, tier bands,
-prose, pull-quotes, captions, product cards and the FAQ all centre; the Take's
-details box drops below the Take instead of sitting to its right (centred type
-beside a right-hand box reads as a mistake). Nav, footer and the More strip are
+prose, pull-quotes, captions, product cards and the FAQ all centre. The opening
+Take + details box keeps the house two-column layout (Lenny, 27 Sep). Nav, footer and the More strip are
 untouched.
 
 Runs on every deploy (Deploy TGI.command), so a rebuilt page keeps it.
@@ -20,6 +19,8 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
 PAGES = [
+    "drops/sugarloaf-autumn-layers-2026.html",
+    "drops/austin-food-truck-field-guide.html",
     "drops/fall-golf-towel-roundup-2026.html",
     "drops/dtc-golf-club-brands.html",
     "drops/brand-to-know-sounder.html",
@@ -34,18 +35,24 @@ PAGES = [
 if "--only" in sys.argv:
     PAGES = [sys.argv[sys.argv.index("--only") + 1]]
 
-CSS = """/*TGI-PUB-V1*/
-main .drop-tag,section.products .drop-tag,section[data-btk] .drop-tag{display:table!important;margin-left:auto!important;margin-right:auto!important}
-section.products h2,section.products .products-hdr,section[data-btk] .products-hdr{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
-.cat-kicker,section[data-btk] .cat-kicker,section[data-btk="take"] .cat-kicker,.sec-intro,section[data-btk="take"] .sec-intro{text-align:center!important;border-left:0!important;padding-left:0!important;margin-left:auto!important;margin-right:auto!important;max-width:720px!important}
-section[data-btk="take"]{display:block!important}
-section[data-btk="take"] .writeup-body,section.products .writeup-body{max-width:720px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
-section[data-btk="take"] .products-hdr,section[data-btk="take"] .drop-tag{margin-left:auto!important;margin-right:auto!important}
-section[data-btk="take"] .sidebar{position:static!important;max-width:520px!important;margin:40px auto 0!important}
-.writeup{display:block!important}
-.writeup .writeup-body{max-width:720px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
-.writeup .writeup-body .products-hdr,.writeup .writeup-body h2{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
-.writeup .sidebar{position:static!important;max-width:520px!important;margin:40px auto 0!important}
+CSS = """/*TGI-PUB-V2*/
+/* The Take + details box stays as the house two-column opener (Lenny, 27 Sep:
+   "TGI take on the left and the box on the right, then the rest of the write
+   up"). Everything after it is centred. */
+section.products:not([data-btk="take"]) .drop-tag{display:table!important;margin-left:auto!important;margin-right:auto!important}
+section.products:not([data-btk="take"]) h2,section.products:not([data-btk="take"]) .products-hdr{text-align:center!important;margin-left:auto!important;margin-right:auto!important}
+section.products:not([data-btk="take"]) .cat-kicker,section.products:not([data-btk="take"]) .sec-intro{text-align:center!important;border-left:0!important;padding-left:0!important;margin-left:auto!important;margin-right:auto!important;max-width:720px!important}
+section.products:not([data-btk="take"]) .writeup-body{max-width:720px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+.products~.writeup{display:block!important}
+.products~.writeup .writeup-body{max-width:720px!important;margin-left:auto!important;margin-right:auto!important;text-align:center!important}
+.products~.writeup .writeup-body h2,.products~.writeup .writeup-body .products-hdr{text-align:center!important}
+/* The details box: label left, answer right, one clean row each (27 Sep: "format the box text a little better"). */
+.sidebar-card .sidebar-detail{display:grid!important;grid-template-columns:max-content 1fr;column-gap:18px;align-items:baseline;margin:0!important;padding:11px 0;border-top:.5px solid rgba(20,20,20,.14)}
+.sidebar-card .sidebar-label+.sidebar-detail{border-top:0;padding-top:4px}
+.sidebar-card .sidebar-detail .l{white-space:nowrap;line-height:1.4}
+.sidebar-card .sidebar-detail>span:last-child{text-align:right;font-size:14px;line-height:1.4;font-family:var(--serif)}
+.sidebar-card .sidebar-label{margin-bottom:10px!important}
+.sidebar-card .sidebar-cta{margin-top:22px}
 section.products>div[style*="max-width:760px"]{margin-left:auto!important;margin-right:auto!important;text-align:center!important;max-width:720px!important}
 .tier-band{text-align:center!important}
 .tier-band h2.tier-title{text-align:center!important}
@@ -62,9 +69,9 @@ section.products>div[style*="max-width:760px"]{margin-left:auto!important;margin
 .products-grid:has(>.product-card:only-child){grid-template-columns:minmax(0,calc((100% - 48px)/3))!important;justify-content:center}
 @media(max-width:900px){.products-grid:has(>.product-card:nth-child(2):last-child),.products-grid:has(>.product-card:only-child){grid-template-columns:repeat(auto-fit,minmax(0,1fr))!important}}
 .entry,.entry-body,.entry p{text-align:center}
-/*/TGI-PUB-V1*/"""
+/*/TGI-PUB-V2*/"""
 
-BLOCK = re.compile(r"/\*TGI-PUB-V1\*/.*?/\*/TGI-PUB-V1\*/\n?", re.S)
+BLOCK = re.compile(r"/\*TGI-PUB-V\d\*/.*?/\*/TGI-PUB-V\d\*/\n?", re.S)
 
 
 def main(apply):
