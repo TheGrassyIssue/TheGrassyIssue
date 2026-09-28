@@ -19,6 +19,7 @@ import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent
 PAGES = [
+    "drops/required-reading-independent-golf-magazines.html",
     "drops/brand-to-know-st-andre.html",
     "drops/brand-to-know-dimple-divot.html",
     "drops/sugarloaf-autumn-layers-2026.html",
