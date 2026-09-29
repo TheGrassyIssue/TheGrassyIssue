@@ -34,9 +34,9 @@ BJ = json.loads((ROOT / "research/aug11/bands.json").read_text())
 SHOP = "https://aug11.co/products/"
 BRAND = "Aug 11"
 
-TITLE = "Aug 11 Hats, Revisited: The Atlanta Hat Brand and Its New Drops"
+TITLE = "Aug 11 Hats, Revisited: The Atlanta Hat Brand's New Drops"
 DESC = ("Aug 11 is the Atlanta hat brand Johnny Persón built on his sister's birthday. Our revisit: "
-        "the new REPS athletic line, The Refill, and 12 hats to buy at $54.95.")
+        "the new REPS athletic line, The Refill, and 12 hats at $54.95.")
 H1 = "Aug 11, Revisited &mdash; The Atlanta Hat Brand Built on a Birthday"
 
 P = {
