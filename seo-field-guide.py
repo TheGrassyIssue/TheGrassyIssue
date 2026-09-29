@@ -228,8 +228,7 @@ def main(apply_):
         head = re.sub(p, lambda m: r, head, count=1)
     head = re.sub(r'"headline"\s*:\s*"(?:[^"\\]|\\.)*"',
                   lambda m: '"headline": ' + json.dumps(H1_PLAIN), head, count=1)
-    head = re.sub(r'"dateModified"\s*:\s*"[^"]*"',
-                  lambda m: '"dateModified": "2026-09-22"', head, count=1)
+    # dateModified is owned by stamp-field-guide-date.py (runs on deploy) — don't pin it here.
     head = re.sub(r"\n*" + re.escape(SMARK) + r".*?" + re.escape(SEND) + r"\n*", "\n", head, flags=re.S)
     head = head.rstrip() + "\n" + breadcrumb()
 
