@@ -1,0 +1,6 @@
+# Practice facilities rewrite — research 28 Sep 2026 (agent a8e6f52e8a63dd34f; full report in transcript)
+Current page: drops/8-best-practice-facilities-around-austin.html (June 2026, 872 words, old "Shop" card format).
+Errors found: Harvey Penick not city-owned (First Tee–Greater Austin, YMCA-leased land) and has mats ("grass or mat"); buckets $8/$12 not $8–14; Lions is 18 holes, "oldest municipal in Texas" unsupported (city: "first public golf course in the city", 1924), range irons-only; Topgolf at 2700 Esperanza Crossing (near, not in, Domain), bays $38–64/hr ($19–32 half-off online Mon–Thu); Butler $14 wkday/$16 wknd adults, BYOB + 100-yd unverified, officially opened 1 Jun 1950; Clay/Kizer $7/$11; Avery $10/$17/$25, Toptracer Mobile; Dripping Springs CC is a standalone family-owned range (not a club).
+Verified details per facility + candidates (Forest Creek, Plum Creek, Teravista, Grey Rock, Falconhead, Crystal Falls, Morris Williams, Blackhawk, ShadowGlen, Star Ranch) with first-party URLs and prices — see transcript report.
+No new outdoor south-side range found in 2025–26 (Field Guide line "new spots popping up on the south side" unsupported).
+Golf ATX RangeGrinder: $95/mo resident, $110 non-resident, 3 large buckets/day at Clay, Kizer, Morris Williams, Lions.

@@ -67,12 +67,12 @@ DESC = ("Austin's public golf courses, explained by a local. All five munis with
 # The snippet sentence. Every claim in it is a position the page already takes:
 # Morris Williams is "The local's course. Real character." and the answer to
 # "Becoming a regular"; Lions is the answer to "Visiting for the weekend" and
-# "The one you play first"; Falconhead is "the closest thing to a destination
-# course within Austin's city limits". No new judgement is introduced here.
+# "The one you play first". Star Ranch replaced Falconhead as the premium pick
+# 28 Sep 2026 at Lenny's call ("Star Ranch should replace Falconhead").
 ANSWER = ("For most golfers, <strong>Morris Williams</strong> is the best all-around Austin "
           "muni, <strong>Lions Municipal</strong> is the one a visitor should play first, and "
-          "<strong>Falconhead</strong> is the strongest public round if you want to spend a "
-          "little more. All five city munis charge the same $35&ndash;$44.")
+          "<strong>Star Ranch</strong> in Hutto is the strongest public round if you want to "
+          "spend a little more. All five city munis charge the same $35&ndash;$44.")
 
 # (course, type, area, price, best-for, anchor) — all verbatim from the page.
 ROWS = [
