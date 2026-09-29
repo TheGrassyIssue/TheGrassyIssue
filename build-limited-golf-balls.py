@@ -130,15 +130,81 @@ TAKE = """
 </section>
 """
 
-GONE = f"""
+GONE_CARDS = [
+ ("bs-peach-reserve-vault", "Bridgestone", "Peach Reserve Vault 26 Kit", "$99.99",
+  "A Masters-week tribute that went on sale April 6: a dozen TOUR B RX with a Peach Reserve logo and a small &lsquo;26&rsquo; play number, in a dark teal box with a gold crest, plus a hat, a towel and a mailer box. The balls-only dozen was $59.99.",
+  "https://shop.bridgestonegolf.com/products/peach-reserve-vault-26-kit-limited-edition-tour-b-rx-custom-spring-hat-and-towel"),
+ ("bs-leaderboard", "Bridgestone", "Leaderboard Edition Kit", "$99.99",
+  "Released July 13, Open week. The box is built like an old flip-number scoreboard, with WOODS at &minus;19 on top and Day, Gotterup, Couples and Kuchar further down. A dozen TOUR B RX, a knit beanie and a soccer-style scarf.",
+  "https://shop.bridgestonegolf.com/products/leaderboard"),
+ ("bs-pbr-kit", "Bridgestone x Pabst Blue Ribbon", "PBR Kit", "$99.99",
+  "Pabst Blue Ribbon logos on a dozen TOUR B RX, in a doodle-covered box with three beer cans spelling U-S-A, plus a matching towel and putter cover. It first dropped in June 2025, came back for the Ryder Cup that September, and is sold out again.",
+  "https://shop.bridgestonegolf.com/products/pabst-blue-ribbon"),
+ ("bs-tour-b-black", "Bridgestone", "TOUR B X and RX BLACK", "$99.99",
+  "Bridgestone blacked out the 2026 TOUR B X and RX in May, with white sidestamps and a black box. Bridgestone&rsquo;s pitch: &ldquo;Own the rarest TOUR B we&rsquo;ve ever released.&rdquo; Both versions are gone.",
+  "https://shop.bridgestonegolf.com/products/bridgestone-tour-b-x-black"),
+ ("bs-usa250", "Bridgestone", "USA 250 Capsule", "$99.99",
+  "It went on sale June 15, U.S. Open week: TOUR B RX with &lsquo;250&rsquo; play numbers and a red, white and blue shield, a box with a navy star band, a ball-marker coin and a retro USA snapback. The dozen alone was $59.99.",
+  "https://shop.bridgestonegolf.com/products/usa-250-limited-edition-capsule"),
+ ("cw-major-series", "Callaway", "Chrome Tour Major Series", "four designs",
+  "Callaway made one Chrome Tour design for each 2026 major. April&rsquo;s is wrapped in a four-colour floral stripe with a &lsquo;90&rsquo; play number; July&rsquo;s box is an illustrated links landscape. The US store has pulled all four, but Callaway&rsquo;s UK site still lists April and July at &pound;55 (~$73).",
+  "https://eu.callawaygolf.com/en/gb/callaway-golf/exclusives/exclusive-balls/balls-2026-chrome-tour-april-major-stripe.html"),
+ ("cw-usa-stripe", "Callaway", "Chrome Tour X and Chrome Soft USA Stripe", "$59.99",
+  "A waving red, white and blue flag stripe around the ball and a &lsquo;250&rsquo; play number, in a flag-covered box. Part of Callaway&rsquo;s USA 250 collection. The Tour X and Chrome Soft versions are both sold out.",
+  "https://www.callawaygolf.com/balls/chrome-tour-x-balls/balls-2026-chrome-tour-x-usa-250-stripe.html"),
+ ("srixon-all-american-zstar-diamond", "Srixon", "All-American Z-STAR DIAMOND", "$54.99",
+  "Launched May 27 ahead of the U.S. Open: a blue-flake cover, cursive play numbers and the Declaration of Independence printed inside the box, which is wrapped in a faded flag.",
+  "https://us.dunlopsports.com/srixon/limited-edition/all-american/limited-edition-all-american-z-star-diamond-golf-balls/MZSTARD3AA.html"),
+ ("vice-greg-mike-loudmouf", "Vice x Greg Mike", "Pro Greg Mike Loudmouf", "$44.99",
+  "Atlanta artist Greg Mike&rsquo;s LOUDMOUF character, a big open mouth with a pink tongue, on a neon green Vice Pro, in a box covered in the faces. Its yellow sister, the Smiley, is still in stock above.",
+  "https://www.vicegolf.com/golf-balls/vice-pro-greg-mike-monster"),
+ ("vice-fastball", "Vice", "Pro Plus Fastball", "$46.99",
+  "Red baseball stitching wraps the ball and doubles as the alignment line, and the box is an illustrated ballpark with a pitcher and batter. Vice says it is for &ldquo;hitting big dingers with tracer-like alignment.&rdquo;",
+  "https://www.vicegolf.com/golf-balls/vice-pro-plus-fastball"),
+ ("malbon-buckets-tour-m", "Malbon", "Buckets Tour M Ball", "$60",
+  "Malbon&rsquo;s urethane Tour M with the Buckets face, swirl eyes and a dimple smile, printed on one side, four sleeves to a dark green box. The plain Tour M is still in stock; the Buckets version is gone.",
+  "https://malbongolf.com/products/buckets-tour-m-ball-white"),
+ ("badbirdie-maxfli-amateurs", "Bad Birdie x Maxfli", "Tour Amateurs", "$44.99",
+  "A Masters-week parody called Amateursland: four characters, one per ball, named Mr. Peach, Pimento C. Sandwich, Dr. Azalea and The Gnome. Sold only through Dick&rsquo;s and Golf Galaxy, and Bad Birdie&rsquo;s page says more stock is coming.",
+  "https://badbirdiegolf.com/products/bad-birdie-x-maxfli-tour-amateurs-golf-balls"),
+]
+
+
+def gone_card(c, idx):
+    slug, brand, ball, price, copy, url = c
+    fr = [f"{IMG}/gone/{slug}-{j}.jpg" for j in (1, 2)]
+    label = H.unescape(f"{brand} {ball}").replace('"', "")
+    imgs = "".join(f'<div class="pg-frame"><img src="{f}" alt="{H.escape(label)}, sold out &middot; view {j+1} of 2" loading="lazy" /></div>'
+                   for j, f in enumerate(fr))
+    dots = "".join(f'<button class="pg-dot{" on" if j == 0 else ""}" data-i="{j}" aria-label="View image {j+1}"></button>' for j in range(2))
+    was = price if price.startswith("$") else price
+    return (f'<div class="product-card" id="p-{idx}" data-frames="2"><div class="product-gallery">'
+            f'<div class="pg-track">{imgs}</div>'
+            f'<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+            f'<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+            f'<span class="pg-count">1/2</span><div class="pg-dots">{dots}</div></div>'
+            f'<div class="product-body"><div class="product-brand">{brand}</div>'
+            f'<div class="product-name">{ball} &middot; Sold out ({"was " + was if was.startswith("$") else was})</div>'
+            f'<div class="product-desc">{copy}</div>'
+            f'<a href="{url}" target="_blank" rel="noopener" class="product-link">See the listing &#8599;</a></div></div>')
+
+
+def gone_html(n0):
+    cards = "\n".join(gone_card(c, n0 + j) for j, c in enumerate(GONE_CARDS))
+    return f"""
 <section class="products" style="margin-top:8px;">
+  <div class="drop-tag grass">{len(GONE_CARDS)} sold out</div>
   <h2 class="products-hdr" id="gone">Gone, but Keep an Eye Out</h2>
+  <p class="cat-kicker">These sold out before we could get to them. They are the ones to look for on eBay and resale sites, or to grab if a brand runs them back. 2026 was Bridgestone&rsquo;s year: five of the twelve are theirs, and four were kits built around a big tournament week.</p>
+    <div class="products-grid">
+{cards}
+    </div>
   <div {PROSE}>
-    <p style="margin:0 0 16px;">These sold out before we could get to them, and they are the ones to look for on resale sites or if the brands run them back. Bridgestone had a year of them: a Masters-week Peach Reserve Vault, a Pabst Blue Ribbon kit, an Open-themed Leaderboard Edition, a blacked-out TOUR B X and RX, and its USA 250 balls.</p>
-    <p style="margin:0 0 16px;">Callaway&rsquo;s Chrome Tour Major Series, one design for each major, has come off its US store, and the Tour X and Chrome Soft versions of its USA Stripe ball have sold out. Srixon&rsquo;s All-American Z-STAR DIAMOND, Titleist&rsquo;s Folds of Honor Pro V1, Vice&rsquo;s Greg Mike Loudmouf and baseball-stitched Fastball, Malbon&rsquo;s Buckets Tour M and the Bad Birdie x Maxfli Amateurs ball are all gone too.</p>
+    <p style="margin:24px 0 0;">Also gone: Titleist&rsquo;s Pro V1 Folds of Honor, $64 with a play number 13, part of each sale going to Folds of Honor scholarships. It is out of stock online.</p>
   </div>
 </section>
 """
+
 
 FAQ = [
     ("Are limited-edition golf balls the same as the regular ones?",
@@ -265,7 +331,7 @@ def main(apply_):
     n = 1
     for s in SECTIONS:
         o, n = section(s, n); body += o
-    body += GONE + faq_html()
+    body += gone_html(n) + faq_html()
     out = head_top() + head_rest + body + tail
     print(f"  {n-1} cards")
     if not apply_:
@@ -276,7 +342,7 @@ def main(apply_):
     bad = []
     for leak in ("Manors Revisited", "Nicklaus", "Enron"):
         if leak in above: bad.append("leak " + leak)
-    if fin.count('class="product-card"') != 17: bad.append("card count")
+    if fin.count('class="product-card"') != 17 + len(GONE_CARDS): bad.append("card count")
     if re.search(r"\bworth\b", re.sub(r"<[^>]+>", " ", above), re.I): bad.append("banned word")
     for f in set(re.findall(rf'src="({IMG}/[^"]+)"', fin)):
         if not (ROOT / f.lstrip("/")).is_file(): bad.append("missing " + f)
