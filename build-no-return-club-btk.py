@@ -302,7 +302,7 @@ def main(apply_):
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A golfer in an NR cap and purple No Return Club Wind Shirt addressing a ball in long grass beneath a concrete structure" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A golfer in an NR cap and purple No Return Club Wind Shirt addressing a ball in long moorland grass in front of a concrete structure with steel stairs" fetchpriority="high" /></div></div>
 """
     body += TAKE + band("outdoors") + pq("about")
     n = 1
