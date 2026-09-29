@@ -47,7 +47,7 @@ BRAND = {"hirokigolf.com": "Hiroki", "apresgolf.com": "Apr&egrave;s-Golf", "dorm
          "dimpledivot.com": "Dimple &amp; Divot", "seamusgolf.com": "Seamus Golf", "bluetross.com": "Bluetross",
          "jonessportsco.com": "Jones Sports Co.", "malbon.com": "Malbon Golf", "ghostgolf.com": "Ghost Golf",
          "gumtreegolfandnature.com": "Gumtree Golf &amp; Nature Club", "sugarloafsocialclub.com": "Sugarloaf Social Club",
-         "birdsofcondor.com": "Birds of Condor", "radmorgolf.com": "Radmor Golf"}
+         "birdsofcondor.com": "Birds of Condor", "radmorgolf.com": "Radmor Golf", "pinterest": "Via Pinterest"}
 CUR = {"hirokigolf.com": "NZ$"}
 
 # handle -> (dom, name, price, role, copy)
@@ -207,7 +207,7 @@ NOTE = """
 <section class="products" style="margin-top:8px;">
   <h2 class="products-hdr" id="how-we-picked">How We Picked</h2>
   <div %s>
-    <p style="margin:0 0 16px;">We started on Pinterest, where the best-saved golf bags share a few habits: palette cards, flat lays, tan leather, green check and houndstooth. Most of those pins were reposts with no credit, so we traced what we could back to the makers. Every photograph here comes from the maker&rsquo;s own store, including Gumtree Golf &amp; Nature Club and Sugarloaf Social Club, whose shoots set the tone for this post.</p>
+    <p style="margin:0 0 16px;">We started on Pinterest, where the best-saved golf bags share a few habits: palette cards, flat lays, tan leather, green check and houndstooth. Most of those pins were reposts with no credit, so we traced what we could back to the makers. The setup photographs come from the makers&rsquo; own stores, and Gumtree Golf &amp; Nature Club and Sugarloaf Social Club set the tone. Two mood-board images, the burgundy bag and the flat lay, were found on Pinterest without a credit; if they are yours, tell us and we will credit or remove them.</p>
     <p style="margin:0 0 16px;">Every piece was in stock when we checked. Prices come from each maker&rsquo;s own store on 28 September 2026, in its own currency. Hiroki sells from New Zealand in New Zealand dollars; everything else is in US dollars. For more on bags themselves, see <a href="/drops/upgrading-your-golf-bag">Upgrading Your Golf Bag</a>.</p>
   </div>
 </section>
@@ -278,7 +278,7 @@ def mood():
     return (f'\n<section class="products" style="margin-top:8px;">\n'
             f'  <div class="drop-tag grass">The Mood</div>\n'
             f'  <h2 class="products-hdr" id="the-mood">Bags That Stop You on the First Tee</h2>\n'
-            f'  <p class="cat-kicker"><strong>Before the rules</strong>These are the bags that made us want to write this, from the makers&rsquo; own photographs.</p>\n'
+            f'  <p class="cat-kicker"><strong>Before the rules</strong>These are the bags that made us want to write this.</p>\n'
             f'  {grid(BANDS["mood"], 300)}\n</section>\n')
 
 
