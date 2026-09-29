@@ -552,8 +552,12 @@ def brand_page(b):
                  f'rel="noopener">Shop {name} &#8599;</a>' if st else "")
 
     # --- tag chips: navigation instead of white space ----------------------
+    # Only link a chip when its tag page exists (29 Sep 2026: "collector" had no
+    # page, so two brand pages linked to a 404 — bad for crawlers and readers).
     chips = "".join(
-        f'<a class="bp-chip" href="/brands/tag/{t}">{TAGL.get(t, t.replace("-", " ").title())}</a>'
+        (f'<a class="bp-chip" href="/brands/tag/{t}">{TAGL.get(t, t.replace("-", " ").title())}</a>'
+         if os.path.isfile(os.path.join(ROOT, "brands", "tag", f"{t}.html"))
+         else f'<span class="bp-chip">{TAGL.get(t, t.replace("-", " ").title())}</span>')
         for t in b.get("tags", []))
     tag_chips = f'<div class="bp-chips">{chips}</div>' if chips else ""
 
