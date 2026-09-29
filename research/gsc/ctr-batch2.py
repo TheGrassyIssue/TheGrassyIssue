@@ -1,0 +1,40 @@
+import json
+P=[
+("brand-to-know-rouqe-golf",427,"Rouqe Golf — Retro-Striped Polos and Mock Necks","Rouqe Golf makes retro-striped polos, mock necks and skorts, shoots its own campaigns on a mountain course and sells out fast. The men's and women's range."),
+("the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site",371,"MacKenzie Golf Bag Collabs — The Full Archive","Every MacKenzie golf bag collaboration we can document: Fyfe's 22 Scottish editions, Sugarloaf, Miura, Bandon Dunes and more, with prices and dates."),
+("10-nikes-that-belong-on-the-course",337,"Nike Golf Shoes 2026 — 10 Pairs From $105 to $275","The Pegasus 1 G, Air Max 90 G, Jordan AJ1 Low Golf in Chicago and Bred, the Eastside Golf collab and the sub-$120 C1TY. Ten Nike golf shoes, priced."),
+("arsham-malbon-chapter-three",335,"Arsham x Malbon Chapter Three — All 15 Pieces","Daniel Arsham and Malbon Golf's Chapter Three: 15 pieces in Arsham's oxidized green with the eroded Buckets logo, $38 to $448. Every piece, priced."),
+("malbon-fall-2026-the-ironworks-collection",314,"Malbon Ironworks, Fall 2026 — Our 27 Picks","Malbon's Fall 2026 Ironworks collection cut from 88 pieces to 27: hickory-stripe workwear, a Red Wing Shop Moc collab, a CLUCT divot tool, the Inkwash print."),
+("summer-practice-guide-austin",297,"Where to Practice Golf in Austin When It's 105°","Driving ranges, short game areas and indoor simulators for Austin's hottest months, plus the timing that keeps your game sharp when it's 105 degrees out."),
+("brand-to-know-merrill-golf",291,"Merrill Golf, Revisited — Now They Make Polos","Merrill Golf's first polo, a $160 mohair cardigan, and headcovers handmade in Japan from quilted nylon with Hinoki leather lids. What changed, and 12 picks."),
+("brand-to-know-jlindeberg",286,"J.Lindeberg Golf at 30 — The Story and Hovland Line","The Swedish label that put Jesper Parnevik in tight pink trousers turns 30. The founding story, the Byron Nelson win and 23 pieces from Viktor Hovland's line."),
+("manors-golf-aw26-collection",277,"Manors Golf AW26 — The Honourable Company Collection","Manors Golf's AW26 Honourable Company collection: merino mid-layers, Primaloft, Cordura ripstop and pleated trousers. 22 pieces priced, the fabrics explained."),
+("7-divot-tools-actually-worth-carrying",266,"Best Divot Tools — 25 Picks From $20 to $130","Twenty-five divot tools from sixteen makers, from a $19.99 Frogger to a $130 Sugarloaf collab. Machined, forged and milled, and the ones that keep selling out."),
+("lions-municipal-golf-course-austin",251,"Lions Municipal Golf Course (Muny) — Austin Guide","Austin's public course since 1924 and the first integrated municipal course in the South. The history, the UT lease fight, the restoration plan, how to play it."),
+("water-when-dry-the-garden-metaphor-that-actually-works",239,"Water When Dry Golf — The Camper Short and More","Water When Dry names its colours River, Dusk, Leaf and Soil and its members the Garden Club. The $88 Camper Short, Canopy fleece and the range, $15 to $128."),
+("brand-to-know-sun-mountain",209,"Sun Mountain Golf — Montana's Stand Bag Pioneer","Sun Mountain invented the modern stand bag in 1986 and still assembles bags in Missoula, Montana. Eighteen picks across bags, carts, travel and accessories."),
+("no-budget-malbon",170,"Malbon's Most Expensive Items Ever — The Top 24","From a $20,000 Honma set to a $4,450 Jimmy Choo bag and one-of-five Bettinardi putters: the 24 priciest things Malbon has sold, and what's still buyable."),
+("the-golf-ball-edit",154,"16 Golf Balls for 2026 — $32 to $60 a Dozen","Sixteen golf balls for 2026: premium picks from Titleist, Callaway, TaylorMade, Bridgestone, Vice and Snell, plus four with cool designs. $32 to $60 a dozen."),
+("fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca",150,"Fyfe Golf Between Tides — Sail Cloth and Waxed Canvas","Fyfe's tidal-island collection: Crinan waxed canvas, Harbour seersucker, Marine Suede and Oban sail cloth. Covers and MacKenzie bags, $81–$888."),
+("brand-to-know-edel-golf",149,"Edel Golf Putters — The Fitting Method Explained","Edel Golf fits putters by where you actually aim, measured with a mirror and a laser. David Edel's method, the clubs it produced, and the company after he left."),
+("brand-to-know-hiroki-golf",147,"Hiroki Golf — The Auckland Bag and Headcover Label","Hiroki Golf makes Sunday bags, stand bags, headcovers and hats in Auckland, New Zealand. The full range with US prices, the collab archive and the materials."),
+("the-towel-edit-12-worth-clipping-to-your-bag",138,"Golf Towels — 12 From Independent Brands, $25–$50","Twelve golf towels from twelve brands: Sugarloaf's waffle knit with a magnetic clip, Gumtree's $50 Member Caddy Towel, Swannies at $25 and more."),
+("brand-to-know-twentyfour-golf",121,"TwentyFour Golf — The Gold Coast Camo Cap Label","TwentyFour Golf started with one camo cap on the Gold Coast in January 2025 and now runs 24 products. What's buyable today, and the story behind the AW26 shoot."),
+("puma-golf-x-realtree-precision-in-the-wild",118,"PUMA Golf x Realtree — All 10 Pieces, Priced","PUMA Golf's second Realtree collab landed 24 August 2026: ten pieces in Realtree Legacy, a new pattern for the camo company's 40th. All ten, priced."),
+("brand-to-know-fyfe-golf",None,"Fyfe Golf — Harris Tweed Headcovers Made in Fife","Fyfe Golf makes headcovers to order in Fife from Harris Tweed, tartan and reclaimed cloth, including RAF flight suits and Augusta coveralls. 32 pieces."),
+("brand-to-know-gamut-golf",None,"Gamut Golf — Headcovers Cut From Vintage Jerseys","Gamut Golf makes one-of-one driver headcovers from vintage baseball jerseys and real course towels, plus $98 hardwood alignment sticks. Eighteen pieces."),
+("golf-brands-founded-by-women",108,"17 Golf Brands Founded by Women","Seventeen golf brands founded or co-founded by women making men's and unisex gear: hand-knit headcovers since 1962, Horween leather, gloves, polos and shoes."),
+("the-lottery-round-austin-private-clubs",106,"Austin Private Golf Clubs — 12 Clubs, No Prices Posted","Twelve private clubs in Austin and the Hill Country: Coore & Crenshaw, Pete Dye, Fazio, Nicklaus, McLay Kidd. The architecture, history and silence on cost."),
+("off-course-golf-brands-doing-non-golf-things",99,"Golf Brands Doing Non-Golf Things — 18 Side Projects","From Brooklyn-roasted coffee to children's books to hot sauce for your golf bag: 18 golf brands proving the culture reaches well beyond the course."),
+("the-dyneema-edit",94,"Dyneema Golf Bags and Gear — 28 Pieces","Dyneema is fifteen times stronger than steel by weight and light enough to float. Twenty-eight pieces that use it, from Sentinel's $890 Walker to $15 laces."),
+("brand-to-know-devereux-golf",90,"Devereux Golf — The Scottsdale Brand, Explained","Founded in 2013 by brothers Robert and Will Brunner and named for their grandmother: Southwestern graphics, tattoo-flash headcovers and 26 new pieces to buy."),
+("the-putter-cover-edit-11-covers-worth-the-pocket",86,"Putter Covers — 11 From Independent Brands, $45–$155","Eleven putter covers from eleven brands: Birds of Condor's Tokyo blade cover, Dormie Workshop's $155 leather mallet, Gumtree, Fyfe, Stitch and Sunday Golf."),
+("texas-golf-brands-and-makers",85,"Texas Golf Brands — 16 Makers Built in Texas","Sixteen golf brands founded and based in Texas: Fort Worth forges, Dallas shirt makers, Hill Country silversmiths and Austin knitters. Who they are."),
+("brand-to-know-criquet",84,"Criquet Shirts — The Austin Golf Label Since 2010","Criquet has made its 4-button Players Shirt in Austin since 2010: a South First clubhouse, a Willie Nelson collection, a Save Muny belt and the fall season."),
+]
+bad=0
+for s,i,t,d in P:
+    ok=len(t)<=60 and 120<=len(d)<=160 and 'worth' not in (t+d).lower()
+    if not ok: bad+=1; print('FIX',s,len(t),len(d))
+print(len(P),'drafts, problems:',bad)
+json.dump([dict(slug=s,impr90=i,title=t,description=d) for s,i,t,d in P],open('ctr-batch2.json','w'),indent=1,ensure_ascii=False)
