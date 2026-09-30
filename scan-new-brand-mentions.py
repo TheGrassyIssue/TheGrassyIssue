@@ -45,6 +45,7 @@ DOMAINS = {
     # added 24 Sep 2026 with Brand to Know — Galvin Green. The BTK links
     # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
     "galvin-green": ["galvingreen.com"],
+    "macade": ["macadegolf.com"],
     # added 25 Sep 2026 with Buying Golf Clubs Direct (DTC club brands). Edel and
     # Takomo had no entry, so --rescan never refreshed their mention counts.
     "edel-golf": ["edelgolf.com"],

@@ -1,0 +1,254 @@
+[
+  {
+    "brand": "St. André Golf",
+    "email": "social@standre.golf",
+    "email_source_url": "https://standre.golf/pages/contact",
+    "email_label": "\"For collaborations and our press kits contact us at social@standre.golf.\" (plain text, not a mailto link; repeated on /pages/faq-and-shipping: \"We want to collaborate. Who do we get in touch with? Shoot us an email at social@standre.golf for a press kit.\")",
+    "broken_mailto": false,
+    "form_url": "https://standre.golf/pages/contact (form is for shop questions only)",
+    "founders": [],
+    "press_page": null,
+    "instagram": "@standregolf",
+    "product": {
+      "name": "Classic Driver Cover",
+      "price": 35.0,
+      "currency": "USD",
+      "url": "https://standre.golf/products/st-andre-classic-driver-cover",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: single variant available=true"
+    },
+    "notes": "No About page on site, so no founder named on the brand's own site (Aaron Chewning is from press, not the site). Footer 'Press Kit' link just goes to the contact page; press kit is on request by email. Driver cover matches our profile's main pick. Alt: Pspsps Jacquard Towel $45 (in stock)."
+  },
+  {
+    "brand": "No Return Club",
+    "email": "info@noreturnclub.co.uk",
+    "email_source_url": "https://noreturnclub.co.uk/policies/contact-information",
+    "email_label": "\"Contact information / Trade name: No Return Club / Email: info@noreturnclub.co.uk\" (also mailto links on /policies/refund-policy)",
+    "broken_mailto": false,
+    "form_url": "https://noreturnclub.co.uk/pages/contact-us",
+    "founders": [],
+    "press_page": null,
+    "instagram": "@noreturnclub",
+    "product": {
+      "name": "NR Ripstop 5 Panel Golf Cap",
+      "price": 24.99,
+      "currency": "GBP",
+      "url": "https://noreturnclub.co.uk/products/nr-ripstop-5-panel-golf-cap",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: single variant available=true; cart.js currency GBP"
+    },
+    "notes": "The Contact Us page is a form only. The email appears only on the policy pages, and it is a general/customer-service inbox. No press, collab or wholesale address. About page doesn't name a founder. All 13 headcovers (Harris Tweed etc.) are still sold out (0 variants available), so the cap matches our profile's pick. Alt hero: Pitchmark Repair Tool £44.99 (in stock)."
+  },
+  {
+    "brand": "Enron (golf collection)",
+    "email": "press@enron.com",
+    "email_source_url": "https://enron.com/",
+    "email_label": "Homepage 'Stay Connected' block: \"Whether you're looking for information about our latest innovations, updates on progress, or connection with our leadership, we're here to help. You can reach us at press@enron.com\" (plain text, not a mailto)",
+    "broken_mailto": false,
+    "form_url": null,
+    "founders": [],
+    "press_page": "https://enron.com/pages/newsroom",
+    "instagram": "@enron",
+    "product": {
+      "name": "Pro E1 Hat",
+      "price": 40.0,
+      "currency": "USD",
+      "url": "https://enron.com/products/pro-e1-enron-pro-e1",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: variant 'Green' available=true"
+    },
+    "notes": "/pages/contact has no email or form, only social links. Other addresses on the site: orders@enron.com (orders/customer support, terms + policies/contact-information), compliance@enron.com (privacy), copyrightagent@enron.com. The Newsroom lists NYT, Houston Chronicle, KPRC, ABC and Bloomberg; each entry is an enron.com blog post that links out to the article (checked Bloomberg and NYT). The site names 'CEO Connor Gaydos' only in the Bloomberg newsroom blurb, and there is no About page. Pro E1 Hat matches our profile's pick. Keep in mind the sensitivities in research/enron/notes.md."
+  },
+  {
+    "brand": "Dimple & Divot",
+    "email": "Nick@dimpledivot.com",
+    "email_source_url": "https://dimpledivot.com/policies/contact-information",
+    "email_label": "\"Contact information / Trade name: Dimple & Divot / Phone number: 6072271934 / Email: Nick@dimpledivot.com\"",
+    "broken_mailto": false,
+    "form_url": "https://dimpledivot.com/pages/contact-us",
+    "founders": [
+      "Chris",
+      "Nick"
+    ],
+    "press_page": null,
+    "instagram": "@dimpledivot",
+    "product": {
+      "name": "Hickory Golf Brush - Highland",
+      "price": 50.0,
+      "currency": "USD",
+      "url": "https://dimpledivot.com/products/hickory-golf-brush-highland",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: variant 'Beige/Brown' available=true"
+    },
+    "notes": "Alternate general address: info@dimpledivot.com (mailto on /policies/refund-policy, 'To start a return, you can contact us at info@dimpledivot.com'). Nick@ is the store's listed contact email and Nick is a co-founder. Contact and Wholesale/Customization pages are forms only. The About page ('Who We Are') names no founders. The names come from the brand's own blog post https://dimpledivot.com/blogs/news/five-years-of-dimple-divot ('By Chris Mallinson ... Chris and Nick, Dimple & Divot'). The homepage has a press logo strip (GOLF, Hypebeast, Golf Digest, NY Mag, Skratch, Hiatus), but the logos don't link to coverage, so there's no press page. The site banner says 'ALL ORDERS SHIP ON OCT. 8TH'. The Highland is a Classic brush, which fits our profile's 'Buy the Classic'. Alt: Carved Hickory Golf Brush $78 (in stock)."
+  },
+  {
+    "brand": "Galvin Green",
+    "email": "customersupport@galvingreen.com",
+    "email_source_url": "https://www.galvingreen.com/pages/faq",
+    "email_label": "FAQ 'How can I contact you?': \"Please contact us either by phone: +46 470- 70 51 00 or by email: customersupport@galvingreen.com\"",
+    "broken_mailto": true,
+    "form_url": "https://www.galvingreen.com/pages/contact",
+    "founders": [
+      "Tomas"
+    ],
+    "press_page": "https://www.galvingreen.com/pages/press-page",
+    "instagram": "@galvingreen",
+    "product": {
+      "name": "Larry - Windproof and water repellent golf jacket (Royal Blue)",
+      "price": 199.0,
+      "currency": "USD",
+      "url": "https://www.galvingreen.com/products/larry-windproof-and-water-repellent-golf-jacket-royal-blue",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: all 5 sizes S-XXL available=true; cart.js currency USD"
+    },
+    "notes": "No US PR or marketing contact is listed anywhere on galvingreen.com. The contact page gives the US entity's address only (Galvin Green US Inc., 11720 Amber Park Drive Ste 160 PMB 1108, Alpharetta, GA), plus the HQ phone and a form. The only email is customer support. BROKEN MAILTO: on /policies/contact-information the visible text says customersupport@galvingreen.com but the link points to mailto:support@galvingreen.com (the same mismatch is on /pages/warranty), and the FAQ mailto has a stray trailing backslash. Use the visible customersupport@ address. The press page isn't in the nav (it's in the sitemap). It lists coverage with outbound links (Golfshake, NCG, Golf Monthly, Today's Golfer, Bunkered, SI, GOLF.com...). The Our Story page names founder Tomas Nilsson and head designer Mats Lundqvist. Larry is our profile's lead pick. To reach US PR you'd have to go off-site (e.g. LinkedIn), which this brief rules out."
+  },
+  {
+    "brand": "Hiroki Golf",
+    "email": "contact@hiroki.co.nz",
+    "email_source_url": "https://hirokigolf.com/pages/wholesale",
+    "email_label": "\"We'd love to hear from you if you are interested in stocking our products or have a custom project in mind. Please fill in the form below or email us at contact@hiroki.co.nz.\" (also on /policies/contact-information as 'e. contact@hiroki.co.nz')",
+    "broken_mailto": false,
+    "form_url": "https://hirokigolf.com/pages/contact",
+    "founders": [
+      "Steve",
+      "Jacob"
+    ],
+    "press_page": null,
+    "instagram": "@hirokigolf_",
+    "product": {
+      "name": "Hiroki 'FTE' Sunday Golf Bag - Stone Grey",
+      "price": 279.0,
+      "currency": "USD",
+      "url": "https://hirokigolf.com/products/hiroki-fte-sunday-golf-bag",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js with US market (localization=US cookie; cart currency USD): 27900, available=true. The default-market products.json shows 369.00 NZD"
+    },
+    "notes": "Email domain is hiroki.co.nz, not hirokigolf.com (hiroki.co.nz redirects to the store). The Contact page is a form only. Founders aren't on the About ('Our Story') page. They're named on the brand's own journal post https://hirokigolf.com/blogs/news/brand-deep-cuts-by-golfbranding ('Founders Steve and Jacob are Olympians'); see hiroki-dossier.md for why the Olympian claim shouldn't be repeated as fact. Price differs by market: US $279 vs NZ NZD 369. The FTE is our profile's pick; Navy and Forest Green are also in stock. The leather Sunday bags are NZD 550 (US price not rechecked)."
+  },
+  {
+    "brand": "Quiet Golf",
+    "email": "orders@quietgolfclub.com",
+    "email_source_url": "https://quietgolf.com/policies/contact-information",
+    "email_label": "\"Contact information / Trade name: Quiet Golf / Email: orders@quietgolfclub.com\"",
+    "broken_mailto": false,
+    "form_url": "https://quietgolf.com/pages/contact",
+    "founders": [],
+    "press_page": null,
+    "instagram": "@quietgolf",
+    "product": {
+      "name": "Hampton Polo Active Pique",
+      "price": 114.0,
+      "currency": "USD",
+      "url": "https://quietgolf.com/products/hampton-polo-active-pique",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: 12/20 variants available (e.g. Wine M-XXL, Navy L-XXL, Pine L-XXL)"
+    },
+    "notes": "Effectively form-first. The header banner 'ORDER FOR YOUR PRO SHOP ?' (their wholesale funnel) links to the contact form. The site shows three different addresses: orders@quietgolfclub.com (contact-information + refund-policy mailto), ProShop@quietgolfclub.com (/pages/shipping, 'For any inquiries regarding an order') and orders@quietgolf.com (privacy policy). None is press or collabs. The About page names no founders. The Jagger Polo from our profile is no longer on the store (404). The Hampton is the same $114 Active Pique polo, so it's the closest like-for-like. Alt: Harris Tweed Driver Head Cover $132 (3/3 available)."
+  },
+  {
+    "brand": "Siegelman Stable",
+    "email": "info@siegelmanstable.com",
+    "email_source_url": "https://siegelmanstable.com/policies/contact-information",
+    "email_label": "\"Contact information / email: info@siegelmanstable.com\" (also throughout /pages/faqs and /pages/policies as the Customer Service address)",
+    "broken_mailto": false,
+    "form_url": null,
+    "founders": [
+      "Max"
+    ],
+    "press_page": null,
+    "instagram": "@siegelmanstable",
+    "product": {
+      "name": "Short Sleeve Harness Shirt (Gray)",
+      "price": 258.0,
+      "currency": "USD",
+      "url": "https://siegelmanstable.com/products/short-sleeve-harness-shirt",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: S, L, XL, XXL available=true (M sold out)"
+    },
+    "notes": "/pages/contact 404s and I found no contact form. The only email is customer service. The About page reads: 'Siegelman Stable founder Max Siegelman is the son of renowned trainer Robbie Siegelman, who founded Siegelman Racing Stable in 1982.' No press page, only collab/lookbook pages (e.g. /pages/maxfli). The Harness Shirt matches our profile's pick. Golf-specific alt: Siegelman Stable x Maxfli Golf Head Cover $58 (in stock)."
+  },
+  {
+    "brand": "Mogshade",
+    "email": "hello@mogshadegolf.com",
+    "email_source_url": "https://www.mogshadegolf.com/pages/wholesale",
+    "email_label": "\"Please contact us at hello@mogshadegolf.com if you're interested in becoming a retailer or you wish to order our accessories in bulk.\" (also the footer 'Contact' link at /policies/contact-information: 'Mogshade Golf Lda hello@mogshadegolf.com Rua Neves Ferreira 7C, Atelier 3, 1170-273 Lisbon')",
+    "broken_mailto": false,
+    "form_url": null,
+    "founders": [],
+    "press_page": null,
+    "instagram": "@mogshade_golf",
+    "product": {
+      "name": "Churra Mono Headcover (Driver)",
+      "price": 84.0,
+      "currency": "EUR",
+      "url": "https://www.mogshadegolf.com/products/churra-mono-headcover",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.json + .js: Driver EUR 84 (Wood/Hybrid EUR 79), all 3 variants available=true, inventory tracked by Shopify"
+    },
+    "notes": "The About page names no founder. The listed address is in Lisbon. Made to order with about a 3-week lead time (site banner), so 'available' means orderable, not on a shelf. Retailers page has no press. Churra Mono is our profile's pick. The UK storefront banner points UK customers to club72.co.uk / softhands.club."
+  },
+  {
+    "brand": "Olydoe",
+    "email": "hello@olydoe.com",
+    "email_source_url": "https://olydoe.com/pages/contact",
+    "email_label": "\"Contact hello@olydoe.com Whether you have a product question or are interested in partnering with Olydoe, we would love to connect. ... If you are interested in sharing the Olydoe brand on your platforms, please connect with our team via the form below.\"",
+    "broken_mailto": false,
+    "form_url": "https://olydoe.com/pages/contact",
+    "founders": [],
+    "press_page": null,
+    "instagram": "@olydoegolf",
+    "product": {
+      "name": "OG Supima® Hollow Polo (Brown / Blue)",
+      "price": 110.0,
+      "currency": "USD",
+      "url": "https://olydoe.com/products/og-supima-hollow-golf-polo-1",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: all 5 sizes S-XXL available=true"
+    },
+    "notes": "The contact page asks creators and media to use the form ('sharing the Olydoe brand on your platforms'), so emailing hello@ goes against their stated route. Worth mentioning in the pitch, or use the form manually (not done). The current About page no longer names Scott Matthews, so no founder is named on the brand's own site. Our profile names him from earlier coverage; recheck before using his name. Retail Partners page exists; no press page. The OG Supima Hollow Polo is the anti-polyester hero from our profile. The range has since moved into merino and cashmere, and our profile's '$30-$115' range is now out of date."
+  },
+  {
+    "brand": "Casualist",
+    "email": "Info@casualist.com",
+    "email_source_url": "https://casualist.com/policies/contact-information",
+    "email_label": "\"Contact information / Trade name: Casual Pro LTD / Email: Info@casualist.com\" (also /pages/returns: 'Our support team is here to help: Info@casualist.com')",
+    "broken_mailto": false,
+    "form_url": "https://casualist.com/pages/contact",
+    "founders": [
+      "Elie"
+    ],
+    "press_page": null,
+    "instagram": "@casualistgolf",
+    "product": {
+      "name": "Weekend Pique Polo (Ecru)",
+      "price": 95.0,
+      "currency": "GBP",
+      "url": "https://casualist.com/products/weekend-pique-polo-ecru",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: S-XL all available=true; cart.js currency GBP"
+    },
+    "notes": "Contact page is a form only. The email is shown with a capital I ('Info@'). About page is signed 'Elie, Founder'. No press page. The Weekend Pique Polo is our profile's pick; Mocha is also fully in stock."
+  },
+  {
+    "brand": "Rouqe Golf",
+    "email": "collaborations@rouqegolf.com",
+    "email_source_url": "https://rouqegolf.com/pages/contact",
+    "email_label": "The contact page chat widget's 'Collaborations' flow says, if submission fails: \"reach out to us directly at collaborations@rouqegolf.com - we'd love to hear from you!\" (in chatbox.js, only shown on error). The visible general address on the same page: \"Questions about sizing, an order or a return? Send us a message or email info@rouqesupport.com.\"",
+    "broken_mailto": false,
+    "form_url": "https://rouqegolf.com/pages/contact (plus the 'Collaborations' form inside the chat widget, not used)",
+    "founders": [],
+    "press_page": null,
+    "instagram": "@rouqegolf",
+    "product": {
+      "name": "Green Mock Neck",
+      "price": 59.0,
+      "currency": "CAD",
+      "url": "https://rouqegolf.com/products/green-mock-neck",
+      "in_stock_checked": "30 Sep 2026",
+      "how_checked": "products/<handle>.js: Small-XL all available=true; cart.js currency CAD"
+    },
+    "notes": "collaborations@rouqegolf.com is on their own site but only appears in the chat widget's error message, so it's not a prominently published address. Fallback is info@rouqesupport.com (visible mailto on contact, shipping, returns and contact-information pages; note the different domain). No About page, so no founders named. No press page. The mock neck is the silhouette our profile calls signature. Of the six colours only Green and Brown are fully in stock (Brown Mock Neck CAD 59 also 4/4). Store currency is CAD."
+  }
+]

@@ -4,12 +4,12 @@
   "sha1": "bbcab0a46a0db7ff1b30bf4f5eeebaeb1cc24f57"
  },
  "index.html": {
-  "size": 1338158,
-  "sha1": "fdf3ff5ea2e58202d674094174a4b81e5aaa16f1"
+  "size": 1347057,
+  "sha1": "d6026fe39210de3e99f5f17b2d19915923274a1b"
  },
  "about.html": {
-  "size": 28880,
-  "sha1": "ba4053a4497b55411dbfdded9848cfce4c4bdf8a"
+  "size": 28885,
+  "sha1": "3e0f0651273a9c9367e59b351438898ad40473c3"
  },
  "work-with-us.html": {
   "size": 26843,
@@ -112,8 +112,8 @@
   "sha1": "9ae709918e2425aaba00b950f29ccbec0855e9eb"
  },
  "brands/index.html": {
-  "size": 200437,
-  "sha1": "4c5c6845fdebc017b2e468d72965a539d9066f7c"
+  "size": 201304,
+  "sha1": "829022db31e121702269b803c3f5fbb67ec62434"
  },
  "brands/jlindeberg.html": {
   "size": 25191,
@@ -221,7 +221,7 @@
  },
  "brands/best-independent-golf-brands.html": {
   "size": 56949,
-  "sha1": "2b1a46bc0e4bdead0ffd1f7d33b277b10f2a927a"
+  "sha1": "5ef204c1b99fabc489a7d6f17af802abeb4bf623"
  },
  "brands/sunday-golf.html": {
   "size": 27736,
@@ -527,6 +527,10 @@
   "size": 24123,
   "sha1": "e132c608338abe9064d498ebd6a8b6e7d4bfebef"
  },
+ "brands/macade.html": {
+  "size": 25400,
+  "sha1": "545c0d7a2ccfb399d8b8fa03a94820b025b67cce"
+ },
  "brands/fella-golf.html": {
   "size": 25720,
   "sha1": "d4a37ec66e9cc19ca6489c5f60e5a5566a5bcf01"
@@ -621,75 +625,75 @@
  },
  "brands/attr/heritage.html": {
   "size": 55414,
-  "sha1": "08dc2cd8eb44cf09f16128a4c0c0b4092615d42a"
+  "sha1": "44ae42cd285df6c857f9a50612231a406bb6c443"
  },
  "brands/attr/new-to-index.html": {
-  "size": 90975,
-  "sha1": "c139e23a5fb24b82c0996532d0caefd8b54a4ab2"
+  "size": 91845,
+  "sha1": "81ac26d1d5781fb34f810a3b13c8907870e79cb2"
  },
  "brands/attr/tour-proven.html": {
   "size": 51525,
-  "sha1": "e8a4b7eb39d13a1e5f3a5261f9f8425c357d1c1e"
+  "sha1": "f0bf969b4de68aa833b36e6f55248edf0156ac46"
  },
  "brands/attr/drops-and-vanishes.html": {
   "size": 50951,
-  "sha1": "d114cedd7b4ff3af97edc68037a6d5a7d9424b29"
+  "sha1": "0c31f58641411d4cc61e4b4b64f7b3bc957aafa4"
  },
  "brands/attr/women-founded.html": {
   "size": 57870,
-  "sha1": "dd79490d09ae3096d71de1fdb8d288895bc35c46"
+  "sha1": "f613d5c38c2895c4a8eeea5e6bfe9bcfe20f2df7"
  },
  "brands/tag/post-round-friendly.html": {
   "size": 63057,
-  "sha1": "7f22318c9fe9ff558a53e85d399758401f948aea"
+  "sha1": "d8e6eea2486db9f5f7d00f57446abb9119e5e3cc"
  },
  "brands/tag/independent.html": {
-  "size": 85908,
-  "sha1": "3b188e9518e7c17f70d51ef279ad70f6079d62da"
+  "size": 86778,
+  "sha1": "8cab30eed32528e3051c2aa936a27a668bea027a"
  },
  "brands/tag/made-by-hand.html": {
-  "size": 75615,
-  "sha1": "42e774d5c21f879c4dddcb9b65032dc5e7982dcf"
+  "size": 75609,
+  "sha1": "78c0000b5ba550a2511029591d82318fcb9fa361"
  },
  "brands/tag/quiet-luxury.html": {
   "size": 55107,
-  "sha1": "a6b026a6e5127ff7e6dcd4d21e9325d66f668ded"
+  "sha1": "9eef800dfa0eb781a7ae40c4611909d1377a731b"
  },
  "brands/tag/gorpcore.html": {
   "size": 84301,
-  "sha1": "76d27e7618f0ea5be61e083702edb0fbb83e5676"
+  "sha1": "af5a667a8a6ce5e0a573b8c080d036934e4ea1a1"
  },
  "brands/tag/collab-machine.html": {
   "size": 55301,
-  "sha1": "ccc32f943436cef621ca8c3ae4767895c227ce55"
+  "sha1": "f6be051a7cd11cfed0e7501088cff93278043389"
  },
  "brands/tag/loud-on-purpose.html": {
   "size": 64563,
-  "sha1": "6715c79679e3f5551bc1cdeede70cee94806e3df"
+  "sha1": "c3429b7292ca95dedbe61c1d347a337405c6451a"
  },
  "brands/tag/muni-energy.html": {
   "size": 63199,
-  "sha1": "df4e639e02c867eea4061c5177b556af3a5597fd"
+  "sha1": "b67d1952a7adb18c2943a8639a14d223a419230e"
  },
  "brands/tag/member-guest.html": {
   "size": 44137,
-  "sha1": "b19de50069f809e643c5dbf83aa7818fbc85b68a"
+  "sha1": "c9a4c766a6fa990e0b7fcead9bef1a39d64d805a"
  },
  "brands/tag/course-merch.html": {
   "size": 44199,
-  "sha1": "440809afcc677357669d8016ee8b26b7471fad4f"
+  "sha1": "307b64b10676a3b98aca8db42df2a03c8c5325a4"
  },
  "brands/tag/design-nerd.html": {
-  "size": 82837,
-  "sha1": "bcb7e3c75855bf4420afc1bbfcc515979f3b553b"
+  "size": 82831,
+  "sha1": "4648c626d6d0be7f2d8800eed8ab7719b01b7fc2"
  },
  "brands/tag/dad-golf.html": {
   "size": 41987,
-  "sha1": "12898915a022171cb18aabe0bbd1a1027d6adf2e"
+  "sha1": "0d98da0519d3c315adf74c290d212833d2f6f3fc"
  },
  "brands/tag/range-rat.html": {
   "size": 47568,
-  "sha1": "5a2097022e057ee2d3a4ab69e980bb57e5153707"
+  "sha1": "37a7dd842b4f43cbf10ca4c1ea860a83604c2103"
  },
  "drops/students-golf-summer-2026.html": {
   "size": 89454,
@@ -722,6 +726,10 @@
  "drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf.html": {
   "size": 66690,
   "sha1": "0638fde8d89050e4996aa538c99d939f9b183b9c"
+ },
+ "drops/brand-to-know-macade.html": {
+  "size": 91397,
+  "sha1": "7cf9f269ce5855860cca30962005bf5aaa01bbb6"
  },
  "drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag.html": {
   "size": 28267,
@@ -774,6 +782,10 @@
  "drops/rodeo-dunes-the-great-divide.html": {
   "size": 37676,
   "sha1": "3e14a7c4a627d78b0472158018837922c8b4582f"
+ },
+ "drops/best-chicken-sandwiches-in-austin.html": {
+  "size": 78705,
+  "sha1": "2868f4fc153caa007af8391faceb8b348c6ca697"
  },
  "drops/off-course-golf-brands-doing-non-golf-things.html": {
   "size": 42000,
@@ -947,6 +959,10 @@
   "size": 40321,
   "sha1": "9f3649a5f2507b2e9d4fa98ec1deac82fa5fc95c"
  },
+ "drops/limited-edition-golf-balls.html": {
+  "size": 103690,
+  "sha1": "b506ecba16f2520eea258306f5b00523f5361f45"
+ },
  "drops/the-towel-edit-vol-3.html": {
   "size": 63600,
   "sha1": "89d0e1d22120ce404d3f7659bed6284b8b306294"
@@ -1108,8 +1124,8 @@
   "sha1": "3cdc57b373d51e05a62960cfbdd60107aa8e2afa"
  },
  "drops/brand-to-know-no-return-club.html": {
-  "size": 103034,
-  "sha1": "174bd159b2e9255ccee9c60dc8a14481507139fe"
+  "size": 103065,
+  "sha1": "ea104c75c2f89c392f1d4a07d7058a413e09f64c"
  },
  "drops/swag-golf-college-program.html": {
   "size": 69242,
@@ -1300,8 +1316,8 @@
   "sha1": "95bbc5efe98a4adcce54879fe4cf3c3bc84b6833"
  },
  "drops/brand-to-know-manors.html": {
-  "size": 123790,
-  "sha1": "9b225b70cedfd99982cbf528ceb12e1bc22a1c24"
+  "size": 123673,
+  "sha1": "9714fbe5ad92998d92bd2405d8c4178e0c794015"
  },
  "drops/7-post-round-moves-in-austin.html": {
   "size": 31825,
@@ -1380,8 +1396,8 @@
   "sha1": "15515654e60cfc00c5c6a07b8c312340280dac64"
  },
  "drops/the-technical-brands-roundup.html": {
-  "size": 50147,
-  "sha1": "c7308aae7d372aa7dd9460a04dd05c652c5f2cce"
+  "size": 50199,
+  "sha1": "fa1112501723acf052343501a0be921216e6bb8b"
  },
  "drops/brand-to-know-aug-11.html": {
   "size": 84392,
