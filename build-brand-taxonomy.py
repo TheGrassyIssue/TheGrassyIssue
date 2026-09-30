@@ -73,7 +73,7 @@ TAX = [
  ),
 ("tag", "made-by-hand", "Golf Brands That Make It By Hand",
  "Handmade Golf Gear — Small-Batch Brands | The Grassy Issue",
- "Thirty-three golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
+ "Thirty-seven golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
  """<p>The honest version of &ldquo;handmade&rdquo; is narrow, and this is our attempt to hold the
  line on it. <strong>Artisan Golf</strong> qualifies because Mike Taylor still grinds every wedge
  himself and you cannot order one without an in-person fitting. <strong>Ally Aiken</strong>

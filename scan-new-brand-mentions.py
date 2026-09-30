@@ -46,6 +46,7 @@ DOMAINS = {
     # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
     "galvin-green": ["galvingreen.com"],
     "macade": ["macadegolf.com"],
+    "hudson-sutler": ["hudsonsutler.com"],
     # added 25 Sep 2026 with Buying Golf Clubs Direct (DTC club brands). Edel and
     # Takomo had no entry, so --rescan never refreshed their mention counts.
     "edel-golf": ["edelgolf.com"],
