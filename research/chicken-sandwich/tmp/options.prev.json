@@ -1,0 +1,818 @@
+[
+ {
+  "id": "C01",
+  "slug": "tumble-22",
+  "name": "Tumble 22 (Lake Austin Blvd)",
+  "style": "Nashville hot",
+  "hood": "Tarrytown / Deep Eddy",
+  "address": "2304 Lake Austin Blvd, Austin, TX 78703 (also 7211 Burnet Rd; 2929 S Lamar Blvd; 9761 Great Hills Trail)",
+  "sandwich": "The O.G.",
+  "price": "$12.49 (own Austin menu graphic, dated Mar 2025)",
+  "desc": "All-natural chicken breast (crispy or grilled), coleslaw, bread-n-butter pickles, Duke's mayo; six heat levels from Painless to Stupid Hot",
+  "hours": "not listed on own site; check before you go",
+  "status": "open",
+  "near_muni": "Lions Municipal (Muny), approx 3 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "Austin Chronicle",
+    "url": "https://www.austinchronicle.com/food/who-gives-a-cluck-about-popeyes-and-chick-fil-a-12100735/"
+   },
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://tumble22.com/",
+  "images": [
+   "research/chicken-sandwich/img/tumble-22-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Own site lists 10 locations incl. new Arboretum and South Lamar (added Aug 2026). Menu price is from a Mar 2025 graphic and may have moved. Other Austin sandwiches: Korean-Style O.G. $12.49, The Southern $9.99."
+ },
+ {
+  "id": "C02",
+  "slug": "cockti-juicy-fried-chicken",
+  "name": "Cockti Juicy Fried Chicken",
+  "style": "fried (chipotle-cinnamon)",
+  "hood": "East Austin (Rosewood / Chestnut)",
+  "address": "1309 Rosewood Ave, Austin, TX 78702 (trailer)",
+  "sandwich": "Chipotle Cinnamon Chicken Sandwich",
+  "price": "not listed (own Square site loads prices in-browser only; $12 on DoorDash, third-party)",
+  "desc": "Fried jumbo tender or thigh, house chipotle-cinnamon rub, green onion, cilantro, lime, agave nectar, spicy pickles, chipotle ranch, toasted bun; GF masa bun available. Also Spicy and Szechuan versions",
+  "hours": "unverified on own site (third-party approx 3:45-9:30pm); check before you go",
+  "status": "open",
+  "near_muni": "Morris Williams or Hancock, approx 8 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/cockti-juicy-fried-chicken"
+   },
+   {
+    "outlet": "Austin Chronicle (First Look)",
+    "url": "https://www.austinchronicle.com/food/first-look-cockti-13286657/"
+   }
+  ],
+  "url": "https://cockti-fried-chicken.square.site/",
+  "images": [
+   "research/chicken-sandwich/img/cockti-juicy-fried-chicken-1.jpg",
+   "research/chicken-sandwich/img/cockti-juicy-fried-chicken-3.jpg"
+  ],
+  "repeat": false,
+  "flags": "Moved: Chronicle (Jan 2025) had it at 2701 E MLK; now 1309 Rosewood per Infatuation 2026. Open status inferred from own Square products updated Sept 2026. Image 3 is the Spicy version."
+ },
+ {
+  "id": "C03",
+  "slug": "diablo-hot-chicken",
+  "name": "Diablo Hot Chicken",
+  "style": "Nashville hot with Mexican chiles",
+  "hood": "Govalle / East Austin",
+  "address": "2505 Webberville Rd, Austin, TX 78702 (trailer park with Veracruz, Desnudo)",
+  "sandwich": "El Chingon (thigh) / El Favorito (breast)",
+  "price": "not listed (own Square site loads prices in-browser only)",
+  "desc": "All-natural breaded thigh (El Chingon) or breast (El Favorito), toasted house bun, coleslaw, dill pickles, ranch; 'make it wet' adds citrus glaze; heat from heatless to diablo",
+  "hours": "unverified; check before you go",
+  "status": "open",
+  "near_muni": "Morris Williams, approx 8 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/diablo-hot-chicken"
+   }
+  ],
+  "url": "https://www.diablohotchicken.com",
+  "images": [
+   "research/chicken-sandwich/img/diablo-hot-chicken-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Opened Mar 2026 (Veracruz All Natural's Vazquez sisters). Open status inferred from own sitemap updated Sept 2026. Both sandwiches share one product photo."
+ },
+ {
+  "id": "C04",
+  "slug": "golden-tiger",
+  "name": "Golden Tiger",
+  "style": "fried thigh (Original / Thai / Buffalo)",
+  "hood": "East 6th St",
+  "address": "1816 E 6th St, Austin, TX 78702 (truck on Whisler's patio)",
+  "sandwich": "Thai Chicken Sandwich (also Original, Buffalo)",
+  "price": "not listed (own Square site loads prices in-browser only)",
+  "desc": "Thai: fried thigh, sweet chili glaze, lettuce, Thai basil, pickled serranos, onion. Original: thigh, lettuce, pickles, onion, special sauce. Buffalo: Buffalo sauce, blue cheese crumbles",
+  "hours": "unverified on own site (third-party: from 4pm weekdays / 2pm weekends to ~1:30am); check before you go",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 8 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/golden-tiger"
+   }
+  ],
+  "url": "https://goldentigerforever.square.site/",
+  "images": [
+   "research/chicken-sandwich/img/golden-tiger-2.jpg",
+   "research/chicken-sandwich/img/golden-tiger-1.jpg",
+   "research/chicken-sandwich/img/golden-tiger-3.jpg"
+  ],
+  "repeat": false,
+  "flags": "Own photos are cut-outs on white. goldentigeratx.com returns empty; live site is goldentigerforever.square.site. Infatuation says Original has gochujang mayo; own site says 'special sauce'. Image order: Thai, Original, Buffalo."
+ },
+ {
+  "id": "C05",
+  "slug": "the-cavalier",
+  "name": "The Cavalier",
+  "style": "fried",
+  "hood": "Govalle / East Austin",
+  "address": "2400 Webberville Rd, Suite A, Austin, TX 78702",
+  "sandwich": "Chicken Sando",
+  "price": "$15.00",
+  "desc": "Crispy chicken, sweet & spicy sauce, tzatziki-green cabbage, house pickles, Duke's mayo, brioche bun",
+  "hours": "Mon-Fri 11am-12am; Sat 10am-12am; Sun 10am-11pm (own site)",
+  "status": "open",
+  "near_muni": "Morris Williams, approx 10 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/the-cavalier-austin"
+   }
+  ],
+  "url": "https://thecavalieratx.com/",
+  "images": [],
+  "repeat": false,
+  "flags": "No usable own photo: the own-site sandwich image returns HTTP 403 (Cloudflare). Own menu now says tzatziki-green cabbage (Infatuation says Caribbean slaw)."
+ },
+ {
+  "id": "C06",
+  "slug": "dai-due",
+  "name": "Dai Due",
+  "style": "fried",
+  "hood": "Manor Rd / Cherrywood",
+  "address": "2406 Manor Rd, Austin, TX 78722",
+  "sandwich": "unverified (fried chicken sandwich)",
+  "price": "not listed",
+  "desc": "unverified; past reports: fried breast, ghee-toasted bun, chile morita mayo, pickled watermelon rind",
+  "hours": "Dinner Tue-Sat 5-10pm, Sun 5-9pm; brunch Fri-Sun 10am-3pm; closed Mon (own site)",
+  "status": "open",
+  "near_muni": "Morris Williams or Hancock, approx 5 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://www.daidue.com/",
+  "images": [],
+  "repeat": false,
+  "flags": "Restaurant open, but sandwich NOT confirmed on current menu (daily-changing menu; none posted). No own photo. Likely drop."
+ },
+ {
+  "id": "C07",
+  "slug": "bird-bird-biscuit",
+  "name": "Bird Bird Biscuit",
+  "style": "chicken biscuit",
+  "hood": "Manor Rd / Cherrywood",
+  "address": "2701 Manor Rd, Austin, TX 78722 (also 1401 W Koenig Ln; 2121 S Lamar Blvd)",
+  "sandwich": "Queen Beak",
+  "price": "$11.50 (Manor Rd, own Toast)",
+  "desc": "Fried chicken breast, spiced black pepper honey sauce, bacon-infused chipotle mayo, handmade buttermilk biscuit",
+  "hours": "Manor Rd: Mon-Wed 7:30am-2pm; Thu-Sat 7:30am-9pm; Sun 7:30am-3pm (own site)",
+  "status": "open",
+  "near_muni": "Morris Williams or Hancock, approx 5 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   },
+   {
+    "outlet": "Austin Chronicle",
+    "url": "https://www.austinchronicle.com/food/who-gives-a-cluck-about-popeyes-and-chick-fil-a-12100735/"
+   },
+   {
+    "outlet": "Austin Chronicle Best of Austin 2023",
+    "url": "https://calendar.austinchronicle.com/best-of/2023/restaurants-dish/breakfast-sandwich-12945950"
+   }
+  ],
+  "url": "https://www.birdbirdbiscuit.com/",
+  "images": [
+   "research/chicken-sandwich/img/bird-bird-biscuit-1.jpg"
+  ],
+  "repeat": true,
+  "flags": "REPEAT (sandwiches post)."
+ },
+ {
+  "id": "C08",
+  "slug": "spicy-boys-fried-chicken",
+  "name": "Spicy Boys Fried Chicken",
+  "style": "fried (Southeast Asian)",
+  "hood": "East 6th St (Zilker Brewing)",
+  "address": "1701 E 6th St, Austin, TX 78702 (also St. Elmo South, St. Elmo Springdale, Pflugerville)",
+  "sandwich": "The OG (also Hot Gai, Tingly Gai)",
+  "price": "$9.49 (own-site menu graphic)",
+  "desc": "Crispy thigh on Martin's potato roll. OG: sweet chili honey, pickled papaya, herbs, Thai basil ranch. Hot Gai: Thai basil, white American, pickles, massaman mayo",
+  "hours": "not on own site; check before you go",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 10 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://www.spicyboyschicken.com/",
+  "images": [
+   "research/chicken-sandwich/img/spicy-boys-fried-chicken-1.jpg"
+  ],
+  "repeat": true,
+  "flags": "REPEAT (wings post). Image is the Hot Gai (frame from own-site GIF), not the OG. Street address from Infatuation."
+ },
+ {
+  "id": "C09",
+  "slug": "vic-and-als",
+  "name": "Vic & Al's",
+  "style": "fried (po'boy)",
+  "hood": "Manor Rd / Cherrywood",
+  "address": "2406 Manor Rd, Suite D, Austin, TX 78722",
+  "sandwich": "Fried Chicken Thigh Po'Boy",
+  "price": "not listed (own Square site loads prices in-browser only)",
+  "desc": "Fried chicken thigh, cajun aioli, cabbage, pickled onions on po'boy bread",
+  "hours": "11am-11pm (own site, days not specified); check before you go",
+  "status": "open",
+  "near_muni": "Morris Williams or Hancock, approx 5 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://www.vicandals.com/",
+  "images": [
+   "research/chicken-sandwich/img/vic-and-als-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Menu rotates; confirm availability."
+ },
+ {
+  "id": "C10",
+  "slug": "roots-chicken-shak",
+  "name": "Roots Chicken Shak",
+  "style": "fried (duck fat)",
+  "hood": "Mueller (Main Streat food hall at H-E-B)",
+  "address": "1801 E 51st St, Austin, TX 78723",
+  "sandwich": "The Big Bird",
+  "price": "$8.95 (food hall menu PDF, undated ~2020)",
+  "desc": "Duck-fat fried chicken, sweet potato bun, kale salad, pickles, tomato, red onion, herb mayo",
+  "hours": "Food hall daily 11am-9pm (Main Streat site); check before you go",
+  "status": "unverified",
+  "near_muni": "Morris Williams, approx 5 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://www.mainstreatfoodhall.com/roots-chicken-shak/",
+  "images": [
+   "research/chicken-sandwich/img/roots-chicken-shak-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Still listed on the food hall site, but all material dates from ~2020; operating status unverified. Photo shows cheese (may be Spicy Bird)."
+ },
+ {
+  "id": "C11",
+  "slug": "junes-all-day",
+  "name": "June's All Day",
+  "style": "fried",
+  "hood": "South Congress",
+  "address": "1722 S Congress Ave, Austin, TX 78704",
+  "sandwich": "Fried Chicken Sandwich",
+  "price": "$23",
+  "desc": "Kohlrabi ranch slaw, hot sauce, jalapeños",
+  "hours": "Lunch Mon-Fri 11am-4pm; brunch Sat-Sun 9am-3pm; dinner daily 4-10pm (own site)",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 5 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   }
+  ],
+  "url": "https://junesallday.com/",
+  "images": [],
+  "repeat": false,
+  "flags": "Price from own menu PDF dated 8.31.26. No own-site photo of the sandwich."
+ },
+ {
+  "id": "C12",
+  "slug": "the-little-darlin",
+  "name": "The Little Darlin'",
+  "style": "fried (thigh)",
+  "hood": "South Austin (Circle S Rd)",
+  "address": "6507 Circle S Rd, Austin, TX 78745",
+  "sandwich": "Fried Chicken Sandwich",
+  "price": "$16 lunch / $17 dinner",
+  "desc": "Sweet & sour coleslaw, Duke's mayo, potato bun; fries or side salad",
+  "hours": "Daily 11am-2am (own site)",
+  "status": "open",
+  "near_muni": "none within 10 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   }
+  ],
+  "url": "https://www.thelittledarlin.com/",
+  "images": [],
+  "repeat": false,
+  "flags": "Prices from own menu images (Apr/Jun 2026). No own-site photo of the sandwich."
+ },
+ {
+  "id": "C13",
+  "slug": "loro",
+  "name": "Loro (South Lamar)",
+  "style": "smoked + battered fried",
+  "hood": "South Lamar",
+  "address": "2115 S Lamar Blvd, Austin, TX 78704 (also Domain Northside)",
+  "sandwich": "Crispy Chicken Sandwich",
+  "price": "$13.50",
+  "desc": "Smoked chicken, battered and fried; citrus-cabbage slaw, pickles, honey, smoked hot sauce",
+  "hours": "Sun-Thu 11am-10pm; Fri-Sat 11am-11pm (own site)",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 5 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   }
+  ],
+  "url": "https://www.loroeats.com/locations/austin/south-lamar/",
+  "images": [
+   "research/chicken-sandwich/img/loro-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Also on the $15 Lunch Two Step (11am-2pm)."
+ },
+ {
+  "id": "C14",
+  "slug": "songbird",
+  "name": "Songbird",
+  "style": "fried (thigh)",
+  "hood": "Southeast Austin (Meanwhile Brewing)",
+  "address": "3901 Promontory Point Dr, Austin, TX 78744",
+  "sandwich": "The Songbird",
+  "price": "$12",
+  "desc": "Fried chicken thigh, chili lime ranch, lettuce, bread & butter pickles, toasted sesame bun. Also Mr T ($13): General Tso sauce, sesame chili crisp, cabbage",
+  "hours": "Wed-Thu 4-9pm; Fri 11am-9pm; Sat 10am-9pm; Sun 10am-8pm; closed Mon-Tue (own Toast); check before you go",
+  "status": "open",
+  "near_muni": "Jimmy Clay/Roy Kizer, approx 10 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   },
+   {
+    "outlet": "Community Impact",
+    "url": "https://communityimpact.com/central-austin/dining/food-network-chopped-winner-brings-chicken-sandwiches-to-southeast-austin/"
+   },
+   {
+    "outlet": "Axios Austin",
+    "url": "https://www.axios.com/local/austin/2023/02/17/austin-food-truck-songbird"
+   }
+  ],
+  "url": "https://toast.app/r/songbird-3901-promontory-point-drive/order",
+  "images": [],
+  "repeat": false,
+  "flags": "Menu changed (Classic/Brutus/General gone). Status inferred from active Toast menu. No own sandwich photo (only truck exterior)."
+ },
+ {
+  "id": "C15",
+  "slug": "lous",
+  "name": "Lou's (Barton Springs)",
+  "style": "fried",
+  "hood": "Barton Springs Rd / Zilker",
+  "address": "1608 Barton Springs Rd, Austin, TX 78704 (also 1900 E Cesar Chavez)",
+  "sandwich": "Fried Chicken Sandwich",
+  "price": "$13",
+  "desc": "Pickled red onion, mozzarella, lettuce, tomato, smoked paprika aioli, hot sauce",
+  "hours": "Mon-Fri 11am-10pm; Sat-Sun 9am-10pm (own site; Toast says 9:45pm); check before you go",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 3 min; Lions Muny approx 8 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation (venue review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/lous-barton-springs"
+   }
+  ],
+  "url": "https://www.lousaustin.com/barton",
+  "images": [],
+  "repeat": false,
+  "flags": "Own menu PDF 3.25.26. No own-site sandwich photo. Closest spot to Butler."
+ },
+ {
+  "id": "C16",
+  "slug": "allday-pizza",
+  "name": "Allday Pizza (Hyde Park)",
+  "style": "chicken parm",
+  "hood": "Hyde Park",
+  "address": "4300 Speedway, Unit 103, Austin, TX 78751",
+  "sandwich": "Vodka Chicken Parm",
+  "price": "$17",
+  "desc": "Chicken cutlet, vodka sauce, stracciatella, basil, Grana Padano, housemade sesame roll",
+  "hours": "Tue-Thu 11am-9pm; Fri-Sat 11am-10pm; Sun 11am-9pm; closed Mon (own site); check before you go",
+  "status": "moved: East Austin trailer closed; now Hyde Park (plus Tarrytown window at Flo's, 3111 W 35th St)",
+  "near_muni": "Hancock, approx 3 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/allday-pizza-hyde-park"
+   }
+  ],
+  "url": "https://allday.pizza/",
+  "images": [],
+  "repeat": true,
+  "flags": "REPEAT (sandwiches post); earlier post's East Austin location is out of date. No own-site sandwich photo."
+ },
+ {
+  "id": "C17",
+  "slug": "hattie-bs",
+  "name": "Hattie B's Hot Chicken (South Lamar)",
+  "style": "Nashville hot",
+  "hood": "South Lamar",
+  "address": "2529 S Lamar Blvd, Austin, TX 78704 (also Domain Northside)",
+  "sandwich": "Hot Chicken Sandwich (name unverified on own site)",
+  "price": "not listed (own ordering site JS-only)",
+  "desc": "unverified on own site; third-party: fried breast, slaw, comeback sauce, pickles, heat level of choice",
+  "hours": "unverified (third-party Mon-Thu 11am-10pm, Fri-Sat 11am-11pm, Sun 11am-9pm); check before you go",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 6 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://hattieb.com/locations",
+  "images": [
+   "research/chicken-sandwich/img/hattie-bs-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Nashville chain. Photo is chain-wide stock from own CDN, not Austin-specific."
+ },
+ {
+  "id": "C18",
+  "slug": "dang-hot-89",
+  "name": "Dang Hot 89",
+  "style": "Nashville hot",
+  "hood": "North Austin (Celis Brewery)",
+  "address": "10001 Metric Blvd, Austin, TX 78758",
+  "sandwich": "Boneless Chicken Sandwich (also Tender Sandwich)",
+  "price": "not listed (own Square site)",
+  "desc": "Fried boneless thighs, Texas bun, slaw, Dang Sauce, pickle, with fries. Tender version: 2 fried tenders",
+  "hours": "unverified (2024 third-party: Tue-Thu 3-9pm, Fri-Sun 12-9pm); check before you go",
+  "status": "open",
+  "near_muni": "none within 10 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation",
+    "url": "https://www.theinfatuation.com/austin/guides/austin-best-fried-chicken-sandwiches"
+   },
+   {
+    "outlet": "Austin Chronicle (trailer review)",
+    "url": "https://www.austinchronicle.com/food/food-trailer-review-dang-hot-89-13283919/"
+   }
+  ],
+  "url": "https://howdy-89-llc.square.site",
+  "images": [
+   "research/chicken-sandwich/img/dang-hot-89-1.jpg",
+   "research/chicken-sandwich/img/dang-hot-89-2.jpg"
+  ],
+  "repeat": false,
+  "flags": "Address is 10001 (Infatuation shows 1001, a typo). Moved to Celis in Jul 2024. Status inferred from own Square pages updated Sep 2026."
+ },
+ {
+  "id": "C19",
+  "slug": "galaxy-cafe",
+  "name": "Galaxy Cafe (Clarksville)",
+  "style": "fried (spicy)",
+  "hood": "Clarksville",
+  "address": "1000 W Lynn St, Austin, TX 78703",
+  "sandwich": "Spicy Fried Chicken Sandwich",
+  "price": "not listed (own Square site)",
+  "desc": "Fried chicken breast, cabbage slaw, fresh jalapeños, homemade pickles, chipotle mayo, ciabatta",
+  "hours": "unverified (third-party daily 8am-9pm); check before you go",
+  "status": "open",
+  "near_muni": "Lions Municipal (Muny), approx 5 min; Butler approx 5 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://www.galaxycafeaustin.com",
+  "images": [
+   "research/chicken-sandwich/img/galaxy-cafe-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Other locations (Mesa Dr, Brodie Ln) not checked."
+ },
+ {
+  "id": "C20",
+  "slug": "better-half",
+  "name": "Better Half Coffee & Cocktails",
+  "style": "fried (Taiwanese mala)",
+  "hood": "Old West Austin (W 5th & Walsh)",
+  "address": "406 Walsh St, Austin, TX 78703",
+  "sandwich": "Taiwanese Spicy Chicken Sandwich",
+  "price": "$16.00 (own Toast)",
+  "desc": "Mala-spiced crispy breast, Szechuan & Japanese peppercorn, zucchini noodle slaw, Thai basil green curry mayo, mint, crispy garlic",
+  "hours": "Mon 8am-3pm; Tue-Thu 8am-10pm; Fri-Sat 8am-11pm; Sun 8am-10pm (own site)",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt approx 5 min; Lions Muny approx 7 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites (reader comment)",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   },
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://theinfatuation.com/austin/reviews/better-half-coffee-cocktails"
+   }
+  ],
+  "url": "https://www.betterhalfbar.com",
+  "images": [
+   "research/chicken-sandwich/img/better-half-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "On the dinner/late menu; daytime availability unverified."
+ },
+ {
+  "id": "C21",
+  "slug": "lucys-fried-chicken",
+  "name": "Lucy's Fried Chicken",
+  "style": "fried",
+  "hood": "South Congress (College Ave)",
+  "address": "2218 College Ave, Austin, TX 78704",
+  "sandwich": "The Revival (also Fried Chicken Sandwich)",
+  "price": "$15.50 (own Toast)",
+  "desc": "Fried chicken, honey mustard slaw, pickles, mayo, American cheese, kettle chips. Classic: brined breast, LTO, mayo, potato bun",
+  "hours": "Sun-Thu 11am-9pm; Fri-Sat 11am-10pm (own site)",
+  "status": "open",
+  "near_muni": "Butler Pitch & Putt, approx 8 min",
+  "recs": [
+   {
+    "outlet": "Austin Chronicle",
+    "url": "https://www.austinchronicle.com/food/who-gives-a-cluck-about-popeyes-and-chick-fil-a-12100735/"
+   }
+  ],
+  "url": "https://www.lucysfriedchicken.com",
+  "images": [
+   "research/chicken-sandwich/img/lucys-fried-chicken-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Only remaining location (Burnet, Lake Travis, Cedar Park closed)."
+ },
+ {
+  "id": "C22",
+  "slug": "hold-out-brewing",
+  "name": "Hold Out Brewing",
+  "style": "fried",
+  "hood": "Old West Austin (W 4th St)",
+  "address": "1208 W 4th St, Austin, TX 78703",
+  "sandwich": "Comeback Chicken Sandwich",
+  "price": "$12.00 (own site/Toast)",
+  "desc": "Crispy fried K&C Ranch chicken breast, comeback sauce, spicy bread & butter pickles. Also Spicy Chicken Sandwich $13",
+  "hours": "Mon 3-10pm; Tue-Fri 11am-11pm; Sat 10am-11pm; Sun 10am-10pm (own site)",
+  "status": "open",
+  "near_muni": "Butler approx 5 min; Lions Muny approx 7 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://holdoutbrewing.com",
+  "images": [],
+  "repeat": false,
+  "flags": "No own-site sandwich photo."
+ },
+ {
+  "id": "C23",
+  "slug": "choo-sando",
+  "name": "Choo Sando & Omakase",
+  "style": "katsu",
+  "hood": "Allandale / Burnet Rd",
+  "address": "5222 Burnet Rd, Suite 535, Austin, TX 78756",
+  "sandwich": "Chicken Katsu Sando",
+  "price": "not listed (own Square site)",
+  "desc": "Fried chicken cutlets, sunomono pickled cucumber, salted cabbage slaw, green leaf, dill grain mustard, shokupan. Also Spicy (Korean fried) Chicken Sando",
+  "hours": "unverified (third-party Wed-Fri/Sat 11am-2pm); check before you go",
+  "status": "open",
+  "near_muni": "Hancock, approx 8 min",
+  "recs": [
+   {
+    "outlet": "The Infatuation (review)",
+    "url": "https://www.theinfatuation.com/austin/reviews/choo-sando"
+   }
+  ],
+  "url": "https://www.chooatx.com",
+  "images": [
+   "research/chicken-sandwich/img/choo-sando-1.jpg",
+   "research/chicken-sandwich/img/choo-sando-2.jpg"
+  ],
+  "repeat": false,
+  "flags": "Photos are small packaged-sando product shots. Classic 'Katsu Sando' is pork. Limited hours."
+ },
+ {
+  "id": "C24",
+  "slug": "pebble-onebird",
+  "name": "Pebble Onebird",
+  "style": "Japanese-style fried",
+  "hood": "Anderson Mill / NW Austin",
+  "address": "12129 N Ranch Rd 620, Ste 100, Austin, TX 78750",
+  "sandwich": "Japantown Chicken Sandwich",
+  "price": "$13.95 (own menu)",
+  "desc": "Broth-brined fried tenders, lettuce, tomato, red onion, pickles, Nagoya black pepper glaze, QP mayo, lemon. Also Chili Chicken Sandwich $13.95",
+  "hours": "Sun 9am-9pm; Mon/Tue/Thu 11am-3pm & 4:30-9pm; Wed closed; Fri 11am-3pm & 4:30-10pm; Sat 9am-10pm (own site)",
+  "status": "open",
+  "near_muni": "none within 10 min",
+  "recs": [
+   {
+    "outlet": "Community Impact (opening news)",
+    "url": "https://communityimpact.com/northwest-austin/dining/pebble-onebird-now-open-in-northwest-austin/"
+   }
+  ],
+  "url": "https://eatonebird.com",
+  "images": [
+   "research/chicken-sandwich/img/pebble-onebird-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Opened 20 Sep 2026; no reviews yet. Photo labelled as chicken sandwiches on own site; that it's the Japantown is an inference."
+ },
+ {
+  "id": "C25",
+  "slug": "flyrite-chicken",
+  "name": "Flyrite Chicken",
+  "style": "fried",
+  "hood": "East 7th St (Stoney's Good Time Ranch)",
+  "address": "3526 E 7th St, Austin, TX 78702 (truck); also ABIA near Gate 21",
+  "sandwich": "The Cowboy",
+  "price": "not listed (own Toast truck page shows catering only)",
+  "desc": "Chicken breast, cheddar, bacon, jalapeños, house pickles, Hoss Sauce (per Community Impact; not on own menu page)",
+  "hours": "Own site: Mon-Tue 4pm-12am; Wed-Thu & Sun 12pm-12am; Fri-Sat 12pm-1am; Toast conflicts; check before you go",
+  "status": "moved: brick-and-mortars closed; food truck at 3526 E 7th since 26 Mar 2026 + airport",
+  "near_muni": "Morris Williams, approx 8-10 min",
+  "recs": [
+   {
+    "outlet": "Austin Chronicle",
+    "url": "https://www.austinchronicle.com/food/who-gives-a-cluck-about-popeyes-and-chick-fil-a-12100735/"
+   },
+   {
+    "outlet": "Community Impact (reopening news)",
+    "url": "https://communityimpact.com/east-austin/dining/flyrite-chicken-reopens-in-east-austin-food-truck/"
+   }
+  ],
+  "url": "https://www.flyritechicken.com",
+  "images": [
+   "research/chicken-sandwich/img/flyrite-chicken-1.jpg",
+   "research/chicken-sandwich/img/flyrite-chicken-2.jpg",
+   "research/chicken-sandwich/img/flyrite-chicken-3.jpg"
+  ],
+  "repeat": false,
+  "flags": "Sandwich description from Community Impact, not own site. Gallery photos undated."
+ },
+ {
+  "id": "C26",
+  "slug": "jewboy-burgers",
+  "name": "JewBoy Burgers",
+  "style": "grilled",
+  "hood": "North Loop / Airport Blvd",
+  "address": "5111 Airport Blvd, Austin, TX 78751",
+  "sandwich": "Can You Grill It?",
+  "price": "$11.00 (own Toast)",
+  "desc": "Marinated grilled boneless chicken thigh, melted Swiss, bacon, Schmutz sauce, lettuce, potato bun",
+  "hours": "Tue-Thu 11am-9pm; Fri-Sat 11am-10pm; Sun 11am-9pm; closed Mon (own site)",
+  "status": "open",
+  "near_muni": "Hancock, approx 7 min",
+  "recs": [],
+  "url": "https://jewboyburgers.com",
+  "images": [
+   "research/chicken-sandwich/img/jewboy-burgers-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "No local outlet rec found for the chicken sandwich (a Toast-based listing mentions it). Grilled only."
+ },
+ {
+  "id": "C27",
+  "slug": "austin-rotisserie",
+  "name": "Austin Rotisserie (Fareground)",
+  "style": "rotisserie",
+  "hood": "Downtown (Fareground)",
+  "address": "111 Congress Ave, P400, Austin, TX 78701 (also 510 E Anderson Ln)",
+  "sandwich": "Poulet Roti Baguette",
+  "price": "$11.99 (own Toast)",
+  "desc": "Baguette, house roti spread, shredded rotisserie chicken, organic arugula, goat cheese, French vinaigrette",
+  "hours": "Fareground daily 11am-9pm; North Tue-Sun 11am-10pm (own site)",
+  "status": "moved: Govalle location no longer listed; now Fareground + Anderson Ln",
+  "near_muni": "Butler Pitch & Putt, approx 5 min",
+  "recs": [],
+  "url": "https://austinrotisserie.com",
+  "images": [
+   "research/chicken-sandwich/img/austin-rotisserie-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Only a generic search-summary mention of past coverage; no outlet URL verified. Photo captioned 'Austin Rotisserie Sandwich'."
+ },
+ {
+  "id": "C28",
+  "slug": "la-plancha",
+  "name": "La Plancha",
+  "style": "buffalo fried chicken torta",
+  "hood": "East MLK / Chestnut",
+  "address": "1701 E Martin Luther King Jr Blvd #101, Austin, TX 78702",
+  "sandwich": "La Hot Chick",
+  "price": "$15.00 (own site menu)",
+  "desc": "Fried chicken in house buffalo sauce, lettuce, tomato, house pickles, jalapeño ranch; avocado +$2",
+  "hours": "Tue-Fri 11am-9pm; Sat 9am-9pm; Sun 9am-5pm; closed Mon (own site)",
+  "status": "open",
+  "near_muni": "Hancock or Morris Williams, approx 7-8 min",
+  "recs": [
+   {
+    "outlet": "ATX Bites",
+    "url": "https://atx-bites.com/best-fried-chicken-sandwiches-in-austin/"
+   }
+  ],
+  "url": "https://planchaatx.com",
+  "images": [
+   "research/chicken-sandwich/img/la-plancha-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "On own-site menu but missing from current Toast menu; confirm it's still served."
+ },
+ {
+  "id": "C29",
+  "slug": "urban-bird",
+  "name": "Urban Bird Hot Chicken (Sunset Valley)",
+  "style": "Nashville hot (tenders)",
+  "hood": "Sunset Valley",
+  "address": "5207 Brodie Ln, Ste 115, Sunset Valley, TX 78745",
+  "sandwich": "Sando",
+  "price": "$11.49 (own Toast)",
+  "desc": "2 jumbo tenders at chosen heat, toasted brioche, kale slaw, Bird Sauce, pickles; halal chicken",
+  "hours": "Own site Mon-Thu 10am-1am; Fri-Sat 10am-3am; Sun 10am-10:30pm; Toast differs; check before you go",
+  "status": "open",
+  "near_muni": "none within 10 min",
+  "recs": [
+   {
+    "outlet": "Community Impact (opening news)",
+    "url": "https://beta2.communityimpact.com/austin/southwest-austin-dripping-springs/business/2026/06/17/urban-bird-now-serving-hot-chicken-loaded-fries-in-sunset-valley/"
+   }
+  ],
+  "url": "https://www.urbanbirdhotchicken.com/location/sunset-valley-tx-coming-soon/",
+  "images": [
+   "research/chicken-sandwich/img/urban-bird-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Texas franchise chain (20+ stores). Brand-wide photo."
+ },
+ {
+  "id": "C30",
+  "slug": "jack-allens-kitchen",
+  "name": "Jack Allen's Kitchen (Anderson Ln)",
+  "style": "Southern fried",
+  "hood": "Allandale / North Shoal Creek",
+  "address": "3010 W Anderson Ln, Ste D, Austin, TX 78757 (also Oak Hill, 360, suburbs)",
+  "sandwich": "Southern Crispy Chicken Sandwich",
+  "price": "$16.99 (own site/Toast)",
+  "desc": "Crispy fried chicken, pimiento cheese, pickled green tomato, jalapeño mayo, JAK slaw",
+  "hours": "Sun 10am-9pm; Mon-Thu 11am-9pm; Fri-Sat 11am-10pm (own site)",
+  "status": "open",
+  "near_muni": "none within 10 min (Oak Hill location approx 10-12 min to Grey Rock)",
+  "recs": [],
+  "url": "https://jackallenskitchen.com/location/anderson-lane/",
+  "images": [
+   "research/chicken-sandwich/img/jack-allens-kitchen-1.jpg"
+  ],
+  "repeat": false,
+  "flags": "Local mini-chain. No outlet rec found. Photo 720px (small)."
+ }
+]
