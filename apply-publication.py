@@ -28,6 +28,7 @@ PAGES = [
     "drops/rangefinder-cases-and-pouches.html",
     "drops/brand-to-know-local-gc.html",
     "drops/fella-golf.html",
+    "drops/brand-to-know-clamp-golf-company.html",
     "drops/best-chicken-sandwiches-in-austin.html",
     "drops/brand-to-know-macade.html",
     "drops/brand-to-know-hudson-sutler.html",

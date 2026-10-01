@@ -137,6 +137,26 @@ PQ = {
 }
 
 BANDS = {
+    "outer": ("Photography &middot; Fella Golf&rsquo;s own", "Fella shot the outerwear in the studio, beside a ball washer and on a hitting mat.",
+             [("band-b1", "A model in the golf-cart sherpa bodywarmer standing beside a ball washer", "Golf-cart sherpa"),
+              ("band-b2", "A model in the green and off-white Panel Tech Jacket", "Panel Tech Jacket"),
+              ("band-b3", "A model in the black Wyatt windshirt holding a club on a hitting mat", "Wyatt windshirt")]),
+    "knit": ("Photography &middot; Fella Golf&rsquo;s own", "Up close, the golf cart on the Graham and the stripe on the Boris are knitted in, not printed.",
+             [("band-c1", "A model in the navy Graham golf cart knit", "Graham knit"),
+              ("band-c2", "The jacquard golf cart on the Graham knit up close", "The golf cart"),
+              ("band-c3", "The cream Boris quarter-zip with its navy stripe up close", "Boris quarter-zip")]),
+    "polo": ("Photography &middot; Fella Golf&rsquo;s own", "The knit polos work at address as well as at the bar.",
+             [("band-d1", "A golfer addressing a ball in the navy Lionel knitted polo", "Lionel, navy"),
+              ("band-d2", "A model in the toffee-stripe Jake knit polo", "Jake polo"),
+              ("band-d3", "A model in a cream knitted polo beside a stand bag", "Knit and a carry bag")]),
+    "tees": ("Photography &middot; Fella Golf&rsquo;s own", "The tees carry the jokes, and Fella shoots them in the studio with the graphics turned to camera.",
+             [("band-e1", "A model in the black Fella T-shirt and a bucket hat carrying a golf bag", "The Fella tee"),
+              ("band-e2", "A model in the washed cognac Sandbagger tee", "Sandbagger"),
+              ("band-e3", "A model in the butter Bistro tee", "Butter Bistro")]),
+    "hats": ("Photography &middot; Fella Golf&rsquo;s own", "Fella takes the caps from the studio to the course.",
+             [("band-f1", "A golfer in a black Fella performance cap addressing a ball on a course", "On the course"),
+              ("band-f2", "A model in the All Gear No Game cap", "All Gear No Game"),
+              ("band-f3", "A model in a white Fella performance cap and a black mockneck", "Performance cap")]),
     "fall": ("Photography &middot; Fella Golf&rsquo;s own", "The fall campaign: the reversible bodywarmer and the cargo pant out on the course.",
              [("band-a1", "A golfer seen from behind wearing Fella's golf-cart print sherpa bodywarmer on a green", "Golf-cart sherpa"),
               ("band-a2", "A golfer mid-swing in Fella's ripstop cargo pant on a fairway", "The cargo pant"),
@@ -318,11 +338,12 @@ def main(apply_):
 """
     body += TAKE + band("fall")
     n = 1
-    s, n = section(SECTIONS[0], n); body += s + pq("love")
-    s, n = section(SECTIONS[1], n); body += s
-    s, n = section(SECTIONS[2], n); body += s + pq("serious")
-    s, n = section(SECTIONS[3], n); body += s
-    s, n = section(SECTIONS[4], n); body += s + pq("fellas")
+    # IRL bands between every category (Lenny, 1 Oct 2026: "add IRL/Lifestyle images between catagories")
+    s, n = section(SECTIONS[0], n); body += s + band("outer") + pq("love")
+    s, n = section(SECTIONS[1], n); body += s + band("knit")
+    s, n = section(SECTIONS[2], n); body += s + band("polo") + pq("serious")
+    s, n = section(SECTIONS[3], n); body += s + band("tees")
+    s, n = section(SECTIONS[4], n); body += s + band("hats") + pq("fellas")
     s, n = section(SECTIONS[5], n); body += s
     body += faq_html()
     out = head_top() + head_rest + body + tail
@@ -346,7 +367,7 @@ def verify():
     for k, (t, _) in PQ.items():
         if fin.count(t[:30]) != 1:
             bad.append(f"pq {k}")
-    if above.count('class="ig-grid"') != 1:
+    if above.count('class="ig-grid"') != len(BANDS):
         bad.append("band count")
     if re.search(r"\bworth\b", re.sub(r"<[^>]+>", " ", above), re.I):
         bad.append("banned word")

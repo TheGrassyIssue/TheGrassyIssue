@@ -222,6 +222,34 @@ BANDS = {
              [("band-b1", "Two navy canvas headcovers with scattered manuka embroidery in a golf bag", "M&#257;nuka navy"),
               ("band-b2", "A tan leather headcover on a driver in a golf bag beside a fence", "Leather on the range"),
               ("band-b3", "Navy manuka headcovers in a grey golf bag against a wall", "Every cover different")]),
+    "birds": ("Photography &middot; Local GC&rsquo;s own", "Local GC shoots its mallards and oilskins on the bag, against brick and turf.",
+             [("band-d1", "Mallard canvas and wool headcovers on clubs against a brick wall", "Mallards on brick"),
+              ("band-d2", "Mallard wool and canvas headcovers up close in a carry bag", "Wool and canvas"),
+              ("band-d3", "Tartan and oilskin headcovers in a golf bag on artificial turf", "On the turf")]),
+    "wool": ("Photography &middot; Local GC&rsquo;s own", "The wool covers live in a carry bag, at the office as often as on the course.",
+             [("band-e1", "Navy and tartan wool headcovers in a green carry bag against a white wall", "Wool in the bag"),
+              ("band-e2", "Check wool headcovers in a carry bag next to an office printer", "Office hours"),
+              ("band-e3", "Tartan and check wool headcovers on clubs against a blue sky", "Check and tartan")]),
+    "out": ("Photography &middot; Local GC&rsquo;s own", "Myles shoots the bags wherever he finds a good wall or a picnic table.",
+             [("band-f1", "A navy carry bag with matching covers leaning on a schoolyard picnic table", "Picnic table"),
+              ("band-f2", "An olive carry bag standing in a schoolyard", "Schoolyard"),
+              ("band-f3", "The swallow embroidery and tag on the Daybreak Sunday bag", "The Daybreak")]),
+    "camo": ("Photography &middot; Local GC&rsquo;s own", "The Australian-forces camo shows up on iron covers, pouches and the Sunday bags.",
+             [("band-g1", "A camo canvas iron cover on a club on artificial turf", "Camo on the iron"),
+              ("band-g2", "The camo Sunday bag in sunlight on a timber floor", "Camo Sunday bag"),
+              ("band-g3", "The leather-trimmed top of the camo Sunday bag", "Leather trim")]),
+    "colour": ("Photography &middot; Local GC&rsquo;s own", "Local GC took the camo Sunday bag down to the beach at Orewa, and shot the Daybreak in the street.",
+             [("band-h1", "The camo Sunday bag standing on a tidal beach in Orewa beside a flagstick", "Orewa"),
+              ("band-h2", "The Daybreak Sunday bag in blue-grey canvas with a tan strap", "Daybreak"),
+              ("band-h3", "A black sailcloth headcover on a club on turf", "Sailcloth")]),
+    "putter": ("Photography &middot; Local GC&rsquo;s own", "Local GC shoots its putter covers on the club, on grass and turf.",
+             [("band-i1", "A camo putter cover on a putter lying on grass", "Camo putter"),
+              ("band-i2", "A black sailcloth putter cover on a putter on turf", "Sailcloth putter"),
+              ("band-i3", "The zip pocket on a canvas Sunday bag", "Zip detail")]),
+    "kit": ("Photography &middot; Local GC&rsquo;s own", "Local GC photographs the shoe bag where you would actually use it: in the locker room.",
+             [("band-j1", "An olive Local GC shoe bag with saddle shoes on a locker room bench", "Locker room"),
+              ("band-j2", "The olive shoe bag unzipped on the bench", "Shoe bag"),
+              ("band-j3", "A camo pouch clipped to a canvas carry bag on grass", "On the bag")]),
     "upcycled": ("Photography &middot; Local GC&rsquo;s Upcycled Customs", "Send Local GC your own clothes and it will rework them: here, a New Balance running jacket became a set of wood covers.",
              [("band-c1", "A navy New Balance fleece running jacket laid on grass", "The jacket"),
               ("band-c2", "Black headcovers made from the jacket on clubs in a carry bag", "The covers"),
@@ -404,16 +432,17 @@ def main(apply_):
 """
     body += TAKE
     n = 1
+    # IRL bands between every category (Lenny, 1 Oct 2026: "add IRL/Lifestyle images between catagories")
     s, n = section(SECTIONS[0], n); body += s + band("bags") + pq("small")
-    s, n = section(SECTIONS[1], n); body += s
+    s, n = section(SECTIONS[1], n); body += s + band("birds")
     s, n = section(SECTIONS[2], n); body += s + pq("rats") + band("covers")
-    s, n = section(SECTIONS[3], n); body += s
-    s, n = section(SECTIONS[4], n); body += s
-    s, n = section(SECTIONS[5], n); body += s + pq("hold")
-    s, n = section(SECTIONS[6], n); body += s
-    s, n = section(SECTIONS[7], n); body += s
-    s, n = section(SECTIONS[8], n); body += s + band("upcycled")
-    s, n = section(SECTIONS[9], n); body += s
+    s, n = section(SECTIONS[3], n); body += s + band("wool")
+    s, n = section(SECTIONS[4], n); body += s + band("out")
+    s, n = section(SECTIONS[5], n); body += s + pq("hold") + band("camo")
+    s, n = section(SECTIONS[6], n); body += s + band("colour")
+    s, n = section(SECTIONS[7], n); body += s + band("putter")
+    s, n = section(SECTIONS[8], n); body += s + band("kit")
+    s, n = section(SECTIONS[9], n); body += s + band("upcycled")
     body += faq_html()
     out = head_top() + head_rest + body + tail
     print(f"  {n-1} picks")
@@ -436,7 +465,7 @@ def verify():
     for k, (t, _) in PQ.items():
         if fin.count(t[:40]) != 1:
             bad.append(f"pq {k}")
-    if above.count('class="ig-grid"') != 3:
+    if above.count('class="ig-grid"') != len(BANDS):
         bad.append("band count")
     if re.search(r"\bworth\b", re.sub(r"<[^>]+>", " ", above), re.I):
         bad.append("banned word")
