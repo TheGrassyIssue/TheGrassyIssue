@@ -26,6 +26,9 @@ TODAY = datetime.date.today()
 
 def feed_kinds():
     s = open(os.path.join(ROOT, "index.html"), encoding="utf-8", errors="replace").read()
+    # older cards live in /feed/page-*.html since paginate-feed.py (1 Oct 2026)
+    for pg in sorted(glob.glob(os.path.join(ROOT, "feed", "page-*.html"))):
+        s += open(pg, encoding="utf-8", errors="replace").read()
     out = {}
     for m in re.finditer(r'<div class="card" data-type="([a-z]+)"', s):
         seg = s[m.start():m.start() + 5000]

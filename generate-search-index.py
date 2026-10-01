@@ -12,6 +12,9 @@ _TYPE = {"drop": "Drops & Brands", "field": "Field Notes", "news": "News",
 FEED_TYPE = {}
 try:
     _idx = open(os.path.join(SITE, "index.html"), encoding="utf-8").read()
+    # older cards live in /feed/page-*.html since paginate-feed.py (1 Oct 2026)
+    for _pg in sorted(glob.glob(os.path.join(SITE, "feed", "page-*.html"))):
+        _idx += open(_pg, encoding="utf-8").read()
     for _m in re.finditer(r'<div class="card"[^>]*data-type="(\w+)"', _idx):
         _seg = _idx[_m.start():_m.start() + 3000]
         _a = re.search(r'href="(/(?:drops|guides)/[^"]+)"', _seg)
