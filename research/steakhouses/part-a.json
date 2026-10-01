@@ -1,0 +1,190 @@
+[
+  {
+    "slug": "jeffreys",
+    "name": "Jeffrey's",
+    "style": "Neighborhood fine dining: dry-aged prime beef and French-American classics; steaks grilled over local live oak then finished in a 1200-degree broiler",
+    "hood": "Clarksville",
+    "address": "1204 West Lynn St, Austin, TX 78703",
+    "dishes": [
+      {"name": "26 oz bone-in ribeye, dry aged 32 days (Niman Ranch, USDA Prime)", "price": "$165"},
+      {"name": "8 oz tenderloin filet (Dean & Peeler, Floresville TX, USDA Prime)", "price": "$72"}
+    ],
+    "hours": "Dining room open daily 4:30-11 p.m. Happy hour: Mondays all night (25% off bar food & wines by the glass); Sundays all night 50% off wine bottles.",
+    "reservations": "Yes. Phone (512) 477-5584 or OpenTable: https://www.opentable.com/r/jeffreys-restaurant-austin (also https://www.opentable.com/restref/client/?restref=102325). NOTE: one block on the site says 'Reservations by phone only', which conflicts with the OpenTable links on the same site.",
+    "status": "Open (own site, (c) 2026, current menu PDF online)",
+    "near_muni": "Lions Municipal 'Muny' (2901 Enfield Rd), about 6 min (est.). Butler Pitch & Putt is also close, about 6-7 min (est.).",
+    "michelin": "MICHELIN Guide recommended/listed (no star or Bib icon on the page; the page says 'a restaurant in the 2025 MICHELIN Guide USA'). Cuisine listed as Contemporary, Steakhouse, $$$$. Also featured in Michelin's 'The Best Steakhouses in Texas' (updated 21 Sep 2026; Jeffrey's is the only Austin entry). https://guide.michelin.com/us/en/texas/austin_2958315/restaurant/jeffrey-s",
+    "recs": [
+      {"outlet": "The Infatuation - Best Steakhouses in Austin", "url": "https://www.theinfatuation.com/austin/guides/best-steakhouses-austin"},
+      {"outlet": "MICHELIN Guide - The Best Steakhouses in Texas", "url": "https://guide.michelin.com/us/en/best-of/best-steakhouses-in-texas"},
+      {"outlet": "Time Out Austin", "url": "https://www.timeout.com/austin/restaurants/jeffreys-restaurant"}
+    ],
+    "url": "https://jeffreysofaustin.com/",
+    "images": [
+      {"path": "research/steakhouses/img/jeffreys-1.jpg", "label": "Dining room: white-jacketed server taking an order at a teal-walled room, seen down a wood-paneled hallway"},
+      {"path": "research/steakhouses/img/jeffreys-2.jpg", "label": "Private dining room: a server setting a long wood table with flowers (from the site's private-dining banner)"}
+    ],
+    "flags": "Dinner menu PDF is at /wp-content/uploads/2022/06/Jeffreys_Dinner.pdf. The folder date is 2022, but the content is a current summer menu (corn tortellini, stone fruit), and the PDF itself is undated. The PDF credits executive chef Sean MacDonald, but the site's About/Events text still names Executive Chef Mark McCain, so treat chef name as unverified. Price band $$$$: steaks run $72-$215 (42 oz dry-aged porterhouse $215); caviar service $115-$700. Complimentary valet. Bar menu PDF linked. Only 2 own-site images found (the WP media API didn't expose more food shots)."
+  },
+  {
+    "slug": "j-carvers",
+    "name": "J. Carver's Oyster Bar & Chophouse",
+    "style": "Classic chophouse / oyster bar: wood-burning grill, steaks aged by Fred Linz (Chicago), raw bar",
+    "hood": "Downtown (West 6th district)",
+    "address": "509 Rio Grande St, Austin, TX 78701",
+    "dishes": [
+      {"name": "10oz filet “carpet bag style” (wood roasted and sliced, crisp batter-fried oysters, bearnaise)", "price": "$74"},
+      {"name": "30 Day Dry Aged USDA PRIME Porterhouse (for two or more, sliced with roasted shallot butter)", "price": "$4.95 per ounce"}
+    ],
+    "hours": "Monday-Sunday 5pm-10pm (own About page; the footer says 'Open Daily')",
+    "reservations": "Yes, via OpenTable. The FAQ says a $25/person deposit is taken through OpenTable for parties of 5+; for 9+ email jc.info@jcarveratx.com. Private Green Room (up to 12): https://www.opentable.com/private-dining/restaurant/1173997. The main OpenTable booking URL was not visible in the fetched page (widget); OpenTable listing seen in search: https://www.opentable.com/r/j-carvers-austin (unverified as own-site link).",
+    "status": "Open (menu PDF dated 9.8.26)",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr), about 6 min (est.). Lions Muny is about 10 min (est.).",
+    "michelin": "none found",
+    "recs": [
+      {"outlet": "The Infatuation - Best Steakhouses in Austin", "url": "https://www.theinfatuation.com/austin/guides/best-steakhouses-austin"},
+      {"outlet": "The Infatuation - J Carver's review", "url": "https://www.theinfatuation.com/austin/reviews/j-carvers"},
+      {"outlet": "Texas Monthly", "url": "https://www.texasmonthly.com/restaurant/j-carvers/"}
+    ],
+    "url": "https://www.jcarveratx.com/",
+    "images": [
+      {"path": "research/steakhouses/img/j-carvers-1.jpg", "label": "Steaks and chops searing on the open wood-fire grill"},
+      {"path": "research/steakhouses/img/j-carvers-3.jpg", "label": "Overhead table spread: Dover sole with crab, lobster bisque en croute, crispy sweet chile shrimp, baked potato gnocchi, cocktail"},
+      {"path": "research/steakhouses/img/j-carvers-2.jpg", "label": "Green cocktail on the bar with green velvet banquettes behind (cocktail/room shot)"}
+    ],
+    "flags": "Menu PDF: 'JCarvers Dinner and Wine Menu 9.8.26.pdf' (dated 8 Sep 2026). Price band $$$$: steaks $62-$120 plus dry-aged cuts at $4.95/oz; caviar $110. Dress code: 'Proper attire'. Business casual encouraged; no tank tops, gym shorts or athletic wear. Not suitable for young children. Valet $15 (FAQ; Texas Monthly/others cite $10, so go with the site). Seatings are timed at 2-3 hours. 20% gratuity for parties of 6+. Same chef-owner (John Carver) as Red Ash Italia. Official domain is jcarveratx.com (jcarvers.com returned nothing)."
+  },
+  {
+    "slug": "red-ash-italia",
+    "name": "Red Ash Italia",
+    "style": "Wood-fired Italian steakhouse: custom wood-burning grill, oven and plancha; handmade pasta; steaks aged by Fred Linz",
+    "hood": "Downtown (Colorado Tower)",
+    "address": "303 Colorado St, Austin, TX 78701 (Colorado Tower; Texas Monthly lists #200)",
+    "dishes": [
+      {"name": "30 DAY DRY AGED PORTERHOUSE “LA FIORENTINA” (for two or more, sliced with roasted shallot butter)", "price": "$4.95 per ounce"},
+      {"name": "10OZ BEEF FILET WITH FRESH BLUE CRAB FONDUTA", "price": "$72"}
+    ],
+    "hours": "check before you go. The own site (home/menu pages) doesn't list hours, and the contact page didn't render. Texas Monthly lists daily 5PM-10PM; an older third-party search snippet says Sun-Thu 5-10, Fri-Sat 5-11.",
+    "reservations": "Yes. OpenTable: https://www.opentable.com/r/red-ash-italia-reservations-austin?restref=214576 (also https://www.opentable.com/r/red-ash-italia-austin). Phone 512.379.2906; call for parties of 8+.",
+    "status": "Open (site shows 'Now Open'; menu PDF dated 9.9.26)",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr), about 7 min (est.)",
+    "michelin": "none found",
+    "recs": [
+      {"outlet": "The Infatuation - Best Steakhouses in Austin", "url": "https://www.theinfatuation.com/austin/guides/best-steakhouses-austin"},
+      {"outlet": "Texas Monthly", "url": "https://www.texasmonthly.com/restaurant/red-ash-italia/"},
+      {"outlet": "Tribeza - Karen's Pick: Red Ash", "url": "https://tribeza.com/restaurants/restaurant-reviews/karens-pick-red-ash/"},
+      {"outlet": "Time Out Austin", "url": "https://www.timeout.com/austin/restaurants/red-ash-italia"}
+    ],
+    "url": "https://www.redashgrill.com/",
+    "images": [
+      {"path": "research/steakhouses/img/red-ash-italia-1.jpg", "label": "Cook tending the custom wood-burning grill with sparks and red embers"},
+      {"path": "research/steakhouses/img/red-ash-italia-2.jpg", "label": "Fresh handmade spaghetti coming off the pasta extruder"},
+      {"path": "research/steakhouses/img/red-ash-italia-3.jpg", "label": "Wood-roasted meatballs in marinara over soft polenta"}
+    ],
+    "flags": "Menu PDF: 'Red Ash Dinner & Wine Menu 9.9.26.pdf' (dated 9 Sep 2026). A Community Impact headline (May 2024) reads 'Red Ash Italia returns to downtown Austin', so it apparently closed and reopened (site says 'Now Open'); details unverified. Current address 303 Colorado St per own site. Dress: 'Proper attire', no athletic wear, not suitable for young children. No tap-to-pay. Valet at the Colorado Tower garage entrance. Two-level room with an upstairs mezzanine for large parties. Rejected images: a Rome skyline and a vintage film-star photo (not the restaurant), a guest selfie, and a dessert."
+  },
+  {
+    "slug": "deans-italian-steakhouse",
+    "name": "Dean's Italian Steakhouse",
+    "style": "Classic American steakhouse with Italian expression (USDA Prime 35-day dry-aged steaks, American Wagyu, house-made pasta, raw bar); inside the JW Marriott",
+    "hood": "Downtown (JW Marriott, 2nd Street District)",
+    "address": "110 E. 2nd St, Austin, TX 78701",
+    "dishes": [
+      {"name": "USDA Prime 35-day dry-aged steaks (as named on own homepage)", "price": "not listed"},
+      {"name": "Short Rib Gnocchi / Truffle Bucatini (as named on own homepage)", "price": "not listed"}
+    ],
+    "hours": "Monday-Thursday 5-10pm; Friday-Saturday 5-11pm; Sunday 5-10pm (own site footer). A third-party search snippet showed shorter hours (Sun-Thu 5-9:30, Fri-Sat 5-10:30), so go with the own site.",
+    "reservations": "Yes. OpenTable: https://www.opentable.com/r/deans-italian-steakhouse-reservations-austin?restref=1229773",
+    "status": "Open (own site (c) 2026, current hours listed)",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr), about 7 min (est.)",
+    "michelin": "none found",
+    "recs": [
+      {"outlet": "The Infatuation - Best Steakhouses in Austin", "url": "https://www.theinfatuation.com/austin/guides/best-steakhouses-austin"},
+      {"outlet": "The Infatuation - Dean's Italian Steakhouse review", "url": "https://www.theinfatuation.com/austin/reviews/deans-italian-steakhouse"},
+      {"outlet": "Texas Monthly", "url": "https://www.texasmonthly.com/restaurant/deans-italian-steakhouse/"}
+    ],
+    "url": "https://www.deanssteakhouseaustin.com/",
+    "images": [
+      {"path": "research/steakhouses/img/deans-italian-steakhouse-1.jpg", "label": "Filet topped with butter-poached lobster, bearnaise and red wine jus on a Dean's bull-logo plate"},
+      {"path": "research/steakhouses/img/deans-italian-steakhouse-2.jpg", "label": "Sliced bone-in ribeye on a Dean's-branded cutting board"},
+      {"path": "research/steakhouses/img/deans-italian-steakhouse-3.jpg", "label": "Server pouring water for diners at a table with popovers and wine"}
+    ],
+    "flags": "Menu blocker: the dinner, dessert, drinks and happy-hour menus load via JavaScript and didn't render in fetch; no PDF found. Dish names come from the own homepage copy; exact menu names and prices are unverified. Press/search mention a 'Dean's Style' 8 oz filet with lobster claw and truffle bearnaise (unverified on own menu; image 1 appears to show it). Home copy says both '35-day dry-aged' and, in older press, '28-day' (go with own site: 35). The Veranda (companion bar room) offers happy hour and the full menu on request. Valet for a fee. The own site shows a Wine Spectator award badge (year not visible). Owned by White Lodging."
+  },
+  {
+    "slug": "aris",
+    "name": "Aris",
+    "style": "Modern Mediterranean steakhouse: USDA Prime beef butchered and dry-aged in-house; chef Hai Avnaim (Sof Hospitality, the Doris Metropolitan group)",
+    "hood": "Clarksville (West 6th)",
+    "address": "1111 W 6th St (Bldg. A, Ste. 150), Austin, TX 78703",
+    "dishes": [
+      {"name": "Spinalis Au Poivre* 10oz", "price": "$70"},
+      {"name": "Porterhouse* 34oz (Niman Ranch Prime, dry aged 21 days)", "price": "$160"}
+    ],
+    "hours": "Mon-Thu 5:00-10:00 p.m.; Fri-Sat 5:00-11:00 p.m.; closed Sunday (own Contact page). The menu page says happy hour is 'daily 5:00-6:30 p.m.', which conflicts with the Sunday closure: check before you go.",
+    "reservations": "Yes. OpenTable 'Book Now' link on own site: https://www.opentable.com/r/iris-reservations-austin?restref=1388707 (note the OpenTable slug says 'iris'). Private dining room for up to 20; prix-fixe for 12+.",
+    "status": "Open (opened Jan 2025 per press; menu PDF uploaded Feb 2026)",
+    "near_muni": "Lions Municipal 'Muny' (2901 Enfield Rd), about 6 min (est.); Butler Pitch & Putt about 6 min (est.)",
+    "michelin": "none found (not in the 2024/2025 selections per search; the 2026 Texas selection is announced Oct 8, 2026)",
+    "recs": [
+      {"outlet": "The Infatuation - Best Steakhouses in Austin", "url": "https://www.theinfatuation.com/austin/guides/best-steakhouses-austin"},
+      {"outlet": "The Infatuation - Aris review", "url": "https://www.theinfatuation.com/austin/reviews/aris"},
+      {"outlet": "Tribeza - Aris", "url": "https://tribeza.com/restaurants/aris-austin-restaurant"},
+      {"outlet": "Austin Food Magazine - Best New Restaurants April 2025", "url": "https://austinfoodmagazine.com/best-new-restaurants-2025-april/"}
+    ],
+    "url": "https://arisrestaurant.us/",
+    "images": [
+      {"path": "research/steakhouses/img/aris-1.jpg", "label": "Charred steak with chermoula-style greens on a dark plate over black marble"},
+      {"path": "research/steakhouses/img/aris-2.jpg", "label": "Aris Cigar: crisp pastry rolls with hummus and harissa"},
+      {"path": "research/steakhouses/img/aris-3.jpg", "label": "Dining room with rust-red chairs, wine wall and open kitchen"}
+    ],
+    "flags": "Menu PDF: /wp-content/uploads/2026/02/Aris-Dinner-Menu-10.pdf (uploaded Feb 2026, version 10). Price band $$$$: steaks $55-$220 (Miyazaki A-5 striploin 10oz $220). Other signatures: Miyazaki A-5 appetizer $45; Grassfed Tenderloin 8oz with bone marrow $68. 20% gratuity for parties of 6+. Wine list on BinWise PDF. Valet. Happy hour 5-6:30 at the bar/dining room/patio. Hours conflict noted above."
+  },
+  {
+    "slug": "lonesome-dove",
+    "name": "Lonesome Dove Western Bistro (Austin)",
+    "style": "Urban Western / wild-game steakhouse by Chef Tim Love: wood-fired and mesquite spit-roasted game, hand-cut steaks by the ounce",
+    "hood": "Downtown (W 6th St at Colorado)",
+    "address": "123 W 6th St, Austin, TX 78701",
+    "dishes": [
+      {"name": "Roasted Garlic Stuffed Beef Tenderloin, Western Plaid Hash, Grilled Asparagus", "price": "6oz $68 / 9oz $84"},
+      {"name": "45-Day Dry Aged Tomahawk for Two, Sautéed Green Beans, Yukon Gold Mash Potatoes, Gorgonzola Garlic Butter", "price": "$245"}
+    ],
+    "hours": "Dinner Mon-Thu 4:30-10PM, Fri 4:30-11PM, Sat 5-11PM, Sun closed. Lunch Friday only, 11:30AM-2PM. Happy hour Mon-Fri 4:30-6:30, Sat 5-6 (own Hours & Location page).",
+    "reservations": "Yes (recommended). Tock: https://www.exploretock.com/lonesome-dove-austin . Parties of 12+ through private dining (Tripleseat).",
+    "status": "Open (own site; wine and bar lists dated 2026-09-23)",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr), about 7 min (est.)",
+    "michelin": "none found",
+    "recs": [
+      {"outlet": "Texas Monthly", "url": "https://www.texasmonthly.com/restaurant/lonesome-dove-2/"},
+      {"outlet": "Austin Food Magazine - Review: Lonesome Dove Austin", "url": "https://austinfoodmagazine.com/review-lonesome-dove-austin/amp/"}
+    ],
+    "url": "https://www.lonesomedoveaustin.com/",
+    "images": [
+      {"path": "research/steakhouses/img/lonesome-dove-1.jpg", "label": "Main dining room: leather booths, antler chandeliers, mounted longhorn skulls"},
+      {"path": "research/steakhouses/img/lonesome-dove-2.jpg", "label": "Wine room: long private table surrounded by wine racks"},
+      {"path": "research/steakhouses/img/lonesome-dove-3.jpg", "label": "Rabbit-rattlesnake sausage bites on manchego rosti with Texas-flag picks"}
+    ],
+    "flags": "Address: the own site now lists 123 W 6th St. The 2014-15 opening press gave 419 Colorado St (former Kenichi space). Both sit at the 6th/Colorado corner, so this is likely the same building with a different address rather than a move (unverified). Phone on own site is (512) 368-2821; older press lists 512.271.2474. Menu is on-page HTML (no date shown); wine and bar lists dated 2026-09-23. Hand-cut steaks are priced per ounce (e.g., Dry Aged Prime Ribeye, 12oz minimum, $9/oz; 30-Day Dry Aged Wagyu Strip $11/oz). The page also shows a second, lower-priced steak/entree block (e.g., tenderloin $5.75/oz), probably a lunch or special menu, so check before quoting. Dress: 'dress to impress', but denim and cowboy hats welcome. Valet out front. Happy hour in the Bar and Front Porch only. The Infatuation steakhouse guide does not list it (per brief)."
+  },
+  {
+    "slug": "ciclo",
+    "name": "Ciclo (Four Seasons Hotel Austin)",
+    "style": "Texas steakhouse with Latin influences (Richard Sandoval), mesquite grill; lakeside hotel restaurant",
+    "hood": "Downtown (Lady Bird Lake / Four Seasons)",
+    "address": "98 San Jacinto Blvd, Austin, TX 78701 (Four Seasons Hotel Austin)",
+    "dishes": [
+      {"name": "Flambéed Texas Wagyu Tomahawk* (Beeman Ranch, Harwood, TX; tequila-flambéed on a Himalayan pink salt block, carved tableside)", "price": "not listed"},
+      {"name": "16 oz. Prime Cowgirl Ribeye*", "price": "not listed"}
+    ],
+    "hours": "Dinner daily 5:00-9:00 pm. Breakfast Mon-Sat 7-11 am, Sun 7-10 am. Lunch Mon-Fri 11 am-2 pm. Brunch Sat 11 am-2 pm, Sun 10 am-2 pm (own Four Seasons page).",
+    "reservations": "Yes. Phone 1 (512) 478-4500; the 'Reserve A Table' button is a widget and no URL was visible in the fetch. OpenTable listing found via search: https://www.opentable.com/r/ciclo-austin (not confirmed as the own-site link).",
+    "status": "Open (own Four Seasons page with current menus)",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr), about 8 min (est.)",
+    "michelin": "none found",
+    "recs": [],
+    "url": "https://www.fourseasons.com/austin/dining/restaurants/ciclo/",
+    "images": [],
+    "flags": "No images: every Four Seasons image URL (img-opt and content/dam) returned HTTP 403 to the downloader. Candidate own-site images for manual download: AUS_1742 (bone-in ribeye), AUS_1725 (flambéed tomahawk tableside), AUS_1367 (dining room with floor-to-ceiling windows). The dinner menu on the own site lists no prices ('Menu items and prices are subject to change'); menu is undated HTML. Other signature dishes on the own page: Bone-In Ribeye, Niman Ranch Lamb Rack (mesquite), Sweet Corn Empanadas, Hippie Salad, Ceviche. All steaks come with roasted garlic, chimichurri and pasilla demi. Serves breakfast/lunch/brunch too (weekend brunch buffet). No local-outlet recommendations found in searches (Chronicle/Austin Monthly/Statesman/Tribeza returned nothing)."
+  }
+]

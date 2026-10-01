@@ -28,6 +28,7 @@ PAGES = [
     "drops/best-chicken-sandwiches-in-austin.html",
     "drops/brand-to-know-macade.html",
     "drops/brand-to-know-hudson-sutler.html",
+    "drops/best-steakhouses-in-austin.html",
     "drops/required-reading-independent-golf-magazines.html",
     "drops/brand-to-know-st-andre.html",
     "drops/brand-to-know-dimple-divot.html",

@@ -1,0 +1,198 @@
+[
+  {
+    "slug": "fogo-de-chao",
+    "name": "Fogo de Chão Austin",
+    "style": "Brazilian churrascaria (gaucho-carved rodízio, 'Full Churrasco Experience'); national chain",
+    "hood": "Downtown (Congress Ave, ground floor of The Austonian)",
+    "address": "200 Congress Avenue, Austin, TX 78701",
+    "dishes": [
+      {"name": "Picanha", "price": "not listed (Austin dinner menu page renders via JavaScript; no price extractable)"},
+      {"name": "Wagyu Ancho (Ribeye) — 24oz enhancement to the Full Churrasco Experience", "price": "not listed"}
+    ],
+    "hours": "Dinner Mon–Thu 3–10 PM, Fri 3–10:30 PM, Sat 2–10:30 PM, Sun 2–9 PM; Lunch Mon–Fri 11 AM–3 PM; Brunch Sat–Sun 11:30 AM–2 PM; all-day happy hour Mon–Thu (Austin location page, modified 24 Sep 2026)",
+    "reservations": "Yes — https://fogodechao.com/reservations/ (booking widget powered by OpenTable); groups 15+ via https://fogodechao.com/group-dining/austin",
+    "status": "Open (confirmed on own Austin location page). Relocated 23 Dec 2022 from 309 E 3rd St to 200 Congress Ave.",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr) ~5 min (est.)",
+    "michelin": "none found (Austin MICHELIN listing, 44 restaurants, checked 30 Sep 2026: https://guide.michelin.com/us/en/texas/austin_2958315/restaurants)",
+    "recs": [
+      {"outlet": "Community Impact (relocation news)", "url": "https://communityimpact.com/central-austin/dining/brazilian-steakhouse-fogo-de-cho-relocates-to-the-austonian/"},
+      {"outlet": "Austin Food Magazine", "url": "https://austinfoodmagazine.com/fogo-de-chao-austin/"}
+    ],
+    "url": "https://fogodechao.com/location/austin/",
+    "images": [
+      {"path": "research/steakhouses/img/fogo-de-chao-1.jpg", "label": "Close-up of fire-grilled skewered beef (chain-wide photo from fogodechao.com steak menu page, not Austin-specific)"},
+      {"path": "research/steakhouses/img/fogo-de-chao-2.jpg", "label": "Gaucho carving a skewered cut tableside (chain-wide photo from fogodechao.com reservations page)"}
+    ],
+    "flags": "National chain. Own page's meta description is stale ('across from the Austin Convention Center… rooftop patio' = old 3rd St site); page body confirms the 200 Congress move. An exterior og:image (2015 upload, likely old location) was rejected. Prices not extractable from own site (JS menu) — unverified. Value angle: all-day happy hour Mon–Thu ($6 beers, $8 South American wines, $10 cocktails; half-price SA bottles under $150); valet $15. Silver Oak wine dinner listed for 30 Sep 2026."
+  },
+  {
+    "slug": "buenos-aires-cafe",
+    "name": "Buenos Aires Café (East 6th)",
+    "style": "Argentine café with parrilla (grilled steaks, achuras, parrillada; Sunday asado)",
+    "hood": "East Austin (E 6th St)",
+    "address": "1201 E 6th St, Austin, TX 78702",
+    "dishes": [
+      {"name": "*Entraña 8oz (De La Parrilla — main + side + chimichurri)", "price": "$35"},
+      {"name": "*Bife De Lomo", "price": "6oz $38 / 8oz $45"},
+      {"name": "Parrillada (morcilla, salchicha parrillera, chef's beef selection & chicken)", "price": "For 2 $70 / For 4 $125"}
+    ],
+    "hours": "Mon–Thu 11 AM–9 PM; Fri–Sat 11 AM–10 PM; Sunday Asado 11 AM–4 PM; Happy hour Mon–Fri 3–6 PM (own Hours & Info page)",
+    "reservations": "Yes — via OpenTable for up to 12 guests (per own site), booked through https://www.buenosairescafe.com/reservations/ ; 13+ via private events page. Walk-ins welcome.",
+    "status": "Open (confirmed on own site)",
+    "near_muni": "Morris Williams (4305 Manor Rd) ~8 min (est.)",
+    "michelin": "none found (Austin MICHELIN listing checked 30 Sep 2026)",
+    "recs": [
+      {"outlet": "The Infatuation (25 Best Restaurants on Austin's East Side)", "url": "https://www.theinfatuation.com/austin/guides/east-side-austin-restaurants"},
+      {"outlet": "Austin Chronicle (Best of Austin 2022 readers poll, Best South American)", "url": "https://www.austinchronicle.com/best-of-austin-restaurants/year:2022/poll:readers/category:cuisine/buenos-aires-cafe-south-american/"}
+    ],
+    "url": "https://www.buenosairescafe.com/",
+    "images": [
+      {"path": "research/steakhouses/img/buenos-aires-cafe-1.jpg", "label": "Overhead spread: empanadas, roast chicken, Brussels sprouts, cheese board, fries, wine (own BentoBox site)"},
+      {"path": "research/steakhouses/img/buenos-aires-cafe-2.jpg", "label": "Salchicha parrillera sausage wheel with bread, empanadas, olives and Argentine wines (own site)"},
+      {"path": "research/steakhouses/img/buenos-aires-cafe-3.jpg", "label": "Hand-rolling gnocchi in the kitchen (own site; not steak)"}
+    ],
+    "flags": "Independent, family-run (Chef Reina Morris). Menu read from own HTML menu page (PDF versions hosted on indd.adobe.com, undated). Recs URLs taken from links on the café's own Press page (Chronicle poll is 2022). Value angle: Lomito Tuesday $25 Lomito & fries 2–6 PM; Monday half-off wine bottles; Sunday Gran Asado $50/pp (min 2). Steak here is a parrilla side-thread, not a full steakhouse."
+  },
+  {
+    "slug": "la-wagyeria",
+    "name": "La Wagyeria – Austin",
+    "style": "American wagyu 'butcher experience' — meet the butcher, pick your cut; Spanish-inspired starters",
+    "hood": "South Austin (St. Elmo, 'The Yard', Building D)",
+    "address": "440 E St Elmo Rd, Building D, Austin, TX 78745",
+    "dishes": [
+      {"name": "BASIC CUT: New York (with roasted potatoes & organic green salad)", "price": "$55"},
+      {"name": "Wagyu Ribeye (upgrade option)", "price": "not listed (own site: 'prices varying')"}
+    ],
+    "hours": "Check before you go — own ATX page: Thu–Sat 6:30–11:30 PM; OpenTable listing: Thu–Sat 5–11 PM",
+    "reservations": "Own site: 'request your invitation' or WhatsApp (https://wagyeria.com/pages/dinner-experience-atx). OpenTable page exists (https://www.opentable.com/r/la-wagyeria-austin) but showed 'Not bookable — temporarily offline' on 30 Sep 2026.",
+    "status": "Open per own site (ATX dinner page live) — but OpenTable shows temporarily offline; call ahead (512-905-2421 per OpenTable).",
+    "near_muni": "Jimmy Clay/Roy Kizer (5400 Jimmy Clay Dr) ~10 min (est.)",
+    "michelin": "none found (Austin MICHELIN listing checked 30 Sep 2026)",
+    "recs": [],
+    "url": "https://wagyeria.com/pages/dinner-experience-atx",
+    "images": [
+      {"path": "research/steakhouses/img/la-wagyeria-1.jpg", "label": "Raw marbled wagyu steak on salt (own Shopify CDN; brand-wide, not necessarily Austin)"},
+      {"path": "research/steakhouses/img/la-wagyeria-2.jpg", "label": "Sliced cooked wagyu steak with rosemary and flaky salt (own site; brand-wide)"},
+      {"path": "research/steakhouses/img/la-wagyeria-3.jpg", "label": "Butcher cutting a tomahawk rib roast (own site; possibly stock-style brand image)"}
+    ],
+    "flags": "Two-city brand (HQ Miami, 6300 NE 4th Ct). lawagyeria.com is only a GoDaddy 'Launching Soon' placeholder — real site is wagyeria.com. Own site says cattle are raised on its ranch in Okeechobee / central Florida, NOT Texas (OpenTable blurb says 'Texas ranch') — do not call it Texas wagyu without checking. BYOB with corkage per own site, but a May 2026 OpenTable review says BYOB no longer offered. OpenTable menu (updated 25 Apr 2026, third-party) lists e.g. Ribeye Boneless 14oz $69, Filet $65, Picanha $55, Tomahawk $100/lb — not own-site prices. No local-press recs found. Mixed OpenTable reviews (3.8/113)."
+  },
+  {
+    "slug": "guard-and-grace",
+    "name": "Guard and Grace (Austin)",
+    "style": "Modern steakhouse (Troy Guard) — but no Austin location exists",
+    "hood": "n/a",
+    "address": "n/a — no Austin address on own site",
+    "dishes": [],
+    "hours": "n/a",
+    "reservations": "n/a",
+    "status": "EXCLUDE — no Austin location found. Own site (guardandgrace.com) lists only Denver, Houston and Charlotte; guardandgrace.com/austin returns an empty page; searches found no Austin opening.",
+    "near_muni": "n/a",
+    "michelin": "n/a for Austin (own site calls the brand 'MICHELIN Guide-Recommended' for Denver/Houston — not verified on guide.michelin.com)",
+    "recs": [],
+    "url": "https://www.guardandgrace.com/",
+    "images": [],
+    "flags": "Likely a mix-up with the Houston location (One Allen Center, downtown Houston). No images downloaded because none would show an Austin restaurant. Recommend dropping from the Austin list."
+  },
+  {
+    "slug": "boa-steakhouse",
+    "name": "BOA Steakhouse Austin",
+    "style": "Modern upscale steakhouse (Creekstone prime, dry-aged cuts, Japanese A5 wagyu); Innovative Dining Group chain",
+    "hood": "Downtown (W 6th St at Lavaca)",
+    "address": "300 W. 6th Street, Austin, TX 78701",
+    "dishes": [
+      {"name": "Four Sixes Ranch Ribeye* (BOA x 6666)", "price": "$102"},
+      {"name": "Ribeye — 15 Day Dry Aged Bone-In*", "price": "$89"},
+      {"name": "NY Strip* 12 oz", "price": "$65"}
+    ],
+    "hours": "Dinner Sun–Thu 5–10 PM, Fri–Sat 5–11 PM; Happy hour Mon–Fri 4–6 PM (bar/lounge only)",
+    "reservations": "Yes — SevenRooms: https://www.sevenrooms.com/explore/boasteakhouseaustin/reservations/create/search",
+    "status": "Open (confirmed on own Austin location page)",
+    "near_muni": "Butler Pitch & Putt (201 Lee Barton Dr) ~6 min (est.)",
+    "michelin": "none found (Austin MICHELIN listing checked 30 Sep 2026)",
+    "recs": [
+      {"outlet": "Texas Monthly", "url": "https://www.texasmonthly.com/restaurant/boa-steakhouse/"},
+      {"outlet": "Community Impact (opening)", "url": "https://communityimpact.com/south-central-austin/dining/california-based-boa-steakhouse-debuts-first-texas-location-in-downtown-austin/"}
+    ],
+    "url": "https://www.boasteak.com/austin-location/",
+    "images": [
+      {"path": "research/steakhouses/img/boa-steakhouse-1.jpg", "label": "Dining room with wood shelving, banquettes and palms (from Austin location gallery; appears to be the Austin room)"},
+      {"path": "research/steakhouses/img/boa-steakhouse-2.jpg", "label": "Steak with quail egg, fries, crème brûlée and cocktails (file named 'Food & Beverage at BOA Steakhouse Austin')"},
+      {"path": "research/steakhouses/img/boa-steakhouse-3.jpg", "label": "Grilled tomahawk steak with knife on board (chain-wide homepage photo)"}
+    ],
+    "flags": "California-based chain (7 locations incl. Las Vegas, Napa, Mexico City coming soon); Austin is its only Texas outpost. Strict upscale dress code (no athletic wear, sweats, flip-flops) — relevant for post-round visits. Chain homepage touts a '40-day dry-aged New York strip' but the Austin menu lists only 15-day dry-aged cuts — conflict. Menu read from own HTML menu (undated). Value angle: weekday happy hour (Wagyu Smash Burger $15, BOA Burger $16, $10 cocktails); Tuesday 50% off wine bottles; valet $13."
+  },
+  {
+    "slug": "carve",
+    "name": "CARVE American Grille (Central Austin, The Grove; also Barton Creek)",
+    "style": "Live-fire / wood-smoked American grille with in-house butcher room and custom-cut steaks by the ounce (Perry's Restaurants concept)",
+    "hood": "Central Austin (The Grove, 45th St & Bull Creek Rd); second location Barton Creek (Lantana Place, SW Parkway)",
+    "address": "2613 Perseverance Drive, Austin, TX 78731 (Central Austin); 7415 SW Parkway, Building 1, Austin, TX 78735 (Barton Creek)",
+    "dishes": [
+      {"name": "14 oz. CARVE Smoked Sliced Ny Strip*", "price": "$49.50"},
+      {"name": "20 oz. Bone-In Cowboy Ribeye*", "price": "$69"},
+      {"name": "Caramelized Prime Rib Thursday* (16 oz.)", "price": "$49"}
+    ],
+    "hours": "Both locations: Mon–Thu lunch 11 AM–3 PM, dinner 3–10 PM (bar to 10); Fri lunch 11–3, dinner 3–10 (bar to 11); Sat brunch 11–3, dinner 3–10 (bar to 11); Sun brunch 11–3, dinner 3–9 (bar to 9)",
+    "reservations": "Yes — 'Make a Reservation' widget on own site (location selector: Central Austin / Barton Creek); booking platform not exposed in page text. An OpenTable listing (carve-american-grille-central-austin) appeared in search results — not confirmed from own site.",
+    "status": "Open (both locations confirmed on own site)",
+    "near_muni": "Central Austin: Lions Municipal 'Muny' (2901 Enfield Rd) ~6 min (est.), Hancock ~8 min (est.). Barton Creek: none within 10 min.",
+    "michelin": "none found (Austin MICHELIN listing checked 30 Sep 2026)",
+    "recs": [
+      {"outlet": "CultureMap Austin (second location)", "url": "https://austin.culturemap.com/news/restaurants-bars/04-20-22-perrys-restaurants-carve-steakhouse-new-location-the-grove-central-austin/"},
+      {"outlet": "Austin Food Magazine (Central Austin opening)", "url": "https://austinfoodmagazine.com/carve-american-grille-opens-second-location-in-central-austin/"},
+      {"outlet": "Visit Austin (Best Steakhouses in Austin; linked from CARVE's own site)", "url": "https://www.austintexas.org/austin-insider-blog/blog/post/top-steakhouses/"}
+    ],
+    "url": "https://www.carveamericangrille.com/location/carve-american-grille-central-austin/",
+    "images": [
+      {"path": "research/steakhouses/img/carve-1.jpg", "label": "Exterior of CARVE Central Austin at The Grove at dusk, fire feature (own BentoBox site)"},
+      {"path": "research/steakhouses/img/carve-2.jpg", "label": "CARVE butcher cutting a strip loin in the butcher room (own site 'The Butcher Is In' page; location not specified)"},
+      {"path": "research/steakhouses/img/carve-3.jpg", "label": "Wood-fired oven flames (own site About page; brand image)"}
+    ],
+    "flags": "Local mini-chain (2 Austin locations) from Perry's Restaurants (Perry's Steakhouse sister). Same menu at both locations; downloadable dinner PDF filename '26CAR01-001-Menu_Dinner_2…' (2026 code, exact date unverified). Butcher's custom-cut steaks priced by the ounce: Ribeye $3.95/oz (min 14 oz), NY Strip $3.75/oz, Filet Mignon $6.75/oz (min 8 oz). Value angle: Smoked Strip Friday Lunch 8 oz NY strip $22; CARVE Lunch Board $27; daily 'Happiest Hour' 3–6:30 PM ($5 off select starters/cocktails/pours). Prime Rib Thursday page says 4 PM–close; menu section says 4–10 PM (minor)."
+  },
+  {
+    "slug": "bashaws",
+    "name": "Bashaw's Steakhouse & Seafood",
+    "style": "Classic white-tablecloth steakhouse & seafood with weekend live jazz (per 2021 press)",
+    "hood": "Northwest Austin (Jester)",
+    "address": "6507 Jester Blvd, Austin (from Community Impact, Jan 2021 — NOT from own site)",
+    "dishes": [],
+    "hours": "n/a",
+    "reservations": "n/a",
+    "status": "EXCLUDE — likely permanently closed. Own domain bashawsteakhouse.com now serves an unrelated Thai online-gambling spam site (domain lapsed/hijacked); Wanderlog listing shows 'Permanently Closed' for every day.",
+    "near_muni": "n/a",
+    "michelin": "none found",
+    "recs": [
+      {"outlet": "Community Impact (opening roundup, 8 Jan 2021)", "url": "https://communityimpact.com/northwest-austin/impacts/steakhouse-debuts-in-northwest-austin-and-5-other-restaurant-openings-to-know/"}
+    ],
+    "url": "unverified — bashawsteakhouse.com no longer belongs to the restaurant (do not link)",
+    "images": [],
+    "flags": "Brief said 'opened late Nov 2025' — incorrect: Community Impact (published 8 Jan 2021) says it opened late November 2020. No own-site verification possible; no images. Do NOT link the old domain in the blog (spam/gambling content). Recommend dropping."
+  },
+  {
+    "slug": "gyu-kaku-austin",
+    "name": "Gyu-Kaku Japanese BBQ – Austin (bonus: Japanese-style wagyu)",
+    "style": "Japanese yakiniku (tabletop grill) with imported Japanese A5 wagyu; global chain",
+    "hood": "East Austin (Plaza Saltillo, E 5th St)",
+    "address": "1211 East 5th Street, Suite 100, Austin, TX 78702",
+    "dishes": [
+      {"name": "A5 Wagyu Kalbi Short Rib Slice*", "price": "$59.00"},
+      {"name": "Harami Skirt Steak* (21-day aged; miso or shio)", "price": "$12.95"}
+    ],
+    "hours": "Sun–Thu 11:30 AM–10:15 PM (last seating); Fri–Sat 11:30 AM–11:15 PM (last seating); happy hour Sun–Thu 11:30 AM–5 PM & 9–10:15 PM, Fri–Sat 11:30 AM–5 PM (own Austin page, 'Updated 9/28/2026')",
+    "reservations": "Yes — OpenTable: https://www.opentable.com/restref/client/?restref=1071871&ot_source=Restaurant%20website",
+    "status": "Open (confirmed on own Austin page, updated 28 Sep 2026)",
+    "near_muni": "Morris Williams (4305 Manor Rd) ~8 min (est.); Butler Pitch & Putt ~8 min (est.)",
+    "michelin": "none found (Austin MICHELIN listing checked 30 Sep 2026)",
+    "recs": [
+      {"outlet": "Patch Downtown Austin (opening coverage)", "url": "https://patch.com/texas/downtownaustin/japanese-barbecue-restaurant-coming-east-austin"}
+    ],
+    "url": "https://www.gyu-kaku.com/austin/",
+    "images": [
+      {"path": "research/steakhouses/img/gyu-kaku-austin-1.jpg", "label": "Plate of raw marinated kalbi beside the tabletop grill (chain-wide photo from gyu-kaku.com)"},
+      {"path": "research/steakhouses/img/gyu-kaku-austin-2.jpg", "label": "Thin-sliced beef tongue with lemon at the grill (chain-wide photo)"}
+    ],
+    "flags": "Chosen as bonus because it is verifiable on its own site. Global chain (800+ restaurants). Prices from own PDF 'c_w_grandmenu2609.pdf' (Sept 2026, regional 'C-W' menu linked from Austin page); A5 menu PDF 'us_wagyu2508.pdf' (Aug 2025, 'Supplies Limited') matches ($59 slice / $49 mix cut). Alternatives checked and rejected: Wagyu Yume trailer left The Domain (moved to Pink Flamingo Food Court, 7221 McNeil Dr, Sept 2025 per Community Impact) and its Selflane ordering page now lists 3922 Woodbury Dr, 78704 — location unstable, no own website, no menu prices visible; Chubby Cattle BBQ (AYCE wagyu yakiniku, Barton Creek Square) still shows 'Coming Soon' on its own site. Value angle: long happy hour; Mon–Fri lunch menu; Premium All-You-Can-Eat option."
+  }
+]
