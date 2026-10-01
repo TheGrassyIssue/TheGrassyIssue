@@ -2870,7 +2870,6 @@
     </div>
   </div>
   <!-- /NEEDLEPOINT -->
-
   <div class="load-more" id="loadMore" data-next="/feed/page-2.html">
     <a href="/feed/page-2.html" onclick="loadMoreCards(event)" class="load-more-link">Load more &rarr;</a>
   </div>
@@ -3729,18 +3728,8 @@
       if (hiddenLeft < CARDS_PER_PAGE && nextUrl()) await fetchPage();
       show();
     };
-    // Infinite scroll: whenever the Load more element is within 1200px of the viewport, keep loading.
-    let pending = false;
-    function near() { return lm && lm.style.display !== 'none' && lm.getBoundingClientRect().top < window.innerHeight + 1200; }
-    async function check() {
-      if (pending || busy) return; pending = true;
-      let progressed = false;
-      try { if (near()) { const before = document.querySelectorAll('.feed .card:not(.card-overflow)').length + document.querySelectorAll('.feed .card').length; await window.loadMoreCards(); progressed = (document.querySelectorAll('.feed .card:not(.card-overflow)').length + document.querySelectorAll('.feed .card').length) > before; } }
-      finally { pending = false; }
-      if (progressed && near()) setTimeout(check, 300);
-    }
-    window.addEventListener('scroll', () => { if (!pending) requestAnimationFrame(check); }, { passive: true });
-    setTimeout(check, 1500);
+    // No infinite scroll (1 Oct 2026, Lenny: "I don't love the endless scroll, can we go back to the load more style?").
+    // Older cards load only when the reader clicks Load more.
   })();
 /*/TGI-FEED-PAGED*/
 </script>

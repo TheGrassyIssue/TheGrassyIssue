@@ -7,8 +7,8 @@ size low", then "Let'd do Feed pagination - will it keep the style of a continuo
 index.html had all ~238 feed cards (1.36 MB of HTML, 277 KB of it carousel captions). This keeps the
 newest KEEP cards in index.html and moves the rest, with their carousel captions and any inline card
 scripts, into /feed/page-2.html, /feed/page-3.html ... (PER cards each). The homepage script fetches the
-next page as the reader nears the bottom (infinite scroll), so it still reads as one continuous feed;
-the Load more button stays as a crawlable fallback link. Filter pills load every page before filtering.
+next page when the reader clicks Load more (no infinite scroll, per Lenny 1 Oct 2026); the button is a
+real link, so crawlers can follow it. Filter pills load every page before filtering.
 
 IDEMPOTENT and SAFE TO RE-RUN. Each run first MERGES: the cards still in index.html (including any new
 card a wire-*-home.py script just put in slot 1) followed by every card already in /feed/page-*.html,
@@ -164,7 +164,7 @@ def patch_css(s):
 
 
 def patch_js(s):
-    # keep the Load more element on screen while older pages remain, so the infinite-scroll observer fires
+    # keep the Load more button on screen while older pages remain to fetch
     a = "loadMoreBtn.style.display = overflowCards.length > 0 ? '' : 'none';"
     if a in s:
         s = s.replace(a, "loadMoreBtn.style.display = (overflowCards.length > 0 || loadMoreBtn.dataset.next) ? '' : 'none';")
@@ -256,18 +256,8 @@ def insert_loader(s):
       if (hiddenLeft < CARDS_PER_PAGE && nextUrl()) await fetchPage();
       show();
     };
-    // Infinite scroll: whenever the Load more element is within 1200px of the viewport, keep loading.
-    let pending = false;
-    function near() { return lm && lm.style.display !== 'none' && lm.getBoundingClientRect().top < window.innerHeight + 1200; }
-    async function check() {
-      if (pending || busy) return; pending = true;
-      let progressed = false;
-      try { if (near()) { const before = document.querySelectorAll('.feed .card:not(.card-overflow)').length + document.querySelectorAll('.feed .card').length; await window.loadMoreCards(); progressed = (document.querySelectorAll('.feed .card:not(.card-overflow)').length + document.querySelectorAll('.feed .card').length) > before; } }
-      finally { pending = false; }
-      if (progressed && near()) setTimeout(check, 300);
-    }
-    window.addEventListener('scroll', () => { if (!pending) requestAnimationFrame(check); }, { passive: true });
-    setTimeout(check, 1500);
+    // No infinite scroll (1 Oct 2026, Lenny: "I don't love the endless scroll, can we go back to the load more style?").
+    // Older cards load only when the reader clicks Load more.
   })();
 /*/TGI-FEED-PAGED*/
 """
