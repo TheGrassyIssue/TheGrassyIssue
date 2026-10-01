@@ -16,14 +16,14 @@ POST = ROOT / "drops/best-steakhouses-in-austin.html"
 SLUG = "/drops/best-steakhouses-in-austin"
 KEY = "steak1"
 MARK, END = "<!-- TGI-STEAK-CARD -->\n", "<!-- /TGI-STEAK-CARD -->\n"
-TITLE = "The Best Steakhouses in Austin: 12 Independents"
+TITLE = "The Best Steakhouses in Austin: 13 Independents"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "steakhouses-2026"
 
 SLIDES = [
     ("jeffreys-ig-DF8pXx3pV64", "Jeffrey's 32-day dry-aged porterhouse sliced on a white plate",
      "Jeffrey's · Our pick", "Twelve independents, no chains",
-     "Live-oak ribeyes, a Michelin-starred hearth and beef from a family ranch. Twelve Austin steakhouses, checked 30 September."),
+     "Live-oak ribeyes, a Michelin-starred hearth and beef from a family ranch. Thirteen Austin steakhouses, checked 30 September."),
     ("hestia-ig-DZGGaFKjHWf", "Hestia's sliced 30-day dry-aged Texas Wagyu ribeye",
      "Hestia · $143", "The Michelin-starred hearth",
      "A 30-day dry-aged Texas Wagyu ribeye cooked over a 20-foot fire."),

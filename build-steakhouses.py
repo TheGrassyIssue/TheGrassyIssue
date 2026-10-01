@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""build-steakhouses.py — The Best Steakhouses in Austin: 12 Independents.
+"""build-steakhouses.py — The Best Steakhouses in Austin: 13 Independents.
 30 September 2026. A Field Note.
 
 Lenny: "let's do a field note about the best steak houses in Austin", then after
@@ -29,10 +29,10 @@ IMG = "/images/steakhouses-2026"
 FR = {k: [{"local": f"{IMG}/{f}.jpg"} for f in v]
       for k, v in json.loads((ROOT / "research/steakhouses/frames.json").read_text()).items()}
 
-TITLE = "The Best Steakhouses in Austin: 12 Independents"
-DESC = ("Twelve independent Austin steakhouses, from Jeffrey's live-oak ribeye to Hestia's Michelin-starred "
+TITLE = "The Best Steakhouses in Austin: 13 Independents"
+DESC = ("Thirteen independent Austin steakhouses, from Jeffrey's live-oak ribeye to Hestia's Michelin-starred "
         "hearth and Jacoby's own ranch beef. Prices checked 30 Sep 2026.")
-H1 = "The Best Steakhouses in Austin &mdash; 12 Independents"
+H1 = "The Best Steakhouses in Austin &mdash; 13 Independents"
 CHECK = "Check before you go"
 
 T = {
@@ -69,6 +69,10 @@ T = {
  "justines": ("Justine&rsquo;s", "East 5th &middot; 4710 E 5th St", "Steak frites, 12oz Angus ribeye &middot; $58",
    "Justine&rsquo;s is a moody French brasserie that stays open late, and the steak frites is the reason to go: a wood-grilled 12oz grass-fed Angus ribeye, or a Texas Wagyu New York strip for $75. It was a finalist for best steak in the Austin Chronicle readers&rsquo; poll this year.",
    CHECK, "https://justines1937.com/"),
+ # ---- South
+ "leroy": ("LeRoy and Lewis Steak Experience", "South Austin &middot; 5621 Emerald Forest Dr", "Steak dinner experience &middot; $90 per pound",
+   "The Michelin-starred barbecue restaurant turns into a steakhouse on Thursday to Sunday nights. Steaks are sourced locally, butchered and aged in house, then smoked and grilled, and the team picks the cuts for your table by party size and what is on hand. They run $90 a pound at 2.5 to 3.5 pounds each, so bring friends. Reservations open on OpenTable 90 days out at midnight and go quickly; use the waitlist if your night is full.",
+   "Steak dinners Thu&ndash;Sun nights &middot; reservations only", "https://leroyandlewisbbq.com/steakandcatering/"),
  # ---- North & the lake
  "bartletts": ("Bartlett&rsquo;s", "Allandale &middot; 2408 W Anderson Ln", "100-hour marinated ribeye",
    "Bartlett&rsquo;s is the north-side neighbourhood grill, locally owned, with steaks cooked over hardwood. The famous order is the 14oz ribeye marinated for 100 hours in pineapple, sesame and ginger, and the prime rib comes with a rosemary salt crust. House rule: no phones in the dining room. The online menu lists no prices.",
@@ -85,6 +89,8 @@ SECTIONS = [
      "<strong>Two stops &middot; six minutes from Muny</strong>Our pick and the best-value steakhouse in the city sit a few blocks apart, both a short drive from Lions."),
     ("east", "East Austin", "east-austin", ["jacobys", "daidue", "justines"],
      "<strong>Three stops &middot; ranch to late night</strong>The East Side has beef from a family ranch, a butcher shop that dry-ages for 95 days and steak frites until midnight."),
+    ("south", "South Austin", "south-austin", ["leroy"],
+     "<strong>One stop &middot; reservations only</strong>Texas barbecue and a live-fire steakhouse meet at LeRoy and Lewis, four nights a week."),
     ("north", "North &amp; the Lake", "north-and-the-lake", ["bartletts", "steiner"],
      "<strong>Two stops &middot; out of the core</strong>Bartlett&rsquo;s anchors the north side, and Steiner Ranch pairs with a round out toward Lake Travis."),
 ]
@@ -96,18 +102,18 @@ TAKE = """
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
     <p>Austin is not a steakhouse town the way Dallas and Houston are, and that works in its favour. The best steaks here come from independents: a Clarksville bistro that grills over live oak, a butcher shop that dry-ages ribeyes for 95 days, a family that serves beef from its own ranch, and a live-fire kitchen with a Michelin star. There is not a national chain on it.</p>
-    <p>If you book one, make it Jeffrey&rsquo;s. It is the most complete steak dinner in the city, six minutes from Muny, and the 26oz dry-aged ribeye is the order. For a fair price, ALC Steaks has been getting it right since 1993. For the big occasion, Hestia.</p>
+    <p>If you book one, make it Jeffrey&rsquo;s. It is the most complete steak dinner in the city, six minutes from Muny, and the 26oz dry-aged ribeye is the order. For a fair price, ALC Steaks has been getting it right since 1993. For the big occasion, Hestia, and for barbecue that turns into a steakhouse four nights a week, the LeRoy and Lewis steak experience.</p>
     <p>Our favourite, though, is Jacoby&rsquo;s. It is the one we keep going back to: a family that raises its own cattle in Melvin, Texas, dry-ages the beef and serves it in a reclaimed-wood room on the Colorado River in East Austin. It is not white-tablecloth, and that is the appeal. Go on a Thursday, when the steak frites and martinis are half price, and ask what the butcher&rsquo;s cut is that night.</p>
     <p>Prices are from each restaurant&rsquo;s own menu, read on 30 September 2026, and where a menu does not publish prices we leave them off. Several downtown rooms have a dress code, so change after the round. The Michelin Guide&rsquo;s 2026 Texas selection comes out on 8 October, so the stars and recommendations here may move. For more, see our <a href="/drops/best-chicken-sandwiches-in-austin">chicken sandwich field note</a> and <a href="/drops/austin-food-truck-field-guide">food truck field guide</a>.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">The Field Note</div>
-      <div class="sidebar-detail"><span class="l">Stops</span><span>12, all independent</span></div>
+      <div class="sidebar-detail"><span class="l">Stops</span><span>13, all independent</span></div>
       <div class="sidebar-detail"><span class="l">Our pick</span><span>Jeffrey&rsquo;s, 26oz ribeye $165</span></div>
       <div class="sidebar-detail"><span class="l">Our favourite</span><span>Jacoby&rsquo;s, Thursday steak frites</span></div>
       <div class="sidebar-detail"><span class="l">Best value</span><span>ALC Steaks, 12oz ribeye $57</span></div>
-      <div class="sidebar-detail"><span class="l">Michelin</span><span>Hestia (star), Dai Due (Bib), Jeffrey&rsquo;s &amp; Garrison (recommended)</span></div>
+      <div class="sidebar-detail"><span class="l">Michelin</span><span>Hestia &amp; LeRoy and Lewis (star), Dai Due (Bib), Jeffrey&rsquo;s &amp; Garrison (recommended)</span></div>
       <div class="sidebar-detail"><span class="l">Near a muni</span><span>Jeffrey&rsquo;s &amp; ALC, ~6 min from Lions</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>30 Sep 2026</span></div>
       <a href="#clarksville-and-central" class="sidebar-cta">Start with our pick &darr;</a>
@@ -124,9 +130,9 @@ TAKE = """
 
 FAQ = [
     ("What is the best steakhouse in Austin?",
-     "Our pick is Jeffrey's in Clarksville, for its live-oak-grilled, 32-day dry-aged 26oz ribeye ($165). The rest of our twelve: Hestia, VanHorn's, J. Carver's, The Driskill Grill, Garrison, ALC Steaks, Jacoby's, Dai Due, Justine's, Bartlett's and Steiner Ranch Steakhouse. All are independent."),
+     "Our pick is Jeffrey's in Clarksville, for its live-oak-grilled, 32-day dry-aged 26oz ribeye ($165). The rest of our thirteen: Hestia, VanHorn's, J. Carver's, The Driskill Grill, Garrison, ALC Steaks, Jacoby's, Dai Due, Justine's, the LeRoy and Lewis steak experience, Bartlett's and Steiner Ranch Steakhouse. All are independent."),
     ("Which Austin steakhouses are in the Michelin Guide?",
-     "In the 2025 guide, Hestia holds one star, Dai Due has a Bib Gourmand and a Green Star, and Jeffrey's and Garrison are Recommended. The 2026 Texas selection is announced on 8 October 2026."),
+     "In the 2025 guide, Hestia and LeRoy and Lewis Barbecue each hold one star, Dai Due has a Bib Gourmand and a Green Star, and Jeffrey's and Garrison are Recommended. The 2026 Texas selection is announced on 8 October 2026."),
     ("Which Austin steakhouse is closest to a golf course?",
      "Jeffrey's (1204 West Lynn) and ALC Steaks (1205 N Lamar) are each about six minutes from Lions Municipal. Downtown spots like VanHorn's, Hestia and Garrison are about five to seven minutes from Butler Pitch & Putt, and Dai Due is about five minutes from Morris Williams."),
     ("Where can I get a good steak in Austin for under $60?",
@@ -233,7 +239,7 @@ def head_top():
 
 def main(apply_):
     ids = [k for s in SECTIONS for k in s[3]]
-    assert len(ids) == 12 == len(set(ids)) and set(ids) == set(T)
+    assert len(ids) == 13 == len(set(ids)) and set(ids) == set(T)
     for k in ids:
         assert FR.get(k), f"{k} has no photos"
     d = DONOR.read_text(encoding="utf-8")
@@ -249,7 +255,7 @@ def main(apply_):
   <div class="drop-meta">
     <span>September 30, 2026</span><span class="dot"></span>
     <span>Austin &middot; 3 parts of town</span><span class="dot"></span>
-    <span>12 steakhouses &middot; checked 30 Sep</span>
+    <span>13 steakhouses &middot; checked 30 Sep</span>
   </div>
 </header>
 
@@ -279,7 +285,7 @@ def verify():
     for leak in ("Manors Revisited", "Fogo", "Perry", "Bob&rsquo;s"):
         if leak in above:
             bad.append(f"should not appear: {leak}")
-    if fin.count('class="product-card"') != 12:
+    if fin.count('class="product-card"') != 13:
         bad.append("card count")
     if 'class="pull-quote"' in above:
         bad.append("a pull-quote got in")
