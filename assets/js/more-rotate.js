@@ -12,9 +12,11 @@
     var cand = P.filter(function (p) { return p.u !== here; });
     function age(p) { return Math.max(0, (now - Date.parse(p.d + 'T12:00:00Z')) / 864e5); }
     function w(p, kinds) { return (0.04 + Math.pow(0.5, age(p) / 21)) / (1 + (kinds[p.k] || 0) * 0.6); }
+    var pin = (grid.getAttribute('data-pin') || '').split(',').filter(Boolean);
     var out = [], kinds = {};
-    var fresh = cand.filter(function (p) { return age(p) <= 14; });
-    if (fresh.length) { var f = fresh[Math.floor(Math.random() * fresh.length)]; out.push(f); kinds[f.k] = 1; }
+    pin.forEach(function (u) { cand.forEach(function (p) { if (p.u === u && out.indexOf(p) < 0) { out.push(p); kinds[p.k] = (kinds[p.k] || 0) + 1; } }); });
+    var fresh = cand.filter(function (p) { return age(p) <= 14 && out.indexOf(p) < 0; });
+    if (fresh.length && out.length < 4) { var f = fresh[Math.floor(Math.random() * fresh.length)]; out.push(f); kinds[f.k] = 1; }
     while (out.length < 4 && out.length < cand.length) {
       var rest = cand.filter(function (p) { return out.indexOf(p) < 0; });
       var tot = 0, ws = rest.map(function (p) { var x = w(p, kinds); tot += x; return x; });

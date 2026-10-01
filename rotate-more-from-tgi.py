@@ -71,12 +71,20 @@ def weight(d):
     age = max(0, (TODAY - datetime.date.fromisoformat(d)).days)
     return 0.04 + 0.5 ** (age / 21)
 
-def pick(P, self_slug, n=4, seed=None):
+def pins():
+    # Pinned cards (1 Oct 2026, Lenny on Local GC: "add [The Bird Edit] to the more from TGI section").
+    # data/more-pins.json maps a page slug to post URLs that always lead its More from TGI grid.
+    try:
+        return json.load(open(os.path.join(ROOT, "data/more-pins.json")))
+    except FileNotFoundError:
+        return {}
+
+def pick(P, self_slug, n=4, seed=None, pinned=()):
     rnd = random.Random(seed or self_slug)
     cand = [p for p in P if p["u"] != self_slug]
-    fresh = [p for p in cand if (TODAY - datetime.date.fromisoformat(p["d"])).days <= 14]
-    out = []
-    if fresh: out.append(rnd.choice(fresh))
+    out = [p for u in pinned for p in cand if p["u"] == u]
+    fresh = [p for p in cand if (TODAY - datetime.date.fromisoformat(p["d"])).days <= 14 and p not in out]
+    if fresh and len(out) < n: out.append(rnd.choice(fresh))
     while len(out) < n:
         rest = [p for p in cand if p not in out]
         kinds = collections.Counter(p["k"] for p in out)
@@ -92,7 +100,8 @@ def cards(ps):
         f'<div class="more-card-tag">{p["k"]}</div></div>\n    </a>' for p in ps)
 
 def grid_span(s):
-    i = s.find('<div class="more-grid">')
+    m0 = re.search(r'<div class="more-grid"[^>]*>', s)
+    i = m0.start() if m0 else -1
     if i < 0: return None
     depth, j = 0, i; tag = re.compile(r"<div\b|</div>")
     while True:
@@ -110,17 +119,20 @@ def main(apply_):
     grids = {}
     for f in pages:
         s = open(f, encoding="utf-8", errors="replace").read()
-        if '<div class="more-grid">' in s:
+        if '<div class="more-grid"' in s:
             sp = grid_span(s)
             grids[f] = tuple(re.findall(r'<a href="([^"]+)" class="more-card"', s[sp[0]:sp[1]])) if sp else ()
     dupcount = collections.Counter(grids.values())
     fixed = injected = 0
+    PIN = pins()
     for f, hrefs in grids.items():
         s = open(f, encoding="utf-8").read(); o = s
         slug = "/" + os.path.relpath(f, ROOT)[:-5]
-        if dupcount[hrefs] > 1 or slug in hrefs or len(hrefs) < 4:
+        pin = PIN.get(slug, [])
+        open_tag = '<div class="more-grid"' + (f' data-pin="{",".join(pin)}"' if pin else "") + '>'
+        if dupcount[hrefs] > 1 or slug in hrefs or len(hrefs) < 4 or tuple(hrefs[:len(pin)]) != tuple(pin) or open_tag not in s:
             sp = grid_span(s)
-            s = s[:sp[0]] + '<div class="more-grid">\n' + cards(pick(P, slug)) + "\n  </div>" + s[sp[1]:]
+            s = s[:sp[0]] + open_tag + '\n' + cards(pick(P, slug, pinned=pin)) + "\n  </div>" + s[sp[1]:]
             fixed += 1
         if TAG not in s:
             k = s.rfind("</body>")

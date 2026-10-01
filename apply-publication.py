@@ -25,6 +25,8 @@ PAGES = [
     "drops/enron-golf-collection.html",
     "drops/brand-to-know-no-return-club.html",
     "drops/limited-edition-golf-balls.html",
+    "drops/rangefinder-cases-and-pouches.html",
+    "drops/brand-to-know-local-gc.html",
     "drops/best-chicken-sandwiches-in-austin.html",
     "drops/brand-to-know-macade.html",
     "drops/brand-to-know-hudson-sutler.html",

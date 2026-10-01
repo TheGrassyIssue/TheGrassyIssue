@@ -1,0 +1,1241 @@
+{
+ "pouches": [
+  {
+   "id": "p01",
+   "slug": "fyfe-marksman",
+   "brand": "Fyfe Golf",
+   "name": "Marksman Range Finder Case",
+   "price": 69.0,
+   "currency": "GBP",
+   "material": "P270 waxed canvas, space-mesh lining, dark brown leather front pocket, two-way waterproof YKK zip with paracord pulls; made in Scotland",
+   "attach": "Matte black brass swivel hook + 3/4in nylon utility webbing",
+   "colours": [
+    "Vintage Green",
+    "Storm Grey",
+    "Deep Ocean",
+    "Burnt Orange",
+    "Surf Blue"
+   ],
+   "url": "https://www.fyfegolf.com/products/marksman-vintage-green",
+   "images": [
+    {
+     "path": "research/rangefinder/img/fyfe-marksman-1.jpg",
+     "label": "front (Vintage Green)"
+    },
+    {
+     "path": "research/rangefinder/img/fyfe-marksman-2.jpg",
+     "label": "side"
+    },
+    {
+     "path": "research/rangefinder/img/fyfe-marksman-3.jpg",
+     "label": "top"
+    },
+    {
+     "path": "research/rangefinder/img/fyfe-marksman-4.jpg",
+     "label": "lifestyle on bag"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Scottish heritage design; same Fidlock/YKK/brass-hook spec family as the sold-out SSC x Sentinel case. Collection: https://www.fyfegolf.com/collections/rangefinder-cases-fyfe-golf"
+  },
+  {
+   "id": "p02",
+   "slug": "bluegrass-recon",
+   "brand": "Bluegrass Fairway",
+   "name": "The Recon | Waxed Canvas Rangefinder Case (Blackwatch)",
+   "price": 80.0,
+   "currency": "USD",
+   "material": "Heavyweight Scottish waxed canvas (Blackwatch tartan) with cigar leather trim; handmade in the USA; approx 5in x 6in",
+   "attach": "D-ring snap hook",
+   "colours": [
+    "Blackwatch"
+   ],
+   "url": "https://www.bluegrassfairway.com/products/golf-rangefinder-case-in-blackwatch-waxed-canvas",
+   "images": [
+    {
+     "path": "research/rangefinder/img/bluegrass-recon-1.jpg",
+     "label": "front"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Only the Blackwatch Recon is in stock; Olive Drab, Cordura camo, Pendleton wool and Harris Tweed Recons all sold out. Store has just 2 images; second rejected (showed a different tan pouch)."
+  },
+  {
+   "id": "p03",
+   "slug": "winston-crazy-horse",
+   "brand": "Winston Collection",
+   "name": "Range Finder Case in Crazy Horse Leather",
+   "price": 99.99,
+   "currency": "USD",
+   "material": "Full-grain waxed Crazy Horse leather, black polar-fleece lining; fits rangefinders up to 6in; 6 x 4.5in",
+   "attach": "Carabiner",
+   "colours": [
+    "Brown (Crazy Horse)"
+   ],
+   "url": "https://winstoncollection.com/products/range-finder-case-in-crazy-horse-leather",
+   "images": [
+    {
+     "path": "research/rangefinder/img/winston-crazy-horse-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/winston-crazy-horse-2.jpg",
+     "label": "back"
+    },
+    {
+     "path": "research/rangefinder/img/winston-crazy-horse-3.jpg",
+     "label": "interior"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Also in stock: Colombian Leather case $89.99 (Tan/Cafe/Black)."
+  },
+  {
+   "id": "p04",
+   "slug": "winston-tradition",
+   "brand": "Winston Collection",
+   "name": "Range Finder Case in Tradition Leather",
+   "price": 119.99,
+   "currency": "USD",
+   "material": "100% genuine leather, McKenzie-plaid polar-fleece lining",
+   "attach": "Carabiner",
+   "colours": [
+    "White",
+    "Pink",
+    "Red",
+    "Navy",
+    "Dark Green"
+   ],
+   "url": "https://winstoncollection.com/products/tradition-leather-range-finder-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/winston-tradition-1.jpg",
+     "label": "front (Navy)"
+    },
+    {
+     "path": "research/rangefinder/img/winston-tradition-2.jpg",
+     "label": "open, plaid lining (Light Blue shown - not in stock)"
+    },
+    {
+     "path": "research/rangefinder/img/winston-tradition-3.jpg",
+     "label": "front (White)"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Tartan lining reveal is the design story."
+  },
+  {
+   "id": "p05",
+   "slug": "winston-aberdeen",
+   "brand": "Winston Collection",
+   "name": "Range Finder Case in Aberdeen Diamond Leather",
+   "price": 129.99,
+   "currency": "USD",
+   "material": "Genuine leather with antique worn finish and diamond deboss, McKenzie-plaid fleece lining",
+   "attach": "Carabiner",
+   "colours": [
+    "Bone"
+   ],
+   "url": "https://winstoncollection.com/products/aberdeen-diamond-range-finder-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/winston-aberdeen-1.jpg",
+     "label": "front (Brown shown)"
+    },
+    {
+     "path": "research/rangefinder/img/winston-aberdeen-2.jpg",
+     "label": "open (Brown shown)"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Only Bone in stock; images show Brown colourway - use cautiously or skip."
+  },
+  {
+   "id": "p06",
+   "slug": "jones-rf-pouch",
+   "brand": "Jones Sports Co.",
+   "name": "Rangefinder Pouch",
+   "price": 38.0,
+   "currency": "USD",
+   "material": "Nylon drawstring-style pouch with cinch-close top (product page gives no fabric spec)",
+   "attach": "YKK carabiner",
+   "colours": [
+    "Seacrest",
+    "Black",
+    "Blue/Fescue",
+    "F.C. Durham",
+    "Bone/Cedar",
+    "Cedar",
+    "Bone",
+    "Fescue/Bone",
+    "Olive Night",
+    "Charcoal",
+    "Moon Gray",
+    "Navy"
+   ],
+   "url": "https://jonessportsco.com/products/rangefinder-pouch-cedar",
+   "images": [
+    {
+     "path": "research/rangefinder/img/jones-rf-pouch-1.jpg",
+     "label": "front (Cedar)"
+    },
+    {
+     "path": "research/rangefinder/img/jones-rf-pouch-2.jpg",
+     "label": "carabiner detail"
+    },
+    {
+     "path": "research/rangefinder/img/jones-rf-pouch-3.jpg",
+     "label": "angle"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Cheapest design-led pick; matches Jones bag colourways. Olive Gray/Fescue and Alpine sold out."
+  },
+  {
+   "id": "p07",
+   "slug": "jones-heritage-pouch",
+   "brand": "Jones Sports Co.",
+   "name": "Rangefinder Pouch - Kodiak (Heritage Collection)",
+   "price": 45.0,
+   "currency": "USD",
+   "material": "Deluxe vegan leather, cinch-close top, traditional Jones silhouette",
+   "attach": "YKK carabiner",
+   "colours": [
+    "Kodiak",
+    "Ecru/Kodiak",
+    "Evergreen",
+    "Onyx",
+    "Oxford"
+   ],
+   "url": "https://jonessportsco.com/products/rangefinder-pouch-kodiak",
+   "images": [
+    {
+     "path": "research/rangefinder/img/jones-heritage-pouch-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/jones-heritage-pouch-2.jpg",
+     "label": "carabiner"
+    },
+    {
+     "path": "research/rangefinder/img/jones-heritage-pouch-3.jpg",
+     "label": "open interior"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Collegiate Campus Collection versions (e.g. Arizona, Texas, Clemson) $70-80 also in stock."
+  },
+  {
+   "id": "p08",
+   "slug": "walker-canvas",
+   "brand": "Walker Golf Things",
+   "name": "Canvas Rangefinder Bag Forest",
+   "price": 70.0,
+   "currency": "AUD",
+   "material": "Heavyweight 100% cotton canvas, padded embossed interior, embroidered Kooka logo, fold-over flap with metal snap",
+   "attach": "Metal carabiner + detachable rope sling (crossbody) + utility webbing",
+   "colours": [
+    "Forest"
+   ],
+   "url": "https://walkergolfthings.com/products/canvas-rangefinder-bag-forest",
+   "images": [
+    {
+     "path": "research/rangefinder/img/walker-canvas-1.jpg",
+     "label": "front with sling"
+    },
+    {
+     "path": "research/rangefinder/img/walker-canvas-2.jpg",
+     "label": "open flap"
+    },
+    {
+     "path": "research/rangefinder/img/walker-canvas-3.jpg",
+     "label": "lifestyle crossbody"
+    },
+    {
+     "path": "research/rangefinder/img/walker-canvas-4.jpg",
+     "label": "back webbing"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Australian brand; only rangefinder bag that doubles as a crossbody sling."
+  },
+  {
+   "id": "p09",
+   "slug": "mogshade-course-case",
+   "brand": "Mogshade",
+   "name": "Course Case",
+   "price": 96.0,
+   "currency": "EUR",
+   "material": "Handmade from rescued wool fabrics woven in Serra da Estrela, Portugal; inner ball-marker pocket and tee loops, open compartment for rangefinder",
+   "attach": "Metal carabiner",
+   "colours": [
+    "Grape",
+    "Risca Light",
+    "Seara",
+    "Risca Dark"
+   ],
+   "url": "https://mogshadegolf.com/products/grape-course-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/mogshade-course-case-1.jpg",
+     "label": "lifestyle hanging (Grape)"
+    },
+    {
+     "path": "research/rangefinder/img/mogshade-course-case-2.jpg",
+     "label": "interior with tees"
+    },
+    {
+     "path": "research/rangefinder/img/mogshade-course-case-3.jpg",
+     "label": "rangefinder inside"
+    },
+    {
+     "path": "research/rangefinder/img/mogshade-course-case-4.jpg",
+     "label": "detail"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Round wool case rather than a pure rangefinder case - upcycled-textile story. Ria colourway sold out."
+  },
+  {
+   "id": "p10",
+   "slug": "malbon-tour-divot",
+   "brand": "Malbon Golf",
+   "name": "Tour Divot Camo Rangefinder Case",
+   "price": 128.0,
+   "currency": "USD",
+   "material": "Ripstop nylon, zip closure, bungee cords on front, Tour Divot label",
+   "attach": "Carabiner",
+   "colours": [
+    "Bark Camo"
+   ],
+   "url": "https://malbongolf.com/products/tour-divot-camo-rangefinder-case-bark-camo",
+   "images": [
+    {
+     "path": "research/rangefinder/img/malbon-tour-divot-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/malbon-tour-divot-2.jpg",
+     "label": "angle"
+    },
+    {
+     "path": "research/rangefinder/img/malbon-tour-divot-3.jpg",
+     "label": "back"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Streetwear pick; pricey for nylon."
+  },
+  {
+   "id": "p11",
+   "slug": "swag-essentials",
+   "brand": "SWAG Golf",
+   "name": "SWAG Essentials: Black Rangefinder Case",
+   "price": 111.11,
+   "currency": "USD",
+   "material": "Vinyl, fur lining, zippered enclosure, embroidered magnetic flap; 6.5 x 4.75 x 1.5in",
+   "attach": "Black carabiner hook",
+   "colours": [
+    "Black",
+    "White (Essentials)",
+    "RWB Stacked Benjamins",
+    "RWB Stacked Skulls",
+    "RWB Stacked Kings"
+   ],
+   "url": "https://swag.golf/products/swag-essentials-black-rangefinder-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/swag-essentials-1.jpg",
+     "label": "Essentials Black"
+    },
+    {
+     "path": "research/rangefinder/img/swag-essentials-2.jpg",
+     "label": "RWB Stacked Kings"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Loud graphic option; all RWB versions $111.11 and in stock; Melting Skull sold out."
+  },
+  {
+   "id": "p12",
+   "slug": "north-coast-rf-case",
+   "brand": "North Coast Golf Co.",
+   "name": "Rangefinder Case",
+   "price": 70.0,
+   "currency": "USD",
+   "material": "Waterproof double zip with paracord pulls, magnetic flap, two inner pockets + rear slit pocket",
+   "attach": "Metal carabiner; magnetic flap",
+   "colours": [
+    "Sea Green/Navy Flap",
+    "Navy Body/Teal Flap",
+    "Navy (Light Blue Logo)",
+    "Green (Navy Logo)",
+    "Light Blue/Teal/Navy"
+   ],
+   "url": "https://northcoastgolfco.com/products/rangefinder-case",
+   "images": [],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Pacific NW brand with strong outdoor lifestyle photography."
+  },
+  {
+   "id": "p13",
+   "slug": "north-coast-bogey-bear",
+   "brand": "North Coast Golf Co.",
+   "name": "Bogey Black Bear Rangefinder Case",
+   "price": 60.0,
+   "currency": "USD",
+   "material": "Recycled rPET shell, waterproof double zip with paracord pulls, magnetic flap",
+   "attach": "Metal carabiner",
+   "colours": [
+    "Black"
+   ],
+   "url": "https://northcoastgolfco.com/products/bogey-black-bear-rangefinder-case",
+   "images": [],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Also in stock: WGA 1899 Rangefinder Case $60."
+  },
+  {
+   "id": "p14",
+   "slug": "vancouver-range-case",
+   "brand": "Vancouver Golf Co.",
+   "name": "Green Range Case",
+   "price": 55.0,
+   "currency": "CAD",
+   "material": "Premium vegan leather, leak-proof zip, water-resistant; tartan or black lining; 3.5 x 1.75 x 5.5in; optional foil-stamp/embroidered personalisation (+$5)",
+   "attach": "Clip/carabiner (per images)",
+   "colours": [
+    "Green",
+    "Black",
+    "Brown",
+    "Red",
+    "White",
+    "Blue (personalised only, $60)"
+   ],
+   "url": "https://vancouvergolfco.com/products/green-range-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/vancouver-range-case-1.jpg",
+     "label": "front with WOODS foil stamp"
+    },
+    {
+     "path": "research/rangefinder/img/vancouver-range-case-2.jpg",
+     "label": "gold foil initials"
+    },
+    {
+     "path": "research/rangefinder/img/vancouver-range-case-3.jpg",
+     "label": "back"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Canadian; personalisation angle. Black also in limited houndstooth lining."
+  },
+  {
+   "id": "p15",
+   "slug": "stitch-console",
+   "brand": "Stitch Golf",
+   "name": "Console",
+   "price": 34.0,
+   "currency": "USD",
+   "material": "Felt lining, YKK zips, interior mesh valuables pocket, elastic closure strap; optional ingot personalisation",
+   "attach": "Aluminum carabiner",
+   "colours": [
+    "Midnight"
+   ],
+   "url": "https://stitchgolf.com/products/console-2023",
+   "images": [
+    {
+     "path": "research/rangefinder/img/stitch-console-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/stitch-console-2.jpg",
+     "label": "angle"
+    },
+    {
+     "path": "research/rangefinder/img/stitch-console-3.jpg",
+     "label": "with rangefinder"
+    },
+    {
+     "path": "research/rangefinder/img/stitch-console-4.jpg",
+     "label": "carabiner side"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "On sale from $98 to $34 - strong value. Hard-shell style."
+  },
+  {
+   "id": "p16",
+   "slug": "palm-utility-bag",
+   "brand": "Palm Golf Co.",
+   "name": "Utility Bag (Range Finder Case) - Yosemite",
+   "price": 35.0,
+   "currency": "USD",
+   "material": "900D Oxford waterproof fabric, fleece-lined and padded; front zip rangefinder pocket, rear phone pocket, velcro front pouch",
+   "attach": "Laser-etched Palm carabiner",
+   "colours": [
+    "Yosemite",
+    "Sea Isle",
+    "Stars and Stripes",
+    "Black"
+   ],
+   "url": "https://palmgolfco.com/products/utility-bag-range-finder-case-yosemite",
+   "images": [
+    {
+     "path": "research/rangefinder/img/palm-utility-bag-1.jpg",
+     "label": "front (Yosemite)"
+    },
+    {
+     "path": "research/rangefinder/img/palm-utility-bag-2.jpg",
+     "label": "angle"
+    },
+    {
+     "path": "research/rangefinder/img/palm-utility-bag-3.jpg",
+     "label": "feature diagram"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Rangefinder + phone in one; Palm also sells a co-branded Precision Pro Titan Elite."
+  },
+  {
+   "id": "p17",
+   "slug": "lopar-leather-grain",
+   "brand": "Lopar Golf",
+   "name": "Leather Grain Rangefinder Case",
+   "price": 75.0,
+   "currency": "USD",
+   "material": "Weather-resistant vegan leather with grain texture",
+   "attach": "Carabiner; magnetic flap",
+   "colours": [
+    "Champlain Fog",
+    "River Rock",
+    "Ash Bark",
+    "Stowe Twilight",
+    "Augusta Shade",
+    "Claret No. 3 ($69)"
+   ],
+   "url": "https://lopargolf.com/products/leather-grain-rangefinder-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/lopar-leather-grain-1.jpg",
+     "label": "studio (brown)"
+    },
+    {
+     "path": "research/rangefinder/img/lopar-leather-grain-2.jpg",
+     "label": "on bag (brown)"
+    },
+    {
+     "path": "research/rangefinder/img/lopar-leather-grain-3.jpg",
+     "label": "on bag (white)"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Rangefinder-case specialist DTC brand (also on Amazon) - less indie than others but good on-bag shots."
+  },
+  {
+   "id": "p18",
+   "slug": "lopar-canvas",
+   "brand": "Lopar Golf",
+   "name": "Canvas Rangefinder Case",
+   "price": 75.0,
+   "currency": "USD",
+   "material": "Waterproof waxed-look canvas, leakproof zip, abrasion-resistant shell, EZYGrab magnetic access",
+   "attach": "Carabiner; magnetic flap",
+   "colours": [
+    "Washed Olive",
+    "Merlot Red"
+   ],
+   "url": "https://lopargolf.com/products/rangefinder-case-waxed-canvas",
+   "images": [
+    {
+     "path": "research/rangefinder/img/lopar-canvas-1.jpg",
+     "label": "back (Washed Olive)"
+    },
+    {
+     "path": "research/rangefinder/img/lopar-canvas-2.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/lopar-canvas-3.jpg",
+     "label": "front (green)"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Same caveat as above."
+  },
+  {
+   "id": "p19",
+   "slug": "sunday-nickel-bag",
+   "brand": "Sunday Golf",
+   "name": "Nickel Bag | Midnight Green",
+   "price": 35.0,
+   "currency": "USD",
+   "material": "Weather-resistant coated polyester, waterproof zips, 2 mesh pockets, smell-proof pocket; 6 x 8in",
+   "attach": "Secure hook",
+   "colours": [
+    "Midnight Green",
+    "Matte Black",
+    "Toasted Almond",
+    "Cobalt Blue"
+   ],
+   "url": "https://sundaygolf.com/products/nickel-bag-midnight-green-golf-valuables-pouch",
+   "images": [
+    {
+     "path": "research/rangefinder/img/sunday-nickel-bag-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/sunday-nickel-bag-2.jpg",
+     "label": "back"
+    },
+    {
+     "path": "research/rangefinder/img/sunday-nickel-bag-3.jpg",
+     "label": "flat-lay with contents"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Valuables pouch marketed as a great fit for rangefinders - not a dedicated case."
+  },
+  {
+   "id": "p20",
+   "slug": "ghost-utility-pouch",
+   "brand": "Ghost Golf",
+   "name": "Utility Pouch - Maverick",
+   "price": 40.0,
+   "currency": "USD",
+   "material": "Water-resistant exterior, velour lining, zip compartment + snap pocket; 7.25 x 6 x 0.5in",
+   "attach": "Carabiner",
+   "colours": [
+    "Maverick",
+    "Kovert Ops",
+    "Valor",
+    "Patriot",
+    "Katana",
+    "Oreo",
+    "Dark Gray & Carbon Fiber"
+   ],
+   "url": "https://ghostgolf.com/products/golf-utility-pouch-maverick",
+   "images": [
+    {
+     "path": "research/rangefinder/img/ghost-utility-pouch-1.jpg",
+     "label": "flat-lay with contents"
+    },
+    {
+     "path": "research/rangefinder/img/ghost-utility-pouch-2.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/ghost-utility-pouch-3.jpg",
+     "label": "back"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Flat utility pouch; lists rangefinder among contents - a thin fit for bulkier lasers."
+  },
+  {
+   "id": "p21",
+   "slug": "stickit-strap",
+   "brand": "STICKIT Magnetic Gear",
+   "name": "STICKIT Magnetic Rangefinder Strap (Gen3)",
+   "price": 26.95,
+   "currency": "USD",
+   "material": "Slotted slim elastic band with enlarged bar magnet and button cut-out; fits 50+ rangefinder models; patented (US 10034526)",
+   "attach": "Magnetic strap - wraps the rangefinder, sticks to cart bar",
+   "colours": [
+    "Camo Augusta Green",
+    "Camo Red White Blue",
+    "Camo Fatigue Green",
+    "Skulls Grey",
+    "Skulls Pink",
+    "Skulls Seafoam Green",
+    "Tiki Salmon",
+    "Tiki Sand",
+    "Tiki Teal Blue",
+    "Paisley Black"
+   ],
+   "url": "https://stickitmagneticgear.com/products/stickit-magnetic-rangefinder-strap-2",
+   "images": [
+    {
+     "path": "research/rangefinder/img/stickit-strap-1.jpg",
+     "label": "Camo Augusta Green"
+    },
+    {
+     "path": "research/rangefinder/img/stickit-strap-2.jpg",
+     "label": "Tiki Sand"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Small indie maker of the original magnetic strap; fun prints."
+  },
+  {
+   "id": "p22",
+   "slug": "frogger-latch-it",
+   "brand": "Frogger Golf",
+   "name": "Rangefinder Latch-It",
+   "price": 19.95,
+   "currency": "USD",
+   "material": "Holster with integrated dongle + Latch-it receiver",
+   "attach": "Cart bar, bag or belt receiver (latching mount)",
+   "colours": [
+    "Black"
+   ],
+   "url": "https://froggergolf.com/products/range-finder-latch-it",
+   "images": [
+    {
+     "path": "research/rangefinder/img/frogger-latch-it-1.jpg",
+     "label": "on cart bar"
+    },
+    {
+     "path": "research/rangefinder/img/frogger-latch-it-2.jpg",
+     "label": "in the box"
+    },
+    {
+     "path": "research/rangefinder/img/frogger-latch-it-3.jpg",
+     "label": "holster detail"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Mechanical latch rather than magnet - useful for push carts."
+  },
+  {
+   "id": "p23",
+   "slug": "bushnell-bite-clip",
+   "brand": "Bushnell Golf",
+   "name": "BITE Clip",
+   "price": 21.99,
+   "currency": "USD",
+   "material": "Stainless steel belt clip with BITE magnet plate",
+   "attach": "Magnetic - pairs with Bushnell integrated BITE mount; clips to belt/pocket",
+   "colours": [
+    "Black"
+   ],
+   "url": "https://www.bushnellgolf.com/products/bite-clip",
+   "images": [
+    {
+     "path": "research/rangefinder/img/bushnell-bite-clip-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/bushnell-bite-clip-2.jpg",
+     "label": "clip side"
+    },
+    {
+     "path": "research/rangefinder/img/bushnell-bite-clip-3.jpg",
+     "label": "back"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Turns any BITE-equipped Bushnell into a belt-carry laser. Mass brand but genuinely useful magnetic angle."
+  },
+  {
+   "id": "p24",
+   "slug": "voicecaddie-magnet-holder",
+   "brand": "Voice Caddie",
+   "name": "Laser Rangefinder Magnetic Holder",
+   "price": 24.99,
+   "currency": "USD",
+   "material": "Wrap holder with industrial-grade magnet",
+   "attach": "Magnetic - cart bar or any metal surface",
+   "colours": [
+    "Black"
+   ],
+   "url": "https://voicecaddie.com/products/laser-rangefinder-magnetic-holder",
+   "images": [
+    {
+     "path": "research/rangefinder/img/voicecaddie-magnet-holder-1.jpg",
+     "label": "on rangefinder"
+    },
+    {
+     "path": "research/rangefinder/img/voicecaddie-magnet-holder-2.jpg",
+     "label": "holder flat"
+    },
+    {
+     "path": "research/rangefinder/img/voicecaddie-magnet-holder-3.jpg",
+     "label": "side"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Universal strap-on magnet for lasers without one."
+  },
+  {
+   "id": "p25",
+   "slug": "bluetees-hard-case",
+   "brand": "Blue Tees Golf",
+   "name": "Rangefinder Hard Case",
+   "price": 29.28,
+   "currency": "USD",
+   "material": "Hard-shell carry case",
+   "attach": "Integrated clip",
+   "colours": [
+    "Black",
+    "Navy"
+   ],
+   "url": "https://blueteesgolf.com/products/rangefinder-hard-case-navy",
+   "images": [
+    {
+     "path": "research/rangefinder/img/bluetees-hard-case-1.jpg",
+     "label": "Black"
+    },
+    {
+     "path": "research/rangefinder/img/bluetees-hard-case-2.jpg",
+     "label": "Navy"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Fits S3 Max+ and S4 Ultra. Blue Tees Rangefinder Magnetic Strap ($29.98) is currently SOLD OUT."
+  },
+  {
+   "id": "p26",
+   "slug": "precisionpro-case",
+   "brand": "Precision Pro Golf",
+   "name": "Laser Rangefinder Carrying Case",
+   "price": 19.99,
+   "currency": "USD",
+   "material": "Black hard-shell case",
+   "attach": "Carabiner/clip",
+   "colours": [
+    "Black"
+   ],
+   "url": "https://precisionprogolf.com/products/nx10-case",
+   "images": [
+    {
+     "path": "research/rangefinder/img/precisionpro-case-1.jpg",
+     "label": "front"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Fits NX9/NX10/Titan and most other lasers. Precision Pro soft-shell cases sold out. Low priority."
+  },
+  {
+   "id": "p27",
+   "slug": "qg-sentinel-scout",
+   "brand": "Quiet Golf x Sentinel",
+   "name": "QG x Sentinel Golf Scout Bag",
+   "price": 140,
+   "currency": "USD",
+   "material": "Sentinel Scout built for Quiet Golf: waterproof X-Pac shell, 1.5mm neoprene lining, Fidlock magnet closure, two-way waterproof YKK zip; fits 3.5in x 5in x 2in; made in USA",
+   "attach": "Matte black brass swivel hook + 3/4in nylon utility webbing",
+   "colours": [
+    "Navy RX30",
+    "Olive X50 (Ultra White sold out)"
+   ],
+   "url": "https://quietgolf.com/products/qg-x-sentinel-golf-scout-bag-1",
+   "images": [
+    {
+     "path": "research/rangefinder/img/qg-sentinel-scout-1.jpg",
+     "label": "Navy"
+    },
+    {
+     "path": "research/rangefinder/img/qg-sentinel-scout-2.jpg",
+     "label": "Olive"
+    },
+    {
+     "path": "research/rangefinder/img/qg-sentinel-scout-3.jpg",
+     "label": "Navy detail"
+    },
+    {
+     "path": "research/rangefinder/img/qg-sentinel-scout-4.jpg",
+     "label": "Olive detail"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Only way to buy a Scout today; Sentinel own-store Scouts all sold out"
+  },
+  {
+   "id": "p28",
+   "slug": "sentinel-stash",
+   "brand": "Sentinel Golf",
+   "name": "Stash Pouch",
+   "price": 62,
+   "currency": "USD",
+   "material": "US-made X-Pac (VX21 / EPX), YKK AquaGuard zip, reverse snap panel holds two gloves; 9.5in x 6in; cut and sewn in New York",
+   "attach": "Nylon webbing loop with carabiner",
+   "colours": [
+    "EPX Black (8 left)",
+    "VX21 Cayenne (9 left)",
+    "EPX White (2 left)"
+   ],
+   "url": "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-srmy2-h7w7l-39l7x-bsgfm-ywarl-9cpaj",
+   "images": [
+    {
+     "path": "research/rangefinder/img/sentinel-stash-1.jpg",
+     "label": "EPX Black"
+    },
+    {
+     "path": "research/rangefinder/img/sentinel-stash-2.jpg",
+     "label": "detail"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "Valuables pouch, big enough for a rangefinder plus phone; not a dedicated laser case"
+  },
+  {
+   "id": "p29",
+   "slug": "sentinel-scout",
+   "brand": "Sentinel Golf",
+   "name": "Scout Rangefinder Case (own store)",
+   "price": 98,
+   "currency": "USD",
+   "material": "Sentinel's universal rangefinder case: X-Pac / Cordura, neoprene lining, Fidlock magnet, waterproof YKK zip; made in USA",
+   "attach": "Matte black brass swivel hook + webbing",
+   "colours": [
+    "SOLD OUT in all five colours on sentinelgolf.us"
+   ],
+   "url": "https://www.sentinelgolf.us/shop/p/lemons-8886w",
+   "images": [
+    {
+     "path": "research/rangefinder/img/sentinel-scout-1.jpg",
+     "label": "Navy X50"
+    },
+    {
+     "path": "research/rangefinder/img/sentinel-scout-2.jpg",
+     "label": "Cayenne RX30"
+    }
+   ],
+   "in_stock_checked": "2026-10-01",
+   "notes": "SOLD OUT - could run as \"restock watch\" line or skip"
+  }
+ ],
+ "rangefinders": [
+  {
+   "id": "r01",
+   "slug": "pp-nx9-slope",
+   "brand": "Precision Pro",
+   "name": "NX9 Slope Rangefinder",
+   "price": 199.99,
+   "specs": {
+    "range": "5-999 yd; flag lock to 400 yd",
+    "magnification": "6x, 24mm",
+    "slope_switch": "Yes (tournament toggle)",
+    "magnet": "Yes, magnetic cart mount",
+    "stabilisation": "No",
+    "battery": "CR2 replaceable",
+    "other": "IP67, 10 oz"
+   },
+   "url": "https://precisionprogolf.com/products/nx9-slope-rangefinder",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-pp-nx9-slope-1.jpg",
+     "label": "hero"
+    },
+    {
+     "path": "research/rangefinder/img/rf-pp-nx9-slope-2.jpg",
+     "label": "lifestyle"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "White or Black; budget pick. Not in old post (old post had NX10 Slope + Titan Elite)."
+  },
+  {
+   "id": "r02",
+   "slug": "vc-el3",
+   "brand": "Voice Caddie",
+   "name": "EL3 Laser Rangefinder",
+   "price": 149.99,
+   "specs": {
+    "range": "within 1 yd accuracy (max range not stated on site)",
+    "magnification": "6x",
+    "slope_switch": "Auto Slope (on/off)",
+    "magnet": "Yes, built-in",
+    "stabilisation": "No",
+    "battery": "Rechargeable lithium, USB-C",
+    "other": "88x33x51mm, 117 g; Pin Tracer, ball-to-pin mode"
+   },
+   "url": "https://voicecaddie.com/products/el3-laser-rangefinder",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-vc-el3-1.jpg",
+     "label": "Black"
+    },
+    {
+     "path": "research/rangefinder/img/rf-vc-el3-2.jpg",
+     "label": "lifestyle on cart"
+    },
+    {
+     "path": "research/rangefinder/img/rf-vc-el3-3.jpg",
+     "label": "Silver (not currently in stock)"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Micro-sized; only Black shown in stock. Specs from search summary of the official page."
+  },
+  {
+   "id": "r03",
+   "slug": "shotscope-pro-zr",
+   "brand": "Shot Scope",
+   "name": "PRO ZR",
+   "price": 199.99,
+   "specs": {
+    "range": "1,500 yd",
+    "magnification": "6x",
+    "slope_switch": "Yes, side slide switch",
+    "magnet": "Yes, built-in cart magnet",
+    "stabilisation": "No",
+    "battery": "CR2 3V replaceable (~4,000 readings)",
+    "other": "DuraShield metal hardshell, red/black dual optics"
+   },
+   "url": "https://shotscope.com/us/shop/products/golf-rangefinders/pro-zr/",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-shotscope-pro-zr-1.jpg",
+     "label": "front"
+    },
+    {
+     "path": "research/rangefinder/img/rf-shotscope-pro-zr-2.jpg",
+     "label": "rear 3/4"
+    },
+    {
+     "path": "research/rangefinder/img/rf-shotscope-pro-zr-3.jpg",
+     "label": "lifestyle on bag"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "In stock at $199.99 (RRP $299.99)."
+  },
+  {
+   "id": "r04",
+   "slug": "bushnell-a1-slope",
+   "brand": "Bushnell Golf",
+   "name": "A1-Slope",
+   "price": 299.99,
+   "specs": {
+    "range": "5-1,300 yd",
+    "magnification": "6x, 18mm",
+    "slope_switch": "Yes, via Mode button",
+    "magnet": "BITE magnetic skin (included)",
+    "stabilisation": "No",
+    "battery": "Integrated rechargeable, USB-C, 50+ rounds",
+    "other": "Smallest Bushnell ever: 3.75 x 1.42 x 2.36in, 5.1 oz, IPX6"
+   },
+   "url": "https://www.bushnellgolf.com/products/a1-slope",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-bushnell-a1-slope-1.jpg",
+     "label": "hero"
+    },
+    {
+     "path": "research/rangefinder/img/rf-bushnell-a1-slope-2.jpg",
+     "label": "on cart bar with BITE skin"
+    },
+    {
+     "path": "research/rangefinder/img/rf-bushnell-a1-slope-3.jpg",
+     "label": "lifestyle in hand"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Notable design - pocket-sized."
+  },
+  {
+   "id": "r05",
+   "slug": "bt-s4-ultra",
+   "brand": "Blue Tees Golf",
+   "name": "Series 4 Ultra",
+   "price": 299.98,
+   "specs": {
+    "range": "800 yd; flag lock to 350 yd",
+    "magnification": "7x",
+    "slope_switch": "Yes",
+    "magnet": "Yes",
+    "stabilisation": "No",
+    "battery": "not stated on product page",
+    "other": "OLED, IP54, 7.5 oz"
+   },
+   "url": "https://blueteesgolf.com/products/series-4-ultra-rangefinder",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-bt-s4-ultra-1.jpg",
+     "label": "Black front"
+    },
+    {
+     "path": "research/rangefinder/img/rf-bt-s4-ultra-2.jpg",
+     "label": "Black side"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Only Black in stock. Old post had Blue Tees Series 3 Max+ and Captain Pro, not this."
+  },
+  {
+   "id": "r06",
+   "slug": "pp-titan-slope",
+   "brand": "Precision Pro",
+   "name": "Titan Slope Rangefinder",
+   "price": 299.99,
+   "specs": {
+    "range": "5-999 yd; flag lock to 400 yd",
+    "magnification": "6x, 24mm",
+    "slope_switch": "Yes",
+    "magnet": "Yes, magnetic cart mount",
+    "stabilisation": "No",
+    "battery": "USB-C rechargeable, ~50 rounds",
+    "other": "Magnesium alloy shell, IP67, 14 oz; Golf Monthly Editor's Choice 2026"
+   },
+   "url": "https://precisionprogolf.com/products/titan",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-pp-titan-slope-1.jpg",
+     "label": "hero with Editor's Choice badge"
+    },
+    {
+     "path": "research/rangefinder/img/rf-pp-titan-slope-2.jpg",
+     "label": "lifestyle"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Sibling of the Titan Elite (which WAS in the old post) - same body minus GPS/Bluetooth. Limited editions (Azalea, Team USA/Europe) $249.99; Palm Golf editions $299.99."
+  },
+  {
+   "id": "r07",
+   "slug": "nikon-50i-gii",
+   "brand": "Nikon",
+   "name": "COOLSHOT 50i GII",
+   "price": 299.95,
+   "specs": {
+    "range": "6-1,200 yd",
+    "magnification": "6x, 22mm",
+    "slope_switch": "Incline/Decline (ID) mode",
+    "magnet": "Yes, built-in",
+    "stabilisation": "No",
+    "battery": "CR2 (~13,000 measurements)",
+    "other": "7.2 oz, rainproof, Dual Locked On Quake, 5-yr warranty"
+   },
+   "url": "https://www.nikonusa.com/p/coolshot-50i-gii/16789/overview",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-nikon-50i-gii-1.jpg",
+     "label": "product"
+    },
+    {
+     "path": "research/rangefinder/img/rf-nikon-50i-gii-2.jpg",
+     "label": "lifestyle banner"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Old post had the Coolshot Pro III Stabilized, not this model."
+  },
+  {
+   "id": "r08",
+   "slug": "vc-tl1",
+   "brand": "Voice Caddie",
+   "name": "TL1 Laser Rangefinder with Slope",
+   "price": 349.99,
+   "specs": {
+    "range": "1,000 yd",
+    "magnification": "6x",
+    "slope_switch": "Auto slope on/off",
+    "magnet": "Yes, integrated",
+    "stabilisation": "No",
+    "battery": "CR2 (~5,000 readings)",
+    "other": "2-colour OLED, IP54, 0.1s response; optional coloured silicone sleeves"
+   },
+   "url": "https://voicecaddie.com/products/tl1-laser-rangefinder-with-slope",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-vc-tl1-1.jpg",
+     "label": "White/Yellow hero"
+    },
+    {
+     "path": "research/rangefinder/img/rf-vc-tl1-2.jpg",
+     "label": "on cart with magnet"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Most design-forward look in the set (white/yellow)."
+  },
+  {
+   "id": "r09",
+   "slug": "garmin-z30",
+   "brand": "Garmin",
+   "name": "Approach Z30",
+   "price": 449.99,
+   "specs": {
+    "range": "pin to 400 yd",
+    "magnification": "6x",
+    "slope_switch": "PlaysLike distance (can be disabled)",
+    "magnet": "Yes, magnetic mount",
+    "stabilisation": "No",
+    "battery": "Replaceable (up to ~1 year use)",
+    "other": "IPX7; Range Relay sends distance to Garmin watch/app; front/back of green"
+   },
+   "url": "https://www.garmin.com/en-US/p/1411809/",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-garmin-z30-1.jpg",
+     "label": "3/4 view"
+    },
+    {
+     "path": "research/rangefinder/img/rf-garmin-z30-2.jpg",
+     "label": "side"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Price is Garmin MSRP from its press release; garmin.com renders price via JS so live price/stock could not be verified (page meta: sellable=true, discontinued=false). Old post had Approach Z82, not Z30."
+  },
+  {
+   "id": "r10",
+   "slug": "bushnell-pro-x3-link",
+   "brand": "Bushnell Golf",
+   "name": "Pro X3+LINK",
+   "price": 599.99,
+   "specs": {
+    "range": "5-1,300 yd",
+    "magnification": "7x, 28mm",
+    "slope_switch": "Yes, locking slope switch",
+    "magnet": "Yes, integrated BITE",
+    "stabilisation": "No",
+    "battery": "CR2",
+    "other": "Wind speed/direction, temperature/altitude compensation, dual red/black display, Bluetooth, LINK to Foresight launch monitors; IPX7, 12 oz"
+   },
+   "url": "https://www.bushnellgolf.com/products/pro-x3-link",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-bushnell-pro-x3-link-1.jpg",
+     "label": "hero"
+    },
+    {
+     "path": "research/rangefinder/img/rf-bushnell-pro-x3-link-2.jpg",
+     "label": "BITE mount on cart"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Premium anchor. Old post only referenced Pro X3+ in passing (Tour V7 Shift entry), not as an item."
+  },
+  {
+   "id": "r11",
+   "slug": "bt-captain-air",
+   "brand": "Blue Tees Golf",
+   "name": "Captain Air Connected GPS Rangefinder",
+   "price": 249.98,
+   "specs": {
+    "range": "not stated on product page",
+    "magnification": "not stated",
+    "slope_switch": "not stated",
+    "magnet": "not stated",
+    "stabilisation": "No",
+    "battery": "not stated",
+    "other": "Bluetooth, GPS via app, built on S4 platform, waterproof"
+   },
+   "url": "https://blueteesgolf.com/products/captain-air",
+   "images": [
+    {
+     "path": "research/rangefinder/img/rf-bt-captain-air-1.jpg",
+     "label": "hero"
+    },
+    {
+     "path": "research/rangefinder/img/rf-bt-captain-air-2.jpg",
+     "label": "side on black"
+    }
+   ],
+   "repeat_of_old_post": false,
+   "notes": "Spec detail thin from official JSON; lower priority. Captain PRO (old post) is a repeat - avoid."
+  }
+ ],
+ "sold_out_or_not_found": [
+  "Sugarloaf Social Club x Sentinel Rangefinder Case ($95) and Double Seve Rangefinder Case ($95) - all sold out",
+  "Oland Golf wool/waxed canvas/leather rangefinder cases ($100) - sold out",
+  "Bluegrass Fairway Recon in Olive Drab, Cordura camo, Pendleton wool, Harris Tweed - sold out",
+  "Blue Tees Rangefinder Magnetic Strap ($29.98) - sold out",
+  "No rangefinder case currently at: Seamus, Dormie Workshop, Gumtree (Squarespace, no case found), MacKenzie (no store reachable), Vessel, Rose & Fire, Birds of Condor, Metalwood Studio, Hudson Sutler, CMC Design, Dimple & Divot, Pins & Aces, Cayce, Eastside, Bad Birdie, Linksoul, Holderness & Bourne, Turtleson",
+  "Asbury Golf, PRG Americas - no store/product found; Barstool/Fore Play skipped (mass)",
+  "Leupold GX-6c - official page shows no price; skipped. Mileseey - official site blocked by Cloudflare; skipped.",
+  "Sentinel own store is sentinelgolf.us (Squarespace): Scout $98 sold out in Black/Navy X50, Goldenrod/Cayenne RX30, White ULTRA; Sorensen Pouch $108 sold out"
+ ]
+}
