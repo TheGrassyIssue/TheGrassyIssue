@@ -1,355 +1,370 @@
 #!/usr/bin/env python3
+"""build-streetwear26.py — The 9 Best Golf Streetwear Brands in 2026 (same URL as the Aug 30 top-five).
+
+1 October 2026. Lenny: "let's update the streetwear page- these are the new picks, keep the position on the
+homepage and URL" with nine brands and an award each, then "6 pieces per brand, with the quotes and short write
+ups per brand, then make sure we have good images that are on-brand".
+The 30 August top-five version and its builder are archived in research/streetwear-oct/.
+
+FACTS: every product read from the brand's own store on 1 Oct 2026 (research/streetwear-oct/picks.json; Shopify
+products.json, Metalwood from its product pages). Quotes verbatim: Huynh (Golf Digest, Nov 2022), Young (FORE),
+Malbon (Complex, 12 Jul 2024), Ajanaku (Axios Detroit, Jul 2025), Tan (Public Drip About page), Midiron and Hidden
+Links Society (their own sites), Clamp (Meet the Team), ALD (as quoted by Golf Digest, 9 May 2024).
+Ownership facts carried from the Aug 30 status check (Malbon/Anthos, Eastside/Centric).
+GBP at 1.3449 and AUD at 0.6951 to USD.
+PHOTOS: brands' own store and campaign images, localised to /images/streetwear-oct.
 """
-build-streetwear26.py — rebuild the golf streetwear ranking on the Kingfisher structure.
+import html as H
+import json
+import os
+import pathlib
+import re
+import sys
 
-Lenny, 2026-08-30: "I want to revamp this page" → full treatment, refresh the
-lineup → "it's too many options, what are the 5 top brands" → cut to five →
-"let's give it some good write ups then push."
-
-WHAT WAS WRONG WITH THE OLD PAGE
---------------------------------
-1,878 words, fifteen brands, and NOT ONE IMAGE. No hero, no product cards, no
-galleries. It also failed verify-post: the meta description read "brands worth
-knowing in 2026" and "worth" is banned in TGI copy.
-
-Two entries were factually broken:
-  * EASTSIDE GOLF — Centric Brands formed a joint venture with them, reported by
-    WWD 13 Aug 2026. The old copy called them independent.
-  * BOGEY BOYS — /collections/all renders 0 products and the product sitemap is
-    empty. The site has been a photo archive since ~late March 2026. We ranked it
-    at #12 as though you could buy something.
-
-And the category problem: of the fifteen, only Metalwood, Rebolf and partly
-Devereux were still streetwear. Seven never were — Gumtree is upcycled deadstock
-and surfboards, Sentinel is expedition gear, Sugarloaf is Nantucket Red prep,
-Fyfe is Harris Tweed headcovers, MacKenzie makes leather bags. They were there
-because the page needed fifteen.
-
-THE ANGLE WE CAN OWN
---------------------
-Nobody on page one of this SERP does any of this:
-  * a dated status check per brand (competitors still rank Bogey Boys as one to
-    watch), so every entry carries "Checked 30 August 2026"
-  * ownership disclosure — Malbon's $33M Anthos round and outside CEO, Manors'
-    £3m, Eastside's Centric JV. The category is consolidating and everyone is
-    running 2023 copy
-  * a stated methodology BEFORE ranking anything
-  * honest category policing — saying plainly who drifted and who never was
-
-Five entries, not fifteen. Hypebeast ranked five; the only page-one result going
-past ten is a gift-affiliate page.
-
-PRICES AND STOCK
-----------------
-Every product was pulled live from each brand's own Shopify catalogue on
-30 Aug 2026 and every one was in stock at capture. Currencies are NATIVE — ANTi
-in yen, not converted. Research file: research/streetwear26.json.
-
-METALWOOD CAVEAT: metalwood.studio blocks its products.json endpoint. Their three
-cards use images we already localised during the Brand Revisited, and carry ONE
-frame each rather than three — no faked gallery. Their prices are marked approx.
-"""
-import os, re, json, html as H, sys
-
-ROOT = os.path.dirname(os.path.abspath(__file__))
+ROOT = pathlib.Path(__file__).resolve().parent
+DONOR = ROOT / "drops/brand-to-know-manors.html"
 SLUG = "best-golf-streetwear-brands-2026"
-PAGE = os.path.join(ROOT, "drops", SLUG + ".html")
-TPL = os.path.join(ROOT, "drops", "brand-to-know-kingfisher-golf.html")
-IMG = "/images/streetwear26"
-CHECKED = "30 August 2026"
+OUT = ROOT / f"drops/{SLUG}.html"
+URL = f"https://thegrassyissue.com/drops/{SLUG}"
+IMG = "/images/streetwear-oct"
+CHECKED = "1 October 2026"
+PK = json.loads((ROOT / "research/streetwear-oct/picks.json").read_text())
 
-TITLE = "The 5 Best Golf Streetwear Brands in 2026"
-DESC = ("The five golf streetwear brands that actually earn the label in 2026 &mdash; each one status-checked, with ownership disclosed. Metalwood, Students, Malbon, Casualist and ANTi Country Club Tokyo, with three pieces from each.")
+TITLE = "The 9 Best Golf Streetwear Brands in 2026"
+DESC = ("The nine best golf streetwear brands of 2026, each with an award: Students, Metalwood, Malbon, Eastside, "
+        "Public Drip, Midiron, Clamp, Aimé Leon Dore and Hidden Links Society, with six pieces from each.")
+H1 = "The 9 Best Golf Streetwear Brands in 2026"
 
-SK = {p["k"]: p for p in json.load(open(os.path.join(ROOT, "research", "streetwear26.json")))}
+
+def gbp(x):
+    return f"&pound;{x:,.0f} (~${x*1.3449:,.0f})"
 
 
-def frames_for(brand, i):
-    """How many gallery frames actually exist on disk for this card."""
+def aud(x):
+    return f"A${x:,.0f} (~${x*0.6951:,.0f})"
+
+
+# per brand: award, display name, profile link, write-up paragraphs, pull quote, band captions, product copy x6
+BRANDS = [
+ dict(k="students", award="Best Overall", name="Students Golf",
+  link=("/drops/students-golf-our-15-favorites", "Our 15 favourite Students pieces"),
+  body=["Students is the most complete brand in golf streetwear right now. Michael Huynh built Publish, a Los Angeles streetwear label, before he turned to golf, and it shows in the cut: pleats that hang properly, nylon that looks like outerwear rather than rainwear, knitwear you would wear to dinner.",
+        "It is also the deepest catalogue on this list, with more than 600 pieces in stock and a fresh fall drop that went live the morning we checked. You can dress head to toe out of Students, and it sits in Bodega, HBX and Culture Kings next to the labels those shops are known for."],
+  pq=("My past as a designer is rooted in streetwear, so it gets me excited to bring those principles to golf in ways that the sport hasn&rsquo;t had access to yet.", "Michael Huynh, Students founder, to Golf Digest, November 2022"),
+  band=["The Art Dept. tee, on model", "The full fit", "Through the smoke"],
+  copy=["A boxy Mack-style jacket in a print Students says was inspired by an oil slick on a course pond. The statement piece of the fall drop.",
+        "A cable-knit polo sweater with a structured collar, collegiate and relaxed. The piece to wear from the first tee to dinner.",
+        "Worn-in work pants with reinforced detailing, cut straight and roomy. They look like workwear and swing like golf trousers.",
+        "A terry-bodied short-sleeve polo with woven utility details. Soft, structured and a long way from pique.",
+        "Lightweight nylon pants in Students&rsquo; own custom camo, with a relaxed utility cut and drawcord hems.",
+        "A full sherpa jacket for cold mornings, clean and utilitarian. The warmest thing in the drop."]),
+ dict(k="metalwood", award="Best Retro", name="Metalwood Studio",
+  link=("/drops/brand-to-know-metalwood-studio", "Read the Metalwood profile"),
+  body=["Nobody mines old golf and old sport better than Metalwood. Cole Young left Malbon in 2020 to start it, and the result looks like a pro shop from 1998 run by skaters: soccer jerseys, gradient mesh, a G.H.BASS moc toe and adidas golf shoes built on a Predator upper.",
+        "The product copy is half the fun. The Sportocasin listing reads &ldquo;RIP Bobby Jones he woulda loved 10k MOI Drivers,&rdquo; and the MC70 page admits everyone is mad at him for calling it &ldquo;soccer&rdquo;. It is still founder-run, and the entry price is a $62 tee."],
+  pq=("I was done helping people build their own empires. I knew I could do it, so I was just going to do it for me.", "Cole Young, Metalwood Studio founder, to FORE Magazine"),
+  band=["Metalwood on the course", "The adidas collab, off the pitch", "Studio session"],
+  copy=["A pale yellow soccer jersey with &ldquo;King of the Green&rdquo; on the chest and a Metalwood repair-centre graphic on the back. The retro pick in one garment.",
+        "adidas Originals and Metalwood put a Predator-style upper on a spiked golf sole, in solar yellow. The most talked-about golf shoe of the year.",
+        "A black leather moc-toe with G.H.BASS, which reads as a loafer until you see the sole. It comes boxed with a Metalwood dust bag.",
+        "A pale blue gingham overshirt with oversized utility pockets. Metalwood says the pockets hold three iPads and a foot-long sandwich.",
+        "A heavyweight olive hood with the Dewey logo across the chest in a hardcore-flyer scrawl.",
+        "A long-sleeve mesh top that fades in vertical stripes, with a boxed logo across the chest."]),
+ dict(k="malbon", award="Most Influential", name="Malbon Golf",
+  link=("/drops/no-budget-malbon", "No Budget: Malbon&rsquo;s most expensive pieces"),
+  body=["Every brand on this page owes something to Malbon. Stephen and Erica Malbon started it in 2017 from an Instagram mood board and a pro shop on Fairfax, and proved that golf clothing could sit next to streetwear on a shop rack. The collaborations, from Nike and New Balance to Daniel Arsham and Bushmills, set the template everyone now follows.",
+        "It is a bigger company now. Malbon raised a $33 million round led by Anthos Capital, Aaron Heiser, formerly of Nike, is chief executive, and the range runs to GORE-TEX outerwear and cashmere. The influence is not in question, and the six below show both the old Malbon and the new one."],
+  pq=("I thought of it more as just trying to inspire young people that old stuffy golfers aren&rsquo;t as lame as you think.", "Stephen Malbon, to Complex, July 2024"),
+  band=["Malbon on course", "The Dornoch anorak", "The adidas Samba golf shoe"],
+  copy=["A colour-blocked pullover in 2-layer GORE-TEX, engineered with 686, with waterproof zips. The new Malbon at its most technical.",
+        "A wool-cashmere crewneck in forest green with the Malbon script at chest and sleeve. The quiet end of the range.",
+        "The adidas Samba rebuilt as a golf shoe in pale green leather with a gum sole. Malbon&rsquo;s best-known kind of collab.",
+        "A lightweight short-sleeve windshirt with an elastic waist and Malbon script across the back. Built to wear all year.",
+        "The Fairway Polo in an all-over Arsham monogram, from the Daniel Arsham collection.",
+        "A heavyweight tee with two palms on the back. The cheapest way into Malbon at $68."]),
+ dict(k="eastside", award="Best Cultural Point of View", name="Eastside Golf",
+  link=("/drops/fall-drops-eastside-students-devereux", "Eastside in our fall drops"),
+  body=["Eastside Golf has the clearest point of view in the sport. Olajuwon Ajanaku and Earl Cooper started it to put people who look like them into golf on their own terms, and the Swingman logo says it before the clothes do. It has an Air Jordan collaboration behind it and a following well outside golf.",
+        "Centric Brands formed a joint venture with Eastside in August, so it now has a bigger partner behind it. The fall range is the strongest we have seen from them: corduroy, a space-themed polo from the Zero Gravity collection and striped knitwear, and none of it over $140."],
+  pq=("I was tired of trying to fit into a mold. Why not come into the sport as I am.", "Olajuwon Ajanaku, Eastside Golf co-founder, to Axios Detroit, July 2025"),
+  band=["The Fall &rsquo;26 Gravity look", "Three balls and a Swingman", "The Swingman on the tee"],
+  copy=["A navy and cranberry corduroy check with a Swingman at the chest and script across the back. Eastside calls it new ground, and it is the best thing in the drop.",
+        "A pique polo printed with a course running out into space, from the Zero Gravity collection.",
+        "A double-knit crew with the Eastside Golf name debossed into the fabric and a tonal Swingman. Subtle for Eastside.",
+        "A tech-stretch hoodie in blue camo with the script logo, made to swing in on cold mornings.",
+        "A soft knit crew in wild grape with a small embroidered Swingman. The easiest piece here to wear anywhere.",
+        "A wool-blend polo sweater in green and navy vertical stripes. Vintage in shape, loud in colour."]),
+ dict(k="publicdrip", award="Best Emerging Brand", name="Public Drip",
+  link=("/drops/public-drip-brooklyns-muni-born-golf-label", "Read the Public Drip profile"),
+  body=["Public Drip is the brand on this list most likely to be twice the size next year. Neil Tan started it in Brooklyn in 2020 after getting back into golf at Van Cortlandt Park in the Bronx, and it is made for public-course golfers rather than members.",
+        "The clothes are menswear first: herringbone, waffle knit, double-pleated trousers and a felt &ldquo;P&rdquo; on denim. The FW26 Nightshift collection is shot in a clothing shop rather than a clubhouse, and nothing in it costs more than $170."],
+  pq=("Creating high-quality, yet approachable products is our nod to the accessibility of the public spaces that made us.", "Neil Tan, Public Drip founder, on the brand&rsquo;s About page"),
+  band=["The &ldquo;P&rdquo; Script cap", "Nightshift, in the shop", "FW26: Nightshift"],
+  copy=["A long-sleeve polo in a textured waffle knit, in a stretchy nylon blend. The Nightshift piece we would buy first.",
+        "A cotton-blend half zip in a soft herringbone knit, in coffee. Menswear with a golf collar.",
+        "Double-pleated trousers in a lightweight stretch nylon, modelled on a suit trouser, in pinstripe.",
+        "A long-sleeve version of Public Drip&rsquo;s player&rsquo;s mock, in a soft cotton blend with an embroidered script.",
+        "A five-panel denim cap with a felt &ldquo;P&rdquo; script and a leather strap. The brand&rsquo;s best-known logo.",
+        "The core Public Athlete polo with a knitted contrast collar and an embossed &ldquo;P&rdquo;. The on-course staple."]),
+ dict(k="midiron", award="Best Design Language", name="Midiron",
+  link=("/drops/brand-to-know-midiron", "Read the Midiron profile"),
+  body=["Midiron has the most consistent look of any brand here. The Australian label shoots everything at night on empty courses, cuts every polo boxy and untucked, and writes product copy better than anyone in golf, without ever putting a founder&rsquo;s name to it.",
+        "The catalogue is tiny, eight pieces in stock, and every one of them looks like it came from the same world: camo, varsity stripes and caps that read &ldquo;For the love of G*lf&rdquo;. The Big Stick headcover is &ldquo;for the club you trust the least and rely on the most.&rdquo;"],
+  pq=("golf clothing never felt like the rest of our wardrobe. It belonged on the course, but nowhere else.", "Midiron, on its own site"),
+  band=["After dark, in the bunker", "The Detour stripe, on course", "Tree camo at night"],
+  copy=["A boxy performance polo in bush camo that is cut to wear untucked. Midiron&rsquo;s line is that it isn&rsquo;t a golf polo.",
+        "Midiron&rsquo;s take on a vintage 90s polo in wide black and white stripes, on the same boxy fit.",
+        "The Tour Spec polo in tree camo with a varsity-style Midiron across the chest.",
+        "An unstructured ripstop cap in camo with &ldquo;For the love of G*lf&rdquo; embroidered on the front.",
+        "A black twill cap made, in Midiron&rsquo;s words, for the days you stripe one down the middle and still make a double.",
+        "A padded camo driver cover for the club you trust the least and rely on the most."]),
+ dict(k="clamp", award="Best Under-the-Radar", name="Clamp Golf Company",
+  link=("/drops/brand-to-know-clamp-golf-company", "Read the Clamp profile"),
+  body=["Clamp is a headcover workshop in Yorkshire, and most golfers in the US have never heard of it. They should have. Its reworked covers are cut from real Palace, Supreme, Carhartt and Nike ACG bags and packs, so every set is a one-off, and they are the best streetwear objects in golf right now.",
+        "The base collection of leather and tweed covers is solid; the reworked and collab pieces are the best we have seen in a while. They sell out in drops: four of the six below were in stock the day we looked, and we kept the Supreme hybrid and the Nike ACG set, both sold out, because they are the best things Clamp has made."],
+  pq=("What started as an idea for more personal headcovers has grown into a workshop making custom pieces for golfers and clubs around the world.", "Clamp Golf Company, Meet the Team"),
+  band=["The Clamp workshop", "The Military Range", "Made for a football club"],
+  copy=["Cut from a Palace bag with leather backing: driver, wood, hybrid and a blade putter cover. The priciest set here, and the most streetwear thing Clamp makes.",
+        "A single grey mallet cover with the red Supreme tag. The cheapest way into the reworked line if you only want to dress the putter.",
+        "A pale grey hybrid cover cut from a Supreme bag, with the box-logo lettering repeated in tone and a toggle and drawcord closure. Gone, but it shows what Clamp does with Supreme.",
+        "Black Carhartt duck canvas with the square Carhartt label on the driver, brass rivets and a utility pocket on the wood. Our pick from the Clamp Brand to Know, and still in stock.",
+        "A driver, wood, hybrid and alignment stick set cut from a Carhartt bag, with black leather backing and a fleece lining.",
+        "Cut from a Nike ACG pack, keeping the black grid ripstop, coyote webbing and buckles, the ACG triangle and the Bigfoot patch. Sold out, and the best set Clamp has made."]),
+ dict(k="ald", award="Best Fashion Crossover", name="Aim&eacute; Leon Dore",
+  link=("/drops/aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater", "ALD&rsquo;s SS26 golf capsule"),
+  body=["Aim&eacute; Leon Dore is a fashion brand first, and that is why it is here. Teddy Santis&rsquo;s Queens label has made a golf capsule every spring since 2024, the latest with FootJoy, and it treats the course as one more setting for the same clubhouse-prep wardrobe it sells all year.",
+        "The SS26 golf capsule has sold through and the ALD Golf page is down, so the six below come from ALD&rsquo;s main fall line. They are the pieces that cross over: a Fair Isle knit polo from the North Face collab, a crested rugby, a fleece-lined windbreaker and caps."],
+  pq=("deep admiration for the game and its distinctive style", "Aim&eacute; Leon Dore on its first golf capsule, as quoted by Golf Digest, May 2024"),
+  band=["ALD Golf SS26", "Pleats and a polo", "The clubhouse look"],
+  copy=["A merino Fair Isle polo from the ALD and The North Face collaboration. The best golf sweater ALD has made that isn&rsquo;t called a golf sweater.",
+        "A heavy 360gsm cotton rugby in red with an embroidered crest and a cream collar. Clubhouse prep at its most ALD.",
+        "A water-repellent nylon windbreaker lined in fleece, with a two-way zip. Made for October rounds.",
+        "A cashmere quarter zip lined in cotton. The most expensive piece on the page, and it looks it.",
+        "A blue five-panel snapback with ALD&rsquo;s crest printed on the front.",
+        "An unstructured cap in striped denim with a leather and brass strap."]),
+ dict(k="hls", award="Best Cult Pick", name="Hidden Links Society",
+  link=("/drops/brand-to-know-hidden-links-society", "Read the Hidden Links Society profile"),
+  body=["Hidden Links Society sells about thirty products and is documenting a hundred golf courses, and the people who know it really know it. The Public 100 Project has them playing and shooting every course on Golf Digest&rsquo;s Top 100 Public list, one at a time.",
+        "The clothes are quiet and well made: a heavyweight overshirt that took more than a year, a &ldquo;Play Faster&rdquo; tee and cap, and a brass pitch-mark tool stamped &ldquo;Fix your damn pitch marks&rdquo;. The clothing tops out at $78."],
+  pq=("no memberships, no private gates, no invitations required.", "Hidden Links Society, on The Public 100 Project"),
+  band=["The follow-through", "Out of the bunker", "The Play Faster cap"],
+  copy=["A charcoal polo sweatshirt that HLS spent more than a year on, understated enough for the clubhouse.",
+        "A garment-washed cotton tee with &ldquo;Play Faster.&rdquo; on the back, made to order. A PSA for your group.",
+        "A five-panel flat-peak cap with the same message, in walnut.",
+        "A perforated bucket hat with the Bud chenille patch, the brand&rsquo;s favourite logo.",
+        "A plain garment-washed tee with a small woven badge, for the range or nowhere near a course.",
+        "A single-prong pitch-mark tool in aged brass, stamped and heavy. Fix your damn pitch marks."]),
+]
+for b in BRANDS:
+    b["rows"] = PK[b["k"]]
+    assert len(b["rows"]) == 6 == len(b["copy"]), b["k"]
+
+
+def price(k, raw):
+    x = float(raw)
+    if k == "clamp":
+        return gbp(x)
+    if k == "midiron":
+        return aud(x)
+    return f"${x:,.0f}" if x.is_integer() else f"${x:,.2f}"
+
+
+def nice(t):
+    t = re.sub(r"\s+", " ", t).strip()
+    return t.title() if t.isupper() else t
+
+
+def frames(k, i):
     n = 0
-    while os.path.exists(f"{ROOT}{IMG}/{brand}-{i}-{n}.jpg"):
+    while (ROOT / f"images/streetwear-oct/{k}-{i}-{n}.jpg").is_file():
         n += 1
-    return n
+    return [f"{IMG}/{k}-{i}-{j}.jpg" for j in range(n)]
 
 
-def gallery(brand, i, name, n, local=None):
-    if local:
-        return (f'<div class="product-gallery"><div class="pg-track">'
-                f'<div class="pg-frame"><img src="{local}" alt="{name}" loading="lazy" /></div>'
-                f'</div></div>')
-    frames = "".join(
-        f'<div class="pg-frame"><img src="{IMG}/{brand}-{i}-{j}.jpg" '
-        f'alt="{name} &middot; view {j+1} of {n}" loading="lazy" /></div>' for j in range(n))
-    dots = "".join(f'<button class="pg-dot{" on" if j == 0 else ""}" data-i="{j}" '
-                   f'aria-label="View image {j+1}"></button>' for j in range(n))
-    return (f'<div class="product-gallery"><div class="pg-track">{frames}</div>'
+def card(b, i, idx):
+    r = b["rows"][i]
+    fr = frames(b["k"], i)
+    name = H.escape(nice(r["t"]))
+    label = H.unescape(f'{b["name"]} {nice(r["t"])}').replace('"', "")
+    imgs = "".join(f'<div class="pg-frame"><img src="{f}" alt="{H.escape(label)} &middot; view {j+1} of {len(fr)}" loading="lazy" /></div>'
+                   for j, f in enumerate(fr))
+    dots = "".join(f'<button class="pg-dot{" on" if j == 0 else ""}" data-i="{j}" aria-label="View image {j+1}"></button>'
+                   for j in range(len(fr)))
+    return (f'<div class="product-card" id="p-{idx}" data-frames="{len(fr)}"><div class="product-gallery">'
+            f'<div class="pg-track">{imgs}</div>'
             f'<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
             f'<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
-            f'<span class="pg-count">1/{n}</span><div class="pg-dots">{dots}</div></div>')
+            f'<span class="pg-count">1/{len(fr)}</span><div class="pg-dots">{dots}</div></div>'
+            f'<div class="product-body"><div class="product-brand">{b["name"]}</div>'
+            f'<div class="product-name">{name} &middot; {("Sold out &middot; was " if r.get("sold") else "") + price(b["k"], r["price"])}</div>'
+            f'<div class="product-desc">{b["copy"][i]}</div>'
+            f'<a href="{r["url"]}" target="_blank" rel="noopener" class="product-link">{"View" if r.get("sold") else "Shop"} &#8599;</a></div></div>')
 
 
-def card(brand, i, label, prod):
-    name = H.escape(prod["t"])
-    n = 1 if prod.get("local") else frames_for(brand, i)
-    g = gallery(brand, i, f"{label} {name}", n, prod.get("local"))
-    price = prod["price"]
-    link = (f'<a href="{prod["url"]}" target="_blank" rel="noopener" class="product-link">Shop &nearr;</a>'
-            if prod.get("url") else '<span class="product-link">See the brand &nearr;</span>')
-    return f'''<div class="product-card" data-frames="{n}">
-      {g}
-      <div class="product-body">
-        <div class="product-brand">{label} &middot; In stock {CHECKED}</div>
-        <div class="product-name">{name} &middot; {price}</div>
-        <div class="product-desc">{prod["desc"]}</div>
-        {link}
-      </div>
-    </div>'''
+def pq(b):
+    q, who = b["pq"]
+    return (f'\n<div class="pull-quote" style="margin:8px auto 24px">\n  <div class="pull-quote-inner">'
+            f'&ldquo;{q}&rdquo;<span class="pull-quote-attr">&mdash; {who}</span></div>\n</div>\n')
 
 
-BRANDS = [
-{
- "k": "metalwood", "rank": 1, "name": "Metalwood Studio", "loc": "Los Angeles",
- "kick": "<strong>The one nobody argues about.</strong> Cole Young left Malbon to build a brand that puts Y2K tour aesthetics through a skate lens &mdash; and in 2026 it out-collabed everyone.",
- "link": "/drops/brand-to-know-metalwood-studio", "linktext": "Read the Metalwood profile",
- "body": [
-  "Metalwood is unambiguously streetwear, and it is also having its best year. In February it dropped a first golf capsule with adidas Originals, launched on a film with Collin Morikawa and the skateboarder Nora Vasconcellos &mdash; a pairing that tells you exactly which two rooms the brand wants to be in. On 20 August it put out the Sportocasin with G.H.BASS, a $275 shoe that reads as a penny loafer until you look at the sole. In between: Maxfli balls, Garrett Leight eyewear, a Realtree five-panel.",
-  "Cole Young was a Division I golfer at Loyola Marymount and then a Malbon employee, and he has been direct about why he left. &ldquo;I was done helping people build their own empires,&rdquo; he told FORE Magazine. &ldquo;I knew I could do it, so I was just going to do it for me.&rdquo; He launched in April 2020. The line he uses to describe the result is the sharpest summary of the brand anyone has managed: &ldquo;It&rsquo;s also the only golf brand that doesn&rsquo;t have the word &lsquo;golf&rsquo; in the name.&rdquo;",
-  "What that buys you is clothing that survives the car park. The graphics are dense and slightly sarcastic, the fits are cut for someone who owns skate shoes, and the price of entry is a $62 tee. Founder still in place, no outside money we could find, cadence relentless. It is number one and it is not close.",
- ],
- "picks": [
-  {"t": "King of the Grass Tee", "price": "approx. $62",
-   "local": "/images/metalwood/new-kotg-tee.jpg",
-   "desc": "The graphic tee is the brand&rsquo;s whole thesis in one $60-ish garment &mdash; dense artwork, boxy cut, no logo creep. Start here before anything else."},
-  {"t": "Dewey Hoodie", "price": "approx. $148",
-   "local": "/images/metalwood/new-dewey-hoodie.jpg",
-   "desc": "Heavyweight brown hood with the wordmark across the chest. The piece that turns up in every Metalwood lookbook and most of the tagged photos."},
-  {"t": "adidas × Metalwood Pant", "price": "approx. $130",
-   "local": "/images/metalwood/new-adidas-pant.jpg",
-   "desc": "From the February capsule with adidas Originals. Wide, pleated, black &mdash; the trouser that made the collab read as skate rather than golf."},
- ]},
-{
- "k": "students", "rank": 2, "name": "Students Golf", "loc": "Los Angeles",
- "kick": "<strong>The pedigree is real, not borrowed.</strong> Everything here was cut by people who made streetwear first and came to golf second.",
- "link": "/drops/students-golf-our-15-favorites", "linktext": "Our 15 favourite Students pieces",
- "body": [
-  "Most golf brands claim streetwear. Students came the other way round. Michael Huynh built Publish first &mdash; a Los Angeles label with two decades in the actual streetwear trade &mdash; then applied that pattern-making to golf. The tell is in the cut: pleats that fall properly, mesh where a golf brand would use pique, an anorak that would work on a skate trip.",
-  "The validation is wholesale, which is the hardest kind to manufacture. Students sits in Bodega, HBX and Culture Kings, on the same racks as the labels those shops are known for. A Students &times; PAYNTR shoe sold through at wholesale. The catalogue runs to 232 pieces in stock, and the newest went live on 29 August &mdash; the day before we checked.",
-  "It is also the deepest range here. The line runs well past a tee, a hood and a hat &mdash; chore coats, wool jackets, knit cardigans and pleated slacks &mdash; so you can dress head to toe out of one brand.",
- ],
- "picks": None},
-{
- "k": "malbon", "rank": 3, "name": "Malbon Golf", "loc": "Los Angeles",
- "kick": "<strong>They built the category, and 2026 is the year it shows.</strong> They are impossible to leave off, and impossible to write about honestly without the ownership facts.",
- "link": "/drops/no-budget-malbon", "linktext": "No Budget &mdash; Malbon&rsquo;s most expensive pieces",
- "body": [
-  "Stephen and Erica Malbon made golf streetwear a category that retailers would stock. Before Malbon, the idea that a golf brand could sit next to a skate brand was a pitch deck. After, it was a market. Everything else on this page exists partly because they proved the room was there.",
-  "Here is the part that usually gets left out. Malbon raised a $33 million round led by Anthos Capital; Aaron Heiser, formerly of Nike, is now chief executive, and Stephen and Erica moved to co-Chief Creative Officers. Anthony Kim took an equity stake in February. In August they shipped a second Gap collection. The brand has a Performance tab in its navigation, a CoolCore program and $448 cart bags.",
-  "None of that is a knock. It is a description of a company that has grown, and it is why Malbon sits third here rather than first: the range now runs wider than streetwear, through performance and womenswear, and it is being built for a bigger room. What it has become is a well-run apparel company that started as the loudest thing in golf.",
- ],
- "picks": None},
-{
- "k": "casualist", "rank": 4, "name": "Casualist", "loc": "Melbourne &middot; London &middot; Los Angeles",
- "kick": "<strong>The best-made clothing in the category, and the quietest.</strong> No graphic you can read from the fairway &mdash; the argument here is entirely construction.",
- "link": "/drops/brand-to-know-casualist", "linktext": "Read the Casualist profile",
- "body": [
-  "Casualist is the outlier on this page and it is here on purpose. There is no dense back print, no house character, no sneaker program. What there is instead is a cotton pique polo with an unstructured collar, a pleated trouser in organic cotton, and a ripstop jacket cut for the cart path &mdash; garments that would pass without comment in a room that has nothing to do with golf.",
-  "That is the test, restated. The question is not whether a brand looks like streetwear; it is whether it designs like a clothing label rather than a golf company. Casualist does. The range is built the way a small menswear label builds a collection &mdash; a polo, a mockneck, a trouser, a vest, a cap &mdash; and the golf is an application rather than a category. Prices run from &pound;45 for a five-panel to &pound;240 for the jacket, in sterling, from a brand that operates between Melbourne, London and Los Angeles.",
-  "The one thing to know before you go looking is the pace. Casualist&rsquo;s most recent drop was 31 March &mdash; the pleated trousers, the No Idea heavy tee and the All The Gear sweatshirt, published within eight minutes of each other. The range is small and it moves slowly, which is what puts it fourth in a category that otherwise moves weekly. Everything on the site is in stock and shipping.",
- ],
- "picks": [
-  {"t": "Trust the Swing Pique Polo", "price": "&pound;115",
-   "url": "https://casualist.com/products/trust-the-swing-pique-polo-dusty-blue",
-   "desc": "The collar is soft and unstructured, the fabric cotton pique, the colour dusty blue. The piece the brand is built around and the clearest statement of the whole idea: nothing on it you could read from the fairway."},
-  {"t": "Pleated Golf Trousers — Organic Cotton", "price": "&pound;160",
-   "url": "https://casualist.com/products/pleated-trousers",
-   "desc": "The newest thing they have made, out on 31 March. Organic cotton, properly pleated, cut to sit as a normal trouser rather than a golf trouser."},
-  {"t": "Cart Path Ripstop Jacket", "price": "&pound;240",
-   "url": "https://casualist.com/products/cart-path-ripstop-jacket",
-   "desc": "The best object in the range and the most expensive. Ripstop, boxy, and the one piece here that will outlast the trend that produced it."},
- ]},
-{
- "k": "anti", "rank": 5, "name": "ANTi Country Club Tokyo", "loc": "Tokyo",
- "kick": "<strong>&ldquo;Anarchism to old school golf culture.&rdquo;</strong> That is their own line. They have an adidas Golf collab and HBX distribution, and page one of Google has never covered them.",
- "link": "/drops/the-white-tee-edit-2026", "linktext": "ANTi in The White Tee Edit",
- "body": [
-  "Every other ranking of this category is American, with one British exception. That is a strange way to write about golf clothing in 2026, when the most interesting work is being done in Tokyo &mdash; a city that has treated golf as a subculture to dress for since the eighties.",
-  "ANTi Country Club Tokyo state their position in the name and repeat it in their copy: anarchism to old school golf culture. In practice that means varsity jackets with a full back print, plaid double-layer shirting, one-tuck chinos and heavy embroidered crews, priced from about &yen;11,550 for a graphic tee up to &yen;65,000 for outerwear. The 26SS collection is live.",
-  "The credential that matters: an adidas Golf &times; ANTi &ldquo;Gazelle G&rdquo; at &yen;22,000, and shelf space at HBX and at Badlands in New Jersey &mdash; the shop that also carries Students and Merrill. When American buyers import you, you are not a local curiosity.",
- ],
- "picks": None},
-]
-
-# The cut list is re-reasoned as of the Casualist swap. When the first test was
-# "streetwear first", Manors, Quiet Golf and Odd Ritual were excluded BY
-# DEFINITION. Loosening the test to "a clothing brand first" admits them, so
-# leaving those old reasons in place would have the page contradict itself in
-# two places on one screen. They are now cut on ranking, which is the honest
-# answer: they qualify, they are not the five best.
-FAQ = [
- ("What counts as golf streetwear?",
-  "For this ranking, four things. The brand has to design like a clothing label that happens to make golf clothes, rather than a golf company adding a graphic to a performance polo. It has to sell garments you would wear off the course without explaining yourself. It has to have a real drop cadence rather than a static catalogue. And it has to be currently trading, with product in stock. Applying all four honestly is what makes this a short list &mdash; and why Casualist, which owns no graphics at all, sits here alongside brands built on them."),
- ("What is the best golf streetwear brand in 2026?",
-  "Metalwood Studio. It is unambiguously streetwear and it had a landmark year — a first golf capsule with adidas Originals in February, and the Sportocasin with G.H.BASS in August. Founder Cole Young still runs it, and the entry price is a $62 tee."),
- ("Is Malbon still a streetwear brand?",
-  "It is broader than it was. Malbon created the category, and the 2026 business now reaches well past it: a Performance tab in the navigation, a CoolCore program, $448 cart bags, womenswear. It also took a $33 million round led by Anthos Capital and now has an outside chief executive in Aaron Heiser, formerly of Nike, with Stephen and Erica Malbon moved to co-Chief Creative Officers."),
- ("Where can I buy these brands outside their own sites?",
-  "Badlands in Atlantic Highlands, New Jersey is the most useful single stockist &mdash; it carries ANTi, Students and Merrill among others. Students is also at Bodega, HBX and Culture Kings, and ANTi is at HBX. Metalwood, Malbon and Casualist are largely direct."),
- ("How often is this page updated?",
-  "Every brand here was status-checked on 30 August 2026 &mdash; store live, product in stock, most recent dated activity, and any change of ownership. We re-check quarterly, and we remove brands that stop trading rather than leaving them ranked."),
-]
+def band(b):
+    figs = "\n".join(f'  <figure><img src="{IMG}/band-{b["k"]}-{n}.jpg" alt="{H.unescape(b["name"])}: {H.unescape(c)}" loading="lazy" />'
+                     f'<figcaption class="ig-cap">{c}</figcaption></figure>' for n, c in enumerate(b["band"]))
+    return f'  <div class="ig-grid" style="margin:8px 0 28px">\n{figs}\n  </div>\n'
 
 
-def main(apply_=False):
-    tpl = open(TPL, encoding="utf-8").read()
+def section(b, rank, n0):
+    MT = ' style="margin-top:14px"'
+    paras = "\n".join(f'    <p{"" if j == 0 else MT}>{p}</p>' for j, p in enumerate(b["body"]))
+    cards = "\n".join(card(b, i, n0 + i) for i in range(6))
+    href, text = b["link"]
+    return (f'\n<section class="products" style="margin-top:8px;">\n'
+            f'  <div class="drop-tag grass">{b["award"]}</div>\n'
+            f'  <h2 class="products-hdr" id="{b["k"]}">{rank}. {b["name"]}</h2>\n'
+            f'  <div style="max-width:760px;margin:0 auto 18px;font-size:16px;line-height:1.75">\n{paras}\n'
+            f'    <p style="margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.6">'
+            f'Checked {CHECKED} &middot; <a href="{href}">{text} &rarr;</a></p>\n  </div>\n'
+            f'{pq(b)}{band(b)}'
+            f'    <div class="products-grid">\n{cards}\n    </div>\n</section>\n'), n0 + 6
 
-    # ---- head: every field written fresh. Never inherit the template's identity.
-    faq_ld = {"@context": "https://schema.org", "@type": "FAQPage",
-              "mainEntity": [{"@type": "Question", "name": q,
-                              "acceptedAnswer": {"@type": "Answer", "text": re.sub(r"<[^>]+>", "", a)}}
-                             for q, a in FAQ]}
-    art = {"@context": "https://schema.org", "@type": "Article",
-           "headline": "The 5 Best Golf Streetwear Brands in 2026",
-           "description": re.sub(r"&[a-z]+;", "-", DESC),
-           "image": f"https://thegrassyissue.com{IMG}/hero.jpg",
-           "datePublished": "2026-08-30", "dateModified": "2026-08-30",
-           "author": {"@type": "Organization", "name": "The Grassy Issue"},
-           "publisher": {"@type": "Organization", "name": "The Grassy Issue"},
-           "mainEntityOfPage": f"https://thegrassyissue.com/drops/{SLUG}"}
 
-    h = tpl[:tpl.find("</head>")]
-    h = re.sub(r'<script type="application/ld\+json">.*?</script>\s*', "", h, flags=re.S)
-    for pat, rep in {
-        r"<title>[^<]*</title>": f"<title>{TITLE} &mdash; The Grassy Issue</title>",
-        r'(<meta name="description" content=")[^"]*(")': rf"\g<1>{DESC}\g<2>",
-        r'(<meta property="og:title" content=")[^"]*(")': rf"\g<1>{TITLE}\g<2>",
-        r'(<meta name="twitter:title" content=")[^"]*(")': rf"\g<1>{TITLE}\g<2>",
-        r'(<meta property="og:description" content=")[^"]*(")': rf"\g<1>{DESC}\g<2>",
-        r'(<meta name="twitter:description" content=")[^"]*(")': rf"\g<1>{DESC}\g<2>",
-        r'(<meta property="og:image" content=")[^"]*(")': rf"\g<1>https://thegrassyissue.com{IMG}/hero.jpg\g<2>",
-        r'(<meta name="twitter:image" content=")[^"]*(")': rf"\g<1>https://thegrassyissue.com{IMG}/hero.jpg\g<2>",
-        r'(<meta property="og:url" content=")[^"]*(")': rf"\g<1>https://thegrassyissue.com/drops/{SLUG}\g<2>",
-        r'(<link rel="canonical" href=")[^"]*(")': rf"\g<1>https://thegrassyissue.com/drops/{SLUG}\g<2>",
-    }.items():
-        h = re.sub(pat, rep, h, count=1)
-    h += """<style>
-/*TGI-CUTLIST-V1*/
-</style>\n"""
-    h += ('<script type="application/ld+json">\n' + json.dumps(art, indent=1, ensure_ascii=False)
-          + '\n</script>\n<script type="application/ld+json">\n'
-          + json.dumps(faq_ld, indent=1, ensure_ascii=False) + "\n</script>\n</head>\n")
-
-    nav = re.search(r"(<body>.*?</nav>)", tpl, re.S).group(1)
-
-    header = f'''
-<div class="breadcrumb">
-  <a href="/">Feed</a><span>/</span>
-  <a href="/#feed">Drops &amp; Brands</a><span>/</span>
-  The 5 Best Golf Streetwear Brands in 2026
-</div>
-
-<header class="drop-header">
-  <span class="drop-tag grass">[Drops &amp; Brands]</span>
-  <h1>The 5 Best Golf Streetwear Brands in 2026</h1>
-  <div class="drop-meta">
-    <span>5 Brands</span><span class="dot"></span>
-    <span>15 Pieces</span><span class="dot"></span>
-    <span>Status-checked {CHECKED}</span>
-  </div>
-</header>
-
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A golfer mid-swing in pleated trousers and an open camp shirt, a second figure in neon behind &mdash; Metalwood Studio campaign" /></div></div>
-'''
-
-    writeup = f'''<div class="writeup">
+TAKE = f"""
+<section class="products" data-btk="take">
   <div class="writeup-body">
-    <p>Golf streetwear is now a category with money in it, which means it is a category with a lot of brands claiming membership. Search the phrase and you get lists of seven, ten, thirty. Read them and you find performance labels, heritage labels and licensing operations filed next to brands that design from streetwear first. The word has stopped doing any work.</p>
-    <p>So we started from a definition instead of a number. A golf streetwear brand designs like a clothing label that happens to make golf clothes, rather than a golf company that adds a graphic to a performance polo. It sells clothes you would wear off the course without explaining yourself. It drops rather than stocks. And it is actually trading &mdash; store live, product in stock, on the day we checked. Five brands clear all four.</p>
-    <p>This is for the person who wants one honest answer rather than a long list, and who would rather know that Malbon has an outside chief executive and $33 million of Anthos money behind it than read the boilerplate every other page is still running. Every brand below was checked on {CHECKED}. Every piece was in stock at that moment, at the price shown, in the brand&rsquo;s own currency. Where a brand has changed hands, we say so.</p>
+    <div class="drop-tag grass">The TGI Take</div>
+    <p>Golf streetwear stopped being one look a while ago. It now covers a Los Angeles label with 600 pieces in stock, a headcover workshop in Yorkshire, a Queens fashion house, a Brooklyn muni brand and an Australian label that only shoots at night. So instead of ranking nine brands against each other on one scale, we gave each one the award it wins outright.</p>
+    <p>Students is the best overall: the deepest range, cut by people who made streetwear before they made golf clothes. Metalwood owns retro, Malbon built the room everyone else is standing in, and Eastside has the clearest reason to exist. Public Drip is the one to watch, Midiron has the strongest look, Clamp is the find, ALD is the crossover and Hidden Links Society is the cult pick.</p>
+    <h2 class="products-hdr btk-story-hdr">How We Picked</h2>
+    <p>Every brand had to design like a clothing label rather than a golf company, sell things you would wear off the course, and be trading, with product in stock, on the day we checked. 52 of the 54 pieces below were in stock on their brand&rsquo;s own store on {CHECKED}, at the price shown, in the brand&rsquo;s own currency; the other two are sold-out Clamp collabs, marked as such.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
-      <div class="sidebar-label">The Five</div>
-      <div class="sidebar-detail"><span class="l">1</span><span>Metalwood Studio</span></div>
-      <div class="sidebar-detail"><span class="l">2</span><span>Students Golf</span></div>
-      <div class="sidebar-detail"><span class="l">3</span><span>Malbon Golf</span></div>
-      <div class="sidebar-detail"><span class="l">4</span><span>Casualist</span></div>
-      <div class="sidebar-detail"><span class="l">5</span><span>ANTi CC Tokyo</span></div>
+      <div class="sidebar-label">The Nine</div>
+""" + "\n".join(f'      <div class="sidebar-detail"><span class="l">{b["award"].replace("Best ", "")}</span><span><a href="#{b["k"]}">{b["name"]}</a></span></div>' for b in BRANDS) + f"""
       <div class="sidebar-detail"><span class="l">Checked</span><span>{CHECKED}</span></div>
-      <a href="/brands" class="sidebar-cta">The full Brand Index &nearr;</a>
+      <a href="/brands" class="sidebar-cta">The full Brand Index &#8599;</a>
       <div class="hashtags">
-        <span class="hashtag">#TheGrassyIssue</span>
         <span class="hashtag">#GolfStreetwear</span>
+        <span class="hashtag">#GolfStyle</span>
         <span class="hashtag">#GolfCulture</span>
         <span class="hashtag">#DropsAndBrands</span>
-        <span class="hashtag">#GolfStyle</span>
       </div>
     </div>
+  <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
-</div>
-'''
-
-    method = '''
-<section class="products">
-  <h2 class="products-hdr" id="how-we-picked">How We Picked</h2>
-  <p class="cat-kicker"><strong>The definition comes before the ranking.</strong> Every brand here runs the same four tests.</p>
-  <div style="max-width:760px;font-size:16px;line-height:1.75">
-    <p><strong>1. A clothing brand first.</strong> The design starts from clothes and arrives at golf, not the other way round. A performance polo with a graphic on it is still a performance polo. This is a test of how a range is built, not of how loud it is &mdash; which is how a brand as quiet as Casualist and one as loud as Metalwood both pass it.</p>
-    <p style="margin-top:14px"><strong>2. Wearable off the course.</strong> If the piece only makes sense inside the ropes, it belongs on a different list.</p>
-    <p style="margin-top:14px"><strong>3. A real cadence.</strong> Drops, collaborations, a reason to check back. Not a static catalogue that has not moved in a year.</p>
-    <p style="margin-top:14px"><strong>4. Actually trading.</strong> Store live, product in stock, on the day we looked. This is the test most rankings skip, and it is the one that shortened this list the most.</p>
-  </div>
 </section>
-'''
+"""
 
-    body = ""
-    for b in BRANDS:
-        picks = b["picks"] or SK[b["k"]]["picks"]
-        cards = "\n\n    ".join(card(b["k"], i, b["name"], p) for i, p in enumerate(picks))
-        MT = ' style="margin-top:16px"'
-        paras = "\n".join("    <p" + (MT if i else "") + f">{p}</p>"
-                          for i, p in enumerate(b["body"]))
-        body += f'''
-<section class="products" style="border-top:none;padding-top:48px">
-  <h2 class="products-hdr" id="{b["k"]}">{b["rank"]}. {b["name"]} &mdash; {b["loc"]}</h2>
-  <p class="cat-kicker">{b["kick"]}</p>
-  <div style="max-width:760px;font-size:16px;line-height:1.75;margin-bottom:12px">
-{paras}
-    <p style="margin-top:18px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.6">Status checked {CHECKED} &middot; trading, product in stock &middot; <a href="{b["link"]}">{b["linktext"]} &rarr;</a></p>
+FAQ = [
+    ("What is the best golf streetwear brand in 2026?",
+     "Students Golf. Its founder Michael Huynh came from streetwear, its range is the deepest in the category with more than 600 pieces in stock, and it is stocked by Bodega, HBX and Culture Kings."),
+    ("What counts as golf streetwear?",
+     "For this list, a brand has to design like a clothing label rather than a golf company, make clothes you would wear off the course, and be trading with product in stock. That admits a headcover workshop like Clamp and a fashion house like Aimé Leon Dore alongside Metalwood and Malbon."),
+    ("Is Malbon still independent?",
+     "Malbon raised a $33 million round led by Anthos Capital, and Aaron Heiser, formerly of Nike, is chief executive. Stephen and Erica Malbon remain as creative leads."),
+    ("Does Aimé Leon Dore still make golf clothes?",
+     "ALD has released a golf capsule every spring since 2024, most recently with FootJoy. As of 1 October 2026 that capsule has sold through and the ALD Golf page is offline, so the pieces in this guide come from its main fall line."),
+    ("How often is this list updated?",
+     "Every piece was checked on 1 October 2026, and all but two sold-out Clamp collabs were in stock. We re-check the list each season and replace anything that sells out or any brand that stops trading."),
+]
+
+
+def faq_html():
+    rows = "\n".join(f'    <details open class="faq-q"><summary>{H.escape(q)}</summary><p>{H.escape(a)}</p></details>'
+                     for q, a in FAQ)
+    return (f'\n<section class="products" style="border-top:none;padding-top:48px">\n'
+            f'  <h2 class="products-hdr" id="faq">The Questions</h2>\n  <div class="faq">\n{rows}\n  </div>\n</section>\n\n')
+
+
+def head_top():
+    og = f"https://thegrassyissue.com{IMG}/og.jpg"
+    items = [{"@type": "ListItem", "position": i + 1, "name": H.unescape(b["name"]), "url": f"{URL}#{b['k']}"}
+             for i, b in enumerate(BRANDS)]
+    blocks = [
+        {"@context": "https://schema.org", "@type": "Article", "headline": TITLE, "description": H.unescape(DESC),
+         "url": URL, "image": og, "datePublished": "2026-08-30", "dateModified": "2026-10-01",
+         "author": {"@type": "Person", "@id": "https://thegrassyissue.com/about#lenny", "name": "Lenny Harrington",
+                    "url": "https://thegrassyissue.com/about", "sameAs": ["https://instagram.com/thegrassyissue"]},
+         "publisher": {"@type": "Organization", "name": "The Grassy Issue", "url": "https://thegrassyissue.com/"},
+         "mainEntityOfPage": {"@type": "WebPage", "@id": URL}},
+        {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+            {"@type": "Question", "name": q, "acceptedAnswer": {"@type": "Answer", "text": a}} for q, a in FAQ]},
+        {"@context": "https://schema.org", "@type": "ItemList", "name": TITLE, "itemListElement": items},
+        {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Feed", "item": "https://thegrassyissue.com/"},
+            {"@type": "ListItem", "position": 2, "name": "Drops & Brands", "item": "https://thegrassyissue.com/#feed"},
+            {"@type": "ListItem", "position": 3, "name": "Best Golf Streetwear Brands", "item": URL}]},
+    ]
+    t, d = H.escape(TITLE, quote=True), DESC.replace('"', "&quot;")
+    ld = "".join(f'<script type="application/ld+json">\n{json.dumps(b, indent=1, ensure_ascii=False)}\n</script>\n' for b in blocks)
+    return f"""<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>{t} | The Grassy Issue</title>
+<meta name="description" content="{d}" />
+<link rel="icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{URL}" />
+<meta property="og:title" content="{t}" />
+<meta property="og:description" content="{d}" />
+<meta property="og:image" content="{og}" />
+<meta property="og:site_name" content="The Grassy Issue" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="{t}" />
+<meta name="twitter:description" content="{d}" />
+<link rel="canonical" href="{URL}" />
+<link rel="preload" as="image" href="{IMG}/hero.jpg" />
+{ld}"""
+
+
+def main(apply_):
+    d = DONOR.read_text(encoding="utf-8")
+    head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
+    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    body = f"""<div class="breadcrumb">
+  <a href="/">Feed</a><span>/</span>
+  <a href="/#feed">Drops &amp; Brands</a><span>/</span>
+  Best Golf Streetwear Brands</div>
+
+<header class="drop-header">
+  <h1>{H1}</h1>
+  <div class="drop-meta">
+    <span>9 brands &middot; 9 awards</span><span class="dot"></span>
+    <span>54 pieces &middot; checked {CHECKED}</span>
   </div>
-  <div class="products-grid">
+</header>
 
-    {cards}
-
-  </div>
-</section>
-'''
-
-    faq_html = ('<div class="faq">\n' + "\n".join(
-        f'    <details class="faq-q"><summary>{q}</summary><p>{a}</p></details>'
-        for q, a in FAQ) + "\n  </div>")
-    faq_sec = f'''
-<section class="products" style="border-top:none;padding-top:48px">
-  <h2 class="products-hdr" id="faq">Golf Streetwear &mdash; FAQ</h2>
-  {faq_html}
-</section>
-'''
-
-    more = tpl[tpl.rfind('<section class="more">'):]
-    out = h + nav + header + writeup + method + body + faq_sec + more
-
-    if ".bk-founder" not in out:
-        k = out.rfind("</style>")
-        out = out[:k] + ("\n/*TGI-BTK-LAYOUT*/\n.bk-founder,.bk-look{max-width:1100px}\n@media(max-width:820px){.bk-founder{grid-template-columns:1fr!important}.bk-look{grid-template-columns:repeat(2,1fr)!important}}\n") + out[k:]
-
-    words = len(H.unescape(re.sub(r"<[^>]+>", " ",
-                re.sub(r"<(script|style)[^>]*>.*?</\1>", " ", out, flags=re.S))).split())
-    ncards = out.count('<div class="product-card')
-    print(f"  cards {ncards}  frames {out.count('pg-frame')}  words {words}")
-    if apply_:
-        open(PAGE, "w", encoding="utf-8").write(out)
-        print("  written", PAGE)
-    else:
-        print("  (dry run - pass --apply)")
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Golf streetwear in 2026: a Students Golf Art Dept. look, a Metalwood player kicking a ball in the adidas golf shoe, and a Public Drip cap" fetchpriority="high" /></div></div>
+"""
+    body += TAKE
+    n = 1
+    for rank, b in enumerate(BRANDS, 1):
+        o, n = section(b, rank, n); body += o
+    body += faq_html()
+    out = head_top() + head_rest + body + tail
+    print(f"  {n-1} cards")
+    if not apply_:
+        print("  dry run — pass --apply"); return
+    OUT.write_text(out, encoding="utf-8")
+    fin = OUT.read_text(encoding="utf-8")
+    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    bad = []
+    for leak in ("Manors Revisited", "Nicklaus", "Enron"):
+        if leak in above: bad.append("leak " + leak)
+    if fin.count('class="product-card"') != 54: bad.append("card count")
+    if re.search(r"\bworth\b", re.sub(r"<[^>]+>", " ", above), re.I): bad.append("banned word")
+    for f in set(re.findall(rf'src="({IMG}/[^"]+)"', fin)):
+        if not (ROOT / f.lstrip("/")).is_file(): bad.append("missing " + f)
+    for href in set(re.findall(r'href="(/(?:drops|guides)/[^"#]+)"', above)):
+        if not (ROOT / (href.lstrip("/") + ".html")).is_file(): bad.append("dead link " + href)
+    if bad: sys.exit("! check failed: " + "; ".join(bad))
+    print(f"  wrote {OUT.relative_to(ROOT)}")
 
 
 if __name__ == "__main__":
