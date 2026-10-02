@@ -21,7 +21,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "fella-golf-2026"
 
 SLIDES = [
-    ("hero", "A golfer in a golf-cart print Fella bodywarmer beside a flag with his stand bag",
+    ("card-hero", "A golfer in a golf-cart print Fella bodywarmer beside his stand bag on the green",
      "Fella Golf · Amsterdam", "Revisited",
      "Fella now sells to the US in dollars, with a fall line: a reversible golf-cart bodywarmer, a reflective windshirt and a cargo pant. 29 pieces, $15 to $275."),
     ("reversible-bodywarmer-fleece-golfcart-pattern-1", "Fella Golf reversible bodywarmer in golf-cart print sherpa",
