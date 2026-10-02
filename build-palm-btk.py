@@ -41,7 +41,7 @@ P = {
  "p07": ("Palm Golf Co.", "Wanderer Glove", G, "mens-wanderer-glove",
    "A teal palm badge on white, part of the outdoorsy Wanderer collection with the caddie towel."),
  "p08": ("Palm Golf Co.", "Night Moves Driver Headcover", "$89.99", "night-moves-driver-headcover-1",
-   "Every Palm headcover is made in the USA with a DRYTEX shell that shrugs off rain and a sherpa lining. Night Moves is the dark one, charcoal camo with a leather palm tab."),
+   "Every Palm headcover is made in the USA with a DRYTEX shell that shrugs off rain and a sherpa lining. Night Moves is the dark one, charcoal with palm-tree silhouettes and a leather Palm tab."),
  "p09": ("Palm Golf Co.", "Night Moves Orange Driver Headcover", "$89.99", "night-moves-orange-driver-headcover",
    "The same Night Moves pattern in safety orange, from the fall drop on 30 September. The loudest cover Palm makes."),
  "p10": ("Palm Golf Co.", "Tropics Driver Headcover", "$89.99", "tropics-driver-headcover",
