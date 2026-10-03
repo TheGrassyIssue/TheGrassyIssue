@@ -29,6 +29,7 @@ PAGES = [
     "drops/golf-ferrules-guide.html",
     "drops/brand-to-know-palm-golf-co.html",
     "drops/brand-to-know-magpie-supply.html",
+    "drops/austin-golf-weekend.html",
     "drops/brand-to-know-local-gc.html",
     "drops/fella-golf.html",
     "drops/brand-to-know-clamp-golf-company.html",
