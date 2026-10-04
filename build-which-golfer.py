@@ -25,7 +25,7 @@ DONOR = ROOT / "drops/brand-to-know-manors.html"
 
 TITLE = "Which Golfer Are You? 7 Types and What to Buy"
 DESC = ("Nature Lover, Muni Rat, Minimalist, Purist, Quiet Luxury, Cowboy or Former Skater: seven golfer types and "
-        "five pieces for each, all from independent brands TGI has featured, with prices.")
+        "six pieces for each, all from independent brands TGI has featured, with prices.")
 H1 = "Which Golfer Are You? Seven Types and the Gear That Fits"
 BC = "Which Golfer Are You?"
 SLUG = "which-golfer-are-you"
@@ -83,7 +83,7 @@ P = {
  "g30": ("Ashworth", "Fully Fashioned Polo", "$225", "https://www.ashworth-golf.com/products/fully-fashioned-polo-charcoal",
    "A knitted polo in 12-gauge superwash wool. It looks like a sweater and plays like a polo."+S("brand-to-know-ashworth")),
  "g31": ("Sun Mountain", "Legacy Leather Stand Bag", "$1,199.99", "https://www.sunmountain.com/products/legacy-leather-stand-bag",
-   "A full-leather stand bag from the Montana bag maker. The most expensive thing on this page, and it shows."+S("brand-to-know-sun-mountain")),
+   "A full-leather stand bag from the Montana bag maker. Expensive, and it shows."+S("brand-to-know-sun-mountain")),
  "g33": ("Clint Orms", "Ball Marker 1801, Sterling Silver Texas Flag", "$300", "https://clintorms.com/products/sterling-silver-texas-flag-ball-marker",
    "A sterling marker with an engraved Texas flag, made and engraved by hand in Kerrville by the Hill Country silversmith."+S("austin-golf-weekend","Our Austin golf weekend")),
  "g34": ("Sierra Madre Golf", "Golf Cowgirl Trucker Hat", "$38", "https://sierramadregolf.com/products/golf-cowgirl-trucker-hat",
@@ -104,32 +104,54 @@ P = {
    "Wide, pleated and baggy, from the LA brand that made it fine to play in skate pants."+S("students-golf-our-15-favorites")),
  "g44": ("Public Drip", "&ldquo;P&rdquo; Script Denim Snapback", "$60", "https://publicdrip.com/products/p-script-denim-snapback-indigo",
    "An indigo denim snapback from the Brooklyn muni label. Flat brim optional."+S("public-drip-brooklyns-muni-born-golf-label")),
+ "g02": ("Gramicci", "Guide Cap", "$48.75", "https://gramicci.com/products/guide-cap",
+   "A light six-panel cap built for river days and mountain trails, in water-repellent nylon with big mesh side panels. It works just as well on a hot back nine."+S("brand-to-know-gramicci")),
+ "g13": ("Sugarloaf Social Club", "Pistol Putter Grip", "$24", "https://sugarloafsocialclub.com/products/pistol-putter-grip",
+   "A classic rubber pistol grip with the SSC arrow on the front and &ldquo;SUGARLOAF&rdquo; down the shaft. The cheapest way to make an old putter feel like yours."+S("ssc-hidden-gem-collection")),
+ "g18": ("Ashworth", "Newport Supima Hoodie", "$125", "https://www.ashworth-golf.com/products/newport-supima-hoodie-kalamata",
+   "A soft hoodie in 100% Supima cotton with a banded hem and cuffs. The only logo is a tonal Golfman on the chest."+S("brand-to-know-ashworth")),
+ "g47": ("Seamus Golf", "Arnold Palmer Yellow Umbrella Driver Cover", "$155", "https://www.seamusgolf.com/products/arnold-palmer-yellow-umbrella-driver-cover",
+   "A tribute to Arnold Palmer&rsquo;s yellow trousers: a yellow driver cover embroidered with his umbrella logo, handmade in Oregon."+S("brand-to-know-seamus")),
+ "g32": ("Quiet Golf", "Cardroom Corduroy Jacket", "$198", "https://quietgolf.com/products/cardroom-corduroy-jacket",
+   "A cotton corduroy jacket with angled hand pockets and a small embroidered flag. It looks right in the clubhouse bar."+S("brand-to-know-quiet-golf")),
+ "g37": ("Clint Orms", "Loden Green Classic Trucker Cap", "$30", "https://clintorms.com/products/loden-green-classic-trucker-cap",
+   "A Richardson 112 trucker from the Kerrville silversmith, embroidered in Kerrville, Texas. Goes with the sterling marker."+S("texas-golf-brands-and-makers")),
+ "g45": ("Hidden Links Society", "The Play Faster Tee, Ivory", "$48", "https://hiddenlinkssociety.com/products/the-play-faster-tee-ivory",
+   "A garment-washed, slightly oversized cotton tee with &ldquo;Play Faster&rdquo; on the front and back. Made to order, so allow two weeks."+S("best-golf-streetwear-brands-2026")),
 }
 SECTIONS = [
- ("Nature Lover", "nature", ["g01","g03","g04","g05","g07"],
-  "<strong>Five picks &middot; $32&ndash;$295</strong>The golfer who notices the course before the card. Canvas and topo maps, a towel you could take camping, a Nalgene instead of a plastic bottle, and a magpie on the driver. The round is an excuse to be outside for four hours."),
- ("The Muni Rat", "muni", ["g08","g09","g10","g11","g12"],
-  "<strong>Five picks &middot; $11.99&ndash;$185</strong>Plays twilight, walks and carries, and knows the starter by first name. The kit is cheap, tough and a little sentimental: a Lions Muni tee, a divot tool that opens a beer, a range bucket and a Jones bag that has seen every public course in town."),
- ("The Minimalist", "minimalist", ["g14","g15","g16","g17","g20"],
-  "<strong>Five picks &middot; $10&ndash;$215</strong>One logo, if any. Navy, bone and white, a slim bag with nothing in it that doesn&rsquo;t need to be there, and a scorecard holder instead of an app. The goal is to look like you&rsquo;ve been playing for twenty years without saying so."),
- ("The Purist", "purist", ["g21","g22","g23","g25","g26"],
-  "<strong>Five picks &middot; $36&ndash;$1,750</strong>Believes golf peaked somewhere between persimmon and balata. Cotton polos, a carry bag, a hand-forged marker and a Harris Tweed headcover. The Purist would rather walk nine holes than ride eighteen."),
- ("The Quiet Luxury Golfer", "quiet-luxury", ["g27","g28","g29","g30","g31"],
-  "<strong>Five picks &middot; $178&ndash;$1,199.99</strong>Expensive, never loud. Wool, leather and a jacquard quarter-zip, a leather weekender and a leather bag. Nothing has a big logo, and everything costs more than you&rsquo;d guess."),
- ("The Cowboy", "cowboy", ["g33","g34","g35","g36","g38"],
-  "<strong>Five picks &middot; $38&ndash;$300</strong>Texas golf with a belt-buckle attitude. A sterling Texas-flag marker made in Kerrville, a pearl snap, a lucky horseshoe and a cowgirl trucker from Austin. Plays fast and tips the cart girl well."),
- ("The Former Skater", "skater", ["g39","g40","g41","g42","g44"],
-  "<strong>Five picks &middot; about $35&ndash;$403</strong>Grew up on a board, found golf later and brought the wardrobe. Baggy pleats, a denim snapback, a skull ball marker and headcovers sewn from old Supreme and Palace pieces. Still treats every round like a session."),
+ ("Nature Lover", "nature", ["g01","g02","g03","g04","g05","g07"],
+  "<strong>Six picks &middot; $32&ndash;$295</strong>The golfer who notices the course before the card. Canvas and topo maps, a towel you could take camping, a Nalgene instead of a plastic bottle, and a magpie on the driver. The round is an excuse to be outside for four hours."),
+ ("The Muni Rat", "muni", ["g08","g09","g10","g11","g12","g13"],
+  "<strong>Six picks &middot; $11.99&ndash;$185</strong>Plays twilight, walks and carries, and knows the starter by first name. The kit is cheap, tough and a little sentimental: a Lions Muni tee, a divot tool that opens a beer, a range bucket and a Jones bag that has seen every public course in town."),
+ ("The Minimalist", "minimalist", ["g14","g15","g16","g17","g18","g20"],
+  "<strong>Six picks &middot; $10&ndash;$215</strong>One logo, if any. Navy, bone and white, a slim bag with nothing in it that doesn&rsquo;t need to be there, and a scorecard holder instead of an app. The goal is to look like you&rsquo;ve been playing for twenty years without saying so."),
+ ("The Purist", "purist", ["g21","g22","g23","g25","g26","g47"],
+  "<strong>Six picks &middot; $36&ndash;$1,750</strong>Believes golf peaked somewhere between persimmon and balata. Cotton polos, a carry bag, a hand-forged marker and a Harris Tweed headcover. The Purist would rather walk nine holes than ride eighteen."),
+ ("The Quiet Luxury Golfer", "quiet-luxury", ["g27","g28","g29","g30","g31","g32"],
+  "<strong>Six picks &middot; $178&ndash;$1,199.99</strong>Expensive, never loud. Wool, leather and a jacquard quarter-zip, a leather weekender and a leather bag. Nothing has a big logo, and everything costs more than you&rsquo;d guess."),
+ ("The Cowboy", "cowboy", ["g33","g34","g35","g36","g38","g37"],
+  "<strong>Six picks &middot; $30&ndash;$300</strong>Texas golf with a belt-buckle attitude. A sterling Texas-flag marker made in Kerrville, a pearl snap, a lucky horseshoe and a cowgirl trucker from Austin. Plays fast and tips the cart girl well."),
+ ("The Former Skater", "skater", ["g39","g40","g41","g42","g44","g45"],
+  "<strong>Six picks &middot; about $35&ndash;$403</strong>Grew up on a board, found golf later and brought the wardrobe. Baggy pleats, a denim snapback, a skull ball marker and headcovers sewn from old Supreme and Palace pieces. Still treats every round like a session."),
 ]
-N = 35
+N = 42
 PQ = {}
-BANDS = {}
+BANDS = {
+ "nature": ("Out there", "", [("band-nature-1","A Magpie x RossCo headcover on a golf bag in the grass, a golfer on the tee behind","Magpie Supply"),("band-nature-2","A man in a Sugarloaf Social Club shirt fishing off a dock on a lake","Sugarloaf Social Club"),("band-nature-3","Two Palm Golf Co. caps lying in the sand on a beach","Palm Golf Co.")]),
+ "muni": ("Twilight rate", "", [("band-muni-1","A golfer in a Puttwell tee walking up a green toward the flag","Puttwell"),("band-muni-2","A golfer in a Palm Golf &amp; Surf Club tee and bucket hat, seen from behind on a cart path","Palm Golf Co."),("band-muni-3","A golfer walking a fairway carrying a navy and white Jones bag","Jones Sports Co.")]),
+ "minimalist": ("Less, better", "", [("band-minimalist-1","A light blue St Andr&eacute; cap on a white tee beside sunglasses and denim","St Andr&eacute;"),("band-minimalist-2","A golfer in a long-sleeve top and black shorts setting up over the ball","Magpie Supply"),("band-minimalist-3","A golfer in a white St Andr&eacute; bucket hat and sunglasses","St Andr&eacute;")]),
+ "purist": ("The old way", "", [("band-purist-1","A golfer in an olive Ashworth layer finishing his swing beside a grassy dune","Ashworth"),("band-purist-2","An Ashworth carry bag lying on the grass with trees behind","Ashworth"),("band-purist-3","A Hudson Sutler maker cutting fabric at a workbench, in black and white","Hudson Sutler")]),
+ "quiet-luxury": ("Never loud", "", [("band-quiet-luxury-1","A golfer in an Ashworth overshirt and cap","Ashworth"),("band-quiet-luxury-2","A navy Hudson Sutler duffel with leather handles carried over the shoulder","Hudson Sutler"),("band-quiet-luxury-3","A golfer in a grey sweater pulling a club from a Sun Mountain bag","Sun Mountain")]),
+ "cowboy": ("Texas made", "", [("band-cowboy-1","A man in a black Criquet shirt holding a coffee","Criquet"),("band-cowboy-2","A smiling man in a chambray Criquet shirt and cap holding a cup","Criquet"),("band-cowboy-3","A man in a light blue Criquet shirt holding a drink by the water","Criquet")]),
+ "skater": ("Session", "", [("band-skater-1","A golfer in a purple shirt and NR cap holding his clubs beside a range bucket","No Return Club"),("band-skater-2","A camo Clamp Golf Company bag against a Union Jack","Clamp Golf Company"),("band-skater-3","A golfer in a black No Return Club cap holding a tee toward the camera","No Return Club")]),
+}
 TAKE = """
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
     <p>Every golfer is a type. You know them from the first tee: the guy in a waxed-canvas jacket who stops to look at a hawk, the one walking 18 at the muni with a bag older than his car, the one whose whole kit is navy and white. Golf has always been a game you dress for, and what you carry says as much about you as your handicap.</p>
-    <p>So we sorted the brands we&rsquo;ve featured on TGI into seven types and picked five pieces for each, from a $10 ball marker to a $1,200 leather bag. Every item comes from an independent brand we&rsquo;ve already written about, and each one links back to our full story on it. Find yourself, find your partner, or find the gift for the golfer who has everything. Prices were checked on each brand&rsquo;s own store on 4 October 2026; UK prices are shown in pounds with an approximate dollar figure.</p>
+    <p>So we sorted the brands we&rsquo;ve featured on TGI into seven types and picked six pieces for each, from a $10 ball marker to a $1,200 leather bag. Every item comes from an independent brand we&rsquo;ve already written about, and each one links back to our full story on it. Find yourself, find your partner, or find the gift for the golfer who has everything. Prices were checked on each brand&rsquo;s own store on 4 October 2026; UK prices are shown in pounds with an approximate dollar figure.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -281,7 +303,7 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>Seven types</span><span class="dot"></span>
-    <span>35 picks &middot; checked 4 October 2026</span>
+    <span>42 picks &middot; checked 4 October 2026</span>
   </div>
 </header>
 
