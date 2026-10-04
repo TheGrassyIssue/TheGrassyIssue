@@ -22,7 +22,8 @@ POSTER = "/images/social-club-poster.jpg"
 BLOCK = f'''{S}
 <section class="featured-event">
   <a href="{URL}">
-    <div class="featured-poster">
+    <style>@media(min-width:821px){{.featured-poster.fp-square{{width:420px;flex:0 0 420px}}}}.featured-poster.fp-square img{{object-position:center top}}</style>
+    <div class="featured-poster fp-square">
       <img src="{POSTER}" alt="The Grassy Issue Social Club poster — a green over a wide Hill Country horizon, with the words Good golf, Good people" />
     </div>
     <div class="featured-body">
