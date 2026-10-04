@@ -58,7 +58,7 @@ def tags_of(b):
 TAX = [
 ("tag", "design-nerd", "Design-Nerd Golf Brands",
  "Design-Nerd Golf Brands — The Grassy Issue",
- "Thirty-seven golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
+ "Forty-three golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
  """<p>This is the largest group in the Index, and the loosest, which is usually a sign a
  category is real rather than invented. What connects <strong>Bettinardi</strong> milling a putter
  from one billet, <strong>Inside Story Socks</strong> printing a narrative into a sock, and
@@ -73,7 +73,7 @@ TAX = [
  ),
 ("tag", "made-by-hand", "Golf Brands That Make It By Hand",
  "Handmade Golf Gear — Small-Batch Brands | The Grassy Issue",
- "Thirty-seven golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
+ "Forty golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
  """<p>The honest version of &ldquo;handmade&rdquo; is narrow, and this is our attempt to hold the
  line on it. <strong>Artisan Golf</strong> qualifies because Mike Taylor still grinds every wedge
  himself and you cannot order one without an in-person fitting. <strong>Ally Aiken</strong>
@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Twenty-five golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Twenty-six golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -102,7 +102,7 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands — Founder-Owned | The Grassy Issue",
- "Forty-four founder- and family-owned golf brands with no parent company and no outside investors — the independent end of the Brand Index.",
+ "Fifty-three founder- and family-owned golf brands with no parent company and no outside investors — the independent end of the Brand Index.",
  """<p>Independent here means structural, not stylistic: no parent conglomerate, no licensing group,
  no outside investors, nobody upstairs to approve the range. <strong>Bettinardi</strong> is still
  family-run out of Tinley Park. <strong>Seamus Golf</strong> is owned outright by Akbar and Megan
@@ -116,7 +116,7 @@ TAX = [
  ),
 ("tag", "muni-energy", "Muni-Energy Golf Brands",
  "Muni Golf Brands — Public-Course Energy | The Grassy Issue",
- "Twenty-two golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
+ "Twenty-four golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
  """<p>Muni energy is a posture more than a price point. It means the brand is dressing for a
  public course on a Saturday morning: a tee time you booked at 11pm, a bag you carry, a beer in the
  lot afterwards. <strong>Devereux</strong>, <strong>Criquet Shirts</strong> and
@@ -131,7 +131,7 @@ TAX = [
  ),
 ("tag", "post-round-friendly", "Golf Clothes You Can Wear After the Round",
  "Post-Round Golf Clothing Brands | The Grassy Issue",
- "Nineteen golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
+ "Twenty-three golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
  """<p>The test is simple and unforgiving: would you keep it on for dinner. Most golf clothing
  fails it, because the thing that makes a polo read as golf — the logo placement, the sheen of the
  fabric, the cut through the shoulder — is exactly the thing that makes it read as golf in a
@@ -145,8 +145,8 @@ TAX = [
  ),
 ("tag", "collab-machine", "Golf's Collaboration Machines",
  "Golf Collaboration Brands — Collab Machines | The Grassy Issue",
- "Fourteen golf brands that build through partnership — the labels whose best work usually arrives with somebody else's name on it too.",
- """<p>Some brands express themselves best in their own range. These fourteen express themselves
+ "Seventeen golf brands that build through partnership — the labels whose best work usually arrives with somebody else's name on it too.",
+ """<p>Some brands express themselves best in their own range. These seventeen express themselves
  best in somebody else's. <strong>MacKenzie Golf Bags</strong> has become a canvas the rest of golf
  paints on. <strong>BEAMS Golf</strong> runs a collaboration calendar dense enough to be its own
  release schedule. <strong>Aimé Leon Dore</strong> turned a FootJoy into a cultural object.</p>
@@ -157,7 +157,7 @@ TAX = [
  ),
 ("tag", "quiet-luxury", "Quiet Luxury Golf Brands",
  "Quiet Luxury Golf Brands — Understated | The Grassy Issue",
- "Thirteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
+ "Sixteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
  """<p>Quiet is harder than loud, because there is nowhere to hide. Strip the logo and the graphic
  and what is left is fabric, cut and finish, which are the expensive parts. That is why this is the
  smallest of the major groups in the Index and why the price floor across it is the highest.</p>
@@ -186,8 +186,8 @@ TAX = [
  ),
 ("tag", "range-rat", "Range-Rat Golf Brands",
  "Range Practice Gear Brands | The Grassy Issue",
- "Five golf brands built for the people who are at the range more than the first tee — grips, shafts, carts and the unglamorous end of the bag.",
- """<p>Nobody photographs a grip. That is roughly the point of this group: five brands operating in
+ "Eight golf brands built for the people who are at the range more than the first tee — grips, shafts, carts and the unglamorous end of the bag.",
+ """<p>Nobody photographs a grip. That is roughly the point of this group: eight brands operating in
  the parts of the bag that only matter to people who are there every week.
  <strong>Rosemark</strong> and <strong>Stick Grips</strong> make the one component you touch on
  every single shot. <strong>Garsen</strong> reshapes the putter grip around what the hands actually
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Fifty-two golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Sixty-two golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
@@ -260,7 +260,7 @@ TAX = [
  ),
 ("attr", "heritage", "Heritage Golf Brands",
  "Heritage Golf Brands — The Long-Running Names | The Grassy Issue",
- "Fourteen golf and adjacent brands with real longevity behind them — companies whose archive is older than most of the Brand Index.",
+ "Seventeen golf and adjacent brands with real longevity behind them — companies whose archive is older than most of the Brand Index.",
  """<p>Heritage is a word golf marketing has beaten senseless, so the bar here is a date you can
  check. <strong>Bag Boy</strong> has made push carts since 1946. <strong>Jan Craig</strong> has been
  knitting headcovers since 1961. <strong>Carhartt</strong> goes back to 1889 and
@@ -273,8 +273,8 @@ TAX = [
  ),
 ("attr", "tour-proven", "Tour-Proven Golf Brands",
  "Tour-Proven Golf Brands — Played at the Top | The Grassy Issue",
- "Eleven golf brands whose product is in play at tour level — equipment, grips and apparel carried by professionals, not just endorsed.",
- """<p>Eleven brands in the Index have product genuinely in play at tour level, which is a narrower
+ "Twelve golf brands whose product is in play at tour level — equipment, grips and apparel carried by professionals, not just endorsed.",
+ """<p>Twelve brands in the Index have product genuinely in play at tour level, which is a narrower
  claim than an endorsement deal. <strong>PXG</strong> and <strong>PUMA Golf</strong> are there at
  full scale. <strong>Takomo</strong> and <strong>Rosemark</strong> are there in spite of their
  size. <strong>Seamus</strong> and <strong>Jan Craig</strong> are there on the headcover, which is
@@ -285,8 +285,8 @@ TAX = [
  ),
 ("attr", "drops-and-vanishes", "Golf Brands That Drop and Vanish",
  "Limited Drop Golf Brands | The Grassy Issue",
- "Eleven golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
- """<p>Eleven brands in the Index operate on a drop model with no restock behind it. The run is
+ "Thirteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
+ """<p>Thirteen brands in the Index operate on a drop model with no restock behind it. The run is
  made, it sells or it does not, and the next thing is a different thing.
  <strong>Sentinel Golf</strong>, <strong>Mogshade</strong>, <strong>Radry</strong> and
  <strong>Gamut Golf</strong> all work this way by design rather than by supply-chain accident.</p>
@@ -572,10 +572,10 @@ for kind, slug, h1, title, desc, intro in TAX:
         raise SystemExit(f"{slug}: intro names {named} brand(s) from its own list, needs 2+ — "
                          f"generic copy is what we are trying to stop shipping")
     # the printed count word must match the computed count
-    WORDS = {2: "two", 4: "four", 5: "five", 7: "seven", 10: "ten", 11: "eleven", 13: "thirteen", 14: "fourteen",
-             19: "nineteen", 22: "twenty-two", 44: "forty-four", 25: "twenty-five", 33: "thirty-three", 37: "thirty-seven",
-             52: "fifty-two"}
-    w = WORDS.get(len(ms))
+    _o = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
+    _t = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
+    n_ = len(ms)
+    w = _o[n_] if n_ < 20 else _t[n_ // 10] + ("" if n_ % 10 == 0 else "-" + _o[n_ % 10])
     if w and w not in (plain + " " + desc).lower():
         raise SystemExit(f"{slug}: {len(ms)} brands but the copy does not say '{w}' — counts must "
                          f"match the data, and the data moved")

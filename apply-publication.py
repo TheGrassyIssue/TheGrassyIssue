@@ -32,6 +32,7 @@ PAGES = [
     "drops/austin-golf-weekend.html",
     "drops/brand-to-know-ashworth.html",
     "drops/brand-to-know-puttwell.html",
+    "drops/which-golfer-are-you.html",
     "drops/brand-to-know-local-gc.html",
     "drops/fella-golf.html",
     "drops/brand-to-know-clamp-golf-company.html",

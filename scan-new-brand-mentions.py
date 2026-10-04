@@ -96,6 +96,13 @@ DOMAINS = {
     "sunday-golf":       ["sundaygolf.com"],          # NOT sundayrollsgolf.com
     "vessel":            ["vesselgolf.com", "vesselbags.com"],
     "winston-collection":["winstoncollection.com"],   # NOT winstonskitchenatx.com
+    # added 4 Oct 2026 with the brand index refresh (Ashworth, Clamp, Local GC, Magpie, Palm, Puttwell).
+    "ashworth":           ["ashworth-golf.com", "ashworthgolf.com"],
+    "clamp-golf-company": ["clampgolfcompany.co.uk"],
+    "local-gc":           ["localgc.co.nz", "localgolfclub.co.nz"],
+    "magpie-supply":      ["magpie-supply.com"],
+    "palm-golf-co":       ["palmgolfco.com"],
+    "puttwell":           ["puttwellgolfclub.com"],
 }
 
 def strip_chrome(h):
