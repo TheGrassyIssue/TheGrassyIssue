@@ -274,7 +274,7 @@ def main(apply_):
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A Honolulu golf course with the city skyline and mountains behind, from Puttwell" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A man in a Puttwell tee, the Sig Zane back print facing out, browsing tapes and records in a Hawaii record store" fetchpriority="high" /></div></div>
 """
     body += TAKE
     n = 1

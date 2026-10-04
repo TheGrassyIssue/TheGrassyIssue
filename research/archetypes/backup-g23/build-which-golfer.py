@@ -68,8 +68,8 @@ P = {
    "A modern version of the roomy cotton polo Ashworth launched in 1987, now in a Pima cotton blend with contrast tipping."+S("brand-to-know-ashworth")),
  "g22": ("Seamus Golf", "Hand Forged Mesh Dimple Ball Marker, Steel", "$36", "https://seamusgolf.com/products/hand-forged-square-dimple-balata-ball-mark-steel",
    "Hammered by hand in Oregon with the square mesh dimples of an old-style ball."+S("brand-to-know-seamus")),
- "g23": ("Fyfe x MacKenzie", "MacKenzie Golf Bag x Fyfe, 22nd Edition", "&pound;650 (~$870)", "https://www.fyfegolf.com/products/mackenzie-golf-bag-x-fyfe-1",
-   "Fyfe&rsquo;s 22nd edition with MacKenzie, the handmade carry bag maker: charcoal waxed canvas with black, agave and white leather, a tartan-lined pocket and a split white and black base. Sold out when we checked, like every edition before it."+S("fyfe-x-mackenzie-every-edition", "Every edition")),
+ "g23": ("Ashworth", "Heritage Players Series Golf Bag", "$245", "https://www.ashworth-golf.com/products/heritage-players-series-golf-bag-kodiak",
+   "A classic Kodiak-brown carry bag with three pockets and a reinforced liner, built for walking."+S("brand-to-know-ashworth")),
  "g25": ("Quiet Golf", "Harris Tweed Driver Head Cover", "$132", "https://quietgolf.com/products/harris-tweed-driver-head-cover",
    "A driver cover in Harris Tweed, the hand-woven Scottish cloth. About as traditional as a headcover gets."+S("brand-to-know-quiet-golf")),
  "g26": ("Hudson Sutler", "Heritage Golf Shoe Bag", "$149", "https://www.hudsonsutler.com/products/heritage-golf-shoe-bag",
@@ -113,7 +113,7 @@ SECTIONS = [
  ("The Minimalist", "minimalist", ["g14","g15","g16","g17","g20"],
   "<strong>Five picks &middot; $10&ndash;$215</strong>One logo, if any. Navy, bone and white, a slim bag with nothing in it that doesn&rsquo;t need to be there, and a scorecard holder instead of an app. The goal is to look like you&rsquo;ve been playing for twenty years without saying so."),
  ("The Purist", "purist", ["g21","g22","g23","g25","g26"],
-  "<strong>Five picks &middot; $36&ndash;about $870</strong>Believes golf peaked somewhere between persimmon and balata. Cotton polos, a carry bag, a hand-forged marker and a Harris Tweed headcover. The Purist would rather walk nine holes than ride eighteen."),
+  "<strong>Five picks &middot; $36&ndash;$245</strong>Believes golf peaked somewhere between persimmon and balata. Cotton polos, a carry bag, a hand-forged marker and a Harris Tweed headcover. The Purist would rather walk nine holes than ride eighteen."),
  ("The Quiet Luxury Golfer", "quiet-luxury", ["g27","g28","g29","g30","g31"],
   "<strong>Five picks &middot; $178&ndash;$1,199.99</strong>Expensive, never loud. Wool, leather and a jacquard quarter-zip, a leather weekender and a leather bag. Nothing has a big logo, and everything costs more than you&rsquo;d guess."),
  ("The Cowboy", "cowboy", ["g33","g34","g35","g36","g38"],
@@ -156,7 +156,7 @@ FAQ = [
  ("What kind of golfer am I?", "Start with what you already reach for. If you walk and carry at public courses, you are probably a Muni Rat; if your kit is all navy and white, a Minimalist; if you want cotton, tweed and a carry bag, a Purist. Most golfers are two types at once."),
  ("What is a good gift for a golfer?", "Something they will use every round. A ball marker ($10 to $48), a towel ($39.99) or a scorecard holder ($75) works for almost anyone; a pearl snap, a Harris Tweed headcover or a reworked Supreme cover suits a specific type."),
  ("Are these all independent golf brands?", "Yes. Every item comes from an independent brand TGI has already featured, and each card links back to our full story on that brand."),
- ("When were these prices checked?", "On each brand's own store on 4 October 2026. Clamp Golf Company, No Return Club and Fyfe are UK brands, so their prices are shown in pounds with an approximate dollar figure."),
+ ("When were these prices checked?", "On each brand's own store on 4 October 2026. Clamp Golf Company and No Return Club are UK brands, so their prices are shown in pounds with an approximate dollar figure."),
 ]
 FRN = json.loads((ROOT / "research/archetypes/frames.json").read_text())
 OUT = ROOT / f"drops/{SLUG}.html"

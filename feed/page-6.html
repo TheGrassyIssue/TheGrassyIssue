@@ -11,6 +11,51 @@
      inside .feed-page into its own feed. Edit cards on the homepage source, not here. -->
 <p><a href="/">The Grassy Issue</a></p>
 <div class="feed-page" data-page="6">
+
+<!-- MUNI GUIDE — Sandwiches Before the Round -->
+  <div class="card" data-type="field">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag flag">[Field Notes]</span>
+      <div class="gear-carousel" data-carousel="sandwiches1">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="https://mumfoodsatx.com" target="_blank" rel="noopener">
+              <img src="/images/sandwiches/mum-foods.jpg" alt="Mum Foods Smokehouse & Delicatessen — Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Morris Williams &middot; 4 min</div><div class="gear-slide-name">Mum Foods &mdash; The Rachel</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://tuccisubs.com" target="_blank" rel="noopener">
+              <img src="/images/sandwiches/tuccis.jpg" alt="Tucci's Southside Subs — Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Jimmy Clay &amp; Roy Kizer &middot; 6 min</div><div class="gear-slide-name">Tucci's Southside Subs</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://www.othersidedeliatx.com" target="_blank" rel="noopener">
+              <img src="/images/sandwiches/otherside.jpg" alt="Otherside Deli — Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Hancock &middot; 6 min</div><div class="gear-slide-name">Otherside Deli &mdash; The Reuben</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="https://homeslicepizza.com" target="_blank" rel="noopener">
+              <img src="/images/sandwiches/home-slice.jpg" alt="Home Slice Pizza — Austin" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">En route south</div><div class="gear-slide-name">Home Slice &mdash; Italian Sub</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/sandwiches-before-the-round" style="color:inherit;text-decoration:none;border-bottom:none;">Sandwiches Before the Round</a></div>
+      <div class="card-text" data-slidetext="sandwiches1">Mum Foods &mdash; Michelin-listed pastrami four minutes from Morris Williams. The Rachel: oak-smoked pastrami, coleslaw, russian dressing on grilled rye. The best pre-round upgrade in Austin golf.</div>
+      <a href="/drops/sandwiches-before-the-round" class="card-link">See the full post &#8594;</a>
+    </div>
+  </div>
+
+  
+
 <!-- BRAND REVISITED — Kingfisher Golf -->
   <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -1032,24 +1077,17 @@
     </div>
   </div>
 
-  <!-- THE TOWEL EDIT, VOL. 2 -->
-
-  <div class="card card-quote" data-type="quote">
-    <span class="card-tag" style="position:static;">[Quote]</span>
-    <blockquote>"Ninety percent of putts that are short don't go in."</blockquote>
-    <div class="quote-row">
-      <div class="quote-portrait" style="width:48px;height:48px;border-radius:50%;background:var(--grass);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:16px;letter-spacing:0.05em;color:var(--paper);flex-shrink:0;">YB</div>
-      <div>
-        <cite style="display:block;">&mdash; Yogi Berra</cite>
-        <span style="font-family:var(--mono);font-size:9px;letter-spacing:0.1em;text-transform:uppercase;opacity:0.45;display:block;margin-top:2px;">Yankees Legend</span>
-      </div>
-    </div>
-  </div>
-
   
+
 <!--/feed-page-->
 </div>
 <script>window._slideTexts=window._slideTexts||{};Object.assign(window._slideTexts,{
+sandwiches1: [
+      "Mum Foods — Michelin Guide-listed pastrami four minutes from Morris Williams. The Rachel: oak-smoked pastrami, grilled rye, coleslaw, russian dressing. Best pre-round upgrade in Austin golf.",
+      "Tucci's Southside Subs — the South Austin institution, six minutes from Jimmy Clay and Roy Kizer. Fresh-baked New World Bakery bread, Boar's Head meats, subs big enough to split across eighteen.",
+      "Otherside Deli — house-brined, smoked, and steamed pastrami six minutes from Hancock. Doors open 10 AM, which is exactly when you want a Reuben before a lunch loop.",
+      "Home Slice — the best Italian sub in the city, hiding at the pizza counter on South Congress. Get the half unless you want to sleep through your tee time."
+    ],
 kingfisherrevisited1: [
       "Mechanic Polo — forest green with a rugby collar and chest patch. The standout of Kingfisher's doubled-up August range. $65.",
       "Kit Polo — dark knit with a football-kit collar. The dressiest thing they make, and it still reads golf. $65.",

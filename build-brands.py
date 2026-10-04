@@ -963,6 +963,7 @@ CHAIN = [
     # as of 24 Sep 2026. The taxonomy build lifts its cards from the approved
     # index, so it must run after build-brand-index.py.
     (["build-brand-taxonomy.py", "--apply"],             "the hand-written /brands/tag + /attr pages"),
+    (["sync-brand-counts.py", "--apply"],                "brand count on About + Work With Us"),
     (["apply-header.py", "--apply"],                      "weather CSS back after the body swap"),
     # THE MASTHEAD. Every page written above starts from an older brand-page
     # template that still carries the In The Margins wordmark, so each rebuild
