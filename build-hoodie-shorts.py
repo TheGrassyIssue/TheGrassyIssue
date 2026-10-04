@@ -63,7 +63,7 @@ HERO  = "/images/hoodie-shorts/hero.jpg"
 MORE = [
     ("/drops/best-golf-streetwear-brands-2026",
      "/images/hoodie-shorts/h-malbon.jpg",
-     "The 5 Best Golf Streetwear Brands in 2026"),
+     "The 9 Best Golf Streetwear Brands in 2026"),
     ("/drops/accessories-on-and-off-the-course",
      "/images/hoodie-shorts/sc-metalwood-studio.jpg",
      "Accessories, On and Off the Course"),

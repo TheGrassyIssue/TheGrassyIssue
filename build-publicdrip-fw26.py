@@ -253,7 +253,7 @@ page = f'''<!DOCTYPE html>
     </a>
     <a href="/drops/best-golf-streetwear-brands-2026" class="more-card">
       <div class="more-card-img"><img src="/images/streetwear26/hero.jpg" alt="The 5 best golf streetwear brands in 2026" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The 5 Best Golf Streetwear Brands in 2026</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+      <div class="more-card-body"><div class="more-card-name">The 9 Best Golf Streetwear Brands in 2026</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
     <a href="/drops/students-golf-summer-2026" class="more-card">
       <div class="more-card-img"><img src="/images/studentsgolf-summer26/slide-pants.jpg" alt="Students Golf Summer 2026 drop" loading="lazy" /></div>

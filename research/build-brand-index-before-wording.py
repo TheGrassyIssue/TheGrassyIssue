@@ -307,9 +307,9 @@ BODY = f"""<!--BX-BRAND-INDEX-->
 <div id="bx">
 <section class="bx-hero"><div class="wrap">
   <div>
-    <div class="eyebrow">{N} GOLF BRANDS &amp; INDEPENDENT MAKERS &middot; AUSTIN</div>
+    <div class="eyebrow">{N} INDEPENDENT GOLF BRANDS &middot; AUSTIN</div>
     <h1>{N} brands<br>to <em>know.</em></h1>
-    <p>A running list of golf brands, independent makers and oddities from Texas to Tokyo &mdash; heritage names, indie labels, small-batch workshops and under-the-radar finds, every one with its own page. Researched and selected by The Grassy Issue.</p>
+    <p>A running list of independent golf brands, makers and oddities from Texas to Tokyo &mdash; indie labels, small-batch workshops and under-the-radar names, every one with its own page. Researched and selected by The Grassy Issue.</p>
     <div class="modes"><button type="button" id="bx-m-discover">DISCOVER</button><button type="button" id="bx-m-az">BROWSE A&ndash;Z</button><button type="button" data-open-filter>FILTER</button></div>
   </div>
   <div class="bx-hero-img"><img src="{HERO_IMG}" alt="Lions Municipal Golf Course at dusk, Austin"><div class="cap">LIONS MUNICIPAL &middot; AUSTIN, TX</div></div>
@@ -430,13 +430,13 @@ head = re.sub(r'\n*<style id="bx-css">.*?</style>\n?', "", head, flags=re.S)
 # read the wrong file. The year is derived there and imported here for the same
 # reason: a hardcoded year goes stale in January without anyone noticing.
 YEAR = __import__("datetime").date.today().year
-head = re.sub(r'<title>[^<]*</title>', f"<title>{N} Golf Brands &amp; Independent Makers ({YEAR}) | The Grassy Issue</title>", head)
+head = re.sub(r'<title>[^<]*</title>', f"<title>{N} Independent Golf Brands to Know ({YEAR}) | The Grassy Issue</title>", head)
 head = re.sub(r'(<meta name="description" content=")[^"]*(")',
-              lambda m: m.group(1) + f"A running list of {N} golf brands and independent makers — apparel, bags, headcovers and under-the-radar labels from Texas to Tokyo, searchable by product, vibe and location." + m.group(2), head)
+              lambda m: m.group(1) + f"A running list of {N} independent and indie golf brands — apparel, bags, headcovers and under-the-radar makers from Texas to Tokyo, searchable by product, vibe and location." + m.group(2), head)
 head = re.sub(r'(<meta property="og:title" content=")[^"]*(")',
-              lambda m: m.group(1) + f"{N} Golf Brands &amp; Independent Makers ({YEAR})" + m.group(2), head)
+              lambda m: m.group(1) + f"{N} Independent Golf Brands to Know ({YEAR})" + m.group(2), head)
 head = re.sub(r'(<meta property="og:description" content=")[^"]*(")',
-              lambda m: m.group(1) + f"A running list of {N} golf brands and independent makers, searchable by product, vibe and location." + m.group(2), head)
+              lambda m: m.group(1) + f"A running list of {N} independent and indie golf brands, searchable by product, vibe and location." + m.group(2), head)
 tail = page[foot:]
 # drop the old page's own pill/gallery script(s) and any previous bx-js
 tail = re.sub(r'<script>\s*\(function\(\)\{\s*var pills=.*?</script>\s*', "", tail, count=1, flags=re.S)

@@ -14,6 +14,8 @@ try:
     _idx = open(os.path.join(SITE, "index.html"), encoding="utf-8").read()
     # older cards live in /feed/page-*.html since paginate-feed.py (1 Oct 2026)
     for _pg in sorted(glob.glob(os.path.join(SITE, "feed", "page-*.html"))):
+        if " " in os.path.basename(_pg):  # skip Finder/iCloud duplicates like "page-2 2.html"
+            continue
         _idx += open(_pg, encoding="utf-8").read()
     for _m in re.finditer(r'<div class="card"[^>]*data-type="(\w+)"', _idx):
         _seg = _idx[_m.start():_m.start() + 3000]

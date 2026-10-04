@@ -310,9 +310,9 @@ pills += [f'<button class="bi-pill" data-f="{k}">{v}</button>' for k, v in REGIO
 # times despite TGI using "indie" on 32 other pages, so they go in the body copy
 # where they read naturally — not stuffed into the title.
 itemlist = json.dumps({"@context":"https://schema.org","@type":"CollectionPage",
-  "name":f"{len(BRANDS)} Golf Brands & Independent Makers — The Grassy Issue",
+  "name":f"{len(BRANDS)} Independent Golf Brands to Know — The Grassy Issue",
   "alternateName":"The Brand Index",
-  "description":f"A running list of {len(BRANDS)} golf brands and independent makers — apparel, clubs, bags, headcovers and accessories — researched and selected by The Grassy Issue in Austin, Texas.",
+  "description":f"A running list of {len(BRANDS)} independent and indie golf brands — apparel, clubs, bags, headcovers and accessories — researched and selected by The Grassy Issue in Austin, Texas.",
   "url":"https://thegrassyissue.com/brands",
   "mainEntity":{"@type":"ItemList","numberOfItems":len(BRANDS),
     "itemListElement":[{"@type":"ListItem","position":i+1,"name":b["name"],
@@ -336,11 +336,11 @@ page = f'''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{N} Golf Brands &amp; Independent Makers ({YEAR}) | The Grassy Issue</title>
-<meta name="description" content="A running list of {N} golf brands and independent makers — apparel, bags, headcovers and under-the-radar labels from Texas to Tokyo, searchable by product, vibe and location.">
+<title>{N} Independent Golf Brands to Know ({YEAR}) | The Grassy Issue</title>
+<meta name="description" content="A running list of {N} independent and indie golf brands — apparel, bags, headcovers and under-the-radar makers from Texas to Tokyo, searchable by product, vibe and location.">
 <link rel="canonical" href="https://thegrassyissue.com/brands">
-<meta property="og:title" content="{N} Golf Brands &amp; Independent Makers ({YEAR})">
-<meta property="og:description" content="A running list of {N} golf brands and independent makers, searchable by product, vibe and location.">
+<meta property="og:title" content="{N} Independent Golf Brands to Know ({YEAR})">
+<meta property="og:description" content="A running list of {N} independent and indie golf brands, searchable by product, vibe and location.">
 <meta property="og:url" content="https://thegrassyissue.com/brands">
 <meta property="og:type" content="website">
 {fonts}
@@ -448,7 +448,7 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 
 <header class="bi-head">
   <span class="bi-kicker">[ The Brand Index ]</span>
-  <h1>Golf Brands &amp; Independent Makers</h1>
+  <h1>Independent Golf Brands to Know</h1>
   <p class="bi-intro">A running index of independent golf brands &mdash; apparel, clubs, bags,
   headcovers and the occasional oddity &mdash; from Texas to Tasmania to Tokyo. Every brand here
   has been researched, photographed and written up by The Grassy Issue, curated from Austin.

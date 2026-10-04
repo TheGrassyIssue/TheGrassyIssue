@@ -132,7 +132,8 @@ def page_doc(n, units, texts, nxt):
     return ("<!DOCTYPE html>\n<html lang=\"en\">\n<head>\n<meta charset=\"UTF-8\" />\n"
             f"<title>The Grassy Issue — the feed, page {n}</title>\n"
             "<meta name=\"robots\" content=\"noindex,follow\" />\n"
-            "<link rel=\"canonical\" href=\"https://thegrassyissue.com/\" />\n</head>\n<body>\n"
+            # self-canonical (SEO audit 4 Oct 2026): these pages are not copies of the homepage
+            f"<link rel=\"canonical\" href=\"https://thegrassyissue.com/feed/page-{n}\" />\n</head>\n<body>\n"
             "<!-- Feed page fragment, written by paginate-feed.py. The homepage fetches this and moves the cards\n"
             "     inside .feed-page into its own feed. Edit cards on the homepage source, not here. -->\n"
             f"<p><a href=\"/\">The Grassy Issue</a></p>\n<div class=\"feed-page\" data-page=\"{n}\">\n"

@@ -29,7 +29,7 @@ import json, os, re, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
 URL = "/drops/best-golf-streetwear-brands-2026"
 PAGE = os.path.join(ROOT, "drops", "best-golf-streetwear-brands-2026.html")
-TITLE = "The 5 Best Golf Streetwear Brands in 2026"
+TITLE = "The 9 Best Golf Streetwear Brands in 2026"
 
 # slug -> the string that must be present in the editorial body
 ON_PAGE = {

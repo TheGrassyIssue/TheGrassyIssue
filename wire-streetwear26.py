@@ -44,7 +44,7 @@ CARD = '''  <div class="card" data-type="drop">
       </div>
     </div>
     <div class="card-body">
-      <div class="card-title"><a href="%s" style="color:inherit;text-decoration:none;border-bottom:none;">The 5 Best Golf Streetwear Brands in 2026</a></div>
+      <div class="card-title"><a href="%s" style="color:inherit;text-decoration:none;border-bottom:none;">The 9 Best Golf Streetwear Brands in 2026</a></div>
       <div class="card-text" data-slidetext="%s">%s</div>
       <a href="%s" class="card-link">Read the edit &#8594;</a>
     </div>

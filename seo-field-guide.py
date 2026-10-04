@@ -87,11 +87,11 @@ ROWS = [
     ("Hancock", "Muni &middot; 9", "E 41st St", "$20",
      "Casual rounds, beginners, 90-minute afternoons", "#munis"),
     ("Falconhead", "Public", "Bee Cave &middot; 25 min", "Dynamic &mdash; check rates",
-     "Birthdays, visitors", "#special"),
+     "Birthdays, visitors", "#special-day"),
     ("Grey Rock", "Semi-private", "SW Austin &middot; 20 min", "$90&ndash;$105",
-     "Regular upgrade, weekday treat", "#special"),
+     "Regular upgrade, weekday treat", "#special-day"),
     ("Avery Ranch", "Semi-private", "Cedar Park &middot; 30 min", "Dynamic &mdash; check rates",
-     "Couples, bachelor rounds", "#special"),
+     "Couples, bachelor rounds", "#special-day"),
 ]
 
 MARK, END = "<!-- TGI-QUICKGUIDE -->", "<!-- /TGI-QUICKGUIDE -->"
