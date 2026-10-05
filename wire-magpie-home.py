@@ -23,7 +23,7 @@ IMGDIR = "magpie-supply"
 SLIDES = [
     ("card-hero", "The Magpie x RossCo headcover on a golf bag, a golfer on the tee behind",
      "Magpie Supply · Denver", "Brand to Know",
-     "A lost wallet in 2017 became a one-person Denver leather shop making golf's small things. The whole store, all ten pieces, from a $25 tee ring to the RossCo headcover."),
+     "A wallet lost in New York in 2017 became a one-person leather shop, now in Denver, making golf's small things. The whole store, all ten pieces, from a $25 tee ring to the RossCo headcover."),
     ("m01-0", "Magpie Supply leather scorecard holder",
      "Scorecard Holder · $75", "Our pick",
      "Full-grain leather, made in Denver, for keeping score in pencil."),

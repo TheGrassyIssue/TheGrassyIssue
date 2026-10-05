@@ -33,6 +33,7 @@ PAGES = [
     "drops/brand-to-know-ashworth.html",
     "drops/brand-to-know-puttwell.html",
     "drops/brand-to-know-shoal-golf.html",
+    "drops/golf-bag-accessories-what-to-hang-from-your-bag.html",
     "drops/which-golfer-are-you.html",
     "drops/brand-to-know-local-gc.html",
     "drops/fella-golf.html",

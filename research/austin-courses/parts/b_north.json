@@ -1,0 +1,534 @@
+{
+  "courses": [
+    {
+      "name": "Avery Ranch Golf Club",
+      "city": "Austin",
+      "address": "10500 Avery Club Drive, Austin, TX 78717",
+      "latitude": 30.5039841,
+      "longitude": -97.7706196,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7121,
+      "architects": [
+        "Andy Raugust"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 60.0,
+        "high_usd": 163.0,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Course states green fees follow a dynamic pricing model. Figures are the per-player prices on the official GolfBack public booking engine (linked from averyranch.com) for 'Public - 18 Holes with Cart' and 'Daily Steal 18' rates across tee times dated 5-12 Oct 2026; the engine's basePrice field ranged $60-$130 (difference likely fees/taxes, not confirmed). Cart fee $35 when bought separately per rates page; no resident/senior table published.",
+        "read_date": "2026-10-05",
+        "source_url": "https://golfback.com/#/course/f06840ec-1229-4d06-b1d9-435573939990"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "7 days (general public and Player's Club); 10 days for members",
+      "website": "https://averyranch.com/",
+      "phone": "512-248-2442",
+      "source_urls": [
+        "https://averyranch.com/",
+        "https://averyranch.com/course-information/",
+        "https://averyranch.com/course-rates/",
+        "https://averyranch.com/wp-content/uploads/sites/13/2026/04/scorecard-1.jpg",
+        "https://golfback.com/#/course/f06840ec-1229-4d06-b1d9-435573939990",
+        "https://nominatim.openstreetmap.org/search?format=json&q=10500%20Avery%20Club%20Drive%2C%20Austin%2C%20TX%2078717"
+      ],
+      "notes": "Self-described 'Austin's Premier Daily Fee Golf Course'; also sells memberships. Scorecard: Black tees 7,121 yds, par 72. Toptracer Mobile on range; push carts not available for rent. Year opened not stated on official site."
+    },
+    {
+      "name": "The Golf Club at Star Ranch",
+      "city": "Hutto",
+      "address": "2500 FM 685, Hutto, TX 78634",
+      "latitude": 30.5063553,
+      "longitude": -97.5811889,
+      "type": "public",
+      "holes": 18,
+      "par": null,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 62.0,
+        "high_usd": 139.0,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Posted rates page: Mon-Thu 7:00am-2:59pm $85-$99, 3pm-close $62; Fri and weekends/holidays 7:00am-2:59pm $129-$139, 3pm-close $75. Senior (60+) $67 Mon-Thu, $99 Fri before 3pm. Juniors call for rate. All fees include green fee, shared cart and warm-up range balls. Rates subject to change; ranges within a time band suggest some variability but the page does not call it dynamic pricing.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.starranchgolf.com/rates/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "7 days (general public); 8 days for annual members",
+      "website": "https://www.starranchgolf.com/",
+      "phone": "512-252-4653",
+      "source_urls": [
+        "https://www.starranchgolf.com/",
+        "https://www.starranchgolf.com/rates/",
+        "https://www.starranchgolf.com/course-details/",
+        "https://starranchgolf.ezlinksgolf.com/index.html#/search",
+        "https://nominatim.openstreetmap.org/search?format=json&q=2500%20FM%20685%2C%20Hutto%2C%20TX"
+      ],
+      "notes": "Daily-fee course with annual memberships; 48-hour cancellation policy; cashless facility. Official site does not publish par, yardage, architect or opening year. Range closed Wednesdays 12-2pm for maintenance."
+    },
+    {
+      "name": "Crystal Falls Golf Club",
+      "city": "Leander",
+      "address": "3400 Crystal Falls Pkwy, Leander, TX 78641",
+      "latitude": 30.52788,
+      "longitude": -97.88034,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6654,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 33.0,
+        "high_usd": 75.0,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Posted rate table (marked 'Effective January 15th 2024', still the live rates page). Adult 18-hole: City of Leander resident $33 (Mon-Thu twilight) to $50 (Fri-Sun morning); non-resident $45 (Mon-Thu twilight) to $75 (Fri-Sun/holiday morning). Senior (60+)/Hero rates $30-$60; junior $18-$25; 9 holes $25-$40. Rates include golf, half cart and taxes. The official TeeItUp booking engine showed non-resident '18 Holes' online prices of $43.86-$73.86 for 5-12 Oct 2026.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.crystalfallsgolf.com/rates/"
+      },
+      "walking": "restricted",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.crystalfallsgolf.com/",
+      "phone": "512-259-5855",
+      "source_urls": [
+        "https://www.crystalfallsgolf.com/",
+        "https://www.crystalfallsgolf.com/rates/",
+        "https://www.crystalfallsgolf.com/course-details/",
+        "https://www.crystalfallsgolf.com/practice-facilities/",
+        "https://www.crystalfallsgolf.com/course-policies/",
+        "https://crystal-falls-golf-club-2.book.teeitup.com/"
+      ],
+      "notes": "Owned and operated by the City of Leander. Walking allowed anytime Mon-Thu and after 1:00pm Fri/Sat/Sun/holidays. Blue tees 6,654 yds (73.7/135). Water in play on 12 holes. Pace of play 4.5 hours. Coordinates from the official TeeItUp facility record. Architect/year not stated on official site."
+    },
+    {
+      "name": "ShadowGlen Golf Club",
+      "city": "Manor",
+      "address": "12801 Lexington St, Manor, TX 78653",
+      "latitude": 30.3531645,
+      "longitude": -97.5557789,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7174,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 69.0,
+        "high_usd": 119.0,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Posted 'Golf Rates 2026': Standard Mon-Thu $79, Fri $99, weekends/holidays $119; Twilight (after 2pm) $69 Mon-Thu, $85 Fri-Sun; Senior/Veterans $65 Mon-Thu, $75 Fri; Junior $45-$55. Rates include green fee and shared cart (small range bucket before 2pm with standard/senior rates). Note: the official TeeItUp booking engine displayed '18 Holes' prices of $95-$135 for 5-12 Oct 2026, higher than the posted table (reason not stated).",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.shadowglengolf.com/course/rates/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://www.shadowglengolf.com/",
+      "phone": "512-278-1304",
+      "source_urls": [
+        "https://www.shadowglengolf.com/",
+        "https://www.shadowglengolf.com/course/rates/",
+        "https://www.shadowglengolf.com/course/scorecard/",
+        "https://www.shadowglengolf.com/course/facilities/",
+        "https://www.shadowglengolf.com/contact-us/",
+        "https://shadowglen-golf-club.book.teeitup.com/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=ShadowGlen%20Golf%20Club%2C%20Manor"
+      ],
+      "notes": "5 Dot tees 7,174 yds (74.9/142), par 72. Double-sided 380-yard range and 3,000 sq ft putting green. Booking-engine description says the course was built by Golf Works, Inc.; architect not named on official pages. 24-hour cancellation policy."
+    },
+    {
+      "name": "Teravista Golf Club",
+      "city": "Round Rock",
+      "address": "4333 Teravista Club Drive, Round Rock, TX 78665",
+      "latitude": 30.5715474,
+      "longitude": -97.6681839,
+      "type": "semi-private (public tee times)",
+      "holes": 18,
+      "par": null,
+      "back_tee_yardage": 7039,
+      "architects": [
+        "Clifton, Ezell & Clifton"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 55.0,
+        "high_usd": 144.0,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Course states green fees follow a dynamic pricing model. Figures are per-player prices on the official GolfBack 'Public Tee Time' engine (linked from teravistagolf.com) for 'Public - 18 Holes with Cart' and 'Daily Steal 18' rates for tee times dated 5-12 Oct 2026; engine basePrice ranged $55-$115. Cart fee $35 when bought separately.",
+        "read_date": "2026-10-05",
+        "source_url": "https://golfback.com/#/course/609b3b52-0b5f-4cd5-a68b-9fdfcb7c6676/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://teravistagolf.com/",
+      "phone": "512-651-9850",
+      "source_urls": [
+        "https://teravistagolf.com/",
+        "https://teravistagolf.com/course-rates/",
+        "https://teravistagolf.com/course-information/",
+        "https://teravistagolf.com/practice-facility/",
+        "https://golfback.com/#/course/609b3b52-0b5f-4cd5-a68b-9fdfcb7c6676/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Teravista%20Golf%20Club%2C%20Round%20Rock"
+      ],
+      "notes": "Public tee times, Players Club and member booking channels. Tee table lists Black 7,039 yds (74.4/141) although marketing copy says '7,200-yard layout'; 7,039 used. Par not published on official pages. Toptracer Range and Power Tee; chipping green and 22,000 sq ft putting green. 24-hour cancellation."
+    },
+    {
+      "name": "Forest Creek Golf Club",
+      "city": "Round Rock",
+      "address": "99 Twin Ridge Parkway, Round Rock, TX 78664",
+      "latitude": 30.5183982,
+      "longitude": -97.6001003,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7147,
+      "architects": [
+        "Dick Phelps"
+      ],
+      "year_opened": 1990,
+      "green_fee": {
+        "low_usd": 31.0,
+        "high_usd": 90.0,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Course uses variable (dynamic) pricing; no rate table published. Figures are the green-fee component shown on the official Chronogolf booking engine (club 13600, default public rate) for tee times dated 5-12 Oct 2026; a $15 half-cart fee is added per player (e.g., $59 + $15 = $74). FAQ notes discounted junior, senior and twilight pricing.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.chronogolf.com/club/forest-creek-golf-club-texas"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "30 days",
+      "website": "https://forestcreek.com/",
+      "phone": "512-388-2874",
+      "source_urls": [
+        "https://forestcreek.com/",
+        "https://forestcreek.com/4968-2/",
+        "https://forestcreek.com/4706-2/",
+        "https://forestcreek.com/scorecard/",
+        "https://forestcreek.com/practice-facilities/",
+        "https://www.roundrocktexas.gov/news/city-selects-kempersports-manage-forest-creek-golf-club/",
+        "https://www.roundrocktexas.gov/news/renovations-way-forest-creek-golf-club/",
+        "https://www.chronogolf.com/marketplace/organizations/13600",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Forest%20Creek%20Golf%20Club%2C%20Round%20Rock"
+      ],
+      "notes": "Owned by the City of Round Rock, managed by KemperSports since 2017; renovated after the KemperSports takeover. Gold tees 7,147 yds (74.8/139). No memberships (Champions Club loyalty program instead). FAQ: walking permitted; relaxed dress code. Range open to 10pm most nights."
+    },
+    {
+      "name": "Blackhawk Golf Club",
+      "city": "Pflugerville",
+      "address": "2714 Kelly Lane, Pflugerville, TX 78660",
+      "latitude": 30.464834,
+      "longitude": -97.578723,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7072,
+      "architects": [
+        "Charles Howard",
+        "Hollis Stacey"
+      ],
+      "year_opened": 1990,
+      "green_fee": {
+        "low_usd": 27.0,
+        "high_usd": 59.0,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Posted rates page is labelled 'Effective July 1 2026 - August 31 2026': Mon-Thu $40 before 2pm, $37 2-4pm, $27 after 4pm; Fri $49/$39/$32; Sat-Sun $59 before noon, $45 noon-4pm, $35 after 4pm. Seniors/students $27-$56; juniors $20-$30. The official TeeItUp booking engine showed the same $27-$59 range ('18 Holes', cart included) for 5-12 Oct 2026.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.blackhawkgolf.com/rates/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.blackhawkgolf.com/",
+      "phone": "512-251-9000",
+      "source_urls": [
+        "https://www.blackhawkgolf.com/",
+        "https://www.blackhawkgolf.com/rates/",
+        "https://www.blackhawkgolf.com/course/",
+        "https://www.blackhawkgolf.com/practice-center/",
+        "https://blackhawk-golf-club.book.teeitup.com/"
+      ],
+      "notes": "Opened fall 1990; links-style layout, 46 bunkers. Black tees 7,072 yds (74.5/125) per official scorecard (homepage says 'almost 7,200'). 15-acre practice facility with chipping and putting greens; buckets $5. Coordinates from official TeeItUp facility record. Posted rate period has lapsed; online engine prices matched it on read date."
+    },
+    {
+      "name": "Lago Vista Golf Course",
+      "city": "Lago Vista",
+      "address": "4616 Rimrock Drive, Lago Vista, TX 78645",
+      "latitude": 30.4468976,
+      "longitude": -98.0043873,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6544,
+      "architects": [
+        "Leon Howard"
+      ],
+      "year_opened": 1971,
+      "green_fee": {
+        "low_usd": 36.0,
+        "high_usd": 54.0,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Posted daily rates: Mon-Thu regular $48, senior $44, twilight $38, super twilight $36; Fri-Sun/holidays regular $54, senior $49, twilight $44, super twilight $36; 9 holes anytime $31; juniors $10 walking/$18 riding. Tee-time page says dynamic pricing is used and online rates are lower than phone rates; the official TeeItUp engine showed $36-$54 for 18 holes with cart, 5-11 Oct 2026.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.lagovistagc.com/golf/fees"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://www.lagovistagc.com/",
+      "phone": "512-267-1170",
+      "source_urls": [
+        "https://www.lagovistagc.com/",
+        "https://www.lagovistagc.com/golf/course",
+        "https://www.lagovistagc.com/golf/fees",
+        "https://www.lagovistagc.com/golf/tee-times",
+        "https://www.lagovistagc.com/golf/operating-procedures",
+        "https://www.lagovistagc.com/club/restaurant",
+        "https://lago-vista-golf-course.book.teeitup.com/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Lago%20Vista%20Golf%20Course"
+      ],
+      "notes": "Owned and operated by the City of Lago Vista. Opened 1971 as 9 holes, later expanded to 18 under architect Leon Howard; private country club until the mid-1990s. Homepage stat: 18 holes, 6,544 yds, par 72. Practice facility with three tiers of grass tees and putting green. Pace 4 hours. 24-hour cancellation."
+    },
+    {
+      "name": "Point Venture Golf Club",
+      "city": "Point Venture",
+      "address": "422 Venture Blvd S, Point Venture, TX 78645",
+      "latitude": 30.38418,
+      "longitude": -97.9989585,
+      "type": "semi-private (public tee times)",
+      "holes": 9,
+      "par": 36,
+      "back_tee_yardage": 3126,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 24.99,
+        "high_usd": 34.99,
+        "basis": "9-hole",
+        "dynamic": false,
+        "notes": "2026 Public Rates (non-member), all plus tax: 9 holes walking $24.99 Tue-Thu / $29.99 Fri-Mon & holidays; 9 holes with half cart $29.99 / $34.99; 18 holes walking $39.99 / $49.99; 18 holes with half cart $49.99 / $59.99; junior $19.99. 10% discount for seniors 70+, military, teachers, first responders.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.pointventuregolf.com/rates/"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.pointventuregolf.com/",
+      "phone": "737-373-3033",
+      "source_urls": [
+        "https://www.pointventuregolf.com/",
+        "https://www.pointventuregolf.com/rates/",
+        "https://www.pointventuregolf.com/course/scorecard-course-tour/",
+        "https://www.pointventuregolf.com/course/policies-and-information/",
+        "https://www.pointventuregolf.com/course/practice-facilities/",
+        "https://www.pointventuregolf.com/contact-us/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=422%20Venture%20Blvd%20S%2C%20Point%20Venture%2C%20TX"
+      ],
+      "notes": "Owned and operated by the Point Venture Property Owners Association; public rates published. Par 36 and 3,126 yds are summed from the official hole-by-hole course tour (tips yardages: 301, 389, 178, 356, 131, 508, 385, 343, 535). Practice area includes range, 50-yard pitching green and practice bunker. Lake Travis views."
+    },
+    {
+      "name": "Mustang Creek Golf Course",
+      "city": "Taylor",
+      "address": "1100 Beech Street, Taylor, TX",
+      "latitude": 30.555521,
+      "longitude": -97.4154648,
+      "type": "semi-private (public tee times)",
+      "holes": 9,
+      "par": null,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "9-hole",
+        "dynamic": null,
+        "notes": "No green-fee table published on the official site; tee times sold online via TeeSnap (golfmustangcreek.teesnap.net), which blocked automated reading. Call 512-309-4045.",
+        "read_date": "2026-10-05",
+        "source_url": "https://mustangcreekgolf.com/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://mustangcreekgolf.com/",
+      "phone": "512-309-4045",
+      "source_urls": [
+        "https://mustangcreekgolf.com/",
+        "https://mustangcreekgolf.com/over-a-century-of-history",
+        "https://mustangcreekgolf.com/memberships%2Ftournaments",
+        "https://golfmustangcreek.teesnap.net/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Mustang%20Creek%20Golf%20Course%2C%20Taylor"
+      ],
+      "notes": "Historic Taylor course ('a south Taylor Texas Landmark since 1914'; formerly Taylor Country Club, bought by local businessmen mid-1980s). Official site describes it as a 9-hole course with driving range; offers private/family/corporate memberships plus public online tee times. OSM geocodes the course at 1100 Gano St; official site lists 1100 Beech Street. Par/yardage not on official site."
+    },
+    {
+      "name": "Sammons Golf Course",
+      "city": "Temple",
+      "address": "2727 W. Adams Ave., Temple, TX 76504",
+      "latitude": 31.1007104,
+      "longitude": -97.3702862,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6597,
+      "architects": null,
+      "year_opened": 1922,
+      "green_fee": {
+        "low_usd": 23.0,
+        "high_usd": 49.0,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "City of Temple daily rates (updated from 1 June 2026): weekday 18 holes $23 walking / $44 with cart; weekend $28 / $49; senior/military weekday $18 / $39; 9 holes $18-$23 walking, $31-$36 with cart. The official TeeItUp engine showed $31-$49 for 18 holes with cart on 5-6 Oct 2026.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.templeparks.com/facilities___rentals/sammons_golf_course/memberships.php"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.templeparks.com/facilities___rentals/sammons_golf_course/index.php",
+      "phone": "254-771-2030",
+      "source_urls": [
+        "https://www.templeparks.com/facilities___rentals/sammons_golf_course/index.php",
+        "https://www.templeparks.com/facilities___rentals/sammons_golf_course/memberships.php",
+        "https://www.templeparks.com/facilities___rentals/sammons_golf_course/course.php",
+        "https://www.templeparks.com/Scorecard.jpg",
+        "https://sammons-golf-course.book.teeitup.com/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Sammons%20Golf%20Course%2C%20Temple"
+      ],
+      "notes": "Borderline distance (Temple, Bell County, roughly 65-70 miles north of downtown Austin via I-35). Municipal course open to public year-round with range, pitching/chipping area and putting green. Opened December 1922 as the 9-hole Lake Polk Golf and Country Club; second nine added in the 1950s; redesigned in the mid-1980s under former mayor John F. Sammons Jr. (no golf architect named). Black tees 6,597 yds (72.5/137), par 72."
+    },
+    {
+      "name": "Stonetree Golf Club",
+      "city": "Killeen",
+      "address": "1600 Stonetree Drive, Killeen, TX 76543",
+      "latitude": 31.0893728,
+      "longitude": -97.6805784,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6693,
+      "architects": [
+        "Jay Riviere",
+        "Lee Singletary (2005 renovation)"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 18.0,
+        "high_usd": 60.5,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Posted rates: 18 holes weekday $32.50 walking / $50.00 with cart; weekend $43.00 / $60.50; twilight (2-4pm) $22.50-$42.50; super twilight (4pm-close) $18.00-$36.00; senior $24.00-$54.50; junior $16.50-$20.00. Active-duty military $5 off. Site says lowest rates are online.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.stonetreegc.com/golf-memberships/"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.stonetreegc.com/",
+      "phone": "254-501-6575",
+      "source_urls": [
+        "https://www.stonetreegc.com/",
+        "https://www.stonetreegc.com/the-course/",
+        "https://www.stonetreegc.com/golf-memberships/",
+        "https://www.stonetreegc.com/tee-times/",
+        "https://stonetree-golf-course.book.teeitup.com/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Stonetree%20Golf%20Club%2C%20Killeen"
+      ],
+      "notes": "Borderline distance (Killeen, Bell County, roughly 70 miles; about 1h15-1h30 drive). Managed by Troon; annual passes priced for residents vs non-residents. Official site: built 1970 by Jay Riviere, renovated 2005 by Lee Singletary; booking-engine description says opened 1972 (year left null due to conflict). Par 72 and 6,693 yds from the official TeeItUp booking engine description. Walking inferred from published green-fee-only (no cart) rates. Double-ended range, pitching green, practice bunker, putting green. Pace limit 4.5 hours."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Cimarron Hills Golf & Country Club (Georgetown)",
+      "reason": "Private member club (Jack Nicklaus Signature course); official site offers membership and member login only, no public tee times found.",
+      "source_urls": [
+        "https://www.cimarronhills.com/",
+        "https://troon.com/course/cimarron-hills-golf-and-country-club"
+      ]
+    },
+    {
+      "name": "The Club at Berry Creek (formerly Berry Creek Country Club, Georgetown)",
+      "reason": "Private club; official site titled 'Private Golf' and built around membership.",
+      "source_urls": [
+        "https://www.theclubatberrycreek.com/"
+      ]
+    },
+    {
+      "name": "Georgetown Country Club (Georgetown, TX)",
+      "reason": "Private member club; tee times not open to the public. No separate public 'Georgetown Golf Club' was found. (Note: georgetowncc.com is an unrelated Ann Arbor, MI club.)",
+      "source_urls": [
+        "https://stymie.golf/golf-courses/texas/williamson-county/georgetown/georgetown-country-club"
+      ]
+    },
+    {
+      "name": "Sun City Texas - Legacy Hills, White Wing and Cowan Creek (Georgetown)",
+      "reason": "Community association describes them as 'three of the best private golf courses in Central Texas'; resident-oriented (resident discounts, resident login). No public tee-time sales found. A new short course is planned for end of 2026.",
+      "source_urls": [
+        "https://www.sctexas.org/club/scripts/memfac/memfac.asp?MFCODE=GOLF",
+        "https://www.sctexas.org/club/scripts/library/view_document.asp?GRP=26544&NS=MEMFAC&MFID=27933&MFCODE=GOLF&DN=SunCityProShops"
+      ]
+    },
+    {
+      "name": "Kurth-Landrum Golf Course (Southwestern University, Georgetown)",
+      "reason": "Closed (reported closed 9 November 2011).",
+      "source_urls": [
+        "https://foretee.com/courses/texas/georgetown/usa/kurth-landrum-golf-course-closed-2011/14056/"
+      ]
+    },
+    {
+      "name": "Bar-K Golf Course (Lago Vista)",
+      "reason": "Closed (9-hole par-3 course reported closed in 2005).",
+      "source_urls": [
+        "https://foretee.com/courses/texas/lago-vista/usa/bar-k-golf-course,-closed-2005/13627"
+      ]
+    },
+    {
+      "name": "Highland Lakes Golf Course (Lago Vista)",
+      "reason": "Could not verify that it is operating: no official website or booking page found; only stale directory listings. Not included pending a phone check.",
+      "source_urls": [
+        "https://stymie.golf/golf-courses/texas/travis-county/lago-vista/highland-lakes-golf-course"
+      ]
+    },
+    {
+      "name": "Mill Creek Golf Club (Salado)",
+      "reason": "Could not verify current public operation: no official website or booking page found. The Village of Salado has published an appraisal tied to talks about possibly buying the course. Directory listings describe a 27-hole semi-private course. Needs a phone check (254-947-5698 per directory).",
+      "source_urls": [
+        "https://www.saladotx.gov/node/2454",
+        "https://foretee.com/courses/texas/salado/usa/mill-creek-inn-and-country-club/14170/"
+      ]
+    },
+    {
+      "name": "Leon Valley Golf Course (Belton)",
+      "reason": "Not verified operating: no official website or booking page found, and listings indicate it is closed.",
+      "source_urls": [
+        "https://stymie.golf/golf-courses/texas/bell-county/belton/leon-valley-golf-course"
+      ]
+    }
+  ]
+}

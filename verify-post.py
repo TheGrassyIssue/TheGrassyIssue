@@ -18,7 +18,7 @@ def verify(path):
         if not ok: fails.append(name)
 
     # --- HOUSE FORMAT (the rule that broke Malbon + Lottery Round, 2026-08-20) ---
-    grids = list(re.finditer(r'<div class="products-grid">', h))
+    grids = list(re.finditer(r'<div class="products-grid"(?: data-[a-z-]+="[^"]*")*>', h))
     cards = list(re.finditer(r'<div class="product-card', h))
     spans = [(m.start(), match_div(h, m.start())) for m in grids]
     outside = [c.start() for c in cards if not any(a < c.start() < b for a, b in spans)]

@@ -1,0 +1,398 @@
+{
+  "courses": [
+    {
+      "name": "Lions Municipal Golf Course",
+      "city": "Austin",
+      "address": "2901 Enfield Rd, Austin, TX 78703",
+      "latitude": 30.2902191,
+      "longitude": -97.7770208,
+      "type": "municipal",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 5825,
+      "architects": null,
+      "year_opened": 1924,
+      "green_fee": {
+        "low_usd": 35,
+        "high_usd": 44,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Fixed Golf ATX rates effective 10/1/2025 (still posted on 2026-10-05). low_usd = Regular Round Mon-Thu $35; Friday $41; Sat-Sun/Holiday $44. Cheaper adult time-of-day rates: Evening Round $29/$31/$34, Sunset $28 any day; 9 holes only $28. Senior (60+) $27 Mon-Thu / $34 Fri (n/a weekends); Junior (18 or younger and in high school) $20. Cart $18 per person (sunset cart $12). City of Austin residents can buy a $5 annual Golf ATX Resident Card for a discount (resident rates not itemised on the page). Card payment only, no cash.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.austintexas.gov/golfatx/fees-memberships"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "Mon-Fri: online 7 days in advance (opens 9 am), or in person/by phone same day; Sat-Sun: online only, opens the preceding Monday at 8 pm (one tee time for up to 4 per registered account); user account required for online booking",
+      "website": "https://www.austintexas.gov/golfatx/lions-municipal-course",
+      "phone": "(512) 978-6869",
+      "source_urls": [
+        "https://www.austintexas.gov/golfatx/lions-municipal-course",
+        "https://www.austintexas.gov/golfatx/fees-memberships",
+        "https://www.austintexas.gov/golfatx",
+        "https://austin.widen.net/s/phqkcncgdf/lions-municipal-golf-course-austin-tx-scorecard-bench-craft-company-inside",
+        "https://cbsaustin.com/news/local/story/lions-municipal-golf-course-turns-100-with-long-term-future-still-in-doubt",
+        "https://hoodline.com/2026/08/tanya-tucker-leads-austin-gala-to-save-historic-muny-golf-course/"
+      ],
+      "notes": "'Muny'. Opened 1924 by the Lions Club as a 9-hole course on UT's Brackenridge Tract, later expanded to 18; lease transferred to the City in 1936. On the National Register of Historic Places; one of the first courses in the South to desegregate (before Brown v. Board, 1954); hosts the Firecracker Open. Land is owned by UT and leased to the City; news reports say it has operated under short-term lease extensions since 2019 while the Muny Conservancy fundraises for permanent preservation, so long-term future not secured. Scorecard: par 71, Blue 5,825 yd (69.8/123). Practice: driving range (irons only) + putting greens; range closes Mondays 1 pm. Closed every 3rd Monday for maintenance; closed for overseeding Oct 6. Architect not stated on official sources."
+    },
+    {
+      "name": "Morris Williams Golf Course",
+      "city": "Austin",
+      "address": "3851 Manor Rd, Austin, TX 78723",
+      "latitude": 30.290077,
+      "longitude": -97.694633,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7023,
+      "architects": [
+        "Leon Howard"
+      ],
+      "year_opened": 1964,
+      "green_fee": {
+        "low_usd": 35,
+        "high_usd": 44,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Fixed Golf ATX rates effective 10/1/2025 (still posted on 2026-10-05). low_usd = Regular Round Mon-Thu $35; Friday $41; Sat-Sun/Holiday $44. Cheaper adult time-of-day rates: Evening Round $29/$31/$34, Sunset $28 any day; 9 holes only $28. Senior (60+) $27 Mon-Thu / $34 Fri (n/a weekends); Junior (18 or younger and in high school) $20. Cart $18 per person (sunset cart $12). City of Austin residents can buy a $5 annual Golf ATX Resident Card for a discount (resident rates not itemised on the page). Card payment only, no cash.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.austintexas.gov/golfatx/fees-memberships"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "Mon-Fri: online 7 days in advance (opens 9 am), or in person/by phone same day; Sat-Sun: online only, opens the preceding Monday at 8 pm (one tee time for up to 4 per registered account); user account required for online booking",
+      "website": "https://www.austintexas.gov/golfatx/morris-williams-course",
+      "phone": "(512) 974-8333",
+      "source_urls": [
+        "https://www.austintexas.gov/golfatx/morris-williams-course",
+        "https://www.austintexas.gov/golfatx/fees-memberships",
+        "https://www.austintexas.gov/golfatx",
+        "https://austin.widen.net/s/xdcbjjfrrp/morris_williams_1__002_"
+      ],
+      "notes": "East Austin; Austin's 3rd public course (1964), Leon Howard design. Former home course of UT golf under George Hannon (Kite/Crenshaw NCAA titles). Scorecard: par 72, Black 7,023 yd (73.1/131). Practice: driving range + putting green. Closed every 2nd Monday; overseeding closure Oct 12-13. Fairways Cantina on site."
+    },
+    {
+      "name": "Roy Kizer Golf Course",
+      "city": "Austin",
+      "address": "5400 Jimmy Clay Dr, Austin, TX 78744",
+      "latitude": 30.1852192,
+      "longitude": -97.7322504,
+      "type": "municipal",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6819,
+      "architects": null,
+      "year_opened": 1994,
+      "green_fee": {
+        "low_usd": 35,
+        "high_usd": 44,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Fixed Golf ATX rates effective 10/1/2025 (still posted on 2026-10-05). low_usd = Regular Round Mon-Thu $35; Friday $41; Sat-Sun/Holiday $44. Cheaper adult time-of-day rates: Evening Round $29/$31/$34, Sunset $28 any day; 9 holes only $28. Senior (60+) $27 Mon-Thu / $34 Fri (n/a weekends); Junior (18 or younger and in high school) $20. Cart $18 per person (sunset cart $12). City of Austin residents can buy a $5 annual Golf ATX Resident Card for a discount (resident rates not itemised on the page). Card payment only, no cash.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.austintexas.gov/golfatx/fees-memberships"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "Mon-Fri: online 7 days in advance (opens 9 am), or in person/by phone same day; Sat-Sun: online only, opens the preceding Monday at 8 pm (one tee time for up to 4 per registered account); user account required for online booking",
+      "website": "https://www.austintexas.gov/golfatx/roy-kizer-course",
+      "phone": "(512) 974-4653",
+      "source_urls": [
+        "https://www.austintexas.gov/golfatx/roy-kizer-course",
+        "https://www.austintexas.gov/golfatx/jimmy-clay-course",
+        "https://www.austintexas.gov/golfatx/fees-memberships",
+        "https://www.austintexas.gov/golfatx",
+        "https://austin.widen.net/s/hxzfw9fmpm/roy-kizer-golf-course-austin-tx-scorecard-bench-craft-company-inside",
+        "https://www.austintexas.gov/golfatx/joe-balander-short-course"
+      ],
+      "notes": "Links-style layout on 200 acres in Southeast Austin with 35 acres of lakes and 22 acres of wetlands. Opened 1994 (per the Jimmy Clay page) as half of the 36-hole Clay/Kizer complex. Scorecard: par 71, Black 6,819 yd (72.2/125). Practice: driving range, sand trap, chipping/pitching and putting greens; shares the 4-hole Joe Balander short course ($5 adult/$3 junior). Closed every 4th Monday; closed two full days Oct 26-27. Architect not stated on official sources."
+    },
+    {
+      "name": "Jimmy Clay Golf Course",
+      "city": "Austin",
+      "address": "5400 Jimmy Clay Dr, Austin, TX 78744",
+      "latitude": 30.18525,
+      "longitude": -97.7322524,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6931,
+      "architects": [
+        "Joe Finger"
+      ],
+      "year_opened": 1974,
+      "green_fee": {
+        "low_usd": 35,
+        "high_usd": 44,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Fixed Golf ATX rates effective 10/1/2025 (still posted on 2026-10-05). low_usd = Regular Round Mon-Thu $35; Friday $41; Sat-Sun/Holiday $44. Cheaper adult time-of-day rates: Evening Round $29/$31/$34, Sunset $28 any day; 9 holes only $28. Senior (60+) $27 Mon-Thu / $34 Fri (n/a weekends); Junior (18 or younger and in high school) $20. Cart $18 per person (sunset cart $12). City of Austin residents can buy a $5 annual Golf ATX Resident Card for a discount (resident rates not itemised on the page). Card payment only, no cash.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.austintexas.gov/golfatx/fees-memberships"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "Mon-Fri: online 7 days in advance (opens 9 am), or in person/by phone same day; Sat-Sun: online only, opens the preceding Monday at 8 pm (one tee time for up to 4 per registered account); user account required for online booking",
+      "website": "https://www.austintexas.gov/golfatx/jimmy-clay-course",
+      "phone": "(512) 974-4653",
+      "source_urls": [
+        "https://www.austintexas.gov/golfatx/jimmy-clay-course",
+        "https://www.austintexas.gov/golfatx/fees-memberships",
+        "https://www.austintexas.gov/golfatx",
+        "https://austin.widen.net/s/kzgf8s2td7/jimmy-clay-golf-course-austin-tx-scorecard-bench-craft-company-inside"
+      ],
+      "notes": "Southeast Austin along Williamson Creek; Joe Finger design, opened 1974; 3 holes rebuilt in 2007 (incl. island green), 4 greens reshaped in 2015. Yardage conflict: course page says 6,918 yd; the official scorecard shows Black 6,931 yd (73.8/126), used here. Par 72. Practice: enlarged driving range, sand trap, chipping/pitching and putting greens; Joe Balander short course on site. Closed every 1st Monday; aerification Oct 5-6 (reopens noon the following day). Same coordinates as Roy Kizer (shared complex/clubhouse)."
+    },
+    {
+      "name": "Hancock Golf Course",
+      "city": "Austin",
+      "address": "811 E 41st St, Austin, TX 78751",
+      "latitude": 30.299039,
+      "longitude": -97.7246046,
+      "type": "municipal",
+      "holes": 9,
+      "par": 35,
+      "back_tee_yardage": 2633,
+      "architects": null,
+      "year_opened": 1899,
+      "green_fee": {
+        "low_usd": 20,
+        "high_usd": 20,
+        "basis": "9-hole",
+        "dynamic": false,
+        "notes": "Pay-station green fee, Monday-Sunday: Regular Round $20 (good for play all day). Sunset $16; Junior (18 or younger and in high school) $16; Senior (60+) $18; College student with ID $18. No cart or pull-cart rental. Credit/debit card only.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.austintexas.gov/golfatx/fees-memberships"
+      },
+      "walking": "yes",
+      "driving_range": false,
+      "short_game_area": false,
+      "booking_window": "No tee times; first-come, first-served pay-station operation",
+      "website": "https://www.austintexas.gov/golfatx/hancock-course",
+      "phone": "(512) 974-9350",
+      "source_urls": [
+        "https://www.austintexas.gov/golfatx/hancock-course",
+        "https://www.austintexas.gov/golfatx/fees-memberships",
+        "https://austin.widen.net/s/lc5cpmwtdn/hancock-golf-course-austin-tx-scorecard-bench-craft-company-inside"
+      ],
+      "notes": "Walking-only, 9-hole par 35 pay-station course with no pro shop, 7 days a week. Founded 1899 as the original Austin Country Club site and renamed for Lewis Hancock in 1946; billed as one of the oldest courses in Texas. Scorecard: Blue 2,633 yd per 9 (5,266 for 18 played twice, 65.2/112). Practice: putting green only. Monthly one-day maintenance closures; closed for overseeding Oct 14. Phone is the Golf ATX office line given on the course page. short_game_area=false means only a putting green is listed."
+    },
+    {
+      "name": "Butler Pitch & Putt",
+      "city": "Austin",
+      "address": "201 Lee Barton Dr, Austin, TX 78704",
+      "latitude": 30.2624519,
+      "longitude": -97.7566439,
+      "type": "public",
+      "holes": 9,
+      "par": 27,
+      "back_tee_yardage": null,
+      "architects": [
+        "Douglas Kinser",
+        "Winston Kinser"
+      ],
+      "year_opened": 1950,
+      "green_fee": {
+        "low_usd": 14,
+        "high_usd": 16,
+        "basis": "9-hole",
+        "dynamic": false,
+        "notes": "Per person: Mon-Thu $14, weekends $16. Over 65 & veterans $10 (Mon-Thu) / $12 (weekends); under 18 $7 / $12. Replay half price. Club and ball rental $1.",
+        "read_date": "2026-10-05",
+        "source_url": "https://butlerpitchandputt.com/play"
+      },
+      "walking": null,
+      "driving_range": false,
+      "short_game_area": true,
+      "booking_window": "No tee times or reservations; first-come, first-play (ball-chute queue)",
+      "website": "https://butlerpitchandputt.com",
+      "phone": "(512) 477-4430",
+      "source_urls": [
+        "https://butlerpitchandputt.com/",
+        "https://butlerpitchandputt.com/play",
+        "https://butlerpitchandputt.com/about",
+        "https://www.austintexas.gov/golfatx/other-golf-atx-info"
+      ],
+      "notes": "9-hole par-3 pitch-and-putt in Butler Park downtown (par 27 = 9 par-3 holes); real grass greens plus a putting area on about 8 acres. Hand-built by Douglas and Winston Kinser and opened June 1, 1950. Run by Pecan Grove Golf Partners (incl. New Waterloo, Criquet, Yeti); Golf ATX lists it under concessions. Open daily 8a-8p, with occasional closures for leagues and events. Typical round under 2 hours. Yardage not published. short_game_area=true refers to the dedicated putting area. Architects listed are the founders who built it by hand."
+    },
+    {
+      "name": "Grey Rock Golf Club",
+      "city": "Austin",
+      "address": "7401 State Highway 45, Austin, TX 78739",
+      "latitude": 30.1825784,
+      "longitude": -97.9118282,
+      "type": "semi-private (public tee times)",
+      "holes": 18,
+      "par": null,
+      "back_tee_yardage": 6909,
+      "architects": [
+        "Jay Morrish"
+      ],
+      "year_opened": 1992,
+      "green_fee": {
+        "low_usd": 70,
+        "high_usd": 105,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Public rates: 18-hole green fee (with cart) $90 Mon-Thu / $105 Fri-Sun; low_usd = Walking Rate $70 Mon-Thu ($85 Fri-Sun). Seasonal Twilight $61/$75, Super Twilight $56/$70; 9 holes (weekends after 12:00 only) $56/$70; Senior $70 Mon-Thu; junior walking $40/$50 (weekends after 12). City of Austin Resident Card rates are about $5 lower (e.g. $85/$100 18-hole, $65/$80 walking). Group rates available. Range balls $14-$19.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.greyrockgolfandtennis.com/golf/rates"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "7 days in advance for guests (14 days for members)",
+      "website": "https://www.greyrockgolfandtennis.com/",
+      "phone": "(512) 288-4297",
+      "source_urls": [
+        "https://www.greyrockgolfandtennis.com/",
+        "https://www.greyrockgolfandtennis.com/golf/rates",
+        "https://www.greyrockgolfandtennis.com/golf/course-details",
+        "https://www.greyrockgolfandtennis.com/contact-us/faqs",
+        "https://www.austintexas.gov/golfatx",
+        "https://www.austintexas.gov/golfatx/fees-memberships",
+        "https://greyrockpp.ezlinksgolf.com/index.html#/search"
+      ],
+      "notes": "Calls itself a 'hybrid' public/private facility (members plus daily-fee guests) and 'the City of Austin's premier golf course'. Golf ATX counts it among its six City-operated courses and links its tee-time booking (EZLinks). Jay Morrish design on 160 acres, opened 1992. Tees: 6,909 (74.8/134), 6,378, 5,732, 5,177 yd. Par is not stated on the official site, so left null. Range is mats Mon-Thu and grass Fri-Sun; chipping and putting areas. Closed the first Tuesday of every month. Also has a tennis club."
+    },
+    {
+      "name": "Falconhead Golf Club",
+      "city": "Austin (Bee Cave area)",
+      "address": "15201 Falconhead Blvd, Austin, TX 78738",
+      "latitude": 30.3202006,
+      "longitude": -97.9689831,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7181,
+      "architects": [
+        "PGA Tour Design Center"
+      ],
+      "year_opened": 2003,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Official rates page says tee times use dynamic pricing that changes in real time with demand, availability, time of day and conditions; no fixed green fees are published. Cart fee $35 (shared cart with green fee purchase). Range buckets $10/$17/$25; Callaway rental sets $85. Live prices are on the GolfBack public tee-time engine linked from the official site (not captured).",
+        "read_date": "2026-10-05",
+        "source_url": "https://falconheadaustin.com/rates/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://falconheadaustin.com/",
+      "phone": "(512) 402-1558",
+      "source_urls": [
+        "https://falconheadaustin.com/",
+        "https://falconheadaustin.com/rates/",
+        "https://falconheadaustin.com/course-information/",
+        "https://falconheadaustin.com/wp-content/uploads/sites/14/2026/05/falconhead-scorecard.pdf",
+        "https://golfback.com/#/course/7a0c7c4d-0282-4524-b863-feab909fec10/"
+      ],
+      "notes": "Hill Country daily-fee course west of Austin in the Bee Cave area (mailing address Austin 78738). Opened 2003, designed by the PGA Tour Design Center. The site says five tee sets; the scorecard shows Black/Blue/White/Red. Scorecard: par 72, Black 7,181 yd (75.7/137). Also sells a Players Club pass and memberships. Sister links to Avery Ranch and Teravista on the site. Range has Toptracer and Power Tee; open sunrise to 6 pm (closes 4 pm Tue). Official domain is falconheadaustin.com (falconheadgolfclub.com did not resolve)."
+    },
+    {
+      "name": "Riverside Golf Course",
+      "city": "Austin",
+      "address": "1020 Grove Blvd, Austin, TX 78741",
+      "latitude": 30.2368342,
+      "longitude": -97.7083575,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6359,
+      "architects": [
+        "Perry Maxwell"
+      ],
+      "year_opened": 1949,
+      "green_fee": {
+        "low_usd": 28,
+        "high_usd": 52,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Rates in effect 3/08/26-10/31/26 (riding / walking). Mon-Thu: morning $45/$33, afternoon $40/$28, after 4 pm $33/$21. Fri: $48/$36, $43/$31, $33/$21. Weekend/holiday: $52/$40, $46/$34, $33/$21. low_usd = Mon-Thu afternoon walking $28 (after-4 pm walking $21 is lower but a late-day rate); high_usd = weekend morning riding $52. Seniors (60+) and college students $36/$24 Mon-Thu, $40/$28 Fri, standard rates on weekends; juniors (17 and under) $27/$15 weekdays, $30/$18 weekends (after 2 pm). Winter rates from 11/1/26 not yet posted. 24-hour cancellation or a no-show fee equal to the green fee.",
+        "read_date": "2026-10-05",
+        "source_url": "https://riverside-gc.com/rates/"
+      },
+      "walking": "yes",
+      "driving_range": false,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://riverside-gc.com/",
+      "phone": "(512) 223-6677",
+      "source_urls": [
+        "https://riverside-gc.com/",
+        "https://riverside-gc.com/rates/",
+        "https://riverside-gc.com/course-details/",
+        "https://riverside-gc.com/facilities/",
+        "https://riverside-gc.com/wp-content/uploads/2021/10/RVSscorecard2-scaled.jpg",
+        "https://foreupsoftware.com/index.php/booking/21469/7880#/teetimes",
+        "https://sites.austincc.edu/acchistory/?p=1309"
+      ],
+      "notes": "Confirmed still operating: the official site has Sept 2026 menus, Spring-Fall 2026 rates and foreUP online booking. Perry Maxwell design that opened in 1949 as Austin Country Club's second home; Crenshaw and Kite learned here under Harvey Penick. ACC bought the land in 1983. Scorecard: par 72 from Blue, 6,359 yd (69.0/123); hole 1 can play as a par 3, making it par 71 / 6,229 yd. Practice: putting/chipping green and hitting nets with mats only, no full driving range. Site says 'walkers and walkups are always welcome'. Tee times run sunrise to two hours before sunset, every 10 minutes. ACC permanently closed its adjacent Riverside campus in July 2025; the golf course is unaffected as of this read. Online booking window not stated."
+    },
+    {
+      "name": "Harvey Penick Golf Campus",
+      "city": "Austin",
+      "address": "5501 Ed Bluestein Blvd, Austin, TX 78723",
+      "latitude": 30.294006,
+      "longitude": -97.6590928,
+      "type": "public",
+      "holes": 9,
+      "par": 30,
+      "back_tee_yardage": 2127,
+      "architects": [
+        "PGA Tour Design Services"
+      ],
+      "year_opened": 2005,
+      "green_fee": {
+        "low_usd": 18,
+        "high_usd": 40,
+        "basis": "9-hole",
+        "dynamic": false,
+        "notes": "2026 daily fees, all for 9-hole rounds (riding / walking): Mon-Thu Regular $35/$18; Fri-Sun & holidays $40/$20. low_usd = Mon-Thu walking $18; high_usd = weekend riding $40. Senior (55+) Mon-Thu $25/$13; Junior (17U) $20/$10; 9-hole replay $17.50/$9 (Mon-Thu), $20/$10 (weekends). Weekday twilight rate may apply after 2 pm. GolfATX members and City of Austin employees pay $5.50. 3-hole short course $7. Cart renters must be 21+ with a driver's license.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.harveypenickgc.com/course/rates/"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.harveypenickgc.com/",
+      "phone": "(512) 926-1100",
+      "source_urls": [
+        "https://www.harveypenickgc.com/",
+        "https://www.harveypenickgc.com/course/rates/",
+        "https://www.harveypenickgc.com/course/",
+        "https://www.harveypenickgc.com/our-facility/",
+        "https://www.harveypenickgc.com/contactus/",
+        "https://www.austintexas.gov/golfatx/other-golf-atx-info"
+      ],
+      "notes": "Additional public course inside Austin city limits (East Austin): a non-profit 9-hole par 30 (three par 4s, six par 3s) owned and run by First Tee - Greater Austin on land leased from the East Communities YMCA. Described as PGA TOUR-designed. year_opened is derived from the site's statement that it celebrated its 10th anniversary in 2015. back_tee_yardage 2,127 is the sum of the official hole-by-hole guide (384/192/185/165/162/394/330/140/175). Grass-only driving range (irons only Mon-Thu), two practice greens, two practice bunkers and a 3-hole short course. Also has an 18-hole FootGolf course. Listed walking='yes' because the site calls the course 'an easy two-mile walk' and posts walking rates. Online booking is via the site's Tee Times page; window not stated (Golf ATX notes a 3-day phone window for the member discount only)."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Bluebonnet Hill Golf Club",
+      "reason": "Permanently closed. The east Austin public course (9100 Decker Lane, opened 1991) shut on Dec 31, 2019 / Jan 1, 2020 over its expiring water contract with the City, and its old domain bluebonnethillgolf.com now serves unrelated spam.",
+      "source_urls": [
+        "https://kvue.com/article/news/local/bluebonnet-hill-golf-club-announces-closure-after-concerns-with-water-contract/269-b6ab1171-dc48-488d-8e1e-8af0fed84378",
+        "https://www.kxan.com/news/local/austin/bluebonnet-hill-golf-club-set-to-close-in-austin-over-water-contract-dispute/amp/"
+      ]
+    },
+    {
+      "name": "Joe Balander Short Course (Golf ATX)",
+      "reason": "Not a regulation course: a 4-hole par-3 practice/learning facility at the Clay/Kizer complex ($5 adult / $3 junior, walking only, no tee times). Mentioned in the Roy Kizer and Jimmy Clay records instead.",
+      "source_urls": [
+        "https://www.austintexas.gov/golfatx/joe-balander-short-course"
+      ]
+    }
+  ]
+}

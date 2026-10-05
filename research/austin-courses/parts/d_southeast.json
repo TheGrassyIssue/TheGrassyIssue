@@ -1,0 +1,471 @@
+{
+  "courses": [
+    {
+      "name": "Plum Creek Golf Course",
+      "city": "Kyle",
+      "address": "4301 Benner Rd, Kyle, TX 78640",
+      "latitude": 30.0185816,
+      "longitude": -97.880689,
+      "type": "public",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6913,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 70,
+        "high_usd": 100,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "2026 'starting from' rates; site says daily green fees may fluctuate with demand. Weekday $70 Mon-Thu, weekend $100 Fri-Sun/holidays. Senior 60+/junior: $62 Mon-Thu, $80 Fri. Twilight (3pm) $58/$70; super twilight (5pm) $35/$45; 9 holes $46/$56 (weekend after 1pm). TX sales tax added. Juniors 18 and under free with paid adult at set times.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.plumcreekgolf.com/golf/rates"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "8 days free online; 9-45 days with advance booking fee ($5-$10/person)",
+      "website": "https://www.plumcreekgolf.com",
+      "phone": "(512) 262-5555",
+      "source_urls": [
+        "https://www.plumcreekgolf.com/",
+        "https://www.plumcreekgolf.com/golf/rates",
+        "https://www.plumcreekgolf.com/golf/course",
+        "https://www.plumcreekgolf.com/templates/yootheme/cache/a0/scorecard-a08a5dab.png",
+        "https://www.plumcreekgolf.com/tee-times",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Plum%20Creek%20Golf%20Course%2C%20Kyle%2C%20Texas"
+      ],
+      "notes": "Foresight Golf property. Yardage 6,913 from Gold tees per the official scorecard image (2025 card); site copy elsewhere says 'just over 7100 yards'. Toptracer range; 2012 renovation added ~3 acres of short-game areas; home of Texas State Bobcat golf teams. Coordinates from OSM."
+    },
+    {
+      "name": "Lost Pines Golf Club (formerly Wolfdancer Golf Club) at Lost Pines Resort & Spa",
+      "city": "Cedar Creek (Lost Pines)",
+      "address": "575 Hyatt Lost Pines Rd, Lost Pines, TX 78612",
+      "latitude": 30.1631256,
+      "longitude": -97.453894,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": null,
+      "architects": [
+        "Arthur Hills"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "No published rate table on the resort site; rates only shown in the ezLinks booking engine (lostpines.ezlinksgolf.com), which was blocked by Cloudflare to automated fetch.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.lostpinesresortandspa.com/golf/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.lostpinesresortandspa.com/golf/",
+      "phone": "(512) 308-4770",
+      "source_urls": [
+        "https://www.lostpinesresortandspa.com/golf/",
+        "https://www.wolfdancergolfclub.com/",
+        "https://www.lostpinesgolfclub.com/",
+        "https://explorebastropcounty.com/listings/wolfdancer-golf-club/",
+        "https://lostpines.ezlinksgolf.com/index.html",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Wolfdancer%20Golf%20Club"
+      ],
+      "notes": "IMPORTANT naming: the Hyatt Regency Lost Pines resort now brands itself 'Lost Pines Resort & Spa' and its course as 'Lost Pines Golf Club' — Explore Bastrop County says 'Formerly known as Wolfdancer'; wolfdancergolfclub.com and lostpinesgolfclub.com both redirect to the resort golf page. Not to be confused with the old Lost Pines Golf Club in Bastrop State Park (closed; see excluded). Resort page: Arthur Hills design, '7,300-yard, par-72' (rounded figure, so back_tee_yardage left null); 13-acre range with 8 target greens, two short-game greens, FLAGD-equipped hitting stations. Phone from Explore Bastrop County listing; resort main line (855) 923-7851. Coordinates from OSM (tagged 'Lost Pines Golf Club')."
+    },
+    {
+      "name": "ColoVista Golf Club",
+      "city": "Bastrop",
+      "address": "100 Country Club Dr, Bastrop, TX 78602",
+      "latitude": 30.0543837,
+      "longitude": -97.2668814,
+      "type": "public",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 57,
+        "high_usd": 67,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "Rates page: weekday Mon-Thu $57, weekend Fri-Sun & holidays $67; twilight after 3pm $50 weekday / $57 weekend. Page notes 'Our current rates are live on our booking engine' (foreUP), so actual rates may differ.",
+        "read_date": "2026-10-05",
+        "source_url": "https://colovistagolf.com/rates/"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://colovistagolf.com/",
+      "phone": "(512) 629-4585",
+      "source_urls": [
+        "https://colovistagolf.com/",
+        "https://colovistagolf.com/rates/",
+        "https://colovistagolf.com/course-info/",
+        "https://explorebastropcounty.com/listings/colovista-golf-club/"
+      ],
+      "notes": "Still operating (site live with 2026 copyright; tournaments listed through Oct 2026). Official course page says 18-hole par 71; signature par-3 15th drops 200 ft to green over Colorado River valley. Type assumed public daily-fee (online tee times, memberships also sold). Coordinates from the Google Maps pin linked on the official site (OSM agrees: 30.0537,-97.2669)."
+    },
+    {
+      "name": "Lockhart State Park Golf Course",
+      "city": "Lockhart",
+      "address": "2012 State Park Rd, Lockhart, TX 78644",
+      "latitude": 29.8517756,
+      "longitude": -97.6983131,
+      "type": "municipal",
+      "holes": 9,
+      "par": 35,
+      "back_tee_yardage": 2905,
+      "architects": [
+        "Civilian Conservation Corps (CCC Company 3803)",
+        "Work Projects Administration (WPA)"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 10,
+        "high_usd": 10,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "TPWD: green fee for 18 holes $10; yearly green fee pass $250. Park day pass also required (park entry fee separate). Carts $15 (9) / $20 (18); clubs $7; pull carts free. No refunds/rainchecks.",
+        "read_date": "2026-10-05",
+        "source_url": "https://tpwd.texas.gov/state-parks/lockhart/fees-facilities/golf-course"
+      },
+      "walking": "yes",
+      "driving_range": false,
+      "short_game_area": null,
+      "booking_window": "30 days (online; same-day by phone)",
+      "website": "https://tpwd.texas.gov/state-parks/lockhart/fees-facilities/golf-course",
+      "phone": "(512) 398-3479",
+      "source_urls": [
+        "https://tpwd.texas.gov/state-parks/lockhart/fees-facilities/golf-course",
+        "https://tpwd.texas.gov/publications/pwdpubs/media/pwd_cd_p4505_0047c.pdf",
+        "https://tpwd.texas.gov/state-parks/lockhart",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Lockhart%20State%20Park%2C%20Texas"
+      ],
+      "notes": "State-park (TPWD) operated 9-hole course; type set to 'municipal' as the nearest category (publicly owned). Par 35 / 2,905 yd are for 9 holes from blue tees (18 via two loops: par 70, 5,810 yd; rating/slope 68.1/110). Closed Wednesdays. Walking inferred from free pull-cart loans stated by TPWD. 'All practice must be done on the practice green' (no range stated). Coordinates are the OSM state-park point, not the course itself."
+    },
+    {
+      "name": "Landa Park Golf Course at Comal Springs",
+      "city": "New Braunfels",
+      "address": "180 Golf Course Rd, New Braunfels, TX 78130",
+      "latitude": 29.7103718,
+      "longitude": -98.1248982,
+      "type": "municipal",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6206,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "No current daily rate table on the official site (rates page shows only membership graphics); site says all tee times are offered online with discounted prices via GolfNow booking.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.landaparkgolfcourse.com/golf/rates/"
+      },
+      "walking": null,
+      "driving_range": false,
+      "short_game_area": true,
+      "booking_window": "14 days",
+      "website": "https://www.landaparkgolfcourse.com/",
+      "phone": "(830) 221-4340",
+      "source_urls": [
+        "https://www.landaparkgolfcourse.com/",
+        "https://www.landaparkgolfcourse.com/golf/",
+        "https://www.landaparkgolfcourse.com/golf/rates/",
+        "https://www.landaparkgolfcourse.com/golf/policies/",
+        "https://www.landaparkgolfcourse.com/course-details/practice-facilities/",
+        "https://www.landaparkgolfcourse.com/wp-content/uploads/sites/7816/2018/12/Scorecard-0216.jpg",
+        "https://www.nbtexas.org/3375/Landa-Park",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Landa%20Park%20Golf%20Course%2C%20New%20Braunfels"
+      ],
+      "notes": "City of New Braunfels course in Landa Park along the Comal River, 122 acres. Yardage 6,206 from Champ tees per scorecard image (older card, 2016-era). Practice: warm-up cages plus large putting/short-game area with bunker (no full driving range stated, hence driving_range false). Pace 4h15. Coordinates from OSM."
+    },
+    {
+      "name": "The Bandit Golf Club",
+      "city": "New Braunfels",
+      "address": "6019 FM 725, New Braunfels, TX 78130",
+      "latitude": 29.6323823,
+      "longitude": -98.0565112,
+      "type": "public",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6909,
+      "architects": [
+        "Keith Foster"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 69,
+        "high_usd": 105,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "2026 regular rate $69 Mon-Thu, $105 Fri-Sun (open-3pm). Twilight $59/$69; super twilight $46/$51; 9 holes $49/$69; military $60/$95; senior 60+ $59 Mon-Thu, $70 Fri; junior $42/$50. TX sales tax added; 'fees subject to change'.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.banditgolfclub.com/golf/rates"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "14 days (online)",
+      "website": "https://www.banditgolfclub.com/",
+      "phone": "(830) 609-4665",
+      "source_urls": [
+        "https://www.banditgolfclub.com/golf/rates",
+        "https://www.banditgolfclub.com/golf/course",
+        "https://www.banditgolfclub.com/templates/yootheme/cache/d0/scorecard-d0cba15e.jpeg",
+        "https://www.banditgolfclub.com/tee-times",
+        "https://nominatim.openstreetmap.org/search?format=json&q=6019%20FM%20725%2C%20New%20Braunfels%2C%20TX"
+      ],
+      "notes": "Foresight Golf owned/managed; open to public play. Black tees 6,909 yd, 73.7/134 per official scorecard. Toptracer range; 12,000 sq ft practice green. Near Lake McQueeney (Guadalupe County side of New Braunfels). Coordinates from OSM."
+    },
+    {
+      "name": "Starcke Park Golf Course",
+      "city": "Seguin",
+      "address": "650 River Dr W, Seguin, TX 78155",
+      "latitude": 29.5545949,
+      "longitude": -97.9741895,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6784,
+      "architects": [
+        "John Bredemus",
+        "Robert Hugman"
+      ],
+      "year_opened": 1938,
+      "green_fee": {
+        "low_usd": 33,
+        "high_usd": 37,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "City rates: adult weekday $33, weekend/holiday $37; senior 60+ weekday $26; military weekday $26; twilight after 2pm $22; 9 holes $22; junior $12 / $13.50 weekend. Green fees only - carts extra ($17/18 holes, $12/9).",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.seguintexas.gov/472/Rates"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "7 days",
+      "website": "https://www.seguintexas.gov/890/Golf-Course",
+      "phone": "(830) 401-2490",
+      "source_urls": [
+        "https://www.seguintexas.gov/890/Golf-Course",
+        "https://www.seguintexas.gov/472/Rates",
+        "https://www.seguintexas.gov/470/Course-Layout",
+        "https://www.seguintexas.gov/1122/Course-History",
+        "https://seguintexas.gov/CivicAlerts.asp?AID=505",
+        "https://starcke-park.book.teeitup.com/?course=10857",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Starcke%20Park%20Golf%20Course%2C%20Seguin"
+      ],
+      "notes": "City of Seguin course (a.k.a. Max Starcke Park Golf Course) on the Guadalupe River; reopened May 2026 after a 1+ year renovation (new larger Paspalum greens, renovated/expanded practice range, re-designed holes). City says it was established 1938 with Bredemus and Hugman among the designers. Layout page lists Black 6,784 yd par 72; may or may not reflect post-renovation yardages. Tee times required daily. Coordinates from OSM."
+    },
+    {
+      "name": "Kissing Tree Golf Club",
+      "city": "San Marcos",
+      "address": "201 Kissing Tree Ln, San Marcos, TX 78666",
+      "latitude": 29.8416348,
+      "longitude": -97.995209,
+      "type": "semi-private (public tee times)",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6572,
+      "architects": [
+        "Gary Stephenson"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Dynamic pricing ('rates adjusted lower and higher in real time based on demand'); public rates only shown in the Troon booking engine. Carts two per cart; no rate table published.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.kissingtreegolfclub.com/tee-off-with-us/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.kissingtreegolfclub.com/",
+      "phone": "(512) 749-1031",
+      "source_urls": [
+        "https://www.kissingtreegolfclub.com/",
+        "https://www.kissingtreegolfclub.com/about-the-course/",
+        "https://www.kissingtreegolfclub.com/tee-off-with-us/",
+        "https://www.kissingtreegolfclub.com/wp-content/uploads/sites/8977/2023/06/KST-SC.pdf",
+        "https://troon.com/course/kissing-tree-golf-club",
+        "https://kissingtree.com/frequently-asked-questions/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Kissing%20Tree%20Golf%20Club%2C%20San%20Marcos"
+      ],
+      "notes": "Troon-managed semi-private course inside a 55+ community; public tee times sold via Troon (separate member/resident tee sheet). Back tees 6,572 yd, 71.8/131 per official scorecard PDF. Driving range and short-game practice area per community FAQ and course page. Opened 2018 per press coverage (not on official site, so year_opened null). Coordinates from OSM."
+    },
+    {
+      "name": "Giddings Municipal Golf Course",
+      "city": "Giddings",
+      "address": "Off County Road 227 near US-290, Giddings, TX 78942",
+      "latitude": null,
+      "longitude": null,
+      "type": "municipal",
+      "holes": 9,
+      "par": null,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "City website publishes only monthly membership rates (2025 application: e.g. Gold Individual $77.50/mo incl. green, cart, trail fees); no daily green fee published.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.giddings.net/giddings-golf-course/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://www.giddings.net/giddings-golf-course/",
+      "phone": null,
+      "source_urls": [
+        "https://www.giddings.net/giddings-golf-course/",
+        "https://www.giddings.net/wp-content/uploads/2025/10/Giddings-Golf-Course-Membership-Application.pdf"
+      ],
+      "notes": "City of Giddings 9-hole course ('Giddings Country Club and Golf Course' in city nav). Driving range referenced in city membership rules. Street address commonly listed as 1031 County Road 227 and course phone (979) 542-3777 by third-party directories, not confirmed on city site (city hall (979) 540-2710). Roughly 1 hr east of Austin on US-290."
+    },
+    {
+      "name": "Luling Municipal Golf Course",
+      "city": "Luling",
+      "address": "1005 S Magnolia Ave, Luling, TX 78648",
+      "latitude": null,
+      "longitude": null,
+      "type": "municipal",
+      "holes": 9,
+      "par": null,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 20,
+        "high_usd": 25,
+        "basis": "9-hole",
+        "dynamic": false,
+        "notes": "City 'Daily Rates for 2026-2027' green play fees: weekdays $20, weekends/holidays $25; students $5/$8. Page does not specify 9 vs 18 holes (basis set to 9-hole because it is a 9-hole course; treat as daily green fee). Carts: $15 for 9 holes (+$7 additional 9), $22 for 18; trail fee $10.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.cityofluling.net/237/Fees"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": "No tee times - first come, first served",
+      "website": "https://www.cityofluling.net/153/Golf-Course",
+      "phone": "(830) 875-5114",
+      "source_urls": [
+        "https://www.cityofluling.net/153/Golf-Course",
+        "https://www.cityofluling.net/237/Fees"
+      ],
+      "notes": "City of Luling 21-acre, 9-hole course among pecan trees along the San Marcos River. Open 7 days (hours listed as 8am-6pm and 8am-5pm on the same page). No coordinates verified."
+    },
+    {
+      "name": "Frisch Auf! Valley Country Club",
+      "city": "La Grange",
+      "address": "575 Country Club Dr, La Grange, TX 78945",
+      "latitude": 29.8921418,
+      "longitude": -96.8859492,
+      "type": "semi-private (public tee times)",
+      "holes": 9,
+      "par": null,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": 1966,
+      "green_fee": {
+        "low_usd": 40,
+        "high_usd": 60,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Club golf page: 18 holes $40 + tax Tue-Thu, $60 + tax Fri-Sun & holidays; 9 holes $26 Tue-Thu, $30 Fri-Sun. Carts $26/18, $16/9 (share $13/golfer). A Sept 2025 chamber spotlight listed lower non-member rates ($35/18), so the club page is treated as current.",
+        "read_date": "2026-10-05",
+        "source_url": "https://favcc.club/default.aspx?p=dynamicmodule&ns=true&pageID=7&ssid=100031"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://favcc.club/",
+      "phone": "(979) 968-6113",
+      "source_urls": [
+        "https://favcc.club/default.aspx?p=dynamicmodule&ns=true&pageID=7&ssid=100031",
+        "https://lagrangetx.org/frisch-auf-valley-country-club/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=575%20Country%20Club%20Drive%2C%20La%20Grange%2C%20TX"
+      ],
+      "notes": "Member club whose 9-hole course accepts public green-fee play (phone reservations at 979-968-6113; office 979-968-3965). Closed Mondays. Est. 1966 per La Grange chamber member spotlight. About 75-90 min drive from Austin - at the edge of the scope. Coordinates from OSM."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Lost Pines Golf Club (Bastrop State Park course)",
+      "reason": "Closed. The historic CCC-era course in Bastrop State Park was shuttered (TPWD's Executive Director listed 'the shuttering of the golf course' among the park's setbacks in 2016); in 2026 TPWD opened an interpretive center in the 'Historic Golf Shelter' covering 'the history of the old golf course and our habitat restoration efforts'. Note the 'Lost Pines Golf Club' name is now used by the former Wolfdancer course at the resort (included).",
+      "source_urls": [
+        "https://tpwmagazine.com/archive/2016/aug/atissue/",
+        "https://tpwd.texas.gov/calendar/bastrop/copy2_of_historic-golf-shelter-interpretive-center-open",
+        "https://www.kvue.com/article/news/local/lost-pines-golf-club-closes-in-bastrop/269-152652102"
+      ]
+    },
+    {
+      "name": "Pine Forest Golf Club / Bastrop River Club (Bastrop)",
+      "reason": "Temporarily closed. Renamed Bastrop River Club; Explore Bastrop County lists it 'TEMPORARILY CLOSED FOR RENOVATIONS' (driving range open, course closed). Its Chronogolf booking engine returned status 'closed' with no tee times on 2026-10-05; official site (2023 copyright) speaks of an upcoming renovation and membership. Re-check before publication.",
+      "source_urls": [
+        "https://explorebastropcounty.com/listings/bastrop-river-club/",
+        "https://bastropriverclub.com/",
+        "https://www.chronogolf.com/club/bastrop-river-club"
+      ]
+    },
+    {
+      "name": "Quail Creek Country Club / Golf Club (San Marcos)",
+      "reason": "Closed permanently July 1, 2018; city of San Marcos bought the land (2022) for a future regional park.",
+      "source_urls": [
+        "https://communityimpact.com/local-news/austin/san-marcos-buda-kyle/features/business/2018/06/26/san-marcos-quail-creek-golf-club-closing-july-1/",
+        "https://communityimpact.com/austin/san-marcos-buda-kyle/government/2024/10/03/san-marcos-approves-preliminary-design-contract-for-new-regional-park/"
+      ]
+    },
+    {
+      "name": "Northcliffe Golf Club (Schertz/Cibolo)",
+      "reason": "Closed May 2019 and has not reopened (later reporting is about redevelopment of the land).",
+      "source_urls": [
+        "https://www.mysanantonio.com/news/local/communities/northeast/article/Northcliffe-Golf-Club-closes-operations-13925489.php",
+        "https://www.ksat.com/news/local/2023/09/06/developer-scraps-plans-for-duplexes-on-schertz-golf-course-land/"
+      ]
+    },
+    {
+      "name": "Lakeside Golf Club / 'Canyon Lake Golf Club' (405 Watts Ln, Canyon Lake TX)",
+      "reason": "Reported closed: Yelp lists it as CLOSED (updated May 2026) and the course's Facebook reportedly says operations are suspended indefinitely; no official operating website found. Note: canyonlakecountryclub.com is Canyon Lake, California - not this course.",
+      "source_urls": [
+        "https://www.yelp.com/biz/lakeside-golf-club-canyon-lake",
+        "https://www.facebook.com/lakesidegolftx/",
+        "https://www.canyonlake.co/golf-courses--lakeside-golf-club/3229"
+      ]
+    },
+    {
+      "name": "Smithville, TX golf course",
+      "reason": "No operating public golf course could be verified in Smithville, Texas. City and tourism pages list only an 18-hole disc golf course at Riverbend Park, and the 'Smithville Golf Club' results online are for Smithville, Tennessee.",
+      "source_urls": [
+        "https://www.ci.smithville.tx.us/188/Disc-Golf",
+        "https://www.ci.smithville.tx.us/DocumentCenter/View/112/Signed-Resolution-2023-09-513-Fee-Schedule-PDF"
+      ]
+    },
+    {
+      "name": "Elgin, TX golf course",
+      "reason": "No public golf course in Elgin, Texas could be found. The Explore Bastrop County golf listing (which covers Elgin) has only Bastrop-area courses, and search results returned Elgin, IL/ND courses.",
+      "source_urls": [
+        "https://explorebastropcounty.com/listings_category/golf-courses/"
+      ]
+    }
+  ]
+}

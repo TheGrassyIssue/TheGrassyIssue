@@ -76,7 +76,7 @@ TAKE = """
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
     <p>Magpie Supply is the smallest brand we&rsquo;ve profiled, and that&rsquo;s what makes it good. The whole store is ten pieces, and almost every one is something you&rsquo;ll use on every round: a leather scorecard holder, a tee ring, a bag tag and a hammered pitch-mark repair tool. They&rsquo;re made in tiny batches and meant to age, so the leather picks up wear the more you use it.</p>
-    <p>It started in Denver with a lost wallet in 2017. Replacing it turned into learning leatherwork, and wallets became totes, backpacks and duffels. Then, in the brand&rsquo;s own words, &ldquo;the focus shifted into curated pieces for golfers, because if your game doesn&rsquo;t look good, at least your bag can.&rdquo; The name comes from the magpies that gather on Denver&rsquo;s golf courses. It&rsquo;s still run by one person writing in the first person. The full-grain leather is stitched in Denver, the quilted pouches are made by the founder&rsquo;s wife at Queen City Quilt Co., the copper and brass repair tools are hammered in Georgia with &ldquo;my good buddy Chuck,&rdquo; and the headcover is made in Bandon, Oregon by RossCo Golf.</p>
+    <p>It started in New York City in 2017, with a lost wallet, and moved to Denver about five years ago. Replacing it turned into learning leatherwork, and wallets became totes, backpacks and duffels. Then, in the brand&rsquo;s own words, &ldquo;the focus shifted into curated pieces for golfers, because if your game doesn&rsquo;t look good, at least your bag can.&rdquo; The name comes from the magpies that gather on Denver&rsquo;s golf courses. It&rsquo;s still run by one person writing in the first person. The full-grain leather is stitched in Denver, the quilted pouches are made by the founder&rsquo;s wife at Queen City Quilt Co., the copper and brass repair tools are hammered in Georgia with &ldquo;my good buddy Chuck,&rdquo; and the headcover is made in Bandon, Oregon by RossCo Golf.</p>
     <p>Magpie is for golfers who still keep score on paper and want the small things in their bag to be well made. Stock is very low: one copper repair tool and two quilted pouches were left when we checked. If something catches your eye, buy it soon. Prices were read on Magpie&rsquo;s own store on 2 October 2026.</p>
   </div>
   <aside class="sidebar">
@@ -101,7 +101,7 @@ TAKE = """
 </section>
 """
 FAQ = [
- ("Where is Magpie Supply from?", "Denver, Colorado. It started in 2017 and is named for the magpies that gather on Denver's golf courses."),
+ ("Where is Magpie Supply from?", "It started in New York City in 2017 and has been based in Denver, Colorado, for about five years. It is named for the magpies that gather on Denver's golf courses."),
  ("What does Magpie Supply make?", "Small leather golf accessories: a scorecard holder, a tee ring, a bag tag and a sunglass case, plus hammered repair tools, a quilted pouch, a RossCo headcover, a five-panel cap and a sun shirt. Prices ran from $25 to $100 on 2 October 2026."),
  ("Where are Magpie Supply products made?", "The leather goods and the quilted pouch are made in Denver, the repair tools in Georgia, the headcover in Bandon, Oregon by RossCo Golf, the cap in Colorado and the sun shirt in the USA."),
  ("Who makes the Magpie x RossCo headcover?", "RossCo Golf, in Bandon, Oregon. It has an aqua crown with the magpie stitched on it and a Pendleton grey shaft, fits a driver or a 3-wood, and cost $100 on 2 October 2026."),

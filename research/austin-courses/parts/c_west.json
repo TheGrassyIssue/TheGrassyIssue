@@ -1,0 +1,714 @@
+{
+  "courses": [
+    {
+      "name": "Omni Barton Creek - Fazio Foothills",
+      "city": "Austin",
+      "address": "8212 Barton Club Dr, Austin, TX 78735 (resort address)",
+      "latitude": 30.2930236,
+      "longitude": -97.8600341,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7087,
+      "architects": [
+        "Tom Fazio"
+      ],
+      "year_opened": 1986,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Not published. Omni states per-player rates vary by seasonality and availability (discounted twilight available) and include green fee, shared cart, practice facility and range balls. Rates quoted only via Experience Planners (512-329-4018).",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": "120 days (resort guests)",
+      "website": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/fazio-foothills",
+      "phone": "(512) 329-4018",
+      "source_urls": [
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/fazio-foothills",
+        "https://overpass-api.de/api/interpreter (OpenStreetMap leisure=golf_course centroid)"
+      ],
+      "notes": "Resort-guest/member only: Omni states course play is exclusive to Barton Creek Country Club members and registered overnight guests of Omni Barton Creek Resort & Spa; not open to the general public. Guests book by phone with Experience Planners, up to 120 days ahead. Scorecard table on course page lists Black tees 7,087 yds (75.3/141); body text elsewhere says 7,125. Built 1986, renovated 2018. Coordinates are OSM course centroid."
+    },
+    {
+      "name": "Omni Barton Creek - Fazio Canyons",
+      "city": "Austin",
+      "address": "8212 Barton Club Dr, Austin, TX 78735 (resort address; Canyons clubhouse is separate from main resort)",
+      "latitude": 30.2704435,
+      "longitude": -97.8777955,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7433,
+      "architects": [
+        "Tom Fazio"
+      ],
+      "year_opened": 1999,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Not published. Omni states per-player rates vary by seasonality and availability (discounted twilight available) and include green fee, shared cart, practice facility and range balls. Rates quoted only via Experience Planners (512-329-4018).",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "120 days (resort guests)",
+      "website": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/fazio-canyons",
+      "phone": "(512) 329-4018",
+      "source_urls": [
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/fazio-canyons",
+        "https://overpass-api.de/api/interpreter (OpenStreetMap leisure=golf_course centroid)"
+      ],
+      "notes": "Resort-guest/member only: Omni states course play is exclusive to Barton Creek Country Club members and registered overnight guests of Omni Barton Creek Resort & Spa; not open to the general public. Guests book by phone with Experience Planners, up to 120 days ahead. Tournament tees 7,433 yds (76/144). Built 1999, renovated 2022 incl. driving range with Toptracer; home of Barton Creek Golf Academy. Omni's overview card still quotes 7,153 yds. Coordinates are OSM course centroid."
+    },
+    {
+      "name": "Omni Barton Creek - Coore Crenshaw (Cliffside)",
+      "city": "Austin",
+      "address": "8212 Barton Club Dr, Austin, TX 78735 (resort address)",
+      "latitude": 30.2835986,
+      "longitude": -97.8547095,
+      "type": "resort",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6650,
+      "architects": [
+        "Bill Coore",
+        "Ben Crenshaw"
+      ],
+      "year_opened": 1991,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Not published. Omni states per-player rates vary by seasonality and availability (discounted twilight available) and include green fee, shared cart, practice facility and range balls. Rates quoted only via Experience Planners (512-329-4018).",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": "120 days (resort guests)",
+      "website": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/coore-crenshaw",
+      "phone": "(512) 329-4018",
+      "source_urls": [
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/coore-crenshaw",
+        "https://overpass-api.de/api/interpreter (OpenStreetMap leisure=golf_course centroid)"
+      ],
+      "notes": "Resort-guest/member only: Omni states course play is exclusive to Barton Creek Country Club members and registered overnight guests of Omni Barton Creek Resort & Spa; not open to the general public. Guests book by phone with Experience Planners, up to 120 days ahead. Gold tees 6,650 yds (72.6/133). Built 1991, renovated 2018. Omni now brands it 'Coore Crenshaw'. Coordinates are OSM course centroid."
+    },
+    {
+      "name": "Omni Barton Creek - Palmer Lakeside",
+      "city": "Spicewood",
+      "address": "1900 Clubhouse Hill Dr, Spicewood, TX 78669 (per OpenStreetMap; Barton Creek Lakeside)",
+      "latitude": 30.4611729,
+      "longitude": -98.0964786,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6550,
+      "architects": [
+        "Arnold Palmer"
+      ],
+      "year_opened": 1986,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Not published. Omni states per-player rates vary by seasonality and availability (discounted twilight available) and include green fee, shared cart, practice facility and range balls. Rates quoted only via Experience Planners (512-329-4018).",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": "120 days (resort guests)",
+      "website": "https://www.omnihotels.com/hotels/austin-barton-creek/golf/palmer-lakeside",
+      "phone": "(512) 329-4018",
+      "source_urls": [
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/rates",
+        "https://www.omnihotels.com/hotels/austin-barton-creek/golf/palmer-lakeside",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Barton%20Creek%20Lakeside%2C%20Spicewood"
+      ],
+      "notes": "Resort-guest/member only: Omni states course play is exclusive to Barton Creek Country Club members and registered overnight guests of Omni Barton Creek Resort & Spa; not open to the general public. Guests book by phone with Experience Planners, up to 120 days ahead. Satellite course about 45 minutes from the resort, above Lake Travis; this is the 'Spicewood/Barton Creek Lakeside' course. Black tees 6,550 yds (72.8/144); Omni page states par 72. Built 1986, renovated 2024. Address and coordinates from OSM/Nominatim (Omni lists only the resort address)."
+    },
+    {
+      "name": "Horseshoe Bay Resort - Slick Rock",
+      "city": "Horseshoe Bay",
+      "address": "105 Slick Rock Blvd, Horseshoe Bay, TX 78657",
+      "latitude": 30.5400304,
+      "longitude": -98.3642809,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6867,
+      "architects": [
+        "Robert Trent Jones Sr."
+      ],
+      "year_opened": 1972,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "No green fees published; golf offered to overnight guests via stay packages and to club members.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.hsbresort.com/golf/slick-rock/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://www.hsbresort.com/golf/slick-rock/",
+      "phone": "877-611-0112",
+      "source_urls": [
+        "https://www.hsbresort.com/golf/",
+        "https://www.hsbresort.com/golf/slick-rock/",
+        "https://www.hsbresort.com/faqs/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Slick%20Rock%20Golf%20Course%2C%20Horseshoe%20Bay"
+      ],
+      "notes": "Resort-guest/member only: Horseshoe Bay Resort FAQ states all amenities and activities are reserved exclusively for overnight guests and members of The Club at Horseshoe Bay Resort (public may only dine at J's/Waterfront and shop at The Market). Golf sold via room packages (e.g. 'Tee it Up', 'Unlimited RTJ Golf'). Championship yardage 6,867 (73.2/134). 'Original course', opened 1972; home of the 'Million Dollar Hole'. Slick Rock has its own range and putting green. Coordinates: OSM polygon tagged Slick Rock near Hi Mesa (a second OSM polygon with the same name lies near Summit Rock Blvd)."
+    },
+    {
+      "name": "Horseshoe Bay Resort - Apple Rock",
+      "city": "Horseshoe Bay",
+      "address": "2655 Bay W Blvd, Horseshoe Bay, TX 78657 (Cap Rock clubhouse)",
+      "latitude": 30.5461259,
+      "longitude": -98.4033175,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6999,
+      "architects": [
+        "Robert Trent Jones Sr."
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "No green fees published; golf offered to overnight guests via stay packages and to club members.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.hsbresort.com/golf/apple-rock/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.hsbresort.com/golf/apple-rock/",
+      "phone": "877-611-0112",
+      "source_urls": [
+        "https://www.hsbresort.com/golf/",
+        "https://www.hsbresort.com/golf/apple-rock/",
+        "https://www.hsbresort.com/faqs/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Apple%20Rock%20Golf%20Course%2C%20Horseshoe%20Bay"
+      ],
+      "notes": "Resort-guest/member only: Horseshoe Bay Resort FAQ states all amenities and activities are reserved exclusively for overnight guests and members of The Club at Horseshoe Bay Resort (public may only dine at J's/Waterfront and shop at The Market). Golf sold via room packages (e.g. 'Tee it Up', 'Unlimited RTJ Golf'). Championship yardage 6,999 (75.4/136). Served by Cap Rock practice facility (range, putting green, short-game facility). Cap Rock Clubhouse dining is members-only. Opening year not stated on official site."
+    },
+    {
+      "name": "Horseshoe Bay Resort - Ram Rock",
+      "city": "Horseshoe Bay",
+      "address": "2655 Bay W Blvd, Horseshoe Bay, TX 78657 (Cap Rock clubhouse)",
+      "latitude": 30.5389224,
+      "longitude": -98.3957133,
+      "type": "resort",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6926,
+      "architects": [
+        "Robert Trent Jones Sr."
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "No green fees published; golf offered to overnight guests via stay packages and to club members.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.hsbresort.com/golf/ram-rock/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.hsbresort.com/golf/ram-rock/",
+      "phone": "877-611-0112",
+      "source_urls": [
+        "https://www.hsbresort.com/golf/",
+        "https://www.hsbresort.com/golf/ram-rock/",
+        "https://www.hsbresort.com/faqs/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Ram%20Rock%20Golf%20Course%2C%20Horseshoe%20Bay"
+      ],
+      "notes": "Resort-guest/member only: Horseshoe Bay Resort FAQ states all amenities and activities are reserved exclusively for overnight guests and members of The Club at Horseshoe Bay Resort (public may only dine at J's/Waterfront and shop at The Market). Golf sold via room packages (e.g. 'Tee it Up', 'Unlimited RTJ Golf'). 'The Challenger'; championship yardage 6,926 (75.6/137). Served by Cap Rock practice facility (range, putting green, short-game facility). Opening year not stated on official site."
+    },
+    {
+      "name": "Delaware Springs Golf Course",
+      "city": "Burnet",
+      "address": "600 Delaware Springs Blvd, Burnet, TX 78611",
+      "latitude": 30.7282646,
+      "longitude": -98.2429492,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6802,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 41,
+        "high_usd": 75,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official rates incl. 1/2 cart: 18 holes Mon-Thu $60, Fri-Sun $75; twilight $41 (Mon-Thu) / $49 (Fri-Sun). 9 holes $41/$49 (after 1pm). $5 off for seniors 60+, juniors, active military, Burnet city residents. Replay $35.",
+        "read_date": "2026-10-05",
+        "source_url": "https://delawaresprings.com/rates/"
+      },
+      "walking": "restricted",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "14 days (online public booking range in course's Chronogolf/Lightspeed engine)",
+      "website": "https://delawaresprings.com/",
+      "phone": "512-756-8471",
+      "source_urls": [
+        "https://delawaresprings.com/",
+        "https://delawaresprings.com/rates/",
+        "https://delawaresprings.com/course-details/",
+        "https://delawaresprings.com/facilities/",
+        "https://www.chronogolf.com/club/delaware-springs-golf-course",
+        "https://www.highlandlakes.com/golf.php",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Delaware%20Springs%20Golf%20Course%2C%20Burnet"
+      ],
+      "notes": "City of Burnet course (contact email @cityofburnet.com). Tees 4,749-6,802 yds (Black 6,802). Walking only Mon-Thu and after 1pm Fri-Sun. Par 72 is from the Highland Lakes tourism directory (official site does not state par); architect/opening year not stated on official site."
+    },
+    {
+      "name": "Hidden Falls Golf Club (Meadowlakes)",
+      "city": "Meadowlakes (Marble Falls)",
+      "address": "220 Meadowlakes Dr, Meadowlakes, TX 78654",
+      "latitude": 30.5679407,
+      "longitude": -98.2928342,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6700,
+      "architects": [
+        "Leon Howard"
+      ],
+      "year_opened": 1973,
+      "green_fee": {
+        "low_usd": 32,
+        "high_usd": 57,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official daily rates (riding = half cart): 18 holes $48 weekday / $57 weekend & holidays; walking $32/$37; twilight $40/$45; super twilight $38/$43; senior/military/first responder $44/$52; 9 holes $24.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.hiddenfallsgolfcourse.com/course-details/rates/"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": null,
+      "website": "https://www.hiddenfallsgolfcourse.com/",
+      "phone": "(830) 693-3300",
+      "source_urls": [
+        "https://www.hiddenfallsgolfcourse.com/",
+        "https://www.hiddenfallsgolfcourse.com/course-details/",
+        "https://www.hiddenfallsgolfcourse.com/course-details/rates/",
+        "https://meadowlakestexas.org/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Hidden%20Falls%20Golf%20Course%2C%20Meadowlakes"
+      ],
+      "notes": "Course of the City of Meadowlakes (gated community; listed as a city department). Public daily-fee play. Site gives 'a 6,700 yards layout' (rounded). Restaurant closed for construction as of read date; overseeding through mid-October."
+    },
+    {
+      "name": "Legends Golf Course & Villas (Legends on Lake LBJ)",
+      "city": "Kingsland",
+      "address": "105 Rangeway Cir, Kingsland, TX 78639",
+      "latitude": 30.6663275,
+      "longitude": -98.4338235,
+      "type": "public",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 7159,
+      "architects": [
+        "Tom Kite",
+        "Roy Bechtol",
+        "Randy Russell"
+      ],
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": null,
+        "high_usd": null,
+        "basis": "18-hole",
+        "dynamic": null,
+        "notes": "No rate card published; rates shown only inside the Club Prophet (cps.golf) booking engine. Golf included with villa/cabin stay-and-play.",
+        "read_date": "2026-10-05",
+        "source_url": "https://legendslbj.com/book-a-tee-time/"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://legendslbj.com/",
+      "phone": "833-525-4653",
+      "source_urls": [
+        "https://legendslbj.com/",
+        "https://legendslbj.com/hole-by-hole-flyover-and-strategy-guide/",
+        "https://legendslbj.com/frequently-asked-questions/",
+        "https://legendslbj.com/amenities/",
+        "https://legendslbj.com/contact-us/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Legends%20Golf%20Course%2C%20Kingsland"
+      ],
+      "notes": "Official site calls it a public course with on-site villas/cabins. Back-tee yardage is the sum of the 18 gold-tee hole yardages on the official hole-by-hole guide (7,159). Booking window not stated (FAQ says book as early as possible). Opening year not on official site."
+    },
+    {
+      "name": "Lighthouse Country Club (formerly Packsaddle)",
+      "city": "Kingsland",
+      "address": "118 Club Circle, Kingsland, TX 78639",
+      "latitude": null,
+      "longitude": null,
+      "type": "semi-private (public tee times)",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6558,
+      "architects": [
+        "Jerry Slack (2006 renovation)",
+        "Leon Howard (2006 renovation)"
+      ],
+      "year_opened": 1968,
+      "green_fee": {
+        "low_usd": 36.71,
+        "high_usd": 65.89,
+        "basis": "18-hole",
+        "dynamic": true,
+        "notes": "Site defers to foreUP booking engine. Public-class 18-hole riding prices returned by engine on read date: Wed 7 Oct 2026 $36.71-$55.53; Sat 10 Oct 2026 $42.36-$65.89 (vary by time of day). 9-hole and senior rates also offered.",
+        "read_date": "2026-10-05",
+        "source_url": "https://foreupsoftware.com/index.php/booking/20649/5231#teetimes"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "14 days (public booking class in foreUP)",
+      "website": "https://lighthousecountryclub.com/",
+      "phone": "(325) 388-6660",
+      "source_urls": [
+        "https://lighthousecountryclub.com/",
+        "https://lighthousecountryclub.com/course/",
+        "https://lighthousecountryclub.com/rates-2/",
+        "https://lighthousecountryclub.com/scorecard/",
+        "https://foreupsoftware.com/index.php/booking/20649/5231#teetimes"
+      ],
+      "notes": "This is the Kingsland 'Packsaddle' course (renamed after 2011 purchase). Course page: championship tees 6,558 yds; posted scorecard image shows par 71 and 6,485 from back tees. Double-ended range, 10,000 sq ft putting green, chipping green. Coordinates not found in OSM/Nominatim."
+    },
+    {
+      "name": "Llano River Golf Course",
+      "city": "Llano",
+      "address": "2835 W Ranch Rd 152, Llano, TX 78643",
+      "latitude": null,
+      "longitude": null,
+      "type": "municipal",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 7200,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 24,
+        "high_usd": 44,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official rates: walking $24 Mon-Fri / $29 Sat-Sun; riding $39 / $44. Seniors $14-$31, military $16-$35. Site does not state hole count for the rate table (18-hole course).",
+        "read_date": "2026-10-05",
+        "source_url": "https://golfllano.com/course-information/"
+      },
+      "walking": "yes",
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": "14 days (public booking class in foreUP)",
+      "website": "https://golfllano.com/",
+      "phone": "325-247-5100",
+      "source_urls": [
+        "https://golfllano.com/",
+        "https://golfllano.com/course-information/",
+        "https://www.cityofllano.com/293/Golf-Course",
+        "https://foreupsoftware.com/index.php/booking/22994#/teetimes"
+      ],
+      "notes": "City of Llano course next to Robinson City Park on the Llano River. Official homepage states 'Holes: 18 | Par: 71 | Yardage: 7,200' - the 7,200 figure is unusually long and may be a site error (older Highland Lakes directory lists 6,094); verify with course. Coordinates not found in OSM/Nominatim."
+    },
+    {
+      "name": "Hancock Park Golf Course",
+      "city": "Lampasas",
+      "address": "237 Naruna Rd, Lampasas, TX 76550",
+      "latitude": 31.0511219,
+      "longitude": -98.1856555,
+      "type": "municipal",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": null,
+      "architects": null,
+      "year_opened": 1945,
+      "green_fee": {
+        "low_usd": 32,
+        "high_usd": 57,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official fees (tax incl.): weekday green $32, with half cart $52; weekend green $37, with half cart $57; senior/military $29-$54; 9 holes $20 ($30 w/ half cart).",
+        "read_date": "2026-10-05",
+        "source_url": "https://hancockparkgolfcourse.com/fees/"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://hancockparkgolfcourse.com/",
+      "phone": "512-556-3202",
+      "source_urls": [
+        "https://hancockparkgolfcourse.com/",
+        "https://hancockparkgolfcourse.com/fees/",
+        "https://hancockparkgolfcourse.com/course-details/",
+        "https://hancockparkgolfcourse.com/rules/",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Hancock%20Golf%20Course%20Lampasas"
+      ],
+      "notes": "City of Lampasas municipal course (lampasas.org golf page redirects here). Opened 1945 as nine holes, expanded to 18 in 1996. Site says 'just 6,000 yards from the championship tees' (approximate, so yardage left null). Tee times by phone; required weekends/holidays. ~60 miles NW of Austin (borderline distance)."
+    },
+    {
+      "name": "Vaaler Creek Golf Club",
+      "city": "Blanco",
+      "address": "228 Jeff Vaughn, Blanco, TX 78606",
+      "latitude": 30.0409777,
+      "longitude": -98.3809667,
+      "type": "semi-private (public tee times)",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6801,
+      "architects": [
+        "Michael Lowry"
+      ],
+      "year_opened": 2009,
+      "green_fee": {
+        "low_usd": 75,
+        "high_usd": 110,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official non-member rates incl. cart: Mon-Thu $95 (twilight $75); Fri-Sun & holidays $110 (twilight $85). Sr/Jr Mon-Thu $75 ($60 twilight); military/accompanied guest $55-$65.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.vaalercreekgolfclub.com/golf/fees"
+      },
+      "walking": null,
+      "driving_range": true,
+      "short_game_area": null,
+      "booking_window": "14 days",
+      "website": "https://www.vaalercreekgolfclub.com/",
+      "phone": "(830) 833-0706",
+      "source_urls": [
+        "https://www.vaalercreekgolfclub.com/",
+        "https://www.vaalercreekgolfclub.com/golf/fees",
+        "https://www.vaalercreekgolfclub.com/golf/course",
+        "https://www.vaalercreekgolfclub.com/golf/tee-times",
+        "https://www.vaalercreekgolfclub.com/golf/practice-facilities",
+        "https://www.vaalercreekgolfclub.com/images/pictures/scorecard.jpg",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Vaaler%20Creek%20Golf%20Club%2C%20Blanco"
+      ],
+      "notes": "Public tee times plus memberships for Rockin' J Ranch property owners. Back nine opened July 2007, front nine July 4, 2009 (year_opened = full 18). Gold tees 6,801 (74.1/139) per official scorecard. All green fees include cart."
+    },
+    {
+      "name": "Lady Bird Johnson Golf Course",
+      "city": "Fredericksburg",
+      "address": "341 Golfers Loop, Fredericksburg, TX 78624",
+      "latitude": 30.2432341,
+      "longitude": -98.9163044,
+      "type": "municipal",
+      "holes": 18,
+      "par": 71,
+      "back_tee_yardage": 6686,
+      "architects": null,
+      "year_opened": 1969,
+      "green_fee": {
+        "low_usd": 32,
+        "high_usd": 53,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official nonresident rack rates, walking, plus 8.25% tax: 18 holes Mon-Thu $47, Fri-Sun $53; twilight $32/$37. Gillespie County residents $33/$38. Shared cart $18 per 18 holes.",
+        "read_date": "2026-10-05",
+        "source_url": "https://ladybirdgolf.com/rates/"
+      },
+      "walking": "yes",
+      "driving_range": true,
+      "short_game_area": true,
+      "booking_window": "7 days",
+      "website": "https://ladybirdgolf.com/",
+      "phone": "830-997-4010",
+      "source_urls": [
+        "https://ladybirdgolf.com/",
+        "https://ladybirdgolf.com/rates/",
+        "https://ladybirdgolf.com/course-details/",
+        "https://ladybirdgolf.com/history/",
+        "https://ladybirdgolf.com/faqs/",
+        "https://ladybirdgolf.com/wp-content/uploads/2025/02/LB_Score_Card.jpg",
+        "https://nominatim.openstreetmap.org/search?format=json&q=Lady%20Bird%20Johnson%20Golf%20Course%2C%20Fredericksburg"
+      ],
+      "notes": "City of Fredericksburg municipal course in Lady Bird Johnson Memorial Park, managed by Touchstone Golf. Opened 1969 as 9 holes ('Live Oak'), 18 holes from 1991, renovated 2012. Black tees 6,686 (72.1/127). Borderline distance (~80 mi from Austin)."
+    },
+    {
+      "name": "Double J Ranch Golf Club (formerly Quicksand at Woodcreek)",
+      "city": "Wimberley (Woodcreek)",
+      "address": "1 Pro Lane, Wimberley, TX 78676",
+      "latitude": 30.0279816,
+      "longitude": -98.1119545,
+      "type": "semi-private (public tee times)",
+      "holes": 18,
+      "par": 72,
+      "back_tee_yardage": 6538,
+      "architects": null,
+      "year_opened": null,
+      "green_fee": {
+        "low_usd": 59,
+        "high_usd": 90,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official daily rates effective June 1, 2026 (plus tax): 18 holes Mon-Thu $69, Fri-Sun & holidays $90; twilight (after 3:30pm) $59/$75; senior 60+ $65 (M-F); 9 holes $55/$65. Cart inclusion not stated on rate card.",
+        "read_date": "2026-10-05",
+        "source_url": "https://doublejranchgolfclub.com/images/2026/05/26/double_j_ranch_daily_rates_bright_yellow_printable.jpg"
+      },
+      "walking": null,
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": null,
+      "website": "https://doublejranchgolfclub.com/",
+      "phone": "(512) 847-9700",
+      "source_urls": [
+        "https://doublejranchgolfclub.com/",
+        "https://doublejranchgolfclub.com/green-fees",
+        "https://doublejranchgolfclub.com/best-public-golf-course-wimberley-tx",
+        "https://doublejranchgolfclub.com/tee-times",
+        "https://doublejranchgolfclub.com/images/2025/10/17/double-j-ranch-card-2.webp",
+        "https://nominatim.openstreetmap.org/search?format=json&q=1%20Pro%20Lane%2C%20Wimberley%2C%20TX"
+      ],
+      "notes": "The former Quicksand at Woodcreek course, renamed under owner Joe Gambino. Official site describes it as semi-private with 24/7 online tee times. Black tees 6,538 per official scorecard (site text says ~6,600). On-site restaurant/entertainment area announced for late 2026."
+    },
+    {
+      "name": "Blue Lake Golf Club (9 holes)",
+      "city": "Horseshoe Bay",
+      "address": "214 Bluebonnet Rd, Horseshoe Bay, TX 78657",
+      "latitude": null,
+      "longitude": null,
+      "type": "public",
+      "holes": 9,
+      "par": null,
+      "back_tee_yardage": null,
+      "architects": [
+        "Joe Finger"
+      ],
+      "year_opened": 1962,
+      "green_fee": {
+        "low_usd": 30,
+        "high_usd": 55,
+        "basis": "18-hole",
+        "dynamic": false,
+        "notes": "Official rates (plus tax): 18 holes walking $30 weekday / $40 weekend; 18 with cart $45/$55; 9 holes walking $25/$30, 9 with cart $40/$45. Closed Mondays.",
+        "read_date": "2026-10-05",
+        "source_url": "https://www.bluelakegolf.com/golf-and-rates/"
+      },
+      "walking": "yes",
+      "driving_range": null,
+      "short_game_area": null,
+      "booking_window": "14 days",
+      "website": "https://www.bluelakegolf.com/",
+      "phone": "830-598-5524",
+      "source_urls": [
+        "https://www.bluelakegolf.com/",
+        "https://www.bluelakegolf.com/golf-and-rates/",
+        "https://blue-lake-golf-club.book.teeitup.com/"
+      ],
+      "notes": "Public 9-hole course in the Blue Lake area of Horseshoe Bay (separate from Horseshoe Bay Resort). Par and yardage not stated on official site. Coordinates not found in OSM/Nominatim."
+    }
+  ],
+  "excluded": [
+    {
+      "name": "Horseshoe Bay Resort - Summit Rock",
+      "reason": "Members-only Jack Nicklaus Signature course; resort FAQ lists Summit Rock as exclusively for members of The Club at Horseshoe Bay Resort.",
+      "source_urls": [
+        "https://www.hsbresort.com/golf/summit-rock/",
+        "https://www.hsbresort.com/faqs/"
+      ]
+    },
+    {
+      "name": "The Hills Country Club - Signature Course (Lakeway)",
+      "reason": "Private Invited club; 'The Hills offers private championship golf' across four courses.",
+      "source_urls": [
+        "https://www.invitedclubs.com/clubs/the-hills-country-club/golf",
+        "https://www.invitedclubs.com/clubs/the-hills-country-club"
+      ]
+    },
+    {
+      "name": "Flintrock Falls (The Hills Country Club, Lakeway)",
+      "reason": "One of The Hills' four private courses (Nicklaus/Nicklaus II); members only.",
+      "source_urls": [
+        "https://www.invitedclubs.com/clubs/the-hills-country-club/golf"
+      ]
+    },
+    {
+      "name": "Live Oak Course (The Hills Country Club, Lakeway)",
+      "reason": "Now one of The Hills' four private courses (older directories list Live Oak/Yaupon as public - out of date).",
+      "source_urls": [
+        "https://www.invitedclubs.com/clubs/the-hills-country-club/golf"
+      ]
+    },
+    {
+      "name": "Yaupon Course (The Hills Country Club, Lakeway)",
+      "reason": "Now one of The Hills' four private courses.",
+      "source_urls": [
+        "https://www.invitedclubs.com/clubs/the-hills-country-club/golf"
+      ]
+    },
+    {
+      "name": "Falconhead Golf Club (Bee Cave)",
+      "reason": "Could not verify current operation or public access: the course's domain falconheadgolf.com is a parked 'may be for sale' page as of 2026-10-05 and no other official page was found. Needs a manual check (phone) before inclusion.",
+      "source_urls": [
+        "https://falconheadgolf.com/"
+      ]
+    },
+    {
+      "name": "Johnson City (no course)",
+      "reason": "No regulation golf course found in Johnson City, TX; searches returned only disc golf.",
+      "source_urls": []
+    },
+    {
+      "name": "Caliterra (Dripping Springs)",
+      "reason": "No golf course verified at Caliterra (residential community; official site is JS-rendered with no golf content retrievable), and no public course found in Dripping Springs itself.",
+      "source_urls": [
+        "https://caliterratx.com/"
+      ]
+    },
+    {
+      "name": "Quicksand at Woodcreek (Wimberley)",
+      "reason": "Not excluded as a course - renamed. Now operates as Double J Ranch Golf Club (included under that name).",
+      "source_urls": [
+        "https://doublejranchgolfclub.com/"
+      ]
+    },
+    {
+      "name": "Packsaddle Country Club (Kingsland)",
+      "reason": "Not excluded as a course - renamed. Now Lighthouse Country Club (included under that name).",
+      "source_urls": [
+        "https://lighthousecountryclub.com/course/"
+      ]
+    }
+  ]
+}
