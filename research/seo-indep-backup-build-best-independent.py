@@ -162,15 +162,6 @@ CSS = """<style>
 #bi .bi-faq summary::after{content:"+";float:right;opacity:.5}
 #bi .bi-faq details[open] summary::after{content:"\\2212"}
 #bi .bi-faq p{font-size:16.5px;line-height:1.62;margin:10px 0 0}
-#bi .bi-glance{max-width:64ch;margin:30px 0 0}
-#bi .bi-glance h2{font-family:var(--bx-serif,Georgia,serif);font-size:24px;letter-spacing:-.01em;margin:0 0 12px}
-#bi .bi-tw{overflow-x:auto}
-#bi .bi-table{width:100%;border-collapse:collapse;font-size:15px;line-height:1.4}
-#bi .bi-table th{text-align:left;font-family:var(--bx-mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;padding:8px 10px 8px 0;border-bottom:1px solid var(--bx-ink)}
-#bi .bi-table td{padding:7px 10px 7px 0;border-bottom:1px solid var(--bx-rule);vertical-align:top}
-#bi .bi-table td:first-child{font-family:var(--bx-mono);font-size:12px;opacity:.6}
-#bi .bi-table a{color:inherit;text-decoration:none;border-bottom:1px solid rgba(20,20,20,.3)}
-#bi .bi-intro a{color:inherit;border-bottom:1px solid currentColor;text-decoration:none}
 #bi .bi-back{margin-top:40px;font-family:var(--bx-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase}
 #bi .bi-back a{color:inherit}
 @media(max-width:760px){#bi .rk{grid-template-columns:52px 1fr;gap:16px}#bi .rk-n{font-size:40px}
@@ -192,9 +183,7 @@ mentions a brand counts once, and the brands with the most pages sit at the top.
 <strong>{esc(plain(n2['name']))}</strong> and <strong>{esc(plain(n3['name']))}</strong>.</p>
 <p>Each brand has its own page in the Brand Index, which links out to every post that counts toward its number.
 Read the list as a map of where our attention has actually gone in {YEAR}: the brands we keep going back to for
-drops, gift guides, roundups and field notes.</p>
-<p>Looking for more than twenty-five? See every <a href="/brands/tag/independent">independent golf brand</a> in the
-Index, or browse <a href="/brands">the full golf brand directory</a>.</p>"""
+drops, gift guides, roundups and field notes.</p>"""
 
 HOW = f"""<h2>How this list works</h2>
 <p>These are the brands we keep coming back to because they make good stuff, they are consistent about it, and
@@ -222,9 +211,6 @@ FAQ = [
      "see them."),
 ]
 
-WRITE = json.load(open(os.path.join(ROOT, "data", "best25-writeups.json"), encoding="utf-8"))
-missing_w = [b["slug"] for b in top if b["slug"] not in WRITE]
-PROFILE = re.compile(r"/drops/(brand-to-know|brand-revisited|brand-to-watch|fella-golf)")
 rows = []
 for i, b in enumerate(top, 1):
     s = b["slug"]
@@ -237,20 +223,14 @@ for i, b in enumerate(top, 1):
         f' width="520" height="390"></a>'
         f'<div class="rk-body"><h2><a href="/brands/{s}">{esc(name)}</a></h2>'
         f'<div class="rk-meta"><b>{num(posts(s))}</b> &middot; {meta}</div>'
-        f'<p>{esc(WRITE.get(s, b.get("line", "")))}</p>'
+        f'<p>{esc(b.get("line", ""))}</p>'
         f'<p class="rk-own">{esc(ind[s]["owner"])}</p>'
-        + (f'<a class="rk-go" href="{b["url"]}">{"Read our Brand to Know" if PROFILE.search(b.get("url", "")) else "Read our coverage"} &rarr;</a> &nbsp; '
-           if b.get("url", "").startswith("/drops/") else "")
-        + f'<a class="rk-go" href="/brands/{s}">See the brand and all its posts &rarr;</a></div></li>')
+        f'<a class="rk-go" href="/brands/{s}">See the brand and its posts &rarr;</a></div></li>')
 
-GLANCE = "\n".join(
-    f'<tr><td>{i:02d}</td><td><a href="#no-{i}">{esc(plain(b["name"]))}</a></td>'
-    f'<td>{esc((b.get("loc") or "").strip("— -")) or "&mdash;"}</td>'
-    f'<td>{esc(", ".join(c.title() for c in b.get("cats", [])))}</td></tr>' for i, b in enumerate(top, 1))
 H1 = f"Our {N_TOP} Best Independent Golf Brands"  # Lenny, 24 Sep 2026
 TITLE = f"Our {N_TOP} Best Independent Golf Brands ({YEAR}) | The Grassy Issue"
-DESC = (f"Our {N_TOP} best independent golf brands for {YEAR}: founder- and family-run labels making clothing, bags "
-        f"and headcovers, with where each is based and who owns it.")
+DESC = (f"The {N_TOP} independent golf brands The Grassy Issue has covered most in {YEAR}, ranked by post count, "
+        f"with who owns each one and how we checked.")
 
 schema = {"@context": "https://schema.org", "@graph": [
     {"@type": "CollectionPage", "name": H1, "description": DESC, "url": f"https://thegrassyissue.com{URL}",
@@ -333,29 +313,10 @@ print(f"{'wrote' if '--apply' in sys.argv else 'DRY RUN'} {URL} — {N_TOP} bran
       f"{len(txt.split())} words, floor {floor} posts")
 for i, b in enumerate(top, 1):
     print(f"  {i:>2}. {plain(b['name']):28} {posts(b['slug']):>3}")
-if missing_w:
-    print("\n  !! no write-up yet (falls back to the Index line) — add to data/best25-writeups.json: " + ", ".join(missing_w))
 if unchecked:
     print("\n  !! UNCHECKED brands with enough posts to make the list — research ownership, then add to "
           "data/independence.json:\n     " + ", ".join(f"{s} ({posts(s)})" for s in unchecked))
 if "--apply" in sys.argv:
     open(OUT, "w", encoding="utf-8").write(out)
-    # Each ranked brand's own page carries one quiet line back to the list (Lenny, 4 Oct 2026, SEO step 3).
-    # Idempotent: the marked block is removed from every brand page first, then re-added for the current top 25.
-    RK0, RK1 = "<!--TGI-BEST25-->", "<!--/TGI-BEST25-->"
-    rank = {b["slug"]: i for i, b in enumerate(top, 1)}
-    for s_ in brands:
-        bp = os.path.join(ROOT, "brands", s_ + ".html")
-        if not os.path.exists(bp): continue
-        h = open(bp, encoding="utf-8").read(); h0 = h
-        h = re.sub(re.escape(RK0) + r".*?" + re.escape(RK1), "", h, flags=re.S)
-        if s_ in rank and '<div class="bp-actions">' in h:
-            line = (f'{RK0}<div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;'
-                    f'letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0">'
-                    f'<a href="/brands/best-independent-golf-brands#no-{rank[s_]}" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">'
-                    f'No. {rank[s_]} on Our {N_TOP} Best Independent Golf Brands &rarr;</a></div>{RK1}')
-            h = h.replace('<div class="bp-actions">', line + '<div class="bp-actions">', 1)
-        if h != h0: open(bp, "w", encoding="utf-8").write(h)
-    print(f"  rank line on {len(rank)} brand pages")
 else:
     print("\npass --apply to write")

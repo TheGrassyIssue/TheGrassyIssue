@@ -101,15 +101,15 @@ TAX = [
  is why both sit here rather than being split.</p>""",
  ),
 ("tag", "independent", "Independent Golf Brands",
- "Independent Golf Brands, Founder-Owned (2026) | The Grassy Issue",
- "Fifty-three independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
- """<p>An <strong>independent golf brand</strong> is one with no parent company, no licensing group and no outside
- investors behind it: it is owned by the people who started it, or by a family. Fifty-three brands in the Index
- meet that bar. <strong>Bettinardi</strong> is still family-run out of Tinley Park. <strong>Seamus Golf</strong>
- is owned outright by Akbar and Megan Chisti. <strong>No Laying Up</strong> answers to its own audience and
- nobody else. The twenty-five we have covered most are ranked on
+ "Independent Golf Brands — Founder-Owned | The Grassy Issue",
+ "Fifty-three founder- and family-owned golf brands with no parent company and no outside investors — the independent end of the Brand Index.",
+ """<p>Independent here means structural, not stylistic: no parent conglomerate, no licensing group,
+ no outside investors, nobody upstairs to approve the range. <strong>Bettinardi</strong> is still
+ family-run out of Tinley Park. <strong>Seamus Golf</strong> is owned outright by Akbar and Megan
+ Chisti. <strong>No Laying Up</strong> answers to its own audience and nobody else. The
+ twenty-five we have covered most are ranked on
  <a href="/brands/best-independent-golf-brands">Our 25 Best Independent Golf Brands</a>.</p>
- <p>It matters to a buyer in two specific ways. Independents tend to move faster: a
+ <p>It matters to a buyer in two specific ways. Independents tend to move faster — a
  <strong>Gamut Golf</strong> or a <strong>Dormie Workshop</strong> can decide on a Tuesday and ship
  in a month. And they tend to disappear faster, which is why a good number of the brands here also
  carry the drops-and-vanishes attribute. Buy the thing when you see it.</p>""",
@@ -449,7 +449,6 @@ def page(kind, slug, h1, title, desc, intro, notes):
 
     schema = {"@context": "https://schema.org", "@type": "CollectionPage",
               "name": h1, "description": desc,
-              "dateModified": __import__("datetime").date.today().isoformat(),
               "url": f"https://thegrassyissue.com{url}",
               "isPartOf": {"@type": "WebSite", "name": "The Grassy Issue",
                            "url": "https://thegrassyissue.com"},

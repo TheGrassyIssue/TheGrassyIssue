@@ -309,7 +309,7 @@ BODY = f"""<!--BX-BRAND-INDEX-->
   <div>
     <div class="eyebrow">{N} GOLF BRANDS &amp; INDEPENDENT MAKERS &middot; AUSTIN</div>
     <h1>{N} brands<br>to <em>know.</em></h1>
-    <p>A running list of golf brands, independent makers and oddities from Texas to Tokyo &mdash; heritage names, indie labels, small-batch workshops and under-the-radar finds, every one with its own page. Researched and selected by The Grassy Issue. Want only the founder-owned ones? See the <a href="/brands/tag/independent" style="color:inherit;border-bottom:1px solid currentColor">independent golf brands</a>, or our <a href="/brands/best-independent-golf-brands" style="color:inherit;border-bottom:1px solid currentColor">25 best independent golf brands</a>.</p>
+    <p>A running list of golf brands, independent makers and oddities from Texas to Tokyo &mdash; heritage names, indie labels, small-batch workshops and under-the-radar finds, every one with its own page. Researched and selected by The Grassy Issue.</p>
     <div class="modes"><button type="button" id="bx-m-discover">DISCOVER</button><button type="button" id="bx-m-az">BROWSE A&ndash;Z</button><button type="button" data-open-filter>FILTER</button></div>
   </div>
   <div class="bx-hero-img"><img src="{HERO_IMG}" alt="Lions Municipal Golf Course at dusk, Austin"><div class="cap">LIONS MUNICIPAL &middot; AUSTIN, TX</div></div>
