@@ -54,7 +54,7 @@ CAPTIONS = [
 TITLE = "Brand to Know &mdash; Hidden Links Society"
 TEXT = ("Thirty products, and a documentary series about a hundred golf courses. Hidden Links Society "
         "makes headwear, headcovers and a properly heavy overshirt, gives 2% of every sale to Youth on "
-        "Course, and is quietly working through Golf Digest's Top 100 Public list one course at a time. "
+        "Course, and is quietly working through a national Top 100 Public list one course at a time. "
         "Eighteen pieces, prices read 17 September 2026.")
 
 

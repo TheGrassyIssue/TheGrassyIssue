@@ -121,7 +121,7 @@ FAQ = [
  ("Did Jones invent the single-strap golf bag?",
   "Jones does not make that claim. Their own site says only that the company has crafted single-strap carry bags "
   "since 1971, and that its stand system is patented and &ldquo;remains the gold standard.&rdquo; Chris Carnahan, "
-  "one of the current owners, told Golf Digest in 2017 that George Jones was &ldquo;the innovator behind the stand "
+  "one of the current owners, said in 2017 that George Jones was &ldquo;the innovator behind the stand "
   "and the straps that are now ubiquitous in golf&rdquo; &mdash; that is his characterisation, not a documented "
   "first."),
  ("What happened to Jones between 1971 and now?",
@@ -130,7 +130,7 @@ FAQ = [
   "declined. The Lemman family and Chris Carnahan acquired it in 2011. Matt Lemman&rsquo;s description of what they "
   "bought: &ldquo;Just the name, that was all.&rdquo;"),
  ("How did they rebuild the bag with no patterns left?",
-  "By finding old ones. Carnahan told Golf Digest there was no inventory and no production facilities, but "
+  "By finding old ones. Carnahan has said there was no inventory and no production facilities, but "
   "&ldquo;being in Portland, a lot of our family and friends had the old bags, so we were able to gather them and "
   "rebuild the Jones bag to the exact specifications but using modern materials.&rdquo;"),
  ("What are Jones bags actually made of?",

@@ -113,8 +113,8 @@ SECTIONS = [
 N = 31
 PQ = {
  "polos": ("I always had a feeling that at some point, when the timing was right, I&rsquo;d be back, and now here we go.", "John Ashworth, founder, on returning as creative director, to FashionUnited, December 2024"),
- "pants": ("It feels natural, where I&rsquo;m supposed to be at this point in the journey.", "John Ashworth, to Global Golf Post, March 2025"),
- "shoes": ("We continue to bump into golfers who have the Golfman tattoo &ndash; what other golf brand can say that?", "Eddie Fadel, Ashworth president, to Golf Today, December 2022"),
+ "pants": ("It feels natural, where I&rsquo;m supposed to be at this point in the journey.", "John Ashworth, March 2025"),
+ "shoes": ("We continue to bump into golfers who have the Golfman tattoo &ndash; what other golf brand can say that?", "Eddie Fadel, Ashworth president, December 2022"),
 }
 BANDS = {
  "polos": ("Since 1987", "Ashworth's own photos.", [("band-10","A golfer in a pale green Ashworth polo","The polo"),("band-4","A golfer in a striped Ashworth polo carrying his bag","On the walk"),("band-11","A golfer in a white Ashworth polo and green shorts among palms","Desert golf")]),

@@ -83,7 +83,7 @@ BAGS = [
 
 CARTS = [
  ("speed-cart-x-push-cart","Sun Mountain","Speed Cart X &middot; $300",
-  "The Speed Cart arrived in 1999 as the first genuinely foldable three-wheel push cart and created a category that did not previously exist. The X is the current version, and MyGolfSpy made it a staff pick in its 2026 push cart testing.", U+"speed-cart-x-push-cart", ("irl-31.jpg",)),
+  "The Speed Cart arrived in 1999 as the first genuinely foldable three-wheel push cart and created a category that did not previously exist. The X is the current version, and it was a staff pick in one major 2026 push cart test.", U+"speed-cart-x-push-cart", ("irl-31.jpg",)),
  ("px4-push-cart","Sun Mountain","PX4 Push Cart &middot; $330",
   "Four wheels instead of three, which trades a little folded bulk for a cart that tracks dead straight across a sidehill. The answer if your course is anything other than flat.", U+"px4-push-cart", ("irl-23.jpg",)),
  ("speed-cart-seat","Sun Mountain","Speed Cart Seat &middot; $75",

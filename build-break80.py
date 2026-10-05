@@ -46,10 +46,10 @@ P = {
    "Carry, spin and launch from your phone, at the range or into a net at home, and it doubles as a simulator. It is on sale for $100 off, and stock yardages are the fastest way to stop coming up short."),
  "hackmotion": ("HackMotion", "Sensor 4", "$345",
    "https://hackmotion.com/hackmotion-sensor-4/",
-   "A wrist sensor that buzzes the moment your lead wrist breaks down, which is where most slices and flips start. The new Sensor 4 records at 800 frames a second, and Golf Monthly names it the best aid for clubface control. Core is $345; Plus, with putting, is $490."),
+   "A wrist sensor that buzzes the moment your lead wrist breaks down, which is where most slices and flips start. The new Sensor 4 records at 800 frames a second, and one major training-aid test names it the best for clubface control. Core is $345; Plus, with putting, is $490."),
  "trs-slider": ("TRS Golf", "TRS Slider", "&pound;64.95 (~$90)",
    "https://trsgolf.com/products/trs-slider",
-   "Robert Rock's strap connects your trail elbow to your torso so the arm cannot fly away at the top. Golf Monthly made it its top training aid of 2026, and it fixes the over-the-top move that costs most mid-handicaps their good drives."),
+   "Robert Rock's strap connects your trail elbow to your torso so the arm cannot fly away at the top. It was named one major review's top training aid of 2026, and it fixes the over-the-top move that costs most mid-handicaps their good drives."),
  "butterblade": ("RYP Golf", "ButterBlade", "$149",
    "https://rypgolf.com/products/butterblade",
    "A 7-iron with a head about the size of a matchbox. Hit twenty balls with it and your own irons look enormous, which is the point: it trains a centred strike by making anything else obvious."),
@@ -61,7 +61,7 @@ P = {
    "A speed stick with three weights and a counterweight, eight setups in all, built for ten minutes, three times a week. More speed means a shorter club into every green, and the bundle with the ButterBlade is $329."),
  "speed-trap": ("EyeLine Golf", "Speed Trap 2.0", "$99.95",
    "https://eyelinegolf.com/products/speed-trap",
-   "Four foam rods on a base that gate your swing path. Hit them and you know your path was off; miss them and the ball starts where you aimed. Golf Monthly calls it the best aid for swing path."),
+   "Four foam rods on a base that gate your swing path. Hit them and you know your path was off; miss them and the ball starts where you aimed. One major training-aid test calls it the best for swing path."),
  "edel-sms": ("Edel Golf", "SMS Pro Wedge", "$180",
    "https://edelgolf.com/products/sms-pro-wedge",
    "Edel built its name on fitting, and the SMS Pro wedge comes in more loft, bounce and grind combinations than almost anything else. Most strokes between 85 and 79 are lost inside 100 yards."),
@@ -165,7 +165,7 @@ GUIDE = """
     <p style="margin-top:14px"><strong>Off the tee, avoid recovery shots.</strong> A drive in the fairway bunker, behind a tree or deep in the rough costs nearly as much as a penalty. Play to the safe side of the hole and club down when the fairway gets narrow.</p>
     <p style="margin-top:14px"><strong>From 150 to 200 yards, aim for the green plus one.</strong> This is where doubles pile up for a ten-handicap. Instead of firing at the flag, aim for the middle or the side with the easiest miss, and count a chip or putt for par as a win.</p>
     <p style="margin-top:14px"><strong>Lag it close.</strong> Three-putts are the quiet leak. Practise from 30 feet and beyond until two putts is automatic, and the putts for par will start to drop on their own.</p>
-    <p style="margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6">Adapted from Luke Kerr-Dineen&rsquo;s <a href="https://www.youtube.com/watch?v=SoXqklRpYxI" target="_blank" rel="noopener">The Easiest Way To Break 80</a> on Golf Digest&rsquo;s The Game Plan, which uses Arccos data and Lou Stagner&rsquo;s research.</p>
+    <p style="margin-top:14px;font-family:var(--mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;opacity:.6">Adapted from Luke Kerr-Dineen&rsquo;s <a href="https://www.youtube.com/watch?v=SoXqklRpYxI" target="_blank" rel="noopener">The Easiest Way To Break 80</a>, which uses Arccos data and Lou Stagner&rsquo;s research.</p>
   </div>
 </section>
 """

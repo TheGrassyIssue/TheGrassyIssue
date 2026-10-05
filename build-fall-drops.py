@@ -100,7 +100,7 @@ PQ = {
                  "Olajuwon Ajanaku, Eastside Golf co-founder, to Axios Detroit, July 2025"),
     "students": ("My past as a designer is rooted in streetwear, so it gets me excited to bring those "
                  "principles to golf in ways that the sport hasn&rsquo;t had access to yet.",
-                 "Michael Huynh, Students founder, to Golf Digest, November 2022"),
+                 "Michael Huynh, Students founder, November 2022"),
     "devereux": ("At Devereux Golf, we&rsquo;re focused on reshaping golf culture without losing sight "
                  "of the sport&rsquo;s roots.",
                  "Robert Brunner, Devereux co-founder, in the brand&rsquo;s Mount Gay capsule release, May 2026"),

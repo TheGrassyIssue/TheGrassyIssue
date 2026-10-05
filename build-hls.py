@@ -5,7 +5,7 @@ THE HOOK, AND WHY IT LEADS
 --------------------------
 Most small golf-apparel brands have an origin story. Hidden Links Society has a
 DOCUMENTARY SERIES. The Public 100 Project is their long-form effort to play,
-walk and document every course on Golf Digest's Top 100 Public list — photography,
+walk and document every course on a national Top 100 Public list — photography,
 video, writing and maps, one course at a time. For a brand whose whole catalogue
 is thirty products, that is an unusual amount of ambition pointed at something
 other than selling hats, and it is what the post leads on.
@@ -73,7 +73,7 @@ HERO = "/images/hls/hero-followthrough.jpg"
 HERO_ALT = ("Black and white photograph of a golfer at the top of the follow-through on a "
             "cypress-lined fairway, from Hidden Links Society")
 DESC = ("Hidden Links Society makes headwear, headcovers and overshirts, gives 2% of every sale to "
-        "Youth on Course, and is documenting all 100 of Golf Digest's top public courses. Eighteen "
+        "Youth on Course, and is documenting all 100 courses on a national top public list. Eighteen "
         "pieces, prices read 17 September 2026.")
 
 
@@ -249,7 +249,7 @@ PUBLIC100 = """<section class="products">
   <h2 class="products-hdr">The Public 100 Project</h2>
   <p class="cat-kicker">A thirty-product brand is making a hundred-course documentary. This is the part nobody else is doing.</p>
   <div class="writeup-body">
-    <p>The Public 100 Project is Hidden Links Society playing, walking and documenting every course on <em>Golf Digest</em>&rsquo;s Top 100 Public list &mdash; photography, short-form video, writing and maps, one course at a time. The ranking is Golf Digest&rsquo;s and they say so; the project is theirs.</p>
+    <p>The Public 100 Project is Hidden Links Society playing, walking and documenting every course on a national Top 100 Public list &mdash; photography, short-form video, writing and maps, one course at a time. The ranking belongs to a magazine and they say so; the project is theirs.</p>
     <p>The framing is the good bit, and it is worded on their own page like this: these are places anyone can book, step onto and experience &mdash; <strong>&ldquo;no memberships, no private gates, no invitations required.&rdquo;</strong> Some of the list is already played. Most of it is not. They describe the whole thing as a living document.</p>
     <p>It matters because it is expensive and slow and does not obviously sell hats. A brand that wanted quick revenue would run a discount code, not drive to Nebraska. Landmand and Wild Horse and The Prairie Club are on that list next to Pebble Beach and Pinehurst, and getting to all of them is a multi-year commitment for a company whose entire catalogue would fit on two tables.</p>
     <p>It also lines up with what they say they are for. Their mission page is blunt about wanting fewer stiff collars and fewer closed doors, and a project built entirely around courses you can just book is the argument made in practice rather than in a brand deck.</p>
@@ -271,7 +271,7 @@ FAQ_ITEMS = [
  ("What is Hidden Links Society?",
   "A small golf apparel and accessories brand selling headwear, headcovers, overshirts, tees, brass tools and art prints, direct through its own store. Its stated mission is to make golf less exclusive — in its own words, to bring streetwear attitude to the fairway. It also donates 2% of every purchase to Youth on Course and runs a documentary series called The Public 100 Project."),
  ("What is The Public 100 Project?",
-  "Hidden Links Society's long-form documentary series playing, walking and documenting the courses on Golf Digest's Top 100 Public list — one course at a time, through photography, short-form video, writing and maps. The brand describes the courses as places anyone can book with no memberships, no private gates and no invitations required. Some are already played; the rest are still ahead."),
+  "Hidden Links Society's long-form documentary series playing, walking and documenting the courses on a national Top 100 Public list — one course at a time, through photography, short-form video, writing and maps. The brand describes the courses as places anyone can book with no memberships, no private gates and no invitations required. Some are already played; the rest are still ahead."),
  ("Is Hidden Links Society the same as Hidden Links Golf?",
   "No. They are unrelated companies with similar names. Hidden Links Society is the apparel and accessories brand at hiddenlinkssociety.com. Hidden Links Golf is a separate business at a different domain."),
  ("How much does Hidden Links Society gear cost?",

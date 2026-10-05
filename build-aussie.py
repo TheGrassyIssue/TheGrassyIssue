@@ -497,8 +497,7 @@ INTRO = """
     American can actually book, with prices exactly as published and a clear note where they are not.</p>
     <p>The finding that surprised us most is in the second list. <em>Random Golf Club runs an Australia trip. No
     other golf media or apparel brand does.</em> We checked No Laying Up, Fried Egg, The Golfer&rsquo;s Journal, Bob Does
-    Sports, Good Good, Skratch, and a dozen clothing labels from Manors to Malbon to Eastside. Nothing. Fried Egg
-    has a deposit system and a calendar published a year ahead, and points its entire international programme
+    Sports, Good Good, Skratch, and a dozen clothing labels from Manors to Malbon to Eastside. Nothing. One golf media outfit has a deposit system and a calendar published a year ahead, and points its entire international programme
     at Britain and Ireland. There is a genuine hole in this market, and for now one fourteen-person van tour is
     filling it.</p>
     <p>One note on money running through everything below. Brand prices are in Australian dollars, because that is

@@ -138,7 +138,7 @@ FIT = [
 FEET = [
  ("duca-del-cosma", "Duca del Cosma", "Shoes &middot; $179",
   "Grado",
-  "Solid black spikeless, waterproof, sizes seven to thirteen. Golf Monthly gave it an Editor's Choice. It is also the only shoe in golf we could find that is black all the way through &mdash; no contrast sole, no white midsole stripe, no orange heel counter. That sounds like a low bar. It is not.",
+  "Solid black spikeless, waterproof, sizes seven to thirteen. It has won an Editor's Choice award. It is also the only shoe in golf we could find that is black all the way through &mdash; no contrast sole, no white midsole stripe, no orange heel counter. That sounds like a low bar. It is not.",
   "https://ducadelcosma.us/products/grado-black"),
  ("mogshade", "Mogshade", "Socks &middot; $14.90",
   "Dogleg Socks, Black",

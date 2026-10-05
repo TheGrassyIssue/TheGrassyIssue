@@ -28,7 +28,7 @@ SLIDES = [
      "18oz waxed canvas, a shoe compartment and a laptop sleeve."),
     ("savannah-golf-shoe-bag-1", "A Hudson Sutler Savannah shoe bag open with golf shoes and balls",
      "Savannah Shoe Bag · $125", "Where to start",
-     "The shoe bag Golf Digest called probably the coolest you can buy."),
+     "The shoe bag one golf magazine called probably the coolest you can buy."),
     ("band-b2", "A Hudson Sutler worker cutting canvas in the New Jersey factory",
      "The factory · North Bergen", "Over 200 steps a bag",
      "Cut, sewn and embroidered a few miles from Midtown."),

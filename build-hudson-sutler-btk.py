@@ -49,7 +49,7 @@ P = {
  "small-club-tote": ("Small Club Tote", "Navy", "65",
    "An open-top canvas tote sized for a pair of spikes, a hat and a light layer, with a slip pocket on the outside. It doubles as a lunch bag, or carries three bottles of wine as a host gift."),
  "savannah-golf-shoe-bag": ("Savannah Golf Shoe Bag", "Three colourways", "125",
-   "This lightweight shoe bag is coated 1000-denier nylon with an interior divider, leather-trimmed handles and two outside pockets. It fits most golf shoes up to a US men&rsquo;s 15, and it is the one Golf Digest singled out."),
+   "This lightweight shoe bag is coated 1000-denier nylon with an interior divider, leather-trimmed handles and two outside pockets. It fits most golf shoes up to a US men&rsquo;s 15, and it is the one the golf press singled out."),
  "heritage-golf-shoe-bag": ("Heritage Golf Shoe Bag", "Waxed canvas", "149",
    "The waxed canvas version has a padded divider, full-grain leather handles and a zip pocket on the front for a phone or keys. It is the one to monogram with a club crest."),
  "heritage-leather-golf-shoe-bag": ("Heritage All Leather Golf Shoe Bag", "Chestnut", "249",
@@ -100,7 +100,7 @@ SECTIONS = [
 
 PQ = {
     "steps": ("It takes our team of artisans over 200 steps to make a single bag by hand.", "Hudson Sutler, on its New Jersey factory"),
-    "digest": ("This is probably the coolest shoe bag that you can buy.", "Golf Digest, on the Savannah, as quoted by Hudson Sutler"),
+    "digest": ("This is probably the coolest shoe bag that you can buy.", "A golf magazine review of the Savannah, as quoted by Hudson Sutler"),
     "need": ("We build our bags with everything you need and nothing you don&rsquo;t.", "Hudson Sutler"),
 }
 
@@ -162,7 +162,7 @@ FAQ = [
     ("What golf bags does Hudson Sutler make?",
      "Two carry bags: the Looper 2.0 ($399, 4.2 lb) and the Featherlite ($365, 3.5 lb), which launched at the 2026 PGA Show."),
     ("Which Hudson Sutler shoe bag should I buy?",
-     "The Savannah ($125) in coated nylon is the lightest and the one Golf Digest praised. The Heritage ($149) is waxed canvas with leather handles, and the all-leather version is $249."),
+     "The Savannah ($125) in coated nylon is the lightest and the one reviewers praised. The Heritage ($149) is waxed canvas with leather handles, and the all-leather version is $249."),
     ("Is Hudson Sutler good for an Austin golf trip?",
      "Yes. The Heritage Weekender ($299) and Wilmington Duffel ($199) have shoe compartments built in, and the Montauk cooler ($159) has a welded liner for hot rounds. Ground shipping is free over $250."),
 ]

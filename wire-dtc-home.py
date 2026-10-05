@@ -33,7 +33,7 @@ SLIDES = [
      "Takomo, Haywood and Edel in the middle, and Avoda at the top."),
     ("life-takomo-101", "A golfer holding a Takomo Iron 101 MKII",
      "Takomo · Iron 101 MKII · $579", "The best game-improvement iron of 2026",
-     "MyGolfSpy named the Finnish brand's hollow-body 101 MKII its top game-improvement iron of 2026. "
+     "The Finnish brand's hollow-body 101 MKII was named the top game-improvement iron of 2026 in one major test. "
      "It sells online only, with KBS shafts at no extra cost."),
     ("life-haywood-build", "A club being ground on a wheel in Haywood Golf's Vancouver workshop",
      "Haywood · Vancouver", "Built in-house, one club at a time",

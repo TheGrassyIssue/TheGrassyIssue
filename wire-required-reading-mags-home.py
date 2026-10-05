@@ -33,7 +33,7 @@ SLIDES = [
      "St Andrews, St Moritz, Singapore's vanishing greens and an unplayable course in Christchurch. Issue #5 is €25; #6 ships in November."),
     ("loop-02-1", "The cover of The Loop Journal Volume 02, a caddie in a red bib",
      "The Loop Journal · Cambridge", "100 pages of long reads",
-     "Turnberry, Royal Birkdale and golf in the Himalayas, led by a former Golf Monthly editor. £20 an issue."),
+     "Turnberry, Royal Birkdale and golf in the Himalayas, led by a former UK golf magazine editor. £20 an issue."),
     ("gq-58-1", "The cover of Golf Quarterly issue 58",
      "Golf Quarterly · UK", "Pocket-sized and funny",
      "A 44-page A5 quarterly with no advertising, run by Financial Times and The Week veterans since 2010."),

@@ -44,7 +44,7 @@ ITEM = f'''      <li class="press-item">
           location.&rdquo;</blockquote>
         <div class="press-meta">Listed first on
           <a href="{THEIRS}" target="_blank" rel="noopener">Southside Golf Co in the
-          News</a>, ahead of Plugged In Golf, Hoodline and What Now Austin. The
+          News</a>, ahead of three other outlets. The
           feature is our
           <a href="{OURS}">Austin indoor golf simulator guide</a>.</div>
       </li>

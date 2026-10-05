@@ -105,7 +105,7 @@ P = {
 }
 SECTIONS = [
  ("The Gloves", "gloves", ["p01","p02","p03","p04","p05","p06","p07"],
-  "<strong>Seven gloves &middot; $27.99, or three for $69</strong>Gloves are where Palm started and still the reason most people find it. Every one is white AAA cabretta leather with a patterned tab, which is the whole idea: a premium player's glove with a bit of character that goes with whatever you are wearing. MyGolfSpy called it among the most comfortable gloves it tested."),
+  "<strong>Seven gloves &middot; $27.99, or three for $69</strong>Gloves are where Palm started and still the reason most people find it. Every one is white AAA cabretta leather with a patterned tab, which is the whole idea: a premium player's glove with a bit of character that goes with whatever you are wearing. One independent glove test called it among the most comfortable it tried."),
  ("The Headcovers", "headcovers", ["p08","p09","p10","p11","p12","p13","p14","p15","p16","p17","p18"],
   "<strong>Eleven covers &middot; $89.99</strong>Headcovers are now the deepest part of the range, with more than forty in stock. They are made in the USA with a weather-resistant DRYTEX shell and a sherpa lining, and the newest batch dropped on 30 September."),
  ("The Caps", "caps", ["p19","p20","p21","p22","p23"],
@@ -119,9 +119,9 @@ SECTIONS = [
 ]
 N = 38
 PQ = {
- "gloves": ("Well, we both suck at golf. So what is something that&rsquo;s neglected?", "Dustin Ghaul, Palm co-founder, to MyGolfSpy, 2025"),
- "caps": ("If you look at something like our headwear, it doesn&rsquo;t scream golf, which is unique.", "Dustin Ghaul, to MyGolfSpy, 2025"),
- "apparel": ("We&rsquo;re not tucked-in country club guys and we&rsquo;re also not out there with inappropriate course attire.", "Joe Ciafardoni, Palm co-founder, to MyGolfSpy, 2025"),
+ "gloves": ("Well, we both suck at golf. So what is something that&rsquo;s neglected?", "Dustin Ghaul, Palm co-founder, 2025"),
+ "caps": ("If you look at something like our headwear, it doesn&rsquo;t scream golf, which is unique.", "Dustin Ghaul, 2025"),
+ "apparel": ("We&rsquo;re not tucked-in country club guys and we&rsquo;re also not out there with inappropriate course attire.", "Joe Ciafardoni, Palm co-founder, 2025"),
 }
 BANDS = {
  "headcovers": ("Swing and smile", "Palm's own shots, from the glove that started it.", [("band-p01-3","A Palm Barrels and Birdies glove on a golfer's hand at the course","The original glove"),("band-p05-1","A golfer in a Palm cap and Sea Isle glove","Sea Isle"),("band-p04-3","A Palm Hula glove gripping a club","Hula")]),
@@ -160,7 +160,7 @@ TAKE = """
 """
 FAQ = [
  ("Where is Palm Golf Co. from?", "Huntington Beach, California. The three founders are from New Jersey and met playing Costa Mesa Country Club, a municipal course in Orange County."),
- ("Are Palm golf gloves good?", "Yes. They are AAA cabretta leather and USGA conforming, and MyGolfSpy called the Palm glove among the most comfortable it tested. They cost $27.99 each or three for $69 as of 2 October 2026."),
+ ("Are Palm golf gloves good?", "Yes. They are AAA cabretta leather and USGA conforming, and one independent glove test called it among the most comfortable it tried. They cost $27.99 each or three for $69 as of 2 October 2026."),
  ("Where are Palm headcovers made?", "In the USA. They have a weather-resistant DRYTEX shell and a sherpa lining, and several styles are made to order in 7 to 10 business days."),
  ("What does swing and smile mean?", "It is Palm's motto: golf is meant to be fun, whether you make a birdie or a double bogey."),
  ("Who makes the Palm golf shoe?", "REEF. The Dangerous Rips G-Papi is a REEF x Palm collaboration, a spikeless golf shoe that sells for $130."),

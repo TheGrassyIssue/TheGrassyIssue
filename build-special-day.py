@@ -256,7 +256,7 @@ FAQ_ITEMS = [
  ("Why do so many Austin courses no longer list green fees?",
   "Dynamic pricing. Rates move with demand, tee time, day of week and season, the same way airline seats do. Falconhead states this openly on its rates page. Others book through Troon or GolfNow, where the price is generated at the point of booking. A course that still posts a fixed rate card — Vaaler Creek and Star Ranch both do — is now the exception."),
  ("How far is Lajitas from Austin, and is it a day trip?",
-  "It is roughly seven hours west, on the Rio Grande at the edge of Big Bend, and it is emphatically not a day trip. Plan three nights. Lajitas prints its accolades on its own site: Golfweek ranks Black Jack's Crossing the number one course you can play in Texas and #38 resort course in the USA, and the Dallas Morning News has had it at number one in Texas since 2013."),
+  "It is roughly seven hours west, on the Rio Grande at the edge of Big Bend, and it is emphatically not a day trip. Plan three nights. Lajitas prints its accolades on its own site: Black Jack's Crossing is ranked the number one course you can play in Texas and #38 resort course in the USA, and the Dallas Morning News has had it at number one in Texas since 2013."),
  ("Which course near Austin is the best value for a big round?",
   "Star Ranch midweek. Rates read on 17 September 2026 were $85 to $99 Monday through Thursday, against $129 to $139 on a Friday or weekend, and $62 to $75 after 3pm. Vaaler Creek at $95 with the cart included is the other one where you know the real number before you leave the house."),
  ("Do I need to stay overnight to play the resort courses?",

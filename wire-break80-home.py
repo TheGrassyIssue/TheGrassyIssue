@@ -29,7 +29,7 @@ SLIDES = [
      "Buzzes the moment your lead wrist breaks down."),
     ("trs-slider", "TRS Slider trail-arm training strap",
      "TRS Slider · ~$90", "Stop the flying elbow",
-     "Robert Rock's strap, Golf Monthly's top aid of 2026."),
+     "Robert Rock's strap, a top-rated aid of 2026."),
     ("orange-whip", "Orange Whip tempo trainer",
      "Orange Whip · $119.99", "Tempo",
      "Rush the transition and it fights you."),

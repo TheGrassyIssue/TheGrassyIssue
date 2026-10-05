@@ -469,8 +469,7 @@ def build():
     Hands Club is proud to be Agronomy Workshop&rsquo;s UK retailer&rdquo; &mdash;
     but the collection currently reads &ldquo;coming soon&rdquo; and holds no
     products. In the US it is direct, plus listings on Mav Farm and Over Under.
-    GolfMagic named it one of ten up-and-coming brands for 2026 back in December,
-    describing &ldquo;a fun towel and a cap&rdquo; and an
+    One golf site named it one of ten up-and-coming brands for 2026 back in December, describing &ldquo;a fun towel and a cap&rdquo; and an
     &ldquo;integrated pen holder&rdquo; &mdash; the brand says pencil, and ships
     one in the box.</p>
 

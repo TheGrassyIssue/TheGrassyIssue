@@ -74,7 +74,7 @@ SECTIONS = [
    "It is the most ambitious title here. We gave it one paragraph in July&rsquo;s Magazine Edit, and it deserved more. Issues #1 to #3 are &euro;19.90 and #4 and #5 are &euro;25. A one-year subscription of two issues is &euro;22.50 plus shipping, starting with #6 in November."]),
  ("loop", "The Loop Journal", "the-loop-journal", ["loop-02", "loop-01"],
   "<strong>Cambridge, UK &middot; twice a year &middot; 100 pages</strong>Each issue is &pound;20, and a golf PR agency publishes it.",
-  ["The Loop Journal comes from The Loop, a golf PR and marketing agency in Cambridge. Its founders include Mike Harris, a former editor of Golf Monthly, and Alex Narey, who worked at the magazine from 2008. The writing is professional and the travel pieces run long: Narey told Golf Business News there was no set word count.",
+  ["The Loop Journal comes from The Loop, a golf PR and marketing agency in Cambridge. Its founders include Mike Harris, a former editor of a leading UK golf magazine, and Alex Narey, who worked at the magazine from 2008. The writing is professional and the travel pieces run long: Narey told Golf Business News there was no set word count.",
    "Volume 01 arrived in February with the Northumberland links and a 16-page portfolio by the photographer Kevin Murray, from Lofoten Links to Pinehurst No. 2 and Royal Portrush. Volume 02 followed in July.",
    "There is one thing to know. An agency that works with golf brands also reviews equipment in these pages. The travel writing is the reason to buy it."]),
  ("gq", "Golf Quarterly", "golf-quarterly", ["gq-58"],

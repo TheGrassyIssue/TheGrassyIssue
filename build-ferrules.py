@@ -149,7 +149,7 @@ N = 29
 
 PQ = {
     "bbf": ("Since the development of plastics, ferrules have been the final custom touch on a set of clubs.",
-            "BB&amp;F Co., to GolfWRX, 2019"),
+            "BB&amp;F Co., 2019"),
     "feral": ("Golf clubs have long told the same story: &lsquo;plain head, plain shaft, plain ferrule.&rsquo;",
               "Feral Golf Co., About"),
 }

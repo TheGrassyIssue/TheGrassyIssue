@@ -132,7 +132,7 @@ PQ = {
                 "Tomas Nilsson, founder, to Golf Business News, July 2020"),
     "fit": ("When we first started in the US, we got some comments that our European "
             "sizing was not okay for US golfers, but that has clearly changed.",
-            "Mats Lundqvist, Creative Director, to Golf Today, April 2021"),
+            "Mats Lundqvist, Creative Director, April 2021"),
     "insula": ("From a time when cotton shirts dominated the scene with shrinkage and heavy "
                "moisture absorption and knitted sweaters weighed golfers down if it rained, "
                "there have been huge advancements in fabric technology for golfers in the "
@@ -142,11 +142,11 @@ PQ = {
     "compromise": ("It means we will not compromise on the quality or function of our "
                    "products, just to achieve an attractive / commercial price level.",
                    "Mats Lundqvist on the brand&rsquo;s &lsquo;we never compromise&rsquo; "
-                   "line, to Golf Today, April 2021"),
+                   "line, April 2021"),
     "design": ("Items with overly complicated features and / or are over-designed can "
                "become tired quickly. But, items with a clear, pure design and purpose "
                "will live a lot longer.",
-               "Mats Lundqvist, Creative Director, to Golf Today, April 2021"),
+               "Mats Lundqvist, Creative Director, April 2021"),
 }
 
 

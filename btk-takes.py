@@ -231,7 +231,7 @@ TAKES = {
 
 "takomo-golf": [
  "Takomo&rsquo;s argument is the price, and it holds up because nothing else about the clubs is a compromise. Launched in 2021 out of Turku, Finland, it designs the heads, partners with established foundries and ships direct &mdash; no pro shop margin, no retail middleman, and the saving goes to the tag.",
- "A set of forged S20C cavity backs at $649 is the headline, and the 101 MKII took MyGolfSpy&rsquo;s Best Game Improvement Iron.",
+ "A set of forged S20C cavity backs at $649 is the headline, and the 101 MKII won a Best Game Improvement Iron award.",
  "This is for the player who wants forged irons and has been quietly priced out of them. The Skyforger wedge at $99 is the cheapest way to hold the build quality before committing to a set.",
 ],
 

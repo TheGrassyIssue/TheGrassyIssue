@@ -80,7 +80,7 @@ S2 = [  # The Jimmy Choo Wing
   "The quiet one nobody wrote headlines about: a full monogram duffle with green leather trim that outpriced the TAG Heuer watch and every putter on this page except the Fat Cat. Sold on Malbon&rsquo;s site through the 2.0 run and now gone from the catalogue &mdash; the price above is from Malbon&rsquo;s own archived product page.",
   "https://malbongolf.com/collections/jimmy-choo"),
  ("jc-shoebag","Jimmy Choo &times; Malbon &middot; Sold out","Crystal-Embellished Shoe Bag","$1,275",
-  "From the original April 2024 collection &mdash; a leather bag for carrying your golf shoes, finished with Jimmy Choo&rsquo;s crystal work. It is the piece that made the first drop read as genuine Jimmy Choo rather than a licensing exercise, and it sold out at Malbon accordingly. Golf Digest put the price at $1,275 in its first look.",
+  "From the original April 2024 collection &mdash; a leather bag for carrying your golf shoes, finished with Jimmy Choo&rsquo;s crystal work. It is the piece that made the first drop read as genuine Jimmy Choo rather than a licensing exercise, and it sold out at Malbon accordingly. The price was reported at $1,275 at launch.",
   "https://us.jimmychoo.com/en/men/bags-and-accessories/jimmy-choo-malbon-shoe-bag/"),
  ("jc-diamond-womens","Jimmy Choo &times; Malbon &middot; Sold out","Women&rsquo;s Diamond Golf Shoe","$850",
   "An actual spiked golf shoe from an actual luxury shoemaker &mdash; leather, green-trimmed, with Jimmy Choo&rsquo;s diamond-pattern sole treatment adapted for turf. Still listed on Malbon&rsquo;s store, every size gone. The 2024 originals came in five colorways and were the fastest sellers of the launch.",
