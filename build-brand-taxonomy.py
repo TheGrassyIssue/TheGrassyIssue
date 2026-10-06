@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Twenty-six golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Twenty-seven golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -131,7 +131,7 @@ TAX = [
  ),
 ("tag", "post-round-friendly", "Golf Clothes You Can Wear After the Round",
  "Post-Round Golf Clothing Brands | The Grassy Issue",
- "Twenty-three golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
+ "Twenty-four golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
  """<p>The test is simple and unforgiving: would you keep it on for dinner. Most golf clothing
  fails it, because the thing that makes a polo read as golf — the logo placement, the sheen of the
  fabric, the cut through the shoulder — is exactly the thing that makes it read as golf in a
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Sixty-two golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Sixty-three golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
@@ -285,8 +285,8 @@ TAX = [
  ),
 ("attr", "drops-and-vanishes", "Golf Brands That Drop and Vanish",
  "Limited Drop Golf Brands | The Grassy Issue",
- "Thirteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
- """<p>Thirteen brands in the Index operate on a drop model with no restock behind it. The run is
+ "Fourteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
+ """<p>Fourteen brands in the Index operate on a drop model with no restock behind it. The run is
  made, it sells or it does not, and the next thing is a different thing.
  <strong>Sentinel Golf</strong>, <strong>Mogshade</strong>, <strong>Radry</strong> and
  <strong>Gamut Golf</strong> all work this way by design rather than by supply-chain accident.</p>

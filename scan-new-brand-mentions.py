@@ -42,6 +42,7 @@ DOMAINS = {
     "metalwood-studio": ["metalwood.studio"],
     "shapland": ["shaplandbags.com"],
     "shoal-golf": ["shoalgolfco.com"],
+    "golden-hour": ["goldenhourclubhouse.co.uk"],
     # added 24 Sep 2026 with Brand to Know — Galvin Green. The BTK links
     # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
     "galvin-green": ["galvingreen.com"],
