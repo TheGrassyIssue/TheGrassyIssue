@@ -58,7 +58,7 @@ def tags_of(b):
 TAX = [
 ("tag", "design-nerd", "Design-Nerd Golf Brands",
  "Design-Nerd Golf Brands — The Grassy Issue",
- "Forty-five golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
+ "Forty-three golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
  """<p>This is the largest group in the Index, and the loosest, which is usually a sign a
  category is real rather than invented. What connects <strong>Bettinardi</strong> milling a putter
  from one billet, <strong>Inside Story Socks</strong> printing a narrative into a sock, and
@@ -73,7 +73,7 @@ TAX = [
  ),
 ("tag", "made-by-hand", "Golf Brands That Make It By Hand",
  "Handmade Golf Gear — Small-Batch Brands | The Grassy Issue",
- "Forty-two golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
+ "Forty golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
  """<p>The honest version of &ldquo;handmade&rdquo; is narrow, and this is our attempt to hold the
  line on it. <strong>Artisan Golf</strong> qualifies because Mike Taylor still grinds every wedge
  himself and you cannot order one without an in-person fitting. <strong>Ally Aiken</strong>
@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Twenty-nine golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Twenty-seven golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -102,9 +102,9 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands, Founder-Owned (2026) | The Grassy Issue",
- "Fifty-six independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
+ "Fifty-three independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
  """<p>An <strong>independent golf brand</strong> is one with no parent company, no licensing group and no outside
- investors behind it: it is owned by the people who started it, or by a family. Fifty-six brands in the Index
+ investors behind it: it is owned by the people who started it, or by a family. Fifty-three brands in the Index
  meet that bar. <strong>Bettinardi</strong> is still family-run out of Tinley Park. <strong>Seamus Golf</strong>
  is owned outright by Akbar and Megan Chisti. <strong>No Laying Up</strong> answers to its own audience and
  nobody else. The twenty-five we have covered most are ranked on
@@ -145,8 +145,8 @@ TAX = [
  ),
 ("tag", "collab-machine", "Golf's Collaboration Machines",
  "Golf Collaboration Brands — Collab Machines | The Grassy Issue",
- "Eighteen golf brands that build through partnership — the labels whose best work usually arrives with somebody else's name on it too.",
- """<p>Some brands express themselves best in their own range. These eighteen express themselves
+ "Seventeen golf brands that build through partnership — the labels whose best work usually arrives with somebody else's name on it too.",
+ """<p>Some brands express themselves best in their own range. These seventeen express themselves
  best in somebody else's. <strong>MacKenzie Golf Bags</strong> has become a canvas the rest of golf
  paints on. <strong>BEAMS Golf</strong> runs a collaboration calendar dense enough to be its own
  release schedule. <strong>Aimé Leon Dore</strong> turned a FootJoy into a cultural object.</p>
@@ -157,7 +157,7 @@ TAX = [
  ),
 ("tag", "quiet-luxury", "Quiet Luxury Golf Brands",
  "Quiet Luxury Golf Brands — Understated | The Grassy Issue",
- "Eighteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
+ "Sixteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
  """<p>Quiet is harder than loud, because there is nowhere to hide. Strip the logo and the graphic
  and what is left is fabric, cut and finish, which are the expensive parts. That is why this is the
  smallest of the major groups in the Index and why the price floor across it is the highest.</p>
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Sixty-nine golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Sixty-three golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
@@ -285,8 +285,8 @@ TAX = [
  ),
 ("attr", "drops-and-vanishes", "Golf Brands That Drop and Vanish",
  "Limited Drop Golf Brands | The Grassy Issue",
- "Sixteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
- """<p>Sixteen brands in the Index operate on a drop model with no restock behind it. The run is
+ "Fourteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
+ """<p>Fourteen brands in the Index operate on a drop model with no restock behind it. The run is
  made, it sells or it does not, and the next thing is a different thing.
  <strong>Sentinel Golf</strong>, <strong>Mogshade</strong>, <strong>Radry</strong> and
  <strong>Gamut Golf</strong> all work this way by design rather than by supply-chain accident.</p>

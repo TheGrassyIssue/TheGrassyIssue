@@ -43,6 +43,13 @@ DOMAINS = {
     "shapland": ["shaplandbags.com"],
     "shoal-golf": ["shoalgolfco.com"],
     "golden-hour": ["goldenhourclubhouse.co.uk"],
+    # added 5 Oct 2026 with Off the Rack, Off the Radar: Six Hat Brands to Know.
+    "bet-on-the-horses": ["betonthehorses.co"],
+    "engel": ["engelleisure.com"],
+    "represent": ["representclo.com"],
+    "orien": ["shoporien.com"],
+    "freddy-tyler-paul": ["freddytylerpaul.com"],
+    "f-and-co": ["fandco.co.nz"],
     # added 24 Sep 2026 with Brand to Know — Galvin Green. The BTK links
     # www.galvingreen.com; the Rain Gear Edit links the bare domain. Both match.
     "galvin-green": ["galvingreen.com"],
