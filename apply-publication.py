@@ -36,6 +36,7 @@ PAGES = [
     "drops/brand-to-know-golden-hour.html",
     "drops/golf-bag-accessories-what-to-hang-from-your-bag.html",
     "drops/hat-brands-off-the-rack-off-the-radar.html",
+    "drops/brand-to-know-slice-town.html",
     "drops/which-golfer-are-you.html",
     "drops/brand-to-know-local-gc.html",
     "drops/fella-golf.html",

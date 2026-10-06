@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Twenty-nine golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Thirty golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -102,9 +102,9 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands, Founder-Owned (2026) | The Grassy Issue",
- "Fifty-six independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
+ "Fifty-seven independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
  """<p>An <strong>independent golf brand</strong> is one with no parent company, no licensing group and no outside
- investors behind it: it is owned by the people who started it, or by a family. Fifty-six brands in the Index
+ investors behind it: it is owned by the people who started it, or by a family. Fifty-seven brands in the Index
  meet that bar. <strong>Bettinardi</strong> is still family-run out of Tinley Park. <strong>Seamus Golf</strong>
  is owned outright by Akbar and Megan Chisti. <strong>No Laying Up</strong> answers to its own audience and
  nobody else. The twenty-five we have covered most are ranked on
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Sixty-nine golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Seventy golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
@@ -285,8 +285,8 @@ TAX = [
  ),
 ("attr", "drops-and-vanishes", "Golf Brands That Drop and Vanish",
  "Limited Drop Golf Brands | The Grassy Issue",
- "Sixteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
- """<p>Sixteen brands in the Index operate on a drop model with no restock behind it. The run is
+ "Seventeen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
+ """<p>Seventeen brands in the Index operate on a drop model with no restock behind it. The run is
  made, it sells or it does not, and the next thing is a different thing.
  <strong>Sentinel Golf</strong>, <strong>Mogshade</strong>, <strong>Radry</strong> and
  <strong>Gamut Golf</strong> all work this way by design rather than by supply-chain accident.</p>

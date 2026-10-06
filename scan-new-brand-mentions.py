@@ -43,6 +43,8 @@ DOMAINS = {
     "shapland": ["shaplandbags.com"],
     "shoal-golf": ["shoalgolfco.com"],
     "golden-hour": ["goldenhourclubhouse.co.uk"],
+    # added 6 Oct 2026 with Brand to Know — SLICE TOWN.
+    "slice-town": ["slice-town.com"],
     # added 5 Oct 2026 with Off the Rack, Off the Radar: Six Hat Brands to Know.
     "bet-on-the-horses": ["betonthehorses.co"],
     "engel": ["engelleisure.com"],
