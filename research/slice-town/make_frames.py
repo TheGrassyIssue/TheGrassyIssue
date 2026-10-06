@@ -38,8 +38,9 @@ for n,(i,cy) in enumerate(B,1):
   else: nh=int(w/r);y=int((h-nh)*cy);im=im.crop((0,y,w,y+nh))
   im.resize((W,H),Image.LANCZOS).save(f'images/slice-town/band-{n}.jpg',quality=85,optimize=True,progressive=True)
 h=Image.open(R+'hero-opt-H.jpg');h.save('images/slice-town/btk-hero.jpg',quality=86);h.resize((1200,514),Image.LANCZOS).save('images/slice-town/btk-og.jpg',quality=84)
-im=Image.open(f'{R}raw/S01-1.jpg').convert('RGB');w,hh=im.size;r=1080/1350
+# homepage card: option B, the white back print in the city (Lenny, 6 Oct)
+im=Image.open(R+L[8][0]).convert('RGB');w,hh=im.size;r=1080/1350
 if w/hh>r: nw=int(hh*r);x=(w-nw)//2;im=im.crop((x,0,x+nw,hh))
-else: nh=int(w/r);y=int((hh-nh)*.3);im=im.crop((0,y,w,y+nh))
+else: nh=int(w/r);y=int((hh-nh)*.4);im=im.crop((0,y,w,y+nh))
 im.resize((1080,1350),Image.LANCZOS).save('images/slice-town/btk-card-hero.jpg',quality=85)
 print(sum(len(v) for v in out.values()))

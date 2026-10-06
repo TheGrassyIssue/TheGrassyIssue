@@ -20,7 +20,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "slice-town"
 
 SLIDES = [
-    ("btk-card-hero", "A golfer in a yellow knitted SLICE TOWN balaclava and black gloves against a blue sky",
+    ("btk-card-hero", "A man from behind in a white SLICE TOWN tee with the big sliced logo down the back, between city buildings",
      "SLICE TOWN", "Brand to Know",
      "Golf streetwear from a Dane and a Swede, started in late 2024: nylon track suits, tech pants and reflective logos."),
     ("s06-1", "The SLICE TOWN Golf Track Jacket in slate with yellow piping",
