@@ -11,6 +11,55 @@
      inside .feed-page into its own feed. Edit cards on the homepage source, not here. -->
 <p><a href="/">The Grassy Issue</a></p>
 <div class="feed-page" data-page="7">
+<!-- THE TECHNICAL BRANDS ROUNDUP -->
+  <div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Drops &amp; Brands]</span>
+      <div class="gear-carousel" data-carousel="techbrands">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="/drops/the-technical-brands-roundup" style="display:block;position:relative;">
+              <img src="/images/technical-brands/radmor-sutton-polo.jpg" alt="Radmor Sutton Polo — Cool Jade recycled stone fiber" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Radmor</div><div class="gear-slide-name">Cool Jade &middot; Recycled Stone Fiber</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/the-technical-brands-roundup" style="display:block;position:relative;">
+              <img src="/images/technical-brands/reflo-mira-polo.jpg" alt="Reflo Mira Polo — Java-tek coffee-infused fabric" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Reflo</div><div class="gear-slide-name">Java-tek &middot; Coffee-Infused Fiber</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/the-technical-brands-roundup" style="display:block;position:relative;">
+              <img src="/images/technical-brands/manors-course-polo.jpg" alt="Manors Course Polo — Seawool from oyster shells" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Manors</div><div class="gear-slide-name">Seawool &middot; Oyster Shell Yarn</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/the-technical-brands-roundup" style="display:block;position:relative;">
+              <img src="/images/technical-brands/whim-merino-shirt.jpg" alt="Whim Golf Merino SS Shirt — 100% merino wool" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Whim Golf</div><div class="gear-slide-name">100% Merino &middot; Pure Wool</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      
+      <div class="card-title"><a href="/drops/the-technical-brands-roundup" style="color:inherit;text-decoration:none;border-bottom:none;">The Technical Brands Roundup &mdash; 8 Brands Where Fabric Is the Story</a></div>
+      <p class="card-text" data-slidetext="techbrands">Radmor Sutton Polo — Cool Jade fabric woven from recycled jade stone particles creates a natural cooling effect on contact. Sweater-knit texture, UPF 50+, moisture-wicking, biodegradable fiber. Seattle-based and fabric-obsessed. $135.</p>
+      <div class="gear-dots" data-dots="techbrands"></div>
+      <div class="gear-counter" data-counter="techbrands">1 / 4</div>
+      <a href="/drops/the-technical-brands-roundup" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+  <script>(function(){const t=["Radmor Sutton Polo — Cool Jade fabric woven from recycled jade stone particles creates a natural cooling effect on contact. Sweater-knit texture, UPF 50+, moisture-wicking, biodegradable fiber. Seattle-based and fabric-obsessed. $135.","Reflo Mira Polo — Java-tek fabric woven from recycled coffee beans. The coffee particles speed up drying, control odor through natural anti-bacterial properties, and provide UV protection. Single-use waste given a second life. Made in Portugal. ~$95.","Manors Course Polo — Seawool yarn made from crushed oyster shells and recycled PET bottles. Natural moisture-wicking, odor resistance, and a hand feel softer than standard merino. Sustainable from the ocean up. $88.","Whim Golf Merino SS Shirt — Pure merino wool on the course. Temperature-regulating, naturally antimicrobial, zero synthetic blends or coatings. The most expensive polo in the roundup at $289, and it earns every dollar."];const c=document.querySelector('[data-carousel="techbrands"]');if(!c)return;const d=document.querySelector('[data-slidetext="techbrands"]');const o=document.querySelector('[data-dots="techbrands"]');const n=document.querySelector('[data-counter="techbrands"]');if(d)d.textContent=t[0];const s=c.querySelectorAll('.gear-slide');function u(){const i=Math.round(c.querySelector('.gear-carousel-track').scrollLeft/s[0].offsetWidth);if(d)d.textContent=t[i]||t[0];if(o){o.innerHTML='';t.forEach((_,j)=>{const dot=document.createElement('span');dot.className='gear-dot'+(j===i?' active':'');o.appendChild(dot);})}if(n)n.textContent=(i+1)+' / '+s.length;}c.querySelector('.gear-carousel-track').addEventListener('scroll',u);setTimeout(u,0);})()</script>
+
+  
+
+
 
 <!-- SUMMER PRACTICE GUIDE — FIELD GUIDE -->
   <div class="card" data-type="field">
@@ -961,61 +1010,16 @@
     </div>
   </div>
 
-  <!-- THE EDIT — Rain Gear -->
-  <div class="card" data-type="drop">
-    <div class="card-media" style="position:relative;">
-      <span class="card-tag grass">[Drops &amp; Brands]</span>
-      <div class="gear-carousel" data-carousel="raingearedit1">
-        <div class="gear-carousel-track">
-          <div class="gear-slide">
-            <a href="https://eastsidegolf.com/products/black-eastside-golf-umbrella" target="_blank" rel="noopener">
-              <img src="/images/rain-gear-edit/eastside-umbrella.jpg" alt="Eastside Golf Script Umbrella" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Eastside Golf</div><div class="gear-slide-name">Script Umbrella &middot; $48</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.sugarloafsocialclub.com/products/ssc-april-showers-umbrella" target="_blank" rel="noopener">
-              <img src="/images/rain-gear-edit/sugarloaf-umbrella.jpg" alt="Sugarloaf Social Club April Showers Umbrella" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sugarloaf Social Club</div><div class="gear-slide-name">April Showers Umbrella &middot; $88</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.function18.com/products/kjus-cascade-bucket-hat-k00906-02-black" target="_blank" rel="noopener">
-              <img src="/images/rain-gear-edit/kjus-cascade-hat.jpg" alt="KJUS Cascade Bucket Hat" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">KJUS</div><div class="gear-slide-name">Cascade Bucket Hat &middot; $99</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://www.sunmountain.com/products/monsoon-jacket" target="_blank" rel="noopener">
-              <img src="/images/rain-gear-edit/sunmountain-monsoon.jpg" alt="Sun Mountain Monsoon Jacket" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sun Mountain</div><div class="gear-slide-name">Monsoon Jacket &middot; $100</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="https://manorsgolf.com/products/2-5l-waterproof-jacket" target="_blank" rel="noopener">
-              <img src="/images/rain-gear-edit/manors-pertex-jacket.jpg" alt="Manors Golf 2.5L Pertex Waterproof Jacket" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Manors Golf</div><div class="gear-slide-name">2.5L Pertex WP Jacket &middot; $402</div></div>
-            </a>
-          </div>
-        </div>
-        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
-        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="card-title"><a href="/drops/the-rain-gear-edit" style="color:inherit;text-decoration:none;border-bottom:none;">Rain Gear &mdash; 18 Picks for Foul Weather Golf</a></div>
-      <p class="card-text" data-slidetext="raingearedit1">Eastside Golf &mdash; Script Umbrella. 58" canopy, auto-open. Culture-forward rain protection from the brand that brought golf to a new generation. $48.</p>
-      <div class="gear-dots" data-dots="raingearedit1"></div>
-      <div class="gear-counter" data-counter="raingearedit1">1 / 5</div>
-      <a href="/drops/the-rain-gear-edit" class="card-readmore" style="display:inline-block;margin-top:10px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See All 18 Picks &rarr;</a>
-    </div>
-  </div>
-
   
-
 <!--/feed-page-->
 </div>
 <script>window._slideTexts=window._slideTexts||{};Object.assign(window._slideTexts,{
+techbrands: [
+        "Radmor's Cool Jade, spun from recycled stone fibre. The roundup's premise in one fabric: the interesting brands are the ones where the material came first.",
+        "Reflo's Java-tek — coffee-infused fibre, which sounds like a gimmick until you read what it does to odour retention.",
+        "Manors' Seawool, made with oyster shell yarn. Waste from one industry becoming the selling point of another.",
+        "Whim Golf in 100% merino. The oldest technical fabric there is, and still the one most brands are trying to synthesise their way back to."
+      ],
 summerpractice: [
         "Round Rock Driving Range, lit until 10:30pm. The single most useful fact in Austin golf between June and September — you can hit balls after the heat breaks.",
         "Butler Pitch & Putt, downtown, nine holes of par 3. No polo required, no tee time, and the correct answer to ninety spare minutes.",
@@ -1130,13 +1134,6 @@ wedgedrop1: [
       "Mizuno — Pro T-3. Grain Flow Forged HD in Hiroshima. Shallow cavity back, Quad Cut+ grooves, HydroFlow micro grooves. Buttery Japanese steel at a mid-range price. $180.",
       "TaylorMade — Milled Grind 5. The first fully forged Milled Grind. Saw-milled grooves with steeper walls and sharper edges for maximum grab on partial shots. $200.",
       "Callaway — Opus SP Chrome. Spin Pocket construction shifts the CG higher for a more penetrating flight. Two-piece build, tour-shaped, engineered for spin consistency. $220."
-    ],
-raingearedit1: [
-      "Eastside Golf — Script Umbrella. 58\" canopy, auto-open. Culture-forward rain protection from the brand that brought golf to a new generation. $48.",
-      "Sugarloaf Social Club — April Showers Umbrella. Wind-resistant to 55mph, 56\" canopy, UPF 50+, reflective trim. Survives Texas thunderstorms with style. $88.",
-      "KJUS — Cascade Bucket Hat. Swiss-engineered, seam-sealed, packable. 100% recycled polyester. The premium waterproof bucket for golfers who don't settle. $99.",
-      "Sun Mountain — Monsoon Jacket. 15K waterproof rating, feather-light, packable, 2-year waterproof guarantee. Best budget rain jacket in golf. Full stop. $100.",
-      "Manors Golf — 2.5L Pertex WP Jacket. 30,000mm Pertex Shield Pro — the highest waterproof rating on this list. Seam-sealed, packs with carabiner. The tech ceiling. $402."
     ]
 });</script>
 <p class="feed-next"><a href="/feed/page-8.html" rel="next">Older posts &rarr;</a></p>
