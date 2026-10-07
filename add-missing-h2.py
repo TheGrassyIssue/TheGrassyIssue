@@ -39,7 +39,7 @@ SECTION_H2 = {
    ("The Fashion Houses &mdash; 3 Picks",
     "Where the knit polo crosses over from the pro shop into menswear."),
    ("Actual Football Shirts &mdash; 6 Picks",
-    "The source material, from a Nike retro England kit to a Umbro johnny collar."),
+    "The source material, from a Nike retro England kit to an Umbro johnny collar."),
  ],
 }
 

@@ -110,7 +110,7 @@ def card(key, copy, alt):
         price = f'<s>${int(float(d["compare"]))}</s> {price}'
     if not d["avail"]:
         price += " &middot; sold out"
-    name = d["title"].replace(" - ", " &middot; ").replace("&", "&amp;")
+    name = d["title"].replace("&", "&amp;").replace(" - ", " &middot; ")
     return f"""<div class="product-card" data-frames="{n}">
       {gal}
       <div class="product-body">

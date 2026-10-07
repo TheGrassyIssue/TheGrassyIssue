@@ -173,7 +173,7 @@ for m in MAN: by_brand.setdefault(m["brand"], []).append(m)
 def card(m):
     frames = "".join(
         '<div class="pg-frame"><img src="%s" alt="%s %s custom golf wedge" loading="lazy" /></div>'
-        % (src, BRAND[m["brand"]], H.escape(m["title"]))
+        % (src, BRAND[m["brand"]], H.escape(H.unescape(m["title"])))
         for src in m["imgs"])
     commission = m["brand"] == "artisangolftx.com" or m["slug"] == "showout-commission-gallery"
     label = "Commission &#8599;" if commission else "Shop &#8599;"

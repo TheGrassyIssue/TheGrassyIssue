@@ -29,6 +29,12 @@ anyone reading one: the tail of this file detects whether it just clobbered the
 approved design and, if so, runs build-brand-index.py itself and fails loudly if
 that does not work. See RESTORE THE APPROVED DESIGN at the bottom.
 """
+def _clip(t, n):
+    t = ' '.join(str(t).split())
+    if len(t) <= n: return t
+    cut = t[:n].rsplit(' ', 1)[0].rstrip(' ,;:—–-')
+    return cut + '…'
+
 import json, os, re, html as H, subprocess, sys, glob
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -585,7 +591,7 @@ def brand_page(b):
         cards = "".join(
             f'<a class="bp-kin" href="/brands/{k["slug"]}">'
             f'<span class="bp-kin-name">{H.escape(k["name"])}</span>'
-            f'<span class="bp-kin-line">{H.escape(k["line"])[:88]}</span></a>' for k in kin)
+            f'<span class="bp-kin-line">{H.escape(_clip(k["line"], 88))}</span></a>' for k in kin)
         related_block = (f'\n<h2 class="bp-gridhdr">More {lab}</h2>\n'
                          f'<div class="bp-kins">{cards}</div>')
     loc = H.escape(b["loc"]) if b["loc"] != "—" else ""

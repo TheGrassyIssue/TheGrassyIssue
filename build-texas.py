@@ -211,7 +211,7 @@ FAQS = [
   "in 1992, moved to Houston, and settled in the Hill Country. Everything is solid sterling silver and gold, "
   "hand-engraved, and he holds a rule of never reproducing more than ten pieces from a single design. His buckles "
   "are named after Texas counties and his client list includes Ben Crenshaw and Nolan Ryan."),
- ("Are there Texas golf brands making womens apparel?",
+ ("Are there Texas golf brands making women's apparel?",
   "Sierra Madre Golf in Austin, founded by Bonny Riddle and Michelle Anderson, is the most established &mdash; "
   "built-in bras, functional pockets, and an elastic glove loop on the All Square Skort, now stocked in select "
   "Golf Galaxy locations. Kingfisher Golf in Dallas, founded by Fiona Cohen, is newer and smaller, and started "
