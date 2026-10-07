@@ -15,6 +15,7 @@ WHAT IT DOES, every run (idempotent):
     pages we want indexed); pages that graduate are put back.
 
 The pages stay on the site and in the Brand Index; readers see no difference.
+Pages with a written About section are exempt.
 Never touches /brands/index.html, tag/attr pages or the Best 25 page.
 Runs in Deploy TGI.command, after the brand pages are built. Dry run by default.
 """
@@ -41,7 +42,8 @@ def main(apply_):
         s = open(p, encoding="utf-8").read()
         if re.search(r'<meta name="robots"[^>]*noindex', TAG_RE.sub("", s)):
             continue  # already noindexed for some other reason; leave it alone
-        is_thin = counts.get(slug, 0) <= 1
+        # A page with a written About section (data/brand-about.json) is not thin, whatever its post count.
+        is_thin = counts.get(slug, 0) <= 1 and 'class="bp-about"' not in s
         (thin if is_thin else full).append(slug)
         new = TAG_RE.sub("", s)
         if is_thin:

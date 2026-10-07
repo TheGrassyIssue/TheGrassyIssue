@@ -47,27 +47,6 @@ GC = ('<!-- GoatCounter analytics -->\n<script data-goatcounter="https://thegras
       'async src="//gc.zgo.at/count.js"></script>')
 BRANDS = json.load(open(os.path.join(ROOT, "data", "brands.json")))
 MENTIONS = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json")))
-# Written "About" intros + FAQ for brand pages Google already shows (7 Oct 2026).
-_AB = os.path.join(ROOT, "data", "brand-about.json")
-ABOUT = {k: v for k, v in json.load(open(_AB)).items() if not k.startswith("_")} if os.path.exists(_AB) else {}
-
-
-def about_block(b):
-    a = ABOUT.get(b["slug"])
-    if not a:
-        return ""
-    paras = "\n".join(f"  <p>{H.escape(t, quote=False)}</p>" for t in a.get("paras", []))
-    faq = a.get("faq", [])
-    qs = "\n".join(f'  <details class="bp-q"><summary>{H.escape(q, quote=False)}</summary><p>{H.escape(x, quote=False)}</p></details>'
-                   for q, x in faq)
-    ld = json.dumps({"@context": "https://schema.org", "@type": "FAQPage",
-                     "mainEntity": [{"@type": "Question", "name": q,
-                                     "acceptedAnswer": {"@type": "Answer", "text": x}} for q, x in faq]},
-                    ensure_ascii=False)
-    faq_html = (f'\n  <h3 class="bp-faqh">{H.escape(b["name"])}: quick answers</h3>\n{qs}\n'
-                f'  <script type="application/ld+json">{ld}</script>') if faq else ""
-    return (f'\n<section class="bp-about"><style>.bp-about{{max-width:1200px;margin:0 auto;padding:6px 24px 18px;box-sizing:border-box}}.bp-about .bp-gridhdr{{padding-left:0;padding-right:0}}.bp-about p{{max-width:68ch;font-size:16.5px;line-height:1.65;margin:0 0 14px}}.bp-about .bp-faqh{{font-family:var(--serif,Georgia,serif);font-size:19px;font-weight:600;margin:26px 0 8px}}.bp-about .bp-q{{max-width:68ch;border-top:1px solid rgba(20,20,20,.15);padding:11px 0}}.bp-about .bp-q:last-of-type{{border-bottom:1px solid rgba(20,20,20,.15)}}.bp-about .bp-q summary{{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none}}.bp-about .bp-q summary::-webkit-details-marker{{display:none}}.bp-about .bp-q summary::after{{content:"+";float:right;opacity:.5}}.bp-about .bp-q[open] summary::after{{content:"\\2212"}}.bp-about .bp-q p{{margin:8px 0 0;font-size:15.5px}}</style>\n  <h2 class="bp-gridhdr">About {H.escape(b["name"])}</h2>\n'
-            f'{paras}{faq_html}\n</section>\n')
 
 # ---------------------------------------------------------------- card images
 #
@@ -442,12 +421,6 @@ background:transparent;border:1px solid rgba(20,20,20,.35);border-radius:100px;p
 .bi-covlink{{margin-top:10px;border-top:1px solid rgba(20,20,20,.1);padding-top:9px;font-family:var(--mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--grass);text-decoration:none;}}
 .bi-covlink:hover{{color:var(--ink);}}
 .bi-zero{{display:none;max-width:1200px;margin:30px auto;padding:0 24px;font-family:var(--mono);font-size:12px;color:#6e736c;}}
-.bp-about{{max-width:1200px;margin:0 auto;padding:0 24px 10px;}}
-.bp-about p{{max-width:68ch;font-size:16.5px;line-height:1.65;margin:0 0 14px;}}
-.bp-faqh{{font-family:var(--serif);font-size:19px;font-weight:600;margin:26px 0 8px;}}
-.bp-q{{max-width:68ch;border-top:1px solid rgba(20,20,20,.15);padding:11px 0;}}
-.bp-q summary{{cursor:pointer;font-weight:600;font-size:15.5px;}}
-.bp-q p{{margin:8px 0 0;font-size:15.5px;}}
 footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}}
 @media(max-width:640px){{.nav-links{{gap:12px;}}.nav-links a{{font-size:9.5px;}}.nav-cta{{display:none;}}}}
 </style>
@@ -760,7 +733,6 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
   </div>
 </header>
 
-{about_block(b)}
 <h2 class="bp-gridhdr">{grid_hdr}</h2>
 <div class="bp-grid">
 {chr(10).join(tiles)}
