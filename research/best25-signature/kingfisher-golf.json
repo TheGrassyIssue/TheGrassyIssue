@@ -1,0 +1,89 @@
+{
+  "slug": "kingfisher-golf",
+  "name": "Kingfisher Golf",
+  "store": "https://kingfisher-golf.com",
+  "currency": "USD",
+  "picks": [
+    {
+      "title": "Worst Golfer in Dallas Tee",
+      "handle": "worst-golfer-in-dallas-tee",
+      "url": "https://kingfisher-golf.com/products/worst-golfer-in-dallas-tee",
+      "price": "22.00",
+      "in_stock": true,
+      "category": "tee",
+      "why": "The contest tee behind Kingfisher's breakout 'Worst Golfer in Dallas' search (covered by D Magazine); TGI reports it became the brand's fastest seller.",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-kingfisher-golf + https://kingfisher-golf.com/products/worst-golfer-in-dallas-tee",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC08536.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC08486.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC08495.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC08528.jpg?width=1600"
+      ]
+    },
+    {
+      "title": "Kit Polo",
+      "handle": "kit-polo",
+      "url": "https://kingfisher-golf.com/products/kit-polo",
+      "price": "65.00",
+      "in_stock": true,
+      "category": "polo",
+      "why": "Leads the store's featured collection; pique polo with a football-kit cotton collar and cuffs, which TGI called 'the dressiest thing they make'.",
+      "source": "https://kingfisher-golf.com/collections/featured-collection + https://thegrassyissue.com/drops/brand-to-know-kingfisher-golf",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC09762.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/NavyKit_Front.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/NavyKit_Back.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/NavyKit_Shoulder.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC07597.png?width=1600"
+      ]
+    },
+    {
+      "title": "Powder Blue DAL Hat",
+      "handle": "powder-blue-dal-hat",
+      "url": "https://kingfisher-golf.com/products/powder-blue-dal-hat",
+      "price": "36.00",
+      "in_stock": true,
+      "category": "hat",
+      "why": "The only product in the store's homepage collection and, per TGI, the best of the eight-colourway DAL cap wall.",
+      "source": "https://kingfisher-golf.com/collections/frontpage + https://thegrassyissue.com/drops/brand-to-know-kingfisher-golf",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/blueDAL.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/blueDALside.png?width=1600"
+      ]
+    }
+  ],
+  "alternates": [
+    {
+      "title": "Golfmobile Tee",
+      "handle": "golfmobile-tee",
+      "url": "https://kingfisher-golf.com/products/golfmobile-tee",
+      "price": "40.00",
+      "in_stock": true,
+      "category": "tee",
+      "why": "TGI's take names the Golfmobile Tee as where the brand's design approach lands: one navy illustration, screen-printed at Lewellyn's in Old East Dallas.",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-kingfisher-golf + https://kingfisher-golf.com/products/golfmobile-tee",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/WhiteTee_Back.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/WhiteTee_Front.png?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC06749.jpg?width=1600"
+      ]
+    },
+    {
+      "title": "Orion Polo",
+      "handle": "hugo-polo",
+      "url": "https://kingfisher-golf.com/products/hugo-polo",
+      "price": "65.00",
+      "in_stock": true,
+      "category": "polo",
+      "why": "One of the four patterned performance polos dropped August 2026, with an intricate navy scallop pattern.",
+      "source": "https://kingfisher-golf.com/products/hugo-polo + https://thegrassyissue.com/drops/brand-to-know-kingfisher-golf",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC01428-2.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC01479.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC01465.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0879/1638/0194/files/DSC01325.jpg?width=1600"
+      ]
+    }
+  ],
+  "notes": "Worst Golfer in Dallas Tee is now $22.00 on the store (TGI's post says $40). Orion Polo's handle is 'hugo-polo'. The 'fastest seller' claim comes from TGI's post, not the store. Everything in stock except Camo caps and KF Layers Cap."
+}

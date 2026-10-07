@@ -1,0 +1,87 @@
+{
+  "slug": "radry-golf",
+  "name": "Radry Golf",
+  "store": "https://radry.com",
+  "currency": "USD",
+  "picks": [
+    {
+      "title": "Bugging Blade Cover",
+      "handle": "bugging-blade-cover",
+      "url": "https://radry.com/products/bugging-blade-cover",
+      "price": "65.00",
+      "in_stock": true,
+      "category": "headcover",
+      "why": "TGI's FAQ names the Bugging Blade Cover as one of the accessories Radry is known for, and it is the only Radry putter cover still in stock (faux leather, sherpa lining, magnetic closure).",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-radry-golf + https://radry.com/products/bugging-blade-cover",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/bugging_blade_back_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/bugging_blade_detail1_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/bugging_blade_front_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/bugging_blade_detail2_new_web.jpg?width=1600"
+      ]
+    },
+    {
+      "title": "Staple Two Tone Hat",
+      "handle": "staple-two-tone-hat",
+      "url": "https://radry.com/products/staple-two-tone-hat",
+      "price": "42.00",
+      "in_stock": true,
+      "category": "hat",
+      "why": "Hats are Radry's 'volume business' per TGI, and this one carries the circle-eye/square-eye birdie-bogey logo patch on a washed two-tone cap.",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-radry-golf + https://radry.com/products/staple-two-tone-hat",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/twotone_logo_hat_front_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/twotone_logo_hat_back_web.jpg?width=1600"
+      ]
+    },
+    {
+      "title": "Logo Zip Hoodie",
+      "handle": "logo-zip-hoodie",
+      "url": "https://radry.com/products/logo-zip-hoodie",
+      "price": "95.00",
+      "in_stock": true,
+      "category": "hoodie",
+      "why": "Black heavyweight full-zip with the embroidered logo at the chest; TGI called it the most wearable thing in the current run.",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-radry-golf + https://radry.com/products/logo-zip-hoodie",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/zip_hoodie_black_front_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/zip_hoodie_black_detail_web.jpg?width=1600"
+      ]
+    }
+  ],
+  "alternates": [
+    {
+      "title": "Gang Gang Blade Cover",
+      "handle": "gang-gang-blade-cover",
+      "url": "https://radry.com/products/gang-gang-blade-cover",
+      "price": "65.00",
+      "in_stock": false,
+      "category": "headcover",
+      "why": "TGI calls the corduroy Gang Gang covers 'the closest Radry gets to a signature product' - currently sold out (numbered runs, no restocks).",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-radry-golf",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/gang_blade_back_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/gang_blade_front_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/gang_blade_detail_new_web.jpg?width=1600"
+      ]
+    },
+    {
+      "title": "Contrast Quarter Zip Navy",
+      "handle": "contrast-quarter-zip",
+      "url": "https://radry.com/products/contrast-quarter-zip",
+      "price": "120.00",
+      "in_stock": true,
+      "category": "quarter-zip",
+      "why": "The Contrast Quarter Zip is the golf-specific layer TGI's FAQ cites at $120: relaxed boxy poly-spandex with mesh liner and hem tag art.",
+      "source": "https://thegrassyissue.com/drops/brand-to-know-radry-golf + https://radry.com/products/contrast-quarter-zip",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/contrast_navy_jacket_front_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/contrast_navy_jacket_detail4_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/contrast_navy_jacket_detail1_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/contrast_navy_jacket_detail2_new_web.jpg?width=1600",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/contrast_navy_jacket_detail3_new_web.jpg?width=1600"
+      ]
+    }
+  ],
+  "notes": "All Gang Gang corduroy covers (blade, mallet, driver) are listed but SOLD OUT, as are the Cow Caddy headcovers and the Smoke Em' Ashtray, so the brand's most iconic accessories cannot be picks. Contrast Quarter Zip Navy is typed 'Mens Tee' in Shopify but is a quarter-zip. Staple Crew ($95, in stock) is another logo-only option if needed."
+}

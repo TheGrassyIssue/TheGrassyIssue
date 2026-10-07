@@ -206,8 +206,11 @@
   "src": "https://pitchbook.com/profiles/company/601707-79"
  },
  "odd-ritual": {
-  "status": "unclear",
-  "why": "No owner or entity named anywhere public."
+  "status": "editor-pick",
+  "owner": "A Cape Town label whose founders have not named themselves publicly.",
+  "src": "https://oddritualgolf.com",
+  "why": "Lenny, 6 Oct 2026: 'Remove Random Golf Club and replace with Odd Ritual.' No owner named publicly, so listed as an editor's pick.",
+  "img": "/images/best-independent/odd-ritual.jpg"
  },
  "cloud-and-wind-golf": {
   "status": "unclear",
@@ -228,5 +231,11 @@
  "realtree": {
   "status": "not",
   "why": "A camouflage-pattern licensor, not a golf brand; appears through collabs."
+ },
+ "mackem-golf": {
+  "status": "independent",
+  "owner": "Run by Paige Harding and her partner Adam Brown, who cut and sew everything in their own Kalamunda studio.",
+  "src": "https://mackemgolf.com/pages/about-us",
+  "img": "/images/best-independent/mackem-golf.jpg"
  }
 }

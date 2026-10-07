@@ -66,15 +66,18 @@ def posts(slug):
     return len(ment.get(slug, []))
 
 
-ranked = sorted((b for s, b in brands.items() if ind.get(s, {}) and ind[s].get("status") in RANKS),
-                key=lambda b: (-posts(b["slug"]), plain(b["name"]).lower()))
-if len(ranked) < N_TOP:
-    raise SystemExit(f"only {len(ranked)} verified independents — need {N_TOP}. Check more brands.")
-top = ranked[:N_TOP]
-floor = posts(top[-1]["slug"])
-if floor < 1:
-    raise SystemExit("a brand with no posts made the list — the mentions file looks empty")
-unchecked = sorted((s for s in brands if s not in ind and posts(s) >= floor), key=lambda s: -posts(s))
+# EDITORIAL ORDER (Lenny, 6 Oct 2026): the list is now our picks, informed by coverage, in the order in
+# data/best25-order.json. Every brand on it must still carry a status in RANKS and an owner line.
+ORDER = json.load(open(os.path.join(ROOT, "data", "best25-order.json"), encoding="utf-8"))["order"]
+for s_ in ORDER:
+    if s_ not in brands or not ind.get(s_) or ind[s_].get("status") not in RANKS:
+        raise SystemExit(f"{s_}: in best25-order.json but not a brand with a RANKS status in independence.json")
+top = [brands[s_] for s_ in ORDER][:N_TOP]
+if len(top) != N_TOP:
+    raise SystemExit(f"best25-order.json has {len(top)} brands, need {N_TOP}")
+floor = min(posts(b["slug"]) for b in top)
+unchecked = []
+SIG = json.load(open(os.path.join(ROOT, "data", "best25-signature.json"), encoding="utf-8"))
 
 # every brand on the list needs an owner line and a source
 for b in top:
@@ -175,6 +178,33 @@ CSS = """<style>
 #bi .bi-back a{color:inherit}
 @media(max-width:760px){#bi .rk{grid-template-columns:52px 1fr;gap:16px}#bi .rk-n{font-size:40px}
  #bi .rk-img{grid-column:2}#bi .rk-body{grid-column:2}}
+#bi{--ink:var(--bx-ink,#141414);--paper:var(--bx-paper,#F4F1EA);--mono:var(--bx-mono,ui-monospace,monospace)}
+#bi .bi-by{font-family:var(--bx-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--bx-ink60);margin:-6px 0 22px}
+#bi .bi-by a{color:inherit;border-bottom:1px solid currentColor;text-decoration:none}
+#bi .rk-best{font-size:14.5px!important;margin:0 0 10px!important}#bi .rk-best b{font-family:var(--bx-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;font-weight:600}
+#bi .bi-cat{max-width:64ch;margin:50px 0 0;border-top:1px solid var(--bx-ink);padding-top:22px}#bi .bi-cat h2{font-family:var(--bx-serif,Georgia,serif);font-size:24px;margin:0 0 6px}#bi .bi-cat h3{font-size:16px;margin:18px 0 4px}#bi .bi-cat p{font-size:16px;line-height:1.6;margin:0}#bi .bi-cat a,#bi .bi-glance a{color:inherit;border-bottom:1px solid rgba(20,20,20,.3);text-decoration:none}
+#bi .sig-h{font-family:var(--bx-mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;margin:18px 0 10px;color:var(--bx-ink60)}
+#bi .sig{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;max-width:640px}
+#bi .sig-card{border:1px solid var(--bx-rule,#e6e4df);background:#fff;position:relative}
+#bi .product-gallery{position:relative;aspect-ratio:4/5;overflow:hidden;background:#ece8df}
+#bi .pg-track{display:flex;height:100%;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;scroll-behavior:smooth}
+#bi .pg-track::-webkit-scrollbar{display:none}
+#bi .pg-frame{flex:0 0 100%;height:100%;scroll-snap-align:center}
+#bi .pg-frame img{width:100%;height:100%;object-fit:cover;display:block}
+#bi .pg-arw{position:absolute;top:50%;transform:translateY(-50%);width:24px;height:24px;border:.5px solid var(--ink);background:var(--paper);color:var(--ink);font-size:14px;line-height:1;cursor:pointer;opacity:0;transition:opacity .18s;z-index:2;padding:0}
+#bi .pg-arw.prev{left:5px}#bi .pg-arw.next{right:5px}
+#bi .sig-card:hover .pg-arw{opacity:.9}
+#bi .pg-count{position:absolute;top:6px;right:6px;font-family:var(--mono);font-size:8.5px;letter-spacing:.1em;background:var(--paper);border:.5px solid var(--ink);padding:1px 5px;z-index:2}
+#bi .pg-dots{position:absolute;bottom:6px;left:0;right:0;display:flex;justify-content:center;gap:4px;z-index:2}
+#bi .pg-dot{width:5px;height:5px;border-radius:50%;border:.5px solid var(--ink);background:var(--paper);padding:0;cursor:pointer;opacity:.55}
+#bi .pg-dot.on{background:var(--ink);opacity:1}
+#bi .sig-b{padding:8px 9px 10px}
+#bi .sig-t{font-family:var(--bx-serif,Georgia,serif);font-size:13.5px;line-height:1.3;margin:0}
+#bi .sig-p{font-family:var(--bx-mono);font-size:10px;letter-spacing:.06em;margin:5px 0 6px;color:var(--bx-ink60)}
+#bi .sig-b a{font-family:var(--bx-mono);font-size:9.5px;letter-spacing:.14em;text-transform:uppercase;color:inherit;text-decoration:none;border-bottom:1px solid currentColor}
+@media(max-width:900px){#bi .pg-arw{opacity:.85}}
+@media(max-width:760px){#bi .sig{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}#bi .sig-t{font-size:12px}}
+@media(max-width:480px){#bi .sig{grid-template-columns:repeat(2,minmax(0,1fr))}}
 </style>"""
 
 # ---------------------------------------------------------------------- copy
@@ -185,24 +215,26 @@ p1 = posts(n1["slug"])
 W = {25: "twenty-five"}
 num = lambda n: "one post" if n == 1 else f"{n} posts"
 
-INTRO = f"""<p>These are the {W[N_TOP]} independent golf brands The Grassy Issue has written about most.
-We ranked them on the record, not on a gut call: every page on the site that
-mentions a brand counts once, and the brands with the most pages sit at the top.
-<strong>{esc(plain(n1['name']))}</strong> leads with {num(p1)}, followed by
-<strong>{esc(plain(n2['name']))}</strong> and <strong>{esc(plain(n3['name']))}</strong>.</p>
-<p>Each brand has its own page in the Brand Index, which links out to every post that counts toward its number.
-Read the list as a map of where our attention has actually gone in {YEAR}: the brands we keep going back to for
-drops, gift guides, roundups and field notes.</p>
+BESTFOR = json.load(open(os.path.join(ROOT, "data", "best25-bestfor.json"), encoding="utf-8"))
+top10 = ", ".join(esc(plain(b["name"])) for b in top[:9]) + " and " + esc(plain(top[9]["name"]))
+INTRO = f"""<p>The best independent golf brands right now are {top10}, with fifteen more below. Independent golf is
+where the most interesting ideas in the game are coming from: small labels, mostly run by the people who started them,
+making golf clothes, bags and headcovers that a big brand would never sign off on.</p>
+<p>We picked these {W[N_TOP]} on taste, on our own experience with the brands, and on who is doing the most
+interesting work right now. We have spent the year covering them out of Austin, in Brand to Know profiles, drops,
+gift guides and the gear we take to the city&rsquo;s munis. Each brand comes with the three signature pieces we would
+buy first, and a link to its page in the Brand Index, where every post we have written about it lives.</p>
 <p>Looking for more than twenty-five? See every <a href="/brands/tag/independent">independent golf brand</a> in the
 Index, or browse <a href="/brands">the full golf brand directory</a>.</p>"""
 
-HOW = f"""<h2>How this list works</h2>
-<p>These are the brands we keep coming back to because they make good stuff, they are consistent about it, and
-they have a clear point of view. Every one is still run by the people who started it, or by a family, rather than
-by a parent company. Most are small, and a few have brought in outside partners along the way.</p>
-<p>The order comes from our own coverage: every TGI page that mentions a brand counts once, and the brands we have
-written about most sit at the top. We last checked who runs each one on {asof}. The list updates whenever the Brand
-Index is rebuilt, so it moves as we write.</p>"""
+HOW = f"""<h2>How we picked</h2>
+<p>This is an editor&rsquo;s list, not a formula. Every brand on it makes good things, makes them consistently and has
+a clear point of view, and every one is doing something we think is to watch closely in {YEAR}. Almost all
+are still run by the people who started them, or by a family, rather than by a parent company. Two are
+editor&rsquo;s picks on ownership: Manors, which has taken a minority outside investment, and Odd Ritual, which has
+not named its owners publicly.</p>
+<p>The three signature pieces for each brand were chosen from its own store, and prices and stock were read there on
+{asof}. Prices outside the US are shown in the store&rsquo;s currency with an approximate dollar figure.</p>"""
 
 # Questions section removed (Lenny, 24 Sep 2026: "remove the questions at the bottom").
 # Kept here unused in case it comes back; the FAQPage schema went with it.
@@ -225,6 +257,24 @@ FAQ = [
 WRITE = json.load(open(os.path.join(ROOT, "data", "best25-writeups.json"), encoding="utf-8"))
 missing_w = [b["slug"] for b in top if b["slug"] not in WRITE]
 PROFILE = re.compile(r"/drops/(brand-to-know|brand-revisited|brand-to-watch|fella-golf)")
+def sig_html(s_, name):
+    items = SIG.get(s_, [])
+    if not items:
+        return ""
+    cards = []
+    for p in items:
+        fr = p["frames"]
+        imgs = "".join(f'<div class="pg-frame"><img src="{f}" alt="{esc(name)} {esc(p["title"])}, view {j+1} of {len(fr)}" loading="lazy" width="500" height="625"></div>' for j, f in enumerate(fr))
+        dots = "".join(f'<button class="pg-dot{" on" if j == 0 else ""}" data-i="{j}" aria-label="View image {j+1}"></button>' for j in range(len(fr)))
+        ctl = (f'<button class="pg-arw prev" aria-label="Previous image">&#8249;</button><button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+               f'<span class="pg-count">1/{len(fr)}</span><div class="pg-dots">{dots}</div>') if len(fr) > 1 else ""
+        note = " &middot; made to order" if p.get("made_to_order") else ""
+        cards.append(f'<div class="sig-card product-card" data-frames="{len(fr)}"><div class="product-gallery"><div class="pg-track">{imgs}</div>{ctl}</div>'
+                     f'<div class="sig-b"><p class="sig-t">{esc(p["title"])}</p><div class="sig-p">{p["price"]}{note}</div>'
+                     f'<a href="{esc(p["url"])}" target="_blank" rel="noopener">Shop &#8599;</a></div></div>')
+    return f'<div class="sig-h">Three signature pieces</div><div class="sig">{"".join(cards)}</div>'
+
+
 rows = []
 for i, b in enumerate(top, 1):
     s = b["slug"]
@@ -236,25 +286,45 @@ for i, b in enumerate(top, 1):
         f'<a class="rk-img" href="/brands/{s}"><img src="{IMG[s]}" alt="{esc(name)}" loading="{"eager" if i < 3 else "lazy"}"'
         f' width="520" height="390"></a>'
         f'<div class="rk-body"><h2><a href="/brands/{s}">{esc(name)}</a></h2>'
-        f'<div class="rk-meta"><b>{num(posts(s))}</b> &middot; {meta}</div>'
+        f'<div class="rk-meta">{meta}</div><p class="rk-best"><b>Best for:</b> {BESTFOR.get(s, "")}</p>'
         f'<p>{esc(WRITE.get(s, b.get("line", "")))}</p>'
         f'<p class="rk-own">{esc(ind[s]["owner"])}</p>'
         + (f'<a class="rk-go" href="{b["url"]}">{"Read our Brand to Know" if PROFILE.search(b.get("url", "")) else "Read our coverage"} &rarr;</a> &nbsp; '
            if b.get("url", "").startswith("/drops/") else "")
-        + f'<a class="rk-go" href="/brands/{s}">See the brand and all its posts &rarr;</a></div></li>')
+        + f'<a class="rk-go" href="/brands/{s}">See the brand and all {num(posts(s))} &rarr;</a>'
+        + sig_html(s, name) + '</div></li>')
 
-GLANCE = "\n".join(
+def frm(s_):
+    it = SIG.get(s_, [])
+    return it[0]["price"] if it else "&mdash;"
+GLANCE_OLD = "\n".join(
     f'<tr><td>{i:02d}</td><td><a href="#no-{i}">{esc(plain(b["name"]))}</a></td>'
     f'<td>{esc((b.get("loc") or "").strip("— -")) or "&mdash;"}</td>'
     f'<td>{esc(", ".join(c.title() for c in b.get("cats", [])))}</td></tr>' for i, b in enumerate(top, 1))
+DASHES = "\u2014 -"
+GLANCE = "\n".join(
+    f'<tr><td>{i:02d}</td><td><a href="#no-{i}">{esc(plain(b["name"]))}</a></td>'
+    f'<td>{esc((b.get("loc") or "").strip(DASHES)) or "&mdash;"}</td><td>{BESTFOR.get(b["slug"], "")}</td></tr>' for i, b in enumerate(top, 1))
+CATS = [("apparel", "Best independent golf apparel brands"), ("bags", "Best independent golf bag brands"),
+        ("headcovers", "Best independent headcover makers"), ("accessories", "Best independent golf accessories brands")]
+RANK = {b["slug"]: i for i, b in enumerate(top, 1)}
+bycat = []
+for c, h in CATS:
+    names = [f'<a href="#no-{RANK[b["slug"]]}">{esc(plain(b["name"]))}</a>' for b in top if c in b.get("cats", [])]
+    if names:
+        bycat.append(f'<h3>{h}</h3><p>{", ".join(names)}.</p>')
+BYCAT = "".join(bycat)
 H1 = f"Our {N_TOP} Best Independent Golf Brands"  # Lenny, 24 Sep 2026
 TITLE = f"Our {N_TOP} Best Independent Golf Brands ({YEAR}) | The Grassy Issue"
-DESC = (f"Our {N_TOP} best independent golf brands for {YEAR}: founder- and family-run labels making clothing, bags "
-        f"and headcovers, with where each is based and who owns it.")
+DESC = (f"Our {N_TOP} best independent golf brands for {YEAR}, picked in Austin: founder-run labels making clothes, bags "
+        f"and headcovers, with three signature pieces from each.")
 
 schema = {"@context": "https://schema.org", "@graph": [
     {"@type": "CollectionPage", "name": H1, "description": DESC, "url": f"https://thegrassyissue.com{URL}",
-     "dateModified": today.isoformat(),
+     "dateModified": today.isoformat(), "datePublished": "2026-09-24",
+     "author": {"@type": "Person", "@id": "https://thegrassyissue.com/about#lenny", "name": "Lenny Harrington",
+                "url": "https://thegrassyissue.com/about", "sameAs": ["https://instagram.com/thegrassyissue"]},
+     "publisher": {"@type": "Organization", "name": "The Grassy Issue", "url": "https://thegrassyissue.com/"},
      "isPartOf": {"@type": "WebSite", "name": "The Grassy Issue", "url": "https://thegrassyissue.com"},
      "breadcrumb": {"@type": "BreadcrumbList", "itemListElement": [
          {"@type": "ListItem", "position": 1, "name": "Feed", "item": "https://thegrassyissue.com/"},
@@ -262,8 +332,9 @@ schema = {"@context": "https://schema.org", "@graph": [
          {"@type": "ListItem", "position": 3, "name": H1}]},
      "mainEntity": {"@type": "ItemList", "itemListOrder": "https://schema.org/ItemListOrderDescending",
                     "numberOfItems": N_TOP, "itemListElement": [
-                        {"@type": "ListItem", "position": i, "name": plain(b["name"]),
-                         "url": f"https://thegrassyissue.com/brands/{b['slug']}"} for i, b in enumerate(top, 1)]}}]}
+                        {"@type": "ListItem", "position": i, "item": {"@type": "Organization", "name": plain(b["name"]),
+                         "url": f"https://thegrassyissue.com/brands/{b['slug']}",
+                         "description": plain(BESTFOR.get(b["slug"], ""))}} for i, b in enumerate(top, 1)]}}]}
 
 head = HEAD
 head = re.sub(r"<title>[^<]*</title>", f"<title>{esc(TITLE)}</title>", head)
@@ -290,18 +361,49 @@ body = f"""<main id="bi">
   <div class="bi-crumb"><a href="/">Feed</a> &nbsp;/&nbsp; <a href="/brands">The Brand Index</a> &nbsp;/&nbsp; Best Independent Golf Brands</div>
   <div class="bi-eyebrow">The Brand Index &middot; {YEAR} list &middot; Updated {asof}</div>
   <h1>{esc(H1)}</h1>
+  <div class="bi-by">By <a href="/about">Lenny Harrington</a>, editor &middot; Austin, Texas</div>
   <div class="bi-intro">
 {INTRO}
   </div>
   <section class="bi-how">
 {HOW}
   </section>
+  <section class="bi-glance">
+<h2>The list at a glance</h2>
+<div class="bi-tw"><table class="bi-table"><thead><tr><th>No.</th><th>Brand</th><th>Based</th><th>Best for</th></tr></thead><tbody>
+{GLANCE}
+</tbody></table></div>
+  </section>
   <ol class="bi-list">
 {chr(10).join(rows)}
   </ol>
+  <section class="bi-cat">
+<h2>The best independent golf brands by category</h2>
+{BYCAT}
+  </section>
   <div class="bi-back"><a href="/brands/tag/independent">All independent brands in the Index &rarr;</a> &nbsp;&middot;&nbsp; <a href="/brands">&larr; The full Brand Index</a></div>
 </main>
-
+<script>
+(function(){{
+  document.querySelectorAll('.product-gallery').forEach(function(g){{
+    var track=g.querySelector('.pg-track'),
+        dots=[].slice.call(g.querySelectorAll('.pg-dot')),
+        count=g.querySelector('.pg-count'),
+        n=parseInt(g.parentNode.getAttribute('data-frames'),10)||1;
+    if(n<2) return;
+    function idx(){{ return Math.round(track.scrollLeft/track.clientWidth); }}
+    function go(i){{ track.scrollTo({{left:track.clientWidth*Math.max(0,Math.min(n-1,i)),behavior:'smooth'}}); }}
+    function sync(){{ var i=idx();
+      dots.forEach(function(d,j){{ d.classList.toggle('on',j===i); }});
+      if(count) count.textContent=(i+1)+'/'+n; }}
+    track.addEventListener('scroll',function(){{ window.requestAnimationFrame(sync); }},{{passive:true}});
+    dots.forEach(function(d){{ d.addEventListener('click',function(e){{ e.preventDefault(); go(+d.dataset.i); }}); }});
+    var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
+    if(p) p.addEventListener('click',function(e){{ e.preventDefault(); go(idx()-1); }});
+    if(nx) nx.addEventListener('click',function(e){{ e.preventDefault(); go(idx()+1); }});
+  }});
+}})();
+</script>
 """
 out = head + "\n</head>\n<body>" + NAV + body + TAIL
 
