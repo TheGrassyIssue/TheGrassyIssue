@@ -65,18 +65,10 @@ P = {
    "https://www.meanwhilebeer.com",
    "Back near Kizer: a brewery with a huge lawn, food trucks, a soccer field and its own lagers. Spend the afternoon outside and watch the games. Sunday is the nice round, so do not stay too late.",
    [f"{W}/meanwhile.jpg", f"{W}/meanwhile-2.jpg", f"{W}/meanwhile-3.jpg"], "Visit"),
- "joes": ("Sunday, 6am &middot; 2305 E 7th St", "Joe's Bakery &amp; Coffee Shop", "East Austin",
-   "https://joesbakery.com/",
-   "Start Sunday on East 7th. The Avila family has run Joe's since 1962: coffee, breakfast all day and a bakery counter of pan dulce. It opens at 6am, and Joe's own site warns of 25 to 45 minute waits after 9:30 on weekends, so go early. It is on the way out of town, about half an hour from the course.",
-   [f"{W}/joes-0.jpg", f"{W}/joes-1.jpg"], "Visit"),
  "lostpines": ("Sunday &middot; 575 Hyatt Lost Pines Rd", "Lost Pines Golf Club", "Rates vary by day",
    "https://www.lostpinesresortandspa.com/golf/",
-   "Finish the weekend at the resort course out by Bastrop. It is an Arthur Hills design, 7,300 yards and par 72, laid along the natural contours of the Lost Pines woodland, and The Dallas Morning News has named it one of the best courses in Texas. The signature holes are the 603-yard par-5 3rd and the 155-yard downhill par-3 12th. There is a 13-acre range with eight target greens if you want to warm up properly. Green fees change by day, so check the resort's tee sheet when you book.",
+   "Finish the weekend at the resort course out by Bastrop. It is an Arthur Hills design, 7,300 yards and par 72, laid along the natural contours of the Lost Pines woodland, and The Dallas Morning News has named it one of the best courses in Texas. The signature holes are the 603-yard par-5 3rd and the 155-yard downhill par-3 12th. There is a 13-acre range with eight target greens if you want to warm up properly. Green fees change by day, so check the resort's tee sheet when you book, then stay for a drink at Maude's Bar &amp; Terrace on the property.",
    [f"{W}/lostpines-4.jpg", f"{W}/lostpines-0.jpg", f"{W}/lostpines-2.jpg", f"{W}/lostpines-1.jpg"], "Course and tee times"),
- "neighbors": ("Sunday, after the round &middot; 601 Chestnut St, Bastrop", "Neighbor's Kitchen &amp; Yard", "Downtown Bastrop",
-   "https://neighborstx.com/",
-   "It sits fifteen minutes from the course, on the Colorado River in downtown Bastrop. There are decks over the water, more than a dozen house beers brewed next door at its sister spot, Iron Bridge Icehouse, scratch pizza (get the Hot Lil Honey) and margaritas. It is the right place to settle the bets from all three rounds. Check the day's hours on its site before you drive over.",
-   [f"{W}/neighbors-0.jpg", f"{W}/neighbors-1.jpg", f"{W}/neighbors-2.jpg"], "Visit"),
  "criquet": ("Criquet Shirts &middot; Austin", "Slub Graphic Tee, Lions Badge", "$58",
    "https://criquetshirts.com/products/slub-graphic-t-shirt-lions-badge-vintage-indigo",
    "Austin's own shirt brand made a Lions Municipal badge tee in vintage indigo. Wear it to Friday's round and then all year at home.",
@@ -107,12 +99,12 @@ SECTIONS = [
   "<strong>The historic muni and a cold swim</strong>Play Lions in the afternoon, jump in Barton Springs, then smoked brisket on South Lamar and records under Hotel Magdalena."),
  ("Saturday: Kizer and a Long Lunch", "saturday", ["veracruz","kizer","leroy","meanwhile"],
   "<strong>Open fairways, then barbecue</strong>Tacos at 7am, the links-style muni in southeast Austin, a barbecue lunch and a brewery lawn. Make it an early night."),
- ("Sunday: Lost Pines Golf Club", "sunday", ["joes","lostpines","neighbors"],
-  "<strong>The nice one</strong>Coffee and pan dulce on East 7th, an Arthur Hills resort course in the pines east of the city, then pizza and a pint on the river in Bastrop."),
+ ("Sunday: Lost Pines Golf Club", "sunday", ["lostpines"],
+  "<strong>The nice one</strong>An Arthur Hills resort course in the pines east of the city, the treat after two days of munis."),
  ("Pack These", "pack", ["criquet","duffle","orms","magpie","sierra","palm"],
   "<strong>Six things that make the trip</strong>Four from Texas makers and two small things you will use all weekend. Prices read on each brand's own store on 2 October 2026."),
 ]
-N = 17
+N = 15
 PQ = {}
 BANDS = {
  "saturday": ("Friday at Lions", "The course where Crenshaw and Kite learned the game.", [("band-dusk","Dusk over the fairways at Lions Municipal Golf Course","Dusk at Lions"),("band-hole16","The 16th hole at Lions Municipal","The 16th"),("band-hist-fairway","A historic photo of golfers on a Lions Municipal green","Lions, years ago")]),
@@ -122,7 +114,7 @@ TAKE = """
   <div class="writeup-body">
     <div class="drop-tag flag">The TGI Take</div>
     <p>The best Austin golf weekend is two days of munis and one round that feels like a treat. Play Lions on Friday, where Austin golf began, and Roy Kizer on Saturday, the links-style muni that lets you swing. Then on Sunday head east to Lost Pines Golf Club, the Arthur Hills course at the resort near Bastrop, which the Dallas Morning News has named one of the best in Texas.</p>
-    <p>Between rounds: a swim in Barton Springs, smoked brisket on South Lamar, breakfast tacos at 7am, a barbecue lunch from the Michelin Guide, records under Hotel Magdalena and a Sunday afternoon on the river in Bastrop. Friday stays central, and Saturday stays in southeast Austin near Kizer, which also puts you on the right side of town for Sunday. Heads up: Saturday and Sunday tee times at the city munis open online at 8pm Central on the Monday before, and they go fast, so set an alarm for Kizer. You need a Golf ATX account, and each account can book one tee time for up to four players. Friday at Lions books on the normal weekday window.</p>
+    <p>Between rounds: a swim in Barton Springs, smoked brisket on South Lamar, breakfast tacos at 7am, a barbecue lunch from the Michelin Guide and records under Hotel Magdalena. Friday stays central, and Saturday stays in southeast Austin near Kizer, which also puts you on the right side of town for Sunday. Heads up: Saturday and Sunday tee times at the city munis open online at 8pm Central on the Monday before, and they go fast, so set an alarm for Kizer. You need a Golf ATX account, and each account can book one tee time for up to four players. Friday at Lions books on the normal weekday window.</p>
     <p>The two munis come to $85: $41 at Lions on a Friday and $44 at Kizer on the weekend. Lost Pines prices by the day, so check its tee sheet. We also picked six things to pack, four of them from Texas makers. The muni fees are the City of Austin's rates, read on 17 September 2026. Venue hours, pool prices and product prices were read on each one's own site on 2 October 2026.</p>
   </div>
   <aside class="sidebar">
