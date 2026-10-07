@@ -4,20 +4,20 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>The Grassy Issue | Independent Golf Brands, Celebrated on Austin&#x27;s Public Courses</title>
-<meta name="description" content="Independent golf brands, celebrated on Austin&#x27;s public courses. The brands, the gear, the courses, the people, curated from Austin by Lenny Harrington." />
+<title>The Grassy Issue | Independent Golf Brands &amp; Austin Golf</title>
+<meta name="description" content="A running index of modern golf culture. The independent brands, the gear, the courses, the people. Curated from Austin." />
 
 <link rel="icon" href="/favicon.ico" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://thegrassyissue.com/" />
-<meta property="og:title" content="The Grassy Issue | Independent Golf Brands, Celebrated on Austin&#x27;s Public Courses" />
-<meta property="og:description" content="Independent golf brands, celebrated on Austin&#x27;s public courses. The brands, the gear, the courses, the people, curated from Austin by Lenny Harrington." />
+<meta property="og:title" content="The Grassy Issue | Independent Golf Brands &amp; Austin Golf" />
+<meta property="og:description" content="A running index of modern golf culture. The independent brands, the gear, the courses, the people. Curated from Austin." />
 <meta property="og:image" content="https://thegrassyissue.com/images/og-image.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="The Grassy Issue | Independent Golf Brands, Celebrated on Austin&#x27;s Public Courses" />
-<meta name="twitter:description" content="Independent golf brands, celebrated on Austin&#x27;s public courses. The brands, the gear, the courses, the people, curated from Austin by Lenny Harrington." />
+<meta name="twitter:title" content="The Grassy Issue | Independent Golf Brands &amp; Austin Golf" />
+<meta name="twitter:description" content="A running index of modern golf culture. The independent brands, the gear, the courses, the people. Curated from Austin." />
 <meta name="twitter:image" content="https://thegrassyissue.com/images/og-image.jpg" />
 
 <link rel="canonical" href="https://thegrassyissue.com/" />
@@ -28,7 +28,7 @@
   "@type": "WebSite",
   "name": "The Grassy Issue",
   "url": "https://thegrassyissue.com/",
-  "description": "Independent golf brands, celebrated on Austin's public courses. The brands, the gear, the courses, the people, curated from Austin by Lenny Harrington.",
+  "description": "A running index of modern golf culture. The independent brands, the gear, the courses, the people. Curated from Austin.",
   "publisher": {
     "@type": "Organization",
     "name": "The Grassy Issue",
@@ -1582,7 +1582,6 @@
 </style>
 <style>.feed .card{content-visibility:auto;contain-intrinsic-size:auto 640px}</style>
 <style>/*TGI-HERO-MW*/.hero-img.desktop{object-position:center top!important}</style>
-<style>/*TGI-H2*/h2.events-label,h2.vibe-label{margin:0;font-weight:inherit;line-height:inherit}.tgi-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
 </head>
 <body>
 
@@ -1646,14 +1645,13 @@
     </div>
     <div class="hero-bottom">
       <h1 class="hero-sub">
-        Independent golf brands, celebrated on Austin&rsquo;s public courses.
+        A running index of modern golf culture. The independent brands, the gear, the courses, the people. Curated from Austin.
       </h1>
     </div>
   </div>
 </section>
 
 <section class="filters" aria-label="Filter feed">
-  <h2 class="tgi-sr">The latest from The Grassy Issue: independent golf brands, drops and Austin field notes</h2>
   <div class="filters-inner">
     <div class="filter-pills" role="tablist">
       <button class="pill active" data-filter="all" role="tab" aria-selected="true">All</button>
@@ -2880,10 +2878,10 @@
 <!-- EVENTS -->
 <section class="events">
   <div class="events-header">
-    <h2 class="events-label">
+    <div class="events-label">
       <span class="cal-icon">&#9670;</span>
       Austin Events
-    </h2>
+    </div>
     <span class="events-count"><a href="/drops/austin-golf-events-calendar" style="color:inherit;text-decoration:none;border-bottom:1px solid currentColor;">4 upcoming &mdash; see the full calendar</a></span>
   </div>
   <div class="events-grid">
@@ -2947,7 +2945,7 @@
 <!-- VIBE BOARD -->
 <section class="vibe-board">
   <div class="vibe-header">
-    <h2 class="vibe-label">◎ Vibe Board</h2>
+    <div class="vibe-label">◎ Vibe Board</div>
     <span class="vibe-source">via Pinterest</span>
   </div>
   <div class="vibe-grid">
@@ -3027,7 +3025,7 @@
   <div class="footer-inner">
     <div class="footer-brand"><div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin:0 0 10px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
       <div class="wordmark">The Grassy Issue.</div>
-      <div class="tag">Independent golf brands, celebrated on Austin&rsquo;s public courses. Edited &amp; published by Lenny Harrington in Austin, Texas.</div>
+      <div class="tag">A running feed of golf culture, design &amp; Austin muni. Edited &amp; published by Lenny Harrington in Austin, Texas.</div>
       <form class="mailing" id="mailingForm">
         <input type="email" placeholder="Email for updates" required aria-label="Email address for updates" />
         <button type="submit">Join →</button>
@@ -3342,28 +3340,15 @@
     const success = document.getElementById('mailingSuccess');
     const email = input.value;
 
-    const btn = this.querySelector('button');
-    const label = success.textContent;
-    if (btn) btn.disabled = true;
-    // Only say "You're in" when the signup service confirms it got the email.
     fetch('https://formsubmit.co/ajax/l4harrington@gmail.com', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
       body: JSON.stringify({ email: email, _subject: 'TGI Mailing List Signup' })
-    }).then(r => r.json().then(d => ({ ok: r.ok, d: d })))
-      .then(({ ok, d }) => {
-        if (!ok || String(d.success) !== 'true') throw new Error(d.message || 'failed');
-        input.value = '';
-        success.textContent = label;
-      })
-      .catch(() => {
-        success.textContent = 'Something went wrong. Try again, or email Lenny@thegrassyissue.com';
-      })
-      .finally(() => {
-        if (btn) btn.disabled = false;
-        success.classList.add('show');
-        setTimeout(() => { success.classList.remove('show'); success.textContent = label; }, 5000);
-      });
+    }).catch(() => {});
+
+    input.value = '';
+    success.classList.add('show');
+    setTimeout(() => success.classList.remove('show'), 3000);
   });
 
   // --- Sticky nav shrink on scroll ---

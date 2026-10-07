@@ -98,9 +98,11 @@ BODY = """
     <p><strong>Display advertising.</strong> There are no banners here and there is not going to be
     a banner slot.</p>
 
-    <p><strong>Links to somebody else's promotion.</strong> Sweepstakes, giveaways, affiliate
-    round-ups for gear nobody here has looked at &mdash; these send a reader away from the site for
-    nothing and they are not something TGI carries.</p>
+    <p><strong>Links to somebody else's promotion.</strong> Sweepstakes, giveaways and
+    affiliate round-ups for gear nobody here has looked at send a reader away from the site for
+    nothing, and TGI does not carry them. Some product links in our own posts do earn a small
+    commission, and that never decides what we cover or how it ranks. The
+    <a href="/disclosure" style="color:inherit;border-bottom:1px solid currentColor">disclosure</a> has the details.</p>
 
     <p><strong>Coverage of one brand at another's expense.</strong> Comparisons stay on the facts.
     Nobody pays to have a competitor described badly.</p>
