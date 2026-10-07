@@ -179,11 +179,11 @@ CSS = """<style>
 @media(max-width:760px){#bi .rk{grid-template-columns:52px 1fr;gap:16px}#bi .rk-n{font-size:40px}
  #bi .rk-img{grid-column:2;position:static;aspect-ratio:4/3}#bi .rk-body{grid-column:2}}
 /*TGI-B25-DENSE*/
-@media(min-width:1000px){#bi .bi-top{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:start}
+@media(min-width:880px){#bi .bi-top{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:56px;align-items:start}
  #bi .bi-top .bi-intro,#bi .bi-top .bi-how{max-width:none}
  #bi .bi-top .bi-how{margin:4px 0 0;padding:20px 24px 8px;border:1px solid var(--bx-rule);border-top:2px solid var(--bx-ink);background:rgba(255,255,255,.35)}}
 @media(min-width:761px){#bi .rk{grid-template-columns:72px minmax(220px,320px) 1fr;gap:28px}
-#bi .rk-img{aspect-ratio:4/5;position:sticky;top:96px}}
+#bi .rk-img{aspect-ratio:4/5}}
 #bi .rk p{max-width:none}
 #bi .sig{max-width:none}
 #bi .bi-list{margin-top:36px}
