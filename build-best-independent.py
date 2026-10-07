@@ -368,12 +368,6 @@ body = f"""<main id="bi">
   <section class="bi-how">
 {HOW}
   </section>
-  <section class="bi-glance">
-<h2>The list at a glance</h2>
-<div class="bi-tw"><table class="bi-table"><thead><tr><th>No.</th><th>Brand</th><th>Based</th><th>Best for</th></tr></thead><tbody>
-{GLANCE}
-</tbody></table></div>
-  </section>
   <ol class="bi-list">
 {chr(10).join(rows)}
   </ol>

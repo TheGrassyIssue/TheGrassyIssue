@@ -1,0 +1,444 @@
+{
+ "band-dusk": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: Muny Conservancy dusk photo not found on their current site"
+ },
+ "band-hist-fairway": {
+  "url": "https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/6fe2d263-99ae-442b-a1eb-bf848cef3bcd/PICA-21294.jpg?format=original",
+  "w": 2401,
+  "h": 1350,
+  "same_photo": true,
+  "old": "900x1125",
+  "score": 0.093,
+  "note": "The Muny Conservancy (official Lions Muni nonprofit) Squarespace original; PICA = Austin History Center archival"
+ },
+ "band-hole16": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: Wikimedia CC0 (Magnushopium), not a venue source; not fetched"
+ },
+ "barton": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: aerial-with-skyline not found on austintexas.gov/Widen"
+ },
+ "barton-2": {
+  "url": "https://austin.widen.net/content/f758065b-131e-4e29-a88d-23638c6c5d85/original/Barton-Springs-Pool34.jpg",
+  "w": 1024,
+  "h": 768,
+  "same_photo": true,
+  "old": "614x767",
+  "score": 0.008,
+  "note": "Widen original is only 1024x768 (renditions above that are upscales); 4:5 crop max ~614x768 = current"
+ },
+ "barton-3": {
+  "url": "https://austin.widen.net/content/s22hg55z1o/original/Barton%20Springs%20Pool3_0.jpg",
+  "w": 4032,
+  "h": 3024,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.055,
+  "note": "City of Austin Widen DAM original"
+ },
+ "criquet-0": {
+  "url": "https://cdn.shopify.com/s/files/1/2546/6304/files/WB-35.jpg",
+  "w": 1500,
+  "h": 1118,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.115,
+  "note": "Shopify original is 1500x1118 landscape; 4:5 crop max ~894x1118"
+ },
+ "criquet-1": {
+  "url": "https://cdn.shopify.com/s/files/1/2546/6304/files/WB-32.jpg",
+  "w": 1500,
+  "h": 1118,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.135,
+  "note": "Shopify original is 1500x1118 landscape"
+ },
+ "criquet-2": {
+  "url": "https://cdn.shopify.com/s/files/1/2546/6304/files/WB-29.jpg",
+  "w": 1500,
+  "h": 1118,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.104,
+  "note": "Shopify original is 1500x1118 landscape"
+ },
+ "equip-2": {
+  "url": "https://login.bunkhousehotels.com/hotel-magdalena/wp-content/uploads/sites/2/2023/07/Nick_Simonite_EQR_HeroImages00005.webp",
+  "w": 1500,
+  "h": 995,
+  "same_photo": true,
+  "old": "640x800",
+  "score": 0.104,
+  "note": "Hotel Magdalena (Equipment Room's host hotel, Bunkhouse) WP media; largest on site 1500x995"
+ },
+ "equip-3": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: not on equipmentroom.com (Akamai-blocked from sandbox; media API shows no such photo) or Hotel Magdalena WP; see alt"
+ },
+ "equip-3-alt": {
+  "url": "https://login.bunkhousehotels.com/hotel-magdalena/wp-content/uploads/sites/2/2024/11/EQ_SocialShoot-40.jpg",
+  "w": 3644,
+  "h": 5464,
+  "same_photo": false,
+  "old": "720x900",
+  "score": 0.769,
+  "note": "alt: different photo (record wall + guests, portrait) from Hotel Magdalena (Equipment Room's host hotel, Bunkhouse) WP media"
+ },
+ "equip-4": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: same; see alt"
+ },
+ "equip-4-alt": {
+  "url": "https://login.bunkhousehotels.com/hotel-magdalena/wp-content/uploads/sites/2/2024/11/EQ_SocialShoot-41.jpg",
+  "w": 4000,
+  "h": 2668,
+  "same_photo": false,
+  "old": "720x900",
+  "score": 0.893,
+  "note": "alt: different photo (lounge with guests, landscape) from Hotel Magdalena (Equipment Room's host hotel, Bunkhouse) WP media"
+ },
+ "equipment-room": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: same; see alt"
+ },
+ "equipment-room-alt": {
+  "url": "https://login.bunkhousehotels.com/hotel-magdalena/wp-content/uploads/sites/2/2024/11/Nick_Simonite_EQR_Details00003-1.jpg",
+  "w": 5000,
+  "h": 3333,
+  "same_photo": false,
+  "old": "1000x1250",
+  "score": 0.967,
+  "note": "alt: different photo (DJ at turntables/mixer) from Hotel Magdalena (Equipment Room's host hotel, Bunkhouse) WP media"
+ },
+ "hero": {
+  "url": "https://www.lostpinesresortandspa.com/wp-content/uploads/2026/06/67992c02289bd9b3029dbc46_673647357e38529e7715026d_AUSLP_P112_Golf_Course.jpg",
+  "w": 1280,
+  "h": 853,
+  "same_photo": true,
+  "old": "1600x685",
+  "score": 0.074,
+  "note": "same photo, but site copy is only 1280x853 (current 1600x685 was upscaled); no larger found"
+ },
+ "hero-alt": {
+  "url": "https://www.lostpinesresortandspa.com/wp-content/uploads/2026/05/golf-hero.jpg",
+  "w": 4096,
+  "h": 2731,
+  "same_photo": false,
+  "old": "1600x685",
+  "score": 0.79,
+  "note": "alt: different Lost Pines course photo (green above the woods), 4096x2731"
+ },
+ "kizer": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: not on austintexas.gov; local copy images/feed/*9820.jpg 1200x720 has unknown source"
+ },
+ "kizer-2": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: same; images/feed/*9821.jpg 1200x684"
+ },
+ "kizer-3": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: same; images/feed/*9823.jpg 1200x762"
+ },
+ "leroy": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: raw-beef photo not on leroyandlewisbbq.com"
+ },
+ "leroy-2": {
+  "url": "https://leroyandlewisbbq.com/wp-content/uploads/2020/04/8C58DEAF-1583-4FB4-A3D4-68A5971BC38F.jpg",
+  "w": 4011,
+  "h": 2778,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.145,
+  "note": ""
+ },
+ "leroy-3": {
+  "url": "https://leroyandlewisbbq.com/wp-content/uploads/2024/02/Leroy_Lewis1286.jpg",
+  "w": 8048,
+  "h": 5368,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.536,
+  "note": "same photo verified visually (current is a tight crop of the left side)"
+ },
+ "leroy-4": {
+  "url": "https://leroyandlewisbbq.com/wp-content/uploads/2024/02/IMGL0022.jpg",
+  "w": 5464,
+  "h": 8192,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.004,
+  "note": ""
+ },
+ "lions": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: not found on austintexas.gov or themunyconservancy.com"
+ },
+ "lions-2": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: clubhouse photo is Wikimedia (Larry D. Moore, CC BY 4.0), not a venue source; see lions-2-alt"
+ },
+ "lions-2-alt": {
+  "url": "https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/a5556d27-9046-4af6-94ea-8880f179f798/Lions+Aerial+OHenry+View+I+%282%29.jpg?format=original",
+  "w": 2500,
+  "h": 1407,
+  "same_photo": false,
+  "old": "1000x1250",
+  "score": 0.868,
+  "note": "alt: different photo (Lions aerial with skyline) from The Muny Conservancy; current lions-2 clubhouse is a Wikimedia CC BY photo, not a venue source"
+ },
+ "lions-3": {
+  "url": "https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/584f20db-0183-47dc-b11d-4c4de4129d2a/Lions+Municipal+Aerial+I.jpg?format=original",
+  "w": 2500,
+  "h": 1406,
+  "same_photo": true,
+  "old": "800x1000",
+  "score": 0.139,
+  "note": "The Muny Conservancy (official Lions Muni nonprofit) Squarespace original"
+ },
+ "lions-4": {
+  "url": "https://images.squarespace-cdn.com/content/v1/614cd23daef8cb2ca9a506b4/281dc8d1-2fe0-48dc-8984-3abaf0698731/Background+Slideshows+History+Page+I-thumbnail.jpg?format=original",
+  "w": 1391,
+  "h": 1043,
+  "same_photo": true,
+  "old": "800x1000",
+  "score": 0.017,
+  "note": "The Muny Conservancy (official Lions Muni nonprofit) Squarespace original; only a -thumbnail named file is on the site (1391x1043 at format=original)"
+ },
+ "loro": {
+  "url": "https://www.loroeats.com/wp-content/uploads/2026/05/loro-asian-fusion-and-bbq.jpg",
+  "w": 2028,
+  "h": 1080,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.022,
+  "note": "original 2028x1080 landscape; 4:5 crop max 864x1080"
+ },
+ "loro-2": {
+  "url": "https://www.loroeats.com/wp-content/uploads/2023/03/Loro_Austin_May_2018_12.jpg",
+  "w": 3366,
+  "h": 4458,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.041,
+  "note": "WP full-size original (unscaled)"
+ },
+ "loro-3": {
+  "url": "https://www.loroeats.com/wp-content/uploads/2023/03/LOR00241-1.jpg",
+  "w": 7952,
+  "h": 5304,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.265,
+  "note": "WP full-size original; verified visually"
+ },
+ "loro-4": {
+  "url": "https://www.loroeats.com/wp-content/uploads/2023/01/slicing-smoked-beef-brisket.jpg",
+  "w": 800,
+  "h": 1422,
+  "same_photo": true,
+  "old": "800x1000",
+  "score": 0.172,
+  "note": "original is 800x1422; same width as current, no larger exists"
+ },
+ "lostpines-0": {
+  "url": "https://www.lostpinesresortandspa.com/wp-content/uploads/2026/06/67992c02289bd9b3029dbc46_673647357e38529e7715026d_AUSLP_P112_Golf_Course.jpg",
+  "w": 1280,
+  "h": 853,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.358,
+  "note": "same photo as hero; only 1280x853 on site, smaller than current"
+ },
+ "lostpines-1": {
+  "url": "https://www.lostpinesresortandspa.com/wp-content/uploads/2026/07/AUSLP-P0914-Golf-Flatlay-Club-Balls.jpg",
+  "w": 6720,
+  "h": 4480,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.17,
+  "note": "WP unscaled original"
+ },
+ "lostpines-2": {
+  "url": "https://www.lostpinesresortandspa.com/wp-content/uploads/2026/07/Hyatt-Regency-Lost-Pines-Resort-P390-Golf-Course.jpg",
+  "w": 8000,
+  "h": 5333,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.253,
+  "note": "WP unscaled original"
+ },
+ "lostpines-4": {
+  "url": "https://www.lostpinesresortandspa.com/wp-content/uploads/2026/06/Golf_Header.png",
+  "w": 2160,
+  "h": 2055,
+  "same_photo": true,
+  "old": "800x1000",
+  "score": 0.192,
+  "note": "same photo, but it sits inside a slightly tilted collage graphic with NATURES PLAYGROUND text box top-right; usable photo area roughly 1850x1500, a clean 4:5 crop ~1150x1440 is possible"
+ },
+ "meanwhile": {
+  "url": null,
+  "w": null,
+  "h": null,
+  "same_photo": false,
+  "note": "no larger found: tap-room pint photo not on meanwhilebeer.com or its Shopify"
+ },
+ "meanwhile-2": {
+  "url": "https://cdn.shopify.com/s/files/1/0447/9785/3856/files/Pint_Glass.png",
+  "w": 2599,
+  "h": 2599,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.439,
+  "note": "same photo verified visually (current is letterboxed onto cream canvas)"
+ },
+ "meanwhile-3": {
+  "url": "https://cdn.shopify.com/s/files/1/0447/9785/3856/files/Oktoberfest_2026_Stein.png",
+  "w": 800,
+  "h": 800,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.571,
+  "note": "same photo verified visually; Shopify original only 800x800"
+ },
+ "orms-0": {
+  "url": "https://cdn.shopify.com/s/files/1/1357/7833/files/BallMarker1801.png",
+  "w": 2048,
+  "h": 2048,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.002,
+  "note": "transparent PNG; current was composited on cream"
+ },
+ "orms-1": {
+  "url": "https://cdn.shopify.com/s/files/1/1357/7833/products/BallMarkerEngravedBack_2e49071f-ee83-4dfa-b7ae-793d214e425d.png",
+  "w": 1080,
+  "h": 1080,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.004,
+  "note": "Shopify original 1080x1080; largest available"
+ },
+ "orms-2": {
+  "url": "https://cdn.shopify.com/s/files/1/1357/7833/files/BallMarker1803.png",
+  "w": 2048,
+  "h": 2048,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.17,
+  "note": "transparent PNG (State of Texas engraved marker product); verified visually"
+ },
+ "orms-3": {
+  "url": "https://cdn.shopify.com/s/files/1/1357/7833/products/BallMarkerEngravedBack_2e49071f-ee83-4dfa-b7ae-793d214e425d.png",
+  "w": 1080,
+  "h": 1080,
+  "same_photo": true,
+  "old": "864x1080",
+  "score": 0.003,
+  "note": "same source as orms-1 (different crop); 1080x1080 is largest"
+ },
+ "smg-0": {
+  "url": "https://cdn.shopify.com/s/files/1/0473/0529/3981/files/20260528_SM_Golf_Towel_Green.png",
+  "w": 1200,
+  "h": 1800,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.002,
+  "note": ""
+ },
+ "smg-1": {
+  "url": "https://cdn.shopify.com/s/files/1/0473/0529/3981/files/SM_Towel_Green_front_web.jpg",
+  "w": 2400,
+  "h": 3600,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.001,
+  "note": ""
+ },
+ "smg-3": {
+  "url": "https://cdn.shopify.com/s/files/1/0473/0529/3981/files/20260528_SM_Golf_Towel_Green_2.png",
+  "w": 1200,
+  "h": 1800,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.002,
+  "note": ""
+ },
+ "veracruz": {
+  "url": "https://images.squarespace-cdn.com/content/v1/678526a0f5699a1308c6757e/0ca23ef9-ea93-4212-ac72-e5705c55db4f/469246570_18472950382056800_5809737616082238431_n.jpg?format=original",
+  "w": 896,
+  "h": 1592,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.113,
+  "note": "original is 896x1592 (current 1000x1250 was upscaled)"
+ },
+ "veracruz-2": {
+  "url": "https://images.squarespace-cdn.com/content/v1/678526a0f5699a1308c6757e/97014a06-9944-4c6c-a0c6-28a7affb04bb/01tacos-2-superJumbo.png?format=original",
+  "w": 2048,
+  "h": 1366,
+  "same_photo": true,
+  "old": "800x1000",
+  "score": 0.324,
+  "note": "same photo, verified visually (crop differs); filename suggests NYT origin though hosted on veracruzallnatural.com"
+ },
+ "veracruz-3": {
+  "url": "https://images.squarespace-cdn.com/content/v1/678526a0f5699a1308c6757e/fb895f8a-0911-484b-bb57-627afd3891c7/398366921_3564525380463583_4910250008907796103_n.jpg?format=original",
+  "w": 1440,
+  "h": 1799,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.008,
+  "note": ""
+ },
+ "veracruz-4": {
+  "url": "https://static1.squarespace.com/static/678526a0f5699a1308c6757e/t/67fd23a87869c808d46b5a88/1744642984136/473653787_18480466684056800_1496443704412160880_n.jpg",
+  "w": 1000,
+  "h": 1250,
+  "same_photo": true,
+  "old": "1000x1250",
+  "score": 0.001,
+  "note": "static1 original is 1000x1250, no larger exists on site"
+ }
+}
