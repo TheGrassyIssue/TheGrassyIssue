@@ -38,6 +38,7 @@ PAGES = [
     "drops/hat-brands-off-the-rack-off-the-radar.html",
     "drops/brand-to-know-slice-town.html",
     "drops/brand-to-know-mackem-golf.html",
+    "drops/in-defense-of-the-slow-round.html",
     "drops/which-golfer-are-you.html",
     "drops/brand-to-know-local-gc.html",
     "drops/fella-golf.html",
