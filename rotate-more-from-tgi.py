@@ -82,9 +82,18 @@ def pins():
     except FileNotFoundError:
         return {}
 
-def pick(P, self_slug, n=4, seed=None, pinned=()):
+def excludes():
+    # Per-page exclusions (8 Oct 2026, Lenny on Small Things: "remove the summer style list - 10 golfers who
+    # get it and replace with a different brand to know rec"). data/more-excludes.json maps a page slug to
+    # post URLs that never appear in its More from TGI grid, static or rotated.
+    try:
+        return json.load(open(os.path.join(ROOT, "data/more-excludes.json")))
+    except FileNotFoundError:
+        return {}
+
+def pick(P, self_slug, n=4, seed=None, pinned=(), skip=()):
     rnd = random.Random(seed or self_slug)
-    cand = [p for p in P if p["u"] != self_slug]
+    cand = [p for p in P if p["u"] != self_slug and p["u"] not in skip]
     out = [p for u in pinned for p in cand if p["u"] == u]
     fresh = [p for p in cand if (TODAY - datetime.date.fromisoformat(p["d"])).days <= 14 and p not in out]
     if fresh and len(out) < n: out.append(rnd.choice(fresh))
@@ -127,15 +136,18 @@ def main(apply_):
             grids[f] = tuple(re.findall(r'<a href="([^"]+)" class="more-card"', s[sp[0]:sp[1]])) if sp else ()
     dupcount = collections.Counter(grids.values())
     fixed = injected = 0
-    PIN = pins()
+    PIN = pins(); EXC = excludes()
     for f, hrefs in grids.items():
         s = open(f, encoding="utf-8").read(); o = s
         slug = "/" + os.path.relpath(f, ROOT)[:-5]
         pin = PIN.get(slug, [])
-        open_tag = '<div class="more-grid"' + (f' data-pin="{",".join(pin)}"' if pin else "") + '>'
-        if dupcount[hrefs] > 1 or slug in hrefs or len(hrefs) < 4 or tuple(hrefs[:len(pin)]) != tuple(pin) or open_tag not in s:
+        exc = EXC.get(slug, [])
+        open_tag = ('<div class="more-grid"' + (f' data-pin="{",".join(pin)}"' if pin else "")
+                    + (f' data-exclude="{",".join(exc)}"' if exc else "") + '>')
+        if (dupcount[hrefs] > 1 or slug in hrefs or len(hrefs) < 4 or tuple(hrefs[:len(pin)]) != tuple(pin)
+                or open_tag not in s or any(u in hrefs for u in exc)):
             sp = grid_span(s)
-            s = s[:sp[0]] + open_tag + '\n' + cards(pick(P, slug, pinned=pin)) + "\n  </div>" + s[sp[1]:]
+            s = s[:sp[0]] + open_tag + '\n' + cards(pick(P, slug, pinned=pin, skip=exc)) + "\n  </div>" + s[sp[1]:]
             fixed += 1
         if TAG not in s:
             k = s.rfind("</body>")

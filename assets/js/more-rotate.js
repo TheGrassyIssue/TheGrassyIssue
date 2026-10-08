@@ -9,7 +9,8 @@
   fetch('/data/more-pool.json', {cache: 'no-cache'}).then(function (r) { return r.ok ? r.json() : null; }).then(function (P) {
     if (!P || P.length < 6) return;
     var now = Date.now();
-    var cand = P.filter(function (p) { return p.u !== here; });
+    var skip = (grid.getAttribute('data-exclude') || '').split(',').filter(Boolean);
+    var cand = P.filter(function (p) { return p.u !== here && skip.indexOf(p.u) < 0; });
     function age(p) { return Math.max(0, (now - Date.parse(p.d + 'T12:00:00Z')) / 864e5); }
     function w(p, kinds) { return (0.04 + Math.pow(0.5, age(p) / 21)) / (1 + (kinds[p.k] || 0) * 0.6); }
     var pin = (grid.getAttribute('data-pin') || '').split(',').filter(Boolean);
