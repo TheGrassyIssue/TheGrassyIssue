@@ -58,7 +58,7 @@ def tags_of(b):
 TAX = [
 ("tag", "design-nerd", "Design-Nerd Golf Brands",
  "Design-Nerd Golf Brands — The Grassy Issue",
- "Forty-five golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
+ "Forty-seven golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
  """<p>This is the largest group in the Index, and the loosest, which is usually a sign a
  category is real rather than invented. What connects <strong>Bettinardi</strong> milling a putter
  from one billet, <strong>Inside Story Socks</strong> printing a narrative into a sock, and
@@ -73,7 +73,7 @@ TAX = [
  ),
 ("tag", "made-by-hand", "Golf Brands That Make It By Hand",
  "Handmade Golf Gear — Small-Batch Brands | The Grassy Issue",
- "Forty-two golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
+ "Forty-five golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
  """<p>The honest version of &ldquo;handmade&rdquo; is narrow, and this is our attempt to hold the
  line on it. <strong>Artisan Golf</strong> qualifies because Mike Taylor still grinds every wedge
  himself and you cannot order one without an in-person fitting. <strong>Ally Aiken</strong>
@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Thirty golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Thirty-one golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -102,9 +102,9 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands, Founder-Owned (2026) | The Grassy Issue",
- "Fifty-seven independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
+ "Sixty independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
  """<p>An <strong>independent golf brand</strong> is one with no parent company, no licensing group and no outside
- investors behind it: it is owned by the people who started it, or by a family. Fifty-seven brands in the Index
+ investors behind it: it is owned by the people who started it, or by a family. Sixty brands in the Index
  meet that bar. <strong>Bettinardi</strong> is still family-run out of Tinley Park. <strong>Seamus Golf</strong>
  is owned outright by Akbar and Megan Chisti. <strong>No Laying Up</strong> answers to its own audience and
  nobody else. The twenty-five we have covered most are ranked on
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Seventy-one golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Seventy-seven golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a

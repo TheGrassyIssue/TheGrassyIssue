@@ -46,6 +46,12 @@ DOMAINS = {
     # added 6 Oct 2026 with Brand to Know — SLICE TOWN.
     "slice-town": ["slice-town.com"],
     "rookline": ["rookline.com"],
+    "totem": ["totem.golf"],
+    "birdie-balm": ["birdiebalm.co"],
+    "show-out-engraving": ["showoutengraving.com"],
+    "kraken-golf": ["krakengolf.com"],
+    "provision-machining-design": ["provisionmachiningdesign.com"],
+    "western-birch": ["westernbirch.com"],
     # added 6 Oct 2026 with Brand to Know — Mackem Golf.
     "mackem-golf": ["mackemgolf.com"],
     # added 5 Oct 2026 with Off the Rack, Off the Radar: Six Hat Brands to Know.
