@@ -1,0 +1,763 @@
+{
+ "pick": {
+  "sigpolo": [
+   "signature-blend-cotton-cashmere-polo-oatmeal-heather",
+   "signature-blend-cotton-cashmere-polo-navy-blazer",
+   "signature-blend-cotton-cashmere-polo-charcoal-heather"
+  ],
+  "cashcrew": [
+   "ottoman-rib-cashmere-crew-oatmeal-heather",
+   "ottoman-rib-cashmere-crew-stone-blue",
+   "ottoman-rib-cashmere-crew-grey-heather"
+  ],
+  "cashhood": [
+   "ottoman-rib-cashmere-hoodie",
+   "ottoman-rib-cashmere-hoodie-stone-blue"
+  ],
+  "pivot": [
+   "brushed-twill-pivot-pant",
+   "brushed-twill-pivot-pant-navy-blazer"
+  ],
+  "watchcap": [
+   "cashmere-watch-cap-oatmeal-heather",
+   "cashmere-watch-cap-grey-heather",
+   "cashmere-watch-cap-stone-blue"
+  ],
+  "hudpolo": [
+   "hudson-3-button-polo-with-brrr-dimple-grey-shade",
+   "hudson-3-button-polo-with-brrr-steel-grey",
+   "hudson-3-button-polo-with-brrr-bunker-light-grey"
+  ],
+  "hudqz": [
+   "hudson-quarter-zip-lichen",
+   "hudson-quarter-zip-dark-navy",
+   "hudson-quarter-zip-steel-grey"
+  ],
+  "hudcrew": [
+   "hudson-crew-elephant",
+   "hudson-crew-highrise"
+  ],
+  "hudhood": [
+   "hudson-hoodie-elephant",
+   "hudson-hoodie-dark-navy"
+  ],
+  "sscrew": [
+   "southside-crew-vintage-green",
+   "southside-crew-wet-sand"
+  ],
+  "circa": [
+   "circa-windbreaker-vintage-green",
+   "circa-windbreaker-steel-grey"
+  ],
+  "fivepocket": [
+   "hudson-5-pocket-pant-dark-moss",
+   "hudson-5-pocket-pant-wet-sand"
+  ],
+  "zephyr": [
+   "zephyr-pant-regal-navy",
+   "zephyr-pant-light-grey"
+  ],
+  "juneau": [
+   "juneau-lined-jogger-2-0-dark-moss",
+   "juneau-lined-jogger-2-0-oil-can"
+  ],
+  "yeoman": [
+   "performance-golf-short-elephant",
+   "performance-golf-short-dark-navy"
+  ],
+  "pullon": [
+   "hudson-pull-on-short-slate",
+   "hudson-pull-on-short-dark-navy"
+  ],
+  "oneunder": [
+   "one-under-cap-chive",
+   "one-under-cap-light-grey"
+  ],
+  "nopics": [
+   "no-pictures-t-shirt-vintage-green",
+   "no-pictures-t-shirt-stone"
+  ]
+ },
+ "frames": {
+  "sigpolo": [
+   {
+    "f": "/images/rookline/sigpolo-v2-0.jpg",
+    "h": "signature-blend-cotton-cashmere-polo-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/OATMEAL-2.jpg?v=1789500275",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/sigpolo-v2-1.jpg",
+    "h": "signature-blend-cotton-cashmere-polo-navy-blazer",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/NAVY-1_5fb1c28b-4f14-4b81-a52b-269fc480bac9.jpg?v=1789500429",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/sigpolo-v2-2.jpg",
+    "h": "signature-blend-cotton-cashmere-polo-charcoal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/CHARCOAL-1_3caf2a27-bdf5-4b7c-93a3-5b8c3f33e822.jpg?v=1789500228",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/sigpolo-v2-3.jpg",
+    "h": "signature-blend-cotton-cashmere-polo-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/OATMEAL-1.jpg?v=1789500275",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/sigpolo-v2-4.jpg",
+    "h": "signature-blend-cotton-cashmere-polo-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S82.OATMEAL.HEATHER-12073.jpg?v=1787772178",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/sigpolo-v2-5.jpg",
+    "h": "signature-blend-cotton-cashmere-polo-navy-blazer",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S82.NAVY.BLAZER-12070.jpg?v=1787771974",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "cashcrew": [
+   {
+    "f": "/images/rookline/cashcrew-v2-0.jpg",
+    "h": "ottoman-rib-cashmere-crew-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew-1.jpg?v=1789481307",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashcrew-v2-1.jpg",
+    "h": "ottoman-rib-cashmere-crew-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/stone-blue-1.jpg?v=1789481777",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashcrew-v2-2.jpg",
+    "h": "ottoman-rib-cashmere-crew-grey-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/gray-4.jpg?v=1789481213",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashcrew-v2-3.jpg",
+    "h": "ottoman-rib-cashmere-crew-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/stone-blue-2.jpg?v=1789481777",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashcrew-v2-4.jpg",
+    "h": "ottoman-rib-cashmere-crew-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S81.OATMEAL.HEATHER-12080.jpg?v=1787772200",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/cashcrew-v2-5.jpg",
+    "h": "ottoman-rib-cashmere-crew-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S81.STONE.BLUE-12085.jpg?v=1787771470",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "cashhood": [
+   {
+    "f": "/images/rookline/cashhood-v2-0.jpg",
+    "h": "ottoman-rib-cashmere-hoodie",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/sharpen-grey.jpg?v=1789501915",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashhood-v2-1.jpg",
+    "h": "ottoman-rib-cashmere-hoodie",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/GREY-2.jpg?v=1789482765",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashhood-v2-2.jpg",
+    "h": "ottoman-rib-cashmere-hoodie-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/STONEBLUE-3_b8d0a47d-21c0-48ad-84c0-813933e08adf.jpg?v=1790007588",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashhood-v2-3.jpg",
+    "h": "ottoman-rib-cashmere-hoodie",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/GREY-1.jpg?v=1789482766",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/cashhood-v2-4.jpg",
+    "h": "ottoman-rib-cashmere-hoodie",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S80.CHARCOAL.HEATHER.2-12118.jpg?v=1787771252",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/cashhood-v2-5.jpg",
+    "h": "ottoman-rib-cashmere-hoodie-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S80.STONE.BLUE.2-12114.jpg?v=1787771345",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "pivot": [
+   {
+    "f": "/images/rookline/pivot-v2-0.jpg",
+    "h": "brushed-twill-pivot-pant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ELEPHANT01.jpg?v=1789489284",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/pivot-v2-1.jpg",
+    "h": "brushed-twill-pivot-pant-navy-blazer",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/navy-3.jpg?v=1789489699",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/pivot-v2-2.jpg",
+    "h": "brushed-twill-pivot-pant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ELEPHANT-6.jpg?v=1789489284",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/pivot-v2-3.jpg",
+    "h": "brushed-twill-pivot-pant-navy-blazer",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/navy-2.jpg?v=1789489699",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/pivot-v2-4.jpg",
+    "h": "brushed-twill-pivot-pant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26P50.ELEPHANT-12069.jpg?v=1787064933",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/pivot-v2-5.jpg",
+    "h": "brushed-twill-pivot-pant-navy-blazer",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26P50.NAVY.BLAZER-12066_f7035544-74f8-4986-96f7-30bca5dab0c9.jpg?v=1787770669",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "watchcap": [
+   {
+    "f": "/images/rookline/watchcap-v2-0.jpg",
+    "h": "cashmere-watch-cap-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-2_1ddccbd9-a14a-4728-942c-38a9eabee1dd.jpg?v=1789501396",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/watchcap-v2-1.jpg",
+    "h": "cashmere-watch-cap-grey-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/gray-1_25ac6cbd-7a8e-4243-9992-882c3a8a2b39.jpg?v=1789501585",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/watchcap-v2-2.jpg",
+    "h": "cashmere-watch-cap-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/STONEBLUE-1.jpg?v=1789501446",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/watchcap-v2-3.jpg",
+    "h": "cashmere-watch-cap-oatmeal-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26H02.OATMEAL.HEATHER.212108_535a4caf-6a93-492c-83c6-942faaa2b97b.jpg?v=1790106192",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/watchcap-v2-4.jpg",
+    "h": "cashmere-watch-cap-grey-heather",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26H02.CHARCOAL.HEATHER.2-12105-MAX.jpg?v=1790106105",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/watchcap-v2-5.jpg",
+    "h": "cashmere-watch-cap-stone-blue",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26H02.STONE.BLUE.2-12106-MAX.jpg?v=1790106068",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "hudpolo": [
+   {
+    "f": "/images/rookline/hudpolo-v2-0.jpg",
+    "h": "hudson-3-button-polo-with-brrr-dimple-grey-shade",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/dimple-grey-shade-lifestyle.jpg?v=1758575518",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/hudpolo-v2-1.jpg",
+    "h": "hudson-3-button-polo-with-brrr-dimple-grey-shade",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/dimple-steel-front.jpg?v=1758235032",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/hudpolo-v2-2.jpg",
+    "h": "hudson-3-button-polo-with-brrr-bunker-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/BUNKER-GREY-FRONT.jpg?v=1758223283",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/hudpolo-v2-3.jpg",
+    "h": "hudson-3-button-polo-with-brrr-bunker-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/BUNKER-RAKE.jpg?v=1773858736",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/hudpolo-v2-4.jpg",
+    "h": "hudson-3-button-polo-with-brrr-dimple-grey-shade",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1766-RKL-HDSN_POLO.RG312545.DIMPLE.GREY.SHADE.1_0275.jpg?v=1755539392",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudpolo-v2-5.jpg",
+    "h": "hudson-3-button-polo-with-brrr-bunker-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1766-RKL_HDSN_POLO_RGF25TP14.LIGHT.GREY.1_0120.jpg?v=1754408440",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "hudqz": [
+   {
+    "f": "/images/rookline/hudqz-v2-0.jpg",
+    "h": "hudson-quarter-zip-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HUDSON-QZ-DARKNAVY-2.jpg?v=1761766708",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/hudqz-v2-1.jpg",
+    "h": "hudson-quarter-zip-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HUDSON-QZ-DARKNAVY-3.jpg?v=1761766708",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/hudqz-v2-2.jpg",
+    "h": "hudson-quarter-zip-steel-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/Look24_1613.jpg?v=1752520266",
+    "kind": "model",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudqz-v2-3.jpg",
+    "h": "hudson-quarter-zip-lichen",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HUDSON.QTR.ZIP.RG312075.LICHEN.1_0611.jpg?v=1757346495",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudqz-v2-4.jpg",
+    "h": "hudson-quarter-zip-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HUDSON_QTR_ZIP.RG312075.DARKNAVY.1.0602.jpg?v=1757346252",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "hudcrew": [
+   {
+    "f": "/images/rookline/hudcrew-v2-0.jpg",
+    "h": "hudson-crew-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/elephant-layflat-image_ad0cf7c7-3ab4-487a-a723-e8be2e62dc96.jpg?v=1773844443",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudcrew-v2-1.jpg",
+    "h": "hudson-crew-highrise",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/highrise-layflat-image.jpg?v=1773844375",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudcrew-v2-2.jpg",
+    "h": "hudson-crew-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/elephant-details-image_c8d825bb-956f-4a87-becd-01d32ef3c8bb.jpg?v=1773873829",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudcrew-v2-3.jpg",
+    "h": "hudson-crew-highrise",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/highrise-details-image.jpg?v=1773844375",
+    "kind": "irl",
+    "warmed": true
+   }
+  ],
+  "hudhood": [
+   {
+    "f": "/images/rookline/hudhood-v2-0.jpg",
+    "h": "hudson-hoodie-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HDSN_HOODIE_RGS26075_ELEPHANT_SKIN_0445_2bbed3a7-d4e9-4699-b317-c28209ed2758.jpg?v=1774279201",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudhood-v2-1.jpg",
+    "h": "hudson-hoodie-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HDSN_HOODIE_RGS26075_DARK_NAVY_0460_14828f54-32cb-4755-8a39-e893af3a8383.jpg?v=1774294122",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudhood-v2-2.jpg",
+    "h": "hudson-hoodie-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HDSN_HOODIE_RGS26075_ELEPHANT_SKIN_0446_eecfa44c-ae4c-41fe-b854-a127e9bc47c3.jpg?v=1774279201",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/hudhood-v2-3.jpg",
+    "h": "hudson-hoodie-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HDSN_HOODIE_RGS26075_DARK_NAVY_0461_c096f097-8fb5-4f9c-bd99-342ff933d7e3.jpg?v=1774294122",
+    "kind": "irl",
+    "warmed": true
+   }
+  ],
+  "sscrew": [
+   {
+    "f": "/images/rookline/sscrew-v2-0.jpg",
+    "h": "southside-crew-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RG311090.VINTAGE.GREEN.2.jpg?v=1752587264",
+    "kind": "model",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/sscrew-v2-1.jpg",
+    "h": "southside-crew-wet-sand",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/Look43_top_1648.jpg?v=1752522782",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/sscrew-v2-2.jpg",
+    "h": "southside-crew-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG311090.VINTAGE.GREEN.1_0327_c6861f99-a128-4d47-9b63-f69841ba1473.jpg?v=1752178374",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/sscrew-v2-3.jpg",
+    "h": "southside-crew-wet-sand",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG311090.WET.SAND.1_0297_f7ea8247-cdd9-4409-b55e-5c7afde78631.jpg?v=1752178134",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "circa": [
+   {
+    "f": "/images/rookline/circa-v2-0.jpg",
+    "h": "circa-windbreaker-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/circa-lifestyle-vintage-green.jpg?v=1761761297",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/circa-v2-1.jpg",
+    "h": "circa-windbreaker-steel-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/CIRCA-STEELGREY-1.jpg?v=1762454593",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/circa-v2-2.jpg",
+    "h": "circa-windbreaker-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RG55099.VINTAGE.GREEN.2.jpg?v=1761761292",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/circa-v2-3.jpg",
+    "h": "circa-windbreaker-steel-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RG55099.STEEL.GREY.2.jpg?v=1762454593",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/circa-v2-4.jpg",
+    "h": "circa-windbreaker-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG55099.VINTAGE.GREEN.1_0352.jpg?v=1752178982",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/circa-v2-5.jpg",
+    "h": "circa-windbreaker-steel-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG55099.STEEL.GREY.1_0337.jpg?v=1752178997",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "fivepocket": [
+   {
+    "f": "/images/rookline/fivepocket-v2-0.jpg",
+    "h": "hudson-5-pocket-pant-dark-moss",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/HUDSON-5-POCKET-DARKMOSS-2.jpg?v=1761761852",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/fivepocket-v2-1.jpg",
+    "h": "hudson-5-pocket-pant-wet-sand",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/golf-performance-pant-wet-sand.jpg?v=1768410531",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/fivepocket-v2-2.jpg",
+    "h": "hudson-5-pocket-pant-dark-moss",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG75614.DARK.MOSS.1_0692_fe9f947f-ac10-484e-8213-053c84f875b7.jpg?v=1752179698",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/fivepocket-v2-3.jpg",
+    "h": "hudson-5-pocket-pant-wet-sand",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG75614.WET.SAND.1_0684_c11d9ead-cb39-4ca9-bed6-ada4d0f0f4cc.jpg?v=1752179715",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "zephyr": [
+   {
+    "f": "/images/rookline/zephyr-v2-0.jpg",
+    "h": "zephyr-pant-regal-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ZEPHYR-NAVY-2.jpg?v=1761762005",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/zephyr-v2-1.jpg",
+    "h": "zephyr-pant-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/GOLF-PERFORMANCE-PANT.jpg?v=1768410360",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/zephyr-v2-2.jpg",
+    "h": "zephyr-pant-regal-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG75084.REGAL.NAVY.1_0724_3ddb9678-3130-42bb-8e6f-123624a700cb.jpg?v=1752180357",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/zephyr-v2-3.jpg",
+    "h": "zephyr-pant-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG75084.LIGHT.GREY.1_0719_2fd35192-0fbd-4cab-aaf0-cc7cbc49ac5c.jpg?v=1752180426",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "juneau": [
+   {
+    "f": "/images/rookline/juneau-v2-0.jpg",
+    "h": "juneau-lined-jogger-2-0-dark-moss",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/DSC08777.jpg?v=1773152375",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/juneau-v2-1.jpg",
+    "h": "juneau-lined-jogger-2-0-dark-moss",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1871-RKL-JUNEAU.2.0.RGS26P42.DARKMOSS.1.128617.jpg?v=1773152375",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/juneau-v2-2.jpg",
+    "h": "juneau-lined-jogger-2-0-oil-can",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1871-RKL-JUNEAU.2.0.RGS26P42.OILCAN.1.128621.jpg?v=1760970777",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/juneau-v2-3.jpg",
+    "h": "juneau-lined-jogger-2-0-dark-moss",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1871-RKL-JUNEAU.2.0.RGS26P42.DARKMOSS.3.28629.jpg?v=1773152375",
+    "kind": "irl",
+    "warmed": true
+   }
+  ],
+  "yeoman": [
+   {
+    "f": "/images/rookline/yeoman-v2-0.jpg",
+    "h": "performance-golf-short-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ELEPHANT-1.jpg?v=1784833853",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/yeoman-v2-1.jpg",
+    "h": "performance-golf-short-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ELEPHANT-2.jpg?v=1784833801",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/yeoman-v2-2.jpg",
+    "h": "performance-golf-short-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/GOLF-SHORT-NAVY_f62606b6-a58f-482c-bd14-0c262ddd837a.jpg?v=1788277484",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/yeoman-v2-3.jpg",
+    "h": "performance-golf-short-elephant",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/PRFC_SHORT_RGS26S023_ELEPHANT-_9702.jpg?v=1783454185",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/yeoman-v2-4.jpg",
+    "h": "performance-golf-short-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/PRFC_SHORT_RGS26S023_NAVY-_9706.jpg?v=1783454153",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "pullon": [
+   {
+    "f": "/images/rookline/pullon-v2-0.jpg",
+    "h": "hudson-pull-on-short-slate",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/PULL-ON-GOLF-SHORT.jpg?v=1768411218",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/pullon-v2-1.jpg",
+    "h": "hudson-pull-on-short-slate",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG2292.SLATE.1_0730_560a3c33-de3e-48a4-b9a7-176bd64c94f5.jpg?v=1768411218",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/pullon-v2-2.jpg",
+    "h": "hudson-pull-on-short-dark-navy",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG2292.DARK.NAVY.1_0738_b79195bd-e791-427e-a3f1-98e623709304.jpg?v=1768411231",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/pullon-v2-3.jpg",
+    "h": "hudson-pull-on-short-slate",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG2292.SLATE.2_0741_130a697c-eb0a-49f4-9d13-4d83b6f09afb.jpg?v=1768411218",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "oneunder": [
+   {
+    "f": "/images/rookline/oneunder-v2-0.jpg",
+    "h": "one-under-cap-chive",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ONEUNDERCAP-CHIVE-1.jpg?v=1770219078",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/oneunder-v2-1.jpg",
+    "h": "one-under-cap-chive",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ONEUNDERCAP-CHIVE3.jpg?v=1770219078",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/oneunder-v2-2.jpg",
+    "h": "one-under-cap-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ONEUNDERCAP-GREY1.jpg?v=1770219201",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/oneunder-v2-3.jpg",
+    "h": "one-under-cap-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/ONEUNDERCAP-GREY2.jpg?v=1770219201",
+    "kind": "irl",
+    "warmed": false
+   },
+   {
+    "f": "/images/rookline/oneunder-v2-4.jpg",
+    "h": "one-under-cap-chive",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/26-2020-RKL_0093.jpg?v=1769790407",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/oneunder-v2-5.jpg",
+    "h": "one-under-cap-light-grey",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/26-2020-RKL_0111.jpg?v=1769790366",
+    "kind": "flat",
+    "warmed": true
+   }
+  ],
+  "nopics": [
+   {
+    "f": "/images/rookline/nopics-v2-0.jpg",
+    "h": "no-pictures-t-shirt-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/vintage-green_45978b9b-3d53-4a2c-ab50-c8e127f91ed6.jpg?v=1752178513",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/nopics-v2-1.jpg",
+    "h": "no-pictures-t-shirt-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RG311096.VINTAGE.GREEN.2.jpg?v=1752178513",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/nopics-v2-2.jpg",
+    "h": "no-pictures-t-shirt-stone",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/stone_86502668-d468-440d-8106-fc878b80dac2.jpg?v=1752178459",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/nopics-v2-3.jpg",
+    "h": "no-pictures-t-shirt-stone",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RG311096.STONE.2.jpg?v=1752178459",
+    "kind": "irl",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/nopics-v2-4.jpg",
+    "h": "no-pictures-t-shirt-vintage-green",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG311096.VINTAGE.GREEN.1_0272_2d81944d-c6ef-4552-9ded-8165393b03cf.jpg?v=1752178513",
+    "kind": "flat",
+    "warmed": true
+   },
+   {
+    "f": "/images/rookline/nopics-v2-5.jpg",
+    "h": "no-pictures-t-shirt-stone",
+    "src": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG311096.STONE.1_0278_dc4b0dde-c1ea-457f-9e14-31cbbb82525c.jpg?v=1752178459",
+    "kind": "flat",
+    "warmed": true
+   }
+  ]
+ }
+}
