@@ -23,7 +23,7 @@ def main(apply_, force):
     if not force and not changed():
         print("field guide: unchanged this deploy, date left alone"); return
     today = datetime.date.today()
-    iso, human = today.isoformat(), f"{today.day} {today.strftime('%B %Y')}"
+    iso, human = today.isoformat(), f"{today.strftime('%B')} {today.day}, {today.year}"
     s = F.read_text(encoding="utf-8"); o = s
     s, a = re.subn(r'("dateModified"\s*:\s*")[^"]*(")', rf'\g<1>{iso}\2', s, count=1)
     s, b = re.subn(r'(<span>Updated )[^<]*(</span>)', rf'\g<1>{human}\2', s, count=1)

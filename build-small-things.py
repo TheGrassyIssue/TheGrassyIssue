@@ -144,7 +144,7 @@ TAKE = """
     <p>Every pick here is a small thing made well enough to stay with you: twenty-five of them, each from a different independent maker, in brass, copper, bronze, hickory, leather and waxed canvas, materials that look better with use instead of worse. A copper marker darkens, a leather pouch creases, a hickory brush handle smooths out in your grip. None of it is disposable, and most of it costs less than a dozen balls.</p>
     <h2 class="products-hdr btk-story-hdr">Buy It Once</h2>
     <p>If you start with one thing, make it TOTEM&rsquo;s brass divot tool. It comes out on every green, it ages the way brass should, and it&rsquo;s the kind of tool that slowly becomes yours. From there, add a marker you like looking at and a pouch to keep it all in one place, and you won&rsquo;t be digging through the bottom of the bag for tees again.</p>
-    <p>Prices were read on each brand&rsquo;s own store on 8 October 2026, and everything was in stock that day. Non-US prices show an approximate dollar figure.</p>
+    <p>Prices were read on each brand&rsquo;s own store on October 8, 2026, and everything was in stock that day. Non-US prices show an approximate dollar figure.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -154,7 +154,7 @@ TAKE = """
       <div class="sidebar-detail"><span class="l">Our pick</span><span>TOTEM brass divot tool, $80</span></div>
       <div class="sidebar-detail"><span class="l">Materials</span><span>Brass, copper, bronze, hickory, leather</span></div>
       <div class="sidebar-detail"><span class="l">The splurge</span><span>Clint Orms Texas marker, $220</span></div>
-      <div class="sidebar-detail"><span class="l">Prices read</span><span>8 October 2026</span></div>
+      <div class="sidebar-detail"><span class="l">Prices read</span><span>October 8, 2026</span></div>
       <a href="#ball-markers" class="sidebar-cta">See the picks &darr;</a>
       <div class="hashtags">
         <span class="hashtag">#BallMarker</span>
@@ -178,7 +178,7 @@ FAQ = [
     ("How do you keep a golf bag organized?",
      "Use a small pouch for the round's kit so markers, tees and tools don't sink to the bottom of a pocket. Jones' Zipper Pouch ($30), Ghost Golf's Utility Pouch ($40), Steurer & Jacoby's waxed canvas pouch ($50), Mackem's Copley drawstring pouch and Hudson Sutler's Canvas Club Pouch ($50) all clip on or drop in."),
     ("What is the most expensive pick here?",
-     "Clint Orms' sterling silver State of Texas ball marker at $220, engraved by hand in Kerrville, Texas. Prices were read on each brand's own store on 8 October 2026."),
+     "Clint Orms' sterling silver State of Texas ball marker at $220, engraved by hand in Kerrville, Texas. Prices were read on each brand's own store on October 8, 2026."),
 ]
 
 
@@ -289,7 +289,7 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>TOTEM, Birdie Balm, Seamus, Fyfe, Edel, Craighill and more</span><span class="dot"></span>
-    <span>25 picks &middot; in stock 8 October 2026</span>
+    <span>25 picks &middot; in stock October 8, 2026</span>
   </div>
 </header>
 

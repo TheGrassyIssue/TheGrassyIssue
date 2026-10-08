@@ -64,6 +64,7 @@ PAGES = [
     "the-lottery-round-austin-private-clubs",
     "fourteen-independent-austin-coffee-shops",
     "date-night-after-36",
+    "date-night-vol-2-austin-restaurants-for-reconnecting",
     "8-special-day-rounds-near-austin",
     "on-our-radar-wild-spring-dunes",
 ]
