@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""wire-date-night-2-home.py — Date Night Vol. 2 card, slot 2. 8 October 2026.
+"""wire-date-night-2-home.py — Date Night Vol. 2 card, slot 1. 8 October 2026.
 Lenny: "Let's finish up the date night vol 2 post then deploy". Cloned from wire-small-things-home.py.
-First run inserts directly after the Small Things card (slot 2); a rerun updates the card where it sits. Dry run by default.
+First run inserts at slot 1 (new posts always lead); a rerun updates the card where it sits. Dry run by default.
 """
 import html
 import json
@@ -91,7 +91,7 @@ def main(apply_):
     if f'href="{SLUG}"' in h:
         sys.exit("! the index already links the post outside this script's card")
     if i is None:
-        anchor = '<!-- /TGI-SMALLTHINGS-CARD -->\n'   # slot 2: Lenny put Small Things in slot 1
+        anchor = 'aria-label="Content feed">\n'   # new posts always lead (Lenny, 8 Oct)
         i = h.index(anchor) + len(anchor)
     h = h[:i] + build_card() + h[i:]
 
@@ -120,8 +120,8 @@ def verify(original):
     if fin.count(CARD_OPEN) != base.count(CARD_OPEN) + 1:
         bad.append("feed card count is not exactly one more than before")
     a = fin.index('aria-label="Content feed">')
-    if MARK not in original and fin.index("<!-- /TGI-SMALLTHINGS-CARD -->") > fin.index(MARK):
-        bad.append("card not placed after Small Things")
+    if MARK not in original and fin.find(CARD_OPEN, a) != fin.index(MARK) + len(MARK):
+        bad.append("a newly placed card is not in slot 1")
     if MARK in original and original.index(MARK) != fin.index(MARK):
         bad.append("a rerun moved the card")
     blk = fin[fin.index(MARK):fin.index(END)]
@@ -146,7 +146,7 @@ def verify(original):
     if bad:
         HOME.write_text(original, encoding="utf-8")
         sys.exit("! reverted. " + "; ".join(bad))
-    print("  wrote index.html — Date Night Vol. 2 card in slot 2")
+    print("  wrote index.html — Date Night Vol. 2 card in slot 1")
 
 
 if __name__ == "__main__":

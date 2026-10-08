@@ -1166,8 +1166,8 @@ section.products>div[style*="max-width:760px"]{margin-left:auto!important;margin
     track.addEventListener('scroll',function(){ window.requestAnimationFrame(sync); },{passive:true});
     dots.forEach(function(d){ d.addEventListener('click',function(e){ e.preventDefault(); go(+d.dataset.i); }); });
     var p=g.querySelector('.pg-arw.prev'), nx=g.querySelector('.pg-arw.next');
-    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go(idx()-1); });
-    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go(idx()+1); });
+    if(p) p.addEventListener('click',function(e){ e.preventDefault(); go((idx()-1+n)%n); });
+    if(nx) nx.addEventListener('click',function(e){ e.preventDefault(); go((idx()+1)%n); });
   });
 })();
 </script>
