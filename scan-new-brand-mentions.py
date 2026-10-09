@@ -46,6 +46,7 @@ DOMAINS = {
     # added 6 Oct 2026 with Brand to Know — SLICE TOWN.
     "slice-town": ["slice-town.com"],
     "rookline": ["rookline.com"],
+    "mantra-golf": ["mantragolf.com"],
     "totem": ["totem.golf"],
     "birdie-balm": ["birdiebalm.co"],
     "show-out-engraving": ["showoutengraving.com"],

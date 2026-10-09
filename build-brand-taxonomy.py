@@ -131,7 +131,7 @@ TAX = [
  ),
 ("tag", "post-round-friendly", "Golf Clothes You Can Wear After the Round",
  "Post-Round Golf Clothing Brands | The Grassy Issue",
- "Twenty-five golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
+ "Twenty-six golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
  """<p>The test is simple and unforgiving: would you keep it on for dinner. Most golf clothing
  fails it, because the thing that makes a polo read as golf — the logo placement, the sheen of the
  fabric, the cut through the shoulder — is exactly the thing that makes it read as golf in a
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Seventy-seven golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Seventy-eight golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
