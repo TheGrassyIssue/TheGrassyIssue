@@ -1,0 +1,417 @@
+{
+  "batch": 9,
+  "checked": "2026-10-09",
+  "method": "products.json/.js + policies pages (curl until Shopify 429 block, then web_fetch); TGI details from local drops HTML",
+  "brands": [
+    {
+      "brand": "Mantra Golf",
+      "site": "https://mantragolf.com",
+      "email": "humans@madebymantra.co",
+      "email_source_url": "https://mantragolf.com/pages/faq",
+      "email_label": "\"please get in touch with us at humans@madebymantra.co\" (also on /policies/contact-information). /pages/faq-contact gives humans@mantragolf.com. No press/partnership address; /pages/wholesale is form-only.",
+      "alt_emails": [
+        "humans@mantragolf.com (https://mantragolf.com/pages/faq-contact)"
+      ],
+      "founders": [
+        "Ashley Revay (co-founder & creative director)",
+        "Dom (surname not on site)"
+      ],
+      "founders_source": "https://mantragolf.com/pages/story",
+      "location": "California warehouse (FAQ); privacy mailing address 548 Market St #16000, San Francisco, CA",
+      "ask": {
+        "name": "Catalyst Polo | Mantra Collar | Woods",
+        "url": "https://mantragolf.com/products/catalyst-polo-mantra-collar-woods",
+        "price": "$88",
+        "sized": true,
+        "size": "M",
+        "in_stock_M": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "TGI called the Catalyst Woods its pick: 'If you buy one Mantra piece, buy this' - the stand-up Mantra Collar is the reason to know the brand.",
+        "Called the Sonoran Desert collection 'the best fall drop the brand has made', led by the Legacy fleece (first heavyweight layer) and the birdie-embroidery crewneck."
+      ],
+      "tgi_posts": [
+        "brand-to-know-mantra-golf"
+      ],
+      "flags": [
+        "Site names 'Ashley and Dom' only; surname Natalizio is from TGI, not the brand site.",
+        "Site never says 'based in San Francisco' outright; SF appears only as privacy mailing address.",
+        "Two humans@ domains in use (madebymantra.co / mantragolf.com)."
+      ]
+    },
+    {
+      "brand": "Local Rule",
+      "site": "https://local-rule.com",
+      "email": "hello@local-rule.com",
+      "email_source_url": "https://local-rule.com/pages/faq",
+      "email_label": "\"Are you looking for brand ambassadors? ... send us a proposal at hello@local-rule.com\" (also wholesale Q). Customer service: shop@local-rule.com on /policies/contact-information and /pages/contact.",
+      "alt_emails": [
+        "shop@local-rule.com (https://local-rule.com/policies/contact-information)"
+      ],
+      "founders": [],
+      "founders_note": "none stated on brand site",
+      "location": "Stockholm, Sweden (FAQ: 'We are based in Stockholm, Sweden')",
+      "ask": {
+        "name": "T-shirt - Dark Green",
+        "url": "https://local-rule.com/products/t-shirt-dark-green",
+        "price": "SEK 599 (~$63 per TGI)",
+        "sized": true,
+        "size": "M",
+        "in_stock_M": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09",
+        "alternative": "Lightweight Tech Polo (699 kr, M in stock in Gray/Light Blue/Blue/Dark Red/Light Brown/Dark Navy) - the BTK's 'cheapest way in'"
+      },
+      "tgi_details": [
+        "BTK: the name is 'the joke and the thesis at once' - a brand called Local Rule that moved production home to Borås in 2025, three years after launching with Portugal-made clothes.",
+        "Fall tees: dark green tee made in Portugal from premium cotton with only an embroidered italic logo; towel roundup praised the microfiber/cotton Iron Logo Towel; bag-accessories post praised the oversized Gym Towel's wet-half/dry-half fold."
+      ],
+      "tgi_posts": [
+        "brand-to-know-local-rule",
+        "fall-golf-t-shirts-tees-for-cooler-weather",
+        "fall-golf-towel-roundup-2026",
+        "golf-bag-accessories-what-to-hang-from-your-bag"
+      ],
+      "flags": [
+        "Founders Simon Madeling, David Zetterlund, Henrik Svensson are in TGI's BTK but NOT named on the brand site.",
+        "Store address conflict on site: footer/contact-info Humlegårdsgatan 14 vs FAQ 'Sveavägen 109'. TGI says Humlegårdsgatan.",
+        "Prices are SEK base; USD figure is TGI's approximation."
+      ]
+    },
+    {
+      "brand": "SLICE TOWN",
+      "site": "https://slice-town.com",
+      "email": "press@slice-town.com",
+      "email_source_url": "https://slice-town.com/policies/contact-information",
+      "email_label": "\"Press - Are you inquiring regarding press? Please reach out at press@slice-town.com\"",
+      "alt_emails": [
+        "contact@slice-town.com (footer)",
+        "sales@slice-town.com (wholesale)",
+        "Collab/gifting form: https://slice-town.com/pages/collab"
+      ],
+      "founders": [],
+      "founders_note": "none stated - About says 'founded by a Dane and a Swede in late 2024'",
+      "location": "Slice-Town AB, S:t Göransgatan 90, 112 45 Stockholm, Sweden (footer); ships from Borås",
+      "ask": {
+        "name": "Long Sleeve Tee, Dusty Cobalt",
+        "url": "https://slice-town.com/products/long-sleeve-tee-cobalt",
+        "price": "SEK 600 (~$63)",
+        "sized": true,
+        "size": "M",
+        "in_stock_M": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09",
+        "alternative": "Golf Track Jacket, Slate (BTK 'Our pick'), SEK 1,750 (~$190), M in stock: https://slice-town.com/products/track-jacket-slate"
+      },
+      "tgi_details": [
+        "BTK quoted their About line ('challenge tradition, and make it possible for golfers to wear whatever they want on the course') and called out the butterfly-knife divot tool and the yellow balaclava 'for when your game's so bad, you need full anonymity'.",
+        "Fall tees: heavy 253gsm cotton with contrast coverlock topstitching across the chest; BTK picked the slate track jacket."
+      ],
+      "tgi_posts": [
+        "brand-to-know-slice-town",
+        "fall-golf-t-shirts-tees-for-cooler-weather"
+      ],
+      "flags": [
+        "TGI says designed in Copenhagen with an outpost in Svängsta; site pages checked show Stockholm address and 'Designed in Scandinavia' - Copenhagen not confirmed on site.",
+        "Site FAQ routes collaborations to a Shopify Collabs form; press@ is still listed."
+      ]
+    },
+    {
+      "brand": "Shapland Bags",
+      "site": "https://shaplandbags.com",
+      "email": "henry@shaplandbags.com",
+      "email_source_url": "https://shaplandbags.com/pages/terms-conditions",
+      "email_label": "\"CONTACT INFORMATION ... Email: henry@shaplandbags.com\" (founder's address; page dated 2017)",
+      "alt_emails": [
+        "support@shaplandbags.com (https://shaplandbags.com/pages/wholesale: 'Feel free to reach us at: support@shaplandbags.com or call us at 614-465-3224')",
+        "info@shaplandbags.com (https://shaplandbags.com/pages/privacy-policy)",
+        "Form: https://shaplandbags.com/pages/contact-us"
+      ],
+      "founders": [
+        "Henry Rowland"
+      ],
+      "founders_source": "https://shaplandbags.com/pages/about-us",
+      "location": "Ships from Ohio (FAQ); 614 phone. Terms/privacy (2017) list 160 E. 88th St, New York, NY",
+      "ask": null,
+      "ask_note": "NO eligible in-stock item today. All bags (Kantle 4.0, Sunday 4.0, Rye 4.0, Lefty Rye 4.0, Caddy 2.0, Kantle 3.1) sold out; rangefinder case and driver headcover sold out. Only in-stock non-hat items are gift card and replacement parts (stand legs $20/$35). Suggest: ask to be considered for a Kantle 4.0 ($535) review/loan sample from the next run, or hold outreach until restock.",
+      "tgi_details": [
+        "Upgrading post: Shapland rebuilds a 1980s Ping silhouette in leather and brass and names models after Harry Colt courses (Rye = Colt's first course); August Rye run sold out in under a day.",
+        "7 Bags: Kantle 3.1 'handcrafted in Columbus, Ohio' with waterproof canvas and oiled leather trim, 'between the mainstream brands and full custom'; noted replacement legs sold on-site as a sign the bag is meant to last."
+      ],
+      "tgi_posts": [
+        "upgrading-your-golf-bag",
+        "7-bags-that-stand-out"
+      ],
+      "flags": [
+        "TGI posts cite Kantle 3.1 $490 / Rye 4.0 $495 / Sunday 3.1 $425 with restock dates; site now lists 4.0 models at $535/$475, all sold out - TGI prices/restock dates are stale.",
+        "TGI says Columbus, Ohio; site says ships from OH but legal pages show a NY address (2017).",
+        "henry@ is on a 2017 terms page; support@ is the current wholesale address - consider CC."
+      ]
+    },
+    {
+      "brand": "Rhoback",
+      "site": "https://rhoback.com",
+      "email": "custom@rhoback.com",
+      "email_source_url": "https://rhoback.com/pages/custom-and-group-orders",
+      "email_label": "\"Reach our custom orders team directly at custom@rhoback.com\" - custom-orders team, not press. General contact is form-only.",
+      "form_url": "https://support.rhoback.com/en-US/contact",
+      "alt_emails": [],
+      "founders": [],
+      "founders_note": "none stated on brand site (Our Story is creed/dog-name copy only)",
+      "location": "Store: 2124 Barracks Rd, Charlottesville, VA (https://rhoback.com/pages/our-stores-charlottesville)",
+      "ask": {
+        "name": "The Sunset Slice | Performance Polo | Shoal Blue/White",
+        "url": "https://www.rhoback.com/products/mens-tops-performance-polo-the-sunset-slice-shoal-blue-white",
+        "price": "$98",
+        "sized": true,
+        "size": "M",
+        "in_stock_M": true,
+        "featured_by_tgi": false,
+        "checked": "2026-10-09",
+        "note": "TGI linked the men's golf collection, not a specific product; chose a golf-themed men's performance polo at the $98 price TGI cited. 'The Texan' is sold out in M."
+      },
+      "tgi_details": [
+        "Founded-by-women post: Kristina Loftus spent the first two years towing a pop-up cross-country, 25,000 miles of parking-lot sales, and taught herself to build the original website.",
+        "Named for their Rhodesian Ridgeback - the two vertical stripes on the back of every piece are the ridge; Off Course Vol. 2 featured the $26 performance dog bandanas printed to match the polos."
+      ],
+      "tgi_posts": [
+        "golf-brands-founded-by-women",
+        "off-course-vol-2-golf-brands-doing-non-golf-things"
+      ],
+      "flags": [
+        "No press/partnership email; custom@ is the only literal address - consider the Gorgias form instead or as well.",
+        "Founders (Kristina & Matt Loftus, Kevin Hubbard) are named by TGI but not on rhoback.com."
+      ]
+    },
+    {
+      "brand": "Badlands",
+      "site": "https://badlands1st.com",
+      "email": "info@badlands1st.com",
+      "email_source_url": "https://badlands1st.com/policies/contact-information",
+      "email_label": "\"Contact information - Badlands, 44 1st Ave, Atlantic Highlands, NJ 07716, 848-300-2037, info@badlands1st.com\" (also on /pages/info)",
+      "alt_emails": [
+        "Form: https://badlands1st.com/pages/contact"
+      ],
+      "founders": [],
+      "founders_note": "none stated",
+      "location": "44 1st Avenue, Atlantic Highlands, NJ 07716",
+      "ask": {
+        "name": "Badlands Great Atlantic T-Shirt - White/Blue",
+        "url": "https://badlands1st.com/products/badlands-great-atlantic-t-shirt-white-blue",
+        "price": "$45",
+        "sized": true,
+        "size": "M",
+        "in_stock_M": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "White Tee Edit: navy laurel crest reading GREAT ATLANTIC SPORTING CLUB over Monmouth County on 6.5oz American cotton - 'a shop that started selling other people's clothes and now makes its own.'",
+        "Bold Tee Edit: called theirs 'the most specific spec sheet in this post' - 100% USA cotton, 220 GSM, side-seamed, shoulder-to-shoulder taping."
+      ],
+      "tgi_posts": [
+        "the-white-tee-edit-2026",
+        "the-bold-tee-edit"
+      ],
+      "flags": [
+        "best-golf-streetwear-brands-2026 does NOT mention Badlands (checked local HTML and live page). Badlands also appears in the-bold-tee-edit (Support Your Local T-Shirt) - linked that instead.",
+        "Badlands is primarily a multi-brand retailer with its own label; the email goes to the shop."
+      ]
+    },
+    {
+      "brand": "B.O.T.H. Bet On The Horses",
+      "site": "https://betonthehorses.co",
+      "email": "info@betonthehorses.co",
+      "email_source_url": "https://betonthehorses.co/policies/contact-information",
+      "email_label": "\"FOR STORE BUYERS PLEASE CONTACT: INFO@BETONTHEHORSES.CO\" (the customer-service line on the same page has a typo domain INFO@BETONTHEHORESES.CO - do not use)",
+      "alt_emails": [
+        "collin@betonthehorses.co (founder; given for privacy questions at https://betonthehorses.co/policies/privacy-policy)"
+      ],
+      "founders": [
+        "Collin McMannis"
+      ],
+      "founders_source": "https://betonthehorses.co/pages/the-story",
+      "location": "Los Angeles ('a design venture born out of Los Angeles', 'Made in Los Angeles')",
+      "ask": {
+        "name": "Malibu Slub Tee - Vintage Black",
+        "url": "https://betonthehorses.co/products/berry-hills-t-shirt-1",
+        "price": "$80",
+        "sized": true,
+        "size": "M",
+        "in_stock_M": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "Fall tees: kept 'a clean blank, with no golf graphic at all', made in LA from lightly distressed slub cotton so the vintage black 'looks like a shirt you found, not one you bought'."
+      ],
+      "tgi_posts": [
+        "fall-golf-t-shirts-tees-for-cooler-weather"
+      ],
+      "flags": [
+        "Privacy-policy mailing address is Phoenix, AZ (3801 E Monterosa St) vs LA on story/product pages.",
+        "Site says founded 2026 - very new brand.",
+        "Consider emailing collin@ directly with info@ CC."
+      ]
+    },
+    {
+      "brand": "Show Out Engraving",
+      "site": "https://showoutengraving.com",
+      "email": "info@showoutengraving.com",
+      "email_source_url": "https://showoutengraving.com/policies/contact-information",
+      "email_label": "\"Trade name: Show Out Engraving / Email: info@showoutengraving.com / Physical address: Gilbert AZ 85297\"",
+      "alt_emails": [
+        "Form: https://showoutengraving.com/pages/contact"
+      ],
+      "founders": [],
+      "founders_note": "none stated (blog bylined 'Vincent Newman'; footer links linkedin.com/in/vincentnewman - likely contact, not confirmed founder)",
+      "location": "Gilbert, Arizona",
+      "ask": {
+        "name": "Desert Roadrunner · 30mm Copper Ball Marker",
+        "url": "https://showoutengraving.com/products/desert-roadrunner-ball-marker",
+        "price": "$50",
+        "sized": false,
+        "in_stock": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "'Its roadrunner wears sunglasses' - solid copper, 30mm, 21 grams, laser-engraved and hand-finished with a Southwestern pattern; 'heavy enough to stay put on a windy green.'"
+      ],
+      "tgi_posts": [
+        "small-golf-accessories-small-things-big-impact"
+      ],
+      "flags": [
+        "Addressee name uncertain (Vincent Newman is a byline, not a stated founder)."
+      ]
+    },
+    {
+      "brand": "Provision Machining & Design",
+      "site": "https://www.provisionmachiningdesign.com",
+      "email": "info@provisionmachiningdesign.com",
+      "email_source_url": "https://www.provisionmachiningdesign.com/pages/contact",
+      "email_label": "\"Feel free to contact me at info@provisionmachiningdesign.com\" (also /policies/contact-information and footer mailto)",
+      "alt_emails": [],
+      "founders": [],
+      "founders_note": "none stated (first-person 'My Story' page, no name - appears one-person shop)",
+      "location": "Ohio ('an Ohio-based machine shop'), no city",
+      "ask": {
+        "name": "Copper Golf Divot Tool with Spade",
+        "url": "https://www.provisionmachiningdesign.com/products/copper-spade-golf-divot-tool",
+        "price": "$39.99",
+        "sized": false,
+        "in_stock": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "CNC-cut from solid copper with an enamel-filled engraved spade, just over three inches and about two ounces, 'so it feels like a real object in the pocket' and patinas the longer you carry it."
+      ],
+      "tgi_posts": [
+        "small-golf-accessories-small-things-big-impact"
+      ],
+      "flags": [
+        "Refund policy also shows provisionmachiningdesign@gmail.com; use info@."
+      ]
+    },
+    {
+      "brand": "Kraken Golf",
+      "site": "https://www.krakengolf.com",
+      "email": "Info@krakengolf.com",
+      "email_source_url": "https://www.krakengolf.com/policies/contact-information",
+      "email_label": "\"Email: Info@krakengolf.com / Physical address: Kraken Golf, 873 Main Street, Acushnet MA 02743\"",
+      "alt_emails": [
+        "Form: https://www.krakengolf.com/pages/contact-us"
+      ],
+      "founders": [
+        "Marc Cordeira"
+      ],
+      "founders_source": "https://www.krakengolf.com/pages/what-is-kraken-golf",
+      "location": "Acushnet, MA",
+      "ask": {
+        "name": "THE SIGNET — Stainless Steel Pitch Tool",
+        "url": "https://www.krakengolf.com/products/the-signet-stainless-steel-pitch-tool",
+        "price": "$109",
+        "sized": false,
+        "in_stock": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "Signet pitch tool 'shaped like a signet ring' - slide it on a finger, KRAKEN cut under the band in solid 303 stainless; 'the oddest object here and the one most likely to get passed around the group.'",
+        "Named the most unusual divot tool in the guide's FAQ."
+      ],
+      "tgi_posts": [
+        "small-golf-accessories-small-things-big-impact"
+      ],
+      "flags": []
+    },
+    {
+      "brand": "Western Birch",
+      "site": "https://westernbirch.com",
+      "email": "info@westernbirch.com",
+      "email_source_url": "https://westernbirch.com/policies/shipping-policy",
+      "email_label": "\"For any shipping inquiries, feel free to reach out to our customer service team at info@westernbirch.com\" (also on /policies/terms-of-service)",
+      "alt_emails": [
+        "westernbirchgolf@gmail.com (https://westernbirch.com/policies/privacy-policy)"
+      ],
+      "founders": [],
+      "founders_note": "none stated",
+      "location": "none stated",
+      "ask": {
+        "name": "\"Redan\" Striped Golf Tee (box of 50, 2.75\")",
+        "url": "https://westernbirch.com/products/redan-striped-golf-tee",
+        "price": "$9.99",
+        "sized": false,
+        "in_stock": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "White birch with a thicker shank so they outlast pro-shop tees; Redan box striped in white, dark blue and green - 'under ten dollars, and they look like they cost more.'"
+      ],
+      "tgi_posts": [
+        "small-golf-accessories-small-things-big-impact"
+      ],
+      "flags": [
+        "Product tagged 'reorder_needed' - stock may be low.",
+        "Very low-value ask; could ask for a mixed box or a towel/pouch instead if preferred.",
+        "No contact page email; terms page has unfilled '[INSERT BUSINESS ADDRESS]' placeholder."
+      ]
+    },
+    {
+      "brand": "Birdie Balm",
+      "site": "https://birdiebalm.co",
+      "email": "sales@birdiebalm.co",
+      "email_source_url": "https://birdiebalm.co/pages/about-us-1",
+      "email_label": "site footer (homepage and About page): 'Birdie Balm sales@birdiebalm.co'",
+      "alt_emails": [],
+      "founders": [
+        "Ben Barrett (signs the About page; not titled founder)"
+      ],
+      "founders_source": "https://birdiebalm.co/pages/about-us-1",
+      "location": "Blue Mountains, Ontario, Canada ('founded in the Blue Mountains of Ontario')",
+      "ask": {
+        "name": "The Original (lip balm with magnetic ball marker lid)",
+        "url": "https://birdiebalm.co/products/birdie-balm",
+        "price": "CA$22.99",
+        "sized": false,
+        "in_stock": true,
+        "featured_by_tgi": true,
+        "checked": "2026-10-09"
+      },
+      "tgi_details": [
+        "A lip balm with a 'Make This Putt' ball marker on a strong magnet built into the lid - 'one of the cheapest things here and the one your playing partners will ask about first.'"
+      ],
+      "tgi_posts": [
+        "small-golf-accessories-small-things-big-impact"
+      ],
+      "flags": [
+        "Ben Barrett is signatory, not explicitly 'founder'; About uses 'we'.",
+        "Price shown without currency in .js; store default is CAD."
+      ]
+    }
+  ]
+}
