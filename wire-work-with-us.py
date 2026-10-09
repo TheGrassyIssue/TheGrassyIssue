@@ -117,9 +117,8 @@ notes.append(f"footer link added on: {foot} pages")
 # ------------------------------------------------------------- 3. /about
 t = open("about.html", encoding="utf-8").read()
 t = re.sub(re.escape(S) + r".*?" + re.escape(E), "", t, flags=re.S)
-line = (f'{S}<p>If you make something and you are wondering whether there is a version of this '
-        f'where we work together, <a href="{URL}" style="border-bottom:1px solid var(--ink)">'
-        f'that is written down here</a>.</p>{E}')
+line = (f'{S}<p>If you make something and want to work together, '
+        f'<a href="{URL}" style="border-bottom:1px solid var(--ink)">here is how that works</a>.</p>{E}')
 anchor = t.find('<p class="sig">')
 if anchor == -1:
     notes.append("  !! no signature block in about.html — link not added")
