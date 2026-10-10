@@ -1,0 +1,378 @@
+{
+ "domains": {
+  "manors": "https://www.manorsgolf.com",
+  "odd-ritual": "https://oddritualgolf.com",
+  "students": "https://studentsgolf.com",
+  "birds-of-condor": "https://us.birdsofcondor.com",
+  "devereux": "https://devereuxgolf.com",
+  "walker": "https://walkergolfthings.com",
+  "radry": "https://radry.com",
+  "kingfisher": "https://kingfisher-golf.com",
+  "sounder": "https://soundergolf.com",
+  "left-of-field": "https://lofgolf.com",
+  "fella": "https://fellagolf.com",
+  "casualist": "https://casualist.com"
+ },
+ "outfits": [
+  {
+   "key": "pants-and-a-tee",
+   "slots": [
+    [
+     "The pants",
+     [
+      [
+       "odd-ritual",
+       "pleated-daily-trouser-black",
+       null
+      ],
+      [
+       "manors",
+       "club-trousers",
+       "Black"
+      ],
+      [
+       "students",
+       "curriculum-baggy-twill-pants-1",
+       "Black"
+      ]
+     ]
+    ],
+    [
+     "The tee",
+     [
+      [
+       "casualist",
+       "heavy-tee-agni",
+       null
+      ],
+      [
+       "fella",
+       "fella-logo-tee-white",
+       null
+      ],
+      [
+       "odd-ritual",
+       "minimal-wordmark-t-shirt-duck-grey",
+       null
+      ]
+     ]
+    ],
+    [
+     "The layer",
+     [
+      [
+       "fella",
+       "gavan-oversized-sweater-heather-grey",
+       null
+      ],
+      [
+       "manors",
+       "crewneck-polartec\u00ae-fleece",
+       "Black"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "key": "shorts-and-a-jersey-polo",
+   "slots": [
+    [
+     "The polo",
+     [
+      [
+       "sounder",
+       "monterey-stripe-polo-in-indigo-and-slate",
+       null
+      ],
+      [
+       "kingfisher",
+       "new-blue-polo",
+       null
+      ],
+      [
+       "walker",
+       "members-polo-3",
+       null
+      ]
+     ]
+    ],
+    [
+     "The shorts",
+     [
+      [
+       "manors",
+       "stableford-shorts",
+       "Dune"
+      ],
+      [
+       "students",
+       "calculus-standard-pleated-shorts-4",
+       "Sand"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "key": "pastels",
+   "slots": [
+    [
+     "The polo",
+     [
+      [
+       "sounder",
+       "capri-collar-polo-mint-natural",
+       null
+      ],
+      [
+       "manors",
+       "tour-shirt",
+       "Powder"
+      ],
+      [
+       "sounder",
+       "play-well-polo-in-jade",
+       null
+      ]
+     ]
+    ],
+    [
+     "The shorts",
+     [
+      [
+       "manors",
+       "greenskeeper-chino-short",
+       "Pebble"
+      ],
+      [
+       "walker",
+       "pitch-cargo-short-1",
+       null
+      ]
+     ]
+    ],
+    [
+     "The layer",
+     [
+      [
+       "radry",
+       "contrast-quarter-zip-butter",
+       null
+      ],
+      [
+       "casualist",
+       "appropriate-dress-code-mockneck-tee-dusty-blue",
+       null
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "key": "earth-tones",
+   "slots": [
+    [
+     "The pants",
+     [
+      [
+       "devereux",
+       "el-classico-pant-brown",
+       "Brown"
+      ],
+      [
+       "manors",
+       "club-trousers",
+       "Earth"
+      ]
+     ]
+    ],
+    [
+     "The polo",
+     [
+      [
+       "casualist",
+       "weekend-pique-polo-mocha",
+       null
+      ],
+      [
+       "devereux",
+       "duke-polo-brindle",
+       null
+      ],
+      [
+       "fella",
+       "jake-toffee-brown-intarsia-knit-polo",
+       null
+      ]
+     ]
+    ],
+    [
+     "The layer",
+     [
+      [
+       "manors",
+       "heritage-primaloft\u00ae-cardigan",
+       "Ivory"
+      ],
+      [
+       "odd-ritual",
+       "caddie-jacket-chocolate",
+       null
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "key": "fall-knit-and-pleats",
+   "slots": [
+    [
+     "The trousers",
+     [
+      [
+       "manors",
+       "greenskeeper-chino-trousers",
+       "Pebble"
+      ],
+      [
+       "left-of-field",
+       "pleated-lite-pant-beige",
+       null
+      ],
+      [
+       "casualist",
+       "pleated-trousers",
+       null
+      ]
+     ]
+    ],
+    [
+     "The knit",
+     [
+      [
+       "students",
+       "riverview-knit-ls-polo-sweater",
+       "Moss"
+      ],
+      [
+       "students",
+       "knight-knitted-l-s-polo-sweater-1",
+       "Coffee"
+      ]
+     ]
+    ],
+    [
+     "The layer",
+     [
+      [
+       "manors",
+       "reversible-polartec\u00ae-fleece-vest",
+       "Dark Olive"
+      ],
+      [
+       "casualist",
+       "grazer-cardigan-vest-grey",
+       null
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "key": "navy-and-stripes",
+   "slots": [
+    [
+     "The pants",
+     [
+      [
+       "birds-of-condor",
+       "blue-navy-ranger-golf-chino-straight-leg-pant",
+       null
+      ],
+      [
+       "manors",
+       "recycled-greenskeeper-trouser",
+       "Navy"
+      ]
+     ]
+    ],
+    [
+     "The polo",
+     [
+      [
+       "left-of-field",
+       "mornington-polo-blue-white-stripe",
+       null
+      ],
+      [
+       "sounder",
+       "monterey-stripe-polo-in-deep-red-and-deep-navy",
+       null
+      ],
+      [
+       "manors",
+       "goat-pique-polo-stripe",
+       "Navy"
+      ]
+     ]
+    ],
+    [
+     "The layer",
+     [
+      [
+       "fella",
+       "boris-quarter-zip-sweater-navy",
+       null
+      ],
+      [
+       "sounder",
+       "pac-mach-jacket-deep-navy-ripstop",
+       null
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "key": "one-loud-piece",
+   "slots": [
+    [
+     "The loud one",
+     [
+      [
+       "fella",
+       "bruno-camp-shirt-tropical-golf-cart",
+       null
+      ],
+      [
+       "walker",
+       "whitsundays-ss-shirt",
+       null
+      ],
+      [
+       "birds-of-condor",
+       "lawn-pawn-blue-green-plaid-golf-polo-shirt",
+       null
+      ]
+     ]
+    ],
+    [
+     "The quiet pants",
+     [
+      [
+       "manors",
+       "club-trousers",
+       "Black"
+      ],
+      [
+       "students",
+       "stockton-work-pants",
+       "Dark Grey"
+      ]
+     ]
+    ]
+   ]
+  }
+ ]
+}
