@@ -13,7 +13,7 @@ ROOT = pathlib.Path(__file__).resolve().parent
 HOME = ROOT / "index.html"
 POST = ROOT / "drops/brand-to-know-howie-benson.html"
 SLUG = "/drops/brand-to-know-howie-benson"
-KEY = "howie-benson"
+KEY = "howiebenson"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-HOWIE-BENSON-CARD -->\n", "<!-- /TGI-HOWIE-BENSON-CARD -->\n"
 TITLE = "Brand to Know: Howie Benson, Resort Polos and Better Taste for Golf"
 CARD_OPEN = '<div class="card" data-type='
