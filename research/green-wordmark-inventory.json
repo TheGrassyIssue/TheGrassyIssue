@@ -37,23 +37,23 @@
  },
  "brands/attr/drops-and-vanishes.html": {
   "size": 57285,
-  "sha1": "0e49f4e7eb1edd27a99e07cac52e6dc4bf608431"
+  "sha1": "1e48c2afb28f2378f48c811ff5881c76c4e95ec0"
  },
  "brands/attr/heritage.html": {
   "size": 56408,
-  "sha1": "b384e91aaf6558f9be21e79a661470c25520812f"
+  "sha1": "01c7abf76cffc437bdf34e75431f72d13d8f3285"
  },
  "brands/attr/new-to-index.html": {
-  "size": 114560,
-  "sha1": "52f8d1e1c64b820d1a429480f29582e2b1b92b4f"
+  "size": 115502,
+  "sha1": "3963ad57889e6bcb15efcc202123ee6e783627e1"
  },
  "brands/attr/tour-proven.html": {
   "size": 51648,
-  "sha1": "2c36b4a33673a8fa753df6ccadff3f9d53d8c875"
+  "sha1": "71ccea14975dc0d3c4693d37326273576ee2a994"
  },
  "brands/attr/women-founded.html": {
   "size": 58154,
-  "sha1": "6a28ca8a61ce2547f3d1270bcacfbf281ef9e869"
+  "sha1": "b36eaf39e05f82193c87e2c3216244665551caa3"
  },
  "brands/aug-11.html": {
   "size": 23541,
@@ -88,8 +88,8 @@
   "sha1": "3ecd00717af5a977223c1ab6a17ce3115c42785d"
  },
  "brands/best-independent-golf-brands.html": {
-  "size": 196477,
-  "sha1": "124b43f79bc2f773064006cceaeb2f21097f47a8"
+  "size": 196479,
+  "sha1": "d75fe2eefc51aa19aa8a807115d761b7929a9c29"
  },
  "brands/bestgrips.html": {
   "size": 24088,
@@ -307,6 +307,10 @@
   "size": 23587,
   "sha1": "ec8fffe276b3cab9a06ff8029cb7a56ddf5f2bdd"
  },
+ "brands/howie-benson.html": {
+  "size": 23386,
+  "sha1": "e416b173f439ee4872d512cc4d24dfe51afecaec"
+ },
  "brands/hudson-sutler.html": {
   "size": 24204,
   "sha1": "006cf727e396ff0367e42b1ad75f2f6f22751910"
@@ -316,8 +320,8 @@
   "sha1": "8dcedf11ea0d2e715a63cc2e56f998a4c6a3409a"
  },
  "brands/index.html": {
-  "size": 225015,
-  "sha1": "2e01657f841064f824ed80f90bd6cea0865e4afa"
+  "size": 225979,
+  "sha1": "26ab7235b63f26642fb82ecfd8fddbfce7946154"
  },
  "brands/inside-story.html": {
   "size": 23548,
@@ -661,55 +665,55 @@
  },
  "brands/tag/collab-machine.html": {
   "size": 58375,
-  "sha1": "dad1c5f110c4b761d851f89c2d707351539ea4d6"
+  "sha1": "86bbb2d59f804e029b0b9ce17ee6805477548175"
  },
  "brands/tag/course-merch.html": {
   "size": 44351,
-  "sha1": "8c66ac860adcedd22c3b19c457e943c943c2a197"
+  "sha1": "d67ce942370f5ae14f3103f510ef69f6ab826953"
  },
  "brands/tag/dad-golf.html": {
   "size": 42139,
-  "sha1": "958713306a0a7fecc7848f0e411f947b502eefbc"
+  "sha1": "8116a1133d643f192c6311f6ae7a33d0d4c3e4e8"
  },
  "brands/tag/design-nerd.html": {
-  "size": 86588,
-  "sha1": "a111231aab8498d8f72eb6327d06f9c29e36d2a5"
+  "size": 86582,
+  "sha1": "c30714fef3289b83784abf721ccf4646e238d501"
  },
  "brands/tag/gorpcore.html": {
   "size": 84349,
-  "sha1": "27a3cafcf296cb6193f3d99e5411c9c9e100186c"
+  "sha1": "3a6615ddcd146db99638de569a59cf90e2226b13"
  },
  "brands/tag/independent.html": {
-  "size": 98819,
-  "sha1": "42bc06f745ec91df63faca039d80be2a567f9caa"
+  "size": 98813,
+  "sha1": "d226b9253e14993501eaffab2efeaa57fa96d035"
  },
  "brands/tag/loud-on-purpose.html": {
   "size": 70899,
-  "sha1": "477b1b2f4827765b0dd1e5e7b574d24f52b0d9c2"
+  "sha1": "43294a2be6a4c2ef2abc0e85cb55f007ff4965c1"
  },
  "brands/tag/made-by-hand.html": {
   "size": 84688,
-  "sha1": "7f9fd690967a206b51f20f5952011a481e91cbab"
+  "sha1": "e3b4205e2f163b79a17355a523aa8a9702b1772d"
  },
  "brands/tag/member-guest.html": {
   "size": 44273,
-  "sha1": "91d8456b9fac0ec7cbcca96cda8cba12725f47df"
+  "sha1": "fcf793368bcb9caa55f7d54b1b1b4463d53ec009"
  },
  "brands/tag/muni-energy.html": {
   "size": 64371,
-  "sha1": "155161a396e5e570c7e3e834d4a6c6d4d0fcbb2e"
+  "sha1": "4cbf728e7ad85f36d90a9c1b11fbf4c54c3aabcf"
  },
  "brands/tag/post-round-friendly.html": {
-  "size": 66072,
-  "sha1": "fd92a7481a145644cfe79940caa0eb12b66241f1"
+  "size": 67029,
+  "sha1": "d4f85bbf1b60005b50fb75cda8bc3f25eac154a9"
  },
  "brands/tag/quiet-luxury.html": {
   "size": 57964,
-  "sha1": "7c9975efa7ebad085085c38b4c52ca8199c7a094"
+  "sha1": "75bc7a5f29ff299b06017870cbb43e4b49a52ad1"
  },
  "brands/tag/range-rat.html": {
   "size": 47695,
-  "sha1": "13e0838c50cdbd4cb449b5a0947dc865953c2c4f"
+  "sha1": "54a4411ade4ea23dbb13998ecf5e6f90a9e90880"
  },
  "brands/takomo-golf.html": {
   "size": 25743,

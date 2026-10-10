@@ -82,7 +82,7 @@ CARDS = {
    ("1872-3", "A player lining up a shot in a bay at 1872 Golf Club")]),
 
 "swing": ("Swing Station", "San Marcos &middot; $45&ndash;60/hr",
-  "San Marcos had no indoor golf at all until Tyler and Laci Gescheidle opened this on 11/7/25. Full Swing, 85-plus licensed courses, <strong>$45 an hour Monday through Thursday and $60 Friday through Sunday</strong>, charged per bay rather than per player, with multi-hour discounts running from $20 to $60 off. Bring your own beer; there is no bar. It is also the most family-first room on this list &mdash; the multi-sport catalogue includes zombie dodgeball, which is exactly as advertised.",
+  "San Marcos had no indoor golf at all until Tyler and Laci Gescheidle opened this on 11/7/25. Full Swing, 85-plus licensed courses, <strong>$45 an hour Monday through Thursday and $60 Friday through Sunday</strong>, charged per bay rather than per player, with multi-hour discounts running from $20 to $60 off. Since early September it has held a TABC license and sells beer from a stocked fridge, so outside alcohol is no longer allowed. Regulars should look at the Swing Pass: <strong>$150 a month for up to two hours of bay time a day, Monday through Thursday</strong>. It is also the most family-first room on this list &mdash; the multi-sport catalogue includes zombie dodgeball, which is exactly as advertised.",
   "https://swingstationgolf.com/",
   [("swing-1", "A golfer putting under the Swing Station sign in San Marcos"),
    ("swing-2", "The bay floor at Swing Station with multiple screens lit"),
