@@ -9,6 +9,10 @@ Sounder and Walker figures in brackets are the stores' own US prices; other conv
 Odd Ritual's Pleated Daily Trouser: khaki sold out, black in M and XL only, marked R990 from R1,300.
 PHOTOS: each brand's own product photography (research/outfits/frames.json). Hero: Sounder's own coastal-course shoot
 (Clean Lie Polo product page), per Lenny: "let's get a better hero shot, any good wide shots of golfers on the course?"
+Then: "at the bottom; Let's add 5 hats to pull it all together" -> Finish It section, five on-model caps from Top 25 brands.
+Earlier: "add a third shorts option, something athletic and casual. Also make sure all images lead with the on-model image."
+-> Students Calabasas nylon short + Left of Field Resort Short; pieces with no on-model photo anywhere on their store were
+swapped (Students Calculus, Birds of Condor Ranger Pant, Sounder Pac Mach, Students Stockton) and every gallery now leads on-model.
 """
 import html as H
 import json
@@ -131,6 +135,16 @@ P = {
    "A cream knit quarter-zip with a single navy band across the chest. It ties the navy pants and the stripe together."),
  "sounder--pac-mach-jacket-deep-navy-ripstop": ("Pac Mach Jacket, Deep Navy Ripstop", "&pound;145 ($196)",
    "A packable navy ripstop jacket for wind and drizzle that disappears into the bag."),
+ "students--calabasas-baggy-nylon-shorts": ("Calabasas Baggy Nylon Shorts, Black", "$110",
+   "The athletic option: a baggy black nylon short with an elastic waist, light enough to forget about. Wear it with the striped polo and white socks."),
+ "left-of-field--resort-golf-short-mocha": ("Resort Golf Short, Mocha", "$100",
+   "A mocha golf short from Sydney with a cream side stripe, halfway between a gym short and a chino. Casual, but still a golf short."),
+ "devereux--el-classico-pant-faded-navy": ("El Classico Pant, Faded Navy", "$88",
+   "Devereux&rsquo;s golf pant in a faded navy, softer than a true navy, which keeps the stripes from looking too formal."),
+ "sounder--eden-base-layer-with-pointelle-star-dark": ("Eden Knit with Pointelle Star, Dark Navy", "&pound;125 ($169)",
+   "A fine dark-navy knit with a small pointelle star. Pull it on over the polo and let the collar show."),
+ "fella--fella-ripstop-cargo-pant": ("Ripstop Cargo Pant, Olive", "&euro;135 (~$157)",
+   "An olive ripstop cargo pant. Plain enough to let a loud shirt do the talking, with pockets for the scorecard."),
  # 7 One Loud Piece
  "fella--bruno-camp-shirt-tropical-golf-cart": ("Bruno Camp Shirt, Tropical Golf Cart", "&euro;135 (~$157)",
    "A camp-collar shirt printed with palm trees and golf carts. Wear it untucked and let it be the only thing anyone notices."),
@@ -140,6 +154,18 @@ P = {
    "A blue-and-green plaid polo, the loud option for courses that want a collar."),
  "students--stockton-work-pants--dark-grey": ("Stockton Work Pants, Dark Grey", "$138",
    "A dark-grey work pant that sits back and lets the shirt do everything."),
+ # The hats
+ "odd-ritual--script-dad-cap-charcoal": ("Script Dad Cap, Charcoal", "R490 (~$27)",
+   "Goes with look 1. A washed charcoal dad cap with the Odd Ritual script, made to sit with the black trouser and a white tee."),
+ "walker--kooka-nylon-cap-navy": ("Kooka Nylon Cap, Navy", "A$50 (~$33)",
+   "Goes with looks 2 and 6. A light navy nylon cap with a rope detail and the kookaburra on the front, built for a hot round in shorts."),
+ "sounder--logo-cap-stone-copy": ("Logo Cap, Stone", "&pound;40 ($55)",
+   "Goes with look 3. A soft stone cap that sits under any pastel without adding a fourth color."),
+ "fella--cozy-corduroy-cap-teddy-brown": ("Cozy Corduroy Cap, Teddy Brown", "&euro;50 (~$58)",
+   "Goes with looks 4 and 5. A brown corduroy cap, the fall texture that finishes an earth-tone outfit."),
+ "left-of-field--duckbill-birds-cap-navy-cream": ("Duckbill Birds Cap, Navy / Cream", "$50",
+   "Goes with looks 6 and 7. A navy cap with a cream brim and a script bird, the one hat here that works with stripes and with a loud shirt."),
+
 }
 
 LOOKS = [
@@ -176,12 +202,12 @@ LOOKS = [
  ("Navy &amp; Stripes", "navy-and-stripes", ["#1d2a44", "#7fa3d8", "#f5f5f2"], ["Navy", "Stripe", "White"],
   "Navy pants and a striped polo: the classic that always works.",
   ["Navy pants and a striped polo is the outfit you can wear to any course in the world. Navy makes every stripe look sharp, and a white collar ties it together.",
-   "Keep the stripe on top only, and pick one stripe color besides white. For a layer, use something that repeats the navy: a band of it on a cream knit, or a plain navy shell.",
-   "<strong>Our pick</strong> is the Left of Field Mornington Polo in blue and white stripe. It&rsquo;s the stripe in its simplest form, and it looks good with all three pants."],
+   "Keep the stripe on top only, and pick one stripe color besides white. For a layer, use something that repeats the navy: a band of it on a cream knit, or a plain navy sweater over the collar.",
+   "<strong>Our pick</strong> is the Left of Field Mornington Polo in blue and white stripe. It&rsquo;s the stripe in its simplest form, and it looks good with both pants."],
   ["left-of-field--mornington-polo-blue-white-stripe--1", "sounder--monterey-stripe-polo-in-deep-red-and-dee--4"]),
- ("One Loud Piece", "one-loud-piece", ["#141414", "#4f9ec7", "#3c3c3c"], ["Black", "Print", "Charcoal"],
+ ("One Loud Piece", "one-loud-piece", ["#141414", "#4f9ec7", "#5c5f3f"], ["Black", "Print", "Olive"],
   "One shirt that shouts. Everything else stays quiet.",
-  ["The rule is the same as with a bag: only one. A camp shirt covered in golf carts or a sunrise print looks great when the pants are black or charcoal and the shoes are plain. Add a second loud piece and it stops looking chosen.",
+  ["The rule is the same as with a bag: only one. A camp shirt covered in golf carts or a sunrise print looks great when the pants are black or olive and the shoes are plain. Add a second loud piece and it stops looking chosen.",
    "Camp shirts are casual, so check the dress code. For courses that want a collar, the plaid polo gets you most of the way there.",
    "<strong>Our pick</strong> is the Fella Bruno Camp Shirt. Palm trees and golf carts, and it&rsquo;s exactly as fun as it sounds."],
   ["walker--whitsundays-ss-shirt--2", "fella--bruno-camp-shirt-tropical-golf-cart--3"]),
@@ -214,8 +240,9 @@ TAKE = """
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Looks</span><span>Seven</span></div>
-      <div class="sidebar-detail"><span class="l">Pieces</span><span>45, from 12 brands</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>51, from 12 brands</span></div>
       <div class="sidebar-detail"><span class="l">The rule</span><span>One idea per outfit</span></div>
+      <div class="sidebar-detail"><span class="l">Plus</span><span>Five hats to finish it</span></div>
       <div class="sidebar-detail"><span class="l">Easiest start</span><span>Shorts &amp; a jersey polo</span></div>
       <div class="sidebar-detail"><span class="l">Prices read</span><span>October 10, 2026</span></div>
       <a href="#pants-and-a-tee" class="sidebar-cta">See the looks &darr;</a>
@@ -250,6 +277,8 @@ FAQ = [
      "Navy, stone, brown and green look right on a course because they sit alongside the grass rather than fighting it. Pastels like mint, butter and powder blue work well in summer on a pale base."),
     ("What should I wear golfing when it's cold?",
      "Swap the polo for a knit polo sweater and add a vest instead of a jacket, so your arms stay free for the swing. Pleated trousers in a pale color keep the outfit from going too dark."),
+    ("What hat should I wear with a golf outfit?",
+     "Pick a cap from inside the outfit's palette rather than adding a new color, and keep the logo small: charcoal with black and white, stone with pastels, brown corduroy with earth tones, navy with navy and stripes."),
     ("What length should golf shorts be?",
      "Just above the knee for most people. Longer, looser shorts are a deliberate 1990s look, and they work best with a pleat."),
 ]
@@ -260,6 +289,19 @@ def items():
         for slot, its in o["slots"]:
             for b, h, c in its:
                 yield o["key"], slot, b, h, c
+    for b, h, c in SPEC.get("hats", []):
+        yield "hats", "The hat", b, h, c
+
+
+def hats_section(n0):
+    its = SPEC.get("hats", [])
+    cards = "\n".join(card(b, h, c, n0 + j) for j, (b, h, c) in enumerate(its))
+    return (f'\n<section class="products" style="margin-top:8px;">\n'
+            f'  <div class="drop-tag grass">Finish It</div>\n'
+            f'  <h2 class="products-hdr" id="the-hats">Five Hats to Pull It Together</h2>\n'
+            f'  <p class="cat-kicker"><strong>One hat, every look</strong>The cap is the last thing you put on and the first thing people see.</p>\n'
+            f'  <div {PROSE}>\n    <p style="margin:0 0 16px;">A hat finishes an outfit or fights it. Pick one from inside your palette rather than adding a new color, and keep the logo small. These five cover all seven looks: each card says which ones it goes with.</p>\n  </div>\n'
+            f'    <div class="products-grid" data-n="{len(its)}">\n{cards}\n    </div>\n</section>\n'), n0 + len(its)
 
 
 def card(b, h, c, idx):
@@ -403,6 +445,7 @@ def main(apply_):
     n = 1
     for i, lk in enumerate(LOOKS, 1):
         o, n = look(i, lk, n); body += o
+    o, n = hats_section(n); body += o
     body += NOTE + faq_html()
     out = head_top() + head_rest.replace('</head>', GRID_CSS + '</head>', 1) + body + tail
     print(f"  {n-1} cards, {len(set(ks))} unique pieces")
