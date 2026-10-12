@@ -19,7 +19,7 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 TP = os.path.join(ROOT, "data", "post-thumbs.json")
 thumbs = json.load(open(TP, encoding="utf-8"))
 mm = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json"), encoding="utf-8"))
-urls = sorted({e["url"] for v in mm.values() for e in v} | {"/drops/" + os.path.basename(p)[:-5] for p in glob.glob(os.path.join(ROOT, "drops", "*.html"))})
+urls = sorted({e["url"] for v in mm.values() for e in v} | {"/drops/" + os.path.basename(p)[:-5] for p in glob.glob(os.path.join(ROOT, "drops", "*.html")) if not re.search(r" \d\.html$", p)})  # skip iCloud " 2" conflict copies)
 
 CATS = ["Drops & Brands", "Field Notes", "News"]
 def derive(url):

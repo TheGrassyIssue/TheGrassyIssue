@@ -186,7 +186,7 @@ TAX = [
  ),
 ("tag", "range-rat", "Range-Rat Golf Brands",
  "Range Practice Gear Brands | The Grassy Issue",
- "Eight golf brands built for the people who are at the range more than the first tee — grips, shafts, carts and the unglamorous end of the bag.",
+ "Nine golf brands built for the people who are at the range more than the first tee — grips, shafts, carts and the unglamorous end of the bag.",
  """<p>Nobody photographs a grip. That is roughly the point of this group: eight brands operating in
  the parts of the bag that only matter to people who are there every week.
  <strong>Rosemark</strong> and <strong>Stick Grips</strong> make the one component you touch on
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Seventy-nine golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Eighty golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
