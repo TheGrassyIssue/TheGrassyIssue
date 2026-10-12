@@ -32,15 +32,15 @@ P = {
    "The plan is to fly Seattle to Wenatchee on Alaska, about 90 minutes from the resort, though a four-hour drive from Sea-Tac is the backup. We want to stay on site: every room has a fireplace, the 40 Golf View rooms look over Scarecrow, and overnight guests can already book tee times for every 2027 date, while day visitors only get 120 days out. That alone makes the case.",
    FR["inn"], "Rates and booking"),
  "quicksands": ("Day 1, late afternoon", "QuickSands", "$80 in 2027",
-   "https://www.gamblesands.com/rates",
+   "https://www.gamblesands.com/quicksands/",
    "Fourteen short holes on the bluff with a pull cart and a couple of wedges. After a travel day, this is the round we have in mind first: no pressure, big views over the Columbia River, and a chance to get our eyes in before the big courses. Ideally as the light drops.",
    FR["quicksands"], "Book QuickSands"),
  "cascades": ("Day 1, after dark", "The Cascades Putting Course", "At the resort",
-   "https://www.gamblesands.com/cascades-putting-course/",
+   "https://www.gamblesands.com/cascades/",
    "A 100,000-square-foot putting course, 175 yards end to end, that the resort calls an homage to the Himalayas at St Andrews. There are fire pits, and after dark they hand out glow balls. This is where we figure the first bet of the trip gets settled.",
    FR["cascades"], "Visit"),
  "barn": ("Day 1 dinner &middot; on site", "The Barn", "All day",
-   "https://www.gamblesands.com/dining/",
+   "https://www.gamblesands.com/food-and-drink/",
    "The casual one: pizzas, sliders and a canning machine that seals cocktails to go. A patio dinner, the sun going down over the river and an early night is the idea. The next day is 36 holes.",
    FR["barn"], "Visit"),
  "sands": ("Day 2 morning", "Gamble Sands", "$315 May&ndash;Sep 2027, cart included",
@@ -52,7 +52,7 @@ P = {
    "The second course, designed by McLay Kidd with Nick Schaan and opened slightly more than a decade after the first. It is wilder than the original, and the second-18 rate would make an afternoon round the best value of the trip. If we only have legs for one more 18 all week, this is the one.",
    FR["scarecrow"], "Tee times"),
  "dannyboy": ("Day 2 dinner &middot; on site", "Danny Boy", "Dinner only",
-   "https://www.gamblesands.com/dining/",
+   "https://www.gamblesands.com/food-and-drink/",
    "The resort's steakhouse: prime rib, ribeye and the Tower of Tots, with a sommelier on site. After 36 holes in the desert it feels earned. We will try to book the table when we book the room.",
    FR["dannyboy"], "Visit"),
  "tsillan": ("Day 3 morning &middot; Lake Chelan", "Tsillan Cellars and Sorrento&rsquo;s Ristorante", "South Shore",
@@ -153,7 +153,7 @@ TAKE = """
 """
 MORE = """
 <section class="products" style="margin-top:8px;">
-  <h2 class="products-hdr" id="more-time">If You Have More Time</h2>
+  <h2 class="products-hdr" id="more-time">If We Have More Time</h2>
   <p class="cat-kicker"><strong>Mount Rainier</strong>If we can steal a day, it is a day trip from Tacoma. In 2026 the park needed no timed-entry reservation, just the entrance fee.</p>
   <p class="cat-kicker"><strong>Seattle</strong>With a night to spare, we would eat at <a href="https://canlis.com" target="_blank" rel="noopener" style="border-bottom:1px solid currentColor;">Canlis</a>, the family-run fine dining room that has been open since 1950, then a late burger at <a href="https://ddir.com" target="_blank" rel="noopener" style="border-bottom:1px solid currentColor;">Dick&rsquo;s Drive-In</a>.</p>
   <p class="cat-kicker"><strong>Bandon Dunes</strong>The obvious question. It is about four and a half hours south of Portland, too far for five days, and a whole trip of its own. Call it 2028.</p>
