@@ -20,15 +20,15 @@ SEL={
  "dannyboy":[("GAMBLE-SANDS-FOOD-_OAR0252-Enhanced-NR-scaled.jpg",'c',.5,.5),("GAMBLE-SANDS-FOOD-_OAR0299-Enhanced-NR-scaled.jpg",'c',.5,.5),("GAMBLE-SANDS-FOOD-_OAR0210-Enhanced-NR-scaled.jpg",'c',.5,.5),("Gamble-2021-Marsh-114-scaled.jpg",'c',.5,.5)],
  "tsillan":[("tsillan__cc80fe8b.jpg",'c',.5,.5),("tsillan__281e489c.jpg",'c',.5,.5)],
  "munchen":[("munchen__8fadd1d5.jpg",'c',.5,.5)],
- "homecourse":[("home-thc-scenic-slider.jpg",'b',0,0),("home-slideshow12b.jpg",'b',0,0)],
+ "homecourse":[("home-thc-scenic-slider.jpg",'c',.5,.45)],
  "copper":[("copper-bar.jpg",'c',.5,.5),("copper-kitchen.jpg",'c',.5,.5)],
- "chambers":[("chambers__2277ccd3.jpg",'c',.5,.6),("chambers__61489c05.jpg",'c',.5,.5),("chambers-golf__1ee6cd52.jpg",'c',.5,.5),("chambers__c9af5e6b.jpg",'c',.5,.5),("chambers__2e381d4e.jpg",'c',.5,.5)],
+ "chambers":[("chambers__61489c05.jpg",'c',.5,.5),("chambers-golf__1ee6cd52.jpg",'c',.5,.5),("chambers__c9af5e6b.jpg",'c',.5,.5),("chambers__2e381d4e.jpg",'c',.5,.5)],
  "gold":[("gold-sig.jpg",'c',.5,.5),("gold-DSC3219-Edit-1.jpg",'c',.5,.5),("gold-Cascade1-1.jpg",'c',.5,.5)],
- "tides":[("tides-dock.jpg",'c',.5,.5),("tides-rainier.jpg",'b',0,0)],
+ "tides":[("tides-dock.jpg",'c',.5,.5),("tides-rainier.jpg",'c',.5,.5)],
  "pinestate":[("pine-1.jpg",'c',.5,.5),("pine-alberta.jpg",'c',.5,.5),("pine-2.jpg",'c',.5,.5)],
- "wildwood":[("wildwood.png",'b',0,0)],
+ "wildwood":[("wildwood.png",'c',.5,.62)],
  "lepigeon":[("lepigeon__5a592d74.jpg",'c',.5,.5),("lepigeon__58a8b522.jpg",'c',.5,.5),("lepigeon__73175ecf.jpg",'c',.5,.5),("lepigeon__370554e6.jpg",'c',.5,.5)],
- "multnomah":[("multnomah.jpg",'b',0,0)],
+ "multnomah":[("multnomah.jpg",'c',.5,.42)],
 }
 fr={}
 for k,lst in SEL.items():

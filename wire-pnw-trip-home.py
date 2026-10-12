@@ -15,23 +15,23 @@ POST = ROOT / "drops/pnw-golf-trip-gamble-sands-chambers-bay.html"
 SLUG = "/drops/pnw-golf-trip-gamble-sands-chambers-bay"
 KEY = "pnwtrip"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-PNW-TRIP-CARD -->\n", "<!-- /TGI-PNW-TRIP-CARD -->\n"
-TITLE = "Field Note: Five Days of Golf in the Pacific Northwest"
+TITLE = "Field Note: My 2027 Golf Trip to the Pacific Northwest"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "pnw-trip-2027"
 
 SLIDES = [
     ("band-1", "Scarecrow at Gamble Sands at sunset above the Columbia River",
      "Gamble Sands \u00b7 Chambers Bay \u00b7 Wildwood", "Field Notes",
-     "Five days of golf in the Pacific Northwest, planned for 2027."),
+     "My five-day Pacific Northwest golf trip for 2027."),
     ("sands-1", "The Gamble Sands course from above on a bluff over the Columbia",
      "Gamble Sands \u00b7 $315", "Days 1 and 2",
      "36 holes above the Columbia and a putting course by firelight."),
     ("chambers-1", "The lone fir at Chambers Bay at sunset over Puget Sound",
      "Chambers Bay", "Day 4",
-     "Walk the 2015 U.S. Open course with a caddie."),
+     "The 2015 U.S. Open course, with a caddie."),
     ("homecourse-1", "The Home Course in DuPont with Puget Sound beyond",
      "The Home Course \u00b7 $64", "Day 3",
-     "The best-value great round of the week."),
+     "The best-value great round of my week."),
     ("multnomah-1", "Multnomah Falls in the Columbia River Gorge",
      "Portland", "Day 5",
      "Wildwood, Le Pigeon and a waterfall on the way to the airport."),
@@ -57,7 +57,7 @@ def build_card():
     return (MARK +
             f'{CARD_OPEN}"drop">\n'
             f'    <div class="card-media" style="position:relative;">\n'
-            f'      <span class="card-tag grass">[Field Notes]</span>\n'
+            f'      <span class="card-tag flag">[Field Notes]</span>\n'
             f'      <div class="gear-carousel" data-carousel="{KEY}">\n'
             f'        <div class="gear-carousel-track">\n' + "\n".join(slides) + "\n"
             f'        </div>\n'

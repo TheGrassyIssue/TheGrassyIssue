@@ -17,12 +17,24 @@ def frame(im,pos=.2):
         im2=im.resize((int(im.width*s),int(im.height*s)),Image.LANCZOS); c=Image.new('RGB',(W,H),col); c.paste(im2,((W-im2.width)//2,(H-im2.height)//2)); return c
     s=max(W/im.width,H/im.height); im2=im.resize((max(W,round(im.width*s)),max(H,round(im.height*s))),Image.LANCZOS)
     x=(im2.width-W)//2; y=int((im2.height-H)*pos); return im2.crop((x,y,x+W,y+H))
+def tight(im, fill=.97):
+    """Three Putt packshots: crop to the garment's bounding box so it fills the frame (Lenny, 12 Oct: products looked small)."""
+    a=np.asarray(im).astype(int); border=np.concatenate([a[0],a[-1],a[:,0],a[:,-1]])
+    if border.std(axis=0).max()>=14 or border.mean()<235: return None
+    col=np.median(border,axis=0); diff=np.abs(a-col).max(axis=2)>22
+    ys,xs=np.where(diff)
+    if len(xs)<500: return None
+    x0,x1=np.percentile(xs,[.2,99.8]).astype(int); y0,y1=np.percentile(ys,[.2,99.8]).astype(int)
+    m=int(.03*max(x1-x0,y1-y0)); x0,y0=max(0,x0-m),max(0,y0-m); x1,y1=min(im.width,x1+m),min(im.height,y1+m)
+    g=im.crop((x0,y0,x1,y1)); s=min(W*1.06/g.width,H*fill/g.height)  # allow sleeve tips to kiss the frame edge for more detail
+    g=g.resize((round(g.width*s),round(g.height*s)),Image.LANCZOS); c=Image.new('RGB',(W,H),tuple(int(v) for v in col)); c.paste(g,((W-g.width)//2,(H-g.height)//2)); return c
 def raw(n,i): return glob.glob(f'{R}{n:03d}-*-{i}.jpg')[0]
 fr={}
 for n,idx in SEL.items():
     fr[n]=[]
     for k,i in enumerate(idx,1):
-        out=f'{O}p{n:03d}-{k}.jpg'; frame(Image.open(raw(n,i)).convert('RGB')).save(out,quality=86); fr[n].append('/'+out)
+        src=Image.open(raw(n,i)).convert('RGB'); t=tight(src) if n<=24 else None
+        out=f'{O}p{n:03d}-{k}.jpg'; (t if t is not None else frame(src)).save(out,quality=86); fr[n].append('/'+out)
 json.dump(fr,open('research/radar-three/frames.json','w'),indent=1)
 def panel(f,w,h,pos=.2):
     im=trim(Image.open(f).convert('RGB')); s=max(w/im.width,h/im.height); im=im.resize((round(im.width*s),round(im.height*s)),Image.LANCZOS)
@@ -73,5 +85,8 @@ def destark(path):
     out=a*(1-m)+(a*STONE/255)*m
     Image.fromarray(out.clip(0,255).astype('uint8')).save(path,quality=86); return True
 import glob as _g
-n=sum(destark(f) for f in _g.glob(O+'p0[0-2]*.jpg')+_g.glob(O+'band-*.jpg'))
+import sys as _s; _s.path.insert(0,'.')
+from destark import destark as _ds
+_LIGHT=('p024-4.jpg','p001-2.jpg','p008-3.jpg','p017-3.jpg')
+n=sum(_ds(f, light=f.endswith(_LIGHT), min_white=0.15) for f in _g.glob(O+'p0*.jpg') if int(f.rsplit('/p',1)[1][:3])<=24)
 print('destarked',n)
