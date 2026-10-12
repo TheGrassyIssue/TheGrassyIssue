@@ -1,0 +1,1588 @@
+{
+ "_note": "Dead (404) outbound links found 11 Oct 2026 and their replacements. kind=same: the product was relisted under a new handle; kind=brand: product gone, link now goes to the brand's shop and the card says sold out. Applied by apply-link-fixes.py on every deploy.",
+ "fixes": {
+  "https://studentsgolf.com/products/ssc-x-students-x-mackenzie-fairway-headcover": {
+   "new": "https://studentsgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "students-golf-summer-2026"
+   ]
+  },
+  "https://studentsgolf.com/products/draft-wood-headcover": {
+   "new": "https://studentsgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "students-golf-summer-2026"
+   ]
+  },
+  "https://studentsgolf.com/products/sgc-snap-back-hat-2": {
+   "new": "https://studentsgolf.com/products/sgc-snap-back-hat-1",
+   "kind": "same",
+   "pages": [
+    "8-bucket-hats-worth-the-brim"
+   ]
+  },
+  "https://studentsgolf.com/products/draft-blade-putter-cover": {
+   "new": "https://studentsgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "12-putter-covers-were-eyeing"
+   ]
+  },
+  "https://studentsgolf.com/products/students-club-snap-back-hat": {
+   "new": "https://studentsgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "students-golf-our-15-favorites"
+   ]
+  },
+  "https://studentsgolf.com/products/el-dorado-realtree-xtra-barrel-headcover": {
+   "new": "https://studentsgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "students-golf-our-15-favorites"
+   ]
+  },
+  "https://randomgolfclub.com/pages/australia-major-2026": {
+   "new": "https://randomgolfclub.com/",
+   "kind": "brand",
+   "pages": [
+    "australian-golf-brands-and-trips"
+   ]
+  },
+  "https://randomgolfclub.com/pages/rgc-events": {
+   "new": "https://randomgolfclub.com/",
+   "kind": "brand",
+   "pages": [
+    "rodeo-dunes-the-great-divide"
+   ]
+  },
+  "https://randomgolfclub.com/pages/random-golf-club-majors": {
+   "new": "https://randomgolfclub.com/",
+   "kind": "brand",
+   "pages": [
+    "the-retreat-guide"
+   ]
+  },
+  "https://randomgolfclub.com/pages/the-japan-major": {
+   "new": "https://randomgolfclub.com/",
+   "kind": "brand",
+   "pages": [
+    "the-retreat-guide"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-blanket-jacket": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-peninsula-alphabet-jacket": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-pine-reflection-windshirt": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-stealie-blanket-polo": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-fairway-stealie-polo": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-bermuda-alphabet-tee": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-bermuda-foundation-tee": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-ripley-blanket-short": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-scooter-alphabet-short": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-stealie-blanket-bucket-hat": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-alphabet-bucket-hat": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-companion-snapback": {
+   "new": "https://malbon.com/",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-blanket-sunday-bag": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-stealie-ball-marker": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-tee-pack": {
+   "new": "https://malbon.com/",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/grateful-dead-stealie-sock": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "malbon-x-grateful-dead"
+   ]
+  },
+  "https://malbon.com/products/tour-divot-camo-golf-glove-bark-camo": {
+   "new": "https://malbon.com/",
+   "kind": "brand",
+   "pages": [
+    "the-camo-edit"
+   ]
+  },
+  "https://malbon.com/products/tour-divot-camo-golf-towel-bark-camo": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "the-camo-edit"
+   ]
+  },
+  "https://malbon.com/products/arsham-fire-at-will-tee-white": {
+   "new": "https://malbon.com/collections/all",
+   "kind": "brand",
+   "pages": [
+    "the-summer-tee-edit"
+   ]
+  },
+  "https://kingmadejerky.com/": {
+   "new": "https://kingmadejerky.com/",
+   "kind": "unlink",
+   "pages": [
+    "off-course-golf-brands-doing-non-golf-things"
+   ]
+  },
+  "https://bbandfco.com/products/blue-recluse-blanco-copper-std": {
+   "new": "https://bbandfco.com/",
+   "kind": "brand",
+   "pages": [
+    "golf-ferrules-guide"
+   ]
+  },
+  "https://bbandfco.com/products/1776-no-5": {
+   "new": "https://bbandfco.com/",
+   "kind": "brand",
+   "pages": [
+    "golf-ferrules-guide"
+   ]
+  },
+  "https://bbandfco.com/products/utah-copper": {
+   "new": "https://bbandfco.com/",
+   "kind": "brand",
+   "pages": [
+    "golf-ferrules-guide"
+   ]
+  },
+  "https://gramicci.com/products/running-man-tee-1": {
+   "new": "https://gramicci.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-gramicci"
+   ]
+  },
+  "https://ibex.com/products/mens-24-hour-polo": {
+   "new": "https://ibex.com/",
+   "kind": "brand",
+   "pages": [
+    "10-technical-fabric-tops-for-summer"
+   ]
+  },
+  "https://www.tascperformance.com/products/everywear-polo-6": {
+   "new": "https://www.tascperformance.com/products/everywear-polo-12",
+   "kind": "same",
+   "pages": [
+    "10-technical-fabric-tops-for-summer"
+   ]
+  },
+  "https://matchstickgolf.com/products/tidy-tool-divot-fixer-alumilite-green": {
+   "new": "https://matchstickgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "7-divot-tools-actually-worth-carrying"
+   ]
+  },
+  "https://matchstickgolf.com/collections/ball-markers": {
+   "new": "https://matchstickgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "10-indie-ball-marker-brands-worth-knowing"
+   ]
+  },
+  "https://matchstickgolf.com/products/west-coast-classic-dad-hat-navy": {
+   "new": "https://matchstickgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-hat-edit-austin-summer"
+   ]
+  },
+  "https://payntrgolf.com/products/moving-day-sc-rs-gators-ghost-gray": {
+   "new": "https://payntrgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-payntr-collab-edit"
+   ]
+  },
+  "https://quietgolf.com/products/qg-x-adidas-samba": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-golf-shoe-edit"
+   ]
+  },
+  "https://quietgolf.com/products/qg-paisley-golf-towel-navy": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-2"
+   ]
+  },
+  "https://quietgolf.com/products/quiet-golf-greens-ball-marker-copy": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-ball-marker-atlas"
+   ]
+  },
+  "https://quietgolf.com/products/qg-x-seamus-hand-forged-copper-monogram-marker-copy": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-ball-marker-atlas"
+   ]
+  },
+  "https://quietgolf.com/products/qg-x-seamus-hand-forged-steel-pennant-marker-copy": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-ball-marker-atlas"
+   ]
+  },
+  "https://quietgolf.com/products/qg-barrel-driver-cover-red": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-driver-headcover-edit"
+   ]
+  },
+  "https://quietgolf.com/products/monogram-washed-pocket-t-shirt-1": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-summer-tee-edit"
+   ]
+  },
+  "https://quietgolf.com/products/randolph-polo-active-pique-brown": {
+   "new": "https://quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-quiet-golf"
+   ]
+  },
+  "https://www.nike.com/t/air-max-1-86-og-g-mens-golf-shoes-JZm9QM": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "the-golf-shoe-edit"
+   ]
+  },
+  "https://www.nike.com/t/jordan-air-rev-golf-shoes-FV6338": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "10-nikes-that-belong-on-the-course"
+   ]
+  },
+  "https://www.nike.com/t/air-max-plus-g-x-eastside-golf-golf-shoes-D9uWI4mO": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "10-nikes-that-belong-on-the-course"
+   ]
+  },
+  "https://www.nike.com/t/acg-aysen-day-pack-32l-Fk4tzD": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.nike.com/t/acg-cinder-cone-mens-windproof-jacket-wDCpzp/HJ2885-085": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "nike-acg-golf-edit"
+   ]
+  },
+  "https://www.nike.com/t/acg-crater-lake-short-sleeve-t-shirt-ddHDZt": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "nike-acg-golf-edit"
+   ]
+  },
+  "https://www.nike.com/t/acg-fly-unstructured-cap-yg6ayQbU": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "nike-acg-golf-edit"
+   ]
+  },
+  "https://www.nike.com/t/dri-fit-club-unstructured-acg-cap-HZcmJ4": {
+   "new": "https://www.nike.com/",
+   "kind": "brand",
+   "pages": [
+    "nike-acg-golf-edit"
+   ]
+  },
+  "https://www.merrell.com/US/en/agility-peak-5-gore-tex/58253M.html": {
+   "new": "https://www.merrell.com/",
+   "kind": "brand",
+   "pages": [
+    "the-best-non-golfing-golf-shoe-5-trail-runners-that-belong-o"
+   ]
+  },
+  "https://mogshadegolf.com/collections/headcovers": {
+   "new": "https://mogshadegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "loud-on-purpose-headcovers"
+   ]
+  },
+  "https://www.sunmountain.com/products/canvas-leather-headcover-driver-1": {
+   "new": "https://www.sunmountain.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-sun-mountain"
+   ]
+  },
+  "https://www.sunmountain.com/products/leather-headcover-chevron-driver": {
+   "new": "https://www.sunmountain.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-sun-mountain"
+   ]
+  },
+  "https://criquetshirts.com/products/discmania-x-criquet-carls-greatest-hits-disc-golf-3-pack": {
+   "new": "https://criquetshirts.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-criquet"
+   ]
+  },
+  "https://criquetshirts.com/products/short-sleeve-corduroy-pearl-snap-burnt-orange": {
+   "new": "https://criquetshirts.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-criquet",
+    "which-golfer-are-you"
+   ]
+  },
+  "https://criquetshirts.com/products/terrycloth-players-shirt-navy": {
+   "new": "https://criquetshirts.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-criquet"
+   ]
+  },
+  "https://criquetshirts.com/products/waffle-rugby-shirt-heather-green": {
+   "new": "https://criquetshirts.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-criquet"
+   ]
+  },
+  "https://criquetshirts.com/products/slub-cotton-short-sleeve-t-shirt-natural": {
+   "new": "https://criquetshirts.com/",
+   "kind": "brand",
+   "pages": [
+    "the-white-tee-edit-2026"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-nctfn-cx85f": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "11-water-bottles-wed-actually-carry"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-nctfn-cggyx": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "11-water-bottles-wed-actually-carry"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-srmy2-h7w7l-8pcrj-ezbym-tynw6-t4tg3": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/do-chua-ss2px-2ab6f-n44hy-wb8rn-mr5da": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-kjjr6-6gc6d-ar5fg-ykh5a-dbfwy-mkdrf-ze83c-t6mze-njngz-bez54-kckwy": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-nctfn-cx85f-wm89j-nrcwb-amgxm-7lchk": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.sentinelgolf.us/shop/p/mwqw2hk7jsxug69d9fa1t1gk7kdu6e-jg7sw-kz2dg-ftpet-ajk8r-myp3l-hzctp-wtgnr-axb2y": {
+   "new": "https://www.sentinelgolf.us/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://shop.butlerpitchandputt.com/products/this-aint-no-country-club-tee": {
+   "new": "https://shop.butlerpitchandputt.com/",
+   "kind": "brand",
+   "pages": [
+    "the-bold-tee-edit"
+   ]
+  },
+  "https://shop.bridgestonegolf.com/products/peach-reserve-vault-26-kit-limited-edition-tour-b-rx-custom-spring-hat-and-towel": {
+   "new": "https://shop.bridgestonegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "limited-edition-golf-balls"
+   ]
+  },
+  "https://shop.bridgestonegolf.com/products/pabst-blue-ribbon": {
+   "new": "https://shop.bridgestonegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "limited-edition-golf-balls"
+   ]
+  },
+  "https://shop.bridgestonegolf.com/products/usa-250-limited-edition-capsule": {
+   "new": "https://shop.bridgestonegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "limited-edition-golf-balls"
+   ]
+  },
+  "https://us.dunlopsports.com/srixon/limited-edition/all-american/limited-edition-all-american-z-star-diamond-golf-balls/MZSTARD3AA.html": {
+   "new": "https://us.dunlopsports.com/",
+   "kind": "brand",
+   "pages": [
+    "limited-edition-golf-balls"
+   ]
+  },
+  "https://parmoregolf.com/products/mogshade-x-parmore-no-membership-required-towel": {
+   "new": "https://parmoregolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-3"
+   ]
+  },
+  "https://walkergolfthings.com/products/kooka-icon-towel-3": {
+   "new": "https://walkergolfthings.com/products/kooka-icon-towel-7",
+   "kind": "same",
+   "pages": [
+    "the-towel-edit-vol-3"
+   ]
+  },
+  "https://soundergolf.com/products/cleeve-hill-logo-bag-towel": {
+   "new": "https://soundergolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-3"
+   ]
+  },
+  "https://soundergolf.com/products/cleeve-hill-ball-marker": {
+   "new": "https://soundergolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-ball-marker-atlas"
+   ]
+  },
+  "https://soundergolf.com/products/cleeve-hill-nbm-combo-tin": {
+   "new": "https://soundergolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-ball-marker-atlas"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/gardener-ss-shirt": {
+   "new": "https://walkergolfthings.com/products/gardener-ss-shirt",
+   "kind": "same",
+   "pages": [
+    "walker-golf-blooming-grounds-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/knockout-v-polo": {
+   "new": "https://walkergolfthings.com/",
+   "kind": "brand",
+   "pages": [
+    "walker-golf-blooming-grounds-drop",
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/par-tec-quarter-zip-fleece": {
+   "new": "https://walkergolfthings.com/products/par-tec-quarter-zip-fleece-1",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/members-polo": {
+   "new": "https://walkergolfthings.com/products/members-polo-3",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/featherlite-kooka-polo": {
+   "new": "https://walkergolfthings.com/products/featherlite-kooka-polo-6",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/par-tec-pant-black": {
+   "new": "https://walkergolfthings.com/",
+   "kind": "brand",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/chevron-rugby-polo": {
+   "new": "https://walkergolfthings.com/products/chevron-rugby-polo",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/dancing-kooka-leather-driver-cover-1": {
+   "new": "https://walkergolfthings.com/products/dancing-kooka-leather-driver-cover-1",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/checkered-pullover-1": {
+   "new": "https://walkergolfthings.com/products/checkered-pullover-1",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/knicked-knit-polo-1": {
+   "new": "https://walkergolfthings.com/products/knicked-knit-polo-1",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.walkergolfthings.com/en-us/products/kooka-knit-polo-1": {
+   "new": "https://walkergolfthings.com/products/kooka-knit-polo",
+   "kind": "same",
+   "pages": [
+    "walker-golf-the-par-tec-drop"
+   ]
+  },
+  "https://www.fyfegolf.com/products/oban-repurposed-sail-cloth-headcover-blue": {
+   "new": "https://www.fyfegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca"
+   ]
+  },
+  "https://www.fyfegolf.com/products/dimple-divot-x-fyfe-golf-hickory-golf-brush": {
+   "new": "https://www.fyfegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca"
+   ]
+  },
+  "https://www.fyfegolf.com/products/oban-repurposed-sail-cloth-shoe-bag-white": {
+   "new": "https://www.fyfegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca"
+   ]
+  },
+  "https://www.fyfegolf.com/products/mackenzie-golf-bag-x-fyfe-17th": {
+   "new": "https://www.fyfegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "fyfe-x-mackenzie-every-edition"
+   ]
+  },
+  "https://www.fyfegolf.com/products/mackenzie-golf-bag-x-fyfe-18th-edition-shooters-club": {
+   "new": "https://www.fyfegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "fyfe-x-mackenzie-every-edition"
+   ]
+  },
+  "https://nordarun.com/products/001a-m-abyss": {
+   "new": "https://nordarun.com/products/001-m-abyss",
+   "kind": "same",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://monohawaii.com/products/porter-yoshida-co-freestyle-dyneema-coin-case": {
+   "new": "https://monohawaii.com/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://outnaboutboutique.com/products/and-wander-ul-wallet-with-dyneema-dark-gray": {
+   "new": "https://outnaboutboutique.com/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://hilltoppacks.com/products/ultralight-dyneema-wallet": {
+   "new": "https://hilltoppacks.com/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.goruck.com/products/macv-2-safety-boot-mid-top": {
+   "new": "https://www.goruck.com/",
+   "kind": "brand",
+   "pages": [
+    "the-dyneema-edit"
+   ]
+  },
+  "https://www.686.com/products/mens-everywhere-ripstop-pant-slim-fit": {
+   "new": "https://www.686.com/",
+   "kind": "brand",
+   "pages": [
+    "technical-fabrics-heating-up-heres-12-of-our-favs"
+   ]
+  },
+  "https://us.carhartt-wip.com/products/regular-cargo-short": {
+   "new": "https://us.carhartt-wip.com/",
+   "kind": "brand",
+   "pages": [
+    "technical-fabrics-heating-up-heres-12-of-our-favs"
+   ]
+  },
+  "https://www.norseprojects.com/products/lukas-ripstop-shorts-tab-series": {
+   "new": "https://www.norseprojects.com/",
+   "kind": "brand",
+   "pages": [
+    "technical-fabrics-heating-up-heres-12-of-our-favs"
+   ]
+  },
+  "https://www.aimeleondore.com/collections/ald-golf": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater",
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-footjoy-croc-embossed-premiere-series-marquis-1": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-clubhouse-sweater": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater",
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-blackwatch-pullover": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater",
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-lightweight-tips-windbreaker": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-cordura-double-pleated-pant-3": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-pique-full-zip-sweater": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-polo-2": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-performance-short-2": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-nylon-quarter-zip-pullover": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-quarter-zip-pullover-5": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-swing-bandana": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "ald-golf-ss26-new-releases"
+   ]
+  },
+  "https://www.aimeleondore.com/products/ald-golf-performance-ankle-sock-1": {
+   "new": "https://www.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "the-sock-edit"
+   ]
+  },
+  "https://eu.aimeleondore.com/products/ald-golf-putter-cover-1": {
+   "new": "https://eu.aimeleondore.com/",
+   "kind": "brand",
+   "pages": [
+    "aim-leon-dore-ss26-golf-croc-embossed-footjoys-and-a-sweater"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/supreme-reworked-hybrid-headcover": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "best-golf-streetwear-brands-2026",
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/nike-reworked-headcovers-24": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "best-golf-streetwear-brands-2026",
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/1-of-1-ralph-lauren-bear-rework-headcovers": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/adidas-reworked-headcovers-2": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/supreme-reworked-headcovers-3": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/barbor-reworked-driver-headcover": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/oakley-reworked-headcovers": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://www.clampgolfcompany.co.uk/products/ralph-lauren-reworked-headcovers-2": {
+   "new": "https://www.clampgolfcompany.co.uk/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-clamp-golf-company"
+   ]
+  },
+  "https://lofgolf.com/en-us/products/albatross-ciel-glue": {
+   "new": "https://lofgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-left-of-field-golf"
+   ]
+  },
+  "https://lofgolf.com/en-us/products/birdie-ciel-glue": {
+   "new": "https://lofgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-left-of-field-golf"
+   ]
+  },
+  "https://lofgolf.com/en-us/products/the-search-ciel-glue": {
+   "new": "https://lofgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-left-of-field-golf"
+   ]
+  },
+  "https://lofgolf.com/en-us/products/it-comes-in-sets-ciel-glue": {
+   "new": "https://lofgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-left-of-field-golf"
+   ]
+  },
+  "https://lofgolf.com/en-us/products/hook-ciel-glue": {
+   "new": "https://lofgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-left-of-field-golf"
+   ]
+  },
+  "https://www.seamusgolf.com/products/chief-joseph-grey-golf-towel-1": {
+   "new": "https://www.seamusgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-2"
+   ]
+  },
+  "https://eastsidegolf.com/products/ega8013-whtblk-white-black-eastside-golf-be-authentic-towel": {
+   "new": "https://eastsidegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-2"
+   ]
+  },
+  "https://eastsidegolf.com/collections/mens-collection/products/navy-calf-height-esg-logo-socks": {
+   "new": "https://eastsidegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-sock-edit"
+   ]
+  },
+  "https://badbirdiegolf.com/products/towel-u-s-a-speedway": {
+   "new": "https://badbirdiegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-2"
+   ]
+  },
+  "https://www.uthersupply.com/collections/all-golf-towels": {
+   "new": "https://www.uthersupply.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-vol-2"
+   ]
+  },
+  "https://www.quietgolf.com/products/montecito-cable-knit-sweater-bone": {
+   "new": "https://www.quietgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "no-budget"
+   ]
+  },
+  "https://shaplandbags.com/products/kantle-3-1": {
+   "new": "https://shaplandbags.com/",
+   "kind": "brand",
+   "pages": [
+    "7-bags-that-stand-out",
+    "upgrading-your-golf-bag"
+   ]
+  },
+  "https://shaplandbags.com/products/sunday-3-1": {
+   "new": "https://shaplandbags.com/",
+   "kind": "brand",
+   "pages": [
+    "upgrading-your-golf-bag"
+   ]
+  },
+  "https://www.jonessportsco.com/products/original-jones-bag-dark-green": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/original-jones-bag-espresso": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/original-jones-bag-burnt-clay": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/players-series-ecru": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/players-series-deep-green-kodiak": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/rider-bag-sienna": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/jones-sports-co-rs-by-payntr-golf-white-black-tan": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/jones-sports-co-rs-by-payntr-golf-gray-black-olive": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/clockwork-hoodie-steel-blue": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/products/out-of-office-backpack-wheat-black": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-revisited-jones-sports-co"
+   ]
+  },
+  "https://www.jonessportsco.com/collections/headcovers/products/script-jones-quilted-blade-putter-cover-black": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "12-putter-covers-were-eyeing"
+   ]
+  },
+  "https://www.jonessportsco.com/collections/accessories": {
+   "new": "https://www.jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-12-worth-clipping-to-your-bag"
+   ]
+  },
+  "https://www.bluegrassfairway.com/products/the-field-hunter-green-cream-leather-golf-headcover-handmade-driver-fairway-hybrid-cover-copy": {
+   "new": "https://www.bluegrassfairway.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-bluegrass-fairway"
+   ]
+  },
+  "https://www.bluegrassfairway.com/products/the-harris-harris-tweed-golf-headcover-handmade-driver-fairway-hybrid-cover": {
+   "new": "https://www.bluegrassfairway.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-bluegrass-fairway"
+   ]
+  },
+  "https://www.bluegrassfairway.com/products/redan-putter-cover-in-harris-tweed-brown-herringbone": {
+   "new": "https://www.bluegrassfairway.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-bluegrass-fairway"
+   ]
+  },
+  "https://www.rosemarkgrips.com/grips": {
+   "new": "https://www.rosemarkgrips.com/",
+   "kind": "brand",
+   "pages": [
+    "the-niche-grip-report"
+   ]
+  },
+  "https://huegahouse.com/products/icon-classic-hat-emerald-green": {
+   "new": "https://huegahouse.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-huega-house"
+   ]
+  },
+  "https://huegahouse.com/products/woodland-dark-camo": {
+   "new": "https://huegahouse.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-huega-house"
+   ]
+  },
+  "https://huegahouse.com/products/essential-sweat-shorts-taupe": {
+   "new": "https://huegahouse.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-huega-house"
+   ]
+  },
+  "https://huegahouse.com/products/icon-hoodie-deep-emerald": {
+   "new": "https://huegahouse.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-huega-house"
+   ]
+  },
+  "https://huegahouse.com/products/essential-crewneck-bone": {
+   "new": "https://huegahouse.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-huega-house"
+   ]
+  },
+  "https://huegahouse.com/products/icon-sweatpants-deep-emerald": {
+   "new": "https://huegahouse.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-huega-house"
+   ]
+  },
+  "https://rouqegolf.com/collections/accessories": {
+   "new": "https://rouqegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-rouqe-golf"
+   ]
+  },
+  "https://www.arccosgolf.com/products/arccos-smart-laser": {
+   "new": "https://www.arccosgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "10-rangefinders-from-90-to-600"
+   ]
+  },
+  "https://www.nikonusa.com/nikon-coolshot-proiii-stabilized-golf-rangefinder": {
+   "new": "https://www.nikonusa.com/",
+   "kind": "brand",
+   "pages": [
+    "10-rangefinders-from-90-to-600"
+   ]
+  },
+  "https://www.garmin.com/en-US/p/710559/": {
+   "new": "https://www.garmin.com/",
+   "kind": "brand",
+   "pages": [
+    "10-rangefinders-from-90-to-600"
+   ]
+  },
+  "https://www.gibbonshandmade.com/products/bears-putter-cover-black": {
+   "new": "https://www.gibbonshandmade.com/",
+   "kind": "brand",
+   "pages": [
+    "12-putter-covers-were-eyeing"
+   ]
+  },
+  "https://keenelandshop.com/products/smathers-branson-keeneland-silks-putter-cover": {
+   "new": "https://keenelandshop.com/",
+   "kind": "brand",
+   "pages": [
+    "12-putter-covers-were-eyeing"
+   ]
+  },
+  "https://dormieworkshop.com/collections/blade-putter-covers": {
+   "new": "https://dormieworkshop.com/",
+   "kind": "brand",
+   "pages": [
+    "12-putter-covers-were-eyeing"
+   ]
+  },
+  "https://miuragolf.com/collections/vendors": {
+   "new": "https://miuragolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-stand-bag-edit"
+   ]
+  },
+  "https://www.sugarloafsocialclub.com/products/quiet-golf-mac-bag": {
+   "new": "https://www.sugarloafsocialclub.com/",
+   "kind": "brand",
+   "pages": [
+    "the-stand-bag-edit"
+   ]
+  },
+  "https://vesselgolf.com/products/2026-season-opener-lux-pro-cart-ii": {
+   "new": "https://vesselgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "vessel-season-opener-26-masters-green-croc-texture-already-s"
+   ]
+  },
+  "https://bettinardi.com/collections/simply-balanced": {
+   "new": "https://bettinardi.com/",
+   "kind": "brand",
+   "pages": [
+    "5-zero-torque-putters-worth-your-attention"
+   ]
+  },
+  "https://evnroll.com/products/usa-250-zero-z1-putter-limited-edition": {
+   "new": "https://evnroll.com/",
+   "kind": "brand",
+   "pages": [
+    "5-zero-torque-putters-worth-your-attention"
+   ]
+  },
+  "https://www.amazon.com/dp/B0BXNJ3K2T": {
+   "new": "https://www.amazon.com/",
+   "kind": "brand",
+   "pages": [
+    "the-push-cart-edit"
+   ]
+  },
+  "https://foundersclub.com/products/copy-of-swerve-3-wheel-golf-cart-white-blue": {
+   "new": "https://foundersclub.com/",
+   "kind": "brand",
+   "pages": [
+    "the-push-cart-edit"
+   ]
+  },
+  "https://birdsofcondor.com/products/flush-puppy-tie-dye-golf-swing-wallet": {
+   "new": "https://birdsofcondor.com/",
+   "kind": "brand",
+   "pages": [
+    "accessories-on-and-off-the-course"
+   ]
+  },
+  "https://prg-golf.com/collections/ball-markers-1": {
+   "new": "https://prg-golf.com/",
+   "kind": "brand",
+   "pages": [
+    "10-indie-ball-marker-brands-worth-knowing"
+   ]
+  },
+  "https://www.sundaygolf.com/products/loma-rain-hood": {
+   "new": "https://www.sundaygolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-rain-gear-edit"
+   ]
+  },
+  "https://jonessportsco.com/products/rain-hood-towel": {
+   "new": "https://jonessportsco.com/",
+   "kind": "brand",
+   "pages": [
+    "the-rain-gear-edit"
+   ]
+  },
+  "https://galvingreen.com/collections/sale": {
+   "new": "https://galvingreen.com/",
+   "kind": "brand",
+   "pages": [
+    "the-rain-gear-edit"
+   ]
+  },
+  "https://www.caycegolf.com/collections/driver-headcovers": {
+   "new": "https://www.caycegolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-driver-headcover-edit"
+   ]
+  },
+  "https://www.roseandfire.com/collections/driver": {
+   "new": "https://www.roseandfire.com/",
+   "kind": "brand",
+   "pages": [
+    "the-driver-headcover-edit"
+   ]
+  },
+  "https://iliacgolf.com/collections/headcovers": {
+   "new": "https://iliacgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-driver-headcover-edit"
+   ]
+  },
+  "https://flagbaggolfco.com/collections/headcovers": {
+   "new": "https://flagbaggolfco.com/",
+   "kind": "brand",
+   "pages": [
+    "the-driver-headcover-edit"
+   ]
+  },
+  "https://greysonclothiers.com/products/greyson-omaha-polo": {
+   "new": "https://greysonclothiers.com/",
+   "kind": "brand",
+   "pages": [
+    "the-hot-weather-roundup"
+   ]
+  },
+  "https://greysonclothiers.com/products/camoscape-polo": {
+   "new": "https://greysonclothiers.com/",
+   "kind": "brand",
+   "pages": [
+    "the-camo-edit"
+   ]
+  },
+  "https://www.austinfc.com/soccercelebration": {
+   "new": "https://www.austinfc.com/",
+   "kind": "brand",
+   "pages": [
+    "where-to-watch-the-world-cup-in-austin"
+   ]
+  },
+  "https://store.fifa.com/products/usa-2026-away-jersey-mens": {
+   "new": "https://store.fifa.com/",
+   "kind": "brand",
+   "pages": [
+    "world-cup-jersey-edit-pitch-to-green"
+   ]
+  },
+  "https://store.fifa.com/products/england-2026-home-jersey-mens": {
+   "new": "https://store.fifa.com/",
+   "kind": "brand",
+   "pages": [
+    "world-cup-jersey-edit-pitch-to-green"
+   ]
+  },
+  "https://store.fifa.com/products/england-2026-away-jersey-mens": {
+   "new": "https://store.fifa.com/",
+   "kind": "brand",
+   "pages": [
+    "world-cup-jersey-edit-pitch-to-green"
+   ]
+  },
+  "https://kamakurashirts.com/collections/golf": {
+   "new": "https://kamakurashirts.com/",
+   "kind": "brand",
+   "pages": [
+    "japan-golf-roundup"
+   ]
+  },
+  "https://devereuxgolf.com/products/mount-gay-sunday-bag-red": {
+   "new": "https://devereuxgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-devereux-golf"
+   ]
+  },
+  "https://devereuxgolf.com/products/competition-polo-dark-charcoal": {
+   "new": "https://devereuxgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-jersey-polo-edit"
+   ]
+  },
+  "https://publicdrip.com/products/p-script-dancing-putter-cover": {
+   "new": "https://publicdrip.com/",
+   "kind": "brand",
+   "pages": [
+    "public-drip-brooklyns-muni-born-golf-label"
+   ]
+  },
+  "https://www.malbongolf.com/products/studio-seoul-buckets-polo-sweater-cream": {
+   "new": "https://www.malbongolf.com/",
+   "kind": "brand",
+   "pages": [
+    "malbon-golf-studio-seoul-ss26"
+   ]
+  },
+  "https://www.malbongolf.com/products/studio-seoul-lightweight-rain-seam-sealed-bucket-hat-black": {
+   "new": "https://www.malbongolf.com/",
+   "kind": "brand",
+   "pages": [
+    "malbon-golf-studio-seoul-ss26"
+   ]
+  },
+  "https://vuoriclothing.com/products/aim-trouser": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/aim-short": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/strato-tech-polo": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/torrey-golf-polo": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/gamepoint-polo": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/ace-polo": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/ponto-half-zip-mock": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/terrain-jacket": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/sunday-insulated-vest": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/venture-quarter-zip": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/ponto-performance-pant": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/ponto-jogger": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/seaside-hoodie": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/waffle-henley": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/meta-trouser": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://vuoriclothing.com/products/vintage-jean": {
+   "new": "https://vuoriclothing.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-know-vuori"
+   ]
+  },
+  "https://malbongolf.com/products/torrey-pines-rope-hat-white": {
+   "new": "https://malbongolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-hat-edit-austin-summer"
+   ]
+  },
+  "https://malbongolf.com/products/monzee-roba-cover-black-black": {
+   "new": "https://malbongolf.com/",
+   "kind": "brand",
+   "pages": [
+    "no-budget-malbon"
+   ]
+  },
+  "https://malbongolf.com/products/bettinardi-cart-bag-multi": {
+   "new": "https://malbongolf.com/",
+   "kind": "brand",
+   "pages": [
+    "no-budget-malbon"
+   ]
+  },
+  "https://www.jlindebergusa.com/products/roy-linen-polo-moonbeam": {
+   "new": "https://www.jlindebergusa.com/",
+   "kind": "brand",
+   "pages": [
+    "the-jersey-polo-edit"
+   ]
+  },
+  "https://fishcreekbrands.com/products/alabama-traditions-needlepoint-belt": {
+   "new": "https://fishcreekbrands.com/",
+   "kind": "brand",
+   "pages": [
+    "the-needlepoint-belt-report"
+   ]
+  },
+  "https://us.birdsofcondor.com/collections/towels": {
+   "new": "https://us.birdsofcondor.com/",
+   "kind": "brand",
+   "pages": [
+    "the-towel-edit-12-worth-clipping-to-your-bag"
+   ]
+  },
+  "https://radmorgolf.com/products/maxwell-bobrad-pimalite-players-tee-black": {
+   "new": "https://radmorgolf.com/",
+   "kind": "brand",
+   "pages": [
+    "the-summer-tee-edit"
+   ]
+  },
+  "https://jonesgolfbags.com/products/block-j-blade-putter-cover-le-creme": {
+   "new": "https://jonesgolfbags.com/",
+   "kind": "brand",
+   "pages": [
+    "the-putter-cover-edit-11-covers-worth-the-pocket"
+   ]
+  },
+  "https://kingfisher-golf.com/polos": {
+   "new": "https://kingfisher-golf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-watch-kingfisher-golf"
+   ]
+  },
+  "https://kingfisher-golf.com/tees": {
+   "new": "https://kingfisher-golf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-watch-kingfisher-golf"
+   ]
+  },
+  "https://kingfisher-golf.com/caps": {
+   "new": "https://kingfisher-golf.com/",
+   "kind": "brand",
+   "pages": [
+    "brand-to-watch-kingfisher-golf"
+   ]
+  }
+ }
+}
