@@ -116,7 +116,7 @@ TAX = [
  ),
 ("tag", "muni-energy", "Muni-Energy Golf Brands",
  "Muni Golf Brands — Public-Course Energy | The Grassy Issue",
- "Twenty-four golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
+ "Twenty-five golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
  """<p>Muni energy is a posture more than a price point. It means the brand is dressing for a
  public course on a Saturday morning: a tee time you booked at 11pm, a bag you carry, a beer in the
  lot afterwards. <strong>Devereux</strong>, <strong>Criquet Shirts</strong> and
@@ -211,7 +211,7 @@ TAX = [
  ),
 ("tag", "member-guest", "Member-Guest Golf Brands",
  "Member-Guest Golf Brands — Club Dress Code | The Grassy Issue",
- "Four golf brands cut for the private-club end of the game — clothing and shoes that clear any dress code without looking like they tried.",
+ "Five golf brands cut for the private-club end of the game — clothing and shoes that clear any dress code without looking like they tried.",
  """<p>The narrowest shelf in the Index, and the one with the clearest brief: clothing that will not
  be questioned at the door. <strong>Peter Millar</strong> is the default answer across most of
  American private golf. <strong>Duca del Cosma</strong> and <strong>Royal Albartross</strong> make
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Eighty-one golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Eighty-three golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a

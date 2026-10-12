@@ -6,7 +6,7 @@ SEL={"the-ultimate-caddy-towel-vaspar":[0,1],"the-ultimate-caddy-towel-dutch-boy
 "the-ultimate-caddy-towel-white-burgundy-and-yellow-stripes":[0,1],"the-ultimate-caddy-towel-burgundry-silver-stripes":[0,1],
 "the-ultimate-caddy-towel-green-white-stripe":[0,1],"the-ultimate-caddy-towel-navy-white-stripe":[0,1],
 "the-classic-forest-green":[0,3,4,2],"the-classic-navy":[0,4,3,2],"the-classic-irish-mint":[0,1,3,4],
-"magnet-towel-dark-green":[0],"magnet-towel-navy":[0],"the-r-green":[1,0,2,3]}
+"magnet-towel-dark-green":[0],"magnet-towel-navy":[0],"the-r-green":[1,0,2]}
 W,H=1000,1250; fr={}
 def frame(im,pos=.5):
     a=np.asarray(im).astype(int); border=np.concatenate([a[0],a[-1],a[:,0],a[:,-1]])
@@ -31,3 +31,9 @@ for n,(f,pos) in enumerate([('Caddie_Holding_Pin_Green.jpg',0),('Grey_Towel_Beac
     frame(Image.open(R+f).convert('RGB'),pos).save(f'{O}band-{n}.jpg',quality=86)
 frame(Image.open(R+'new-colors-highlight.jpg').convert('RGB')).save(O+'card-hero.jpg',quality=86)
 print(sum(map(len,fr.values())))
+# No stark white backgrounds (Lenny, 12 Oct)
+import glob as _g, sys as _s; _s.path.insert(0,'.')
+from destark import destark
+LIGHT=('uc-white-burgundy-and-yellow-stripes','uc-dutch-boy','band-4','band-6','card-hero')
+n=sum(destark(f, light=any(k in f for k in LIGHT), min_white=0.15) for f in _g.glob(O+'*.jpg') if not f.endswith(('btk-hero.jpg','btk-og.jpg')))
+print('destarked',n)
