@@ -196,7 +196,6 @@ HEADINGS = [
 ADD_LINKS = [
     ("/drops/austin-golf-events-calendar", "the Austin golf events calendar"),
     ("/drops/the-lottery-round-austin-private-clubs", "Austin&rsquo;s private clubs"),
-    ("/drops/muni-kids-10-years", "ten years of Muni Kids"),
 ]
 
 

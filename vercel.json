@@ -4,7 +4,7 @@
   "redirects": [
     {
       "source": "/drops/muni-kids-turns-11-the-muni-never-left",
-      "destination": "/drops/muni-kids-10-years",
+      "destination": "/",
       "permanent": true
     },
     {
@@ -95,6 +95,11 @@
     {
       "source": "/drops/hats-carousel",
       "destination": "/drops/the-hat-and-towel-edit",
+      "permanent": true
+    },
+    {
+      "source": "/drops/muni-kids-10-years",
+      "destination": "/",
       "permanent": true
     }
   ]

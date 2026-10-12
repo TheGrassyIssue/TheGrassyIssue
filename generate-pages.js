@@ -64,7 +64,7 @@ while ((sm = startRe.exec(html)) !== null) {
 const allCards = [];
 // Pre-existing manually-named pages we don't overwrite
 const manualSlugs = new Set([
-  'ald-golf-ss26-new-releases', 'muni-kids-10-years', 'manors-gentleman-jack',
+  'ald-golf-ss26-new-releases', 'manors-gentleman-jack',
   'malbon-summer-gallo-colorido', 'metalwood-ss26-picks', 'sugarloaf-ss26',
   'premium-tees-carousel', 'bold-tees-carousel', 'hats-carousel',
   'best-golf-streetwear-brands-2026', 'manors-ss26',
