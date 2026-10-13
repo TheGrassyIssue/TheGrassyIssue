@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Eighty-four golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Eighty-five golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
