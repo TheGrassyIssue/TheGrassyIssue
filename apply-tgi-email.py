@@ -30,6 +30,10 @@ the form would look like it was working while every signup went nowhere. A
 silent failure on the one form that collects readers is not a change to make on
 someone's behalf. It is listed at the end as a thing for Lenny to do, in order.
 
+UPDATE 12 Oct 2026 (Lenny: "change all emails on the site to go to Lenny@thegrassyissue.com"): the newsletter
+endpoint in index.html now posts to formsubmit.co/ajax/Lenny@thegrassyissue.com. The handler shows an error
+unless FormSubmit returns success, so signups fail visibly (not silently) until the address is activated.
+
 Idempotent. Dry run by default.
 """
 import pathlib
