@@ -12,7 +12,7 @@ Shopify / GA reports as "thegrassyissue" instead of vanishing into "direct".
 Leaves alone:
   * anything inside <script>, <style> or <!-- comments --> (JS-built cards,
     JSON-LD, the search overlay — see reference-js-health-check)
-  * affiliate-wrapped links (data-aff="1") and affiliate/redirect networks
+  * affiliate/redirect networks (data-aff links on a brand's own domain ARE tagged, 12 Oct 2026)
   * links that already carry utm_source (a brand's own tags win)
   * social, government, maps and publication domains (SKIP_DOMAINS)
   * private pages: ig.html, instagram-posts.html, stats.html, drafts/
@@ -113,8 +113,8 @@ def rewrite_html(h, fn):
     out, last, n = [], 0, 0
     def do_tag(tag):
         nonlocal n
-        if 'data-aff="1"' in tag:
-            return tag
+        # data-aff links on a brand's own domain (e.g. ?ref= codes) are tagged too (Lenny, 12 Oct 2026:
+        # "make sure all links out have the TGI Tag"); redirect networks stay skipped via SKIP_DOMAINS.
         m = HREF.search(tag)
         if not m or skip_host(host_of(m.group(2).replace("&amp;", "&"))):
             return tag
