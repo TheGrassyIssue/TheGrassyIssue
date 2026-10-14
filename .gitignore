@@ -15,3 +15,10 @@ __pycache__/
 * [0-9].* copy*
 *\ copy.*
 *\ copy\ [0-9].*
+
+# ---- Scraped third-party pages ----
+# Raw HTML saved while researching a post (e.g. research/apt-sims/*.html, 14 Oct
+# 2026) carries whatever the source site embeds — 415 Colorado's page included its
+# own Google Maps browser key, which tripped GitHub secret scanning. Keep the
+# extracted JSON/images in research/, never the downloaded pages themselves.
+research/**/*.html
