@@ -125,6 +125,25 @@ DOMAINS = {
     "puttwell":           ["puttwellgolfclub.com"],
 }
 
+# ---- 14 Oct 2026 coverage audit ("make sure the brands all coverage pages are accurate and up to date") ----
+# 87 brands were missing 235 real posts. Cause: --rescan only visits brands with a DOMAINS entry, and most
+# brands only had their store domain in data/brand-stores.json. Fix: fold every exact store domain in, and map
+# the brands that had neither (domains read off the outbound links in their own existing coverage posts).
+DOMAINS.update({
+    "agronomy-workshop": ["agronomywork.shop"], "artisan-golf": ["artisangolftx.com"], "badlands": ["badlands1st.com"],
+    "carhartt-wip": ["carhartt-wip.com"], "duca-del-cosma": ["ducadelcosma.us"], "found-golf": ["found.golf"],
+    "gray-haast": ["grayandhaast.com"], "hedge": ["hedgenewyork.com"], "juniper-james": ["juniperjamesgolf.com"],
+    "mogshade": ["mogshadegolf.com"], "orkai": ["orkai.life"], "owala": ["owalalife.com"], "piretti": ["pirettigolf.com"],
+    "pluto-golf": ["pluto.golf"], "stick-grips": ["stickgripsgolf.com"], "howie-benson": ["howiebenson.com"],
+    "cph-golf": ["captainshelmgolf.com"], "left-of-field-golf": ["lofgolf.com"], "royal-albartross": ["albartross.com"],
+})
+for _slug, _st in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/brand-stores.json")))["stores"].items():
+    _d = (_st.get("domain") or "").replace("www.", "")
+    if _d and str(_st.get("match", "")).startswith("exact"):
+        DOMAINS.setdefault(_slug, [])
+        if _d not in DOMAINS[_slug]:
+            DOMAINS[_slug].append(_d)
+
 def strip_chrome(h):
     """Drop nav/footer/More-from-the-Feed so a sitewide link never reads as coverage."""
     h = re.sub(r'<head>.*?</head>', '', h, flags=re.S)

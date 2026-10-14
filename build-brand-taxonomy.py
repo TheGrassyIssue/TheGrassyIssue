@@ -102,9 +102,9 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands, Founder-Owned (2026) | The Grassy Issue",
- "Sixty independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
+ "Sixty-one independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
  """<p>An <strong>independent golf brand</strong> is one with no parent company, no licensing group and no outside
- investors behind it: it is owned by the people who started it, or by a family. Sixty brands in the Index
+ investors behind it: it is owned by the people who started it, or by a family. Sixty-one brands in the Index
  meet that bar. <strong>Bettinardi</strong> is still family-run out of Tinley Park. <strong>Seamus Golf</strong>
  is owned outright by Akbar and Megan Chisti. <strong>No Laying Up</strong> answers to its own audience and
  nobody else. The twenty-five we have covered most are ranked on
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Eighty-five golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Eighty-six golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
