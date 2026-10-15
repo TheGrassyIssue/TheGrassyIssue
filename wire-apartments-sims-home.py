@@ -52,9 +52,9 @@ def build_card():
             f'          </div>')
     first = html.escape(SLIDES[0][4], quote=False)
     return (MARK +
-            f'{CARD_OPEN}"drop">\n'
+            f'{CARD_OPEN}"field">\n'
             f'    <div class="card-media" style="position:relative;">\n'
-            f'      <span class="card-tag grass">[Drops &amp; Brands]</span>\n'
+            f'      <span class="card-tag flag">[Field Notes]</span>\n'
             f'      <div class="gear-carousel" data-carousel="{KEY}">\n'
             f'        <div class="gear-carousel-track">\n' + "\n".join(slides) + "\n"
             f'        </div>\n'

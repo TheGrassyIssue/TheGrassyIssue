@@ -206,7 +206,7 @@ def head_top():
         {"@context": "https://schema.org", "@type": "ItemList", "name": TITLE, "itemListElement": items},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Feed", "item": "https://thegrassyissue.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Drops & Brands", "item": "https://thegrassyissue.com/#feed"},
+            {"@type": "ListItem", "position": 2, "name": "Field Notes", "item": "https://thegrassyissue.com/#feed"},
             {"@type": "ListItem", "position": 3, "name": BC, "item": URL}]},
     ]
     t, d = H.escape(TITLE, quote=True), H.escape(DESC, quote=True)
@@ -287,7 +287,7 @@ def main(apply_):
     tail = d[d.index('<div class="more" data-brandindex="1">'):]
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
-  <a href="/#feed">Drops &amp; Brands</a><span>/</span>
+  <a href="/#feed">Field Notes</a><span>/</span>
   {BC}</div>
 
 <header class="drop-header">
