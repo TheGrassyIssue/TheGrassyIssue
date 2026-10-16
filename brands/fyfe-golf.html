@@ -83,6 +83,49 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-title{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
+
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+
 </style>
 <style id="wwu-css">
 .wwu{max-width:1200px;margin:8px auto 64px;padding:0 24px}
@@ -113,17 +156,18 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </nav>
 
 <header class="bp-head">
-  <div class="bp-heroimg"><img src="/images/brand-index/fyfe-golf.jpg" alt="Fyfe Golf — independent golf brand" loading="eager"></div>
-  <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Fyfe Golf</div>
-    <div class="bp-kickline">[ All Coverage &middot; 19 Posts ]</div>
-    <h1>Fyfe Golf</h1>
-    <div class="bp-meta">UK &middot; Accessories &middot; Headcovers</div>
-    <p class="bp-line">Harris Tweed and tartan headcovers made to order in Fife — plus RAF flight suits and Augusta coveralls cut into covers.</p>
-    <!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-10" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 10 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-profile" href="/drops/brand-to-know-fyfe-golf">Read the full profile &rarr;</a><a class="bp-store" href="https://fyfegolf.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=fyfe-golf" target="_blank" rel="noopener">Shop Fyfe Golf &#8599;</a></div>
-    <div class="bp-chips"><a class="bp-chip" href="/brands/tag/design-nerd">Design Nerd</a><a class="bp-chip" href="/brands/tag/made-by-hand">Made by Hand</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div>
+  <div class="bp2-hero"><img src="/images/fyfe-golf/btk-hero.jpg" alt="Fyfe Golf" fetchpriority="high"><div class="bp2-shade"></div>
+    <div class="bp2-cap">
+      <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Fyfe Golf</div>
+      <h1>Fyfe Golf</h1>
+      <div class="bp-meta">UK &middot; Accessories &middot; Headcovers</div>
+    </div>
   </div>
 </header>
+<section class="bp2-find">
+  <div><p class="bp-line">Harris Tweed and tartan headcovers made to order in Fife — plus RAF flight suits and Augusta coveralls cut into covers.</p><div class="bp-chips"><a class="bp-chip" href="/brands/tag/design-nerd">Design Nerd</a><a class="bp-chip" href="/brands/tag/made-by-hand">Made by Hand</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div></div>
+  <div class="bp2-box"><div class="bp2-lab">Find them</div><!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-10" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 10 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-store" href="https://www.fyfegolf.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=fyfe-golf" target="_blank" rel="noopener">Visit fyfegolf.com &#8599;</a><a class="bp-ig" href="https://www.instagram.com/fyfegolf/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> @fyfegolf</a></div><div class="bp2-count">19 TGI stories</div></div>
+</section>
 
 
 <section class="bp-about"><style>.bp-about{max-width:1200px;margin:0 auto;padding:6px 24px 18px;box-sizing:border-box}.bp-about .bp-gridhdr{padding-left:0;padding-right:0}.bp-about p{max-width:68ch;font-size:16.5px;line-height:1.65;margin:0 0 14px}.bp-about .bp-faqh{font-family:var(--serif,Georgia,serif);font-size:19px;font-weight:600;margin:26px 0 8px}.bp-about .bp-q{max-width:68ch;border-top:1px solid rgba(20,20,20,.15);padding:11px 0}.bp-about .bp-q:last-of-type{border-bottom:1px solid rgba(20,20,20,.15)}.bp-about .bp-q summary{cursor:pointer;font-weight:600;font-size:15.5px;list-style:none}.bp-about .bp-q summary::-webkit-details-marker{display:none}.bp-about .bp-q summary::after{content:"+";float:right;opacity:.5}.bp-about .bp-q[open] summary::after{content:"\2212"}.bp-about .bp-q p{margin:8px 0 0;font-size:15.5px}/*TGI-MOBILE-BTN-V1*/
@@ -150,20 +194,121 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Where are Fyfe Golf headcovers made?", "acceptedAnswer": {"@type": "Answer", "text": "In Fyfe's own workshop in Fife, Scotland, where every cover is cut, lined and sewn to order."}}, {"@type": "Question", "name": "Who founded Fyfe Golf?", "acceptedAnswer": {"@type": "Answer", "text": "Neil Rennie, who launched the brand in November 2021 after a career in fashion."}}, {"@type": "Question", "name": "What materials does Fyfe Golf use?", "acceptedAnswer": {"@type": "Answer", "text": "Harris Tweed, Scottish tartan and waxed canvas from Dundee, plus limited runs cut from reclaimed material such as RAF flight suits, Augusta caddie coveralls and yacht sail cloth."}}]}</script>
 </section>
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Fyfe Golf</h2>
+<section class="bp2-stories">
+<div class="bp2-kick">On The Grassy Issue</div>
+<h2 class="bp-gridhdr">Every story featuring Fyfe Golf</h2>
+<a class="bp2-feat" href="/drops/brand-to-know-fyfe-golf"><img src="/images/brand-index/fyfe-golf.jpg" alt="Brand to Know: Fyfe Golf — Harris Tweed, RAF Flight Suits and a Workshop in Fife" loading="lazy"><div class="b"><div class="c">The Profile &middot; </div><div class="t">Brand to Know: Fyfe Golf — Harris Tweed, RAF Flight Suits and a Workshop in Fife</div><div class="d">Fyfe Golf makes headcovers to order in a Fife workshop from Harris Tweed, Scottish tartan and reclaimed cloth — RAF flight suits, Augusta caddie coveralls, Oban sail…</div><div class="r">Read the profile &rarr;</div></div></a>
 <div class="bp-grid">
-  <a class="bp-card" href="/drops/brand-to-know-fyfe-golf">
-    <div class="bp-thumb"><img src="/images/fyfe-golf/btk-hero.jpg" loading="lazy" alt="Brand to Know: Fyfe Golf — Harris Tweed, RAF Flight Suits and a Workshop in Fife"><span class="bp-badge">The Profile</span></div>
+  <a class="bp-card" href="/drops/golf-color-combos-mix-and-match">
+    <div class="bp-thumb"><img src="/images/color-combos/hero.jpg" loading="lazy" alt="7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Brand to Know: Fyfe Golf — Harris Tweed, RAF Flight Suits and a Workshop in Fife</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 13, 2026</div>
+      <div class="bp-title">7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/golf-brands-clothes-they-wanted-to-wear">
+    <div class="bp-thumb"><img src="/images/wanted-to-wear/hero.jpg" loading="lazy" alt="The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 12, 2026</div>
+      <div class="bp-title">The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fyfe-golf-second-round-headcovers-from-vintage-golf-jackets">
+    <div class="bp-thumb"><img src="/images/fyfe-second-round/hero.jpg" loading="lazy" alt="Fyfe Golf Second Round: 15 Headcovers Cut From Vintage Golf Jackets"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 10, 2026</div>
+      <div class="bp-title">Fyfe Golf Second Round: 15 Headcovers Cut From Vintage Golf Jackets</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/small-golf-accessories-small-things-big-impact">
+    <div class="bp-thumb"><img src="/images/small-things/hero.jpg" loading="lazy" alt="Small Golf Accessories: 25 Pocket Pieces That Get Noticed"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 8, 2026</div>
+      <div class="bp-title">Small Golf Accessories: 25 Pocket Pieces That Get Noticed</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/rangefinder-cases-and-pouches">
+    <div class="bp-thumb"><img src="/images/rangefinder-pouches/qg-sentinel-scout-1.jpg" loading="lazy" alt="Rangefinder Cases and Pouches: 16 Picks, Plus 6 Rangefinders"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 1, 2026</div>
+      <div class="bp-title">Rangefinder Cases and Pouches: 16 Picks, Plus 6 Rangefinders</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/loud-on-purpose-headcovers">
+    <div class="bp-thumb"><img src="/images/loud-headcovers/hero.jpg" loading="lazy" alt="Loud on Purpose — 18 Headcovers Built on Design, Not Punchlines"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 31, 2026</div>
+      <div class="bp-title">Loud on Purpose — 18 Headcovers Built on Design, Not Punchlines</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site">
+    <div class="bp-thumb"><img src="/images/feed/132af5c5-JAIN.GOLF-2.jpg" loading="lazy" alt="The MacKenzie Collab Archive"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 28, 2026</div>
+      <div class="bp-title">The MacKenzie Collab Archive</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-ball-marker-atlas">
+    <div class="bp-thumb"><img src="/images/ball-markers/hero.jpg" loading="lazy" alt="The Ball Marker Atlas — 77 Markers From 20 Brands"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Ball Marker Atlas — 77 Markers From 20 Brands</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-fyfe-putter-cover-edit">
+    <div class="bp-thumb"><img src="/images/fyfe-putter-covers/brand-hero.jpg" loading="lazy" alt="The Fyfe Putter Cover Edit — Handmade in Scotland"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 6, 2026</div>
+      <div class="bp-title">The Fyfe Putter Cover Edit — Handmade in Scotland</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-towel-edit-vol-2">
+    <div class="bp-thumb"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" loading="lazy" alt="The Towel Edit, Vol. 2"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 27, 2026</div>
+      <div class="bp-title">The Towel Edit, Vol. 2</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-driver-headcover-edit">
+    <div class="bp-thumb"><img src="/images/headcover-edit/mogshade-churra-mono.jpg" loading="lazy" alt="18 Driver Headcovers We&#x27;d Game"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 14, 2026</div>
+      <div class="bp-title">18 Driver Headcovers We&#x27;d Game</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fyfe-x-mackenzie-every-edition">
+    <div class="bp-thumb"><img src="/images/fyfe-mackenzie/harbour-both.jpg" loading="lazy" alt="Fyfe x MacKenzie — Every Edition"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 6, 2026</div>
+      <div class="bp-title">Fyfe x MacKenzie — Every Edition</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/12-putter-covers-were-eyeing">
     <div class="bp-thumb"><img src="/images/feed/2b8c560e-Studentsgolf67b6f31aad6be067b6f31aad878.6034779267b6f31aad87.jpg" loading="lazy" alt="12 Putter Covers We&#x27;re Eyeing"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
       <div class="bp-title">12 Putter Covers We&#x27;re Eyeing</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca">
+    <div class="bp-thumb"><img src="/images/feed/a4ba5056-oban-blue-driver.jpg" loading="lazy" alt="Fyfe Golf — Between Tides. Sail cloth, marine suede, and waxed canvas, made in Scotland."></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">Fyfe Golf — Between Tides. Sail cloth, marine suede, and waxed canvas, made in Scotland.</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-putter-cover-edit-11-covers-worth-the-pocket">
+    <div class="bp-thumb"><img src="/images/feed/ef7d0ecb-birds-of-condor-black-tokyo-country-club-blade-putter-cover-.jpg" loading="lazy" alt="The Putter Cover Edit — 11 Covers Worth the Pocket"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">The Putter Cover Edit — 11 Covers Worth the Pocket</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag">
+    <div class="bp-thumb"><img src="/images/feed/d2ef4ddf-LakersLarge.png" loading="lazy" alt="The Headcover Edit — 6 covers that deserve their own bag tag."></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">The Headcover Edit — 6 covers that deserve their own bag tag.</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/7-divot-tools-actually-worth-carrying">
@@ -180,116 +325,12 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">The Accessory Edit — 21 Small Things, On Course and Off</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/fyfe-golf-between-tides-sail-cloth-marine-suede-and-waxed-ca">
-    <div class="bp-thumb"><img src="/images/feed/a4ba5056-oban-blue-driver.jpg" loading="lazy" alt="Fyfe Golf — Between Tides. Sail cloth, marine suede, and waxed canvas, made in Scotland."></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Fyfe Golf — Between Tides. Sail cloth, marine suede, and waxed canvas, made in Scotland.</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fyfe-golf-second-round-headcovers-from-vintage-golf-jackets">
-    <div class="bp-thumb"><img src="/images/fyfe-second-round/hero.jpg" loading="lazy" alt="Fyfe Golf Second Round: 15 Headcovers Cut From Vintage Golf Jackets"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Fyfe Golf Second Round: 15 Headcovers Cut From Vintage Golf Jackets</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fyfe-x-mackenzie-every-edition">
-    <div class="bp-thumb"><img src="/images/fyfe-mackenzie/harbour-both.jpg" loading="lazy" alt="Fyfe x MacKenzie — Every Edition"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Fyfe x MacKenzie — Every Edition</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-brands-clothes-they-wanted-to-wear">
-    <div class="bp-thumb"><img src="/images/wanted-to-wear/hero.jpg" loading="lazy" alt="The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-color-combos-mix-and-match">
-    <div class="bp-thumb"><img src="/images/color-combos/hero.jpg" loading="lazy" alt="7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/loud-on-purpose-headcovers">
-    <div class="bp-thumb"><img src="/images/loud-headcovers/hero.jpg" loading="lazy" alt="Loud on Purpose — 18 Headcovers Built on Design, Not Punchlines"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Loud on Purpose — 18 Headcovers Built on Design, Not Punchlines</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/rangefinder-cases-and-pouches">
-    <div class="bp-thumb"><img src="/images/rangefinder-pouches/qg-sentinel-scout-1.jpg" loading="lazy" alt="Rangefinder Cases and Pouches: 16 Picks, Plus 6 Rangefinders"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Rangefinder Cases and Pouches: 16 Picks, Plus 6 Rangefinders</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/small-golf-accessories-small-things-big-impact">
-    <div class="bp-thumb"><img src="/images/small-things/hero.jpg" loading="lazy" alt="Small Golf Accessories: 25 Pocket Pieces That Get Noticed"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Small Golf Accessories: 25 Pocket Pieces That Get Noticed</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-ball-marker-atlas">
-    <div class="bp-thumb"><img src="/images/ball-markers/hero.jpg" loading="lazy" alt="The Ball Marker Atlas — 77 Markers From 20 Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Ball Marker Atlas — 77 Markers From 20 Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-driver-headcover-edit">
-    <div class="bp-thumb"><img src="/images/headcover-edit/mogshade-churra-mono.jpg" loading="lazy" alt="18 Driver Headcovers We&#x27;d Game"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">18 Driver Headcovers We&#x27;d Game</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-fyfe-putter-cover-edit">
-    <div class="bp-thumb"><img src="/images/fyfe-putter-covers/brand-hero.jpg" loading="lazy" alt="The Fyfe Putter Cover Edit — Handmade in Scotland"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Fyfe Putter Cover Edit — Handmade in Scotland</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-putter-cover-edit-11-covers-worth-the-pocket">
-    <div class="bp-thumb"><img src="/images/feed/ef7d0ecb-birds-of-condor-black-tokyo-country-club-blade-putter-cover-.jpg" loading="lazy" alt="The Putter Cover Edit — 11 Covers Worth the Pocket"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Putter Cover Edit — 11 Covers Worth the Pocket</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-towel-edit-vol-2">
-    <div class="bp-thumb"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" loading="lazy" alt="The Towel Edit, Vol. 2"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Towel Edit, Vol. 2</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag">
-    <div class="bp-thumb"><img src="/images/feed/d2ef4ddf-LakersLarge.png" loading="lazy" alt="The Headcover Edit — 6 covers that deserve their own bag tag."></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Headcover Edit — 6 covers that deserve their own bag tag.</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site">
-    <div class="bp-thumb"><img src="/images/feed/132af5c5-JAIN.GOLF-2.jpg" loading="lazy" alt="The MacKenzie Collab Archive"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The MacKenzie Collab Archive</div>
-    </div>
-  </a>
 </div>
 <!--TGI-WWU--><section class="wwu"><div class="wwu-in"><span class="wwu-lab">For Fyfe Golf</span><p>Work at Fyfe Golf? This coverage is independent and always will be, but if you want to talk about sending product, a sponsored Field Note or something longer, <a href="/work-with-us">here is how that works</a>.</p></div></section><!--/TGI-WWU-->
+</section>
 
 <h2 class="bp-gridhdr">More Design Nerd</h2>
-<div class="bp-kins"><a class="bp-kin" href="/brands/mackenzie"><span class="bp-kin-name">MacKenzie Golf Bags</span><span class="bp-kin-line">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf…</span></a><a class="bp-kin" href="/brands/matchstick-golf"><span class="bp-kin-name">Matchstick Golf</span><span class="bp-kin-line">Ball markers, towels and ferrules out of St. Johns, Portland, started in 2021 by…</span></a><a class="bp-kin" href="/brands/mogshade"><span class="bp-kin-name">Mogshade</span><span class="bp-kin-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</span></a><a class="bp-kin" href="/brands/seamus"><span class="bp-kin-name">Seamus Golf</span><span class="bp-kin-line">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that…</span></a><a class="bp-kin" href="/brands/axxa"><span class="bp-kin-name">AXXA</span><span class="bp-kin-line">Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted…</span></a><a class="bp-kin" href="/brands/apres-golf"><span class="bp-kin-name">Après Golf</span><span class="bp-kin-line">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and…</span></a></div>
+<div class="bp-kins"><a class="bp-kin" href="/brands/mackenzie"><span class="bp-kin-name">MacKenzie Golf Bags</span><span class="bp-kin-line">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf…</span></a><a class="bp-kin" href="/brands/matchstick-golf"><span class="bp-kin-name">Matchstick Golf</span><span class="bp-kin-line">Hand-painted ball markers with a sense of humor, plus one-of-one headcovers sewn from…</span></a><a class="bp-kin" href="/brands/mogshade"><span class="bp-kin-name">Mogshade</span><span class="bp-kin-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</span></a><a class="bp-kin" href="/brands/seamus"><span class="bp-kin-name">Seamus Golf</span><span class="bp-kin-line">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that…</span></a><a class="bp-kin" href="/brands/axxa"><span class="bp-kin-name">AXXA</span><span class="bp-kin-line">Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted…</span></a><a class="bp-kin" href="/brands/apres-golf"><span class="bp-kin-name">Après Golf</span><span class="bp-kin-line">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and…</span></a></div>
 
 <footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>
 <!-- Google Analytics 4 (gtag.js) -->

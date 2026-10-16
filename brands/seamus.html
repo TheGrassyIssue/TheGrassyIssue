@@ -83,6 +83,49 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-title{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
+
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+
 /*TGI-MOBILE-BTN-V1*/
 .nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0;background:none;border:none;cursor:pointer}
 .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);transition:transform .25s,opacity .25s}
@@ -125,40 +168,205 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </nav>
 
 <header class="bp-head">
-  <div class="bp-heroimg"><img src="/images/seamus/glacier-driver-0.jpg" alt="Seamus Golf — independent golf brand" loading="eager"></div>
-  <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Seamus Golf</div>
-    <div class="bp-kickline">[ All Coverage &middot; 31 Posts ]</div>
-    <h1>Seamus Golf</h1>
-    <div class="bp-meta">Beaverton, OR &middot; Headcovers &middot; Accessories</div>
-    <p class="bp-line">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that covered the 2016 U.S. Ryder Cup team.</p>
-    <!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-25" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 25 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-profile" href="/drops/brand-to-know-seamus">Read the full profile &rarr;</a><a class="bp-store" href="https://seamusgolf.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=seamus" target="_blank" rel="noopener">Shop Seamus Golf &#8599;</a></div>
-    <div class="bp-chips"><a class="bp-chip" href="/brands/tag/made-by-hand">Made by Hand</a><a class="bp-chip" href="/brands/tag/design-nerd">Design Nerd</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div>
+  <div class="bp2-hero"><img src="/images/seamus/btk-hero.jpg" alt="Seamus Golf" fetchpriority="high"><div class="bp2-shade"></div>
+    <div class="bp2-cap">
+      <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Seamus Golf</div>
+      <h1>Seamus Golf</h1>
+      <div class="bp-meta">Beaverton, OR &middot; Headcovers &middot; Accessories</div>
+    </div>
   </div>
 </header>
+<section class="bp2-find">
+  <div><p class="bp-line">Hand-cut wool headcovers and blacksmith-hammered markers from a Beaverton workshop that covered the 2016 U.S. Ryder Cup team.</p><div class="bp-chips"><a class="bp-chip" href="/brands/tag/made-by-hand">Made by Hand</a><a class="bp-chip" href="/brands/tag/design-nerd">Design Nerd</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div></div>
+  <div class="bp2-box"><div class="bp2-lab">Find them</div><!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-25" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 25 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-store" href="https://www.seamusgolf.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=seamus" target="_blank" rel="noopener">Visit seamusgolf.com &#8599;</a><a class="bp-ig" href="https://www.instagram.com/seamusgolf/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> @seamusgolf</a></div><div class="bp2-count">31 TGI stories</div></div>
+</section>
 
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Seamus Golf</h2>
+<section class="bp2-stories">
+<div class="bp2-kick">On The Grassy Issue</div>
+<h2 class="bp-gridhdr">Every story featuring Seamus Golf</h2>
+<a class="bp2-feat" href="/drops/brand-to-know-seamus"><img src="/images/seamus/glacier-driver-0.jpg" alt="Brand to Know — Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team" loading="lazy"><div class="b"><div class="c">The Profile &middot; Aug 25, 2026</div><div class="t">Brand to Know — Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team</div><div class="d">Hand-cut wool headcovers sewn in Beaverton, Oregon since 2011 — Pendleton fabric, a blacksmith who hammers the ball markers, the 2016 U.S. Ryder Cup team&#x27;s covers, and…</div><div class="r">Read the profile &rarr;</div></div></a>
 <div class="bp-grid">
-  <a class="bp-card" href="/drops/brand-to-know-seamus">
-    <div class="bp-thumb"><img src="/images/seamus/btk-hero.jpg" loading="lazy" alt="Brand to Know — Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team"><span class="bp-badge">The Profile</span></div>
+  <a class="bp-card" href="/drops/golf-color-combos-mix-and-match">
+    <div class="bp-thumb"><img src="/images/color-combos/hero.jpg" loading="lazy" alt="7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Brand to Know — Seamus Golf, the Oregon Workshop That Covered a Ryder Cup Team</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 13, 2026</div>
+      <div class="bp-title">7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/golf-brands-clothes-they-wanted-to-wear">
+    <div class="bp-thumb"><img src="/images/wanted-to-wear/hero.jpg" loading="lazy" alt="The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 12, 2026</div>
+      <div class="bp-title">The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/small-golf-accessories-small-things-big-impact">
+    <div class="bp-thumb"><img src="/images/small-things/hero.jpg" loading="lazy" alt="Small Golf Accessories: 25 Pocket Pieces That Get Noticed"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 8, 2026</div>
+      <div class="bp-title">Small Golf Accessories: 25 Pocket Pieces That Get Noticed</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/golf-bag-accessories-what-to-hang-from-your-bag">
+    <div class="bp-thumb"><img src="/images/bag-hang/card-hero.jpg" loading="lazy" alt="Golf Bag Accessories: 27 Things to Hang From Your Bag"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 5, 2026</div>
+      <div class="bp-title">Golf Bag Accessories: 27 Things to Hang From Your Bag</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/which-golfer-are-you">
+    <div class="bp-thumb"><img src="/images/golfer-archetypes/card-hero.jpg" loading="lazy" alt="Which Golfer Are You? 7 Types and What to Buy"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 4, 2026</div>
+      <div class="bp-title">Which Golfer Are You? 7 Types and What to Buy</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/curating-your-golf-bag-setup">
+    <div class="bp-thumb"><img src="/images/bag-setup/v2-mood-1.jpg" loading="lazy" alt="Golf Bag Setup Ideas: How to Match Your Bag, Headcovers and Colors"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 28, 2026</div>
+      <div class="bp-title">Golf Bag Setup Ideas: How to Match Your Bag, Headcovers and Colors</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fall-golf-towel-roundup-2026">
+    <div class="bp-thumb"><img src="/images/fall-towels-2026/devereux-golf-1.jpg" loading="lazy" alt="50 Golf Towels for Fall 2026, From 50 Independent Brands"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 25, 2026</div>
+      <div class="bp-title">50 Golf Towels for Fall 2026, From 50 Independent Brands</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hat-and-towel-edit">
+    <div class="bp-thumb"><img src="/images/hats-towels/hero.jpg" loading="lazy" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 21, 2026</div>
+      <div class="bp-title">The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/golf-brands-founded-by-women">
+    <div class="bp-thumb"><img src="/images/women-founded/hero.jpg" loading="lazy" alt="Seventeen Golf Brands Founded by Women"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">The Roundup &middot; Aug 27, 2026</div>
+      <div class="bp-title">Seventeen Golf Brands Founded by Women</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-all-black-edit">
+    <div class="bp-thumb"><img src="/images/all-black/hero.jpg" loading="lazy" alt="The All-Black Edit"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">The Edit &middot; Aug 27, 2026</div>
+      <div class="bp-title">The All-Black Edit</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-white-tee-edit-2026">
+    <div class="bp-thumb"><img src="/images/whitetee26/hero.jpg" loading="lazy" alt="The White Tee Edit — 17 From the Universe and Beyond"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 27, 2026</div>
+      <div class="bp-title">The White Tee Edit — 17 From the Universe and Beyond</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-ball-marker-atlas">
+    <div class="bp-thumb"><img src="/images/ball-markers/hero.jpg" loading="lazy" alt="The Ball Marker Atlas — 77 Markers From 20 Brands"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Ball Marker Atlas — 77 Markers From 20 Brands</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hat-edit-austin-summer">
+    <div class="bp-thumb"><img src="/images/hat-edit/hero.jpg" loading="lazy" alt="The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-towel-edit-vol-3">
+    <div class="bp-thumb"><img src="/images/towel-edit-v3/hero.jpg" loading="lazy" alt="The Towel Edit, Vol. 3"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Towel Edit, Vol. 3</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/no-budget">
+    <div class="bp-thumb"><img src="/images/no-budget/hero.jpg" loading="lazy" alt="No Budget — The Most Expensive Golf Gear We Could Find"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 10, 2026</div>
+      <div class="bp-title">No Budget — The Most Expensive Golf Gear We Could Find</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/brand-to-know-quiet-golf">
+    <div class="bp-thumb"><img src="/images/quiet-golf-2026/btk-hero.jpg" loading="lazy" alt="Quiet Golf: The Costa Mesa Golf Brand, Revisited for Fall"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 3, 2026</div>
+      <div class="bp-title">Quiet Golf: The Costa Mesa Golf Brand, Revisited for Fall</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-towel-edit-vol-2">
+    <div class="bp-thumb"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" loading="lazy" alt="The Towel Edit, Vol. 2"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 27, 2026</div>
+      <div class="bp-title">The Towel Edit, Vol. 2</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/break-80-kit">
+    <div class="bp-thumb"><img src="/images/break-80-2026/hackmotion.jpg" loading="lazy" alt="The Break 80 Kit: 22 Picks to Finally Shoot 79"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 23, 2026</div>
+      <div class="bp-title">The Break 80 Kit: 22 Picks to Finally Shoot 79</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-bold-tee-edit">
+    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-driver-headcover-edit">
+    <div class="bp-thumb"><img src="/images/headcover-edit/mogshade-churra-mono.jpg" loading="lazy" alt="18 Driver Headcovers We&#x27;d Game"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 14, 2026</div>
+      <div class="bp-title">18 Driver Headcovers We&#x27;d Game</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/off-course-golf-brands-doing-non-golf-things">
+    <div class="bp-thumb"><img src="/images/off-course/gumtree-coffee.jpg" loading="lazy" alt="Off Course — Golf Brands Doing Non-Golf Things"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 8, 2026</div>
+      <div class="bp-title">Off Course — Golf Brands Doing Non-Golf Things</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/home-golf-decor-edit">
+    <div class="bp-thumb"><img src="/images/home-golf-decor/assouline-book.jpg" loading="lazy" alt="The Home Golf Decor Edit — 19 Picks for the 19th Hole"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 21, 2026</div>
+      <div class="bp-title">The Home Golf Decor Edit — 19 Picks for the 19th Hole</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/10-indie-ball-marker-brands-worth-knowing">
     <div class="bp-thumb"><img src="/images/feed/24a002d9-Swag-Anniversary-2026-Torched-Bottlecap-Ball-marker-1000-1.j.jpg" loading="lazy" alt="10 Indie Ball Marker Brands Worth Knowing"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
       <div class="bp-title">10 Indie Ball Marker Brands Worth Knowing</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/12-putter-covers-were-eyeing">
     <div class="bp-thumb"><img src="/images/feed/2b8c560e-Studentsgolf67b6f31aad6be067b6f31aad878.6034779267b6f31aad87.jpg" loading="lazy" alt="12 Putter Covers We&#x27;re Eyeing"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
       <div class="bp-title">12 Putter Covers We&#x27;re Eyeing</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/brand-to-know-radry-golf">
+    <div class="bp-thumb"><img src="/images/radry-golf/btk-hero.jpg" loading="lazy" alt="Radry Golf — The Wisconsin Artist Behind the Bird"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">Radry Golf — The Wisconsin Artist Behind the Bird</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag">
+    <div class="bp-thumb"><img src="/images/feed/d2ef4ddf-LakersLarge.png" loading="lazy" alt="The Headcover Edit — 6 covers that deserve their own bag tag."></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">The Headcover Edit — 6 covers that deserve their own bag tag.</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/7-divot-tools-actually-worth-carrying">
@@ -175,111 +383,6 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">The Accessory Edit — 21 Small Things, On Course and Off</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/break-80-kit">
-    <div class="bp-thumb"><img src="/images/break-80-2026/hackmotion.jpg" loading="lazy" alt="The Break 80 Kit: 22 Picks to Finally Shoot 79"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Break 80 Kit: 22 Picks to Finally Shoot 79</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/curating-your-golf-bag-setup">
-    <div class="bp-thumb"><img src="/images/bag-setup/v2-mood-1.jpg" loading="lazy" alt="Golf Bag Setup Ideas: How to Match Your Bag, Headcovers and Colors"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Golf Bag Setup Ideas: How to Match Your Bag, Headcovers and Colors</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fall-golf-towel-roundup-2026">
-    <div class="bp-thumb"><img src="/images/fall-towels-2026/devereux-golf-1.jpg" loading="lazy" alt="50 Golf Towels for Fall 2026, From 50 Independent Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">50 Golf Towels for Fall 2026, From 50 Independent Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-bag-accessories-what-to-hang-from-your-bag">
-    <div class="bp-thumb"><img src="/images/bag-hang/card-hero.jpg" loading="lazy" alt="Golf Bag Accessories: 27 Things to Hang From Your Bag"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Golf Bag Accessories: 27 Things to Hang From Your Bag</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-brands-clothes-they-wanted-to-wear">
-    <div class="bp-thumb"><img src="/images/wanted-to-wear/hero.jpg" loading="lazy" alt="The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Golf Clothes They Wanted to Wear: 17 Brands, One Origin Story</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-brands-founded-by-women">
-    <div class="bp-thumb"><img src="/images/women-founded/hero.jpg" loading="lazy" alt="Seventeen Golf Brands Founded by Women"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">The Roundup</div>
-      <div class="bp-title">Seventeen Golf Brands Founded by Women</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-color-combos-mix-and-match">
-    <div class="bp-thumb"><img src="/images/color-combos/hero.jpg" loading="lazy" alt="7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/home-golf-decor-edit">
-    <div class="bp-thumb"><img src="/images/home-golf-decor/assouline-book.jpg" loading="lazy" alt="The Home Golf Decor Edit — 19 Picks for the 19th Hole"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Home Golf Decor Edit — 19 Picks for the 19th Hole</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/no-budget">
-    <div class="bp-thumb"><img src="/images/no-budget/hero.jpg" loading="lazy" alt="No Budget — The Most Expensive Golf Gear We Could Find"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">No Budget — The Most Expensive Golf Gear We Could Find</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/off-course-golf-brands-doing-non-golf-things">
-    <div class="bp-thumb"><img src="/images/off-course/gumtree-coffee.jpg" loading="lazy" alt="Off Course — Golf Brands Doing Non-Golf Things"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Off Course — Golf Brands Doing Non-Golf Things</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/small-golf-accessories-small-things-big-impact">
-    <div class="bp-thumb"><img src="/images/small-things/hero.jpg" loading="lazy" alt="Small Golf Accessories: 25 Pocket Pieces That Get Noticed"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Small Golf Accessories: 25 Pocket Pieces That Get Noticed</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-all-black-edit">
-    <div class="bp-thumb"><img src="/images/all-black/hero.jpg" loading="lazy" alt="The All-Black Edit"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">The Edit</div>
-      <div class="bp-title">The All-Black Edit</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-ball-marker-atlas">
-    <div class="bp-thumb"><img src="/images/ball-markers/hero.jpg" loading="lazy" alt="The Ball Marker Atlas — 77 Markers From 20 Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Ball Marker Atlas — 77 Markers From 20 Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-bold-tee-edit">
-    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-driver-headcover-edit">
-    <div class="bp-thumb"><img src="/images/headcover-edit/mogshade-churra-mono.jpg" loading="lazy" alt="18 Driver Headcovers We&#x27;d Game"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">18 Driver Headcovers We&#x27;d Game</div>
-    </div>
-  </a>
   <a class="bp-card" href="/drops/the-drop-report-september-2026">
     <div class="bp-thumb"><img src="/images/sept-drops/malbon-shards.jpg" loading="lazy" alt="The Drop Report — Everything That Landed, Brand by Brand"></div>
     <div class="bp-body">
@@ -294,74 +397,12 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">The Dyneema Edit — A Golf Bag, a Pouch, a Wallet and a Sling in the Fiber That Floats</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/the-hat-and-towel-edit">
-    <div class="bp-thumb"><img src="/images/hats-towels/hero.jpg" loading="lazy" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hat-edit-austin-summer">
-    <div class="bp-thumb"><img src="/images/hat-edit/hero.jpg" loading="lazy" alt="The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-towel-edit-vol-2">
-    <div class="bp-thumb"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" loading="lazy" alt="The Towel Edit, Vol. 2"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Towel Edit, Vol. 2</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-towel-edit-vol-3">
-    <div class="bp-thumb"><img src="/images/towel-edit-v3/hero.jpg" loading="lazy" alt="The Towel Edit, Vol. 3"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Towel Edit, Vol. 3</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-white-tee-edit-2026">
-    <div class="bp-thumb"><img src="/images/whitetee26/hero.jpg" loading="lazy" alt="The White Tee Edit — 17 From the Universe and Beyond"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The White Tee Edit — 17 From the Universe and Beyond</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/which-golfer-are-you">
-    <div class="bp-thumb"><img src="/images/golfer-archetypes/card-hero.jpg" loading="lazy" alt="Which Golfer Are You? 7 Types and What to Buy"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Which Golfer Are You? 7 Types and What to Buy</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/brand-to-know-quiet-golf">
-    <div class="bp-thumb"><img src="/images/quiet-golf-2026/btk-hero.jpg" loading="lazy" alt="Quiet Golf: The Costa Mesa Golf Brand, Revisited for Fall"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Quiet Golf: The Costa Mesa Golf Brand, Revisited for Fall</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/brand-to-know-radry-golf">
-    <div class="bp-thumb"><img src="/images/radry-golf/btk-hero.jpg" loading="lazy" alt="Radry Golf — The Wisconsin Artist Behind the Bird"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Radry Golf — The Wisconsin Artist Behind the Bird</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-headcover-edit-6-covers-that-deserve-their-own-bag-tag">
-    <div class="bp-thumb"><img src="/images/feed/d2ef4ddf-LakersLarge.png" loading="lazy" alt="The Headcover Edit — 6 covers that deserve their own bag tag."></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Headcover Edit — 6 covers that deserve their own bag tag.</div>
-    </div>
-  </a>
 </div>
 <!--TGI-WWU--><section class="wwu"><div class="wwu-in"><span class="wwu-lab">For Seamus Golf</span><p>Work at Seamus Golf? This coverage is independent and always will be, but if you want to talk about sending product, a sponsored Field Note or something longer, <a href="/work-with-us">here is how that works</a>.</p></div></section><!--/TGI-WWU-->
+</section>
 
 <h2 class="bp-gridhdr">More Design Nerd</h2>
-<div class="bp-kins"><a class="bp-kin" href="/brands/fyfe-golf"><span class="bp-kin-name">Fyfe Golf</span><span class="bp-kin-line">Harris Tweed and tartan headcovers made to order in Fife — plus RAF flight suits and…</span></a><a class="bp-kin" href="/brands/mackenzie"><span class="bp-kin-name">MacKenzie Golf Bags</span><span class="bp-kin-line">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf…</span></a><a class="bp-kin" href="/brands/matchstick-golf"><span class="bp-kin-name">Matchstick Golf</span><span class="bp-kin-line">Ball markers, towels and ferrules out of St. Johns, Portland, started in 2021 by…</span></a><a class="bp-kin" href="/brands/mogshade"><span class="bp-kin-name">Mogshade</span><span class="bp-kin-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</span></a><a class="bp-kin" href="/brands/axxa"><span class="bp-kin-name">AXXA</span><span class="bp-kin-line">Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted…</span></a><a class="bp-kin" href="/brands/apres-golf"><span class="bp-kin-name">Après Golf</span><span class="bp-kin-line">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and…</span></a></div>
+<div class="bp-kins"><a class="bp-kin" href="/brands/fyfe-golf"><span class="bp-kin-name">Fyfe Golf</span><span class="bp-kin-line">Harris Tweed and tartan headcovers made to order in Fife — plus RAF flight suits and…</span></a><a class="bp-kin" href="/brands/mackenzie"><span class="bp-kin-name">MacKenzie Golf Bags</span><span class="bp-kin-line">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf…</span></a><a class="bp-kin" href="/brands/matchstick-golf"><span class="bp-kin-name">Matchstick Golf</span><span class="bp-kin-line">Hand-painted ball markers with a sense of humor, plus one-of-one headcovers sewn from…</span></a><a class="bp-kin" href="/brands/mogshade"><span class="bp-kin-name">Mogshade</span><span class="bp-kin-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</span></a><a class="bp-kin" href="/brands/axxa"><span class="bp-kin-name">AXXA</span><span class="bp-kin-line">Northern Beaches label built between surf and golf. Founded 2022, jacquard-knitted…</span></a><a class="bp-kin" href="/brands/apres-golf"><span class="bp-kin-name">Après Golf</span><span class="bp-kin-line">Hi-loft sherpa fleece headcovers hand-sewn in California, with vintage ski-resort and…</span></a></div>
 
 <footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>
 <!-- Google Analytics 4 (gtag.js) -->

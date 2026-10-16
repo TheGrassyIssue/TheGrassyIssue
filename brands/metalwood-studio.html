@@ -83,6 +83,49 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-title{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
+
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+
 /*TGI-MOBILE-BTN-V1*/
 .nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0;background:none;border:none;cursor:pointer}
 .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);transition:transform .25s,opacity .25s}
@@ -125,40 +168,107 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </nav>
 
 <header class="bp-head">
-  <div class="bp-heroimg"><img src="/images/brand-index/metalwood-studio.jpg" alt="Metalwood Studio — independent golf brand" loading="eager"></div>
-  <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Metalwood Studio</div>
-    <div class="bp-kickline">[ All Coverage &middot; 15 Posts ]</div>
-    <h1>Metalwood Studio</h1>
-    <div class="bp-meta">Los Angeles, CA &middot; Apparel &middot; Accessories</div>
-    <p class="bp-line">Cole Young's LA studio mining Y2K tour aesthetics — the blueprint for modern golf nostalgia.</p>
-    <!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-8" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 8 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-profile" href="/drops/brand-to-know-metalwood-studio">Read the full profile &rarr;</a></div>
-    <div class="bp-chips"><a class="bp-chip" href="/brands/tag/loud-on-purpose">Loud on Purpose</a><a class="bp-chip" href="/brands/tag/design-nerd">Design Nerd</a><a class="bp-chip" href="/brands/tag/collab-machine">Collab Machine</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div>
+  <div class="bp2-hero"><img src="/images/metalwood/brand-hero.jpg" alt="Metalwood Studio" fetchpriority="high"><div class="bp2-shade"></div>
+    <div class="bp2-cap">
+      <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Metalwood Studio</div>
+      <h1>Metalwood Studio</h1>
+      <div class="bp-meta">Los Angeles, CA &middot; Apparel &middot; Accessories</div>
+    </div>
   </div>
 </header>
+<section class="bp2-find">
+  <div><p class="bp-line">Cole Young's LA studio mining Y2K tour aesthetics — the blueprint for modern golf nostalgia.</p><div class="bp-chips"><a class="bp-chip" href="/brands/tag/loud-on-purpose">Loud on Purpose</a><a class="bp-chip" href="/brands/tag/design-nerd">Design Nerd</a><a class="bp-chip" href="/brands/tag/collab-machine">Collab Machine</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div></div>
+  <div class="bp2-box"><div class="bp2-lab">Find them</div><!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-8" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 8 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-store" href="https://metalwood.studio/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=metalwood-studio" target="_blank" rel="noopener">Visit metalwood.studio &#8599;</a></div><div class="bp2-count">15 TGI stories</div></div>
+</section>
 
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Metalwood Studio</h2>
+<section class="bp2-stories">
+<div class="bp2-kick">On The Grassy Issue</div>
+<h2 class="bp-gridhdr">Every story featuring Metalwood Studio</h2>
+<a class="bp2-feat" href="/drops/brand-to-know-metalwood-studio"><img src="/images/brand-index/metalwood-studio.jpg" alt="Metalwood Studio — Cole Young&#x27;s Y2K Golf Revival" loading="lazy"><div class="b"><div class="c">The Profile &middot; Jun 15, 2026</div><div class="t">Metalwood Studio — Cole Young&#x27;s Y2K Golf Revival</div><div class="d">The Los Angeles studio mining late-nineties tour aesthetics. Cole Young&#x27;s story, the adidas MC70 collab and the pieces that set the template.</div><div class="r">Read the profile &rarr;</div></div></a>
 <div class="bp-grid">
-  <a class="bp-card" href="/drops/brand-to-know-metalwood-studio">
-    <div class="bp-thumb"><img src="/images/metalwood/brand-hero.jpg" loading="lazy" alt="Metalwood Studio — Cole Young&#x27;s Y2K Golf Revival"><span class="bp-badge">The Profile</span></div>
+  <a class="bp-card" href="/drops/fall-golf-t-shirts-tees-for-cooler-weather">
+    <div class="bp-thumb"><img src="/images/fall-tees/hero.jpg" loading="lazy" alt="Fall Golf T-Shirts: 26 Tees for Cooler Weather"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Metalwood Studio — Cole Young&#x27;s Y2K Golf Revival</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 9, 2026</div>
+      <div class="bp-title">Fall Golf T-Shirts: 26 Tees for Cooler Weather</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hat-and-towel-edit">
+    <div class="bp-thumb"><img src="/images/hats-towels/hero.jpg" loading="lazy" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 21, 2026</div>
+      <div class="bp-title">The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/best-golf-streetwear-brands-2026">
     <div class="bp-thumb"><img src="/images/streetwear-oct/band-students-0.jpg" loading="lazy" alt="The 9 Best Golf Streetwear Brands in 2026"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 30, 2026</div>
       <div class="bp-title">The 9 Best Golf Streetwear Brands in 2026</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/fall-golf-t-shirts-tees-for-cooler-weather">
-    <div class="bp-thumb"><img src="/images/fall-tees/hero.jpg" loading="lazy" alt="Fall Golf T-Shirts: 26 Tees for Cooler Weather"></div>
+  <a class="bp-card" href="/drops/the-all-black-edit">
+    <div class="bp-thumb"><img src="/images/all-black/hero.jpg" loading="lazy" alt="The All-Black Edit"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Fall Golf T-Shirts: 26 Tees for Cooler Weather</div>
+      <div class="bp-kicker">The Edit &middot; Aug 27, 2026</div>
+      <div class="bp-title">The All-Black Edit</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-white-tee-edit-2026">
+    <div class="bp-thumb"><img src="/images/whitetee26/hero.jpg" loading="lazy" alt="The White Tee Edit — 17 From the Universe and Beyond"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 27, 2026</div>
+      <div class="bp-title">The White Tee Edit — 17 From the Universe and Beyond</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-golf-shoe-edit">
+    <div class="bp-thumb"><img src="/images/reebok-manors-ii/campaign-club-c.jpg" loading="lazy" alt="The Golf Shoe Edit"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 5, 2026</div>
+      <div class="bp-title">The Golf Shoe Edit</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-water-bottle-edit">
+    <div class="bp-thumb"><img src="/images/water-bottles/tomorrow-golf-bottle.jpg" loading="lazy" alt="The Water Bottle Edit"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 4, 2026</div>
+      <div class="bp-title">The Water Bottle Edit</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-towel-edit-vol-2">
+    <div class="bp-thumb"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" loading="lazy" alt="The Towel Edit, Vol. 2"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 27, 2026</div>
+      <div class="bp-title">The Towel Edit, Vol. 2</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-bold-tee-edit">
+    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hoodie-and-shorts-edit">
+    <div class="bp-thumb"><img src="/images/hoodie-shorts/hero.jpg" loading="lazy" alt="Hoodie and Shorts — The Best Fall Combo"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">Hoodie and Shorts — The Best Fall Combo</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-sock-edit">
+    <div class="bp-thumb"><img src="/images/sock-edit/02-sentinel.jpg" loading="lazy" alt="The Sock Drawer — 15 Pairs From $16 to $39"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 13, 2026</div>
+      <div class="bp-title">The Sock Drawer — 15 Pairs From $16 to $39</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fresh-pieces-for-the-warm-weather">
+    <div class="bp-thumb"><img src="/images/feed/959b2b2c-mens_in_line_2.jpg" loading="lazy" alt="Fresh Pieces for the Warm Weather"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">Fresh Pieces for the Warm Weather</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/metalwood-ss26-picks">
@@ -175,78 +285,9 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">Off Course, Vol. 2 — Golf Brands Doing Non-Golf Things</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/the-all-black-edit">
-    <div class="bp-thumb"><img src="/images/all-black/hero.jpg" loading="lazy" alt="The All-Black Edit"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">The Edit</div>
-      <div class="bp-title">The All-Black Edit</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-bold-tee-edit">
-    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-golf-shoe-edit">
-    <div class="bp-thumb"><img src="/images/reebok-manors-ii/campaign-club-c.jpg" loading="lazy" alt="The Golf Shoe Edit"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Golf Shoe Edit</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hat-and-towel-edit">
-    <div class="bp-thumb"><img src="/images/hats-towels/hero.jpg" loading="lazy" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hoodie-and-shorts-edit">
-    <div class="bp-thumb"><img src="/images/hoodie-shorts/hero.jpg" loading="lazy" alt="Hoodie and Shorts — The Best Fall Combo"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">Hoodie and Shorts — The Best Fall Combo</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-sock-edit">
-    <div class="bp-thumb"><img src="/images/sock-edit/02-sentinel.jpg" loading="lazy" alt="The Sock Drawer — 15 Pairs From $16 to $39"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Sock Drawer — 15 Pairs From $16 to $39</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-towel-edit-vol-2">
-    <div class="bp-thumb"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" loading="lazy" alt="The Towel Edit, Vol. 2"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Towel Edit, Vol. 2</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-water-bottle-edit">
-    <div class="bp-thumb"><img src="/images/water-bottles/tomorrow-golf-bottle.jpg" loading="lazy" alt="The Water Bottle Edit"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Water Bottle Edit</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-white-tee-edit-2026">
-    <div class="bp-thumb"><img src="/images/whitetee26/hero.jpg" loading="lazy" alt="The White Tee Edit — 17 From the Universe and Beyond"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The White Tee Edit — 17 From the Universe and Beyond</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fresh-pieces-for-the-warm-weather">
-    <div class="bp-thumb"><img src="/images/feed/959b2b2c-mens_in_line_2.jpg" loading="lazy" alt="Fresh Pieces for the Warm Weather"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Fresh Pieces for the Warm Weather</div>
-    </div>
-  </a>
 </div>
 <!--TGI-WWU--><section class="wwu"><div class="wwu-in"><span class="wwu-lab">For Metalwood Studio</span><p>Work at Metalwood Studio? This coverage is independent and always will be, but if you want to talk about sending product, a sponsored Field Note or something longer, <a href="/work-with-us">here is how that works</a>.</p></div></section><!--/TGI-WWU-->
+</section>
 
 <h2 class="bp-gridhdr">More Collab Machine</h2>
 <div class="bp-kins"><a class="bp-kin" href="/brands/mackenzie"><span class="bp-kin-name">MacKenzie Golf Bags</span><span class="bp-kin-line">Handmade carry bags since 1985 — and the maker behind collabs for Fyfe, Sugarloaf…</span></a><a class="bp-kin" href="/brands/mogshade"><span class="bp-kin-name">Mogshade</span><span class="bp-kin-line">Handmade Portuguese headcovers and towels, made to order on a three-week lead.</span></a><a class="bp-kin" href="/brands/ovo"><span class="bp-kin-name">OVO</span><span class="bp-kin-line">Streetwear, outerwear and accessories from Toronto, run as Drake&#x27;s clothing label since…</span></a><a class="bp-kin" href="/brands/sentinel-golf"><span class="bp-kin-name">Sentinel Golf</span><span class="bp-kin-line">Minneapolis walker bags from $810 — Dyneema, Danish textiles, and no interest in…</span></a><a class="bp-kin" href="/brands/walker-golf-things"><span class="bp-kin-name">Walker Golf Things</span><span class="bp-kin-line">Pro skater Jack Fardell&#x27;s label — named after Nicklaus, collabs with adidas, Wahine and…</span></a><a class="bp-kin" href="/brands/apc-golf"><span class="bp-kin-name">A.P.C. Golf</span><span class="bp-kin-line">Jean Touitou&#x27;s golf line, launched in Korea and Japan first. Collaborated with…</span></a></div>

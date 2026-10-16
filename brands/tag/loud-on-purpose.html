@@ -83,6 +83,49 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-title{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
+
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+
 /*TGI-MOBILE-BTN-V1*/
 .nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0;background:none;border:none;cursor:pointer}
 .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);transition:transform .25s,opacity .25s}
@@ -297,10 +340,10 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
  <strong>Malbon</strong> built an entire company on the premise that golf clothing had been
- apologizing for itself for forty years.</p>
+ apologising for itself for forty years.</p>
  <p>The useful distinction inside this group is between loud-as-graphic and loud-as-colour.
  <strong>Golf Gods</strong> and <strong>Metalwood Studio</strong> work in imagery and reference;
- <strong>G/FORE</strong> and <strong>J.Lindeberg</strong> work in saturated blocks of color and
+ <strong>G/FORE</strong> and <strong>J.Lindeberg</strong> work in saturated blocks of colour and
  cut. They land very differently on a first tee and they are shopped for different reasons, which
  is why both sit here rather than being split.</p>
   </div>
@@ -330,7 +373,7 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 <a class="bc" href="/brands/puttwell" data-slug="puttwell" data-letter="P" data-cats="apparel accessories headcovers" data-regions="usa" data-tags="collab-machine loud-on-purpose" data-text="puttwell hawaii a hawaii golf brand from a music-and-art crew: dj-culture tees, know your roll covers and collabs with sig zane and extra butter. collab machine loud on purpose apparel accessories headcovers"><div class="bc-img"><img src="/images/puttwell/band-1.jpg" alt="Puttwell" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">Puttwell</div><div class="bc-meta">HAWAII · APPAREL</div><p class="bc-line">A Hawaii golf brand from a music-and-art crew: DJ-culture tees, Know Your Roll covers and collabs with Sig Zane and Extra Butter.</p><div class="bc-tags"><span class="tag">COLLAB MACHINE</span></div></div></a>
 <a class="bc" href="/brands/radry-golf" data-slug="radry-golf" data-letter="R" data-cats="headwear apparel" data-regions="usa" data-tags="loud-on-purpose muni-energy independent" data-text="radry golf sheboygan, wi a wisconsin artist whose logo is a bird in a bucket hat — est. 2018, drawn before it is stitched. loud on purpose muni energy independent headwear apparel"><div class="bc-img"><img src="/images/radry-golf/a-cameo-a2.jpg" alt="Radry Golf" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">Radry Golf</div><div class="bc-meta">SHEBOYGAN, WI · HEADWEAR</div><p class="bc-line">A Wisconsin artist whose logo is a bird in a bucket hat — est. 2018, drawn before it is stitched.</p><div class="bc-tags"><span class="tag">MUNI ENERGY</span></div></div></a>
 <a class="bc" href="/brands/realtree" data-slug="realtree" data-letter="R" data-cats="apparel" data-regions="usa" data-tags="loud-on-purpose collab-machine" data-text="realtree columbus, ga the camouflage licensor turning forty, now with golf collabs at puma and sun mountain. loud on purpose collab machine apparel"><div class="bc-img"><img src="/images/realtree-puma/realtree-camo-golf-polo-aw26-0.jpg" alt="Realtree" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">Realtree</div><div class="bc-meta">COLUMBUS, GA · APPAREL</div><p class="bc-line">The camouflage licensor turning forty, now with golf collabs at PUMA and Sun Mountain.</p><div class="bc-tags"><span class="tag">LOUD ON PURPOSE</span></div></div></a>
-<a class="bc" href="/brands/ripit-grips" data-slug="ripit-grips" data-letter="R" data-cats="grips" data-regions="australia" data-tags="loud-on-purpose design-nerd" data-text="ripit grips australia todd watts spent three years getting a print to survive the moulding — art-series golf grips with alignment marks at both ends. loud on purpose design nerd grips"><div class="bc-img"><img src="/images/grips/ripit-2.jpg" alt="RIPIT Grips" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">RIPIT Grips</div><div class="bc-meta">AUSTRALIA · GRIPS</div><p class="bc-line">Todd Watts spent three years getting a print to survive the molding — art-series golf grips with alignment marks at both ends.</p><div class="bc-tags"><span class="tag">DESIGN NERD</span></div></div></a>
+<a class="bc" href="/brands/ripit-grips" data-slug="ripit-grips" data-letter="R" data-cats="grips" data-regions="australia" data-tags="loud-on-purpose design-nerd" data-text="ripit grips australia todd watts spent three years getting a print to survive the moulding — art-series golf grips with alignment marks at both ends. loud on purpose design nerd grips"><div class="bc-img"><img src="/images/grips/ripit-2.jpg" alt="RIPIT Grips" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">RIPIT Grips</div><div class="bc-meta">AUSTRALIA · GRIPS</div><p class="bc-line">Todd Watts spent three years getting a print to survive the moulding — art-series golf grips with alignment marks at both ends.</p><div class="bc-tags"><span class="tag">DESIGN NERD</span></div></div></a>
 <a class="bc" href="/brands/sinking-birdies" data-slug="sinking-birdies" data-letter="S" data-cats="accessories" data-regions="europe" data-tags="loud-on-purpose" data-text="sinking birdies hampshire, england bold-print cabretta gloves, towels and covers. co-founder christina rogers verified via companies house. loud on purpose accessories"><div class="bc-img"><img src="/images/women-founded/sinking-birdies-1.jpg" alt="Sinking Birdies" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">Sinking Birdies</div><div class="bc-meta">HAMPSHIRE, ENGLAND · ACCESSORIES</div><p class="bc-line">Bold-print Cabretta gloves, towels and covers. Co-founder Christina Rogers verified via Companies House.</p><div class="bc-tags"><span class="tag">LOUD ON PURPOSE</span></div></div></a>
 <a class="bc" href="/brands/slice-town" data-slug="slice-town" data-letter="S" data-cats="apparel headwear accessories" data-regions="europe" data-tags="loud-on-purpose independent" data-text="slice town copenhagen, denmark golf streetwear started in late 2024 by a dane and a swede: wide nylon track suits, boxy reflective layers, tech pants and a yellow knitted balaclava. loud on purpose independent apparel headwear accessories"><div class="bc-img"><img src="/images/slice-town/band-6.jpg" alt="SLICE TOWN" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">SLICE TOWN</div><div class="bc-meta">COPENHAGEN, DENMARK · APPAREL</div><p class="bc-line">Golf streetwear started in late 2024 by a Dane and a Swede: wide nylon track suits, boxy reflective layers, tech pants and a yellow knitted balaclava.</p><div class="bc-tags"><span class="tag">LOUD ON PURPOSE</span></div></div></a>
 <a class="bc" href="/brands/students-golf" data-slug="students-golf" data-letter="S" data-cats="apparel" data-regions="usa" data-tags="loud-on-purpose independent" data-text="students golf usa campus-inflected golfwear built on varsity graphics and a deep bench of collabs. loud on purpose independent apparel"><div class="bc-img"><img src="/images/students-golf-15/brand-hero.jpg" alt="Students Golf" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div><div class="bc-body"><div class="bc-name">Students Golf</div><div class="bc-meta">USA · APPAREL</div><p class="bc-line">Campus-inflected golfwear built on varsity graphics and a deep bench of collabs.</p><div class="bc-tags"><span class="tag">LOUD ON PURPOSE</span></div></div></a>

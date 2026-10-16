@@ -1,0 +1,723 @@
+{
+ "_": "Brand website + Instagram for /brands pages (15 Oct 2026). Website from data/brand-stores.json or the brand's own product links in our posts; Instagram read from the brand's own site. Empty = not found, no button shown.",
+ "3-putt-round": {
+  "website": "https://3puttround.com/",
+  "instagram": "3puttround"
+ },
+ "agronomy-workshop": {
+  "website": "https://agronomywork.shop/",
+  "instagram": "agronomyworkshop"
+ },
+ "aime-leon-dore": {
+  "website": "https://www.aimeleondore.com/",
+  "instagram": "aimeleondore"
+ },
+ "ally-aiken": {
+  "website": "https://allyaikendesign.com/",
+  "instagram": null
+ },
+ "anti-country-club-tokyo": {
+  "website": "https://anticountryclubtokyo.com/",
+  "instagram": "anticountryclubtokyo"
+ },
+ "apc-golf": {
+  "website": null,
+  "instagram": null
+ },
+ "apres-golf": {
+  "website": "https://apresgolf.com/",
+  "instagram": "apresgolf_"
+ },
+ "artisan-golf": {
+  "website": "https://www.artisangolftx.com/",
+  "instagram": "artisangolftx"
+ },
+ "ashworth": {
+  "website": "https://www.ashworth-golf.com/",
+  "instagram": "ashworthgolfcompany"
+ },
+ "aug-11": {
+  "website": "https://aug11.co/",
+  "instagram": null
+ },
+ "austinknittylimits": {
+  "website": "https://austinknittylimits.com/",
+  "instagram": null
+ },
+ "avoda-golf": {
+  "website": "https://avodagolf.com/",
+  "instagram": "avodagolf"
+ },
+ "axxa": {
+  "website": "https://www.axxa.com.au/",
+  "instagram": "axxagolf"
+ },
+ "badlands": {
+  "website": "https://badlands1st.com/",
+  "instagram": "badlands1st"
+ },
+ "bag-boy": {
+  "website": "https://bagboy.com/",
+  "instagram": "bagboygolf"
+ },
+ "beams-golf": {
+  "website": null,
+  "instagram": null
+ },
+ "beavertail-golf-co": {
+  "website": null,
+  "instagram": null
+ },
+ "bestgrips": {
+  "website": "https://bestgrips.com/",
+  "instagram": "bestgrips"
+ },
+ "bet-on-the-horses": {
+  "website": "https://betonthehorses.co/",
+  "instagram": "betonthehorses"
+ },
+ "bettinardi": {
+  "website": "https://bettinardi.com/",
+  "instagram": "bettinardigolf"
+ },
+ "big-dog-golf": {
+  "website": "https://bigdoggolfco.com/",
+  "instagram": "big_dog_golf_co"
+ },
+ "birdie-balm": {
+  "website": "https://birdiebalm.co/",
+  "instagram": "birdie_balm"
+ },
+ "birds-of-condor": {
+  "website": "https://birdsofcondor.com/",
+  "instagram": "birdsofcondor"
+ },
+ "bluegrass-fairway": {
+  "website": "https://www.bluegrassfairway.com/",
+  "instagram": "bluegrassfairway"
+ },
+ "bluetross": {
+  "website": "https://bluetross.com/",
+  "instagram": "bluetross"
+ },
+ "bubbawhips": {
+  "website": "https://bubbawhips.com/",
+  "instagram": "bubbawhips"
+ },
+ "bunker-mentality": {
+  "website": "https://bunker-mentality.com/",
+  "instagram": "bunkermentality"
+ },
+ "carhartt-wip": {
+  "website": null,
+  "instagram": null
+ },
+ "casualist": {
+  "website": "https://casualist.com/",
+  "instagram": "casualistgolf"
+ },
+ "chipp-golf": {
+  "website": "https://www.chippgolfco.com/",
+  "instagram": "chippgolfco"
+ },
+ "clamp-golf-company": {
+  "website": "https://www.clampgolfcompany.co.uk/",
+  "instagram": null
+ },
+ "clint-orms": {
+  "website": "https://clintorms.com/",
+  "instagram": "clintormsbuckles"
+ },
+ "cloud-and-wind-golf": {
+  "website": "https://www.cloudandwindgolf.com/",
+  "instagram": "cloudandwindgolf"
+ },
+ "clutch-golf-company": {
+  "website": "https://clutchgolfcompany.com/",
+  "instagram": "clutchgolfco"
+ },
+ "cph-golf": {
+  "website": "https://captainshelmgolf.com/",
+  "instagram": "captainshelm_golf"
+ },
+ "criquet": {
+  "website": "https://criquetshirts.com/",
+  "instagram": "criquetshirts"
+ },
+ "daphnes-headcovers": {
+  "website": "https://www.daphnesheadcovers.com/",
+  "instagram": "daphnesheadcovers"
+ },
+ "devant": {
+  "website": null,
+  "instagram": null
+ },
+ "devereux-golf": {
+  "website": "https://devereuxgolf.com/",
+  "instagram": "devereuxgolf"
+ },
+ "dimple-divot": {
+  "website": "https://dimpledivot.com/",
+  "instagram": "dimpledivot"
+ },
+ "dormie-workshop": {
+  "website": "https://dormieworkshop.com/",
+  "instagram": "dormieworkshop"
+ },
+ "duca-del-cosma": {
+  "website": null,
+  "instagram": null
+ },
+ "eastside-golf": {
+  "website": "https://eastsidegolf.com/",
+  "instagram": "eastsidegolf"
+ },
+ "edel-golf": {
+  "website": "https://edelgolf.com/",
+  "instagram": "edel_golf"
+ },
+ "edison-golf": {
+  "website": "https://edisonwedges.com/",
+  "instagram": null
+ },
+ "ekorre-golf": {
+  "website": "https://www.ekorregolf.com/",
+  "instagram": "ekorregolf"
+ },
+ "engel": {
+  "website": "https://engelleisure.com/",
+  "instagram": "engelleisure"
+ },
+ "evnroll": {
+  "website": "https://www.evnroll.com/",
+  "instagram": "evnroll"
+ },
+ "f-and-co": {
+  "website": "https://fandco.co.nz/",
+  "instagram": "fandco__"
+ },
+ "fella-golf": {
+  "website": "https://fellagolf.com/",
+  "instagram": "fellagolfofficial"
+ },
+ "foray-golf": {
+  "website": "https://foraygolf.com/",
+  "instagram": "foraygolfusa"
+ },
+ "forden-golf": {
+  "website": "https://www.fordengolf.com/",
+  "instagram": "fordengolf"
+ },
+ "found-golf": {
+  "website": "https://found.golf/",
+  "instagram": "found.golf"
+ },
+ "freddy-tyler-paul": {
+  "website": "https://freddytylerpaul.com/",
+  "instagram": "freddytylerpaul"
+ },
+ "fyfe-golf": {
+  "website": "https://www.fyfegolf.com/",
+  "instagram": "fyfegolf"
+ },
+ "galvin-green": {
+  "website": "https://www.galvingreen.com/",
+  "instagram": "galvingreen"
+ },
+ "gamut-golf": {
+  "website": "https://gamutgolf.com/",
+  "instagram": "gamutgolf"
+ },
+ "garsen-golf": {
+  "website": "https://garsengolf.com/",
+  "instagram": "garsengolf"
+ },
+ "gfore": {
+  "website": "https://www.gfore.com/",
+  "instagram": null
+ },
+ "ghost-golf": {
+  "website": "https://ghostgolf.com/",
+  "instagram": "ghostgolfclub"
+ },
+ "golden-hour": {
+  "website": "https://goldenhourclubhouse.co.uk/",
+  "instagram": "goldenhourglf"
+ },
+ "golf-gods": {
+  "website": "https://golfgodsonline.com/",
+  "instagram": "golf_gods"
+ },
+ "gramicci": {
+  "website": "https://gramicci.com/",
+  "instagram": "gramicci"
+ },
+ "gray-haast": {
+  "website": null,
+  "instagram": null
+ },
+ "gumtree-golf": {
+  "website": "https://gumtreegolf.com/",
+  "instagram": null
+ },
+ "haywood-golf": {
+  "website": "https://www.haywoodgolf.com/",
+  "instagram": "haywoodgolf"
+ },
+ "hazy-golf": {
+  "website": "https://hazygolf.com/",
+  "instagram": null
+ },
+ "hedge": {
+  "website": null,
+  "instagram": null
+ },
+ "hickory-and-heath": {
+  "website": "https://www.hickoryandheath.com/",
+  "instagram": "hickoryandheath"
+ },
+ "hidden-links-society": {
+  "website": "https://hiddenlinkssociety.com/",
+  "instagram": "hiddenlinkssociety"
+ },
+ "hiroki-golf": {
+  "website": "https://hirokigolf.com/",
+  "instagram": "hirokigolf_"
+ },
+ "howie-benson": {
+  "website": "https://howiebenson.com/",
+  "instagram": "howiebensongolf"
+ },
+ "hudson-sutler": {
+  "website": "https://www.hudsonsutler.com/",
+  "instagram": "hudsonsutler"
+ },
+ "huega-house": {
+  "website": "https://huegahouse.com/",
+  "instagram": "huegahouse"
+ },
+ "inside-story": {
+  "website": "https://insidestory.co/",
+  "instagram": "insidestorygolf"
+ },
+ "jan-craig": {
+  "website": "https://www.jancraigheadcovers.com/",
+  "instagram": "jancraig_golf"
+ },
+ "jlindeberg": {
+  "website": "https://www.jlindeberg.com/",
+  "instagram": "jlindebergofficial"
+ },
+ "jones-sports-co": {
+  "website": "https://www.jonessportsco.com/",
+  "instagram": "jonessportsco1971"
+ },
+ "juniper-james": {
+  "website": null,
+  "instagram": null
+ },
+ "kingfisher-golf": {
+  "website": "https://kingfisher-golf.com/",
+  "instagram": null
+ },
+ "kraken-golf": {
+  "website": "https://www.krakengolf.com/",
+  "instagram": null
+ },
+ "lamb-crafted": {
+  "website": "https://lambcrafted.com/",
+  "instagram": "tyson_lamb"
+ },
+ "late-nine": {
+  "website": "https://late-nine.com/",
+  "instagram": "late_nine"
+ },
+ "lazyface": {
+  "website": "https://lazyface.com/",
+  "instagram": "lazyfacesun"
+ },
+ "left-of-field-golf": {
+  "website": "https://lofgolf.com/",
+  "instagram": "leftoffieldgolf"
+ },
+ "local-gc": {
+  "website": "https://www.localgc.co.nz/",
+  "instagram": "local_g.c"
+ },
+ "local-rule": {
+  "website": "https://local-rule.com/",
+  "instagram": "localrule"
+ },
+ "lululemon": {
+  "website": null,
+  "instagram": null
+ },
+ "macade": {
+  "website": "https://macadegolf.com/",
+  "instagram": "macadegolf"
+ },
+ "mackem-golf": {
+  "website": "https://mackemgolf.com/",
+  "instagram": "mackemgolf"
+ },
+ "mackenzie": {
+  "website": "https://www.mackenziegolfbags.com/",
+  "instagram": "mackenziegolfbags"
+ },
+ "magpie-supply": {
+  "website": "https://magpie-supply.com/",
+  "instagram": "magpiesupply_"
+ },
+ "malbon": {
+  "website": "https://malbon.com/",
+  "instagram": "malbon"
+ },
+ "manors": {
+  "website": "https://manorsgolf.com/",
+  "instagram": "manorsgolf"
+ },
+ "mantra-golf": {
+  "website": "https://mantragolf.com/",
+  "instagram": "madebymantra"
+ },
+ "matchstick-golf": {
+  "website": "https://matchstickgolf.com/",
+  "instagram": "matchstickgolf"
+ },
+ "merrill-golf": {
+  "website": "https://merrillgolf.com/",
+  "instagram": "merrillgolf"
+ },
+ "metalwood-studio": {
+  "website": "https://metalwood.studio/",
+  "instagram": null
+ },
+ "midiron": {
+  "website": "https://midiron.shop/",
+  "instagram": "midiron_golf"
+ },
+ "mogshade": {
+  "website": "https://www.mogshadegolf.com/",
+  "instagram": "mogshade_golf"
+ },
+ "morning-people-clothiers": {
+  "website": "https://morningpeopleclothiers.com/",
+  "instagram": "morningpeople.co"
+ },
+ "mount-tee-golf": {
+  "website": "https://mountteegolf.com.au/",
+  "instagram": "mountteegolf"
+ },
+ "no-dirt-golf": {
+  "website": "https://nodirtgolf.com/",
+  "instagram": "nodirtgolf"
+ },
+ "no-laying-up": {
+  "website": "https://nolayingup.com/",
+  "instagram": "nolayingup"
+ },
+ "no-return-club": {
+  "website": "https://noreturnclub.co.uk/",
+  "instagram": "noreturnclub"
+ },
+ "noreaster-sticks": {
+  "website": "https://noreastersticks.com/",
+  "instagram": "nor_easter_sticks"
+ },
+ "odd-ritual": {
+  "website": "https://oddritualgolf.com/",
+  "instagram": "oddritual.gc"
+ },
+ "okka-golf": {
+  "website": "https://okkagolf.com/",
+  "instagram": "okkagolf"
+ },
+ "olydoe": {
+  "website": "https://olydoe.com/",
+  "instagram": "olydoegolf"
+ },
+ "orien": {
+  "website": "https://shoporien.com/",
+  "instagram": null
+ },
+ "orkai": {
+  "website": null,
+  "instagram": null
+ },
+ "out-west-atelier": {
+  "website": null,
+  "instagram": null
+ },
+ "ovo": {
+  "website": null,
+  "instagram": null
+ },
+ "owala": {
+  "website": null,
+  "instagram": null
+ },
+ "p53": {
+  "website": "https://p53irons.com/",
+  "instagram": null
+ },
+ "palm-golf-co": {
+  "website": "https://palmgolfco.com/",
+  "instagram": "palmgolfco"
+ },
+ "parmore-golf": {
+  "website": "https://parmoregolf.com/",
+  "instagram": "parmoreglf"
+ },
+ "payntr": {
+  "website": "https://payntrgolf.com/",
+  "instagram": "payntrgolf"
+ },
+ "penta-golf": {
+  "website": "https://penta-golf.com/",
+  "instagram": "penta_golf"
+ },
+ "peter-millar": {
+  "website": "https://www.petermillar.com/",
+  "instagram": null
+ },
+ "pins-and-aces": {
+  "website": "https://pinsandaces.com/",
+  "instagram": "pinsandaces"
+ },
+ "piretti": {
+  "website": "https://pirettigolf.com/",
+  "instagram": null
+ },
+ "pluto-golf": {
+  "website": "https://www.pluto.golf/",
+  "instagram": "pluto.golf"
+ },
+ "provision-machining-design": {
+  "website": "https://www.provisionmachiningdesign.com/",
+  "instagram": null
+ },
+ "public-drip": {
+  "website": "https://publicdrip.com/",
+  "instagram": "publicdripbrand"
+ },
+ "puma-golf": {
+  "website": "https://www.pumagolf.com/",
+  "instagram": "pumagolf"
+ },
+ "puttwell": {
+  "website": "https://puttwellgolfclub.com/",
+  "instagram": "puttwellgolf"
+ },
+ "pxg": {
+  "website": "https://www.pxg.com/",
+  "instagram": "pxg"
+ },
+ "quiet-golf": {
+  "website": "https://quietgolf.com/",
+  "instagram": "quietgolf"
+ },
+ "radry-golf": {
+  "website": "https://radry.com/",
+  "instagram": "radrygolf"
+ },
+ "random-golf-club": {
+  "website": "https://randomgolfclub.com/",
+  "instagram": "randomgolfclub"
+ },
+ "read-the-green": {
+  "website": "https://readthegreen.com/",
+  "instagram": "readthegreen_"
+ },
+ "realtree": {
+  "website": null,
+  "instagram": null
+ },
+ "rebolf": {
+  "website": "https://rebolf.com/",
+  "instagram": "rebolfclub"
+ },
+ "represent": {
+  "website": "https://representclo.com/",
+  "instagram": "representclo"
+ },
+ "rhoback": {
+  "website": "https://rhoback.com/",
+  "instagram": "rhoback"
+ },
+ "ripit-grips": {
+  "website": "https://ripitgrips.com/",
+  "instagram": "ripitgrips"
+ },
+ "rookline": {
+  "website": "https://rookline.com/",
+  "instagram": "rooklinegolf"
+ },
+ "rosemark-grips": {
+  "website": "https://www.rosemarkgrips.com/",
+  "instagram": "rosemark_grips"
+ },
+ "rouqe-golf": {
+  "website": "https://rouqegolf.com/",
+  "instagram": "rouqegolf"
+ },
+ "royal-albartross": {
+  "website": null,
+  "instagram": null
+ },
+ "salomon": {
+  "website": "https://salomon.com/",
+  "instagram": null
+ },
+ "scotch-and-skins": {
+  "website": "https://www.scotchandskins.com/",
+  "instagram": "scotchandskins"
+ },
+ "scotsticks": {
+  "website": "https://www.scotsticks.com/",
+  "instagram": "scot.sticks"
+ },
+ "seamus": {
+  "website": "https://www.seamusgolf.com/",
+  "instagram": "seamusgolf"
+ },
+ "sentinel-golf": {
+  "website": "https://www.sentinelgolf.us/",
+  "instagram": "sentinelgolf.us"
+ },
+ "shapland": {
+  "website": "https://shaplandbags.com/",
+  "instagram": "shaplandbags"
+ },
+ "shoal-golf": {
+  "website": "https://shoalgolfco.com/",
+  "instagram": "shoalgolfco"
+ },
+ "show-out-engraving": {
+  "website": "https://showoutengraving.com/",
+  "instagram": "showoutengraving"
+ },
+ "siegelman-stable": {
+  "website": "https://siegelmanstable.com/",
+  "instagram": "siegelmanstable"
+ },
+ "sierra-madre": {
+  "website": "https://sierramadregolf.com/",
+  "instagram": "sierramadregolf"
+ },
+ "sinking-birdies": {
+  "website": "https://www.sinkingbirdies.co.uk/",
+  "instagram": "sinkingbirdies"
+ },
+ "slice-town": {
+  "website": "https://slice-town.com/",
+  "instagram": null
+ },
+ "sounder": {
+  "website": "https://soundergolf.com/",
+  "instagram": "soundergolf"
+ },
+ "st-andre": {
+  "website": "https://standre.golf/",
+  "instagram": "standregolf"
+ },
+ "stick-grips": {
+  "website": null,
+  "instagram": null
+ },
+ "stitch-golf": {
+  "website": "https://stitchgolf.com/",
+  "instagram": "stitchgolf"
+ },
+ "stix-golf": {
+  "website": "https://stix.golf/",
+  "instagram": "stixgolfgear"
+ },
+ "students-golf": {
+  "website": "https://studentsgolf.com/",
+  "instagram": null
+ },
+ "sugarloaf-social-club": {
+  "website": "https://www.sugarloafsocialclub.com/",
+  "instagram": "sugarloafsocialclub"
+ },
+ "sun-mountain": {
+  "website": "https://www.sunmountain.com/",
+  "instagram": "sunmountainsports"
+ },
+ "sunday-golf": {
+  "website": "https://sundaygolf.com/",
+  "instagram": "sundaygolf"
+ },
+ "swag-golf": {
+  "website": "https://swag.golf/",
+  "instagram": "swaggolfco"
+ },
+ "takomo-golf": {
+  "website": "https://takomogolf.com/",
+  "instagram": "takomogolf"
+ },
+ "tarraing-golf": {
+  "website": "https://tarrainggolf.com/",
+  "instagram": "tarraing_golf"
+ },
+ "three-putt-golf-clothing": {
+  "website": "https://threeputtgolfclothing.co.uk/",
+  "instagram": "threeputtgolfclothing"
+ },
+ "thwack-sporting-co": {
+  "website": "https://www.thwacksportingco.com/",
+  "instagram": "thwacksportingco"
+ },
+ "totem": {
+  "website": "https://totem.golf/",
+  "instagram": "totem.golf"
+ },
+ "travismathew": {
+  "website": "https://travismathew.com/",
+  "instagram": "travismathew"
+ },
+ "twentyfour-golf": {
+  "website": "https://twentyfourgolf.com/",
+  "instagram": "twentyfourgolf"
+ },
+ "vessel": {
+  "website": "https://vesselgolf.com/",
+  "instagram": "vesselgolf"
+ },
+ "vice-golf": {
+  "website": "https://www.vicegolf.com/",
+  "instagram": "vicegolf"
+ },
+ "vuori": {
+  "website": "https://vuoriclothing.com/",
+  "instagram": "vuoriclothing"
+ },
+ "walker-golf-things": {
+  "website": "https://www.walkergolfthings.com/",
+  "instagram": "walkergolfthings"
+ },
+ "water-when-dry": {
+  "website": "https://waterwhendry.com/",
+  "instagram": null
+ },
+ "western-birch": {
+  "website": "https://westernbirch.com/",
+  "instagram": "westernbirchgolf"
+ },
+ "whim-golf": {
+  "website": "https://whimgolf.com/",
+  "instagram": "whimgolf"
+ },
+ "winston-collection": {
+  "website": "https://winstoncollection.com/",
+  "instagram": "thewinstoncollection"
+ },
+ "woodgrain-golf": {
+  "website": "https://woodgrain.golf/",
+  "instagram": "woodgraingolf"
+ },
+ "zaleas-golf": {
+  "website": "https://www.zaleasgolf.com/",
+  "instagram": "zaleasgolfco"
+ }
+}

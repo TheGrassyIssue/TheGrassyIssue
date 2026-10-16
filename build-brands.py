@@ -572,6 +572,150 @@ TAGL = {"design-nerd": "Design Nerd", "made-by-hand": "Made by Hand",
         "loud": "Loud"}
 
 
+# ---- brand page redesign, 15 Oct 2026 ---------------------------------------
+# Lenny: "I want these pages to look better, we need a large hero, links to socials
+# and website and then the stories we've featured under that." He picked mockup
+# Option A (full-width hero, "Find them" box, compact Brand to Know strip, then a
+# 3-up story grid). Website + Instagram come from data/brand-socials.json, which
+# was read off each brand's own site; a brand with nothing found gets no button.
+try:
+    SOCIALS = {k: v for k, v in json.load(open(os.path.join(ROOT, "data", "brand-socials.json"),
+                                              encoding="utf-8")).items() if not k.startswith("_")}
+except (OSError, ValueError):
+    SOCIALS = {}
+try:
+    HEROES = {k: v for k, v in json.load(open(os.path.join(ROOT, "data", "brand-heroes.json"),
+                                             encoding="utf-8")).items() if not k.startswith("_")}
+except (OSError, ValueError):
+    HEROES = {}
+try:
+    from PIL import Image as _PIL
+except ImportError:
+    _PIL = None
+
+
+def _imgw(path):
+    try:
+        return _PIL.open(ROOT + path).size[0] if _PIL else 0
+    except Exception:
+        return 0
+
+
+_DATES = {}
+
+
+def _post_date(url):
+    u = url.split("#")[0]
+    if u not in _DATES:
+        d = ""
+        pth = _page_of(u)
+        if pth:
+            m = re.search(r'"datePublished":\s*"(\d{4}-\d\d-\d\d)', open(pth, encoding="utf-8").read())
+            d = m.group(1) if m else ""
+        _DATES[u] = d
+    return _DATES[u]
+
+
+def _fmt_date(d):
+    try:
+        return _dt.date.fromisoformat(d).strftime("%b %-d, %Y")
+    except Exception:
+        return ""
+
+
+def profile_entry(b, men):
+    """The one dedicated profile post (a Brand to Know / Revisited), if there is one."""
+    for e in men:
+        u = e["url"]
+        if e.get("profile") and "#" not in u and (b["slug"] in REAL_PROFILES or "brand-to-know" in u or "revisited" in u):
+            return e
+    return None
+
+
+def hero_for(b, prof):
+    """('wide', [img]) when the profile post has a real wide hero, else ('tri', up to 3 frames)."""
+    # Curated single heroes win (data/brand-heroes.json, Lenny 15 Oct 2026: "find more
+    # single hero shots for more brands especially if they have multiple posts").
+    cur = HEROES.get(b["slug"])
+    if cur and os.path.exists(ROOT + cur):
+        return "wide", [cur]
+    if prof:
+        pth = _page_of(prof["url"])
+        if pth:
+            m = re.search(r'<div class="drop-hero-img">\s*<img src="([^"]+)"', open(pth, encoding="utf-8").read())
+            if m and os.path.exists(ROOT + m.group(1)) and _imgw(m.group(1)) >= 1600:
+                return "wide", [m.group(1)]
+    # Lead with the curated gallery, then the first frame of each card this brand
+    # has in ANY post (the gallery alone is often a single frame).
+    fr = [f for f in GALLERIES.get(b["slug"], []) if os.path.exists(ROOT + f)][:1]
+    n = _norm(b["name"])
+    for e in sorted(MENTIONS.get(b["slug"], []), key=lambda e: _post_date(e["url"]), reverse=True):
+        pth = _page_of(e["url"])
+        if not pth or len(fr) >= 3:
+            continue
+        for bt, nt, frames in _cards(open(pth, encoding="utf-8").read()):
+            lead = _norm(bt.split("\u00b7")[0])
+            if frames and lead and (lead == n or (n.startswith(lead) and len(lead) >= 4) or (lead.startswith(n) and len(n) >= 4)):
+                f = frames[0]
+                if f not in fr and os.path.exists(ROOT + f):
+                    fr.append(f)
+                    break
+    for f in GALLERIES.get(b["slug"], []):
+        if len(fr) >= 3:
+            break
+        if f not in fr and os.path.exists(ROOT + f):
+            fr.append(f)
+    return "tri", fr[:3]
+
+IG_SVG = ('<svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" '
+          'aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/>'
+          '<circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>')
+
+BP2_CSS = """
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+"""
+
+
 def brand_page(b):
     slug = b["slug"]; name = H.escape(b["name"])
     men = MENTIONS.get(slug, [])
@@ -649,6 +793,69 @@ def brand_page(b):
         "itemListElement":[{"@type":"ListItem","position":i+1,"name":e["title"],
           "url":"https://thegrassyissue.com"+e["url"]} for i,e in enumerate(men)]}}, ensure_ascii=False)
     heroimg = f'<img src="{img}" alt="{name} — independent golf brand" loading="eager">' if img else ''
+
+    # ---- v2: hero, Find them box, compact profile strip, story grid ----------
+    prof = profile_entry(b, men)
+    kind, himgs = hero_for(b, prof)
+    if kind == "wide":
+        hero_media = f'<img src="{himgs[0]}" alt="{name}" fetchpriority="high">'
+    elif len(himgs) == 1:
+        hero_media = (f'<img class="bp2-blur" src="{himgs[0]}" alt="" aria-hidden="true">'
+                      f'<img class="bp2-solo" src="{himgs[0]}" alt="{name}" fetchpriority="high">')
+    elif himgs:
+        hero_media = (f'<div class="bp2-tri" style="grid-template-columns:repeat({len(himgs)},1fr)">'
+                      + "".join('<img src="%s" alt="%s, photo %d" %s>' % (f, name, i + 1, 'fetchpriority="high"' if i == 0 else 'loading="lazy"')
+                                for i, f in enumerate(himgs)) + '</div>')
+    else:
+        hero_media = ""
+    soc = SOCIALS.get(slug, {})
+    site = soc.get("website") or (st["url"] if st else None)
+    ig = soc.get("instagram")
+    host = re.sub(r"^www\.", "", re.sub(r"^https?://", "", site or "").split("/")[0])
+    store_cta = (f'<a class="bp-store" href="{site}" target="_blank" rel="noopener">Visit {H.escape(host)} &#8599;</a>'
+                 if site else "")
+    ig_cta = (f'<a class="bp-ig" href="https://www.instagram.com/{ig}/" target="_blank" rel="noopener">{IG_SVG} @{H.escape(ig)}</a>'
+              if ig else "")
+    find_box = (f'<div class="bp2-box"><div class="bp2-lab">Find them</div><div class="bp-actions">{store_cta}{ig_cta}</div>'
+                f'<div class="bp2-count">{n} TGI stor{"ies" if n != 1 else "y"}</div></div>') if (store_cta or ig_cta) else \
+               (f'<div class="bp2-box"><div class="bp2-lab">On TGI</div><div class="bp-actions"></div>'
+                f'<div class="bp2-count" style="margin-top:0">{n} TGI stor{"ies" if n != 1 else "y"}</div></div>')
+    feat = ""
+    rest = [e for e in men if not (prof and e["url"] == prof["url"])]
+    rest.sort(key=lambda e: _post_date(e["url"]), reverse=True)
+    if prof:
+        ft = THUMBS.get(prof["url"], {}).get("img")
+        if kind == "wide" and ft == himgs[0]:
+            ch = os.path.dirname(himgs[0]) + "/card-hero.jpg"
+            alt_f = [f for f in GALLERIES.get(slug, []) if f != himgs[0]]
+            ft = ch if os.path.exists(ROOT + ch) else (alt_f[0] if alt_f else ft)
+        ptitle = H.unescape(prof["title"])
+        pdesc = ""
+        pth = _page_of(prof["url"])
+        if pth:
+            dm = re.search(r'<meta name="description" content="([^"]*)"', open(pth, encoding="utf-8").read())
+            pdesc = H.unescape(dm.group(1)) if dm else ""
+            pdesc = re.sub(r"^Brand to Know: [^.]*\.\s*", "", pdesc)
+        feat = (f'<a class="bp2-feat" href="{prof["url"]}">' + (f'<img src="{ft}" alt="{H.escape(ptitle)}" loading="lazy">' if ft else "")
+                + f'<div class="b"><div class="c">The Profile &middot; {_fmt_date(_post_date(prof["url"]))}</div>'
+                f'<div class="t">{H.escape(ptitle)}</div>' + (f'<div class="d">{H.escape(_clip(pdesc, 170))}</div>' if pdesc else "")
+                + '<div class="r">Read the profile &rarr;</div></div></a>')
+    tiles = []
+    for e in rest:
+        t = THUMBS.get(e["url"], {})
+        ti = t.get("img")
+        cat = H.escape(t.get("cat", "Drops & Brands"))
+        dt = _fmt_date(_post_date(e["url"]))
+        e = dict(e, title=H.unescape(e["title"]))
+        thumb = (f'<div class="bp-thumb"><img src="{ti}" loading="lazy" alt="{H.escape(e["title"])}"></div>'
+                 if ti else '<div class="bp-thumb bp-nothumb"></div>')
+        tiles.append(f'''  <a class="bp-card" href="{e["url"]}">
+    {thumb}
+    <div class="bp-body">
+      <div class="bp-kicker">{cat}{" &middot; " + dt if dt else ""}</div>
+      <div class="bp-title">{H.escape(e["title"])}</div>
+    </div>
+  </a>''')
     return f'''<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -732,6 +939,7 @@ h1{{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);li
 .bp-title{{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}}
 footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}}
 @media(max-width:640px){{.nav-links{{gap:12px;}}.nav-links a{{font-size:9.5px;}}.bp-heroimg{{width:120px;}}}}
+{BP2_CSS}
 </style>
 </head>
 <body>
@@ -748,23 +956,28 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 </nav>
 
 <header class="bp-head">
-  <div class="bp-heroimg">{heroimg}</div>
-  <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>{name}</div>
-    <div class="bp-kickline">[ All Coverage &middot; {len(men)} Post{"s" if len(men)!=1 else ""} ]</div>
-    <h1>{name}</h1>
-    <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
-    <p class="bp-line">{b["line"]}</p>
-    <div class="bp-actions">{profile_cta}{store_cta}</div>
-    {tag_chips}
+  <div class="bp2-hero">{hero_media}<div class="bp2-shade"></div>
+    <div class="bp2-cap">
+      <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>{name}</div>
+      <h1>{name}</h1>
+      <div class="bp-meta">{loc}{" &middot; " if loc else ""}{cats_txt}</div>
+    </div>
   </div>
 </header>
+<section class="bp2-find">
+  <div><p class="bp-line">{b["line"]}</p>{tag_chips}</div>
+  {find_box}
+</section>
 
 {about_block(b)}
-<h2 class="bp-gridhdr">{grid_hdr}</h2>
+<section class="bp2-stories">
+<div class="bp2-kick">On The Grassy Issue</div>
+<h2 class="bp-gridhdr">Every story featuring {name}</h2>
+{feat}
 <div class="bp-grid">
 {chr(10).join(tiles)}
 </div>
+</section>
 {related_block}
 
 <footer>The Grassy Issue &middot; Golf culture, in a running feed &middot; Austin, TX</footer>

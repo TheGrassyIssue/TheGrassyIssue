@@ -83,6 +83,49 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-title{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
+
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+
 /*TGI-MOBILE-BTN-V1*/
 .nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0;background:none;border:none;cursor:pointer}
 .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);transition:transform .25s,opacity .25s}
@@ -125,47 +168,219 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </nav>
 
 <header class="bp-head">
-  <div class="bp-heroimg"><img src="/images/students-golf-15/librarian-polo.jpg" alt="Students Golf — independent golf brand" loading="eager"></div>
-  <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Students Golf</div>
-    <div class="bp-kickline">[ All Coverage &middot; 32 Posts ]</div>
-    <h1>Students Golf</h1>
-    <div class="bp-meta">USA &middot; Apparel</div>
-    <p class="bp-line">Campus-inflected golfwear built on varsity graphics and a deep bench of collabs.</p>
-    <!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-2" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 2 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-profile" href="/drops/students-golf-our-15-favorites">Read the full profile &rarr;</a><a class="bp-store" href="https://studentsgolf.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=students-golf" target="_blank" rel="noopener">Shop Students Golf &#8599;</a></div>
-    <div class="bp-chips"><a class="bp-chip" href="/brands/tag/loud-on-purpose">Loud on Purpose</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div>
+  <div class="bp2-hero"><img src="/images/students-golf-15/brand-hero.jpg" alt="Students Golf" fetchpriority="high"><div class="bp2-shade"></div>
+    <div class="bp2-cap">
+      <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Students Golf</div>
+      <h1>Students Golf</h1>
+      <div class="bp-meta">USA &middot; Apparel</div>
+    </div>
   </div>
 </header>
+<section class="bp2-find">
+  <div><p class="bp-line">Campus-inflected golfwear built on varsity graphics and a deep bench of collabs.</p><div class="bp-chips"><a class="bp-chip" href="/brands/tag/loud-on-purpose">Loud on Purpose</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div></div>
+  <div class="bp2-box"><div class="bp2-lab">Find them</div><!--TGI-BEST25--><div class="bp-rank" style="font-family:var(--bx-mono,ui-monospace,monospace);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;margin:12px 0 0"><a href="/brands/best-independent-golf-brands#no-2" style="color:inherit;border-bottom:1px solid currentColor;text-decoration:none">No. 2 on Our 25 Best Independent Golf Brands &rarr;</a></div><!--/TGI-BEST25--><div class="bp-actions"><a class="bp-store" href="https://studentsgolf.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=students-golf" target="_blank" rel="noopener">Visit studentsgolf.com &#8599;</a></div><div class="bp2-count">32 TGI stories</div></div>
+</section>
 
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Students Golf</h2>
+<section class="bp2-stories">
+<div class="bp2-kick">On The Grassy Issue</div>
+<h2 class="bp-gridhdr">Every story featuring Students Golf</h2>
+<a class="bp2-feat" href="/drops/students-golf-our-15-favorites"><img src="/images/students-golf-15/calculus-shorts.jpg" alt="Students Golf — Our 15 Favorites" loading="lazy"><div class="b"><div class="c">The Profile &middot; Jul 17, 2026</div><div class="t">Students Golf — Our 15 Favorites</div><div class="d">18 picks from Students Golf. Streetwear-meets-golf, academic-inspired apparel. $15–$148.</div><div class="r">Read the profile &rarr;</div></div></a>
 <div class="bp-grid">
-  <a class="bp-card" href="/drops/students-golf-our-15-favorites">
-    <div class="bp-thumb"><img src="/images/students-golf-15/brand-hero.jpg" loading="lazy" alt="Students Golf — Our 15 Favorites"><span class="bp-badge">The Profile</span></div>
+  <a class="bp-card" href="/drops/the-technical-brands-roundup-vol-2">
+    <div class="bp-thumb"><img src="/images/technical-vol2/hero.jpg" loading="lazy" alt="The Technical Brands Roundup, Vol. 2: Golf Layers for Wind, Rain and Muggy Fall Days"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Students Golf — Our 15 Favorites</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 15, 2026</div>
+      <div class="bp-title">The Technical Brands Roundup, Vol. 2: Golf Layers for Wind, Rain and Muggy Fall Days</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-fall-hoodie-edit-2026">
+    <div class="bp-thumb"><img src="/images/hoodie-edit/hero.jpg" loading="lazy" alt="Best Golf Hoodies for Men: 28 Picks for Fall 2026"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 14, 2026</div>
+      <div class="bp-title">Best Golf Hoodies for Men: 28 Picks for Fall 2026</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fresh-fall-drops-students-walker-sugarloaf">
+    <div class="bp-thumb"><img src="/images/fresh-fall/hero.jpg" loading="lazy" alt="Three Fresh Fall Golf Drops: Students, Walker and Sugarloaf"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 13, 2026</div>
+      <div class="bp-title">Three Fresh Fall Golf Drops: Students, Walker and Sugarloaf</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/golf-color-combos-mix-and-match">
+    <div class="bp-thumb"><img src="/images/color-combos/hero.jpg" loading="lazy" alt="7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 13, 2026</div>
+      <div class="bp-title">7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/how-to-build-a-golf-outfit">
+    <div class="bp-thumb"><img src="/images/outfits/hero.jpg" loading="lazy" alt="How to Build a Golf Outfit: 7 Looks, From Pants and a Tee to Pastels"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 10, 2026</div>
+      <div class="bp-title">How to Build a Golf Outfit: 7 Looks, From Pants and a Tee to Pastels</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fall-golf-t-shirts-tees-for-cooler-weather">
+    <div class="bp-thumb"><img src="/images/fall-tees/hero.jpg" loading="lazy" alt="Fall Golf T-Shirts: 26 Tees for Cooler Weather"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 9, 2026</div>
+      <div class="bp-title">Fall Golf T-Shirts: 26 Tees for Cooler Weather</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/small-golf-accessories-small-things-big-impact">
+    <div class="bp-thumb"><img src="/images/small-things/hero.jpg" loading="lazy" alt="Small Golf Accessories: 25 Pocket Pieces That Get Noticed"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 8, 2026</div>
+      <div class="bp-title">Small Golf Accessories: 25 Pocket Pieces That Get Noticed</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/golf-bag-accessories-what-to-hang-from-your-bag">
+    <div class="bp-thumb"><img src="/images/bag-hang/card-hero.jpg" loading="lazy" alt="Golf Bag Accessories: 27 Things to Hang From Your Bag"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 5, 2026</div>
+      <div class="bp-title">Golf Bag Accessories: 27 Things to Hang From Your Bag</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/which-golfer-are-you">
+    <div class="bp-thumb"><img src="/images/golfer-archetypes/card-hero.jpg" loading="lazy" alt="Which Golfer Are You? 7 Types and What to Buy"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Oct 4, 2026</div>
+      <div class="bp-title">Which Golfer Are You? 7 Types and What to Buy</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/best-golf-pants-ranked">
+    <div class="bp-thumb"><img src="/images/pants-top5/card-gk-walk.jpg" loading="lazy" alt="The 5 Best Golf Pants Right Now, Ranked (2026)"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 24, 2026</div>
+      <div class="bp-title">The 5 Best Golf Pants Right Now, Ranked (2026)</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/fall-drops-eastside-students-devereux">
+    <div class="bp-thumb"><img src="/images/fall-drops-2026/card-devereux-swing.jpg" loading="lazy" alt="Three Fall 2026 Golf Drops: Eastside Golf, Students and Devereux"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 24, 2026</div>
+      <div class="bp-title">Three Fall 2026 Golf Drops: Eastside Golf, Students and Devereux</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-pants-edit">
+    <div class="bp-thumb"><img src="/images/pants-edit/band-hero.jpg" loading="lazy" alt="The Pants Edit — The Pleat Came Back"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">The Edit &middot; Sep 20, 2026</div>
+      <div class="bp-title">The Pants Edit — The Pleat Came Back</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/best-golf-streetwear-brands-2026">
+    <div class="bp-thumb"><img src="/images/streetwear-oct/band-students-0.jpg" loading="lazy" alt="The 9 Best Golf Streetwear Brands in 2026"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 30, 2026</div>
+      <div class="bp-title">The 9 Best Golf Streetwear Brands in 2026</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hat-edit-austin-summer">
+    <div class="bp-thumb"><img src="/images/hat-edit/hero.jpg" loading="lazy" alt="The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/brand-to-know-sugarloaf-social-club">
+    <div class="bp-thumb"><img src="/images/sugarloaf-social-club/btk-hero.jpg" loading="lazy" alt="Sugarloaf Social Club — The Group Chat Turned Brand"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">Sugarloaf Social Club — The Group Chat Turned Brand</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-payntr-collab-edit">
+    <div class="bp-thumb"><img src="/images/payntr/hero.jpg" loading="lazy" alt="The PAYNTR Collab Edit — 33 Shoes, Bags and Odds From Golf&#x27;s Busiest Collaborator"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The PAYNTR Collab Edit — 33 Shoes, Bags and Odds From Golf&#x27;s Busiest Collaborator</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/students-golf-summer-2026">
+    <div class="bp-thumb"><img src="/images/studentsgolf-summer26/hero.jpg" loading="lazy" alt="Students Golf Summer 2026 — Summer School Is in Session"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 9, 2026</div>
+      <div class="bp-title">Students Golf Summer 2026 — Summer School Is in Session</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-golf-shoe-edit">
+    <div class="bp-thumb"><img src="/images/reebok-manors-ii/campaign-club-c.jpg" loading="lazy" alt="The Golf Shoe Edit"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 5, 2026</div>
+      <div class="bp-title">The Golf Shoe Edit</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-technical-brands-roundup">
+    <div class="bp-thumb"><img src="/images/technical-brands/radmor-sutton-polo.jpg" loading="lazy" alt="The Technical Brands Roundup"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 1, 2026</div>
+      <div class="bp-title">The Technical Brands Roundup</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-bold-tee-edit">
+    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hoodie-and-shorts-edit">
+    <div class="bp-thumb"><img src="/images/hoodie-shorts/hero.jpg" loading="lazy" alt="Hoodie and Shorts — The Best Fall Combo"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">Hoodie and Shorts — The Best Fall Combo</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hot-weather-roundup">
+    <div class="bp-thumb"><img src="/images/hot-weather-roundup/scout-hat.jpg" loading="lazy" alt="The Hot Weather Roundup"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 18, 2026</div>
+      <div class="bp-title">The Hot Weather Roundup</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-camo-edit">
+    <div class="bp-thumb"><img src="/images/camo-edit/sunday-mossy-oak-bag.jpg" loading="lazy" alt="Camo on the Course — 18 Picks That Blend In and Stand Out"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 22, 2026</div>
+      <div class="bp-title">Camo on the Course — 18 Picks That Blend In and Stand Out</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-summer-tee-edit">
+    <div class="bp-thumb"><img src="/images/summer-tee-edit/kingfisher-getting-worse.jpg" loading="lazy" alt="The Summer Tee Edit — 18 Picks From $30 to $68"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 17, 2026</div>
+      <div class="bp-title">The Summer Tee Edit — 18 Picks From $30 to $68</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/12-putter-covers-were-eyeing">
     <div class="bp-thumb"><img src="/images/feed/2b8c560e-Studentsgolf67b6f31aad6be067b6f31aad878.6034779267b6f31aad87.jpg" loading="lazy" alt="12 Putter Covers We&#x27;re Eyeing"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
       <div class="bp-title">12 Putter Covers We&#x27;re Eyeing</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/14-hoodies-that-caught-my-eye">
     <div class="bp-thumb"><img src="/images/feed/c45a91a3-EGMC3004-Core_Fleece_Hoodie_Swingman-Heather_Grey-Front.jpg" loading="lazy" alt="14 Hoodies That Caught My Eye"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
       <div class="bp-title">14 Hoodies That Caught My Eye</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/8-bucket-hats-worth-the-brim">
     <div class="bp-thumb"><img src="/images/feed/77104b10-RECYCLED_GREENSKEEPER_BUCKET_HAT_BLACK_01_8b60c382-95a6-4ca6.jpg" loading="lazy" alt="8 Bucket Hats Worth the Brim"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
       <div class="bp-title">8 Bucket Hats Worth the Brim</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond">
+    <div class="bp-thumb"><img src="/images/feed/2882ba68-MOKCINGBIRD2.jpg" loading="lazy" alt="The Tee Edit — 14 independent tees for the fairway and beyond"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">The Tee Edit — 14 independent tees for the fairway and beyond</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/accessories-on-and-off-the-course">
@@ -175,165 +390,11 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">The Accessory Edit — 21 Small Things, On Course and Off</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/best-golf-pants-ranked">
-    <div class="bp-thumb"><img src="/images/pants-top5/card-gk-walk.jpg" loading="lazy" alt="The 5 Best Golf Pants Right Now, Ranked (2026)"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The 5 Best Golf Pants Right Now, Ranked (2026)</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/best-golf-streetwear-brands-2026">
-    <div class="bp-thumb"><img src="/images/streetwear-oct/band-students-0.jpg" loading="lazy" alt="The 9 Best Golf Streetwear Brands in 2026"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The 9 Best Golf Streetwear Brands in 2026</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fall-drops-eastside-students-devereux">
-    <div class="bp-thumb"><img src="/images/fall-drops-2026/card-devereux-swing.jpg" loading="lazy" alt="Three Fall 2026 Golf Drops: Eastside Golf, Students and Devereux"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Three Fall 2026 Golf Drops: Eastside Golf, Students and Devereux</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fall-golf-t-shirts-tees-for-cooler-weather">
-    <div class="bp-thumb"><img src="/images/fall-tees/hero.jpg" loading="lazy" alt="Fall Golf T-Shirts: 26 Tees for Cooler Weather"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Fall Golf T-Shirts: 26 Tees for Cooler Weather</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/fresh-fall-drops-students-walker-sugarloaf">
-    <div class="bp-thumb"><img src="/images/fresh-fall/hero.jpg" loading="lazy" alt="Three Fresh Fall Golf Drops: Students, Walker and Sugarloaf"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Three Fresh Fall Golf Drops: Students, Walker and Sugarloaf</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-bag-accessories-what-to-hang-from-your-bag">
-    <div class="bp-thumb"><img src="/images/bag-hang/card-hero.jpg" loading="lazy" alt="Golf Bag Accessories: 27 Things to Hang From Your Bag"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Golf Bag Accessories: 27 Things to Hang From Your Bag</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/golf-color-combos-mix-and-match">
-    <div class="bp-thumb"><img src="/images/color-combos/hero.jpg" loading="lazy" alt="7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">7 Golf Color Combos to Mix and Match: Clothes, Headcovers, Grips</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/how-to-build-a-golf-outfit">
-    <div class="bp-thumb"><img src="/images/outfits/hero.jpg" loading="lazy" alt="How to Build a Golf Outfit: 7 Looks, From Pants and a Tee to Pastels"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">How to Build a Golf Outfit: 7 Looks, From Pants and a Tee to Pastels</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/small-golf-accessories-small-things-big-impact">
-    <div class="bp-thumb"><img src="/images/small-things/hero.jpg" loading="lazy" alt="Small Golf Accessories: 25 Pocket Pieces That Get Noticed"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Small Golf Accessories: 25 Pocket Pieces That Get Noticed</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/students-golf-summer-2026">
-    <div class="bp-thumb"><img src="/images/studentsgolf-summer26/hero.jpg" loading="lazy" alt="Students Golf Summer 2026 — Summer School Is in Session"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Students Golf Summer 2026 — Summer School Is in Session</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-bold-tee-edit">
-    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-camo-edit">
-    <div class="bp-thumb"><img src="/images/camo-edit/sunday-mossy-oak-bag.jpg" loading="lazy" alt="Camo on the Course — 18 Picks That Blend In and Stand Out"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Camo on the Course — 18 Picks That Blend In and Stand Out</div>
-    </div>
-  </a>
   <a class="bp-card" href="/drops/the-drop-report-september-2026">
     <div class="bp-thumb"><img src="/images/sept-drops/malbon-shards.jpg" loading="lazy" alt="The Drop Report — Everything That Landed, Brand by Brand"></div>
     <div class="bp-body">
       <div class="bp-kicker">Drops &amp; Brands</div>
       <div class="bp-title">The Drop Report — Everything That Landed, Brand by Brand</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-fall-hoodie-edit-2026">
-    <div class="bp-thumb"><img src="/images/hoodie-edit/hero.jpg" loading="lazy" alt="Best Golf Hoodies for Men: 28 Picks for Fall 2026"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Best Golf Hoodies for Men: 28 Picks for Fall 2026</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hat-edit-austin-summer">
-    <div class="bp-thumb"><img src="/images/hat-edit/hero.jpg" loading="lazy" alt="The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hoodie-and-shorts-edit">
-    <div class="bp-thumb"><img src="/images/hoodie-shorts/hero.jpg" loading="lazy" alt="Hoodie and Shorts — The Best Fall Combo"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">Hoodie and Shorts — The Best Fall Combo</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-pants-edit">
-    <div class="bp-thumb"><img src="/images/pants-edit/band-hero.jpg" loading="lazy" alt="The Pants Edit — The Pleat Came Back"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">The Edit</div>
-      <div class="bp-title">The Pants Edit — The Pleat Came Back</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-summer-tee-edit">
-    <div class="bp-thumb"><img src="/images/summer-tee-edit/kingfisher-getting-worse.jpg" loading="lazy" alt="The Summer Tee Edit — 18 Picks From $30 to $68"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Summer Tee Edit — 18 Picks From $30 to $68</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-technical-brands-roundup-vol-2">
-    <div class="bp-thumb"><img src="/images/technical-vol2/hero.jpg" loading="lazy" alt="The Technical Brands Roundup, Vol. 2: Golf Layers for Wind, Rain and Muggy Fall Days"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Technical Brands Roundup, Vol. 2: Golf Layers for Wind, Rain and Muggy Fall Days</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-technical-brands-roundup">
-    <div class="bp-thumb"><img src="/images/technical-brands/radmor-sutton-polo.jpg" loading="lazy" alt="The Technical Brands Roundup"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Technical Brands Roundup</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-tee-edit-14-independent-tees-for-the-fairway-and-beyond">
-    <div class="bp-thumb"><img src="/images/feed/2882ba68-MOKCINGBIRD2.jpg" loading="lazy" alt="The Tee Edit — 14 independent tees for the fairway and beyond"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Tee Edit — 14 independent tees for the fairway and beyond</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/which-golfer-are-you">
-    <div class="bp-thumb"><img src="/images/golfer-archetypes/card-hero.jpg" loading="lazy" alt="Which Golfer Are You? 7 Types and What to Buy"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Which Golfer Are You? 7 Types and What to Buy</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-golf-shoe-edit">
-    <div class="bp-thumb"><img src="/images/reebok-manors-ii/campaign-club-c.jpg" loading="lazy" alt="The Golf Shoe Edit"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Golf Shoe Edit</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/sugarloaf-ss26">
@@ -343,29 +404,9 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">Sugarloaf Social Club SS26</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/brand-to-know-sugarloaf-social-club">
-    <div class="bp-thumb"><img src="/images/sugarloaf-social-club/btk-hero.jpg" loading="lazy" alt="Sugarloaf Social Club — The Group Chat Turned Brand"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Sugarloaf Social Club — The Group Chat Turned Brand</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hot-weather-roundup">
-    <div class="bp-thumb"><img src="/images/hot-weather-roundup/scout-hat.jpg" loading="lazy" alt="The Hot Weather Roundup"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hot Weather Roundup</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-payntr-collab-edit">
-    <div class="bp-thumb"><img src="/images/payntr/hero.jpg" loading="lazy" alt="The PAYNTR Collab Edit — 33 Shoes, Bags and Odds From Golf&#x27;s Busiest Collaborator"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The PAYNTR Collab Edit — 33 Shoes, Bags and Odds From Golf&#x27;s Busiest Collaborator</div>
-    </div>
-  </a>
 </div>
 <!--TGI-WWU--><section class="wwu"><div class="wwu-in"><span class="wwu-lab">For Students Golf</span><p>Work at Students Golf? This coverage is independent and always will be, but if you want to talk about sending product, a sponsored Field Note or something longer, <a href="/work-with-us">here is how that works</a>.</p></div></section><!--/TGI-WWU-->
+</section>
 
 <h2 class="bp-gridhdr">More Independent</h2>
 <div class="bp-kins"><a class="bp-kin" href="/brands/anti-country-club-tokyo"><span class="bp-kin-name">ANTi Country Club Tokyo</span><span class="bp-kin-line">White tees picked for The White Tee Edit, 2026.</span></a><a class="bp-kin" href="/brands/bet-on-the-horses"><span class="bp-kin-name">B.O.T.H. (Bet On The Horses)</span><span class="bp-kin-line">Collin McMannis’s Los Angeles label, started in 2026: heavy twill caps and truckers…</span></a><a class="bp-kin" href="/brands/birds-of-condor"><span class="bp-kin-name">Birds of Condor</span><span class="bp-kin-line">Byron Bay&#x27;s cult label — started with ten hats, now a flagship store with a restored…</span></a><a class="bp-kin" href="/brands/fella-golf"><span class="bp-kin-name">Fella Golf</span><span class="bp-kin-line">Tongue-in-cheek European golf — heavyweight tees, a pizza-slice ball marker, zero…</span></a><a class="bp-kin" href="/brands/freddy-tyler-paul"><span class="bp-kin-name">Freddy Tyler Paul</span><span class="bp-kin-line">A Chicago-born musician in Los Angeles who taught himself to screenprint and embroider…</span></a><a class="bp-kin" href="/brands/gumtree-golf"><span class="bp-kin-name">Gumtree Golf &amp; Nature Club</span><span class="bp-kin-line">Small-batch headcovers, bags and apparel sewn in a Greenpoint studio from upcycled and…</span></a></div>

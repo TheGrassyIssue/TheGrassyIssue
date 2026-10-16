@@ -83,6 +83,49 @@ h1{font-family:var(--serif);font-weight:600;font-size:clamp(32px,4.6vw,50px);lin
 .bp-title{font-family:var(--serif);font-weight:600;font-size:16.5px;line-height:1.3;letter-spacing:-.01em;}
 footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:1200px;margin:0 auto;font-family:var(--mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:#6e736c;}
 @media(max-width:640px){.nav-links{gap:12px;}.nav-links a{font-size:9.5px;}.bp-heroimg{width:120px;}}
+
+/* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
+.bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
+.bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
+.bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
+.bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
+@media(max-width:760px){.bp2-hero>img.bp2-solo{right:50%;transform:translateX(50%);top:6%;height:58%}}
+.bp2-tri img{width:100%;height:100%;object-fit:cover;display:block}
+.bp2-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 35%,rgba(0,0,0,.74))}
+.bp2-cap{position:absolute;left:0;right:0;bottom:0;max-width:1200px;margin:0 auto;padding:0 24px 40px;color:#fff}
+.bp2-cap .bp-crumb a{color:#fff;opacity:.85}.bp2-cap .bp-crumb{color:#fff;opacity:.9}
+.bp2-cap h1{font-family:var(--serif);font-weight:700;font-size:clamp(40px,7vw,88px);line-height:1;letter-spacing:-.02em;margin:12px 0 14px;color:#fff;text-shadow:0 2px 18px rgba(0,0,0,.25)}
+.bp2-cap .bp-meta{color:#fff;opacity:.92;margin:0}
+.bp2-find{max-width:1200px;margin:0 auto;padding:36px 24px 34px;display:grid;grid-template-columns:1.45fr 1fr;gap:44px;border-bottom:1px solid rgba(20,20,20,.15)}
+.bp2-find .bp-line{font-family:var(--serif);font-size:20px;line-height:1.55;color:var(--ink);max-width:none;margin:0 0 16px}
+.bp2-box{border-left:1px solid rgba(20,20,20,.2);padding-left:32px}
+.bp2-lab{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass);margin-bottom:12px}
+.bp2-box .bp-actions{flex-direction:column;align-items:flex-start;gap:10px;margin:0}
+.bp-store,.bp-ig{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;padding:11px 16px;border:1px solid var(--ink);text-decoration:none}
+.bp-store{background:var(--ink);color:var(--paper)}.bp-store:hover{background:var(--grass);border-color:var(--grass)}
+.bp-ig{color:var(--ink);background:transparent}.bp-ig:hover{border-color:var(--grass);color:var(--grass)}
+.bp2-count{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:16px}
+.bp2-stories{max-width:1200px;margin:0 auto;padding:40px 24px 0}
+.bp2-stories .bp-gridhdr{margin:6px 0 22px;padding:0;font-size:28px}
+.bp2-kick{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--grass)}
+.bp2-feat{display:grid;grid-template-columns:300px 1fr;max-width:900px;background:var(--grass);color:#fff;text-decoration:none;margin:0 0 24px}
+.bp2-feat img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block}
+.bp2-feat .b{padding:22px 28px;display:flex;flex-direction:column;justify-content:center}
+.bp2-feat .c{font-family:var(--mono);font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.8;margin-bottom:8px}
+.bp2-feat .t{font-family:var(--serif);font-weight:700;font-size:22px;line-height:1.2;margin-bottom:8px}
+.bp2-feat .d{font-family:var(--serif);font-size:14.5px;line-height:1.5;opacity:.9}
+.bp2-feat .r{margin-top:12px;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border-bottom:1px solid rgba(255,255,255,.7);align-self:flex-start;padding-bottom:2px}
+.bp2-feat:hover .t{text-decoration:underline}
+.bp2-stories .bp-grid{padding:0;margin:0 0 70px;grid-template-columns:repeat(3,1fr)}
+.bp2-stories .bp-card{border-radius:0}
+.bp2-stories .bp-thumb{aspect-ratio:4/3}
+.bp2-stories .bp-title{font-size:19px;font-weight:700;line-height:1.22}
+@media(max-width:900px){.bp2-stories .bp-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:760px){.bp2-find{grid-template-columns:1fr;gap:24px}.bp2-box{border-left:0;padding-left:0;border-top:1px solid rgba(20,20,20,.15);padding-top:20px}
+ .bp2-feat{grid-template-columns:1fr}.bp2-stories .bp-grid{grid-template-columns:1fr}.bp2-hero{height:440px}}
+
 /*TGI-MOBILE-BTN-V1*/
 .nav-toggle{display:none;width:28px;height:20px;flex-direction:column;justify-content:space-between;padding:0;background:none;border:none;cursor:pointer}
 .nav-toggle span{display:block;width:100%;height:1.5px;background:var(--ink);transition:transform .25s,opacity .25s}
@@ -125,33 +168,100 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
 </nav>
 
 <header class="bp-head">
-  <div class="bp-heroimg"><img src="/images/random-golf-club/dad-hat-white.jpg" alt="Random Golf Club — independent golf brand" loading="eager"></div>
-  <div class="bp-headtext">
-    <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Random Golf Club</div>
-    <div class="bp-kickline">[ All Coverage &middot; 13 Posts ]</div>
-    <h1>Random Golf Club</h1>
-    <div class="bp-meta">Los Angeles, CA &middot; Apparel &middot; Community</div>
-    <p class="bp-line">Erik Anders Lang's community that became a brand — meetups, films, and the only Australia trip in golf media.</p>
-    <div class="bp-actions"><a class="bp-profile" href="/drops/brand-to-know-random-golf-club">Read the full profile &rarr;</a><a class="bp-store" href="https://randomgolfclub.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=random-golf-club" target="_blank" rel="noopener">Shop Random Golf Club &#8599;</a></div>
-    <div class="bp-chips"><a class="bp-chip" href="/brands/tag/muni-energy">Muni Energy</a><a class="bp-chip" href="/brands/tag/course-merch">Course Merch</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div>
+  <div class="bp2-hero"><img src="/images/random-golf-club/btk-hero.jpg" alt="Random Golf Club" fetchpriority="high"><div class="bp2-shade"></div>
+    <div class="bp2-cap">
+      <div class="bp-crumb"><a href="/">Feed</a><span>/</span><a href="/brands">The Brand Index</a><span>/</span>Random Golf Club</div>
+      <h1>Random Golf Club</h1>
+      <div class="bp-meta">Los Angeles, CA &middot; Apparel &middot; Community</div>
+    </div>
   </div>
 </header>
+<section class="bp2-find">
+  <div><p class="bp-line">Erik Anders Lang's community that became a brand — meetups, films, and the only Australia trip in golf media.</p><div class="bp-chips"><a class="bp-chip" href="/brands/tag/muni-energy">Muni Energy</a><a class="bp-chip" href="/brands/tag/course-merch">Course Merch</a><a class="bp-chip" href="/brands/tag/independent">Independent</a></div></div>
+  <div class="bp2-box"><div class="bp2-lab">Find them</div><div class="bp-actions"><a class="bp-store" href="https://randomgolfclub.com/?utm_source=thegrassyissue&amp;utm_medium=referral&amp;utm_campaign=brand-index&amp;utm_content=random-golf-club" target="_blank" rel="noopener">Visit randomgolfclub.com &#8599;</a><a class="bp-ig" href="https://www.instagram.com/randomgolfclub/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg> @randomgolfclub</a></div><div class="bp2-count">13 TGI stories</div></div>
+</section>
 
 
-<h2 class="bp-gridhdr">Every Grassy Issue Post Featuring Random Golf Club</h2>
+<section class="bp2-stories">
+<div class="bp2-kick">On The Grassy Issue</div>
+<h2 class="bp-gridhdr">Every story featuring Random Golf Club</h2>
+<a class="bp2-feat" href="/drops/brand-to-know-random-golf-club"><img src="/images/random-golf-club/carry-bag-tan.jpg" alt="Brand to Know — Random Golf Club" loading="lazy"><div class="b"><div class="c">The Profile &middot; Jul 7, 2026</div><div class="t">Brand to Know — Random Golf Club</div><div class="d">Random Golf Club is the global community of local golfers — 30,000 members, 140 chapters, founded by filmmaker Erik Anders Lang. Austin HQ. Community-first golf gear and…</div><div class="r">Read the profile &rarr;</div></div></a>
 <div class="bp-grid">
-  <a class="bp-card" href="/drops/brand-to-know-random-golf-club">
-    <div class="bp-thumb"><img src="/images/random-golf-club/btk-hero.jpg" loading="lazy" alt="Brand to Know — Random Golf Club"><span class="bp-badge">The Profile</span></div>
+  <a class="bp-card" href="/drops/the-hat-and-towel-edit">
+    <div class="bp-thumb"><img src="/images/hats-towels/hero.jpg" loading="lazy" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">Brand to Know — Random Golf Club</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Sep 21, 2026</div>
+      <div class="bp-title">The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-all-black-edit">
+    <div class="bp-thumb"><img src="/images/all-black/hero.jpg" loading="lazy" alt="The All-Black Edit"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">The Edit &middot; Aug 27, 2026</div>
+      <div class="bp-title">The All-Black Edit</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/australian-golf-brands-and-trips">
     <div class="bp-thumb"><img src="/images/aussie/hero-australia.jpg" loading="lazy" alt="Golf in Australia — 10 Brands and 12 Trips to Book"></div>
     <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 24, 2026</div>
       <div class="bp-title">Golf in Australia — 10 Brands and 12 Trips to Book</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-ball-marker-atlas">
+    <div class="bp-thumb"><img src="/images/ball-markers/hero.jpg" loading="lazy" alt="The Ball Marker Atlas — 77 Markers From 20 Brands"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Ball Marker Atlas — 77 Markers From 20 Brands</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hat-edit-austin-summer">
+    <div class="bp-thumb"><img src="/images/hat-edit/hero.jpg" loading="lazy" alt="The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Aug 14, 2026</div>
+      <div class="bp-title">The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-bold-tee-edit">
+    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-hoodie-and-shorts-edit">
+    <div class="bp-thumb"><img src="/images/hoodie-shorts/hero.jpg" loading="lazy" alt="Hoodie and Shorts — The Best Fall Combo"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Feed &middot; Jul 23, 2026</div>
+      <div class="bp-title">Hoodie and Shorts — The Best Fall Combo</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-retreat-guide">
+    <div class="bp-thumb"><img src="/images/golf-retreats/sand-valley.jpg" loading="lazy" alt="The Retreat Guide — 12 Golf Retreats from Buddy Trips to Bucket Lists"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Field Notes &middot; Jul 22, 2026</div>
+      <div class="bp-title">The Retreat Guide — 12 Golf Retreats from Buddy Trips to Bucket Lists</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/rodeo-dunes-the-great-divide">
+    <div class="bp-thumb"><img src="/images/rodeo-dunes/rodeo-dunes-hero.jpg" loading="lazy" alt="72 Strangers, 3 Rounds, 1 Course — Rodeo Dunes with Random Golf Club"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 19, 2026</div>
+      <div class="bp-title">72 Strangers, 3 Rounds, 1 Course — Rodeo Dunes with Random Golf Club</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-driver-headcover-edit">
+    <div class="bp-thumb"><img src="/images/headcover-edit/mogshade-churra-mono.jpg" loading="lazy" alt="18 Driver Headcovers We&#x27;d Game"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jul 14, 2026</div>
+      <div class="bp-title">18 Driver Headcovers We&#x27;d Game</div>
+    </div>
+  </a>
+  <a class="bp-card" href="/drops/the-towel-edit-12-worth-clipping-to-your-bag">
+    <div class="bp-thumb"><img src="/images/feed/8769eb87-SUGTWL001_1copy.jpg" loading="lazy" alt="The Towel Edit — 12 Worth Clipping to Your Bag"></div>
+    <div class="bp-body">
+      <div class="bp-kicker">Drops &amp; Brands &middot; Jun 15, 2026</div>
+      <div class="bp-title">The Towel Edit — 12 Worth Clipping to Your Bag</div>
     </div>
   </a>
   <a class="bp-card" href="/drops/off-course-vol-2-golf-brands-doing-non-golf-things">
@@ -161,78 +271,9 @@ footer{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width:
       <div class="bp-title">Off Course, Vol. 2 — Golf Brands Doing Non-Golf Things</div>
     </div>
   </a>
-  <a class="bp-card" href="/drops/rodeo-dunes-the-great-divide">
-    <div class="bp-thumb"><img src="/images/rodeo-dunes/rodeo-dunes-hero.jpg" loading="lazy" alt="72 Strangers, 3 Rounds, 1 Course — Rodeo Dunes with Random Golf Club"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">72 Strangers, 3 Rounds, 1 Course — Rodeo Dunes with Random Golf Club</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-all-black-edit">
-    <div class="bp-thumb"><img src="/images/all-black/hero.jpg" loading="lazy" alt="The All-Black Edit"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">The Edit</div>
-      <div class="bp-title">The All-Black Edit</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-ball-marker-atlas">
-    <div class="bp-thumb"><img src="/images/ball-markers/hero.jpg" loading="lazy" alt="The Ball Marker Atlas — 77 Markers From 20 Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Ball Marker Atlas — 77 Markers From 20 Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-bold-tee-edit">
-    <div class="bp-thumb"><img src="/images/bold-tees/hero.jpg" loading="lazy" alt="The Bold Tee Edit — The Graphic Tee Grew Up"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">The Bold Tee Edit — The Graphic Tee Grew Up</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-driver-headcover-edit">
-    <div class="bp-thumb"><img src="/images/headcover-edit/mogshade-churra-mono.jpg" loading="lazy" alt="18 Driver Headcovers We&#x27;d Game"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">18 Driver Headcovers We&#x27;d Game</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hat-and-towel-edit">
-    <div class="bp-thumb"><img src="/images/hats-towels/hero.jpg" loading="lazy" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hat-edit-austin-summer">
-    <div class="bp-thumb"><img src="/images/hat-edit/hero.jpg" loading="lazy" alt="The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Hat Edit — 28 Summer Caps, Ropes and Buckets From the Brands We Follow</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-hoodie-and-shorts-edit">
-    <div class="bp-thumb"><img src="/images/hoodie-shorts/hero.jpg" loading="lazy" alt="Hoodie and Shorts — The Best Fall Combo"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Feed</div>
-      <div class="bp-title">Hoodie and Shorts — The Best Fall Combo</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-retreat-guide">
-    <div class="bp-thumb"><img src="/images/golf-retreats/sand-valley.jpg" loading="lazy" alt="The Retreat Guide — 12 Golf Retreats from Buddy Trips to Bucket Lists"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Field Notes</div>
-      <div class="bp-title">The Retreat Guide — 12 Golf Retreats from Buddy Trips to Bucket Lists</div>
-    </div>
-  </a>
-  <a class="bp-card" href="/drops/the-towel-edit-12-worth-clipping-to-your-bag">
-    <div class="bp-thumb"><img src="/images/feed/8769eb87-SUGTWL001_1copy.jpg" loading="lazy" alt="The Towel Edit — 12 Worth Clipping to Your Bag"></div>
-    <div class="bp-body">
-      <div class="bp-kicker">Drops &amp; Brands</div>
-      <div class="bp-title">The Towel Edit — 12 Worth Clipping to Your Bag</div>
-    </div>
-  </a>
 </div>
 <!--TGI-WWU--><section class="wwu"><div class="wwu-in"><span class="wwu-lab">For Random Golf Club</span><p>Work at Random Golf Club? This coverage is independent and always will be, but if you want to talk about sending product, a sponsored Field Note or something longer, <a href="/work-with-us">here is how that works</a>.</p></div></section><!--/TGI-WWU-->
+</section>
 
 <h2 class="bp-gridhdr">More Independent</h2>
 <div class="bp-kins"><a class="bp-kin" href="/brands/birds-of-condor"><span class="bp-kin-name">Birds of Condor</span><span class="bp-kin-line">Byron Bay&#x27;s cult label — started with ten hats, now a flagship store with a restored…</span></a><a class="bp-kin" href="/brands/devereux-golf"><span class="bp-kin-name">Devereux Golf</span><span class="bp-kin-line">Scottsdale brothers, est. 2013, named after their grandfather — relaxed silhouettes…</span></a><a class="bp-kin" href="/brands/hidden-links-society"><span class="bp-kin-name">Hidden Links Society</span><span class="bp-kin-line">Anti-country-club headwear and heavyweight cotton. Gives 2% of every sale to Youth on…</span></a><a class="bp-kin" href="/brands/huega-house"><span class="bp-kin-name">Huega House</span><span class="bp-kin-line">Carlsbad, est. 2022 — retro-modern prints, towels and objects that treat golf as…</span></a><a class="bp-kin" href="/brands/kingfisher-golf"><span class="bp-kin-name">Kingfisher Golf</span><span class="bp-kin-line">Started at a kitchen counter in East Dallas by a former PepsiCo art director; first…</span></a><a class="bp-kin" href="/brands/no-laying-up"><span class="bp-kin-name">No Laying Up</span><span class="bp-kin-line">Golf podcasts, video and merchandise, produced by a small team in Jacksonville, Florida.</span></a></div>
