@@ -36,6 +36,7 @@ DOMAINS = {
     # build-brands.py silently skips its page — while /brands still lists
     # it and links a 404. That is what happened here.
     "matchstick-golf": ["matchstickgolf.com"],
+    "dual-sport": ["dualsportbrand.com"],  # Brand to Know, 16 Oct 2026
     # metalwoodstudio.com now redirects to an unrelated woodworking shop;
     # the brand lives at metalwood.studio. Mapping the dead domain would
     # have matched nothing and silently produced no mentions.

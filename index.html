@@ -1588,29 +1588,6 @@
 <style>.feed .card{content-visibility:auto;contain-intrinsic-size:auto 640px}</style>
 <style>/*TGI-HERO-MW*/.hero-img.desktop{object-position:center top!important}</style>
 <style>/*TGI-H2*/h2.events-label,h2.vibe-label{margin:0;font-weight:inherit;line-height:inherit}.tgi-sr{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}</style>
-<script type="application/ld+json" data-tgi="schema-org">
-{
- "@context": "https://schema.org",
- "@type": "Organization",
- "@id": "https://thegrassyissue.com/#org",
- "name": "The Grassy Issue",
- "alternateName": [
-  "TGI",
-  "Grassy Issue"
- ],
- "url": "https://thegrassyissue.com/",
- "logo": "https://thegrassyissue.com/apple-touch-icon.png",
- "description": "Independent golf brands, celebrated on Austin's public courses.",
- "sameAs": [
-  "https://instagram.com/thegrassyissue"
- ],
- "founder": {
-  "@type": "Person",
-  "@id": "https://thegrassyissue.com/about#lenny",
-  "name": "Lenny Harrington"
- }
-}
-</script>
 <style id="tgi-mobile-home">/* TGI mobile homepage, 15 Oct 2026 — see apply-mobile-home.py */
 @media (max-width:640px){
   .weather-banner{padding:7px 14px!important;gap:10px!important;font-size:9.5px!important;flex-wrap:nowrap!important;justify-content:space-between!important}
@@ -1647,6 +1624,29 @@
 }
 @media (max-width:640px) and (hover:none){ .gear-arrow{display:none!important} }
 </style>
+<script type="application/ld+json" data-tgi="schema-org">
+{
+ "@context": "https://schema.org",
+ "@type": "Organization",
+ "@id": "https://thegrassyissue.com/#org",
+ "name": "The Grassy Issue",
+ "alternateName": [
+  "TGI",
+  "Grassy Issue"
+ ],
+ "url": "https://thegrassyissue.com/",
+ "logo": "https://thegrassyissue.com/apple-touch-icon.png",
+ "description": "Independent golf brands, celebrated on Austin's public courses.",
+ "sameAs": [
+  "https://instagram.com/thegrassyissue"
+ ],
+ "founder": {
+  "@type": "Person",
+  "@id": "https://thegrassyissue.com/about#lenny",
+  "name": "Lenny Harrington"
+ }
+}
+</script>
 </head>
 <body>
 
@@ -1729,6 +1729,50 @@
 </section>
 
 <section class="feed" id="feed" data-nosnippet role="tabpanel" aria-label="Content feed">
+<!-- TGI-DUALSPORT-CARD -->
+<div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Drops &amp; Brands]</span>
+      <div class="gear-carousel" data-carousel="dualsport">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="/drops/brand-to-know-dual-sport">
+              <img src="/images/dualsport/card-hero.jpg" alt="Three golfers in Dual Sport windbreakers and shorts shaking hands on a fairway" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Dual Sport · Brand to Know</div><div class="gear-slide-name">Brand to Know</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/brand-to-know-dual-sport">
+              <img src="/images/dualsport/knitjersey-4.jpg" alt="A man in the black Dual Sport Classic Knit Jersey with a big 2 on the front" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Dual Sport · Classic Knit Jersey</div><div class="gear-slide-name">The Football Side</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/brand-to-know-dual-sport">
+              <img src="/images/dualsport/flightknitpololightgre-3.jpg" alt="A man in the light grey Flight Knit polo and seafoam shorts" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Dual Sport · Flight Knit Polo</div><div class="gear-slide-name">The Polos</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/brand-to-know-dual-sport">
+              <img src="/images/dualsport/life-2.jpg" alt="A golfer in the Midnight Bloom Signature polo beside a pond" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Dual Sport · On the Course</div><div class="gear-slide-name">24 Pieces</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/brand-to-know-dual-sport" style="color:inherit;text-decoration:none;border-bottom:none;">Brand to Know: Dual Sport — Golf Clothes for the Two-Sport Athlete</a></div>
+      <p class="card-text" data-slidetext="dualsport">Golf clothes for the two-sport athlete.</p>
+      <div class="gear-dots" data-dots="dualsport"></div>
+      <div class="gear-counter" data-counter="dualsport">1 / 4</div>
+      <a href="/drops/brand-to-know-dual-sport" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
+    </div>
+  </div>
+<!-- /TGI-DUALSPORT-CARD -->
 <!-- TGI-GUMTREE-CARD -->
 <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -2825,56 +2869,6 @@
     </div>
   </div>
 <!-- /TGI-HOWIE-BENSON-CARD -->
-<!-- TGI-MANTRA-CARD -->
-<div class="card" data-type="drop">
-    <div class="card-media" style="position:relative;">
-      <span class="card-tag grass">[Drops &amp; Brands]</span>
-      <div class="gear-carousel" data-carousel="mantra">
-        <div class="gear-carousel-track">
-          <div class="gear-slide">
-            <a href="/drops/brand-to-know-mantra-golf">
-              <img src="/images/mantra/band-2.jpg" alt="A golfer in Mantra&#x27;s Birdie Embroidery crewneck leaning on an iron among saguaros at dusk" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Mantra Golf</div><div class="gear-slide-name">Brand to Know</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="/drops/brand-to-know-mantra-golf">
-              <img src="/images/mantra/m01-1.jpg" alt="Mantra&#x27;s Legacy Crewneck Pullover with Birdie Embroidery" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Legacy Crewneck, Birdie · $168</div><div class="gear-slide-name">The standout</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="/drops/brand-to-know-mantra-golf">
-              <img src="/images/mantra/band-3.jpg" alt="A golfer finishing his swing under a pink dusk sky in the Sonoran Desert" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Sonoran Desert</div><div class="gear-slide-name">The new collection</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="/drops/brand-to-know-mantra-golf">
-              <img src="/images/mantra/m09-1.jpg" alt="Mantra&#x27;s long-sleeve pique polo in brown checkerboard" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Pique Polo L/S, Checkerboard · $108</div><div class="gear-slide-name">Our favorite print</div></div>
-            </a>
-          </div>
-          <div class="gear-slide">
-            <a href="/drops/brand-to-know-mantra-golf">
-              <img src="/images/mantra/m27-1.jpg" alt="Mantra&#x27;s Catalyst Polo with the stand-up Mantra Collar in woods brown" loading="lazy" />
-              <div class="gear-slide-info"><div class="gear-slide-brand">Catalyst Polo, Woods · $88</div><div class="gear-slide-name">The essential</div></div>
-            </a>
-          </div>
-        </div>
-        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
-        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
-      </div>
-    </div>
-    <div class="card-body">
-      <div class="card-title"><a href="/drops/brand-to-know-mantra-golf" style="color:inherit;text-decoration:none;border-bottom:none;">Brand to Know: Mantra Golf, the Sonoran Desert Collection and the Essentials</a></div>
-      <p class="card-text" data-slidetext="mantra">The San Francisco label behind the Mantra Collar polo, and its new Sonoran Desert collection.</p>
-      <div class="gear-dots" data-dots="mantra"></div>
-      <div class="gear-counter" data-counter="mantra">1 / 5</div>
-      <a href="/drops/brand-to-know-mantra-golf" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
-    </div>
-  </div>
-<!-- /TGI-MANTRA-CARD -->
 
   <div class="load-more" id="loadMore" data-next="/feed/page-2.html">
     <a href="/feed/page-2.html" onclick="loadMoreCards(event)" class="load-more-link">Load more &rarr;</a>
@@ -3459,6 +3453,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    dualsport: [
+      "Golf clothes for the two-sport athlete.",
+      "A heavy knit cut like a football jersey.",
+      "Raglan sleeves and a bowling-shirt collar.",
+      "From a Kennesaw State linebacker who plays off plus five."
+    ],
     gumtree: [
       "Headcovers cut from quilts, tents and waders.",
       "A 1970s California camp tent, cut into covers.",
@@ -3610,13 +3610,6 @@
       "A single button where the quarter-zip would be.",
       "Warm rust brown for an Austin fall round.",
       "Caps from $40, and $15 off with any top."
-    ],
-    mantra: [
-      "The San Francisco label behind the Mantra Collar polo, and its new Sonoran Desert collection.",
-      "Heavyweight fleece covered in embroidered North American birds.",
-      "Shot in Arizona: clay, prickly pear, agave and sand.",
-      "A long-sleeve pique polo with a 1970s pro-shop look.",
-      "The stand-up Mantra Collar polo the brand started with in 2019."
     ],
     boldtees: [
       "Quiet Golf does the quiet luxury thing without saying the words out loud. Washed pocket tee, tonal monogram, heavyweight cotton. The kind of shirt that gets a nod from the guy with taste at the range.",
