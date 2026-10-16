@@ -178,7 +178,7 @@ def size_guide():
 <section class="products" style="margin-top:8px;">
   <h2 class="products-hdr" id="size-guide">Which Sunday Golf Bag? A Size Guide</h2>
   <p class="cat-kicker"><strong>Size guide</strong>Sunday Golf publishes these specs on its own comparison page. Every bag has full-length dividers and is 600D nylon unless noted: the S-Class bags are polyurethane (vegan) leather and the Ranger is recycled nylon ripstop. If you play oversized grips, Sunday Golf points you to the Ryder 14 or the Big Rig.</p>
-  <div style="overflow-x:auto;max-width:1100px"><table style="width:100%;border-collapse:collapse;font-size:15px;min-width:640px">
+  <div style="overflow-x:auto;max-width:980px;margin:0 auto"><table style="width:100%;border-collapse:collapse;font-size:15px;min-width:640px">
     <thead><tr>{th}</tr></thead><tbody>{rows}</tbody></table></div>
   <p class="cat-kicker" style="margin-top:24px"><strong>Our rule of thumb</strong>Par 3s and range sessions: the Loma. Walking nine with a half set: the Loma XL. Walking eighteen with most of your clubs: the El Camino. Full bag, carrying: the Ryder. Riding in a cart or pushing a cart: the Big Rig.</p>
 </section>
