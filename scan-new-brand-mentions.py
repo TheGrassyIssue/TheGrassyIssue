@@ -37,6 +37,13 @@ DOMAINS = {
     # it and links a 404. That is what happened here.
     "matchstick-golf": ["matchstickgolf.com"],
     "dual-sport": ["dualsportbrand.com"],  # Brand to Know, 16 Oct 2026
+    # needlepoint belt makers, added to the index 16 Oct 2026
+    "smathers-branson": ["smathersandbranson.com"],
+    "j-press": ["jpress.com"],
+    "charleston-belt": ["charlestonbelt.com"],
+    "good-threads": ["goodthreadsneedlepoint.com"],
+    "baldwin-belts": ["baldwinbelts.com"],
+    "fish-creek": ["fishcreekbrands.com"],
     # metalwoodstudio.com now redirects to an unrelated woodworking shop;
     # the brand lives at metalwood.studio. Mapping the dead domain would
     # have matched nothing and silently produced no mentions.
@@ -164,6 +171,10 @@ def matches(host_set, domains):
     return any(hst == d or hst.endswith("." + d) for hst in host_set for d in domains)
 
 APPLY  = "--apply" in sys.argv
+# DEMOTE: the one way a sticky profile flag comes off. A brand's old profile post
+# stays on its coverage page as a mention once a proper Brand to Know replaces it.
+# Lenny, 16 Oct 2026: the Gumtree Brand to Know is the profile, not the 2025 drop.
+DEMOTE = {("gumtree-golf", "/drops/gumtree-nature-club-drop")}
 brands = json.load(open(f"{ROOT}/data/brands.json"))
 ment   = json.load(open(f"{ROOT}/data/brand-mentions.json"))
 import copy; was = copy.deepcopy(ment)   # pre-scan state, for sticky profile flags
@@ -230,6 +241,8 @@ for b in todo:
         prof = (titled
                 or (slug.startswith("brand-to-know-") and b["slug"].split("-")[0] in slug)
                 or bool(prev.get(url, {}).get("profile")))
+        if (b["slug"], url) in DEMOTE:
+            prof = False
         hits.append({"url": url, "title": title, "profile": prof})
     # A RESCAN MAY ONLY ADD. Found 24 Sep 2026: the first --rescan of Students and
     # Devereux dropped ten real mentions (Sugarloaf collab posts, the camo and tee
