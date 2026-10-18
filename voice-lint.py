@@ -80,7 +80,11 @@ ships ship shipped
 fills fill filled drops drop dropped earns earn earned cannot
 runs run ran covers cover covered opens open opened books book booked
 differs differ differed varies vary varied measures measure measured
-charges charge charged lends lend lent rents rent rented""".split())
+charges charge charged lends lend lent rents rent rented
+embroiders embroider embroidered screenprints screenprint screenprinted
+draws draw drew drawn commissions commission commissioned""".split())
+# embroider/screenprint/draw/commission added 2026-10-17 on the Hats & Nalgenes build ("Mustard Beetle
+# embroiders...", "Otso Cycles commissioned..."). Plain finite verbs the set lacked; same fix as above.
 # The three lines ending 'ships shipped' were added 2026-09-15 after the check
 # fired on "Mogshade weaves these to order..." — weave and call were simply
 # absent. Same false-positive class as the 2026-09-09 batch below; same fix.
