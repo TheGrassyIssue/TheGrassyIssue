@@ -468,8 +468,8 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
 </nav>
 
 <div class="bi-hero">
-  <img src="/images/hero-wide.jpg" alt="Sunset over the green and flag at Jimmy Clay Golf Course, Austin" class="desktop" loading="eager" />
-  <img src="/images/hero.jpg" alt="Sunset over the green and flag at Jimmy Clay Golf Course, Austin" class="mobile" loading="eager" />
+  <img src="/images/hero-wide.jpg" alt="Live oaks reflected in a pond at sunset at Jimmy Clay Golf Course, Austin" class="desktop" loading="eager" />
+  <img src="/images/hero.jpg" alt="Live oaks reflected in a pond at sunset at Jimmy Clay Golf Course, Austin" class="mobile" loading="eager" />
   <div class="bi-hero-content">
     <div class="bi-hero-stamp"><span class="pulse"></span><span>The Brand Index &middot; Live from Austin</span></div>
     <div>
