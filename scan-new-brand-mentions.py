@@ -37,6 +37,10 @@ DOMAINS = {
     # it and links a 404. That is what happened here.
     "matchstick-golf": ["matchstickgolf.com"],
     "dual-sport": ["dualsportbrand.com"],  # Brand to Know, 16 Oct 2026
+    # On Our Radar Vol. 2, 19 Oct 2026. drvngolfco.com ONLY: "DRVN Golf" is an unrelated coaching certification.
+    "dim-sum-golf-club": ["dimsumgolfclub.com"],
+    "rowena-golf-club": ["rowenagolf.com"],
+    "drvn-golf-co": ["drvngolfco.com"],
     # needlepoint belt makers, added to the index 16 Oct 2026
     "smathers-branson": ["smathersandbranson.com"],
     "j-press": ["jpress.com"],

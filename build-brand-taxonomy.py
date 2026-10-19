@@ -58,7 +58,7 @@ def tags_of(b):
 TAX = [
 ("tag", "design-nerd", "Design-Nerd Golf Brands",
  "Design-Nerd Golf Brands — The Grassy Issue",
- "Forty-seven golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
+ "Forty-eight golf brands that treat design as the product rather than the packaging — from milled putters to socks with a point of view.",
  """<p>This is the largest group in the Index, and the loosest, which is usually a sign a
  category is real rather than invented. What connects <strong>Bettinardi</strong> milling a putter
  from one billet, <strong>Inside Story Socks</strong> printing a narrative into a sock, and
@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Thirty-one golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Thirty-two golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -131,7 +131,7 @@ TAX = [
  ),
 ("tag", "post-round-friendly", "Golf Clothes You Can Wear After the Round",
  "Post-Round Golf Clothing Brands | The Grassy Issue",
- "Twenty-nine golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
+ "Thirty golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
  """<p>The test is simple and unforgiving: would you keep it on for dinner. Most golf clothing
  fails it, because the thing that makes a polo read as golf — the logo placement, the sheen of the
  fabric, the cut through the shoulder — is exactly the thing that makes it read as golf in a
@@ -157,7 +157,7 @@ TAX = [
  ),
 ("tag", "quiet-luxury", "Quiet Luxury Golf Brands",
  "Quiet Luxury Golf Brands — Understated | The Grassy Issue",
- "Eighteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
+ "Nineteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
  """<p>Quiet is harder than loud, because there is nowhere to hide. Strip the logo and the graphic
  and what is left is fabric, cut and finish, which are the expensive parts. That is why this is the
  smallest of the major groups in the Index and why the price floor across it is the highest.</p>
@@ -211,7 +211,7 @@ TAX = [
  ),
 ("tag", "member-guest", "Member-Guest Golf Brands",
  "Member-Guest Golf Brands — Club Dress Code | The Grassy Issue",
- "Five golf brands cut for the private-club end of the game — clothing and shoes that clear any dress code without looking like they tried.",
+ "Six golf brands cut for the private-club end of the game — clothing and shoes that clear any dress code without looking like they tried.",
  """<p>The narrowest shelf in the Index, and the one with the clearest brief: clothing that will not
  be questioned at the door. <strong>Peter Millar</strong> is the default answer across most of
  American private golf. <strong>Duca del Cosma</strong> and <strong>Royal Albartross</strong> make
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Eighty-six golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Eighty-nine golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
@@ -285,8 +285,8 @@ TAX = [
  ),
 ("attr", "drops-and-vanishes", "Golf Brands That Drop and Vanish",
  "Limited Drop Golf Brands | The Grassy Issue",
- "Seventeen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
- """<p>Seventeen brands in the Index operate on a drop model with no restock behind it. The run is
+ "Eighteen golf brands that release in small runs and do not restock — if you are waiting for it to come back, it is not coming back.",
+ """<p>Eighteen brands in the Index operate on a drop model with no restock behind it. The run is
  made, it sells or it does not, and the next thing is a different thing.
  <strong>Sentinel Golf</strong>, <strong>Mogshade</strong>, <strong>Radry</strong> and
  <strong>Gamut Golf</strong> all work this way by design rather than by supply-chain accident.</p>
