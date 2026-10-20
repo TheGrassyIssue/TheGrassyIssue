@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Thirty-two golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Thirty-three golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -102,9 +102,9 @@ TAX = [
  ),
 ("tag", "independent", "Independent Golf Brands",
  "Independent Golf Brands, Founder-Owned (2026) | The Grassy Issue",
- "Sixty-one independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
+ "Sixty-two independent golf brands: founder- and family-owned labels with no parent company or outside investors, with where each is based and what it makes.",
  """<p>An <strong>independent golf brand</strong> is one with no parent company, no licensing group and no outside
- investors behind it: it is owned by the people who started it, or by a family. Sixty-one brands in the Index
+ investors behind it: it is owned by the people who started it, or by a family. Sixty-two brands in the Index
  meet that bar. <strong>Bettinardi</strong> is still family-run out of Tinley Park. <strong>Seamus Golf</strong>
  is owned outright by Akbar and Megan Chisti. <strong>No Laying Up</strong> answers to its own audience and
  nobody else. The twenty-five we have covered most are ranked on
@@ -116,7 +116,7 @@ TAX = [
  ),
 ("tag", "muni-energy", "Muni-Energy Golf Brands",
  "Muni Golf Brands — Public-Course Energy | The Grassy Issue",
- "Twenty-five golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
+ "Twenty-six golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
  """<p>Muni energy is a posture more than a price point. It means the brand is dressing for a
  public course on a Saturday morning: a tee time you booked at 11pm, a bag you carry, a beer in the
  lot afterwards. <strong>Devereux</strong>, <strong>Criquet Shirts</strong> and
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Eighty-nine golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Ninety golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a

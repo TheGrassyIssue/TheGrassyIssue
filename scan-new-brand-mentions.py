@@ -41,6 +41,7 @@ DOMAINS = {
     "dim-sum-golf-club": ["dimsumgolfclub.com"],
     "rowena-golf-club": ["rowenagolf.com"],
     "drvn-golf-co": ["drvngolfco.com"],
+    "bunx-golf": ["bunxgolf.com"],  # Brand to Know, 20 Oct 2026
     # needlepoint belt makers, added to the index 16 Oct 2026
     "smathers-branson": ["smathersandbranson.com"],
     "j-press": ["jpress.com"],
