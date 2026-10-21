@@ -15,7 +15,7 @@ def frame(src,force=False):
     ys,xs=np.where(~bg)
     x0,x1=np.percentile(xs,[.3,99.7]).astype(int); y0,y1=np.percentile(ys,[.3,99.7]).astype(int)
     m=int(.06*max(x1-x0,y1-y0)); x0,y0=max(0,x0-m),max(0,y0-m); x1,y1=min(src.width,x1+m),min(src.height,y1+m)
-    g=Image.fromarray(out.clip(0,255).astype('uint8')).crop((x0,y0,x1,y1)); s=min(W*.86/g.width,H*.8/g.height); g=g.resize((round(g.width*s),round(g.height*s)),Image.LANCZOS)
+    g=Image.fromarray(out.clip(0,255).astype('uint8')).crop((x0,y0,x1,y1)); s=min(W*.72/g.width,H*.66/g.height); g=g.resize((round(g.width*s),round(g.height*s)),Image.LANCZOS)
     c=Image.new('RGB',(W,H),tuple(int(v) for v in STONE)); c.paste(g,((W-g.width)//2,(H-g.height)//2)); return c
 PRE={44:(540,170,880,360)}
 FORCE={16,21,32,40,44}

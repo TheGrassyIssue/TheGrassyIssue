@@ -873,15 +873,19 @@ section[data-btk="take"] .writeup-body{font-size:17px}
 </nav>
 
 <style>
-.gs-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;align-items:stretch;margin-top:24px}
-.gs-photos{display:flex;flex-direction:column;justify-content:space-between;gap:18px}.gs-photos figure{margin:0}.gs-photos img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#E8E2D6}
+.gs-row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:48px;align-items:stretch;margin:40px auto 0;max-width:1040px}
+.gs-photos{display:flex;flex-direction:column;justify-content:space-between;gap:32px}.gs-photos figure{margin:0}.gs-photos img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#E8E2D6}
 .gs-photos figcaption{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.02em;color:var(--muted,#6b6b5e);margin-top:6px;line-height:1.4}
-.gs-row .products-grid{grid-template-columns:1fr 1fr !important;gap:16px}
-.gs-row .product-card .product-desc{font-size:13px}
+.gs-row .products-grid{grid-template-columns:1fr 1fr !important;gap:32px 28px}
+.gs-row .product-body{padding:18px 20px 20px}
+.gs-row .product-card .product-desc{font-size:12.5px;line-height:1.55}
+.gs-row .product-name{font-size:15px}
+.gs-row .product-brand{font-size:9.5px}
+.gs-sec{margin-bottom:40px}
 @media (max-width:760px){.gs-row{grid-template-columns:1fr;gap:12px}
  .gs-photos{display:flex;flex-direction:row;justify-content:flex-start;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:0 16px}
  .gs-photos figure{flex:0 0 72%;scroll-snap-align:start;margin:0}
- .gs-row .products-grid{gap:10px}.gs-row .product-card .product-desc{font-size:12.5px}}
+ .gs-row .products-grid{gap:16px 12px}.gs-row .product-body{padding:14px 12px 16px}.gs-row .product-card .product-desc{font-size:12.5px}}
 </style>
 <div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
@@ -926,7 +930,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   <p class="cat-kicker"><strong>Jump to</strong><a href="#nelly-korda" style="border-bottom:1px solid var(--ink)">Nelly Korda</a> &middot; <a href="#arnold-palmer" style="border-bottom:1px solid var(--ink)">Arnold Palmer</a> &middot; <a href="#min-woo-lee" style="border-bottom:1px solid var(--ink)">Min Woo Lee</a> &middot; <a href="#anthony-kim" style="border-bottom:1px solid var(--ink)">Anthony Kim</a> &middot; <a href="#moe-norman" style="border-bottom:1px solid var(--ink)">Moe Norman</a></p>
 </section>
 
-<section class="products" style="margin-top:8px;">
+<section class="products gs-sec" style="margin-top:8px;">
   <div class="drop-tag grass">Inspired by &middot; 12 pieces</div>
   <h2 class="products-hdr" id="nelly-korda">Nelly Korda</h2>
   <p class="cat-kicker">Since moving to Nike in 2023, Korda has stuck to mock necks, clean lines and quiet colors. PGA.com&rsquo;s fashion expert called it &ldquo;classy, athletic and graceful &mdash; never overdone.&rdquo; Then at the 2025 AIG Women&rsquo;s Open at Royal Porthcawl she wore camo cargos and an oversized jacket, and Skratch called it the best golf fit of her career. These picks are menswear, borrowing from both sides of her wardrobe.</p>
@@ -955,7 +959,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
-<section class="products" style="margin-top:8px;">
+<section class="products gs-sec" style="margin-top:8px;">
   <div class="drop-tag grass">Inspired by &middot; 10 pieces</div>
   <h2 class="products-hdr" id="arnold-palmer">Arnold Palmer</h2>
   <p class="cat-kicker">Esquire put Palmer on its list of the best-dressed men of all time, and the look was simple: a cardigan or sweater in red, navy, foam green, gray or yellow, a shirt in a color that didn&rsquo;t match, and slacks with a razor crease. Since 2017, the winner of his Invitational at Bay Hill gets a red cardigan.</p>
@@ -982,7 +986,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
-<section class="products" style="margin-top:8px;">
+<section class="products gs-sec" style="margin-top:8px;">
   <div class="drop-tag grass">Inspired by &middot; 16 pieces</div>
   <h2 class="products-hdr" id="min-woo-lee">Min Woo Lee</h2>
   <p class="cat-kicker">The Perth-born lululemon ambassador won his first PGA Tour title at the 2025 Houston Open and dresses like he&rsquo;s having more fun than everyone else. He lists mock necks, the mullet, the mustache and the shades as his branding, and he turned &ldquo;Let Him Cook&rdquo; into a lululemon collection. Picks here include his lululemon staples, plus color, pattern and a few Australian brands from his corner of the country.</p>
@@ -1015,7 +1019,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
-<section class="products" style="margin-top:8px;">
+<section class="products gs-sec" style="margin-top:8px;">
   <div class="drop-tag grass">Inspired by &middot; 10 pieces</div>
   <h2 class="products-hdr" id="anthony-kim">Anthony Kim</h2>
   <p class="cat-kicker">In 2008 Kim won twice on the PGA Tour and beat Sergio Garc&iacute;a 5 and 4 at the Ryder Cup, with a backward hat and a big custom AK belt buckle. Then he disappeared for 12 years. He came back with LIV in 2024, hitting balls in a white tee, gym shorts and runners, won LIV Adelaide in February 2026 and became an equity partner in Malbon, which now sells his AK 1% line.</p>
@@ -1042,7 +1046,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   </div>
 </section>
 
-<section class="products" style="margin-top:8px;">
+<section class="products gs-sec" style="margin-top:8px;">
   <div class="drop-tag grass">Inspired by &middot; 10 pieces</div>
   <h2 class="products-hdr" id="moe-norman">Moe Norman</h2>
   <p class="cat-kicker">The Canadian two-time national amateur champion was golf&rsquo;s purest ball-striker and one of its oddest dressers. He buttoned long-sleeve shirts to the chin in any heat, wore turtlenecks in summer, liked bright colors and mixed stripes with plaids, and his pants were always an inch too short. He wore two watches at once. He was frugal, too, so plenty of these picks are cheap.</p>

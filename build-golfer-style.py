@@ -130,15 +130,19 @@ GOLFERS = [
 N = 58
 LS = ' style="border-bottom:1px solid var(--ink)"'
 CSS = """<style>
-.gs-row{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:28px;align-items:stretch;margin-top:24px}
-.gs-photos{display:flex;flex-direction:column;justify-content:space-between;gap:18px}.gs-photos figure{margin:0}.gs-photos img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#E8E2D6}
+.gs-row{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,7fr);gap:48px;align-items:stretch;margin:40px auto 0;max-width:1040px}
+.gs-photos{display:flex;flex-direction:column;justify-content:space-between;gap:32px}.gs-photos figure{margin:0}.gs-photos img{width:100%;aspect-ratio:4/5;object-fit:cover;display:block;background:#E8E2D6}
 .gs-photos figcaption{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.02em;color:var(--muted,#6b6b5e);margin-top:6px;line-height:1.4}
-.gs-row .products-grid{grid-template-columns:1fr 1fr !important;gap:16px}
-.gs-row .product-card .product-desc{font-size:13px}
+.gs-row .products-grid{grid-template-columns:1fr 1fr !important;gap:32px 28px}
+.gs-row .product-body{padding:18px 20px 20px}
+.gs-row .product-card .product-desc{font-size:12.5px;line-height:1.55}
+.gs-row .product-name{font-size:15px}
+.gs-row .product-brand{font-size:9.5px}
+.gs-sec{margin-bottom:40px}
 @media (max-width:760px){.gs-row{grid-template-columns:1fr;gap:12px}
  .gs-photos{display:flex;flex-direction:row;justify-content:flex-start;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;margin:0 -16px;padding:0 16px}
  .gs-photos figure{flex:0 0 72%;scroll-snap-align:start;margin:0}
- .gs-row .products-grid{gap:10px}.gs-row .product-card .product-desc{font-size:12.5px}}
+ .gs-row .products-grid{gap:16px 12px}.gs-row .product-body{padding:14px 12px 16px}.gs-row .product-card .product-desc{font-size:12.5px}}
 </style>
 """
 
@@ -203,7 +207,7 @@ def golfer(g, n0):
     assert len(ps) == cnt, key
     figs = "\n".join(f'    <figure><img src="{IMG}/g-{key}-{x}.jpg" alt="{alt}" loading="lazy" /><figcaption>{cap}</figcaption></figure>' for x, alt, cap in photos)
     cards = "\n".join(card(p, n0 - 1 + j, n0 + j) for j, p in enumerate(ps))
-    return (f'\n<section class="products" style="margin-top:8px;">\n'
+    return (f'\n<section class="products gs-sec" style="margin-top:8px;">\n'
             f'  <div class="drop-tag grass">Inspired by &middot; {cnt} pieces</div>\n'
             f'  <h2 class="products-hdr" id="{anchor}">{name}</h2>\n'
             f'  <p class="cat-kicker">{intro}</p>\n'
