@@ -1,0 +1,239 @@
+{
+  "note": "Sponsor/brand-sourced only; no Getty/AP/Reuters. Instagram images (ak-1,2,4,5) were taken from the brand's own posts via /media/?size=l (first slide, max 1080w). Instagram entries below are intended as official embeds; the photos inside the athlete's own posts are often tour/wire photographers, so embed rather than download.",
+  "photos": [
+    {
+      "golfer": "minwoo",
+      "file": "photos/minwoo-1.jpg",
+      "source_page": "https://shop.lululemon.com/story/golf",
+      "img_url": "https://images.lululemon.com/is/image/lululemon/NA_Mar26_Q1_2026Masters_StoryPage_Alpine_2Col_FeatureParallax_Left_D_02_Min_V2?wid=1440&hei=1800&fmt=jpg&qlt=95",
+      "credit": "Photo: lululemon",
+      "width": 1440,
+      "height": 1800,
+      "how_verified": "lululemon Golf story page (2026 Masters/Alpine campaign). Asset filename ends '_02_Min_V2' and the on-page card reads 'Tailored for the tour. The Relaxed-Fit Pant keeps Min Woo Lee's tees and scorecard safe'. Native 4:5. Note: page alt text is a generic placeholder, so the visible card copy plus filename is the confirmation."
+    },
+    {
+      "golfer": "minwoo",
+      "file": "photos/minwoo-2.jpg",
+      "source_page": "https://shop.lululemon.com/story/golf",
+      "img_url": "https://images.lululemon.com/is/image/lululemon/NA_Mar26_Q1_2026Masters_StoryPage_Alpine_2Col_FeatureParallax_SmallCard_D_02_Min?wid=648&hei=778&fmt=jpg&qlt=95",
+      "credit": "Photo: lululemon",
+      "width": 648,
+      "height": 778,
+      "how_verified": "Same Min Woo Lee card on the lululemon Golf story page (filename '_SmallCard_D_02_Min', same caption block). Full-length walking shot showing polo + Relaxed-Fit Pant. Low-res (native 648x778)."
+    },
+    {
+      "golfer": "minwoo",
+      "file": "photos/minwoo-3.jpg",
+      "source_page": "https://shop.lululemon.com/story/golf",
+      "img_url": "https://images.lululemon.com/is/image/lululemon/NA_Mar26_Q1_2026Masters_StoryPage_Alpine_2x3Up_Feature_D_SportPolo?wid=960&hei=960&fmt=jpg&qlt=95",
+      "credit": "Photo: lululemon",
+      "width": 960,
+      "height": 960,
+      "how_verified": "lululemon Golf story page tile captioned 'The lightweight, sweat-wicking Logo Sport Polo keeps Min Woo Lee feeling the flow.' Square, native 960x960 (below 1200 target); crouched, polo visible."
+    },
+    {
+      "golfer": "minwoo",
+      "file": "photos/minwoo-4.jpg",
+      "source_page": "https://corporate.lululemon.com/newsroom/our-stories/2024/min-woo-lee-joins-lululemon-as-its-newest-ambassador",
+      "img_url": "https://corporate.lululemon.com/~/media/Images/L/Lululemon/media/insights/images/2024/min-woo-lee.jpg",
+      "credit": "Photo: lululemon",
+      "width": 1040,
+      "height": 565,
+      "how_verified": "Lead image of lululemon's own newsroom story 'Min Woo Lee joins lululemon as its newest ambassador'; filename min-woo-lee.jpg. Landscape 1040x565 (native; larger ?w= requests are just upscales)."
+    },
+    {
+      "golfer": "minwoo",
+      "file": "photos/minwoo-5.jpg",
+      "source_page": "https://corporate.lululemon.com/newsroom/our-stories/2026/lululemon-launches-content-series-with-lewis-hamilton",
+      "img_url": "https://corporate.lululemon.com/~/media/Images/L/Lululemon/media/insights/images/2026/lululemon-launches-content-series-with-lewis-hamilton-1.jpg",
+      "credit": "Photo: lululemon",
+      "width": 1040,
+      "height": 648,
+      "how_verified": "Lead image of lululemon newsroom story on the Lewis Hamilton 'Rest Day' series, which says Lewis joins Min Woo Lee on the golf course. Min Woo is on the left (white lululemon polo) and Hamilton is driving. Landscape 1040x648, upper body only; weakest pick."
+    },
+    {
+      "golfer": "ak",
+      "file": "photos/ak-1.jpg",
+      "source_page": "https://www.instagram.com/p/DZDXQ4-nzX1/",
+      "img_url": "https://www.instagram.com/p/DZDXQ4-nzX1/media/?size=l",
+      "credit": "Photo: Malbon (@malbon)",
+      "width": 1080,
+      "height": 1440,
+      "how_verified": "Malbon's own Instagram post; caption: '1% better every day. Anthony Kim wears the pieces built for repetition...'. Studio campaign portrait with Malbon polo and AK-logo cap. 1080x1440 (3:4, crops to 4:5). IG media endpoint returns first slide only."
+    },
+    {
+      "golfer": "ak",
+      "file": "photos/ak-2.jpg",
+      "source_page": "https://www.instagram.com/p/DZ75EZODH2G/",
+      "img_url": "https://www.instagram.com/p/DZ75EZODH2G/media/?size=l",
+      "credit": "Photo: Malbon (@malbon)",
+      "width": 1080,
+      "height": 1440,
+      "how_verified": "Malbon Instagram post captioned '1% Better Every Day. Inspired by Anthony Kim's belief... the AK 1% Collection'. Same toy-store shoot as the malbon.com AK collection banner. Kim is in the grey '1(%)Better' sweatshirt and sweatpants, with his wife and daughter in frame. 1080x1440."
+    },
+    {
+      "golfer": "ak",
+      "file": "photos/ak-3.jpg",
+      "source_page": "https://malbon.com/collections/anthony-kim",
+      "img_url": "https://malbon.com/cdn/shop/files/AK_Desktop_Landing.jpg",
+      "credit": "Photo: Malbon",
+      "width": 2850,
+      "height": 1325,
+      "how_verified": "Hero banner of Malbon's ANTHONY KIM collection page (filename AK_Desktop_Landing, with Kim's signature and the 1(%)Better mark on the left panel). The photo panel is the toy-store shoot with Kim in the grey AK sweatsuit. 2850x1325 landscape, so crop the right-hand photo panel to 4:5 (about 1060x1325)."
+    },
+    {
+      "golfer": "ak",
+      "file": "photos/ak-4.jpg",
+      "source_page": "https://www.instagram.com/p/DVMF0ykgSbm/",
+      "img_url": "https://www.instagram.com/p/DVMF0ykgSbm/media/?size=l",
+      "credit": "Photo: Malbon (@malbon)",
+      "width": 1080,
+      "height": 1440,
+      "how_verified": "Malbon Instagram post 'Anthony Kim Joins Team Malbon.' Kim is seen from behind in a black AK-logo tee and shorts, holding the pin flag with his daughter. Face not visible, but the outfit and AK back logo read clearly. 1080x1440. Original photographer not stated: check before use."
+    },
+    {
+      "golfer": "ak",
+      "file": "photos/ak-5.jpg",
+      "source_page": "https://www.instagram.com/p/DZ5psCyAQzI/",
+      "img_url": "https://www.instagram.com/p/DZ5psCyAQzI/media/?size=l",
+      "credit": "Photo: Malbon (@malbon)",
+      "width": 720,
+      "height": 960,
+      "how_verified": "Malbon Instagram post 'THE WORK CONTINUES. Anthony Kim 1% Better, available tomorrow.' Campaign card with Kim's signature; Kim is in the grey AK sweatsuit with his family. Low-res 720x960 and has graphic borders, so use as backup only."
+    },
+    {
+      "golfer": "moe",
+      "file": "photos/moe-1.jpg",
+      "source_page": "https://gravesgolf.com/bacon-strips-not-pork-chops/moe-20/",
+      "img_url": "https://gravesgolf.com/wp-content/uploads/2022/01/Moe-20.jpg",
+      "credit": "Photo: Graves Golf",
+      "width": 2004,
+      "height": 2950,
+      "how_verified": "Graves Golf WordPress media record: title/alt/caption 'Moe Norman Address'. The original un-scaled file is used (the -scaled version is 1739x2560). Grey long-sleeve, dark trousers, full length at address in front of a gallery."
+    },
+    {
+      "golfer": "moe",
+      "file": "photos/moe-2.jpg",
+      "source_page": "https://gravesgolf.com/?attachment_id=7687",
+      "img_url": "https://gravesgolf.com/wp-content/uploads/2021/06/Moe-Clinic-2001-1.jpeg",
+      "credit": "Photo: Graves Golf",
+      "width": 1189,
+      "height": 1774,
+      "how_verified": "Graves Golf media file 'Moe-Clinic-2001-1'. Moe is mid-swing at a 2001 clinic in a striped knit polo, brown slacks and cap, with the crowd seated behind. 1189x1774 portrait. The parent post is no longer live; the attachment page resolves."
+    },
+    {
+      "golfer": "moe",
+      "file": "photos/moe-3.jpg",
+      "source_page": "https://gravesgolf.com/stop-setting-goals-and-build-a-plan-start-asking-questions-2/",
+      "img_url": "https://gravesgolf.com/wp-content/uploads/2022/01/Moe-at-address.jpg",
+      "credit": "Photo: Graves Golf",
+      "width": 1179,
+      "height": 1770,
+      "how_verified": "Graves Golf media file 'Moe at address', embedded in the live Graves Golf post 'Stop Setting Goals and Build a Plan?'. Patterned shirt, white visor, dark trousers, full length. 1179x1770 portrait."
+    },
+    {
+      "golfer": "moe",
+      "file": "photos/moe-4.jpg",
+      "source_page": "https://gravesgolf.com/overlapping-vs-10-finger/",
+      "img_url": "https://gravesgolf.com/wp-content/uploads/2022/01/Moe-Coke-Bottle.bmp.jpg",
+      "credit": "Photo: Graves Golf",
+      "width": 1559,
+      "height": 2379,
+      "how_verified": "Graves Golf media file 'Moe-Coke-Bottle', used on the live Graves Golf post 'Overlapping vs. 10 Finger'. Vintage B&W of Moe in a dark turtleneck and trousers hitting off a Coke bottle (classic Moe stunt). 1559x2379 portrait."
+    },
+    {
+      "golfer": "moe",
+      "file": "photos/moe-5.jpg",
+      "source_page": "https://gravesgolf.com/?attachment_id=7499",
+      "img_url": "https://gravesgolf.com/wp-content/uploads/2021/06/Moe-10-e1572116716616.jpg",
+      "credit": "Photo: Graves Golf",
+      "width": 1000,
+      "height": 1465,
+      "how_verified": "Graves Golf media record: alt 'Moe Norman', caption 'Moe Norman Demonstrating the Feeling of Lag'. Grey turtleneck, dark slacks, full length. 1000x1465 (an edited crop; the original Moe-10.jpg returns 404)."
+    },
+    {
+      "golfer": "moe",
+      "file": "photos/moe-6.jpg",
+      "source_page": "https://gravesgolf.com/bacon-strips-not-pork-chops/",
+      "img_url": "https://gravesgolf.com/wp-content/uploads/2021/06/DSC0000a.jpg",
+      "credit": "Photo: Graves Golf",
+      "width": 2100,
+      "height": 1500,
+      "how_verified": "Graves Golf media record: alt 'Moe Norman', caption 'Moe Norman Blue Shirt taking divot'. Shown on the live post 'Bacon Strips not Pork Chops'. Navy shirt and blue trousers, full length. 2100x1500 landscape; Moe is left of centre, so it crops to 4:5 at about 1200x1500."
+    }
+  ],
+  "instagram": [
+    {
+      "golfer": "minwoo",
+      "url": "https://www.instagram.com/p/DYdYYfwDP02/",
+      "account": "@minwoo27lee",
+      "note": "'Another major in the books' (PGA Championship 2026). Cream mock-neck and pleated khaki trousers, full length."
+    },
+    {
+      "golfer": "minwoo",
+      "url": "https://www.instagram.com/p/DYLZNycDG_1/",
+      "account": "@minwoo27lee",
+      "note": "'Cheeky Sunday 64. Tied 14th.' Green lululemon polo and cream trousers, crouched reading a putt."
+    },
+    {
+      "golfer": "minwoo",
+      "url": "https://www.instagram.com/p/DatT17_CAAu/",
+      "account": "@minwoo27lee",
+      "note": "'Something about Scotland. Solo second.' (The Open). Green layer and baggy taupe trousers, full swing."
+    },
+    {
+      "golfer": "minwoo",
+      "url": "https://www.instagram.com/p/DcZ84IEv3ra/",
+      "account": "@minwoo27lee",
+      "note": "'Average 2 weeks. Onto the Season finale'. Maroon polo and white trousers, full length."
+    },
+    {
+      "golfer": "ak",
+      "url": "https://www.instagram.com/p/DZDXQ4-nzX1/",
+      "account": "@malbon",
+      "note": "'1% better every day. Anthony Kim wears the pieces...'. AK 1% campaign portrait."
+    },
+    {
+      "golfer": "ak",
+      "url": "https://www.instagram.com/p/DZ75EZODH2G/",
+      "account": "@malbon",
+      "note": "AK 1% Collection launch post; Kim in grey 1(%)Better sweatsuit."
+    },
+    {
+      "golfer": "ak",
+      "url": "https://www.instagram.com/p/DZ5psCyAQzI/",
+      "account": "@malbon",
+      "note": "'THE WORK CONTINUES. Anthony Kim 1% Better'. Drop teaser."
+    },
+    {
+      "golfer": "ak",
+      "url": "https://www.instagram.com/p/DVMF0ykgSbm/",
+      "account": "@malbon",
+      "note": "'Anthony Kim Joins Team Malbon.' AK-logo tee and shorts on course (back view)."
+    },
+    {
+      "golfer": "moe",
+      "url": "https://www.instagram.com/p/Dd-gNI_inYB/",
+      "account": "@gravesgolfacademy",
+      "note": "Archival Moe on the range: red sweater, red trousers, visor. Moe-themed caption."
+    },
+    {
+      "golfer": "moe",
+      "url": "https://www.instagram.com/p/DeGOl3hgX4g/",
+      "account": "@gravesgolfacademy",
+      "note": "Archival video still: blue check shirt and teal trousers at address."
+    },
+    {
+      "golfer": "moe",
+      "url": "https://www.instagram.com/p/DeYJO6OAQ7o/",
+      "account": "@gravesgolfacademy",
+      "note": "'Why don't you swing like Moe?' Part 01. Cut-out of Moe in a loud patterned shirt and dark slacks."
+    },
+    {
+      "golfer": "moe",
+      "url": "https://www.instagram.com/p/Dd4QmmfiOYQ/",
+      "account": "@gravesgolfacademy",
+      "note": "Archival video still: Moe in a bold striped shirt and grey slacks at address."
+    }
+  ]
+}

@@ -1,0 +1,960 @@
+{
+ "korda": [
+  {
+   "brand": "Jordan (Nike)",
+   "name": "Jordan Sport Men's Dri-FIT Mock-Neck Golf Top",
+   "price_usd": 70.0,
+   "currency_note": "USD full price on nike.com; all sizes XS-3XL available",
+   "url": "https://www.nike.com/t/jordan-sport-mens-dri-fit-mock-neck-golf-top-l28d5s/IB2831-451",
+   "img_url": "https://static.nike.com/a/images/t_PDP_1728_v1/56494317-c70d-43b7-a192-86094461e1b3/M+J+DF+GOLF+SS+MOCK.png",
+   "img_file": "raw/kordam-1.jpg",
+   "in_stock": true,
+   "category": "top",
+   "colorways": [
+    "Obsidian/Black"
+   ],
+   "why": "Korda's Nike-era wardrobe is built on mock necks and she wears Jordan golf shoes, and this is Jordan's men's mock-neck golf top in a plain Obsidian/Black."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "Upland Mockneck Tee",
+   "price_usd": 118.0,
+   "currency_note": "USD from malbon.com product .js (country=US); Rifle Green in stock in all sizes",
+   "url": "https://malbon.com/products/upland-mockneck-tee-rifle-green",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10214-RFG-1.jpg",
+   "img_file": "raw/kordam-2.jpg",
+   "in_stock": true,
+   "category": "top",
+   "colorways": [
+    "Rifle Green",
+    "White"
+   ],
+   "why": "A plain long-sleeve cotton mock neck in Rifle Green that pairs her mock-neck habit with the muted greens of her Royal Porthcawl camo cargos."
+  },
+  {
+   "brand": "J.Lindeberg",
+   "name": "Ace Mock Neck T-Shirt",
+   "price_usd": 100.0,
+   "currency_note": "USD from jlindebergusa.com product .js (country=US); tagged gender_Men",
+   "url": "https://www.jlindebergusa.com/products/ace-mock-neck-t-shirt-black-ss26",
+   "img_url": "https://cdn.shopify.com/s/files/1/0344/3051/7383/files/FMJT15659_9999_001.jpg",
+   "img_file": "raw/kordam-3.jpg",
+   "in_stock": true,
+   "category": "top",
+   "colorways": [
+    "Black",
+    "White",
+    "JL Navy"
+   ],
+   "why": "A streamlined technical mock neck from Swedish label J.Lindeberg, matching the European, more sophisticated lean Korda describes in her own words."
+  },
+  {
+   "brand": "Students Golf",
+   "name": "Presidio Camo Nylon Pants",
+   "price_usd": 138.0,
+   "currency_note": "USD from studentsgolf.com product .js (country=US); S, M, XL, XXL in stock",
+   "url": "https://studentsgolf.com/products/presidio-camo-nylon-pants",
+   "img_url": "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf6a70f5c2dfd4766a70f5c2dfeeb.446116036a70f5c2dfeeb.jpg",
+   "img_file": "raw/kordam-4.jpg",
+   "in_stock": true,
+   "category": "bottom",
+   "colorways": [
+    "Camo"
+   ],
+   "why": "A relaxed camo utility pant in greens and browns, the men's analogue to the camo cargos she wore at the 2025 AIG Women's Open."
+  },
+  {
+   "brand": "Fella Golf",
+   "name": "Fella Ripstop Cargo Pant",
+   "price_usd": 135.0,
+   "currency_note": "USD from fellagolf.com product .js (country=US); all eight size combos in stock",
+   "url": "https://fellagolf.com/products/fella-ripstop-cargo-pant",
+   "img_url": "https://cdn.shopify.com/s/files/1/0279/7482/8066/files/fella-ripstop-cargo-pants-0-2560.png",
+   "img_file": "raw/kordam-5.jpg",
+   "in_stock": true,
+   "category": "bottom",
+   "colorways": [
+    "Single colorway (olive green, unnamed on site)"
+   ],
+   "why": "Relaxed olive ripstop cargos with magnetic cargo pockets carry the utility side of her Royal Porthcawl fit in one muted tone."
+  },
+  {
+   "brand": "Late Nine",
+   "name": "Double Pleat Slacks",
+   "price_usd": 429.0,
+   "currency_note": "USD (store currency confirmed USD for US); Dark Brown in stock in sizes 48-54, Taupe and Dark Navy partial sizes",
+   "url": "https://late-nine.com/products/double-pleat-slacks-dark-brown",
+   "img_url": "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Frame14_b02fb208-c820-4378-bce4-db34f9c4925c.jpg",
+   "img_file": "raw/kordam-6.jpg",
+   "in_stock": true,
+   "category": "bottom",
+   "colorways": [
+    "Dark Brown",
+    "Dark Navy",
+    "Taupe"
+   ],
+   "why": "Full straight-leg, double-pleated Italian wool slacks from Stockholm are the men's counterpart to her wide-leg high-waisted trousers and European lean."
+  },
+  {
+   "brand": "Jordan (Nike)",
+   "name": "Jordan Men's Golf Jacket",
+   "price_usd": 125.0,
+   "currency_note": "USD full price on nike.com; all sizes XS-3XL available",
+   "url": "https://www.nike.com/t/jordan-mens-golf-jacket-BVXpr4BM/HQ8681-247",
+   "img_url": "https://static.nike.com/a/images/t_PDP_1728_v1/c590d5b7-ae56-4b66-ab40-c00b11264c52/M+J+GOLF+JACKET.png",
+   "img_file": "raw/kordam-7.jpg",
+   "in_stock": true,
+   "category": "outerwear",
+   "colorways": [
+    "Khaki/Black"
+   ],
+   "why": "A loose-fit full-zip golf jacket in khaki, echoing the men's Nike full-zip she wore at a major and the roomy jacket she layered over her camo cargos."
+  },
+  {
+   "brand": "Metalwood Studio",
+   "name": "Raglan Sleeve Blouson",
+   "price_usd": 298.0,
+   "currency_note": "USD from metalwood.studio product .js (country=US); Tan and Steel in stock in all sizes",
+   "url": "https://metalwood.studio/products/raglan-sleeve-blouson-tan",
+   "img_url": "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-05-03_TAN_V1.jpg",
+   "img_file": "raw/kordam-8.jpg",
+   "in_stock": true,
+   "category": "outerwear",
+   "colorways": [
+    "Tan",
+    "Steel"
+   ],
+   "why": "A cotton-blend woven full-zip blouson in tan, an independent take on the Nike Sportswear oversized woven jacket she paired with camo at Royal Porthcawl."
+  },
+  {
+   "brand": "Jordan (Nike)",
+   "name": "Air Jordan 1 Low G Golf Shoes",
+   "price_usd": 155.0,
+   "currency_note": "USD full price for the linked White/Medium Olive/Khaki/Black colorway; several other colorways on sale at $124.97 (list $155)",
+   "url": "https://www.nike.com/t/air-jordan-1-low-g-golf-shoes-ZR2b5R/DD9315-121",
+   "img_url": "https://static.nike.com/a/images/t_PDP_1728_v1/6e8038cb-ad76-45b7-976b-7e84d306ca59/AIR+JORDAN+1+LOW+G.png",
+   "img_file": "raw/kordam-9.jpg",
+   "in_stock": true,
+   "category": "shoe",
+   "colorways": [
+    "White/Medium Olive/Khaki/Black",
+    "Wolf Grey/Photon Dust/White/Black",
+    "Forest Green/White/White",
+    "Steam/White/Tangerine Tint/Steam",
+    "White/Obsidian/White/White",
+    "Medium Grey/Blue Tint/White",
+    "White/Hydrogen Blue/Metallic Silver/White"
+   ],
+   "why": "Air Jordan golf shoes are in her documented rotation, and the White/Medium Olive/Khaki colorway sits in the same greens and browns as her camo fit."
+  },
+  {
+   "brand": "Nike",
+   "name": "Nike Ace Dri-FIT Visor",
+   "price_usd": 21.97,
+   "currency_note": "USD sale price on nike.com (list $24); unisex, all sizes available",
+   "url": "https://www.nike.com/t/ace-dri-fit-visor-NHd8Qj/HJ3689-100",
+   "img_url": "https://static.nike.com/a/images/t_PDP_1728_v1/369fa78c-19c6-4130-8386-37d877c97ed4/U+NK+DF+ACE+VISOR+U+CB+NEW+P.png",
+   "img_file": "raw/kordam-10.jpg",
+   "in_stock": true,
+   "category": "headwear",
+   "colorways": [
+    "White/Anthracite/Black"
+   ],
+   "why": "Korda plays in a visor, and this is a plain unstructured unisex Nike Ace visor in white."
+  },
+  {
+   "brand": "Late Nine",
+   "name": "Twilight Cap",
+   "price_usd": 67.0,
+   "currency_note": "USD (store currency confirmed USD for US); one size, in stock",
+   "url": "https://late-nine.com/products/country-club-cap-beige",
+   "img_url": "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05895.jpg",
+   "img_file": "raw/kordam-11.jpg",
+   "in_stock": true,
+   "category": "headwear",
+   "colorways": [
+    "Beige",
+    "White"
+   ],
+   "why": "An unlined cotton twill cap with tonal stitching, in line with the restraint Skratch singled out in her style."
+  },
+  {
+   "brand": "Ghost Golf",
+   "name": "Olive Green Golf Glove (Men's)",
+   "price_usd": 40.0,
+   "currency_note": "USD from ghostgolf.com product .js (country=US); left and right hand in stock across most sizes",
+   "url": "https://ghostgolf.com/products/olive-green-golf-glove-mens",
+   "img_url": "https://cdn.shopify.com/s/files/1/0306/5023/7068/files/Ghost_Olive_Green_Front.jpg",
+   "img_file": "raw/kordam-12.jpg",
+   "in_stock": true,
+   "category": "accessory",
+   "colorways": [
+    "Olive Green"
+   ],
+   "why": "An olive cabretta leather glove keeps the accessory in the muted green register of her camo cargos rather than standard tour white."
+  }
+ ],
+ "palmer": [
+  {
+   "brand": "Malbon Golf",
+   "name": "Insignia Sweater",
+   "price_usd": 228.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://malbon.com/products/insignia-sweater-crimson-red-black",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10389-CRR-BLK-1.jpg",
+   "img_file": "research/golfer-style/raw/palmer-1.jpg",
+   "in_stock": true,
+   "category": "sweater",
+   "colorways": [
+    "Crimson Red / Black",
+    "Navy / Off White"
+   ],
+   "why": "Palmer's red sweaters were his signature layer, and a red sweater led his unmatched three-color outfits such as red sweater, yellow shirt and blue pants."
+  },
+  {
+   "brand": "Students Golf",
+   "name": "Ellis Mohair Cardigan",
+   "price_usd": 130.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://studentsgolf.com/products/ellis-mohair-cardigan",
+   "img_url": "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf67a335924ed8b367a335924f03f.6219674467a335924f03f.jpg",
+   "img_file": "research/golfer-style/raw/palmer-2.jpg",
+   "in_stock": true,
+   "category": "cardigan",
+   "colorways": [
+    "Green",
+    "Mustard"
+   ],
+   "why": "Palmer wore cardigans in foam green and yellow, and this button-front mohair cardigan comes in green and mustard."
+  },
+  {
+   "brand": "Eastside Golf",
+   "name": "Modern Cardigan",
+   "price_usd": 148.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://eastsidegolf.com/products/el2021201-410-midnight-navy-modern-cardigan",
+   "img_url": "https://cdn.shopify.com/s/files/1/0542/2419/1681/files/EL2021201-410-ModernCardigan-MidnightNavy-Front.png",
+   "img_file": "research/golfer-style/raw/palmer-3.jpg",
+   "in_stock": true,
+   "category": "cardigan",
+   "colorways": [
+    "Midnight Navy"
+   ],
+   "why": "Navy was one of the cardigan colors in Palmer's regular rotation."
+  },
+  {
+   "brand": "Peter Millar",
+   "name": "Alpine V-Neck Cardigan Sweater",
+   "price_usd": 398.0,
+   "currency_note": "USD, from product page JSON-LD (InStock)",
+   "url": "https://www.petermillar.com/p/alpine-v-neck-cardigan-sweater/mf26xs57.html",
+   "img_url": "https://res.cloudinary.com/petermillar/image/upload/v1784057729/MF26XS57_GALE.jpg",
+   "img_file": "research/golfer-style/raw/palmer-4.jpg",
+   "in_stock": true,
+   "category": "cardigan",
+   "colorways": [
+    "Gale Grey"
+   ],
+   "why": "Gray was one of Palmer's cardigan colors, and this is a wool-cashmere V-neck cardigan in grey."
+  },
+  {
+   "brand": "PUMA Golf x Arnold Palmer",
+   "name": "AP Modalon Umbrella Golf Polo",
+   "price_usd": 85.0,
+   "currency_note": "USD, live Shopify price (pumagolf.com)",
+   "url": "https://www.pumagolf.com/products/ap-modalon-umbrella-golf-polo",
+   "img_url": "https://cdn.shopify.com/s/files/1/0562/1186/5673/files/635595_02.jpg",
+   "img_file": "research/golfer-style/raw/palmer-5.jpg",
+   "in_stock": true,
+   "category": "polo",
+   "colorways": [
+    "Forest Green",
+    "Alpine Snow",
+    "Jasmine Flower"
+   ],
+   "why": "Part of Puma's current Arnold Palmer collection, this polo is named for the multicolor umbrella that was Palmer's logo."
+  },
+  {
+   "brand": "PUMA Golf x Arnold Palmer",
+   "name": "AP Rope Golf Cap",
+   "price_usd": 40.0,
+   "currency_note": "USD, live Shopify price (pumagolf.com)",
+   "url": "https://www.pumagolf.com/products/ap-rope-golf-cap",
+   "img_url": "https://cdn.shopify.com/s/files/1/0562/1186/5673/files/027299_02.jpg",
+   "img_file": "research/golfer-style/raw/palmer-6.jpg",
+   "in_stock": true,
+   "category": "hat",
+   "colorways": [
+    "Deep Navy",
+    "White Glow"
+   ],
+   "why": "Rope caps were part of the Puma x Arnold Palmer range, and this one is in Puma's Arnold Palmer collection now."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "Navarro Polo",
+   "price_usd": 148.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://malbon.com/products/navarro-polo-wax-yellow",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9844-WYW_e7dd14ef-fa13-40b4-a82c-4ca691432107.png",
+   "img_file": "research/golfer-style/raw/palmer-7.jpg",
+   "in_stock": true,
+   "category": "polo",
+   "colorways": [
+    "Wax Yellow"
+   ],
+   "why": "A yellow shirt was the middle color in Palmer's unmatched red-yellow-blue outfits."
+  },
+  {
+   "brand": "Students Golf",
+   "name": "Tradition Double Pleated Wool Pants",
+   "price_usd": 158.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://studentsgolf.com/products/tradition-double-pleated-wool-pants",
+   "img_url": "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf6a70f72edb8b416a70f72edba99.782396896a70f72edba99.jpg",
+   "img_file": "research/golfer-style/raw/palmer-8.jpg",
+   "in_stock": true,
+   "category": "trousers",
+   "colorways": [
+    "Cement",
+    "Grey"
+   ],
+   "why": "Palmer's slacks were tailored and razor-creased, and these are double-pleated wool-blend trousers."
+  },
+  {
+   "brand": "Peter Millar",
+   "name": "Americana Penny Loafer",
+   "price_usd": 350.0,
+   "currency_note": "USD, from product page JSON-LD (InStock)",
+   "url": "https://www.petermillar.com/p/americana-penny-loafer/ma27xf103.html",
+   "img_url": "https://res.cloudinary.com/petermillar/image/upload/v1779897227/MA27XF103_CHO.jpg",
+   "img_file": "research/golfer-style/raw/palmer-9.jpg",
+   "in_stock": true,
+   "category": "shoes",
+   "colorways": [
+    "Chocolate"
+   ],
+   "why": "Brown leather loafers were part of the Puma x Arnold Palmer range, and Palmer kept his shoes shined."
+  },
+  {
+   "brand": "Seamus Golf",
+   "name": "Arnold Palmer Yellow Umbrella Driver Cover",
+   "price_usd": 155.0,
+   "currency_note": "USD, live Shopify price; fairway $145, mallet and blade putter covers $155",
+   "url": "https://www.seamusgolf.com/products/arnold-palmer-yellow-umbrella-driver-cover",
+   "img_url": "https://cdn.shopify.com/s/files/1/0129/1462/files/DSC06752.png",
+   "img_file": "research/golfer-style/raw/palmer-10.jpg",
+   "in_stock": true,
+   "category": "accessory (headcover)",
+   "colorways": [
+    "Driver",
+    "Fairway",
+    "Center-shafted mallet",
+    "Blade putter"
+   ],
+   "why": "The yellow leather cover is embroidered with Palmer's umbrella logo, and Seamus says it nods to his yellow trousers."
+  }
+ ],
+ "minwoo": [
+  {
+   "brand": "lululemon",
+   "name": "ABC Slim-Fit Golf Trouser 32L",
+   "price_usd": 148.0,
+   "currency_note": "USD, full price (also sold in 30L and 34L)",
+   "url": "https://shop.lululemon.com/p/abc-slim-fit-golf-trouser-32l/oul66pzucc",
+   "img_url": "https://images.lululemon.com/is/image/lululemon/LM5AWXS_076994_1",
+   "img_file": "research/golfer-style/raw/minwoo-1.jpg",
+   "in_stock": true,
+   "category": "bottom",
+   "colorways": [
+    "Cypress Forest",
+    "Rumble Crumble",
+    "plus further colorways on the product page"
+   ],
+   "why": "Lee's sharp, fitted trousers are lululemon's ABC Slim Fit, and this is the golf version of that trouser."
+  },
+  {
+   "brand": "lululemon",
+   "name": "Evolution Short-Sleeve Polo Shirt",
+   "price_usd": 88.0,
+   "currency_note": "USD, full price",
+   "url": "https://shop.lululemon.com/p/evolution-polo/nvwqh0am2n",
+   "img_url": "https://images.lululemon.com/is/image/lululemon/LM3CY5S_0001_1",
+   "img_file": "research/golfer-style/raw/minwoo-2.jpg",
+   "in_stock": true,
+   "category": "top",
+   "colorways": [
+    "Black",
+    "Heathered Olive Brown",
+    "plus 14 further colorways on the product page"
+   ],
+   "why": "The Evolution polo is one of the lululemon pieces Lee is documented wearing."
+  },
+  {
+   "brand": "lululemon",
+   "name": "Soft Jersey Half Zip",
+   "price_usd": 98.0,
+   "currency_note": "USD, full price",
+   "url": "https://shop.lululemon.com/p/soft-jersey-half-zip/sebzdeu9yl",
+   "img_url": "https://images.lululemon.com/is/image/lululemon/LM3ES1S_080640_1",
+   "img_file": "research/golfer-style/raw/minwoo-3.jpg",
+   "in_stock": true,
+   "category": "layer",
+   "colorways": [
+    "Heathered Sassy Sage/Heathered Deep Forest",
+    "Black",
+    "plus further colorways on the product page"
+   ],
+   "why": "The Soft Jersey Half Zip is a documented Lee layer for building his layered fits."
+  },
+  {
+   "brand": "lululemon",
+   "name": "ShowZero Slim-Fit Mockneck Shirt",
+   "price_usd": 69.0,
+   "currency_note": "USD sale price $69 (regular $88); Dreamy Blue marked final sale",
+   "url": "https://shop.lululemon.com/p/slim-fit-mockneck-shirt-showzero/tmws1gnqwd",
+   "img_url": "https://images.lululemon.com/is/image/lululemon/LM3GP4S_076998_1",
+   "img_file": "research/golfer-style/raw/minwoo-4.jpg",
+   "in_stock": true,
+   "category": "top",
+   "colorways": [
+    "Dreamy Blue",
+    "Black",
+    "one further colorway"
+   ],
+   "why": "Mock necks are a Lee signature, and this is lululemon's slim-fit golf mock neck."
+  },
+  {
+   "brand": "Matchstick Golf",
+   "name": "Chef Skull Golf Ball Marker",
+   "price_usd": 20.0,
+   "currency_note": "USD, full price; limited edition",
+   "url": "https://matchstickgolf.com/products/chef-skull",
+   "img_url": "https://cdn.shopify.com/s/files/1/0570/2565/9037/files/GenerousChefMainProductPhoto.webp",
+   "img_file": "research/golfer-style/raw/minwoo-10.jpg",
+   "in_stock": true,
+   "category": "accessory",
+   "colorways": [
+    "White/black with gunmetal plating"
+   ],
+   "why": "A magnetic ball marker made with The Generous Chef that \"knows his way around a kitchen\", a real chef-themed nod to his \"Let Him Cook\" persona."
+  },
+  {
+   "brand": "Okka Golf",
+   "name": "Checkered Pink Polo",
+   "price_usd": 69.0,
+   "currency_note": "USD, live Shopify price with country=US (store lists AUD 94.95 by default)",
+   "url": "https://okkagolf.com/products/checkered-pink-polo",
+   "img_url": "https://cdn.shopify.com/s/files/1/0676/5458/2491/files/polocheckeredpink.png",
+   "img_file": "raw/mwl2-1.jpg",
+   "in_stock": true,
+   "category": "top",
+   "colorways": [
+    "Pink check"
+   ],
+   "why": "A loud pink checkered polo from Okka, a Perth label, so it brings both a color jolt and a hometown nod. Polyester-spandex, athletic fit, three-button placket."
+  },
+  {
+   "brand": "Gray + Haast",
+   "name": "The Links Windbreaker",
+   "price_usd": 139.0,
+   "currency_note": "USD, live Shopify price with country=US",
+   "url": "https://grayandhaast.com/products/links-windbreaker-sand",
+   "img_url": "https://cdn.shopify.com/s/files/1/0601/1682/8310/files/1_63ae6c81-a847-4e72-bfbc-0fd545cc7488.png",
+   "img_file": "raw/mwl2-2.jpg",
+   "in_stock": true,
+   "category": "outerwear",
+   "colorways": [
+    "Sand",
+    "Coffee",
+    "Dark Olive"
+   ],
+   "why": "A lightweight, water-resistant stretch shell from Burleigh Heads in a light sand shade, for layering over a polo instead of another dark mock."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "Twill La Perla Pant",
+   "price_usd": 198.0,
+   "currency_note": "USD, full price",
+   "url": "https://malbon.com/products/twill-la-perla-pant-ivory",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10430-IVY-1.jpg",
+   "img_file": "raw/mwl2-3.jpg",
+   "in_stock": true,
+   "category": "bottom",
+   "colorways": [
+    "Ivory",
+    "Black"
+   ],
+   "why": "Ivory twill with a straight-leg trouser shape, close to the cream and white trousers Lee has worn in 2026 posts."
+  },
+  {
+   "brand": "Birds of Condor",
+   "name": "Lawn Pawn Knitted Vest",
+   "price_usd": null,
+   "currency_note": "AUD 99.95, AUD-only store (no USD price shown); flag before publishing",
+   "url": "https://birdsofcondor.com/products/lawn-pawn-blue-green-knitted-golf-street-vest",
+   "img_url": "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-KN2502-LAWN-PAWN-VEST-FAIRWAY-CHECK-FRONT-7151_7ca1b51a-4e7d-4160-b481-283c20be1d72.jpg",
+   "img_file": "raw/mwl2-4.jpg",
+   "in_stock": true,
+   "category": "layer",
+   "colorways": [
+    "Blue & Green Plaid"
+   ],
+   "why": "A blue-and-green plaid cotton knit vest from Byron Bay, inspired by fairway mow lines; a statement layer for his 'walking mood board' fits."
+  },
+  {
+   "brand": "Oakley",
+   "name": "Radar EV Path Sunglasses",
+   "price_usd": 244.0,
+   "currency_note": "USD, Oakley.com JSON-LD, InStock, White frame / Prizm Jade colorway; other colorways $207.90 to $297",
+   "url": "https://www.oakley.com/en-us/product/W0OO9208",
+   "img_url": "https://assets2.oakley.com/cdn-record-files-pi/57cf1455-4d65-47e1-ae8c-a8250059b0f2/47849559-1707-4c67-9bb1-ad7901530249/0OO9208__920871__P21__shad__fr.png",
+   "img_file": "raw/mwl2-5.jpg",
+   "in_stock": true,
+   "category": "eyewear",
+   "colorways": [
+    "White / Prizm Jade",
+    "White / Prizm Ruby",
+    "White / Prizm Sapphire",
+    "Matte Fern Terrazzo / Prizm Black Polarized",
+    "plus further colorways on the product page"
+   ],
+   "why": "A sporty wraparound shield in place of the current lifestyle frames; the white frame with green Prizm Jade lens keeps it bright."
+  },
+  {
+   "brand": "Okka Golf",
+   "name": "Detachable Legionnaire",
+   "price_usd": 43.0,
+   "currency_note": "USD, live Shopify price with country=US (store lists AUD 59.95 by default)",
+   "url": "https://okkagolf.com/products/mullet-protecor",
+   "img_url": "https://cdn.shopify.com/s/files/1/0676/5458/2491/files/detachablelegionnaire2.png",
+   "img_file": "raw/mwl2-6.jpg",
+   "in_stock": true,
+   "category": "headwear",
+   "colorways": [
+    "Cream"
+   ],
+   "why": "Okka's flat-brim five-panel with a detachable neck flap; the store's own product handle calls it the mullet protector, a direct nod to Lee's mullet."
+  },
+  {
+   "brand": "PAYNTR Golf",
+   "name": "Chef RX RS",
+   "price_usd": 240.0,
+   "currency_note": "USD, full price",
+   "url": "https://payntrgolf.com/products/chef-rx-rs",
+   "img_url": "https://cdn.shopify.com/s/files/1/0689/1880/4763/files/FW26_Chef_RX_RS_Wht_Hero.jpg",
+   "img_file": "raw/mwl2-7.jpg",
+   "in_stock": true,
+   "category": "shoes",
+   "colorways": [
+    "White / Black / Copper",
+    "Black / White / Copper"
+   ],
+   "why": "A full-grain leather, waterproof golf shoe with a propulsion plate. PAYNTR named it the Chef, a neat match for Lee's 'Let Him Cook' persona."
+  },
+  {
+   "brand": "Holderness & Bourne",
+   "name": "The Barker Belt",
+   "price_usd": 185.0,
+   "currency_note": "USD, full price",
+   "url": "https://www.holdernessandbourne.com/products/the-barker-belt-browncypressclaretnavy",
+   "img_url": "https://cdn.shopify.com/s/files/1/0269/8763/files/download_bfdf4445-a4c4-403d-81a7-555b1264f98b.png",
+   "img_file": "raw/mwl2-8.jpg",
+   "in_stock": true,
+   "category": "belt",
+   "colorways": [
+    "Brown/Cypress/Claret/Navy",
+    "Brown/Navy/Claret/Stone",
+    "Brown/Cypress/Dune/Navy",
+    "Navy & Slate",
+    "Espresso"
+   ],
+   "why": "A handcrafted gaucho-style leather belt; the cypress-green and claret pattern picks up the green and maroon polos from his 2026 posts."
+  },
+  {
+   "brand": "Big Dog Golf Co.",
+   "name": "\"Let The Big Dog Eat\" Headcover",
+   "price_usd": 79.0,
+   "currency_note": "USD, live Shopify price with country=US",
+   "url": "https://bigdoggolfco.com/products/let-the-big-dog-eat",
+   "img_url": "https://cdn.shopify.com/s/files/1/0933/5419/7304/files/let-the-big-dog-eat.jpg",
+   "img_file": "raw/mwl2-9.jpg",
+   "in_stock": true,
+   "category": "headcover",
+   "colorways": [
+    "Black & Silver",
+    "Navy & Red"
+   ],
+   "why": "White leather driver cover, Australian made, with 'Let The Big Dog Eat' embroidered on it; a food-themed line that sits nicely next to 'Let Him Cook'."
+  },
+  {
+   "brand": "Mackem Golf",
+   "name": "Patchwork Headcover",
+   "price_usd": 108.0,
+   "currency_note": "USD, live Shopify price with country=US (driver; fairway and hybrid also offered)",
+   "url": "https://mackemgolf.com/products/patchwork-headcover",
+   "img_url": "https://cdn.shopify.com/s/files/1/0957/0533/4062/files/Patchwork-Headcover-mackem-golf.jpg",
+   "img_file": "raw/mwl2-10.jpg",
+   "in_stock": true,
+   "category": "headcover",
+   "colorways": [
+    "Lucky Dip",
+    "Blue Tones",
+    "Red Tones",
+    "Green Tones",
+    "Lighter Tones",
+    "Dark Tones"
+   ],
+   "why": "One-off patchwork covers from Kalamunda in Perth's hills, pieced from current releases and deadstock, so no two match."
+  },
+  {
+   "brand": "Walker Golf Things",
+   "name": "Blooming Grounds Knit Polo",
+   "price_usd": 120.0,
+   "currency_note": "USD, live Shopify price with country=US (store lists AUD 140 by default)",
+   "url": "https://walkergolfthings.com/products/blooming-grounds-knit-polo",
+   "img_url": "https://cdn.shopify.com/s/files/1/0558/3346/0817/files/GT34-Q3-SH02-GDS-14.jpg",
+   "img_file": "raw/mwl2-11.jpg",
+   "in_stock": true,
+   "category": "knit",
+   "colorways": [
+    "Garden Sky"
+   ],
+   "why": "A Gold Coast jacquard knit polo with a course landscape knit right into the body; a colorful knit that reads as personality, not uniform."
+  }
+ ],
+ "ak": [
+  {
+   "brand": "Malbon Golf",
+   "name": "AK 1% New Era 9FORTY Snapback",
+   "price_usd": 54.0,
+   "currency_note": "USD, malbon.com (Shopify). One size; White and Black both in stock.",
+   "url": "https://malbon.com/products/ak-1-new-era-9forty-snapback-white",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/71088985-1.jpg",
+   "img_file": "raw/ak-1.jpg",
+   "in_stock": true,
+   "category": "cap",
+   "colorways": [
+    "White",
+    "Black"
+   ],
+   "why": "Kim's AK 1% capsule with Malbon (he became an equity partner in Feb 2026) puts his initials on a structured New Era snapback, the cap to flip backward the way he wore his hat in 2008."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "AK 1% Bermuda Tee",
+   "price_usd": 68.0,
+   "currency_note": "USD, malbon.com (Shopify).",
+   "url": "https://malbon.com/products/ak-1-bermuda-tee-white",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-19725-WHT-1.png",
+   "img_file": "raw/ak-2.jpg",
+   "in_stock": true,
+   "category": "white tee",
+   "colorways": [
+    "White (XS-XXL in stock)",
+    "Black (S, M only)"
+   ],
+   "why": "A white 100% cotton tee from Kim's own AK 1% line, echoing the plain white T-shirt he practiced in during his LIV comeback."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "AK 1% Raglan Sleeve Mesh Polo",
+   "price_usd": 118.0,
+   "currency_note": "USD, malbon.com (Shopify). Only S and M in stock at check time.",
+   "url": "https://malbon.com/products/ak-1-raglan-sleeve-mesh-polo-black",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-19730-BLK-1.jpg",
+   "img_file": "raw/ak-3.jpg",
+   "in_stock": true,
+   "category": "polo",
+   "colorways": [
+    "Black"
+   ],
+   "why": "An AK-branded polo standing in for the AK-initial Extracurricular polos Kim helped design in 2024; Extracurricular's store no longer sells golf or AK pieces."
+  },
+  {
+   "brand": "Autry",
+   "name": "Reelwind Low Sneakers in White Nylon and Suede",
+   "price_usd": 270.0,
+   "currency_note": "USD, autry-usa.com visible price (page JSON-LD shows 329.40; the visible US price is $270, free US shipping, duties included). Sizes EU 39-47 selectable, schema availability InStock.",
+   "url": "https://www.autry-usa.com/en/man/sneakers/reelwind/reelwind-low-sneakers-in-white-nylon-and-suede-3375.html",
+   "img_url": "https://static.autry-usa.com/articoli/sneakers_reelwind_low_in_nylon_e_suede_bianco_3375_dettaglio_02_20260828094051.jpg",
+   "img_file": "raw/ak-4.jpg",
+   "in_stock": true,
+   "category": "sneakers",
+   "colorways": [
+    "White",
+    "Green",
+    "Black",
+    "White/Limoges",
+    "Bluette/Digital Blue",
+    "White/Evening Primrose",
+    "plus others"
+   ],
+   "why": "Autry's nylon-and-suede Reelwind Low sits in the same WWLM model line retailers list for the Whirlwind, the Autry runner Kim wore with gym shorts on the LIV range."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "CLUCT Leather Belt",
+   "price_usd": 128.0,
+   "currency_note": "USD, malbon.com (Shopify) /products/cluct-leather-belt-black.js?country=US: variant 'OS / BLACK' available, $128. NOTE: listed as PREORDER, ships by 10/30.",
+   "url": "https://malbon.com/products/cluct-leather-belt-black",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-20454-BLK-1_2debb9ab-b217-4079-bd6f-b0c4ec94164f.jpg",
+   "img_file": "raw/akb-3.jpg",
+   "in_stock": true,
+   "category": "golf brand statement buckle belt",
+   "colorways": [
+    "Black"
+   ],
+   "why": "From Kim's own brand partner: Malbon x CLUCT water-buffalo leather belt finished in Japan, with a chunky engraved square buckle in brass under a thick 925 silver coating. A heavy silver buckle, toned down for now."
+  },
+  {
+   "brand": "Charleston Belt",
+   "name": "Custom Needlepoint Belt (stitch \"AK\")",
+   "price_usd": 195.0,
+   "currency_note": "USD, charlestonbelt.com (Shopify) /products/custom-needlepoint-belt.js?country=US: all variants available. $195 for men's 1.25 in belts up to size 42 (base listing shows $150, which is the children's price); larger sizes cost slightly more, +$30 for licensed logos. Free digital proof before stitching; custom, so no returns.",
+   "url": "https://charlestonbelt.com/products/custom-needlepoint-belt",
+   "img_url": "https://cdn.shopify.com/s/files/1/0269/8510/3465/products/Custom_Belts.jpg",
+   "img_file": "raw/akb-4.jpg",
+   "in_stock": true,
+   "category": "custom initial needlepoint belt",
+   "colorways": [
+    "Any (custom design)"
+   ],
+   "why": "A golf-world version of the personalised belt from a needlepoint maker TGI already covers: stitch AK (or a flag and AK) into the strap. The sample image includes initials ('CMT') and a First Tee design. Landscape sample image, so crop it."
+  },
+  {
+   "brand": "Metalwood Studio",
+   "name": "Heavyweight Mini Metal Logo T-Shirt",
+   "price_usd": 72.0,
+   "currency_note": "USD, metalwood.studio (Shopify).",
+   "url": "https://metalwood.studio/products/heavyweight-mini-metal-logo-t-shirt-white",
+   "img_url": "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26SS-03-01_WHT_V1_b91eb4ed-6867-419c-b70a-2dd6893fbfed.jpg",
+   "img_file": "raw/ak-7.jpg",
+   "in_stock": true,
+   "category": "white heavyweight tee",
+   "colorways": [
+    "White"
+   ],
+   "why": "A heavyweight 100% cotton white tee for the white-T-shirt range look Kim wore at LIV practice."
+  },
+  {
+   "brand": "Eastside Golf",
+   "name": "Crossover Short",
+   "price_usd": 115.0,
+   "currency_note": "USD, eastsidegolf.com (Shopify). Price differs by colorway; listed price is Midnight Navy.",
+   "url": "https://eastsidegolf.com/products/midnight-navy-eastside-golf-mens-mesh-lined-short-1",
+   "img_url": "https://cdn.shopify.com/s/files/1/0542/2419/1681/files/EGMS6008_NYLOBMESHLINEDSHORT_MIDNIGHTNAVY_FRONT1.jpg",
+   "img_file": "raw/ak-8.jpg",
+   "in_stock": true,
+   "category": "gym-style golf short",
+   "colorways": [
+    "Midnight Navy ($115)",
+    "Cool Grey ($95)",
+    "Pale Khaki ($88)"
+   ],
+   "why": "A nylon, mesh-lined short Eastside pitches for the range, course and gym, matching the gym shorts Kim practiced in at LIV."
+  },
+  {
+   "brand": "Nike",
+   "name": "Nike Velocity Men's Dri-FIT Chest Logo Golf Polo",
+   "price_usd": 65.0,
+   "currency_note": "USD, nike.com visible price; all sizes XS-4XL selectable, Add to Bag live.",
+   "url": "https://www.nike.com/t/velocity-mens-dri-fit-chest-logo-golf-polo-8VC6Z0bT/IB0273-419",
+   "img_url": "https://static.nike.com/a/images/a3f5328c-2153-4779-ad03-d0c56a0e59e2/M+NK+DF+VLCTY+POLO+SS+SOLID.png",
+   "img_file": "raw/ak-9.jpg",
+   "in_stock": true,
+   "category": "Nike golf polo",
+   "colorways": [
+    "College Navy/White",
+    "White/Black",
+    "Black/White",
+    "Wolf Grey/Black",
+    "Gym Red/Black",
+    "University Blue/Black",
+    "Hydrogen Blue/Black",
+    "Pacific Blue/Black",
+    "Pink Foam/Black",
+    "Camo Green/White",
+    "Purple Fade/Black"
+   ],
+   "why": "Kim wore Nike apparel in his 2008 breakout season; this chest-Swoosh Dri-FIT polo is Nike Golf's current version of that clean look."
+  },
+  {
+   "brand": "Students Golf",
+   "name": "SGC 5-Panel Snap Back Hat",
+   "price_usd": 52.0,
+   "currency_note": "USD, studentsgolf.com (Shopify). One size.",
+   "url": "https://studentsgolf.com/products/sgc-snap-back-hat",
+   "img_url": "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf699e28e339a4c0699e28e339b32.18093085699e28e339b32.jpg",
+   "img_file": "raw/ak-10.jpg",
+   "in_stock": true,
+   "category": "cap",
+   "colorways": [
+    "Black",
+    "White"
+   ],
+   "why": "A structured wool-blend snapback (soft buckram crown) to wear backward, the hat style Kim was known for in 2008."
+  }
+ ],
+ "moe": [
+  {
+   "brand": "Fella Golf",
+   "name": "Long Sleeve Mockneck Shirt",
+   "price_usd": 75.0,
+   "currency_note": "USD from Fella's US storefront (store base currency EUR)",
+   "url": "https://fellagolf.com/products/fella-long-sleeve-mockneck-shirt-white",
+   "img_url": "https://cdn.shopify.com/s/files/1/0279/7482/8066/files/fella-logo-long-sleeve-tee-white-00-2560_ab1e9a22-7c3f-4dbc-976d-29390a32e660.png",
+   "img_file": "research/golfer-style/raw/moe-1.jpg",
+   "in_stock": true,
+   "category": "mock neck",
+   "colorways": [
+    "White",
+    "Black"
+   ],
+   "why": "Moe wore turtlenecks on hot summer days, and this lightweight long-sleeve mock is cut for warm-weather golf."
+  },
+  {
+   "brand": "Sounder",
+   "name": "Drawcord Good Walk Chino",
+   "price_usd": 103.0,
+   "currency_note": "USD from Sounder's US storefront; base price GBP 75 (x1.34 = $100.50). Only XS, S, XL, XXL in stock",
+   "url": "https://soundergolf.com/products/drawcord-good-walk-chino-in-tan-ripstop",
+   "img_url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/GoodWalk-TAnrip.png",
+   "img_file": "research/golfer-style/raw/moe-2.jpg",
+   "in_stock": true,
+   "category": "cropped trousers",
+   "colorways": [
+    "Tan Ripstop"
+   ],
+   "why": "Moe's pants ran an inch too short, and Sounder describes this chino as having a cropped length."
+  },
+  {
+   "brand": "Loudmouth",
+   "name": "Birdie Pant - Yellow Dogwood",
+   "price_usd": 29.0,
+   "currency_note": "USD, live Shopify price; final sale, limited sizes",
+   "url": "https://www.loudmouth.com/products/birdie-pant-yellow-dogwood",
+   "img_url": "https://cdn.shopify.com/s/files/1/0578/8634/3377/files/MENS_YELLOW_DOGWOOD_BIRDIE_PANT_LOUDMOUTH_2.png",
+   "img_file": "research/golfer-style/raw/moe-3.jpg",
+   "in_stock": true,
+   "category": "trousers (loud)",
+   "colorways": [
+    "Yellow Dogwood"
+   ],
+   "why": "Moe's 'tangerine shirt, banana slacks' combinations call for yellow trousers, and this pair is marked down to $29."
+  },
+  {
+   "brand": "Students Golf",
+   "name": "Macker Plaid Pants",
+   "price_usd": 138.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://studentsgolf.com/products/macker-plaid-pants",
+   "img_url": "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf6a84fa9cf352266a84fa9cf3732.635040076a84fa9cf3732.jpg",
+   "img_file": "research/golfer-style/raw/moe-4.jpg",
+   "in_stock": true,
+   "category": "trousers (plaid)",
+   "colorways": [
+    "Color 001",
+    "Color 002"
+   ],
+   "why": "Moe mixed stripes with plaids, and these are wool-blend plaid trousers."
+  },
+  {
+   "brand": "Sugarloaf Social Club",
+   "name": "The Mini Stripe LS Polo",
+   "price_usd": 105.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://www.sugarloafsocialclub.com/products/long-sleeve-striped-pique-polo-spring",
+   "img_url": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-LS-2-MIN-RDBL_1copy.jpg",
+   "img_file": "research/golfer-style/raw/moe-5.jpg",
+   "in_stock": true,
+   "category": "long-sleeve polo (stripes)",
+   "colorways": [
+    "Red & Blue"
+   ],
+   "why": "Moe buttoned long-sleeve shirts to the chin in any heat, and this striped long-sleeve polo can be the stripe half of a stripes-and-plaid outfit."
+  },
+  {
+   "brand": "Malbon Golf",
+   "name": "Mountain Sweater",
+   "price_usd": 228.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://malbon.com/products/mountain-sweater-royal-ice-blue",
+   "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10429-ROY-ICB-1.jpg",
+   "img_file": "research/golfer-style/raw/moe-6.jpg",
+   "in_stock": true,
+   "category": "sweater",
+   "colorways": [
+    "Royal / Ice Blue",
+    "Black / Ivory"
+   ],
+   "why": "Moe wore a colorful sweater, and this color-blocked quarter-zip knit comes in royal and ice blue."
+  },
+  {
+   "brand": "Holderness & Bourne",
+   "name": "The Cocktail Tour Visor",
+   "price_usd": 45.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://holdernessandbourne.com/products/the-cocktail-tour-visor-navy-with-white-hb-icon-new",
+   "img_url": "https://cdn.shopify.com/s/files/1/0269/8763/files/HoldernessBourne6791320a0862716791320a088b6.598104506791320a088b6.jpg",
+   "img_file": "research/golfer-style/raw/moe-7.jpg",
+   "in_stock": true,
+   "category": "visor",
+   "colorways": [
+    "Navy with HB Icon",
+    "White with Transfusion Icon",
+    "Navy with Transfusion Icon"
+   ],
+   "why": "A visor was part of Moe's on-course look, and this is a high-crown tour visor with a terry sweatband."
+  },
+  {
+   "brand": "Casio",
+   "name": "A158WA-1 Vintage",
+   "price_usd": 29.95,
+   "currency_note": "USD, from casio.com product page JSON-LD (InStock)",
+   "url": "https://www.casio.com/us/watches/casio/product.A158WA-1/",
+   "img_url": "https://www.casio.com/content/dam/casio/product-info/locales/us/en/timepiece/product/watch/A/A1/A15/A158WA-1/assets/A158WA-1.png",
+   "img_file": "research/golfer-style/raw/moe-8.jpg",
+   "in_stock": true,
+   "category": "watch",
+   "colorways": [
+    "Silver"
+   ],
+   "why": "Moe wore two watches at once, and at $29.95 this digital Casio is the cheaper half of the pair."
+  },
+  {
+   "brand": "Timex",
+   "name": "Weekender 38mm Fabric Strap Watch",
+   "price_usd": 77.0,
+   "currency_note": "USD, live Shopify price",
+   "url": "https://timex.com/products/weekender-38mm-fabric-strap-watch-t2n647",
+   "img_url": "https://cdn.shopify.com/s/files/1/0573/1198/5747/files/T2N647_6979a599-35e0-4a7b-801d-6a1f4b18c23d.png",
+   "img_file": "research/golfer-style/raw/moe-9.jpg",
+   "in_stock": true,
+   "category": "watch",
+   "colorways": [
+    "T2N647",
+    "T2N651",
+    "T2N654"
+   ],
+   "why": "Paired with the Casio, this slip-thru-strap Timex makes Moe's two-watch wrist."
+  },
+  {
+   "brand": "PUMA Golf",
+   "name": "FUSION Grip 6 Spikeless Golf Shoes",
+   "price_usd": 70.0,
+   "currency_note": "USD, live Shopify price (pumagolf.com)",
+   "url": "https://www.pumagolf.com/products/fusion-grip-6-golf-shoes",
+   "img_url": "https://cdn.shopify.com/s/files/1/0562/1186/5673/files/310260_04_sv01.jpg",
+   "img_file": "research/golfer-style/raw/moe-10.jpg",
+   "in_stock": true,
+   "category": "shoes",
+   "colorways": [
+    "Feather Gray / Puma Black / Gum",
+    "Puma Black / Asphalt",
+    "Puma White / Puma Black"
+   ],
+   "why": "Moe kept 10 pairs of golf shoes, and at $70 this spikeless pair is the frugal way to add to the rack."
+  }
+ ]
+}

@@ -1,0 +1,161 @@
+[
+ {
+  "brand": "Fella Golf",
+  "name": "Long Sleeve Mockneck Shirt",
+  "price_usd": 75.0,
+  "currency_note": "USD from Fella's US storefront (store base currency EUR)",
+  "url": "https://fellagolf.com/products/fella-long-sleeve-mockneck-shirt-white",
+  "img_url": "https://cdn.shopify.com/s/files/1/0279/7482/8066/files/fella-logo-long-sleeve-tee-white-00-2560_ab1e9a22-7c3f-4dbc-976d-29390a32e660.png",
+  "img_file": "research/golfer-style/raw/moe-1.jpg",
+  "in_stock": true,
+  "category": "mock neck",
+  "colorways": [
+   "White",
+   "Black"
+  ],
+  "why": "Moe wore turtlenecks on hot summer days, and this lightweight long-sleeve mock is cut for warm-weather golf."
+ },
+ {
+  "brand": "Sounder",
+  "name": "Drawcord Good Walk Chino",
+  "price_usd": 103.0,
+  "currency_note": "USD from Sounder's US storefront; base price GBP 75 (x1.34 = $100.50). Only XS, S, XL, XXL in stock",
+  "url": "https://soundergolf.com/products/drawcord-good-walk-chino-in-tan-ripstop",
+  "img_url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/GoodWalk-TAnrip.png",
+  "img_file": "research/golfer-style/raw/moe-2.jpg",
+  "in_stock": true,
+  "category": "cropped trousers",
+  "colorways": [
+   "Tan Ripstop"
+  ],
+  "why": "Moe's pants ran an inch too short, and Sounder describes this chino as having a cropped length."
+ },
+ {
+  "brand": "Loudmouth",
+  "name": "Birdie Pant - Yellow Dogwood",
+  "price_usd": 29.0,
+  "currency_note": "USD, live Shopify price; final sale, limited sizes",
+  "url": "https://www.loudmouth.com/products/birdie-pant-yellow-dogwood",
+  "img_url": "https://cdn.shopify.com/s/files/1/0578/8634/3377/files/MENS_YELLOW_DOGWOOD_BIRDIE_PANT_LOUDMOUTH_2.png",
+  "img_file": "research/golfer-style/raw/moe-3.jpg",
+  "in_stock": true,
+  "category": "trousers (loud)",
+  "colorways": [
+   "Yellow Dogwood"
+  ],
+  "why": "Moe's 'tangerine shirt, banana slacks' combinations call for yellow trousers, and this pair is marked down to $29."
+ },
+ {
+  "brand": "Students Golf",
+  "name": "Macker Plaid Pants",
+  "price_usd": 138.0,
+  "currency_note": "USD, live Shopify price",
+  "url": "https://studentsgolf.com/products/macker-plaid-pants",
+  "img_url": "https://cdn.shopify.com/s/files/1/0565/3581/0232/files/Studentsgolf6a84fa9cf352266a84fa9cf3732.635040076a84fa9cf3732.jpg",
+  "img_file": "research/golfer-style/raw/moe-4.jpg",
+  "in_stock": true,
+  "category": "trousers (plaid)",
+  "colorways": [
+   "Color 001",
+   "Color 002"
+  ],
+  "why": "Moe mixed stripes with plaids, and these are wool-blend plaid trousers."
+ },
+ {
+  "brand": "Sugarloaf Social Club",
+  "name": "The Mini Stripe LS Polo",
+  "price_usd": 105.0,
+  "currency_note": "USD, live Shopify price",
+  "url": "https://www.sugarloafsocialclub.com/products/long-sleeve-striped-pique-polo-spring",
+  "img_url": "https://cdn.shopify.com/s/files/1/0711/9568/9176/files/SSCPP002-LS-2-MIN-RDBL_1copy.jpg",
+  "img_file": "research/golfer-style/raw/moe-5.jpg",
+  "in_stock": true,
+  "category": "long-sleeve polo (stripes)",
+  "colorways": [
+   "Red & Blue"
+  ],
+  "why": "Moe buttoned long-sleeve shirts to the chin in any heat, and this striped long-sleeve polo can be the stripe half of a stripes-and-plaid outfit."
+ },
+ {
+  "brand": "Malbon Golf",
+  "name": "Mountain Sweater",
+  "price_usd": 228.0,
+  "currency_note": "USD, live Shopify price",
+  "url": "https://malbon.com/products/mountain-sweater-royal-ice-blue",
+  "img_url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10429-ROY-ICB-1.jpg",
+  "img_file": "research/golfer-style/raw/moe-6.jpg",
+  "in_stock": true,
+  "category": "sweater",
+  "colorways": [
+   "Royal / Ice Blue",
+   "Black / Ivory"
+  ],
+  "why": "Moe wore a colorful sweater, and this color-blocked quarter-zip knit comes in royal and ice blue."
+ },
+ {
+  "brand": "Holderness & Bourne",
+  "name": "The Cocktail Tour Visor",
+  "price_usd": 45.0,
+  "currency_note": "USD, live Shopify price",
+  "url": "https://holdernessandbourne.com/products/the-cocktail-tour-visor-navy-with-white-hb-icon-new",
+  "img_url": "https://cdn.shopify.com/s/files/1/0269/8763/files/HoldernessBourne6791320a0862716791320a088b6.598104506791320a088b6.jpg",
+  "img_file": "research/golfer-style/raw/moe-7.jpg",
+  "in_stock": true,
+  "category": "visor",
+  "colorways": [
+   "Navy with HB Icon",
+   "White with Transfusion Icon",
+   "Navy with Transfusion Icon"
+  ],
+  "why": "A visor was part of Moe's on-course look, and this is a high-crown tour visor with a terry sweatband."
+ },
+ {
+  "brand": "Casio",
+  "name": "A158WA-1 Vintage",
+  "price_usd": 29.95,
+  "currency_note": "USD, from casio.com product page JSON-LD (InStock)",
+  "url": "https://www.casio.com/us/watches/casio/product.A158WA-1/",
+  "img_url": "https://www.casio.com/content/dam/casio/product-info/locales/us/en/timepiece/product/watch/A/A1/A15/A158WA-1/assets/A158WA-1.png",
+  "img_file": "research/golfer-style/raw/moe-8.jpg",
+  "in_stock": true,
+  "category": "watch",
+  "colorways": [
+   "Silver"
+  ],
+  "why": "Moe wore two watches at once, and at $29.95 this digital Casio is the cheaper half of the pair."
+ },
+ {
+  "brand": "Timex",
+  "name": "Weekender 38mm Fabric Strap Watch",
+  "price_usd": 77.0,
+  "currency_note": "USD, live Shopify price",
+  "url": "https://timex.com/products/weekender-38mm-fabric-strap-watch-t2n647",
+  "img_url": "https://cdn.shopify.com/s/files/1/0573/1198/5747/files/T2N647_6979a599-35e0-4a7b-801d-6a1f4b18c23d.png",
+  "img_file": "research/golfer-style/raw/moe-9.jpg",
+  "in_stock": true,
+  "category": "watch",
+  "colorways": [
+   "T2N647",
+   "T2N651",
+   "T2N654"
+  ],
+  "why": "Paired with the Casio, this slip-thru-strap Timex makes Moe's two-watch wrist."
+ },
+ {
+  "brand": "PUMA Golf",
+  "name": "FUSION Grip 6 Spikeless Golf Shoes",
+  "price_usd": 70.0,
+  "currency_note": "USD, live Shopify price (pumagolf.com)",
+  "url": "https://www.pumagolf.com/products/fusion-grip-6-golf-shoes",
+  "img_url": "https://cdn.shopify.com/s/files/1/0562/1186/5673/files/310260_04_sv01.jpg",
+  "img_file": "research/golfer-style/raw/moe-10.jpg",
+  "in_stock": true,
+  "category": "shoes",
+  "colorways": [
+   "Feather Gray / Puma Black / Gum",
+   "Puma Black / Asphalt",
+   "Puma White / Puma Black"
+  ],
+  "why": "Moe kept 10 pairs of golf shoes, and at $70 this spikeless pair is the frugal way to add to the rack."
+ }
+]
