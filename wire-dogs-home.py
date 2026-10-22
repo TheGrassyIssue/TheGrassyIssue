@@ -15,13 +15,13 @@ POST = ROOT / "drops/dogs-and-golf.html"
 SLUG = "/drops/dogs-and-golf"
 KEY = "dogsgolf"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-DOGS-CARD -->\n", "<!-- /TGI-DOGS-CARD -->\n"
-TITLE = "Dogs and Golf: Bring Him Along (Carefully)"
+TITLE = "Dogs and Golf: Bring Them Along (Carefully)"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "dogs-golf"
 
 SLIDES = [
-    ("card-hero", "A dog sitting on a golf course with a lead on",
-     "Dogs and Golf \u00b7 Our Take", "Bring Him Along",
+    ("card-stella", "Lenny Harrington putting at the Sedgewood Club with Stella sitting on the green",
+     "Dogs and Golf \u00b7 Our Take", "Bring Them Along",
      "We're all for dogs on the course. Carefully."),
     ("p-13", "Sounder x Yeti dog bowl",
      "Sounder x Yeti Dog Bowl \u00b7 $69", "In the Bag",

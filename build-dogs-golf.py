@@ -17,7 +17,7 @@ DONOR = ROOT / "drops/brand-to-know-mackem-golf.html"
 TITLE = "Dogs on the Golf Course: Our Take, and 29 Pieces of Golf Dog Gear"
 DESC = ("Should you bring your dog golfing? We're all for it, carefully. Where dogs are welcome, course etiquette, and 29 golf dog collars, "
         "bandanas, bowls and headcovers.")
-H1 = "Dogs and Golf: Bring Him Along (Carefully)"
+H1 = "Dogs and Golf: Bring Them Along (Carefully)"
 BC = "Dogs and Golf"
 SLUG = "dogs-and-golf"
 IMG = "/images/dogs-golf"
@@ -52,15 +52,15 @@ P = {
  "d17": ("Daphne&rsquo;s Headcovers", "Golden Retriever Driver Headcover", "$45.99", "https://www.daphnesheadcovers.com/products/golden-retriever",
    "Soft fur and floppy ears, fits a 460cc driver. Daphne&rsquo;s lists eighteen breeds, from Beagle to Australian Shepherd."),
  "d18": ("Daphne&rsquo;s Headcovers", "Black Lab Driver Headcover", "$45.99", "https://www.daphnesheadcovers.com/products/black-lab",
-   "Shiny black fur and floppy ears. Add embroidery if you want his name on it."),
+   "Shiny black fur and floppy ears. Add embroidery if you want your dog&rsquo;s name on it."),
  "d19": ("Daphne&rsquo;s Headcovers", "Doodle Driver Headcover", "$45.99", "https://www.daphnesheadcovers.com/products/doodle",
    "Soft amber fur, for doodle people."),
  "d20": ("Big Dog Golf Co.", "Dancing Dog Headcover", "$79", "https://bigdoggolfco.com/products/dancing-dog",
    "White leather embroidered with the brand&rsquo;s dancing dog logo, made in Australia."),
  "d21": ("Swag Golf", "Saints &ldquo;Gumbo&rdquo; 2.0 Driver Cover", "$99.99", "https://swag.golf/products/nfl-new-orleans-saints-gumbo-2-0-driver-cover",
-   "Gumbo is the Saints&rsquo; dog mascot, and Swag made him a &ldquo;massive scruffy dog face&rdquo; with a fleur-de-lis on the forehead."),
+   "Gumbo is the Saints&rsquo; dog mascot, and Swag made Gumbo a &ldquo;massive scruffy dog face&rdquo; with a fleur-de-lis on the forehead."),
  "d22": ("Pins &amp; Aces", "Man&rsquo;s Best Friend Polo, Light", "$69.95", "https://pinsandaces.com/products/mans-best-friend-light",
-   "A small all-over dog print, written for &ldquo;the player whose golden retriever is also their best wingman.&rdquo;"),
+   "A small all-over dog print, made for the golfer whose golden retriever never misses a round."),
  "d23": ("Pins &amp; Aces", "Man&rsquo;s Best Friend Polo, Dark", "$69.95", "https://pinsandaces.com/products/mans-best-friend-dark",
    "The dark version, a nod &ldquo;to the four-legged sidekick who never judges your slice.&rdquo;"),
  "d24": ("Rhoback", "The Golf Dog Poly Hat", "$38", "https://rhoback.com/products/the-golf-dog-poly-solid-fleet-navy",
@@ -68,7 +68,7 @@ P = {
  "d25": ("Smathers &amp; Branson", "Yellow Lab Performance Hat", "$45", "https://smathersandbranson.com/products/yellow-lab-needlepoint-performance-hat-navy",
    "A hand-stitched needlepoint Lab on a light, sweat-wicking navy six-panel."),
  "d31": ("Old Faithful Golf Co.", "TRUSTY Caddy Golf Towel", "$40", "https://oldfaithfulgolf.com/products/old-faithful-trusty-caddy-golf-towel-copy-1",
-   "A 22-by-44-inch caddy towel in white, navy and red, &ldquo;branded with Trusty, the Old Faithful mascot&rdquo;: a dog with a club in his mouth. Old Faithful is a small Canadian brand that went live in November 2024."),
+   "A 22-by-44-inch caddy towel in white, navy and red, &ldquo;branded with Trusty, the Old Faithful mascot&rdquo;: a dog with a club in its mouth. Old Faithful is a small Canadian brand that went live in November 2024."),
  "d28": ("Old Faithful Golf Co.", "The Dancing TRUSTY Fairway Wood Headcover", "$75", "https://oldfaithfulgolf.com/products/dancing-trusty-fairway-wood-headcover",
    "Black pebbled synthetic leather covered in white Trustys, lined in burgundy sherpa. Made for your go-to fairway wood: &ldquo;Your &lsquo;old faithful&rsquo; has been good to you. Now return the favor.&rdquo;"),
  "d29": ("Old Faithful Golf Co.", "The Heritage TRUSTY Fairway Headcover", "$85", "https://oldfaithfulgolf.com/products/the-heritage-trusty-fairway-headcover-in-genuine-leather",
@@ -88,7 +88,7 @@ SECTIONS = [
  ("In the Bag", "in-the-bag", ["d13","d11","d12","d14","d31"],
   "<strong>Bowls, toys and a towel &middot; $20&ndash;$100</strong>Water, something to chew in the cart barn, and the poop bags you will definitely need."),
  ("Dogs on Your Headcovers", "headcovers", ["d16","d28","d29","d30","d17","d18","d19","d20","d21"],
-  "<strong>Nine covers &middot; $46&ndash;$130</strong>For the days he has to stay home."),
+  "<strong>Nine covers &middot; $46&ndash;$130</strong>For the days your dog has to stay home."),
  ("Dogs on You", "on-you", ["d32","d22","d23","d33","d34","d24","d25"],
   "<strong>Polos and hats &middot; $37&ndash;$105</strong>Dog-print clothes from independent golf brands, including a polo covered in Old Faithful&rsquo;s mascot, Trusty."),
 ]
@@ -123,7 +123,7 @@ WHERE = """
 <section class="products" style="margin-top:8px;">
   <div class="drop-tag grass">Where to Go</div>
   <h2 class="products-hdr" id="where">Where You Can Bring a Dog</h2>
-  <p class="cat-kicker"><strong>Austin.</strong> The City of Austin&rsquo;s rules for Roy Kizer say it plainly: &ldquo;Dogs must be on a leash and under control.&rdquo; Golf Advisor reported in 2015 that every Austin muni allowed dogs, along with Delaware Springs in Burnet (&ldquo;scoop the poop, and keep them on a leash&rdquo;). Policies change, so call the pro shop before you load him in the car.</p>
+  <p class="cat-kicker"><strong>Austin.</strong> The City of Austin&rsquo;s rules for Roy Kizer say it plainly: &ldquo;Dogs must be on a leash and under control.&rdquo; Golf Advisor reported in 2015 that every Austin muni allowed dogs, along with Delaware Springs in Burnet (&ldquo;scoop the poop, and keep them on a leash&rdquo;). Policies change, so call the pro shop before you load your dog in the car.</p>
   <p class="cat-kicker"><strong>Elsewhere in the US.</strong> Golf Digest has named Belgrade Lakes in Maine, Indian Valley in Marin County and Seaside in Oregon as dog-friendly. Plenty of others allow it quietly or with permission, and plenty don&rsquo;t at all. Ask first, every time.</p>
   <p class="cat-kicker"><strong>The UK and Ireland.</strong> Golf Digest says dogs are more likely to be welcome at old links with common walking ground than at newer inland clubs. The St Andrews Links are a public park with dogs on them every day, Cruden Bay is known for it, and Scotland&rsquo;s Outdoor Access Code asks walkers crossing a course to keep dogs on a short lead.</p>
 </section>
@@ -132,16 +132,16 @@ TAKE = """
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag flag">The TGI Take</div>
-    <p>We&rsquo;re all for dogs on the golf course. Not every course and not every round, but where they&rsquo;re allowed, bring him along. A walking round with a dog at your heel is about as good as golf gets: the pace slows down, nobody minds the bogey, and you stop staring at your phone between shots.</p>
-    <p><strong>Be careful about it.</strong> A dog on the course is a guest, and so are you. Keep him on a leash, keep him off the greens and out of the bunkers, pick up after him, and keep him quiet when someone&rsquo;s hitting. Start with a short loop on a quiet evening before you take him on eighteen. If the club says no dogs, it&rsquo;s no dogs.</p>
+    <p>We&rsquo;re all for dogs on the golf course. Not every course and not every round, but where they&rsquo;re allowed, bring your dog along. A walking round with a dog at your heel is about as good as golf gets: the pace slows down, nobody minds the bogey, and you stop staring at your phone between shots.</p>
+    <p><strong>Be careful about it.</strong> A dog on the course is a guest, and so are you. Keep your dog on a leash, off the greens and out of the bunkers, pick up after them, and keep them quiet when someone&rsquo;s hitting. Start with a short loop on a quiet evening before you try eighteen together. If the club says no dogs, it&rsquo;s no dogs.</p>
     <p><strong>The British figured this out a long time ago.</strong> On the old links of the UK and Ireland dogs are part of the scenery. The Old Course at St Andrews closes on Sundays and turns into one of the biggest dog parks in the world, and Sunningdale&rsquo;s club historian says overseas visitors are surprised by how many dogs they see. In the US it&rsquo;s rarer, but closer than you think: Austin&rsquo;s own city courses allow leashed dogs.</p>
-    <p><strong>The best golf dogs belong to the greenskeepers.</strong> Every good course seems to have one riding in the maintenance cart: Blu, the pit mix who chases geese for the grounds crew at Detroit Golf Club; Lucky, Lefty and Charlie, the goose dogs at Pebble Beach; Rio, the superintendent&rsquo;s Lab at King&rsquo;s Deer in Colorado. Golf Digest put it simply: most courses allow only one dog, the superintendent&rsquo;s. Wave to him on the way past.</p>
+    <p><strong>The best golf dogs belong to the greenskeepers.</strong> Every good course seems to have one riding in the maintenance cart: Blu, the pit mix who chases geese for the grounds crew at Detroit Golf Club; Lucky, Lefty and Charlie, the goose dogs at Pebble Beach; Rio, the superintendent&rsquo;s Lab at King&rsquo;s Deer in Colorado. Golf Digest put it simply: most courses allow only one dog, the superintendent&rsquo;s. Give a wave on the way past.</p>
     <p>Below: the etiquette, 29 pieces of golf dog gear (from a $20 bandana to a $130 headcover embroidered with Labs), and where you can bring a dog. Everything was in stock when we checked on October 22, 2026.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">The Short Version</div>
-      <div class="sidebar-detail"><span class="l">Our stance</span><span>Bring him</span></div>
+      <div class="sidebar-detail"><span class="l">Our stance</span><span>Bring your dog</span></div>
       <div class="sidebar-detail"><span class="l">The rule</span><span>Leash on, off the greens</span></div>
       <div class="sidebar-detail"><span class="l">In Austin</span><span>City courses allow leashed dogs</span></div>
       <div class="sidebar-detail"><span class="l">Gear</span><span>29 picks, $20&ndash;$130</span></div>
