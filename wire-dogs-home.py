@@ -31,7 +31,7 @@ SLIDES = [
      "For the greenskeepers' best friends."),
     ("p-9", "The Foggy Dog golf applique bandana",
      "Golf Applique Bandana \u00b7 $29", "On the Dog",
-     "27 pieces of golf dog gear, $20 to $200."),
+     "29 pieces of golf dog gear, $20 to $130."),
 ]
 
 

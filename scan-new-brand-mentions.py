@@ -44,6 +44,7 @@ DOMAINS = {
     "bunx-golf": ["bunxgolf.com"],  # Brand to Know, 20 Oct 2026
     "saha-golf": ["saha.golf"],  # Brand to Know, 21 Oct 2026
     "sloat": ["sloat.cc"],  # Brand to Know, 21 Oct 2026
+    "old-faithful-golf": ["oldfaithfulgolf.com"],  # Dogs and Golf, 22 Oct 2026
     # needlepoint belt makers, added to the index 16 Oct 2026
     "smathers-branson": ["smathersandbranson.com"],
     "j-press": ["jpress.com"],

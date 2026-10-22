@@ -14,8 +14,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent
 DONOR = ROOT / "drops/brand-to-know-mackem-golf.html"
 
-TITLE = "Dogs on the Golf Course: Our Take, and 27 Pieces of Golf Dog Gear"
-DESC = ("Should you bring your dog golfing? We're all for it, carefully. Where dogs are welcome, course etiquette, and 27 golf dog collars, "
+TITLE = "Dogs on the Golf Course: Our Take, and 29 Pieces of Golf Dog Gear"
+DESC = ("Should you bring your dog golfing? We're all for it, carefully. Where dogs are welcome, course etiquette, and 29 golf dog collars, "
         "bandanas, bowls and headcovers.")
 H1 = "Dogs and Golf: Bring Him Along (Carefully)"
 BC = "Dogs and Golf"
@@ -31,10 +31,6 @@ P = {
    "Woven golf-print ribbon on nylon webbing with a quick-release buckle, in green or pink. There&rsquo;s a matching lead, bandana and toy."),
  "d4": ("The Worthy Dog", "Golf Lead", "$21", "https://theworthydog.com/products/golf-lead-4786",
    "The matching lead, same golf print over nylon webbing."),
- "d5": ("PXG", "Logo Tag Collar", "$33", "https://www.pxg.com/products/pxg-logo-tag-collar",
-   "Eco-leather lined with white PXG logos. The pet line is shot with Bob and Renee Parsons&rsquo; own dogs, Sixx and Five. Only black in large is left."),
- "d6": ("PXG", "Eco Leather Pet Leash", "$65", "https://www.pxg.com/products/eco-leather-pet-leash",
-   "A 65.5-inch eco-leather leash to match. Long enough to give a dog room on the fairway, short enough to keep him off the green."),
  "d7": ("Rhoback", "The Mulligan Performance Dog Bandana", "$26", "https://rhoback.com/products/the-mulligan-performance-bandana",
    "Quick-drying four-way-stretch fabric in fairway green. Rhoback is named after the Rhodesian Ridgeback, so the dog gear isn&rsquo;t an afterthought."),
  "d8": ("Rhoback", "The Birdie Stripe Performance Dog Bandana", "$26", "https://rhoback.com/products/dogs-accessories-performance-bandana-the-birdie-stripe-fairway-green-fleet-navy",
@@ -51,8 +47,6 @@ P = {
    "A plush bag with a club, a tee and two balls, and every piece squeaks. For gentle chewers only."),
  "d14": ("A.P.C.", "Dog Waste Bag Holder", "$100", "https://www.apc-us.com/products/dog-waste-bag-holder-cohiz-m66088_iai",
    "Japanese denim with &ldquo;A.P.C. Toutou&rdquo; embroidered on it and a press-stud closure. The most expensive way to carry poop bags, and you will need poop bags."),
- "d15": ("PXG", "Convertible Bag Pet Car Seat", "$150", "https://www.pxg.com/products/pxg-convertible-bag-car-seat",
-   "For the ride to the course: a padded car seat for small dogs that converts to a carry bag."),
  "d16": ("Seamus Golf", "Seamus Lab Canvas Driver Cover", "$130", "https://www.seamusgolf.com/products/seamus-lab-head-covers-with-personalization",
    "Ivory canvas embroidered all over with Labs and lined in brown fleece, made &ldquo;to celebrate all the greenskeepers&rsquo; best friends.&rdquo; Seamus itself is named after the founders&rsquo; Irish Terrier."),
  "d17": ("Daphne&rsquo;s Headcovers", "Golden Retriever Driver Headcover", "$45.99", "https://www.daphnesheadcovers.com/products/golden-retriever",
@@ -73,22 +67,32 @@ P = {
    "A navy performance hat with Rhoback&rsquo;s golf dog on the front."),
  "d25": ("Smathers &amp; Branson", "Yellow Lab Performance Hat", "$45", "https://smathersandbranson.com/products/yellow-lab-needlepoint-performance-hat-navy",
    "A hand-stitched needlepoint Lab on a light, sweat-wicking navy six-panel."),
- "d26": ("Foray Golf", "Dog Toile Zip Front Skirt", "$77.17", "https://foraygolf.com/products/dog-print-front-zip-skirt",
-   "A dog toile print, and Foray gives $50 in kind to Puppies &amp; Golf for every one sold. Only XXL is left, final sale."),
- "d27": ("Sunday Golf", "El Camino, Mindy Lemon", "$200", "https://sundaygolf.com/products/el-camino-mindy-lemon-mid-size-stand-bag",
-   "A stand bag in a colorway &ldquo;inspired by our office pup, Mindy,&rdquo; whom Sunday calls its Chief Positivity Officer. Holds up to ten clubs, with an insulated pocket."),
+ "d31": ("Old Faithful Golf Co.", "TRUSTY Caddy Golf Towel", "$40", "https://oldfaithfulgolf.com/products/old-faithful-trusty-caddy-golf-towel-copy-1",
+   "A 22-by-44-inch caddy towel in white, navy and red, &ldquo;branded with Trusty, the Old Faithful mascot&rdquo;: a dog with a club in his mouth. Old Faithful is a small Canadian brand that went live in November 2024."),
+ "d28": ("Old Faithful Golf Co.", "The Dancing TRUSTY Fairway Wood Headcover", "$75", "https://oldfaithfulgolf.com/products/dancing-trusty-fairway-wood-headcover",
+   "Black pebbled synthetic leather covered in white Trustys, lined in burgundy sherpa. Made for your go-to fairway wood: &ldquo;Your &lsquo;old faithful&rsquo; has been good to you. Now return the favor.&rdquo;"),
+ "d29": ("Old Faithful Golf Co.", "The Heritage TRUSTY Fairway Headcover", "$85", "https://oldfaithfulgolf.com/products/the-heritage-trusty-fairway-headcover-in-genuine-leather",
+   "Tan cowhide embroidered with dancing Trustys in different colors, a cream sherpa lining and a club member patch on the back. Fits any fairway wood, 3 through 9."),
+ "d30": ("Old Faithful Golf Co.", "The TRUSTY Corduroy Barrel Headcover", "$70&ndash;$75", "https://oldfaithfulgolf.com/products/the-trusty-corduroy-barrel-hybrid-headcover",
+   "Green corduroy barrel cover with Trusty in white and a tight elastic band inside: &ldquo;the club ain&rsquo;t going anywhere.&rdquo; Hybrid $70, fairway wood $75."),
+ "d32": ("Old Faithful Golf Co.", "The Old Faithful TRUSTY Golf Polo", "$105", "https://oldfaithfulgolf.com/products/the-old-faithful-trusty-golf-polo",
+   "Burgundy with a small all-over Trusty print, a structured collar, four buttons and a club member patch on the sleeve. A limited run, and only XX-Large is left."),
+ "d33": ("Old Faithful Golf Co.", "TRUSTY &lsquo;Golden&rsquo; Snapback Golf Hat", "$37", "https://oldfaithfulgolf.com/products/old-faithful-trusty-golden-golf-hat",
+   "A black structured five-panel with Trusty embroidered in gold on the corner."),
+ "d34": ("Old Faithful Golf Co.", "TRUSTY Rope Hat", "$40", "https://oldfaithfulgolf.com/products/old-faithful-trusty-rope-hat",
+   "A structured rope hat with Trusty on the front, in black or navy. Both carry the club member tag."),
 }
 SECTIONS = [
- ("On the Dog", "on-the-dog", ["d1","d2","d3","d4","d5","d6","d7","d8","d9","d10"],
+ ("On the Dog", "on-the-dog", ["d1","d2","d3","d4","d7","d8","d9","d10"],
   "<strong>Collars, leads and bandanas &middot; $20&ndash;$85</strong>A leash is the rule almost everywhere dogs are welcome, so you may as well make it a good one."),
- ("In the Bag", "in-the-bag", ["d13","d11","d12","d14","d15"],
-  "<strong>Bowls, toys and the ride there &middot; $20&ndash;$150</strong>Water, something to chew in the cart barn, and the poop bags you will definitely need."),
- ("Dogs on Your Headcovers", "headcovers", ["d16","d17","d18","d19","d20","d21"],
-  "<strong>Six covers &middot; $46&ndash;$130</strong>For the days he has to stay home."),
- ("Dogs on You", "on-you", ["d22","d23","d24","d25","d26","d27"],
-  "<strong>Polos, hats, a skirt and a bag &middot; $38&ndash;$200</strong>Dog-print clothes from golf brands, including two named after their own dogs."),
+ ("In the Bag", "in-the-bag", ["d13","d11","d12","d14","d31"],
+  "<strong>Bowls, toys and a towel &middot; $20&ndash;$100</strong>Water, something to chew in the cart barn, and the poop bags you will definitely need."),
+ ("Dogs on Your Headcovers", "headcovers", ["d16","d28","d29","d30","d17","d18","d19","d20","d21"],
+  "<strong>Nine covers &middot; $46&ndash;$130</strong>For the days he has to stay home."),
+ ("Dogs on You", "on-you", ["d32","d22","d23","d33","d34","d24","d25"],
+  "<strong>Polos and hats &middot; $37&ndash;$105</strong>Dog-print clothes from independent golf brands, including a polo covered in Old Faithful&rsquo;s mascot, Trusty."),
 ]
-N = 27
+N = 29
 PQ = {
  "on-the-dog": ("Everyone knows a tired dog is a good dog, and we get a lot of good dogs here.", "Mike Beaver, Indian Valley Golf Club, to Golf Digest"),
  "headcovers": ("The fact is, dogs can&rsquo;t cause as much trouble as how some people drive carts.", "Sandy Loeffler, The Links at Highlands Ranch, to Golf Digest"),
@@ -132,7 +136,7 @@ TAKE = """
     <p><strong>Be careful about it.</strong> A dog on the course is a guest, and so are you. Keep him on a leash, keep him off the greens and out of the bunkers, pick up after him, and keep him quiet when someone&rsquo;s hitting. Start with a short loop on a quiet evening before you take him on eighteen. If the club says no dogs, it&rsquo;s no dogs.</p>
     <p><strong>The British figured this out a long time ago.</strong> On the old links of the UK and Ireland dogs are part of the scenery. The Old Course at St Andrews closes on Sundays and turns into one of the biggest dog parks in the world, and Sunningdale&rsquo;s club historian says overseas visitors are surprised by how many dogs they see. In the US it&rsquo;s rarer, but closer than you think: Austin&rsquo;s own city courses allow leashed dogs.</p>
     <p><strong>The best golf dogs belong to the greenskeepers.</strong> Every good course seems to have one riding in the maintenance cart: Blu, the pit mix who chases geese for the grounds crew at Detroit Golf Club; Lucky, Lefty and Charlie, the goose dogs at Pebble Beach; Rio, the superintendent&rsquo;s Lab at King&rsquo;s Deer in Colorado. Golf Digest put it simply: most courses allow only one dog, the superintendent&rsquo;s. Wave to him on the way past.</p>
-    <p>Below: the etiquette, 27 pieces of golf dog gear (from a $20 bandana to a $200 bag named after a brand&rsquo;s office dog), and where you can bring a dog. Everything was in stock when we checked on October 22, 2026.</p>
+    <p>Below: the etiquette, 29 pieces of golf dog gear (from a $20 bandana to a $130 headcover embroidered with Labs), and where you can bring a dog. Everything was in stock when we checked on October 22, 2026.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
@@ -140,7 +144,7 @@ TAKE = """
       <div class="sidebar-detail"><span class="l">Our stance</span><span>Bring him</span></div>
       <div class="sidebar-detail"><span class="l">The rule</span><span>Leash on, off the greens</span></div>
       <div class="sidebar-detail"><span class="l">In Austin</span><span>City courses allow leashed dogs</span></div>
-      <div class="sidebar-detail"><span class="l">Gear</span><span>27 picks, $20&ndash;$200</span></div>
+      <div class="sidebar-detail"><span class="l">Gear</span><span>29 picks, $20&ndash;$130</span></div>
       <div class="hashtags">
         <span class="hashtag">#GolfDogs</span>
         <span class="hashtag">#WalkingGolf</span>
@@ -181,7 +185,7 @@ FAQ = [
 _LB = []
 _figs = ""
 LOOKBOOK = ""
-FRN = {f"d{i}": [f"/images/dogs-golf/p-{i}.jpg"] for i in range(1, 28)}
+FRN = {k: [f"/images/dogs-golf/p-{k[1:]}.jpg"] for k in P}
 OUT = ROOT / f"drops/{SLUG}.html"
 URL = f"https://thegrassyissue.com/drops/{SLUG}"
 GRID_CSS = ('<style>/*TGI-R3-GRID*/.products-grid[data-n]{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}.products-grid[data-n]>.product-card{flex:0 0 calc((100% - 48px)/3);min-width:0}@media(max-width:820px){.products-grid[data-n]>.product-card{flex-basis:calc((100% - 24px)/2)}}@media(max-width:480px){.products-grid[data-n]>.product-card{flex-basis:100%}}</style>\n')
@@ -305,7 +309,7 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>The Grassy Issue &middot; Dogs on the course</span><span class="dot"></span>
-    <span>27 picks &middot; prices checked October 22, 2026</span>
+    <span>29 picks &middot; prices checked October 22, 2026</span>
   </div>
 </header>
 

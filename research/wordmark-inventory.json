@@ -4,16 +4,16 @@
   "sha1": "bbcab0a46a0db7ff1b30bf4f5eeebaeb1cc24f57"
  },
  "index.html": {
-  "size": 181357,
-  "sha1": "0d42d3439063bf4dbca6c83c4839c8d02ae22639"
+  "size": 181349,
+  "sha1": "cd46283fd062989c84302689f44343296c4a22ff"
  },
  "about.html": {
-  "size": 32617,
-  "sha1": "08b7f2b306c0d0fb8c648ac7810901da4c5ce23c"
+  "size": 32622,
+  "sha1": "10026aba86bbfaf1fd81a5a9ace3519e98d8753f"
  },
  "work-with-us.html": {
   "size": 27064,
-  "sha1": "1dc0a6a943a9ad55c7db0503d079f00edd36ce23"
+  "sha1": "5eb295b13dd2127baa75a06fd89f4b0ae46eb299"
  },
  "field-guide/index.html": {
   "size": 192869,
@@ -25,7 +25,7 @@
  },
  "brands/daphnes-headcovers.html": {
   "size": 32297,
-  "sha1": "f33f193338c40288db1bde0aad07991dadf9e8cd"
+  "sha1": "862b6d66127978517fb812fe6726bea34ebca6d8"
  },
  "brands/good-threads.html": {
   "size": 27123,
@@ -34,6 +34,10 @@
  "brands/vice-golf.html": {
   "size": 31964,
   "sha1": "f3f7ae0a268b23c23a05d0c99d9c6db46a8ae42c"
+ },
+ "brands/old-faithful-golf.html": {
+  "size": 26786,
+  "sha1": "8c3c6a090f734cec227cf23f9871da902e6a002d"
  },
  "brands/midiron.html": {
   "size": 29752,
@@ -84,8 +88,8 @@
   "sha1": "6d59e06b3d62b109e3e6e1cb0d2ad66ffcd322db"
  },
  "brands/foray-golf.html": {
-  "size": 30949,
-  "sha1": "1cf649f08916c0d7d4bdd5220fbb9f140aff3b1b"
+  "size": 30964,
+  "sha1": "0245a83503e67279ce60f78a9d7d2033b8bd30cc"
  },
  "brands/scotch-and-skins.html": {
   "size": 29511,
@@ -105,11 +109,11 @@
  },
  "brands/sounder.html": {
   "size": 36637,
-  "sha1": "247637eb6ea52ffcc7af071ada0448f9e0a08c10"
+  "sha1": "ac6554b7b7d9f9ab0159d41e2f8229bc2d0ce479"
  },
  "brands/rhoback.html": {
   "size": 28234,
-  "sha1": "a8ae00b28586b849686ef5975bc777e30e11a3b5"
+  "sha1": "0b09983a5c0b33c1537212de9f454a3cc30c7106"
  },
  "brands/sentinel-golf.html": {
   "size": 40000,
@@ -140,8 +144,8 @@
   "sha1": "b6659eb696b4c1562e871aab116482de01b123d0"
  },
  "brands/index.html": {
-  "size": 247948,
-  "sha1": "acd4fa0f794efb508afc9c5b391d6a4330dfec28"
+  "size": 248974,
+  "sha1": "e82c105fabbb93e9b2ef99716f14ea4a1c3a7b85"
  },
  "brands/hudson-sutler.html": {
   "size": 29878,
@@ -169,7 +173,7 @@
  },
  "brands/pins-and-aces.html": {
   "size": 34546,
-  "sha1": "80af55c1f0b157a00a18e6b87c22cd037e0f7b06"
+  "sha1": "082157db5d956326934337debf842324a682d670"
  },
  "brands/puttwell.html": {
   "size": 31526,
@@ -193,7 +197,7 @@
  },
  "brands/pxg.html": {
   "size": 31252,
-  "sha1": "589a46cfbe0bfaacf48338cec0f3e98e90023ecd"
+  "sha1": "83f27d57110d6ee6514a14f240ac3fc3efcae70f"
  },
  "brands/mackenzie.html": {
   "size": 37784,
@@ -293,7 +297,7 @@
  },
  "brands/sunday-golf.html": {
   "size": 35010,
-  "sha1": "6ee761ce6767a5ae4450918fd287d066d376549c"
+  "sha1": "fbad2c0899fa96bcf0b5d170f95c69125253fe7d"
  },
  "brands/charleston-belt.html": {
   "size": 28033,
@@ -389,7 +393,7 @@
  },
  "brands/seamus.html": {
   "size": 49442,
-  "sha1": "f4f7d51a7c195b44b54ecc8aef0db0e83872f256"
+  "sha1": "77e270becb5537aaa47731dc22f347f4a0d4bf2c"
  },
  "brands/okka-golf.html": {
   "size": 29890,
@@ -733,7 +737,7 @@
  },
  "brands/smathers-branson.html": {
   "size": 31082,
-  "sha1": "cd18e65bd9e672caa886d6df5154d722719f7f20"
+  "sha1": "6de3db088a166d097553567d3cd5104d3032e893"
  },
  "brands/apc-golf.html": {
   "size": 28643,
@@ -773,7 +777,7 @@
  },
  "brands/big-dog-golf.html": {
   "size": 28555,
-  "sha1": "fc50ed33a47298d89055a55ce72ad608aeb18f79"
+  "sha1": "10fbe6d02a6096f833b5246b4b765180e25d8c9e"
  },
  "brands/devant.html": {
   "size": 28500,
@@ -801,75 +805,75 @@
  },
  "brands/attr/heritage.html": {
   "size": 60619,
-  "sha1": "37288dc19db413f9e826791f65aaa43cdb614177"
+  "sha1": "c7420a76b83b8bf50c068b149832e1876df03624"
  },
  "brands/attr/new-to-index.html": {
-  "size": 132891,
-  "sha1": "829f74f8232eb2d7e085b118989843395ae6dfd1"
+  "size": 133934,
+  "sha1": "794c08e16e10a882d1fd355ecc123c2437662cbb"
  },
  "brands/attr/tour-proven.html": {
   "size": 55859,
-  "sha1": "7ac609c94662846efc26a23ef28e97bac2b317a2"
+  "sha1": "bab937a7dba2233148c17370695d20a446877f31"
  },
  "brands/attr/drops-and-vanishes.html": {
   "size": 62505,
-  "sha1": "a2fb7ff261ff959edb69fee04c16bbbb7cd95d5c"
+  "sha1": "2eeceb2afde7492de84413871218914449398d8d"
  },
  "brands/attr/women-founded.html": {
   "size": 62365,
-  "sha1": "c1259920ede03b28103b204af2d4c860bbd5f541"
+  "sha1": "74f355a7a216f59ea8aad77ec6469eca235d0d9d"
  },
  "brands/tag/post-round-friendly.html": {
   "size": 76495,
-  "sha1": "e8c2fa953e6c82d6c5b72aca46313441268c660b"
+  "sha1": "e14187b4057d7690a77ca18d2f365629095ef4eb"
  },
  "brands/tag/independent.html": {
   "size": 106207,
-  "sha1": "f8728174fae175a514a3dbfe6c4e3479105807b0"
+  "sha1": "c94ca4897b3adf66dacb9dcfd6493aace0ed1565"
  },
  "brands/tag/made-by-hand.html": {
   "size": 88857,
-  "sha1": "1281dff060944f1dcebb846f0e03f887cf869dd1"
+  "sha1": "e2e200acddae63798bb3767faab88d9090d39c74"
  },
  "brands/tag/quiet-luxury.html": {
   "size": 64249,
-  "sha1": "ee6d90bab45bc681eef48088f612bff3977188e0"
+  "sha1": "8f81d8ac3628bc9be3bd8fa24d4bbde06af7321d"
  },
  "brands/tag/gorpcore.html": {
   "size": 88560,
-  "sha1": "2ff70ab99fb1455c25ac89ecb21891239b19aa23"
+  "sha1": "506f11de47404edfc8627e77d8d41ac5b0abb228"
  },
  "brands/tag/collab-machine.html": {
   "size": 62586,
-  "sha1": "dd9a6f74b404e1706bc02956c9d69b14e3e389da"
+  "sha1": "31963fad4f68b96146a4d92991b2b6e82592d16a"
  },
  "brands/tag/loud-on-purpose.html": {
   "size": 78378,
-  "sha1": "5d1cd801838b5b18aacc0602cd53889a9dd050a8"
+  "sha1": "e91ab71046c8b0ed3bd3d9fb2a4eff745357a568"
  },
  "brands/tag/muni-energy.html": {
   "size": 70644,
-  "sha1": "8342b9af8f46c675466d8e58e21e654166cfc607"
+  "sha1": "e140e0a456570425f94789b11e4d67a6ce0b66ea"
  },
  "brands/tag/member-guest.html": {
   "size": 50504,
-  "sha1": "86fc9ec7b8685abf0ccbeb3602139027a1aea3d2"
+  "sha1": "9e49c0e5a08b982b2e168b52e881193b2651b275"
  },
  "brands/tag/course-merch.html": {
   "size": 48562,
-  "sha1": "cdaedeffc840984619cf41bc97158a860a30e2ee"
+  "sha1": "42ccd291c6adf26a4a62a667f61b88a2e86f7468"
  },
  "brands/tag/design-nerd.html": {
   "size": 91838,
-  "sha1": "20e8177abebff2d456b47097ad8c57fec8a2f71f"
+  "sha1": "1568b45253f1081d536be24d593ede46f03b821b"
  },
  "brands/tag/dad-golf.html": {
   "size": 46350,
-  "sha1": "6c47c6646b643a8e18fdf530e7661e94468c706f"
+  "sha1": "8a454b099b87e8c64be10915f760af4a069f6e64"
  },
  "brands/tag/range-rat.html": {
   "size": 52817,
-  "sha1": "1507668e017bf09a5a841ceaf604ce0bbd89f33b"
+  "sha1": "68379cf4b4724c08cb1cd0e704c31bfe6b11b816"
  },
  "drops/students-golf-summer-2026.html": {
   "size": 96009,
@@ -940,8 +944,8 @@
   "sha1": "9c8fe3b65fbaaed2cee32ecf307f8accf113ba26"
  },
  "drops/brand-to-know-mackem-golf.html": {
-  "size": 95578,
-  "sha1": "f57ace7b4b4578909c2f6d6706c8c201b1e76342"
+  "size": 95563,
+  "sha1": "00427855e89e8d0b5ce8603834e78ed143210e40"
  },
  "drops/malbon-fall-2026-the-ironworks-collection.html": {
   "size": 98002,
@@ -1388,8 +1392,8 @@
   "sha1": "378f5823f125f2e047a2b698e72ff1e50a7c6493"
  },
  "drops/dogs-and-golf.html": {
-  "size": 89904,
-  "sha1": "40328924a79871fe53db1a879ad057d6cfcbc8bf"
+  "size": 94543,
+  "sha1": "72954709227ef6a60b9a4151c7788e6a38bb4a99"
  },
  "drops/upgrading-your-golf-bag.html": {
   "size": 64360,
