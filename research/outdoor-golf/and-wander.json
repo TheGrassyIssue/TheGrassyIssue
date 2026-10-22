@@ -1,0 +1,34 @@
+{
+ "brand": "and wander",
+ "slug": "and-wander",
+ "store": null,
+ "checked": "2026-10-22",
+ "status": "NOT WORKABLE - no US/USD store with stock",
+ "us_availability": [
+  {
+   "where": "andwander.com (brand own store)",
+   "finding": "Japan-only Salesforce store priced in JPY; also sells via mix.tokyo (TSI Shopify) in JPY. No US/USD storefront.",
+   "source": "https://andwander.com"
+  },
+  {
+   "where": "Official US stockists (from brand stores page): Atelier New York, Atelier Seattle, Blue in Green (SoHo), Hatchet Outdoor Supply (Brooklyn)",
+   "source": "https://andwander.com/stores/",
+   "finding": "Blue in Green online: 18 and wander listings, all sold out. Atelier New York online: 1 item (57 Reflective Embroidery Shirt, on sale). Hatchet Outdoor Supply online: no and wander products."
+  },
+  {
+   "where": "Other",
+   "finding": "Norse Store (Sweden) ships to US in USD with a few cargo pants in stock, but it is not a US or official US retailer.",
+   "source": "https://www.norsestore.com/commodity/50878-and-wander-oversized-cargo-pants"
+  }
+ ],
+ "facts": [
+  {
+   "fact": "Founded in Tokyo in 2011 by designers Keita Ikeuchi and Mihoko Mori, both formerly at Issey Miyake (third-party retailer source).",
+   "source": "https://www.urbanindustry.co.uk/en-fr/collections/and-wander"
+  }
+ ],
+ "quotes": [],
+ "products": [],
+ "lookbook": [],
+ "notes": "TGI prior mentions: and wander x Yu Nagaba Nalgene bottle (golf-hats-and-nalgenes), and wander in the-dyneema-edit. Not researched further because nothing golf-useful can be bought in USD from a US store today."
+}

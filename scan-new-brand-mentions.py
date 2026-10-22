@@ -46,6 +46,9 @@ DOMAINS = {
     "sloat": ["sloat.cc"],  # Brand to Know, 21 Oct 2026
     "old-faithful-golf": ["oldfaithfulgolf.com"],  # Dogs and Golf, 22 Oct 2026
     "swag-golf": ["swag.golf"],  # swaggolf.com 301s to swag.golf (checked 22 Oct 2026); store domain folds in below
+    "arcteryx": ["arcteryx.com"],  # Outdoor Brands for Golf, 22 Oct 2026
+    "purple-mountain-observatory": ["purplemountainobservatory.co.uk"],
+    "goldwin": ["goldwin.global"],  # us.goldwin.global
     # needlepoint belt makers, added to the index 16 Oct 2026
     "smathers-branson": ["smathersandbranson.com"],
     "j-press": ["jpress.com"],

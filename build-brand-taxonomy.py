@@ -170,7 +170,7 @@ TAX = [
  ),
 ("tag", "gorpcore", "Gorpcore Golf Brands",
  "Gorpcore Golf Brands — Outdoor Crossover | The Grassy Issue",
- "Ten golf brands borrowing from climbing, camping and trail kit — what the materials actually mean, the two routes in, and four pieces from each brand.",
+ "Thirteen golf brands borrowing from climbing, camping and trail kit — what the materials actually mean, the two routes in, and four pieces from each brand.",
  """<p>One of the smaller groups in the Index and the one moving fastest. Gorpcore in golf means the
  construction language of the outdoors — ripstop, Dyneema, welded seams, webbing, fleece, bucket
  hats — arriving in a game that spent thirty years dressing like an office and calling it
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Ninety-three golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Ninety-six golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a

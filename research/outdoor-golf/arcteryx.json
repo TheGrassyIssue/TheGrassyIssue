@@ -1,0 +1,305 @@
+{
+ "brand": "Arc'teryx",
+ "slug": "arcteryx",
+ "store": "https://arcteryx.com/us/en (US, USD)",
+ "checked": "2026-10-22",
+ "facts": [
+  {
+   "fact": "Founded in 1989 by a crew of Vancouver, Canada-based climbers; started as a basement operation making climbing harnesses and packs.",
+   "source": "https://arcteryx.com/us/en/explore/whoweare"
+  },
+  {
+   "fact": "Originally named Rock Solid by co-founder Dave Lane; in 1990 Lane sold his stake to Blair Murdoch, Tim Duholke and Jeremy Guard, and the company was renamed Arc'teryx in 1991.",
+   "source": "https://en.wikipedia.org/wiki/Arc%27teryx"
+  },
+  {
+   "fact": "The name and bird logo reference the Archaeopteryx fossil; the brand is colloquially called 'dead bird'.",
+   "source": "https://en.wikipedia.org/wiki/Arc%27teryx"
+  },
+  {
+   "fact": "Its first breakout product was the thermolaminated Vapor harness; Gore-Tex technical apparel followed in 1996.",
+   "source": "https://en.wikipedia.org/wiki/Arc%27teryx"
+  },
+  {
+   "fact": "Headquartered in North Vancouver, B.C.; designs and tests gear in the Coast Mountains of British Columbia, which the brand calls its proving ground.",
+   "source": "https://arcteryx.com/us/en/explore/whoweare"
+  },
+  {
+   "fact": "Known for Gore-Tex shell jackets and technical mountain apparel; also runs ReBIRD (wash, repair, trade-in, resale) to extend the life of its gear.",
+   "source": "https://arcteryx.com/us/en/rebird"
+  },
+  {
+   "fact": "Owned by Amer Sports since 2005 (Salomon Group before that, from 2001).",
+   "source": "https://en.wikipedia.org/wiki/Arc%27teryx"
+  }
+ ],
+ "quotes": [
+  {
+   "quote": "Obsessively designed gear for mountain athletes.",
+   "who": "Arc'teryx",
+   "source": "https://arcteryx.com/us/en/explore/whoweare"
+  },
+  {
+   "quote": "Every piece we make serves a purpose and solves a problem for mountain athletes, delivering functionality, simplicity, and durability in a timeless design.",
+   "who": "Arc'teryx",
+   "source": "https://arcteryx.com/us/en/explore/whoweare"
+  }
+ ],
+ "products": [
+  {
+   "id": "a1",
+   "name": "Gamma Pant Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/gamma-pant-0481",
+   "price_usd": "$200",
+   "stock": "In stock; limited sizes - Tatsu: 4/17 sizes available (3 low); Black: 12/17 sizes available; Black Sapphire: 16/17 sizes available (2 low)",
+   "colors": "Tatsu, Rune, Cloud, Black, Black Sapphire",
+   "category": "pants",
+   "features": [
+    "Body: Fortius™ 2.0, 186gsm - 88% Nylon, 12% Elastane",
+    "Gusseted crotch for comfort and freedom of movement",
+    "Fortius™ DW 2.0 softshell in specific areas provide durability, breathability, weather resistance, and stretch, and is made with recycled content"
+   ],
+   "golf_note": "Stretch softshell with a gusseted crotch, so a full turn and a crouch to read a putt are no fight. It blocks a January wind and sheds morning dew off wet fairways, and the regular fit looks like a trouser, not a ski pant.",
+   "img": "https://images.arcteryx.com/details/1350x1710/S26-X000010481-Gamma-Pant-Black-Sapphire-Full-Body.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a2",
+   "name": "Gamma SL Short 9\" Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/gamma-sl-short-9-9531",
+   "price_usd": "$120",
+   "stock": "In stock; limited sizes - Black: 3/8 sizes available (1 low); Void: 2/6 sizes available",
+   "colors": "Black, Void",
+   "category": "shorts",
+   "features": [
+    "Body: Fortius™ DW 1.0 - Woven Double Weave, 125gsm - 86% Nylon, 14% Elastane",
+    "UPF 50+",
+    "Two hand pockets with zippers; harness friendly zippered thigh pocket"
+   ],
+   "golf_note": "A 9\" inseam reads as a normal course short. The stretch nylon has a water-repellent finish and zip pockets keep a ball marker and keys from walking off between shots. Best for warm Austin days the rest of the year.",
+   "img": "https://images.arcteryx.com/details/1350x1710/S26-X000009531-Gamma-SL-Short-9-Black-Full-Body.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a3",
+   "name": "Atom Vest Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/atom-vest-9559",
+   "price_usd": "$200",
+   "stock": "In stock; limited sizes - Black Sapphire: 3/6 sizes available; Black: 4/6 sizes available",
+   "colors": "Black Sapphire, Black, Mongoose",
+   "category": "vest",
+   "features": [
+    "Synthetic Insulation: Coreloft™ Stretch, 40gsm",
+    "Lightweight stretch Octa® Fleece side panels provide freedom of movement and improve ventilation",
+    "195g / 6.9 oz"
+   ],
+   "golf_note": "Core warmth with no sleeves to bind the swing. Stretch insulation and fleece side panels move with your rotation, and synthetic fill keeps working if the drizzle starts on the back nine.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000009559-Atom-Vest-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a4",
+   "name": "Atom Hoody Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/atom-hoody-9556",
+   "price_usd": "$300",
+   "stock": "In stock; limited sizes - Headwaters: 7/7 sizes available (1 low); Stone Red: 6/7 sizes available (1 low); Cloud / Black: 3/7 sizes available",
+   "colors": "Stratus, Mongoose / Bracken, Headwaters, Aquaculture, Larch, Fluidity / Blk Sapphire, Black, Spotlight, Black Sapphire, Stone Red, Cloud / Black",
+   "category": "midlayer",
+   "features": [
+    "Synthetic Insulation: Coreloft™ 60 (60 g/m²)",
+    "Performance stretch fleece side panels give ventilation",
+    "FC0 DWR (Durable Water Repellent) finish repels moisture"
+   ],
+   "golf_note": "The coldest-morning option. Fitted with articulated patterning, so it does not balloon at address, and the insulation is rated to perform if wet. Peel it off by the turn and it packs small into the bag.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000009556-Atom-Hoody-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a5",
+   "name": "Delta 1/2 Zip Neck Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/delta-1-2-zip-neck-0550",
+   "price_usd": "$180",
+   "stock": "In stock in all listed sizes",
+   "colors": "Black, Stratus, Nucleus / Larch",
+   "category": "fleece",
+   "features": [
+    "Body: Octa Polyester Fleece, 40D Delta Face, 122gsm - 100% Polyester",
+    "Articulated patterning for unrestricted mobility",
+    "Deep front zipper for easy on and off, rapid ventilation"
+   ],
+   "golf_note": "A thin, warm quarter-zip that looks right on a first tee. The smooth fleece face is built for durability, and the deep zip lets you dump heat as the morning warms up.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000010550-Delta-1-2-Zip-Neck-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a6",
+   "name": "Kyanite Jacket Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/kyanite-jacket-8447",
+   "price_usd": "$180",
+   "stock": "In stock in all listed sizes",
+   "colors": "Black, Cloud, Mongoose",
+   "category": "fleece",
+   "features": [
+    "Body: Polartec® Power Stretch® Pro, 248gsm - 53% Polyester, 38% Nylon, 9% Elastane",
+    "Four-way stretch textile",
+    "Two hand pockets with laminated zippers"
+   ],
+   "golf_note": "Four-way stretch fleece with a hard nylon face, so it swings like a sweater but shrugs off brushes with trees and bag straps. Arc'teryx pitches it as a midlayer or a stand-alone piece, so it covers both a frosty start and a mild finish.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000008447-Kyanite-Jacket-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a7",
+   "name": "Squamish Hoody Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/squamish-hoody-0276",
+   "price_usd": "$200",
+   "stock": "In stock; limited sizes - Stone Red: 6/6 sizes available (1 low); Sea Salt: 2/6 sizes available",
+   "colors": "Black, Blurple, Stone Red, Aquaculture, Sea Salt, Spotlight, Larch, Bracken",
+   "category": "shell",
+   "features": [
+    "Body: Tyono™ 30 - Nylon Mini-Rip Lightweight Mechanical Stretch, FC0 DWR, 51gsm - 100% Nylon",
+    "150g / 5.3 oz",
+    "Single chest pocket stores jacket for compact storage"
+   ],
+   "golf_note": "A 150 g stretch windshell that packs into its own chest pocket. Throw it over a polo when the north wind picks up and the swing feels unchanged; the DWR handles a passing sprinkle.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000010276-Squamish-Hoody-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a8",
+   "name": "Solano Jacket Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/solano-jacket-0896",
+   "price_usd": "$350",
+   "stock": "In stock; limited sizes - Void: 6/6 sizes available (1 low)",
+   "colors": "Void, Black",
+   "category": "shell",
+   "features": [
+    "Body: 2L GORE-TEX® ePE, 92gsm, FC0 DWR - 100% Polyester with ePE and PU Membrane",
+    "50D recycled nylon plain weave under the arms provides ventilation and stretch",
+    "Regular fit; articulated patterning for unrestricted mobility"
+   ],
+   "golf_note": "Windproof Gore-Tex on the body with stretch panels under the arms, which is where a golf swing needs the give. No hood to flap in the wind, and at 340 g it stays light over a long walk.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000010896-Solano-Jacket-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a9",
+   "name": "Cormac Crew Neck Shirt LS Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/cormac-crew-neck-shirt-ls-0291",
+   "price_usd": "$80",
+   "stock": "In stock; limited sizes - Nucleus: 4/6 sizes available; Habitat: 1/6 sizes available",
+   "colors": "Nucleus, Aquaculture, Black, Arctic Silk, Habitat",
+   "category": "top",
+   "features": [
+    "Body: 40d Phasic LT, 110gsm - 100% Polyester",
+    "Moisture-wicking; Durable, snag-resistant material withstands wear and tear",
+    "This article was treated with an anti-odour biocidal product (Silvadur™ )"
+   ],
+   "golf_note": "A light base layer under a vest or fleece that wicks sweat on the walk and does not hold odor. Snag-resistant knit survives Velcro glove tabs and bag zippers.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000010291-Cormac-Crew-Neck-Shirt-LS-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a10",
+   "name": "Kopec 2 Low GTX Shoe Men's",
+   "url": "https://arcteryx.com/us/en/shop/mens/kopec-2-low-gtx-shoe-0831",
+   "price_usd": "$190",
+   "stock": "In stock; limited sizes - Sea Salt/Sea Salt: 12/13 sizes available (1 low); Fogstone/Fogstone: 13/13 sizes available (2 low)",
+   "colors": "Sea Salt/Sea Salt, Fogstone/Fogstone, Black/Black",
+   "category": "shoe",
+   "features": [
+    "GORE-TEX® upper membrane keeps your feet dry without sacrificing breathability",
+    "Vibram® Megagrip outsole with LITEBASE technology; 5mm lugs",
+    "357g / 13oz"
+   ],
+   "golf_note": "A low, light Gore-Tex hiker that keeps socks dry on soaked morning grass. Vibram Megagrip with 5 mm lugs grips wet slopes; check your course's footwear rules, since aggressive lugs are not a golf spike pattern.",
+   "img": "https://images.arcteryx.com/details/1350x1710/F26-X000010831-Kopec-2-Low-GTX-Shoe-Black-Black-Profile.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a11",
+   "name": "Small Bird Cap",
+   "url": "https://arcteryx.com/us/en/shop/small-bird-cap-9782",
+   "price_usd": "$50",
+   "stock": "In stock in all listed sizes",
+   "colors": "24K Black",
+   "category": "hat",
+   "features": [
+    "Body: Mechanical 4 Way Stretch Plain Weave, 99gsm, FC0 DWR - 100% Polyester",
+    "Spacer mesh sweatband; fully adjustable closure",
+    "59g / 2.1 oz"
+   ],
+   "golf_note": "A light, water-repellent technical cap with a mesh sweatband. Small bird logo, nothing loud, so it fits the muni and the clubhouse.",
+   "img": "https://images.arcteryx.com/details/1350x1710/S25-X000009782-Small-Bird-Cap-24K-Black-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "a12",
+   "name": "Grotto Toque",
+   "url": "https://arcteryx.com/us/en/shop/grotto-toque-0067",
+   "price_usd": "$60",
+   "stock": "In stock in all listed sizes",
+   "colors": "Moondrop / Mallow, Habitat / Black, Alpine Blue / Blk Sapp, Cosmic Bloom, Black / Void",
+   "category": "hat",
+   "features": [
+    "100% Recycled Polyester",
+    "Arc'teryx bird logo centre front",
+    "62g / 2.2 oz"
+   ],
+   "golf_note": "For the 35-degree tee times in January. A thin, 62 g beanie keeps ears warm on the first few holes and stuffs in a bag pocket once the sun is up.",
+   "img": "https://images.arcteryx.com/details/1350x1710/S26-X000010067-Grotto-Toque-Black-Void-Front-View.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  }
+ ],
+ "lookbook": [
+  {
+   "img": "https://cdn.sanity.io/images/inkbj32c/production/d4625af41843f7ea0300ebb33c036b80c564349d-3990x2662.jpg",
+   "desc": "Inside the Arc'teryx design centre: designers fitting a red shell on a model among prototypes and footwear (Who We Are page)",
+   "orientation": "landscape",
+   "img_px": "3990x2662"
+  },
+  {
+   "img": "https://cdn.sanity.io/images/inkbj32c/production/1612891fc42f93406669073ac4726385bb435c6c-8640x5760.jpg?w=3000",
+   "desc": "Athlete Sarah Hueniken ice climbing past huge icicles at Helmcken Falls, B.C. (Who We Are hero)",
+   "orientation": "landscape",
+   "img_px": "3000x2000"
+  },
+  {
+   "img": "https://cdn.sanity.io/images/inkbj32c/production/5223f12aeb1f1d74ab811777691df29c46658768-1504x2008.jpg",
+   "desc": "Moss-green karst peaks and cliffs at dawn, homepage editorial image",
+   "orientation": "portrait",
+   "img_px": "1504x2008"
+  },
+  {
+   "img": "https://cdn.sanity.io/images/inkbj32c/production/91f0bd2cad4a1e0093b1598b8e868bec622180dc-4760x4760.jpg?w=2400",
+   "desc": "Athlete portrait in warm evening light wearing a pale Arc'teryx cap and running vest (Athletes page)",
+   "orientation": "square",
+   "img_px": "2400x2400"
+  },
+  {
+   "img": "https://cdn.sanity.io/images/inkbj32c/production/1007d9c78c9b2d6207e368f1c60185876a7d0100-4291x4291.jpg?w=2400",
+   "desc": "Smiling athlete in a purple Arc'teryx jacket with mountains and water behind (Athletes page)",
+   "orientation": "square",
+   "img_px": "2400x2400"
+  },
+  {
+   "img": "https://cdn.sanity.io/images/inkbj32c/production/ad085ac995fd1bb437b8844ba982ba5c56443cee-2070x1536.jpg",
+   "desc": "View out of a tent door at sunset over snowy peaks, gear spread inside (footwear campaign)",
+   "orientation": "landscape",
+   "img_px": "2070x1536"
+  }
+ ],
+ "notes": "All prices are full price on arcteryx.com/us/en (price equals discountPrice on every variant, so nothing is on sale). Stock read from the product page data on 2026-10-22. Product images: the /details/1350x1710/ CDN path is the largest Arc'teryx serves (larger size paths return 403) and actually delivers 1500x2000 files. Product shots are on a light studio background. Kyanite Lightweight Jacket was considered but is sold out in nearly every size, so the Kyanite Jacket is listed instead."
+}

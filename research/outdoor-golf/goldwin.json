@@ -1,0 +1,265 @@
+{
+ "brand": "Goldwin",
+ "slug": "goldwin",
+ "store": "https://us.goldwin.global (Goldwin America, USD, ships US)",
+ "checked": "2026-10-22",
+ "facts": [
+  {
+   "fact": "Founded in 1950 when 25-year-old Tosaku Nishida started Tsuzawa Knit Fabric Manufacture in Oyabe City, Toyama Prefecture, Japan; the Goldwin brand itself launched in 1958.",
+   "source": "https://about.goldwin.co.jp/en/about/history"
+  },
+  {
+   "fact": "Built its name on skiwear: functional ski sweaters in the 1960s, official supplier to the Swedish national ski team from 1987, and sponsor of the British Alpine Ski Team since 2017.",
+   "source": "https://us.goldwin.global/pages/brand"
+  },
+  {
+   "fact": "Goldwin is the company behind The North Face in Japan: it began marketing The North Face in 1978 and acquired the Japan and South Korea trademark rights in 1995.",
+   "source": "https://about.goldwin.co.jp/en/about/history"
+  },
+  {
+   "fact": "Golf runs deep: a USPGA golf wear license and U.S. Open Golf line (1980-81), the Goldwin Cup Japan vs USA Golf Match (1983), Golf Club Goldwin in Oyabe (1991), Goldwin Golf Club USA in California (1994), and official supplier to the U.S. Open and U.S. Senior Open (1997).",
+   "source": "https://about.goldwin.co.jp/en/about/history"
+  },
+  {
+   "fact": "In 2013 its subsidiary Black & White Sportswear launched \"and per se\", a dedicated golf apparel brand (Japan market; not sold on the US store).",
+   "source": "https://about.goldwin.co.jp/en/about/history"
+  },
+  {
+   "fact": "Launched the Goldwin lifestyle collection in FW16 and its outdoor and athletic collections in 2019; Goldwin 0, an experimental technical platform, launched in 2022.",
+   "source": "https://us.goldwin.global/pages/brand"
+  },
+  {
+   "fact": "First US store opened in San Francisco in 2019; a New York flagship opened in April 2026.",
+   "source": "https://english.adnkronos.com/2026/04/25/japans-goldwin-opens-flagship-store-in-n-y/"
+  }
+ ],
+ "quotes": [
+  {
+   "quote": "The resulting apparel can withstand the toughest outdoor conditions while still looking great in urban environments.",
+   "who": "Goldwin (About Goldwin, history)",
+   "source": "https://us.goldwin.global/pages/brand"
+  },
+  {
+   "quote": "Harmony with nature can, and should, be heightened by the clothes you wear.",
+   "who": "Goldwin manifesto",
+   "source": "https://us.goldwin.global/pages/brand"
+  }
+ ],
+ "products": [
+  {
+   "id": "x1",
+   "name": "Floating Wind Shell Half Zip Pullover",
+   "url": "https://us.goldwin.global/products/gm15102",
+   "price_usd": "$189",
+   "stock": "In stock: Black 3-5, Sleet Gray 4-5, Opal Green 2-5 (Goldwin sizes 1-5)",
+   "colors": "Black, Sleet Gray, Opal Green (others sold out)",
+   "category": "shell",
+   "features": [
+    "Lightweight 100% polyester with a balance of wind resistance and breathability; water repellent, withstands light rain",
+    "Body and sleeves cut slightly wider for mobility; packs into included stuff sack"
+   ],
+   "golf_note": "A half-zip wind shirt you can swing in: wider sleeves, longer back that will not ride up at the top of the backswing, and it stuffs into its own sack once the morning wind drops.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM15102_BK-b2_e4896ea6-5670-49ac-9875-20bf66f6246a.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x2",
+   "name": "Airly Shell Packable Wind Jacket",
+   "url": "https://us.goldwin.global/products/gm16124",
+   "price_usd": "$300",
+   "stock": "In stock: After Dark 2-5, Red Carnelian 4-5",
+   "colors": "After Dark, Red Carnelian",
+   "category": "shell",
+   "features": [
+    "Goldwin's original 10-denier ripstop with reinforced high-strength yarns; water-repellent finish",
+    "Forward-set sleeves for freedom of movement; double-slider zip; packs into the hood pocket"
+   ],
+   "golf_note": "Forward-set sleeves are the golf detail here. Full-zip wind layer for a 40-degree first tee, then it folds into its own hood pocket and lives in the bag.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM16124_AD-b4.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x3",
+   "name": "PERTEX UNLIMITED 2L Jacket",
+   "url": "https://us.goldwin.global/products/gl25142",
+   "price_usd": "$385",
+   "stock": "In stock: Black 2 & 5, Kokiran Green 3-5, Sand Land 2-5",
+   "colors": "Black, Kokiran Green, Sand Land (6 other colors sold out)",
+   "category": "shell",
+   "features": [
+    "PERTEX UNLIMITED two-layer fabric: water-resistant, windproof and moisture-permeable, with full seam design",
+    "Slightly loose cut for movement and layering; double-flap placket; two-way front zip; zippered inner security pocket"
+   ],
+   "golf_note": "The rain-day option. A cotton-like face that looks like a normal jacket in the clubhouse, but sheds a January drizzle and the wind off the back nine.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL25142_SD-b2.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x4",
+   "name": "Kel Mid Jacket",
+   "url": "https://us.goldwin.global/products/gm36335",
+   "price_usd": "$290",
+   "stock": "In stock: Espresso 3-5, Black 3-5",
+   "colors": "Espresso, Black",
+   "category": "midlayer",
+   "features": [
+    "POLARTEC Alpha Direct high-loft fleece for warmth with breathability; Octa panels at collar, body, underarms and cuffs",
+    "Regular fit for unrestricted movement; flatlock seams; quick-drying; thumbhole cuffs"
+   ],
+   "golf_note": "Active insulation built to be worn while moving, so it breathes on the walk between shots instead of steaming up. Put a wind shell over it and a cold dawn round is handled.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM36335_BK-b4.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x5",
+   "name": "POLARTEC Fleece Jacket",
+   "url": "https://us.goldwin.global/products/gl36332",
+   "price_usd": "$300",
+   "stock": "In stock: Lunar Gray 3-5, Black 4-5 (Dove sold out)",
+   "colors": "Lunar Gray, Black",
+   "category": "fleece",
+   "features": [
+    "Midweight POLARTEC 200 fleece; quick-drying, easy care",
+    "Two-way front zip, zippered side pockets with mesh bags that vent when opened; high stand collar"
+   ],
+   "golf_note": "Classic full-zip fleece with a high collar for a windy tee box. Zipped pockets keep tees and a ball marker from falling out on the cart path.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL36332_BK.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x6",
+   "name": "Mesh Pile Crew",
+   "url": "https://us.goldwin.global/products/gm35301",
+   "price_usd": "$175",
+   "stock": "In stock: After Dark, Rose Taupe, Wolf Gray all in 2-5",
+   "colors": "After Dark, Rose Taupe, Wolf Gray",
+   "category": "top",
+   "features": [
+    "Pile-texture yarn knitted in a mesh structure for warmth, breathability and quick drying",
+    "WHOLEGARMENT seamless knitting for stretch with no seams; thumbhole cuffs with fold-back rib"
+   ],
+   "golf_note": "A technical sweater that looks like a sweater. Seamless knit means nothing binds across the shoulders, and the mesh build dries out by the turn.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM35301_AD.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x7",
+   "name": "Nimble Tech Tapered Pants",
+   "url": "https://us.goldwin.global/products/gm75155",
+   "price_usd": "$270",
+   "stock": "In stock: Dark Charcoal 2-5, Black 2-5",
+   "colors": "Dark Charcoal, Black",
+   "category": "pants",
+   "features": [
+    "Double-woven stretch fabric, windproof, water-repellent for light rain; stretch without polyurethane for durability",
+    "Larger inseam gusset, looser hip-to-thigh, slacks-like taper; zippered security pocket and zippered yoke pocket with key loop"
+   ],
+   "golf_note": "The pick of the pants for golf: a clean slacks look, a big gusset for squatting to read a putt, wind blocking for January, and a zippered pocket for the car key.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM75155_DC.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x8",
+   "name": "One Tuck Tapered Ankle Pants",
+   "url": "https://us.goldwin.global/products/gl75186",
+   "price_usd": "$203",
+   "stock": "Limited: Light Beige 3-4, Black 5, Deep Charcoal 4-5",
+   "colors": "Light Beige, Black, Deep Charcoal",
+   "category": "pants",
+   "features": [
+    "Nylon-based twill with a dry touch and stretch; water repellent, can handle some rain",
+    "Single tuck with tapered ankle-length hem; zippered security pocket inside right waist pocket; hook-type buckle"
+   ],
+   "golf_note": "A pleated, ankle-length trouser that reads as golf-course-smart, with stretch and water repellency for wet morning grass.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL75186_DH-b2.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x9",
+   "name": "One Tuck Light Stretch Shorts",
+   "url": "https://us.goldwin.global/products/gl76181",
+   "price_usd": "$147",
+   "stock": "In stock: Sand Land 4-5, Ebony Gray 2, Black 2-5",
+   "colors": "Sand Land, Ebony Gray, Black (Jet Brown sold out)",
+   "category": "shorts",
+   "features": [
+    "High-stretch SOLOTEX fabric, soft and wrinkle-resistant; water-repellent for light rain",
+    "Above-knee one-tuck cut; elastic waist with drawcord and belt loops; right waist security zipper pocket"
+   ],
+   "golf_note": "For the warm January afternoons Austin throws in. Above the knee, stretchy, wrinkle-resistant, belt loops so it still looks like a golf short.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL76181_SD.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  },
+  {
+   "id": "x10",
+   "name": "All Direction Light Cap",
+   "url": "https://us.goldwin.global/products/gm95192",
+   "price_usd": "$90",
+   "stock": "Limited: Black only in stock (one size)",
+   "colors": "Black (9 other colors sold out)",
+   "category": "hat",
+   "features": [
+    "Thin double-weave stretch fabric with excellent stretch and breathability; skin side releases sweat so it does not get sticky",
+    "Water repellent for light rain; buckle-type adjuster with elastic tape ends"
+   ],
+   "golf_note": "A six-panel that stretches, breathes and shrugs off drizzle. Sweat release on the inside is the part you notice on hole 14.",
+   "img": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95192_BK.jpg",
+   "img_bg": "light",
+   "img_px": "1500x2000"
+  }
+ ],
+ "lookbook": [
+  {
+   "img": "https://us.goldwin.global/cdn/shop/files/fw26-lifestyle-outer--img-21-pc-2x.jpg",
+   "desc": "FW26 lifestyle campaign: wide film shot of the cast in an empty industrial hall, down jackets and wide trousers",
+   "orientation": "landscape",
+   "img_px": "2400x1600",
+   "page": "https://us.goldwin.global/pages/fw26-lifestyle-outer"
+  },
+  {
+   "img": "https://us.goldwin.global/cdn/shop/files/fw26-lifestyle-outer--img-22-pc-2x.jpg",
+   "desc": "FW26 lifestyle campaign: four-person group shot against a white wall, layered down, blazers and trousers",
+   "orientation": "landscape",
+   "img_px": "2400x1600",
+   "page": "https://us.goldwin.global/pages/fw26-lifestyle-outer"
+  },
+  {
+   "img": "https://us.goldwin.global/cdn/shop/files/fw26-lifestyle-outer--img-11-pc-2x.jpg",
+   "desc": "FW26 lifestyle campaign: model in a stone-colored down jacket and pleated trousers in a sunlit workshop",
+   "orientation": "landscape",
+   "img_px": "2400x1800",
+   "page": "https://us.goldwin.global/pages/fw26-lifestyle-outer"
+  },
+  {
+   "img": "https://us.goldwin.global/cdn/shop/files/fw26-lifestyle-outer--img-05-pc-2x.jpg",
+   "desc": "FW26 lifestyle campaign: model in a hooded down jacket and loose trousers walking along a mossy path outside a building",
+   "orientation": "portrait",
+   "img_px": "1600x2400",
+   "page": "https://us.goldwin.global/pages/fw26-lifestyle-outer"
+  },
+  {
+   "img": "https://us.goldwin.global/cdn/shop/files/fw26-lifestyle-outer--img-12-pc-2x.jpg",
+   "desc": "FW26 lifestyle campaign: hooded shell and track pants, walking past a window on a concrete yard",
+   "orientation": "portrait",
+   "img_px": "1600x2400",
+   "page": "https://us.goldwin.global/pages/fw26-lifestyle-outer"
+  },
+  {
+   "img": "https://us.goldwin.global/cdn/shop/files/fw26-lifestyle-outer--img-02-pc-2x.jpg",
+   "desc": "FW26 lifestyle campaign: full-length look in a teal down jacket, gray trousers, by a vintage cooler",
+   "orientation": "landscape",
+   "img_px": "2400x1800",
+   "page": "https://us.goldwin.global/pages/fw26-lifestyle-outer"
+  }
+ ],
+ "notes": "All prices from Goldwin America Shopify store in USD; stock read from live variant availability 2026-10-22. Sizes are Goldwin 1-5 (roughly XS-XL). Goldwin golf line (\"and per se\") is not sold in the US store, so the golf bridge is historical/brand-level. Brand lookbook imagery on the US site is urban/studio, not mountain; the FW26 lifestyle set used here is film-shot and the most editorial available. Prior TGI mention: Ripstop Light Hike Pants (via Yards) in technical-fabrics post - not repeated here."
+}

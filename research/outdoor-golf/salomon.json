@@ -1,0 +1,317 @@
+{
+ "brand": "Salomon",
+ "slug": "salomon",
+ "store": "salomon.com/en-us (US store, USD)",
+ "checked": "2026-10-22",
+ "facts": [
+  {
+   "fact": "Founded in 1947 in Annecy, in the French Alps.",
+   "source": "https://www.salomon.com/en-us/lp/g/who-we-are"
+  },
+  {
+   "fact": "Founder: Salomon's own site credits Georges Salomon as founder; Wikipedia says François Salomon started it making ski edges in a small workshop with his wife and son Georges, and Georges grew it into a global brand.",
+   "source": "https://en.wikipedia.org/wiki/Salomon_Group"
+  },
+  {
+   "fact": "Built its name in skiing: the 1957 \"Skade\" binding toe piece, the 1979 SX90 ski boot, and the first full-system ski brand by 1991.",
+   "source": "https://www.salomon.com/en-us/lp/g/who-we-are"
+  },
+  {
+   "fact": "Moved from snow to trail: XA PRO shoe in 2002, S/LAB range in 2005, XT-6 in 2013; by its 75th anniversary in 2022 it was a leading footwear brand.",
+   "source": "https://www.salomon.com/en-us/lp/g/who-we-are"
+  },
+  {
+   "fact": "The XT-6 began in 2013 as an S/LAB trail racing shoe made with athletes and was re-released in 2018 in the Sportstyle range; collaborators include Palace, Kith and Atmos.",
+   "source": "https://www.salomon.com/en-us/lp/g/icons-xt-6"
+  },
+  {
+   "fact": "Stated purpose: \"We exist to unleash the best in people through mountain sports.\"",
+   "source": "https://www.salomon.com/en-us/lp/g/who-we-are"
+  },
+  {
+   "fact": "Owned by Amer Sports (also parent of Arc'teryx, Wilson, Atomic).",
+   "source": "https://en.wikipedia.org/wiki/Salomon_Group"
+  }
+ ],
+ "quotes": [
+  {
+   "quote": "What fascinates me the most is what I'm going to invent tomorrow.",
+   "who": "Georges Salomon, founder",
+   "source": "https://www.salomon.com/en-us/lp/g/who-we-are"
+  },
+  {
+   "quote": "You take a shoe you think you know and transform it, propose a new vision, magnify it and build it into something completely different.",
+   "who": "Benjamin Grenet, original XT-6 designer and Head of Footwear Design",
+   "source": "https://www.salomon.com/en-us/lp/g/icons-xt-6"
+  }
+ ],
+ "overlap_with_old_post": "June 15 2026 post \"The Best Non-Golfing Golf Shoe\" featured Salomon Sense Ride 5 GTX only. None of the 5 shoes here repeat it; Genesis 2 GTX (s5) is the closest in type (trail runner).",
+ "products": [
+  {
+   "id": "s1",
+   "name": "XT-6 GORE-TEX",
+   "url": "https://www.salomon.com/en-us/product/xt-6-gore-tex-lg9333/L49306800",
+   "price_usd": "$200",
+   "stock": "In stock (Salomon shows 100% of sizes available for the Sea Foam colorway)",
+   "colors": "Sea Foam / Green Milieu / Black (shown); 11 colorways incl. Black / Black / Asphalt, Bitter Chocolate / Iron / Vanilla Ice, Safari / Safari / Black",
+   "category": "shoe",
+   "features": [
+    "GORE-TEX membrane; Mud contaGRIP rubber outsole",
+    "agileCHASSIS + quickLACE one-pull lacing; 10 mm drop; 357 g (13 oz) per shoe"
+   ],
+   "golf_note": "The trail shoe that became a street icon, now waterproof. The Mud contaGRIP outsole is built for soft ground, which is what a January fairway at 8 a.m. is. Overlap note: not in the June trail-runner post (that ran the Sense Ride 5 GTX).",
+   "img": "https://cdn.dam.salomon.com/329e06e3-7a10-4be2-945f-b3790089d54b/L49306800/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s1.jpg"
+  },
+  {
+   "id": "s2",
+   "name": "XA PRO 3D V9 GORE-TEX (Men)",
+   "url": "https://www.salomon.com/en-us/product/xa-pro-3d-v9-gore-tex-li3151/L49199100",
+   "price_usd": "$170",
+   "stock": "In stock, some sizes gone (US men 7.5, 8.5, 9, 13, 14 unavailable)",
+   "colors": "Alloy / Castlerock / Lunar Rock (shown); Black / Dark Gull Gray / Acid Lime; Turbulence / Black / Burnt Ochre; Black / Phantom / Pewter",
+   "category": "shoe",
+   "features": [
+    "GORE-TEX membrane; All-Terrain contaGRIP outsole, 3.5 mm lugs",
+    "3D advancedCHASSIS for stability; protective toecap; 360 g per shoe, 11 mm drop"
+   ],
+   "golf_note": "The most stable shoe here. The chassis keeps your foot planted on sidehill lies, and the toecap shrugs off cart-path scuffs. Lugs are shallow enough not to chew up greens.",
+   "img": "https://cdn.dam.salomon.com/d04f1b55-d60a-4993-82a0-b37800ccdd60/L49199100/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s2.jpg"
+  },
+  {
+   "id": "s3",
+   "name": "XT-WHISPER GORE-TEX",
+   "url": "https://www.salomon.com/en-us/product/xt-whisper-gore-tex-li9305/L45397400",
+   "price_usd": "$165",
+   "stock": "In stock (100% of sizes per Salomon)",
+   "colors": "Iron / Shadow Gray / Black Olive (shown); 7 colorways incl. Black / Black / Ftw Silver, Grisaille / Dark Navy / Black",
+   "category": "shoe",
+   "features": [
+    "GORE-TEX membrane; ripstop upper",
+    "Chevron-lug rubber outsole; agileCHASSIS; 290 g per shoe"
+   ],
+   "golf_note": "The lightest GORE-TEX shoe in the set, with a lower, sneaker-like profile. Good for walkers who want dry feet without the bulk of a hiker.",
+   "img": "https://cdn.dam.salomon.com/7885c9c7-3a1e-4329-8b0d-b379008978f8/L45397400/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s3.jpg"
+  },
+  {
+   "id": "s4",
+   "name": "XT-PATHWAY GORE-TEX",
+   "url": "https://www.salomon.com/en-us/product/xt-pathway-gore-tex-li4557/L49235900",
+   "price_usd": "$150",
+   "stock": "In stock, some sizes gone (e.g. M5.5, M7.5, M8.5, M9.5, M10, M11.5 unavailable)",
+   "colors": "Desert Tan / Bitter Chocolate / Rainy Day (shown); Black / Black / Ftw Silver",
+   "category": "shoe",
+   "features": [
+    "GORE-TEX membrane; anti-debris mesh upper",
+    "Chevron-lug rubber outsole; agileCHASSIS; 323 g per shoe"
+   ],
+   "golf_note": "The cheapest way into a waterproof Salomon. Anti-debris mesh keeps sand and grass clippings out, and the tan/brown colorway reads more golf than gorp.",
+   "img": "https://cdn.dam.salomon.com/7e3e6ec5-3c5c-4cef-bb51-b40300b4b783/L49235900/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s4.jpg"
+  },
+  {
+   "id": "s5",
+   "name": "GENESIS 2 GORE-TEX (Men)",
+   "url": "https://www.salomon.com/en-us/product/genesis-2-gtx-li9188/L49301900",
+   "price_usd": "$170",
+   "stock": "In stock (100% of sizes per Salomon)",
+   "colors": "Grape Leaf / Black / Deep Lichen Green (shown); Black / Fiery Red / Ftw Silver; Oxford Tan / Walnut / Niagara; Black / Black / White",
+   "category": "shoe",
+   "features": [
+    "GORE-TEX membrane; Matryx upper; All-Terrain contaGRIP outsole, 4 mm lugs",
+    "activeCHASSIS + optiFOAM midsole; 8 mm drop; 291 g per shoe"
+   ],
+   "golf_note": "A modern trail runner with real grip and a durable Matryx upper. Closest in spirit to the June post's Sense Ride 5 GTX, so pick one or the other.",
+   "img": "https://cdn.dam.salomon.com/dcbe0bf1-a047-42c9-a89a-b3e80095bbe6/L49301900/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s5.jpg"
+  },
+  {
+   "id": "s6",
+   "name": "OUTWIND Jacket (Men)",
+   "url": "https://www.salomon.com/en-us/product/outwind-lc14428/LC2761400",
+   "price_usd": "$90",
+   "stock": "In stock (100% of sizes per Salomon)",
+   "colors": "Deep Black (shown); Marlin; Silver Cloud",
+   "category": "shell",
+   "features": [
+    "Windshell: 100% polyamide body, polyester lining",
+    "\"Lightweight and packable windproof layer for comfort and style everyday\" (product page); regular fit"
+   ],
+   "golf_note": "A wind shell for the gusty January days in Austin. It packs small enough to live in a bag pocket and comes out on the exposed holes.",
+   "img": "https://cdn.dam.salomon.com/4dc80278-8bee-471c-8044-b34b00ec2e42/LC2761400/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s6.jpg"
+  },
+  {
+   "id": "s7",
+   "name": "BONATTI WATERPROOF Jacket (Men)",
+   "url": "https://www.salomon.com/en-us/product/bonatti-waterproof-lc14451/LC2931100",
+   "price_usd": "$200",
+   "stock": "In stock S-XL (2XL sold out)",
+   "colors": "Clematis Blue (shown); Burnt Umber; Deep Black",
+   "category": "shell",
+   "features": [
+    "adv.DRY waterproof: 10,000 mm waterproofing, 10,000 g/m2 breathability; 200 g",
+    "Two zippered hand pockets, hem adjustment, packs into a hand pocket"
+   ],
+   "golf_note": "A full waterproof shell at running-jacket weight (200 g), so it does not fight your turn the way a stiff rain jacket does. Burnt Umber or black for the course.",
+   "img": "https://cdn.dam.salomon.com/8d89c032-7a97-4939-b55e-b3fe0109d018/LC2931100/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s7.jpg"
+  },
+  {
+   "id": "s8",
+   "name": "ESSENTIAL LIGHTWARM Half Zip Midlayer (Men)",
+   "url": "https://www.salomon.com/en-us/product/essential-lightwarm-lc13574/LC2767400",
+   "price_usd": "$70",
+   "stock": "In stock (100% of sizes per Salomon)",
+   "colors": "Cardamon Seed (shown); Clematis Blue; Deep Black; Grape Leaf",
+   "category": "midlayer",
+   "features": [
+    "93% polyester / 7% elastane grid fleece; 221 g",
+    "Slim fit; wicks moisture and \"lets air circulate\" (product page)"
+   ],
+   "golf_note": "Thin, stretchy grid fleece in a slim fit: the classic quarter-zip shape, with enough elastane to swing freely under a shell. The cheapest top here.",
+   "img": "https://cdn.dam.salomon.com/4cc83bbe-3f6c-4f93-b529-b3fe00aec22d/LC2767400/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s8.jpg"
+  },
+  {
+   "id": "s9",
+   "name": "THERNOVA Half Zip Midlayer (Men)",
+   "url": "https://www.salomon.com/en-us/product/thernova-lc14960/LC2967500",
+   "price_usd": "$130",
+   "stock": "In stock S-XL (2XL sold out)",
+   "colors": "Deep Black (shown); Castor Gray; Coffee Bean",
+   "category": "fleece",
+   "features": [
+    "PrimaLoft fleece fabric, 100% polyester; 305 g",
+    "Relaxed fit; \"breathable, stretchy and soft\" (product page)"
+   ],
+   "golf_note": "The warm one for 35-degree tee times. PrimaLoft fleece in a relaxed fit, roomy enough to layer and to swing in. Coffee Bean is the course color.",
+   "img": "https://cdn.dam.salomon.com/484d8b03-8276-483f-9291-b3fe00af3479/LC2967500/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s9.jpg"
+  },
+  {
+   "id": "s10",
+   "name": "WAYFARER 2.0 Pants (Men)",
+   "url": "https://www.salomon.com/en-us/product/wayfarer-2-0-lc14588/LC2745400",
+   "price_usd": "$110",
+   "stock": "\"A few left\": only 2XL/Regular available in Deep Black on 22 Oct",
+   "colors": "Deep Black",
+   "category": "pants",
+   "features": [
+    "Water-resistant, four-way stretch: 85% polyamide 6 / 15% elastane",
+    "Built-in belt, streamlined pockets, bottom-hem drawcords"
+   ],
+   "golf_note": "Clean, slim-ish black hiking pant that passes for a golf trouser, with real four-way stretch and water resistance for wet mornings. Almost sold out; may not be usable.",
+   "img": "https://cdn.dam.salomon.com/7fdd558e-b91f-493d-8b08-b34b00ec151c/LC2745400/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s10.jpg"
+  },
+  {
+   "id": "s11",
+   "name": "BONATTI PRO Waterproof Cap",
+   "url": "https://www.salomon.com/en-us/product/bonatti-pro-wp-lc14552/LC2930700",
+   "price_usd": "$50",
+   "stock": "In stock in L/XL only (S/M sold out) in Burnt Umber",
+   "colors": "Burnt Umber (shown); Acid Lime; Whisper White; Deep Black",
+   "category": "hat",
+   "features": [
+    "AdvancedSkin Dry waterproofing; 100% polyamide body, polyester sweatband",
+    "60 g; \"waterproof, lightweight and packable\" (product page)"
+   ],
+   "golf_note": "A waterproof 5-panel cap that packs flat, for drizzle days. Burnt Umber and Deep Black look right with golf clothes.",
+   "img": "https://cdn.dam.salomon.com/1c0893fc-642e-4706-afd4-b3fe00f81d40/LC2930700/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s11.jpg"
+  },
+  {
+   "id": "s12",
+   "name": "DOCKER BEANIE",
+   "url": "https://www.salomon.com/en-us/product/docker-beanie-lc13892/LC2938900",
+   "price_usd": "$35",
+   "stock": "In stock (100% per Salomon)",
+   "colors": "Cardamon Seed (shown); Deep Black",
+   "category": "hat",
+   "features": [
+    "71% recycled polyester / 28% wool / 1% elastane",
+    "Woven \"Salomon\" label; wear rolled up or down"
+   ],
+   "golf_note": "Wool-blend docker beanie for the first few holes of a frosty morning; it comes off and goes in the bag once the sun is up.",
+   "img": "https://cdn.dam.salomon.com/9d7dc1e6-81c5-4a8d-9595-b3fc0095e311/LC2938900/PNG-2000px-max-72dpi.png",
+   "img_bg": "light",
+   "img_px": "2000x2000",
+   "local": "salomon/p-s12.jpg"
+  }
+ ],
+ "lookbook": [
+  {
+   "img": "https://images.ctfassets.net/7iktyqnb7v9e/3fh75Oj08WxaUCoFIwTyV8/856178c57e07e60b421416f176cdcfcf/media_xapro_regular_01_3840x1066.jpg",
+   "desc": "XA Pro pair on mossy rocks and fallen branches, moody low light (XA Pro icons page). Wide banner, best hero candidate.",
+   "orientation": "landscape",
+   "img_px": "3840x1066",
+   "page": "https://www.salomon.com/en-us/lp/g/icons-xa-pro",
+   "local": "salomon/look-1.jpg"
+  },
+  {
+   "img": "https://images.ctfassets.net/7iktyqnb7v9e/2CilvhBXzwAIhHA5jjSvrU/c77d57e6a94e07186ba6107837e34800/header_xa-pro.jpg",
+   "desc": "Single XA Pro shoe floating over gravel, dark studio-on-dirt spotlight (XA Pro icons header).",
+   "orientation": "landscape",
+   "img_px": "3840x1384",
+   "page": "https://www.salomon.com/en-us/lp/g/icons-xa-pro",
+   "local": "salomon/look-2.jpg"
+  },
+  {
+   "img": "https://images.ctfassets.net/7iktyqnb7v9e/4QBuo8TmNhcRBJmc7HSsuU/c0f97b67dd6568fcb51741afadc69202/XAPROLP.jpg",
+   "desc": "Two runners climbing a grey rock gully, shot from above (XA Pro icons page).",
+   "orientation": "square",
+   "img_px": "1770x1770",
+   "page": "https://www.salomon.com/en-us/lp/g/icons-xa-pro",
+   "local": "salomon/look-3.jpg"
+  },
+  {
+   "img": "https://images.ctfassets.net/7iktyqnb7v9e/37fXtPKCIwctSBkIPlvLhY/7ca47caa07a45341a02d713211e6fdc6/multipurpose_1_D.jpg",
+   "desc": "XT-6s worn with wide olive trousers on concrete steps, street-style crop (XT-6 icons page).",
+   "orientation": "square",
+   "img_px": "1760x1760",
+   "page": "https://www.salomon.com/en-us/lp/g/icons-xt-6",
+   "local": "salomon/look-4.jpg"
+  },
+  {
+   "img": "https://images.ctfassets.net/7iktyqnb7v9e/5JN8Whl2F5DX2CBYu2IJ5A/0cba41d1c44ffe057625de1783e7ff44/Category_Hiking_VLL_Clothing.jpg",
+   "desc": "Two hikers in shells and packs on a dark ridge under heavy cloud (Hiking category, clothing tile).",
+   "orientation": "portrait",
+   "img_px": "1166x1653",
+   "page": "https://www.salomon.com/en-us/c/sports/hiking",
+   "local": "salomon/look-5.jpg"
+  },
+  {
+   "img": "https://images.ctfassets.net/7iktyqnb7v9e/2uHLpgpyGvg2cEzvUQ6JvC/6130868c2ea7073ef19bc6fc5f7f3cb4/Category_Hiking_VLL_Hiking-Shoes.jpg",
+   "desc": "Close-up of black hiking shoes stepping across mossy boulders (Hiking category, shoes tile).",
+   "orientation": "portrait",
+   "img_px": "1166x1653",
+   "page": "https://www.salomon.com/en-us/c/sports/hiking",
+   "local": "salomon/look-6.jpg"
+  }
+ ]
+}

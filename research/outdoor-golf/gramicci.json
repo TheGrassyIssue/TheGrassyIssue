@@ -1,0 +1,334 @@
+{
+ "brand": "Gramicci",
+ "slug": "gramicci",
+ "store": "https://gramicci.com (US store, USD)",
+ "checked": "2026-10-22",
+ "facts": [
+  {
+   "fact": "Founded in 1982 by Mike Graham, a Yosemite 'Stonemaster' climber; it started in a garage in Ventura, California.",
+   "source": "https://gramicci.com/pages/about"
+  },
+  {
+   "fact": "The first product was a climbing short: a diamond-shaped gusset taken from kung-fu trousers for full 180-degree flexibility, hard-wearing canvas, and an integrated nylon webbing belt (inspired by backpack straps) adjustable with one hand over an elasticated waist.",
+   "source": "https://gramicci.com/pages/about"
+  },
+  {
+   "fact": "The name comes from a moniker Graham gave himself when a few Stonemasters attempted the first 'all-Italian' ascent of Half Dome (none of them were Italian).",
+   "source": "https://gramicci.com/pages/about"
+  },
+  {
+   "fact": "After the shorts came the trousers, dubbed the G-Pants; by the mid-80s surfers and skaters were seeking out the pants with the hand-drawn 'running man' logo. The brand later found favor in Tokyo and moved its home to Japan.",
+   "source": "https://gramicci.com/pages/about"
+  },
+  {
+   "fact": "Gramicci Products' first items were big-wall accessories such as haul bags and belay seats; Graham's mother taught him to sew, and he cites Bruce Lee as an influence on the early trousers.",
+   "source": "https://gramicci.com/blogs/journal/in-conversation-with-mike-graham"
+  },
+  {
+   "fact": "The Stonemasters were the first to climb El Capitan in a day and made the first free ascent of Astroman in Yosemite Valley.",
+   "source": "https://gramicci.com/blogs/journal/in-conversation-with-mike-graham"
+  },
+  {
+   "fact": "TGI's existing Brand to Know on Gramicci (Aug 2026) covers the original Gramicci Pant, G-Short and cotton range; its brand facts match the brand's About page above.",
+   "source": "https://thegrassyissue.com/drops/brand-to-know-gramicci"
+  }
+ ],
+ "quotes": [
+  {
+   "quote": "For me, building clothing is like architecture and engineering. And those were the ideas I put into Gramicci, to make things function in a better way.",
+   "who": "Mike Graham, founder",
+   "source": "https://gramicci.com/blogs/journal/in-conversation-with-mike-graham"
+  },
+  {
+   "quote": "Yes, form was never the criteria for the product. It was all based on the function and then I guess we were lucky to get the form right as well!",
+   "who": "Mike Graham, founder",
+   "source": "https://gramicci.com/blogs/journal/in-conversation-with-mike-graham"
+  },
+  {
+   "quote": "40 years since the first pair of Gramicci shorts were sewn together in Mike Graham's garage, the song remains the same—it's hard-wearing, functional clothing, designed with movement firmly in mind.",
+   "who": "Gramicci (About page)",
+   "source": "https://gramicci.com/pages/about"
+  }
+ ],
+ "products": [
+  {
+   "id": "x1",
+   "name": "Nanotex® DWR Hooded Shell Jacket",
+   "url": "https://gramicci.com/products/nanotex%C2%AE-dwr-hooded-shell-jacket",
+   "price_usd": "$280",
+   "stock": "In stock (limited sizes) — Bronze: S, XL; DWR Navy: XS, M",
+   "colors": "Bronze, DWR Navy",
+   "category": "shell",
+   "features": [
+    "High-density shell fabric with Nanotex Aquapel® finish, 100% polyester; water-repellent without PFAS (per product page)",
+    "Mesh lining; zippered chest and lower pockets; elastic cuffs, drawcord hem and drawcord hood"
+   ],
+   "golf_note": "A real rain shell for a January morning round that is still light enough to swing in; zip chest pocket for the scorecard and phone. Sizes are thin, so check yours.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J044_NAVY_mens-jacket_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x1.jpg",
+   "style_no": "G6FM-J044"
+  },
+  {
+   "id": "x2",
+   "name": "WR Anorak",
+   "url": "https://gramicci.com/products/wr-anorak",
+   "price_usd": "$190",
+   "stock": "In stock — Khaki: all sizes; Deep Brown: all sizes; Black: all sizes",
+   "colors": "Khaki, Deep Brown, Black",
+   "category": "shell",
+   "features": [
+    "Water-repellent polyester-cotton blend (80% polyester, 20% cotton) with UV protection",
+    "Front zipper pouch pocket, zippered side pockets, elastic cuffs and drawcord waist, attached hood"
+   ],
+   "golf_note": "A pull-over wind and drizzle layer with a soft hand that won't rustle at address; the front pouch holds balls, tees and a glove.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x2.jpg",
+   "style_no": "G6FM-J042"
+  },
+  {
+   "id": "x3",
+   "name": "Mini Check Nylon Jacket",
+   "url": "https://gramicci.com/products/mini-check-nylon-jacket",
+   "price_usd": "$150",
+   "stock": "In stock (limited sizes) — Seal Check: all sizes; Navy Check: S, L, XL; Brown Check: all sizes",
+   "colors": "Seal Check, Navy Check, Brown Check",
+   "category": "shell",
+   "features": [
+    "High-density 70% nylon / 30% cotton blend with water-repellent and UV-protection finishes",
+    "Zip closure with stand collar; chest welt pocket and two side pockets; short blouson shape"
+   ],
+   "golf_note": "A short, light zip jacket that stays clear of the hands at the bottom of the swing and sheds wet-grass mist; looks fine in the clubhouse.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J013_SEALCHECK_unisex-jacket_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x3.jpg",
+   "style_no": "G6FM-J013"
+  },
+  {
+   "id": "x4",
+   "name": "G-Zero Primaloft® Vest",
+   "url": "https://gramicci.com/products/g-zero-primaloft%C2%AE-vest",
+   "price_usd": "$180",
+   "stock": "In stock (limited sizes) — Dotted: XS, S, M; Lime: XS, XL; Indigo: XS, L, XL; Cola: XS, M, L, XL; Frost: all sizes",
+   "colors": "Dotted, Lime, Indigo, Cola, Frost",
+   "category": "vest",
+   "features": [
+    "100% nylon shell (described as water-repellent) with Primaloft® synthetic insulation",
+    "Regular-fit puffer vest with stand collar and two zip welt pockets"
+   ],
+   "golf_note": "Core warmth with free shoulders: the classic cold-muni layer, and synthetic fill keeps working if the morning is damp.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J035_INDIGO_unisex-vest_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x4.jpg",
+   "style_no": "G6FM-J035"
+  },
+  {
+   "id": "x5",
+   "name": "Thermal Fleece Pullover",
+   "url": "https://gramicci.com/products/thermal-fleece-pullover",
+   "price_usd": "$130",
+   "stock": "In stock — Multi-Stripe: all sizes; Deep Brown: all sizes; Black: all sizes",
+   "colors": "Multi-Stripe, Deep Brown, Black",
+   "category": "fleece",
+   "features": [
+    "100% recycled polyester low-profile thermal fleece",
+    "Quarter-zip pullover with stand collar, elasticated cuffs and drawcord hem"
+   ],
+   "golf_note": "The quarter-zip is the golfer's midlayer for a reason; this one is low-profile so it doesn't bunch at the top of the backswing, and the drawcord hem blocks wind.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_MULTISTRIPE_unisex-jacket_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x5.jpg",
+   "style_no": "G6FM-J006"
+  },
+  {
+   "id": "x6",
+   "name": "Thermal Fleece Vest",
+   "url": "https://gramicci.com/products/thermal-fleece-vest",
+   "price_usd": "$140",
+   "stock": "In stock — Bark Camo: all sizes; Black: all sizes",
+   "colors": "Bark Camo, Black",
+   "category": "vest",
+   "features": [
+    "100% recycled polyester fleece body with nylon accents on the collar and shoulders",
+    "Diagonal zip front pockets and drawcord hem"
+   ],
+   "golf_note": "A slim fleece vest that fits under a shell; nylon on the shoulders means a carry bag strap won't pill it.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J002_BARKCAMO_unisex-vest_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x6.jpg",
+   "style_no": "G6FM-J002"
+  },
+  {
+   "id": "x7",
+   "name": "Nylon Gramicci Pant",
+   "url": "https://gramicci.com/products/nylon-gramicci-pant",
+   "price_usd": "$110",
+   "stock": "In stock — Burnt Olive: all sizes; Carbon: all sizes; Black: all sizes; Stone: all sizes",
+   "colors": "Burnt Olive, Carbon, Black, Stone",
+   "category": "pants",
+   "features": [
+    "100% recycled nylon, described as durable and water-repellent",
+    "Elastic color-matching waistband; relaxed, slightly tapered fit; 32\" inseam; two side and two back pockets"
+   ],
+   "golf_note": "The G-Pant idea in nylon: dew from the first fairway beads off and it dries fast, and the elastic belt waistband moves with the turn. A clean solid-color pant for the course.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_BURNTOLIVE_mens-pants_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x7.jpg",
+   "style_no": "G6FM-P112"
+  },
+  {
+   "id": "x8",
+   "name": "Mini Check Nylon Pant",
+   "url": "https://gramicci.com/products/mini-check-nylon-pant",
+   "price_usd": "$130",
+   "stock": "In stock (limited sizes) — Brown Check: XS, S, M, L; Seal Check: all sizes; Navy Check: all sizes",
+   "colors": "Brown Check, Seal Check, Navy Check",
+   "category": "pants",
+   "features": [
+    "High-density 70% nylon / 30% cotton blend, UV and water resistant",
+    "Roomy straight leg with shock-cord adjuster at the hem; back flap pockets with velcro closure; inseam 27-30\""
+   ],
+   "golf_note": "Water-resistant and tough with a hem cinch to keep cuffs off wet grass; the velcro back pockets keep a phone or yardage book from falling out.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P015_BROWNCHECK_unisex-pants_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x8.jpg",
+   "style_no": "G6FM-P015"
+  },
+  {
+   "id": "x9",
+   "name": "Loose Tapered Ridge Pant",
+   "url": "https://gramicci.com/products/loose-tapered-ridge-pant",
+   "price_usd": "$110",
+   "stock": "In stock (limited sizes) — Haze Pigment: XS, S, M, L, XL; Brown Pigment: XS, S, M, L, XL; Bayleaf Pigment: XS, S, M, L, XL; Double Navy: XS, S, L, XL, XXS; Black: XS, XXS; Olive: XS, S, XXS; Greige: XS, S, L, XL, XXS; Chino: XS, XXS",
+   "colors": "Haze Pigment, Brown Pigment, Bayleaf Pigment, Double Navy, Black, Olive, Greige, Chino",
+   "category": "pants",
+   "features": [
+    "100% cotton organic twill",
+    "Roomy hips and thighs tapering to the ankle; large side and back pockets; inseam 29-31\""
+   ],
+   "golf_note": "Room through the hips and thighs for a full turn, with a taper that keeps the hem clear of your shoes. Cotton, so a dry-day pick rather than a rain pant.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G114-OGT_GREIGE_unisex-pants_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x959",
+   "local_img": "research/outdoor-golf/gramicci/p-x9.jpg",
+   "style_no": "G114-OGT"
+  },
+  {
+   "id": "x10",
+   "name": "Nylon Cliff Short",
+   "url": "https://gramicci.com/products/nylon-cliff-short",
+   "price_usd": "$90–$120",
+   "stock": "In stock (limited sizes) — Milk Tea: XS, S, L, XL; Black: L, XL; Chocolate: all sizes; Jade Green: XS, L, XL; British Navy: S, M, L, XL | some colors on sale: Jade Green at $90 (was $120)",
+   "colors": "Milk Tea, Black, Chocolate, Jade Green, British Navy",
+   "category": "shorts",
+   "features": [
+    "Recycled nylon (100% nylon) with quick-dry properties; water and chlorine resistant",
+    "Integrated belt system, reinforced stitching at high-stress points, 9-10\" inseam"
+   ],
+   "golf_note": "For the warm January afternoons Austin throws in: quick-dry nylon, a longer 9-10\" inseam that reads fine on a course, and the adjustable belt.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6SM-P034_BLACK_mens-shorts_M1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x10.jpg",
+   "style_no": "G6SM-P034"
+  },
+  {
+   "id": "x11",
+   "name": "Mini Check Nylon Cap",
+   "url": "https://gramicci.com/products/mini-check-nylon-cap",
+   "price_usd": "$55",
+   "stock": "In stock — Navy Check: one size; Brown Check: one size; Seal Check: one size",
+   "colors": "Navy Check, Brown Check, Seal Check",
+   "category": "hat",
+   "features": [
+    "High-density nylon/cotton blend that protects against water and UV",
+    "Short-billed cap with all-over check print"
+   ],
+   "golf_note": "A short bill keeps the brim out of your sightline at address, and it shrugs off drizzle.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FA-014_BROWNCHECK_unisex-hat_1.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x11.jpg",
+   "style_no": "G6FA-014"
+  },
+  {
+   "id": "x12",
+   "name": "Thermal Fleece Beanie",
+   "url": "https://gramicci.com/products/thermal-fleece-beanie",
+   "price_usd": "$52",
+   "stock": "In stock — Deep Brown: one size; Black: one size; Bark Camo: one size",
+   "colors": "Deep Brown, Black, Bark Camo",
+   "category": "hat",
+   "features": [
+    "Recycled polyester thermal fleece",
+    "Midweight; described as warm and stretchy"
+   ],
+   "golf_note": "For the 35-degree first tee time: a soft fleece beanie that stretches to fit and comes off easily once it warms up.",
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FA-007_DEEPBROWN_product_11_891c053c-8c7c-4243-b85b-b1d24b8abe02.jpg",
+   "img_bg": "light",
+   "img_px": "800x960",
+   "local_img": "research/outdoor-golf/gramicci/p-x12.jpg",
+   "style_no": "G6FA-007"
+  }
+ ],
+ "lookbook": [
+  {
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-logo-close-up-magnifying-glass-mountain-outdoors.jpg",
+   "desc": "Archive-style shot on a snowy mountain scree slope: a magnifying glass held over the Gramicci label on a climber's pants (gramicci.com homepage hero). Best hero candidate.",
+   "orientation": "landscape",
+   "img_px": "1920x1080",
+   "local_img": "research/outdoor-golf/gramicci/look-1.jpg"
+  },
+  {
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-in-conversation-with-mike-graham-yosemite.jpg",
+   "desc": "El Capitan above the trees with a Yosemite tour bus in the foreground (Journal: In Conversation with Mike Graham).",
+   "orientation": "landscape",
+   "img_px": "1600x1440",
+   "local_img": "research/outdoor-golf/gramicci/look-2.jpg"
+  },
+  {
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/FW26_Journal_800x1000_12.png",
+   "desc": "Two people walking away through a tall-grass meadow toward a dark pine treeline, in a striped fleece and a graphic tee (FW26 Journal).",
+   "orientation": "portrait",
+   "img_px": "800x1000",
+   "local_img": "research/outdoor-golf/gramicci/look-3.jpg"
+  },
+  {
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/FW26_Journal_800x1000_10.png",
+   "desc": "Motion-blurred rider in a navy jacket pedalling through a splashing stream (FW26 Journal) — the wet-weather mood.",
+   "orientation": "portrait",
+   "img_px": "800x1000",
+   "local_img": "research/outdoor-golf/gramicci/look-4.jpg"
+  },
+  {
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/FW26_Journal_800x1000_1.png",
+   "desc": "Climber bouldering an overhanging mossy rock in a purple top and orange pants (FW26 Journal).",
+   "orientation": "portrait",
+   "img_px": "800x1000",
+   "local_img": "research/outdoor-golf/gramicci/look-5.jpg"
+  },
+  {
+   "img": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-Book_26-MAY_FINAL-14-PIC-2.jpg",
+   "desc": "Archival 1970s photo: three climbers in fleece and headbands resting on granite slabs among climbing gear (Gramicci book images, Journal: In Conversation with Mike Graham).",
+   "orientation": "landscape",
+   "img_px": "800x576",
+   "local_img": "research/outdoor-golf/gramicci/look-6.jpg"
+  }
+ ],
+ "notes": [
+  "All prices/stock from gramicci.com /products.json on 2026-10-22; Nanotex jacket and G-Zero vest re-confirmed via /products/<handle>.js.",
+  "Product images on Gramicci's CDN max out at 800x960 (the original upload size); no larger versions exist. Lookbook images are 800-1920px; only look-1 (1920x1080) and look-2 (1600x1440) reach 1600px.",
+  "Overlap with TGI Brand to Know: none of the 12 picks appear there. Its Nylon Gramicci Cap (nylon-gramicci-cap-1) and Cliff Pant (stretch 98% cotton/2% PU, $104-138, the only in-stock stretch pant) were deliberately left out; Nylon Gramicci Cap ($59, recycled nylon, water repellent) is a swap if a cap with the webbing belt is wanted.",
+  "No stretch G-Pant variants are currently sold on the US store; NN-Pant Cropped has 1 size left and NN-Short 2, so both were skipped.",
+  "Nanotex DWR Shell Pant ($210) skipped: only XS/S left."
+ ]
+}

@@ -1,0 +1,327 @@
+{
+ "brand": "Purple Mountain Observatory",
+ "slug": "purple-mountain-observatory",
+ "store": "https://purplemountainobservatory.co.uk",
+ "checked": "2026-10-22",
+ "price_method": "USD prices are the store's own US-market prices: Shopify storefront requested with cookies localization=US; cart_currency=USD (the store's country selector offers 'United States (USD $)'). Cross-checked: Mogul Pant /products/mogul-pant.js returns 21500 (=$215) with the US cookie vs 14000 (=£140) on the default GBP storefront; page reports Shopify.currency active USD. US prices are set by the store, not a simple conversion.",
+ "us_shipping": "Ships worldwide incl. US (FAQ: 'Yes, we ship all over the world'; overseas delivery 7-16 days; shipping cost added at checkout). International shipments are DDU: US customers pay any import charges at the border. Ships from TPS Fulfillment, Northern Ireland (returns address). Returns within 14 days. Source: https://purplemountainobservatory.co.uk/pages/faq",
+ "facts": [
+  {
+   "fact": "Established in 2021 (brand's own site footer: 'Established in 2021, Purple Mountain Observatory is an outdoors and activewear brand that emerged from a profound love for nature yet draws inspiration from the dynamic urban landscape').",
+   "source": "https://purplemountainobservatory.co.uk/pages/faq"
+  },
+  {
+   "fact": "Founded by Georgia Smith and Matt Braun in 2021 during the COVID-19 pandemic; London label.",
+   "source": "https://www.highsnobiety.com/p/under-the-radar-purple-mountain-observatory/"
+  },
+  {
+   "fact": "Founded by outdoor enthusiasts Matt Braun and Georgia Smith; London-based; established 2021.",
+   "source": "https://deadstock.ca/blogs/features/introducing-purple-mountain"
+  },
+  {
+   "fact": "Matt Braun grew up in Barking, East London, and spent over two decades in design roles for other labels before PMO.",
+   "source": "https://basementapproved.com/fashion/brand-spotlight-purple-mountain-observatory/"
+  },
+  {
+   "fact": "Name comes from Purple Mountain (Zijin Shan) above Nanjing, China, home to China's first modern observatory, near where the clothing is made.",
+   "source": "https://www.fieldmag.com/articles/purple-mountain-observatory-profile"
+  },
+  {
+   "fact": "Known for unisex outerwear for trail and town, color-changing thermo-sensitive fabrics (e.g. Obsidian Jacket), bold color-blocked prints, and community group hikes in the UK; East London label. (Note: Field Mag says 'founded in 2023' and Urban Industry says 2020; brand site, Highsnobiety and Deadstock say 2021.)",
+   "source": "https://www.fieldmag.com/articles/purple-mountain-observatory-profile"
+  },
+  {
+   "fact": "Works with named technical fabrics across the range: PrimaLoft Active Evolve, Polartec Alpha Direct, Toray DOT AIR, ALUULA, YKK Vislon hardware.",
+   "source": "https://purplemountainobservatory.co.uk/collections/all"
+  }
+ ],
+ "quotes": [
+  {
+   "quote": "Growing up in the UK you’re used to weather that can turn on you in minutes, I remember it being Summer time and we’d get pelted on by horizontal rain, and in Winter, damp cold, wind that cuts through everything. You need clothes that can handle that without feeling like mountaineering kit.",
+   "who": "Matt Braun, founder",
+   "source": "https://basementapproved.com/fashion/brand-spotlight-purple-mountain-observatory/"
+  },
+  {
+   "quote": "I was brought up with my old man always stating “there’s no such thing as bad weather, just bad clothing”",
+   "who": "Matt Braun, founder",
+   "source": "https://basementapproved.com/fashion/brand-spotlight-purple-mountain-observatory/"
+  },
+  {
+   "quote": "When you put that PMO jacket on you feel a sense of home, whether you’re on top of a mountain or standing waiting for the bus.",
+   "who": "Matt Braun, co-founder",
+   "source": "https://www.fieldmag.com/articles/purple-mountain-observatory-profile"
+  },
+  {
+   "quote": "Every detail, from articulated patterning to lightweight hardware, is calibrated for being on the move.",
+   "who": "Matt Braun, founder (via Deadstock)",
+   "source": "https://deadstock.ca/blogs/features/introducing-purple-mountain"
+  }
+ ],
+ "products": [
+  {
+   "id": "x1",
+   "name": "Mogul Pant",
+   "url": "https://purplemountainobservatory.co.uk/products/mogul-pant",
+   "price_usd": "$215",
+   "stock": "In stock; sold out: Black / XL, Olive / XS",
+   "colors": "Black, Olive",
+   "category": "pants",
+   "features": [
+    "Hard-wearing cotton-nylon blend",
+    "Wider fit inspired by movement-focused outdoor silhouettes; multi-pocket system"
+   ],
+   "golf_note": "Roomy through the leg so a full turn never pulls, and the cotton-nylon blend shrugs off a muddy knee from reading putts. Olive or black both pass on a muni.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-260.jpg?v=1789677361",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x1.jpg"
+  },
+  {
+   "id": "x2",
+   "name": "City Pant",
+   "url": "https://purplemountainobservatory.co.uk/products/city-pant",
+   "price_usd": "$305",
+   "stock": "In stock",
+   "colors": "Grey",
+   "category": "pants",
+   "features": [
+    "Premium Japanese double-weave fabric with stretch and weather resistance",
+    "Water-resistant with UV protection; articulated patterning; two-zip pocketing"
+   ],
+   "golf_note": "The cleanest-looking pant here: stretch double-weave that sheds morning drizzle and looks tailored enough for the clubhouse. Zip pockets keep a ball marker and keys from falling out mid-swing.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-255.jpg?v=1789677791",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x2.jpg"
+  },
+  {
+   "id": "x3",
+   "name": "Deluge Pant",
+   "url": "https://purplemountainobservatory.co.uk/products/deluge-pant",
+   "price_usd": "$178",
+   "stock": "In stock; sold out: Green / XS, Green / S, Black / XS, Black / XL",
+   "colors": "Green, Black",
+   "category": "pants",
+   "features": [
+    "Lightweight waterproof fabric with ultrasonic welded seams and internal taping",
+    "Three front pockets with YKK magnetic zips; gusseted zip openings; adjustable hem cords"
+   ],
+   "golf_note": "A real rain over-trouser for the wet January round. Gusseted openings help with movement, and front pockets mean you can still reach tees without unzipping a layer.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-267.jpg?v=1789677201",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x3.jpg"
+  },
+  {
+   "id": "x4",
+   "name": "Climate Shirt",
+   "url": "https://purplemountainobservatory.co.uk/products/climate-shirt",
+   "price_usd": "$280",
+   "stock": "In stock; sold out: Black / XS, Black / XL, Olive / XS",
+   "colors": "Black, Olive",
+   "category": "top",
+   "features": [
+    "Breathable premium nylon with ultrasonic taped seams",
+    "Water-resistant; YKK Vislon zip"
+   ],
+   "golf_note": "An overshirt that does the job of a light jacket: water-resistant nylon for a damp first nine, easy to unzip as the day warms past 50.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-145.jpg?v=1789671141",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x4.jpg"
+  },
+  {
+   "id": "x5",
+   "name": "Stinger Jacket",
+   "url": "https://purplemountainobservatory.co.uk/products/stinger-jacket",
+   "price_usd": "$305",
+   "stock": "In stock; sold out: Black / XS, Black / S, Olive / XS, Olive / L",
+   "colors": "Black, Olive",
+   "category": "shell",
+   "features": [
+    "2-layer ripstop weighing just 165g with microporous membrane; fully taped seams",
+    "Ventilation pocketing, action hood, pack-away bag"
+   ],
+   "golf_note": "At 165g it is the lightest shell here, so it swings like a windshirt but blocks wind and rain. Packs into its own bag and lives in the golf bag all winter.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-163.jpg?v=1789670628",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x5.jpg"
+  },
+  {
+   "id": "x6",
+   "name": "Breeze Ombre Jacket",
+   "url": "https://purplemountainobservatory.co.uk/products/breeze-ombre-jacket",
+   "price_usd": "$255",
+   "stock": "In stock",
+   "colors": "Brown",
+   "category": "shell",
+   "features": [
+    "Mini-ripstop nylon with DWR finish and ultrasonic taped seams",
+    "Breathable mesh panels, ventilated back yoke and an action back for unrestricted movement"
+   ],
+   "golf_note": "The action back is exactly what you want in a golf shell: room across the shoulders at the top of the backswing. DWR handles light rain; the ombre print gives it some personality on the tee.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-154.jpg?v=1789670330",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x6.jpg"
+  },
+  {
+   "id": "x7",
+   "name": "PrimaLoft® Ursa Pullover",
+   "url": "https://purplemountainobservatory.co.uk/products/primaloft%C2%AE-ursa-pullover",
+   "price_usd": "$170",
+   "stock": "In stock; sold out: Cement / XS, Apple / XS, Apple / XL",
+   "colors": "Cement, Apple, Black",
+   "category": "fleece",
+   "features": [
+    "PrimaLoft Active Evolve fabric for breathable warmth during movement",
+    "Articulated flatlock seam panels; thumb loops with elastic-bound cuffs"
+   ],
+   "golf_note": "A breathable fleece crew that keeps you warm on a 38-degree first tee without overheating by the turn. Articulated seams keep the shoulders free.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-79.jpg?v=1789666623",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x7.jpg"
+  },
+  {
+   "id": "x8",
+   "name": "PrimaLoft® Ursa Hoodie",
+   "url": "https://purplemountainobservatory.co.uk/products/primaloft%C2%AE-ursa-hoodie",
+   "price_usd": "$200",
+   "stock": "In stock; sold out: Cement / XS, Cement / XL, Black / XL",
+   "colors": "Cement, Black",
+   "category": "fleece",
+   "features": [
+    "PrimaLoft Active Evolve fabric",
+    "Articulated flatlock seam panels; elastic binding at cuffs, centre front zip and hood; thumb loops"
+   ],
+   "golf_note": "Same breathable PrimaLoft fleece with a half-zip and hood for the windiest mornings; zip it open once you are moving.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-74.jpg?v=1789667166",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x8.jpg"
+  },
+  {
+   "id": "x9",
+   "name": "Polartec® Alpha™ Direct 90 Pullover",
+   "url": "https://purplemountainobservatory.co.uk/products/polartec%C2%AE-alpha%E2%84%A2-direct-90-pullover",
+   "price_usd": "$170",
+   "stock": "In stock; sold out: Black / XL",
+   "colors": "Black, Chocolate",
+   "category": "fleece",
+   "features": [
+    "Polartec Alpha Direct 90 fleece for dynamic insulation",
+    "Built for stop-and-go pursuits; moisture-resistant and quick-drying"
+   ],
+   "golf_note": "Golf is the definition of stop-and-go: warm while you wait on the group ahead, vents heat when you walk. Thin enough to wear under a shell without bulk.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-48.jpg?v=1789801126",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x9.jpg"
+  },
+  {
+   "id": "x10",
+   "name": "Waffle LS",
+   "url": "https://purplemountainobservatory.co.uk/products/waffle-ls",
+   "price_usd": "$125",
+   "stock": "In stock; sold out: Olive / XS, Black / XS",
+   "colors": "Olive, Black",
+   "category": "top",
+   "features": [
+    "Sweat-wicking, quick-drying lightweight waffle knit",
+    "Heat-sealed front pocket with hidden YKK magnetic zip"
+   ],
+   "golf_note": "A base or standalone long sleeve for 50-60 degree days. Quick-drying waffle handles sweat, and the zip pocket is the right size for a scorecard pencil and tees.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-66.jpg?v=1789664679",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x10.jpg"
+  },
+  {
+   "id": "x11",
+   "name": "Tech Ripstop Air Cap",
+   "url": "https://purplemountainobservatory.co.uk/products/tech-ripstop-air-cap",
+   "price_usd": "$77",
+   "stock": "In stock",
+   "colors": "Olive",
+   "category": "hat",
+   "features": [
+    "Lightweight ripstop with ventilated side panels",
+    "Quick-release puller at the rear; 3M reflective branding"
+   ],
+   "golf_note": "A ventilated ripstop sports cap that keeps the sun out of your eyes, dries fast after a drizzle, and adjusts in a second with the rear puller.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-137.jpg?v=1789678564",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x11.jpg"
+  },
+  {
+   "id": "x12",
+   "name": "PrimaLoft® Ursa Beanie",
+   "url": "https://purplemountainobservatory.co.uk/products/primaloft%C2%AE-ursa-beanie",
+   "price_usd": "$72",
+   "stock": "In stock",
+   "colors": "Apple, Cement",
+   "category": "hat",
+   "features": [
+    "PrimaLoft Active Evolve fabric for lightweight, breathable warmth",
+    "Textured knit structure enhances airflow while retaining insulation"
+   ],
+   "golf_note": "For the 7 a.m. frost-delay tee time. Breathable enough that you will not want to pull it off after a few holes of walking.",
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-241.jpg?v=1789678797",
+   "img_bg": "light",
+   "img_px": "2250x3000",
+   "img_file": "p-x12.jpg"
+  }
+ ],
+ "lookbook": [
+  {
+   "img": "https://purplemountainobservatory.co.uk/cdn/shop/files/HOMEPAGESLIDE.jpg?v=1792418489",
+   "desc": "AW26 campaign hero: hiker in a green PMO fleece with poles above a sea of cloud",
+   "orientation": "landscape",
+   "img_px": "2400x1200",
+   "img_file": "look-1.jpg"
+  },
+  {
+   "img": "https://purplemountainobservatory.co.uk/cdn/shop/files/SLIDE6.jpg?v=1786821282",
+   "desc": "AW26 campaign: two hikers roped up on a snowy alpine ridge, peaks behind",
+   "orientation": "landscape",
+   "img_px": "2400x1200",
+   "img_file": "look-2.jpg"
+  },
+  {
+   "img": "https://purplemountainobservatory.co.uk/cdn/shop/files/SLIDE4_245c1813-a85d-4fd5-86c2-8f26d8b8ec0f.jpg?v=1789680346",
+   "desc": "Campaign slide: dark, moody close-up of a figure in PMO outerwear among rocks",
+   "orientation": "landscape",
+   "img_px": "2400x1200",
+   "img_file": "look-3.jpg"
+  },
+  {
+   "img": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/OLLIE1-3.jpg?v=1787434551",
+   "desc": "Stories editorial (Ollie Ranger on birdwatching in London): man in a grey PMO shell and shorts laughing on a park bench",
+   "orientation": "portrait",
+   "img_px": "2560x3200",
+   "img_file": "look-4.jpg"
+  },
+  {
+   "img": "https://purplemountainobservatory.co.uk/cdn/shop/files/HOMEPAGESLIDE_MOBILE.jpg?v=1792418489",
+   "desc": "AW26 campaign: close crop of a hiker in a lime fleece on a mountain at dusk",
+   "orientation": "portrait",
+   "img_px": "1200x1600",
+   "img_file": "look-5.jpg"
+  },
+  {
+   "img": "https://purplemountainobservatory.co.uk/cdn/shop/files/TRIAL2.jpg?v=1786723169",
+   "desc": "Calyx footwear campaign: tattooed hiker with pack in a dense forest (has 'CALYX' text overlay)",
+   "orientation": "portrait",
+   "img_px": "1500x2500",
+   "img_file": "look-6.jpg"
+  }
+ ],
+ "notes": [
+  "No vests in stock (ALUULA Modular Fishing Vest sold out); no shorts in the current catalogue; Calyx shoe sold out in all sizes, so excluded.",
+  "All product images are studio shots on white/light grey background (model shots chosen).",
+  "Deluge Pant is an over-trouser (rain pant), not an everyday pant."
+ ]
+}
