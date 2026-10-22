@@ -168,6 +168,7 @@ def main():
                    glob.glob(os.path.join(S, "guides", "*.html")) +
                    glob.glob(os.path.join(S, "brands", "*.html")) +
                    [os.path.join(S, "index.html")])
+    pages = [p for p in pages if not re.search(r" [23]\.html$", p)]  # skip Finder/iCloud duplicates ("x 2.html"); reading them raises EDEADLK
     if rev:
         n = sum(1 for p in pages if revert(p, apply_))
         print(("reverted" if apply_ else "would revert"), n, "page(s)")
