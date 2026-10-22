@@ -58,6 +58,25 @@ TAGL = {"quiet-luxury":"Quiet","material-forward":"Material forward","made-by-ha
         "course-merch":"Course merch","member-guest":"Member-guest","dad-golf":"Dad golf",
         "collector":"Collector","loud":"Loud"}
 MATERIAL = ["sentinel-golf","inside-story","manors","evnroll","piretti","p53","lamb-crafted","takomo-golf","sun-mountain"]
+# LAST UPDATED (Lenny, 22 Oct 2026: "filter the brands in order of being updated
+# or included in a post"). A brand's date is the newest of: the day it joined the
+# Index ("added") and the dateModified/datePublished of every post on its coverage
+# page (data/brand-mentions.json). The full list defaults to newest first; A–Z is
+# one click away and the letter bar switches to it before jumping.
+_MENT = json.load(open(os.path.join(ROOT, "data", "brand-mentions.json"), encoding="utf-8"))
+_pdate = {}
+def _post_date(url):
+    if url in _pdate: return _pdate[url]
+    f = os.path.join(ROOT, url.split("#")[0].lstrip("/") + ".html"); d = ""
+    if os.path.exists(f):
+        h = open(f, encoding="utf-8", errors="ignore").read()
+        m = re.search(r'"dateModified":\s*"(\d{4}-\d{2}-\d{2})', h) or re.search(r'"datePublished":\s*"(\d{4}-\d{2}-\d{2})', h) \
+            or re.search(r'article:(?:modified|published)_time" content="(\d{4}-\d{2}-\d{2})', h)
+        d = m.group(1) if m else ""
+    _pdate[url] = d; return d
+def last_updated(b):
+    ds = [b.get("added") or ""] + [_post_date(m["url"]) for m in _MENT.get(b["slug"], [])]
+    return max(ds) if any(ds) else ""
 recent = sorted(brands, key=lambda b: b["added"], reverse=True)[:12]
 NEW = {b["slug"] for b in recent}
 
@@ -70,7 +89,8 @@ for b in sorted(brands, key=lambda x: x["name"].lower().lstrip("&")):
     data.append({"slug": b["slug"], "name": b["name"], "loc": b["loc"],
                  "cat": CATL.get(b["cats"][0], b["cats"][0]) if b["cats"] else "",
                  "cats": b["cats"], "regions": b["regions"], "tags": tags, "line": b["line"],
-                 "img": img, "url": f"/brands/{b['slug']}", "new": b["slug"] in NEW})
+                 "img": img, "url": f"/brands/{b['slug']}", "new": b["slug"] in NEW, "upd": last_updated(b)})
+data.sort(key=lambda d: d["upd"], reverse=True)  # stable: ties stay alphabetical
 N = len(data)
 by = {d["slug"]: d for d in data}
 def count(pred): return sum(1 for d in data if pred(d))
@@ -170,7 +190,7 @@ def card(d):
     meta = " · ".join(x for x in (esc(d["loc"].upper().strip("— -")), esc(d["cat"].upper())) if x)
     text = (d["name"]+" "+d["loc"]+" "+d["line"]+" "+" ".join(TAGL.get(t,t) for t in d["tags"])+" "+" ".join(CATL.get(c,c) for c in d["cats"])).lower()
     pl = re.sub(r"\s+", " ", re.sub(r"&[a-z]+;|&#\d+;", "", d["name"])).strip()
-    return (f'<a class="bc" href="{d["url"]}" data-slug="{d["slug"]}" data-letter="{d["name"].lstrip("&").strip()[0].upper()}" '
+    return (f'<a class="bc" href="{d["url"]}" data-slug="{d["slug"]}" data-letter="{d["name"].lstrip("&").strip()[0].upper()}" data-upd="{d["upd"]}" data-az="{esc(d["name"].lstrip("&").strip().lower())}" '
             f'data-cats="{" ".join(d["cats"])}" data-regions="{" ".join(d["regions"])}" '
             f'data-tags="{" ".join(d["tags"])}{" __new" if d["new"] else ""}" data-text="{esc(text)}">'
             f'<div class="bc-img"><img src="{esc(d["img"])}" alt="{esc(pl)}" loading="lazy"><span class="bc-view">VIEW BRAND →</span></div>'
@@ -248,7 +268,7 @@ CSS = r"""
 #bx .az{background:none;border:0;cursor:pointer;font-family:var(--bx-mono);font-size:12px;letter-spacing:.1em;width:34px;height:34px;color:var(--bx-ink);border-bottom:1px solid transparent}
 #bx .az:hover{border-bottom-color:var(--bx-ink)}#bx .az.off{color:var(--bx-ink30);cursor:default}
 #bx .dir-state{display:flex;justify-content:space-between;align-items:center;gap:20px;font-family:var(--bx-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--bx-ink60);min-height:20px}
-#bx .dir-state b{color:var(--bx-ink);font-weight:500}#bx .dir-state button{background:none;border:0;cursor:pointer;font:inherit;color:var(--bx-ink);border-bottom:1px solid var(--bx-ink);padding:0 0 2px;letter-spacing:inherit;text-transform:inherit}
+#bx .dir-state b{color:var(--bx-ink);font-weight:500}#bx .bx-sort button{border-bottom-color:transparent!important;color:var(--bx-ink60)!important}#bx .bx-sort button.on,#bx .bx-sort button:hover{border-bottom-color:var(--bx-ink)!important;color:var(--bx-ink)!important}#bx .bx-sort [data-open-filter]{color:var(--bx-ink)!important;border-bottom-color:var(--bx-ink)!important}#bx .dir-state button{background:none;border:0;cursor:pointer;font:inherit;color:var(--bx-ink);border-bottom:1px solid var(--bx-ink);padding:0 0 2px;letter-spacing:inherit;text-transform:inherit}
 #bx .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(22px,2.4vw,36px) clamp(16px,1.6vw,26px);padding-bottom:40px}
 #bx .bc{display:flex;flex-direction:column;gap:12px}#bx .bc.hide{display:none}
 /* .bc-body and .vibe-body are the text halves of their cards. They looked like
@@ -324,7 +344,7 @@ BODY = f"""<!--BX-BRAND-INDEX-->
   <div class="sh"><h2>The full list</h2><span class="sub" id="bx-count">{N} BRANDS</span></div>
   <div class="search"><input id="bx-q" type="search" placeholder="Search brands, gear, or a vibe&hellip;" autocomplete="off" aria-label="Search the Brand Index"><span class="k">/</span></div>
   <div class="dir-tools"><div class="azbar" role="navigation" aria-label="Jump to letter">{AZ}</div>
-    <div class="dir-state"><span id="bx-label">ALPHABETICAL</span><button type="button" data-open-filter>FILTER &rarr;</button></div></div>
+    <div class="dir-state"><span id="bx-label">RECENTLY UPDATED</span><span class="bx-sort">SORT: <button type="button" id="bx-s-recent" class="on">RECENT</button> <button type="button" id="bx-s-az">A&ndash;Z</button> &middot; <button type="button" data-open-filter>FILTER &rarr;</button></span></div></div>
   {GRID}
   <p class="zero" id="bx-zero">Nothing in that combination yet &mdash; the Index grows every week.</p>
   <div class="submit"><div><div class="eyebrow">KNOW SOMETHING WE DON&rsquo;T?</div><h2>The Index should never feel finished.</h2><p>Found a brand that belongs here? Send it our way.</p></div><a class="cta" href="mailto:Lenny@thegrassyissue.com?subject=A%20brand%20for%20the%20Index">SUBMIT A BRAND &rarr;</a></div>
@@ -372,7 +392,7 @@ function apply(){
   cuts.forEach(x=>x.classList.toggle('hide',filtering));
   $('#bx-zero').classList.toggle('show',n===0);
   $('#bx-count').textContent=(filtering?n+' OF ':'')+cards.length+' BRANDS';
-  $('#bx-label').innerHTML=filtering?('SHOWING <b>'+describe()+'</b> &middot; <button type="button" id="bx-clr">CLEAR</button>'):'ALPHABETICAL';
+  $('#bx-label').innerHTML=filtering?('SHOWING <b>'+describe()+'</b> &middot; <button type="button" id="bx-clr">CLEAR</button>'):(sortMode==='az'?'ALPHABETICAL':'RECENTLY UPDATED');
   const b=$('#bx-clr'); if(b)b.onclick=clearAll;
   $('#bx-apply-count').textContent='SHOW '+n+' BRANDS →';
 }
@@ -384,7 +404,14 @@ $('#bx-q').addEventListener('input',e=>{state.q=e.target.value;state.vibe=null;s
 document.addEventListener('keydown',e=>{const t=document.activeElement.tagName;if(e.key==='/'&&t!=='INPUT'&&t!=='TEXTAREA'){e.preventDefault();goDir();$('#bx-q').focus({preventScroll:true});}});
 $$('#bx .vibe').forEach(v=>v.addEventListener('click',e=>{if(v.dataset.vibe==='best25')return;e.preventDefault();clearAll();if(v.dataset.vibe==='picks'){state.picks=true;}else{state.vibe=VIBE[v.dataset.vibe];}apply();goDir();}));
 $$('#bx [data-jump]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();clearAll();const j=a.dataset.jump;if(j.startsWith('region:'))state.regions.add(j.split(':')[1]);if(j==='picks')state.picks=true;apply();goDir();}));
-$$('#bx .az').forEach(b=>b.addEventListener('click',()=>{const t=cards.find(c=>!c.classList.contains('hide')&&c.dataset.letter===b.dataset.letter);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'instant'});}}));
+let sortMode='recent';
+const grids=$$('#bx #directory .grid'),slots=grids.map(g=>g.querySelectorAll('.bc').length);
+function setSort(m){if(m===sortMode)return;sortMode=m;
+  const list=[...cards].sort(m==='az'?((a,b)=>a.dataset.az.localeCompare(b.dataset.az)):((a,b)=>b.dataset.upd.localeCompare(a.dataset.upd)||a.dataset.az.localeCompare(b.dataset.az)));
+  let i=0;grids.forEach((g,gi)=>{for(let k=0;k<slots[gi];k++)g.appendChild(list[i++]);});
+  $('#bx-s-recent').classList.toggle('on',m==='recent');$('#bx-s-az').classList.toggle('on',m==='az');apply();}
+$('#bx-s-recent').onclick=()=>setSort('recent');$('#bx-s-az').onclick=()=>setSort('az');
+$$('#bx .az').forEach(b=>b.addEventListener('click',()=>{setSort('az');const t=$$('#bx .bc').find(c=>!c.classList.contains('hide')&&c.dataset.letter===b.dataset.letter);if(t){window.scrollTo({top:t.getBoundingClientRect().top+window.scrollY-90,behavior:'instant'});}}));
 const drawer=$('#bx-drawer');function openD(){drawer.classList.add('open');document.body.style.overflow='hidden'}function closeD(){drawer.classList.remove('open');document.body.style.overflow=''}
 $$('#bx [data-open-filter]').forEach(b=>b.onclick=openD);$('#bx-d-close').onclick=closeD;$('#bx .scrim').onclick=closeD;
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&drawer.classList.contains('open'))closeD();});
