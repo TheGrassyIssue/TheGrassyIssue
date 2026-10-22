@@ -131,7 +131,7 @@ TAX = [
  ),
 ("tag", "post-round-friendly", "Golf Clothes You Can Wear After the Round",
  "Post-Round Golf Clothing Brands | The Grassy Issue",
- "Thirty-one golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
+ "Thirty-two golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
  """<p>The test is simple and unforgiving: would you keep it on for dinner. Most golf clothing
  fails it, because the thing that makes a polo read as golf — the logo placement, the sheen of the
  fabric, the cut through the shoulder — is exactly the thing that makes it read as golf in a
@@ -157,7 +157,7 @@ TAX = [
  ),
 ("tag", "quiet-luxury", "Quiet Luxury Golf Brands",
  "Quiet Luxury Golf Brands — Understated | The Grassy Issue",
- "Nineteen golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
+ "Twenty golf brands working in restraint — no visible branding, considered fabric and cuts that say nothing at all across a car park.",
  """<p>Quiet is harder than loud, because there is nowhere to hide. Strip the logo and the graphic
  and what is left is fabric, cut and finish, which are the expensive parts. That is why this is the
  smallest of the major groups in the Index and why the price floor across it is the highest.</p>
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Ninety-one golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "Ninety-two golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a

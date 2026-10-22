@@ -46,7 +46,7 @@ C = [
  (None, None, "Wool and cashmere, V-neck, in gray. The quietest of Palmer&rsquo;s cardigan colors."),
  (None, None, "From Puma&rsquo;s current Arnold Palmer collection, named for the multicolor umbrella logo he adopted in 1961. Forest green, white or pink."),
  (None, None, "Rope caps have been part of Puma&rsquo;s Arnold Palmer range from the start. This one is in the collection now, in navy or white."),
- (None, None, "The yellow shirt: the middle color in the red, yellow and blue outfits he was remembered for."),
+ (None, None, "Pima cotton with contrast piping, plus removable collar stays to keep the collar crisp. Palmer&rsquo;s shirts never seemed to wrinkle. Red, navy, maroon or burnt orange."),
  (None, None, "Double-pleated wool-blend trousers in cement or gray. Palmer&rsquo;s slacks always had a razor crease, so press them."),
  (None, None, "Brown leather penny loafers, kept shined. The Puma x Arnold Palmer collection launched with a brown loafer of its own."),
  (None, None, "Yellow leather with the umbrella logo embroidered on it. Seamus says the yellow nods to his trousers. Fairway, mallet and blade covers too."),
