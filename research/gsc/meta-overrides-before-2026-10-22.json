@@ -1,0 +1,417 @@
+{
+ "_what": "Hand-written <title> and <meta name=description> for the pages that already earn search impressions. Applied by fix-meta.py, which is re-runnable so a page rebuild cannot silently lose these.",
+ "_why": "GSC 20 Jun — 19 Sep 2026: average position 8 but CTR 1.1%. Position 8 normally earns 2-3%, so roughly half to two thirds of the clicks the ranking already deserves are being lost at the SERP. Every title below was 66-118 characters and every description 153-304, so Google was truncating both mid-phrase.",
+ "_rules": [
+  "title <= 60 characters, brand or primary query FIRST",
+  "description 120-160 characters, the answer front-loaded",
+  "no site-name suffix on article pages — Google renders the site name on its own line above the title, so repeating it spent 19 characters to say nothing. The homepage keeps it, because that is the page Google derives the site name FROM.",
+  "house rules still apply: no banned word, no ranking other brands down, no selection-criteria explainers"
+ ],
+ "_source": "research/gsc/pages-2026-09-21.json",
+ "drops/brand-to-know-sentinel-golf.html": {
+  "title": "Sentinel Golf: The Grail Closet of Indie Golf",
+  "description": "Sentinel Golf makes carry bags in Minneapolis from Dyneema shells and Danish textiles, from $810. Every bag in the line, the materials and how pre-orders work.",
+  "_keep": "Lenny kept 'The Grail Closet of Indie Golf', 7 Oct 2026; 'Brand to Know' dropped so the brand leads and it fits in 60."
+ },
+ "drops/brand-to-know-kingfisher-golf.html": {
+  "title": "Kingfisher Golf: Dallas Golf Clothing Under $65",
+  "description": "Kingfisher Golf began at an East Dallas kitchen counter with a former PepsiCo art director. Screen-printed tees, performance polos and the Worst Golfer contest."
+ },
+ "drops/brand-to-know-aug-11.html": {
+  "title": "Aug 11 Golf Hats: The Atlanta Hat Brand's New Drops",
+  "description": "Aug 11 is the Atlanta golf hat brand Johnny Persón named for his sister's birthday. Our revisit: the new REPS athletic line, The Refill and 12 hats at $54.95."
+ },
+ "drops/brand-to-know-read-the-green.html": {
+  "title": "Read The Green Golf: NYC Golf Hats and the '97 Pullover",
+  "description": "Read The Green is a New York golf hat and apparel brand from four friends, not a putting tip. The $47 Founder's Cap, the viral '97 Pullover and the full range."
+ },
+ "drops/brand-to-know-cloud-and-wind-golf.html": {
+  "title": "Cloud & Wind Golf Grips: $18 Grips With Chinese Verse",
+  "description": "Cloud & Wind makes golf grips only: hand-blended rubber, Eastern design and a line of verse printed on every box, at $18 a grip. Every grip in the range."
+ },
+ "drops/brand-to-know-huega-house.html": {
+  "title": "Huega House Golf Hats: The Carlsbad Brand the Pros Wear",
+  "description": "Huega House is the Carlsbad hat brand from ex-Packers linebacker Jake Ryan and Jonathan Ruley. The hygge name, the prints and why Rodgers and Ohtani wear it."
+ },
+ "drops/brand-to-know-siegelman-stable.html": {
+  "title": "Siegelman Stable — NYC Streetwear Meets Harness Racing",
+  "description": "Max Siegelman's New York label, built on harness-racing heritage. The caddie origin story, the Maxfli collab and the pieces that got it noticed."
+ },
+ "drops/brand-to-know-mogshade.html": {
+  "title": "Mogshade Golf Headcovers: Handmade in Portugal",
+  "description": "Mogshade makes golf headcovers, towels and wool wall art by hand in Portugal, to order, from deadstock and rescued fabric. Three-week lead time."
+ },
+ "drops/brand-to-know-casualist.html": {
+  "title": "Casualist Golf: London Golf Clothes Made in Portugal",
+  "description": "Casualist is Elie Reboul's label, designed in London and made in Portugal. It began as Casual Pro in Melbourne and moved in 2024. Clothes for golf and after."
+ },
+ "drops/brand-to-know-olydoe.html": {
+  "title": "Olydoe Golf: Supima Cotton Golf Polos From Dallas",
+  "description": "Olydoe makes cotton golf polos in Dallas, not polyester: Supima hollow-core yarn from a former Wall Street banker, launched October 2025. Fit and fabric."
+ },
+ "drops/brand-to-know-sugarloaf-social-club.html": {
+  "title": "Sugarloaf Social Club — The Group Chat Turned Brand",
+  "description": "Ian Gilley's crew started as a 2011 college group chat and became one of golf's most prolific collaborators. The capsules, the collabs, the story."
+ },
+ "drops/ssc-hidden-gem-collection.html": {
+  "title": "Sugarloaf Social Club — The Hidden Gem Collection",
+  "description": "An $850 MacKenzie bag, USA-made wool headcovers, a Crazy Creek chair, a Nalgene and a frisbee. All fifteen pieces, with prices and six favorites."
+ },
+ "drops/brand-to-know-quiet-golf.html": {
+  "title": "Quiet Golf: The Costa Mesa Golf Brand, Revisited for Fall",
+  "description": "Quiet Golf, revisited: the Costa Mesa label from Christion Lennon and the Diaz brothers. Fall polos, a Sentinel Scout and Harris Tweed covers, with prices.",
+  "_note": "Revisited 7 Oct 2026; owl crest no longer in the range."
+ },
+ "drops/best-golf-streetwear-brands-2026.html": {
+  "title": "The 9 Best Golf Streetwear Brands in 2026",
+  "description": "Nine golf streetwear brands, nine awards: Students, Metalwood, Malbon, Eastside, Public Drip and more, with six pieces from each."
+ },
+ "drops/brand-to-know-radry-golf.html": {
+  "title": "Radry Golf — The Wisconsin Artist Behind the Bird",
+  "description": "Tony Knapton draws in Sheboygan before anything gets stitched. One round eye for birdies, one square for bogeys — the hats, the tees, the story."
+ },
+ "drops/reebok-x-manors-ii.html": {
+  "title": "Reebok × Manors II — The United Kingdom of Golf",
+  "description": "All seventeen pieces and thirty colorways from Reebok × Manors II, broken down by color with prices and stock, plus the campaign behind it."
+ },
+ "drops/the-magazine-edit.html": {
+  "title": "The Best Independent Golf Magazines — 24 Titles",
+  "description": "Twenty-four independent golf magazines and newsletters, from ad-free quarterlies to indie print coming out of the UK, Europe and Japan."
+ },
+ "drops/brand-to-know-odd-ritual.html": {
+  "title": "Odd Ritual Golf — Cape Town Golf Clothing, Collection 03",
+  "description": "Odd Ritual Golf is Cape Town's golf culture brand. Collection 03 brings the Caddie Jacket, pleated trousers, heavy knits and a 1990s polo, made in South Africa."
+ },
+ "drops/gumtree-nature-club-drop.html": {
+  "title": "Gumtree Golf & Nature Club — The Nature Club Drop",
+  "description": "Sixteen pieces sewn by hand in New York from deadstock lace, wetsuit neoprene, Angora mohair and reclaimed cotton. Every piece, with prices."
+ },
+ "drops/australian-golf-brands-and-trips.html": {
+  "title": "Golf in Australia — 10 Brands and 12 Trips to Book",
+  "description": "Ten independent Australian golf brands, plus twelve organized trips you can actually book, from Random Golf Club's Australia Major onward."
+ },
+ "drops/walker-golf-the-par-tec-drop.html": {
+  "title": "Walker Golf — The Australian Skate-Golf Brand",
+  "description": "Pro skateboarder Jack Fardell's label out of the Gold Coast. The Kooka logo, the Par-Tec fabric and the whole drop, with prices and stock."
+ },
+ "drops/brand-to-know-metalwood-studio.html": {
+  "title": "Metalwood Studio — Cole Young's Y2K Golf Revival",
+  "description": "The Los Angeles studio mining late-nineties tour aesthetics. Cole Young's story, the adidas MC70 collab and the pieces that set the template."
+ },
+ "drops/hancock-golf-course-austin.html": {
+  "title": "Hancock Golf Course — The Oldest Course in Texas",
+  "description": "Nine holes and par 35 in central Austin for twenty dollars, no carts and no pro shop. The Harvey Penick history, and how the course plays."
+ },
+ "drops/brand-to-know-beams-golf.html": {
+  "title": "BEAMS Golf — Japan's First Select-Shop Golf Line",
+  "description": "Harajuku's most influential retailer started making golf clothes in 2011. The collabs, the silhouettes, and how to buy it from the United States."
+ },
+ "drops/brand-to-know-manors.html": {
+  "title": "Manors Golf — The Brand That Changed Its Mind",
+  "description": "Launched in London in 2019 arguing nobody needed a technical polo. In 2023 it relaunched as a technical golf brand. The full story, and the range."
+ },
+ "drops/brand-to-know-takomo-golf.html": {
+  "title": "Takomo Golf — Forged Irons From Finland, Direct",
+  "description": "Turku-built forged irons at roughly half the shop price. The fitting process, the model range and what the independent testing actually found."
+ },
+ "drops/brand-to-know-found-golf.html": {
+  "title": "Found Golf — Melbourne's Gallery-and-Golf Label",
+  "description": "Half gallery, half golf brand. Lance Peach and Ellen Keillar sell paintings beside the polos in Melbourne. The full range, in Australian dollars."
+ },
+ "drops/ranking-the-muni-grub-every-on-course-food-spot-in-austin.html": {
+  "title": "Ranking Austin's Muni Golf Course Food",
+  "description": "Austin has five public courses and the on-course food at each one tells a different story. Every spot ranked, and what to order at each."
+ },
+ "_updated": "7 Oct 2026: ten Brand to Know titles/descriptions rewritten from GSC queries (5 Jul - 4 Oct 2026); homepage set to the new tagline.",
+ "_homepage": "index.html is no longer managed here (7 Oct 2026): its title/description carry the approved tagline 'Independent golf brands, celebrated on Austin's public courses.' and are edited in index.html directly.",
+ "drops/independent-golf-brands-best-art-direction.html": {
+  "title": "13 Golf Brands With the Best Art Direction (2026)",
+  "description": "The independent golf brands with the best lookbooks, graphics and product design: Kingfisher, Left of Field, Sentinel, Whim, Found, Fyfe and seven more.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/metalwood-studio-fw26-collection.html": {
+  "title": "Metalwood Studio FW26: The Full Collection and Lookbook",
+  "description": "All 36 styles from Metalwood Studio's Fall/Winter 2026 Part 1: western track jackets, the Oasis parka, a padded Goalie Jersey and Trophy pants, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-dual-sport.html": {
+  "title": "Dual Sport Golf: Clothes for the Two-Sport Athlete",
+  "description": "Dual Sport is Evan Thompson's golf brand for athletes who play more than one sport: knit polos, boxy windbreakers and a football jersey. 24 picks with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/the-technical-brands-roundup-vol-2.html": {
+  "title": "Technical Golf Layers for Fall: 27 Picks From 26 Brands",
+  "description": "Twenty-seven technical golf pieces for a Texas fall: packable windshirts, vests, rain shells that breathe, and polos and shorts for muggy days. With prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/small-golf-club-makers-putters-irons-drivers.html": {
+  "title": "Small Golf Club Makers: 17 Independent Brands",
+  "description": "Seventeen small, independent golf club makers: milled putters, forged irons from Fort Worth and Japan, and the few small brands still making drivers.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-sunday-golf.html": {
+  "title": "Sunday Golf: The Par 3 Bag Brand, Plus a Size Guide",
+  "description": "How a San Diego par 3 course turned into Sunday Golf's Loma bag and 100,000-plus bags sold. A size guide and 24 picks, from the Loma to the Big Rig.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-matchstick-golf.html": {
+  "title": "Matchstick Golf: Hand-Painted Ball Markers From Portland",
+  "description": "Matchstick Golf makes hand-painted $20 ball markers in Portland: Putterade, Devil Horns, Cash Stack and more, plus one-of-one headcovers. 30 picks.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-gumtree-golf-and-nature-club.html": {
+  "title": "Gumtree Golf & Nature Club: Headcovers From Quilts and Tents",
+  "description": "Gumtree Golf & Nature Club sews golf headcovers in Brooklyn from 1940s quilts, camp tents and fly-fishing waders. The founder, the materials and 36 pieces.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-mount-tee-golf.html": {
+  "title": "Mount Tee Golf: Knit Polos and Plush Headcovers",
+  "description": "Mount Tee Golf, three friends in Melbourne making waffle and knit polos, pleated shorts and plush and tartan headcovers. All 39 pieces, A$12 to A$130.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-revisited-cph-golf.html": {
+  "title": "Cph/Golf: The Tokyo Golf Brand From CAPTAINS HELM",
+  "description": "Cph/Golf, the golf line of Tokyo's CAPTAINS HELM: the AW26 collection, the A.P.C. Golf collab and 18 pieces in stock now, with yen and dollar prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/austin-apartments-with-golf-simulators.html": {
+  "title": "Austin Apartments With Golf Simulators: 10 Buildings",
+  "description": "Ten Austin apartment buildings with an on-site golf simulator, from downtown to Mueller and Oak Hill, with starting rents and the drive to the nearest muni.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/golf-color-combos-mix-and-match.html": {
+  "title": "7 Golf Color Combos: Clothes, Headcovers and Grips",
+  "description": "Seven two-color golf pairings, from royal blue and chalk to forest and leaf, each built from pieces you can buy now: polos, headcovers, grips, hats and towels.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-lazyface.html": {
+  "title": "Lazyface: Mineral Sunscreen and Golf Merch",
+  "description": "Lazyface, the dermatologist-developed mineral sunscreen with its first store in Austin, plus a Tremont-made golf capsule, hats and tees. 19 pieces, $10 to $118.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/three-small-golf-brands-on-our-radar.html": {
+  "title": "3 Small Golf Brands to Watch: Three Putt, Tarraing, Rebolf",
+  "description": "Three Putt, Tarraing and Rebolf: three new small-batch golf brands from England, the US and Spain, taking golf clothes in three directions. 21 picks.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/pnw-golf-trip-gamble-sands-chambers-bay.html": {
+  "title": "PNW Golf Trip: Gamble Sands, Chambers Bay and More",
+  "description": "A five-day Pacific Northwest golf trip: Gamble Sands and Scarecrow, Chambers Bay, The Home Course and Wildwood, with where to eat and when to book.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/niche-grip-report-vol-2.html": {
+  "title": "Golf Grips From Small Makers: 56 Picks (Vol. 2)",
+  "description": "Seven small golf grip makers: RIPIT art grips, Cloud & Wind, 97golf, Gives Golf, Sweet Rollz, and IOMIC and Cadero from Japan. 56 grips with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/golf-brands-clothes-they-wanted-to-wear.html": {
+  "title": "17 Golf Brands That Made the Clothes They Wanted",
+  "description": "Seventeen independent golf brands started with the same line: we made what we wanted to wear. What each one made, 33 pieces from knit headcovers to camo.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-woodgrain-golf.html": {
+  "title": "Woodgrain Golf: Double Pleats and the '90s Golf Look",
+  "description": "Woodgrain Golf, the New York label bringing back wide double-pleated trousers, cable knits and old-school caps. All 14 pieces, from $49 hats to $180 trousers.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-parmore-golf.html": {
+  "title": "Parmore Golf: UK Streetwear Golf, No Membership Required",
+  "description": "Parmore Golf, the English streetwear golf label behind No Membership Required. Every in-stock piece, from £10 grip socks to a £90 weatherproof quarter-zip.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-no-dirt-golf.html": {
+  "title": "No Dirt Golf: The Golf Towel With a Built-In Club Brush",
+  "description": "No Dirt Golf, the Utah brand that sews a club brush into every golf towel. Twelve picks, from the $14.99 Range Rat to the $29.99 tour-size caddy towel.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/how-to-build-a-golf-outfit.html": {
+  "title": "How to Build a Golf Outfit: 7 Looks That Work",
+  "description": "How to put together a golf outfit: seven complete looks from independent brands, from pants and a tee to pastels and earth tones, with options for each piece.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/fyfe-golf-second-round-headcovers-from-vintage-golf-jackets.html": {
+  "title": "Fyfe Golf Second Round: Headcovers From Old Golf Jackets",
+  "description": "Fyfe Golf took 15 vintage golf jackets, from Mizuno to Sunderland of Scotland, and remade them by hand in Scotland into 73 headcovers. Every remake and price.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/evening-spots-vol-2-best-austin-bars.html": {
+  "title": "The Best Bars in Austin After a Round: 15 Picks",
+  "description": "Fifteen Austin bars for the evening after the round: The Roosevelt Room, Midnight Cowboy, Hula Hut, Deep Eddy Cabaret and more, with current hours.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-howie-benson.html": {
+  "title": "Howie Benson Golf: Resort Polos and Camp Collars",
+  "description": "Howie Benson, the 2025 golf label behind the Resort Camp Collar Polo. Every in-stock piece from Vol. 1, from $40 caps to $118 layers, with fit notes.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/fall-golf-t-shirts-tees-for-cooler-weather.html": {
+  "title": "Fall Golf T-Shirts: 26 Tees for Cooler Weather",
+  "description": "Fall golf T-shirts from independent brands: long sleeves, heavyweight cotton and graphic tees in fall colors from Criquet, Malbon, Manors, Sounder and more.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-mantra-golf.html": {
+  "title": "Mantra Golf: The Sonoran Desert Collection",
+  "description": "Mantra Golf, the San Francisco label behind the Mantra Collar polo: the Sonoran Desert collection, heavyweight Legacy fleece and everyday essentials.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/date-night-vol-2-austin-restaurants-for-reconnecting.html": {
+  "title": "Austin Date Night Restaurants: 15 Places to Talk",
+  "description": "Fifteen Austin restaurants for a night where you actually talk: Fish Shop, Jeffrey's, Lenoir, Barley Swine, Sway and more, from tasting menus to lounges.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/in-defense-of-the-slow-round.html": {
+  "title": "In Defense of the Slow Round of Golf",
+  "description": "Slow rounds of golf are miserable and you can't fix them. What you can control on an Austin muni: what you look at, how you handle the wait and who you talk to.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-slice-town.html": {
+  "title": "SLICE TOWN: Scandinavian Golf Streetwear",
+  "description": "SLICE TOWN, golf streetwear started in 2024 by a Dane and a Swede: nylon track suits, boxy polos, tech pants, caps and a yellow balaclava, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-mackem-golf.html": {
+  "title": "Mackem Golf: Wool Headcovers Hand-Sewn in Perth",
+  "description": "Mackem Golf, the Perth headcover studio run by Paige Harding and Adam Brown: tartan, corduroy and houndstooth covers, waxed canvas pouches and custom work.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/hat-brands-off-the-rack-off-the-radar.html": {
+  "title": "6 Independent Hat Brands to Know: 27 Caps",
+  "description": "Six independent hat brands from Los Angeles, Amsterdam, Manchester and Queensland: 27 caps and truckers from B.O.T.H., Engel, Represent, Orién and more.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/which-golfer-are-you.html": {
+  "title": "Which Golfer Are You? 7 Golfer Types and What to Buy",
+  "description": "Nature Lover, Muni Rat, Minimalist, Purist, Quiet Luxury, Cowboy or Former Skater: seven golfer types and six pieces each from independent brands.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-puttwell.html": {
+  "title": "Puttwell: The Hawaii Golf Brand With DJ Roots",
+  "description": "Puttwell, the Hawaii golf brand started by a crew from music and art: the Sig On Smith Waikahalulu capsule, Extra Butter and Sig Zane collabs, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-ashworth.html": {
+  "title": "Ashworth Golf Is Back: The 1987 Polo Brand",
+  "description": "Ashworth Golf, the 1987 cotton-polo brand, relaunched with founder John Ashworth back as creative director. Polos, fall layers, belts and bags, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-palm-golf-co.html": {
+  "title": "Palm Golf Co.: The Huntington Beach Golf Glove Brand",
+  "description": "Palm Golf Co., the Huntington Beach glove brand started by three friends from a muni: gloves, USA-made headcovers, caps and the REEF shoe collab, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-magpie-supply.html": {
+  "title": "Magpie Supply: Leather Golf Accessories From Denver",
+  "description": "Magpie Supply, a one-person Denver leather shop making scorecard holders, tee rings, hammered repair tools and a RossCo headcover. All ten pieces, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/austin-golf-weekend.html": {
+  "title": "An Austin Golf Weekend: Where to Play, Eat and Drink",
+  "description": "An Austin golf weekend: Lions Muni Friday, Roy Kizer Saturday and Lost Pines Sunday, with breakfast tacos, barbecue, Barton Springs and a vinyl bar.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/rangefinder-cases-and-pouches.html": {
+  "title": "Rangefinder Cases and Pouches: 16 Picks",
+  "description": "Rangefinder cases and pouches from Sentinel, Quiet Golf, Fyfe, Winston, Jones and Mogshade in waxed canvas, wool and leather, plus six rangefinders.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/golf-ferrules-guide.html": {
+  "title": "Custom Golf Ferrules: Who Makes Them and Where to Install",
+  "description": "What a golf ferrule does, the sizes that matter, 28 custom ferrules from Feral Golf, Clamp and BB&F Co, and where to get them installed in Austin.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-clamp-golf-company.html": {
+  "title": "Clamp Golf Company: Handmade Headcovers From Yorkshire",
+  "description": "Clamp Golf Company sews headcovers in Yorkshire, from Harris Tweed to one-of-one covers cut from Carhartt and Louis Vuitton. 31 picks with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-hudson-sutler.html": {
+  "title": "Hudson Sutler: Golf and Travel Bags Made in New Jersey",
+  "description": "Hudson Sutler cuts and sews golf bags, shoe bags, coolers and duffels in North Bergen, New Jersey. Why it suits a golf trip, and 20 picks from $50 to $399.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/limited-edition-golf-balls.html": {
+  "title": "Limited-Edition Golf Balls: 17 Special Runs",
+  "description": "Limited-edition golf balls from Callaway, Vice, Seed, TaylorMade, Bridgestone and more: hot dogs, cocktails, Oktoberfest, artist collabs and throwbacks.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/enron-golf-collection.html": {
+  "title": "Enron Golf: What Is the New Enron Golf Line?",
+  "description": "Enron is back as a parody brand, and its Pro E1 golf line is better than it has any right to be. What the new Enron is, the case for and against, and 12 picks.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/required-reading-independent-golf-magazines.html": {
+  "title": "6 Independent Golf Magazines to Read in Print",
+  "description": "Six independent golf magazines in print: Hiatus, Depeche Golf, The Loop Journal, Golf Quarterly, Golf Architecture and Links from the Road. What each costs.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/curating-your-golf-bag-setup.html": {
+  "title": "Golf Bag Setup Ideas: Match Your Bag and Headcovers",
+  "description": "Golf bag setup ideas: how to match your bag, headcovers, towel and accessories by color, with four simple rules and six complete setups from independent makers.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-st-andre.html": {
+  "title": "St. André Golf: The Atlanta Comedy Troupe's Golf Merch",
+  "description": "St. André Golf is an Atlanta golf sketch-comedy group with a sharp merch line. Who is behind it, why it looks the way it does, and 12 picks from $10 to $50.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/sugarloaf-autumn-layers-2026.html": {
+  "title": "Sugarloaf Social Club Autumn Layers: 12 Picks",
+  "description": "Sugarloaf Social Club's Autumn Layers: the new Tech Jacket and Windcrew, Hidden Gem putter covers and the layers to go with them. Twelve picks, $28 to $165.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-dimple-divot.html": {
+  "title": "Dimple & Divot: Hickory Golf Brushes From Raleigh",
+  "description": "Dimple & Divot makes hickory golf brushes by hand in Raleigh, North Carolina. The brothers behind it, the In The Woods collection and 14 picks from $13 to $120.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/austin-food-truck-field-guide.html": {
+  "title": "Austin Food Trucks: 15 Stops Across Town",
+  "description": "Fifteen Austin food trucks to drive across town for, from 7am breakfast tacos to Bib Gourmand barbecue and the Butler Pitch & Putt smash burger.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/fall-golf-towel-roundup-2026.html": {
+  "title": "50 Golf Towels for Fall 2026 From Independent Brands",
+  "description": "Fifty golf towels from 50 independent golf brands, $13 to $57: knits, chenille, jacquard, magnetic towels and a few jokes. Prices checked in fall 2026.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/dtc-golf-club-brands.html": {
+  "title": "Direct-to-Consumer Golf Clubs: 6 DTC Brands Compared",
+  "description": "Six direct-to-consumer golf club brands from entry to tour level: STIX, Vice, Takomo, Haywood, Edel and Avoda, with prices and where to try them in Austin.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/fall-drops-eastside-students-devereux.html": {
+  "title": "Fall 2026 Golf Drops: Eastside Golf, Students, Devereux",
+  "description": "Fifteen pieces from three fall golf drops: Eastside Golf's new arrivals, Students' The Curriculum and Devereux's Pioneertown Golf Club, with prices.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-galvin-green.html": {
+  "title": "Galvin Green: Swedish Golf Clothing Since 1990",
+  "description": "Galvin Green, a family-owned golf clothing brand from Växjö, Sweden, making only golf gear since 1990: polos, windproof layers and mid-layers for cool days.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/best-golf-pants-ranked.html": {
+  "title": "The 5 Best Golf Pants, Ranked (2026)",
+  "description": "Our five favorite golf pants, ranked: Manors' Greenskeeper, Sentinel's MajoTech, Odd Ritual's Pleated Daily Trouser, Students' Science Pant and lululemon.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/the-hat-and-towel-edit.html": {
+  "title": "Golf Hats and Towels: 30 Picks From Independent Brands",
+  "description": "Eighteen caps and twelve golf towels from independent golf brands, one piece per brand, every price read from the maker's own store.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/the-pants-edit.html": {
+  "title": "Pleated Golf Pants Are Back: 18 Trousers",
+  "description": "Eighteen golf trousers from independent brands, one per brand, and why the pleat came back, with prices from each maker's own store.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/on-our-radar-wild-spring-dunes.html": {
+  "title": "Wild Spring Dunes: Tom Doak's East Texas Golf Course",
+  "description": "Wild Spring Dunes opened all 18 holes on Sept. 8, 2026: a walking-only Tom Doak course on former East Texas timber land, $275, and what to know before driving.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ },
+ "drops/brand-to-know-axxa.html": {
+  "title": "AXXA: The Surf and Golf Brand From Sydney",
+  "description": "AXXA, the Sydney Northern Beaches label built between surf and golf: founded 2022, jacquard knits, the Golf-Surf Club line, with prices in Australian dollars.",
+  "_added": "17 Oct 2026 SEO pass on recent posts: brand/query first, title <=60, description 120-160."
+ }
+}
