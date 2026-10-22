@@ -127,7 +127,7 @@ WHERE = """
 TAKE = """
 <section class="products" data-btk="take">
   <div class="writeup-body">
-    <div class="drop-tag grass">The TGI Take</div>
+    <div class="drop-tag flag">The TGI Take</div>
     <p>We&rsquo;re all for dogs on the golf course. Not every course and not every round, but where they&rsquo;re allowed, bring him along. A walking round with a dog at your heel is about as good as golf gets: the pace slows down, nobody minds the bogey, and you stop staring at your phone between shots.</p>
     <p><strong>Be careful about it.</strong> A dog on the course is a guest, and so are you. Keep him on a leash, keep him off the greens and out of the bunkers, pick up after him, and keep him quiet when someone&rsquo;s hitting. Start with a short loop on a quiet evening before you take him on eighteen. If the club says no dogs, it&rsquo;s no dogs.</p>
     <p><strong>The British figured this out a long time ago.</strong> On the old links of the UK and Ireland dogs are part of the scenery. The Old Course at St Andrews closes on Sundays and turns into one of the biggest dog parks in the world, and Sunningdale&rsquo;s club historian says overseas visitors are surprised by how many dogs they see. In the US it&rsquo;s rarer, but closer than you think: Austin&rsquo;s own city courses allow leashed dogs.</p>
@@ -233,7 +233,7 @@ def head_top():
         {"@context": "https://schema.org", "@type": "ItemList", "name": TITLE, "itemListElement": items},
         {"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
             {"@type": "ListItem", "position": 1, "name": "Feed", "item": "https://thegrassyissue.com/"},
-            {"@type": "ListItem", "position": 2, "name": "Drops & Brands", "item": "https://thegrassyissue.com/#feed"},
+            {"@type": "ListItem", "position": 2, "name": "Field Notes", "item": "https://thegrassyissue.com/#feed"},
             {"@type": "ListItem", "position": 3, "name": BC, "item": URL}]},
     ]
     t, d = H.escape(TITLE, quote=True), H.escape(DESC, quote=True)
@@ -298,7 +298,7 @@ def main(apply_):
     tail = d[d.index('<div class="more" data-brandindex="1">'):]
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
-  <a href="/#feed">Drops &amp; Brands</a><span>/</span>
+  <a href="/#feed">Field Notes</a><span>/</span>
   {BC}</div>
 
 <header class="drop-header">
