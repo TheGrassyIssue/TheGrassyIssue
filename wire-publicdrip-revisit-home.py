@@ -15,23 +15,23 @@ POST = ROOT / "drops/brand-revisited-public-drip.html"
 SLUG = "/drops/brand-revisited-public-drip"
 KEY = "pdrevisit"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-PDREVISIT-CARD -->\n", "<!-- /TGI-PDREVISIT-CARD -->\n"
-TITLE = "Brand Revisited: Public Drip"
+TITLE = "Brand Revisited: Public Drip, From the Muni to the Pro Shop"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "publicdrip-revisit"
 
 SLIDES = [
-    ("card-hero", "A man in the coffee Herringbone Half Zip in a vintage clothing shop",
-     "Public Drip \u00b7 Brand Revisited", "Muni to the LIV Tour",
-     "Brooklyn's muni label now dresses LIV's Cleeks GC."),
+    ("card-hero", "A man in the denim P script bucket in a vintage clothing shop",
+     "Public Drip \u00b7 Brand Revisited", "Muni to the Pro Shop",
+     "Brooklyn's muni-born label, four months on: 33 picks."),
     ("a2-1", "Public Drip x Akashi-Kama Patchwork Swing Vest",
      "Patchwork Swing Vest \u00b7 $140", "Public Drip x Akashi-Kama",
      "Japanese patchwork textiles on a swing vest, out October 23."),
     ("n2-1", "Public Drip Herringbone Half Zip in coffee",
      "Herringbone Half Zip \u00b7 $140", "Nightshift, FW26",
      "The fall collection: knits, mocks, pinstripes and denim."),
-    ("c1-1", "Public Drip Public Athlete Polo in coffee",
-     "Public Athlete Polo \u00b7 $95", "The Cleeks Polo",
-     "The polo Cleeks GC wear on tour."),
+    ("p7-1", "Public Drip Public Athlete Knit Polo in ochre",
+     "Public Athlete Knit Polo \u00b7 $66", "The Polos",
+     "Ten polos, every colorway in one card."),
 ]
 
 

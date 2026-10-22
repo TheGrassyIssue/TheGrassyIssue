@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """build-publicdrip-revisit.py — Brand Revisited: Public Drip. 22 October 2026. Cloned from build-sloat-btk.py.
 Lenny: "Let's do a brand revisited- .../public-drip-brooklyns-muni-born-golf-label" -> options sheet -> "let's build it and bring the post to the 1st slot".
-Picks: everything new since June (Akashi-Kama x3, Nightshift FW26) + the core pieces (no pick list given; editor's choice), 19 cards.
+Picks: everything new since June (Akashi-Kama x3, Nightshift FW26) + the core pieces, 19 cards -> v2 (22 Oct): "hero grainy", "remove the LIV golf mentions", "a little thin... more of a write up and more options", "background color for the products isn't right" -> 33 cards, site hero, stone backgrounds, no LIV/Cleeks.
 FACTS: publicdrip.com products.json (USD, Oct 22 2026); research/publicdrip-revisit/brief.md (LINKS Apr 23 2026, LIV/Cleeks pages,
 Instagram @publicdripbrand, Golfweek Sep 15). Akashi-Kama collab releases Oct 23. Never "worth".
 """
@@ -14,10 +14,10 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent
 DONOR = ROOT / "drops/brand-to-know-mackem-golf.html"
 
-TITLE = "Public Drip Revisited: Cleeks, Akashi-Kama and the Nightshift Collection"
-DESC = ("Four months after our first look, Brooklyn's muni-born Public Drip is LIV's Cleeks GC clothing partner, has a Japanese-textile "
-        "swing vest with Akashi-Kama and a whole fall line. 19 picks with prices.")
-H1 = "Brand Revisited: Public Drip, From Van Cortlandt to the LIV Tour"
+TITLE = "Public Drip Revisited: Nightshift, Akashi-Kama and 33 Picks"
+DESC = ("Four months after our first look at Brooklyn's muni-born Public Drip: the Nightshift fall collection, a Japanese-textile swing vest "
+        "with Akashi-Kama, new pro shops, and 33 picks from $40 to $170.")
+H1 = "Brand Revisited: Public Drip, From the Muni to the Pro Shop"
 BC = "Brand Revisited: Public Drip"
 SLUG = "brand-revisited-public-drip"
 IMG = "/images/publicdrip-revisit"
@@ -26,41 +26,69 @@ C = "Public Drip"
 AK = "Public Drip x Akashi-Kama"
 P = {
  "a2": (AK, "Patchwork Swing Vest", "$140", "swing-vest-patchwork",
-   "Our pick. A ribbed V-neck sleeveless vest cut from a 100% cotton patchwork fabric Akashi-Kama supplied, with hidden button waist pockets for your on-course goods. Public Drip&rsquo;s line: &ldquo;There may not be a bigger flex on the course this fall than the swing vest.&rdquo; Releases October 23."),
+   "Our pick of the whole post. A ribbed V-neck sleeveless vest cut from a 100% cotton patchwork fabric Akashi-Kama supplied, with hidden button waist pockets for your on-course goods. Public Drip&rsquo;s line: &ldquo;There may not be a bigger flex on the course this fall than the swing vest.&rdquo; Releases October 23."),
  "a3": (AK, "Sharkskin Swing Vest", "$140", "swing-vest-sharkskin",
-   "The same swing vest in a quieter 100% cotton sharkskin from Akashi-Kama, with ribbed trim and the collab logo embroidered on the back. Releases October 23."),
+   "The same swing vest in a quieter 100% cotton sharkskin from Akashi-Kama, with ribbed trim and the collab logo embroidered on the back. Layer it over a long-sleeve mock. Releases October 23."),
  "a1": (AK, "&ldquo;Golf Abroad&rdquo; Long Sleeve Mock", "$115", "pa-ls-mock-neck-akashi-kama-coffee",
    "The long-sleeve player&rsquo;s mock in soft cotton, printed with a &ldquo;Golf Abroad&rdquo; graphic that reads hole, yard, par in Japanese. Coffee, with Akashi-Kama&rsquo;s &ldquo;NY to CA&rdquo; label at the hem. Releases October 23."),
+ "n2": (C, "The Herringbone Half Zip", "$140", "the-herringbone-half-zip-coffee",
+   "The Nightshift lead piece: a soft cotton-blend herringbone knit with a gold YKK zip, a felt P appliqu&eacute; and the script logo. Coffee or cream."),
  "n1": (C, "Triborough Waffle Knit Polo", "$110", "triborough-waffle-knit-polo-coffee",
    "A long-sleeve polo in a textured, quick-dry waffle knit with four-way stretch and the silicone P. Dress it up or down. Coffee, dark slate, black or navy."),
- "n2": (C, "The Herringbone Half Zip", "$140", "the-herringbone-half-zip-coffee",
-   "The Nightshift lead piece: a soft cotton-blend herringbone knit with a gold YKK zip and a felt P appliqu&eacute;. Coffee or cream. It&rsquo;s the one on the hero up top."),
  "n3": (C, "Public Athlete Long Sleeve Mock", "$110", "public-athlete-long-sleeve-mock-coffee",
-   "The player&rsquo;s mock with long sleeves, in cotton with the script logo at the chest and a tonal P on the sleeve. Coffee or cream."),
+   "The player&rsquo;s mock with long sleeves, in cotton with the script logo at the chest and a tonal P on the sleeve. Coffee or cream. It&rsquo;s the base layer under both swing vests."),
  "n4": (C, "Anywhere Pleated Pants", "$170", "anywhere-pleated-pants-pinstripe",
-   "The double-pleated trouser that got Public Drip noticed, built on a classic suit pant in lightweight stretch nylon. Fall added pinstripe and charcoal to sand, black and olive."),
+   "The double-pleated trouser that made the brand&rsquo;s name, built on a classic suit pant in lightweight stretch nylon with a straight, tapered leg. Fall added pinstripe and charcoal to sand, black and olive."),
  "n5": (C, "&ldquo;P&rdquo; Script Denim Snapback", "$60", "p-script-denim-snapback-indigo",
    "Indigo denim five-panel with a felt P script and a leather strap. Made to get better the more you wear it."),
  "n6": (C, "&ldquo;P&rdquo; Script Denim Bucket", "$65", "p-script-denim-bucket-indigo",
-   "The denim version of the bucket, with the felt P and branded seam tape inside."),
+   "The denim version of the bucket, with the felt P and branded seam tape inside. It&rsquo;s the hat on the hero up top."),
  "n7": (C, "Script Drip 3-Pack Marker Set", "$45", "3-pack-drip-marker",
    "Three gold-metal markers in green, black and maroon, with a drip alignment line and a faux-suede pouch."),
  "c1": (C, "Public Athlete Polo", "$95", "public-athlete-polo-coffee",
-   "The Cleeks GC polo. Coffee, pine grove and cream are the colors Cleeks wear on the LIV tour; white and storm are back in stock. Knit spread collar, embossed P, four-way stretch."),
+   "The everyday polo, and one Martin Kaymer has worn on tour: knit spread collar, embossed P, four-way recycled-poly stretch. Eight colors, with white and storm back in stock after selling out."),
  "c2": (C, "Public Athlete Blade Polo", "$90", "public-athlete-blade-polo-cream",
    "Still our favorite place to start: knit collar, hidden two-button placket, recycled-poly stretch. Cream, slate or sage."),
  "c3": (C, "Public Athlete Striped Polo", "$95", "public-athlete-striped-polo-olive-cream",
    "A jacquard-knit stripe with a contrast collar, in olive and cream or storm and white."),
+ "p2": (C, "Public Athlete Frequency Polo", "$100", "public-athlete-frequency-polo",
+   "A jacquard knit with a subtle pattern Public Drip says is meant to put you in the right mindset. Lightweight and breathable."),
+ "p1": (C, "Public Athlete Up &amp; Down Polo", "$100", "public-athlete-up-down-polo",
+   "A jacquard pattern inspired by the highs and lows of a round. Low stock, so check your size."),
+ "p3": (C, "Public Athlete Retro Polo", "$100", "public-athlete-retro-polo",
+   "A jacquard knit that borrows from classic polo patterns, with a modern cut."),
+ "p4": (C, "Public Athlete Drip Stripe Polo", "$100", "public-athlete-drip-stripe-polo",
+   "The statement stripe, in jacquard knit with a knitted spread collar and the embossed P."),
+ "p5": (C, "Public Athlete Camo Polo", "$100", "public-athlete-camo-polo",
+   "Camo drawn from the shapes of bunkers and greens, in a recycled-poly jacquard with a spread collar."),
+ "p6": (C, "Public Athlete Tonal Polo", "$95", "public-athlete-tonal-polo-black",
+   "The core polo with a tonal collar, in black or navy. As quiet as Public Drip gets."),
+ "p7": (C, "Public Athlete Knit Polo", "$66", "public-athlete-knit-polo-ochre",
+   "A 100% cotton sweater-knit polo with cross-stitch embroidery and a three-button placket. Ochre, green or navy, and the cheapest polo in the line."),
  "c4": (C, "The Dinner Polo", "$115", "dinner-polo",
-   "A long-sleeve heathered piqu&eacute; with a felt P, for the dinner after the round. Smoke."),
+   "A long-sleeve heathered piqu&eacute; with a felt P, made for the dinner after the round. Smoke."),
+ "l1": (C, "Public Athlete Mock Neck", "$85", "public-athlete-mock-neck-cream",
+   "The short-sleeve player&rsquo;s mock in a stretch poly blend with a silicone P, in cream or pine grove. Public Drip&rsquo;s line: &ldquo;Pinky up.&rdquo;"),
+ "l2": (C, "Public Athlete Rugby", "$130", "public-athlete-rugby-navy-gold",
+   "A 100% cotton rugby with a sturdy structure that softens with age, a three-button placket and a sewn-on felt P. Navy with gold or red stripes."),
  "c5": (C, "Swing Shirt", "$120", "swing-shirt-green",
    "Japanese nylon ripstop that packs into its own pocket, printed &ldquo;Always in the Bag.&rdquo; Green, cream or black."),
+ "l3": (C, "Elevated Tee", "$50", "elevated-tee-green",
+   "A relaxed tee inspired by Japanese street style, made from 100% recycled nylon fishnets. Green, cream or black."),
  "c6": (C, "Anywhere Tech Short", "$90", "anywhere-tech-short-olive",
    "Stretch nylon with a flat drawstring waist and belt loops. Olive or black."),
+ "b1": (C, "Anywhere Cord Shorts", "$50", "anywhere-p-script-cord-shorts-navy",
+   "Thin-wale cotton corduroy with a 6-inch inseam and a drawstring waist, in navy. Low stock."),
  "h1": (C, "&ldquo;P&rdquo; Script Nylon Snapback", "$40", "p-script-nylon-snapback-sand",
    "The lightweight, quick-drying everyday hat. Sand, pine grove, white or black."),
  "h2": (C, "&ldquo;P&rdquo; Script Nylon Bucket Hat", "$50", "script-nylon-bucket-hat-black",
    "Unstructured nylon with the P appliqu&eacute; and drip-pattern seam tape. Black, pine grove, sand or white."),
+ "h4": (C, "Public Drip Classic Baseball Cap", "$50", "public-drip-classic-baseball-cap-sand",
+   "Lightweight wool with a felt P script, a green satin underbrim and a leather strap. Sand, navy, forest green or black."),
+ "h6": (C, "Fore All Nylon Snapback", "$40", "fore-all-nylon-snapback-black",
+   "A nylon snapback with &ldquo;Fore All&rdquo; across the front, which Public Drip calls a reminder that the game is for everyone."),
+ "h7": (C, "&ldquo;P&rdquo; Script Appliqu&eacute; Bucket", "$50", "p-script-applique-bucketwhite",
+   "The classic bucket with a woven felt P patch, in white or black."),
  "h3": (C, "Script Driver Cover", "$90", "script-driver-cover-whiskey",
    "Genuine leather with a white leather P, two white stripes and the Drip club seal. Whiskey, green or black."),
 }
@@ -69,46 +97,57 @@ SECTIONS = [
   "<strong>Three pieces &middot; $115&ndash;$140 &middot; out October 23</strong>Built with Akashi-Kama, a Japanese-American label founded by Alec Nakashima, from fabrics Akashi-Kama supplied."),
  ("Nightshift, FW26", "nightshift", ["n2","n1","n3","n4","n5","n6","n7"],
   "<strong>Seven pieces &middot; $45&ndash;$170</strong>The fall collection, launched August 28: knits, mocks, pinstripes and denim."),
- ("Still in the Bag", "core", ["c1","c2","c3","c4","c5","c6","h1","h2","h3"],
-  "<strong>Nine pieces &middot; $40&ndash;$120</strong>The core pieces we&rsquo;d still buy, including the Cleeks polo, with every colorway in one card."),
+ ("The Polos", "polos", ["c1","c2","c3","p2","p1","p3","p4","p5","p6","p7"],
+  "<strong>Ten polos &middot; $66&ndash;$100</strong>The heart of the brand. Every colorway sits in one card, and nearly all of them fit true to size."),
+ ("Layers, Mocks &amp; Tees", "layers", ["c4","l1","l2","c5","l3"],
+  "<strong>Five pieces &middot; $50&ndash;$130</strong>A dinner polo, a mock, a rugby, a packable shell and a tee made from fishing nets."),
+ ("Shorts, Hats &amp; the Bag", "accessories", ["c6","b1","h1","h2","h4","h6","h7","h3"],
+  "<strong>Eight pieces &middot; $40&ndash;$90</strong>Five hats, two shorts and a driver cover, all carrying the script P."),
 ]
-N = 19
+N = 33
 PQ = {
  "akashi-kama": ("My handicap is embarrassing. My kids don&rsquo;t care.", "Neil Tan, Public Drip founder, on Father&rsquo;s Day"),
  "nightshift": ("I almost think of the subway as being this mood board where you can see what everyone&rsquo;s wearing.", "Neil Tan, to LINKS"),
- "core": ("I love the way some of my favorite dress shirts look, but you can&rsquo;t wear a dress shirt every day.", "Neil Tan, to LINKS"),
+ "polos": ("I love the way some of my favorite dress shirts look, but you can&rsquo;t wear a dress shirt every day.", "Neil Tan, to LINKS"),
+ "accessories": ("The city plays public.", "Public Drip, on its night at Flushing Meadows Pitch &amp; Putt"),
 }
 CAP = "Photography &middot; Public Drip"
 BANDS = {
- "akashi-kama": ("The collab", "From Public Drip and Akashi-Kama&rsquo;s Instagram.",
-   [("life-1","A man in the patchwork swing vest sitting on a Brooklyn brownstone stoop","&ldquo;Akashi-Kama x Public Drip,&rdquo; out October 23"),
-    ("life-2","Close-up of the Japanese-textile patchwork on the swing vest","&ldquo;Japanese textiles, reimagined for the course.&rdquo;"),
-    ("life-6","A man in the patchwork swing vest seated in front of golf bags and headcovers","The swing vest, on the post announcing Neil Tan as Cleeks&rsquo; Art of Golf partner")]),
- "core": ("Out in the world", "Coney Island, the BMW International Open and the clubroom.",
-   [("life-5","A golfer on the sand at Coney Island carrying the Cleeks x Public Drip Bag 13","Coney Island, with Bag 13: &ldquo;This one meant something.&rdquo;"),
-    ("life-10","A Cleeks player at the top of his swing in a green Public Drip polo and white cap","Cleeks at the BMW International Open"),
-    ("life-15","Two golfers in jacquard polos and pleated pants in a wood-panelled clubroom","The SS26 Open Season campaign")]),
+ "akashi-kama": ("The collab", "From the Public Drip x Akashi-Kama shoot.",
+   [("site-31","A man in the patchwork swing vest over a cream long-sleeve, from the Akashi-Kama shoot","The Patchwork Swing Vest"),
+    ("site-30","A man in the brown sharkskin swing vest over a cream long-sleeve in a vintage shop","The Sharkskin Swing Vest"),
+    ("site-16","Close portrait in the patchwork swing vest and a denim P script snapback","Patchwork, with the denim snapback")]),
+ "nightshift": ("Nightshift, on set", "From Public Drip&rsquo;s fall campaign, shot in a vintage shop.",
+   [("site-8","A man in a coffee knit and P script cap in front of shelves of vintage boots","Nightshift"),
+    ("site-10","A man in a cream long-sleeve mock and denim P script snapback","The cream mock and the denim snapback"),
+    ("site-15","A man in the dark slate Triborough Waffle Knit Polo","The Triborough, in dark slate")]),
+ "polos": ("Out in the world", "The polos off the set.",
+   [("site-26","A man in the navy tonal polo and sand pants leaning on a laundromat cart","The Tonal Polo, at the laundromat"),
+    ("site-63","A golfer with a carry bag in a striped polo and navy shorts in a clubroom","Spring 2026, in the clubroom"),
+    ("site-64","A golfer in a mint polo and olive shorts on a lawn","The polo and the tech short")]),
 }
 PROSE = 'style="max-width:760px;font-size:16px;line-height:1.7;margin:0 auto 24px;"'
 TAKE = """
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
-    <p>When we first wrote about <a href="/drops/public-drip-brooklyns-muni-born-golf-label" style="border-bottom:1px solid var(--ink)">Public Drip</a> in June, it was the Brooklyn label Neil Tan started after he went back to golf at Van Cortlandt Park in the Bronx: script-P polos, pleated trousers and a few collabs. Four months later it&rsquo;s a lot bigger, and it still feels like a muni brand.</p>
-    <p><strong>It dresses a LIV team now.</strong> LIV&rsquo;s Cleeks GC calls Public Drip its clothing partner, and the second collaboration put the Public Athlete Polo on Martin Kaymer, Adrian Meronk and Victor Perez at the BMW International Open. Tan was also the creative partner on Cleeks&rsquo; &ldquo;Bag 13&rdquo; art bag, made with Vessel, at LIV Indianapolis. A brand that started on a public course in the Bronx is now on tour.</p>
-    <p><strong>And it&rsquo;s moving into pro shops.</strong> Public Drip took its first booth at the PGA Buying Summit in July and pre-sold Spring 2027 there. New stockists include the pro shop at Corica Park, the public course in Alameda whose youth programs it backed in May. Its line on that shop: &ldquo;It&rsquo;s more than a stop for a sleeve of balls before your tee time.&rdquo;</p>
-    <p><strong>The clothes got better.</strong> Nightshift, the fall collection, is the strongest thing they&rsquo;ve made: a herringbone half zip, a waffle-knit long-sleeve polo and pinstripe pleated pants that look like a suit you can swing in. The Akashi-Kama collab, out October 23, puts Japanese patchwork textiles on a swing vest, and it&rsquo;s our pick of the whole post.</p>
-    <p><strong>What hasn&rsquo;t changed:</strong> almost nothing costs more than $170, the script P is still on everything, and the founder still says his handicap is embarrassing.</p>
+    <p>When we first wrote about <a href="/drops/public-drip-brooklyns-muni-born-golf-label" style="border-bottom:1px solid var(--ink)">Public Drip</a> in June, it was the Brooklyn label Neil Tan started in 2020, the year he went back to golf at Van Cortlandt Park in the Bronx after a decade away. Script-P polos, pleated trousers, a few good collabs and nothing over $170. Four months on, almost everything about the business has grown, and almost nothing about the clothes has gone corporate.</p>
+    <p><strong>The clothes got better.</strong> Nightshift, the fall collection that landed August 28, is the strongest thing they&rsquo;ve made. The Herringbone Half Zip, a waffle-knit long-sleeve polo called the Triborough and pinstripe pleated pants look like a suit you can actually swing in. It&rsquo;s a fall line for golfers who play in New York in November, and it reads that way: browns, coffee, slate, denim.</p>
+    <p><strong>The collab is the best thing on the site.</strong> Public Drip x Akashi-Kama, out October 23, puts Japanese patchwork and sharkskin textiles on a swing vest. The sleeveless V-neck is an old player&rsquo;s staple, and over a long-sleeve mock it&rsquo;s the outfit we&rsquo;d most like to be wearing on a cold first tee this fall.</p>
+    <p><strong>It&rsquo;s in pro shops now.</strong> Public Drip went wholesale through RepSpark in January, took its first booth at the PGA Buying Summit in July and pre-sold Spring 2027 there. Stockists now include the new pro shop at Corica Park, the public course in Alameda whose youth programs it backed in May, and Black Desert Resort in Utah. Its line on the Corica shop: &ldquo;It&rsquo;s more than a stop for a sleeve of balls before your tee time.&rdquo;</p>
+    <p><strong>It still plays public.</strong> The events are still muni events: a night at Flushing Meadows Pitch &amp; Putt in Queens with Five Boroughs Golf Club, an outing at Sullivan County Golf Club upstate. Martin Kaymer, a two-time major champion, wears the polos, and the brand celebrated Jorge Villar winning the Mexico Match Play this month. A brand that started on a public course in the Bronx now turns up at both ends of the game.</p>
+    <p><strong>What hasn&rsquo;t changed:</strong> almost nothing costs more than $170, the script P is on everything, the polos fit true to size, and the founder still says his handicap is embarrassing. If you&rsquo;re buying one thing, get the Patchwork Swing Vest before it goes. If you&rsquo;re buying two, add the Long Sleeve Mock to wear under it.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Since June</div>
       <div class="sidebar-detail"><span class="l">Based</span><span>Brooklyn, NY</span></div>
-      <div class="sidebar-detail"><span class="l">New</span><span>Cleeks GC partner</span></div>
+      <div class="sidebar-detail"><span class="l">Founded</span><span>2020, Neil Tan</span></div>
       <div class="sidebar-detail"><span class="l">Collab</span><span>Akashi-Kama, Oct 23</span></div>
       <div class="sidebar-detail"><span class="l">Fall line</span><span>Nightshift, Aug 28</span></div>
+      <div class="sidebar-detail"><span class="l">Stockists</span><span>Corica Park, Black Desert</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$40&ndash;$170</span></div>
-      <div class="sidebar-detail"><span class="l">In the post</span><span>19 picks</span></div>
+      <div class="sidebar-detail"><span class="l">In the post</span><span>33 picks</span></div>
       <div class="hashtags">
         <span class="hashtag">#PublicDrip</span>
         <span class="hashtag">#MuniGolf</span>
@@ -118,28 +157,35 @@ TAKE = """
   <div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:14px;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div>
   </aside>
 </section>
+
+<section class="products" style="margin-top:8px;">
+  <div class="drop-tag grass">How It Fits</div>
+  <h2 class="products-hdr" id="fit">Sizing, Fabrics and Where to Start</h2>
+  <p class="cat-kicker">Public Drip lists almost everything as true to size. The polos are recycled polyester with elastane, so they stretch and dry fast; the knits, mocks and rugby are cotton and sit closer to a sweater. The Anywhere Pleated Pants have a straight, tapered leg and run in S to XL rather than waist sizes, so check the size chart. Buckets come in S/M and L/XL. If you&rsquo;ve never worn the brand, the $90 Blade Polo or the $66 Knit Polo is the cheapest way to find your size before you spend $140 on a vest.</p>
+</section>
 """
 FAQ = [
  ("Who founded Public Drip?", "Neil Tan, who started the brand in Brooklyn in 2020 after getting back into golf at Van Cortlandt Park Golf Course in the Bronx."),
- ("Is Public Drip connected to LIV Golf?", "Yes. LIV's Cleeks GC names Public Drip as its clothing partner; their second collaboration came in 2026, and Cleeks players wear the Public Athlete Polo."),
  ("When does the Public Drip x Akashi-Kama collab release?", "October 23, 2026: a Patchwork Swing Vest and a Sharkskin Swing Vest at $140 each, and a Golf Abroad long-sleeve mock at $115."),
  ("What is Public Drip Nightshift?", "Public Drip's fall 2026 collection, launched August 28, 2026, with the Herringbone Half Zip, Triborough Waffle Knit Polo, long-sleeve mocks, pinstripe Anywhere Pleated Pants and denim script hats."),
+ ("Where can you buy Public Drip?", "On publicdrip.com, and in a growing number of pro shops and golf stores, including Corica Park in Alameda, California and Black Desert Resort in Utah."),
+ ("Does Public Drip run true to size?", "Public Drip lists most pieces as true to size. The Anywhere Pleated Pants come in S to XL rather than waist sizes, and the bucket hats in S/M and L/XL."),
 ]
-_LB = [("life-4","A man in the coffee Herringbone Half Zip and pinstripe pleated pants seated in a vintage clothing shop","Nightshift: &ldquo;Available tomorrow @2PM EST.&rdquo;"),
- ("life-9","A man in the coffee Long Sleeve Mock in a vintage shop","&ldquo;FW26 loading.&rdquo;"),
- ("life-8","A Cleeks player in a cream Public Athlete Polo walking a fairway","&ldquo;Cleeks x Public Drip. Back in stock.&rdquo;"),
- ("life-13","Martin Kaymer in black and white at a PGA Championship","Martin Kaymer, a two-time major champion who wears the brand"),
- ("life-11","A golfer in a black tee and P bucket hat at The Links Social Tour in Canada","The Links Social Tour, Canada"),
+_LB = [("site-11","A man in a cream knit standing in front of shelves of vintage denim and boots","Nightshift"),
+ ("site-19","A man in a cream knit, grey trousers and a P script cap in a vintage shop","Nightshift"),
+ ("site-20","Close-up of a coffee knit and a golf club in a vintage shop","The details"),
+ ("site-25","A man in sunglasses and the black tonal polo against a plain backdrop","The Tonal Polo, in black"),
+ ("site-97","Three golfers in Public Drip sitting on a bench by a stone building","From the archive"),
+ ("life-5","A golfer on the sand at Coney Island carrying a leather golf bag","Coney Island: &ldquo;This one meant something.&rdquo;"),
  ("life-12","A golfer on a beach carrying a leather Public Drip carry bag","&ldquo;My handicap is embarrassing. My kids don&rsquo;t care.&rdquo;"),
- ("life-14","Behind the scenes of a Public Drip campaign shoot, adjusting a hat","Behind the SS26 Open Season shoot"),
- ("life-7","Public Drip&rsquo;s booth at the PGA Buying Summit in Frisco, Texas","Its first PGA Buying Summit, July"),
- ("life-3","Jorge Villar holding his exemption sign after winning the Mexico Match Play","Jorge Villar, after winning the Mexico Match Play")]
+ ("life-14","Behind the scenes of a Public Drip campaign shoot, adjusting a hat","Behind the Spring 2026 shoot"),
+ ("life-7","Public Drip&rsquo;s booth at the PGA Buying Summit in Frisco, Texas","Its first PGA Buying Summit, July")]
 _figs = "\n".join(f'  <figure><img src="{IMG}/{f}.jpg" alt="{a}" loading="lazy" /><figcaption class="ig-cap">{c}</figcaption></figure>' for f, a, c in _LB)
 LOOKBOOK = f"""
 <section class="products" style="margin-top:8px;">
   <div class="drop-tag grass">Lookbook</div>
   <h2 class="products-hdr" id="lookbook">Since June, in Photos</h2>
-  <p class="cat-kicker"><strong>From Public Drip&rsquo;s feed &middot; nine photos</strong>Nightshift, Cleeks on tour and the events in between, with the brand&rsquo;s captions where it wrote them.</p>
+  <p class="cat-kicker"><strong>From Public Drip&rsquo;s site and feed &middot; nine photos</strong>Nightshift, the archive and four months of muni golf, with the brand&rsquo;s captions where it wrote them.</p>
   <div class="ig-grid">
 {_figs}
   </div>
@@ -269,11 +315,11 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>Brand Revisited &middot; Brooklyn &middot; First covered June 15, 2026</span><span class="dot"></span>
-    <span>19 picks &middot; prices checked October 22, 2026</span>
+    <span>33 picks &middot; prices checked October 22, 2026</span>
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A man in the coffee Public Drip Herringbone Half Zip sitting in a vintage clothing shop, from the Nightshift campaign" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A man in the denim P script bucket and a cream long-sleeve in a vintage clothing shop, from Public Drip&rsquo;s Nightshift campaign" fetchpriority="high" /></div></div>
 """
     body += TAKE
     n = 1
