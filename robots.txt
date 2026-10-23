@@ -3,4 +3,50 @@ Allow: /
 Disallow: /drafts/
 Disallow: /previews/
 
+# AI search and assistant crawlers are welcome (23 Oct 2026)
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: ChatGPT-User
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: Claude-SearchBot
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: Google-Extended
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: Applebot-Extended
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
+User-agent: bingbot
+Allow: /
+Disallow: /drafts/
+Disallow: /previews/
+
 Sitemap: https://thegrassyissue.com/sitemap.xml
