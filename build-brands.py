@@ -379,12 +379,12 @@ page = f'''<!DOCTYPE html>
 --sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace;}}
 *{{margin:0;padding:0;box-sizing:border-box;}}
 body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
-.nav{{border-bottom:1px solid rgba(20,20,20,.15);background:var(--paper);position:sticky;top:0;z-index:50;}}
-.nav-inner{{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 24px;}}
+.nav{{position:sticky;top:0;background:var(--paper);border-bottom:.5px solid var(--ink);z-index:50}}
+.nav-inner{{max-width:1400px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:32px}}
 .nav-wordmark{{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.01em;}}
-.nav-links{{display:flex;gap:20px;}}
-.nav-links a{{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
-.nav-links a.active{{opacity:1;border-bottom:2px solid var(--grass);padding-bottom:2px;}}
+.nav-links{{display:flex;gap:24px;}}
+.nav-links a{{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .15s}}.nav-links a:hover{{border-bottom-color:var(--ink)}}
+.nav-links a.active{{border-bottom:1px solid var(--ink)}}
 .nav-cta{{margin-left:auto;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink);text-decoration:none;border:1px solid var(--ink);padding:7px 12px;border-radius:2px;}}
 .bi-hero{{position:relative;height:30vh;min-height:240px;max-height:340px;overflow:hidden;background:var(--ink);}}
 .bi-hero img{{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 70%;}}
@@ -463,6 +463,7 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
       <a href="/brands" class="active">Brands</a>
       <a href="/field-guide">Field Guide</a>
       <a href="/events">Events</a>
+      <a href="/about">About</a>
     </div>
   </div>
 </nav>
@@ -675,7 +676,7 @@ BP2_CSS = """
 /* --- brand page v2 (Option A), 15 Oct 2026 --------------------------------- */
 .bp-head{max-width:none;margin:0;padding:0;text-align:left;display:block}
 .bp2-hero{position:relative;height:clamp(380px,52vw,620px);background:#1d1d1b;overflow:hidden}
-.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+.bp2-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 18%;display:block}
 .bp2-tri{position:absolute;inset:0;display:grid;gap:4px}
 .bp2-hero>img.bp2-blur{inset:-30px;width:calc(100% + 60px);height:calc(100% + 60px);filter:blur(30px) brightness(.62) saturate(1.1)}
 .bp2-hero>img.bp2-solo{inset:auto;right:7%;top:9%;height:82%;width:auto;aspect-ratio:4/5;box-shadow:0 18px 50px rgba(0,0,0,.35)}
@@ -876,12 +877,12 @@ def brand_page(b):
 --sans:'Inter',-apple-system,sans-serif;--mono:'JetBrains Mono',monospace;}}
 *{{margin:0;padding:0;box-sizing:border-box;}}
 body{{background:var(--paper);color:var(--ink);font-family:var(--sans);}}
-.nav{{border-bottom:1px solid rgba(20,20,20,.15);background:var(--paper);position:sticky;top:0;z-index:50;}}
-.nav-inner{{max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:28px;padding:14px 24px;}}
+.nav{{position:sticky;top:0;background:var(--paper);border-bottom:.5px solid var(--ink);z-index:50}}
+.nav-inner{{max-width:1400px;margin:0 auto;padding:18px 32px;display:flex;align-items:center;justify-content:space-between;gap:32px}}
 .nav-wordmark{{font-family:var(--display);font-size:22px;color:var(--ink);text-decoration:none;letter-spacing:.01em;}}
-.nav-links{{display:flex;gap:20px;}}
-.nav-links a{{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.75;}}
-.nav-links a.active{{opacity:1;border-bottom:2px solid var(--grass);padding-bottom:2px;}}
+.nav-links{{display:flex;gap:24px;}}
+.nav-links a{{font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink);text-decoration:none;padding:6px 0;border-bottom:1px solid transparent;transition:border-color .15s}}.nav-links a:hover{{border-bottom-color:var(--ink)}}
+.nav-links a.active{{border-bottom:1px solid var(--ink)}}
 /* Stacked, not flex. The flex version was written for a .bp-headtext wrapper
    that the tag and attribute pages never emit, so the kicker, the h1 and the
    intro landed side by side as three columns and the deck floated off to the
@@ -951,6 +952,7 @@ footer{{border-top:1px solid rgba(20,20,20,.15);padding:26px 24px 60px;max-width
       <a href="/brands" class="active">Brands</a>
       <a href="/field-guide">Field Guide</a>
       <a href="/events">Events</a>
+      <a href="/about">About</a>
     </div>
   </div>
 </nav>
