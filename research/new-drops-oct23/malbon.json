@@ -1,0 +1,354 @@
+{
+  "note": "Sources fetched 2026-10-23: https://malbon.com/collections/grateful-dead/products.json (limit=40 response was truncated mid-file, so pages 2-3 were fetched with limit=10), https://malbon.com/products.json (limit=30 was truncated; limit=3 pages 6-7 used to confirm the boundary), and https://malbon.com/products/grateful-dead-tour-m-golf-ball-pack-white.json (the Golf Ball Pack is NOT in the grateful-dead collection feed, only in the all-products feed). 18 products/colorways carry published_at 2026-10-23 (08:50:55 to 08:51:06 -07:00) and the tag '10.23.26 Grateful Dead'; the next product in products.json was published 2026-10-16 (non-GD), so there are no others. Theme: the body copy repeatedly frames the pieces as the 'Long Vacation' collection (e.g. 'give the familiar Fairway shape a Long Vacation update', 'carries the Long Vacation treatment from every angle', 'the Long Vacation character artwork', 'the Long Vacation language'). No body text states which drop number of the Grateful Dead collaboration this is. Factual context from tags only: the same grateful-dead collection also contains older GD products tagged '7.9.26 GD' (published 2026-07-09, e.g. Stealie Blanket Polo, Blanket Jacket, Bermuda Foundation Tee) and one tagged '12.2.25 Grateful Dead Select' / '12.5.25 Grateful Dead' (Tee Pack). All prices USD (golf ball product JSON shows price_currency 'USD'). Cart Bag body says: 'This item is available for preorder and will ship by 11/23.' (tagged 'preorder'). The Tour M Golf Ball Pack is the only one of the 18 showing available:false; all others show available:true for every variant. Body text below is HTML stripped to plain text with original wording/typos kept (e.g. 'Pancho', 'varation', 'flat- knit').",
+  "products": [
+    {
+      "title": "GRATEFUL DEAD LONG VACATION PONCHO",
+      "handle": "grateful-dead-long-vacation-poncho-forest",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-poncho-forest",
+      "product_type": "Jackets",
+      "published_at": "2026-10-23T08:51:06-07:00",
+      "price": "398.00",
+      "available": true,
+      "variants": ["OS / FOREST"],
+      "body_text": "The Long Vacation Pancho builds the collection's boldest pattern into an oversized hooded layer. A full jacquard graphic, large front pocket, and snap-adjustable sides create an easy drape with enough structure to make the artwork the focus.\nFabrication: 80% cotton 20% wool jacquard knit\nOversized hooded poncho construction\nWide body designed to layer easily over clothing\nIntegrated hood for added coverage\nLarge front patch pocket\nOne-size construction\nTotal body length: 67\"",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-OAT-1.jpg?v=1792534014",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-HOA-A.jpg?v=1792534690",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-OAT-2.jpg?v=1792534014",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-HOA-B.jpg?v=1792534689",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-HOA-E.jpg?v=1792534690",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-HOA-D.jpg?v=1792534689",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-HOA-C.jpg?v=1792534689",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10463-FRS-OAT-3.jpg?v=1792534014"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION SNAPBACK",
+      "handle": "grateful-dead-long-vacation-snapback-forest",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-snapback-forest",
+      "product_type": "Snapback Caps",
+      "published_at": "2026-10-23T08:51:05-07:00",
+      "price": "68.00",
+      "available": true,
+      "variants": ["OS / FOREST"],
+      "body_text": "The Long Vacation Snapback builds the collection's artwork into a classic five-panel profile. A clear rubber front patch, repeating woven side detail, rear embroidery, and tonal construction keep the graphics layered while the adjustable snapback keeps the fit straightforward.\nFabrication: 100% acrylic\nFive-panel cap silhouette\nAdjustable rear snapback closure\nOne size fits most",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10458-FRS-1.jpg?v=1792534423",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10458-FRS-2.jpg?v=1792534423",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10458-FRS-3.jpg?v=1792534423"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION SNAPBACK",
+      "handle": "grateful-dead-long-vacation-snapback-brown",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-snapback-brown",
+      "product_type": "Snapback Caps",
+      "published_at": "2026-10-23T08:51:00-07:00",
+      "price": "68.00",
+      "available": true,
+      "variants": ["OS / BROWN"],
+      "body_text": "The Long Vacation Snapback builds the collection's artwork into a classic five-panel profile. A clear rubber front patch, repeating woven side detail, rear embroidery, and tonal construction keep the graphics layered while the adjustable snapback keeps the fit straightforward.\nFabrication: 100% acrylic\nFive-panel cap silhouette\nAdjustable rear snapback closure\nOne size fits most",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10458-BRN-1.jpg?v=1792534553",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10458-BRN-2.jpg?v=1792534553",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10458-BRN-3.jpg?v=1792534553"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION BUCKET HAT",
+      "handle": "grateful-dead-long-vacation-bucket-hat-heather-oatmeal",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-bucket-hat-heather-oatmeal",
+      "product_type": "Bucket Hats",
+      "published_at": "2026-10-23T08:51:04-07:00",
+      "price": "98.00",
+      "available": true,
+      "variants": ["S/M / HEATHER OATMEAL", "L/XL / HEATHER OATMEAL"],
+      "body_text": "The Long Vacation Bucket Hat brings the collection's softer textures and graphic details into an easy unstructured shape. A deep-pile body is wrapped with repeating woven artwork and finished with a clear rubber character patch at the front.\nFabrication: 100% polyester\nSoft, unstructured bucket silhouette\nRounded crown with full-coverage brim\nOne size fits most",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10457-HOA-1.jpg?v=1792533615",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10457-HOA-2.jpg?v=1792533615",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10457-HOA-3.jpg?v=1792533615"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION CART BAG",
+      "handle": "grateful-dead-long-vacation-cart-bag-forest",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-cart-bag-forest",
+      "product_type": "Golf Cart Bags",
+      "published_at": "2026-10-23T08:51:04-07:00",
+      "price": "448.00",
+      "available": true,
+      "preorder": true,
+      "variants": ["OS / FOREST"],
+      "body_text": "This item is available for preorder and will ship by 11/23.\nThe Long Vacation Cart Bag turns a course essential into one of the collection's most detailed pieces. Textured leather, woven wool panels, chenille artwork, embroidery, and debossed accents move across a structured multi- pocket silhouette, carrying the Long Vacation language through every side of the bag.\nFabrication:\nMain body: 100% textured PU leather\nContrast body: 100% wool\nFull-size cart-bag profile\nMulti-pocket storage layout\nPoly-mesh interior lining\nMetal zipper and hardware system",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-2.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-6.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-10.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-4.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-1.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-3.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-8.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-9.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-7.jpg?v=1792534292",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10459-FRS-5.jpg?v=1792534291"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION VARSITY JACKET",
+      "handle": "grateful-dead-long-vacation-varsity-jacket-forest",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-varsity-jacket-forest",
+      "product_type": "Coats & Jackets",
+      "published_at": "2026-10-23T08:51:03-07:00",
+      "price": "428.00",
+      "available": true,
+      "variants": ["XS / FOREST", "S / FOREST", "M / FOREST", "L / FOREST", "XL / FOREST", "XXL / FOREST"],
+      "body_text": "The Long Vacation Varsity Jacket takes a familiar collegiate shape and pushes it through the collection's graphic world. Patterned jacquard ribbing, mixed chest artwork, and oversized chenille graphics across the back give the classic snap-front silhouette a more expressive finish.\nFabrication:\nBody: 50% wool 50% polyester\nLining: 100% quilted nylon\nRelaxed fit\nClassic snap-front varsity jacket construction\nPatterned jacquard rib at collar, cuffs, and waistband\nQuilted interior lining\nBranded metal snap closure at center front\nWelt hand pockets",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-1.jpg?v=1792533484",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/2026_08_31_MALBON_0978_cb0d95e2-8e72-4fa5-aa0d-73de7e4dbabc.jpg?v=1792624295",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-A.jpg?v=1792533496",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-2.jpg?v=1792533484",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-E.jpg?v=1792533497",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-B.jpg?v=1792533496",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-D.jpg?v=1792533497",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-C.jpg?v=1792533497",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10453-FRS-3.jpg?v=1792533484"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD TOUR M GOLF BALL PACK",
+      "handle": "grateful-dead-tour-m-golf-ball-pack-white",
+      "url": "https://malbon.com/products/grateful-dead-tour-m-golf-ball-pack-white",
+      "product_type": "Golf Balls",
+      "published_at": "2026-10-23T08:51:02-07:00",
+      "price": "60.00",
+      "available": false,
+      "available_note": "From https://malbon.com/products.json (limit=30): the only variant (SKU M-10461-WHT-OS) shows \"available\":false. This is the only Oct 23 GD product not available.",
+      "variants": ["OS / WHITE"],
+      "body_text": "The Tour M Golf Ball 12 Pack carries the collection across every side of the ball with a clean black-on-white graphic treatment. Malbon script, Tour M branding, and the Long Vacation character artwork create a coordinated set built around the collaboration's visual identity.\nStandard golf-ball format\n12-ball set\nGraphics positioned across four viewing orientations",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10461-WHT-1.jpg?v=1792534473",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10461-WHT-2.jpg?v=1792534474",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10461-WHT-3.jpg?v=1792534474",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10461-WHT-4.jpg?v=1792534474"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION CARDIGAN",
+      "handle": "grateful-dead-long-vacation-cardigan-forest",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-cardigan-forest",
+      "product_type": "Cardigans",
+      "published_at": "2026-10-23T08:51:02-07:00",
+      "price": "278.00",
+      "available": true,
+      "variants": ["XS / FOREST", "S / FOREST", "M / FOREST", "L / FOREST", "XL / FOREST", "XXL / FOREST"],
+      "body_text": "The Long Vacation Mohair Cardigan turns a relaxed V-neck layer into a full jacquard statement. The collection pattern moves across the body and sleeves, balanced by a clean button front, ribbed finishes, and a subtle embroidered patch at the chest.\nFabrication: 95% wool 5% cashmere\nRelaxed fit\nV-neck cardigan construction\nDeep V-neck opening with button-front closure\nRibbed cuffs and hem",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-1.jpg?v=1792533725",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/2026_08_31_MALBON_0742_1e328f26-8763-4098-b674-2a54a03c2755.jpg?v=1792624026",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-D.jpg?v=1792533732",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-A.jpg?v=1792533732",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-B.jpg?v=1792533732",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-2.jpg?v=1792533726",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-E.jpg?v=1792533732",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-FRS-C.jpg?v=1792533732"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION CARDIGAN",
+      "handle": "grateful-dead-long-vacation-cardigan-heather-oatmeal",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-cardigan-heather-oatmeal",
+      "product_type": "Cardigans",
+      "published_at": "2026-10-23T08:51:01-07:00",
+      "price": "278.00",
+      "available": true,
+      "variants": ["XS / HEATHER OATMEAL", "S / HEATHER OATMEAL", "M / HEATHER OATMEAL", "L / HEATHER OATMEAL", "XL / HEATHER OATMEAL", "XXL / HEATHER OATMEAL"],
+      "body_text": "The Long Vacation Mohair Cardigan turns a relaxed V-neck layer into a full jacquard statement. The collection pattern moves across the body and sleeves, balanced by a clean button front, ribbed finishes, and a subtle embroidered patch at the chest.\nFabrication: 95% wool 5% cashmere\nRelaxed fit\nV-neck cardigan construction\nDeep V-neck opening with button-front closure\nRibbed cuffs and hem",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-1.jpg?v=1792533397",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/2026_08_31_MALBON_0844_15da1f08-94b8-4eb4-9c63-03771183dd96.jpg?v=1792624425",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-E.jpg?v=1792533412",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-A.jpg?v=1792533412",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-2.jpg?v=1792533397",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-B.jpg?v=1792533411",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-D.jpg?v=1792533412",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10465-HOA-C.jpg?v=1792533411"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION STICKER PACK",
+      "handle": "grateful-dead-long-vacation-sticker-pack-multi",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-sticker-pack-multi",
+      "product_type": "Stickers & Sticker Machines",
+      "published_at": "2026-10-23T08:51:01-07:00",
+      "price": "18.00",
+      "available": true,
+      "variants": ["OS / MULTI"],
+      "body_text": "The Long Vacation Sticker Pack collects the collaboration's logos, graphics, and character artwork into an 11-piece vinyl set. Mixed sizes and a green, white, and black palette make it an easy extension of the collection beyond the product itself.\nAssorted sticker sizes for flexible placement\n11-piece vinyl sticker assortment\nAssorted shapes and proportions",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10462-MLT2.jpg?v=1792532871",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10462-MLT-1.jpg?v=1792532871"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION QUARTER ZIP",
+      "handle": "grateful-dead-long-vacation-quarter-zip-heather-oatmeal",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-quarter-zip-heather-oatmeal",
+      "product_type": "Sweatshirts",
+      "published_at": "2026-10-23T08:50:59-07:00",
+      "price": "228.00",
+      "available": true,
+      "variants": ["XS / HEATHER OATMEAL", "S / HEATHER OATMEAL", "M / HEATHER OATMEAL", "L / HEATHER OATMEAL", "XL / HEATHER OATMEAL", "XXL / HEATHER OATMEAL"],
+      "body_text": "The Long Vacation Quarter Zip brings plush texture to an oversized utility layer. Custom woven tape frames the placket and pocket openings, while an antique-brass zip and clear chest patch give the relaxed silhouette a more considered finish.\nFabrication: 100% polyester\nRelaxed fit\nQuarter-zip pullover construction\nHigh stand collar\nAntique-brass center-front zipper and hardware\nFront hand pockets\nElastic sleeve cuffs",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-1.jpg?v=1792533792",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/2026_08_31_MALBON_0596.jpg?v=1792623443",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-D.jpg?v=1792533802",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-C.jpg?v=1792533801",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-A.jpg?v=1792533802",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-2.jpg?v=1792533792",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-B.jpg?v=1792533801"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD LONG VACATION SWEATPANT",
+      "handle": "grateful-dead-long-vacation-sweatpant-heather-oatmeal",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-sweatpant-heather-oatmeal",
+      "product_type": "Sweatpants",
+      "published_at": "2026-10-23T08:50:59-07:00",
+      "price": "178.00",
+      "available": true,
+      "variants": ["XS / HEATHER OATMEAL", "S / HEATHER OATMEAL", "M / HEATHER OATMEAL", "L / HEATHER OATMEAL", "XL / HEATHER OATMEAL", "XXL / HEATHER OATMEAL"],
+      "body_text": "The Clubhouse Long Vacation Sweatpant brings the collection's graphic language to a relaxed, tapered sweat silhouette. Custom woven tape tracks the side seams, while a clear silicone leg patch, embroidered back-pocket artwork, and branded hardware layer in the Long Vacation details.\nFabrication: 100% polyester\nRelaxed fit\nDeep-pile sweatpant construction\nEncased elastic waistband with adjustable drawcord\nSlant front pockets and back patch pocket\nInseam: 30\"",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-1.jpg?v=1792533651",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/2026_08_31_MALBON_0658.jpg?v=1792624515",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-A.jpg?v=1792533660",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-E.jpg?v=1792533660",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10464-HOA-E_504393ac-af74-4748-aa0d-b91e016c1257.jpg?v=1792535139",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-B.jpg?v=1792533660",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-D.jpg?v=1792533660",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-C.jpg?v=1792533660",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-2.jpg?v=1792533651"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD GORSE DANCING BUCKETS TEE",
+      "handle": "grateful-dead-gorse-dancing-buckets-tee-washed-black",
+      "url": "https://malbon.com/products/grateful-dead-gorse-dancing-buckets-tee-washed-black",
+      "product_type": "T-Shirts",
+      "published_at": "2026-10-23T08:50:58-07:00",
+      "price": "98.00",
+      "available": true,
+      "variants": ["XS / WASHED BLACK", "S / WASHED BLACK", "M / WASHED BLACK", "L / WASHED BLACK", "XL / WASHED BLACK", "XXL / WASHED BLACK"],
+      "body_text": "The Gorse Dancing Buckets Tee turns a long-sleeve staple into a full graphic story. An enzyme-washed finish softens the look, while artwork across the chest, both sleeves, and back carries the Long Vacation treatment from every angle.\nFabrication: 100% cotton\nRelaxed fit\nEnzyme-washed finish\nRibbed sleeve cuffs\nStraight body designed for easy layering",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-3.jpg?v=1792534757",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-A.jpg?v=1792534765",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-2.jpg?v=1792534757",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-1.jpg?v=1792534757",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-B.jpg?v=1792534765",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-D.jpg?v=1792534765",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WBK-C.jpg?v=1792534765"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD GORSE DANCING BUCKETS TEE",
+      "handle": "grateful-dead-gorse-dancing-buckets-tee-white",
+      "url": "https://malbon.com/products/grateful-dead-gorse-dancing-buckets-tee-white",
+      "product_type": "T-Shirts",
+      "published_at": "2026-10-23T08:50:58-07:00",
+      "price": "98.00",
+      "available": true,
+      "variants": ["XS / WHITE", "S / WHITE", "M / WHITE", "L / WHITE", "XL / WHITE", "XXL / WHITE"],
+      "body_text": "The Gorse Dancing Buckets Tee turns a long-sleeve staple into a full graphic story. An enzyme-washed finish softens the look, while artwork across the chest, both sleeves, and back carries the Long Vacation treatment from every angle.\nFabrication: 100% cotton\nRelaxed fit\nEnzyme-washed finish\nRibbed sleeve cuffs\nStraight body designed for easy layering\nEach piece is unique and there may be color varation",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WHT-3.jpg?v=1792533231",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WHT-A.jpg?v=1792533334",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WHT-2.jpg?v=1792533231",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WHT-B.jpg?v=1792533333",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WHT-1.jpg?v=1792533231",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10455-WHT-C.jpg?v=1792533334"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD FAIRWAY DANCING BUCKETS POLO",
+      "handle": "grateful-dead-fairway-dancing-buckets-polo-ivory",
+      "url": "https://malbon.com/products/grateful-dead-fairway-dancing-buckets-polo-ivory",
+      "product_type": "Polos",
+      "published_at": "2026-10-23T08:50:57-07:00",
+      "price": "128.00",
+      "available": true,
+      "variants": ["XS / IVORY", "S / IVORY", "M / IVORY", "L / IVORY", "XL / IVORY", "XXL / IVORY"],
+      "body_text": "The Fairway Dancing Buckets Polo keeps the front clean and lets the collection details build around it. A contrast flat- knit collar, concealed snap placket, embroidered hits, patterned side tape, and center-back artwork give the familiar Fairway shape a Long Vacation update.\nFabrication: 63% polyester 34% cotton 3% silk\nClassic relaxed polo silhouette\nContrast flat-knit collar\nTwo hidden metal snaps at the center-front placket\nStraight body with easy room through the chest",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-1.jpg?v=1792534601",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-C.jpg?v=1792534614",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-A.jpg?v=1792534614",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-2.jpg?v=1792534601",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-E.jpg?v=1792534614",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-B.jpg?v=1792534614",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-D.jpg?v=1792534614",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-IVY-3.jpg?v=1792534601"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD FAIRWAY DANCING BUCKETS POLO",
+      "handle": "grateful-dead-fairway-dancing-buckets-polo-forest",
+      "url": "https://malbon.com/products/grateful-dead-fairway-dancing-buckets-polo-forest",
+      "product_type": "Polos",
+      "published_at": "2026-10-23T08:50:56-07:00",
+      "price": "128.00",
+      "available": true,
+      "variants": ["XS / FOREST", "S / FOREST", "M / FOREST", "L / FOREST", "XL / FOREST", "XXL / FOREST"],
+      "body_text": "The Fairway Dancing Buckets Polo keeps the front clean and lets the collection details build around it. A contrast flat- knit collar, concealed snap placket, embroidered hits, patterned side tape, and center-back artwork give the familiar Fairway shape a Long Vacation update.\nFabrication: 63% polyester 34% cotton 3% silk\nClassic relaxed polo silhouette\nContrast flat-knit collar\nTwo hidden metal snaps at the center-front placket\nStraight body with easy room through the chest",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-1.jpg?v=1792534099",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-C.jpg?v=1792534105",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-A.jpg?v=1792534105",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-2.jpg?v=1792534100",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-E.jpg?v=1792534105",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-B.jpg?v=1792534105",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-D.jpg?v=1792534105",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10454-FRS-3.jpg?v=1792534099"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD BERMUDA RIDERS TEE",
+      "handle": "grateful-dead-bermuda-riders-tee-ash-heather",
+      "url": "https://malbon.com/products/grateful-dead-bermuda-riders-tee-ash-heather",
+      "product_type": "T-Shirts",
+      "published_at": "2026-10-23T08:50:56-07:00",
+      "price": "68.00",
+      "available": true,
+      "variants": ["XS / ASH HEATHER", "S / ASH HEATHER", "M / ASH HEATHER", "L / ASH HEATHER", "XL / ASH HEATHER", "XXL / ASH HEATHER"],
+      "body_text": "The Bermuda Riders Tee pairs a simple short-sleeve crew with a restrained front hit and a larger graphic moment on the back. The result is an easy everyday tee that keeps the collection story present without overworking the silhouette.\nFabrication: 100% cotton\nRelaxed fit\nRelaxed short-sleeve tee silhouette\nStraight body with easy room through the chest\nClassic crew neckline",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-ASH-1.jpg?v=1792534211",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-ASH-A.jpg?v=1792534226",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-ASH-B.jpg?v=1792534226",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-ASH-2.jpg?v=1792534210",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-ASH-C.jpg?v=1792534226"
+      ]
+    },
+    {
+      "title": "GRATEFUL DEAD BERMUDA RIDERS TEE",
+      "handle": "grateful-dead-bermuda-riders-tee-ivory",
+      "url": "https://malbon.com/products/grateful-dead-bermuda-riders-tee-ivory",
+      "product_type": "T-Shirts",
+      "published_at": "2026-10-23T08:50:55-07:00",
+      "price": "68.00",
+      "available": true,
+      "variants": ["XS / IVORY", "S / IVORY", "M / IVORY", "L / IVORY", "XL / IVORY", "XXL / IVORY"],
+      "body_text": "The Bermuda Riders Tee pairs a simple short-sleeve crew with a restrained front hit and a larger graphic moment on the back. The result is an easy everyday tee that keeps the collection story present without overworking the silhouette.\nFabrication: 100% cotton\nRelaxed fit\nRelaxed short-sleeve tee silhouette\nStraight body with easy room through the chest\nClassic crew neckline",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-IVY-1.jpg?v=1792533140",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-IVY-A.jpg?v=1792533087",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-IVY-2.jpg?v=1792533140",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-IVY-B.jpg?v=1792533088",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10456-IVY-C.jpg?v=1792533087"
+      ]
+    }
+  ]
+}

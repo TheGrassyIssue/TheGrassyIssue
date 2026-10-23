@@ -1,0 +1,232 @@
+{
+  "currency": "EUR",
+  "currency_source": "https://mogshadegolf.com/meta.json (fetched 2026-10-23) returns \"currency\":\"EUR\" and \"money_format\":\"€{{amount_with_comma_separator}}\"; shop city Lisboa, country PT; ships_to_countries includes US. https://mogshadegolf.com/cart.js returned an empty body. Prices below are the raw products.json variant prices, which are in the shop currency (EUR) - they are NOT USD.",
+  "source_note": "Fetched https://mogshadegolf.com/products.json?limit=60 (truncated in the saved output) plus limit=5 pages 1-3 for full records. 15 products have created_at on/after 2026-10-16 (14 created 2026-10-19, Tartan Yellow created 2026-10-23); all 15 were published 2026-10-23 between 18:00:04 and 18:00:18 +01:00. Excluded: Tartan Orange and Tartan Red Headcovers (re-published 2026-10-19 but created 2024-02-10) and ST Headcover (created 2026-10-11). All 15 share the same Re.Weave Collection body copy, empty product_type, no tags, exactly ONE image each, and identical pricing: Driver 78.00, Wood 74.00, Hybrid 71.00 (EUR).",
+  "products": [
+    {
+      "title": "Tartan Yellow Headcover",
+      "handle": "tartan-yellow-headcover",
+      "url": "https://mogshadegolf.com/products/tartan-yellow-headcover",
+      "created_at": "2026-10-23T10:57:54+01:00",
+      "published_at": "2026-10-23T18:00:18+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2948.jpg?v=1792437419"]
+    },
+    {
+      "title": "Houndstooth Autumn Headcover",
+      "handle": "dogtooth-autumn-headcover",
+      "url": "https://mogshadegolf.com/products/dogtooth-autumn-headcover",
+      "created_at": "2026-10-19T21:58:07+01:00",
+      "published_at": "2026-10-23T18:00:17+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2950.jpg?v=1792437419"]
+    },
+    {
+      "title": "Azulejo Brown Headcover",
+      "handle": "azulejo-brown-black-headcover",
+      "url": "https://mogshadegolf.com/products/azulejo-brown-black-headcover",
+      "created_at": "2026-10-19T21:54:43+01:00",
+      "published_at": "2026-10-23T18:00:16+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2935.jpg?v=1792437418"]
+    },
+    {
+      "title": "Desert Orange & Sea Headcover",
+      "handle": "desert-orange-sea-headcover",
+      "url": "https://mogshadegolf.com/products/desert-orange-sea-headcover",
+      "created_at": "2026-10-19T21:53:56+01:00",
+      "published_at": "2026-10-23T18:00:15+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2702.jpg?v=1792437419"]
+    },
+    {
+      "title": "Waffle Autumn Headcover",
+      "handle": "waffle-autumn-headcover",
+      "url": "https://mogshadegolf.com/products/waffle-autumn-headcover",
+      "created_at": "2026-10-19T21:53:05+01:00",
+      "published_at": "2026-10-23T18:00:14+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": false},
+        {"title": "Wood", "price": "74.00", "available": false},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2703.jpg?v=1792437419"]
+    },
+    {
+      "title": "Noor Brown Headcover",
+      "handle": "noor-brown-headcover",
+      "url": "https://mogshadegolf.com/products/noor-brown-headcover",
+      "created_at": "2026-10-19T21:52:00+01:00",
+      "published_at": "2026-10-23T18:00:13+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": false},
+        {"title": "Wood", "price": "74.00", "available": false},
+        {"title": "Hybrid", "price": "71.00", "available": false}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2963.jpg?v=1792437418"]
+    },
+    {
+      "title": "Vintage Orange & Gray Headcover",
+      "handle": "vintage-orange-gray-headcover",
+      "url": "https://mogshadegolf.com/products/vintage-orange-gray-headcover",
+      "created_at": "2026-10-19T21:51:31+01:00",
+      "published_at": "2026-10-23T18:00:12+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2695.jpg?v=1792437419"]
+    },
+    {
+      "title": "Vintage Berry Headcover",
+      "handle": "vintage-berry-headcover",
+      "url": "https://mogshadegolf.com/products/vintage-berry-headcover",
+      "created_at": "2026-10-19T21:50:53+01:00",
+      "published_at": "2026-10-23T18:00:11+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2970.jpg?v=1792437418"]
+    },
+    {
+      "title": "Dot Red & Gray Headcover",
+      "handle": "dot-red-gray-headcover",
+      "url": "https://mogshadegolf.com/products/dot-red-gray-headcover",
+      "created_at": "2026-10-19T21:49:09+01:00",
+      "published_at": "2026-10-23T18:00:10+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2938.jpg?v=1792437420"]
+    },
+    {
+      "title": "Dot Gray & Red Headcover",
+      "handle": "dot-gray-red-headcover",
+      "url": "https://mogshadegolf.com/products/dot-gray-red-headcover",
+      "created_at": "2026-10-19T21:48:33+01:00",
+      "published_at": "2026-10-23T18:00:09+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2942.jpg?v=1792437419"]
+    },
+    {
+      "title": "Vintage Algae Headcover",
+      "handle": "vintage-algae-headcover",
+      "url": "https://mogshadegolf.com/products/vintage-algae-headcover",
+      "created_at": "2026-10-19T21:47:55+01:00",
+      "published_at": "2026-10-23T18:00:08+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": false},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2966.jpg?v=1792437418"]
+    },
+    {
+      "title": "Tiles Orange Headcover",
+      "handle": "tiles-orange-headcover",
+      "url": "https://mogshadegolf.com/products/tiles-orange-headcover",
+      "created_at": "2026-10-19T21:45:39+01:00",
+      "published_at": "2026-10-23T18:00:07+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2973_9cea8a38-e557-4242-bbab-277008381d1e.jpg?v=1792442758"]
+    },
+    {
+      "title": "Arrow Eucalypto Headcover",
+      "handle": "arrow-eucalypto-headcover",
+      "url": "https://mogshadegolf.com/products/arrow-eucalypto-headcover",
+      "created_at": "2026-10-19T21:44:54+01:00",
+      "published_at": "2026-10-23T18:00:06+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": true},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2977.jpg?v=1792749311"]
+    },
+    {
+      "title": "Houndstooth Lichen Headcover",
+      "handle": "dogtooth-lychen-headcover",
+      "url": "https://mogshadegolf.com/products/dogtooth-lychen-headcover",
+      "created_at": "2026-10-19T21:44:24+01:00",
+      "published_at": "2026-10-23T18:00:05+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": false},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2988.jpg?v=1792749283"]
+    },
+    {
+      "title": "Houndstooth Brown Headcover",
+      "handle": "dogtooth-brown-headcover",
+      "url": "https://mogshadegolf.com/products/dogtooth-brown-headcover",
+      "created_at": "2026-10-19T21:43:08+01:00",
+      "published_at": "2026-10-23T18:00:04+01:00",
+      "product_type": "",
+      "variants": [
+        {"title": "Driver", "price": "78.00", "available": true},
+        {"title": "Wood", "price": "74.00", "available": false},
+        {"title": "Hybrid", "price": "71.00", "available": true}
+      ],
+      "body_text": "Our Re.Weave Collection is made with rescued high-quality fabrics woven at factories in the mountain region of Serra da Estrela and fleece lining. These headcovers ensure less waste, less resource depletion, and lower carbon emissions.",
+      "images": ["https://cdn.shopify.com/s/files/1/0773/5961/2244/files/MG_2971.jpg?v=1792437419"]
+    }
+  ]
+}
