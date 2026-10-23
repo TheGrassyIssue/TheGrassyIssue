@@ -211,7 +211,10 @@ FAQ = [
 _LB = []
 _figs = ""
 LOOKBOOK = ""
-FRN = {k: [f"{IMG}/p-{k[1:]}.jpg"] for k in P}
+_FRN1 = {k: [f"{IMG}/p-{k[1:]}.jpg"] for k in P}
+# extra frames per product (Lenny, 23 Oct 2026: "need more images in each products box"); research/extra-images/frame_extras.py
+_EX = json.loads((ROOT / "research/extra-images/outdoor-golf/frames.json").read_text())
+FRN = {k: v + _EX.get(k[1:], []) for k, v in _FRN1.items()}
 OUT = ROOT / f"drops/{SLUG}.html"
 URL = f"https://thegrassyissue.com/drops/{SLUG}"
 GRID_CSS = ('<style>/*TGI-R3-GRID*/.products-grid[data-n]{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}.products-grid[data-n]>.product-card{flex:0 0 calc((100% - 48px)/3);min-width:0}@media(max-width:820px){.products-grid[data-n]>.product-card{flex-basis:calc((100% - 24px)/2)}}@media(max-width:480px){.products-grid[data-n]>.product-card{flex-basis:100%}}</style>\n')

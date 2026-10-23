@@ -185,6 +185,8 @@ FAQ = [
  ("What was on Anthony Kim's belt buckle?", "His initials. In 2008 he wore big custom AK buckles that Golf Digest called his bling belt. In 2026 he became an equity partner in Malbon, which sells an AK 1% line."),
  ("How did Moe Norman dress?", "Long-sleeve shirts buttoned to the chin even in heat, turtlenecks in summer, bright colors with stripes and plaids, and pants that were always a little too short. He also wore two watches."),
 ]
+# extra frames per product (Lenny, 23 Oct 2026); research/extra-images/frame_extras.py
+_EX = json.loads((ROOT / "research/extra-images/golfer-style/frames.json").read_text())
 OUT = ROOT / f"drops/{SLUG}.html"
 URL = f"https://thegrassyissue.com/drops/{SLUG}"
 
@@ -193,8 +195,14 @@ def card(p, i, idx):
     name = C[i][0] or p["name"]
     pr = price(p, i)
     label = H.escape(H.unescape(name).replace('"', ""))
-    return (f'<div class="product-card" id="p-{idx}" data-frames="1"><div class="product-gallery">'
-            f'<div class="pg-track"><div class="pg-frame"><img src="{IMG}/p-{idx}.jpg" alt="{H.escape(p["brand"])} {label}" loading="lazy" /></div></div>'
+    fr = [f"{IMG}/p-{idx}.jpg"] + _EX.get(str(idx), [])
+    imgs = "".join(f'<div class="pg-frame"><img src="{f}" alt="{H.escape(p["brand"])} {label} &middot; view {j+1} of {len(fr)}" loading="lazy" /></div>' for j, f in enumerate(fr))
+    dots = "".join(f'<button class="pg-dot{" on" if j == 0 else ""}" data-i="{j}" aria-label="View image {j+1}"></button>' for j in range(len(fr)))
+    return (f'<div class="product-card" id="p-{idx}" data-frames="{len(fr)}"><div class="product-gallery">'
+            f'<div class="pg-track">{imgs}</div>'
+            f'<button class="pg-arw prev" aria-label="Previous image">&#8249;</button>'
+            f'<button class="pg-arw next" aria-label="Next image">&#8250;</button>'
+            f'<span class="pg-count">1/{len(fr)}</span><div class="pg-dots">{dots}</div>'
             f'</div><div class="product-body"><div class="product-brand">{H.escape(p["brand"])}</div>'
             f'<div class="product-name">{H.escape(name)} &middot; {pr}</div>'
             f'<div class="product-desc">{C[i][2]}</div>'

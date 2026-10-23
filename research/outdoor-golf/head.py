@@ -207,6 +207,9 @@ FAQ = [
 _LB = []
 _figs = ""
 LOOKBOOK = ""
-FRN = {k: [f"{IMG}/p-{k[1:]}.jpg"] for k in P}
+_FRN1 = {k: [f"{IMG}/p-{k[1:]}.jpg"] for k in P}
+# extra frames per product (Lenny, 23 Oct 2026: "need more images in each products box"); research/extra-images/frame_extras.py
+_EX = json.loads((ROOT / "research/extra-images/outdoor-golf/frames.json").read_text())
+FRN = {k: v + _EX.get(k[1:], []) for k, v in _FRN1.items()}
 OUT = ROOT / f"drops/{SLUG}.html"
 URL = f"https://thegrassyissue.com/drops/{SLUG}"

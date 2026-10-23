@@ -1,0 +1,699 @@
+{
+ "1": [
+  {
+   "file": "c1-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/S26-X000010481-Gamma-Pant-Black-Sapphire-Front-View.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c1-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/S26-X000010481-Gamma-Pant-Black-Sapphire-Back-View.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c1-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/S26-X000010481-Gamma-Pant-Black-Sapphire-Side-View.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  }
+ ],
+ "2": [
+  {
+   "file": "c2-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000009559-Atom-Vest-Black-Back-View.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c2-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000009559-Atom-Vest-Black-Side-View.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  },
+  {
+   "file": "c2-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000009559-Atom-Vest-Black-Full-Body.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  }
+ ],
+ "3": [
+  {
+   "file": "c3-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010550-Delta-1-2-Zip-Neck-Black-Back-View.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c3-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010550-Delta-1-2-Zip-Neck-Black-Side-View.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  },
+  {
+   "file": "c3-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010550-Delta-1-2-Zip-Neck-Black-Full-Body.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  }
+ ],
+ "4": [
+  {
+   "file": "c4-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000008447-Kyanite-Jacket-Black-Back-View.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c4-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000008447-Kyanite-Jacket-Black-Side-View.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  },
+  {
+   "file": "c4-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000008447-Kyanite-Jacket-Black-Full-Body.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  }
+ ],
+ "5": [
+  {
+   "file": "c5-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010276-Squamish-Hoody-Black-Back-View.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c5-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010276-Squamish-Hoody-Black-Hood.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c5-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010276-Squamish-Hoody-Black-Side-View.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  }
+ ],
+ "6": [
+  {
+   "file": "c6-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010831-Kopec-2-Low-GTX-Shoe-Black-Black-Pair.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c6-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010831-Kopec-2-Low-GTX-Shoe-Black-Black-Hover.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c6-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/F26-X000010831-Kopec-2-Low-GTX-Shoe-Black-Black-Sole.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  }
+ ],
+ "7": [
+  {
+   "file": "c7-1.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/S25-X000009782-Small-Bird-Cap-24K-Black-Side-View.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  },
+  {
+   "file": "c7-2.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/S25-X000009782-Small-Bird-Cap-24K-Black-Back-View.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c7-3.jpg",
+   "src": "https://images.arcteryx.com/details/1350x1710/S25-X000009782-Small-Bird-Cap-24K-Black-Front.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  }
+ ],
+ "8": [
+  {
+   "file": "c8-1.jpg",
+   "src": "https://cdn.dam.salomon.com/7e268552-8ec9-4c22-9ae2-b48f00e4bdc2/L49306800/PNG-2000px-max-72dpi.png",
+   "px": "1667x2000",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c8-2.jpg",
+   "src": "https://cdn.dam.salomon.com/4170a151-97f9-4935-946c-b3f500adc1a4/L49306800/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c8-3.jpg",
+   "src": "https://cdn.dam.salomon.com/b84d2d29-b737-4697-aef7-b3f500e00d4e/L49306800/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "back"
+  }
+ ],
+ "9": [
+  {
+   "file": "c9-1.jpg",
+   "src": "https://cdn.dam.salomon.com/8041e21a-878f-4512-bbbb-b3f500d686ba/L49199100/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c9-2.jpg",
+   "src": "https://cdn.dam.salomon.com/7f10c9c8-f565-4bd0-a051-b3ef00a0f330/L49199100/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c9-3.jpg",
+   "src": "https://cdn.dam.salomon.com/ff8dd3f5-c1a5-41c3-acfb-b3e9009cb793/L49199100/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "back"
+  }
+ ],
+ "10": [
+  {
+   "file": "c10-1.jpg",
+   "src": "https://cdn.dam.salomon.com/2aabd691-1f4d-4103-9285-b3f500a58428/L45397400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c10-2.jpg",
+   "src": "https://cdn.dam.salomon.com/b98f386b-eacd-4cf4-ab5f-b3f500d6b531/L45397400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c10-3.jpg",
+   "src": "https://cdn.dam.salomon.com/c22d73f8-9241-43a1-ac19-b3f500f43b07/L45397400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "back"
+  }
+ ],
+ "11": [
+  {
+   "file": "c11-1.jpg",
+   "src": "https://cdn.dam.salomon.com/ecbc36b9-d041-474e-8686-b34b00f05360/LC2761400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c11-2.jpg",
+   "src": "https://cdn.dam.salomon.com/f5e0fe09-eac8-4234-a235-b31b00b3573c/LC2761400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c11-3.jpg",
+   "src": "https://cdn.dam.salomon.com/a099c438-195f-4498-bd8d-b347009028d2/LC2761400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  }
+ ],
+ "12": [
+  {
+   "file": "c12-1.jpg",
+   "src": "https://cdn.dam.salomon.com/597f3a1c-d5cb-4edd-8db6-b3fe00aec86b/LC2767400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c12-2.jpg",
+   "src": "https://cdn.dam.salomon.com/66d55eb6-040a-45a5-b224-b3fc00950c51/LC2767400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c12-3.jpg",
+   "src": "https://cdn.dam.salomon.com/04d6129d-b3d0-4b8f-8b21-b403009c3058/LC2767400/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  }
+ ],
+ "13": [
+  {
+   "file": "c13-1.jpg",
+   "src": "https://cdn.dam.salomon.com/4ffb1191-435e-4c63-8c5a-b3fe00af394a/LC2967500/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c13-2.jpg",
+   "src": "https://cdn.dam.salomon.com/f180de99-f23b-46af-b700-b3b400d872f4/LC2967500/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c13-3.jpg",
+   "src": "https://cdn.dam.salomon.com/905e2148-b27b-4aea-99e8-b403009eaa23/LC2967500/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  }
+ ],
+ "14": [
+  {
+   "file": "c14-1.jpg",
+   "src": "https://cdn.dam.salomon.com/93f2cd1e-b247-4abf-9d02-b3ae00ab2b03/LC2930700/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c14-2.jpg",
+   "src": "https://cdn.dam.salomon.com/94b1de25-0a03-42b6-9379-b40300b53ff7/LC2930700/PNG-2000px-max-72dpi.png",
+   "px": "2000x2000",
+   "kind": "model"
+  }
+ ],
+ "15": [
+  {
+   "file": "c15-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  },
+  {
+   "file": "c15-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_M3.jpg",
+   "px": "800x960",
+   "kind": "back"
+  },
+  {
+   "file": "c15-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_M1.jpg",
+   "px": "800x960",
+   "kind": "model"
+  }
+ ],
+ "16": [
+  {
+   "file": "c16-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J013_SEALCHECK_unisex-jacket_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  },
+  {
+   "file": "c16-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J013_SEALCHECK_unisex-jacket_M3.jpg",
+   "px": "800x960",
+   "kind": "back"
+  },
+  {
+   "file": "c16-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J013_SEALCHECK_unisex-jacket-detail_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  }
+ ],
+ "17": [
+  {
+   "file": "c17-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_MULTISTRIPE_unisex-jacket_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  },
+  {
+   "file": "c17-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_MULTISTRIPE_unisex-jacket_M3.jpg",
+   "px": "800x960",
+   "kind": "back"
+  },
+  {
+   "file": "c17-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_MULTISTRIPE_unisex-jacket-detail_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  }
+ ],
+ "18": [
+  {
+   "file": "c18-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J002_BARKCAMO_unisex-vest_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  },
+  {
+   "file": "c18-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J002_BARKCAMO_unisex-vest_M3.jpg",
+   "px": "800x960",
+   "kind": "back"
+  },
+  {
+   "file": "c18-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J002_BARKCAMO_unisex-vest-detail_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  }
+ ],
+ "19": [
+  {
+   "file": "c19-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_BURNTOLIVE_mens-pants_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  },
+  {
+   "file": "c19-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_BURNTOLIVE_mens-pants_M2.jpg",
+   "px": "800x960",
+   "kind": "model"
+  },
+  {
+   "file": "c19-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_BURNTOLIVE_mens-pants_M3.jpg",
+   "px": "800x960",
+   "kind": "back"
+  }
+ ],
+ "20": [
+  {
+   "file": "c20-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P015_BROWNCHECK_unisex-pants_1_48f48757-ef3d-4685-84ec-a51bcd8262ec.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  },
+  {
+   "file": "c20-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P015_BROWNCHECK_unisex-pants_M3.jpg",
+   "px": "800x960",
+   "kind": "back"
+  },
+  {
+   "file": "c20-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P015_BROWNCHECK_unisex-pants-detail_1.jpg",
+   "px": "800x960",
+   "kind": "detail"
+  }
+ ],
+ "21": [
+  {
+   "file": "c21-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FA-014_BROWNCHECK_unisex-hat_2.jpg",
+   "px": "800x960",
+   "kind": "back"
+  },
+  {
+   "file": "c21-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FA-014_BROWNCHECK_unisex-hat_3.jpg",
+   "px": "800x960",
+   "kind": "side"
+  },
+  {
+   "file": "c21-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FA-014_SEALCHECK_unisex-hat_1.jpg",
+   "px": "800x960",
+   "kind": "alt-color"
+  }
+ ],
+ "22": [
+  {
+   "file": "c22-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-261.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "side"
+  },
+  {
+   "file": "c22-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-262_1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "back"
+  },
+  {
+   "file": "c22-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MOGUL-PANT-OLIVE1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "23": [
+  {
+   "file": "c23-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-257.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "side"
+  },
+  {
+   "file": "c23-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-258_1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "back"
+  },
+  {
+   "file": "c23-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/yes.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "24": [
+  {
+   "file": "c24-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-269.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "side"
+  },
+  {
+   "file": "c24-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-270.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "back"
+  },
+  {
+   "file": "c24-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/DELUGE-PANT-OLIVE1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "25": [
+  {
+   "file": "c25-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-160.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "model"
+  },
+  {
+   "file": "c25-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-162.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "back"
+  },
+  {
+   "file": "c25-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/STINGER-JACKET-OLIVE1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "26": [
+  {
+   "file": "c26-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-82.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "model"
+  },
+  {
+   "file": "c26-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-81.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "back"
+  },
+  {
+   "file": "c26-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/URSA-PULLOVER-APPLE1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "27": [
+  {
+   "file": "c27-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-49.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "model"
+  },
+  {
+   "file": "c27-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-47.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "back"
+  },
+  {
+   "file": "c27-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/POLARTEC-PULLOVER-BLACK1.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "28": [
+  {
+   "file": "c28-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-135.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "model"
+  },
+  {
+   "file": "c28-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-FLAT-66.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  },
+  {
+   "file": "c28-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1006/5749/6446/files/MearaKallista-PMO-AW26-FLAT-67.jpg?width=2000",
+   "px": "2000x2667",
+   "kind": "detail"
+  }
+ ],
+ "29": [
+  {
+   "file": "c29-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM15102_BK-b4_5af211e0-6765-4e9b-a094-83a23c287b34.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c29-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM15102_BK-b1_d4710db2-275e-480a-972b-0af42ae89100.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c29-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM15102_BK.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  }
+ ],
+ "30": [
+  {
+   "file": "c30-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL25142_SD-b1.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c30-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL25142_SD-b4.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c30-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL25142_SD.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  }
+ ],
+ "31": [
+  {
+   "file": "c31-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM36335_BK-b6.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c31-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM36335_BK.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c31-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM36335_BK-b9.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  }
+ ],
+ "32": [
+  {
+   "file": "c32-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM35301_AD-b4.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c32-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM35301_RT.jpg",
+   "px": "1500x2000",
+   "kind": "alt-color"
+  }
+ ],
+ "33": [
+  {
+   "file": "c33-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM75155_GH-b1.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c33-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM75155_GH-b5.jpg",
+   "px": "1500x2000",
+   "kind": "detail"
+  },
+  {
+   "file": "c33-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM75155_BK.jpg",
+   "px": "1500x2000",
+   "kind": "alt-color"
+  }
+ ],
+ "34": [
+  {
+   "file": "c34-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL76181_SD-b51.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c34-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL76181_JB-b1.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c34-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GL76181_JB-b5.jpg",
+   "px": "1500x2000",
+   "kind": "side"
+  }
+ ],
+ "35": [
+  {
+   "file": "c35-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95192_AD-b4.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c35-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95192_AD-b51.jpg",
+   "px": "1500x2000",
+   "kind": "back"
+  },
+  {
+   "file": "c35-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1645/3613/files/GM95192_KB-b1.jpg",
+   "px": "1500x2000",
+   "kind": "model"
+  }
+ ],
+ "notes": {
+  "14": "Salomon page gallery has only 3 images (existing model shot + 2 others); both saved.",
+  "15": "Gramicci CDN originals max out at 800x960 (Shopify serves no larger); applies to cards 15-21.",
+  "21": "Gramicci originals 800x960. One extra is the Seal Check colorway.",
+  "32": "Only After Dark (shown) model shot + flat used; other on-model shots are Wild Willow colorway (not sold on site), so added Rose Taupe as the one alt-color.",
+  "33": "All on-model/detail shots on the page are the Gray Haze colorway (not in the listed colors); Dark Charcoal has only the flat. Extras: Gray Haze model + waist detail, Black flat.",
+  "34": "Sand Land has only flat front/back; model shots are Jet Brown (sold out colorway).",
+  "35": "Black has only the flat image; model shots are After Dark and Kirby Blue colorways (sold out)."
+ }
+}

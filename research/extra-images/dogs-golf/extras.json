@@ -1,0 +1,379 @@
+{
+ "1": [],
+ "1_note": "Brand page has only one product photo (already used); other two gallery images are generic sizing diagram and leather-tab options, not this collar.",
+ "2": [],
+ "2_note": "Brand page has only one product photo (already used); other two gallery images are generic sizing diagram and leather-tab options, not this collar.",
+ "3": [
+  {
+   "file": "c3-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0767/0248/2622/files/840350711832_1_1.jpg?v=1782725134",
+   "px": "1860x1861",
+   "kind": "alt-color"
+  }
+ ],
+ "4": [
+  {
+   "file": "c4-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0767/0248/2622/files/840350712341_1.jpg?v=1782725342",
+   "px": "2400x2400",
+   "kind": "alt-color"
+  }
+ ],
+ "7": [],
+ "7_note": "Rhoback page (headless store, .js 404) shows a single product image (mulligan_bandana.jpg, already used); other files are colour swatches only.",
+ "8": [],
+ "8_note": "Rhoback page shows a single product image (already used); no other gallery shots.",
+ "9": [
+  {
+   "file": "c9-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1392/6117/files/GolfApplique_BAN_26-02-19_9645-Crop2.jpg?v=1773262033",
+   "px": "2000x2000",
+   "kind": "model"
+  },
+  {
+   "file": "c9-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1392/6117/files/YaySports26_Golf_Applique_Bandana-NoEmb.jpg?v=1773262033",
+   "px": "516x516",
+   "kind": "detail",
+   "note": "largest size the brand CDN serves is 516px"
+  }
+ ],
+ "10": [],
+ "10_note": "All 3 gallery images on the Worthy Dog page are the identical shot (pixel diff 0); no extras.",
+ "13": [
+  {
+   "file": "c13-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SS25Flats2-859.jpg?v=1739215220",
+   "px": "2048x2048",
+   "kind": "side"
+  },
+  {
+   "file": "c13-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/DSC08805.jpg?v=1741600039",
+   "px": "1280x1280",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c13-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/DSC08803.jpg?v=1741604555",
+   "px": "1280x1280",
+   "kind": "lifestyle"
+  }
+ ],
+ "11": [
+  {
+   "file": "c11-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0767/0248/2622/files/840350712938_1.jpg?v=1782707544",
+   "px": "2249x2248",
+   "kind": "alt-color"
+  }
+ ],
+ "12": [
+  {
+   "file": "c12-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0911/7584/products/Golf-Champ-Dog-Toy-Set.jpg?v=1614798237",
+   "px": "1024x1024",
+   "kind": "side"
+  }
+ ],
+ "14": [],
+ "14_note": "A.P.C. US page has a single image; apc.fr rate-limited (429), no retailer used.",
+ "16": [
+  {
+   "file": "c16-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0129/1462/files/SeamusLabBrown_LidCloseUp_117925a0-d006-4f21-b537-355a6f3a6c05_edited.png?v=1765281884",
+   "px": "2400x2400",
+   "kind": "side"
+  },
+  {
+   "file": "c16-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0129/1462/files/SeamusLabBrown_VeritcalLayingDown_d27a3006-5f40-4a93-9488-b548805293d0_edited.png?v=1768572127",
+   "px": "2400x2400",
+   "kind": "detail"
+  }
+ ],
+ "17": [
+  {
+   "file": "c17-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/golden-on-bag-v3.png?v=1685306442",
+   "px": "2048x2048",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c17-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/golden-on-bag-left-angle_1.png?v=1686510746",
+   "px": "2400x2400",
+   "kind": "side"
+  },
+  {
+   "file": "c17-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/golden-on-bag-right-angle_1.png?v=1686510746",
+   "px": "2400x2400",
+   "kind": "side"
+  }
+ ],
+ "18": [
+  {
+   "file": "c18-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/gps_generated.png?v=1700850591",
+   "px": "1024x1024",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c18-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/black-on-bag-left-angle_1.png?v=1700850591",
+   "px": "2400x2400",
+   "kind": "side"
+  },
+  {
+   "file": "c18-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/black-on-bag-right-angle_1.png?v=1686510303",
+   "px": "2400x2400",
+   "kind": "side"
+  }
+ ],
+ "19": [
+  {
+   "file": "c19-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/doodle-on-bag.png?v=1685306413",
+   "px": "2400x2400",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c19-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/doodle-on-bag-left-angle_1.png?v=1686510538",
+   "px": "2400x2400",
+   "kind": "side"
+  },
+  {
+   "file": "c19-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0561/2368/6976/files/doodle-on-bag-right-angle_1.png?v=1686510538",
+   "px": "2400x2400",
+   "kind": "side"
+  }
+ ],
+ "20": [
+  {
+   "file": "c20-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0933/5419/7304/files/2026-01-1314.16.30.jpg?v=1769997265",
+   "px": "2400x2400",
+   "kind": "side"
+  }
+ ],
+ "21": [],
+ "21_note": "Swag Golf page has a single image (already used); no extras.",
+ "22": [
+  {
+   "file": "c22-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/2435/1447/files/PA_Spring26_Studio_Man_sBestFriend_07.jpg?v=1772702285",
+   "px": "1920x2400",
+   "kind": "back"
+  },
+  {
+   "file": "c22-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/2435/1447/files/PA_Spring26_Lifestyle_MansBestFriend-Light-4.jpg?v=1772702285",
+   "px": "1920x2400",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c22-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/2435/1447/files/PA_Spring26_Studio_Man_sBestFriend_03.jpg?v=1772702285",
+   "px": "1920x2400",
+   "kind": "detail"
+  }
+ ],
+ "23": [
+  {
+   "file": "c23-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/2435/1447/files/PA_Spring26_Studio_MansBestFriend.jpg?v=1772702504",
+   "px": "1920x2400",
+   "kind": "back"
+  },
+  {
+   "file": "c23-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/2435/1447/files/PA_Spring26_Lifestyle_MansBestFriend-Dark-2.jpg?v=1772702504",
+   "px": "1920x2400",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c23-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/2435/1447/files/PA_Spring26_Studio_MansBestFriend_9.jpg?v=1772702504",
+   "px": "1920x2400",
+   "kind": "detail"
+  }
+ ],
+ "24": [
+  {
+   "file": "c24-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1366/9275/files/UPPH0003-0000-N0001_GOLF_DOG_POLY_HAT_SOLID_FLEET_NAVY_UPPH_2.jpg",
+   "px": "2400x2400",
+   "kind": "back"
+  },
+  {
+   "file": "c24-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1366/9275/files/UPPH0003-0000-N0001_GOLF_DOG_POLY_HAT_SOLID_FLEET_NAVY_UPPH_3.jpg",
+   "px": "2400x2400",
+   "kind": "detail"
+  },
+  {
+   "file": "c24-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/1366/9275/files/UPPH0003-0000-N0001_GOLF_DOG_POLY_HAT_SOLID_FLEET_NAVY_UPPH_4.jpg",
+   "px": "2400x2400",
+   "kind": "detail"
+  }
+ ],
+ "25": [
+  {
+   "file": "c25-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0767/9233/2592/files/Performance_Hat_Navy__Back_Low_Res_bcec7cef-a507-40e1-9bb6-8c2aaa9a5f8e.jpg?v=1697743504",
+   "px": "2048x2048",
+   "kind": "back"
+  },
+  {
+   "file": "c25-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0767/9233/2592/files/Yellow-Lab-Navy_837270bc-49f3-4311-8713-aad73343b9e2.jpg?v=1787851327",
+   "px": "2048x2048",
+   "kind": "model"
+  }
+ ],
+ "31": [
+  {
+   "file": "c31-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/15.png?v=1792446138",
+   "px": "1080x1080",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c31-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143439.jpg?v=1783804629",
+   "px": "1080x1080",
+   "kind": "detail"
+  },
+  {
+   "file": "c31-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143441.jpg?v=1783804642",
+   "px": "1080x1080",
+   "kind": "detail"
+  }
+ ],
+ "28": [
+  {
+   "file": "c28-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/3C241BE6-E3B8-4782-9342-2CD2594057D4.jpg?v=1784142612",
+   "px": "1080x1080",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c28-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143482.jpg?v=1784142317",
+   "px": "1080x1080",
+   "kind": "detail"
+  },
+  {
+   "file": "c28-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143485.jpg?v=1784142368",
+   "px": "1080x1080",
+   "kind": "detail"
+  }
+ ],
+ "29": [
+  {
+   "file": "c29-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143393.jpg?v=1781294508",
+   "px": "1080x1080",
+   "kind": "detail"
+  },
+  {
+   "file": "c29-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143394.jpg?v=1781294529",
+   "px": "1080x1080",
+   "kind": "back"
+  },
+  {
+   "file": "c29-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143395.jpg?v=1781294564",
+   "px": "1080x1080",
+   "kind": "detail"
+  }
+ ],
+ "30": [
+  {
+   "file": "c30-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/E3CE9346-5C3F-46FA-AA79-0FACA3F9D499.jpg?v=1791224834",
+   "px": "2400x2400",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c30-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143613.jpg?v=1791224993",
+   "px": "1080x1080",
+   "kind": "detail"
+  },
+  {
+   "file": "c30-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/IMG_0271.jpg?v=1791303380",
+   "px": "1080x1440",
+   "kind": "lifestyle"
+  }
+ ],
+ "32": [
+  {
+   "file": "c32-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/Untitleddesign_7_cb5ac72e-a49a-4c22-ac5f-298de2c3adaf.png?v=1791563160",
+   "px": "1080x1080",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c32-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143373.jpg?v=1778195296",
+   "px": "1080x1080",
+   "kind": "detail"
+  },
+  {
+   "file": "c32-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143355.jpg?v=1778196503",
+   "px": "1080x1080",
+   "kind": "back"
+  }
+ ],
+ "33": [
+  {
+   "file": "c33-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/770ECA34-ED7E-4C8B-87C4-13DDF85FF84F.jpg?v=1775351455",
+   "px": "1080x1080",
+   "kind": "lifestyle"
+  },
+  {
+   "file": "c33-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143311.jpg?v=1775351455",
+   "px": "1080x1080",
+   "kind": "detail"
+  },
+  {
+   "file": "c33-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1143312.jpg?v=1775351455",
+   "px": "1080x1080",
+   "kind": "back"
+  }
+ ],
+ "34": [
+  {
+   "file": "c34-1.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1142921.jpg?v=1775354794",
+   "px": "1080x1080",
+   "kind": "side"
+  },
+  {
+   "file": "c34-2.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/P1142920.jpg?v=1775354794",
+   "px": "1080x1080",
+   "kind": "back"
+  },
+  {
+   "file": "c34-3.jpg",
+   "src": "https://cdn.shopify.com/s/files/1/0572/7368/0005/files/11.png?v=1792446401",
+   "px": "1080x1080",
+   "kind": "alt-color"
+  }
+ ]
+}
