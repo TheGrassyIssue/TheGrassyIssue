@@ -422,5 +422,15 @@
   "title": "Shoal Golf Bags: The $450 Standard and the Simple Sunday",
   "description": "Shoal Golf Co. makes waxed-canvas carry bags for golfers who walk. The $450 Standard, the Simple Sunday, what owners say about them, caps and the towel.",
   "_ctr3": "CTR batch 3, 22 Oct 2026: matched to GSC queries (brand + meaning/founder/price intent)."
+ },
+ "index.html": {
+  "title": "The Grassy Issue | Independent Golf Blog From Austin, Texas",
+  "description": "An independent golf blog from Austin: small golf brands, new drops, gear and the public courses we play, written by Lenny Harrington.",
+  "_why": "23 Oct 2026, Lenny: \"We still aren't showing up in Gemini AI search for Golf blogs\". Homepage never said \"golf blog\"; AI answers match the entity to the category it describes itself as."
+ },
+ "about.html": {
+  "title": "About The Grassy Issue: An Independent Golf Blog",
+  "description": "The Grassy Issue is an independent golf blog from Austin, Texas, run by Lenny Harrington: small golf brands, new drops, gear and public-course golf.",
+  "_why": "23 Oct 2026, Gemini visibility for \"golf blogs\"."
  }
 }

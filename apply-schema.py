@@ -43,7 +43,8 @@ ORG = {
     "alternateName": ["TGI", "Grassy Issue"],
     "url": f"{ROOT_URL}/",
     "logo": f"{ROOT_URL}/apple-touch-icon.png",
-    "description": "Independent golf brands, celebrated on Austin's public courses.",
+    "description": "An independent golf blog from Austin, Texas, covering small golf brands, new drops, gear and public-course golf.",
+    "knowsAbout": ["Golf", "Independent golf brands", "Golf apparel", "Golf equipment", "Public golf courses", "Austin golf"],
     "sameAs": ["https://instagram.com/thegrassyissue"],
     "founder": {"@type": "Person", "@id": f"{ROOT_URL}/about#lenny", "name": "Lenny Harrington"},
 }

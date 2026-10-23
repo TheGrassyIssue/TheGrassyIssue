@@ -16,7 +16,7 @@ btk = sorted([e for e in idx if re.search(r"/drops/brand-(to-know|revisited)-", 
 guides = [e for e in idx if e.get("g") in ("Field Notes",) or e["u"].startswith("/field-guide/") or e["u"].startswith("/guides/")]
 edits = [e for e in idx if e["u"].startswith("/drops/") and e not in btk and e not in guides]
 out = ["# The Grassy Issue", "",
- "> An independent golf publication from Austin, Texas, edited by Lenny Harrington. It covers independent golf brands "
+ "> An independent golf blog from Austin, Texas, edited by Lenny Harrington. It covers independent golf brands "
  f"({len(brands)} in its Brand Index, each with its own page), gear edits with live prices, and Austin's public and municipal golf courses.", "",
  "Every product price on the site is read from the brand's own store and dated. Coverage is editorial; some outbound links are affiliate links (see /disclosure).", "",
  "## Start here"]
