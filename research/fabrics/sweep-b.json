@@ -1,0 +1,569 @@
+{
+  "generated": "2026-10-24",
+  "method": "web_fetch of <store>/products.json?limit=250 (Shopify); fabric keywords matched case-insensitively in title, product_type, tags and body_html. Currency from <store>/meta.json. IMPORTANT: the fetch tool caps responses at roughly 73k characters, so for most stores only the first N products of the JSON were visible (see products_seen vs published_products_count). Matches below cover only the visible products; no store returned 250 products, so page=2 was never triggered.",
+  "stores_checked": [
+    {"slug": "kingfisher-golf", "url": "https://kingfisher-golf.com/", "products_seen": 20, "published_products_count": 42, "truncated": true, "currency": "USD", "matches": 0},
+    {"slug": "lazyface", "url": "https://lazyface.com/", "products_seen": 20, "published_products_count": null, "truncated": false, "currency": "USD (assumed, US store)", "matches": 2},
+    {"slug": "local-rule", "url": "https://local-rule.com/", "products_seen": 6, "published_products_count": 128, "truncated": true, "currency": "SEK", "matches": 5},
+    {"slug": "malbon", "url": "https://malbon.com/", "products_seen": 19, "published_products_count": 1317, "truncated": true, "currency": "USD", "matches": 2},
+    {"slug": "midiron", "url": "https://midiron.shop/", "products_seen": 17, "published_products_count": 16, "truncated": false, "currency": "AUD", "matches": 1},
+    {"slug": "morning-people-clothiers", "url": "https://morningpeopleclothiers.com/", "products_seen": 7, "published_products_count": null, "truncated": false, "currency": "USD (assumed, US store)", "matches": 0, "note": "The Casual Hat mentions merino only as a pairing suggestion (cotton hat) - excluded."},
+    {"slug": "mount-tee-golf", "url": "https://mountteegolf.com.au/", "products_seen": 20, "published_products_count": 54, "truncated": true, "currency": "AUD", "matches": 5},
+    {"slug": "okka-golf", "url": "https://okkagolf.com/", "products_seen": 16, "published_products_count": 85, "truncated": true, "currency": "AUD", "matches": 0},
+    {"slug": "olydoe", "url": "https://olydoe.com/", "products_seen": 18, "published_products_count": 49, "truncated": true, "currency": "USD", "matches": 8},
+    {"slug": "parmore-golf", "url": "https://parmoregolf.com/", "products_seen": 26, "published_products_count": 30, "truncated": true, "currency": "GBP", "matches": 3},
+    {"slug": "payntr", "url": "https://payntrgolf.com/", "products_seen": 6, "published_products_count": 93, "truncated": true, "currency": "USD", "matches": 0},
+    {"slug": "penta-golf", "url": "https://penta-golf.com/", "products_seen": 22, "published_products_count": 21, "truncated": false, "currency": "AUD", "matches": 1},
+    {"slug": "pins-and-aces", "url": "https://pinsandaces.com/", "products_seen": 14, "published_products_count": 998, "truncated": true, "currency": "USD", "matches": 0},
+    {"slug": "public-drip", "url": "https://publicdrip.com/", "products_seen": 11, "published_products_count": 89, "truncated": true, "currency": "USD", "matches": 3},
+    {"slug": "quiet-golf", "url": "https://quietgolf.com/", "products_seen": 8, "published_products_count": 29, "truncated": true, "currency": "USD", "matches": 0, "note": "San Marino Pant (handle san-merino-pant) matched 'merino' only in its handle/image filenames - not a merino product, excluded."},
+    {"slug": "radry-golf", "url": "https://radrygolf.com/", "products_seen": 24, "published_products_count": 86, "truncated": true, "currency": "USD", "matches": 1}
+  ],
+  "stores_failed": [
+    {"slug": "manors", "why": "products.json?limit=250 returned an empty body"},
+    {"slug": "merrill-golf", "why": "products.json?limit=250 returned an empty body"},
+    {"slug": "no-laying-up", "why": "products.json?limit=250 returned an empty body"},
+    {"slug": "gumtree-golf", "why": "skipped per brief (Squarespace, no products.json)"}
+  ],
+  "products": [
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Polo",
+      "handle": "merino-wool-polo",
+      "url": "https://olydoe.com/products/merino-wool-polo",
+      "product_type": "Polos",
+      "fabric_keywords": ["merino"],
+      "price": "125.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-50.jpg?v=1789424856",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe11Large.jpg?v=1789419633",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe6Large.jpg?v=1789419633"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Polo",
+      "handle": "merino-wool-long-sleeve-polo-copy-2",
+      "url": "https://olydoe.com/products/merino-wool-long-sleeve-polo-copy-2",
+      "product_type": "Polos",
+      "fabric_keywords": ["merino"],
+      "price": "125.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-13.jpg?v=1789425099",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe35Large.jpg?v=1789419755",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe34Large.jpg?v=1789419755"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Polo",
+      "handle": "merino-wool-polo-copy",
+      "url": "https://olydoe.com/products/merino-wool-polo-copy",
+      "product_type": "Polos",
+      "fabric_keywords": ["merino"],
+      "price": "125.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-13_websize.jpg?v=1790808792",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe37Large.jpg?v=1789419681",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe36Large.jpg?v=1789419681"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Polo",
+      "handle": "merino-wool-polo-1",
+      "url": "https://olydoe.com/products/merino-wool-polo-1",
+      "product_type": "Polos",
+      "fabric_keywords": ["merino"],
+      "price": "125.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-38_websize.jpg?v=1790809347",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe62Large.jpg?v=1789419193",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe38Large.jpg?v=1789419193"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Long-Sleeve Polo",
+      "handle": "merino-aire-ls-polo-blueberry",
+      "url": "https://olydoe.com/products/merino-aire-ls-polo-blueberry",
+      "product_type": "Polos",
+      "fabric_keywords": ["merino"],
+      "price": "130.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-51.jpg?v=1789424919",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe3Large.jpg?v=1789420043",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-33_websize.jpg?v=1790809401",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe5Large.jpg?v=1789420042"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Long-Sleeve Polo",
+      "handle": "merino-aire-ls-polo",
+      "url": "https://olydoe.com/products/merino-aire-ls-polo",
+      "product_type": "Polos",
+      "fabric_keywords": ["merino"],
+      "price": "130.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-6_websize.jpg?v=1790817375",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe2Large.jpg?v=1789419862",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-5_websize.jpg?v=1789428197",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe4Large.jpg?v=1789419862"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Hoodie",
+      "handle": "merino-tencel-hoodie",
+      "url": "https://olydoe.com/products/merino-tencel-hoodie",
+      "product_type": "Hoodie",
+      "fabric_keywords": ["merino"],
+      "price": "145.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-17_websize.jpg?v=1789428065",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe42Large.jpg?v=1789423189"
+      ],
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "olydoe",
+      "title": "Merino Aire Hoodie",
+      "handle": "merino-tencel-hoodie-1",
+      "url": "https://olydoe.com/products/merino-tencel-hoodie-1",
+      "product_type": "Hoodie",
+      "fabric_keywords": ["merino"],
+      "price": "145.00",
+      "currency": "USD",
+      "available": true,
+      "images": [],
+      "note": "Last product in the truncated response; image list was cut off, so no complete image URL is available. Availability is from the first variant only.",
+      "excerpt": "Incredibly innovative blend of Merino Wool and Tencel™ where the fabric is core spun around recycled nylon to add durability. ... Merino is nature’s most technical fiber and rivals the performance of polyester, but with added benefits of odor prevention."
+    },
+    {
+      "brand": "local-rule",
+      "title": "Lightweight Tech Pants - Black",
+      "handle": "lightweight-tech-pants-new-black",
+      "url": "https://local-rule.com/products/lightweight-tech-pants-new-black",
+      "product_type": "Bottoms",
+      "fabric_keywords": ["ripstop"],
+      "price": "1299.00",
+      "currency": "SEK",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/TechPantsBlackFrontCropped.jpg?v=1791443290",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/BlackCloseUp.jpg?v=1791443199",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/BlackFront2.jpg?v=1791443200",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/BlackBack.jpg?v=1791443199"
+      ],
+      "excerpt": "Made from a premium stretch ripstop blend, these pants combine durability with exceptional comfort. The fabric resists tearing while allowing full flexibility through every swing, walk, and commute."
+    },
+    {
+      "brand": "local-rule",
+      "title": "Lightweight Tech Pants - Light Grey",
+      "handle": "lightweight-tech-pants-new-light-grey",
+      "url": "https://local-rule.com/products/lightweight-tech-pants-new-light-grey",
+      "product_type": "Bottoms",
+      "fabric_keywords": ["ripstop"],
+      "price": "1299.00",
+      "currency": "SEK",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LocalRuleLightweightTechPantsLightGreyTaperedstart.jpg?v=1770733528",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LocalRuleLightweightTechPantsLightGreyTapered6.jpg?v=1772006225",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LightGreyFront.jpg?v=1791374794",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LightGreyBack2.jpg?v=1791374794"
+      ],
+      "excerpt": "Made from a premium stretch ripstop blend, these pants combine durability with exceptional comfort. The fabric resists tearing while allowing full flexibility through every swing, walk, and commute."
+    },
+    {
+      "brand": "local-rule",
+      "title": "Lightweight Tech Pants - Dusty Olive",
+      "handle": "lightweight-tech-pants-new-dusty-olive",
+      "url": "https://local-rule.com/products/lightweight-tech-pants-new-dusty-olive",
+      "product_type": "Bottoms",
+      "fabric_keywords": ["ripstop"],
+      "price": "1299.00",
+      "currency": "SEK",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/DustyOliveTechpantsfront.jpg?v=1791376985",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LocalRuleLightweightTechPantsOliveGreenTapered5.jpg?v=1772006234",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/OliveGreenFront.jpg?v=1791374746",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/OliveGreenBack.jpg?v=1791374746"
+      ],
+      "excerpt": "Made from a premium stretch ripstop blend, these pants combine durability with exceptional comfort. The fabric resists tearing while allowing full flexibility through every swing, walk, and commute."
+    },
+    {
+      "brand": "local-rule",
+      "title": "Lightweight Tech Pants - Dark Navy",
+      "handle": "lightweight-tech-pants-new-dark-navy",
+      "url": "https://local-rule.com/products/lightweight-tech-pants-new-dark-navy",
+      "product_type": "Bottoms",
+      "fabric_keywords": ["ripstop"],
+      "price": "1299.00",
+      "currency": "SEK",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LocalRuleLightweightTechPantsNavyRegularstart.jpg?v=1770732524",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LocalRuleLightweightTechPantsNavyTapered6.jpg?v=1772006220",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/NavyFront2.jpg?v=1791374616",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/Navyback2.jpg?v=1791374616"
+      ],
+      "excerpt": "Made from a premium stretch ripstop blend, these pants combine durability with exceptional comfort. The fabric resists tearing while allowing full flexibility through every swing, walk, and commute."
+    },
+    {
+      "brand": "local-rule",
+      "title": "Lightweight Tech Pants - Beige",
+      "handle": "lightweight-tech-pants-new-beige",
+      "url": "https://local-rule.com/products/lightweight-tech-pants-new-beige",
+      "product_type": "Bottoms",
+      "fabric_keywords": ["ripstop"],
+      "price": "1299.00",
+      "currency": "SEK",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/BeigeTechPantsFront.jpg?v=1791377044",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/LocalRuleLightweightTechPantsBeigeTapered5.jpg?v=1772006229",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/BeigeFront2_959f33c2-7c5c-4670-a845-e8afcf0bf345.jpg?v=1791374572",
+        "https://cdn.shopify.com/s/files/1/0915/5841/2569/files/Beigeback2_6aa83627-b40e-4cc8-a564-e69255360f76.jpg?v=1791374572"
+      ],
+      "excerpt": "Made from a premium stretch ripstop blend, these pants combine durability with exceptional comfort. The fabric resists tearing while allowing full flexibility through every swing, walk, and commute."
+    },
+    {
+      "brand": "parmore-golf",
+      "title": "Parmore Ripstop Cotton 5 panel (Brown)",
+      "handle": "parmore-ripstop-cotton-5-panel-copy",
+      "url": "https://parmoregolf.com/products/parmore-ripstop-cotton-5-panel-copy",
+      "product_type": "Cap",
+      "fabric_keywords": ["ripstop"],
+      "price": "35.00",
+      "currency": "GBP",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/GeneratedImageOctober21_2026-9_23AM.jpg?v=1792571258",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/Generated_Image_October_21_2026_-_9_32AM.jpg?v=1792571558",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/CAP_IMAGE5.jpg?v=1792572365",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/REBRAND_-_SOCIALS_CONTENT._-10.png?v=1792575881"
+      ],
+      "excerpt": "The crown is ripstop cotton blend in warm brown a softer shade that goes with pretty much anything. The shorter brim keeps the look sharp and streetwear-led. Fabric: ripstop cotton blend. Construction: 5-panel crown, shorter curved brim."
+    },
+    {
+      "brand": "parmore-golf",
+      "title": "Parmore + Ripstop Cotton 5 panel",
+      "handle": "parmore-embroidered-5-panel",
+      "url": "https://parmoregolf.com/products/parmore-embroidered-5-panel",
+      "product_type": "Cap",
+      "fabric_keywords": ["ripstop"],
+      "price": "35.00",
+      "currency": "GBP",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/GeneratedImageOctober21_2026-9_20AM.jpg?v=1792570897",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/GeneratedImageOctober21_2026-9_18AM.jpg?v=1792570896",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/CAP_FINAL4.jpg?v=1792572394",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/CAP_FINAL2.jpg?v=1792572455"
+      ],
+      "excerpt": "The crown is ripstop cotton blend in warm charcoal, a softer shade than black that goes with pretty much anything. The shorter brim keeps the look sharp and streetwear-led. Fabric: ripstop cotton blend. Construction: 5-panel crown, shorter curved brim."
+    },
+    {
+      "brand": "mount-tee-golf",
+      "title": "Mountain Range Cap - Black",
+      "handle": "mountain-range-hat",
+      "url": "https://mountteegolf.com.au/products/mountain-range-hat",
+      "product_type": "Cap",
+      "fabric_keywords": ["ripstop"],
+      "price": "50.00",
+      "currency": "AUD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/5d227ba2-f2fa-45b9-9270-1b6c09fb6649.jpg?v=1781611636",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/47b03efa-486e-4af6-b0aa-8c87d1a325f8.jpg?v=1781611642",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/c8c5e740-0f19-4c13-a5ef-f38f4b340431.jpg?v=1781611660"
+      ],
+      "excerpt": "Made from a 100% nylon ripstop, the Mountain Range cap is sure to keep your head dry. Built for winter and beyond, this tried and tested fabric is water and abrasion resistant."
+    },
+    {
+      "brand": "midiron",
+      "title": "M-Star Cap",
+      "handle": "m-star-golf-cap-trad-camo",
+      "url": "https://midiron.shop/products/m-star-golf-cap-trad-camo",
+      "product_type": "Headwear",
+      "fabric_keywords": ["ripstop"],
+      "price": "69.00",
+      "currency": "AUD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0777/0328/2926/files/MIDIRON_G_OLF_WOOLAWARE-7042.jpg?v=1788692552",
+        "https://cdn.shopify.com/s/files/1/0777/0328/2926/files/IMG_2554.jpg?v=1788692473",
+        "https://cdn.shopify.com/s/files/1/0777/0328/2926/files/IMG_34952.jpg?v=1788692473",
+        "https://cdn.shopify.com/s/files/1/0777/0328/2926/files/MIDIRON_G_OLF_WOOLAWARE-6934.jpg?v=1788692552"
+      ],
+      "excerpt": "100% Cotton Ripstop, all-over camo print. Signature unstructured, 5 panel fit. Adjustable strap back with metal clasp closure."
+    },
+    {
+      "brand": "penta-golf",
+      "title": "Players Cap",
+      "handle": "players-cap-navy",
+      "url": "https://penta-golf.com/products/players-cap-navy",
+      "product_type": "Headwear",
+      "fabric_keywords": ["ripstop"],
+      "price": "60.00",
+      "currency": "AUD",
+      "available": false,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0582/2159/2691/files/players-cap.webp?v=1769237209",
+        "https://cdn.shopify.com/s/files/1/0582/2159/2691/files/Players-Cap-Navy-1.webp?v=1769237209",
+        "https://cdn.shopify.com/s/files/1/0582/2159/2691/files/Players-Cap-Navy-2.webp?v=1769237209"
+      ],
+      "excerpt": "Sits firm, shades heavy. Made from 100% Nylon Ripstop keeping it lightweight and durable."
+    },
+    {
+      "brand": "mount-tee-golf",
+      "title": "Parklands Waffle Polo - Wattle Stripe",
+      "handle": "parklands-waffle-polo-wattle-stripe",
+      "url": "https://mountteegolf.com.au/products/parklands-waffle-polo-wattle-stripe",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "110.00",
+      "currency": "AUD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/YELLOW_1.jpg?v=1770807739",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1544.jpg?v=1770807739",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/YELLOW_2.jpg?v=1770802796",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1943.jpg?v=1770802796"
+      ],
+      "excerpt": "A polo suitable for warmer weather that maintains our brand identity of classic materials and a high quality and sophisticated feel. Made with a 220 GSM mid-weight waffle material for a beautiful mix of breathability and weight."
+    },
+    {
+      "brand": "mount-tee-golf",
+      "title": "Parklands Waffle Polo - Eucalyptus Stripe",
+      "handle": "parklands-waffle-polo-eucalyptus-stripe",
+      "url": "https://mountteegolf.com.au/products/parklands-waffle-polo-eucalyptus-stripe",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "110.00",
+      "currency": "AUD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TEAL_1.jpg?v=1770807752",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1530.jpg?v=1770807752",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TEAL_2.jpg?v=1770802758",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC2073.jpg?v=1770802758"
+      ],
+      "excerpt": "A polo suitable for warmer weather that maintains our brand identity of classic materials and a high quality and sophisticated feel. Made with a 220 GSM mid-weight waffle material for a beautiful mix of breathability and weight."
+    },
+    {
+      "brand": "mount-tee-golf",
+      "title": "Parklands Waffle Polo - Chocolate Brown",
+      "handle": "parklands-waffle-polo-chocolate-brown",
+      "url": "https://mountteegolf.com.au/products/parklands-waffle-polo-chocolate-brown",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "90.00",
+      "currency": "AUD",
+      "available": false,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BROWN-POLO-UNDONE.jpg?v=1756262906",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BROWN-POLO-BACK.jpg?v=1756262905",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BROWN-POLO-FRONT-DETAIL.jpg?v=1756262905",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BROWN-POLO-SLEEVE-DETAIL.jpg?v=1756262906"
+      ],
+      "excerpt": "A polo suitable for warmer weather that maintains our brand identity of classic materials and a high quality and sophisticated feel. Made with a 220 GSM mid-weight waffle material for a beautiful mix of breathability and weight."
+    },
+    {
+      "brand": "mount-tee-golf",
+      "title": "Parklands Waffle Polo - Sky Blue",
+      "handle": "parklands-waffle-polo-sky-blue",
+      "url": "https://mountteegolf.com.au/products/parklands-waffle-polo-sky-blue",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "90.00",
+      "currency": "AUD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-FRONT-UNDONE.jpg?v=1756262856",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-BACK.jpg?v=1756262856",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-FRONT-DETAIL.jpg?v=1756262856",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-SLEEVE-DETAIL.jpg?v=1756262856"
+      ],
+      "excerpt": "A polo suitable for warmer weather that maintains our brand identity of classic materials and a high quality and sophisticated feel. Made with a 220 GSM mid-weight waffle material for a beautiful mix of breathability and weight."
+    },
+    {
+      "brand": "public-drip",
+      "title": "Triborough Waffle Knit Polo (Dark Slate)",
+      "handle": "triborough-waffle-knit-polo-dark-slate",
+      "url": "https://publicdrip.com/products/triborough-waffle-knit-polo-dark-slate",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "110.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_slate_hero_webres.png?v=1784592922",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09633.jpg?v=1784829198",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_slate_detail_1_webres.png?v=1784592925",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09774.jpg?v=1784829196"
+      ],
+      "excerpt": "Elevate your everyday style with the Triborough Waffle Knit Polo. Crafted from a clean, textured waffle knit, this long sleeve polo brings subtle dimension to your wardrobe. Made from a versatile nylon blend with added stretch."
+    },
+    {
+      "brand": "public-drip",
+      "title": "Triborough Waffle Knit Polo (Coffee)",
+      "handle": "triborough-waffle-knit-polo-coffee",
+      "url": "https://publicdrip.com/products/triborough-waffle-knit-polo-coffee",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "110.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_coffee_hero_webres.png?v=1784592904",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09539_496bb5b3-8034-4032-8306-b759b914a61c.jpg?v=1784829186",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_coffee_detail_1_webres.png?v=1784592907",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09512.jpg?v=1784829188"
+      ],
+      "excerpt": "Elevate your everyday style with the Triborough Waffle Knit Polo. Crafted from a clean, textured waffle knit, this long sleeve polo brings subtle dimension to your wardrobe. Made from a versatile nylon blend with added stretch."
+    },
+    {
+      "brand": "public-drip",
+      "title": "Triborough Waffle Knit Polo (Black)",
+      "handle": "triborough-waffle-knit-polo-black",
+      "url": "https://publicdrip.com/products/triborough-waffle-knit-polo-black",
+      "product_type": "Polo",
+      "fabric_keywords": ["waffle"],
+      "price": "110.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_black_hero_webres.png?v=1784592887",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09573.jpg?v=1784829180",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_black_detail_1_webres.png?v=1784592890",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09570.jpg?v=1784829178"
+      ],
+      "excerpt": "Elevate your everyday style with the Triborough Waffle Knit Polo. Crafted from a clean, textured waffle knit, this long sleeve polo brings subtle dimension to your wardrobe. Made from a versatile nylon blend with added stretch."
+    },
+    {
+      "brand": "parmore-golf",
+      "title": "Waffle-Knit Long Sleeve Tee",
+      "handle": "long-sleeve-tee-rebrand",
+      "url": "https://parmoregolf.com/products/long-sleeve-tee-rebrand",
+      "product_type": "Pullovers",
+      "fabric_keywords": ["waffle"],
+      "price": "45.00",
+      "currency": "GBP",
+      "available": false,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/ParmoreYellowWaffleLongSleeve-Front-WebEnhanced2x.png?v=1789753247"
+      ],
+      "excerpt": "Matched on title (Waffle-Knit Long Sleeve Tee); no fabric sentence was captured from the body text. All 4 variants show available:false."
+    },
+    {
+      "brand": "malbon",
+      "title": "GRATEFUL DEAD LONG VACATION BUCKET HAT",
+      "handle": "grateful-dead-long-vacation-bucket-hat-heather-oatmeal",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-bucket-hat-heather-oatmeal",
+      "product_type": "Bucket Hats",
+      "fabric_keywords": ["deep-pile"],
+      "price": "98.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10457-HOA-1.jpg?v=1792533615",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10457-HOA-2.jpg?v=1792533615",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10457-HOA-3.jpg?v=1792533615"
+      ],
+      "excerpt": "The Long Vacation Bucket Hat brings the collection's softer textures and graphic details into an easy unstructured shape. A deep-pile body is wrapped with repeating woven artwork and finished with a clear rubber character patch at the front. Fabrication: 100% polyester."
+    },
+    {
+      "brand": "malbon",
+      "title": "GRATEFUL DEAD LONG VACATION SWEATPANT",
+      "handle": "grateful-dead-long-vacation-sweatpant-heather-oatmeal",
+      "url": "https://malbon.com/products/grateful-dead-long-vacation-sweatpant-heather-oatmeal",
+      "product_type": "Sweatpants",
+      "fabric_keywords": ["deep-pile"],
+      "price": "178.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-1.jpg?v=1792533651",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/2026_08_31_MALBON_0658.jpg?v=1792624515",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-A.jpg?v=1792533660",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-10452-HOA-E.jpg?v=1792533660"
+      ],
+      "excerpt": "Fabrication: 100% polyester. Relaxed fit. Deep-pile sweatpant construction. Encased elastic waistband with adjustable drawcord. Slant front pockets and back patch pocket."
+    },
+    {
+      "brand": "radry-golf",
+      "title": "Staple Crew",
+      "handle": "staple-crew",
+      "url": "https://radrygolf.com/products/staple-crew",
+      "product_type": "Mens Sweatshirt",
+      "fabric_keywords": ["terry"],
+      "price": "95.00",
+      "currency": "USD",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/staple_crew_grey_front_web.jpg?v=1772898459",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/Staple_crew_black_front_web.jpg?v=1772898459",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/Staple_crew_black_detail_web.jpg?v=1772898459",
+        "https://cdn.shopify.com/s/files/1/0015/4121/0184/files/staple_crew_grey_detail_web.jpg?v=1772898373"
+      ],
+      "excerpt": "Details: Relaxed Fit. Heavyweight 14.7oz. 100% french terry cotton. Preshrunk. Embroidered artwork."
+    },
+    {
+      "brand": "lazyface",
+      "title": "THE GOLF TOWEL",
+      "handle": "the-golf-towel",
+      "url": "https://lazyface.com/products/the-golf-towel",
+      "product_type": "",
+      "fabric_keywords": ["terrycloth"],
+      "price": "48.00",
+      "currency": "USD (assumed)",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0696/1981/0361/files/ImageFrame_20.png?v=1790893285",
+        "https://cdn.shopify.com/s/files/1/0696/1981/0361/files/ImageFrame_21.png?v=1790893285"
+      ],
+      "note": "Accessory (towel), but the fabric mention is substantive.",
+      "excerpt": "Introducing the Lazyface Golf Towel, part of our capsule collection with Tremont Sporting Co. This reversible, two-color design always looks good wiping things off, no matter which side you're using. And the terrycloth blend is built to be highly absorbent and durable."
+    },
+    {
+      "brand": "lazyface",
+      "title": "THE SUN CAP",
+      "handle": "the-sun-cap",
+      "url": "https://lazyface.com/products/the-sun-cap",
+      "product_type": "",
+      "fabric_keywords": ["corduroy"],
+      "price": "35.00",
+      "currency": "USD (assumed)",
+      "available": true,
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0696/1981/0361/files/Sun-Cap-1.jpg?v=1773185479",
+        "https://cdn.shopify.com/s/files/1/0696/1981/0361/files/Sun-Cap-2.jpg?v=1773185479"
+      ],
+      "excerpt": "Perfect for temperate climates in the summer or subtropical climates in the winter, this corduroy cap keeps your head cozy and the sun out of your eyes."
+    }
+  ]
+}
