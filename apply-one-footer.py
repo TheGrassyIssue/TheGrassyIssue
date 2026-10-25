@@ -16,6 +16,15 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 S, E = "<!-- TGI-ONE-FOOTER -->", "<!-- /TGI-ONE-FOOTER -->"
 RS, RE_ = "<!-- TGI-RELATED -->", "<!-- /TGI-RELATED -->"
 TAG = '<script src="/assets/js/more-rotate.js" defer></script>'
+# Substack signup above Keep Reading (Lenny, 25 Oct 2026: bring back the newsletter signup, sign people up to our Substack).
+SUBSCRIBE = ('<style>.tgi-sub{max-width:1400px;margin:56px auto 0;padding:28px 32px;border-top:.5px solid var(--ink);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}'
+  '.tgi-sub-t{font-family:var(--serif);font-size:22px;line-height:1.25}.tgi-sub-t small{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.55;margin-top:6px}'
+  '.tgi-sub form{display:flex;flex:0 1 420px;min-width:260px;border:.5px solid var(--ink)}.tgi-sub input{flex:1;min-width:0;padding:12px;border:none;background:transparent;font-family:var(--sans);font-size:14px;color:var(--ink);outline:none}'
+  '.tgi-sub button{padding:0 18px;border:none;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;cursor:pointer}.tgi-sub button:hover{background:var(--grass)}'
+  '@media(max-width:640px){.tgi-sub{padding:24px 20px;margin-top:40px}.tgi-sub-t{font-size:19px}}</style>\n'
+  '<section class="tgi-sub" aria-label="Newsletter"><div class="tgi-sub-t">Get The Grassy Issue in your inbox.<small>New posts by email, via our Substack</small></div>'
+  '<form action="https://thegrassyissue.substack.com/api/v1/free?nojs=true" method="post" target="_blank" rel="noopener">'
+  '<input type="email" name="email" placeholder="Your email" required aria-label="Email address" /><button type="submit">Subscribe &rarr;</button></form></section>\n')
 
 
 def div_end(s, i):
@@ -56,7 +65,7 @@ def merge(s, self_url):
     taken = {r[0] for r in rel} | {self_url}
     extra = [c for c in grid_cards if c[0] not in taken][:4 - len(rel)]
     cards = [card(*r) for r in rel] + [card(*c) for c in extra]
-    block = (f'{S}\n<div class="more" data-tgi="one-footer">\n  <div class="more-hdr">\n    <span class="more-label">Keep Reading</span>\n'
+    block = (f'{S}\n' + SUBSCRIBE + '<div class="more" data-tgi="one-footer">\n  <div class="more-hdr">\n    <span class="more-label">Keep Reading</span>\n'
              f'    <a href="/brands" class="more-link">Explore All Brands &rarr;</a>\n  </div>\n  <div class="more-grid">\n'
              + "\n".join(cards) + f'\n  </div>\n</div>\n{E}\n')
     # remove the pieces being merged
