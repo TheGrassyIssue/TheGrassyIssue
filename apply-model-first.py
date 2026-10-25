@@ -7,8 +7,6 @@ wearing the piece) comes first; the rest keep their order. On-model is judged by
 are left alone. Idempotent; runs in Deploy TGI.command before apply-gallery-wrap. Dry run by default.
 """
 import json, os, re, sys
-import numpy as np
-from PIL import Image
 ROOT = os.path.dirname(os.path.abspath(__file__))
 POSTS = ["drops/golf-capsule-wardrobe.html", "drops/brand-revisited-water-when-dry.html",
          "drops/golf-fabrics-merino-ripstop-corduroy.html", "drops/new-golf-drops-malbon-gumtree-mogshade.html"]
@@ -46,6 +44,8 @@ OVERRIDE = {
 
 
 def skin(path):
+    import numpy as np  # only needed for frames not yet in the cache; the deploy Mac may not have numpy
+    from PIL import Image
     im = Image.open(os.path.join(ROOT, path.lstrip("/"))).convert("YCbCr").resize((250, 312))
     a = np.asarray(im).astype(int); y, cb, cr = a[..., 0], a[..., 1], a[..., 2]
     m = (cb >= 80) & (cb <= 125) & (cr >= 138) & (cr <= 170) & (y > 45)
@@ -65,7 +65,9 @@ def main(apply_):
             srcs = [re.search(r'src="([^"]+)"', f).group(1) for f in frames]
             def on(src):
                 if src in OVERRIDE: return OVERRIDE[src]
-                if src not in cache: cache[src] = skin(src)
+                if src not in cache:
+                    try: cache[src] = skin(src)
+                    except ImportError: return False
                 return cache[src] >= THRESH
             flags = [on(x) for x in srcs]
             if flags[0] or not any(flags): return m.group(0)
