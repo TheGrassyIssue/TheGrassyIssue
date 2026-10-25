@@ -287,7 +287,7 @@ def main(apply_):
         assert (ROOT / f"images/golfer-style/p-{i}.jpg").is_file(), i
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     jump = " &middot; ".join(f'<a href="#{g[2]}"{LS}>{g[1]}</a>' for g in GOLFERS)
     body = CSS + f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
@@ -316,7 +316,7 @@ def main(apply_):
         print("  dry run — pass --apply"); return
     OUT.write_text(out, encoding="utf-8")
     fin = OUT.read_text(encoding="utf-8")
-    above = re.sub(r"<style\b.*?</style>|<script\b.*?</script>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    above = re.sub(r"<style\b.*?</style>|<script\b.*?</script>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     bad = []
     if fin.count('class="product-card"') != N: bad.append("card count")
     if re.search(r"\bworth\b", re.sub(r"<[^>]+>", " ", above), re.I): bad.append("banned word")

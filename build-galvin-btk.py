@@ -363,7 +363,7 @@ def main(apply_):
     d = DONOR.read_text(encoding="utf-8")
     style_at = d.index("<style>")
     body_at = d.index('<div class="breadcrumb">')
-    tail_at = d.index('<div class="more" data-brandindex="1">')
+    tail_at = d.index('<!-- TGI-ONE-FOOTER -->')
     head_rest = d[style_at:body_at]
 
     lo, hi = min(p["usd"] for p in PICKS), max(p["usd"] for p in PICKS)
@@ -407,7 +407,7 @@ def main(apply_):
 def verify():
     fin = OUT.read_text(encoding="utf-8")
     bad = []
-    if "Manors" in re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S):
+    if "Manors" in re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S):
         bad.append("Manors text leaked into the Galvin page above the More block")
     if fin.count('class="product-card"') != len(PICKS):
         bad.append("card count")

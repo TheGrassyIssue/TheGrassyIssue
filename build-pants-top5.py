@@ -261,7 +261,7 @@ def main(apply_):
     # one card per entry: centre it at a readable width instead of leaving it
     # in the first column of a three-column grid
     head_rest = head_rest.replace("</style>", "[data-single-card] .products-grid{grid-template-columns:minmax(0,460px);justify-content:center}\nsection.products > div > p + p{margin-top:16px}\n</style>", 1)
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
   <a href="/#feed">Drops &amp; Brands</a><span>/</span>
@@ -306,7 +306,7 @@ def main(apply_):
 def verify():
     fin = OUT.read_text(encoding="utf-8")
     bad = []
-    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     if "Manors, Revisited" not in above:
         pass
     if re.search(r"Manors Golf, Revisited &mdash; The Brand", above):

@@ -334,34 +334,32 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
   </div>
 </section>
 <div style="max-width:1400px;margin:0 auto 40px;padding:0 32px;"><a href="/field-guide" style="display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;border:.5px solid var(--ink);padding:10px 14px;">&larr; Part of the Austin Golf Field Guide</a></div>
-  <!-- More from the Feed -->
-<!-- TGI-RELATED -->
-<section class="tgi-rel" aria-label="Keep reading"><div class="tgi-rel-h">Keep Reading</div><div class="tgi-rel-g"><a href="/drops/8-special-day-rounds-near-austin"><img src="/images/special-day/v2/c7-b0.jpg" alt="" loading="lazy" /><div class="tgi-rel-c">Field Notes</div><div class="tgi-rel-t">Special Day Rounds Near Austin &mdash; 10 Day Trips and 5 Overnights</div></a><a href="/drops/austin-apartments-with-golf-simulators"><img src="/images/austin-apartments-golf-sims/hero.jpg" alt="" loading="lazy" /><div class="tgi-rel-c">Field Notes</div><div class="tgi-rel-t">Austin Apartments With Golf Simulators: Ten Buildings With a Sim Room Downstairs</div></a><a href="/drops/austin-food-truck-field-guide"><img src="/images/food-trucks-2026/gimme-1.jpg" alt="" loading="lazy" /><div class="tgi-rel-c">Field Notes</div><div class="tgi-rel-t">The Austin Food Truck Field Guide &mdash; 15 Stops Around Town</div></a></div></section>
-<!-- /TGI-RELATED -->
-<div class="more">
+  <!-- TGI-ONE-FOOTER -->
+<div class="more" data-tgi="one-footer">
   <div class="more-hdr">
-    <span class="more-label">More from TGI</span>
-    <a href="/" class="more-link">See All &rarr;</a>
+    <span class="more-label">Keep Reading</span>
+    <a href="/brands" class="more-link">Explore All Brands &rarr;</a>
   </div>
   <div class="more-grid">
+    <a href="/drops/8-special-day-rounds-near-austin" class="more-card">
+      <div class="more-card-img"><img src="/images/special-day/v2/c7-b0.jpg" alt="Special Day Rounds Near Austin — 10 Day Trips and 5 Overnights" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Special Day Rounds Near Austin &mdash; 10 Day Trips and 5 Overnights</div><div class="more-card-tag">Field Notes</div></div>
+    </a>
+    <a href="/drops/austin-apartments-with-golf-simulators" class="more-card">
+      <div class="more-card-img"><img src="/images/austin-apartments-golf-sims/hero.jpg" alt="Austin Apartments With Golf Simulators: Ten Buildings With a Sim Room Downstairs" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Austin Apartments With Golf Simulators: Ten Buildings With a Sim Room Downstairs</div><div class="more-card-tag">Field Notes</div></div>
+    </a>
+    <a href="/drops/austin-food-truck-field-guide" class="more-card">
+      <div class="more-card-img"><img src="/images/food-trucks-2026/gimme-1.jpg" alt="The Austin Food Truck Field Guide — 15 Stops Around Town" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">The Austin Food Truck Field Guide &mdash; 15 Stops Around Town</div><div class="more-card-tag">Field Notes</div></div>
+    </a>
     <a href="/drops/the-hat-and-towel-edit" class="more-card">
-      <div class="more-card-img"><img src="/images/hats-towels/hero.jpg" alt="The Hat & Towel Edit — 30 Picks From the Independent Golf Brands" loading="lazy" /></div>
+      <div class="more-card-img"><img src="/images/hats-towels/hero.jpg" alt="The Hat &amp; Towel Edit — 30 Picks From the Independent Golf Brands" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">The Hat &amp; Towel Edit &mdash; 30 Picks From the Independent Golf Brands</div><div class="more-card-tag">Drops &amp; Brands</div></div>
-    </a>
-    <a href="/drops/the-towel-edit-vol-2" class="more-card">
-      <div class="more-card-img"><img src="/images/towel-edit-v2/sentinel-shinto-gauze.jpg" alt="The Towel Edit, Vol. 2" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Towel Edit, Vol. 2</div><div class="more-card-tag">Drops &amp; Brands</div></div>
-    </a>
-    <a href="/drops/7-post-round-moves-in-austin" class="more-card">
-      <div class="more-card-img"><img src="/images/feed/78a42937-LS102929-homepage.jpg" alt="7 Post-Round Moves in Austin" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">7 Post-Round Moves in Austin</div><div class="more-card-tag">Field Notes</div></div>
-    </a>
-    <a href="/drops/brand-to-know-forden-golf" class="more-card">
-      <div class="more-card-img"><img src="/images/forden/hero-tee-picks.jpg" alt="Brand to Know — Forden Golf" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; Forden Golf</div><div class="more-card-tag">Drops &amp; Brands</div></div>
     </a>
   </div>
 </div>
+<!-- /TGI-ONE-FOOTER -->
 <footer><div class="inner" style="flex-wrap:wrap;gap:10px;"><div class="aff-disclosure" style="font-family:var(--mono);font-size:9px;letter-spacing:.08em;text-transform:uppercase;opacity:.5;margin-top:0;line-height:1.6;">Some links may earn TGI a commission &mdash; <a href="/disclosure" style="border-bottom:1px solid currentColor;">details</a></div><span>&copy; 2026 The Grassy Issue</span><a href="/work-with-us">Work With Us</a><a href="/">Back to Feed</a></div></footer>
 <!-- TGI SEARCH -->
 <style>
@@ -781,6 +779,5 @@ function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getE
   b.addEventListener('click',function(e){e.preventDefault();toggleMenu();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});})();
 </script>
-<script src="/assets/js/more-rotate.js" defer></script>
 </body>
 </html>

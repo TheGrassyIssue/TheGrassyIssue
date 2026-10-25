@@ -205,7 +205,7 @@ def main(apply_):
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
     head_rest = head_rest.replace("</style>",
         "section.products > div > p + p{margin-top:16px}\n</style>", 1)
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
 
     art = next(x for x in lds if x.get("@type") == "Article")
     art.update({"dateModified": "2026-09-24", "image": f"https://thegrassyissue.com{V2}/og.jpg", "url": URL})

@@ -414,34 +414,32 @@ footer .inner{max-width:1400px;margin:0 auto;display:flex;justify-content:space-
 
 </section>
 
-<!-- More from the Feed -->
-<!-- TGI-RELATED -->
-<section class="tgi-rel" aria-label="Keep reading"><div class="tgi-rel-h">Keep Reading</div><div class="tgi-rel-g"><a href="/drops/brand-to-know-sun-mountain"><img src="/images/sun-mountain/btk-hero.jpg" alt="" loading="lazy" /><div class="tgi-rel-c">Brand to Know</div><div class="tgi-rel-t">Brand to Know &mdash; Sun Mountain, the Montana Company That Put Legs on the Golf Bag</div></a><a href="/drops/golf-brands-founded-by-women"><img src="/images/women-founded/hero.jpg" alt="" loading="lazy" /><div class="tgi-rel-c">The Roundup</div><div class="tgi-rel-t">Seventeen Golf Brands Founded by Women</div></a><a href="/drops/the-rain-gear-edit"><img src="/images/rain-gear-edit/manors-pertex-jacket.jpg" alt="" loading="lazy" /><div class="tgi-rel-c">Drops &amp; Brands</div><div class="tgi-rel-t">Rain Gear &mdash; 18 Picks for Foul Weather Golf</div></a></div></section>
-<!-- /TGI-RELATED -->
-<div class="more">
+<!-- TGI-ONE-FOOTER -->
+<div class="more" data-tgi="one-footer">
   <div class="more-hdr">
-    <span class="more-label">More from TGI</span>
-    <a href="/" class="more-link">See All &rarr;</a>
+    <span class="more-label">Keep Reading</span>
+    <a href="/brands" class="more-link">Explore All Brands &rarr;</a>
   </div>
   <div class="more-grid">
+    <a href="/drops/brand-to-know-sun-mountain" class="more-card">
+      <div class="more-card-img"><img src="/images/sun-mountain/btk-hero.jpg" alt="Brand to Know — Sun Mountain, the Montana Company That Put Legs on the Golf Bag" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; Sun Mountain, the Montana Company That Put Legs on the Golf Bag</div><div class="more-card-tag">Brand to Know</div></div>
+    </a>
+    <a href="/drops/golf-brands-founded-by-women" class="more-card">
+      <div class="more-card-img"><img src="/images/women-founded/hero.jpg" alt="Seventeen Golf Brands Founded by Women" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Seventeen Golf Brands Founded by Women</div><div class="more-card-tag">The Roundup</div></div>
+    </a>
+    <a href="/drops/the-rain-gear-edit" class="more-card">
+      <div class="more-card-img"><img src="/images/rain-gear-edit/manors-pertex-jacket.jpg" alt="Rain Gear — 18 Picks for Foul Weather Golf" loading="lazy" /></div>
+      <div class="more-card-body"><div class="more-card-name">Rain Gear &mdash; 18 Picks for Foul Weather Golf</div><div class="more-card-tag">Drops &amp; Brands</div></div>
+    </a>
     <a href="/drops/7-post-round-moves-in-austin" class="more-card">
       <div class="more-card-img"><img src="/images/feed/78a42937-LS102929-homepage.jpg" alt="7 Post-Round Moves in Austin" loading="lazy" /></div>
       <div class="more-card-body"><div class="more-card-name">7 Post-Round Moves in Austin</div><div class="more-card-tag">Field Notes</div></div>
     </a>
-    <a href="/drops/the-ball-marker-edit-6-markers-worth-pocketing" class="more-card">
-      <div class="more-card-img"><img src="/images/feed/f0ac9ee4-TeddyRooseveltBallMarker3DPresaleMainProductPhoto.png" alt="The Ball Marker Edit — 6 markers worth pocketing." loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">The Ball Marker Edit — 6 markers worth pocketing.</div><div class="more-card-tag">Drops &amp; Brands</div></div>
-    </a>
-    <a href="/drops/brand-to-know-rouqe-golf" class="more-card">
-      <div class="more-card-img"><img src="/images/rouqe-golf/btk-hero.jpg" alt="Brand to Know — Rouqe Golf, the Label Built on Mock Necks and Retro Stripes" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">Brand to Know &mdash; Rouqe Golf, the Label Built on Mock Necks and Retro Stripes</div><div class="more-card-tag">Drops &amp; Brands</div></div>
-    </a>
-    <a href="/drops/world-cup-jersey-edit-pitch-to-green" class="more-card">
-      <div class="more-card-img"><img src="/images/world-cup-jersey-edit/england-home.jpg" alt="World Cup Jersey Edit — 18 Kits From the Pitch to the Green" loading="lazy" /></div>
-      <div class="more-card-body"><div class="more-card-name">World Cup Jersey Edit — 18 Kits From the Pitch to the Green</div><div class="more-card-tag">Drops &amp; Brands</div></div>
-    </a>
   </div>
 </div>
+<!-- /TGI-ONE-FOOTER -->
 <footer>
   <div class="inner">
     <span>&copy; 2026 The Grassy Issue</span>
@@ -844,6 +842,5 @@ function closeMenu(){var b=document.querySelector('.nav-toggle'),d=document.getE
   b.addEventListener('click',function(e){e.preventDefault();toggleMenu();});
   document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});})();
 </script>
-<script src="/assets/js/more-rotate.js" defer></script>
 </body>
 </html>

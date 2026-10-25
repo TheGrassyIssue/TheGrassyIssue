@@ -375,7 +375,7 @@ def main(apply_):
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
     head_rest = head_rest.replace("</style>", TIER_CSS + "</style>", 1)
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     n_picks = sum(len(b[5]) for b in BRANDS)
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
@@ -415,7 +415,7 @@ def verify(n_cards):
     fin = OUT.read_text(encoding="utf-8")
     bad = []
     above = re.sub(r"<style\b.*?</style>|<!--.*?-->|<script\b.*?</script>", "",
-                   fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+                   fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     for leak in ("Sounder", "McAteer", "Raglan"):
         if leak in above:
             bad.append(f"{leak} leaked from the donor")

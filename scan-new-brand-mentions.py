@@ -156,6 +156,7 @@ DOMAINS.update({
     "mogshade": ["mogshadegolf.com"], "orkai": ["orkai.life"], "owala": ["owalalife.com"], "piretti": ["pirettigolf.com"],
     "pluto-golf": ["pluto.golf"], "stick-grips": ["stickgripsgolf.com"], "howie-benson": ["howiebenson.com"],
     "cph-golf": ["captainshelmgolf.com"], "left-of-field-golf": ["lofgolf.com"], "royal-albartross": ["albartross.com"],
+    "alba-golf": ["albagolf.it"],  # Brand to Know, 25 Oct 2026
 })
 for _slug, _st in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/brand-stores.json")))["stores"].items():
     _d = (_st.get("domain") or "").replace("www.", "")

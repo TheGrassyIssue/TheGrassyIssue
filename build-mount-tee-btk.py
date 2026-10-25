@@ -254,7 +254,7 @@ def main(apply_):
         assert FRN[k] and all((ROOT / f.lstrip("/")).is_file() for f in FRN[k]), k
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
   <a href="/#feed">Drops &amp; Brands</a><span>/</span>
@@ -283,7 +283,7 @@ def main(apply_):
         print("  dry run — pass --apply"); return
     OUT.write_text(out, encoding="utf-8")
     fin = OUT.read_text(encoding="utf-8")
-    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     bad = []
     for leak in ("Mackem", "Kalamunda", "Howie", "No Dirt", "Lehi", "Rookline", "Bethpage", "Hudson", "LBB", "GolfPass", "Woodgrain", "Parmore", "Lazyface", "Jeremy", "Joel and Tom"):
         if leak in above: bad.append("leak " + leak)

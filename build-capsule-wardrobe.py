@@ -311,7 +311,7 @@ def main(apply_):
             assert all(x in P and x.startswith(key) for x in keys), keys
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     toc = "".join(f'<a href="#{c[2]}">{c[1]}</a>' for c in CAPS)
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
@@ -341,7 +341,7 @@ def main(apply_):
         print("  dry run — pass --apply"); return
     OUT.write_text(out, encoding="utf-8")
     fin = OUT.read_text(encoding="utf-8")
-    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     bad = []
     if fin.count('class="product-card"') != N: bad.append("card count")
     if re.search(r"\bworth\b", re.sub(r"\bFort\s+Worth\b", " ", re.sub(r"<[^>]+>", " ", re.sub(r"(?s)<script\b.*?</script>", " ", above))), re.I): bad.append("banned word")

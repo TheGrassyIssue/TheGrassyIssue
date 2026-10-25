@@ -300,7 +300,7 @@ def head_top():
 def main(apply_):
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     allp = [P[n] for _, ns, *_ in SECTIONS for n in ns]
     lo, hi = min(p["usd"] for p in allp), max(p["usd"] for p in allp)
     body = f"""<div class="breadcrumb">
@@ -340,7 +340,7 @@ def main(apply_):
 def verify():
     fin = OUT.read_text(encoding="utf-8")
     bad = []
-    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     if "Manors" in above:
         bad.append("Manors text leaked")
     if fin.count('class="product-card"') != 15:

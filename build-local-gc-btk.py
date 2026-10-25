@@ -414,7 +414,7 @@ def main(apply_):
         assert CAT[h]["name"] and "*" not in P[h][0], h
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
-    tail = d[d.index('<div class="more" data-brandindex="1">'):]
+    tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     body = f"""<div class="breadcrumb">
   <a href="/">Feed</a><span>/</span>
   <a href="/#feed">Drops &amp; Brands</a><span>/</span>
@@ -456,7 +456,7 @@ def main(apply_):
 def verify():
     fin = OUT.read_text(encoding="utf-8")
     bad = []
-    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+    above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     for leak in ("Manors Revisited", "Nicklaus", "Hudson Sutler", "Macade", "MORE COLOURS", "LIMITED RUN"):
         if leak in above:
             bad.append(f"should not appear: {leak}")

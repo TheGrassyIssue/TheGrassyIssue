@@ -325,7 +325,7 @@ def main(apply_):
     d = DONOR.read_text(encoding="utf-8")
     style_at = d.index("<style>")
     body_at = d.index('<div class="breadcrumb">')
-    tail_at = d.index('<div class="more" data-brandindex="1">')
+    tail_at = d.index('<!-- TGI-ONE-FOOTER -->')
     head_rest = d[style_at:body_at]
     # the donor's own head tags that name the post must not leak (they live above <style>)
     lo, hi = min(p["usd"] for p in PICKS), max(p["usd"] for p in PICKS)
@@ -367,7 +367,7 @@ def verify():
     fin = OUT.read_text(encoding="utf-8")
     bad = []
     above = re.sub(r"<style\b.*?</style>|<!--.*?-->|<script\b.*?</script>", "",
-                   fin[:fin.index('<div class="more" data-brandindex')], flags=re.S)
+                   fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     for leak in ("Galvin", "INSULA", "Nilsson"):
         if leak in above:
             bad.append(f"{leak} text leaked from the donor")
