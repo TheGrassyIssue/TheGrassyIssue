@@ -1,0 +1,4335 @@
+{
+ "fetched": "2026-10-24 (Shopify products.json; updated_at stamps 2026-10-24T23:4x-04:00)",
+ "source": "https://waterwhendry.com/products.json",
+ "product_count": 103,
+ "notes": [
+  "Prices USD as listed on waterwhendry.com.",
+  "Bundle products (Camper Pack, Soil & Clay, Every Layer) and Route insurance have variants summarised in variants_note instead of listed.",
+  "A few long body_html fields were captured partially and are marked '(remaining body not captured)'.",
+  "compare_at_price of '0.00' is as listed in the store data (no real markdown)."
+ ],
+ "new_arrivals": [
+  "green-utility-pants",
+  "brown-pullover",
+  "brown-utility-pants",
+  "utility-cap-burgundy",
+  "pink-pullover",
+  "blue-university-t-shirt",
+  "black-utility-pants",
+  "utility-cap-black",
+  "cream-quarter-socks"
+ ],
+ "sale": [
+  "brown-tan-59fifty-copy",
+  "black-brown-59fifty",
+  "treehugger-short-green",
+  "camper-short-dusk",
+  "camper-short-black",
+  "logo-tee-rose-clay",
+  "greener-grass-tee-soil",
+  "internets-favorite-pullover-v2",
+  "wwd-collared-pullover",
+  "black-zip-up-hoodie",
+  "charcoal-hoodie-copy",
+  "raglan-tee",
+  "logo-tee-black",
+  "garden-hands-tee",
+  "logo-tee-dusty-blue",
+  "icon-ls-tee-plum",
+  "icon-ls-tee-eggplant",
+  "utility-swim-short-black",
+  "utility-swim-short-terracotta",
+  "terracotta-utility-pants-copy",
+  "river-slate-utility-pants",
+  "breathe-cap",
+  "logo-quarter-black",
+  "logo-quarter-soil",
+  "logo-quarter-rose-clay",
+  "grocery-tote",
+  "sherpa-fleece-blackberry",
+  "sherpa-fleece-riverbank",
+  "seeds-pocket-tee-maroon",
+  "seeds-pocket-tee-blue"
+ ],
+ "products": [
+  {
+   "position": 1,
+   "title": "Cream Quarter Socks",
+   "handle": "cream-quarter-socks",
+   "url": "https://waterwhendry.com/products/cream-quarter-socks",
+   "product_type": "Socks",
+   "tags": [
+    "Accessories",
+    "next-drop"
+   ],
+   "created_at": "2026-10-05T13:57:02-04:00",
+   "published_at": "2026-10-06T12:17:09-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": true
+    }
+   ],
+   "body_text": "One pair. Embroidered icon logo. Cushioned sole.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/cream-quarter-socks-front-prop.png?v=1792443929"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 2,
+   "title": "Utility Cap - Burgundy",
+   "handle": "utility-cap-burgundy",
+   "url": "https://waterwhendry.com/products/utility-cap-burgundy",
+   "product_type": "Headwear",
+   "tags": [
+    "Accessories",
+    "next-drop"
+   ],
+   "created_at": "2026-10-05T13:57:05-04:00",
+   "published_at": "2026-10-06T12:17:07-04:00",
+   "price": "42.00",
+   "compare_at_price": "48.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": true
+    }
+   ],
+   "body_text": "Made to order. Limited seasonal colorway. Estimated to ship 20–30 November 2026. Made to be worn with you. Light, breathable, and out of the way — running, golfing, or nothing in particular. Five panel, unstructured. Embroidered front and left side.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/utility-cap-burgundy-front-prop.png?v=1791925017",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/utility-cap-burgundy-side-prop.png?v=1791925017"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 3,
+   "title": "Utility Cap - Black",
+   "handle": "utility-cap-black",
+   "url": "https://waterwhendry.com/products/utility-cap-black",
+   "product_type": "Headwear",
+   "tags": [
+    "Accessories",
+    "next-drop"
+   ],
+   "created_at": "2026-10-05T13:57:02-04:00",
+   "published_at": "2026-10-06T12:17:06-04:00",
+   "price": "48.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": true
+    }
+   ],
+   "body_text": "Made to be worn with you. Light, breathable, and out of the way — running, golfing, or nothing in particular. Five panel, unstructured. Embroidered front and left side.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/utility-cap-black-front-prop.png?v=1791925015",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/utility-cap-black-side-prop.png?v=1791925015"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 4,
+   "title": "Blue University T-Shirt",
+   "handle": "blue-university-t-shirt",
+   "url": "https://waterwhendry.com/products/blue-university-t-shirt",
+   "product_type": "Tee",
+   "tags": [
+    "next-drop",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2026-10-05T13:56:47-04:00",
+   "published_at": "2026-10-06T12:17:04-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "The tee everybody asked for. With a new graphic. Collegiate WWD, distressed — flowers growing out of the mark. Screen printed.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FRONTTTT.png?v=1792434783",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Vintage_blue_WWD_floral_tee.png?v=1792439441",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BACKKKK.png?v=1792434783"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 5,
+   "title": "Pink Pullover",
+   "handle": "pink-pullover",
+   "url": "https://waterwhendry.com/products/pink-pullover",
+   "product_type": "Tops",
+   "tags": [
+    "next-drop",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2026-10-05T13:57:04-04:00",
+   "published_at": "2026-10-06T12:17:02-04:00",
+   "price": "128.00",
+   "compare_at_price": "148.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Made to order. Limited seasonal colorway. Estimated to ship 20–30 November 2026. Many years from now, when the funko shelves are dust and hell is frozen over, the internet's favorite pullover will still remain – 1111Case. “Feels like a crewneck, wears like a rugby polo”",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/pink-pullover-front-prop.png?v=1791925010",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Mauve_rugby_pullover_on_a_model.png?v=1792439445",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/pink-pullover-back-prop.png?v=1791925010",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2026-10-19_at_3.03.27_PM.png?v=1792436650"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 6,
+   "title": "Brown Pullover",
+   "handle": "brown-pullover",
+   "url": "https://waterwhendry.com/products/brown-pullover",
+   "product_type": "Tops",
+   "tags": [
+    "next-drop",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2026-10-05T13:57:03-04:00",
+   "published_at": "2026-10-06T12:17:00-04:00",
+   "price": "128.00",
+   "compare_at_price": "148.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Made to order. Limited seasonal colorway. Estimated to ship 20–30 November 2026. Many years from now, when the funko shelves are dust and hell is frozen over, the internet's favorite pullover will still remain – 1111Case. “Feels like a crewneck, wears like a rugby polo”",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/brown-pullover-front-prop.png?v=1791925008",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Burgundy_rugby_pullover_studio_portrait.png?v=1792439443",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/brown-pullover-back-prop.png?v=1791925007",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2026-10-19_at_3.03.37_PM.png?v=1792436766"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 7,
+   "title": "Black Utility Pants",
+   "handle": "black-utility-pants",
+   "url": "https://waterwhendry.com/products/black-utility-pants",
+   "product_type": "Bottoms",
+   "tags": [
+    "Bottoms",
+    "next-drop",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl"
+   ],
+   "created_at": "2026-10-05T13:56:46-04:00",
+   "published_at": "2026-10-06T12:16:58-04:00",
+   "price": "108.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Your everyday carry. Light enough to forget you have it on, with two zip cargo pockets for everything you can't. 2 premium zipper cargo pockets.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/black-utility-pants-front-prop.png?v=1791925005",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2025-04-29_at_1.59.25_PM.png?v=1772644108",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PANTS.png?v=1746259326",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/black-utility-pants-back-prop.png?v=1791925005"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 8,
+   "title": "Brown Utility Pants",
+   "handle": "brown-utility-pants",
+   "url": "https://waterwhendry.com/products/brown-utility-pants",
+   "product_type": "Bottoms",
+   "tags": [
+    "Bottoms",
+    "next-drop",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl"
+   ],
+   "created_at": "2026-10-05T13:56:45-04:00",
+   "published_at": "2026-10-06T12:16:57-04:00",
+   "price": "108.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Your everyday carry. Light enough to forget you have it on, with two zip cargo pockets for everything you can't. 2 premium zipper cargo pockets.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/brown-utility-pants-front-prop.png?v=1791925003",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/brown-utility-pants-back-prop.png?v=1791925003",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2026-10-14_at_12.30.00_PM.png?v=1791995442"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 9,
+   "title": "Green Utility Pants",
+   "handle": "green-utility-pants",
+   "url": "https://waterwhendry.com/products/green-utility-pants",
+   "product_type": "Bottoms",
+   "tags": [
+    "Bottoms",
+    "next-drop",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl"
+   ],
+   "created_at": "2026-10-05T13:56:44-04:00",
+   "published_at": "2026-10-06T12:16:55-04:00",
+   "price": "108.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Your everyday carry. Light enough to forget you have it on, with two zip cargo pockets for everything you can't. 2 premium zipper cargo pockets.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/green-utility-pants-front-prop.png?v=1791925001",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/green-utility-pants-back-prop.png?v=1791925001",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2026-10-14_at_12.30.13_PM.png?v=1791995442"
+   ],
+   "in_new_arrivals": true,
+   "in_sale": false,
+   "fw26_new": true
+  },
+  {
+   "position": 10,
+   "title": "Garden Club Tote",
+   "handle": "garden-club-tote",
+   "url": "https://waterwhendry.com/products/garden-club-tote",
+   "product_type": "Accessory",
+   "tags": [
+    "garden-club",
+    "gift",
+    "not-for-sale"
+   ],
+   "created_at": "2026-08-12T13:52:17-04:00",
+   "published_at": "2026-08-12T13:52:19-04:00",
+   "price": "0.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": true
+    }
+   ],
+   "body_text": "The Icon Tote as it arrives with a Garden Club membership. Not for sale on its own — this exists so the gift can appear in the cart at zero.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/TOTE-FRONT_a63fa481-996b-45b0-ab1a-8bed67ffd3fc.png?v=1792435924"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 11,
+   "title": "THE GARDEN CLUB",
+   "handle": "the-garden-club",
+   "url": "https://waterwhendry.com/products/the-garden-club",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2026-08-12T13:03:05-04:00",
+   "published_at": "2026-08-12T13:14:11-04:00",
+   "price": "12.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "Monthly",
+     "available": true
+    }
+   ],
+   "body_text": "Step inside the Garden. Membership gives you permanent advantages inside water when dry™ - early access, better pricing, and deeper rewards. What All Members Receive: Exclusive Garden Club Item (ships immediately); 20% off your first order (after signing up); 10% off always; Early access to every drop; 2× loyalty points on purchases; Private Garden Club community access. Membership requires a 3-month minimum commitment. After the initial term, it renews automatically monthly unless canceled prior to renewal. LIMITED TO ONE (1) PER CUSTOMER.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/wwd-garden-club-cover.png?v=1786553911"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 12,
+   "title": "Preorder Tee - Sample",
+   "handle": "preorder-tee-sample",
+   "url": "https://waterwhendry.com/products/preorder-tee-sample",
+   "product_type": "Tee",
+   "tags": [
+    "preorder",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs"
+   ],
+   "created_at": "2026-08-11T14:13:55-04:00",
+   "published_at": "2026-08-11T21:53:32-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "A working sample for the made-to-order flow. Rename, reprice and replace the images before this goes anywhere.",
+   "images": [],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false,
+   "note": "Internal placeholder/test product that is publicly published; no images."
+  },
+  {
+   "position": 13,
+   "title": "WWD GARDEN CLUB",
+   "handle": "tgc-monthly",
+   "url": "https://waterwhendry.com/products/tgc-monthly",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs"
+   ],
+   "created_at": "2026-01-22T14:19:13-05:00",
+   "published_at": "2026-08-06T00:58:30-04:00",
+   "price": "12.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "Monthly / XS",
+     "available": true
+    },
+    {
+     "title": "Monthly / S",
+     "available": true
+    },
+    {
+     "title": "Monthly / M",
+     "available": true
+    },
+    {
+     "title": "Monthly / L",
+     "available": true
+    },
+    {
+     "title": "Monthly / XL",
+     "available": true
+    },
+    {
+     "title": "Monthly / 2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Step inside the Garden. Membership gives you permanent advantages inside water when dry™ - early access, better pricing, and deeper rewards. What All Members Receive: Exclusive Garden Club Item (ships immediately); 20% off your first order (after signing up); 10% off always; Early access to every drop; 2× loyalty points on purchases; Private Garden Club community access. Membership requires a 3-month minimum commitment. After the initial term, it renews automatically monthly unless canceled prior to renewal. LIMITED TO ONE (1) PER CUSTOMER.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/wwd-garden-club-cover.png?v=1786553911"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false,
+   "note": "Earlier/duplicate Garden Club membership listing with size option (likely for the member item)."
+  },
+  {
+   "position": 14,
+   "title": "Logo Tee - Lilac",
+   "handle": "logo-tee-lilac",
+   "url": "https://waterwhendry.com/products/logo-tee-lilac",
+   "product_type": "Tee",
+   "tags": [
+    "archive-30",
+    "Tops"
+   ],
+   "created_at": "2025-06-11T17:53:48-04:00",
+   "published_at": "2026-08-02T02:33:19-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PURPLE-FRONT_1_f4db91da-6368-44a9-b73d-fa84c6cb5384.png?v=1754982157",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PURPLE-BACK_f8eef39e-d3d6-4cc3-b3fd-df977c17958e.png?v=1754982157",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_3419_1_4.png?v=1755025823",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_35096702-a0ef-44ea-aab7-63f66ac0cac4.png?v=1755025953"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 15,
+   "title": "Black/Brown - 59FIFTY",
+   "handle": "black-brown-59fifty",
+   "url": "https://waterwhendry.com/products/black-brown-59fifty",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2026-05-25T17:33:22-04:00",
+   "published_at": "2026-07-22T12:52:36-04:00",
+   "price": "68.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "7",
+     "available": false
+    },
+    {
+     "title": "7 1/8",
+     "available": false
+    },
+    {
+     "title": "7 1/4",
+     "available": false
+    },
+    {
+     "title": "7 1/2",
+     "available": false
+    },
+    {
+     "title": "7 7/8",
+     "available": false
+    }
+   ],
+   "body_text": "all sales final.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-2_f1e3d227-927a-47c6-bafb-d9bb2b774208.png?v=1784739446",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/E4EC0ABB-B653-4321-B552-088296C66D48.jpg?v=1784742133",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/6FC507A8-1E11-4542-A968-2CBD66E02A49.jpg?v=1784742051",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DC76F38F-2886-423C-A095-C7EBF4A66CFD.jpg?v=1784742051",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_2587.png?v=1784739063"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 16,
+   "title": "Brown/Tan - 59FIFTY",
+   "handle": "brown-tan-59fifty-copy",
+   "url": "https://waterwhendry.com/products/brown-tan-59fifty-copy",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2026-05-25T17:33:45-04:00",
+   "published_at": "2026-07-22T12:52:23-04:00",
+   "price": "68.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "7",
+     "available": false
+    },
+    {
+     "title": "7 1/8",
+     "available": false
+    },
+    {
+     "title": "7 1/4",
+     "available": false
+    },
+    {
+     "title": "7 3/8",
+     "available": false
+    },
+    {
+     "title": "7 7/8",
+     "available": false
+    }
+   ],
+   "body_text": "all sales final.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BROWN-2.png?v=1784739422",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/6FC507A8-1E11-4542-A968-2CBD66E02A49.jpg?v=1784742051",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DC76F38F-2886-423C-A095-C7EBF4A66CFD.jpg?v=1784742051",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_2587.png?v=1784739063"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 17,
+   "title": "Camper Pack",
+   "handle": "camper-pack",
+   "url": "https://waterwhendry.com/products/camper-pack",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2026-05-10T23:46:50-04:00",
+   "published_at": "2026-05-10T23:49:15-04:00",
+   "price": "123.00",
+   "compare_at_price": "176.00",
+   "available": false,
+   "variants": null,
+   "body_text": "Built for repeated wear and changing conditions. Designed to move between routines, late nights, early mornings, and everything in between. • Fits True To Size • 7\" Inseam • Nylon w/ Mesh Lining • 8 Pockets",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FIELD-PACK.png?v=1778471224",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CAMPER-BLUE-BACK.png?v=1777929428",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CAMPER-BLACK-BACK.png?v=1777929474",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_12_05_05_AM.png?v=1778818027"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false,
+   "variants_note": "Bundle of Camper Short - River (Size) x Camper Short - Dusk (Size), 25 combos S-2XL x S-2XL; all 25 unavailable. First variant S/S $123 (cmp $176); all other combos $103 (cmp $148)."
+  },
+  {
+   "position": 18,
+   "title": "Logo Tee - Dusty Blue",
+   "handle": "logo-tee-dusty-blue",
+   "url": "https://waterwhendry.com/products/logo-tee-dusty-blue",
+   "product_type": "Tee",
+   "tags": [
+    "archive-30",
+    "Tops"
+   ],
+   "created_at": "2025-06-11T17:51:48-04:00",
+   "published_at": "2026-05-10T22:49:52-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": ".Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLUE-FRONT_fe880edc-ee90-4326-86de-a221ef96f674.png?v=1754966477",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLUE-BACK_b1252a8d-46a3-40c8-8226-613a7d82b45b.png?v=1754966477",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_3431_VSCO_1_1.png?v=1755025985",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_3336_1_1.png?v=1755025985",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_35096702-a0ef-44ea-aab7-63f66ac0cac4.png?v=1755025953"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 19,
+   "title": "WWD PULLOVER V2",
+   "handle": "internets-favorite-pullover-v2",
+   "url": "https://waterwhendry.com/products/internets-favorite-pullover-v2",
+   "product_type": "",
+   "tags": [
+    "size-m",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2025-11-24T16:52:02-05:00",
+   "published_at": "2026-05-09T12:33:39-04:00",
+   "price": "103.00",
+   "compare_at_price": "148.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Many years from now, when the funko shelves are dust and hell is frozen over, the internet’s favorite pullover will still remain – 1111Case. • 450 GSM — 100% cotton • “Feels like a crewneck, wears like a rugby polo” Model is 6'2 220 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/POLOv2.png?v=1764021149",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_6883.heic?v=1772660238",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WEBSITEEEEEEE.gif?v=1772660238",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_6933.heic?v=1772660217",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/COLLAREDPULLOVER.png?v=1764021626"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 20,
+   "title": "WWD PULLOVER",
+   "handle": "wwd-collared-pullover",
+   "url": "https://waterwhendry.com/products/wwd-collared-pullover",
+   "product_type": "",
+   "tags": [
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2024-10-06T22:38:37-04:00",
+   "published_at": "2026-05-09T12:33:37-04:00",
+   "price": "103.00",
+   "compare_at_price": "148.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Many years from now, when the funko shelves are dust and hell is frozen over, the internet’s favorite pullover will still remain – 1111Case. • 450 GSM — 100% cotton • “Feels like a crewneck, wears like a rugby polo” Model is 6'1 220 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/POLO_fe01893f-e0da-40a0-9b0b-e20821648699.png?v=1764021626",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC09234-Enhanced-NR.jpg?v=1772660206",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DETAIL.png?v=1772660206",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC09144-Enhanced-NR.jpg?v=1764021626",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC09215-Enhanced-NR.jpg?v=1764021626",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/COLLAREDPULLOVER.png?v=1764021626",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC09226-Enhanced-NR.jpg?v=1764021626"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 21,
+   "title": "Camper Short - River",
+   "handle": "camper-short-dusk",
+   "url": "https://waterwhendry.com/products/camper-short-dusk",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-s"
+   ],
+   "created_at": "2026-05-04T17:13:37-04:00",
+   "published_at": "2026-05-04T17:17:18-04:00",
+   "price": "61.00",
+   "compare_at_price": "88.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Built for repeated wear and changing conditions. Designed to move between routines, late nights, early mornings, and everything in between. Please allow 1-2 weeks for order processing & shipping. Fits True To Size. 7\" Inseam. Nylon w/ Mesh Lining. 8 Pockets. Model is 6'2 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CAMPER-BLUE-FRONT.png?v=1777929428",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CAMPER-BLUE-BACK.png?v=1777929428",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_12_05_05_AM.png?v=1778818027",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/21ED2172-EEFA-404D-A833-424D39DA890D_2.jpg?v=1778813900",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009910_VSCO_2.jpg?v=1786089074",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/913CFF08-B235-4F6C-A144-0954230C044D.jpg?v=1778814565"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 22,
+   "title": "SEEDS Pocket Tee - Blue",
+   "handle": "seeds-pocket-tee-blue",
+   "url": "https://waterwhendry.com/products/seeds-pocket-tee-blue",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl"
+   ],
+   "created_at": "2026-03-27T16:19:39-04:00",
+   "published_at": "2026-03-27T16:24:24-04:00",
+   "price": "30.00",
+   "compare_at_price": "44.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "READY TO SHIP. SEEDS — the base layer. a lighter weight, softer tee designed to be worn under everything. built for daily use, made to move with you. nothing extra. just right.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SEEDS_BLUE.png?v=1774642802",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009700.jpg?v=1774645640",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SEEDS_BLUE_BACK.png?v=1774645640",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_fc0297c3-cd1f-43ca-880b-0b107338ec42.png?v=1774643007"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 23,
+   "title": "SEEDS Pocket Tee - Maroon",
+   "handle": "seeds-pocket-tee-maroon",
+   "url": "https://waterwhendry.com/products/seeds-pocket-tee-maroon",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl"
+   ],
+   "created_at": "2026-03-27T16:17:51-04:00",
+   "published_at": "2026-03-27T16:17:52-04:00",
+   "price": "30.00",
+   "compare_at_price": "44.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "READY TO SHIP. SEEDS — the base layer. a lighter weight, softer tee designed to be worn under everything. built for daily use, made to move with you. nothing extra. just right.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SEEDSMAROON.png?v=1774642461",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009703.jpg?v=1774645640",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SEEDS_MAROON_BACK.png?v=1774645640",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_fc0297c3-cd1f-43ca-880b-0b107338ec42.png?v=1774643007"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 24,
+   "title": "Soil & Clay",
+   "handle": "soil-clay",
+   "url": "https://waterwhendry.com/products/soil-clay",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2026-03-20T14:42:43-04:00",
+   "published_at": "2026-03-20T14:43:40-04:00",
+   "price": "161.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": null,
+   "body_text": "Soil & Clay Set — ships april 25th. built for everyday wear — and everything in between. the soil & clay set brings together two core tones from the wwd palette, designed to be worn on repeat. grounded, easy, and made to move with you — this is your go-to rotation. includes: 2 heavyweight tees (soil + clay); 3 pairs of socks (soil, clay, midnight). each piece is designed with a relaxed, lived-in fit and finished with our signature marks. this set is about the basics done right — pieces you reach for without thinking. because the grass is always greener where you water it. estimated ship date: ",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitled-1_9975cc30-a8c3-4152-9036-ba3a7193784c.png?v=1774036961",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitled-1_bb089d16-a3a8-47bf-b4b2-5c4e87087c3e.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENER.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GRASS.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ROSE-CLAY.png?v=1786571330",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ROE-CLAY-B.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SOIL_2a1598c5-b2e9-444d-8272-761521d352e1.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ROSE-SOCKS.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-WWD-SOCK_ec703df9-c21d-4904-8cde-f503a7e251d2.png?v=1774037063"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false,
+   "variants_note": "Bundle: Greener Grass Tee - Soil (Size) x Logo Tee - Rose Clay (Size), 36 combos XS-2XL x XS-2XL; all 36 unavailable. First variant XS/XS $161; others $128."
+  },
+  {
+   "position": 25,
+   "title": "Logo Quarter - Soil",
+   "handle": "logo-quarter-soil",
+   "url": "https://waterwhendry.com/products/logo-quarter-soil",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2026-03-20T14:39:48-04:00",
+   "published_at": "2026-03-20T14:40:08-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W). Please allow 1–2 weeks for processing. Shipping times vary by location.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SOIL_2a1598c5-b2e9-444d-8272-761521d352e1.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010399_2.jpg?v=1778859793",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BROWN-SOCKS.png?v=1778858286"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 26,
+   "title": "Logo Quarter - Petal",
+   "handle": "logo-quarter-rose-clay",
+   "url": "https://waterwhendry.com/products/logo-quarter-rose-clay",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2026-03-20T14:37:51-04:00",
+   "published_at": "2026-03-20T14:39:37-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W). Please allow 1–2 weeks for processing. Shipping times vary by location.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ROSE-SOCKS_c9217ff3-9288-4ef9-81cc-d6a1c51d133e.png?v=1778859157",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010394.jpg?v=1778859946",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PINK-SOCKS.png?v=1778858283"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 27,
+   "title": "Greener Grass Tee - Soil",
+   "handle": "greener-grass-tee-soil",
+   "url": "https://waterwhendry.com/products/greener-grass-tee-soil",
+   "product_type": "Tee",
+   "tags": [
+    "size-2xl",
+    "size-s",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2026-03-20T14:35:21-04:00",
+   "published_at": "2026-03-20T14:36:51-04:00",
+   "price": "40.00",
+   "compare_at_price": "58.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Ready-to-Ship. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Please allow 1–2 weeks for processing. Shipping times vary by location. Model is 6'0 wearing size Large.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GRASS.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ad-f65a685f-2dde-48a9-843d-5589b40b0299-v1.png?v=1781748841",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENER.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_12_43_59_AM.png?v=1778820255",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_4e43d241-8b23-4e2d-b526-f9eef888bb63.png?v=1775136391"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 28,
+   "title": "Logo Tee - Rose Clay",
+   "handle": "logo-tee-rose-clay",
+   "url": "https://waterwhendry.com/products/logo-tee-rose-clay",
+   "product_type": "Tee",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-s",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2026-03-20T14:31:21-04:00",
+   "published_at": "2026-03-20T14:34:39-04:00",
+   "price": "40.00",
+   "compare_at_price": "58.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Ready-to-Ship. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Please allow 1–2 weeks for processing. Shipping times vary by location. Model is 6'0 wearing size Medium.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ROSE-CLAY.png?v=1786571330",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ad-1c771156-5ce9-453d-8f21-45ba011289e4-v1.png?v=1781748527",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_12_43_00_AM.png?v=1778820223",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ROE-CLAY-B.png?v=1774037063",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_4e43d241-8b23-4e2d-b526-f9eef888bb63.png?v=1775136391"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 29,
+   "title": "Uniform Raglan Tee",
+   "handle": "raglan-tee",
+   "url": "https://waterwhendry.com/products/raglan-tee",
+   "product_type": "Tee",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "Tops"
+   ],
+   "created_at": "2026-01-07T16:01:40-05:00",
+   "published_at": "2026-03-04T11:49:10-05:00",
+   "price": "47.00",
+   "compare_at_price": "68.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Limited Run. 280 GSM French Terry. Loopback cotton. Everyday Uniform. Stone washed. Boxy fit: Refer to sizing chart for best fit. Please allow 1–2 weeks for processing. Shipping times vary by location.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/RAGLAN-F.png?v=1767819798",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_01_21_19_AM.png?v=1778822605",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/RAGLAN-B.png?v=1768816816",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 30,
+   "title": "Canopy Zip Hoodie - Charcoal",
+   "handle": "black-zip-up-hoodie",
+   "url": "https://waterwhendry.com/products/black-zip-up-hoodie",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "Tops"
+   ],
+   "created_at": "2026-01-07T15:22:02-05:00",
+   "published_at": "2026-03-04T11:49:09-05:00",
+   "price": "68.00",
+   "compare_at_price": "98.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "100% Cotton. 380 GSM mid-weight cotton. Garment-dyed and stone-washed for a rich, lived-in look. Sleek metal hardware adds a modern touch. Monochrome embroidered logos for a clean, minimalist style. Please allow 1–2 weeks for processing. Shipping times vary by location. Model is 6'3 220 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-ZIP-UP.png?v=1767817348",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_12_55_04_AM.png?v=1778820959",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOOOODE-SPIN-1.gif?v=1768691510",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009867.png?v=1778860858",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010423.jpg?v=1778860679",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIE100_COTTONCHAT-TOP.png?v=1768691510",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRPAHIC.png?v=1768691510"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 31,
+   "title": "Canopy Zip Hoodie - Leaf",
+   "handle": "charcoal-hoodie-copy",
+   "url": "https://waterwhendry.com/products/charcoal-hoodie-copy",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "Tops"
+   ],
+   "created_at": "2026-01-07T15:20:07-05:00",
+   "published_at": "2026-03-04T11:49:08-05:00",
+   "price": "68.00",
+   "compare_at_price": "98.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "100% Cotton. 380 GSM mid-weight cotton. Garment-dyed and stone-washed for a rich, lived-in look. Sleek metal hardware adds a modern touch. Monochrome embroidered logos for a clean, minimalist style. Please allow 1–2 weeks for processing. Shipping times vary by location. Model is 6'3 220 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-ZIP-UP.png?v=1767817273",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_01_18_14_AM.png?v=1778822313",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIE-SPIN.gif?v=1768689409",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010420.jpg?v=1778860679",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIE100_COTTONCHAT-TOP.png?v=1768691510",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRPAHIC.png?v=1768691510"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 32,
+   "title": "Utility Swim Short - Black",
+   "handle": "utility-swim-short-black",
+   "url": "https://waterwhendry.com/products/utility-swim-short-black",
+   "product_type": "Bottoms",
+   "tags": [
+    "1",
+    "archive-30",
+    "Bottoms",
+    "size-s"
+   ],
+   "created_at": "2025-05-17T16:11:56-04:00",
+   "published_at": "2026-02-23T12:07:35-05:00",
+   "price": "54.00",
+   "compare_at_price": "78.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "6\" Inseam. 4-Way Stretch Mesh Lined Shorts. Metal Hardware - Elastic Waistband. Hidden Seam Zipper Pocket. 3M-Reflective Piping. Quick Dry Polyamide.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WEBSITE-BFRONT.png?v=1747937079",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_513ce5c3-59fa-4093-8422-4879983d7fcb.heic?v=1747937079",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/9E1253C3-7F86-4BF4-B7F3-2B7CF065AE8E.jpg?v=1747937077",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WEBSITE-BBACK.png?v=1747934871",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/UTILITY-SWIM-SIZE_b45438d9-8002-44d0-9468-4f428b36ce4d.png?v=1747934871"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 33,
+   "title": "Utility Swim Short - Terracotta",
+   "handle": "utility-swim-short-terracotta",
+   "url": "https://waterwhendry.com/products/utility-swim-short-terracotta",
+   "product_type": "Bottoms",
+   "tags": [
+    "1",
+    "archive-30",
+    "Bottoms",
+    "size-s",
+    "size-xl"
+   ],
+   "created_at": "2025-05-17T16:09:47-04:00",
+   "published_at": "2026-02-23T12:06:56-05:00",
+   "price": "54.00",
+   "compare_at_price": "78.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "6\" Inseam. 4-Way Stretch Mesh Lined Shorts. Metal Hardware - Elastic Waistband. Hidden Seam Zipper Pocket. 3M-Reflective Piping. Quick Dry Polyamide.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WEBSITE-TFRONT.png?v=1747512625",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender.heic?v=1747937088",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_1185_2.heic?v=1747937088",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WEBSITE-TBACK.png?v=1747934456",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/UTILITY-SWIM-SIZE.png?v=1747934456"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 34,
+   "title": "Logo LS Tee - Washed Plum",
+   "handle": "icon-ls-tee-eggplant",
+   "url": "https://waterwhendry.com/products/icon-ls-tee-eggplant",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2026-02-11T17:53:38-05:00",
+   "published_at": "2026-02-11T17:53:38-05:00",
+   "price": "34.00",
+   "compare_at_price": "68.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PURPLS.png?v=1770944227",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PURPLEBACK.png?v=1771000933",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_fc0297c3-cd1f-43ca-880b-0b107338ec42.png?v=1774643007"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 35,
+   "title": "Icon LS Tee - Black",
+   "handle": "icon-ls-tee-plum",
+   "url": "https://waterwhendry.com/products/icon-ls-tee-plum",
+   "product_type": "Tee",
+   "tags": [
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2026-02-11T17:51:09-05:00",
+   "published_at": "2026-02-11T17:51:09-05:00",
+   "price": "34.00",
+   "compare_at_price": "68.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKLS.png?v=1770944228",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKBACK.png?v=1771000933",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_fc0297c3-cd1f-43ca-880b-0b107338ec42.png?v=1774643007"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 36,
+   "title": "CARRY-ALL BAG",
+   "handle": "grocery-tote",
+   "url": "https://waterwhendry.com/products/grocery-tote",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2024-02-13T12:27:01-05:00",
+   "published_at": "2026-01-15T19:14:27-05:00",
+   "price": "18.00",
+   "compare_at_price": null,
+   "available": true,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": true
+    }
+   ],
+   "body_text": "Holds the contents of 4 single-use plastic bags. 24\" x 15\" x 6\". Durable with maximum reusability. Carries up to 50 lbs.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WWWWWWWBAG.png?v=1707933506",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WWWWWWWWDDDDDD.png?v=1707933506",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/TOTEDETAILS.png?v=1707933506"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 37,
+   "title": "Logo Cap - Camo",
+   "handle": "5-panel-unstructured-camo",
+   "url": "https://waterwhendry.com/products/5-panel-unstructured-camo",
+   "product_type": "Headwear",
+   "tags": [
+    "Accessories"
+   ],
+   "created_at": "2026-01-07T16:53:04-05:00",
+   "published_at": "2026-01-07T17:00:08-05:00",
+   "price": "42.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Each cap features a unique pattern. Embroidered logo. 5-panel ripstop construction. Adjustable snapback. One size fits most.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/5.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/7.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/4.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/12.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/11.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/10.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/9.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/8.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/6.png?v=1770761457",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/2.png?v=1770761270",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/1.png?v=1770761270"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 38,
+   "title": "Logo Tee - Garden Green",
+   "handle": "logo-tee-black-copy",
+   "url": "https://waterwhendry.com/products/logo-tee-black-copy",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2025-11-03T14:58:05-05:00",
+   "published_at": "2025-11-03T14:58:38-05:00",
+   "price": "58.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENF_a475fa22-afa1-4b59-bd82-8b6eab628084.png?v=1765203819",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENB_e0b2bc58-197e-4b05-8551-05790ef5f848.png?v=1765203819",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_4e43d241-8b23-4e2d-b526-f9eef888bb63.png?v=1775136391"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 39,
+   "title": "Logo Tee - Black",
+   "handle": "logo-tee-black",
+   "url": "https://waterwhendry.com/products/logo-tee-black",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2025-11-03T14:51:34-05:00",
+   "published_at": "2025-11-03T14:57:31-05:00",
+   "price": "29.00",
+   "compare_at_price": "58.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENff_80120343-0efd-414f-a976-41b31bddb5a0.png?v=1762504218",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENbb_5184ab8f-3f11-452e-9e7a-fdf2473196e2.png?v=1762504218",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_4e43d241-8b23-4e2d-b526-f9eef888bb63.png?v=1775136391"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 40,
+   "title": "Every Layer",
+   "handle": "i-love-layering",
+   "url": "https://waterwhendry.com/products/i-love-layering",
+   "product_type": "",
+   "tags": [
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs"
+   ],
+   "created_at": "2026-03-08T18:12:38-04:00",
+   "published_at": "2026-03-08T18:19:31-04:00",
+   "price": "163.00",
+   "compare_at_price": "234.00",
+   "available": true,
+   "variants": null,
+   "body_text": "",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/EVERYLAYER.png?v=1773008245",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKLS.png?v=1770944228",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKBACK.png?v=1771000933",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/RAGLAN-F.png?v=1767819798",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/RAGLAN-B.png?v=1768816816",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-ZIP-UP.png?v=1767817348"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false,
+   "variants_note": "Bundle: Canopy Zip Hoodie - Charcoal (Size S-2XL) x Icon LS Tee - Black (Size XS-2XL) x Uniform Raglan Tee (Size S-2XL) = 150 combos. 25 available: every combo where the Icon LS Tee size is XS. Prices: S/XS/S and S/XS/M $163 (cmp $234); hoodie S or M combos otherwise $138 (cmp $198); hoodie L/XL/2XL combos $198 (no compare-at).",
+   "note": "body_html is null. Product order: listed between Logo Tee - Rose Clay and Uniform Raglan Tee."
+  },
+  {
+   "position": 41,
+   "title": "Treehugger Crew Socks",
+   "handle": "treehugger-crew-socks",
+   "url": "https://waterwhendry.com/products/treehugger-crew-socks",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2025-11-03T14:45:32-05:00",
+   "published_at": "2025-11-03T14:46:06-05:00",
+   "price": "18.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/TREESOCKS_57c59ec4-9305-4d50-b1c5-2ec677ca6f28.png?v=1762200255"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 42,
+   "title": "Utility Pant - River Slate",
+   "handle": "river-slate-utility-pants",
+   "url": "https://waterwhendry.com/products/river-slate-utility-pants",
+   "product_type": "Bottoms",
+   "tags": [
+    "archive-30",
+    "Bottoms"
+   ],
+   "created_at": "2025-11-03T14:35:07-05:00",
+   "published_at": "2025-11-03T14:41:54-05:00",
+   "price": "54.00",
+   "compare_at_price": "108.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Lightweight packable nylon shell. 2 Premium Zipper Cargo Pockets. Soft-inner mesh lining. Model is 6'3 210 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitled-4_a3da68db-c582-46aa-98ed-779407401cbd.png?v=1773147625",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009059_28-min.png?v=1773147625",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/65B12ABA-8EEE-4566-A9C0-4D85AD464425.jpg?v=1773147625",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ff.png?v=1773147625",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRAPPHI.png?v=1773147684",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZE-TEMPLATE_0db2237e-3d3c-4b40-bea6-56c2f034aa2b.png?v=1773147684"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 43,
+   "title": "Utility Pant - Driftwood",
+   "handle": "terracotta-utility-pants-copy",
+   "url": "https://waterwhendry.com/products/terracotta-utility-pants-copy",
+   "product_type": "Bottoms",
+   "tags": [
+    "archive-30",
+    "Bottoms"
+   ],
+   "created_at": "2025-11-03T14:24:28-05:00",
+   "published_at": "2025-11-03T14:26:09-05:00",
+   "price": "50.00",
+   "compare_at_price": "100.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Ready-to-Ship. Lightweight packable nylon shell. 2 Premium Zipper Cargo Pockets. Soft-inner mesh lining. Model is 6'3 210 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitled-5.png?v=1773147684",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009071.jpg?v=1773147684",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/bb.png?v=1773147684",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRAPPHI.png?v=1773147684",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZE-TEMPLATE_0db2237e-3d3c-4b40-bea6-56c2f034aa2b.png?v=1773147684"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 44,
+   "title": "Canopy Fleece - Blackberry",
+   "handle": "sherpa-fleece-blackberry",
+   "url": "https://waterwhendry.com/products/sherpa-fleece-blackberry",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2025-09-09T14:44:39-04:00",
+   "published_at": "2025-09-09T16:45:59-04:00",
+   "price": "64.00",
+   "compare_at_price": "128.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Heavyweight sherpa fleece fabric. Inner mesh liner. Half-zip closure. Contrast elbow + underarm panels. Embroidered WWD chest logo. Kangaroo pocket for function + warmth. Boxy fit — size down if you prefer a closer, snugger look. Model is 6'3 220 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKPLUM.gif?v=1757797756",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CANOPYBLACKWEBSITE.png?v=1758749951",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CANOPYBLACKWEBSITE2.png?v=1758749951",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-GIF_e4578ba7-1159-4ea0-a3b0-218621747b1c.gif?v=1758749951",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X008942_3.jpg?v=1757629584",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZE-DIAGRAM.png?v=1757631283",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CANOPY-FLEECE-SIZE-TEMPLATE.png?v=1757631283"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 45,
+   "title": "Canopy Fleece - Riverbank",
+   "handle": "sherpa-fleece-riverbank",
+   "url": "https://waterwhendry.com/products/sherpa-fleece-riverbank",
+   "product_type": "",
+   "tags": [
+    "size-xs"
+   ],
+   "created_at": "2025-09-09T14:48:19-04:00",
+   "published_at": "2025-09-09T16:45:50-04:00",
+   "price": "64.00",
+   "compare_at_price": "128.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Heavyweight sherpa fleece fabric. Inner mesh liner. Half-zip closure. Contrast elbow + underarm panels. Embroidered WWD chest logo. Kangaroo pocket for function + warmth. Boxy fit — size down if you prefer a closer, snugger look. Model is 6'3 220 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BROWN-CANOPY-GIF.gif?v=1757797769",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CANOPYBROWNWEBSITE.png?v=1758749962",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CANOPYBROWNWEBSITE2.png?v=1758749962",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BROWN-GIF.gif?v=1758749962",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X008945_3.jpg?v=1757629411",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZE-DIAGRAM.png?v=1757631283",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CANOPY-FLEECE-SIZE-TEMPLATE.png?v=1757631283"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 46,
+   "title": "Greenhouse Tee",
+   "handle": "greenhouse-tee",
+   "url": "https://waterwhendry.com/products/greenhouse-tee",
+   "product_type": "Tee",
+   "tags": [
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2025-09-04T13:13:37-04:00",
+   "published_at": "2025-09-04T15:46:54-04:00",
+   "price": "29.00",
+   "compare_at_price": "58.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GAREDN-IS-ALIVE_45a51d1b-fa55-40b8-bc28-6be43071ab7b.png?v=1757006038",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2025-09-25_at_4.36.40_AM.png?v=1761119482",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GAREDN-IS-ALIVE-BACK_9797d060-d3d8-4225-a473-f7ea61063654.png?v=1775136391",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_4e43d241-8b23-4e2d-b526-f9eef888bb63.png?v=1775136391"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 47,
+   "title": "Logo Quarter - Black",
+   "handle": "logo-quarter-black",
+   "url": "https://waterwhendry.com/products/logo-quarter-black",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2025-09-03T12:04:31-04:00",
+   "published_at": "2025-09-04T15:46:53-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W). Please allow 1–2 weeks for processing. Shipping times vary by location.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-WWD-SOCK_42a61fd9-6160-4c55-aa04-e5e648ec1158.png?v=1757006865",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010402_2.jpg?v=1778859716",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-SOCKS.png?v=1778858286"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 48,
+   "title": "Logo Quarter - White",
+   "handle": "logo-quarter-white",
+   "url": "https://waterwhendry.com/products/logo-quarter-white",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2025-09-03T12:03:55-04:00",
+   "published_at": "2025-09-04T15:46:51-04:00",
+   "price": "15.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WHITE-WWD-SOCK.png?v=1756915388"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 49,
+   "title": "Logo Quarter - Stone",
+   "handle": "logo-quarter-stone",
+   "url": "https://waterwhendry.com/products/logo-quarter-stone",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2025-09-03T12:02:42-04:00",
+   "published_at": "2025-09-04T15:46:50-04:00",
+   "price": "15.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREY-WWD-SOCK.png?v=1756915382"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 50,
+   "title": "Garden Hands Tee",
+   "handle": "garden-hands-tee",
+   "url": "https://waterwhendry.com/products/garden-hands-tee",
+   "product_type": "Tee",
+   "tags": [
+    "size-m",
+    "size-s",
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2025-09-04T13:17:11-04:00",
+   "published_at": "2025-09-04T15:46:38-04:00",
+   "price": "29.00",
+   "compare_at_price": "58.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GLOVE-BACK_0e5a7484-b67b-419b-b372-a1ffd1c91497.png?v=1757006673",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2025-09-25_at_4.36.22_AM.png?v=1758789916",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GLOVE_8b91a997-accb-4ce0-9b1a-ff45dbf51338.png?v=1758789484",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_4e43d241-8b23-4e2d-b526-f9eef888bb63.png?v=1775136391"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 51,
+   "title": "Shipping Protection by Route",
+   "handle": "routeins",
+   "url": "https://waterwhendry.com/products/routeins",
+   "product_type": "Insurance",
+   "tags": [],
+   "created_at": "2025-08-07T16:56:06-04:00",
+   "published_at": "2025-08-07T16:56:10-04:00",
+   "price": "0.98",
+   "compare_at_price": null,
+   "available": null,
+   "variants": null,
+   "body_text": "Add Route at checkout to protect your package against loss, theft and damage, and make shipping 100% carbon neutral. Visit route.com/sustainability to learn more.",
+   "images": [],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false,
+   "variants_note": "Route shipping-protection app product with a very long list of price-tier variants (first variant titled 0.98); full variant list exceeded fetch limit and was not captured. Not merchandise.",
+   "note": "Third-party checkout add-on, not WWD apparel. Images not captured (response truncated)."
+  },
+  {
+   "position": 52,
+   "title": "Icon Quarter - Stone",
+   "handle": "icon-quarter-black-copy",
+   "url": "https://waterwhendry.com/products/icon-quarter-black-copy",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2025-01-24T11:48:07-05:00",
+   "published_at": "2025-07-30T14:58:56-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREYSOCKS.png?v=1762199259"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 53,
+   "title": "Icon Quarter - Black",
+   "handle": "icon-quarter-black",
+   "url": "https://waterwhendry.com/products/icon-quarter-black",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-10-08T11:30:53-04:00",
+   "published_at": "2025-07-30T14:58:54-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKSOCKS.png?v=1762199225",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK_SOCKS.png?v=1762199225",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_5033.jpg?v=1762199225",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_5064.jpg?v=1762199225"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 54,
+   "title": "Icon Quarter - White",
+   "handle": "icon-quarter-white",
+   "url": "https://waterwhendry.com/products/icon-quarter-white",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-10-08T11:33:15-04:00",
+   "published_at": "2025-07-30T14:58:31-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Embroidered Icon Logo. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WHITESOCKS_797ff7e5-37b1-4df0-8fd2-811fb0515833.png?v=1762200160",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/WHITE_SOKCS.png?v=1762200160",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_4820_jpg.jpg?v=1762200160",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_4852.jpg?v=1762200160"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 55,
+   "title": "Icon Quarter - Pomegranate",
+   "handle": "logo-quarter-pomegrante",
+   "url": "https://waterwhendry.com/products/logo-quarter-pomegrante",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-07-30T09:59:42-04:00",
+   "published_at": "2025-07-30T14:53:17-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. (remaining body not captured)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/POM-2.png?v=1723239142",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_f2747d9c-4c0d-43f3-a44e-5349092c5260.jpg?v=1724250206",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/POM.png?v=1723239142"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 56,
+   "title": "Core Logo Tee - Black",
+   "handle": "core-logo-tee-black",
+   "url": "https://waterwhendry.com/products/core-logo-tee-black",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-07-01T23:02:13-04:00",
+   "published_at": "2025-07-30T14:53:15-04:00",
+   "price": "58.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Model is 6'2 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-LOGO-FRONT.png?v=1719889262",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/187134AE-85B8-4E6D-8735-027364A633A9.jpg?v=1724190194",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKLOGOBACK.png?v=1719889262",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 57,
+   "title": "Core Logo Tee - White",
+   "handle": "core-logo-tee-white",
+   "url": "https://waterwhendry.com/products/core-logo-tee-white",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-07-01T22:58:18-04:00",
+   "published_at": "2025-07-30T14:53:14-04:00",
+   "price": "58.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Model is 6'2 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/LOGOWHITEFRONT.png?v=1719889262",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/LOGOWHITEBACK.png?v=1719889262",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 58,
+   "title": "GROWING Tee",
+   "handle": "growing-tee-1",
+   "url": "https://waterwhendry.com/products/growing-tee-1",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-07-01T16:06:33-04:00",
+   "published_at": "2025-07-30T14:53:12-04:00",
+   "price": "58.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Model is 6'2 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GROWING-FRONT_dda0ac2a-d9a7-4958-b67a-84a1ac749d1b.png?v=1719888708",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GROWINGBACK.png?v=1719864279",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 59,
+   "title": "Greener Grass Tee",
+   "handle": "growing-tee",
+   "url": "https://waterwhendry.com/products/growing-tee",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-07-01T16:03:17-04:00",
+   "published_at": "2025-07-30T14:53:11-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Model is 6'2 wearing Size 2XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GRASSBACK.png?v=1719864268",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GRASSFRONT.png?v=1719864267",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/92252CA7-D4DF-4753-9B3B-0287F33870B3.jpg?v=1722479407",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 60,
+   "title": "Treehugger Short - Green",
+   "handle": "treehugger-short-green",
+   "url": "https://waterwhendry.com/products/treehugger-short-green",
+   "product_type": "Bottoms",
+   "tags": [
+    "1",
+    "Bottoms",
+    "size-2xl",
+    "size-l",
+    "size-m",
+    "size-s",
+    "size-xl",
+    "size-xs"
+   ],
+   "created_at": "2024-06-24T19:12:36-04:00",
+   "published_at": "2025-07-30T14:53:10-04:00",
+   "price": "48.00",
+   "compare_at_price": "68.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": true
+    },
+    {
+     "title": "M",
+     "available": true
+    },
+    {
+     "title": "L",
+     "available": true
+    },
+    {
+     "title": "XL",
+     "available": true
+    },
+    {
+     "title": "2XL",
+     "available": true
+    }
+   ],
+   "body_text": "Built for slow mornings, quick workouts, and whatever comes after. Easy enough to live in, functional enough to keep up. Please allow 1 week for order processing & shipping. 6\" Inseam. Lined Mesh Shorts. Elastic Waistband. (remaining body not captured)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FRONT-TREE-GREEN-PRODUCT.png?v=1724189839",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIDE-TREE-GREEN-PRODUCT.png?v=1719270777"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 61,
+   "title": "Treehugger Short - Black",
+   "handle": "treehugger-short-black",
+   "url": "https://waterwhendry.com/products/treehugger-short-black",
+   "product_type": "Bottoms",
+   "tags": [
+    "1",
+    "Bottoms"
+   ],
+   "created_at": "2024-06-24T18:55:01-04:00",
+   "published_at": "2025-07-30T14:53:08-04:00",
+   "price": "68.00",
+   "compare_at_price": "68.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "6\" Inseam. Lined Mesh. Metal Hardware. Elastic Waistband. Model is 6'2 wearing Size XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FRONT-TREE-BLACK-PRODUCT.png?v=1719269774",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_5c969489-10bf-4c9a-8d00-34227bbb1901.jpg?v=1724190105",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIDE-TREE-BLACK-PRODUCT.png?v=1719269778",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZE-TEMPLATE_e97b922a-f3cc-4133-acf2-9909d21a50d0.png?v=1741474866"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 62,
+   "title": "Logo Quarter - Celery",
+   "handle": "logo-quarter-celery",
+   "url": "https://waterwhendry.com/products/logo-quarter-celery",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-06-24T07:36:10-04:00",
+   "published_at": "2025-07-30T14:53:07-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CELERY-PRODUCT-PAGE.png?v=1719228984",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC05545.jpg?v=1719894904",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC05558.jpg?v=1719894905",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC05552_e54eb1f2-816e-4cc7-ad34-6fa370014d89.jpg?v=1719894904"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 63,
+   "title": "Logo Quarter - Carrot",
+   "handle": "logo-crew-carrot",
+   "url": "https://waterwhendry.com/products/logo-crew-carrot",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-06-24T07:34:55-04:00",
+   "published_at": "2025-07-30T14:53:06-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CARROT-PRODUCT-PAGE.png?v=1719228915",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC05520.jpg?v=1719894904",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC05503.jpg?v=1719894904",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/DSC05521.jpg?v=1719894904"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 64,
+   "title": "5-Panel Unstructured Strapback - Black",
+   "handle": "wwd-black-strapback",
+   "url": "https://waterwhendry.com/products/wwd-black-strapback",
+   "product_type": "Headwear",
+   "tags": [],
+   "created_at": "2024-06-03T15:32:02-04:00",
+   "published_at": "2025-07-30T14:53:04-04:00",
+   "price": "48.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Embroidered Logo. 5-panel Cotton Ripstop Construction. Adjustable Strapback. One-Size Fits Most.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HATBLACK1.png?v=1717637828",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_f9e284d8-2620-4947-a3d1-27ea81447dc9.jpg?v=1724213460",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_8d1d1993-04cb-4653-aa19-53feeaa849c8.jpg?v=1724213646"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 65,
+   "title": "5-Panel Unstructured Strapback - Green",
+   "handle": "wwd-strapback-wwd-green",
+   "url": "https://waterwhendry.com/products/wwd-strapback-wwd-green",
+   "product_type": "Headwear",
+   "tags": [],
+   "created_at": "2024-06-03T15:27:06-04:00",
+   "published_at": "2025-07-30T14:53:02-04:00",
+   "price": "48.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Embroidered Logo. 5-panel Cotton Ripstop Construction. Adjustable Strapback. One-Size Fits Most.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-HAT-SITE_6cf04871-bcf9-4909-b19c-b5baaad89c5d.png?v=1717637828",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HATBACKG.png?v=1717637828"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 66,
+   "title": "Camper Short - Dusk",
+   "handle": "camper-short-black",
+   "url": "https://waterwhendry.com/products/camper-short-black",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2024-04-04T14:33:32-04:00",
+   "published_at": "2025-07-30T14:53:00-04:00",
+   "price": "61.00",
+   "compare_at_price": "88.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Built for repeated wear and changing conditions. Designed to move between routines, late nights, early mornings, and everything in between. Fits True To Size. 7\" Inseam. Nylon w/ Mesh Lining. 8 Pockets.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CAMPER-BLACK-FRONT.png?v=1777929474",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CAMPER-BLACK-BACK.png?v=1777929474",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/ChatGPT_Image_May_15_2026_12_05_05_AM.png?v=1778818027",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3DD65425-FB95-4936-9B5F-85949AD4CDCA.jpg?v=1724190696",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/77B3AE14-A3F1-4D01-A6E3-307B7FE5A3C6.jpg?v=1724190696",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/C1050E02-8B97-4899-8081-0C72037A4304.jpg?v=1724190696",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/A84313CF-21A4-47F3-8B2D-15724BFD198D.jpg?v=1724190695"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 67,
+   "title": "Camper Short - Dawn",
+   "handle": "camper-short",
+   "url": "https://waterwhendry.com/products/camper-short",
+   "product_type": "Bottoms",
+   "tags": [
+    "1",
+    "Bottoms"
+   ],
+   "created_at": "2024-02-13T16:11:33-05:00",
+   "published_at": "2025-07-30T14:52:58-04:00",
+   "price": "88.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    }
+   ],
+   "body_text": "7\" Inseam. Nylon w/ Mesh Lining. 8 Pockets. Ships Immediately. Model is 6'2 wea... (truncated in capture)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITESHORTSFRONT.png?v=1712255248",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/6A7D8C73-9F34-4FEB-B14A-247BF35CFF34.jpg?v=1724212725",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_d32bd14b-2df5-4a9f-93e7-3103ff04fcf2.jpg?v=1724190777",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITESHORTSDETAIL.png?v=1724213327",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SHORTS-SIDEsssite.png?v=1724213327",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITESHORTSBACK.png?v=1724213327"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 68,
+   "title": "Oval Icon Tee - Moss",
+   "handle": "oval-icon-tee-moss",
+   "url": "https://waterwhendry.com/products/oval-icon-tee-moss",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-02-11T00:31:32-05:00",
+   "published_at": "2025-07-30T14:52:56-04:00",
+   "price": "58.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Ships Immediately. Model is 6'2 wearing Size M.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitled-1-_Recovered_xxx.png?v=1708654929",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_d32bd14b-2df5-4a9f-93e7-3103ff04fcf2.jpg?v=1724190777",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_e937d658-3223-4dae-a3ba-d7429bca2b7a.jpg?v=1724190776",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/MOSSSITEB.png?v=1724190852",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/MOSSFABRICB.png?v=1724190852"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 69,
+   "title": "Logo Tee - Limestone",
+   "handle": "wwd-logo-tee-sail",
+   "url": "https://waterwhendry.com/products/wwd-logo-tee-sail",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-02-11T00:31:25-05:00",
+   "published_at": "2025-07-30T14:52:54-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Ships Immediately. Model is 6'2 wearing Size M.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITEFRON.png?v=1710130488",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITE-BACK.png?v=1710130488",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BEIGE.png?v=1710130414",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitleddesign_5.gif?v=1710295736"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 70,
+   "title": "Logo Tee - Juniper",
+   "handle": "wwd-logo-tee-balsam",
+   "url": "https://waterwhendry.com/products/wwd-logo-tee-balsam",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-02-11T00:31:03-05:00",
+   "published_at": "2025-07-30T14:52:52-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Ships Immediately. Model is 6'2 wearing Size M.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITEGREEN.png?v=1707784956",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SITEGREEN1.png?v=1707784956",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREENFABRIC.png?v=1707784956",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Untitleddesign_2.gif?v=1710129748"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 71,
+   "title": "6-Panel Unstructured Strapback - Brown",
+   "handle": "two-tone-tan-suede-cap",
+   "url": "https://waterwhendry.com/products/two-tone-tan-suede-cap",
+   "product_type": "Headwear",
+   "tags": [],
+   "created_at": "2023-05-22T17:06:46-04:00",
+   "published_at": "2025-07-30T14:52:50-04:00",
+   "price": "48.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Embroidered Logo. 6-panel Cotton Ripstop Construction. Adjustable Strapback. Suede Brim. One-Size Fits Most.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIDE-TAN.webp?v=1708478430",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BACKING.png?v=1708478429",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/LABEL_74b1a8a6-a72d-4e05-9417-3cfd908d555b.png?v=1708478429"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 72,
+   "title": "6-Panel Unstructured Strapback - Black",
+   "handle": "two-tone-black-suede-cap",
+   "url": "https://waterwhendry.com/products/two-tone-black-suede-cap",
+   "product_type": "Headwear",
+   "tags": [],
+   "created_at": "2023-05-22T17:04:10-04:00",
+   "published_at": "2025-07-30T14:52:49-04:00",
+   "price": "48.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Embroidered Logo. 6-panel Cotton Ripstop Construction. Adjustable Strapback. Suede Brim. One-Size Fits Most.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIDE-BLACK.webp?v=1708478408",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BACKING-BLACK.png?v=1708478408",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/LABEL.png?v=1708478408"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 73,
+   "title": "April Showers Tee",
+   "handle": "april-showers-tee",
+   "url": "https://waterwhendry.com/products/april-showers-tee",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2025-04-14T18:42:15-04:00",
+   "published_at": "2025-07-30T14:52:48-04:00",
+   "price": "68.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CHAINSTITCH-FONT.png?v=1744670843",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CHAINSTITCHb.png?v=1744971763",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CHAINSTICH-DETAIL.png?v=1744971763",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 74,
+   "title": "12oz Glass Can",
+   "handle": "12oz-glass",
+   "url": "https://waterwhendry.com/products/12oz-glass",
+   "product_type": "",
+   "tags": [
+    "Accessories"
+   ],
+   "created_at": "2025-01-24T12:34:37-05:00",
+   "published_at": "2025-07-30T14:52:46-04:00",
+   "price": "24.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One (1) Green WWD Glass Can. 12 oz.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CUP1.png?v=1737739831",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CUP3.png?v=1742238613",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CUP2.png?v=1742238613",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/COVER-DELIVERY-1.jpg?v=1742238613"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 75,
+   "title": "Logo Tee - Blush",
+   "handle": "logo-tee-blush",
+   "url": "https://waterwhendry.com/products/logo-tee-blush",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2025-01-21T13:48:58-05:00",
+   "published_at": "2025-07-30T14:52:45-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PINKFRONT.png?v=1786571096",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PINKBACK.png?v=1786571125",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING_35096702-a0ef-44ea-aab7-63f66ac0cac4.png?v=1755025953"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 76,
+   "title": "Logo Tee - Chocolate",
+   "handle": "logo-tee-juniper-copy",
+   "url": "https://waterwhendry.com/products/logo-tee-juniper-copy",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2025-01-21T13:42:26-05:00",
+   "published_at": "2025-07-30T14:52:44-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BROWNTEEFRONT_42b0dd5e-530a-4e40-a58b-a3b9e58841eb.png?v=1739033081",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BROWNTEEBACK.png?v=1739033081",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 77,
+   "title": "Fog Sweats",
+   "handle": "hemp-sweats",
+   "url": "https://waterwhendry.com/products/hemp-sweats",
+   "product_type": "",
+   "tags": [
+    "Bottoms"
+   ],
+   "created_at": "2024-12-17T12:26:12-05:00",
+   "published_at": "2025-07-30T14:52:42-04:00",
+   "price": "108.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "100% Cotton. 380gsm mid-heavyweight cotton for ultimate comfort and durability. Garment-dyed and stone-washed for a rich, lived-in look. Sleek metal hardware adds a modern touch. Monochrome embroidered logos for a clean, minimalist style. (remaining body not captured)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREYPANTSF.png?v=1734456359",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREYPANTB.png?v=1734456359",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SWEATPANTSSZIECHART.png?v=1734719272",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRAPPHI.png?v=1773147684"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 78,
+   "title": "Charcoal Sweats",
+   "handle": "charcoal-sweats",
+   "url": "https://waterwhendry.com/products/charcoal-sweats",
+   "product_type": "",
+   "tags": [
+    "Bottoms",
+    "size-xs"
+   ],
+   "created_at": "2024-12-17T12:24:38-05:00",
+   "published_at": "2025-07-30T14:52:41-04:00",
+   "price": "54.00",
+   "compare_at_price": "108.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "100% Cotton. 380gsm mid-heavyweight cotton for ultimate comfort and durability. Garment-dyed and stone-washed for a rich, lived-in look. Sleek metal hardware adds a modern touch. Monochrome embroidered logos for a clean, minimalist style. (remaining body not captured)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKPANTSF.png?v=1734456269",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKPANTSB.png?v=1734456269",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SWEATPANTSSZIECHART.png?v=1734719272",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRAPPHI.png?v=1773147684"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 79,
+   "title": "Charcoal Hoodie",
+   "handle": "charcoal-hoodie",
+   "url": "https://waterwhendry.com/products/charcoal-hoodie",
+   "product_type": "",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-12-17T12:23:58-05:00",
+   "published_at": "2025-07-30T14:52:40-04:00",
+   "price": "128.00",
+   "compare_at_price": "128.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "100% Cotton. 380gsm mid-heavyweight cotton for ultimate comfort and durability. Garment-dyed and stone-washed for a rich, lived-in look. Sleek metal hardware adds a modern touch. Monochrome embroidered logos for a clean, minimalist style. (remaining body not captured)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKHOODIEF.png?v=1734456206",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKHOODIEB.png?v=1734456214",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIE100_COTTONCHAT-TOP.png?v=1768691510",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRPAHIC.png?v=1768691510"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 80,
+   "title": "Black Ice Beanie",
+   "handle": "black-ice-beanie",
+   "url": "https://waterwhendry.com/products/black-ice-beanie",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2024-12-09T13:26:54-05:00",
+   "published_at": "2025-07-30T14:52:38-04:00",
+   "price": "44.00",
+   "compare_at_price": "44.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "S/M",
+     "available": false
+    },
+    {
+     "title": "L/XL",
+     "available": false
+    }
+   ],
+   "body_text": "Embroidered Logo. 100% Cotton. Based on \"New-Era\" Fitted - 7⅛ & above = L/XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-BEANIE.png?v=1733767195",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BOTH-BENAIES.png?v=1733767195"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 81,
+   "title": "Snowy Grass Beanie",
+   "handle": "snowy-grass-beanie",
+   "url": "https://waterwhendry.com/products/snowy-grass-beanie",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2024-12-09T13:07:40-05:00",
+   "published_at": "2025-07-30T14:52:37-04:00",
+   "price": "44.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "S/M",
+     "available": false
+    },
+    {
+     "title": "L/XL",
+     "available": false
+    }
+   ],
+   "body_text": "Embroidered Logo. 100% Cotton. Based on \"New-Era\" Fitted - 7⅛ & above = L/XL.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-BEANIE.png?v=1733767195",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BOTH-BENAIES.png?v=1733767195"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 82,
+   "title": "Logo LS Tee - Fog",
+   "handle": "logo-ls-tee-fog",
+   "url": "https://waterwhendry.com/products/logo-ls-tee-fog",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-11-10T14:33:41-05:00",
+   "published_at": "2025-07-30T14:52:34-04:00",
+   "price": "68.00",
+   "compare_at_price": "68.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "AVAILABLE FRIDAY 11/15. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREY-LONGSLEEVE.png?v=1731267259",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREY-LONGSLEEVE-BACK1.png?v=1731267239",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 83,
+   "title": "Logo LS Tee - Juniper",
+   "handle": "logo-ls-tee-juniper",
+   "url": "https://waterwhendry.com/products/logo-ls-tee-juniper",
+   "product_type": "Tee",
+   "tags": [
+    "size-xs",
+    "Tops"
+   ],
+   "created_at": "2024-11-10T14:29:57-05:00",
+   "published_at": "2025-07-30T14:52:33-04:00",
+   "price": "34.00",
+   "compare_at_price": "68.00",
+   "available": true,
+   "variants": [
+    {
+     "title": "XS",
+     "available": true
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "AVAILABLE FRIDAY 11/15. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-LONGLSEEVE.png?v=1731267008",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-LONGLSEEVE-BACK1.png?v=1731267015",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 84,
+   "title": "Logo LS Tee - Pomegranate",
+   "handle": "logo-pomegrante-ls-tee",
+   "url": "https://waterwhendry.com/products/logo-pomegrante-ls-tee",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-11-10T14:28:29-05:00",
+   "published_at": "2025-07-30T14:52:32-04:00",
+   "price": "68.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "AVAILABLE FRIDAY 11/15. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/RED-LONGSLEEVE.png?v=1731266937",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/RED-LONGSLEEVE-BACK1.png?v=1731266944",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/1850CE29-FDD2-404E-81F1-0409943A2239.jpg?v=1772656342",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/F84916E0-D96F-4CF9-9920-6C89F41ACBFA.jpg?v=1732678370",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/12599D4E-8EBE-4C40-AAAD-570D700A4703.jpg?v=1732678371"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 85,
+   "title": "Icon LS Tee - Indigo",
+   "handle": "indigo-l-s-tee",
+   "url": "https://waterwhendry.com/products/indigo-l-s-tee",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-11-10T14:25:18-05:00",
+   "published_at": "2025-07-30T14:52:30-04:00",
+   "price": "68.00",
+   "compare_at_price": "68.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "AVAILABLE FRIDAY 11/15. Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLUE-LONGSLEEVE.png?v=1731266785",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLUE-LONGSLEEVE-BACK1.png?v=1731266794",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/AF3D495D-6B6F-4BDC-9042-C751894550D7.jpg?v=1731295722",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/14FC88AD-C96D-42CA-8A5F-49D77A81FE0C.jpg?v=1731295722",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/8C14995E-E6FB-407C-B81D-0A319C25F6C9.jpg?v=1732678243",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/D621E3A4-AFB4-4906-997E-3A681B9625CE.jpg?v=1732678243"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 86,
+   "title": "Logo Crew - Blossom",
+   "handle": "logo-crew-blossom",
+   "url": "https://waterwhendry.com/products/logo-crew-blossom",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-10-08T11:35:42-04:00",
+   "published_at": "2025-07-30T14:52:29-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLOSSOMSOCK.png?v=1728401760",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLOSSOMINDIVIDUAL.png?v=1728401759"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 87,
+   "title": "Logo Crew -  Pollen",
+   "handle": "logo-crew-pollen",
+   "url": "https://waterwhendry.com/products/logo-crew-pollen",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-10-08T11:34:34-04:00",
+   "published_at": "2025-07-30T14:52:28-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/POLLEN_SOCKS.png?v=1728401536",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/POLLEN_INDIV.png?v=1728401538"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 88,
+   "title": "Logo Tee - Kiwi",
+   "handle": "wwd-logo-tee-kiwi",
+   "url": "https://waterwhendry.com/products/wwd-logo-tee-kiwi",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-09-11T00:09:58-04:00",
+   "published_at": "2025-07-30T14:52:25-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Ships Immediately. KEYCHAIN INCLUDED WITH EVERY EARLY ACCESS ORDER. (max. 1 per order)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/REAL-KIWIFRONT.png?v=1726669034",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/REAL-KIWI-BACK.png?v=1726669035",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/KEYCHAIN.png?v=1726028327",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 89,
+   "title": "Logo Tee - Terracotta",
+   "handle": "wwd-logo-tee-terracotta",
+   "url": "https://waterwhendry.com/products/wwd-logo-tee-terracotta",
+   "product_type": "Tee",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-09-11T00:05:57-04:00",
+   "published_at": "2025-07-30T14:52:24-04:00",
+   "price": "58.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "Limited Run. 220 GSM heavy weight cotton. Stone washed. Boxy fit: Refer to sizing chart for best fit. Ships Immediately. KEYCHAIN INCLUDED WITH EVERY EARLY ACCESS ORDER. (max. 1 per order)",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/REAL-TERRA-FRONT.png?v=1726669034",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/REAL-TERRA-BACK.png?v=1726669034",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/KEYCHAIN.png?v=1726028327",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SIZING.png?v=1768816816"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 90,
+   "title": "Logo Crew - Sage",
+   "handle": "logo-crew-cream-copy",
+   "url": "https://waterwhendry.com/products/logo-crew-cream-copy",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-07-30T10:08:59-04:00",
+   "published_at": "2025-07-30T14:52:22-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Available August 2024. One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SAGE1.png?v=1723239143",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/1DCCF758-7449-4116-997A-E9FA8B85820D.jpg?v=1724250241",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/SAGE-23.png?v=1723239143"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 91,
+   "title": "Icon Quarter - Clear Skies",
+   "handle": "logo-quarter-blue-skies",
+   "url": "https://waterwhendry.com/products/logo-quarter-blue-skies",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-07-30T10:08:13-04:00",
+   "published_at": "2025-07-30T14:52:21-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CEAL-1.png?v=1723239143",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/19125A72-054C-489C-8E53-DA5E0589203C.jpg?v=1724250186",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CLEAR-3.png?v=1723239143"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 92,
+   "title": "Logo Quarter - Moss",
+   "handle": "logo-quarter-moss",
+   "url": "https://waterwhendry.com/products/logo-quarter-moss",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2025-07-02T12:29:48-04:00",
+   "published_at": "2025-07-02T12:30:21-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W). Ship Immediately.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/MOSS-FOLD-SITE.png?v=1751473804",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/MOSS-UN-SITE.png?v=1751473805"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 93,
+   "title": "Logo Quarter - Purple Clay",
+   "handle": "amethyst-crew",
+   "url": "https://waterwhendry.com/products/amethyst-crew",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2023-03-10T01:05:34-05:00",
+   "published_at": "2025-07-02T12:29:33-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W). Ship Immediately.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PURPLE-CLAY-FOLD-SITE.png?v=1751473731",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PURPLECLAY-UN-SITE.png?v=1751473731"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 94,
+   "title": "Utility Towel - Charcoal",
+   "handle": "utility-towel-charcoal",
+   "url": "https://waterwhendry.com/products/utility-towel-charcoal",
+   "product_type": "",
+   "tags": [
+    "Accessories",
+    "archive-30"
+   ],
+   "created_at": "2025-04-13T15:45:31-04:00",
+   "published_at": "2025-04-13T15:47:27-04:00",
+   "price": "38.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Dimensions: 44\" x 20\", All-over continuous logo in terry fabric. 100% Cotton. Soft-inner mesh lining. Machine wash cold with like colors, Use only non-Chlorine bleach when needed, Reshape, Lay flat to dry, Low iron as needed, Do not dry clean. Imported.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-1.png?v=1744573559",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-2.png?v=1744573559",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-3.png?v=1744573559",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-DETAIL.png?v=1744573559"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 95,
+   "title": "Utility Towel - Garden Green",
+   "handle": "utility-towel-garden-green",
+   "url": "https://waterwhendry.com/products/utility-towel-garden-green",
+   "product_type": "",
+   "tags": [
+    "Accessories",
+    "archive-30"
+   ],
+   "created_at": "2025-04-13T15:44:39-04:00",
+   "published_at": "2025-04-13T15:44:39-04:00",
+   "price": "38.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Dimensions: 44\" x 20\", All-over continuous logo in terry fabric. 100% Cotton. Soft-inner mesh lining. Machine wash cold with like colors, Use only non-Chlorine bleach when needed, Reshape, Lay flat to dry, Low iron as needed, Do not dry clean. Imported.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-1.png?v=1744573325",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-2.png?v=1744573325",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-3.png?v=1744573325",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREEN-DETAIL.png?v=1744573325"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 96,
+   "title": "Fog Hoodie",
+   "handle": "hemp-hoodie",
+   "url": "https://waterwhendry.com/products/hemp-hoodie",
+   "product_type": "",
+   "tags": [
+    "Tops"
+   ],
+   "created_at": "2024-12-17T12:25:33-05:00",
+   "published_at": "2024-12-17T12:25:33-05:00",
+   "price": "128.00",
+   "compare_at_price": "128.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "XS",
+     "available": false
+    },
+    {
+     "title": "S",
+     "available": false
+    },
+    {
+     "title": "M",
+     "available": false
+    },
+    {
+     "title": "L",
+     "available": false
+    },
+    {
+     "title": "XL",
+     "available": false
+    },
+    {
+     "title": "2XL",
+     "available": false
+    }
+   ],
+   "body_text": "100% Cotton. 380gsm mid-heavyweight cotton for ultimate comfort and durability. Garment-dyed and stone-washed for a rich, lived-in look. Sleek metal hardware adds a modern touch. Monochrome embroidered logos for a clean, minimalist style.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREYHOODIEF.png?v=1734456328",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/GREYHOODIEB.png?v=1734456328",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIE100_COTTONCHAT-TOP.png?v=1768691510",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/HOODIESWEATSSIZINGGRPAHIC.png?v=1768691510"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 97,
+   "title": "WWD Strap Bag",
+   "handle": "wwd-strap-bag",
+   "url": "https://waterwhendry.com/products/wwd-strap-bag",
+   "product_type": "",
+   "tags": [
+    "Accessories",
+    "archive-30"
+   ],
+   "created_at": "2024-11-26T21:46:03-05:00",
+   "published_at": "2024-11-26T21:47:01-05:00",
+   "price": "38.00",
+   "compare_at_price": "0.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "LAST PHOTO: I WAS PAINTING THE OTHER NIGHT AND GOT PAINT ON MY BAG. OH, WELL.. -JARED. Adjustable Strap. Can be worn around waist or across chest. Water Resistant - Lightweight Design. WWD Green Lining. PINS NOT INCLUDED.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/STARPBAG.png?v=1732675598",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_6357.heic?v=1742238632",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG-6359.heic?v=1742238632"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 98,
+   "title": "Icon Crew - \"Moevy\" Navy",
+   "handle": "logo-crew-cream-copy-1",
+   "url": "https://waterwhendry.com/products/logo-crew-cream-copy-1",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2024-11-26T20:49:46-05:00",
+   "published_at": "2024-11-26T20:52:25-05:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "MOE PICKED THIS COLOR. IF YOU LOVE IT, TELL HIM YOU LOVE IT. IF YOU HATE IT.. TELL HIM IT SUCKS. One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit:-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/NAVY-FONT.png?v=1732672204",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/NAVY-BACK.png?v=1732672277"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 99,
+   "title": "Breathe Cap",
+   "handle": "breathe-cap",
+   "url": "https://waterwhendry.com/products/breathe-cap",
+   "product_type": "Headwear",
+   "tags": [
+    "archive-30"
+   ],
+   "created_at": "2024-10-18T00:28:49-04:00",
+   "published_at": "2024-10-18T00:28:49-04:00",
+   "price": "19.00",
+   "compare_at_price": "38.00",
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "Rubberized Icon Logo. 6-panel Lightweight Construction. Polyester. Adjustable Strapback. One-Size Fits Most.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BREATHE-CAP.png?v=1729225710",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG-5421.jpg?v=1742238676"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": true,
+   "fw26_new": false
+  },
+  {
+   "position": 100,
+   "title": "WWD Carabiner",
+   "handle": "wwd-carabiner-coming-soon",
+   "url": "https://waterwhendry.com/products/wwd-carabiner-coming-soon",
+   "product_type": "",
+   "tags": [
+    "Accessories"
+   ],
+   "created_at": "2024-10-15T04:28:29-04:00",
+   "published_at": "2024-10-15T04:28:29-04:00",
+   "price": "12.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One (1) WWD Carabiner. 12kN. CONNECT TO WORLD.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CARABINER.png?v=1742238676",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CARBINER-2.png?v=1742238715"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 101,
+   "title": "Logo Keychain",
+   "handle": "handplant-keychain",
+   "url": "https://waterwhendry.com/products/handplant-keychain",
+   "product_type": "",
+   "tags": [
+    "Accessories"
+   ],
+   "created_at": "2024-02-14T01:56:42-05:00",
+   "published_at": "2024-09-18T16:33:43-04:00",
+   "price": "12.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "1 Keychain. Rubberized Double Sided Logo tab. Silver Metal Chain.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/KEYCHAIN-USE-1.png?v=1726691549",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/KEYCHAIN-USE-2.png?v=1726691549",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_8794.heic?v=1726069222"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 102,
+   "title": "Scent Of Forest",
+   "handle": "scent-of-forest-2pk",
+   "url": "https://waterwhendry.com/products/scent-of-forest-2pk",
+   "product_type": "",
+   "tags": [],
+   "created_at": "2024-08-05T13:43:33-04:00",
+   "published_at": "2024-08-05T13:43:33-04:00",
+   "price": "12.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "2 Pack - WWD Scented Logo Hangtags. Base notes of oud, pine, and cedarwood, balanced with a hint of fresh moss, culminate in a slightly sharp yet intriguingly mysterious aroma.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FRSH.png?v=1722879795",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_1926.heic?v=1722879308",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/IMG_4924.heic?v=1722877809"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  },
+  {
+   "position": 103,
+   "title": "Logo Crew - Cream",
+   "handle": "cream-crew",
+   "url": "https://waterwhendry.com/products/cream-crew",
+   "product_type": "Socks",
+   "tags": [],
+   "created_at": "2023-03-10T01:02:45-05:00",
+   "published_at": "2024-07-30T10:46:21-04:00",
+   "price": "15.00",
+   "compare_at_price": null,
+   "available": false,
+   "variants": [
+    {
+     "title": "Default Title",
+     "available": false
+    }
+   ],
+   "body_text": "One Pair. 80% Cotton, 18% Polyester, 2% Spandex. Cushioned Sole. One Size Fits Most (Approx. Fit: 6-13M | 7-12W).",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CREAM-SOCKS-FOLDED---SHOP_3e1770fd-f1de-459f-a666-36fc6ee2bc7b.png?v=1707815036",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/C231D010-6341-45FA-AAAE-FB373E5C8FED.jpg?v=1742238655",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/CREAM.png?v=1742238655",
+    "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/LOGO-OF-02_600x_64c4d5e0-e40f-47ac-92dc-0b2a717138bb.png?v=1742238655"
+   ],
+   "in_new_arrivals": false,
+   "in_sale": false,
+   "fw26_new": false
+  }
+ ]
+}
