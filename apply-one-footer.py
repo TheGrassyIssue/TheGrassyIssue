@@ -29,6 +29,9 @@ def div_end(s, i):
 
 
 def card(href, img, title, cat):
+    # one image per box (Lenny 25 Oct: multi-panel heroes looked wrong in the square cards) -> use the post's single card-hero if it has one
+    if img.endswith("/hero.jpg") and os.path.exists(os.path.join(ROOT, img.lstrip("/").replace("/hero.jpg", "/card-hero.jpg"))):
+        img = img.replace("/hero.jpg", "/card-hero.jpg")
     t = html.escape(html.unescape(title), quote=True)
     return (f'    <a href="{href}" class="more-card">\n'
             f'      <div class="more-card-img"><img src="{img}" alt="{t}" loading="lazy" /></div>\n'

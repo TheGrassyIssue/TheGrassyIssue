@@ -45,7 +45,11 @@ for key, hs in CARDS.items():
         seq = [p[0] for p in per] + [u for u in per[0][1:]]
         seq = seq[:6]
     for j, u in enumerate(seq, 1):
-        out = f'{O}{key}-{j}.jpg'; frame(Image.open(fn(u)).convert('RGBA')).save(out, quality=84, optimize=True); fr.setdefault(key, []).append('/' + out)
+        # Lenny 25 Oct: ivory trousers and the towel looked wrong after the background warm-up. Alba's backdrop is a mid-grey
+        # studio sweep, not stark white, so frames are a plain 4:5 cover crop of the original photo.
+        im = Image.open(fn(u)).convert('RGB'); s_ = max(W / im.width, H / im.height); im = im.resize((round(im.width * s_), round(im.height * s_)), Image.LANCZOS)
+        x0 = (im.width - W) // 2; y0 = (im.height - H) // 2
+        out = f'{O}{key}-{j}.jpg'; im.crop((x0, y0, x0 + W, y0 + H)).save(out, quality=84, optimize=True); fr.setdefault(key, []).append('/' + out)
 json.dump(fr, open(R + 'frames.json', 'w'), indent=1)
 # lifestyle / campaign
 L = json.load(open(R + 'lifestyle.json'))

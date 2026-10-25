@@ -150,13 +150,14 @@ FAQ = [
  ("What is the best Alba Golf piece?", "The Grian quarter-zip polo, in an exclusive REDA 1865 merino and lyocell fabric with a collar that zips into a stand collar or opens into a polo collar."),
 ]
 _LB = [("lb-0", "Alba Golf campaign: one golfer in a salmon cap shot as a multiple-exposure swing sequence", "One swing, start to finish"),
- ("lb-5", "A grassy links dune under a grey sky, from Alba&rsquo;s site", "Scotland&rsquo;s wild skies")]
+ ("lb-grian", "The Alba Grian quarter-zip polo worn full length with trousers", "The Grian, head to toe"),
+ ("lb-cheviot", "The Alba Cheviot mock neck in melange beige worn full length", "The Cheviot, head to toe")]
 _figs = "\n".join(f'  <figure><img src="{IMG}/{f}.jpg" alt="{a}" loading="lazy" /><figcaption class="ig-cap">{c}</figcaption></figure>' for f, a, c in _LB)
 LOOKBOOK = f"""
 <section class="products" style="margin-top:8px;">
   <div class="drop-tag grass">Lookbook</div>
   <h2 class="products-hdr" id="lookbook">The Launch, in Photos</h2>
-  <p class="cat-kicker"><strong>From Alba&rsquo;s site &middot; two photos</strong>The full swing and the landscape the brand says it came from.</p>
+  <p class="cat-kicker"><strong>From Alba&rsquo;s site &middot; three photos</strong>The full swing, and the two pieces we&rsquo;d start with.</p>
   <div class="ig-grid">
 {_figs}
   </div>
