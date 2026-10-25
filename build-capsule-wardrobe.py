@@ -80,8 +80,8 @@ P = {
    "A double-pleated Bermuda in lightweight cotton twill with slanted side pockets. EU sizing, 48 to 54."),
  "to6": ("Read The Green", "The '97 Vintage Pullover, Navy", "$100", "https://readthegreen.com/products/the-97-vintage-pullover-navy",
    "The nylon pullover that went viral, with rib-knit cuffs and collar and &ldquo;Read The Green Golf Club 1997&rdquo; on the chest."),
- "to7": ("Siegelman Stable", "Logo Knit, Light Blue", "$282", "https://siegelmanstable.com/products/siegelman-stable-logo-knit-5",
-   "A loose-cut cotton tricot sweater in dusty blue with a cream logo. The accent, and the piece to wear to dinner."),
+ "to7": ("Late Nine", "Cable Knit Polo, Light Blue", "$282 (SEK 2,950)", "https://late-nine.com/products/cable-knit-polo-light-blue",
+   "A lightly brushed cable knit in fine merino with an oversized seventies collar and mother-of-pearl buttons. The accent colour, and the piece to wear to dinner. S and M only."),
  "to8": ("Ashworth Golf Company", "Tech Stretch Vest, Bone", "$145", "https://www.ashworth-golf.com/products/tech-stretch-vest-bone",
    "A four-way-stretch full-zip vest, wind and water resistant, with the Golfman on the chest. Over a polo, it&rsquo;s the whole era in one layer."),
  "to9": ("Read The Green", "Founder's Cap, Sky", "$45", "https://readthegreen.com/products/founders-cap-sky-blue",
@@ -142,7 +142,7 @@ CAPS = [
   "Public Drip, Hidden Links Society, water when dry, Malbon, Odd Ritual", "$31&ndash;$170"),
  ("to", "The Tour &rsquo;97", "tour97", [("Cream", "#ece2c8"), ("Chocolate", "#4b3326"), ("Faded red", "#b2322d"), ("Sky blue", "#a9c6dc")],
   "Late-nineties tour golf: pleats, piped collars, a nylon pullover and a vest over a polo. Cream and chocolate are the base, faded red and sky blue the accents. Three tops, one trouser, one short, and everything matches the brown pants.",
-  "Late Nine, Metalwood, Read The Green, Ashworth, Siegelman Stable, Devereux", "$45&ndash;$282"),
+  "Late Nine, Metalwood, Read The Green, Ashworth, Devereux", "$45&ndash;$282"),
  ("ou", "The Outdoor Technical", "outdoor", [("Charcoal", "#33363a"), ("Sage", "#8c9273"), ("Sand", "#cfc2a5"), ("Cobalt", "#1f5fbf")],
   "For walkers and anyone who plays when the forecast says not to. Merino next to the skin, ripstop and climbing nylon on the legs, fleece and a shell on top, and one cobalt polo for the day it clears up.",
   "Macade, Manors, Sounder, Galvin Green, Gramicci, SLOAT, Sentinel", "$25&ndash;$890"),
@@ -196,7 +196,7 @@ INTRO = """
       <div class="sidebar-detail"><span class="l">Capsules</span><span>5</span></div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>52</span></div>
       <div class="sidebar-detail"><span class="l">Outfits</span><span>20</span></div>
-      <div class="sidebar-detail"><span class="l">Brands</span><span>29 independents</span></div>
+      <div class="sidebar-detail"><span class="l">Brands</span><span>28 independents</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$25&ndash;$295</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>October 25, 2026</span></div>
       <div class="hashtags">
@@ -221,7 +221,7 @@ FAQ = [
  ("How many pieces should a golf capsule wardrobe have?", "About ten: three or four tops, two or three bottoms, one or two layers, a hat and socks. That gives you well over a dozen combinations."),
  ("What colours work best for a golf capsule wardrobe?", "Pick three neutrals, such as navy, cream and stone, or black, olive and grey, then one accent colour like forest green, cobalt or terracotta."),
  ("Can a capsule wardrobe work for a course with a dress code?", "Yes. Include one collared polo and one tailored trouser, such as a pleated or chino-cut pant, and the same capsule covers a muni round and a private course."),
- ("Which brands are in TGI's capsule wardrobes?", "Twenty-nine independent brands, including Criquet, Rookline, Woodgrain, Public Drip, Hidden Links Society, Odd Ritual, Sentinel, Late Nine, Metalwood, Read The Green, Sounder, Manors, Gramicci, Mount Tee, Howie Benson and Juniper & James."),
+ ("Which brands are in TGI's capsule wardrobes?", "Twenty-eight independent brands, including Criquet, Rookline, Woodgrain, Public Drip, Hidden Links Society, Odd Ritual, Sentinel, Late Nine, Metalwood, Read The Green, Sounder, Manors, Gramicci, Mount Tee, Howie Benson and Juniper & James."),
 ]
 
 

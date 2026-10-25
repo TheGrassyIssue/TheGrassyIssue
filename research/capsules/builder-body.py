@@ -42,7 +42,7 @@ INTRO = """
       <div class="sidebar-detail"><span class="l">Capsules</span><span>5</span></div>
       <div class="sidebar-detail"><span class="l">Pieces</span><span>52</span></div>
       <div class="sidebar-detail"><span class="l">Outfits</span><span>20</span></div>
-      <div class="sidebar-detail"><span class="l">Brands</span><span>29 independents</span></div>
+      <div class="sidebar-detail"><span class="l">Brands</span><span>28 independents</span></div>
       <div class="sidebar-detail"><span class="l">Range</span><span>$25&ndash;$295</span></div>
       <div class="sidebar-detail"><span class="l">Checked</span><span>October 25, 2026</span></div>
       <div class="hashtags">
@@ -67,7 +67,7 @@ FAQ = [
  ("How many pieces should a golf capsule wardrobe have?", "About ten: three or four tops, two or three bottoms, one or two layers, a hat and socks. That gives you well over a dozen combinations."),
  ("What colours work best for a golf capsule wardrobe?", "Pick three neutrals, such as navy, cream and stone, or black, olive and grey, then one accent colour like forest green, cobalt or terracotta."),
  ("Can a capsule wardrobe work for a course with a dress code?", "Yes. Include one collared polo and one tailored trouser, such as a pleated or chino-cut pant, and the same capsule covers a muni round and a private course."),
- ("Which brands are in TGI's capsule wardrobes?", "Twenty-nine independent brands, including Criquet, Rookline, Woodgrain, Public Drip, Hidden Links Society, Odd Ritual, Sentinel, Late Nine, Metalwood, Read The Green, Sounder, Manors, Gramicci, Mount Tee, Howie Benson and Juniper & James."),
+ ("Which brands are in TGI's capsule wardrobes?", "Twenty-eight independent brands, including Criquet, Rookline, Woodgrain, Public Drip, Hidden Links Society, Odd Ritual, Sentinel, Late Nine, Metalwood, Read The Green, Sounder, Manors, Gramicci, Mount Tee, Howie Benson and Juniper & James."),
 ]
 
 

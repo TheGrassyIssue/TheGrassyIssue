@@ -8,7 +8,7 @@ os.makedirs(O, exist_ok=True)
 PICKS = {
  'clubhouse': [0, 1, 10, 7, 4, 15, 20, 23, 24, 25],
  'streetwear': [1, 10, 11, 2, 14, 3, 24, 16, 13, 26],  # st9 Parmore cap -> HLS olive cap (Lenny 25 Oct: used that hat a ton)
- 'tour97': [0, 24, 17, 7, 3, 11, 21, 19, 15, 10],
+ 'tour97': [0, 24, 17, 7, 3, 11, 1, 19, 15, 10],  # to7 Siegelman Logo Knit -> Late Nine Cable Knit Polo (Lenny 25 Oct: doesn't like the Logo Knit)
  'outdoor': [13, 15, 0, 7, 16, 24, 25, 11, 22, 5],
  'coastal': [0, 5, 22, 12, 20, 8, 14, 19, 3, 13],
 }
