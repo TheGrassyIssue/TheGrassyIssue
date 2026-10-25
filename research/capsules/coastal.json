@@ -1,0 +1,545 @@
+{
+  "capsule": "coastal",
+  "fetched": "2026-10-25",
+  "notes": "Live-checked 25 Oct 2026 via product .js endpoints (per-variant availability). Stores: howiebenson.com (USD), juniperjamesgolf.com (USD), mountteegolf.com.au (AUD), www.axxa.com.au (AUD), birdsofcondor.com (AUD, per /meta.json), lofgolf.com (AUD, per /meta.json). AUD converted at 0.7028. products.json?limit=250 was truncated by the fetch tool (~74k chars) on every store, so catalogues were enumerated via sitemap_products_1.xml (and search/suggest.json for Birds of Condor, whose sitemap also truncated) and then confirmed per product. Nothing blocked. Palette gaps: AXXA's current knits/jackets are mostly brown, navy or forest green, and its polos are older prints (Paper Par is XL only); Birds of Condor is print-heavy, so its picks are bottoms plus one bucket; no in-palette socks were found at any of the six brands (AXXA socks are pink, LOF socks are black). Excluded as sold out: LOF Lennox Polo Oat, BoC Cheers Soft Peak Cream, AXXA Anchor Ace Polo. Excluded as off-palette: AXXA Staple Knit (brown only), Brushed Surfer Knit (navy), Canvas Jacket (forest green), Liney Lip Out Polo (navy); BoC Player Pant (army olive), Tee Box Snapback (black brim); J&J Comfort Polo Peach (pale peach, not rust). Mount Tee Woodlands Sand is S only and Parklands Sky Blue is L only.",
+  "items": [
+    {
+      "brand": "Howie Benson",
+      "title": "Resort Camp Collar Polo",
+      "slot": "polo",
+      "url": "https://howiebenson.com/products/resort-camp-collar-polo-off-white",
+      "handle": "resort-camp-collar-polo-off-white",
+      "price_usd": 108.00,
+      "price_orig": "USD 108.00",
+      "colorway": "Off-White",
+      "sizes_available": ["S", "M", "L"],
+      "fabric_fit": "69% cotton / 31% polyester custom textured stretch knit; camp collar; relaxed fit through chest and shoulders; runs slightly large (size down for closer fit). XL and 2XL sold out.",
+      "copy_quote": "A resort shirt made to play 18.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07497_3.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07500_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC08718_1.jpg"
+      ]
+    },
+    {
+      "brand": "Howie Benson",
+      "title": "Ottoman Camp Collar Polo",
+      "slot": "polo",
+      "url": "https://howiebenson.com/products/ottoman-camp-collar-polo-sand",
+      "handle": "ottoman-camp-collar-polo-sand",
+      "price_usd": 98.00,
+      "price_orig": "USD 98.00",
+      "colorway": "Sand",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "75% cotton / 25% nylon lightweight ottoman knit with stretch; relaxed camp collar; relaxed fit; runs true to size.",
+      "copy_quote": "We loved how activewear performed. We just didn't want to dress like it.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07512-2.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07565_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07564_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07973-2.jpg"
+      ]
+    },
+    {
+      "brand": "Howie Benson",
+      "title": "Relaxed Fit Textured Crew",
+      "slot": "knit",
+      "url": "https://howiebenson.com/products/relaxed-fit-crew-natural",
+      "handle": "relaxed-fit-crew-natural",
+      "price_usd": 118.00,
+      "price_orig": "USD 118.00",
+      "colorway": "Natural",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "55% cotton / 40% polyester / 5% spandex double-layer fabric, textured outside and smooth inside; relaxed fit; ribbed cuffs and hem; runs slightly large.",
+      "copy_quote": "Not your standard crewneck.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07522-2.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07553.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07551.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC00556_11.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC00562_9.jpg"
+      ]
+    },
+    {
+      "brand": "Howie Benson",
+      "title": "Five-Panel Patch Hat",
+      "slot": "cap",
+      "url": "https://howiebenson.com/products/five-panel-patch-hat-white",
+      "handle": "five-panel-patch-hat-white",
+      "price_usd": 50.00,
+      "price_orig": "USD 50.00",
+      "colorway": "White",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Five-panel snapback in moisture-wicking technical fabric; structured front, curved brim; rubber oval patch. One size fits most. (Tan colorway also listed at five-panel-patch-hat-tan.)",
+      "copy_quote": "Built to handle humid days without feeling heavy.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06182.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06184.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06185.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06192_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC09065.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC09197_1.jpg"
+      ]
+    },
+    {
+      "brand": "Howie Benson",
+      "title": "Two-Tone Five-Panel",
+      "slot": "cap",
+      "url": "https://howiebenson.com/products/two-tone-five-panel-nude",
+      "handle": "two-tone-five-panel-nude",
+      "price_usd": 45.00,
+      "price_orig": "USD 45.00",
+      "colorway": "Nude",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Five-panel snapback in cotton twill, two-tone colorway; structured front panels, curved brim, minimal branding. One size fits most.",
+      "copy_quote": "Pair it with any polos and chinos for a casual round",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06256.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06258_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06260.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC06268_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07286.jpg",
+        "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07440.jpg"
+      ]
+    },
+    {
+      "brand": "Mount Tee Golf",
+      "title": "Parklands Waffle Polo - Eucalyptus Stripe",
+      "slot": "polo",
+      "url": "https://mountteegolf.com.au/products/parklands-waffle-polo-eucalyptus-stripe",
+      "handle": "parklands-waffle-polo-eucalyptus-stripe",
+      "price_usd": 77.31,
+      "price_orig": "AUD 110.00",
+      "colorway": "Eucalyptus Stripe (sage green with brown stripe)",
+      "sizes_available": ["S", "M", "L"],
+      "fabric_fit": "220 GSM mid-weight waffle, 55% polyester / 45% cotton; heavier-weight collar fabric in this rendition; relaxed oversized fit. XL sold out.",
+      "copy_quote": "a beautiful mix of breathability and weight",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TEAL_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TEAL_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1530.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC2073.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1759.jpg"
+      ]
+    },
+    {
+      "brand": "Mount Tee Golf",
+      "title": "Parklands Waffle Polo - Sky Blue",
+      "slot": "polo",
+      "url": "https://mountteegolf.com.au/products/parklands-waffle-polo-sky-blue",
+      "handle": "parklands-waffle-polo-sky-blue",
+      "price_usd": 63.25,
+      "price_orig": "AUD 90.00",
+      "colorway": "Sky Blue",
+      "sizes_available": ["L"],
+      "fabric_fit": "220 GSM mid-weight waffle, 55% polyester / 45% cotton; relaxed oversized fit. Only size L in stock.",
+      "copy_quote": "A polo suitable for warmer weather",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-FRONT-UNDONE.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-BACK.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-FRONT-DETAIL.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/BLUE-POLO-SLEEVE-DETAIL.jpg"
+      ]
+    },
+    {
+      "brand": "Mount Tee Golf",
+      "title": "Woodlands Knit Polo Short Sleeve - Sand",
+      "slot": "polo",
+      "url": "https://mountteegolf.com.au/products/woodlands-knit-polo",
+      "handle": "woodlands-knit-polo",
+      "price_usd": 70.28,
+      "price_orig": "AUD 100.00",
+      "colorway": "Sand",
+      "sizes_available": ["S"],
+      "fabric_fit": "100% breathable cotton knit polo; 3-button closure; ribbed sleeves and hem. Only size S in stock (M, L sold out).",
+      "copy_quote": "perfect for on and off the course",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC8702copy.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC9086copy.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC8631copy.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC9081copy.jpg"
+      ]
+    },
+    {
+      "brand": "Mount Tee Golf",
+      "title": "Peninsula Pleated Shorts - Tan",
+      "slot": "short",
+      "url": "https://mountteegolf.com.au/products/pleated-shorts",
+      "handle": "pleated-shorts",
+      "price_usd": 70.28,
+      "price_orig": "AUD 100.00",
+      "colorway": "Tan",
+      "sizes_available": ["30", "32", "34", "36"],
+      "fabric_fit": "97% cotton / 3% elastane mid-weight; double front pleats; partial stretch waistband; eyelets for tee storage at rear right hip; relaxed oversized fit; 22.5 cm inseam.",
+      "copy_quote": "Our very own take on tee storage at the rear right hip",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TAN_SHORT_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TAN_SHORT_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TAN_SHORT_3.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/TAN_SHORT_4.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1772.jpg"
+      ]
+    },
+    {
+      "brand": "Mount Tee Golf",
+      "title": "Links Nylon Quarter Zip - Sand",
+      "slot": "overshirt",
+      "url": "https://mountteegolf.com.au/products/nylon-quarter-zip",
+      "handle": "nylon-quarter-zip",
+      "price_usd": 91.36,
+      "price_orig": "AUD 130.00",
+      "colorway": "Sand",
+      "sizes_available": ["S", "L"],
+      "fabric_fit": "100% nylon ripstop shell with breathable mesh lining; quarter zip; side-seam zip pockets; elasticated waistband and cuffs. M and XL sold out.",
+      "copy_quote": "you will stay dry and protected from the elements",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/MountTeeGolf-067.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/MountTeeGolf-142.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/MountTeeGolf-130.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC9754.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC9792.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC9734.jpg"
+      ]
+    },
+    {
+      "brand": "Mount Tee Golf",
+      "title": "Partners Corduroy Cap - White / Green",
+      "slot": "cap",
+      "url": "https://mountteegolf.com.au/products/partners-corduroy-cap-white-green",
+      "handle": "partners-corduroy-cap-white-green",
+      "price_usd": 35.14,
+      "price_orig": "AUD 50.00",
+      "colorway": "White / Green",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Corduroy cap; Partners MTG logo embroidery; MTG mono script at rear left panel; antique silver clasp buckle; universal size.",
+      "copy_quote": "the perfect addition to your summer golf kit",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/IMG_3698.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/IMG_3263.jpg",
+        "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/IMG_2740.jpg"
+      ]
+    },
+    {
+      "brand": "AXXA",
+      "title": "Paper Par Polo",
+      "slot": "polo",
+      "url": "https://www.axxa.com.au/products/paper-par-polo",
+      "handle": "paper-par-polo",
+      "price_usd": 41.47,
+      "price_orig": "AUD 59.00",
+      "colorway": "Off-white with small geometric print (verified from product image)",
+      "sizes_available": ["XLarge"],
+      "fabric_fit": "Axxa GolfComfort polyester/spandex blend; moisture-wicking, quick-drying; regular fit. Only XL in stock.",
+      "copy_quote": "looking cool - at the course or driving range - or hanging out in between",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/paper-par-polo-491804.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/paper-par-polo-352048.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/paper-par-polo-446081.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/paper-par-polo-237714.jpg"
+      ]
+    },
+    {
+      "brand": "AXXA",
+      "title": "Golfer Knit",
+      "slot": "knit",
+      "url": "https://www.axxa.com.au/products/golfer-knit",
+      "handle": "golfer-knit",
+      "price_usd": 111.75,
+      "price_orig": "AUD 159.00",
+      "colorway": "Cream",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "730g heavyweight 100% cotton crew; jacquard-knitted golfer motif; embroidered Axxa logo; ribbed hem and cuffs; size up for oversized fit.",
+      "copy_quote": "730g heavyweight construction",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00295.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00080-2.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00136.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00141.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00124-2.jpg"
+      ]
+    },
+    {
+      "brand": "AXXA",
+      "title": "Golf Bag Cap",
+      "slot": "cap",
+      "url": "https://www.axxa.com.au/products/expresso-golf-bag-cap",
+      "handle": "expresso-golf-bag-cap",
+      "price_usd": 41.47,
+      "price_orig": "AUD 59.00",
+      "colorway": "Espresso (cream canvas crown, brown corduroy brim)",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Canvas and corduroy cap; embroidered golf bag on front, Axxa stitched on back; adjustable snap closure. (Forest Green variant also in stock.)",
+      "copy_quote": "Built for on and off the course",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Expresso_Golf_bag_Cap.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Expresso_Golf_Bag_Cap_side.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL08293.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL08295.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/Expresso_Golf_Bag_and_MCC_white_tee.jpg",
+        "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL08350.jpg"
+      ]
+    },
+    {
+      "brand": "Birds of Condor",
+      "title": "Good Weather Walkshort",
+      "slot": "short",
+      "url": "https://birdsofcondor.com/products/brown-good-weather-golf-walk-short",
+      "handle": "brown-good-weather-golf-walk-short",
+      "price_usd": 63.22,
+      "price_orig": "AUD 89.95",
+      "colorway": "Rust",
+      "sizes_available": ["S / 28", "M / 30", "L / 32"],
+      "fabric_fit": "Recycled nylon/elastane stretch walk short; belt loops; side elastic; zip fly with embossed button; felt-lined pockets; back velcro pocket with key loop. XL and XXL sold out.",
+      "copy_quote": "arguably our best above the knee yet",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-brown-good-weather-shorts-front7304_82bbc408-de0c-4b3b-b512-46e86a8e192e.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-brown-good-weather-shorts-back7306.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-brown-good-weather-shorts-detail7311.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-brown-good-weather-shorts-detail7317.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-brown-good-weather-shorts-detail7310.jpg"
+      ]
+    },
+    {
+      "brand": "Birds of Condor",
+      "title": "Ranger Walk Short",
+      "slot": "short",
+      "url": "https://birdsofcondor.com/products/green-ranger-golf-belt-loop-walk-shorts",
+      "handle": "green-ranger-golf-belt-loop-walk-shorts",
+      "price_usd": 63.22,
+      "price_orig": "AUD 89.95",
+      "colorway": "Khaki Green (dusty sage, verified from image)",
+      "sizes_available": ["30", "32", "34", "36", "38"],
+      "fabric_fit": "Cotton spandex classic walk short; fixed waist with belt loops; secret stash zip pocket; printed inner pocket.",
+      "copy_quote": "Built for cruising fairways and greens.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-WS2501-RANGER-SHORT-GREEN-FRONT-7177.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-WS2501-RANGER-SHORT-GREEN-BACK-7181.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-WS2501-RANGER-SHORT-GREEN-BACK-7179.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-WS2501-RANGER-SHORT-GREEN-DETAIL-IMG_6800.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-WS2501-RANGER-SHORT-GREEN-DETAIL-IMG_6799.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/BIRDS-OF-CONDOR-WS2501-RANGER-SHORT-GREEN-DETAIL-IMG_6808_d6b0d191-aeea-469a-b7d2-372ac27e0485.jpg"
+      ]
+    },
+    {
+      "brand": "Birds of Condor",
+      "title": "Norm Bucket Hat",
+      "slot": "cap",
+      "url": "https://birdsofcondor.com/products/norm-the-shark-greg-norman-golf-bucket-hat",
+      "handle": "norm-the-shark-greg-norman-golf-bucket-hat",
+      "price_usd": 25.27,
+      "price_orig": "AUD 35.95 (was AUD 59.95)",
+      "colorway": "Off White Natural with green brim",
+      "sizes_available": ["L/XL"],
+      "fabric_fit": "100% cotton twill bucket hat; Norm the Shark print; OSFM (single L/XL variant). On sale.",
+      "copy_quote": "Our classic new bucket fit is the ducks nuts.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-norm-bucket-bu23109-offwhite-osfa-front-5627.jpg",
+        "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-norm-bucket-bu23109-offwhite-osfa-closeup-6651.jpg"
+      ]
+    },
+    {
+      "brand": "Left of Field Golf",
+      "title": "Mornington Polo Beige/White Stripe",
+      "slot": "polo",
+      "url": "https://lofgolf.com/products/mornington-polo-beige-white-stripe",
+      "handle": "mornington-polo-beige-white-stripe",
+      "price_usd": 105.42,
+      "price_orig": "AUD 150.00",
+      "colorway": "Beige / White Stripe",
+      "sizes_available": ["Medium", "Large", "X-Large"],
+      "fabric_fit": "Ultra-premium polyester with 2-way stretch; extended sleeves, wider boxier cut; contrast collar and sleeves; traditional button placket; chainstitch embroidery. S and XXL sold out.",
+      "copy_quote": "Traditional spirit. Modern edge.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6592_c4d98d34-d6a5-4adf-a023-05ee35cebc34.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6603_TOP.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6595_TOP.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6599_TOP.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_May_WEB_030.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_May_WEB_029.jpg"
+      ]
+    },
+    {
+      "brand": "Left of Field Golf",
+      "title": "Dune Golf Short - Sage",
+      "slot": "short",
+      "url": "https://lofgolf.com/products/xdune-golf-short-sage",
+      "handle": "xdune-golf-short-sage",
+      "price_usd": 83.63,
+      "price_orig": "AUD 119.00",
+      "colorway": "Sage",
+      "sizes_available": ["Small", "XX-Large"],
+      "fabric_fit": "Lightweight stretch golf short; relaxed fit with slightly wider leg opening; length sits just above the knee. M, L, XL sold out.",
+      "copy_quote": "Where performance meets comfort.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7553_shorts.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7551_shorts.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7555_shorts.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_SEPT_WEB_029.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_SEPT_WEB_028.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_FINAL_SOCIAL_21.jpg"
+      ]
+    },
+    {
+      "brand": "Left of Field Golf",
+      "title": "Pleated Lite Pant Beige",
+      "slot": "trouser",
+      "url": "https://lofgolf.com/products/pleated-lite-pant-beige",
+      "handle": "pleated-lite-pant-beige",
+      "price_usd": 158.13,
+      "price_orig": "AUD 225.00",
+      "colorway": "Beige",
+      "sizes_available": ["Small", "Medium", "Large", "XX-Large"],
+      "fabric_fit": "90/10 nylon spandex, lightweight and stretchy; pleated front, wider leg opening, side welt pocket; relaxed modern silhouette. XL sold out.",
+      "copy_quote": "looking sharp enough to wear straight off the course",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6592_BOTTOM.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6594_BOTTOM.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6596_BOTTOM.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG6595_BOTTOM.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_May_WEB_018.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_May_WEB_017.jpg"
+      ]
+    },
+    {
+      "brand": "Left of Field Golf",
+      "title": "Elements Weather Jacket - Sand/Moss",
+      "slot": "overshirt",
+      "url": "https://lofgolf.com/products/xelements-weather-jacket-sand-moss",
+      "handle": "xelements-weather-jacket-sand-moss",
+      "price_usd": 210.14,
+      "price_orig": "AUD 299.00",
+      "colorway": "Sand / Moss",
+      "sizes_available": ["Small", "Medium", "Large", "X-Large", "XX-Large"],
+      "fabric_fit": "Windproof lightweight shell with water-repellent finish; insulated front panel; mesh-lined interior; hidden side pockets; YKK zips.",
+      "copy_quote": "Built for when the forecast turns.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7486_resized.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7489_resized.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7484_resized.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_SEPT_0_WEB_02_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_SEPT_0_WEB_02_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_FINAL_SOCIAL_13.jpg"
+      ]
+    },
+    {
+      "brand": "Left of Field Golf",
+      "title": "Left of Field Staff Cap - White",
+      "slot": "cap",
+      "url": "https://lofgolf.com/products/xleft-of-field-staff-cap-white",
+      "handle": "xleft-of-field-staff-cap-white",
+      "price_usd": 48.49,
+      "price_orig": "AUD 69.00",
+      "colorway": "White",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Lightweight microfibre polyester; low-rise peak; moisture-wicking internal band; rear Velcro strap with Left of Field Golf Flag insignia.",
+      "copy_quote": "Built for the course. Styled for everywhere.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7580_resized_185d60dc-a356-4971-917d-1b63bf72cb7e.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7581_resized_d8905fd7-9c6b-4776-9c5c-b48e3062ce26.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/260408_LOFG7582_resized_722eb730-eb57-4276-a0ae-02e1b270b6f2.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_SEPT_WEB_06.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_SEPT_WEB_04.jpg",
+        "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_FINAL_SOCIAL_41.jpg"
+      ]
+    },
+    {
+      "brand": "Juniper & James",
+      "title": "Comfort Polo - Sea Foam/Slate",
+      "slot": "polo",
+      "url": "https://juniperjamesgolf.com/products/comfort-polo-sea-storm-slate",
+      "handle": "comfort-polo-sea-storm-slate",
+      "price_usd": 99.00,
+      "price_orig": "USD 99.00",
+      "colorway": "Sea Foam / Slate stripe",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "48% Lenzing Micro Modal / 47% polyester / 5% spandex; mother-of-pearl buttons; structured spread dress collar with built-in stays; athletic (not slim) fit.",
+      "copy_quote": "From Tee Time to Down Time",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/skystorm.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/JamesElledge_r1_03A_7994-edit-transparent-2500x2500_jpg.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/JamesElledge_r1_03A_7982-hi-res-edit-transparent.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/JuniperJamesGolf_AN_Mar26-338.jpg"
+      ]
+    },
+    {
+      "brand": "Juniper & James",
+      "title": "Comfort Polo - Biscuit/Gravy",
+      "slot": "polo",
+      "url": "https://juniperjamesgolf.com/products/comfort-polo-biscuit-gravy",
+      "handle": "comfort-polo-biscuit-gravy",
+      "price_usd": 99.00,
+      "price_orig": "USD 99.00",
+      "colorway": "Biscuit / Gravy (beige with orange stripe, per store alt text)",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "48% Lenzing Micro Modal / 47% polyester / 5% spandex; mother-of-pearl buttons; structured spread dress collar with built-in stays; athletic (not slim) fit.",
+      "copy_quote": "its elevated style carries over from tee box to office",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/biscuit-square.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Untitleddesign_15.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/JamesElledge_r1_03A_7902-edit-transparent-2500x2500.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/JamesElledge_r1_03A_7883-edit-transparent-2500x2500.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Biscuit_Gravy_Lifestyle_Back_Bret.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/JuniperJamesGolf_AN_Mar26-33.jpg"
+      ]
+    },
+    {
+      "brand": "Juniper & James",
+      "title": "Play On Pants - Driftwood",
+      "slot": "trouser",
+      "url": "https://juniperjamesgolf.com/products/play-on-pants-driftwood",
+      "handle": "play-on-pants-driftwood",
+      "price_usd": 129.00,
+      "price_orig": "USD 129.00",
+      "colorway": "Driftwood (light khaki)",
+      "sizes_available": ["Waist 30-40 (even), inseam 30/31/32/34 - all 24 combinations in stock"],
+      "fabric_fit": "Performance 5-pocket pant; breathable technical fabric with soft handfeel; athletic cut, not slim; interior pockets; embroidered Double J Hook on back right pocket.",
+      "copy_quote": "color matches pretty much everything in your wardrobe",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/James_Elledge_r1_03D_3858.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/James_Elledge_r1_03D_3863.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/James_Elledge_r1_03D_3870.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/MJ_JJ_Fall2026_Preview-61.jpg",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Driftwood_Golf_Pants_Approach_Shot_Sunrise.png"
+      ]
+    },
+    {
+      "brand": "Juniper & James",
+      "title": "Golf Shorts - Driftwood",
+      "slot": "short",
+      "url": "https://juniperjamesgolf.com/products/driftwood",
+      "handle": "driftwood",
+      "price_usd": 99.00,
+      "price_orig": "USD 99.00",
+      "colorway": "Driftwood",
+      "sizes_available": ["Waist 30-40 (even), 7\" and 9\" inseam - all 12 combinations in stock"],
+      "fabric_fit": "4-way stretch nylon; ultra breathable and lightweight; UPF 50+; gripper waistband, glove loop, microfiber cloth in back pocket; waist can run slightly large.",
+      "copy_quote": "The best golf shorts are the ones you don't have to think about.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/short_driftwood--2.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/short_driftwood--1.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/short_driftwood--3.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/short_driftwood--4.png",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/short_driftwood--5.jpg",
+        "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Shorts_Lifestyle_1_Driftwood.png"
+      ]
+    }
+  ],
+  "lifestyle": [
+    {"brand": "Howie Benson", "url": "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC08718_1.jpg", "caption": "Resort Camp Collar Polo (Off-White) on-model gallery shot"},
+    {"brand": "Howie Benson", "url": "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC07973-2.jpg", "caption": "Ottoman Camp Collar Polo (Sand) on-model gallery shot"},
+    {"brand": "Howie Benson", "url": "https://cdn.shopify.com/s/files/1/0904/4217/0738/files/DSC00556_11.jpg", "caption": "Relaxed Fit Textured Crew (Natural) on-model gallery shot"},
+    {"brand": "Mount Tee Golf", "url": "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1530.jpg", "caption": "Parklands Waffle Polo Eucalyptus Stripe on-model gallery shot"},
+    {"brand": "Mount Tee Golf", "url": "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/DSC1772.jpg", "caption": "Peninsula Pleated Shorts (Tan) on-model gallery shot"},
+    {"brand": "Mount Tee Golf", "url": "https://cdn.shopify.com/s/files/1/0653/9460/6312/files/MountTeeGolf-130.jpg", "caption": "Links Nylon Quarter Zip (Sand) gallery shot"},
+    {"brand": "AXXA", "url": "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL00295.jpg", "caption": "Golfer Knit (Cream) worn by the ocean at dusk (viewed)"},
+    {"brand": "AXXA", "url": "https://cdn.shopify.com/s/files/1/0750/2561/3077/files/AKL08293.jpg", "caption": "Golf Bag Cap on-model gallery shot"},
+    {"brand": "Birds of Condor", "url": "https://cdn.shopify.com/s/files/1/1028/7699/files/birds-of-condor-natural-cheers-good-round-soft-peak-golf-cap-1-181.jpg", "caption": "Store alt text: a golfer wearing a cream cap with red embroidered Cheers Good Round logo and a green top (cap itself currently sold out)"},
+    {"brand": "Birds of Condor", "url": "https://cdn.shopify.com/s/files/1/1028/7699/products/birds-of-condor-army-khaki-four-way-stretch-player-golf-pants-lifestyle.jpg", "caption": "Store alt text: man in army pants, white polo and visor leaning on a golf club"},
+    {"brand": "Left of Field Golf", "url": "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_FINAL_SOCIAL_42.jpg", "caption": "Elements campaign landscape image (3000x2001) from Staff Cap gallery"},
+    {"brand": "Left of Field Golf", "url": "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_FINAL_SOCIAL_13.jpg", "caption": "Elements campaign image from Weather Jacket gallery"},
+    {"brand": "Left of Field Golf", "url": "https://cdn.shopify.com/s/files/1/0622/5038/5646/files/LOFG_May_WEB_030.jpg", "caption": "SOUTH collection editorial from Mornington Polo gallery"},
+    {"brand": "Juniper & James", "url": "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Driftwood_Golf_Pants_Approach_Shot_Sunrise.png", "caption": "Store alt text: golfer in Driftwood pants and green polo hitting an approach shot at sunrise"},
+    {"brand": "Juniper & James", "url": "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Biscuit_Gravy_Lifestyle_Back_Bret.png", "caption": "Store alt text: man in a striped shirt and cap holding a golf club on a golf course (Biscuit/Gravy polo)"},
+    {"brand": "Juniper & James", "url": "https://cdn.shopify.com/s/files/1/0923/4920/2747/files/Shorts_Lifestyle_1_Driftwood.png", "caption": "Store alt text: man playing golf on the back of a red truck (Driftwood shorts)"}
+  ]
+}

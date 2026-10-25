@@ -1,0 +1,521 @@
+{
+  "capsule": "streetwear",
+  "fetched": "2026-10-25",
+  "notes": "Live Shopify reads 25 Oct 2026 (sitemap_products_1.xml for discovery, /products/HANDLE.js or .oembed for price + per-variant availability). All six stores were reachable; none blocked. Parmore and Three Putt are GBP stores (Parmore currency per existing TGI research note; Three Putt currency confirmed GBP in .oembed), converted at 1.3375. Three Putt Golf Clothing store = threeputtgolfclothing.co.uk. Three Putt is print-on-demand: every image is a 'tapstitch' render/mockup, with no real photography. Their sweatshirt also comes in Black and Grey Marl but only the Cream render URL was confirmed, so Cream is listed. Parmore: several product images are AI-generated, judging by filenames ('GeneratedImage...', 'ChatGPTImage...'). I put the non-AI shots first on the cap and left out the AI ones where I could. The Parmore Graphic Tee (Black) has no product copy and only one 'Default Title' variant, so sizes are unknown. water when dry: I left out the ChatGPT_Image* files. The '-prop' packshots on the new FW26 utility pants and cap may be composited; I couldn't verify either way. Lots of WWD is sold out (Charcoal Hoodie, Camper Short Dusk, Logo Tee Black/Terracotta, 5-Panel Black, all Logo Quarter socks), and so is Public Drip's 'P' Script Nylon Snapback (Black). Weak spots in the sweep: (1) Rust/burnt-orange accent: nothing in stock in a true rust. The closest is HLS Society LS Tee in Vintage Brown; WWD Logo Tee Terracotta is sold out. (2) Socks: none in palette in stock at these six brands. (3) Shorts: only Public Drip Anywhere Tech Short (Olive), sizes 28 and 32. Some tees have thin size runs (Public Drip Elevated Tee Black S only; WWD Icon LS Tee Black XS only).",
+  "items": [
+    {
+      "brand": "Public Drip",
+      "title": "Triborough Waffle Knit Polo (Black)",
+      "slot": "polo",
+      "url": "https://publicdrip.com/products/triborough-waffle-knit-polo-black",
+      "handle": "triborough-waffle-knit-polo-black",
+      "price_usd": 110,
+      "price_orig": "$110.00",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "fabric_fit": "Long-sleeve waffle-knit polo, 80% nylon / 20% elastane, spread collar, 4-button placket, quick dry, 4-way stretch.",
+      "copy_quote": "perfect for dressing up or down",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_black_hero_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_black_detail_1_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09573.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09570.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09728.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_black_detail_2_webres.png"
+      ]
+    },
+    {
+      "brand": "Public Drip",
+      "title": "Triborough Waffle Knit Polo (Dark Slate)",
+      "slot": "polo",
+      "url": "https://publicdrip.com/products/triborough-waffle-knit-polo-dark-slate",
+      "handle": "triborough-waffle-knit-polo-dark-slate",
+      "price_usd": 110,
+      "price_orig": "$110.00",
+      "colorway": "Dark Slate (charcoal grey)",
+      "sizes_available": ["S", "M", "L", "XL", "2XL", "3XL"],
+      "fabric_fit": "Long-sleeve waffle-knit polo, 80% nylon / 20% elastane, spread collar, 4-button placket, quick dry, 4-way stretch.",
+      "copy_quote": "brings subtle dimension to your wardrobe",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_slate_hero_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_slate_detail_1_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09633.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09774.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09639.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW26_ECOMM_FW26_Triborough_polo_slate_detail_2_webres.png"
+      ]
+    },
+    {
+      "brand": "Public Drip",
+      "title": "Anywhere Pleated Pants (Olive)",
+      "slot": "trouser",
+      "url": "https://publicdrip.com/products/anywhere-pleated-pants",
+      "handle": "anywhere-pleated-pants",
+      "price_usd": 170,
+      "price_orig": "$170.00",
+      "colorway": "Olive",
+      "sizes_available": ["28", "30", "32", "34", "38"],
+      "fabric_fit": "Double-pleated nylon trouser, 88% nylon / 12% elastane, elastic waistband with internal drawcord, belt loops, side zip pockets, straight leg taper.",
+      "copy_quote": "Inspired by the classic menswear suit pant",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS25_ECOMM_double_pleated_pants_olive_5298_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/055_Anywhere_Pleated_Pants__Olive__img1.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS25_ECOMM_double_pleated_pants_olive_detail_5339_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS25_ECOMM_double_pleated_pants_olive_detail_5299_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS25_ECOMM_double_pleated_pants_olive_detail_5304_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS25_ECOMM_double_pleated_pants_olive_detail_5311_webres.png"
+      ]
+    },
+    {
+      "brand": "Public Drip",
+      "title": "Anywhere Tech Short (Olive)",
+      "slot": "short",
+      "url": "https://publicdrip.com/products/anywhere-tech-short-olive",
+      "handle": "anywhere-tech-short-olive",
+      "price_usd": 90,
+      "price_orig": "$90.00",
+      "colorway": "Olive",
+      "sizes_available": ["28", "32"],
+      "fabric_fit": "Nylon tech short, 88% nylon / 12% elastane, flat drawstring elastic waist with belt loops, front and back pockets, fits true to size, ~6 in inseam.",
+      "copy_quote": "Built to move wherever the day takes you.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS26_CLEEKS_ECOMM_anywhere_tech_short_olive_hero_front_lowres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS26_CLEEKS_ECOMM_anywhere_tech_short_olive_hero_back_lowres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_SS26_CLEEKS_ECOMM_anywhere_tech_short_olive_0162_detail_lowres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_Rough_-53_1.png"
+      ]
+    },
+    {
+      "brand": "Public Drip",
+      "title": "Elevated Tee (Black)",
+      "slot": "tee",
+      "url": "https://publicdrip.com/products/elevated-tee-black",
+      "handle": "elevated-tee-black",
+      "price_usd": 50,
+      "price_orig": "$50.00",
+      "colorway": "Black",
+      "sizes_available": ["S"],
+      "fabric_fit": "Relaxed, slightly oversized and boxy tee made from 100% recycled nylon fishnets; offset script embroidery. Only size S in stock.",
+      "copy_quote": "inspired by the vibrant street fashion of Japan",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW25_ECOMM_elevated_tee_black_hero_0195_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/060_Elevated_Tee__Black__img1.jpg",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW25_ECOMM_elevated_tee_black_detail_0197_webres.png",
+        "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_FW25_ECOMM_elevated_tee_black_detail_0199_webres.png"
+      ]
+    },
+    {
+      "brand": "Parmore Golf",
+      "title": "Cargo Pants – Paneled Utility Pant",
+      "slot": "trouser",
+      "url": "https://parmoregolf.com/products/casual-pants-black",
+      "handle": "casual-pants-black",
+      "price_usd": 86.94,
+      "price_orig": "£65.00",
+      "colorway": "Black",
+      "sizes_available": ["S", "XL"],
+      "fabric_fit": "Nylon street cargo, black with tonal panel blocking at the yoke, elasticated waist, cargo side pockets, baggy tapered leg, toggle-cinched ankle hem. Brand calls it a street cargo, not a golf trouser.",
+      "copy_quote": "A street cargo pant that happens to wear the Parmore name",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/21_fcd3cd59-8f1a-43e0-a036-695cb4a796a9.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/20_1d64026b-6e6d-4209-8966-b10bab52e5e8.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/No_Membership_Required-23.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/No_Membership_Required-25.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/55_13b84f02-36ed-4a56-b338-740aea4de184.png"
+      ]
+    },
+    {
+      "brand": "Parmore Golf",
+      "title": "Paneled Tee – Cotton Jersey Tee (Grey)",
+      "slot": "tee",
+      "url": "https://parmoregolf.com/products/grey-paneled-tee-rebrand",
+      "handle": "grey-paneled-tee-rebrand",
+      "price_usd": 60.19,
+      "price_orig": "£45.00",
+      "colorway": "Charcoal grey with white side panels",
+      "sizes_available": ["S", "M", "XL"],
+      "fabric_fit": "Pique cotton, regular fit, raglan sleeve seams, contrast white side panels, small silicone Parmore wordmark at chest; retro sports-jersey silhouette.",
+      "copy_quote": "a charcoal that's easier to keep clean off the course too",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/19_2bd01e81-3fec-478c-a624-6c1322c4bbf8.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/20_43978f86-b7f9-4e2f-b6db-61c75e136e01.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/No_Membership_Required-26.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/No_Membership_Required_1080_x_1920_px_Instagram_Post_45_-8.png",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/42.png"
+      ]
+    },
+    {
+      "brand": "Parmore Golf",
+      "title": "Parmore + Ripstop Cotton 5 panel",
+      "slot": "cap",
+      "url": "https://parmoregolf.com/products/parmore-embroidered-5-panel",
+      "handle": "parmore-embroidered-5-panel",
+      "price_usd": 46.81,
+      "price_orig": "£35.00",
+      "colorway": "Warm charcoal",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Ripstop cotton-blend 5-panel, shorter curved brim, stitched eyelets, raised 3D embroidered '+' front, flat embroidered side wordmark, velcro strap.",
+      "copy_quote": "a softer shade than black that goes with pretty much anything",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/CAP_FINAL4.jpg",
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/CAP_FINAL2.jpg"
+      ]
+    },
+    {
+      "brand": "Parmore Golf",
+      "title": "Graphic Tee - No membership required (Black)",
+      "slot": "tee",
+      "url": "https://parmoregolf.com/products/graphic-tee-no-membership-required",
+      "handle": "graphic-tee-no-membership-required",
+      "price_usd": 53.5,
+      "price_orig": "£40.00",
+      "colorway": "Black",
+      "sizes_available": ["Default Title (size not specified by store)"],
+      "fabric_fit": "Black graphic tee. The product page has no copy and a single unsized variant; check sizing with the brand before featuring.",
+      "copy_quote": "",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/Untitleddesign-25.png"
+      ]
+    },
+    {
+      "brand": "Hidden Links Society",
+      "title": "The Society Overshirt - Charcoal",
+      "slot": "layer",
+      "url": "https://hiddenlinkssociety.com/products/the-society-overshirt-charcoal-1",
+      "handle": "the-society-overshirt-charcoal-1",
+      "price_usd": 85,
+      "price_orig": "$85.00",
+      "colorway": "Charcoal",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "445GSM heavyweight fleece polo sweatshirt, 65% cotton / 35% polyester, relaxed fit, single-button closure. Made to order (allow two weeks).",
+      "copy_quote": "understated enough for the clubhouse, easy enough for everywhere else",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/51_816514ba-2156-4af4-92e8-5ff49f81491d.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/52.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/55_3adcf769-46d1-4f00-b394-858d32affbe4.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/54_47f56ee9-708d-4a2a-a176-2711029c599a.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/53_320a00c6-0cb4-4cd0-8bba-69d0ee55c416.png"
+      ]
+    },
+    {
+      "brand": "Hidden Links Society",
+      "title": "The Society Tee - Light Grey",
+      "slot": "tee",
+      "url": "https://hiddenlinkssociety.com/products/the-society-tee-light-grey",
+      "handle": "the-society-tee-light-grey",
+      "price_usd": 43,
+      "price_orig": "$43.00",
+      "colorway": "Light Grey",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "230gsm 100% cotton, garment-washed; relaxed, slightly oversized fit with drop shoulders; tonal HLS patch at left chest.",
+      "copy_quote": "No loud graphics. No tech-fabric shine.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/36_shadow.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/38_d4bf385e-4fe7-4361-a7cb-45547372d49a.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/37_111318c8-3859-432a-a9a9-3e51dacc28b3.png"
+      ]
+    },
+    {
+      "brand": "Hidden Links Society",
+      "title": "The Society Long Sleeve Tee - Vintage Brown",
+      "slot": "tee",
+      "url": "https://hiddenlinkssociety.com/products/the-society-long-sleeve-tee-vintage-brown",
+      "handle": "the-society-long-sleeve-tee-vintage-brown",
+      "price_usd": 62,
+      "price_orig": "$62.00",
+      "colorway": "Vintage Brown (closest available to the rust accent)",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "310gsm 100% cotton, garment-washed; relaxed, slightly oversized fit, drop shoulders; Running Man imprint front and back. Made to order (allow two weeks).",
+      "copy_quote": "Our first item with the our new logo.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/72_8bf36961-06e8-4d96-a24a-26d850286199.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/71.png"
+      ]
+    },
+    {
+      "brand": "Hidden Links Society",
+      "title": "Play Faster Hat - Black",
+      "slot": "cap",
+      "url": "https://hiddenlinkssociety.com/products/play-faster-hat-black-1",
+      "handle": "play-faster-hat-black-1",
+      "price_usd": 37,
+      "price_orig": "$37.00",
+      "colorway": "Black",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Mid-weight 100% cotton five-panel cap, flat peak, adjustable fastener with metal clasp, tonal under-peak lining, internal mesh structure support.",
+      "copy_quote": "A PSA you can wear.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/65.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/66.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/67.png"
+      ]
+    },
+    {
+      "brand": "Hidden Links Society",
+      "title": "Hidden Links Soc. Hat - Olive",
+      "slot": "cap",
+      "url": "https://hiddenlinkssociety.com/products/hidden-links-soc-hat-olive",
+      "handle": "hidden-links-soc-hat-olive",
+      "price_usd": 32,
+      "price_orig": "$32.00",
+      "colorway": "Olive",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Mid-profile, lightweight 100% cotton cap, single-panel front, plastic snapback, 3D embroidery on front.",
+      "copy_quote": "The statement hat you've been looking for.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/olive_front.png",
+        "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/olive_back.png"
+      ]
+    },
+    {
+      "brand": "water when dry",
+      "title": "Black Utility Pants",
+      "slot": "trouser",
+      "url": "https://waterwhendry.com/products/black-utility-pants",
+      "handle": "black-utility-pants",
+      "price_usd": 108,
+      "price_orig": "$108.00",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Lightweight utility pant with 2 premium zipper cargo pockets (FW26 drop). The store gives no fabric content.",
+      "copy_quote": "Your everyday carry.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/black-utility-pants-front-prop.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/black-utility-pants-back-prop.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2025-04-29_at_1.59.25_PM.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/PANTS.png"
+      ]
+    },
+    {
+      "brand": "water when dry",
+      "title": "Green Utility Pants",
+      "slot": "trouser",
+      "url": "https://waterwhendry.com/products/green-utility-pants",
+      "handle": "green-utility-pants",
+      "price_usd": 108,
+      "price_orig": "$108.00",
+      "colorway": "Green (olive-toned)",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Lightweight utility pant with 2 premium zipper cargo pockets (FW26 drop). The store gives no fabric content.",
+      "copy_quote": "Light enough to forget you have it on",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/green-utility-pants-front-prop.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/green-utility-pants-back-prop.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/Screenshot_2026-10-14_at_12.30.13_PM.png"
+      ]
+    },
+    {
+      "brand": "water when dry",
+      "title": "Canopy Zip Hoodie - Charcoal",
+      "slot": "hoodie",
+      "url": "https://waterwhendry.com/products/black-zip-up-hoodie",
+      "handle": "black-zip-up-hoodie",
+      "price_usd": 68,
+      "price_orig": "$68.00 (was $98.00)",
+      "colorway": "Charcoal",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "380 GSM 100% cotton zip hoodie, garment-dyed and stone-washed, metal hardware, monochrome embroidered logos. Allow 1–2 weeks processing.",
+      "copy_quote": "Garment-dyed and stone-washed for a rich, lived-in look.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACK-ZIP-UP.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009867.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010423.jpg"
+      ]
+    },
+    {
+      "brand": "water when dry",
+      "title": "Utility Cap - Black",
+      "slot": "cap",
+      "url": "https://waterwhendry.com/products/utility-cap-black",
+      "handle": "utility-cap-black",
+      "price_usd": 48,
+      "price_orig": "$48.00",
+      "colorway": "Black",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Five-panel unstructured cap, embroidered front and left side.",
+      "copy_quote": "running, golfing, or nothing in particular",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/utility-cap-black-front-prop.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/utility-cap-black-side-prop.png"
+      ]
+    },
+    {
+      "brand": "water when dry",
+      "title": "Icon LS Tee - Black",
+      "slot": "tee",
+      "url": "https://waterwhendry.com/products/icon-ls-tee-plum",
+      "handle": "icon-ls-tee-plum",
+      "price_usd": 34,
+      "price_orig": "$34.00 (was $68.00)",
+      "colorway": "Black",
+      "sizes_available": ["XS"],
+      "fabric_fit": "220 GSM heavyweight cotton long-sleeve, stone washed, boxy fit. Only XS in stock.",
+      "copy_quote": "Boxy fit",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKLS.png",
+        "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/BLACKBACK.png"
+      ]
+    },
+    {
+      "brand": "Three Putt Golf Clothing",
+      "title": "Contours Golf Streetwear T-Shirt",
+      "slot": "tee",
+      "url": "https://threeputtgolfclothing.co.uk/products/contours-golf-t-shirt",
+      "handle": "contours-golf-t-shirt",
+      "price_usd": 41.45,
+      "price_orig": "£30.99",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Heavyweight 305gsm 100% cotton tee, relaxed cut with a longer body; topographic green map printed across the back, round cow badge on chest.",
+      "copy_quote": "Some greens you never stop reading.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/contours-golf-t-shirt-black-front-tapstitch-r00227.png",
+        "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/contours-golf-t-shirt-black-back-tapstitch-r00227.png",
+        "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/Untitleddesign_30.png"
+      ]
+    },
+    {
+      "brand": "Three Putt Golf Clothing",
+      "title": "Three on the Green Golf Streetwear Long-Sleeve Tee",
+      "slot": "tee",
+      "url": "https://threeputtgolfclothing.co.uk/products/three-on-the-green-golf-long-sleeve-tee",
+      "handle": "three-on-the-green-golf-long-sleeve-tee",
+      "price_usd": 38.77,
+      "price_orig": "£28.99",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "305gsm 100% cotton long-sleeve, oversized drop-shoulder fit; no print, just the TPG flag mark on chest.",
+      "copy_quote": "The plain one, with sleeves.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/three-on-the-green-golf-long-sleeve-tee-black-front-tapstitch-r00281.png"
+      ]
+    },
+    {
+      "brand": "Three Putt Golf Clothing",
+      "title": "The Scenic Route Golf Streetwear T-Shirt",
+      "slot": "tee",
+      "url": "https://threeputtgolfclothing.co.uk/products/the-scenic-route-golf-t-shirt",
+      "handle": "the-scenic-route-golf-t-shirt",
+      "price_usd": 41.45,
+      "price_orig": "£30.99",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Relaxed-fit heavyweight 305gsm 100% cotton tee; hand-drawn course-vista back print, cow-and-golf-bag chest print.",
+      "copy_quote": "for the rounds where the walk is the best part",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/the-scenic-route-golf-t-shirt-black-front-tapstitch-r00227.png"
+      ]
+    },
+    {
+      "brand": "Three Putt Golf Clothing",
+      "title": "Contours Golf Streetwear Sweatshirt",
+      "slot": "hoodie",
+      "url": "https://threeputtgolfclothing.co.uk/products/contours-golf-sweatshirt",
+      "handle": "contours-golf-sweatshirt",
+      "price_usd": 64.19,
+      "price_orig": "£47.99",
+      "colorway": "Cream (also in stock in Black and Grey Marl)",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Heavyweight 400gsm 100% cotton crewneck, clean regular fit; topographic contour-map back print, round cow badge on chest.",
+      "copy_quote": "a crewneck that sidesteps the no-hood rules some clubs still have",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/contours-golf-sweatshirt-cream-front-tapstitch.png"
+      ]
+    },
+    {
+      "brand": "Malbon Golf",
+      "title": "PERFORMANCE TRAVERSE PANT",
+      "slot": "trouser",
+      "url": "https://malbon.com/products/performance-traverse-pant-dark-slate",
+      "handle": "performance-traverse-pant-dark-slate",
+      "price_usd": 168,
+      "price_orig": "$168.00",
+      "colorway": "Dark Slate",
+      "sizes_available": ["M", "L", "XL", "XXL"],
+      "fabric_fit": "76% nylon / 24% spandex, relaxed straight-leg cut, side pockets with waterproof zipper tape, drawcord cuffs with lock stoppers, printed Malbon logo on right leg.",
+      "copy_quote": "blend technical performance with relaxed sophistication",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9586-DKS-1.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9586-DKS-2.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9586-DKS-A.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9586-DKS-B.jpg"
+      ]
+    },
+    {
+      "brand": "Malbon Golf",
+      "title": "PERFORMANCE RAGLAN QUARTER ZIP",
+      "slot": "layer",
+      "url": "https://malbon.com/products/performance-raglan-quarter-zip-dark-slate",
+      "handle": "performance-raglan-quarter-zip-dark-slate",
+      "price_usd": 148,
+      "price_orig": "$148.00",
+      "colorway": "Dark Slate",
+      "sizes_available": ["XS", "S", "M"],
+      "fabric_fit": "63% nylon / 37% spandex quarter-zip mid layer, athletic silhouette, raglan sleeves, mesh side panels, branded zip pull.",
+      "copy_quote": "balancing technical functionality with a streamlined, athletic silhouette",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-1.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-2.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-3.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-A.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-B.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-C.jpg"
+      ]
+    },
+    {
+      "brand": "Malbon Golf",
+      "title": "RANGE COOPER SWEATSHIRT",
+      "slot": "hoodie",
+      "url": "https://malbon.com/products/range-sweatshirt-black",
+      "handle": "range-sweatshirt-black",
+      "price_usd": 148,
+      "price_orig": "$148.00",
+      "colorway": "Black",
+      "sizes_available": ["XS", "S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Premium cotton crewneck sweatshirt (Icons line), ribbed collar/waistband/cuffs, embroidered Buckets logo left chest, Malbon script on right cuff, made in the USA.",
+      "copy_quote": "your go-to for laid-back luxury",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9417-BLK-1_REVISED.png",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9417-BLK-2_REVISED.png",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9417-BLK-A.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9417-BLK-D.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9417-BLK-C.jpg"
+      ]
+    },
+    {
+      "brand": "Malbon Golf",
+      "title": "PERFORMANCE TECH BUCKET HAT",
+      "slot": "cap",
+      "url": "https://malbon.com/products/performance-tech-bucket-hat-black",
+      "handle": "performance-tech-bucket-hat-black",
+      "price_usd": 68,
+      "price_orig": "$68.00",
+      "colorway": "Black",
+      "sizes_available": ["S/M", "L/XL"],
+      "fabric_fit": "97% polyester / 3% elastane bucket, unstructured crown with perforated panels, full brim, adjustable bungee at back.",
+      "copy_quote": "balancing lightweight coverage with functional performance elements",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9588-BLK.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9588-BLK1.jpg",
+        "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9588-BLK2.jpg"
+      ]
+    }
+  ],
+  "lifestyle": [
+    {"brand": "Public Drip", "url": "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09573.jpg", "caption": "On-model shot of the Triborough Waffle Knit Polo (Black), from its product page"},
+    {"brand": "Public Drip", "url": "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/DSC09633.jpg", "caption": "On-model shot of the Triborough Waffle Knit Polo (Dark Slate), from its product page"},
+    {"brand": "Public Drip", "url": "https://cdn.shopify.com/s/files/1/0475/7218/9333/files/PublicDrip_Rough_-53_1.png", "caption": "Lifestyle image from the Anywhere Tech Short (Olive) product page"},
+    {"brand": "Parmore Golf", "url": "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/No_Membership_Required-23.png", "caption": "Campaign image from the Cargo Pants (Black) product page ('No Membership Required' series)"},
+    {"brand": "Parmore Golf", "url": "https://cdn.shopify.com/s/files/1/0779/1214/6243/files/No_Membership_Required-26.png", "caption": "Campaign image from the Paneled Tee (Grey) product page ('No Membership Required' series)"},
+    {"brand": "Hidden Links Society", "url": "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/55_3adcf769-46d1-4f00-b394-858d32affbe4.png", "caption": "Additional image from The Society Overshirt (Charcoal) product page (content not visually verified)"},
+    {"brand": "Hidden Links Society", "url": "https://cdn.shopify.com/s/files/1/0534/2615/9786/files/38_d4bf385e-4fe7-4361-a7cb-45547372d49a.png", "caption": "Additional image from The Society Tee (Light Grey) product page (content not visually verified)"},
+    {"brand": "water when dry", "url": "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X010423.jpg", "caption": "Photo from the Canopy Zip Hoodie (Charcoal) product page"},
+    {"brand": "water when dry", "url": "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/3X009867.png", "caption": "Photo from the Canopy Zip Hoodie (Charcoal) product page"},
+    {"brand": "water when dry", "url": "https://cdn.shopify.com/s/files/1/0734/4950/5079/files/FullSizeRender_f9e284d8-2620-4947-a3d1-27ea81447dc9.jpg", "caption": "Phone photo from the (sold-out) 5-Panel Strapback Black page"},
+    {"brand": "Three Putt Golf Clothing", "url": "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/Untitleddesign_30.png", "caption": "Contours T-shirt in Black on a hanger (store alt text)"},
+    {"brand": "Three Putt Golf Clothing", "url": "https://cdn.shopify.com/s/files/1/0945/0858/1251/files/Untitleddesign_28.png", "caption": "Back of the Contours T-shirt in Brown with topographic green print (store alt text)"},
+    {"brand": "Malbon Golf", "url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9586-DKS-A.jpg", "caption": "On-model image, Performance Traverse Pant (Dark Slate)"},
+    {"brand": "Malbon Golf", "url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9734-DKS-A.jpg", "caption": "On-model image, Performance Raglan Quarter Zip (Dark Slate)"},
+    {"brand": "Malbon Golf", "url": "https://cdn.shopify.com/s/files/1/1770/9541/files/M-9417-BLK-A.jpg", "caption": "On-model image, Range Cooper Sweatshirt (Black)"}
+  ]
+}

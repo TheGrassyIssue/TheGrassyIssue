@@ -1,0 +1,222 @@
+{
+  "_meta": {
+    "captured": "2026-10-25",
+    "method": "Live web_fetch of product pages (Sentinel: Squarespace og product:availability/price meta + page copy; Odd Ritual: Shopify /products/HANDLE.js variant availability + product HTML). Sentinel gallery image assetUrls taken from local Squarespace shop JSON cache (research/sold-out/sentinel-shop.json, 21 Oct) and cross-checked against today's live gallery filenames.",
+    "fx": "ZAR->USD at 0.0565"
+  },
+  "sentinel": {
+    "items": [
+      {
+        "brand": "Sentinel Golf",
+        "title": "Basecamp Walker - Charcoal ULTRA",
+        "url": "https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-rsxwj-ykzhj-z89wk-5smxj",
+        "price_usd": 890.00,
+        "price_orig": "$890.00 USD",
+        "colorway": "Charcoal (Challenge Sailcloth ULTRA)",
+        "in_stock": "yes (product:availability=instock; made to order, ships in 8-10 weeks, all sales final)",
+        "sizes_available": "One size",
+        "fabric_fit": "MacKenzie Walker carry bag in Challenge Sailcloth ULTRA fabric; 2 lbs; single strap, single divider; 8in opening with 1 pocket; stretch Dyneema interior pocket; YKK reverse coil waterproof zipper; 550 paracord zipper pulls; full-grain leather trim; stainless steel hardware; made in USA. No customizations on Basecamp series bags.",
+        "copy_quote": "carry your clubs, golf balls, and necessities in an elegant and uncomplicated manner.",
+        "images": [
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/2402656f-0248-4d0d-8f7c-5cce2af81057/cc1+copy.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/247d56e0-e079-4712-b4dc-685ea110b87b/BC+2025+Misc+Images+Bulk_0078_IMG_0541.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/b63b4885-5e84-4048-88e3-95d0110c5bac/BC+2025+Misc+Images+Bulk_0073_IMG_0525.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/730763be-c4b2-48b9-8c28-eb76cf730403/BC+2025+Misc+Images+Bulk_0074_IMG_0523.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/7783d9bf-b96d-41d1-88f6-494c5649f752/BC+2025+Misc+Images+Bulk_0075_IMG_0540.jpg?format=1500w"
+        ]
+      },
+      {
+        "brand": "Sentinel Golf",
+        "title": "ULTRACOMP WALKER 2.0 - COYOTE",
+        "url": "https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-f592w",
+        "price_usd": 890.00,
+        "price_orig": "$890.00 USD",
+        "colorway": "Coyote (sand/stone)",
+        "in_stock": "yes (product:availability=instock; made to order, ships in 6-8 weeks, all sales final; monogram follow-up after order)",
+        "sizes_available": "One size (single pocket only)",
+        "fabric_fit": "MacKenzie Walker in ULTRAcomp, an American-made laminate with a Cordura face fabric; copy says it far exceeds military-standard air textured nylon in tear and abrasion resistance and is hydrophobic. 3 lbs; single strap, divider and pocket; 8in opening; leather interior pocket; YKK reverse coil waterproof zipper; 550 paracord pulls; full-grain leather trim; stainless hardware; made in USA.",
+        "copy_quote": "a case where the sum is greater than the parts.",
+        "images": [
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1676750453240-LHB9I29LYNZ2SBHBNN4D/Coyote2.0.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1676750483315-8J4HG6C4OMCQ9TAF9HME/c1.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1676750481127-28ZL2XX7J3WIFBPX6TVL/c3.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1676750481132-B0E2YY4H7Z5U8PDBFD0J/c4.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1676750483314-HG35X3GL66XZRP60J2S4/c2.jpg?format=1500w"
+        ]
+      },
+      {
+        "brand": "Sentinel Golf",
+        "title": "Basecamp Duffle - Gray Dyneema",
+        "url": "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-kjjr6-6gc6d-ar5fg-ykh5a-dbfwy-mkdrf-ze83c-r74ja-styrm-7dwcx-9s95h",
+        "price_usd": 340.00,
+        "price_orig": "$340.00 USD",
+        "colorway": "Gray Dyneema",
+        "in_stock": "yes (product:availability=instock)",
+        "sizes_available": "One size: 53 x 26 x 26 cm (21 x 10 x 10 in), 28L",
+        "fabric_fit": "Barrel duffle made in USA by 1733 (Chicago) in bio-based Dyneema composite; triple-layer construction, cotton batting mid-layer, 400D packcloth lining; 2-way YKK Aquaguard zipper; two exterior zip pockets, two interior pockets; removable adjustable shoulder strap; tubular nylon grab handles; reinforced base; hand-tied 275 paracord pulls. Note: page copy's shell line still says 'Saltex Nylon shell' (carry-over text); product title and fabric section say Dyneema.",
+        "copy_quote": "a material focused take on the classic barrel duffle.",
+        "images": [
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/80554399-0127-4ed2-8147-c24809f19df8/gd1.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/bd851d06-f277-48c1-88ef-9e50d2e5b3d7/BC+2025+Misc+Images+Bulk_0013_IMG_1442.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/ca9c5507-30b7-48b9-a157-8ecc203466ac/BC+2025+Misc+Images+Bulk_0033_IMG_1430.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/752919fa-3100-45cf-b7c0-efd337e6c12e/BC+2025+Misc+Images+Bulk_0037_IMG_1433.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/7eb49b16-1109-4953-adc0-ce6122fc708a/BC+2025+Misc+Images+Bulk+4_0014_Sentinel-Expidition01-00141.jpg?format=1500w"
+        ]
+      },
+      {
+        "brand": "Sentinel Golf",
+        "title": "Shinto Gauze Towel - Charcoal",
+        "url": "https://www.sentinelgolf.us/shop/p/mwqw2hk7jsxug69d9fa1t1gk7kdu6e",
+        "price_usd": 46.00,
+        "price_orig": "$46.00 USD",
+        "colorway": "Charcoal",
+        "in_stock": "yes (product:availability=instock)",
+        "sizes_available": "One size: 45.28 x 11.81 in",
+        "fabric_fit": "2.5-ply gauze towel by Shinto (traditional 3-ply gauze with the middle layer swapped for a half-weight weave); 100% organic cotton; irregular weave; slimmer than a standard bag towel so it slides under the bag handle; made in Japan; machine wash cold, hang dry.",
+        "copy_quote": "feels both lightweight and substantial.",
+        "images": [
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1713456564136-WY1DGHHWKF81ZVMU42RD/c1.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1644525652649-OF08DTRP2YBNV969Y8R2/T1+2.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1713456569593-CNHCYJE4D2TAWBVRJ6AU/c4.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1713456570420-OU4YIU4RF6QDE20Q7JZ4/c2.jpg?format=1500w",
+          "https://images.squarespace-cdn.com/content/v1/5f7b7302cb6064569d654760/1713456562849-2DE6WZI5CRB3T7LEDXLK/c3.jpg?format=1500w"
+        ]
+      }
+    ],
+    "alternates_in_stock": [
+      "Basecamp Walker - Olive ULTRA $890 https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-rsxwj-ykzhj-z89wk-5smxj-gj7b8 (not sold out on shop grid today; page not individually fetched)",
+      "Basecamp Walker - Black Dyneema $890 https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-rsxwj (not sold out on shop grid today; page not individually fetched)",
+      "ULTRACOMP WALKER 2.0 - BLACK / OLIVE $890 (shop grid shows in stock)"
+    ]
+  },
+  "oddritual": {
+    "currency": "ZAR (store displays R ... ZAR; USD converted at 0.0565)",
+    "ships_international": "No, not by default. Shipping policy (effective 30 May 2025): 'We currently ship across South Africa. We do not yet offer international shipping—but it's in the pipeline.' Custom international orders can be arranged by emailing hello@oddritualgolf.com. Source: https://oddritualgolf.com/pages/shipping-policy",
+    "items": [
+      {
+        "brand": "Odd Ritual",
+        "title": "Pleated Daily Trouser [Black]",
+        "url": "https://oddritualgolf.com/products/pleated-daily-trouser-black",
+        "price_usd": 55.94,
+        "price_orig": "R 990.00 ZAR (on sale; compare-at R 1,300.00)",
+        "colorway": "Black",
+        "in_stock": "yes",
+        "sizes_available": "L [34-36], XL [37-39] (S, M, XXL sold out)",
+        "fabric_fit": "Relaxed trouser in soft 235gsm cotton twill; loose fit with a subtle carrot silhouette; front pleats; elasticated back waistband; RR monogram embroidery and Odd Ritual script. Locally made in Cape Town.",
+        "copy_quote": "Designed for effortless everyday wear",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/COL03_TROU_BLACK.jpg?v=1783855773",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC05802.jpg?v=1783855922",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC05939.jpg?v=1783855825",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC05877.jpg?v=1783855878",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC05872.jpg?v=1783855838"
+        ]
+      },
+      {
+        "brand": "Odd Ritual",
+        "title": "Odd Ritual Classic Polo [Black]",
+        "url": "https://oddritualgolf.com/products/odd-ritual-classic-polo-black",
+        "price_usd": 31.08,
+        "price_orig": "R 550.00 ZAR (on sale; compare-at R 850.00)",
+        "colorway": "Black",
+        "in_stock": "yes",
+        "sizes_available": "M, L, XL (S and 2XL sold out)",
+        "fabric_fit": "Performance golf polo in lightweight, high-performance polyester; structured fit, modern collar; Odd Ritual wordmark on chest, brand crest on back right lat.",
+        "copy_quote": "Refined, minimal, yet subtly unique.",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/Packshot_96aefddc-66e4-42d3-bfab-b262463374e2.jpg?v=1748491661",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/02_c6254fa7-a1e9-4a5b-8ec7-34c9a443d37e.jpg?v=1748491713",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/03_cd04baea-7930-452c-8661-27eef762c4c6.jpg?v=1748491713",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/04_eb092aee-4712-4e80-beeb-82dfb9d3e081.jpg?v=1748491713",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/05_85b8a590-db72-472d-bb1a-d1fd045b5b36.jpg?v=1748491713"
+        ]
+      },
+      {
+        "brand": "Odd Ritual",
+        "title": "Minimal Wordmark T-Shirt [Duck Grey]",
+        "url": "https://oddritualgolf.com/products/minimal-wordmark-t-shirt-duck-grey",
+        "price_usd": 39.55,
+        "price_orig": "R 700.00 ZAR displayed on product page and collection (struck-through R 900.00). Note: Shopify .js reports base price R 900; the R 700 appears to be a storefront-applied discount, so confirm at checkout.",
+        "colorway": "Duck Grey (slate/grey)",
+        "in_stock": "yes",
+        "sizes_available": "S, M, L, XL, 2XL (all per .js; product HTML also renders a generic 'out of stock' string, but .js variant availability is true for all sizes)",
+        "fabric_fit": "Boxy, drop-shoulder tee with bias-binding neckline; 180gsm 100% cotton with soft combed finish (not heavyweight); tone-on-tone wordmark embroidery on front right ribcage. Locally made in Cape Town.",
+        "copy_quote": "an understated daily essential",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/COL03_MIN_DUCK.jpg?v=1783859273",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06650.jpg?v=1783859307",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06713.jpg?v=1783859322",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06659.jpg?v=1783859340",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06669.jpg?v=1783859342"
+        ]
+      },
+      {
+        "brand": "Odd Ritual",
+        "title": "Script Dad Cap [Brown]",
+        "url": "https://oddritualgolf.com/products/script-dad-cap",
+        "price_usd": 27.69,
+        "price_orig": "R 490.00 ZAR",
+        "colorway": "Brown (warm brown accent)",
+        "in_stock": "yes",
+        "sizes_available": "One size",
+        "fabric_fit": "6-panel unstructured cap, mid/deep profile, sturdy curved peak; Odd Ritual script wordmark in light brown stitch on front; arched STAY TRUE embroidery over rear opening.",
+        "copy_quote": "part of our minimal staples",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/COL03_CAP_DAD_CH.jpg?v=1784059486",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06650_5cd95ea1-6584-4ff6-9ab4-7cfc139ff88a.jpg?v=1784059570",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06675_18ef5924-0251-4c48-a5be-cfd7fe5f4520.jpg?v=1784059509",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06688.jpg?v=1784059524",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06677.jpg?v=1784059513"
+        ]
+      },
+      {
+        "brand": "Odd Ritual",
+        "title": "Odd Ritual Script Cap [Olive Green]",
+        "url": "https://oddritualgolf.com/products/odd-ritual-script-cap-olive",
+        "price_usd": 42.38,
+        "price_orig": "R 750.00 ZAR",
+        "colorway": "Olive Green",
+        "in_stock": "yes",
+        "sizes_available": "One size",
+        "fabric_fit": "6-panel unstructured, low-profile cap with soft peak in olive green; Odd Ritual script wordmark in white stitch embroidery on front. (Optional fifth pick / swap for the brown cap.)",
+        "copy_quote": "This cap is part of our minimal staples",
+        "images": [
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/COL03_CAP_SCRPT_Olive.jpg?v=1784058593",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06417_1856f911-1f95-40cf-b9d9-f260ff3a7221.jpg?v=1784058729",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06457.jpg?v=1784058786",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06492.jpg?v=1784058765",
+          "https://cdn.shopify.com/s/files/1/0584/7551/1907/files/DSC06489_3ce96b28-63f4-40aa-82dc-69742f42428c.jpg?v=1784058634"
+        ]
+      }
+    ],
+    "facts": [
+      {"fact": "Based in Cape Town, South Africa (site footer: 'Cape Town, South Africa'; homepage: 'Designed and made locally').", "source": "https://oddritualgolf.com/"},
+      {"fact": "Founding story: started because the founders couldn't find a local golf brand that spoke to them; they loved the game but found its culture stiff, narrow and exclusionary.", "source": "https://oddritualgolf.com/pages/about"},
+      {"fact": "The name refers to the small personal habits people fall into when focus matters: the club waggle before a shot, stepping back to check alignment, the breath before committing. The brand extends it beyond golf (a tennis player's ball bounces, a footballer's run-up, a morning coffee routine).", "source": "https://oddritualgolf.com/pages/about"},
+      {"fact": "Tagline: 'a modern expression of heritage'; brand mark/initials ORGC (Odd Ritual Golf Club).", "source": "https://oddritualgolf.com/pages/about"},
+      {"fact": "Three brand pillars on the shop page: Community (number one rule is 'be lekker'), Creativity, and Craft.", "source": "https://oddritualgolf.com/collections/all"},
+      {"fact": "Products are locally made in Cape Town (stated on product pages, e.g. Pleated Daily Trouser and Minimal Wordmark Tee).", "source": "https://oddritualgolf.com/products/pleated-daily-trouser-black"},
+      {"fact": "Range currently branded 'Collection 01 & 02' on the shop: polos (Classic, Motus, 1990s Heritage), tees, Pleated Daily Trouser, Caddie Jacket, Traditions crewneck, many caps (Script, Script Dad, Heritage Rope, Versa Nylon Crush, Horizon Utility), crew socks. Prices run roughly R 100 to R 1,900 on sale today.", "source": "https://oddritualgolf.com/collections/all"},
+      {"fact": "Signature/featured pieces on the homepage: The Caddie Jacket [Navy], ORGC Traditions Crewneck [Burgundy], 1990s Heritage Polo, Pleated Daily Trouser.", "source": "https://oddritualgolf.com/"},
+      {"fact": "Collab: PGG X ODD tees and corduroy caps.", "source": "https://oddritualgolf.com/collections/all"},
+      {"fact": "Giving back / community partners listed on homepage: Fairways to Africa, StartWell Foundation, 242 (coffee), Running Late Club.", "source": "https://oddritualgolf.com/"},
+      {"fact": "Ships within South Africa only by default (via Bob Go); international orders by custom arrangement over email.", "source": "https://oddritualgolf.com/pages/shipping-policy"},
+      {"fact": "Founder names: NOT published on the About page, homepage, shop page or shipping policy checked today. Do not name founders.", "source": "https://oddritualgolf.com/pages/about"}
+    ],
+    "quotes": [
+      {"quote": "We started Odd Ritual because we couldn't find a golf brand locally that spoke to us.", "source": "https://oddritualgolf.com/pages/about"},
+      {"quote": "Everyone has their own weird little process. Their own weird routine they go through, their odd ritual.", "source": "https://oddritualgolf.com/pages/about"},
+      {"quote": "A brand for people who love the game but want to feel like themselves on the course. Less rigid, more real.", "source": "https://oddritualgolf.com/pages/about"},
+      {"quote": "We're not trying to tear anything down — we're just here to open the door a little wider.", "source": "https://oddritualgolf.com/pages/about"},
+      {"quote": "at Odd Ritual our number one Rule is 'be lekker'.", "source": "https://oddritualgolf.com/collections/all"}
+    ],
+    "lifestyle": [
+      {"url": "https://oddritualgolf.com/cdn/shop/files/DSC07658.jpg", "caption": "On-course, low angle: golfer in a black ODD RITUAL back-print tee, white Odd Ritual script cap and light trousers mid-backswing against blue sky and trees. Portrait 3000x4500."},
+      {"url": "https://oddritualgolf.com/cdn/shop/files/DSC04379b.jpg", "caption": "On-course at golden hour: golfer in all-black tee and shorts with white socks and white cap at the top of the backswing on a tee box, trees behind. Portrait 1600x2000."},
+      {"url": "https://oddritualgolf.com/cdn/shop/files/DSC00234b.jpg", "caption": "On the green: golfer crouched reading a putt, black outfit, white-and-blue cap, leaning on a putter, hedge and trees behind. Landscape 2000x1600."},
+      {"url": "https://oddritualgolf.com/cdn/shop/t/4/assets/hero_02.jpg", "caption": "Moody fog-covered course with palm trees: lone golfer mid-swing with a stand bag beside him. Landscape 2880x1680."},
+      {"url": "https://oddritualgolf.com/cdn/shop/files/01_5ded9b6b-e019-43ef-8ed2-45f93ff9ebdb.jpg", "caption": "Studio editorial (site og:image): one model in a black ODD RITUAL tee and tan trousers standing by a golf bag, another seated reading an 'odd ritual' newspaper. Landscape 2880x1680."},
+      {"url": "https://oddritualgolf.com/cdn/shop/t/4/assets/03_1.jpg", "caption": "Street scene: two people walking past a roller-shutter garage door on a city pavement, off-course streetwear context. Landscape 2880x1680."}
+    ]
+  }
+}

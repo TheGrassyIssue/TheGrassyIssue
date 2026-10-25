@@ -1,0 +1,556 @@
+{
+  "capsule": "outdoor",
+  "fetched": "2026-10-25",
+  "notes": "The Outdoor Technical: charcoal/black, sage/olive, sand/stone, with cobalt/royal blue as the one accent. All prices are USD as shown by each store's US storefront. Sounder via /en-us/ (oembed and .js both report USD), Galvin Green US store (oembed currency_code USD), Macade (USD), SLOAT (USD), Gramicci US (USD), Manors US location ($ USD shown on product pages). No currency conversion was needed. Availability was checked per variant from Shopify products.json, .js or .oembed on 2026-10-25. MANORS caveat: manorsgolf.com is headless (Sanity front end), and /products.json, .oembed and .js all return empty to the fetch tool. Manors prices, colours and size lists come from the rendered product HTML, which lists sizes but does not show per-size stock, so sizes_available for Manors means sizes offered, not confirmed in stock. Manors images: the og:image Shopify packshot plus Sanity gallery images, with query params stripped. The gallery may mix colourways. SOUNDER caveats: several pieces are on sale with thin size runs (fleece S only, cobalt polo S/M only, socks 40-43 only). The Long Marl Sock is 80% cotton, not wool, because no Sounder wool sock turned up. GRAMICCI: Gramicci Pant images are limited to the live Dried Sage packshot (oembed thumbnail) because the full product JSON was truncated before the image list. Slot note: the Gramicci Pant (climbing pant) is filed under slot 'trouser'. Its fabric_fit marks it as the climbing/hiking pant. No wool socks were found at any of the six brands. Galvin Green lifestyle imagery was not easily found in product feeds. Its entries carry on-figure/detail shots only.",
+  "items": [
+    {
+      "brand": "Sounder",
+      "title": "Clean Lie Polo - Smokey Olive",
+      "slot": "polo",
+      "url": "https://soundergolf.com/en-us/products/clean-lie-polo-smokey-olive",
+      "handle": "clean-lie-polo-smokey-olive",
+      "price_usd": 103,
+      "price_orig": "$103.00 USD (en-us store)",
+      "colorway": "Smokey Olive",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "100% organic jersey cotton, made in Portugal. Engineered placket, ribbed cuff and hem for a structured shape that can be worn untucked. Branding limited to a Sounder star tab on the sleeve. New style for 2026.",
+      "copy_quote": "Because you never saw Arnie or Jack with a massive logo on their chest.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/CLEANLIEOLIVE.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/CleanLieOlive2.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SaltandGorsexDW_Sounder_Trevose_0572.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SaltandGorsexDW_Sounder_Trevose_0549.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/StudioSession-158.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/StudioSession-160.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Play Well Polo - Cobalt",
+      "slot": "polo",
+      "url": "https://soundergolf.com/en-us/products/play-well-polo-in-cobalt",
+      "handle": "play-well-polo-in-cobalt",
+      "price_usd": 55,
+      "price_orig": "$55.00 USD (en-us store)",
+      "colorway": "Cobalt (accent)",
+      "sizes_available": ["S", "M"],
+      "fabric_fit": "100% organic cotton pique, made in Portugal. Engineered rib collar and cuff. Jersey hem keeps the waist slim. Sounder Star embroidery on chest. Only S and M left.",
+      "copy_quote": "will keep you looking crisp on and off the course",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/2_9836276a-90bc-49ad-8273-308102c97381.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/12_05563c2e-d1b4-465c-bd8c-33c4a00e3409.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/StudioSession-314.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/StudioSession-300.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/StudioSession-304.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/StudioSession-313.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Hooded Himalayas Fleece Jacket - Charcoal",
+      "slot": "fleece",
+      "url": "https://soundergolf.com/en-us/products/hooded-himalayas-fleece-jacket-in-charcoal",
+      "handle": "hooded-himalayas-fleece-jacket-in-charcoal",
+      "price_usd": 103,
+      "price_orig": "$103.00 USD (en-us store; compare-at $246.00)",
+      "colorway": "Charcoal",
+      "sizes_available": ["S"],
+      "fabric_fit": "Lightweight Italian polar fleece with a cotton jersey lining. Raglan sleeves, two-way zip, stand collar, deep front and rear pockets, ball marker patch. Hooded. On sale with only S left.",
+      "copy_quote": "to keep you out there even when the wind starts whipping in from the West Sands",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C7_10082JK_HimalayasHoodedJacket_Charcoal_Front.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C7_10082JK_HimalayasHoodedJacket_Charcoal_Back.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/BI_Sounder_RGC_17245.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/SOUNDERGOLFQ3_2211THOCTOBER-235.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/SOUNDERGOLFQ3_2211THOCTOBER-241.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/BI_Sounder_RGC_17243.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Pac Mach Half Zip - Olive Ripstop",
+      "slot": "shell",
+      "url": "https://soundergolf.com/en-us/products/pac-mach-half-zip-olive-ripstop",
+      "handle": "pac-mach-half-zip-olive-ripstop",
+      "price_usd": 198,
+      "price_orig": "$198.00 USD (en-us store)",
+      "colorway": "Olive Ripstop",
+      "sizes_available": ["XS", "L", "XL"],
+      "fabric_fit": "Ultra-lightweight Japanese recycled polyester ripstop, shower-resistant. Packs into a matching drawstring stuff bag. Overhead half-zip with nylon zip pockets, elasticated cuffs, drawstring hem with toggle adjusters, and an elongated back hem.",
+      "copy_quote": "squeeze into the pocket of even the smallest Sunday bag",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/PacMachOlive.png"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Luxe Star Beanie - Charcoal",
+      "slot": "cap",
+      "url": "https://soundergolf.com/en-us/products/luxe-star-beanie-slate",
+      "handle": "luxe-star-beanie-slate",
+      "price_usd": 62,
+      "price_orig": "$62.00 USD (en-us store)",
+      "colorway": "Charcoal",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Turn-up beanie in a close-knit rib, 70% wool / 30% cashmere, with Sounder half-star cotton yarn embroidery.",
+      "copy_quote": "the most comfortable hat that you will ever own",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/BEANIECHARCOAL.png"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Long Marl Sock - Olive",
+      "slot": "socks",
+      "url": "https://soundergolf.com/en-us/products/long-marl-sock-olive",
+      "handle": "long-marl-sock-olive",
+      "price_usd": 25,
+      "price_orig": "$25.00 USD (en-us store)",
+      "colorway": "Olive / grey melange marl",
+      "sizes_available": ["40-43 (7-9)"],
+      "fabric_fit": "Long marl sock in olive and grey melange colour blocks, made in Portugal. 80% cotton, 18% polyamide, 2% elastane. Cushioned footbed, ribbed leg. Not wool. Only the 40-43 size is in stock.",
+      "copy_quote": "A treat for your feet.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/socksolive.png"
+      ]
+    },
+    {
+      "brand": "Galvin Green",
+      "title": "Edwin - Thermal base layer golf top (Black)",
+      "slot": "base",
+      "url": "https://www.galvingreen.com/products/edwin-thermal-base-layer-top-black",
+      "handle": "edwin-thermal-base-layer-top-black",
+      "price_usd": 99,
+      "price_orig": "$99.00 USD (US store)",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "SKINTIGHT thermal base layer top worn under outerwear. Soft, stretchy, bluesign-approved fabric that is extremely breathable.",
+      "copy_quote": "Don't let cold weather get in the way",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/EDWIN_FRONT_E01000089403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/EDWIN_BACK_E01000089403.webp"
+      ]
+    },
+    {
+      "brand": "Galvin Green",
+      "title": "Marty TOUR - Breathable short sleeve golf shirt (Royal Blue)",
+      "slot": "polo",
+      "url": "https://www.galvingreen.com/products/marty-tour-breathable-short-sleeve-golf-shirt-royal-blue",
+      "handle": "marty-tour-breathable-short-sleeve-golf-shirt-royal-blue",
+      "price_usd": 99,
+      "price_orig": "$99.00 USD (US store)",
+      "colorway": "Royal Blue (accent)",
+      "sizes_available": ["S", "M", "L", "XL", "XXL", "3XL"],
+      "fabric_fit": "Technical polo on VENTIL8 PLUS fabric with an engineered micro-pattern. Stretch through the shoulders and chest, fast moisture transport, UV protection, subtle tour branding.",
+      "copy_quote": "brings a competitive edge to warm-weather play",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/MARTY_TOUR_FRONT_T-D01001308763.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/MARTY_TOUR_FRONT_T-D01001308763_062be622-119c-481a-b35e-88b780d86d43.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/MARTY_BACK_T-D01001308763.webp"
+      ]
+    },
+    {
+      "brand": "Galvin Green",
+      "title": "Nick - Breathable golf pants (Black)",
+      "slot": "trouser",
+      "url": "https://www.galvingreen.com/products/nick-breathable-golf-pants-black",
+      "handle": "nick-breathable-golf-pants-black",
+      "price_usd": 149,
+      "price_orig": "$149.00 USD (US store)",
+      "colorway": "Black (also Sand in stock)",
+      "sizes_available": ["32/30", "34/30", "36/30", "30/32", "32/32", "34/32", "36/32", "38/32", "32/34", "34/34", "36/34"],
+      "fabric_fit": "Lightweight straight-cut trouser in VENTIL8 PLUS fabric. Breathable and quick-drying, with mechanical stretch and UV protection 20+. Front and back pockets.",
+      "copy_quote": "keeping you cool and comfortable on the course",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/NICK_FRONT_D010001549403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/NICK_BACK_D010001549403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/NICK_S_1_D01001549403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/NICK_S_2_D01001549403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/NICK_S_3_D01001549403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/NICK_S_4_D01001549403.webp"
+      ]
+    },
+    {
+      "brand": "Galvin Green",
+      "title": "Akron - Waterproof Golf Jacket (Black)",
+      "slot": "shell",
+      "url": "https://www.galvingreen.com/products/akron-waterproof-golf-jacket-black",
+      "handle": "akron-waterproof-golf-jacket-black",
+      "price_usd": 399,
+      "price_orig": "$399.00 USD (US store)",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL", "XXL", "3XL"],
+      "fabric_fit": "Hooded waterproof jacket in lightweight, breathable Pertex Shield. Adjustable cuffs and hood, elastic drawstring hem, front pockets. Chest tabs reduce bulk at the front during the swing, and repositioned side seams cut friction.",
+      "copy_quote": "your go-to piece for your next round, daily commute, dog walk, or any rainy-day adventure",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/AKRON_FRONT_A01000519403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/AKRON_S_1_A01000519403_2c445ec1-e9a2-4c64-a17f-abfddc9ee5a0.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/AKRON_S_2_A01000519403_67d64da2-0b04-49d5-9044-dcc98fc0b3ea.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/AKRON_S_3_A01000519403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/AKRON_S_4_A01000519403_aefc797a-8235-4b9a-af03-8515be3fe729.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/AKRON_L_2_A01000519403.webp"
+      ]
+    },
+    {
+      "brand": "Galvin Green",
+      "title": "Atlas - Waterproof golf cap (Black)",
+      "slot": "cap",
+      "url": "https://www.galvingreen.com/products/atlas-waterproof-golf-hat-black",
+      "handle": "atlas-waterproof-golf-hat-black",
+      "price_usd": 69,
+      "price_orig": "$69.00 USD (US store)",
+      "colorway": "Black",
+      "sizes_available": ["One Size"],
+      "fabric_fit": "Lightweight waterproof cap in Pertex Shield, a lightweight, breathable waterproof material. White edge piping, Galvin Green logo, adjustable 54-62 cm.",
+      "copy_quote": "an essential accessory when golfing in rainy or unpredictable weather",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/ATLAS_FRONT_A01000659403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/ATLAS_FRONT_WS_A01000659403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/ATLAS_S_1_A01000659403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/ATLAS_S_2_A01000659403.webp",
+        "https://cdn.shopify.com/s/files/1/0607/9430/6718/files/ATLAS_S_3_A01000659403.webp"
+      ]
+    },
+    {
+      "brand": "Macade",
+      "title": "Course Shell Jacket - Charcoal",
+      "slot": "shell",
+      "url": "https://macadegolf.com/products/charcoal-course-shell-jacket",
+      "handle": "charcoal-course-shell-jacket",
+      "price_usd": 210,
+      "price_orig": "$210.00 USD",
+      "colorway": "Charcoal",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Lightweight, wind-resistant layer in a smooth, flexible polyester-spandex blend. Tailored fit with subtle contrast piping, zippered pockets and a drawstring waistband. Wind-resistant only, not described as waterproof.",
+      "copy_quote": "effortless comfort and protection for changing conditions on the course or in daily life",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/1.-Charcoal-Course-Shell-Jacket.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/2.-Charcoal-Course-Shell-Jacket.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/3.-Charcoal-Course-Shell-Jacket.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/4.-Charcoal-Course-Shell-Jacket.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/CharcoalShellJacketMJA26445021.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/Spring_26Macros0294WEB-macro.jpg"
+      ]
+    },
+    {
+      "brand": "Macade",
+      "title": "Lightweight Relaxed Trouser - Sage Green",
+      "slot": "trouser",
+      "url": "https://macadegolf.com/products/lightweight-relaxed-trouser-sage-green",
+      "handle": "lightweight-relaxed-trouser-sage-green",
+      "price_usd": 130,
+      "price_orig": "$130.00 USD",
+      "colorway": "Sage Green (also Ash Black, Bone in stock)",
+      "sizes_available": ["30/30", "30/32", "30/34", "32/30", "32/32", "32/34", "34/30", "34/32", "34/34", "36/32", "36/34", "36/36", "38/32", "38/34", "38/36"],
+      "fabric_fit": "Relaxed-cut trouser made with ROICA, a Japanese-engineered premium elastane, for stretch, recovery and durability. Moisture-managing and shape-holding fabric with a clean, modern silhouette.",
+      "copy_quote": "Effortless performance, quietly delivered.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/1.-Alt-Lightweight-relaxed-sage-green.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/2.-Alt-Lightweight-relaxed-sage-green.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/3.-Alt-Lightweight-relaxed-sage-green.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/MacadeLightweightRelaxedTrouserSage01.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/MacadeLightweightRelaxedTrouserSage05.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/MacadeLightweightRelaxedTrouserSage08-MACRO.jpg"
+      ]
+    },
+    {
+      "brand": "Macade",
+      "title": "Bridge Merino Quarter Zip - Black",
+      "slot": "base",
+      "url": "https://macadegolf.com/products/bridge-black-mernio-quarter-zip",
+      "handle": "bridge-black-mernio-quarter-zip",
+      "price_usd": 195,
+      "price_orig": "$195.00 USD",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "Lightweight quarter-zip in a merino wool and cashmere blend. Clean, tailored fit with subtle stretch. Works as a merino layer for cool rounds.",
+      "copy_quote": "an essential choice for cool weather rounds and refined everyday style",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/1.-Bridge-Merino-Quarter-Zip---Black.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/2.-Bridge-Merino-Quarter-Zip---Black.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/3.-Bridge-Merino-Quarter-Zip---Black.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/4.-Bridge-Merino-Quarter-Zip---Black.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/8.-Black-knit-qs.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/9.-Black-knit-qs.jpg"
+      ]
+    },
+    {
+      "brand": "Macade",
+      "title": "AR Tech Polo - Tan",
+      "slot": "polo",
+      "url": "https://macadegolf.com/products/tan-ar-tech-polo",
+      "handle": "tan-ar-tech-polo",
+      "price_usd": 120,
+      "price_orig": "$120.00 USD",
+      "colorway": "Tan (sand/stone; Black also available in S, M, XXL)",
+      "sizes_available": ["S", "M", "L", "XXL"],
+      "fabric_fit": "Technical polo in a lightweight, breathable ribbed fabric. Refined athletic fit with clean lines and minimal details.",
+      "copy_quote": "keeps you cool and comfortable through every round",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/1.-Tan-AR-Tech-Polo_56e4e075-58ce-4370-b885-eea3a9b43bf8.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/2.-Tan-AR-Tech-Polo_e7130304-537b-4f55-b484-ce0b80254af6.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/3.-Tan-AR-Tech-Polo_fde03786-f270-4c79-bb6f-8c291c7ab6c1.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/4.-Tan-AR-Tech-Polo.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/5.-Tan-AR-Tech-Polo.jpg",
+        "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/8.-Tan-AR-tech-polo.jpg"
+      ]
+    },
+    {
+      "brand": "Manors Golf",
+      "title": "Merino Tech Crewneck - Dune",
+      "slot": "base",
+      "url": "https://manorsgolf.com/products/merino-wool-crewneck",
+      "handle": "merino-wool-crewneck",
+      "price_usd": 241,
+      "price_orig": "$241 (US $ USD location shown on page)",
+      "colorway": "Dune",
+      "sizes_available": ["XS", "S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "100% merino wool in a 9-gauge knit with a heavier, vintage feel. Soft, machine-washable, odour-resistant. Laser-cut ripstop elbow patches. Sizes are those offered on the page, without per-size stock confirmation.",
+      "copy_quote": "Smart enough for the clubhouse, tough enough to live in your bag.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MERINO_TECH_CREWNECK_DUNE_05_crop.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/1d82588c0567a3ed1364cbc8dd71e063860929a9-2732x4096.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/99c5bb9526918194aff23023eda52e84a0917f89-2732x4096.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/2d5d50b0ab5074b59889386f8f9457b528f164e0-4096x2732.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/4d8b1e47099041f593119bea416e37bb2e15297d-4000x5000.jpg"
+      ]
+    },
+    {
+      "brand": "Manors Golf",
+      "title": "Ripstop Tech Trouser - Dune",
+      "slot": "trouser",
+      "url": "https://manorsgolf.com/products/ripstop-tech-trouser",
+      "handle": "ripstop-tech-trouser",
+      "price_usd": 201,
+      "price_orig": "$201 (US $ USD location shown on page)",
+      "colorway": "Dune (Steel also offered)",
+      "sizes_available": ["28", "30", "32", "34", "36", "38"],
+      "fabric_fit": "Recycled TORAY two-way stretch ripstop with a PFC-free water-repellent finish. Water and wind repellent. Slim cut with an elasticated waistband, a gusseted seat and a slight taper so it breaks cleanly on the shoe. Laser-cut scorecard pockets with a concealed zip pocket. Sizes are those offered on the page, without per-size stock confirmation.",
+      "copy_quote": "with enough stretch in it to bend over a putt",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/RIPSTOP_TECH_TROUSER_DUNE.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/638de4a09619a921b85066c85fb449dafd0f9b40-2732x4096.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/bb94a122f377f4940972e5ed7a459890ee499027-2732x4096.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/8058f9c47b497e27e5aa99db5ed7716f131c14ba-2732x4096.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/ea6c34242af57d130f384c19ad34ec47d9aafca4-2732x4096.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/b3fce3b20cc7c7bd257096d94ff476ccefc22152-4000x5000.jpg"
+      ]
+    },
+    {
+      "brand": "Manors Golf",
+      "title": "Crewneck Polartec Fleece - Dark Olive",
+      "slot": "fleece",
+      "url": "https://manorsgolf.com/products/crewneck-polartec%C2%AE-fleece",
+      "handle": "crewneck-polartec®-fleece",
+      "price_usd": 174,
+      "price_orig": "$174 (US $ USD location shown on page)",
+      "colorway": "Dark Olive (Black also offered)",
+      "sizes_available": ["XS", "S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Polartec 100 fleece: lightweight, breathable and durable. Crewneck with vintage-inspired ribbing on the collar and underarm panels, embroidered logo. Sizes are those offered on the page, without per-size stock confirmation.",
+      "copy_quote": "it keeps you warm without weighing you down",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/CREWNECK_POLARTEC_FLEECE_DARK_OLIVE_05_crop.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/7d4b94f868649dbfda8f227e232ccffb47cbcf10-4000x6000.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/c5220f5f4627e7c8eb5f4424e4528e3221ca65e6-3973x5959.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/d921b96eae0078dc8dbbfe522bbff97b114d8126-5213x7820.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/332fb5553633af0b0022ff3c42b1405d4efb0fea-1882x2823.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/9c18e0a3f39798c8090e985cfead8e5e01a01048-3857x5785.jpg"
+      ]
+    },
+    {
+      "brand": "Manors Golf",
+      "title": "Tech Cap - Black",
+      "slot": "cap",
+      "url": "https://manorsgolf.com/products/frontier-tech-cap",
+      "handle": "frontier-tech-cap",
+      "price_usd": 54,
+      "price_orig": "$54 (US $ USD location shown on page)",
+      "colorway": "Black",
+      "sizes_available": ["One Size"],
+      "fabric_fit": "One-size adjustable cap in a technical nylon-elastane fabric that is lightweight and breathable. Adjustable cord and toggle. Borrows from running and cycling caps.",
+      "copy_quote": "The most stylish and functional golf hat we've ever made.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/TECH_CAP_BLACK_01.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/f733c8de4ed1b1013b864d826f91ff7930a05d2f-5464x6830.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/5a90166e9551a8084ea7d30f9c9b9fa60635377b-5293x6616.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/46d0619c241ba58a59f987fb8bdfd7e20dad72cf-5385x6731.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/4f14fae117d554b22217607fe4e5185ac6bb4897-4674x5843.jpg",
+        "https://cdn.sanity.io/images/9aznesrq/production/643e4e26d2f0bd16957b453feb962a99db772025-5230x6537.jpg"
+      ]
+    },
+    {
+      "brand": "SLOAT",
+      "title": "Merino Polo - Black",
+      "slot": "polo",
+      "url": "https://sloat.cc/products/mens-merino-wool-golf-polo",
+      "handle": "mens-merino-wool-golf-polo",
+      "price_usd": 215,
+      "price_orig": "$215.00 USD",
+      "colorway": "Black",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "200 gsm RWS-certified merino jersey (100% merino), sewn in Portugal. Classic fit with a self-fabric collar, three-button placket, side vents and subtle sleeve embroidery. Thermoregulating and odour-resistant. Doubles as the merino layer.",
+      "copy_quote": "Built for golf, travel, and repeated wear between washes.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_MerinoWoolPolo_Black_1367.jpg"
+      ]
+    },
+    {
+      "brand": "SLOAT",
+      "title": "Organic Ventile Wind Shirt - Black",
+      "slot": "shell",
+      "url": "https://sloat.cc/products/mens-ventile-wind-shirt",
+      "handle": "mens-ventile-wind-shirt",
+      "price_usd": 295,
+      "price_orig": "$295.00 USD",
+      "colorway": "Black (Stone S-XL and Charcoal M/L also in stock)",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "Organic Ventile cotton shell (fabric woven in Switzerland) with organic cotton lining, made in Portugal. Naturally wind- and light-rain-resistant without synthetic membranes or coatings. Relaxed quarter-zip with raglan sleeves and a chest pocket. Lifetime guarantee.",
+      "copy_quote": "Built for walking eighteen holes, changing coastal weather, travel, and everyday wear.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_VentileWindShirt_Black_1536.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_VentileWindShirt_Black_2310.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_VentileWindShirt_Black_2312.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_VentileWindShirt_2300.jpg"
+      ]
+    },
+    {
+      "brand": "SLOAT",
+      "title": "Organic Cotton Day Pant - Oil Green",
+      "slot": "trouser",
+      "url": "https://sloat.cc/products/mens-organic-cotton-golf-pants",
+      "handle": "mens-organic-cotton-golf-pants",
+      "price_usd": 195,
+      "price_orig": "$195.00 USD",
+      "colorway": "Oil Green",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "195 gsm lightweight organic cotton twill, GOTS certified, made in Portugal. Relaxed straight fit with an elastic back waistband, belt loops and knee articulation. Cotton, not a technical fabric. Sizes S-XL fit 30-37 waist.",
+      "copy_quote": "Built for everyday wear and casual rounds of golf.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_DayPant_OilGreen_0204.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_DayPant_OilGreen_0192.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_DayPant_OilGreen_0195.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_DayPant_OilGreen_0198.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_DayPant_OilGreen_2353.jpg"
+      ]
+    },
+    {
+      "brand": "SLOAT",
+      "title": "Organic Cotton Five Panel Hat - Oil Green",
+      "slot": "cap",
+      "url": "https://sloat.cc/products/organic-cotton-five-panel-hat",
+      "handle": "organic-cotton-five-panel-hat",
+      "price_usd": 65,
+      "price_orig": "$65.00 USD",
+      "colorway": "Oil Green",
+      "sizes_available": ["One size"],
+      "fabric_fit": "100% organic cotton five-panel cap made in the USA. Slightly upright front profile, raised SLOAT embroidery, adjustable leather back strap that develops a patina.",
+      "copy_quote": "Our version of a classic baseball hat",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_5PanelHat_OilGreen_1308.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_5PanelHat_OilGreen_1313.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_5PanelHat_OilGreen_1344.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_5PanelHat_OilGreen_1353.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_5PanelHat_OilGreen_2355.jpg",
+        "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_5PanelHat_OilGreen_2362.jpg"
+      ]
+    },
+    {
+      "brand": "Gramicci",
+      "title": "Gramicci Pant - Dried Sage",
+      "slot": "trouser",
+      "url": "https://gramicci.com/products/gramicci-pant",
+      "handle": "gramicci-pant",
+      "price_usd": 100,
+      "price_orig": "$100.00 USD",
+      "colorway": "Dried Sage (Olive and Black also in stock at $100)",
+      "sizes_available": ["XS", "S", "M", "L", "XL"],
+      "fabric_fit": "CLIMBING/HIKING PANT. The original 1982 Gramicci Pant in 100% organic cotton twill. Gusseted crotch, easy-adjust integrated webbing belt and buckle, zip fly, two side seam and two back welt pockets. Relaxed fit, low rise, 32-inch inseam.",
+      "copy_quote": "the original Gramicci Pants that started the \"Freedom of Movement.\"",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G102-OGT_DRIEDSAGE_mens-pants_1_1.jpg"
+      ]
+    },
+    {
+      "brand": "Gramicci",
+      "title": "Nylon Gramicci Pant - Carbon",
+      "slot": "trouser",
+      "url": "https://gramicci.com/products/nylon-gramicci-pant",
+      "handle": "nylon-gramicci-pant",
+      "price_usd": 110,
+      "price_orig": "$110.00 USD",
+      "colorway": "Carbon (Burnt Olive, Black, Stone also in stock)",
+      "sizes_available": ["XS", "S", "M", "L", "XL"],
+      "fabric_fit": "100% recycled nylon, durable and water-repellent. Colour-matched elastic waistband, relaxed and slightly tapered fit, two side and two back pockets, 32-inch inseam. FW26.",
+      "copy_quote": "No set of pants is truly perfect, but these ones come pretty darn close.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_CARBON_mens-pants_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_CARBON_mens-pants_2.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_CARBON_mens-pants_M1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_CARBON_mens-pants_M2.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_CARBON_mens-pants_M3.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-P112_BURNTOLIVE_mens-pants_M1.jpg"
+      ]
+    },
+    {
+      "brand": "Gramicci",
+      "title": "Thermal Fleece Pullover - Black",
+      "slot": "fleece",
+      "url": "https://gramicci.com/products/thermal-fleece-pullover",
+      "handle": "thermal-fleece-pullover",
+      "price_usd": 130,
+      "price_orig": "$130.00 USD",
+      "colorway": "Black",
+      "sizes_available": ["XS", "S", "M", "L", "XL"],
+      "fabric_fit": "100% recycled polyester low-profile thermal fleece. Quarter-zip pullover with a stand collar, elasticated cuffs and a drawcord hem. Retro relaxed fit. Unisex. FW26.",
+      "copy_quote": "keeps you warm without making you feel like a puffed-up marshmallow",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_BLACK_unisex-jacket_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_BLACK_unisex-jacket_M1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_BLACK_unisex-jacket_M2.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_BLACK_unisex-jacket_M3.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_BLACK_unisex-jacket_W1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J006_BLACK_unisex-jacket_W2.jpg"
+      ]
+    },
+    {
+      "brand": "Gramicci",
+      "title": "WR Anorak - Black",
+      "slot": "shell",
+      "url": "https://gramicci.com/products/wr-anorak",
+      "handle": "wr-anorak",
+      "price_usd": 190,
+      "price_orig": "$190.00 USD",
+      "colorway": "Black (Khaki also in stock XS-XL)",
+      "sizes_available": ["XS", "S", "M", "L", "XL"],
+      "fabric_fit": "80% polyester / 20% cotton water-repellent fabric with UV protection. Attached hood, front zip pouch pocket and zippered side pockets, elastic cuffs, drawcord waist. Water-resistant, not waterproof. Unisex. FW26.",
+      "copy_quote": "reassuringly tough, yet soft to the touch",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_M1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_M2.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_M3.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-G6FM-J042_BLACK_unisex-jacket_W1.jpg",
+        "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-fw26-looks-SOCIAL_LOOKS_13_629a1aa3-3b3d-4eee-a1b2-b5b126f78ec5.jpg"
+      ]
+    }
+  ],
+  "lifestyle": [
+    {"brand": "Sounder", "url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SaltandGorsexDW_Sounder_Trevose_0572.jpg", "caption": "Salt and Gorse x Sounder shoot at Trevose, Clean Lie Polo in Smokey Olive (from the product gallery)"},
+    {"brand": "Sounder", "url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SaltandGorsexDW_Sounder_Trevose_0549.jpg", "caption": "Salt and Gorse x Sounder shoot at Trevose, second frame"},
+    {"brand": "Sounder", "url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/BI_Sounder_RGC_17245.jpg", "caption": "Hooded Himalayas Fleece in Charcoal, landscape lifestyle frame from the product gallery"},
+    {"brand": "Macade", "url": "https://cdn.shopify.com/s/files/1/0692/0699/9327/collections/Macade_Crossover_26_Lifestyle_012_500KB_4x5_c835d76e-c8f0-42cc-ae7a-0d7998c0e4f1.jpg", "caption": "Macade Men's Crossover '26 collection lifestyle image (collection banner)"},
+    {"brand": "Macade", "url": "https://cdn.shopify.com/s/files/1/0692/0699/9327/collections/Macade_Fall_26_Men_Category_Banner_1400x1680_V4.jpg", "caption": "Macade Men's Fall 26 category banner"},
+    {"brand": "Macade", "url": "https://cdn.shopify.com/s/files/1/0692/0699/9327/files/Spring_26M0184WEB.jpg", "caption": "AR Tech Polo in Black, Spring 26 on-model frame from the product gallery"},
+    {"brand": "Manors Golf", "url": "https://cdn.sanity.io/images/9aznesrq/production/993b2a6f054f0c217ad5415db22e4bf7c8e94482-6606x3715.png", "caption": "Manors homepage hero, 'A Game to Be Explored'"},
+    {"brand": "Manors Golf", "url": "https://cdn.sanity.io/images/9aznesrq/production/931f6a781d3113c6b566b9942e2d0bbfce159d3f-3200x1800.png", "caption": "Manors Winter Capsule 2026 campaign banner"},
+    {"brand": "Manors Golf", "url": "https://cdn.sanity.io/images/9aznesrq/production/b3fce3b20cc7c7bd257096d94ff476ccefc22152-4000x5000.jpg", "caption": "Manors AW26 Look 3: Ripstop Tech Vest, Ripstop Tech Trouser, Highland Mockneck Fleece"},
+    {"brand": "Manors Golf", "url": "https://cdn.sanity.io/images/9aznesrq/production/4d8b1e47099041f593119bea416e37bb2e15297d-4000x5000.jpg", "caption": "Manors AW26 Look 12: Merino Tech Crewneck with Recycled Greenskeeper Trouser"},
+    {"brand": "SLOAT", "url": "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_VentileJacket_2255.jpg", "caption": "SLOAT Organic Ventile Jacket, outdoor shoot frame from the product gallery"},
+    {"brand": "SLOAT", "url": "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_VentileWindShirt_2300.jpg", "caption": "SLOAT Organic Ventile Wind Shirt, outdoor shoot frame from the product gallery"},
+    {"brand": "SLOAT", "url": "https://cdn.shopify.com/s/files/1/0792/6710/2957/files/Sloat_OF_260716_CaddyPant_2438.jpg", "caption": "SLOAT Caddie Pant, outdoor shoot frame from the product gallery"},
+    {"brand": "Gramicci", "url": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-fw26-looks-SOCIAL_LOOKS.jpg", "caption": "Gramicci FW26 look (from the Thermal Fleece Pullover gallery)"},
+    {"brand": "Gramicci", "url": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-fw26-looks-SOCIAL_LOOKS_2_2d517a79-e9ac-4e51-8f1d-3271d7c0d440.jpg", "caption": "Gramicci FW26 look 2"},
+    {"brand": "Gramicci", "url": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-fw26-looks-SOCIAL_LOOKS_12_28dc43ca-5fb2-4365-ad26-9048823dec2b.jpg", "caption": "Gramicci FW26 look 12 (from the WR Anorak gallery)"},
+    {"brand": "Gramicci", "url": "https://cdn.shopify.com/s/files/1/0060/2030/0890/files/Gramicci-fw26-looks-SOCIAL_LOOKS_11_1d41581a-ee2d-458c-8d14-d71c9e7bfef6.jpg", "caption": "Gramicci FW26 look 11 (from the WR Anorak gallery)"}
+  ]
+}

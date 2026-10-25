@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""build-streetwear26.py — The 9 Best Golf Streetwear Brands in 2026 (same URL as the Aug 30 top-five).
+"""build-streetwear26.py — The 10 Best Golf Streetwear Brands in 2026 (same URL as the Aug 30 top-five).
+25 Oct 2026, Lenny: "add Odd Ritual to the best streetwear brands as a tenth option, do a new title and let's categorize Odd Ritual as the best
+international option." Odd Ritual read live from oddritualgolf.com 25 Oct 2026 (ZAR at 0.0565). 1 Oct version kept at research/streetwear-oct/build-streetwear26-oct01.py.
 
 1 October 2026. Lenny: "let's update the streetwear page- these are the new picks, keep the position on the
 homepage and URL" with nine brands and an award each, then "6 pieces per brand, with the quotes and short write
@@ -30,14 +32,18 @@ IMG = "/images/streetwear-oct"
 CHECKED = "1 October 2026"
 PK = json.loads((ROOT / "research/streetwear-oct/picks.json").read_text())
 
-TITLE = "The 9 Best Golf Streetwear Brands in 2026"
-DESC = ("The nine best golf streetwear brands of 2026, each with an award: Students, Metalwood, Malbon, Eastside, "
-        "Public Drip, Midiron, Clamp, Aimé Leon Dore and Hidden Links Society, with six pieces from each.")
-H1 = "The 9 Best Golf Streetwear Brands in 2026"
+TITLE = "The 10 Best Golf Streetwear Brands of 2026, LA to Cape Town"
+DESC = ("The ten best golf streetwear brands of 2026, each with an award: Students, Metalwood, Malbon, Eastside, "
+        "Public Drip, Midiron, Clamp, Aimé Leon Dore, Hidden Links Society and Cape Town's Odd Ritual, with six pieces from each.")
+H1 = "The 10 Best Golf Streetwear Brands in 2026"
 
 
 def gbp(x):
     return f"&pound;{x:,.0f} (~${x*1.3449:,.0f})"
+
+
+def zar(x):
+    return f"R{x:,.0f} (~${x*0.0565:,.0f})"
 
 
 def aud(x):
@@ -154,6 +160,18 @@ BRANDS = [
         "A perforated bucket hat with the Bud chenille patch, the brand&rsquo;s favourite logo.",
         "A plain garment-washed tee with a small woven badge, for the range or nowhere near a course.",
         "A single-prong pitch-mark tool in aged brass, stamped and heavy. Fix your damn pitch marks."]),
+ dict(k="oddritual", award="Best International", name="Odd Ritual", checked="25 October 2026",
+  link=("/drops/brand-to-know-odd-ritual", "Read the Odd Ritual profile"),
+  body=["Odd Ritual is the best golf streetwear brand outside the US, UK and Australia, and the one most likely to be new to you. It is a Cape Town label, designed and made locally, started because its founders couldn&rsquo;t find a golf brand at home that spoke to them. The name is for the small habits everyone has before a shot: the waggle, the step back to check the line, the breath before you commit.",
+        "The clothes are workwear and heritage golf pushed through a streetwear cut: a cotton twill caddie jacket with brass press studs, a pigment-washed crewneck, pleated carrot-leg trousers and script caps. Its number one rule, printed on the shop page, is &ldquo;be lekker.&rdquo; And yes, it ships to the United States."],
+  pq=("Everyone has their own weird little process. Their own weird routine they go through, their odd ritual.", "Odd Ritual, on its About page"),
+  band=["The Odd Ritual back print, mid-swing", "Golden hour on the tee", "Reading the putt"],
+  copy=["A relaxed jacket in 230gsm cotton twill with a washed cotton lining, a YKK zip and brass press studs. Odd Ritual&rsquo;s best piece, and on sale from R3,200.",
+        "An oversized, drop-shoulder crewneck in heavyweight cotton fleece with a vintage pigment wash and small embroidered branding. On sale from R2,100.",
+        "A boxy, relaxed sweater with the wordmark on the chest and a big statement print across the back, from Collection 02. On sale from R1,750.",
+        "Relaxed trousers in 235gsm cotton twill with front pleats and a subtle carrot leg. On sale from R1,300; only L and XL left.",
+        "A boxy, drop-shoulder tee in 180gsm combed cotton with the wordmark embroidered tone on tone at the ribcage. The way into the brand.",
+        "An unstructured six-panel cap with the script wordmark on the front and &ldquo;Stay True&rdquo; arched over the back strap."]),
 ]
 for b in BRANDS:
     b["rows"] = PK[b["k"]]
@@ -166,6 +184,8 @@ def price(k, raw):
         return gbp(x)
     if k == "midiron":
         return aud(x)
+    if k == "oddritual":
+        return zar(x)
     return f"${x:,.0f}" if x.is_integer() else f"${x:,.2f}"
 
 
@@ -223,7 +243,7 @@ def section(b, rank, n0):
             f'  <h2 class="products-hdr" id="{b["k"]}">{rank}. {b["name"]}</h2>\n'
             f'  <div style="max-width:760px;margin:0 auto 18px;font-size:16px;line-height:1.75">\n{paras}\n'
             f'    <p style="margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.6">'
-            f'Checked {CHECKED} &middot; <a href="{href}">{text} &rarr;</a></p>\n  </div>\n'
+            f'Checked {b.get("checked", CHECKED)} &middot; <a href="{href}">{text} &rarr;</a></p>\n  </div>\n'
             f'{pq(b)}{band(b)}'
             f'    <div class="products-grid">\n{cards}\n    </div>\n</section>\n'), n0 + 6
 
@@ -232,14 +252,14 @@ TAKE = f"""
 <section class="products" data-btk="take">
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
-    <p>Golf streetwear stopped being one look a while ago. It now covers a Los Angeles label with 600 pieces in stock, a headcover workshop in Yorkshire, a Queens fashion house, a Brooklyn muni brand and an Australian label that only shoots at night. So instead of ranking nine brands against each other on one scale, we gave each one the award it wins outright.</p>
-    <p>Students is the best overall: the deepest range, cut by people who made streetwear before they made golf clothes. Metalwood owns retro, Malbon built the room everyone else is standing in, and Eastside has the clearest reason to exist. Public Drip is the one to watch, Midiron has the strongest look, Clamp is the find, ALD is the crossover and Hidden Links Society is the cult pick.</p>
+    <p>Golf streetwear stopped being one look a while ago. It now covers a Los Angeles label with 600 pieces in stock, a headcover workshop in Yorkshire, a Queens fashion house, a Brooklyn muni brand and an Australian label that only shoots at night. It now reaches Cape Town, too. So instead of ranking ten brands against each other on one scale, we gave each one the award it wins outright.</p>
+    <p>Students is the best overall: the deepest range, cut by people who made streetwear before they made golf clothes. Metalwood owns retro, Malbon built the room everyone else is standing in, and Eastside has the clearest reason to exist. Public Drip is the one to watch, Midiron has the strongest look, Clamp is the find, ALD is the crossover, Hidden Links Society is the cult pick and Odd Ritual is the best brand from outside the usual places.</p>
     <h2 class="products-hdr btk-story-hdr">How We Picked</h2>
-    <p>Every brand had to design like a clothing label rather than a golf company, sell things you would wear off the course, and be trading, with product in stock, on the day we checked. 52 of the 54 pieces below were in stock on their brand&rsquo;s own store on {CHECKED}, at the price shown, in the brand&rsquo;s own currency; the other two are sold-out Clamp collabs, marked as such.</p>
+    <p>Every brand had to design like a clothing label rather than a golf company, sell things you would wear off the course, and be trading, with product in stock, on the day we checked. 58 of the 60 pieces below were in stock on their brand&rsquo;s own store when we checked ({CHECKED}; Odd Ritual on 25 October 2026), at the price shown, in the brand&rsquo;s own currency; the other two are sold-out Clamp collabs, marked as such.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
-      <div class="sidebar-label">The Nine</div>
+      <div class="sidebar-label">The Ten</div>
 """ + "\n".join(f'      <div class="sidebar-detail"><span class="l">{b["award"].replace("Best ", "")}</span><span><a href="#{b["k"]}">{b["name"]}</a></span></div>' for b in BRANDS) + f"""
       <div class="sidebar-detail"><span class="l">Checked</span><span>{CHECKED}</span></div>
       <a href="/brands" class="sidebar-cta">The full Brand Index &#8599;</a>
@@ -258,6 +278,8 @@ TAKE = f"""
 FAQ = [
     ("What is the best golf streetwear brand in 2026?",
      "Students Golf. Its founder Michael Huynh came from streetwear, its range is the deepest in the category with more than 600 pieces in stock, and it is stocked by Bodega, HBX and Culture Kings."),
+    ("What is the best international golf streetwear brand?",
+     "Odd Ritual, from Cape Town, South Africa. It designs and makes its clothes locally, named itself for the small habits golfers have before a shot, and ships to the United States."),
     ("What counts as golf streetwear?",
      "For this list, a brand has to design like a clothing label rather than a golf company, make clothes you would wear off the course, and be trading with product in stock. That admits a headcover workshop like Clamp and a fashion house like Aimé Leon Dore alongside Metalwood and Malbon."),
     ("Is Malbon still independent?",
@@ -265,7 +287,7 @@ FAQ = [
     ("Does Aimé Leon Dore still make golf clothes?",
      "ALD has released a golf capsule every spring since 2024, most recently with FootJoy. As of 1 October 2026 that capsule has sold through and the ALD Golf page is offline, so the pieces in this guide come from its main fall line."),
     ("How often is this list updated?",
-     "Every piece was checked on 1 October 2026, and all but two sold-out Clamp collabs were in stock. We re-check the list each season and replace anything that sells out or any brand that stops trading."),
+     "The first nine brands were checked on 1 October 2026 and Odd Ritual on 25 October 2026, and all but two sold-out Clamp collabs were in stock. We re-check the list each season and replace anything that sells out or any brand that stops trading."),
 ]
 
 
@@ -282,7 +304,7 @@ def head_top():
              for i, b in enumerate(BRANDS)]
     blocks = [
         {"@context": "https://schema.org", "@type": "Article", "headline": TITLE, "description": H.unescape(DESC),
-         "url": URL, "image": og, "datePublished": "2026-08-30", "dateModified": "2026-10-01",
+         "url": URL, "image": og, "datePublished": "2026-08-30", "dateModified": "2026-10-25",
          "author": {"@type": "Person", "@id": "https://thegrassyissue.com/about#lenny", "name": "Lenny Harrington",
                     "url": "https://thegrassyissue.com/about", "sameAs": ["https://instagram.com/thegrassyissue"]},
          "publisher": {"@type": "Organization", "name": "The Grassy Issue", "url": "https://thegrassyissue.com/"},
@@ -335,8 +357,8 @@ def main(apply_):
 <header class="drop-header">
   <h1>{H1}</h1>
   <div class="drop-meta">
-    <span>9 brands &middot; 9 awards</span><span class="dot"></span>
-    <span>54 pieces &middot; checked {CHECKED}</span>
+    <span>10 brands &middot; 10 awards</span><span class="dot"></span>
+    <span>60 pieces &middot; updated 25 October 2026</span>
   </div>
 </header>
 
@@ -357,7 +379,7 @@ def main(apply_):
     bad = []
     for leak in ("Manors Revisited", "Nicklaus", "Enron"):
         if leak in above: bad.append("leak " + leak)
-    if fin.count('class="product-card"') != 54: bad.append("card count")
+    if fin.count('class="product-card"') != 60: bad.append("card count")
     if re.search(r"\bworth\b", re.sub(r"<[^>]+>", " ", above), re.I): bad.append("banned word")
     for f in set(re.findall(rf'src="({IMG}/[^"]+)"', fin)):
         if not (ROOT / f.lstrip("/")).is_file(): bad.append("missing " + f)

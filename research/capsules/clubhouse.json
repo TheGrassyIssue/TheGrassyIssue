@@ -1,0 +1,547 @@
+{
+  "capsule": "clubhouse",
+  "fetched": "2026-10-25",
+  "notes": "Clubhouse Classic: navy / cream-off-white / stone-khaki, forest green as the one accent. All availability and prices read live on 2026-10-25 from each store's Shopify JSON (products.json, /products/HANDLE.js, /search/suggest.json). Store currencies: Criquet, Rookline, Woodgrain (woodgrain.golf, the apparel store; woodgraingolf.com is an unrelated golf-map/print shop), Olydoe are USD. Sounder read from the /en-us market, which prices in USD (the root domain prices in GBP), so the sale prices recorded are the en-us ones. Casualist has no US market (/en-us returns empty) and prices in GBP, converted at 1.3375. Nothing was blocked by the fetch tool. Gaps: no belt in palette (Criquet's belts are loud Zilker needlepoint; Woodgrain's Signature Belt is black). Only one true outer/mid layer found in palette (Sounder Raglan Star Sweat, dark green); Rookline's Signature Blend Polo is described as 'worn more like a sweater' and can double as the mid layer. Casualist only has 3 in-palette pieces (rest of the catalogue is yellow, mocha, dusty blue, olive, royal blue); their Cart Path Ripstop Jacket was skipped because the colour isn't stated. Low-stock: Sounder Good Look Crew Off White is XS only; Sounder Good Walk Chino Navy is S only; Olydoe Pleated Walker Pant is 32-38 (30 sold out). Colour judgement calls: Rookline 'Wet Sand' and Olydoe 'Light Sand' read as stone; Casualist pleated trouser offered in Beige and Taupe (both treated as stone/khaki); Casualist cap is a taupe wool tartan; Rookline cap is a cashmere watch cap (beanie), not a peaked cap; Sounder sock is cream with green trim but has a burgundy heel and toe; Olydoe Luxe Pima and Woodgrain Players Polo are listed as white (Woodgrain SKU code says CRM), so they're the brightest items here.",
+  "items": [
+    {
+      "brand": "Criquet",
+      "title": "Slim Fit Top-Shelf Range Polo - Navy Blue",
+      "slot": "polo",
+      "url": "https://criquetshirts.com/products/slim-fit-top-shelf-range-polo-navy-blue",
+      "handle": "slim-fit-top-shelf-range-polo-navy-blue",
+      "price_usd": 104.00,
+      "price_orig": "USD 104.00",
+      "colorway": "Navy Blue",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "92% Pima cotton / 8% spandex jersey, slim fit, removable collar stays. Designed in Austin, made in Peru.",
+      "copy_quote": "super-soft premium Pima cotton and a touch of spandex",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/SS26Studio2-509.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/products/6LS__M-RSF20-NB.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/products/laydown_closeup_f5b351df-3e61-4c8f-94a0-ca34ffdccfb6.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/SS26Studio2-511.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/products/5LS__M-RSF20-NB.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/SS26Studio2-504.jpg"
+      ]
+    },
+    {
+      "brand": "Criquet",
+      "title": "Performance Players Shirt - Golf Green",
+      "slot": "polo",
+      "url": "https://criquetshirts.com/products/performance-players-shirt-golf-green",
+      "handle": "performance-players-shirt-golf-green",
+      "price_usd": 104.00,
+      "price_orig": "USD 104.00",
+      "colorway": "Golf Green (forest-green accent)",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Short-sleeve players shirt in a tri-blend performance fabric: 62% polyester / 31% cotton / 7% spandex. Moisture-wicking with stretch, removable collar stays, pocket detail. Regular fit, made in Peru.",
+      "copy_quote": "the look of a classic shirt and the performance of activewear",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/IMG_0436.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/StudioSession-337.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/7S6A2678.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/StudioSession-344.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/7S6A2652.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/SS26_Studio_2-985.jpg"
+      ]
+    },
+    {
+      "brand": "Criquet",
+      "title": "Long Sleeve Bungalow Sweater Polo - Navy",
+      "slot": "knit",
+      "url": "https://criquetshirts.com/products/long-sleeve-bungalow-sweater-polo-navy",
+      "handle": "long-sleeve-bungalow-sweater-polo-navy",
+      "price_usd": 168.00,
+      "price_orig": "USD 168.00",
+      "colorway": "Navy",
+      "sizes_available": ["S", "L", "XL", "XXL"],
+      "fabric_fit": "100% Pima cotton knit sweater polo, long sleeve, 3-button placket with faux horn buttons, ribbing at hem, sleeve, chest pocket, collar and placket, contrast cuffs.",
+      "copy_quote": "The same refined knit and contrast cuffs give it a sharp, vintage look",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/R6SF8990.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/R6SF8941.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/R6SF8978.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/R6SF6344.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/R6SF6361_43ead218-b5cf-4fbd-a914-8669559759bb.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/FW26LookbookJan26Studio-476_4393f7e8-4cca-4bf7-bdbf-ce0a7005edb6.jpg"
+      ]
+    },
+    {
+      "brand": "Criquet",
+      "title": "Anytime Pants - Stone",
+      "slot": "trouser",
+      "url": "https://criquetshirts.com/products/anytime-pants-stone",
+      "handle": "anytime-pants-stone",
+      "price_usd": 148.00,
+      "price_orig": "USD 148.00",
+      "colorway": "Stone",
+      "sizes_available": ["33x30", "38x30", "33x32", "34x32", "36x32"],
+      "fabric_fit": "Chino-style performance pant, 72% poly / 20% cotton / 8% spandex. Stretchy and moisture-wicking, branded tack button and zip closure, embroidered Grassy C logo. Waist 30-38, length 30 or 32.",
+      "copy_quote": "from the golf course to the main course",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/anytimepantsstone.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/IMG_9500.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/LookbookSS26-654.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/7S6A0327.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/LookbookSS26-639.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/FW26LookbookJan26Studio-1350.jpg"
+      ]
+    },
+    {
+      "brand": "Criquet",
+      "title": "Anytime Pants - Navy",
+      "slot": "trouser",
+      "url": "https://criquetshirts.com/products/anytime-pants-navy",
+      "handle": "anytime-pants-navy",
+      "price_usd": 148.00,
+      "price_orig": "USD 148.00",
+      "colorway": "Navy",
+      "sizes_available": ["33x30", "34x30", "35x30", "36x30", "38x30", "32x32", "33x32", "34x32", "36x32", "38x32"],
+      "fabric_fit": "Same Anytime Pant: chino styling, 72% poly / 20% cotton / 8% spandex, stretch and moisture-wicking, embroidered Grassy C logo.",
+      "copy_quote": "Styled like a classic chino pant but wears like it's 100% performance",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/navyanytimepants.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/IMG_8925.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/LookbookSS26-559.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/FW26LookbookJan26Studio-1300.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/FW26LookbookJan26Studio-1304.jpg",
+        "https://cdn.shopify.com/s/files/1/2546/6304/files/LookbookSS26-546.jpg"
+      ]
+    },
+    {
+      "brand": "Rookline",
+      "title": "Signature Blend Polo - Navy Blazer",
+      "slot": "polo",
+      "url": "https://rookline.com/products/signature-blend-cotton-cashmere-polo-navy-blazer",
+      "handle": "signature-blend-cotton-cashmere-polo-navy-blazer",
+      "price_usd": 165.00,
+      "price_orig": "USD 165.00",
+      "colorway": "Navy Blazer",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Long-sleeve polo in a cotton-cashmere blend; the copy says it gives warmth without losing breathability and wears like a sweater. Can double as the mid layer.",
+      "copy_quote": "Composed for the fork and knife afterwards.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S82.NAVY.BLAZER-12070.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/LONGSLEEVE-POLO-NAVY.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/NAVY-1_5fb1c28b-4f14-4b81-a52b-269fc480bac9.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/NAVY-2_75e02056-3585-432e-8045-04d4606a8198.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/NAVY-4_29369736-2829-4e40-83da-c5c4b908e1d6.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/NAVY-7.jpg"
+      ]
+    },
+    {
+      "brand": "Rookline",
+      "title": "Signature Blend Polo - Ivory",
+      "slot": "polo",
+      "url": "https://rookline.com/products/signature-blend-cotton-cashmere-polo-ivory",
+      "handle": "signature-blend-cotton-cashmere-polo-ivory",
+      "price_usd": 165.00,
+      "price_orig": "USD 165.00",
+      "colorway": "Ivory",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Same cotton-cashmere long-sleeve polo as the navy, in ivory (cream slot).",
+      "copy_quote": "Categorically a longsleeve polo. Worn more like a sweater.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S82.IVORY-12071.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/sig-polo-ivory.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/IVORY-6.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/IVORY-4.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/IVORY-2.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/IVORY-3.jpg"
+      ]
+    },
+    {
+      "brand": "Rookline",
+      "title": "Ottoman Rib Cashmere Crew - Oatmeal Heather",
+      "slot": "knit",
+      "url": "https://rookline.com/products/ottoman-rib-cashmere-crew-oatmeal-heather",
+      "handle": "ottoman-rib-cashmere-crew-oatmeal-heather",
+      "price_usd": 295.00,
+      "price_orig": "USD 295.00",
+      "colorway": "Oatmeal Heather",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "100% cashmere crewneck, fully fashioned saddle sleeve, Ottoman rib detail at the elbow, cuff and hem.",
+      "copy_quote": "Wear it more than you think you should.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26S81.OATMEAL.HEATHER-12080.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew-1.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew-4.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew-2.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew-3.jpg"
+      ]
+    },
+    {
+      "brand": "Rookline",
+      "title": "Hudson 5-Pocket Pant - Wet Sand",
+      "slot": "trouser",
+      "url": "https://rookline.com/products/hudson-5-pocket-pant-wet-sand",
+      "handle": "hudson-5-pocket-pant-wet-sand",
+      "price_usd": 90.00,
+      "price_orig": "USD 90.00 (compare-at USD 155.00)",
+      "colorway": "Wet Sand (stone)",
+      "sizes_available": ["30x30", "30x32", "32x30", "32x32", "34x30", "34x32", "36x30", "36x32", "38x30", "38x32"],
+      "fabric_fit": "Five-pocket golf pant plus an internal sixth pocket sized for a yardage book or scorecard. Water-repellent, four-way stretch, bonded waistband that lies flat under a tucked shirt.",
+      "copy_quote": "The sixth sits flat and internal, sized to a yardage book",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG75614.WET.SAND.1_0684_c11d9ead-cb39-4ca9-bed6-ada4d0f0f4cc.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/golf-performance-pant-wet-sand.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/25-1740-RKL-RG75614.WET.SAND.3_0687_21c46510-8d08-4c27-b49b-191cd451ebb1.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/Look18_Bottom_0875.jpg",
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/Look18_Bottom_0886.jpg"
+      ]
+    },
+    {
+      "brand": "Rookline",
+      "title": "Cashmere Watch Cap - Oatmeal Heather",
+      "slot": "cap",
+      "url": "https://rookline.com/products/cashmere-watch-cap-oatmeal-heather",
+      "handle": "cashmere-watch-cap-oatmeal-heather",
+      "price_usd": 75.00,
+      "price_orig": "USD 75.00",
+      "colorway": "Oatmeal Heather",
+      "sizes_available": ["One size"],
+      "fabric_fit": "Watch cap (beanie) knit from 100% cashmere, two ends of yarn twisted into one for density. A cold-morning option, not a peaked golf cap.",
+      "copy_quote": "Deploy on dreich mornings waiting for the frost to burn.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/RGF26H02.OATMEAL.HEATHER.212108_535a4caf-6a93-492c-83c6-942faaa2b97b.jpg"
+      ]
+    },
+    {
+      "brand": "Casualist",
+      "title": "Weekend Pique Polo - Ecru",
+      "slot": "polo",
+      "url": "https://casualist.com/products/weekend-pique-polo-ecru",
+      "handle": "weekend-pique-polo-ecru",
+      "price_usd": 127.06,
+      "price_orig": "GBP 95.00",
+      "colorway": "Ecru (two-tone; flat-lay filename says ecru/olive)",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "100% organic cotton pique, raglan sleeves, relaxed retro fit, two-tone detail. Made in Portugal.",
+      "copy_quote": "The sort of polo your club captain would wear, if your club captain had better taste.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Short_sleeve_polo_Offwhite_front_Olive_2.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Short_sleeve_polo_Offwhite_back_Olive_2.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/CasualistSelects-354.jpg",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/casualist9632.jpg",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-352.jpg"
+      ]
+    },
+    {
+      "brand": "Casualist",
+      "title": "Pleated Golf Trousers — Organic Cotton",
+      "slot": "trouser",
+      "url": "https://casualist.com/products/pleated-trousers",
+      "handle": "pleated-trousers",
+      "price_usd": 214.00,
+      "price_orig": "GBP 160.00",
+      "colorway": "Beige or Taupe (both in stock)",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "Smooth organic cotton twill, high waist with hidden drawstring, clean front pleats, straight leg, embroidered logo. Made in Portugal.",
+      "copy_quote": "The trouser you actually want to wear.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_golf_trousers_front_view_ivory.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_back_view_ivory.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_taupe_front_view.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_taupe_back_view.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Close_up_Casualist_pleated_trousers_ivory_fabric_detail.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_on_course_lifestyle_shot.jpg"
+      ]
+    },
+    {
+      "brand": "Casualist",
+      "title": "Legacy Wool 5 Panel Cap - Taupe",
+      "slot": "cap",
+      "url": "https://casualist.com/products/legacy-wool-5-panel-cap",
+      "handle": "legacy-wool-5-panel-cap",
+      "price_usd": 60.19,
+      "price_orig": "GBP 45.00",
+      "colorway": "Taupe (Dark Brown sold out)",
+      "sizes_available": ["One size"],
+      "fabric_fit": "5-panel cap in soft wool tartan with rope detail and embroidered C logo. One size.",
+      "copy_quote": "The sort of cap that looks like it has been somewhere.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Wool_Legacy_Hat.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/WoolLegacyHatworn.png",
+        "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Wool_Legacy_Hat_side.png"
+      ]
+    },
+    {
+      "brand": "Woodgrain Golf",
+      "title": "Peak Polo • Navy",
+      "slot": "polo",
+      "url": "https://woodgrain.golf/products/peak-polo-navy",
+      "handle": "peak-polo-navy",
+      "price_usd": 110.00,
+      "price_orig": "USD 110.00",
+      "colorway": "Navy (with vintage-inspired stripes and contrast collar)",
+      "sizes_available": ["S", "M", "L", "XL"],
+      "fabric_fit": "100% cotton polo modelled on 1990s golf polos: boxy silhouette, extended sleeves, contrast collar, custom buttons, small left-chest embroidery, vintage-inspired stripes.",
+      "copy_quote": "a modern take on a timeless staple",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/BF447EAA-A4A0-450F-994F-AAF57A0838C8_1_105_c.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/35BC4298-4D07-4F64-A005-EC71BF5D1A45_1_105_c.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/23E53697-6FAA-485A-BB7F-8AB0C54C2C6B_1_105_c.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/A4EED7B5-FB62-4F5D-9FD9-A03FD05A9710_1_105_c.jpg"
+      ]
+    },
+    {
+      "brand": "Woodgrain Golf",
+      "title": "Players Polo • White",
+      "slot": "polo",
+      "url": "https://woodgrain.golf/products/players-polo-white",
+      "handle": "players-polo-white",
+      "price_usd": 92.00,
+      "price_orig": "USD 92.00",
+      "colorway": "White (SKU code 'CRM')",
+      "sizes_available": ["S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Woodgrain's lightest polo; ultra-lightweight breathable performance fabric (fibre content not stated).",
+      "copy_quote": "A balance of function and tradition, built for long days on the course.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/6A05D667-111B-462E-B2CF-F1E66CA4054B_1_105_c.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/079ECA9E-B167-4AD4-B55E-59BA16CC85CE_1_105_c.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/F0283728-07C5-439B-8072-B03F647D365D_1_102_a.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/8087FAFE-5A79-4F74-9BEB-050F9A9D094F_1_102_o.jpg"
+      ]
+    },
+    {
+      "brand": "Woodgrain Golf",
+      "title": "Legacy Double Pleated Trouser • Tan",
+      "slot": "trouser",
+      "url": "https://woodgrain.golf/products/relaxed-double-pleated-trouser-tan",
+      "handle": "relaxed-double-pleated-trouser-tan",
+      "price_usd": 180.00,
+      "price_orig": "USD 180.00",
+      "colorway": "Tan (Cream also in stock, all sizes, same price: /products/relaxed-double-pleated-trouser)",
+      "sizes_available": ["XS", "S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "Wide-leg, double-pleated trouser in premium 100% cotton; vintage-inspired tailoring for on and off the course.",
+      "copy_quote": "Refined, functional, and built for versatility",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/11_e9c39c27-cf7a-42d2-a138-21019fd0e05b.png",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/productphotosforwebsite_4.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/15.png",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/13.png",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/944AE739-4C16-41C6-9801-CB2A36249E02_1_105_c.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/EC3DC293-C5FF-4458-BB50-683347175DDF_1_105_c.jpg"
+      ]
+    },
+    {
+      "brand": "Woodgrain Golf",
+      "title": "The Double Pleated Short • Tan",
+      "slot": "short",
+      "url": "https://woodgrain.golf/products/the-double-pleated-short-tan",
+      "handle": "the-double-pleated-short-tan",
+      "price_usd": 130.00,
+      "price_orig": "USD 130.00",
+      "colorway": "Tan (Cream also in stock except S: /products/the-double-pleated-short-cream)",
+      "sizes_available": ["XS", "S", "M", "L", "XL", "2XL"],
+      "fabric_fit": "100% cotton double-pleated short, relaxed through the leg; modelled on '80s and '90s golf silhouettes.",
+      "copy_quote": "A warm-weather take on a timeless silhouette.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/25.png",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/C4_ProductPhotos_MCM_v2-9_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/26.png",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/98D7380F-D1B1-45D5-B9E9-3F4E15BF40FE_1_102_o.jpg",
+        "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/B77A5554-EEC2-4A38-B4A5-588DDBB1022C_1_102_o.jpg"
+      ]
+    },
+    {
+      "brand": "Olydoe",
+      "title": "Luxe Pima Long Sleeve Polo - Snow White",
+      "slot": "polo",
+      "url": "https://olydoe.com/products/og-long-sleeve-polo-copy-1",
+      "handle": "og-long-sleeve-polo-copy-1",
+      "price_usd": 115.00,
+      "price_orig": "USD 115.00",
+      "colorway": "Snow White",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Long-sleeve polo in long-staple Peruvian Pima cotton with a touch of elastane, finished with an extra polish for a crisp look and a cooling feel.",
+      "copy_quote": "comfort and unrestricted movement without compromise",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/BMC01674-Edit-2.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-77_websize.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/BMC09877-Edit.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-78_websize.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/BMC09895-Edit-2_ee6c8e02-b4f3-4f34-9ccd-86c92c603624.jpg"
+      ]
+    },
+    {
+      "brand": "Olydoe",
+      "title": "Merino Aire Polo - Pineneedle",
+      "slot": "polo",
+      "url": "https://olydoe.com/products/merino-wool-polo",
+      "handle": "merino-wool-polo",
+      "price_usd": 125.00,
+      "price_orig": "USD 125.00",
+      "colorway": "Pineneedle (forest-green accent)",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "Merino wool and Tencel blend core-spun around recycled nylon for durability; the copy cites odour resistance, breathability and thermal regulation, and a silk-like feel from the Tencel.",
+      "copy_quote": "Merino is nature's most technical fiber",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-50.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe11Large.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe6Large.jpg"
+      ]
+    },
+    {
+      "brand": "Olydoe",
+      "title": "Pleated Walker Pant - Light Sand",
+      "slot": "trouser",
+      "url": "https://olydoe.com/products/pleated-walker-pant",
+      "handle": "pleated-walker-pant",
+      "price_usd": 115.00,
+      "price_orig": "USD 115.00",
+      "colorway": "Light Sand (stone)",
+      "sizes_available": ["32", "34", "36", "38"],
+      "fabric_fit": "Pleated pant in a lightweight cotton / Tencel / linen blend; linen for breathability, Tencel to limit wrinkling. Wider leg; the brand suggests sizing down for a closer fit.",
+      "copy_quote": "seamlessly bridge classic tailoring with modern performance",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-27_websize.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe22Large.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-4_websize.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe23Large.jpg"
+      ]
+    },
+    {
+      "brand": "Olydoe",
+      "title": "The Walker Short - Navy Blue",
+      "slot": "short",
+      "url": "https://olydoe.com/products/cotton-shorts",
+      "handle": "cotton-shorts",
+      "price_usd": 105.00,
+      "price_orig": "USD 105.00",
+      "colorway": "Navy Blue",
+      "sizes_available": ["30", "32", "34", "36", "38"],
+      "fabric_fit": "Lightweight cotton / Tencel / linen blend short with a wider leg and a matte, breathable texture that holds up in humidity.",
+      "copy_quote": "a cool, matte texture that holds up even in high humidity",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NavyShorts2.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-38.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NavyPantsCloseUp_cb388c1e-84b2-4a43-af30-7f4092bb52a3.jpg",
+        "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NavyShorts.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Good Look Crew - Off White",
+      "slot": "knit",
+      "url": "https://soundergolf.com/en-us/products/good-look-crew-in-off-white-cotton",
+      "handle": "good-look-crew-in-off-white-cotton",
+      "price_usd": 46.00,
+      "price_orig": "USD 46.00 on en-us market (compare-at USD 123.00)",
+      "colorway": "Off White with navy Half-Star embroidery",
+      "sizes_available": ["XS"],
+      "fabric_fit": "Lightweight 12-gauge Pima cotton knit crew mid-layer, pointelle sleeve detail, navy Half-Star chest embroidery, machine washable. Only XS left.",
+      "copy_quote": "ketchup on white is not a good look",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C1_1003K_GoodLookCrew_OffWhite_Front.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C1_1003K_GoodLookCrew_OffWhite_FrontDetail2.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C1_1003K_GoodLookCrew_OffWhite_SleeveDetail.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C1_1003K_GoodLookCrew_OffWhite_Back.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/S_C1_1003K_GoodLookCrew_OffWhite_FrontDetail1.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Good Walk Chino - Navy Cotton Twill with Navy Star Embroidery",
+      "slot": "trouser",
+      "url": "https://soundergolf.com/en-us/products/good-walk-chino-in-navy",
+      "handle": "good-walk-chino-in-navy",
+      "price_usd": 103.00,
+      "price_orig": "USD 103.00 on en-us market (compare-at USD 185.00)",
+      "colorway": "Navy",
+      "sizes_available": ["S"],
+      "fabric_fit": "Garment-dyed cotton twill chino, relaxed waist and tapered leg, single pleat, concealed button fly, angled jet pockets, tonal star on the back pocket. Made in Portugal. Only S left.",
+      "copy_quote": "Wear them frequently and with pleasure.",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/GoodWalk-Navy.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/BI_Sounder_Devon_2273.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/chinohirestif_0004_Layer5.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/chinohirestif_0002_Layer1.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/chinohirestif_0000_Layer3.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/chinohirestif_0001_Layer6.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Raglan Star Sweat - Dark Green",
+      "slot": "layer",
+      "url": "https://soundergolf.com/en-us/products/raglan-star-sweat-dark-green",
+      "handle": "raglan-star-sweat-dark-green",
+      "price_usd": 102.00,
+      "price_orig": "USD 102.00 on en-us market (compare-at USD 156.00)",
+      "colorway": "Dark Green (forest-green accent)",
+      "sizes_available": ["S", "M", "L", "XL", "XXL"],
+      "fabric_fit": "100% organic cotton crew-neck raglan sweatshirt, cut for a full swing, ribbed hem and cuffs, tonal chenille star on the sleeve, ball-marker patch. Made in Portugal.",
+      "copy_quote": "sometimes it's nice to layer up without breaking out the cashmere",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/RaglanGreen.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/RaglanDarkGreen_1.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/Sounder-Sunningdale-45.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SS26Pre-606.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/SS26Pre-607.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/Sounder-Sunningdale-44.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Logo Cap - Stone",
+      "slot": "cap",
+      "url": "https://soundergolf.com/en-us/products/logo-cap-stone-copy",
+      "handle": "logo-cap-stone-copy",
+      "price_usd": 55.00,
+      "price_orig": "USD 55.00 on en-us market",
+      "colorway": "Stone",
+      "sizes_available": ["One size (adjustable)"],
+      "fabric_fit": "Six-panel 100% cotton baseball cap with a small Sounder wordmark patch, adjustable. A restock of the cap from Sounder's first collection.",
+      "copy_quote": "taking on a unique character that will tell the story of every round",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/CapStone1.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/CapStone2.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/CapStone3.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/StudioSession-875.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/StudioSession-876.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/products/BI_Sounder_Devon_3439.jpg"
+      ]
+    },
+    {
+      "brand": "Sounder",
+      "title": "Ivy Ellis x Sounder Lightweight Crew Sock - Cream with Green Trim",
+      "slot": "socks",
+      "url": "https://soundergolf.com/en-us/products/ivy-ellis-x-sounder-lightweight-crew-sock-cream-with-green-trim",
+      "handle": "ivy-ellis-x-sounder-lightweight-crew-sock-cream-with-green-trim",
+      "price_usd": 28.00,
+      "price_orig": "USD 28.00 on en-us market",
+      "colorway": "Cream with green ankle trim (burgundy heel and toe)",
+      "sizes_available": ["One size (men's 7-12)"],
+      "fabric_fit": "Lightweight ribbed crew sock made with Ivy Ellis at a family-owned mill in the Scottish Highlands.",
+      "copy_quote": "a timeless flex that will have you one-up before you've even hit your opening tee shot",
+      "images": [
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/IvyEllisBurg_Grn1.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/IvyEllisBurg_Grn2.png",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/ivyelliscrewsockgreen.jpg",
+        "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/IvyEllisBurg_Grnwrapped.png"
+      ]
+    }
+  ],
+  "lifestyle": [
+    {"brand": "Criquet", "url": "https://cdn.shopify.com/s/files/1/2546/6304/files/LookbookSS26-654.jpg", "caption": "SS26 lookbook frame from the Anytime Pants - Stone product page"},
+    {"brand": "Criquet", "url": "https://cdn.shopify.com/s/files/1/2546/6304/files/LookbookSS26-559.jpg", "caption": "SS26 lookbook frame from the Anytime Pants - Navy product page"},
+    {"brand": "Criquet", "url": "https://cdn.shopify.com/s/files/1/2546/6304/files/FW26LookbookJan26Studio-476_4393f7e8-4cca-4bf7-bdbf-ce0a7005edb6.jpg", "caption": "FW26 lookbook studio frame from the Long Sleeve Bungalow Sweater Polo - Navy page"},
+    {"brand": "Rookline", "url": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/NAVY-1_5fb1c28b-4f14-4b81-a52b-269fc480bac9.jpg", "caption": "On-model shot of the Signature Blend Polo in Navy Blazer"},
+    {"brand": "Rookline", "url": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/oatmeal-crew-1.jpg", "caption": "On-model shot of the Ottoman Rib Cashmere Crew in Oatmeal Heather"},
+    {"brand": "Rookline", "url": "https://cdn.shopify.com/s/files/1/0770/2164/3046/files/Look18_Bottom_0875.jpg", "caption": "Lookbook frame (Look 18) from the Hudson 5-Pocket Pant - Wet Sand page"},
+    {"brand": "Casualist", "url": "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_on_course_lifestyle_shot.jpg", "caption": "Pleated trousers on course (store alt text: 'on course lifestyle shot')"},
+    {"brand": "Casualist", "url": "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/casualist9632.jpg", "caption": "Weekend Pique Polo in Ecru on course (store alt text: 'worn on course ecru lifestyle')"},
+    {"brand": "Casualist", "url": "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/WoolLegacyHatworn.png", "caption": "Legacy Wool 5 Panel Cap in Taupe on model (store alt text: 'worn model lifestyle taupe')"},
+    {"brand": "Woodgrain Golf", "url": "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/C4_ProductPhotos_MCM_v2-9_1.jpg", "caption": "Campaign product photo from the Double Pleated Short - Tan page"},
+    {"brand": "Woodgrain Golf", "url": "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/944AE739-4C16-41C6-9801-CB2A36249E02_1_105_c.jpg", "caption": "Lifestyle frame from the Legacy Double Pleated Trouser - Tan page"},
+    {"brand": "Woodgrain Golf", "url": "https://cdn.shopify.com/s/files/1/0758/5821/5131/files/F0283728-07C5-439B-8072-B03F647D365D_1_102_a.jpg", "caption": "Lifestyle frame from the Players Polo - White page"},
+    {"brand": "Olydoe", "url": "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Campaign-77_websize.jpg", "caption": "Olydoe campaign image from the Luxe Pima Long Sleeve Polo - Snow White page"},
+    {"brand": "Olydoe", "url": "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/Olydoe_Early_Previews-38.jpg", "caption": "Early-preview campaign frame from the Walker Short - Navy page"},
+    {"brand": "Olydoe", "url": "https://cdn.shopify.com/s/files/1/0756/5017/1098/files/NewOlydoe11Large.jpg", "caption": "Campaign frame from the Merino Aire Polo - Pineneedle page"},
+    {"brand": "Sounder", "url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/Sounder-Sunningdale-45.jpg", "caption": "Sounder shoot at Sunningdale (per filename), from the Raglan Star Sweat - Dark Green page"},
+    {"brand": "Sounder", "url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/BI_Sounder_Devon_2273.jpg", "caption": "Devon shoot (per filename), from the Good Walk Chino - Navy page"},
+    {"brand": "Sounder", "url": "https://cdn.shopify.com/s/files/1/0282/4106/8111/files/Sounder-Sunningdale-44.jpg", "caption": "Second Sunningdale frame (per filename), from the Raglan Star Sweat page"}
+  ]
+}

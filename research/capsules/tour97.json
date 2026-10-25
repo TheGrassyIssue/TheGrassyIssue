@@ -1,0 +1,764 @@
+{
+ "capsule": "tour97",
+ "fetched": "2026-10-25",
+ "notes": "All items confirmed in stock (>=1 size) via live /products/HANDLE.js fetches on 2026-10-25. Late Nine store is late-nine.com and prices in SEK; converted at 0.0955 USD/SEK. Ashworth relaunched store is www.ashworth-golf.com (ashworthgolf.com returned nothing). Full products.json listings were truncated by the fetch tool (~15 products/page), so candidates were chosen from first-page listings plus TGI's earlier local catalogue captures (Ashworth 10-03, Metalwood 10-16, RTG 10-19), then each pick re-verified live. Dropped after live check: Ashworth Ivy Stripe Polo Core Red (sold out). Thin stock: Late Nine QZ Windbreaker Beige (S only), Cable Knit Polo Light Blue (S, M), RTG Grounds Crew Jacket (L only), Ashworth O.G. Polo (S, XL). Pleats: true pleated trousers only from Late Nine (double pleat wool) and Metalwood (permanent pleat track pant); Ashworth Pierside cord and Devereux El Classico are relaxed/flat. Siegelman Stable FW26 is mostly cobalt/black/grey; only 3 palette-fit pieces (light-blue knit, red cap, camel cap). Its beige Knit Pant was skipped because the listing labels it Women. No in-palette rope hat identified; the only rope cap seen (RTG Fairway Performance Cap Green (White Rope), from the 10-19 local catalogue, not re-verified) is green. Late Nine sizing for trousers/shorts is EU (46-54).",
+ "items": [
+  {
+   "brand": "Late Nine",
+   "title": "Ribbed Jersey Polo Long Sleeve Brown Melange",
+   "slot": "polo",
+   "url": "https://late-nine.com/products/ribbed-jersey-polo-long-sleeve-brown-melange",
+   "handle": "ribbed-jersey-polo-long-sleeve-brown-melange",
+   "price_usd": 191.0,
+   "price_orig": "SEK 2 000",
+   "colorway": "Brown Melange",
+   "sizes_available": [
+    "S",
+    "M",
+    "L",
+    "XL"
+   ],
+   "fabric_fit": "Long-sleeve polo in a hefty cotton melange; contrast-stripe ribbed collar, ribbed cuffs, clean placket, oversized buttons. FW26.",
+   "copy_quote": "based on the iconic jersey golf polos of the late 90's and early '00s",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/fnewenflknlekfwk.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/fenjlnfewknwkefl.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/ewfnklefwklnfewk.jpg"
+   ]
+  },
+  {
+   "brand": "Late Nine",
+   "title": "Cable Knit Polo Light Blue",
+   "slot": "knit",
+   "url": "https://late-nine.com/products/cable-knit-polo-light-blue",
+   "handle": "cable-knit-polo-light-blue",
+   "price_usd": 281.73,
+   "price_orig": "SEK 2 950",
+   "colorway": "Light Blue",
+   "sizes_available": [
+    "S",
+    "M"
+   ],
+   "fabric_fit": "Ultra-fine first-shearing merino, lightly brushed cable-knit body; oversized 70s/80s collar, mother-of-pearl buttons; relaxed, slightly cropped fit.",
+   "copy_quote": "nods to classic knits worn by icons of past decades",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05886.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05872.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05891.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05892.jpg"
+   ]
+  },
+  {
+   "brand": "Late Nine",
+   "title": "Double Pleat Slacks Dark Brown",
+   "slot": "trouser",
+   "url": "https://late-nine.com/products/double-pleat-slacks-dark-brown",
+   "handle": "double-pleat-slacks-dark-brown",
+   "price_usd": 305.6,
+   "price_orig": "SEK 3 200",
+   "colorway": "Dark Brown",
+   "sizes_available": [
+    "48",
+    "50",
+    "52",
+    "54"
+   ],
+   "fabric_fit": "Italian four-season wool; full straight leg, outward-facing double pleats, unlined on-seam buttoned waistband, slanted side pockets. EU sizing.",
+   "copy_quote": "whether you're seated in a sky rise or lining up putts all day",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Frame14_b02fb208-c820-4378-bce4-db34f9c4925c.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Frame13_81b59fac-2c03-4918-9de3-f33ca3178b6f.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Frame15_7fee1381-d52b-4a9c-b945-e58a2ed4d6eb.jpg"
+   ]
+  },
+  {
+   "brand": "Late Nine",
+   "title": "Double Pleat Shorts Beige",
+   "slot": "short",
+   "url": "https://late-nine.com/products/double-pleat-shorts-beige",
+   "handle": "double-pleat-shorts-beige",
+   "price_usd": 238.75,
+   "price_orig": "SEK 2 500",
+   "colorway": "Beige",
+   "sizes_available": [
+    "48",
+    "50",
+    "52",
+    "54"
+   ],
+   "fabric_fit": "Double-pleated Bermuda short in lightweight textured 100% cotton twill; straight leg, unlined, slanted side pockets, double-layered waistband. EU sizing.",
+   "copy_quote": "a modern interpretation of the classic pleated short",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_shorts_1.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_shorts_2.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_shorts_3.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Brown_belt_4_32e788d8-698b-4cbf-b316-d90a19044112.jpg"
+   ]
+  },
+  {
+   "brand": "Late Nine",
+   "title": "Quarter Zip Windbreaker Beige",
+   "slot": "layer",
+   "url": "https://late-nine.com/products/quarter-zip-windbreaker-beige",
+   "handle": "quarter-zip-windbreaker-beige",
+   "price_usd": 358.12,
+   "price_orig": "SEK 3 750",
+   "colorway": "Beige",
+   "sizes_available": [
+    "S"
+   ],
+   "fabric_fit": "Soft water-repellent cotton blend; tall full collar, zip with buttoned placket, dark metal hardware, drawstring hem, elastic cuffs, boxy fit. Only size S left.",
+   "copy_quote": "An icon, redefined.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_QZ_1.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_QZ_2.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_QZ_4.jpg",
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_QZ_3.jpg"
+   ]
+  },
+  {
+   "brand": "Late Nine",
+   "title": "Orbit Cap Burgundy",
+   "slot": "cap",
+   "url": "https://late-nine.com/products/sports-cap-burgundy",
+   "handle": "sports-cap-burgundy",
+   "price_usd": 47.75,
+   "price_orig": "SEK 500",
+   "colorway": "Burgundy",
+   "sizes_available": [
+    "One Size"
+   ],
+   "fabric_fit": "Unlined 100% cotton twill cap, double-backed front, contrast stitching and under-brim, Orbit logo, silver adjustable loop.",
+   "copy_quote": "inspiration from the two-tone caps popular on tour in the early 2000s",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05901.jpg"
+   ]
+  },
+  {
+   "brand": "Metalwood Studio",
+   "title": "Piped Longsleeve Quarter Zip Polo",
+   "slot": "polo",
+   "url": "https://metalwood.studio/products/piped-longsleeve-quarter-zip-polo-tan",
+   "handle": "piped-longsleeve-quarter-zip-polo-tan",
+   "price_usd": 158.0,
+   "price_orig": "USD 158",
+   "colorway": "Tan",
+   "sizes_available": [
+    "Small",
+    "Medium",
+    "Large",
+    "X-Large"
+   ],
+   "fabric_fit": "100% polyester mesh long-sleeve polo; piped detail throughout, hidden zipper placket. FW26.",
+   "copy_quote": "People want us to make more polos",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-04-04_TAN_V1.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-04-04_TAN_V2.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-04-04_TAN_V3.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_511.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_514_b6c7aaa3-1668-4413-b5f2-913d2be230c6.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_515.jpg"
+   ]
+  },
+  {
+   "brand": "Metalwood Studio",
+   "title": "Pleated Western Track Pant",
+   "slot": "trouser",
+   "url": "https://metalwood.studio/products/pleated-western-track-pant-brown",
+   "handle": "pleated-western-track-pant-brown",
+   "price_usd": 168.0,
+   "price_orig": "USD 168",
+   "colorway": "Brown",
+   "sizes_available": [
+    "Small",
+    "Medium",
+    "Large",
+    "X-Large",
+    "XX-Large"
+   ],
+   "fabric_fit": "52% polyester / 42% cotton / 6% spandex; straight leg, permanent pleat, drawstring + elastic waist.",
+   "copy_quote": "Arguably the most comfortable pants ever made",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-08-02_BRN_V1.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-08-02_BRN_V2.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-08-02_BRN_V3.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_430.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_433.jpg"
+   ]
+  },
+  {
+   "brand": "Metalwood Studio",
+   "title": "My Serious Short",
+   "slot": "short",
+   "url": "https://metalwood.studio/products/my-serious-short-brown",
+   "handle": "my-serious-short-brown",
+   "price_usd": 208.0,
+   "price_orig": "USD 208",
+   "colorway": "Brown",
+   "sizes_available": [
+    "30",
+    "32",
+    "34",
+    "36",
+    "38"
+   ],
+   "fabric_fit": "65% polyester / 35% cotton; satin-lined legs, oversized fit.",
+   "copy_quote": "These are my serious shorts",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-07-02_BRN_V1.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-07-02_BRN_V2.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-07-02_BRN_V3.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_513.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_514.jpg"
+   ]
+  },
+  {
+   "brand": "Metalwood Studio",
+   "title": "Raglan Sleeve Blouson",
+   "slot": "layer",
+   "url": "https://metalwood.studio/products/raglan-sleeve-blouson-tan",
+   "handle": "raglan-sleeve-blouson-tan",
+   "price_usd": 298.0,
+   "price_orig": "USD 298",
+   "colorway": "Tan",
+   "sizes_available": [
+    "Small",
+    "Medium",
+    "Large",
+    "X-Large",
+    "XX-Large"
+   ],
+   "fabric_fit": "Shell 50% cotton / 50% polyester, 100% cotton lining; raglan sleeves, western back yoke, concealed button closure + full zip.",
+   "copy_quote": "definitely the butteriest jacket we've made",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-05-03_TAN_V1.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-05-03_TAN_V2.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-05-03_TAN_V5.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_449.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_454_19a40d60-8e13-496e-ab84-975dae91c0fc.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_452.jpg"
+   ]
+  },
+  {
+   "brand": "Metalwood Studio",
+   "title": "Carlsbad Dad Hat",
+   "slot": "cap",
+   "url": "https://metalwood.studio/products/carlsbad-dad-hat-tan",
+   "handle": "carlsbad-dad-hat-tan",
+   "price_usd": 48.0,
+   "price_orig": "USD 48",
+   "colorway": "Tan",
+   "sizes_available": [
+    "One Size"
+   ],
+   "fabric_fit": "100% nylon mid-crown dad hat; direct embroidery, velcro loop closure.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-01-17_TAN_V1.jpg",
+    "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/26FW-01-17_TAN_V2.jpg"
+   ]
+  },
+  {
+   "brand": "Read The Green",
+   "title": "The '97 Vintage Pullover - Navy",
+   "slot": "layer",
+   "url": "https://readthegreen.com/products/the-97-vintage-pullover-navy",
+   "handle": "the-97-vintage-pullover-navy",
+   "price_usd": 100.0,
+   "price_orig": "USD 100",
+   "colorway": "Navy",
+   "sizes_available": [
+    "M",
+    "L",
+    "XL"
+   ],
+   "fabric_fit": "Lightweight 100% nylon vintage-inspired pullover; rib-knit cuffs and collar, adjustable drawstring waist, 'Read The Green Golf Club 1997' front embroidery, back logo. Unisex.",
+   "copy_quote": "Lightweight, Vintage-Inspired Navy Pullover",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/7.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/8.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/11.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/12.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/10.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/32.png"
+   ]
+  },
+  {
+   "brand": "Read The Green",
+   "title": "Back '90s Windbreaker | Regal",
+   "slot": "layer",
+   "url": "https://readthegreen.com/products/back-90s-windbreaker-regal",
+   "handle": "back-90s-windbreaker-regal",
+   "price_usd": 108.0,
+   "price_orig": "USD 108",
+   "colorway": "Regal (navy/cream per SKU NVYCRM; image file named Navy_Gold)",
+   "sizes_available": [
+    "M",
+    "L",
+    "XL",
+    "2XL"
+   ],
+   "fabric_fit": "Lightweight wind- and water-resistant performance fabric; quarter-zip, two side pockets, elastic cuffs, drawstring waist; retro two-tone detailing, relaxed silhouette.",
+   "copy_quote": "A throwback to an era when golf style had a little more personality.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/Navy_Gold_Regal_Front.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/Navy_Gold_Regal_Back.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/Navy_Gold_Regal_Tag.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/HeroImages-36.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/HeroImages-44.png"
+   ]
+  },
+  {
+   "brand": "Read The Green",
+   "title": "The Grounds Crew Jacket | Tan",
+   "slot": "layer",
+   "url": "https://readthegreen.com/products/the-grounds-crew-jacket",
+   "handle": "the-grounds-crew-jacket",
+   "price_usd": 150.0,
+   "price_orig": "USD 150",
+   "colorway": "Tan",
+   "sizes_available": [
+    "L"
+   ],
+   "fabric_fit": "Midweight cotton twill full-zip work jacket; corduroy collar and cuffs, RTG Grounds Crew chest patch, structured workwear fit. Only L in stock.",
+   "copy_quote": "an off the course essential",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/19_e11deaf7-6630-412a-99fa-871f5685e5a4.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/20_64f1b94d-5f55-468d-8734-7d1864c98fa6.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/ECommClothing.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/22_617a16e2-0a66-4e43-8fe6-76094beff209.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/23_26c5906b-37b4-4047-a8ae-fb6afb0af759.png",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/24_2640d631-2c97-4e26-875e-34fb1115c800.png"
+   ]
+  },
+  {
+   "brand": "Read The Green",
+   "title": "Founder's Cap | Brownstone",
+   "slot": "cap",
+   "url": "https://readthegreen.com/products/founders-cap-brown-corduroy",
+   "handle": "founders-cap-brown-corduroy",
+   "price_usd": 45.0,
+   "price_orig": "USD 45",
+   "colorway": "Brownstone (brown corduroy)",
+   "sizes_available": [
+    "One Size"
+   ],
+   "fabric_fit": "Premium 5-panel, 100% corduroy, seamless buckram front, plastic snap; 'Read The Green' front and '4' side embroidery.",
+   "copy_quote": "Premium 5-panel cap",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/hvh3Yo71.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/UB_PkHQU.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/9Mv99eFA.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/HpvOU-_w.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/3.png"
+   ]
+  },
+  {
+   "brand": "Read The Green",
+   "title": "Founder's Cap | Sky",
+   "slot": "cap",
+   "url": "https://readthegreen.com/products/founders-cap-sky-blue",
+   "handle": "founders-cap-sky-blue",
+   "price_usd": 45.0,
+   "price_orig": "USD 45",
+   "colorway": "Sky",
+   "sizes_available": [
+    "One Size"
+   ],
+   "fabric_fit": "Premium 5-panel, 100% cotton, seamless buckram front, plastic snap; 'Read The Green' front and '4' side embroidery.",
+   "copy_quote": "Premium 5-panel cap",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/S7Wdag1w.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/nVItiPBg.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/tSLkNzhI.jpg",
+    "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/7_b91493fd-c336-4170-85e6-70528128b6c8.png"
+   ]
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "title": "The O.G. Polo",
+   "slot": "polo",
+   "url": "https://www.ashworth-golf.com/products/the-o-g-polo-white-blue-heaven-driver-navy",
+   "handle": "the-o-g-polo-white-blue-heaven-driver-navy",
+   "price_usd": 95.0,
+   "price_orig": "USD 95",
+   "colorway": "White/Blue Heaven/Driver Navy",
+   "sizes_available": [
+    "Small",
+    "XLarge"
+   ],
+   "fabric_fit": "Update of Ashworth's original signature polo in CT TECH Pima cotton/poly blend with contrast tipping. Sizes thin (S, XL only).",
+   "copy_quote": "The one that started it all.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1120_1036_CB.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1120_10.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1120_1.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1120_5.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1120_8.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/OGPolo.jpg"
+   ]
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "title": "2Bar Solid Polo",
+   "slot": "polo",
+   "url": "https://www.ashworth-golf.com/products/2bar-solid-polo-core-red",
+   "handle": "2bar-solid-polo-core-red",
+   "price_usd": 89.0,
+   "price_orig": "USD 89",
+   "colorway": "Core Red",
+   "sizes_available": [
+    "Medium",
+    "Large",
+    "XLarge",
+    "XXLarge"
+   ],
+   "fabric_fit": "CT TECH Pima cotton/performance blend with subtle stretch; clean, unfussy solid polo.",
+   "copy_quote": "a clean, unfussy look that wears just as well off the course",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1987_400.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM1987-644.jpg"
+   ]
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "title": "Pierside Cord Pant",
+   "slot": "trouser",
+   "url": "https://www.ashworth-golf.com/products/pierside-cord-pant-taupe",
+   "handle": "pierside-cord-pant-taupe",
+   "price_usd": 125.0,
+   "price_orig": "USD 125",
+   "colorway": "Taupe",
+   "sizes_available": [
+    "30",
+    "32",
+    "33",
+    "34",
+    "36",
+    "38",
+    "40",
+    "42",
+    "44"
+   ],
+   "fabric_fit": "Fine-wale garment-washed corduroy (CT TECH) with a hint of stretch, tailored feel; 32\" inseam. Flat front (not pleated).",
+   "copy_quote": "adds quiet texture to your cold-weather lineup",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM5017_809_CB.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM5017_43.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM5017_18.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM5017_34.jpg"
+   ]
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "title": "Tech Stretch Vest",
+   "slot": "vest",
+   "url": "https://www.ashworth-golf.com/products/tech-stretch-vest-bone",
+   "handle": "tech-stretch-vest-bone",
+   "price_usd": 145.0,
+   "price_orig": "USD 145",
+   "colorway": "Bone",
+   "sizes_available": [
+    "Medium",
+    "XLarge",
+    "XXLarge"
+   ],
+   "fabric_fit": "High-gauge four-way-stretch AG TECH full-zip vest; wind and water resistant, zip pockets, Golfman embroidery.",
+   "copy_quote": "Your secret weapon.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM4072_802_d15bef2e-75b0-43cd-a28a-fbe220cff192.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM4072_2299.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM4072_2290.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM4072_2294.jpg"
+   ]
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "title": "Terry Twillback Crew",
+   "slot": "crew",
+   "url": "https://www.ashworth-golf.com/products/terry-twillback-crew-oatmeal-heather",
+   "handle": "terry-twillback-crew-oatmeal-heather",
+   "price_usd": 110.0,
+   "price_orig": "USD 110",
+   "colorway": "Oatmeal Heather",
+   "sizes_available": [
+    "Small",
+    "Medium",
+    "Large",
+    "XLarge",
+    "XXLarge",
+    "XXXLarge"
+   ],
+   "fabric_fit": "CT TECH crewneck, soft with subtle structure; model 6'2\" wears M.",
+   "copy_quote": "A modern take on the crewneck.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM2070_813_CB_ac622dbe-a20c-4097-899b-8d5f33686308.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM2070_30.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM2070_22.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM2070_23.jpg",
+    "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM2070_29.jpg"
+   ]
+  },
+  {
+   "brand": "Siegelman Stable",
+   "title": "Logo Knit",
+   "slot": "knit",
+   "url": "https://siegelmanstable.com/products/siegelman-stable-logo-knit-5",
+   "handle": "siegelman-stable-logo-knit-5",
+   "price_usd": 282.0,
+   "price_orig": "USD 282",
+   "colorway": "Light Blue (dusty blue, cream logo)",
+   "sizes_available": [
+    "XS/S",
+    "M/L",
+    "XL/XXL"
+   ],
+   "fabric_fit": "Tricot knit sweater, 96% cotton / 4% recycled polyester; rib cuff and waistband, unisex, cut for a loose fit.",
+   "copy_quote": "Blue tricot knit sweater with white Siegelman Stable logo.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/img_RM_9_4_f6c7c21b-8b06-45bc-9f34-8c735ba20dfa.jpg",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/SSECOMM09104682_be48018e-30ad-48b7-ade4-7824499e01a1.jpg",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/SSECOMM09104684_5bc03dc8-95db-4c15-9037-80f55e76c072.jpg"
+   ]
+  },
+  {
+   "brand": "Siegelman Stable",
+   "title": "Siegelman Stable Hat (Red / Gold)",
+   "slot": "cap",
+   "url": "https://siegelmanstable.com/products/siegelman-stable-hat-1",
+   "handle": "siegelman-stable-hat-1",
+   "price_usd": 76.0,
+   "price_orig": "USD 76",
+   "colorway": "Red / Gold",
+   "sizes_available": [
+    "O/S"
+   ],
+   "fabric_fit": "Structured five-panel pro-style cap, 65% poly / 35% cotton, seamless buckram front, matching undervisor, adjustable strap; university-gold embroidery.",
+   "copy_quote": "Red Five Panel Pro Style cap featuring university gold Siegelman Stable embroidery.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/download-1_17e08db2-346d-4e60-8cdf-c6ead73d9f60.png",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/SSECOMM08182579521.jpg",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/SSECOMM08182579571.jpg",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/Untitled-June16_2026at10.40.30-7_d35d2a42-8e42-49a8-bda5-546e708b74a3.png"
+   ]
+  },
+  {
+   "brand": "Siegelman Stable",
+   "title": "Siegelman Stable Canvas Dad Hat",
+   "slot": "cap",
+   "url": "https://siegelmanstable.com/products/siegelman-stable-canvas-dad-hat-2",
+   "handle": "siegelman-stable-canvas-dad-hat-2",
+   "price_usd": 82.0,
+   "price_orig": "USD 82",
+   "colorway": "Camel",
+   "sizes_available": [
+    "OS"
+   ],
+   "fabric_fit": "100% cotton washed canvas, unstructured 6-panel, buckle closure, made in USA; each cap unique from washing.",
+   "copy_quote": "Due to the Washing Process Each Cap Is Unique",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/29699_t_1_6af193b4-0f97-4cbc-8fb5-4db2ad16a1c1.jpg",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/29699_t_4_8cb01bb5-2114-4ee5-a307-3f066161dd92.jpg",
+    "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/29699_t_5B.jpg"
+   ]
+  },
+  {
+   "brand": "Devereux Golf",
+   "title": "Camelback Polo - Brown / White Stripe",
+   "slot": "polo",
+   "url": "https://devereuxgolf.com/products/camelback-polo-brown-white-stripe",
+   "handle": "camelback-polo-brown-white-stripe",
+   "price_usd": 68.0,
+   "price_orig": "USD 68",
+   "colorway": "Brown/White stripe",
+   "sizes_available": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "fabric_fit": "Brushed pique striped polo with contrast ribbed collar; soft hand feel.",
+   "copy_quote": "pairs classic stripes with a contrast ribbed collar",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_1005-BRWN-WHT-STRIPE_01.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_1005-BRWN-WHT-STRIPE_03.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277402680.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277402665.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277402696.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/Fall2_fuji-43.jpg"
+   ]
+  },
+  {
+   "brand": "Devereux Golf",
+   "title": "Origin Polo - Clay",
+   "slot": "polo",
+   "url": "https://devereuxgolf.com/products/origin-polo-clay",
+   "handle": "origin-polo-clay",
+   "price_usd": 74.0,
+   "price_orig": "USD 74",
+   "colorway": "Clay (tagged 'color: brown')",
+   "sizes_available": [
+    "S",
+    "M",
+    "L",
+    "XL",
+    "XXL"
+   ],
+   "fabric_fit": "Printed polo with a subtle geometric pattern and ribbed collar.",
+   "copy_quote": "A clean option for the course or everyday wear.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_1051-CLAY_01.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_1051-CLAY_03.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277403212.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277403209.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277403234.jpg"
+   ]
+  },
+  {
+   "brand": "Devereux Golf",
+   "title": "El Classico Pant - Brown",
+   "slot": "trouser",
+   "url": "https://devereuxgolf.com/products/el-classico-pant-brown",
+   "handle": "el-classico-pant-brown",
+   "price_usd": 88.0,
+   "price_orig": "USD 88",
+   "colorway": "Brown",
+   "sizes_available": [
+    "32x30",
+    "34x30",
+    "36x30",
+    "38x30",
+    "40x30",
+    "32x32",
+    "34x32",
+    "36x32",
+    "38x32",
+    "40x32"
+   ],
+   "fabric_fit": "Relaxed soft-twill trouser, roomier fit with 16\" leg opening; engineered stretch waistband with metal embellishments. (Copy does not mention pleats.)",
+   "copy_quote": "Wear it on the course. Wear it to dinner.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_3005-BRWN_04.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_3005-BRWN_05.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_3005-BRWN_03.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_3005-BRWN_01.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277403275.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277403280.jpg"
+   ]
+  },
+  {
+   "brand": "Devereux Golf",
+   "title": "Grand Canyon Country Club Hat - Brindle",
+   "slot": "cap",
+   "url": "https://devereuxgolf.com/products/golden-state-country-club-hat-stone",
+   "handle": "golden-state-country-club-hat-stone",
+   "price_usd": 38.0,
+   "price_orig": "USD 38",
+   "colorway": "Brindle (tagged 'color: brown')",
+   "sizes_available": [
+    "O/S"
+   ],
+   "fabric_fit": "Structured five-panel A-frame hat with patch detail.",
+   "copy_quote": "Structured five-panel A-frame hat with patch detail.",
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_5037-BRNDL-BLK_01.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_5037-BRNDL-BLK_02.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/FA26_5037-BRNDL-BLK_03.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277400663_959cbbac-b28f-49c8-89cd-ed5be76f5256.jpg",
+    "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277400679_5c1d9f67-5d47-404f-9a4e-34c27038fb6e.jpg"
+   ]
+  }
+ ],
+ "lifestyle": [
+  {
+   "brand": "Late Nine",
+   "url": "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Frame13_81b59fac-2c03-4918-9de3-f33ca3178b6f.jpg",
+   "caption": "Full-length on-model: Double Pleat Slacks Dark Brown worn with a dark brown polo (store alt text)"
+  },
+  {
+   "brand": "Late Nine",
+   "url": "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/DSC05872.jpg",
+   "caption": "Full-length on-model: Cable Knit Polo Light Blue with grey trousers (store alt text)"
+  },
+  {
+   "brand": "Late Nine",
+   "url": "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_QZ_2.jpg",
+   "caption": "Full-length on-model: Quarter Zip Windbreaker Beige with white shorts (store alt text)"
+  },
+  {
+   "brand": "Late Nine",
+   "url": "https://cdn.shopify.com/s/files/1/0848/3261/6716/files/Beige_shorts_3.jpg",
+   "caption": "Side view: Double Pleat Shorts Beige worn with golf shoes (store alt text)"
+  },
+  {
+   "brand": "Metalwood Studio",
+   "url": "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_430.jpg",
+   "caption": "Metalwood campaign/on-model image from the Pleated Western Track Pant (Brown) product page"
+  },
+  {
+   "brand": "Metalwood Studio",
+   "url": "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_449.jpg",
+   "caption": "Metalwood campaign/on-model image from the Raglan Sleeve Blouson (Tan) product page"
+  },
+  {
+   "brand": "Metalwood Studio",
+   "url": "https://cdn.shopify.com/s/files/1/0256/5429/6673/files/MWS_SS26_511.jpg",
+   "caption": "Metalwood campaign/on-model image from the Piped LS Quarter Zip Polo (Tan) product page"
+  },
+  {
+   "brand": "Read The Green",
+   "url": "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/HeroImages-36.png",
+   "caption": "Hero/campaign image from the Back '90s Windbreaker | Regal product page"
+  },
+  {
+   "brand": "Read The Green",
+   "url": "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/HeroImages-44.png",
+   "caption": "Hero/campaign image from the Back '90s Windbreaker | Regal product page"
+  },
+  {
+   "brand": "Read The Green",
+   "url": "https://cdn.shopify.com/s/files/1/0795/0306/5378/files/ECommClothing.png",
+   "caption": "Lifestyle image from The Grounds Crew Jacket | Tan product page"
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "url": "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/OGPolo.jpg",
+   "caption": "Editorial image from The O.G. Polo product page"
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "url": "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM5017_43.jpg",
+   "caption": "On-model image from the Pierside Cord Pant (Taupe) product page"
+  },
+  {
+   "brand": "Ashworth Golf Company",
+   "url": "https://cdn.shopify.com/s/files/1/0498/0031/5048/files/AM2070_30.jpg",
+   "caption": "On-model image from the Terry Twillback Crew (Oatmeal Heather) product page"
+  },
+  {
+   "brand": "Siegelman Stable",
+   "url": "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/SSECOMM08182579521.jpg",
+   "caption": "Model wearing the red Siegelman Stable pro cap with gold logo and a cream sweatshirt (store alt text)"
+  },
+  {
+   "brand": "Siegelman Stable",
+   "url": "https://cdn.shopify.com/s/files/1/0260/6625/5908/files/SSECOMM09104682_be48018e-30ad-48b7-ade4-7824499e01a1.jpg",
+   "caption": "Model wearing the dusty blue logo knit with a gray-blue cap and dark jeans (store alt text)"
+  },
+  {
+   "brand": "Devereux Golf",
+   "url": "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277403275.jpg",
+   "caption": "Devereux campaign image from the El Classico Pant - Brown product page"
+  },
+  {
+   "brand": "Devereux Golf",
+   "url": "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/DevereuxSpring277402680.jpg",
+   "caption": "Devereux campaign image from the Camelback Polo - Brown/White Stripe product page"
+  },
+  {
+   "brand": "Devereux Golf",
+   "url": "https://cdn.shopify.com/s/files/1/0148/2421/0518/files/Fall2_fuji-43.jpg",
+   "caption": "Devereux fall editorial image from the Camelback Polo - Brown/White Stripe product page"
+  }
+ ]
+}
