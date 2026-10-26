@@ -133,14 +133,17 @@ def rewrite_html(h, fn):
     return "".join(out), n
 
 
-def read(path, tries=4):
+def read(path, tries=8):
+    # 25 Oct 2026: this used to raise after 4 tries. One iCloud-locked file then killed the whole run, and
+    # because Deploy TGI.command has no `set -e` the deploy carried on and pushed 211 pages (every brand page
+    # and the newest posts) with untagged outbound links. Now it retries longer, then skips that one file.
     for i in range(tries):
         try:
             with open(path, encoding="utf-8") as f:
                 return f.read()
         except OSError:          # iCloud "Resource deadlock avoided" — retry
             if i == tries - 1:
-                raise
+                return None
             time.sleep(0.5 * (i + 1))
 
 
@@ -162,9 +165,14 @@ def main():
     apply_ = "--apply" in sys.argv
     revert = "--revert" in sys.argv
     total_links = total_files = refused = 0
+    skipped = []
     for rel in files():
         path = os.path.join(S, rel)
         h = read(path)
+        if h is None:
+            print("SKIPPED (file locked by iCloud, will be tagged next run):", rel)
+            skipped.append(rel)
+            continue
         if revert:
             new, n = rewrite_html(h, strip_utm)
         else:
@@ -186,6 +194,8 @@ def main():
     verb = "stripped" if revert else "tagged"
     print("%s %d links on %d pages%s" % (verb, total_links, total_files,
           "" if apply_ else "  (dry run - pass --apply)"))
+    if skipped:
+        print("%d page(s) skipped because iCloud had them locked" % len(skipped))
     if refused:
         print("%d pages refused - nothing written to them" % refused)
         sys.exit(1)
