@@ -8,7 +8,7 @@ are left alone. Idempotent; runs in Deploy TGI.command before apply-gallery-wrap
 """
 import json, os, re, sys
 ROOT = os.path.dirname(os.path.abspath(__file__))
-POSTS = ["drops/golf-capsule-wardrobe.html", "drops/brand-revisited-water-when-dry.html",
+POSTS = ["drops/east-coast-vs-west-coast-golf-brands.html", "drops/golf-capsule-wardrobe.html", "drops/brand-revisited-water-when-dry.html",
          "drops/golf-fabrics-merino-ripstop-corduroy.html", "drops/new-golf-drops-malbon-gumtree-mogshade.html"]
 CACHE = os.path.join(ROOT, "data/model-first.json")
 THRESH = 0.035
