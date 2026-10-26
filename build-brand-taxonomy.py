@@ -73,7 +73,7 @@ TAX = [
  ),
 ("tag", "made-by-hand", "Golf Brands That Make It By Hand",
  "Handmade Golf Gear — Small-Batch Brands | The Grassy Issue",
- "Forty-five golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
+ "Forty-six golf brands where a person still makes the thing — wedges ground by hand, headcovers cut one at a time, course maps painted to order.",
  """<p>The honest version of &ldquo;handmade&rdquo; is narrow, and this is our attempt to hold the
  line on it. <strong>Artisan Golf</strong> qualifies because Mike Taylor still grinds every wedge
  himself and you cannot order one without an in-person fitting. <strong>Ally Aiken</strong>
@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Thirty-four golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Thirty-five golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -116,7 +116,7 @@ TAX = [
  ),
 ("tag", "muni-energy", "Muni-Energy Golf Brands",
  "Muni Golf Brands — Public-Course Energy | The Grassy Issue",
- "Twenty-six golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
+ "Twenty-seven golf brands that dress for a muni rather than a member-guest — public-course culture, parking-lot beer and no dress code anxiety.",
  """<p>Muni energy is a posture more than a price point. It means the brand is dressing for a
  public course on a Saturday morning: a tee time you booked at 11pm, a bag you carry, a beer in the
  lot afterwards. <strong>Devereux</strong>, <strong>Criquet Shirts</strong> and
@@ -131,7 +131,7 @@ TAX = [
  ),
 ("tag", "post-round-friendly", "Golf Clothes You Can Wear After the Round",
  "Post-Round Golf Clothing Brands | The Grassy Issue",
- "Thirty-three golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
+ "Thirty-five golf brands making clothes that do not announce themselves off the course — wearable at the bar, the airport and everywhere after eighteen.",
  """<p>The test is simple and unforgiving: would you keep it on for dinner. Most golf clothing
  fails it, because the thing that makes a polo read as golf — the logo placement, the sheen of the
  fabric, the cut through the shoulder — is exactly the thing that makes it read as golf in a
@@ -145,8 +145,8 @@ TAX = [
  ),
 ("tag", "collab-machine", "Golf's Collaboration Machines",
  "Golf Collaboration Brands — Collab Machines | The Grassy Issue",
- "Eighteen golf brands that build through partnership — the labels whose best work usually arrives with somebody else's name on it too.",
- """<p>Some brands express themselves best in their own range. These eighteen express themselves
+ "Nineteen golf brands that build through partnership — the labels whose best work usually arrives with somebody else's name on it too.",
+ """<p>Some brands express themselves best in their own range. These nineteen express themselves
  best in somebody else's. <strong>MacKenzie Golf Bags</strong> has become a canvas the rest of golf
  paints on. <strong>BEAMS Golf</strong> runs a collaboration calendar dense enough to be its own
  release schedule. <strong>Aimé Leon Dore</strong> turned a FootJoy into a cultural object.</p>
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "Ninety-seven golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "One hundred golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
@@ -576,7 +576,12 @@ for kind, slug, h1, title, desc, intro in TAX:
     _o = "zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen eighteen nineteen".split()
     _t = "_ _ twenty thirty forty fifty sixty seventy eighty ninety".split()
     n_ = len(ms)
-    w = _o[n_] if n_ < 20 else _t[n_ // 10] + ("" if n_ % 10 == 0 else "-" + _o[n_ % 10])
+    def _w(n):
+        if n < 20: return _o[n]
+        if n < 100: return _t[n // 10] + ("" if n % 10 == 0 else "-" + _o[n % 10])
+        # 100+ (new-to-index passed 100 on 25 Oct 2026): "one hundred", "one hundred and four"
+        return _o[n // 100] + " hundred" + ("" if n % 100 == 0 else " and " + _w(n % 100))
+    w = _w(n_)
     if w and w not in (plain + " " + desc).lower():
         raise SystemExit(f"{slug}: {len(ms)} brands but the copy does not say '{w}' — counts must "
                          f"match the data, and the data moved")
