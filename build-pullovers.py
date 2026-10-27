@@ -95,10 +95,10 @@ BANDS = {
    ("look-juniper-james-1", "A golfer in a light-blue Juniper &amp; James performance quarter-zip on a course at golden hour", "Juniper &amp; James"),
    ("look-macade-3", "A golfer in a grey Macade cable-knit quarter-zip holding an iron in front of a stone clubhouse", "Macade"),
    ("look-criquet-1", "A man in a teal Criquet fleece half-zip in a forest", "Criquet")]),
- "wind-pullovers": ("The Lookbook", "Windshirts on links greens and parkland fairways.", [
-   ("look-read-the-green-2", "A golfer in a green Read the Green quarter-zip windshirt at the finish of a swing", "Read the Green"),
-   ("look-sugarloaf-social-club-1", "A golfer in a mint Sugarloaf windshirt lining up a putt on a links green beside dunes", "Sugarloaf Social Club"),
-   ("look-mount-tee-golf-1", "A golfer in a cream Mount Tee nylon pullover walking off a green with a carry bag", "Mount Tee")]),
+ "wind-pullovers": ("The Lookbook", "Windshirts on the green, mid-round and mid-celebration.", [
+   ("look-read-the-green-1", "A golfer in a grey Read the Green half-zip windshirt walking on a course", "Read the Green"),
+   ("look-sugarloaf-social-club-2", "A golfer in a red Sugarloaf half-zip windshirt marking his ball on a green", "Sugarloaf Social Club"),
+   ("look-walker-golf-things-2", "A golfer in a maroon Walker short-sleeve windshirt tossing a club after a shot", "Walker")]),
  "v-necks": ("The Lookbook", "Plaid, tipped trim and a full swing.", [
    ("look-walker-golf-things-1", "A golfer in a plaid Walker windshirt on a sunlit course", "Walker"),
    ("look-macade-1", "A golfer in a heather-tan Macade quarter-zip with varsity trim, iron in hand", "Macade"),
@@ -284,7 +284,7 @@ def main(apply_):
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Three photos side by side: a golfer in a red Devereux Sandy Lane pullover on coastal rocks, a man in a cream Fella Boris quarter-zip with a navy stripe, and a golfer mid-swing in a blue Juniper &amp; James quarter-zip" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Three photos side by side on the course: a golfer in a mint Sugarloaf windshirt putting on a links green, a golfer in a green Read the Green quarter-zip windshirt finishing a swing, and a golfer in a cream Mount Tee nylon pullover walking off a green with his bag" fetchpriority="high" /></div></div>
 """
     body += TAKE
     n = 1

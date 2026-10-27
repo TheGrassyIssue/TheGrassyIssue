@@ -19,7 +19,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "pullovers"
 
 SLIDES = [
-    ("card-hero", "A golfer in a red Devereux Sandy Lane pullover on coastal rocks",
+    ("card-hero", "A golfer in a mint Sugarloaf windshirt putting on a links green",
      "The Pullover Edit", "The Fall Layer",
      "Quarter-zips, windshirts and V-necks: 20 new, 5 vintage."),
     ("n42-1", "Macade Bridge merino quarter zip in brown",
