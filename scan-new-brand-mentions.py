@@ -162,6 +162,9 @@ DOMAINS.update({
     "communal": ["communalmfg.com"],
     "duke-dexter": ["dukeanddexter.com"],
     "winslow": ["winslowla.com"],
+    "aberdeen-west": ["aberdeenwest.com"],
+    "we-hit-fairways": ["wehitfairways.com"],
+    "grind-city-golf": ["grindcitygolf.com"],
 })
 for _slug, _st in json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/brand-stores.json")))["stores"].items():
     _d = (_st.get("domain") or "").replace("www.", "")
