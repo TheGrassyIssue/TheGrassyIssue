@@ -183,12 +183,17 @@ ENDPOINT = ("https://script.google.com/macros/s/"
 
 def esc(s): return html.escape(s, quote=True)
 
+_SOC = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data/brand-socials.json")))
+
 def card(d):
     tags = [t for t in d["tags"] if t in ("quiet-luxury","material-forward","made-by-hand","muni-energy","gorpcore","design-nerd")][:2] \
            or [t for t in d["tags"] if t in TAGL][:1]
     tg = "".join(f'<span class="tag">{TAGL[t].upper()}</span>' for t in tags)
     meta = " · ".join(x for x in (esc(d["loc"].upper().strip("— -")), esc(d["cat"].upper())) if x)
     text = (d["name"]+" "+d["loc"]+" "+d["line"]+" "+" ".join(TAGL.get(t,t) for t in d["tags"])+" "+" ".join(CATL.get(c,c) for c in d["cats"])).lower()
+    # 27 Oct: Lenny couldn't find We Hit Fairways — brands style themselves as one word (WEHITFAIRWAYS.COM, GrindCity),
+    # so also index the name with no spaces/punctuation and the brand's own domain.
+    text += " " + re.sub(r"[^a-z0-9]", "", d["name"].lower()) + " " + _SOC.get(d["slug"], {}).get("website", "").lower().replace("https://", "").replace("http://", "").replace("www.", "").strip("/")
     pl = re.sub(r"\s+", " ", re.sub(r"&[a-z]+;|&#\d+;", "", d["name"])).strip()
     return (f'<a class="bc" href="{d["url"]}" data-slug="{d["slug"]}" data-letter="{d["name"].lstrip("&").strip()[0].upper()}" data-upd="{d["upd"]}" data-az="{esc(d["name"].lstrip("&").strip().lower())}" '
             f'data-cats="{" ".join(d["cats"])}" data-regions="{" ".join(d["regions"])}" '
