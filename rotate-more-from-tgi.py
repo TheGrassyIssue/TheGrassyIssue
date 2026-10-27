@@ -136,7 +136,7 @@ def main(apply_):
             grids[f] = tuple(re.findall(r'<a href="([^"]+)" class="more-card"', s[sp[0]:sp[1]])) if sp else ()
     dupcount = collections.Counter(grids.values())
     fixed = injected = 0
-    PIN = pins(); EXC = excludes()
+    PIN = pins(); EXC = excludes(); POOLU = {p["u"] for p in P}
     for f, hrefs in grids.items():
         s = open(f, encoding="utf-8").read(); o = s
         slug = "/" + os.path.relpath(f, ROOT)[:-5]
@@ -145,7 +145,10 @@ def main(apply_):
         open_tag = ('<div class="more-grid"' + (f' data-pin="{",".join(pin)}"' if pin else "")
                     + (f' data-exclude="{",".join(exc)}"' if exc else "") + '>')
         if (dupcount[hrefs] > 1 or slug in hrefs or len(hrefs) < 4 or tuple(hrefs[:len(pin)]) != tuple(pin)
-                or open_tag not in s or any(u in hrefs for u in exc)):
+                or open_tag not in s or any(u in hrefs for u in exc)
+                # a card pointing at a post that left the pool (held or removed, e.g. the quiet-luxury post
+                # pulled 26 Oct 2026) would otherwise sit there as a dead link until something else forced a redraw
+                or any(u not in POOLU for u in hrefs)):
             sp = grid_span(s)
             s = s[:sp[0]] + open_tag + '\n' + cards(pick(P, slug, pinned=pin, skip=exc)) + "\n  </div>" + s[sp[1]:]
             fixed += 1

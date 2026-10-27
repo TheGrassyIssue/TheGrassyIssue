@@ -1,0 +1,380 @@
+{
+ "slug": "casualist",
+ "domain": "casualist.com",
+ "fetched": "2026-10-26",
+ "currency": "USD",
+ "rate": "1.361139",
+ "country": "US",
+ "count_total": 24,
+ "count_kept": 20,
+ "note": "Fetched via Chrome (sandbox rate-limited). Prices are store USD presentment prices (rate 1.361139 vs base currency), cross-checked against /products/<handle>.js.",
+ "products": [
+  {
+   "handle": "pleated-trousers",
+   "title": "Pleated Golf Trousers — Organic Cotton",
+   "product_type": "Trousers",
+   "price": "199.00",
+   "currency": "USD",
+   "available_variant_count": 8,
+   "total_variant_count": 8,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_golf_trousers_front_view_ivory.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_back_view_ivory.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_taupe_back_view.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_pleated_trousers_taupe_front_view.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_No_Idea_sweatshirt_worn_model_lifestyle_shot.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Close_up_Casualist_pleated_trousers_ivory_fabric_detail.png"
+   ],
+   "description": "The trouser you actually want to wear. Made from smooth organic cotton twill with a high waist, clean pleats and a straight leg that works on and off the course without making a fuss about it. Hidden drawstring at the waist, embroidered Casualist log",
+   "published_at": "2026-03-31",
+   "url": "https://casualist.com/products/pleated-trousers"
+  },
+  {
+   "handle": "heavy-tee-agni",
+   "title": "No Idea Heavy Tee — Organic Cotton Golf T-shirt",
+   "product_type": "T-Shirt",
+   "price": "95.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Heavy_T-shirt_back.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Heavy_T-shirt_front.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/T-shirt_Worn_close_up.png"
+   ],
+   "description": "Made from 100% organic cotton with a relaxed fit that lets you breathe, move, and question why you ever wore tight tees to begin with. Heavyweight construction, screen printed Casualist logo and swing motif detail. The kind of tee that improves with ",
+   "published_at": "2026-03-31",
+   "url": "https://casualist.com/products/heavy-tee-agni"
+  },
+  {
+   "handle": "all-the-gear-sweatshirt",
+   "title": "All The Gear Sweatshirt",
+   "product_type": "Sweatshirt",
+   "price": "140.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_All_The_Gear_sweatshirt_front_view.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_All_The_Gear_sweatshirt_back_screen_print.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_No_Idea_sweatshirt_worn_model_lifestyle_shot.png"
+   ],
+   "description": "A mid weight crewneck built for the course and everywhere after. 380gsm cotton that feels substantial without being heavy, with an embroidered logo on the chest and a screen printed back that does the explaining for you. The kind of sweatshirt that w",
+   "published_at": "2026-03-31",
+   "url": "https://casualist.com/products/all-the-gear-sweatshirt"
+  },
+  {
+   "handle": "legacy-wool-5-panel-cap",
+   "title": "Legacy Wool 5 Panel Cap",
+   "product_type": "Hat",
+   "price": "60.00",
+   "currency": "USD",
+   "available_variant_count": 1,
+   "total_variant_count": 2,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Wool_Legacy_Hat.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/WoolLegacyHatworn.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Wool_Legacy_Hat_Brown.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Wool_Legacy_Hat_Dark_side.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Wool_Legacy_Hat_side.png"
+   ],
+   "description": "A fresh take on a timeless shape. The sort of cap that looks like it has been somewhere. Made from soft wool tartan with a rope detail and our signature C logo up front. Inspired by vintage caps from an era when golf was slower and the clothes were b",
+   "published_at": "2026-02-20",
+   "url": "https://casualist.com/products/legacy-wool-5-panel-cap"
+  },
+  {
+   "handle": "winbreaker-1",
+   "title": "Windbreaker Coach Jacket - Archive",
+   "product_type": "Jacket",
+   "price": "120.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Jacket_flat_back_grey.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Jacket_flat_grey.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/R0001868_25332156-c13a-4f0c-9750-a1f7299848a9.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/R0001806.jpg"
+   ],
+   "description": "Because the weather on a British golf course is more of a suggestion than a forecast. Designed to be both stylish and functional, this water resistant windbreaker is cut for the course and built to handle whatever the sky decides to do. Lightweight e",
+   "published_at": "2026-02-17",
+   "url": "https://casualist.com/products/winbreaker-1"
+  },
+  {
+   "handle": "leisure-hats",
+   "title": "Casual Pro Snapback — Leisure Hats OG",
+   "product_type": "Hat",
+   "price": "45.00",
+   "currency": "USD",
+   "available_variant_count": 3,
+   "total_variant_count": 5,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Leisure_Hats_OG_snapback_navy_front_embroidery_yellow.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Black_Casual_Pro_Snapback_Cap_Casualist_Leisure_Hats_OG.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Brown_Casual_Pro_Snapback_Cap_Casualist_Leisure_Hats_OG.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Green_Casual_Pro_Snapback_Cap_Casualist_Leisure_Hats_OG.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Bone_Casual_Pro_Snapback_Cap_Casualist_Leisure_Hats_OG.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Black_Casualist_Snapback_Side_View_Leisure_Hats_OG.jpg"
+   ],
+   "description": "Our best seller is back in stock, which means you have no excuse not to look the part. Made from 100% recycled quick-dry nylon with a mid-profile fit and plastic snapback. It sits right, stays right, and quietly suggests you know what you're doing - ",
+   "published_at": "2025-11-24",
+   "url": "https://casualist.com/products/leisure-hats"
+  },
+  {
+   "handle": "grazer-cardigan-vest-grey",
+   "title": "Grazer Cardigan Vest",
+   "product_type": "Vest",
+   "price": "250.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Grazer_Cardigan_Vest_front_view_grey_merino_wool.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Grazer_Cardigan_Vest_back_embroidery_detail_grey.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Grazer_Cardigan_Vest_close_up_merino_wool_texture_Casualist.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/asualist_Grazer_Cardigan_Vest_worn_lifestyle_shot.jpg"
+   ],
+   "description": "A throwback layer that earns its place in the bag. Made from 100% merino wool with a soft, vintage feel. Button down front for easy styling, quietly embroidered logo and mascot on the chest, and a back caption for those walking behind you. The kind o",
+   "published_at": "2025-11-09",
+   "url": "https://casualist.com/products/grazer-cardigan-vest-grey"
+  },
+  {
+   "handle": "appropriate-dress-code-mockneck-tee-dusty-blue",
+   "title": "Dress Code Mockneck Tee",
+   "product_type": "T-Shirt",
+   "price": "115.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Appropriate_Dress_Code_Mockneck_Tee_blue.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Mockneck_Blue_front_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-1577.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Mockneck_blue_detail.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-147.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-164.jpg"
+   ],
+   "description": "Still technically a tee. Just dressed up enough to pass scrutiny. Made from smooth interlock cotton for added stretch and movement, with a mockneck that handles the dress code so you don't have to think about it. Raglan sleeves, regular fit, screen p",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/appropriate-dress-code-mockneck-tee-dusty-blue"
+  },
+  {
+   "handle": "trust-the-swing-pique-polo-olive",
+   "title": "Trust the Swing Pique Polo",
+   "product_type": "Polo",
+   "price": "140.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Long_sleeve_polo_Olive_green_front.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-313_1026c399-aa2f-4abc-b5a8-090e778a437f.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Long_sleeve_polo_Olive_green_back.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-321.jpg"
+   ],
+   "description": "A classic long sleeve polo with a retro Claudine collar. The kind of thing that works in the clubhouse, in the pub, and at that dinner you were slightly underdressed for. Made from soft pique cotton with a relaxed fit so you can move like you meant t",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/trust-the-swing-pique-polo-olive"
+  },
+  {
+   "handle": "weekend-pique-polo-ecru",
+   "title": "Weekend Pique Polo",
+   "product_type": "Polo",
+   "price": "129.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Short_sleeve_polo_Offwhite_back_Olive_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/CasualistSelects-354.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Short_sleeve_polo_Offwhite_front_Olive_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/casualist9632.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-352.jpg"
+   ],
+   "description": "A laid-back take on a classic. The sort of polo your club captain would wear, if your club captain had better taste. Raglan sleeves for comfort, a relaxed retro fit, and a two-tone look that does just enough. Made from 100% organic cotton pique. Avai",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/weekend-pique-polo-ecru"
+  },
+  {
+   "handle": "casual-5-panels-ripstop-cap-olive",
+   "title": "Casual 5 Panels Ripstop Cap",
+   "product_type": "Hat",
+   "price": "60.00",
+   "currency": "USD",
+   "available_variant_count": 1,
+   "total_variant_count": 1,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Ripstop_green_hat_front_2_e1960740-9ec7-4cd9-ada3-133f0d22316f.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-379.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-381-2.jpg"
+   ],
+   "description": "For the days you're not trying too hard, and it shows in the best way. Lightweight ripstop, adjustable buckle, and 'casual' up front to match your general approach to the back nine. The olive colourway blends in on the course, which may or may not be",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/casual-5-panels-ripstop-cap-olive"
+  },
+  {
+   "handle": "appropriate-dress-code-mockneck-tee-ecru",
+   "title": "Dress Code Mockneck Tee",
+   "product_type": "T-Shirt",
+   "price": "115.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Appropriate_Dress_Code_Mockneck_Tee_back_view_ecru.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Appropriate_Dress_Code_Mockneck_Tee_worn_on_course_Casualist.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Dress_Code_Mockneck_Tee_front_view_ecru_organic_cotton.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Mockneck_tee_close_up_detail_Casualist_swing_label.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/ppropriate_Dress_Code_Mockneck_Tee_worn_on_course_Casualist.jpg"
+   ],
+   "description": "Still technically a tee. Just dressed up enough to pass scrutiny. Made from smooth interlock cotton for added stretch and movement, with a mockneck that handles the dress code so you don't have to think about it. Raglan sleeves, regular fit, screen p",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/appropriate-dress-code-mockneck-tee-ecru"
+  },
+  {
+   "handle": "trust-the-swing-pique-polo-dusty-blue",
+   "title": "Trust the Swing Pique Polo",
+   "product_type": "Polo",
+   "price": "140.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Long_sleeve_polo_Blue_front.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Captured_ecran2025-11-08a18.24.37.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Long_sleeve_polo_Blue_back.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Long_sleeve_polo_Blue_detail.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-97.jpg"
+   ],
+   "description": "A classic long sleeve polo with a retro Claudine collar. The kind of thing that works in the clubhouse, in the pub, and at that dinner you were slightly underdressed for. Made from soft pique cotton with a relaxed fit so you can move like you meant t",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/trust-the-swing-pique-polo-dusty-blue"
+  },
+  {
+   "handle": "weekend-pique-polo-mocha",
+   "title": "Weekend Pique Polo",
+   "product_type": "Polo",
+   "price": "129.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Short_sleeve_polo_mocha_back_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-102.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Short_sleeve_polo_mocha_front_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-107.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-282.jpg"
+   ],
+   "description": "A laid-back take on a classic. The sort of polo your club captain would wear, if your club captain had better taste. Raglan sleeves for comfort, a relaxed retro fit, and a two-tone look that does just enough. Made from 100% organic cotton pique. Avai",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/weekend-pique-polo-mocha"
+  },
+  {
+   "handle": "casual-5-panels-ripstop-cap-yellow",
+   "title": "Casual 5 Panels Ripstop Cap",
+   "product_type": "Hat",
+   "price": "60.00",
+   "currency": "USD",
+   "available_variant_count": 1,
+   "total_variant_count": 1,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Ripstop_Yellow_hat_front_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-91.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-385.jpg"
+   ],
+   "description": "For the days you're not trying too hard, and it shows in the best way. Lightweight ripstop, adjustable buckle, and 'casual' up front to match your general approach to the back nine. The yellow colourway does the talking so you don't have to. Lightwei",
+   "published_at": "2025-10-30",
+   "url": "https://casualist.com/products/casual-5-panels-ripstop-cap-yellow"
+  },
+  {
+   "handle": "grazer-cardigan-vest",
+   "title": "Grazer Cardigan Vest",
+   "product_type": "Vest",
+   "price": "250.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Grazer_Cardigan_Vest_front_view_yellow_merino_wool.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Grazer_Cardigan_Vest_worn_on_course_yellow_Casualist_lifestyle.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Grazer_Cardigan_Vest_yellow_front_detail.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Grazer_Cardigan_Vest_yellow_worn_model_Casualist_golf.jpg"
+   ],
+   "description": "A throwback layer that earns its place in the bag. Made from 100% merino wool with a soft, vintage feel. Button down front for easy styling, quietly embroidered logo and mascot on the chest, and a back caption for those walking behind you. The kind o",
+   "published_at": "2025-06-13",
+   "url": "https://casualist.com/products/grazer-cardigan-vest"
+  },
+  {
+   "handle": "two-tone-course-cap",
+   "title": "Two Tone Course Cap",
+   "product_type": "Hat",
+   "price": "60.00",
+   "currency": "USD",
+   "available_variant_count": 1,
+   "total_variant_count": 1,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Ripstop_Yellow_hat_front.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-361.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Two_tones_hat_back.jpg"
+   ],
+   "description": "Inspired by vintage baseball hats, reworked for the modern course. Low-profile fit, flat brim, and adjustable plastic snaps at the back. Two-tone construction that does just enough to stand out without trying too hard about it. Which is, frankly, the",
+   "published_at": "2025-06-13",
+   "url": "https://casualist.com/products/two-tone-course-cap"
+  },
+  {
+   "handle": "legacy-velvet-5-panel-cap",
+   "title": "Legacy Velvet 5 Panel Cap",
+   "product_type": "Hat",
+   "price": "60.00",
+   "currency": "USD",
+   "available_variant_count": 1,
+   "total_variant_count": 1,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Velvet_blue_hat_front_2_13a6f47f-016a-4423-b507-f4d599ff30b7.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-45.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Selects-328.jpg"
+   ],
+   "description": "A fresh take on a timeless shape. The sort of cap that looks like it belongs somewhere interesting. Made from soft cotton velvet in deep royal blue, with a rope detail and our signature C logo up front. Inspired by vintage caps from another era - one",
+   "published_at": "2025-06-13",
+   "url": "https://casualist.com/products/legacy-velvet-5-panel-cap"
+  },
+  {
+   "handle": "cart-path-ripstop-jacket",
+   "title": "Cart Path Ripstop Jacket",
+   "product_type": "Jacket",
+   "price": "339.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Ripstpop_jacket_front_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Cart_Path_Ripstop_Jacket.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Ripstpop_jacket_back_2.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Cart_Path_Ripstop_Jacket_back.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Cart_Path_Ripstop_Jacket_close_up.jpg"
+   ],
+   "description": "Lightweight and built to move, on and off the course. Made from ripstop fabric with back ventilation and an adjustable waist cord, this jacket goes wherever the round takes you - including the car park, the pub, and that shortcut through the rough yo",
+   "published_at": "2025-06-13",
+   "url": "https://casualist.com/products/cart-path-ripstop-jacket"
+  },
+  {
+   "handle": "good-enough-tee",
+   "title": "Good Enough Tee",
+   "product_type": "T-Shirt",
+   "price": "95.00",
+   "currency": "USD",
+   "available_variant_count": 4,
+   "total_variant_count": 4,
+   "images": [
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Good_Enough_Tee_front_view_white_organic_cotton.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/ood_Enough_Tee_worn_on_course_Casualist_golf_lifestyle.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Good_Enough_Tee_front_view.png",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Good_Enough_Tee_worn_model_Casualist_oversized_fit.jpg",
+    "https://cdn.shopify.com/s/files/1/0743/5350/8646/files/Casualist_Good_Enough_Tee_lifestyle_shot_details_label.jpg"
+   ],
+   "description": "Heavyweight (380gsm), but not emotionally. Made from 100% organic cotton with a relaxed fit that lets you breathe, move, and question why you ever wore anything else on a golf course. Screen printed Casualist logo front and back, with a swing motif l",
+   "published_at": "2025-06-13",
+   "url": "https://casualist.com/products/good-enough-tee"
+  }
+ ]
+}
