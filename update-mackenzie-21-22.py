@@ -72,7 +72,7 @@ COASTAL = '''  ''' + MARK + '''
 NEXT_OLD_DESC = ("The next chapter. Fyfe&rsquo;s site confirms a new MacKenzie collaboration "
                  "landing July 2026. Sign up for early access on their collection page. If "
                  "history is any guide, it won&rsquo;t last long.")
-NEXT_NEW = (f'''<div class="product-desc">Twenty-two editions in, the pattern is fixed: two bags at a time, &pound;650 each, Halley Stevensons canvas from Dundee stitched by MacKenzie in Oregon, and sold out before most people hear about them. Coastal Tones landed 11 August 2026. Watch the collection page, or read our full profile of <a href="{BTK}">the workshop behind them</a>.</div>''')
+NEXT_NEW = (f'''<div class="product-desc">Twenty-two editions in, the pattern is fixed: two bags at a time, &pound;650 each, Halley Stevensons canvas from Dundee stitched by MacKenzie in Oregon, and sold out before most people hear about them. Coastal Tones landed 11 August 2026. Watch the collection page for the next drop.</div>''')
 
 apply_ = "--apply" in sys.argv
 h = open(P, encoding="utf-8").read()
