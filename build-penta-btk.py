@@ -96,7 +96,7 @@ BANDS = {
  "polos": ("The campaign", "Penta shoots its own clothes outdoors, on the grass and on the beach, in hard evening light.",
    [("band-metal-sun", "A man in the green Penta zip polo adjusting orange-tinted sunglasses against a pale sky", "The Metal polo"),
     ("band-metal-beach", "A man in the green Penta zip polo and black shorts standing on a beach at sunset", "On the beach"),
-    ("band-digital", "A man in the black Penta zip polo crouching in a sandy bunker", "The Digital polo, in the bunker")]),
+    ("band-digital", "A man in the black Penta zip polo and olive shorts digging his ball out of the dirt", "The Digital polo, off the fairway")]),
  "bottoms-after": ("The Hazard Shorts, out on the course", "The short Penta named after the part of the course it&rsquo;s built for.",
    [("band-swing", "A golfer in a blue polo and moss Hazard Shorts mid-swing on a fairway", "Moss, mid-swing"),
     ("band-bunker", "A golfer in moss Hazard Shorts and a navy cap playing out of a bunker", "Moss, in the hazard"),

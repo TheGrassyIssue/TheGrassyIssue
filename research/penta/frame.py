@@ -28,9 +28,12 @@ K = {  # key: (handle, image indexes)
  'elements-butter': ('penta-elements-jacket-butter', [0,1,2,3]),
  'member': ('member-trunks', [0,1,2,3]),
 }
+SOFTK = {'grid-sorbet', 'glove-green', 'glove-salt', 'cap-bone', 'elements-butter', 'gear'}  # white/cream product on a white sweep: the flood mask eats the product
+SOFT.add('penta-soft')
 FR = {}
 for k, (h, ix) in K.items():
     out = []
+    CUR[0] = 'penta-soft' if k in SOFTK else None
     for j, i in enumerate(ix, 1):
         f = glob.glob(f'{R}{h}-{i}.*')[0]
         frame(load(f)).save(f'{O}{k}-{j}.jpg', quality=86, optimize=True); out.append(f'/{O}{k}-{j}.jpg')
@@ -43,7 +46,7 @@ OR = 'research/penta/orig/'
 hero = cover(OR + 'optical_33e6212e-ff89-476e-a382-da1f329e8e46.webp', 2000, 857, .35); hero.save(O + 'hero.jpg', quality=86, optimize=True)
 cover(OR + 'optical_33e6212e-ff89-476e-a382-da1f329e8e46.webp', 1200, 630, .3).save(O + 'og.jpg', quality=84)
 cover(OR + 'optical_33e6212e-ff89-476e-a382-da1f329e8e46.webp', 1000, 1250, .5).save(O + 'card-hero.jpg', quality=84, optimize=True)
-B = {'band-metal-sun': ('Metal-1.webp', .3), 'band-metal-beach': ('metal-3.webp', .5), 'band-digital': ('Digital-1.webp', .5),
+B = {'band-metal-sun': ('Metal-1.webp', .3), 'band-metal-beach': ('metal-3.webp', .5), 'band-digital': ('../raw/penta-golf-polo-digital-2.webp', .5),
      'band-swing': ('moss-3_8e3f7575-ccd1-4142-b50b-af89270c2d70.webp', .5), 'band-bunker': ('moss-1_76bbacc5-a77e-4c06-a347-20b9f126dca5.webp', .5),
      'band-black': ('hazard-black-3.webp', .5), 'band-cap': ('Players-Cap-Navy-1.webp', .4)}
 for n, (f, fy) in B.items(): cover(OR + f, 1000, 1250, fy).save(O + n + '.jpg', quality=84, optimize=True)
