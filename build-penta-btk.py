@@ -243,7 +243,7 @@ def pq(k):
 
 def band(k):
     kick, line, items = BANDS[k]
-    figs = "\n".join(f'  <figure><img src="{IMG}/{f}.jpg" alt="{alt}" loading="lazy" /><figcaption class="ig-cap">{cap}</figcaption></figure>' for f, alt, cap in items)
+    figs = "\n".join(f'  <figure><img src="{IMG}/{f}-v2.jpg" alt="{alt}" loading="lazy" /><figcaption class="ig-cap">{cap}</figcaption></figure>' for f, alt, cap in items)
     return (f'\n<section class="products" style="margin-top:8px;">\n  <p class="cat-kicker"><strong>{kick}</strong>{line}</p>\n'
             f'  <div class="ig-grid">\n{figs}\n</div>\n</section>\n')
 
