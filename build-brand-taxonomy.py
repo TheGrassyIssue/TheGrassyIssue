@@ -88,7 +88,7 @@ TAX = [
  ),
 ("tag", "loud-on-purpose", "Loud Golf Brands, On Purpose",
  "Loud Golf Brands — Bold Apparel & Headcovers | The Grassy Issue",
- "Thirty-five golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
+ "Thirty-six golf brands built to be seen — maximal prints, painted headcovers and graphics that were never going to be subtle.",
  """<p>Loud is a decision, not an accident, and the brands here made it deliberately.
  <strong>Swag Golf</strong> paints headcovers that the rest of the bag has to live up to.
  <strong>Birds of Condor</strong> runs prints that would be at home on a surf shirt.
@@ -234,7 +234,7 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "One hundred and three golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "One hundred and four golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a

@@ -476,7 +476,11 @@ section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
+section[data-btk="story-native"] .writeup-body,
 section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+/* 27 Oct: a native Story kept its old left-hugging column under a centred heading
+   (Bluegrass Fairway); a kicker between two of its write-up blocks also needs air above it. */
+section[data-btk="story-native"] .writeup-body + .cat-kicker{margin-top:44px}
 
 /* ...and the exception: a section with a box or a picture alongside it sets
    its type to the left, because centred type next to a right-hand box reads as
@@ -1010,6 +1014,11 @@ def build(slug, apply_=False):
                 re.findall(r'<div class="pull-quote">.*?</div>\s*</div>', b, re.S))
         else:
             mark = re.search(r'data-btk="([a-z-]+)"', b[:120])
+            # 27 Oct: the newsletter block belongs to apply-one-footer. When a page's
+            # footer row was missing at template time it got swept into the body as
+            # "prose" and then doubled once the footer was re-merged (Bluegrass Fairway).
+            if 'class="tgi-sub"' in b[:200]:
+                continue
             # RESCUE BEFORE REGENERATING. The Story section is rebuilt from the
             # spec, but on the FIRST run it was given things the spec does not
             # hold: the write-up's own image and its founder pull-quote, lifted

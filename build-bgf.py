@@ -92,7 +92,7 @@ INTRO="""<div class="writeup">
   <div class="writeup-body">
     <p>Bluegrass Fairway is a small workshop in Louisville, Kentucky making leather, Harris Tweed and waxed canvas golf goods by hand &mdash; headcovers, yardage book covers, valuables pouches, rangefinder cases and the occasional needlepoint belt. Around 172 products are live at any one time, priced from about $38 for a hat to $1,100 for a bag built out of a repurposed Barbour jacket.</p>
     <p>The company exists because a cheap yardage book cover fell apart. Matt Reynolds took it to a local shoe cobbler to be repaired, and the cobbler told him they could simply build a better one. They went through roughly three versions. Friends asked for copies, a friend&rsquo;s wife suggested Etsy, and in October 2015 he listed it. One sale came in the first month. Then about a hundred arrived over the next forty days, and the cobbler could not keep up.</p>
-    <p>For anyone who likes the idea of golf equipment made from named materials by identifiable people, this is a straightforward recommendation. It is also cheaper to get into than that description implies: a Horween scorecard holder is $85, and a waxed canvas headcover is $100.</p>
+    <p>For anyone who likes the idea of golf equipment made from named materials by identifiable people, this is an easy recommendation. It is also cheaper to get into than that description implies: a Horween scorecard holder is $85, and a waxed canvas headcover is $100.</p>
   </div>
 </div>
 """

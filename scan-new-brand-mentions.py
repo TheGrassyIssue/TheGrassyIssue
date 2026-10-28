@@ -163,6 +163,7 @@ DOMAINS.update({
     "duke-dexter": ["dukeanddexter.com"],
     "winslow": ["winslowla.com"],
     "aberdeen-west": ["aberdeenwest.com"],
+    "pare-golf": ["pare.golf"],
     "we-hit-fairways": ["wehitfairways.com"],
     "grind-city-golf": ["grindcitygolf.com"],
 })

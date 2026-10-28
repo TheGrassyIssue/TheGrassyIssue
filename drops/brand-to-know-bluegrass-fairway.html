@@ -153,7 +153,14 @@ section[data-btk="take"] .sidebar{position:sticky;top:88px;align-self:start}
 /* THE SPECIAL SENTENCES — larger, and made to stop the eye.
    Lenny, twice: "too small", then "larger and more eyecatching." 38px, the
    brand green on the opening mark, generous air above and below, and a rule
-   only under the credit so the sentence itself floats free. */
+   only under the credit so the sentence itself floats free.
+
+   ROMAN, NOT ITALIC. Lenny, on Birds of Condor: "I dont love the italics but
+   everything else is super solid." This block used to say italic, and because
+   the template is a POST-PROCESSOR it re-injected that italic on every page it
+   touched -- silently undoing deitalicise-pullquotes.py on 38 pages. The CSS
+   text read "normal" higher up the file and this block, sitting last, won. Do
+   not set this back to italic without also fixing the script. */
 .pull-quote{max-width:1400px;margin:0 auto;padding:0 32px}
 .pull-quote-inner{max-width:900px;margin:0;font-family:var(--serif);
   font-style:normal;font-size:38px;line-height:1.24;letter-spacing:-.015em;
@@ -293,7 +300,11 @@ section[data-btk] .drop-tag{max-width:760px;margin-left:auto;margin-right:auto;
   display:block;width:fit-content}
 section[data-btk="prose"] .writeup-body,
 section[data-btk="story"] .writeup-body,
+section[data-btk="story-native"] .writeup-body,
 section[data-btk="coda"] .writeup-body{max-width:760px;margin:0 auto}
+/* 27 Oct: a native Story kept its old left-hugging column under a centred heading
+   (Bluegrass Fairway); a kicker between two of its write-up blocks also needs air above it. */
+section[data-btk="story-native"] .writeup-body + .cat-kicker{margin-top:44px}
 
 /* ...and the exception: a section with a box or a picture alongside it sets
    its type to the left, because centred type next to a right-hand box reads as
@@ -433,7 +444,7 @@ section[data-btk="take"] .writeup-body{font-size:17px}
   <div class="writeup-body">
     <p>Bluegrass Fairway is a small workshop in Louisville, Kentucky making leather, Harris Tweed and waxed canvas golf goods by hand &mdash; headcovers, yardage book covers, valuables pouches, rangefinder cases and the occasional <a href="/drops/the-needlepoint-belt-report">needlepoint belt</a>. Around 172 products are live at any one time, priced from about $38 for a hat to $1,100 for a bag built out of a repurposed Barbour jacket.</p>
     <p>The company exists because a cheap yardage book cover fell apart. Matt Reynolds took it to a local shoe cobbler to be repaired, and the cobbler told him they could simply build a better one. They went through roughly three versions. Friends asked for copies, a friend&rsquo;s wife suggested Etsy, and in October 2015 he listed it. One sale came in the first month. Then about a hundred arrived over the next forty days, and the cobbler could not keep up.</p>
-    <p>For anyone who likes the idea of golf equipment made from named materials by identifiable people, this is a straightforward recommendation. It is also cheaper to get into than that description implies: a Horween scorecard holder is $85, and a waxed canvas headcover is $100.</p>
+    <p>For anyone who likes the idea of golf equipment made from named materials by identifiable people, this is an easy recommendation. It is also cheaper to get into than that description implies: a Horween scorecard holder is $85, and a waxed canvas headcover is $100.</p>
   </div>
 
   <p class="cat-kicker">Reynolds has given two published interviews, both in 2017. The quotes below are from those, and are dated accordingly.</p>
