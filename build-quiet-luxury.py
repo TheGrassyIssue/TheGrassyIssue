@@ -2,7 +2,7 @@
 """build-quiet-luxury.py — The 9 Best Quiet Luxury Golf Brands. 26 October 2026. Structure cloned from build-streetwear26.py.
 Lenny: "Let's do Quiet luxury golf brands build that as a post" (after "What other categories are similar to Streetwear").
 FACTS: every product read from the brand's own store on 26 Oct 2026 (research/quiet-luxury/*.json, picks.json); product copy
-paraphrases each store's own description. Late Nine and Local Rule sell in SEK only, converted at 0.1005 (SEK/USD mid,
+paraphrases each store's own description. Re-checked 28 Oct 2026 before publishing (research/quiet-luxury/recheck-1028.json): all 42 in stock; Whim slate $300, Alba prices down $1-2. Late Nine and Local Rule sell in SEK only, converted at 0.1005 (SEK/USD mid,
 27 Oct 2026, poundsterlinglive.com). Pull quotes are the verified quotes already on each brand's TGI profile.
 PHOTOS: brands' own store and campaign images (research/quiet-luxury/frame.py, bands.py).
 """
@@ -18,18 +18,18 @@ SLUG = "best-quiet-luxury-golf-brands"
 OUT = ROOT / f"drops/{SLUG}.html"
 URL = f"https://thegrassyissue.com/drops/{SLUG}"
 IMG = "/images/quiet-luxury"
-CHECKED = "26 October 2026"
+CHECKED = "28 October 2026"
 SEK = 0.1005
 PK = json.loads((ROOT / "research/quiet-luxury/picks.json").read_text())
 FR = json.loads((ROOT / "research/quiet-luxury/frames.json").read_text())
 
-TITLE = "The 7 Best Quiet Luxury Golf Brands of 2026"
-DESC = ("The seven best quiet luxury golf brands of 2026: Late Nine, Whim, Alba, Sounder, Quiet Golf, Local Rule "
-        "and Casualist. Merino, cashmere and pleats, six pieces from each, with prices.")
-H1 = "The 7 Best Quiet Luxury Golf Brands in 2026"
+TITLE = "The 12 Best Quiet Luxury Golf Brands of 2026"
+DESC = ("The 12 best quiet luxury golf brands of 2026, from Late Nine, Whim and Alba to Rookline, Macade, Woodgrain, "
+        "Shapland and MacKenzie bags. Merino, cashmere, pleats and leather, with prices.")
+H1 = "The 12 Best Quiet Luxury Golf Brands in 2026"
 
 BRANDS = [
- dict(k="ln", slug="late-nine", award="Best Overall", name="Late Nine",
+ dict(k="ln", slug="late-nine", award="Most Complete Wardrobe", name="Late Nine",
   link=("/drops/late-nine-stockholm-relaxed-fits-and-the-quiet-part-of-golf", "Read the Late Nine profile"),
   body=["Late Nine is the clearest answer to what quiet luxury looks like on a golf course. Maxim Lundh co-founded it in Stockholm in 2024 around late-nineties tour golf: double-pleated slacks in Italian four-season wool, knit polos, merino vests and an instructor&rsquo;s blouson. There is barely a logo in the range.",
         "The fabrics carry it. The cable polo and the ribbed vest are knit from merino taken at the sheep&rsquo;s first shearing, and the slacks hang with a full straight leg that looks like 2000 in the best way. It is not cheap, but it is the most complete wardrobe on this list."],
@@ -63,7 +63,7 @@ BRANDS = [
         "A knit in 100% technical wool with shaped sleeves and a slightly raised collar.",
         "Mostly cotton, blended with nylon, in a clean, tailored trouser.",
         "Polyester microfiber with an internal coating against wind and water. The most color in the range.",
-        "A three-layer waterproof jacket and the most expensive piece in this post.",
+        "A three-layer waterproof jacket and the most expensive piece of clothing on the list.",
         "The same three-layer waterproof fabric as the Crest, cut as a quarter-zip."]),
  dict(k="sd", slug="sounder", award="Best British", name="Sounder",
   link=("/drops/brand-to-know-sounder", "Read the Sounder profile"),
@@ -100,7 +100,7 @@ BRANDS = [
         "A quarter-zip fleece for cool mornings and layering. In beige.",
         "A long-sleeve performance polo built for competitive rounds.",
         "A light technical vest for changing conditions on and off the course.",
-        "An off-white cold-weather beanie. The cheapest thing in the post."]),
+        "An off-white cold-weather beanie, the easy add-on to any order."]),
  dict(k="cs", slug="casualist", award="Best Off the Course", name="Casualist",
   link=("/drops/brand-to-know-casualist", "Read the Casualist profile"),
   body=["Casualist is Elie Reboul&rsquo;s label, designed in London and made in Portugal. It started as Casual Pro in Melbourne and moved to the UK in 2024, where, as the team put it, golf is a little more buttoned-up.",
@@ -113,13 +113,80 @@ BRANDS = [
         "An interlock cotton mockneck that stays just dressed-up enough to pass a dress code.",
         "Lightweight ripstop with back ventilation and an adjustable waist cord.",
         "Soft wool tartan with a rope detail."]),
+ dict(k="rk", slug="rookline", award="Best Cashmere", name="Rookline",
+  link=("/drops/brand-to-know-rookline", "Read the Rookline profile"),
+  body=["Rookline is a Long Island brand that launched in late 2024 and plays most of its golf in New York, with a lot of it on Bethpage Black. Its fall line, Hand &amp; Heritage, is the reason it is here: cotton, cashmere and brushed twill in oatmeal, charcoal and stone blue.",
+        "The questions on its About page are the right ones for this list: can this fabric hold up walking 36 in August, and will this layer keep the cold out without the bulk? The cashmere crew answers the second one."],
+  pq=("We know because we play.", "Rookline"),
+  band=["Rookline at sundown", "Hand &amp; Heritage", "The fall layers"],
+  copy=["Ottoman-rib cashmere in oatmeal, the piece that carries the fall line. Our pick from Rookline.",
+        "A long-sleeve polo in a cotton blend you wear like a sweater. The one to buy first.",
+        "Brushed twill trousers in a soft grey, cut to walk in.",
+        "A cashmere watch cap for a cold first tee.",
+        "A grid-fleece windbreaker for the mornings that start in the 40s.",
+        "Japanese Stormfleece with a wool interior, cut as a pant for the coldest rounds."]),
+ dict(k="mc", slug="macade", award="Best for Cold Rounds", name="Macade",
+  link=("/drops/brand-to-know-macade", "Read the Macade profile"),
+  body=["Macade is a Stockholm brand founded in 2019 that builds for the round that changes on you: a cold first tee, a warm back nine and a north wind in between. The look is clean and quiet, in deep green, rust, camel and navy, with script logos and nothing loud.",
+        "Its knit capsule is the reason it belongs here: cotton and cashmere knit polos, merino-blend layers and a wool bomber that work just as well at dinner. It ships from the US, with free shipping and returns."],
+  pq=("Golf clothing shouldn&rsquo;t announce itself from across the room.", "Macade, on its Knit Capsule launch page"),
+  band=["Macade, fall 2026", "The knit capsule", "Stockholm"],
+  copy=["A wool bomber in tan with a ribbed collar. The most clubhouse thing Macade makes.",
+        "A merino-blend bomber with a funnel neck, in camel. Our pick from Macade.",
+        "Cotton and cashmere knit into a polo, in rust.",
+        "A long-sleeve zip polo in brown, to wear like a light sweater.",
+        "Pleated trousers in a midweight sand ridgeweave with four-way stretch.",
+        "A cashmere-blend beanie in green with the Macade script."]),
+ dict(k="wg", slug="woodgrain-golf", award="Best Trousers", name="Woodgrain Golf",
+  link=("/drops/brand-to-know-woodgrain-golf", "Read the Woodgrain Golf profile"),
+  body=["Woodgrain is two people in New York, who sign the brand&rsquo;s story &ldquo;Christian &amp; Em,&rdquo; making golf clothes from old photos: wide trousers with double pleats, relaxed 1990s polos and wool caps. Somewhere along the way golf clothes got tighter, brighter and more technical, and Woodgrain wants the older shapes back.",
+        "The Legacy Double Pleated Trouser makes the case: 100% cotton, cut wide, with two deep pleats on each side, hanging the way trousers did before every golf pant became a slim five-pocket."],
+  pq=("Woodgrain is our take on where golf style should be going by looking back at where it came from.", "Christian &amp; Em, Woodgrain Golf"),
+  band=["Double pleats on the course", "The wool hat", "Collection 4"],
+  copy=["The Legacy trouser in chocolate brown: cotton, cut wide, two deep pleats a side. Our pick from Woodgrain.",
+        "The same trouser in tan, the easier color to wear every week.",
+        "The double-pleated short in cream, for the hot months.",
+        "A polo drawn from the golf polos of the 1990s, with the relaxed proportions to match.",
+        "A leather belt with a black crocodile-embossed finish and polished hardware.",
+        "A five-panel wool hat in brown plaid. The cheapest way in."]),
+ dict(k="sp", slug="shapland", award="Best Bag", name="Shapland",
+  link=("/drops/upgrading-your-golf-bag", "Read our bag guide"),
+  body=["Shapland rebuilds a 1980s Ping silhouette in waterproof canvas, oiled leather and brass, and names its models after Harry Colt golf courses. It is the quiet luxury answer to the golf bag: no logos to speak of, materials that darken with use, and a shape that will still look like itself in ten years.",
+        "The catch is getting one. Every bag was sold out when we checked. The store says the next Rye, Kantle and Sunday 4.0 runs arrive in late November 2026, and the Caddy 2.0 in early spring 2027. Prices shown are the current 4.0 prices."],
+  pq=("A bag should be quiet, light, and built to still look like itself in ten years.", "The Grassy Issue, in our bag guide"),
+  band=["The full lineup", "Oiled leather trim", "The Kantle"],
+  copy=["The flagship, named for Harry Colt&rsquo;s first course: hickory-wrapped carbon legs and oiled leather trim. Next run due late November.",
+        "Two straps, so it carries single or double, over an eight-inch, four-way top. Next run due late November.",
+        "The way into the line: marine canvas, a hard bottom and straps that switch it to a backpack. Next run due late November.",
+        "The Caddy 2.0, the last of the four bags. Due back in early spring 2027.",
+        "A knit winter hat, and the only Shapland piece you can buy today."]),
+ dict(k="mk", slug="mackenzie", award="Best Collaborations", name="MacKenzie",
+  link=("/drops/the-mackenzie-collab-edit-6-bags-you-cant-buy-on-their-site", "Read the MacKenzie Collab Archive"),
+  body=["MacKenzie has made one thing by hand in Oregon since 1985: the carry bag. PGA Tour pro Peter Jacobsen and his brother David named it after Rick MacKenzie, the St Andrews caddie who combined their two staff bags into one leather pencil bag. The house style is leather or waxed canvas, built by hand.",
+        "MacKenzie&rsquo;s own ready-made stock was sold out when we checked, and its best bags were never on its own site anyway. They are the collaborations: the same workshop building for Sugarloaf Social Club in Charleston, Fyfe Golf in Scotland, Sentinel in Minneapolis, Miura in Japan, Donald Ross Sportswear, ACL Golf and Bandon Dunes. Fyfe&rsquo;s latest edition had sold out; the rest were orderable from the partners on the day we checked, and Sentinel and Bandon build theirs to order. The whole run is in our MacKenzie Collab Archive."],
+  pq=("The MacKenzie mantra has always been simple, beautiful, useful.", "Todd Rohrer, who revived MacKenzie in 2006"),
+  band=["A MacKenzie in the dunes", "On the links", "Out on the hill"],
+  copy=["Sugarloaf&rsquo;s own MacKenzie, in navy or a Nantucket colorway, with the club&rsquo;s chenille patch and an eight-inch top. Handmade in Portland for SSC. Our pick from MacKenzie.",
+        "Fyfe has run the longest MacKenzie collaboration of anyone, in organic cotton canvas from the Halley Stevenson mill in Dundee. The 22nd edition is charcoal waxed canvas with black, agave and white leather. Sold out, like every edition before it.",
+        "Sentinel&rsquo;s leather Walker, in nubuck from S&oslash;rensen, a Danish tannery founded in 1973. The most expensive bag on the list, built to order.",
+        "The first bag Sentinel and MacKenzie made together: a polymer laminate bonded to Cordura, with full-grain leather trim. Built to order.",
+        "Miura, the Japanese club maker, has sold its own MacKenzie Original Walker since 2020. This is the waxed canvas one, the cloth that marks and darkens with use and is meant to.",
+        "The same Miura Walker in full-grain leather, cut, folded and stitched by hand rather than molded.",
+        "Donald Ross Sportswear&rsquo;s numbered series, in navy canvas with a red thistle and a Dornoch crest on the base.",
+        "ACL Golf has run MacKenzie bags since 2023. Tan waxed canvas with the ACL monogram on the pocket and an eight-inch top.",
+        "Grey waxed canvas for Pacific Dunes, with the course logo on the base. Bandon makes these to order, in nine to ten weeks, with embroidered initials included."]),
 ]
 for b in BRANDS:
     b["rows"] = PK[b["slug"]]
-    assert len(b["rows"]) == 6 == len(b["copy"]), b["k"]
+    assert len(b["rows"]) == len(b["copy"]) and 5 <= len(b["rows"]) <= 9, b["k"]
 
 
 def price(r):
+    suf = " &middot; sold out" if str(r.get("avail")).lower() == "false" else (" &middot; made to order" if str(r.get("made_to_order")).lower() == "true" else "")
+    return _price(r) + suf
+
+
+def _price(r):
     x = float(r["price"])
     if r["cur"] == "SEK":
         return f"{x:,.0f} kr (~${x * SEK:,.0f})"
@@ -168,16 +235,16 @@ def band(b):
 def section(b, rank, n0):
     MT = ' style="margin-top:14px"'
     paras = "\n".join(f'    <p{"" if j == 0 else MT}>{p}</p>' for j, p in enumerate(b["body"]))
-    cards = "\n".join(card(b, i, n0 + i) for i in range(6))
+    cards = "\n".join(card(b, i, n0 + i) for i in range(len(b["rows"])))
     href, text = b["link"]
     return (f'\n<section class="products" style="margin-top:8px;">\n'
             f'  <div class="drop-tag grass">{b["award"]}</div>\n'
-            f'  <h2 class="products-hdr" id="{b["slug"]}">{rank}. {b["name"]}</h2>\n'
+            f'  <h2 class="products-hdr" id="{b["slug"]}">{b["name"]}</h2>\n'
             f'  <div style="max-width:760px;margin:0 auto 18px;font-size:16px;line-height:1.75">\n{paras}\n'
             f'    <p style="margin-top:16px;font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;opacity:.6">'
             f'Checked {CHECKED} &middot; <a href="{href}">{text} &rarr;</a></p>\n  </div>\n'
             f'{pq(b)}{band(b)}'
-            f'    <div class="products-grid">\n{cards}\n    </div>\n</section>\n'), n0 + 6
+            f'    <div class="products-grid">\n{cards}\n    </div>\n</section>\n'), n0 + len(b["rows"])
 
 
 TAKE = f"""
@@ -185,13 +252,14 @@ TAKE = f"""
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
     <p>Quiet luxury in golf means clothes that look expensive because of what they are made of and how they are cut, not because of what is printed on them. Merino and cashmere instead of polyester, pleats instead of performance stretch, navy and cream instead of neon, and a logo you have to look for. It is the opposite of a tour-pro billboard, and it is the look a lot of the best independent brands are chasing right now.</p>
-    <p>Late Nine is the best overall: the most complete wardrobe, the best fabrics and the clearest point of view, all built on late-nineties tour golf. Whim makes everything in America, from the merino to the hats, and Alba is the most polished new arrival of the year. Sounder, Quiet Golf, Local Rule and Casualist round it out, from British knitwear and California cashmere to Swedish tailoring at the friendliest prices on the list.</p>
+    <p>Late Nine has the most complete wardrobe of the twelve, with first-rate fabrics and a clear point of view, all built on late-nineties tour golf. Whim makes everything in America, from the merino to the hats, and Alba is the most polished new arrival of the year. Sounder, Quiet Golf, Local Rule and Casualist bring British knitwear, California cashmere and Swedish tailoring at the friendliest prices on the list. Rookline, Macade and Woodgrain cover the cold months and the trousers: Long Island cashmere, Stockholm knits and double pleats from New York.</p>
+    <p>The look does not stop at clothes. A loud bag undoes a quiet outfit, so the list ends with two bag makers: Shapland, whose leather-and-brass carry bags sell out every run, and MacKenzie, which has made bags by hand in Oregon since 1985 and does its best work in collaboration, for Sugarloaf Social Club, Fyfe, Sentinel and Miura among others.</p>
     <h2 class="products-hdr btk-story-hdr">How We Picked</h2>
-    <p>Every brand had to build its clothes around fabric and cut rather than logos, sell pieces you would wear off the course, and have product in stock on the day we checked. Each brand gets an award and six pieces, all read live from its own store on {CHECKED}. Late Nine and Local Rule only sell in Swedish kronor, so their prices are shown in kronor with a dollar estimate at the {CHECKED[:2]} October rate.</p>
+    <p>Every brand had to build its clothes around fabric and cut rather than logos, sell pieces you would wear off the course, and have product in stock on the day we checked. Each brand gets an award and six pieces (Shapland gets five, and MacKenzie nine, to cover its collaborations), all read live from its own store on {CHECKED}. The two bag makers are the exception on stock: every Shapland bag was sold out, with restock dates from the store, and the MacKenzie bags are collaborations bought from the partner brands, not from MacKenzie itself. Late Nine and Local Rule only sell in Swedish kronor, so their prices are shown in kronor with a dollar estimate at the 27 October exchange rate.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
-      <div class="sidebar-label">The Seven</div>
+      <div class="sidebar-label">The Twelve</div>
 """ + "\n".join(f'      <div class="sidebar-detail"><span class="l">{b["award"].replace("Best ", "")}</span><span><a href="#{b["slug"]}">{b["name"]}</a></span></div>' for b in BRANDS) + f"""
       <div class="sidebar-detail"><span class="l">Checked</span><span>{CHECKED}</span></div>
       <a href="/brands" class="sidebar-cta">The full Brand Index &#8599;</a>
@@ -210,12 +278,14 @@ TAKE = f"""
 FAQ = [
     ("What is quiet luxury golf clothing?",
      "Golf clothes that look expensive because of their fabric and cut rather than their logos: merino, cashmere and cotton knits, pleated wool or cotton trousers, muted colors and small or hidden branding."),
-    ("What is the best quiet luxury golf brand in 2026?",
+    ("Which quiet luxury golf brand has the most complete range?",
      "Late Nine, from Stockholm. Its range of double-pleated wool slacks, merino knit polos and vests is the most complete on our list, and it carries almost no visible logos."),
     ("Which quiet luxury golf brand is the most affordable?",
-     "Sounder and Local Rule. On 26 October 2026 Sounder's knit polos and cords started around $75 to $115, and Local Rule's knit polo was 1,199 Swedish kronor, about $120."),
+     "Sounder and Local Rule. On 28 October 2026 Sounder's knit polos and cords started around $75 to $115, and Local Rule's knit polo was 1,199 Swedish kronor, about $120."),
     ("Is there a quiet luxury golf brand made in the USA?",
      "Whim Golf makes its clothing, hats and accessories in the USA, and its merino shirts use wool from ranches in Idaho, Colorado, California and Nevada, finished in New York."),
+    ("What is the best quiet luxury golf bag?",
+     "Shapland and MacKenzie. Shapland's leather-and-brass carry bags start at $475 but sell out each run, with the next Rye, Kantle and Sunday runs due in late November 2026. MacKenzie makes its bags by hand in Oregon, and its collaborations with Sugarloaf Social Club, Fyfe, Sentinel, Miura, Donald Ross, ACL Golf and Bandon Dunes run from $735 to $1,750."),
     ("What is old money golf style?",
      "It is the same look under another name: pleats, knitwear, earth tones and very little branding, closer to a 1990s clubhouse than to modern tour apparel."),
 ]
@@ -234,7 +304,7 @@ def head_top():
              for i, b in enumerate(BRANDS)]
     blocks = [
         {"@context": "https://schema.org", "@type": "Article", "headline": TITLE, "description": H.unescape(DESC),
-         "url": URL, "image": og, "datePublished": "2026-10-26", "dateModified": "2026-10-26",
+         "url": URL, "image": og, "datePublished": "2026-10-28", "dateModified": "2026-10-28",
          "author": {"@type": "Person", "@id": "https://thegrassyissue.com/about#lenny", "name": "Lenny Harrington",
                     "url": "https://thegrassyissue.com/about", "sameAs": ["https://instagram.com/thegrassyissue"]},
          "publisher": {"@type": "Organization", "name": "The Grassy Issue", "url": "https://thegrassyissue.com/"},
@@ -287,12 +357,12 @@ def main(apply_):
 <header class="drop-header">
   <h1>{H1}</h1>
   <div class="drop-meta">
-    <span>7 brands &middot; 7 awards</span><span class="dot"></span>
-    <span>42 pieces &middot; prices checked {CHECKED}</span>
+    <span>12 brands &middot; 12 awards</span><span class="dot"></span>
+    <span>74 pieces &middot; prices checked {CHECKED}</span>
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Quiet luxury golf in 2026: a Late Nine golfer in a ribbed knit vest carrying his bag through the dunes, Alba Golf's Milan launch campaign in navy and white, and a Sounder golfer walking the links at Trevose" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Quiet luxury golf in 2026: a Late Nine golfer in a ribbed knit vest carrying his bag through the dunes" fetchpriority="high" /></div></div>
 """
     body += TAKE
     n = 1
@@ -309,7 +379,7 @@ def main(apply_):
     bad = []
     for leak in ("Manors Revisited", "Nicklaus", "Enron"):
         if leak in above: bad.append("leak " + leak)
-    if fin.count('class="product-card"') != 42: bad.append("card count")
+    if fin.count('class="product-card"') != 74: bad.append("card count")
     plain = re.sub(r"<[^>]+>", " ", above)
     if re.search(r"\bworth\b|\bgenuinely\b|\bhonestly\b|\bstraightforward\b", plain, re.I): bad.append("banned word")
     for f in set(re.findall(rf'src="({IMG}/[^"]+)"', fin)):

@@ -8,7 +8,7 @@ R = 'research/quiet-luxury/'; O = 'images/quiet-luxury/'; W, H = 1000, 1250; STO
 os.makedirs(O, exist_ok=True); os.makedirs(R + 'raw', exist_ok=True)
 src = open('research/capsules/frame.py').read(); exec(src[src.index('SOFT ='):src.index('fr = {}')])
 PK = json.load(open(R + 'picks.json'))
-KEY = {'late-nine':'ln','alba-golf':'al','whim-golf':'wh','rookline':'rk','sloat':'sl','quiet-golf':'qg','local-rule':'lr','sounder':'sd','casualist':'cs'}
+KEY = {'late-nine':'ln','alba-golf':'al','whim-golf':'wh','rookline':'rk','sloat':'sl','quiet-golf':'qg','local-rule':'lr','sounder':'sd','casualist':'cs','macade':'mc','woodgrain-golf':'wg','shapland':'sp','mackenzie':'mk'}
 SOFTK = {'al3'}   # cream trouser: the flood mask blotched it (26 Oct render), soft path instead
 def fn(u): return R + 'raw/' + re.sub(r'[^A-Za-z0-9_.-]', '_', u.split('?')[0].rsplit('/', 1)[-1])[-90:]
 def get(u):
@@ -26,8 +26,10 @@ def soft(im):
     if Lb < 150: return im2
     w = np.clip((L - .72 * Lb) / (.28 * Lb), 0, 1)[..., None]
     return Image.fromarray((a * (1 - w) + np.clip(a / np.maximum(col, 1) * np.array(STONE), 0, 255) * w).astype('uint8'))
+ONLY = set(os.environ.get('ONLY', '').split(',')) - {''}  # 28 Oct: reframe only the new / changed brands
 jobs = []
 for slug, rows in PK.items():
+    if ONLY and slug not in ONLY: continue
     for i, r in enumerate(rows, 1):
         for j, u in enumerate(r['imgs'][:5], 1): jobs.append((f'{KEY[slug]}{i}', j, u))
 def do(job):
@@ -38,6 +40,8 @@ def do(job):
         p = f'{O}{k}-{j}.jpg'; out.save(p, quality=84, optimize=True); return (k, j, '/' + p)
     except Exception as e: print('ERR', k, j, u, e)
 with ThreadPoolExecutor(6) as ex: res = [r for r in ex.map(do, jobs) if r]
-fr = {}
+fr = json.load(open(R + 'frames.json')) if ONLY else {}
+for slug in ONLY:
+    for k in [k for k in fr if k.rstrip('0123456789') == KEY[slug]]: fr.pop(k)
 for k, j, p in sorted(res, key=lambda r: (r[0], r[1])): fr.setdefault(k, []).append(p)
 json.dump(fr, open(R + 'frames.json', 'w'), indent=1); print(len(fr), {k: len(v) for k, v in fr.items()})

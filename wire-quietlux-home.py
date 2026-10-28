@@ -14,16 +14,16 @@ POST = ROOT / "drops/best-quiet-luxury-golf-brands.html"
 SLUG = "/drops/best-quiet-luxury-golf-brands"
 KEY = "quietlux"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-QUIETLUX-CARD -->\n", "<!-- /TGI-QUIETLUX-CARD -->\n"
-TITLE = "The 7 Best Quiet Luxury Golf Brands in 2026"
+TITLE = "The 12 Best Quiet Luxury Golf Brands in 2026"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "quiet-luxury"
 
 SLIDES = [
     ("card-hero", "A Late Nine golfer in a ribbed knit vest carrying his bag through the dunes",
-     "Quiet Luxury \u00b7 The Edit", "Seven Brands",
-     "Merino, cashmere and pleats: 7 brands, 42 pieces."),
+     "Quiet Luxury \u00b7 The Edit", "Twelve Brands",
+     "Merino, cashmere, pleats and leather: 12 brands, 74 pieces."),
     ("ln1-1", "Late Nine cable knit polo in dark brown",
-     "Late Nine \u00b7 Best Overall", "Stockholm",
+     "Late Nine \u00b7 Most Complete Wardrobe", "Stockholm",
      "Double-pleated wool and first-shearing merino."),
     ("wh1-1", "Whim Golf navy merino long sleeve golf shirt",
      "Whim Golf \u00b7 Best Made in America", "New York",
@@ -31,6 +31,12 @@ SLIDES = [
     ("al1-1", "Alba Golf long-sleeve polo in mauve",
      "Alba Golf \u00b7 Best New Brand", "Milan",
      "The most polished debut of the year."),
+    ("sp1-1", "Shapland Rye 4.0 carry bag",
+     "Shapland \u00b7 Best Bag", "Rye 4.0",
+     "Leather and brass, back in late November."),
+    ("mk1-1", "Sugarloaf Social Club x MacKenzie golf bag in navy",
+     "MacKenzie \u00b7 Best Collaborations", "Sugarloaf x MacKenzie",
+     "Sugarloaf, Fyfe, Sentinel, Miura and more."),
 ]
 
 

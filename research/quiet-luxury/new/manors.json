@@ -1,0 +1,173 @@
+{
+ "slug": "manors",
+ "name": "Manors Golf",
+ "city": "London",
+ "founded": 2019,
+ "founders": [
+  "Jojo Regan",
+  "Luke Davies",
+  "Nick Watts (joined as Fashion Director)"
+ ],
+ "why_quiet": "Borderline fit: Manors is streetwear-adjacent and runs logo tees, prints and collabs, so the picks are limited to its quiet core: 100% merino Tech knits (crew, vest, quarter-zip windbreaker) in Dune/Hickory/Midnight, a Primaloft cardigan, and pleated / wide-cut trousers in earthy neutrals. Note the merino knits carry a small chest emblem patch. Design focus is cut and silhouette drawn from golf's golden era.",
+ "quote": {
+  "text": "Some of the designs might seem quite basic, but the cut and silhouette is something we really wanted to emphasize.",
+  "who": "Nick Watts, Manors Fashion Director",
+  "url": "https://hypebeast.com/2021/5/manors-classic-collection-golf-details-interview"
+ },
+ "facts": [
+  {
+   "fact": "London-based; set up in 2019 by school friends Jojo Regan and Luke Davies, joined by Nick Watts as Fashion Director.",
+   "src": "https://hypebeast.com/2021/5/manors-classic-collection-golf-details-interview"
+  },
+  {
+   "fact": "Cites Arnold Palmer, Gary Player and Jack Nicklaus as influences; mantra 'personality before performance' (2021).",
+   "src": "https://hypebeast.com/2021/5/manors-classic-collection-golf-details-interview"
+  },
+  {
+   "fact": "Classic Collection (2021) built on argyle cardigans, wide-legged trousers and polos with a 1950s Ivy feel.",
+   "src": "https://hypebeast.com/2021/5/manors-classic-collection-golf-details-interview"
+  },
+  {
+   "fact": "Harrods lists the brand as co-founded and owned by Jojo Regan, Luke Davies and Nick Watts.",
+   "src": "https://www.harrods.com/en-gb/designers/manors"
+  },
+  {
+   "fact": "Merino Tech pieces are 100% natural merino wool, treated to be machine-washable (per product copy).",
+   "src": "https://manorsgolf.com/products/merino-wool-crewneck"
+  },
+  {
+   "fact": "Ships to the US with USD pricing (US market active; prices read from product-page structured data).",
+   "src": "https://manorsgolf.com/products/merino-wool-crewneck"
+  }
+ ],
+ "life": [
+  {
+   "file": "manors/life/manors-life-1-dusk-links-swing.jpg",
+   "desc": "3200x1800 (source 6606x3715). Lone golfer mid-swing in dune grass on a seaside links at dusk, pink sky, moon overhead.",
+   "src": "https://manorsgolf.com/ (homepage campaign image, cdn.sanity.io)"
+  },
+  {
+   "file": "manors/life/manors-life-2-grey-merino-crew.jpg",
+   "desc": "2000x2999. Golfer in grey knit crewneck and cap on a fairway, trees behind; calm, tonal.",
+   "src": "https://manorsgolf.com/ (homepage campaign image)"
+  },
+  {
+   "file": "manors/life/manors-life-3-knit-carry-bag.jpg",
+   "desc": "2000x2999. Golfer in oatmeal knit sweater and cream trousers with a leather carry bag on a parkland course.",
+   "src": "https://manorsgolf.com/ (homepage campaign image)"
+  }
+ ],
+ "hero_candidate": {
+  "file": "manors/life/manors-life-1-dusk-links-swing.jpg",
+  "w": 6606,
+  "h": 3715,
+  "desc": "Landscape, small golfer swinging in links dune grass at dusk, sea horizon and moon; very calm and atmospheric. Golfer wears a cap with small logo, otherwise quiet.",
+  "src_url": "https://cdn.sanity.io/images/9aznesrq/production/993b2a6f054f0c217ad5415db22e4bf7c8e94482-6606x3715.png"
+ },
+ "notes": "Store base currency GBP (myshopify products.json); 'price' is GBP, 'usd' is what a US shopper is charged per manorsgolf.com product-page JSON-LD (priceCurrency USD). manorsgolf.com is a Hydrogen storefront, so /products.json 404s there; catalogue read from manorsgolf.myshopify.com/products.json.",
+ "picks": [
+  {
+   "t": "Merino Tech Crewneck",
+   "handle": "merino-wool-crewneck",
+   "price": "180.00",
+   "cur": "GBP",
+   "usd": 240.0,
+   "url": "https://manorsgolf.com/products/merino-wool-crewneck",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MERINO_TECH_CREWNECK_DUNE_01.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MERINO_TECH_CREWNECK_DUNE_05_crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORSGOLF_1505crop_d06af1df-7d0f-43db-9867-fac3a6fac52e.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORSGOLF_1276crop_18d259bd-6eee-49a3-b2b7-bcba9193e6d2.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORS_GOLF_1276_crop_7153d4bf-99f8-4896-9767-450232b789a1.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_6a871bb8-f39f-4426-9de7-6568ef5094c4.jpg"
+   ],
+   "desc": "The Merino Tech Crewneck is built from 100% natural merino wool, the game’s original performance fabric. It keeps you warm when the wind bites, cool when the sun breaks through, and it won’t hold odour even after a long day on the course. Unlike the scratchy wool jumpers of the past, this one is soft, machine-washable, and won’t shrink or lose shape. The 9-Gauge knit gives it a heavier, vintage fe",
+   "avail": true
+  },
+  {
+   "t": "Merino Tech Vest",
+   "handle": "merino-wool-vest",
+   "price": "150.00",
+   "cur": "GBP",
+   "usd": 200.0,
+   "url": "https://manorsgolf.com/products/merino-wool-vest",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORSGOLF_1106crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORSGOLF_1509crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORS_GOLF_1106_crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORS_GOLF_1509_crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_0d452e65-1d11-4944-8bd9-0867120cb40d.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_1916d21b-7e23-470c-b265-664d7bbf35be.jpg"
+   ],
+   "desc": "The Merino Tech Vest is made from the finest 100% natural merino wool, the original performance fabric. Like it did for sheep on the original Scottish linksland, merino will keep you warm when it’s cold and cool when it’s hot. But unlike their old-school knits, this one is treated so you can throw it in the wash and not worry about shrinking or losing shape. The 9 Gauge knit has a heavier, vintage",
+   "avail": true
+  },
+  {
+   "t": "Merino Tech Windbreaker",
+   "handle": "merino-wool-1-4-windbreaker",
+   "price": "215.00",
+   "cur": "GBP",
+   "usd": 287.0,
+   "url": "https://manorsgolf.com/products/merino-wool-1-4-windbreaker",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MERINO_TECH_WINDBREAKER_DUNE_01.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MERINO_TECH_WINDBREAKER_DUNE_04_crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_be9a6070-95e2-4754-81c5-65fda5dc330d.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_f57481de-1b99-4c41-a781-1a3d662474b6.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_d22b33a1-4f7e-40bf-afcd-0390993cb453.jpg"
+   ],
+   "desc": "The Merino Tech Windbreaker combines the extraordinary natural performance of merino knitwear with a technical lining for elite warmth and protection. Crafted from 100% natural merino wool, it regulates temperature, resists odour, and stays soft round after round. We’ve treated it so you can throw it in the wash without worrying about shrinking, and the 9-Gauge knit gives it a vintage, slightly we",
+   "avail": true
+  },
+  {
+   "t": "Heritage Primaloft® Cardigan",
+   "handle": "heritage-primaloft®-cardigan",
+   "price": "160.00",
+   "cur": "GBP",
+   "usd": 213.0,
+   "url": "https://manorsgolf.com/products/heritage-primaloft®-cardigan",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/HERITAGE_PRIMALOFT_CARDIGAN_BURGUNDY_05_2.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/HERITAGE_PRIMALOFT_CARDIGAN_IVORY_05_2.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/HERITAGE_PRIMALOFT_CARDIGAN_IVORY_05_2_70c57bfa-0d96-47c4-a0ce-6c361a403127.jpg"
+   ],
+   "desc": "A classic golf style put back together in modern outdoor fabric. Primaloft Active Evolve has an open structure that holds warmth without adding bulk, which is why hike and run brands use it, and why you can still swing in it. The hand feel is close to wool, so it looks and feels vintage even though it has modern performance attributes. The full snap placket keeps the front clean with no loose fabr",
+   "avail": true
+  },
+  {
+   "t": "Lightweight Pleated Trouser",
+   "handle": "greenskeeper-chino-trousers",
+   "price": "130.00",
+   "cur": "GBP",
+   "usd": 173.0,
+   "url": "https://manorsgolf.com/products/greenskeeper-chino-trousers",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/01_THUMBNAIL_16.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/01_THUMBNAIL_15.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/LONG_SLEEVE_COURSE_POLO_-_DUNE_--_CHINO_GREENSKEEPER_TROUSER_-_DARK_OLIVE_02_crop.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/INSULATED_COURES_GILET_--_CHINO_GREENSKEEPER_TROUSER_-_MIDNIGHT_01_crop2.jpg"
+   ],
+   "desc": "Classic chinos meet performance golfwear in the Chino Greenskeeper Trouser, crafted from Primeflex™ fabric for exceptional durability, stretch, and lightweight comfort. Water-resistant and soft to the touch, these trousers create a crisp base if you want to dress smart or add a more informal combination. Thoughtful details like double pleats and a ticket pocket for scorecards seamlessly combine ti",
+   "avail": true
+  },
+  {
+   "t": "Stableford Trousers",
+   "handle": "work-trousers",
+   "price": "140.00",
+   "cur": "GBP",
+   "usd": 187.0,
+   "url": "https://manorsgolf.com/products/work-trousers",
+   "imgs": [
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/MANORSGOLF_1042.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_8f399c61-6606-4e29-9c8d-75463207ed51.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/THUMBNAIL_17d4908b-3365-40b3-ae09-1534f780f011.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/COURSE_POLO_-_SAGE_--_STABLEFORD_TROUSER_-_DUNE_01_crop2.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/REVERSIBLE_V-NECK_VEST_-_BLACK_--_STABLEFORD_TROUSER_-_STEEL_01_crop2.jpg",
+    "https://cdn.shopify.com/s/files/1/0713/1693/0869/files/STABLEFORD_TROUSER_VINTAGE_INDIGO_06_2.jpg"
+   ],
+   "desc": "The Stableford Trouser blends combines classic workwear with a nod to golf’s golden era to bring an entirely new silhouette to the fairways. The Primeflex™ recycled fabric blend fabric of the Stableford Trouser, mimics the crisp, tightly woven feel of cotton twill but delivers lightweight stretch, durability, and wrinkle resistance to keep you looking and feeling sharp through every swing. Its hig",
+   "avail": true
+  }
+ ]
+}
