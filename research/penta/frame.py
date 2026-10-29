@@ -46,13 +46,31 @@ def soft_contain(im):
     g = Image.fromarray(out.astype('uint8')).crop((x0, y0, x1, y1))
     sc = min(W * .8 / g.width, H * .74 / g.height); g = g.resize((round(g.width * sc), round(g.height * sc)), Image.LANCZOS)
     c = Image.new('RGB', (W, H), STONE); c.paste(g, ((W - g.width) // 2, (H - g.height) // 2)); return c
+from PIL import ImageFilter
+def tight_cutout(im, tol=4):
+    """Product on a pure-white (255) sweep with a near-white product (gloves sit at ~240-249): flood only the
+    pure white from the corners, feather the edge, and keep the product's own whites. Falls back to soft_contain."""
+    a = np.array(im.convert('RGB')).astype(int); k = 10
+    cc = np.concatenate([a[:k, :k].reshape(-1, 3), a[:k, -k:].reshape(-1, 3), a[-k:, :k].reshape(-1, 3), a[-k:, -k:].reshape(-1, 3)])
+    if cc.min() < 250: return soft_contain(im)
+    mk = Image.fromarray(((255 - a.min(axis=2) <= tol) * 255).astype('uint8'))
+    for pt in [(0, 0), (mk.width - 1, 0), (0, mk.height - 1), (mk.width - 1, mk.height - 1)]: ImageDraw.floodfill(mk, pt, 128)
+    bg = np.array(mk) == 128
+    alpha = Image.fromarray(((~bg) * 255).astype('uint8')).filter(ImageFilter.MinFilter(3)).filter(ImageFilter.GaussianBlur(1.2))
+    ys, xs = np.where(~bg)
+    x0, x1 = xs.min(), xs.max(); y0, y1 = ys.min(), ys.max()
+    m = int(.03 * max(x1 - x0, y1 - y0)); x0, y0 = max(0, x0 - m), max(0, y0 - m); x1, y1 = min(a.shape[1], x1 + m), min(a.shape[0], y1 + m)
+    g = Image.fromarray(a.astype('uint8')).convert('RGBA'); g.putalpha(alpha); g = g.crop((x0, y0, x1, y1))
+    sc = min(W * .8 / g.width, H * .74 / g.height); g = g.resize((round(g.width * sc), round(g.height * sc)), Image.LANCZOS)
+    c = Image.new('RGBA', (W, H), STONE + (255,)); c.alpha_composite(g, ((W - g.width) // 2, (H - g.height) // 2)); return c.convert('RGB')
+TIGHT = set()  # tight_cutout tried for the gloves 28 Oct; Lenny said nvm, so not in use
 FR = {}
 for k, (h, ix) in K.items():
     out = []
     CUR[0] = 'penta-soft' if k in SOFTK else None
     for j, i in enumerate(ix, 1):
         f = glob.glob(f'{R}{h}-{i}.*')[0]
-        (soft_contain(load(f)) if k in SOFTK else frame(load(f))).save(f'{O}{k}-v2-{j}.jpg', quality=86, optimize=True); out.append(f'/{O}{k}-v2-{j}.jpg')
+        (tight_cutout(load(f)) if k in TIGHT else soft_contain(load(f)) if k in SOFTK else frame(load(f))).save(f'{O}{k}-v2-{j}.jpg', quality=86, optimize=True); out.append(f'/{O}{k}-v2-{j}.jpg')
     FR[k] = out
 json.dump(FR, open('research/penta/frames.json', 'w'), indent=1)
 def cover(f, w, h, fy=.5):

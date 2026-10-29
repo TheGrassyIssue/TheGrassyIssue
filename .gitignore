@@ -22,3 +22,24 @@ __pycache__/
 # own Google Maps browser key, which tripped GitHub secret scanning. Keep the
 # extracted JSON/images in research/, never the downloaded pages themselves.
 research/**/*.html
+
+# ---- Research source images (28 Oct 2026) ----
+# Full-size brand photos downloaded while researching posts. Nothing on the site
+# links to research/ (the cropped copies used on pages live in images/), but
+# `git add .` was pushing them on every deploy: 21,700 files, ~1.5 GB, and the
+# reason deploys had slowed down. They stay on disk; they just never ship.
+research/**/*.jpg
+research/**/*.jpeg
+research/**/*.JPG
+research/**/*.png
+research/**/*.webp
+research/**/*.gif
+research/**/*.heic
+research/**/*.HEIC
+research/**/*.avif
+research/**/*.tif
+research/**/*.tiff
+research/**/*.img
+research/**/*.raw
+research/**/*.orig
+research/**/*.jpg?*

@@ -44,6 +44,7 @@ DOMAINS = {
     "bunx-golf": ["bunxgolf.com"],  # Brand to Know, 20 Oct 2026
     "saha-golf": ["saha.golf"],  # Brand to Know, 21 Oct 2026
     "penta-golf": ["penta-golf.com"],  # Brand to Know, 28 Oct 2026
+    "golden-soul-golf": ["goldensoulgolf.com"],  # Brand to Know, 28 Oct 2026
     "sloat": ["sloat.cc"],  # Brand to Know, 21 Oct 2026
     "old-faithful-golf": ["oldfaithfulgolf.com"],  # Dogs and Golf, 22 Oct 2026
     "swag-golf": ["swag.golf"],  # swaggolf.com 301s to swag.golf (checked 22 Oct 2026); store domain folds in below
