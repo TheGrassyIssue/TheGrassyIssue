@@ -46,6 +46,9 @@ DOMAINS = {
     "penta-golf": ["penta-golf.com"],  # Brand to Know, 28 Oct 2026
     "golden-soul-golf": ["goldensoulgolf.com"],  # Brand to Know, 28 Oct 2026
     "dicey-golf": ["diceygolf.com"],  # Brand to Know, 29 Oct 2026
+    "swell-marks": ["swellmarks.com"],  # Three indie brands, 29 Oct 2026
+    "hinotori-golf": ["hinotorigolf.com"],
+    "studio-grain": ["studiograin.store"],
     "sloat": ["sloat.cc"],  # Brand to Know, 21 Oct 2026
     "old-faithful-golf": ["oldfaithfulgolf.com"],  # Dogs and Golf, 22 Oct 2026
     "swag-golf": ["swag.golf"],  # swaggolf.com 301s to swag.golf (checked 22 Oct 2026); store domain folds in below
