@@ -3,26 +3,27 @@ import json, os, sys
 import numpy as np
 from PIL import Image
 sys.path.insert(0, 'research/pinned'); from gcut import cutout, bg_flat
+from soft import soft
 R = 'research/pinned/raw/'; L = 'research/pinned/life/'; O = 'images/pinned-golf/'; os.makedirs(O, exist_ok=True)
 def cover(f, w=1000, h=1250, fx=.5, fy=.5):
     im = Image.open(f).convert('RGB'); s = max(w / im.width, h / im.height); im = im.resize((round(im.width * s), round(im.height * s)), Image.LANCZOS)
     x = int((im.width - w) * fx); y = int((im.height - h) * fy); return im.crop((x, y, x + w, y + h))
 F = {
- 'prism': [R+'prism-1', R+'prism-2', R+'prism-3', R+'prism-4'], 'caddie': [L+'3_0e5b3a97-c390-4f29-bcc9-9f61ad3bcfb5', R+'caddie-2', R+'caddie-3'],
+ 'prism': [R+'prism-1', R+'prism-2', R+'prism-3', R+'prism-4'], 'caddie': [L+'3_0e5b3a97-c390-4f29-bcc9-9f61ad3bcfb5', R+'caddie-2'],
  'sspro': [L+'SSProPDP_1', R+'sspro-1', R+'sspro-2'], 'sstick': [R+'sstick-1', L+'11_8d2b66f4-fda1-439d-a51f-f77e963f44d7', R+'sstick-2', R+'sstick-3'],
  'dart': [R+'dart-1', R+'dart-2', R+'dart-3'], 'roller': [R+'roller-1', R+'roller-2', R+'roller-3'],
  'stickpro': [R+'stickpro-1', R+'stickpro-2', R+'stickpro-3'], 'stick': [R+'stick-1', R+'stick-2', R+'stick-3'],
  'combo': [R+'combo-1', R+'combo-2', R+'combo-3'], 'comboplus': [R+'comboplus-1', R+'comboplus-2', R+'comboplus-3'],
  'mount': [R+'mount-2', R+'mount-1'], 'magpad': [R+'magpad-1'], 'markers': [R+'markers-4', R+'markers-1', R+'markers-2', R+'markers-3'],
  'towels': [R+'towels-1', R+'towels-2', R+'towels-3'], 'hats': [L+'Untitled_267_x_363_px_1', R+'hats-1', R+'hats-2', R+'hats-3'],
- 'charger': [R+'charger-2', R+'charger-1', R+'charger-3'], 'prcase': [R+'prcase-1', R+'prcase-2', R+'prcase-3'], 'spcase': [R+'spcase-1', R+'spcase-2'],
+ 'charger': [R+'charger-2', R+'charger-3'], 'prcase': [R+'prcase-1', R+'prcase-3'], 'spcase': [R+'spcase-1', R+'spcase-2'],
 }
 FR = {}
 for k, srcs in F.items():
     FR[k] = []
     for j, s in enumerate(srcs, 1):
         f = s + '.jpg'; a = np.array(Image.open(f).convert('RGB')).astype(float); flat, col = bg_flat(a)
-        im = cutout(f, .78, .7) if (flat and col.min() > 230) else None
+        im = soft(f, .78, .7) if (flat and col.min() > 230) else None
         if im is None: im = cover(f)
         o = f'{O}{k}-{j}.jpg'; im.save(o, quality=86, optimize=True); FR[k].append('/' + o)
 json.dump(FR, open('research/pinned/frames.json', 'w'), indent=1)
