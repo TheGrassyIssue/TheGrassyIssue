@@ -46,6 +46,7 @@ DOMAINS = {
     "penta-golf": ["penta-golf.com"],  # Brand to Know, 28 Oct 2026
     "golden-soul-golf": ["goldensoulgolf.com"],  # Brand to Know, 28 Oct 2026
     "dicey-golf": ["diceygolf.com"],  # Brand to Know, 29 Oct 2026
+    "pinned-golf": ["pinnedgolf.com"],  # Brand to Know, 30 Oct 2026
     "swell-marks": ["swellmarks.com"],  # Three indie brands, 29 Oct 2026
     "hinotori-golf": ["hinotorigolf.com"],
     "studio-grain": ["studiograin.store"],
