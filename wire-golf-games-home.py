@@ -19,7 +19,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "best-golf-video-games"
 
 SLIDES = [
-    ("card-hero", "A mini golf course at night with a lit windmill, from Walkabout Mini Golf",
+    ("card-hero", "A first-person golf swing with the ball flying toward a bunker in Normal Golf Game",
      "The Edit", "New Golf Video Games",
      "The clocks fall back November 1. The best golf games of the last few years, and where to play them tonight."),
     ("card-2k25", "A golfer in a fairway bunker in PGA Tour 2K25",
@@ -28,9 +28,9 @@ SLIDES = [
     ("card-battle", "Cartoon golfers teeing off together in Super Battle Golf",
      "Super Battle Golf \u00b7 $12.99", "The 2026 Breakout",
      "Eight players, one hole, weapons."),
-    ("card-normal", "A first-person golf swing in Normal Golf Game",
-     "Normal Golf Game \u00b7 $9.99", "Delightfully Frustrating",
-     "Luke Muscat's very normal golf sim."),
+    ("card-walk", "A mini golf course at night with a lit windmill, from Walkabout Mini Golf",
+     "Walkabout Mini Golf \u00b7 $24.99", "Made in Austin",
+     "VR mini golf with glowing night courses."),
 ]
 
 
