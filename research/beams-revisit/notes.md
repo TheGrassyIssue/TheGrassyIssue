@@ -1,0 +1,13 @@
+# BEAMS Golf Revisited — research notes (Oct 30, 2026)
+- Slug plan: brand-revisited-beams-golf (recent revisits use new page). Original: drops/brand-to-know-beams-golf.html (Aug 13, 2026).
+- CORRECTION: Satoshi Nishiwaki is *former* BEAMS Golf director (Senken Shimbun Oct 21 2025, https://senken.co.jp/posts/golfbiz-talk-251021): moved to BEAMS Creative Mar 2025, directs New Vintage Golf (NVG). Original page calls him director; start year 1995 (Senken) vs 1996 (Bunshun 2019). Current director unverified.
+- SUN DAY RED x BEAMS: exclusive Japan partner; pop-up at Baycurrent Classic (Yokohama CC, Oct 8–11); BEAMS Golf Yurakucho from Oct 16; special Icon Polo II in BEAMS Golf green ¥26,400 (Fashionsnap Oct 8 https://www.fashionsnap.com/article/2026-10-08/beams-sun-day-red-partnership/).
+- BEAMS 50th / BEAMS Golf 15th. SS26 "BASIC & FUTURE"; FW26 "THE GREATEST HITS" (blog Aug 17 https://www.beams.co.jp/blog/beamsgolf/183612/), sub-themes "ON THE COURSE" (Goat Hill Park polo) and "U.S. TRADITIONAL"; Purple Label "Return British".
+- 50th golf specials: JONES BLUE + RIDER BLUE caddie ¥99,000, LACOSTE LS knit polo ¥26,400, BARACUTA blouson, JONES x Champion reverse weave, MALBON archive headcover.
+- Malbon x BEAMS Golf archive collection Oct 28 (Green Hunting Buckets revived + new Sextet Buckets) https://bruder.golfdigest.co.jp/entry/fashion/2026/10/28/170000 ; first drop May 21.
+- BRIEFING x BEAMS Golf woodland camo (July) — first special caddie bag since FW2018; CR-4 ¥93,500 https://www.beams.co.jp/blog/beamsgolf/182306/
+- Harris Tweed headcovers/bags Oct 30 (headcover ¥13,200). Pop-up BEAMS LIFE Yokohama Oct 16–Nov 1.
+- Quotes (translated): Bunshun Nov 28 2019 https://bunshun.jp/articles/-/15361 ; WWD Japan Aug 28 2024 https://www.wwdjapan.com/articles/1895642 ; Houyhnhnm ~2016.
+- US buying: beams.co.jp (JPY; WorldShopping status unconfirmed), BEAMS America doesn't carry Golf, proxies (Buyee URL paste, Forward2me, ZOZOTOWN via proxy).
+- FW26 lookbook (1080x1440, fetch via browser): https://www.beams.co.jp/special/news_2025/golf26awN.jpg — men's: 19,25,26,28,29,30,31,22,27,18(land),8,5,16,6.
+- Catalogue: label 0081 men's, 286 items; product images cdn.beams.co.jp/img/goods/{id}/O/{id}_C_1.jpg (1200x1440), D_n styling shots. FX ~¥156/$.
