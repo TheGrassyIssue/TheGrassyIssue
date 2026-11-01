@@ -17,7 +17,7 @@ DONOR = ROOT / "drops/brand-to-know-mackem-golf.html"
 
 TITLE = "Brand to Know: Paris Golf Gallery, the Showroom That Says Golf Is the New Skateboarding"
 DESC = ("Paris Golf Gallery started as a Fashion Week showroom in Le Marais and now makes its own line: Golf Is the New Skateboarding tees, "
-        "a supporter scarf, handmade ashtrays and caps with Paré, PXG and Odd Ritual. 24 picks in US dollars.")
+        "a supporter scarf, handmade ashtrays and caps with Paré, PXG and Odd Ritual. 21 picks in US dollars.")
 H1 = "Brand to Know: Paris Golf Gallery"
 BC = "Brand to Know: Paris Golf Gallery"
 SLUG = "brand-to-know-paris-golf-gallery"
@@ -34,10 +34,6 @@ P = {
    "A 7.825-inch skateboard deck in the bright orange and yellow of winter golf balls, made for the Fashion Week edition of the series. For the wall or for the street."),
  "gtees": (PG, "Golf Is the New Skateboarding Tees", "$14", "golf-is-the-new-skateboarding-tees",
    "A pouch of 25 wooden tees in a green-and-yellow marble pattern, printed with the slogan. The cheapest way into the shop."),
- "music": (PG, "Music Legends Tee", "$65", "golf-legends-t-shirt-wash",
-   "A washed black tee with Kurt Cobain, Bob Marley and Paul Stanley drawn on a golf course, under the line &ldquo;The Game Remains, The Landscape Doesn&rsquo;t.&rdquo; Relaxed, slightly oversized fit."),
- "football": (PG, "Football Legends Tee", "$65", "football-legends-t-shirt-wash",
-   "The same idea for football fans: Zidane, Ronaldo and Maradona on the course, in a vintage-style monochrome print on a black tee."),
  "qzipc": (PG, "Quarter Zip", "$92", "paris-golf-gallery",
    "From the Winter 2026 Fashion Week showroom: a fleece quarter zip with the logo on the chest and, on the back, a PGG flag over a cup that reads &ldquo;Fairway Research Center Inc.&rdquo; Burgundy or navy."),
  "mat": (PG + " x Wellputt", "Putting Mat", "$92", "golf-is-the-new-skateboarding-deck-2nd-generation-copy",
@@ -46,8 +42,6 @@ P = {
    "A football supporter&rsquo;s scarf, 140 by 20 centimeters, in a green-and-blue check with PARIS GOLF GALLERY knitted in. Made to be worn on the course or held up at the 18th."),
  "ashtray": (PG, "Golf Hole Ashtray", "$154", "paris-golf-gallery-ashtray",
    "One of 18 handmade ceramic ashtrays, each shaped like a different golf hole and made with a ceramic artist. No two are the same: one for every hole on the course."),
- "palo": (PG, "Palo Santo", "$14", "paris-golf-gallery-palo-santo",
-   "Four sticks of palo santo wood from Ecuador, from naturally fallen trees, in a Paris Golf Gallery wrap. A small, strange and very Paris thing to sell in a golf shop."),
  "perfume": (PG + " x Nas Studio", "Skin Break Perfume", "$63", "nas-studio-x-paris-golf-gallery-skin-break-fragrance-01",
    "A leather scent made by perfumer Alexandra Mettetal, who based it on golf gloves, the quiet before a swing and the heat off a bunker. The most unusual piece in the collection."),
  "baggy": (X("Baggy Pants"), "Limited Edition Cap", "$46", "baggy-pants-limited-edition-paris-golf-gallery-cap",
@@ -76,16 +70,16 @@ P = {
    "A divot tool that opens like a butterfly knife, made in a numbered run of 200 with Slice Town. A toy for the green that fixes pitch marks."),
 }
 SECTIONS = [
- ("Golf Is the New Skateboarding", "skate", ["wash", "classic", "decks", "gtees", "music", "football"],
-  "<strong>Six pieces &middot; $14&ndash;$171</strong>The slogan that started on a tee at Fashion Week and now runs across shirts, decks and wooden tees."),
- ("The House Line", "house", ["qzipc", "scarf", "mat", "ashtray", "perfume", "palo"],
+ ("Golf Is the New Skateboarding", "skate", ["wash", "classic", "decks"],
+  "<strong>Three pieces &middot; $65&ndash;$171</strong>The slogan that started on a tee at Fashion Week and now runs across shirts and skate decks."),
+ ("The House Line", "house", ["qzipc", "scarf", "mat", "ashtray", "perfume", "gtees"],
   "<strong>Six pieces &middot; $14&ndash;$154</strong>A quarter zip, a supporter scarf, a putting mat and the objects that make the shop feel like a gallery."),
  ("Collab Caps", "caps", ["pare", "odd", "pxg", "pluto", "lof", "baggy"],
   "<strong>Six pieces &middot; $46&ndash;$63</strong>Made with brands from the showroom, from Par&eacute; to PXG."),
  ("Collab Clothing and Gear", "collabs", ["brutta", "vibe", "hof", "lostballs", "val", "slice"],
   "<strong>Six pieces &middot; $40&ndash;$114</strong>More collaborations with brands that have shown at the gallery."),
 ]
-N = 24
+N = 21
 PQ = {
  "caps": ("It&rsquo;s not a trade show. It&rsquo;s not a pop-up store. It&rsquo;s not an art gallery, but it&rsquo;s everything at the same time.", "Pierre Greilsamer, to The Wedge, 2025"),
 }
@@ -100,7 +94,7 @@ TAKE = """
   <div class="writeup-body">
     <div class="drop-tag grass">The TGI Take</div>
     <p>Paris Golf Gallery is a shop, a showroom and a small brand at once. Pierre Greilsamer and Malo Bourdet, who run the Paris branding agency WRKS, started it during Paris Fashion Week in June 2024 as a showroom in Le Marais with six golf brands under one roof. By June 2025 it had 25 brands in a 600-square-meter space in Cadillac&rsquo;s showroom at Op&eacute;ra, according to The Wedge, and it now sells many of them online, from Metalwood to Par&eacute;.</p>
-    <p><strong>Its own line.</strong> This post covers the things Paris Golf Gallery makes itself. It started with one slogan on a tee, &ldquo;Golf is the new Skateboarding,&rdquo; and the line has grown from there into washed tees, skate decks, wooden tees, a quarter zip and a supporter scarf. Then come the objects you would not expect from a golf shop: 18 handmade ashtrays, each shaped like a golf hole, a leather perfume and palo santo.</p>
+    <p><strong>Its own line.</strong> This post covers the things Paris Golf Gallery makes itself. It started with one slogan on a tee, &ldquo;Golf is the new Skateboarding,&rdquo; and the line has grown from there into washed tees, skate decks, wooden tees, a quarter zip and a supporter scarf. Then come the objects you would not expect from a golf shop: 18 handmade ashtrays, each shaped like a golf hole, and a leather perfume.</p>
     <p><strong>The collabs.</strong> The other half of the line is caps and pieces made with brands that have shown at the gallery: Par&eacute;, Odd Ritual, PXG, Pluto, Left of Field, Brutta, House of Flavor, Lost Balls, Val Golf and Slice Town. It is the best record of who has passed through the room.</p>
     <p><strong>Buying from the US.</strong> The shop is in Paris, but the site shows prices in US dollars and ships to the US. Prices here were checked on November 1, 2026.</p>
   </div>
@@ -258,7 +252,7 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>Brand to Know &middot; Paris, France &middot; Est. 2024</span><span class="dot"></span>
-    <span>24 picks &middot; prices checked November 1, 2026</span>
+    <span>21 picks &middot; prices checked November 1, 2026</span>
   </div>
 </header>
 
