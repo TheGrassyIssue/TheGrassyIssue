@@ -48,6 +48,7 @@ DOMAINS = {
     "dicey-golf": ["diceygolf.com"],  # Brand to Know, 29 Oct 2026
     "pinned-golf": ["pinnedgolf.com"],  # Brand to Know, 30 Oct 2026
     "angus-and-grace-go-golfing": ["angusandgracegogolfing.com"],  # Brand to Know, 30 Oct 2026
+    "paris-golf-gallery": ["parisgolfgallery.com"],  # Brand to Know, 1 Nov 2026
     "swell-marks": ["swellmarks.com"],  # Three indie brands, 29 Oct 2026
     "hinotori-golf": ["hinotorigolf.com"],
     "studio-grain": ["studiograin.store"],
