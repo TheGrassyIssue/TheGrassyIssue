@@ -241,7 +241,7 @@ def main(apply_):
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="People working on laptops at big tables inside Flightpath Coffeehouse in Hyde Park" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Leather couches, an arc lamp and tall windows in the Carpenter Hotel coffee bar" fetchpriority="high" /></div></div>
 """
     body += TAKE  # Lenny 28 Oct: the story closes the post in place of The Questions
     n = 1

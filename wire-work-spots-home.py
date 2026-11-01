@@ -19,7 +19,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "austin-work-spots"
 
 SLIDES = [
-    ("card-hero", "Leather couches and a big window at the Carpenter Hotel coffee bar",
+    ("card-hero", "Rattan pendant lights and wood booths in the bright dining room at Hank's",
      "Field Notes", "Where to Work in Austin",
      "15 laptop-friendly spots in Austin, each paired with the nearest course, range or sim for after you log off."),
     ("flightpath-1", "People working on laptops at big tables inside Flightpath Coffeehouse",

@@ -18,7 +18,7 @@ for k,fs in F.items():
     for j,f in enumerate(fs,1):
         o=f'{O}{k}-{j}.jpg'; cover(Image.open(R+f).convert('RGB'),1200,675).save(o,quality=86,optimize=True); FR[k].append('/'+o)
 json.dump(FR,open('research/work-spots-atx/frames.json','w'),indent=1)
-h=Image.open(R+'flightpath-2').convert('RGB')
-cover(h,2000,857,.5,.5).save(O+'hero.jpg',quality=86,optimize=True); cover(h,1200,630).save(O+'og.jpg',quality=84)
-cover(Image.open(R+'carpenter-coffee-bar-1').convert('RGB'),1000,1250,.45,.5).save(O+'card-hero.jpg',quality=84,optimize=True)
+h=Image.open(R+'carpenter-coffee-bar-1').convert('RGB')
+cover(h,2000,857,.5,.55).save(O+'hero.jpg',quality=86,optimize=True); cover(h,1200,630).save(O+'og.jpg',quality=84)
+cover(Image.open(R+'hanks-0').convert('RGB'),1000,1250,.5,.5).save(O+'card-hero.jpg',quality=84,optimize=True)
 print({k:len(v) for k,v in FR.items()})
