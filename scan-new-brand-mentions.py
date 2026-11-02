@@ -52,6 +52,7 @@ DOMAINS = {
     "itl-golf": ["itlgolf.com"],  # On Our Radar vol 5, 2 Nov 2026
     "masterpiece-sports-club": ["masterpiecegolf.com"],
     "52-sundays": ["52sundays.co"],
+    "three-putt-golf-clothing": ["threeputtgolfclothing.co.uk"],
     "swell-marks": ["swellmarks.com"],  # Three indie brands, 29 Oct 2026
     "hinotori-golf": ["hinotorigolf.com"],
     "studio-grain": ["studiograin.store"],
