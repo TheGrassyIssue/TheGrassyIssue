@@ -49,6 +49,9 @@ DOMAINS = {
     "pinned-golf": ["pinnedgolf.com"],  # Brand to Know, 30 Oct 2026
     "angus-and-grace-go-golfing": ["angusandgracegogolfing.com"],  # Brand to Know, 30 Oct 2026
     "paris-golf-gallery": ["parisgolfgallery.com"],  # Brand to Know, 1 Nov 2026
+    "itl-golf": ["itlgolf.com"],  # On Our Radar vol 5, 2 Nov 2026
+    "masterpiece-sports-club": ["masterpiecegolf.com"],
+    "52-sundays": ["52sundays.co"],
     "swell-marks": ["swellmarks.com"],  # Three indie brands, 29 Oct 2026
     "hinotori-golf": ["hinotorigolf.com"],
     "studio-grain": ["studiograin.store"],
