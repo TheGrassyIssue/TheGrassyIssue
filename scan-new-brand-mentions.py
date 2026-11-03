@@ -49,6 +49,7 @@ DOMAINS = {
     "pinned-golf": ["pinnedgolf.com"],  # Brand to Know, 30 Oct 2026
     "angus-and-grace-go-golfing": ["angusandgracegogolfing.com"],  # Brand to Know, 30 Oct 2026
     "paris-golf-gallery": ["parisgolfgallery.com"],  # Brand to Know, 1 Nov 2026
+    "radmor": ["radmorgolf.com"],  # Brand to Know, 3 Nov 2026
     "itl-golf": ["itlgolf.com"],  # On Our Radar vol 5, 2 Nov 2026
     "masterpiece-sports-club": ["masterpiecegolf.com"],
     "52-sundays": ["52sundays.co"],
