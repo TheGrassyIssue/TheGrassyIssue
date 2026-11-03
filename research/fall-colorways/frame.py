@@ -59,7 +59,7 @@ for (t,fy),w in zip(tri,(666,668,666)):
     h.paste(cover(Image.open(R+t).convert('RGB'),w-4 if x else w-2,857,.5,fy),(x+(2 if x else 0),0)); x+=w
 h.save(O+'hero.jpg',quality=86,optimize=True)
 og=h.resize((1200,514),Image.LANCZOS); c=Image.new('RGB',(1200,630),tuple(int(v) for v in STONE)); c.paste(og,(0,58)); c.save(O+'og.jpg',quality=84)
-cover(Image.open(R+'12-0').convert('RGB'),1000,1250).save(O+'card-hero.jpg',quality=84,optimize=True)
+cover(Image.open(R+'25-1').convert('RGB'),1000,1250,.5,.2).save(O+'card-hero.jpg',quality=84,optimize=True)
 B={'band-1':['07-1','33-1','34-1'],'band-2':['m3-3','n16-0','43-1']}
 for b,ts in B.items():
     for n,t in enumerate(ts,1): cover(Image.open(R+t).convert('RGB'),1000,1250).save(f'{O}{b}-{n}.jpg',quality=84,optimize=True)

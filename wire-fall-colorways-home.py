@@ -19,7 +19,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "fall-colorways"
 
 SLIDES = [
-    ("card-hero", "A golfer in a Jones Sports Co timber brown fleece vest by the water",
+    ("card-hero", "A man in a Grind City Golf burgundy Sphere Study crew knit with a golf ball graphic",
      "The Edit", "Fall Golf Colorways",
      "Sage, hunter orange, chocolate, racing green and four more pairings: 72 pieces in stock."),
     ("ps5-1", "The Kingfisher Golf Sage Green DAL cap",
