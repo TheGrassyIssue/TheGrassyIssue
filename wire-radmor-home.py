@@ -24,13 +24,13 @@ SLIDES = [
      "Seattle golf clothes with no virgin polyester: knit polos, cashmere-blend sweaters and BobRad headcovers."),
     ("p37-1", "A man in a Radmor Inness knit polo",
      "Knit Polos", "Radmor Inness Knit Polo",
-     "$145"),
+     "A 1990s 3D-knit look, rebuilt as a golf polo."),
     ("p5-1", "A man in a Radmor RADMerino turtleneck",
      "Sweaters", "RADMerino Turtleneck",
-     "$225"),
+     "Merino and cashmere, made for winter rounds."),
     ("p143-1", "The Radmor Dancing BobRad leather blade putter cover",
      "Headcovers", "Dancing BobRad Putter Cover",
-     "$90"),
+     "The dancing mascot, in hand-crafted leather."),
 ]
 
 

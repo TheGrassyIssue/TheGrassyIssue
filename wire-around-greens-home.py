@@ -24,13 +24,13 @@ SLIDES = [
      "Nine each of ball markers, divot tools, putter covers and wedges from independent makers."),
     ("pm1-1", "The Swell Marks Rise and Grind Red Sun ball marker",
      "Ball Markers", "Swell Marks Red Sun",
-     "$65"),
+     "Hand-finished steel from a Coronado surf town."),
     ("pp3-1", "The Mackem Golf Fawcett plaid mallet putter cover",
      "Putter Covers", "Mackem Fawcett Cover",
-     "$102"),
+     "Deadstock wool plaid in fall reds and browns."),
     ("pw3-1", "A Piretti hand-stamped forged wedge with colorful icons",
      "Wedges", "Piretti Handstamped",
-     "$299"),
+     "Forged, then stamped by hand with colorful icons."),
 ]
 
 

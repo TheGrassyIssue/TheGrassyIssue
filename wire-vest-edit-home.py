@@ -24,13 +24,13 @@ SLIDES = [
      "36 golf vests for fall from 30 independent brands: fleece, padded, wind and sweater vests."),
     ("p30-1", "The Metalwood Studio Trail Mix reversible vest in brown",
      "Fleece &amp; Texture", "Metalwood Trail Mix Vest",
-     "$218"),
+     "Reversible: deep brown one way, dijon the other."),
     ("p40-1", "The Sounder Low Light Gilet in rust",
      "Padded", "Sounder Low Light Gilet",
-     "$103"),
+     "Japanese showerproof nylon in rust."),
     ("p21-1", "A man in a Devereux pinstripe sweater vest",
      "Knit", "Devereux Sweater Vest",
-     "$94"),
+     "Charcoal and white pinstripes, cut a little oversized."),
 ]
 
 

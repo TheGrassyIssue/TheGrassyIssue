@@ -24,13 +24,13 @@ SLIDES = [
      "Sage, hunter orange, chocolate, racing green and four more pairings: 72 pieces in stock."),
     ("ps5-1", "The Kingfisher Golf Sage Green DAL cap",
      "Sage + Ecru", "Kingfisher Sage DAL Cap",
-     "$36"),
+     "The easiest way to wear sage: one cap."),
     ("p9-1", "The Dicey Golf blaze orange Country Club trucker hat",
      "Hunter Orange + Charcoal", "Dicey Country Club Hat",
-     "$40"),
+     "Blaze orange, borrowed from the hunting world."),
     ("p18-1", "The Quiet Golf Mesa cashmere sweater in pine",
      "Racing Green + Butter", "Quiet Golf Mesa Sweater",
-     "$348"),
+     "Cashmere in a deep pine green."),
 ]
 
 
