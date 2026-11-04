@@ -19,7 +19,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "collabs-nov"
 
 SLIDES = [
-    ("card-hero", "A golfer carrying the Sun Mountain x Manors stand bag",
+    ("card-hero", "The Sun Mountain x Manors ClubGlider3 travel bag on a clifftop golf course above the sea",
      "The Edit", "Our Favorite Collabs This Month",
      "Manors x Sun Mountain bags, hockey socks turned headcovers, a mahjong set and four more collabs to know."),
     ("psock-1", "The Sherwood x Dormie red hockey sock fairway headcover",
