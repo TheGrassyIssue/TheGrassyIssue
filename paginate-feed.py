@@ -270,6 +270,9 @@ def insert_loader(s):
 # ------------------------------------------------------------------- main
 def main(apply_, merge_only):
     s = HOME.read_text(encoding="utf-8")
+    # The Special Field Note double-wide box (apply-special-wide.py) is not a feed card: drop it here so it
+    # never moves to /feed/page-N or de-duplicates its lead story's own card. That script re-adds it.
+    s = re.sub(r'\n?<!-- TGI-SPECIAL-WIDE -->.*?<!-- /TGI-SPECIAL-WIDE -->\n?', '\n', s, flags=re.S)
     m = FEED_OPEN.search(s)
     lmm = LOADMORE.search(s, m.end())
     if not m or not lmm:

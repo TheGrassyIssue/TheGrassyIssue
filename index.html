@@ -1657,6 +1657,44 @@
 }
 @media (max-width:640px) and (hover:none){ .gear-arrow{display:none!important} }
 </style>
+<style>/*TGI-SPECIAL-WIDE*/
+.feed .card.card-wide{border:0.5px solid var(--ink);background:var(--ink);color:var(--paper)}
+.card-wide .wide-in{display:grid;grid-template-columns:1fr;grid-template-rows:minmax(0,1fr) auto;height:var(--wide-h,auto)}
+.card-wide .wide-media{position:relative;overflow:hidden;min-height:0;display:block;border:0}
+.card-wide .wide-media img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s ease}
+.card-wide:hover .wide-media img{transform:scale(1.03)}
+.card-wide .wide-flag,.card-wide .wide-star{position:absolute;top:12px;font-family:var(--mono);font-size:8.5px;font-weight:500;letter-spacing:.15em;text-transform:uppercase;padding:5px 10px}
+.card-wide .wide-flag{left:12px;background:var(--flag);color:var(--paper)}
+.card-wide .wide-star{left:118px;background:var(--paper);color:var(--ink)}
+.card-wide .wide-body{display:grid;grid-template-columns:1.25fr 1fr;column-gap:26px;padding:20px 22px 18px;align-items:start}
+.card-wide .wide-kick{font-family:var(--mono);font-size:9px;letter-spacing:.18em;text-transform:uppercase;opacity:.7;margin-bottom:8px}
+.card-wide .wide-title{font-family:var(--serif);font-style:italic;font-weight:400;font-size:25px;line-height:1.1;letter-spacing:-.01em;margin-bottom:8px}
+.card-wide .wide-title a{color:inherit;border:0;text-decoration:none}
+.card-wide .wide-dek{font-family:var(--serif);font-size:13.5px;line-height:1.55;opacity:.85;margin:0 0 12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-wide .wide-cta{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--paper);border:0.5px solid var(--paper);padding:8px 13px;text-decoration:none}
+.card-wide .wide-cta:hover{background:var(--paper);color:var(--ink)}
+.card-wide .wide-more{padding-left:22px;border-left:0.5px solid rgba(255,255,255,.25);height:100%}
+.card-wide .wide-more-l{font-family:var(--mono);font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;opacity:.6;margin:2px 0 12px}
+.card-wide .wide-mini{display:flex;gap:12px;align-items:center;color:var(--paper);text-decoration:none;border:0;margin-bottom:10px}
+.card-wide .wide-mini img{width:58px;height:58px;object-fit:cover;flex:0 0 58px}
+.card-wide .wide-mini span{font-family:var(--serif);font-style:italic;font-size:14px;line-height:1.25}
+.card-wide .wide-mini:hover span{text-decoration:underline}
+@media(max-width:760px){
+.card-wide .wide-in{height:auto;grid-template-rows:auto auto}
+.card-wide .wide-media img{height:auto;aspect-ratio:16/10}
+.card-wide .wide-body{display:block;padding:14px}
+.card-wide .wide-kick{font-size:8.5px}
+.card-wide .wide-title{font-size:21px}
+.card-wide .wide-dek{font-size:13px;line-height:1.5}
+.card-wide .wide-cta{padding:7px 12px;font-size:9.5px;margin-bottom:14px}
+.card-wide .wide-more{padding:0;border-left:0;border-top:0.5px solid rgba(255,255,255,.25);height:auto}
+.card-wide .wide-more-l{margin:12px 0 8px}
+.card-wide .wide-more-row{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.card-wide .wide-mini{margin-bottom:0;gap:8px;align-items:flex-start}
+.card-wide .wide-mini img{width:44px;height:44px;flex:0 0 44px}
+.card-wide .wide-mini span{font-size:12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+}
+</style>
 </head>
 <body>
 
@@ -1871,6 +1909,31 @@
     </div>
   </div>
 <!-- /TGI-AROUNDGREENS-CARD -->
+<!-- TGI-SPECIAL-WIDE -->
+<div class="card card-wide" data-type="field">
+  <div class="wide-in">
+    <a class="wide-media" href="/drops/golf-trips-mind-body-spirit">
+      <img src="/images/special/mbs-wide.jpg" alt="A lone golfer swinging on a rolling public course at dusk" loading="lazy" width="1600" height="900" />
+      <span class="wide-flag">[Field Notes]</span><span class="wide-star">Special</span>
+    </a>
+    <div class="wide-body">
+      <div class="wide-main">
+        <div class="wide-kick">A Special Field Note &middot; The Long Read</div>
+        <div class="wide-title"><a href="/drops/golf-trips-mind-body-spirit">Golf Trips for the Mind, Body or Spirit</a></div>
+        <p class="wide-dek">Fifteen public courses built for a dedicated trip, sorted by what you need: courses that make you think, courses that test your body and courses that quiet everything down.</p>
+        <a class="wide-cta" href="/drops/golf-trips-mind-body-spirit">Read the story &rarr;</a>
+      </div>
+      <div class="wide-more">
+        <div class="wide-more-l">More Special Field Notes</div>
+        <div class="wide-more-row">
+        <a class="wide-mini" href="/drops/how-big-can-an-independent-golf-brand-get"><img src="/images/special/mini-independent.jpg" alt="" loading="lazy" width="58" height="58"><span>How Big Can an Independent Golf Brand Get?</span></a>
+        <a class="wide-mini" href="/drops/pnw-golf-trip-gamble-sands-chambers-bay"><img src="/images/special/mini-pnw.jpg" alt="" loading="lazy" width="58" height="58"><span>PNW Golf Trip: Gamble Sands, Chambers Bay and More</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- /TGI-SPECIAL-WIDE -->
 <!-- TGI-VESTEDIT-CARD -->
 <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -3183,20 +3246,34 @@
     }
 
     const feedWidth = feed.clientWidth;
-    const firstCard = visibleCards[0];
+    const firstCard = visibleCards.find(c => !c.classList.contains('card-wide')) || visibleCards[0];
     const cardWidth = firstCard.offsetWidth;
     const gap = 20;
     const cols = Math.max(1, Math.round(feedWidth / (cardWidth + gap)));
     const colWidth = (feedWidth - (cols - 1) * gap) / cols;
     const colHeights = new Array(cols).fill(0);
 
+    /*TGI-SPECIAL-WIDE-JS*/
+    const refCard = visibleCards.find(c => !c.classList.contains('card-wide'));
     visibleCards.forEach((card, index) => {
-      const col = index % cols;
-      const x = col * (colWidth + gap);
-      const y = colHeights[col];
       card.style.position = 'absolute';
-      card.style.left = x + 'px';
-      card.style.top = y + 'px';
+      if (card.classList.contains('card-wide')) {
+        if (cols >= 2) {
+          let best = 0, bestY = Infinity;
+          for (let c = 0; c < cols - 1; c++) { const yy = Math.max(colHeights[c], colHeights[c + 1]); if (yy < bestY - 1) { bestY = yy; best = c; } }
+          card.style.setProperty('--wide-h', refCard ? refCard.offsetHeight + 'px' : 'auto');
+          card.style.left = (best * (colWidth + gap)) + 'px';
+          card.style.top = bestY + 'px';
+          card.style.width = (colWidth * 2 + gap) + 'px';
+          colHeights[best] = colHeights[best + 1] = bestY + card.offsetHeight + gap;
+          return;
+        }
+        card.style.setProperty('--wide-h', 'auto');
+      }
+      let col = 0;
+      for (let c = 1; c < cols; c++) if (colHeights[c] < colHeights[col] - 1) col = c;
+      card.style.left = (col * (colWidth + gap)) + 'px';
+      card.style.top = colHeights[col] + 'px';
       card.style.width = colWidth + 'px';
       colHeights[col] += card.offsetHeight + gap;
     });

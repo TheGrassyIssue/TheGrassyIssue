@@ -1,0 +1,16 @@
+{
+ "_": "Homepage 'Special Field Note' double-wide box (Lenny, 4 Nov 2026). lead = the featured story; more = two smaller links. Edit this file and run apply-special-wide.py --apply (Deploy TGI.command runs it).",
+ "lead": {
+  "url": "/drops/golf-trips-mind-body-spirit",
+  "img": "/images/special/mbs-wide.jpg",
+  "alt": "A lone golfer swinging on a rolling public course at dusk",
+  "kicker": "A Special Field Note &middot; The Long Read",
+  "title": "Golf Trips for the Mind, Body or Spirit",
+  "dek": "Fifteen public courses built for a dedicated trip, sorted by what you need: courses that make you think, courses that test your body and courses that quiet everything down."
+ },
+ "more": [
+  {"url": "/drops/how-big-can-an-independent-golf-brand-get", "img": "/images/special/mini-independent.jpg", "title": "How Big Can an Independent Golf Brand Get?"},
+  {"url": "/drops/pnw-golf-trip-gamble-sands-chambers-bay", "img": "/images/special/mini-pnw.jpg", "title": "PNW Golf Trip: Gamble Sands, Chambers Bay and More"}
+ ],
+ "after_card": 3
+}
