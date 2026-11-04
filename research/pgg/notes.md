@@ -1,5 +1,0 @@
-# Paris Golf Gallery BTK — notes (Nov 1, 2026)
-- Founders Pierre Greilsamer + Malo Bourdet (WRKS Studio/Agency, Paris). Born during Paris Fashion Week 2024 as a Le Marais showroom (site About page).
-- The Wedge (Shane Breslin, Jun 22 2025, thewedgegolf.substack.com/p/paris-golf-gallery-2025): 6 brands June 2024 -> 10 Jan 2025 -> 25 June 2025 at Cadillac showroom, Opera (600 m2). Sparked by Captain's Helm Golf asking for help at PFW. La Boulie round anecdote. Greilsamer grandfather founded first golf course in hometown. Lockdown 2020 golf revelation. Quotes: "It's not a trade show. It's not a pop-up store. It's not an art gallery, but it's everything at the same time." / "It's our job to inject energy..." / Bourdet: side project for Wrks, "flat every season so far". E-com launched after June 2025.
-- Store sells 24 other brands; BTK covers the PGG own-label collection (38 products, ~32 in stock). Prices USD via Shopify currency=USD (rate 1.1399).
-- Collabs in collection: Baggy Pants, Left of Field, Brutta, House of Flavor, Lost Balls, Vibe Caddy, Val Golf, Slice Town, Pluto, Odd Ritual, Paré, PXG, Generation Mulligan (vintage), Nas Studio perfume.

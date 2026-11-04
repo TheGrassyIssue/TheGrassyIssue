@@ -43,3 +43,10 @@ research/**/*.img
 research/**/*.raw
 research/**/*.orig
 research/**/*.jpg?*
+
+# ---- Research working files (3 Nov 2026) ----
+# research/ was already in .vercelignore (never deployed) but was still committed,
+# 2.1 GB of raw brand photos and scraped JSON. Vercel's clone of the repo grew until
+# the 12:55PM build hit the 45-minute limit while still cloning. Files stay on disk.
+research/
+images/ig-tiles/*.zip
