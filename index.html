@@ -3205,13 +3205,22 @@
           card.style.display = 'none';
         }
       });
-      // Re-layout masonry and re-trigger entrance animation
+      /*TGI-FILTER-SMOOTH*/
+      const feedEl = document.querySelector('.feed');
+      feedEl.style.transition = 'opacity .18s ease';
+      feedEl.style.opacity = '0';
+      const leads = [];
+      document.querySelectorAll('.feed .card:not(.hidden)').forEach((c, i) => {
+        if (i >= cardsShown) return;
+        const img = c.querySelector('img');
+        if (img) { img.loading = 'eager'; if (!img.complete) leads.push(new Promise(r => { img.addEventListener('load', r, { once: true }); img.addEventListener('error', r, { once: true }); })); }
+      });
+      await Promise.race([Promise.all(leads), new Promise(r => setTimeout(r, 900))]);
       requestAnimationFrame(() => {
         layoutMasonry();
-        document.querySelectorAll('.card:not(.hidden)').forEach((c, i) => {
-          c.classList.remove('visible');
-          setTimeout(() => c.classList.add('visible'), i * 60);
-        });
+        document.querySelectorAll('.card:not(.hidden)').forEach(c => c.classList.add('visible'));
+        feedEl.style.opacity = '1';
+        setTimeout(layoutMasonry, 400);
       });
     });
   });
