@@ -129,8 +129,11 @@ CSS = ('<style>/*TGI-GG-BRAND*/.gg-brand{max-width:1180px;margin:0 auto;padding:
  '.gg-grid .product-name{font-size:15px}.gg-grid .product-body{padding:12px 12px 14px}'
  '@media(max-width:900px){.gg-grid,.gg-grid[data-n="3"]{grid-template-columns:repeat(2,minmax(0,1fr))}}'
  '.gg-nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:10px auto 0;max-width:900px}.gg-nav a{font-family:var(--mono,monospace);font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid rgba(20,20,20,.25);padding:4px 8px}</style>\n')
+ML = json.loads((ROOT / "research/gift-guide-2026/model-lead.json").read_text()).get("2", {})  # on-model frame leads (Lenny, 9 Nov 2026)
 def card(k, idx):
-    v = D[k]; fr = FRN[k]; brand = v.get("brand", "")
+    v = D[k]; fr = FRN[k]
+    if k in ML: fr = [fr[ML[k]]] + [x for i, x in enumerate(fr) if i != ML[k]]
+    brand = v.get("brand", "")
     label = H.unescape(nm(k)).replace('"', "")
     imgs = "".join(f'<div class="pg-frame"><img src="{f}" alt="{H.escape(label)} &middot; view {j+1} of {len(fr)}" loading="lazy" /></div>' for j, f in enumerate(fr))
     dots = "".join(f'<button class="pg-dot{" on" if j == 0 else ""}" data-i="{j}" aria-label="View image {j+1}"></button>' for j in range(len(fr)))

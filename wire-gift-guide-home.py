@@ -42,7 +42,6 @@ def build_card(key, slug, title, imgdir, slides):
             f'      <p class="card-text" data-slidetext="{key}">{slides[0][4]}</p>\n'
             f'      <div class="gear-dots" data-dots="{key}"></div>\n'
             f'      <div class="gear-counter" data-counter="{key}">1 / {len(slides)}</div>\n'
-            f'      <a href="{url}" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:\'JetBrains Mono\',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>\n'
             f'    </div>\n  </div>\n' + e)
 def main(apply_):
     h = HOME.read_text(encoding="utf-8"); original = h
