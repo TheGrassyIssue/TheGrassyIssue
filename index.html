@@ -1778,6 +1778,49 @@
 </section>
 
 <section class="feed" id="feed" data-nosnippet role="tabpanel" aria-label="Content feed">
+<!-- TGI-NPROUND-CARD -->
+<div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Drops &amp; Brands]</span>
+      <div class="gear-carousel" data-carousel="npround">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="/drops/golf-needlepoint-roundup">
+              <img src="/images/needlepoint-roundup/b15-f1.jpg" alt="Brewster Belt Pinehurst Golf Course needlepoint belt" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Brewster Belt</div><div class="gear-slide-name">Pinehurst, Stitched</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/golf-needlepoint-roundup">
+              <img src="/images/needlepoint-roundup/h3-f1.jpg" alt="Asher Riley gopher needlepoint driver headcover" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Asher Riley</div><div class="gear-slide-name">Gopher Golf Driver Cover</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/golf-needlepoint-roundup">
+              <img src="/images/needlepoint-roundup/b6-f1.jpg" alt="Smathers &amp; Branson Ham and Egging needlepoint belt" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Smathers &amp; Branson</div><div class="gear-slide-name">Ham and Egging Belt</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/golf-needlepoint-roundup">
+              <img src="/images/needlepoint-roundup/n3-f1.jpg" alt="Smathers &amp; Branson Gopher Golf Life needlepoint flask" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Smathers &amp; Branson</div><div class="gear-slide-name">Gopher Golf Life Flask</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/golf-needlepoint-roundup" style="color:inherit;text-decoration:none;border-bottom:none;">The Needlepoint Roundup: 36 Pieces for Golfers</a></div>
+      <p class="card-text" data-slidetext="npround">Belts, headcovers, key fobs and a flask, all hand-stitched and in stock.</p>
+      <div class="gear-dots" data-dots="npround"></div>
+      <div class="gear-counter" data-counter="npround">1 / 4</div>
+    </div>
+  </div>
+<!-- /TGI-NPROUND-CARD -->
 <!-- TGI-SPECIAL-WIDE -->
 <div class="card card-wide" data-type="field">
   <div class="wide-in">
@@ -3628,6 +3671,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    npround: [
+      "Belts, headcovers, key fobs and a flask, all hand-stitched and in stock.",
+      "Four needlepoint driver covers and a blade putter cover.",
+      "Twenty belts, from Good Threads at $125 to custom work at $200.",
+      "The 19th hole: a bottle opener, a flask and a card wallet."
+    ],
     easttexas: [
       "Four courses in the East Texas pines, and not one wait on a tee box.",
       "Stroke play, then match play, on Brauer's hilly redesign.",
