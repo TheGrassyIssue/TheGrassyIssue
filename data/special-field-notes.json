@@ -1,5 +1,5 @@
 {
- "_": "Homepage 'Special Field Note' double-wide box (Lenny, 4 Nov 2026). lead = the featured story; more = two smaller links. Edit this file and run apply-special-wide.py --apply (Deploy TGI.command runs it).",
+ "_": "Homepage 'Special Field Note' double-wide box (Lenny, 4 Nov 2026). lead = the featured story; more = two smaller links. Edit this file and run apply-special-wide.py --apply (Deploy TGI.command runs it). after_card 0 = top-left of the feed (Lenny, 12 Nov 2026: 'pin the field note to the top left corner').",
  "lead": {
   "url": "/drops/east-texas-golf-trip-90-holes",
   "img": "/images/special/etx-wide.jpg",
