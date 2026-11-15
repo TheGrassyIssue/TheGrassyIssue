@@ -12,8 +12,8 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent
 DONOR = ROOT / "drops/brand-to-know-mackem-golf.html"
 
-TITLE = "Climbing x Golf: 37 Pieces of Climbing and Trail Gear That Work on the Course"
-DESC = ("The climbing pant is a very good golf pant. 37 crossover picks: South2 West8, four indie climbing labels, "
+TITLE = "Climbing x Golf: 29 Pieces of Climbing and Trail Gear That Work on the Course"
+DESC = ("The climbing pant is a very good golf pant. 29 crossover picks: South2 West8, four indie climbing labels, "
         "trail shoes from Danner, Salomon, Altra and Scarpa, carabiners, boulder brushes and totes, with US prices.")
 H1 = "Climbing &times; Golf"
 BC = "Climbing &times; Golf"
@@ -26,19 +26,19 @@ P = {
  "g003": ('South2 West8', 'Climbing Pant, Natural Canvas', '$290', 'https://nepenthesamerica.com/products/south2-west8-climbing-pant-natural-cotton-canvas-fall-winter-2026',
    'New on November 1. Cotton canvas with double knees, a reinforced seat that doubles as the back pockets, a webbing belt and drawcord hems.'),
  "g057": ('Rungne', 'Highballer Utility Pants Soft Stretch', '$159', 'https://rungne.com/products/highballer-utility-pants-new-color',
-   'Rungne&rsquo;s boulder pant in soft stretch with utility pockets.'),
+   'R&uacute;ngne is a climbing label designed in the North by climbers, with the wall as its test lab. This is its Highballer boulder pant in soft stretch, with utility pockets.'),
  "g060": ('Rungne', 'Approach Quarter Zip, 180g', '$99', 'https://rungne.com/products/athletic-unisex-zip-pullover',
    'A light grid-fleece quarter zip with contrast stitching.'),
  "g013": ('Gramicci', 'Corduroy Loose Tapered Ridge Pant', '$138', 'https://www.gramicci.com/products/corduroy-loose-tapered-ridge-pant-1',
    '100% cotton 10-wale cord with Gramicci&rsquo;s elastic waist and integrated belt, cut loose with a taper. New for fall.'),
  "g061": ('Hitorii', 'Bouldering Pants, Pastel Sage, Ginkgo', '$120', 'https://hitorii.com/products/bouldering-pants-mint-green-gingko',
-   'Hitorii&rsquo;s baggy bouldering pant with a ginkgo leaf embroidered at the knee.'),
+   'Hitorii is a Los Angeles label designed by climbers, with Japanese-inspired prints. Its baggy bouldering pant has a ginkgo leaf embroidered at the knee.'),
  "g066": ('g2g', 'Double Knee Pants', '$120', 'https://g2g.co/products/double-knee-pants',
-   'g2g&rsquo;s double-knee work pant with contrast stitching, from Seattle.'),
+   'g2g, short for got to go, is a small Seattle label from the city&rsquo;s bouldering scene. A double-knee work pant with contrast stitching.'),
  "g068": ('g2g', 'High Pile Fleece Jacket, Forest', '$120', 'https://g2g.co/products/high-pile-zip-fleece-forest',
    'High-pile fleece with a shell yoke and hood.'),
  "g071": ('Looking For Wild', 'Fitz Roy Cargo Climbing Pant, Mayfly', '&euro;99 (about $110)', 'https://lookingforwild.com/products/pantalon-descalade-fitz-roy-cargo-mayfly-1',
-   'Looking For Wild&rsquo;s cargo climbing pant, new in September. From the French climbing label.'),
+   'Looking For Wild is a French climbing-clothes label. Its Fitz Roy is a cargo climbing pant, new in September.'),
  "g079": ('Altra', 'Lone Peak 9+ x and wander', '$185', 'https://www.altrarunning.com/en-us/products/mens-lone-peak-9-and-wander-al0a85uk',
    'The Lone Peak, reworked by and wander.'),
  "g082": ('Scarpa', 'Mescalito Approach Shoe', '$219.95', 'https://www.scarpa.com/products/mescalito-shoe-for-technical-approach-and-via-ferrata-72103-350-8',
@@ -61,55 +61,43 @@ P = {
    'A light sun hoodie in a water print. For the bright days.'),
  "g050": ('Battenwear', 'Warm-Up Fleece, Tan', '$250', 'https://battenwear.com/products/20426fw-warm-up-fleece-tan',
    'Battenwear&rsquo;s zip fleece with a flap pocket and ribbed cuffs.'),
- "g021": ('Metolius', 'FS Mini II Carabiner', '$7.95', 'https://www.metoliusclimbing.com/products/fs-mini-ii-carabiner',
-   'A small, light, full-strength climbing carabiner. Clip a towel, a brush or your keys to the bag.'),
- "g022": ('Metolius', 'Bravo II Wiregate Carabiner', '$9.95', 'https://www.metoliusclimbing.com/products/bravo-ii-wiregate-carabiner',
-   'A wiregate climbing carabiner in bright anodized colors. The cheapest climbing gear in the post.'),
  "g023": ('Topo Designs', 'Crux Key Clip', '$18', 'https://topodesigns.com/products/crux-key-clip-black-white',
    'Climbing rope that loops around your wrist with a Topo aluminum carabiner. For the cart key.'),
- "g024": ('Topo Designs', 'Carabiner Shoulder Strap', '$17', 'https://topodesigns.com/products/carabiner-shoulder-strap-desert-palm-goldenrod',
-   'Paracord with Topo carabiners on each end. Turns a small Topo bag into a shoulder carry for the range.'),
  "g025": ('Black Diamond', 'BD Stretch Belt', '$39', 'https://www.blackdiamondequipment.com/products/bd-stretch-belt',
    'A stretch webbing belt with an aluminum buckle, made to stay put through any activity. A good belt for a full turn.'),
- "g026": ('Topo Designs', 'Slim Web Belt', '$42', 'https://topodesigns.com/products/slim-web-belt-desert-palm-goldenrod',
-   'One-inch nylon webbing with a Topo jacquard pattern and an anodized aluminum buckle.'),
  "g027": ('Gramicci', 'Boulder Brush', '$25', 'https://www.gramicci.com/products/boulder-brush',
    'A wood-handled climbing brush with dense synthetic bristles and a paracord loop. It cleans clubface grooves as well as holds.'),
  "g028": ('Metolius', 'Razorback Boar&rsquo;s Hair Brush', '$9.95', 'https://www.metoliusclimbing.com/products/razorback-boars-hair-brush',
    'Densely packed boar&rsquo;s hair with an ergonomic handle, for $9.95. The best club brush on this page might be a climbing brush.'),
  "g029": ('Metalwood Studio', 'Luminous Carabiner', '$10', 'https://metalwood.studio/products/metal-logo-luminous-carabiner-green',
    'The one golf-brand piece: Metalwood&rsquo;s glow-in-the-dark plastic carabiner, for keys or a towel.'),
- "g030": ('Gramicci', 'Running Man Key Chain', '$35', 'https://www.gramicci.com/products/running-man-climbing-key-chain',
-   'Gramicci&rsquo;s running-man climber mascot in resin, on a mini carabiner.'),
  "g031": ('Gramicci', 'Climbing Tote', '$98', 'https://www.gramicci.com/products/climbing-tote-1',
    'Cordura nylon with daisy-chain webbing on the sides and an interior zip pocket. A range bag in disguise.'),
  "g032": ('Black Diamond', 'Stonehauler Athlete Tote', '$120', 'https://www.blackdiamondequipment.com/products/stonehauler-athlete-tote',
    'A 20-liter overbuilt daily tote for gear and everything else.'),
- "g033": ('Metolius', 'Climbers Tote', '$64.95', 'https://www.metoliusclimbing.com/products/climbers-tote',
-   'Sized for a rope, shoes and harness, so it fits shoes, balls and a jacket easily.'),
  "g034": ('Organic Climbing', 'Quiver Tote', '$56', 'https://www.organicclimbing.com/products/quiver-tote',
    'Organic Climbing&rsquo;s refined take on its market tote. Handmade in Pennsylvania.'),
- "g035": ('Black Diamond', 'Capsule 20 Bouldering Bag', '$59.95', 'https://www.blackdiamondequipment.com/products/capsule-20-bouldering-bag',
-   'A 20-liter organizer bag with zip compartments, made to ride inside a crash pad. Also good inside a golf bag.'),
- "g036": ('Tension Climbing', 'Figures Tote', '$35', 'https://www.tensionclimbing.com/products/figures-tote',
-   'A denim tote printed with Tension&rsquo;s Figures graphic on one side and its logo on the other.'),
  "g070": ('g2g', 'Rope Tote', '$70', 'https://g2g.co/products/rope-tote',
    'A big black tote sized for a climbing rope, or a pair of shoes and a jacket.'),
 }
 SECTIONS = [
  ('The Pants', 'pants', ['g000', 'g003', 'g013', 'g061', 'g066', 'g071', 'g057'],
-  '<strong>Seven pairs &middot; $110&ndash;$365</strong>Stretch, room in the knee and a belt you can cinch: everything a climbing pant needs, a golf swing needs too. Our pick, Gramicci, then four small climbing labels.'),
+  '<strong>Seven pairs &middot; $110&ndash;$365</strong>Stretch, room in the knee and a belt you can cinch: everything a climbing pant needs, a golf swing needs too. Our pick, Gramicci, then four small climbing labels. <em>On the course:</em> a gusset and a roomy knee mean you can squat to read a putt and make a full turn without anything pulling.'),
  ('Shirts and Layers', 'tops', ['g005', 'g015', 'g047', 'g060', 'g068', 'g050'],
-  '<strong>Six pieces &middot; $99&ndash;$250</strong>A polo, two sun layers and three fleeces, all made for long days outside.'),
+  '<strong>Six pieces &middot; $99&ndash;$250</strong>A polo, two sun layers and three fleeces, all made for long days outside. <em>On the course:</em> sun hoodies for the summer, light fleece for the 7 a.m. tee time, and nothing that binds across the shoulders.'),
  ('Trail and Approach Shoes', 'shoes', ['g091', 'g087', 'g077', 'g079', 'g082', 'g095', 'g084'],
-  '<strong>Seven pairs &middot; $185&ndash;$240</strong>Grippy, light and built for wet ground: the trail shoe as a spikeless golf shoe, plus an approach shoe made for the walk to the rock.'),
- ('Hardware: Carabiners, Belts and Brushes', 'hardware', ['g021', 'g022', 'g023', 'g024', 'g025', 'g026', 'g027', 'g028', 'g029', 'g030'],
-  '<strong>10 pieces &middot; $7.95&ndash;$42</strong>Carabiners for towels and keys, web belts, and boar&rsquo;s-hair boulder brushes that clean grooves as well as holds.'),
- ('Totes and Bags', 'bags', ['g031', 'g032', 'g033', 'g034', 'g035', 'g036', 'g070'],
-  '<strong>7 bags &middot; $35&ndash;$120</strong>Gear haulers that double as range or shoe bags.'),
+  '<strong>Seven pairs &middot; $185&ndash;$240</strong>Grippy, light and built for wet ground: the trail shoe as a spikeless golf shoe, plus an approach shoe made for the walk to the rock. <em>On the course:</em> soft lugs and sticky rubber grip dew-wet grass and a sloped lie, and none of them look like golf shoes.'),
+ ('Hardware: Brushes, a Belt and a Carabiner', 'hardware', ['g028', 'g027', 'g023', 'g025', 'g029'],
+  '<strong>Five pieces &middot; $9.95&ndash;$39</strong>Two boulder brushes, a key clip, a stretch belt and the one golf-brand carabiner. <em>On the course:</em> a boar&rsquo;s-hair brush clears grooves as well as it clears chalk off a hold.'),
+ ('Totes and Bags', 'bags', ['g031', 'g032', 'g034', 'g070'],
+  '<strong>Four bags &middot; $56&ndash;$120</strong>Totes built to haul ropes and shoes. <em>On the course:</em> a range bag, a shoe bag, or the thing that carries a rain layer and a dozen balls to the first tee.'),
 ]
-N = 37
-PQ = {}
+N = 29
+PQ = {
+ "pants": ("Built for movement, and loved by countless cultural movements.", "Gramicci, on the pant a Yosemite climber designed in 1982"),
+ "tops": ("We make technical gear for people who would rather be moving.", "R&uacute;ngne"),
+ "shoes": ("g2g, short for &lsquo;got to go&rsquo;, encapsulates our core philosophy: the time to act is now.", "g2g, Seattle"),
+}
 BANDS = {
  "pants-after": ("In Motion", "Climbing pants doing what they were made for, from the brands&rsquo; own photography.",
    [("band-4", "A climber in a Gramicci sweatshirt and pants belaying from a rock ledge with a red rope", "Gramicci"),
@@ -120,7 +108,7 @@ BANDS = {
     ("band-11", "A climber in a blue shirt on a streaked limestone wall", "Metolius"),
     ("band-12", "A climber in a red helmet high on a granite face", "Black Diamond")]),
  "shoes-after": ("On the Approach", "Approach and trail shoes on the ground they were built for.",
-   [("band-7", "A man in an olive vest and pants striding across rocks in Scarpa approach shoes", "Scarpa"),
+   [("band-7", "Two climbers stepping across a boulder top against the sun", "R&uacute;ngne"),
     ("band-8", "Two hikers with poles heading into a mountain valley", "Scarpa"),
     ("band-9", "A boulderer on a tall grey boulder on a heather moor", "Organic Climbing")]),
 }
@@ -130,15 +118,15 @@ TAKE = """
     <div class="drop-tag grass">The TGI Take</div>
     <p>The pant that started this post was made for climbing. South2 West8&rsquo;s Trek Pant has the things a climber wants: a relaxed cut that lets you high-step onto a hold, a belt you can cinch with one hand, cuffs you can pull in. Those are also the things you want on a golf course, where you spend four hours walking, squatting to read putts and making a full turn.</p>
     <p><strong>Why climbing gear.</strong> Climbing clothes are built for movement and wear: stretch, gussets, reinforced knees and seats, quick-drying fabric. Golf clothes have spent years getting slimmer and shinier. The climbing version is roomier, tougher and, to us, better looking.</p>
-    <p><strong>What is here.</strong> The most interesting pants, shirts and shoes we found, plus the small stuff. The pants come from South2 West8, Gramicci and four small climbing labels we had never covered: Hitorii from Los Angeles, g2g from Seattle, Looking For Wild from France and Rungne. The shirts are sun layers and fleeces, and the shoes are trail and approach shoes that grip wet grass like a spikeless golf shoe. Then come carabiners, belts and boar&rsquo;s-hair boulder brushes that clean a clubface as well as a hold, and totes built to haul ropes, which carry shoes and balls just as well.</p>
+    <p><strong>What is here.</strong> The most interesting pants, shirts and shoes we found, plus the small stuff. The pants come from South2 West8, Gramicci and four small climbing labels we had never covered: Hitorii from Los Angeles, g2g from Seattle, Looking For Wild from France and Rungne. The shirts are sun layers and fleeces, and the shoes are trail and approach shoes that grip wet grass like a spikeless golf shoe. Then come boar&rsquo;s-hair boulder brushes that clean a clubface as well as a hold, a key clip, a stretch belt and a carabiner, and totes built to haul ropes, which carry shoes and balls just as well.</p>
     <p>Golf brands have barely touched this yet. The only climbing piece we found from one was Metalwood Studio&rsquo;s $10 glow-in-the-dark carabiner.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">At a Glance</div>
-      <div class="sidebar-detail"><span class="l">Pieces</span><span>37</span></div>
-      <div class="sidebar-detail"><span class="l">Brands</span><span>19</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$7.95&ndash;$390</span></div>
+      <div class="sidebar-detail"><span class="l">Pieces</span><span>29</span></div>
+      <div class="sidebar-detail"><span class="l">Brands</span><span>18</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$9.95&ndash;$365</span></div>
       <div class="sidebar-detail"><span class="l">Our pick</span><span>S2W8 Trek Pant, $365</span></div>
       <div class="sidebar-detail"><span class="l">Best value</span><span>Metolius brush, $9.95</span></div>
       <div class="sidebar-detail"><span class="l">Prices</span><span>Checked Nov 14, 2026</span></div>
@@ -167,7 +155,7 @@ LOOKBOOK = ""
 FRN = json.loads((ROOT / "research/climbing-golf/frames.json").read_text())
 OUT = ROOT / f"drops/{SLUG}.html"
 URL = f"https://thegrassyissue.com/drops/{SLUG}"
-GRID_CSS = ('<style>/*TGI-R3-GRID*/.products-grid[data-n]{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}.products-grid[data-n]>.product-card{flex:0 0 calc((100% - 48px)/3);min-width:0}@media(max-width:820px){.products-grid[data-n]>.product-card{flex-basis:calc((100% - 24px)/2)}}@media(max-width:480px){.products-grid[data-n]>.product-card{flex-basis:100%}}.product-card[data-frames="1"] .pg-arw,.product-card[data-frames="1"] .pg-count,.product-card[data-frames="1"] .pg-dots{display:none!important}</style>\n')
+GRID_CSS = ('<style>/*TGI-R3-GRID*/.products-grid[data-n]{display:flex;flex-wrap:wrap;justify-content:center;gap:24px}.products-grid[data-n]>.product-card{flex:0 0 calc((100% - 48px)/3);min-width:0}@media(max-width:820px){.products-grid[data-n]>.product-card{flex-basis:calc((100% - 24px)/2)}}@media(max-width:480px){.products-grid[data-n]>.product-card{flex-basis:100%}}.product-card[data-frames="1"] .pg-arw,.product-card[data-frames="1"] .pg-count,.product-card[data-frames="1"] .pg-dots{display:none!important}.cg-nums{max-width:1400px;margin:40px auto 0;padding:0 32px;display:grid;grid-template-columns:repeat(5,1fr);border-top:.5px solid var(--ink);border-bottom:.5px solid var(--ink)}.cg-nums div{padding:22px 18px;border-right:.5px solid rgba(20,20,20,.2);text-align:center}.cg-nums div:last-child{border-right:none}.cg-nums b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(36px,5vw,64px);line-height:1;color:var(--grass)}.cg-nums span{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.14em;text-transform:uppercase;opacity:.6;margin-top:10px}@media(max-width:820px){.cg-nums{grid-template-columns:repeat(3,1fr);padding-left:18px;padding-right:18px}.cg-nums div:nth-child(3){border-right:none}.cg-nums div:nth-child(n+4){border-top:.5px solid rgba(20,20,20,.2)}}</style>\n')
 def card(k, idx):
     brand, item, price, handle, copy = P[k]
     url = handle if handle.startswith("http") else SHOP + handle
@@ -286,11 +274,13 @@ def main(apply_):
   <h1>{H1}</h1>
   <div class="drop-meta">
     <span>Drops &amp; Brands &middot; Climbing &middot; Trail</span><span class="dot"></span>
-    <span>37 picks &middot; 19 brands &middot; prices checked November 14, 2026</span>
+    <span>29 picks &middot; 18 brands &middot; prices checked November 14, 2026</span>
   </div>
 </header>
 
-<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="Three action shots: a climber in a sun hoodie clipping a quickdraw on a crack, a man striding across rocks in Scarpa approach shoes, and a man stepping between boulders against the sun" fetchpriority="high" /></div></div>
+<div class="drop-hero"><div class="drop-hero-img"><img src="{IMG}/hero.jpg" alt="A man in an olive vest and pants striding across a rocky hillside in Scarpa approach shoes under a blue sky" fetchpriority="high" /></div></div>
+
+<div class="cg-nums"><div><b>7</b><span>pants</span></div><div><b>6</b><span>layers</span></div><div><b>7</b><span>shoes</span></div><div><b>18</b><span>brands</span></div><div><b>$9.95</b><span>to start</span></div></div>
 """
     body += TAKE
     n = 1

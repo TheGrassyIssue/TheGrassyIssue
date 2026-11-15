@@ -14,14 +14,14 @@ POST = ROOT / "drops/climbing-golf-crossover-gear.html"
 SLUG = "/drops/climbing-golf-crossover-gear"
 KEY = "climbinggolf"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-CLIMBGOLF-CARD -->\n", "<!-- /TGI-CLIMBGOLF-CARD -->\n"
-TITLE = "Climbing x Golf: 37 Pieces of Climbing and Trail Gear That Work on the Course"
+TITLE = "Climbing x Golf: 29 Pieces of Climbing and Trail Gear That Work on the Course"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "climbing-golf"
 
 SLIDES = [
     ("card-hero", "A climber in a sun hoodie clipping a quickdraw on a sandstone crack",
      "Drops & Brands", "Climbing x Golf",
-     "The climbing pant is a very good golf pant. 37 crossover picks, from South2 West8 and four indie climbing labels to trail shoes and boulder brushes."),
+     "The climbing pant is a very good golf pant. 29 crossover picks, from South2 West8 and four indie climbing labels to trail shoes and boulder brushes."),
     ("c000-1", "South2 West8 Trek Pant in olive herringbone",
      "South2 West8 \u00b7 $365", "Our Pick",
      "The Trek Pant: drawstring waist, drawcord hems, made in Japan."),
