@@ -176,6 +176,7 @@ TAKE = """
     <p>A good bag setup is not a collection of nice things. It is a palette. The golfers whose bags you notice have usually picked three colours, one pattern at most, and stuck to them from the bag down to the brush.</p>
     <p>This is a guide to doing that on purpose. It starts with four rules, then six complete setups from independent makers, each one opening with photographs of the palette in use and then the individual pieces. Mix brands freely. The palette is what holds it together.</p>
     <p>If you only change one thing, change the driver cover. It is the largest piece of colour on the bag after the bag itself.</p>
+    <p><strong>New:</strong> <a href="/drops/golf-bag-setup-ideas-vol-2">Golf Bag Setup Ideas, Vol. 2</a> has six more setups, built for winter.</p>
     <h2 class="products-hdr btk-story-hdr">The Four Rules</h2>
     <p><strong>Sixty, thirty, ten.</strong> Let one colour take most of the bag, a second take the covers, and a third show up only in small things: a tether, a trim, a brush. Interior designers use the same split for a room.</p>
     <p><strong>One pattern per bag.</strong> Tartan, check, paisley or camo, pick one and make everything else plain. The exception is repeating the same pattern, as the tweed kit below does.</p>
@@ -208,7 +209,7 @@ NOTE = """
   <h2 class="products-hdr" id="how-we-picked">How We Picked</h2>
   <div %s>
     <p style="margin:0 0 16px;">We started on Pinterest, where the best-saved golf bags share a few habits: palette cards, flat lays, tan leather, green check and houndstooth. Most of those pins were reposts with no credit, so we traced what we could back to the makers. The setup photographs come from the makers&rsquo; own stores, and Gumtree Golf &amp; Nature Club and Sugarloaf Social Club set the tone. Two mood-board images, the burgundy bag and the flat lay, were found on Pinterest without a credit; if they are yours, tell us and we will credit or remove them.</p>
-    <p style="margin:0 0 16px;">Every piece was in stock when we checked. Prices come from each maker&rsquo;s own store on 28 September 2026, in its own currency. Hiroki sells from New Zealand in New Zealand dollars; everything else is in US dollars. For more on bags themselves, see <a href="/drops/upgrading-your-golf-bag">Upgrading Your Golf Bag</a>.</p>
+    <p style="margin:0 0 16px;">Every piece was in stock when we checked. Prices come from each maker&rsquo;s own store on 28 September 2026, in its own currency. Hiroki sells from New Zealand in New Zealand dollars; everything else is in US dollars. For more on bags themselves, see <a href="/drops/upgrading-your-golf-bag">Upgrading Your Golf Bag</a>. For six winter palettes, see <a href="/drops/golf-bag-setup-ideas-vol-2">Vol. 2</a>.</p>
   </div>
 </section>
 """ % PROSE
