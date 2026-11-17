@@ -61,7 +61,6 @@ CARD = f'''<div class="card" data-type="drop">
       <div class="gear-dots" data-dots="{KEY}"></div>
       <div class="gear-counter" data-counter="{KEY}">1 / {len(SLIDES)}</div>
       <div class="card-source">{SOURCE}</div>
-      <a href="{HREF}" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
     </div>
   </div>'''
 

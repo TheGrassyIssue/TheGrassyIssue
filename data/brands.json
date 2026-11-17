@@ -2766,14 +2766,14 @@
   "cats": [
    "apparel"
   ],
-  "line": "White tees picked for The White Tee Edit, 2026.",
-  "url": "/drops/the-white-tee-edit-2026",
+  "line": "Spikeless Pluto 1 sneakers, PlutoDry rain jackets and loud custom polos; launched in Indianapolis in 2024 to make golf part of the culture.",
+  "url": "/drops/pierre-pluto-borde-golf-brands",
   "tags": [
    "independent"
   ],
   "attrs": [],
   "added": "2026-08-29",
-  "img": "/images/whitetee26/pluto-0.jpg"
+  "img": "/images/fresh-three/pl-moss-1.jpg"
  },
  {
   "slug": "provision-machining-design",
@@ -4706,5 +4706,44 @@
    "new-to-index"
   ],
   "img": "/images/feather-hide/card-hero.jpg"
+ },
+ {
+  "slug": "pierre-golf",
+  "name": "Pierre",
+  "loc": "Montreal, Canada",
+  "regions": [
+   "world"
+  ],
+  "cats": [
+   "apparel"
+  ],
+  "line": "Golf clothes in silk blends, designed in Montreal and made in Japan, with Dime's Vincent Tsang as artistic director.",
+  "url": "/drops/pierre-pluto-borde-golf-brands",
+  "tags": [],
+  "added": "2026-11-16",
+  "attrs": [
+   "new-to-index"
+  ],
+  "img": "/images/fresh-three/pi-jacket-b-1.jpg"
+ },
+ {
+  "slug": "borde-golf",
+  "name": "Bordé Golf",
+  "loc": "St Albans, UK",
+  "regions": [
+   "europe"
+  ],
+  "cats": [
+   "apparel",
+   "headwear"
+  ],
+  "line": "Tailored, low-logo polos, midlayers and caps in Portuguese fabric, sold in short runs since 2025.",
+  "url": "/drops/pierre-pluto-borde-golf-brands",
+  "tags": [],
+  "added": "2026-11-16",
+  "attrs": [
+   "new-to-index"
+  ],
+  "img": "/images/fresh-three/bo-edge-b-1.jpg"
  }
 ]

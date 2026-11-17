@@ -87,7 +87,6 @@ def card_html():
       <div class="card-text" data-slidetext="{KEY}">{TEXTS[SLIDE_SLUGS[0]]}</div>
       <div class="gear-dots" data-dots="{KEY}"></div>
       <div class="gear-counter" data-counter="{KEY}">1 / {len(SLIDE_SLUGS)}</div>
-      <a href="/drops/{SLUG}" class="card-readmore" style="display:inline-block;margin-top:12px;font-family:'JetBrains Mono',monospace;font-size:10px;letter-spacing:0.12em;text-transform:uppercase;border-bottom:1px solid var(--ink);padding-bottom:2px;">See the Full Post &rarr;</a>
     </div>
   </div>
 '''

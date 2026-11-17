@@ -34,7 +34,6 @@ its .card-readmore anchor is nested INSIDE the source div:
     <div class="card-source">
       <a ... class="source-link">merrillgolf.com</a> ·
       <a ... class="source-link">@merrillgolf</a>
-    <a ... class="card-readmore">See the Full Post →</a>      <-- inside
 
 A `<div class="card-source">.*?</div>` replacement would either stop at the
 first </div> (deleting the read-more link on that card) or run on and eat the
