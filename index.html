@@ -1778,7 +1778,6 @@
 </section>
 
 <section class="feed" id="feed" data-nosnippet role="tabpanel" aria-label="Content feed">
-
 <!-- TGI-SPECIAL-WIDE -->
 <div class="card card-wide" data-type="field">
   <div class="wide-in">
@@ -1804,6 +1803,50 @@
   </div>
 </div>
 <!-- /TGI-SPECIAL-WIDE -->
+<!-- TGI-BACKYARDCHIP-CARD -->
+<div class="card" data-type="drop">
+    <div class="card-media" style="position:relative;">
+      <span class="card-tag grass">[Drops &amp; Brands]</span>
+      <div class="gear-carousel" data-carousel="backyardchip">
+        <div class="gear-carousel-track">
+          <div class="gear-slide">
+            <a href="/drops/backyard-chipping-practice-fall">
+              <img src="/images/backyard-chipping/card-hero.jpg" alt="A golfer chipping into a SKLZ net in a backyard" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">The Kit</div><div class="gear-slide-name">Backyard Chipping</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/backyard-chipping-practice-fall">
+              <img src="/images/backyard-chipping/pt2-1.jpg" alt="An almostGOLF pop-up chipping net on a lawn" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">almostGOLF · $79.99</div><div class="gear-slide-name">Short Shot Bundle</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/backyard-chipping-practice-fall">
+              <img src="/images/backyard-chipping/ph1-1.jpg" alt="A golfer in a Kraken hoodie walking a foggy fairway with a carry bag" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Kraken Golf · $119</div><div class="gear-slide-name">Bench Sketch Hoodie</div></div>
+            </a>
+          </div>
+          <div class="gear-slide">
+            <a href="/drops/backyard-chipping-practice-fall">
+              <img src="/images/backyard-chipping/ps3-1.jpg" alt="A man in Pins &amp; Aces waffle knit shorts sitting outside" loading="lazy" />
+              <div class="gear-slide-info"><div class="gear-slide-brand">Pins &amp; Aces · $49.95</div><div class="gear-slide-name">Waffle Knit Short</div></div>
+            </a>
+          </div>
+        </div>
+        <button class="gear-arrow prev" onclick="gearSlide(this, -1)">&#8249;</button>
+        <button class="gear-arrow next" onclick="gearSlide(this, 1)">&#8250;</button>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="card-title"><a href="/drops/backyard-chipping-practice-fall" style="color:inherit;text-decoration:none;border-bottom:none;">Backyard Chipping, Fall Edition</a></div>
+      <p class="card-text" data-slidetext="backyardchip">A mat, three targets and Nine Inside 50, a game for distance and trajectory control. Plus wedges, hoodies and gym shorts. 25 picks.</p>
+      <div class="gear-dots" data-dots="backyardchip"></div>
+      <div class="gear-counter" data-counter="backyardchip">1 / 4</div>
+    </div>
+  </div>
+<!-- /TGI-BACKYARDCHIP-CARD -->
+
 <!-- TGI-PENFOLD-CARD -->
 <div class="card" data-type="drop">
     <div class="card-media" style="position:relative;">
@@ -4102,6 +4145,12 @@
 
   // Slide text data for carousels with dynamic descriptions
   window._slideTexts = {
+    backyardchip: [
+      "A mat, three targets and Nine Inside 50, a game for distance and trajectory control. Plus wedges, hoodies and gym shorts. 25 picks.",
+      "A pop-up net with three targets that folds away when the lawn is needed.",
+      "A Kraken drawn in one take on the workbench, printed as drawn.",
+      "Made for the gym and lounging around the house, which is the brief."
+    ],
     dunegolf: [
       "Dune: Part Three opens December 18. What Emperor Paul, Hayt, Scytale, Stilgar, Gurney and Farok would carry on a golf course.",
       "Emperor Paul's bag: croc-embossed black leather.",
