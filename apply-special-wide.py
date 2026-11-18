@@ -145,11 +145,40 @@ def strip(s):
     return CSS_RE.sub("", CARD_RE.sub("\n", s))
 
 
+def drop_lead_card(s, url):
+    """Lenny, 17 Nov 2026: a field note is either the featured box or an independent feed card, never both.
+    Removes the feed card whose card-title links to the featured lead (and its marker comments)."""
+    removed = 0
+    while True:
+        t = s.find(f'<div class="card-title"><a href="{url}"')
+        if t < 0:
+            return s, removed
+        st = s.rfind('<div class="card" data-type=', 0, t)
+        i, depth = st, 0
+        for m in re.finditer(r'<div\b|</div>', s[st:]):
+            depth += 1 if m.group(0).startswith('<div') else -1
+            if depth == 0:
+                i = st + m.end(); break
+        a, b = st, i
+        pre = s.rfind("\n", 0, a)
+        ls = s.rfind("\n", 0, pre) + 1
+        if s[ls:pre].strip().startswith("<!-- TGI-") and s[ls:pre].strip().endswith("-CARD -->"):
+            a = ls
+        nxt = s[b:b + 200].lstrip("\n")
+        if nxt.startswith("<!-- /TGI-") :
+            b = s.find("-->", b) + 3
+        s = s[:a] + s[b:]
+        removed += 1
+
+
 def main(apply_):
     d = json.loads(DATA.read_text())
     s0 = HOME.read_text(encoding="utf-8")
     s = strip(s0)
     s = s.replace("</head>", CSS + "</head>", 1)
+    s, dropped = drop_lead_card(s, d["lead"]["url"])
+    if dropped:
+        print(f"  removed {dropped} duplicate feed card for the featured lead")
     # JS patch (once)
     if "/*TGI-SPECIAL-WIDE-JS*/" not in s:
         if OLD_LOOP not in s:
