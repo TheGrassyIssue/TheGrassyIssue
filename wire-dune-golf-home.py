@@ -19,7 +19,7 @@ CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "dune-golf"
 
 SLIDES = [
-    ("card-hero", "A golfer swinging on a desert course at dusk",
+    ("card-hero-paul", "A golfer in cream standing among cactus on a desert course",
      "Drops & Brands", "Dune x Golf",
      "Dune: Part Three opens December 18. What Emperor Paul, Hayt, Scytale, Stilgar, Gurney and Farok would carry on a golf course."),
     ("d00-1", "A black croc-embossed leather VESSEL stand bag",
