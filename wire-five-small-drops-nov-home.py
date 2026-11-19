@@ -14,13 +14,13 @@ POST = ROOT / "drops/five-small-golf-drops-november-2026.html"
 SLUG = "/drops/five-small-golf-drops-november-2026"
 KEY = "fivedropsnov"  # JS object key: no hyphens
 MARK, END = "<!-- TGI-FIVEDROPSNOV-CARD -->\n", "<!-- /TGI-FIVEDROPSNOV-CARD -->\n"
-TITLE = "Five Small Drops, November 2026"
+TITLE = "Small Runs, Big Ideas"
 CARD_OPEN = '<div class="card" data-type='
 IMGDIR = "curated-drops"
 
 SLIDES = [
     ("card-hero", "A man carrying a mustard Mogshade x Incense Harbour nylon tote",
-     "The Edit", "Five Small Drops",
+     "The Edit", "Small Runs, Big Ideas",
      "Mogshade x Incense Harbour, Whim, Local Rule, Hendrikx and Eastside x Avirex: five small drops and the ideas behind them. 21 picks."),
     ("band-hendrikx-3", "A man in a Hendrikx merino half-zip holding a flagstick",
      "Hendrikx \u00b7 \u20ac390", "Half-Zip, Caff\u00e8",

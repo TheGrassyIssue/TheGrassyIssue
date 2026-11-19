@@ -16,11 +16,11 @@ import sys
 ROOT = pathlib.Path(__file__).resolve().parent
 DONOR = ROOT / "drops/brand-to-know-mackem-golf.html"
 
-TITLE = "Five Small Golf Drops From November: Mogshade, Whim, Local Rule, Hendrikx and Eastside \u00d7 Avirex"
+TITLE = "Small Runs, Big Ideas: Five November Golf Drops From Mogshade, Whim, Local Rule, Hendrikx and Eastside \u00d7 Avirex"
 DESC = ("Five small golf drops from November 2026 and the ideas behind them: Mogshade x Incense Harbour and Fabricaal, Whim's Schoeller Storm suit, "
         "Local Rule's FW26 rain layers, Hendrikx's Italian-made debut and Eastside Golf x Avirex.")
-H1 = "Five Small Drops, November 2026"
-BC = "Five Small Drops"
+H1 = "Small Runs, Big Ideas"
+BC = "Small Runs, Big Ideas"
 SLUG = "five-small-golf-drops-november-2026"
 IMG = "/images/curated-drops"
 U = lambda d, h: f"https://{d}/products/{h}"
