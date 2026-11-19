@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+"""!! 11/18/26: THE LIVE PAGE WAS PATCHED IN PLACE, NOT REBUILT FROM THIS FILE.
+Lenny asked for an accuracy pass. patch-austin-sims-2026-11-18.py applied it to
+drops/austin-indoor-golf-simulators.html: Southside Golf Co now OPEN (15 rooms),
+Five Iron "coming soon, December", Another Nine late Jan 2027 + Leander, Golf Lounge 18
+early 2027, The Mackenzie Club added to Coming, 512 Golf Co removed (unverifiable),
+1872 $40/hr, Fiber memberships from $300, Dr. Golf promo to 12/31/26 (top tier $220),
+Halftime caveat, Spare Birdie/Austin Indoor Golf contradiction fixed. sims_map.py was
+updated too (22 open / 3 coming), so the guards below WILL FAIL on purpose if this
+builder is rerun as-is. Port those changes here before rebuilding.
+"""
 """The Austin indoor simulator guide — a full-treatment rebuild.
 
 WHY THIS REPLACES THE OLD POST

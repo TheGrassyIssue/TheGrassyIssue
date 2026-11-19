@@ -51,8 +51,8 @@ PINS = [
  ("fiber",  "Fiber Golf",             30.24245, -97.92846, "open",   False),
  ("bogey",  "Bogey Master",           30.52200, -97.54844, "open",   False),
  ("b9rr",   "Back Nine Round Rock",   30.53900, -97.55600, "open",   False),
+ ("southside","Southside Golf Co",    30.14077, -97.83306, "open",   False),
  # ---- coming
- ("southside","Southside Golf Co",    30.14077, -97.83306, "coming", False),
  ("another9", "Another Nine",         30.60181, -97.68444, "coming", True),
  ("gl18",     "Golf Lounge 18",       30.41515, -97.66988, "coming", True),
  ("fiveiron", "Five Iron Golf",       30.26729, -97.74263, "coming", True),
@@ -92,7 +92,7 @@ def svg():
         num[p[0]] = i + 1
 
     out = [f'<svg viewBox="0 0 {W} {H}" xmlns="http://www.w3.org/2000/svg" '
-           f'role="img" aria-label="Map of 21 open and 4 upcoming indoor golf '
+           f'role="img" aria-label="Map of 22 open and 3 upcoming indoor golf '
            f'simulators across the Austin metro" style="width:100%;height:auto;'
            f'background:#faf9f6;border:1px solid rgba(0,0,0,.14);">']
     out.append('<defs><style>'
@@ -183,7 +183,7 @@ def svg():
     for p in coming:
         out.append(pin(p, "#b07a2b", "#b07a2b"))
 
-    out.append(f'<text class="t hd" x="{PAD}" y="{PAD-18}">Indoor golf simulators &#183; Austin metro &#183; 9/16/26</text>')
+    out.append(f'<text class="t hd" x="{PAD}" y="{PAD-18}">Indoor golf simulators &#183; Austin metro &#183; 11/18/26</text>')
     out.append('</svg>')
     return "\n".join(out), num, open_pins, coming, pos
 
@@ -203,7 +203,7 @@ def section():
     cl = "".join(row(p, "#b07a2b") for p in coming)
     return f"""<section class="products">
   <h2 class="products-hdr">The Map</h2>
-  <p class="cat-kicker">Twenty-one open rooms and four on the way, plotted from their own published addresses.</p>
+  <p class="cat-kicker">Twenty-two open rooms and three on the way, plotted from their own published addresses.</p>
   <div class="writeup-body">
     {s}
     <div style="display:flex;flex-wrap:wrap;gap:34px;margin-top:20px;font-size:14px;">
@@ -216,8 +216,8 @@ def section():
         <ol style="list-style:none;padding:0;margin:0;">{cl}</ol>
       </div>
     </div>
-    <p style="font-size:13px;opacity:.65;margin-top:18px;">A dashed ring and a &#176; mark a venue whose exact address our geocoder could not resolve &mdash; those four sit at the centre of their ZIP or town rather than on their doorstep. <strong>Halftime Co.</strong> in Kyle and <strong>512 Golf Co</strong> are missing from the map entirely because neither publishes a street address to plot. Coordinates from OpenStreetMap, 9/16/26.</p>
-    <p>Two things fall straight out of the picture. The first is the hole in the middle: <strong>the closer you get to downtown, the fewer rooms there are</strong>, and the only pin inside the urban core is an amber one that has no opening date. The second is the north-south stretch &mdash; from 1872 in Georgetown down to Swing Station in San Marcos is a little over fifty miles, and the corridor between them is now dense enough that most of the metro has something within a twenty-minute drive.</p>
+    <p style="font-size:13px;opacity:.65;margin-top:18px;">A dashed ring and a &#176; mark a venue whose exact address our geocoder could not resolve &mdash; those four sit at the centre of their ZIP or town rather than on their doorstep. <strong>Halftime Co.</strong> in Kyle is missing from the map entirely because it publishes no street address to plot, and Another Nine&rsquo;s Leander suite and The Mackenzie Club are not plotted yet. Coordinates from OpenStreetMap, 9/16/26; Southside moved to open on 11/18/26.</p>
+    <p>Two things fall straight out of the picture. The first is the hole in the middle: <strong>the closer you get to downtown, the fewer rooms there are</strong>, and the only pin inside the urban core is an amber one, Five Iron, which says December. The second is the north-south stretch &mdash; from 1872 in Georgetown down to Swing Station in San Marcos is a little over fifty miles, and the corridor between them is now dense enough that most of the metro has something within a twenty-minute drive.</p>
   </div>
 </section>
 """
