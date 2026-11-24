@@ -39,9 +39,9 @@ P = {
  "S04": ("Fyfe Golf", "The Brave Copper Hand Forged Ball Marker", "&pound;25 (~$34)",
    "https://fyfegolf.com/products/the-brave-copper-hand-forged-ball-marker",
    'Fyfe has this one made by a swordsmith at a forge in Scotland, from the same shop that still makes battle swords by hand. It is copper, with the Lion Rampant and the Saltire on the front, and initials can be hand-stamped on the back. Ours in <a href="/drops/brand-to-know-fyfe-golf">the Fyfe Brand to Know</a>.'),
- "S06": ("Show Out Engraving", "Desert Roadrunner 30mm Copper Ball Marker", "$50",
-   "https://showoutengraving.com/products/desert-roadrunner-ball-marker",
-   "Show Out is an engraving shop in Gilbert, Arizona, and its roadrunner wears sunglasses. The marker is solid copper, 30mm across and 21 grams, laser-engraved and finished by hand, with a Southwestern pattern around the bird. Heavy enough to stay put on a windy green."),
+ "S06": ("Swell Marks", "Trestles Copper Ball Marker", "$65",
+   "https://swellmarks.com/products/trestles",
+   "Swell Marks is one person engraving markers in a garage workshop in Coronado, California, and nearly every design comes from surfing. Trestles is solid copper, 32mm across and 20 grams, with the San Clemente peak carved in layered relief over a cobblestone texture, then torched and hand-finished, so each one comes out a slightly different color."),  # Lenny 23 Nov 2026: replaced Show Out Engraving
  "S05": ("Clint Orms Engravers &amp; Silversmiths", "Ball Marker 1803, Engraved State of Texas", "$220",
    "https://clintorms.com/products/sterling-silver-custom-state-of-texas-ball-marker",
    'Clint Orms makes buckles in Kerrville, and this is the same hand engraving at coin size. It is sterling silver, with the State of Texas on one side and full scrollwork on the other, and because it is cut by hand no two are quite the same. The splurge on the list. More in <a href="/drops/texas-golf-brands-and-makers">our Texas makers guide</a>.'),

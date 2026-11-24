@@ -51,7 +51,9 @@ ROOT = os.path.dirname(os.path.abspath(__file__))
 NAME = "Lenny Harrington"
 ABOUT = "https://thegrassyissue.com/about"
 IG = "https://instagram.com/thegrassyissue"
-PERSON = {"@type": "Person", "@id": ABOUT + "#lenny", "name": NAME, "url": ABOUT, "sameAs": [IG]}
+TITLE = "Founder & Editor"  # masthead title (Lenny, 24 Nov 2026: PGA Show media credential)
+PERSON = {"@type": "Person", "@id": ABOUT + "#lenny", "name": NAME, "jobTitle": TITLE, "url": ABOUT, "sameAs": [IG],
+          "worksFor": {"@type": "Organization", "name": "The Grassy Issue", "url": "https://thegrassyissue.com/"}}
 ARTICLE = {"Article", "BlogPosting", "NewsArticle"}
 MARK, END = "<!--TGI-BY-->", "<!--/TGI-BY-->"
 LINK = f'<a href="/about" rel="author">{NAME}</a>'
@@ -208,7 +210,7 @@ def process(s, rel):
     if not h:
         bad.append("no h1 — no byline")
         return s, notes, bad
-    line = f"By {LINK}" + (f" &middot; Updated {updated}" if updated else "")
+    line = f"By {LINK}, Founder &amp; Editor" + (f" &middot; Updated {updated}" if updated else "")
     s = s[:h.end()] + f'\n{MARK}<p class="tgi-byline">{line}</p>{END}' + s[h.end():]
     notes.append("byline")
 
@@ -242,7 +244,7 @@ def about(apply_):
             return m.group(0)
         me = data.get("mainEntity")
         if isinstance(me, dict) and me.get("@type") == "Person":
-            me.update({"@id": PERSON["@id"], "name": NAME, "url": ABOUT})
+            me.update({"@id": PERSON["@id"], "name": NAME, "jobTitle": TITLE, "url": ABOUT, "worksFor": PERSON["worksFor"]})
             same = [x for x in me.get("sameAs", []) if "instagram.com/thegrassyissue" not in x]
             me["sameAs"] = [IG] + same
             return m.group(1) + json.dumps(data, ensure_ascii=False) + m.group(3)

@@ -55,7 +55,7 @@ def pr(k):
     return f"${s}"
 def K(d, h):
     k = f"{d}|{h}"; assert k in D and "err" not in D[k], k; return k
-NAME_FIX.update({"8-airliner-style-leather": "8&Prime; Airliner Golf Bag, Premium Leather", "weather-golf-bag-covers": "Waxed Canvas Rain &amp; Storage Hood",
+NAME_FIX.update({"trestles": "Trestles Copper Ball Marker", "good-bones": "Good Bones Brass Ball Marker", "skulligan": "Skulligan Brass Ball Marker", "8-airliner-style-leather": "8&Prime; Airliner Golf Bag, Premium Leather", "weather-golf-bag-covers": "Waxed Canvas Rain &amp; Storage Hood",
  "modern-driver-cover-maclaren-modern-tartan-with-natural-leather-trim": "Maclaren Tartan Driver Cover", "dallas-mural-headcovers": "Dallas Mural Leather Headcover",
  "the-field-saddle-tan-leather-golf-headcover-handmade-driver-fairway-hybrid-cover-copy": "The Field Leather Headcover, Saddle Tan",
  "premium-italian-buttero-leather-golf-scorecard-holder-yardage-book-cover-black": "Italian Buttero Leather Scorecard Holder", "redan-putter-cover-in-black-leather": "Redan Putter Cover, Black Napa",
@@ -106,8 +106,8 @@ CATS = [
     [K("oldfaithfulgolf.com","the-diamond-trusty-driver-golf-headcover-in-genuine-leather"),K("oldfaithfulgolf.com","dancing-trusty-fairway-wood-headcover"),K("oldfaithfulgolf.com","old-faithful-trusty-caddy-golf-towel-copy-1"),K("oldfaithfulgolf.com","trusty-ball-marker-pouch-full-grain-leather")]),
    ("Local GC", "Orewa, New Zealand", "Handmade headcovers and Sunday bags from an Orewa workshop: mallards, beach birds and a sense of humor. The Daybreak Sunday bag is the big one, and the Mallard and Beached covers and the shag bag make up the rest. Prices are in New Zealand dollars.",
     [K("localgc.co.nz","daybreak-local-gc-sunday-bag"),K("localgc.co.nz","mallard-canvas-head-cover"),K("localgc.co.nz","beached-head-cover"),K("localgc.co.nz","local-gc-shag-bag")]),
-   ("Show Out Engraving", "Gilbert, Arizona", "Copper markers laser-engraved and finished by hand, led by a desert roadrunner in sunglasses. Stencil Lab designs like the Desert Diamondback are engraved on your own wedge, and the portrait marker turns a photo into brass.",
-    [K("showoutengraving.com","diamondback-stencil-lab-edition"),K("showoutengraving.com","desert-roadrunner-ball-marker"),K("showoutengraving.com","custom-ball-marker")]),
+   ("Swell Marks", "Coronado, California", "One person engraving ball markers in a Coronado garage, most designs drawn from surfing. Trestles is solid copper carved with the San Clemente peak and torched by hand; Good Bones is brass with a half-skeleton shaka filled with surfboard resin; Skulligan, the newest, is a grinning brass skull in sunglasses with a stainless steel tooth, numbered on the back.",
+    [K("swellmarks.com","trestles"),K("swellmarks.com","good-bones"),K("swellmarks.com","skulligan")]),  # Lenny 23 Nov 2026: replaced Show Out Engraving
    ("AustinKnittyLimits", "Austin, Texas", "Hand-knit retro headcovers from Austin, made one at a time by a maker who learned from their mother. Tassels, stripes, and custom colors on request.",
     [K("austinknittylimits.com","two-golf-club-head-covers-retro-vintage-blue-white-with-tassels-for-fairway-woods-copy"),K("austinknittylimits.com","three-golf-club-head-covers-retro-vintage-light-pink-green-white-with-tassels-for-drivers-woods"),K("austinknittylimits.com","hand-knit-golf-club-head-covers-retro-vintage-blue-yellow-gray-with-tassels-for-fairway-woods")]),
    ("Big Dog Golf Co.", "Wodonga, Australia", "Leather and Harris Tweed covers stocked in the pro shops at Royal Melbourne, Barnbougle and Cape Wickham. The Shamrock barrel is genuine Harris Tweed, the Cowboy scorecard holder is hair-on hide, and the Homestead mallet cover is diamond-stitched full-grain leather.",

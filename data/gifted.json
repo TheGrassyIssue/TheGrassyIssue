@@ -1,0 +1,4 @@
+{
+ "_how": "One entry per post that features gifted product. Key = post path; value = list of [brand, item]. apply-gifted.py prints the label under the byline on every deploy. Example: \"/drops/some-post\": [[\"Brand Name\", \"Driver headcover\"]]",
+ "posts": {}
+}
