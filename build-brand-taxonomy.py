@@ -234,12 +234,12 @@ TAX = [
  ),
 ("attr", "new-to-index", "New to the Brand Index",
  "New Golf Brands — Recently Added | The Grassy Issue",
- "One hundred and twenty-three golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
+ "One hundred and twenty-four golf brands added to the Brand Index most recently — the newest entries, from established houses to first drops.",
  """<p>The most recently added entries in the Index, and the fastest-moving page on this part of the
  site. New here means new to us rather than new to golf — <strong>Carhartt WIP</strong> and
  <strong>Bag Boy</strong> both predate most of the Index by decades and were added because a
  specific piece of coverage finally warranted a page.</p>
- <p>Genuinely new arrivals sit alongside them: <strong>Après Golf</strong>,
+ <p>Brand-new arrivals sit alongside them: <strong>Après Golf</strong>,
  <strong>Bluegrass Fairway</strong>, <strong>Beavertail Golf Co.</strong> and
  <strong>Clutch Golf Company</strong> are small enough that a single drop can sell through in a
  week. If you check one taxonomy page periodically, this is the one that will have changed.</p>""",

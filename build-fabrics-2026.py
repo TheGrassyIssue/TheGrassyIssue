@@ -48,15 +48,15 @@ P = {
          "Cordura nylon made with air-jet textured fibers, with a half-zip, hood and kangaroo pocket. Proof that Cordura isn&rsquo;t only for luggage."),
  "D11": ("Sentinel Golf &times; MacKenzie", "Basecamp Walker, Black Dyneema", "$890", "https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-rsxwj",
          "The MacKenzie Walker in Dyneema. Made to order, ships in 8&ndash;10 weeks, final sale. Also in <a href=\"https://www.sentinelgolf.us/shop/p/ultracomp-walker-mf43f-9nnps-8y9n3-rsxwj-ykzhj\" target=\"_blank\" rel=\"noopener\">white</a>."),
- "D1": ("Briefing", "Driver Cover DL", "$330", "https://www.briefing-us.com/products/brg263g26",
+ "D1": ("Briefing", "Driver Cover DL", "&yen;12,400 (~$85)", "https://www.briefing-us.com/products/brg263g26",
         "A 500D Cordura ripstop body with a patch of ECCO leather layered with Dyneema. Two fabrics from this post in one cover."),
- "D3": ("Briefing", "Putter Cover DL", "$265", "https://www.briefing-us.com/products/brg263g30",
+ "D3": ("Briefing", "Putter Cover DL", "&yen;10,000 (~$65)", "https://www.briefing-us.com/products/brg263g30",
         "The same DL build in a blade cover."),
- "D4": ("Briefing", "Iron Cover DL", "$395", "https://www.briefing-us.com/products/brg263g29",
+ "D4": ("Briefing", "Iron Cover DL", "&yen;14,900 (~$100)", "https://www.briefing-us.com/products/brg263g29",
         "A full iron-set cover in the DL build, with a clip to hang it off the bag."),
- "D5": ("Briefing", "Cart Tote DL", "$655", "https://www.briefing-us.com/products/brg263t31",
+ "D5": ("Briefing", "Cart Tote DL", "&yen;24,600 (~$165)", "https://www.briefing-us.com/products/brg263t31",
         "Briefing&rsquo;s CR-9 tote, slimmed down to clear a tight trunk, with ECCO-and-Dyneema hybrid leather panels."),
- "D7": ("Briefing", "Transport Cover DL", "$1,200", "https://www.briefing-us.com/products/brg263g33",
+ "D7": ("Briefing", "Transport Cover DL", "&yen;45,100 (~$300)", "https://www.briefing-us.com/products/brg263g33",
         "A travel cover for a full caddy bag: Cordura ripstop body, Dyneema-backed leather panels."),
  "D13": ("Sentinel Golf &times; 1733", "Basecamp Duffle, Gray Dyneema", "$340", "https://www.sentinelgolf.us/shop/p/no-16-basket-galvanized-76zkc-kjjr6-6gc6d-ar5fg-ykh5a-dbfwy-mkdrf-ze83c-r74ja-styrm-7dwcx-9s95h",
          "A barrel duffle made with Chicago&rsquo;s 1733: triple-layer build, YKK AquaGuard zipper, hand-tied paracord pulls."),
@@ -66,13 +66,13 @@ P = {
         "Small, medium and large pouches in 5 oz Dyneema, a quarter-pound for all three. Made for camera gear; it works just as well in a golf bag."),
  "D10": ("Goldwin", "Moon Trail Pack", "$320", "https://usshop.goldwin-global.com/products/gm95799",
          "A 100-mile trail-running vest with a Dyneema-reinforced three-layer waterproof shell. Overkill for a walking round, which is the point."),
- "N1": ("Casualist", "Pleated Golf Trousers, Beige", "$160", "https://casualist.com/products/pleated-golf-trousers-organic-cotton-copy",
+ "N1": ("Casualist", "Pleated Golf Trousers, Beige", "&pound;160 (~$205)", "https://casualist.com/products/pleated-golf-trousers-organic-cotton-copy",
         "Smooth organic cotton twill, a high waist with a hidden drawstring, and clean front pleats. Made in Portugal."),
  "N3": ("Radmor", "Ethan Knit Polo", "$101.50 (reg. $145)", "https://radmorgolf.com/products/ethan-knit-polo",
         "Organic cotton, organic silk and recycled nylon. The silk gives it a slight sheen and a softer drape."),
  "N5": ("Sounder", "Big Mach Long Sleeve Polo Sweat", "&pound;50 (~$64, reg. &pound;100)", "https://soundergolf.com/products/big-mach-long-sleeve-polo-sweat-sea-blue",
         "A 100% organic cotton rugby polo named for Machrihanish, with thumbhole cuffs. Made in Portugal."),
- "N9": ("Mogshade", "O.B. Oversized Sweat", "$91", "https://www.mogshadegolf.com/products/o-b-oversized-sweat",
+ "N9": ("Mogshade", "O.B. Oversized Sweat", "&euro;91 (~$98)", "https://www.mogshadegolf.com/products/o-b-oversized-sweat",
         "100% organic cotton with screen-printed art by Fiumani. Made in Portugal."),
  "N10": ("Morning People Clothiers", "The Cotton Knit Sweater", "$95", "https://morningpeopleclothiers.com/products/the-cotton-knit-sweater",
          "100% organic cotton in a medium knit. The brand&rsquo;s pitch: warmth &ldquo;without plastic.&rdquo;"),
@@ -208,14 +208,14 @@ TAKE = """
     <p><strong>Ventile is what long staple can do.</strong> Developed in 1943 for the Royal Air Force at the Shirley Institute in Manchester, it&rsquo;s extra-long-staple cotton &ldquo;woven to exceptionally high densities.&rdquo; Dry, it breathes; wet, the fibers swell and close the gaps, with no membrane or coating. Zurich&rsquo;s Stotz &amp; Co. has owned it since 2017, and most of it is now organic.</p>
     <blockquote class="fb-pq">&ldquo;A texture-forward golf sweater that adds warmth without plastic.&rdquo;<cite style="display:block;font-family:var(--mono);font-style:normal;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-top:10px;opacity:.75">Morning People Clothiers, on its organic cotton knit</cite></blockquote>
     <p><strong>The rest grow too.</strong> Linen (flax), hemp and ramie are bast fibers from plant stems. Cashmere legally averages 19 microns or finer, superfine merino is 18.5 or finer, and alpaca carries almost no lanolin.</p>
-    <p class="fb-src">Sources: cordura.com; srulirecht.com (Stylezeitgeist interview, 2017); dyneema.com and the Dyneema SK75 technical sheet; Avient&rsquo;s 2022 10-K; Textile Exchange Materials Market Report 2025 via the Organic Trade Association; 16 CFR 300.19; Woolmark; Britannica; ventile.co.uk; textile-network.com. Products and prices read on each brand&rsquo;s own store, November 25, 2026.</p>
+    <p class="fb-src">Sources: cordura.com; srulirecht.com (Stylezeitgeist interview, 2017); dyneema.com and the Dyneema SK75 technical sheet; Avient&rsquo;s 2022 10-K; Textile Exchange Materials Market Report 2025 via the Organic Trade Association; 16 CFR 300.19; Woolmark; Britannica; ventile.co.uk; textile-network.com. Products and prices read on each brand&rsquo;s own store, November 25, 2026; non-US prices show an approximate dollar figure.</p>
   </div>
   <aside class="sidebar">
     <div class="sidebar-card">
       <div class="sidebar-label">Details</div>
       <div class="sidebar-detail"><span class="l">Picks</span><span>34</span></div>
       <div class="sidebar-detail"><span class="l">Fabrics</span><span>Cordura, Dyneema, organic cotton &amp; naturals, Ventile</span></div>
-      <div class="sidebar-detail"><span class="l">Range</span><span>$32&ndash;$1,200</span></div>
+      <div class="sidebar-detail"><span class="l">Range</span><span>$32&ndash;$890</span></div>
       <div class="sidebar-detail"><span class="l">Lead pick</span><span>Sentinel &times; MacKenzie Basecamp Walker</span></div>
       <div class="sidebar-detail"><span class="l">Prices read</span><span>November 25, 2026</span></div>
       <a href="#cordura" class="sidebar-cta">See the picks &darr;</a>
