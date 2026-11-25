@@ -94,6 +94,15 @@
    "status": "active",
    "links_on_site": 18,
    "note": "Verified 20 Sept 2026: the GoAffPro loader is present on axxa.com.au home and product pages, and ?ref=gfinczjd survives on a product URL (200, param intact, no redirect strip). Reader code LENNY1085 gives A$10 off and is stated in the post body, not injected by this map. FIRST merchant to go active — every other entry is still pending-signup or pending-outreach."
+  },
+  "sloat.cc": {
+   "program": "impact.com (app.impact.com/advertiser-advertiser-info/SLOAT.brand) — Lenny applies himself",
+   "mode": "wrap",
+   "template": null,
+   "id": null,
+   "status": "pending-signup",
+   "links_on_site": 60,
+   "note": "Once approved, paste the Impact deep-link pattern as template, e.g. https://<sub>.pxf.io/c/<partnerId>/<adId>/<campaignId>?u={url} (copy the exact one from Impact's Create a Link tool), set status=active, deploy. Check one wrapped link lands on the right product page first."
   }
  }
 }

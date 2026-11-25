@@ -235,6 +235,7 @@ def head_top():
 def main(apply_):
     d = DONOR.read_text(encoding="utf-8")
     head_rest = d[d.index("<style>"):d.index('<div class="breadcrumb">')]
+    head_rest = re.sub(r'<script type="application/ld\+json"[^>]*>.*?</script>\s*', "", head_rest, flags=re.S)
     tail = d[d.index('<!-- TGI-ONE-FOOTER -->'):]
     _side = "\n".join(f'      <div class="sidebar-detail"><span class="l">{len(g[4])}</span><span><a href="#{g[0]}" style="border-bottom:none">{g[2]}</a></span></div>' for g in GROUPS)
 
@@ -323,7 +324,7 @@ def main(apply_):
     above = re.sub(r"<style\b.*?</style>|<!--.*?-->", "", fin[:fin.index('<!-- TGI-ONE-FOOTER -->')], flags=re.S)
     txt = re.sub(r"<[^>]+>", " ", above)
     bad = []
-    for w in ("worth", "genuinely", "honestly", "straightforward", "selling out", "Mackem", "country club"):
+    for w in ("worth", "genuinely", "honestly", "straightforward", "selling out", "Mackem", "Manors", "country club"):
         if re.search(rf"\b{w}\b", txt, re.I): bad.append("word " + w)
     for f in set(re.findall(rf'src="({IMG}/[^"]+)"', fin)):
         if not (ROOT / f.lstrip("/")).is_file(): bad.append("missing " + f)
