@@ -1,23 +1,23 @@
 {
  "_": "Homepage 'Special Field Note' double-wide box (Lenny, 4 Nov 2026). lead = the featured story; more = two smaller links. Edit this file and run apply-special-wide.py --apply (Deploy TGI.command runs it). after_card 0 = top-left of the feed (Lenny, 12 Nov 2026: 'pin the field note to the top left corner').",
  "lead": {
-  "url": "/drops/london-golf-trip-drawing-it-up",
-  "img": "/images/special/london-wide.jpg",
-  "alt": "Royal Blackheath Golf Club at sunset with the London skyline on the horizon",
-  "kicker": "A Special Field Note &middot; Drawing It Up",
-  "title": "Drawing It Up: A Five-Day Golf Trip to London",
-  "dek": "England&rsquo;s oldest golf club, Walton Heath and Swinley Forest, a red shirt on Wimbledon Common, Beyond the Streets at Saatchi, Palace and St. JOHN. The plan, day by day."
+  "url": "/drops/guest-field-guide-san-francisco-sloat",
+  "img": "/images/special/sloat-sf-wide.jpg",
+  "alt": "A surfer with a board at the end of a coastal path in San Francisco",
+  "kicker": "A Special Field Note &middot; Guest Guide No. 01",
+  "title": "San Francisco, According to SLOAT",
+  "dek": "Our first Guest Field Guide: SLOAT&rsquo;s founders on the courses they play, where they eat after, and an interview about fog, surf and natural fibers."
  },
  "more": [
+  {
+   "url": "/drops/london-golf-trip-drawing-it-up",
+   "img": "/images/special/mini-london.jpg",
+   "title": "Drawing It Up: A Five-Day Golf Trip to London"
+  },
   {
    "url": "/drops/east-texas-golf-trip-90-holes",
    "img": "/images/special/mini-etx.jpg",
    "title": "90 Holes in 3 Days: An East Texas Golf Trip"
-  },
-  {
-   "url": "/drops/golf-trips-mind-body-spirit",
-   "img": "/images/special/mini-mbs.jpg",
-   "title": "Golf Trips for the Mind, Body or Spirit"
   }
  ],
  "after_card": 0
